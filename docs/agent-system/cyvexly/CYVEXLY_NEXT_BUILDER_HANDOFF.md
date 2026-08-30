@@ -53,6 +53,9 @@ close. The pre-existing Auditor/Council dirty files remain untouched. Use
   `docs/agent-system/cyvexly/builder/evidence/`.
 - Real served HTML contains the three preview SVGs, three concept disclosures,
   and all three case-study links on both Home and Services.
+- Internal-link graph audit — 395 link instances across twelve rendered pages,
+  27 unique internal route/hash targets, and zero unexpected failures. The only
+  404 targets were the known Owner-blocked About, Privacy, and Terms routes.
 - Extended exact-viewport CDP audit of Home, Services, Work, Pricing, and Planner
   at 1440px and 390px: ten opened full-page renders; every state has one `h1`,
   one `main`, no heading skip, unnamed control, unexplained empty image alt, or

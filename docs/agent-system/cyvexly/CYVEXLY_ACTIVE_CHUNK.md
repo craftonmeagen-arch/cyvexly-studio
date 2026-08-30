@@ -121,6 +121,11 @@ routes/assets and the intended 404 for a nonexistent route. Served Home and
 Services HTML each contains all three preview SVGs, concept disclosures, and
 case-study links.
 
+An internal-link graph pass covered 395 link instances across twelve rendered
+pages and 27 unique internal route/hash targets. It found zero unexpected
+status or fragment failures; `/about`, `/privacy`, and `/terms` were the exact
+three expected Owner-blocked 404 targets.
+
 **Rendered evidence:** local Chrome 151 headless + CDP captured and the Builder
 opened Home/Services selected-work sections at exact 390px, 768px, and 1440px.
 Every state has three cards and three previews; exact phone cards are 342px in a

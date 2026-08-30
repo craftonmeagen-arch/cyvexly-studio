@@ -316,6 +316,9 @@
   `scrollWidth === clientWidth` checks, three-card/three-preview counts, and
   source/diff reconciliation. Rotated round 7 from the near-full active hot-path
   file and retained only cited round-8 captures/metrics.
+- Audited 395 internal-link instances across twelve rendered pages and 27 unique
+  route/hash targets: no unexpected status or fragment failure; only the known
+  Owner-blocked About, Privacy, and Terms targets returned 404.
 - Used CDP native Chromium Tab/Enter dispatch to close round 7's remaining
   keyboard-proof gap at exact 1440px and 390px. The first run found validation
   alerts were correctly exposed but focus remained on `Continue`; fixed the
