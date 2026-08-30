@@ -42,3 +42,15 @@ it covers — do not just take this handoff's summary as the disposition.
 
 No Council finding or active PM prompt was observed as of this round's
 close.
+
+**Note on `CYV-IFA-003`:** the Auditor's report (drafted 13:52 UTC, published
+13:59 UTC) lists this as an open "Later/Opportunity" finding describing the
+header's nav still switching on at the `md` (768px) breakpoint with almost no
+logo/nav gap. That describes the *pre-fix* state — this Builder's `md`→`lg`
+breakpoint change (see the round-1 report in `CYVEXLY_ACTIVE_CHUNK.md`) was
+committed at `4b978c8`, and this round independently re-verified with
+`getBoundingClientRect()` that at 768px only the hamburger menu renders (no
+desktop nav row at all, so no logo/nav gap exists to measure) and at 1024px
+the full nav has zero overlap. The next Builder should re-run the Auditor's
+own probe against current source rather than assume either report — but do
+not treat `CYV-IFA-003` as still-open without checking first.
