@@ -215,6 +215,13 @@ boundary on future reasoning.
   `input`/`change` events, `dispatchEvent(new MouseEvent('click', ...))`)
   remained fully reliable for driving the entire nine-step Planner
   wizard, matching round 2's established interaction method.
+- **`claude-in-chrome`'s `list_connected_browsers` returned an empty
+  array in this scheduled session** — confirmed directly (not assumed)
+  that there is no attended real-Chrome fallback available for
+  pixel-level screenshot proof in a scheduled Cyvexly Builder run, which
+  makes sense (no user is present to have a Chrome extension connected).
+  Re-verify this each round rather than treating it as permanent — an
+  attended session or a different invocation context could differ.
 - **A new ESLint rule shipped with this project's `eslint-config-next`
   install, `react-hooks/set-state-in-effect`, flags any direct `setState`
   call inside a `useEffect` body** — including the legitimate,

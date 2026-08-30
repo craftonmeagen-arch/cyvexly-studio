@@ -408,3 +408,75 @@ round 3, still `NEEDS COHERENT FOLLOW-UP`.
    (`CYVEXLY_CHUNK_DEBT.md` item 5) and the `/process` layout gap (item
    1) during a dedicated visual-polish pass, unchanged from round 3's
    recommendation.
+
+### Addendum — additional stress-testing after the initial commit
+
+After the round-4 commit above landed, used remaining scheduled work-window
+time (this is a 50-minute-minimum scheduled round) for further real-browser
+stress testing of the Planner rather than starting a new, separate task —
+each of the following is a genuine alternate/failure-state check the
+interactive floor (§2.4) calls for, not repetition of the happy-path
+proof already recorded above:
+
+- **Verified `list_connected_browsers` (the `claude-in-chrome` MCP surface)
+  returns empty in this session** before repeating the "no pixel-level
+  proof reachable" conclusion as fact rather than assumption — confirms
+  there is no attended real-Chrome fallback available this round, per
+  §4.8's instruction to verify rather than assume a capability is
+  unavailable.
+- **Verified tablet width (768px)**: zero horizontal overflow.
+- **Verified a real edit-and-revalidate round trip**: reached the review
+  step with real data, used a review-group "Edit" link to jump back to
+  step 4, changed the selected pages, returned to review via the progress
+  rail, and confirmed the summary reflected the new page selection while
+  every other previously entered field (name, etc.) remained intact — not
+  just linear happy-path proof.
+- **Verified the step-4 "not sure — recommend the sitemap" toggle
+  actually bypasses the "select at least one page" requirement**: first
+  confirmed Continue is blocked with zero pages selected and the toggle
+  unchecked, then confirmed checking the toggle immediately allows
+  advancement with zero pages selected — real proof of vision §6.9's
+  "open 'I'm not sure' choice" requirement, not just that the checkbox
+  exists.
+- **Verified the progress-rail's `disabled` attribute on unreached steps
+  is a real access-control mechanism, not just visual/ARIA decoration**:
+  dispatching a real click on a `disabled` step-9 button while only
+  having reached step 2 did not navigate — confirmed via the rendered
+  step heading staying on step 2 afterward.
+- **Verified layout robustness with a 120-character unbroken string** (no
+  spaces to wrap on) in a textarea at 375px mobile width and in the
+  review-step summary's `dt`/`dd` rows: zero horizontal overflow in
+  either case.
+- **Verified two real failure-state paths for the "save & continue
+  later" feature**, per §2.9/§8.7's instruction to test failure and
+  recovery, not just the success path: (1) manually corrupted the stored
+  draft's JSON (`{not valid json!!`) and reloaded — the page started
+  fresh at step 1 with zero console errors, no crash, proving the
+  existing `try`/`catch` around `JSON.parse` actually works against real
+  malformed data, not just a code-reading assumption; (2) temporarily
+  overrode `Storage.prototype.setItem` to throw
+  `QuotaExceededError` (simulating a full or blocked storage quota, a
+  real condition in private-browsing modes) and clicked "Save & continue
+  later" — no uncaught exception, the page did not crash, and correctly
+  did **not** show the "Saved on this device" confirmation, i.e. it does
+  not lie about a save that didn't happen.
+- **Investigated whether the honeypot's silent-fail behavior (blocking
+  submission with zero visible error) is a defect; confirmed it is
+  intentional, correct anti-spam design.** Filling the hidden honeypot
+  programmatically and submitting with both required boxes checked
+  correctly blocked navigation but showed no `role="alert"`. The field
+  sits in a `display:none` container (unreachable by real Tab order or
+  screen readers) with a bot-only name/label, so no real human can
+  plausibly trigger it — a silent fail is the standard honeypot pattern
+  (surfacing "you tripped spam protection" only helps bots adapt). No fix
+  needed; reasoning recorded rather than left an unexamined gap.
+- **Re-confirmed the `computer` screenshot limitation and the HMR
+  WebSocket console errors are session/tooling artifacts, not Planner
+  defects**: the screenshot timeout reproduced identically to rounds
+  1–3's finding; the HMR errors (visible only after several forced
+  reloads) reproduced identically on the unrelated Home page — dev-server
+  noise absent from production builds, not introduced by this round.
+- Stopped the manually started dev server (confirmed via
+  `Get-CimInstance Win32_Process` as this round's own process first) and
+  cleared the test `localStorage` draft as the final step of this
+  addendum.
