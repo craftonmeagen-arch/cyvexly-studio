@@ -34,9 +34,24 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
    a real design asset (round 2 did add a real color-swatch + typography
    "Visual direction" section per case study, closing part of this gap, but
    the photographic hero and desktop/mobile screen previews remain).
-4. **`/favicon.ico` and social-sharing image are still the Next.js
-   defaults.** Vision §12 requires a final wordmark/favicon and
-   social-sharing image before launch; still not built as of round 2.
+4. **Favicon: partially addressed round 2, social-sharing image still
+   open.** Added `src/app/icon.svg` — a hand-authored abstract "C/Y signal
+   mark" (an open orbit-ring arc plus a Y formed from two converging paths,
+   single-color `#0F66E0`, no clichés) per vision §4's logo direction,
+   replacing the Next.js default for browsers that honor the SVG icon link
+   (Next.js emits both; the old `favicon.ico` default remains as a fallback
+   for browsers/contexts that don't). **Verified:** valid build (`○
+   /icon.svg` in the route table), served with correct content-type, and
+   correctly linked in `<head>` (`rel="icon" ... type="image/svg+xml"`) —
+   confirmed via a temporary dev server on a scratch port, not port 5173
+   (see the round-2 report's Audibles for why). **Not verified:** actual
+   pixel-rendered appearance in a browser tab — this unattended session has
+   no working screenshot capability, so this is a code/serve-correctness
+   proof, not a visual one. The next attended session or Auditor/Council
+   round should confirm it actually looks right at 16×16/32×32. A real
+   social-sharing (Open Graph) image is still not built — also blocked on
+   `metadataBase`/domain per `CYVEXLY_APP_DEBT.md` item 2 for the metadata
+   wiring, though the image asset itself doesn't strictly need the domain.
 5. **Round-2 mockup comparison found real layout/density gaps on
    Services and Pricing vs. `mockups/02-services-pricing.png`** (visual
    floor comparison performed this round — see the round-2 report in

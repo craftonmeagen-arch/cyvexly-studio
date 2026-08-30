@@ -84,3 +84,33 @@ boundary on future reasoning.
   for a `generateStaticParams` route does not by itself prove the route
   works — that build step doesn't execute the same runtime-request code
   path that surfaced this bug.
+- **Builder's reserved port 5173 was found occupied by a completely
+  unrelated foreign process mid-round, and this Builder's own dev server had
+  independently died.** Late in round 2, `curl http://localhost:5173/...`
+  started returning a different app entirely — page title "EduAILenz V2", a
+  Vite dev server (`node node_modules\vite\bin\vite.js --config
+  vite.config.ts --host 0.0.0.0`, PID confirmed via
+  `Get-CimInstance Win32_Process`), not this project's Next.js/Turbopack
+  server. This project has no EduAILenz code and `AGENTS.md` only references
+  "EduAILenz" as the *unrelated example product* the frozen Supervisor
+  packet's prose examples originally came from — so this is very likely a
+  different, unrelated live session on the same physical machine that
+  happens to also default to port 5173, not orphaned Cyvexly infrastructure.
+  Checked for any surviving/orphaned process of this project's own on that
+  port first (none found — this Builder's own `next dev --port 5173`,
+  PID recorded earlier in the session, was confirmed gone via
+  `Get-Process`); found the Council's own isolated runtime alive and well on
+  its own reserved port 5373 (`next dev --port 5373` plus a turbopack-node
+  worker under `.codex\runtime\council\...`) — correctly left untouched.
+  **Did not stop or otherwise touch the foreign EduAILenz process** — its
+  ownership is not proven to be mine or orphaned, so killing a live
+  unrelated process to reclaim a port is exactly the kind of action §1.6
+  and the Ownership section warn against. Worked around it by starting a
+  throwaway verification dev server on an unused scratch port (5179, killed
+  again immediately after use) rather than contesting port 5173. Unresolved:
+  why this Builder's own port-5173 server died is unknown (no crash log
+  captured before it happened — the last live check on it was mid-round; by
+  the time of the icon.svg check it was gone). The next Builder should
+  re-check port 5173 availability before assuming it's free, and if the
+  same foreign process is still there, apply the same non-interference
+  judgment rather than killing it.
