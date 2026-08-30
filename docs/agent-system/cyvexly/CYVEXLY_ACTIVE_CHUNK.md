@@ -182,10 +182,15 @@ config file since that is the framework's current documented pattern.
 
 ### Git/diff accountability
 
-Two commits this round: the Chunk 1 root commit (Home page + foundation, 107
-files) and a second commit for the Process page + header breakpoint fix. `git
-status` is clean after both. No file outside what's described above was
-touched.
+Four commits this round: the Chunk 1 root commit (Home page + foundation, 108
+files); a second commit for the Process page, header breakpoint fix, and
+color-contrast fix; a third for the honest Process-page mockup-gap note and
+`.gitignore` entry for the scheduled-task runner's own lock file; a fourth
+noting the Auditor's published report in the handoff. `git status` at close
+shows only the concurrently-running Auditor's own report/state files as
+modified/untracked (correctly left untouched — see Audibles/`CYVEXLY_WATCH.md`
+non-interference note). No file this Builder is responsible for is
+uncommitted, and no file outside what's described above was touched.
 
 ### Completion state
 
