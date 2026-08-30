@@ -339,6 +339,22 @@ color was the most likely accidental mistake with this approach.
   by port number alone; confirmed via a failed `curl` afterward that
   port 5173 no longer responds. Deleted the temporary dev-server stdout
   log file used during the round.
+- **Ran a final verification pass against the real production build, not
+  just the dev server**, given this project's own established history
+  (rounds 2-3) of dev/production behavior differences: deleted `.next`
+  entirely and ran a clean `pnpm run build` from scratch (no incremental
+  cache) — compiled successfully, same eighteen routes, same pre-existing
+  `metadataBase` warning only. Started the real production server
+  (`next start --port 5173`, not `next dev`) and re-swept every route via
+  `curl` (all 200, `/not-a-real-route` correctly 404s) against the actual
+  built output. Grepped the real production HTML directly: confirmed zero
+  occurrences of the invented `0c1a30` color anywhere in the built
+  `/work/nexora-systems` page, and confirmed "Desktop & mobile
+  experience," "Our collaboration promise," and "Typical timing" all
+  appear in the real production HTML — not just the dev-server render.
+  Stopped the production server (verified by PID/`CommandLine` before
+  stopping, same discipline as the dev server) and deleted the disposable
+  `.next` build output afterward, per the ephemeral-storage rule.
 
 ### What was not checked
 
