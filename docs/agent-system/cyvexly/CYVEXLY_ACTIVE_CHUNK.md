@@ -391,3 +391,18 @@ no-index default (`robots.txt` + meta `robots`) is correct and working.
 Independent confirmation, from a different role using a different
 runtime, of both this round's `metadataBase` finding and its
 `robots.txt`/no-index fix.
+
+
+The same round's `auditor-20260830T1738Z-route-probe.md` (also read
+read-only) independently exercised every route and several stateful
+interactions (Work filters, Pricing mobile nav, Pricing FAQ, Contact
+validation) and found zero defects — full agreement with this round's
+and round 2's own verification. It also surfaced one minor, low-priority
+observation not previously logged: the `Redesign` and `Landing Page`
+Work filter chips currently have no matching project (only `Business
+Site`, `Commerce`, and `Concept` return results), so those two filters
+always show the honest empty state. Not a defect — the empty state
+renders correctly and truthfully, and vision's own "three strong
+concept projects" guidance doesn't require covering every filter
+category — but noted here as a minor content-coverage gap for whenever
+the portfolio grows past three projects.
