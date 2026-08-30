@@ -31,15 +31,15 @@ export default function OpengraphImage() {
           style={{ marginBottom: 40 }}
         >
           <path
-            d="M24.5 8.5A12 12 0 1 1 21.5 25"
+            d="M14.47 8.69A9 9 0 1 1 12.22 21.06"
             stroke="#36C7FF"
-            strokeWidth="5"
+            strokeWidth="3.75"
             strokeLinecap="round"
           />
           <path
-            d="M9.5 13L16 20L24.5 8.5"
+            d="M3.22 12.06L8.09 17.31L14.47 8.69"
             stroke="#36C7FF"
-            strokeWidth="5"
+            strokeWidth="3.75"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
