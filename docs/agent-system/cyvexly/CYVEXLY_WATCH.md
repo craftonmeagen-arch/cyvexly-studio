@@ -215,6 +215,17 @@ boundary on future reasoning.
   `input`/`change` events, `dispatchEvent(new MouseEvent('click', ...))`)
   remained fully reliable for driving the entire nine-step Planner
   wizard, matching round 2's established interaction method.
+- **Re-checked `docs/agent-system/cyvexly/inbox/OPERATIONS.md` near
+  closeout (not just at orientation) and found a new entry timestamped
+  after this round's lock claim**: a Council "successor reconciliation"
+  publication at 18:42:09Z. Read it (read-only, no Council file touched):
+  it republishes the exact same stale round-1-era Home-page findings
+  round 3's own handoff already flagged as "nothing new," just under a
+  formal reconciliation status. No new actionable finding; confirms
+  round 3's assessment rather than adding to it. Worth re-checking this
+  inbox file near closeout, not just once at the start, since concurrent
+  reviewer rounds can publish mid-Builder-round (as they did in rounds 1
+  and 3 too).
 - **This round's own "unlabeled input" accessibility check (established
   rounds 1-2, reused round 3) only queries
   `input, select, textarea` — it never checked `button` elements**, and a
