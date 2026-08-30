@@ -34,6 +34,7 @@ export function PlannerProgress({
                 onClick={() => isReachable && onStepClick(step.number)}
                 disabled={!isReachable}
                 aria-current={isCurrent ? "step" : undefined}
+                aria-label={`Step ${step.number}: ${step.label}${isComplete ? " (complete)" : ""}`}
                 title={step.label}
                 className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border font-mono text-xs font-medium transition-colors duration-150 ${
                   isCurrent

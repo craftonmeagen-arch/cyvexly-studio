@@ -1014,6 +1014,7 @@ function PlannerReview({
               <button
                 type="button"
                 onClick={() => onEdit(group.step)}
+                aria-label={`Edit ${group.title}`}
                 className="text-xs font-medium text-cyber-blue hover:text-[#0b4fb0]"
               >
                 Edit

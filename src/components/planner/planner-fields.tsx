@@ -333,6 +333,7 @@ export function StatusRow({
               type="button"
               onClick={() => onChange(option.id)}
               aria-pressed={checked}
+              aria-label={`${categoryLabel}: ${option.label}`}
               className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors duration-150 ${
                 checked
                   ? "border-cyber-blue bg-cyber-blue text-white"
