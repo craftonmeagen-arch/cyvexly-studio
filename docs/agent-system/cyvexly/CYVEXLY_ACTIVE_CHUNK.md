@@ -67,7 +67,8 @@ already-accepted, truthful `ConceptPreview` artwork at both surfaces.
 
 **Session:** `7694882a-69e8-4ed1-8a51-535001d0780d`; lock claimed
 `2026-08-30T22:29:39.5314948Z`; scheduled extended window requires at least 50
-minutes of substantive work and release before minute 60.
+minutes of substantive work and release before minute 60. Closeout was recorded
+at `2026-08-30T23:19:48.5241789Z`, after 50 minutes 9 seconds.
 
 1. Preserve the visual plan and current/mockup comparison; rotate the nearly
    full round-7 report out of this hot-path file.

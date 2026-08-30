@@ -3,6 +3,8 @@
 ## Round 8 closed cleanly
 
 **Session:** `7694882a-69e8-4ed1-8a51-535001d0780d`
+**Closeout recorded:** `2026-08-30T23:19:48.5241789Z` (50 minutes 9 seconds
+after lock claim; within the required 50–60 minute window)
 **Product commits:** `d04dc9d` — Home and Services selected-work cards reuse
 `ConceptPreview`; `da9c6d9` — Planner focuses the first invalid control and
 links grouped-control errors; `4bdab10` — stale case-study “placeholder” label
