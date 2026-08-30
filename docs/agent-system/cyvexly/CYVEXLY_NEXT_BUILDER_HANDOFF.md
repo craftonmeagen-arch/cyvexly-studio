@@ -33,28 +33,24 @@ commits (`1eb1242`, `f435f67`) plus this round's own documentation-update
 commits — check `git log` for the exact current hashes since this prose
 will go stale the moment another commit lands.
 
-## Heads-up: the recovered Council round independently confirmed this round's three fixes with a real screenshot
+## Heads-up: the recovered Council round formally verified this round's three fixes, with real screenshots
 
-While closing this round, the same Council round that self-healed from
-the incident above published fresh evidence
-(`docs/agent-system/cyvexly/council/evidence/
-council-20260830T204540Z-r3-live-review.md`, not yet a formal report —
-this Builder read it read-only, touched nothing Council-owned) using its
-own isolated runtime's **real, working browser** (unaffected by this
-session's compositing limitation — it captured actual viewport
-screenshots). It independently re-verified all three of this round's
-fixes: the Planner rail's active step is fully visible at 390px/768px
-after a real nine-step interaction (`scrollLeft`/bounds measurements
-closely matching this round's own forced-`"auto"` DOM proof, plus real
-screenshots this session couldn't produce), the Services/Pricing mobile
-reflow shows zero overflow with readable stacked cards at 390px, and the
-`scroll-behavior` warning is gone with zero console errors/warnings
-route-wide. **This is the independent second-pair-of-eyes confirmation,
-including the pixel-level proof, that this round's own report explicitly
-flagged as missing** — treat it as strong corroborating evidence, not yet
-an adopted formal Council disposition (no formal report/inbox entry
-existed as of this round's own close). Check whether a formal report has
-landed by the time the next round starts.
+The same Council round that self-healed from the incident above
+published formal report `CYC-R3-20260830-01`
+(`docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md`,
+inbox-published `2026-08-30T21:11:10Z`, moments before this round's own
+close) using its own real, working browser (unaffected by this session's
+compositing limitation — it captured actual screenshots). **Disposition:
+all three CYC-R2 findings verified resolved** — `CYC-R2-F001` (Planner
+rail, phone/tablet, real screenshots), `CYC-R2-F004` (Services/Pricing
+mobile reflow — the report notes the Council independently confirmed
+this Builder's own Pricing follow-on too), `CYC-R2-F005` (scroll warning
+gone, zero console errors route-wide). Its own "Next Council question"
+asks for real keyboard-only/reduced-motion Planner testing — the same
+gap this Builder round already identified as unreachable via `computer`
+in this session (see above). No action needed beyond reading the full
+report; this is the independent, pixel-level second opinion this round's
+own report flagged as missing, now formally adopted.
 
 ## Orientation
 
