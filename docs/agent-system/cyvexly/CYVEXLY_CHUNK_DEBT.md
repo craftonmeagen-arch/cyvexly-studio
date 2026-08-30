@@ -1,23 +1,35 @@
 # Cyvexly Chunk Debt
 
-Active-chunk (Chunk 1 — Foundation & Home) findings and reachable follow-ups
-from global round 1. Not the full backlog — see `CYVEXLY_PROJECT_CHUNK_MAP.md`
-for chunk-level direction.
+Active-chunk (Chunk 2 — Core marketing pages) findings and reachable
+follow-ups from global round 1, carried over from Chunk 1 (Foundation &
+Home, closed this same round). Not the full backlog — see
+`CYVEXLY_PROJECT_CHUNK_MAP.md` for chunk-level direction.
 
 ## Open
 
-1. **Other sitemap routes 404.** The header/footer link to `/services`,
+1. **`/process` uses a simpler card-stack layout than
+   `mockups/04-process-planner.png`'s left panel.** The mockup shows a
+   vertical connected-line timeline (numbered circles joined by a line) with
+   a separate "Typical Timing" summary table and an "Our Collaboration
+   Promise" panel; the shipped page uses stacked cards with the timeframe as
+   a small badge per card, and has no timing-summary table or collaboration-
+   promise panel. This is a genuine gap, not a deliberate adaptation — it
+   was a time-boxed choice to ship a real, content-complete page (all five
+   stages' inputs/deliverables/approval points, matching vision §6.7)
+   without the extra layout/table work. Revisit when Chunk 2 does a
+   dedicated visual pass on this page.
+2. **Other sitemap routes 404.** The header/footer link to `/services`,
    `/work`, `/pricing`, `/process`, `/about`, `/start`, `/contact`, `/faq`,
    `/privacy`, `/terms`, `/accessibility`. These are intentionally out of
    Chunk 1's coherent slice (Home + design-system foundation) and are Chunk
    2/3/4's job per the project map — not a defect to fix inside Chunk 1.
-2. **Placeholder work-card imagery.** `selectedWork` in
+3. **Placeholder work-card imagery.** `selectedWork` in
    `src/lib/site-config.ts` uses CSS gradients, not real screenshots/crops,
    for the three concept projects (Aurora Spaces, Nexora Systems, Vellora
    Care) named in the vision and mockups. This is honest (no fabricated
    client work) but should be replaced with real designed crops once Chunk 2
    builds the actual case-study pages for those concepts.
-3. **`/favicon.ico` and social-sharing image are still the Next.js
+4. **`/favicon.ico` and social-sharing image are still the Next.js
    defaults.** Vision §12 requires a final wordmark/favicon and
    social-sharing image before launch; out of scope for Chunk 1.
 

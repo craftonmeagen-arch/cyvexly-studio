@@ -19,3 +19,6 @@ next-env.d.ts
 .vercel
 .env*
 
+# Claude Code scheduled-task runner lock (harness-owned, not role-system state)
+.claude/scheduled_tasks.lock
+
