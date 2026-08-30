@@ -227,8 +227,25 @@
   `CYVEXLY_WATCH.md` for full detail.
 - Rotated the round-5 full report out of `CYVEXLY_ACTIVE_CHUNK.md` into
   `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND5_REPORT.md`, and rotated
-  `CYVEXLY_WATCH.md`'s rounds 1-3 into a new
-  `docs/archive/CYVEXLY_WATCH_ARCHIVE.md` to bring both hot-path files
-  back under their §7.14 caps (Watch had grown to ~26.8KB against its
-  20KB cap; a pre-existing overage, not caused by this round, repaired at
-  closeout per §7.14).
+  `CYVEXLY_WATCH.md`'s rounds 1-4 (in two passes, as new content needed
+  the room) into `docs/archive/CYVEXLY_WATCH_ARCHIVE.md` to bring both
+  hot-path files back under their §7.14 caps (Watch had grown to ~26.8KB
+  against its 20KB cap; a pre-existing overage, not caused by this round,
+  repaired at closeout per §7.14).
+- Refreshed the vision §15 launch-readiness pass round 3 first established
+  (gone stale after three rounds of real progress): still not launch-ready,
+  same four Owner-input blockers, but concrete measurable progress (fewer
+  sitemap gaps, the Planner now assessable and partially ready, stronger
+  accessibility/portfolio evidence). Tested `computer{action:"key"}`
+  directly for the first time and confirmed it produces zero real keyboard
+  events in this session (same frame-compositing limitation as clicks/
+  screenshots), closing the loop on the Council's suggested keyboard-
+  traversal-testing follow-up honestly rather than leaving it untried.
+- **Incident:** near closeout, a too-broad process-stop filter briefly
+  stopped a concurrently-running Council round's own dev-server processes
+  (`council-20260830T204540Z`, port 5373) — a real cross-role
+  non-interference violation. The Council round self-healed within
+  minutes, confirmed with direct evidence (fresh registered PIDs, port
+  responding again). Full account and the root-cause fix for future
+  process-stop filters are in `CYVEXLY_WATCH.md` and
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
