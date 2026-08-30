@@ -14,4 +14,8 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
   Pricing icon parity, robots/no-index default, OG image, favicon 16px
   legibility finding, first launch-readiness pass against vision §15),
   rotated out during round 4.
+- `CYVEXLY_CHUNK3_ROUND4_REPORT.md` — round 4 (Chunk 3 opened: full
+  Project Planner UI/state/validation at `/start`; CSS Grid mobile-overflow
+  fix; field-usage-audit fixes; reduced-motion scroll-to-top fix; button
+  accessible-name fixes), rotated out during round 5.
 

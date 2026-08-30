@@ -149,3 +149,43 @@
   "smooth"})`, which bypasses the site's global CSS
   `prefers-reduced-motion` rule; fixed by checking `matchMedia` at call
   time and verified both branches via a `scrollTo`/`matchMedia` spy.
+- Landed as 13 total commits (one initial + twelve "(cont.)" follow-on
+  fixes, including three groups of Planner buttons with missing/duplicate
+  accessible names found by re-auditing the round's own work).
+
+## Round 5 — 2026-08-30
+
+- Revisited two open items from the closed Chunk 2 (closed does not mean
+  frozen), both independently flagged as reachable, well-scoped, and not
+  Owner-blocked by every input read this round.
+- Rebuilt `/process`'s steps section as a connected vertical timeline
+  (numbered circle badges linked by a continuous line, matching
+  `mockups/04-process-planner.png`), added a "Typical timing" summary
+  table (derived directly from existing `processSteps` data) and an "Our
+  collaboration promise" panel (grounded in already-established facts —
+  approval points, two-business-day response time, 14-day post-launch
+  support). Closed `CYVEXLY_CHUNK_DEBT.md` item 1, open since round 1.
+- Replaced the Work grid/case-study flat two-tone gradients — flagged
+  independently by both the Auditor (`CYV-IFA-002`) and the Council
+  (`CYC-R1-F002`) as their own "Next" priority finding — with
+  `src/components/concept-preview.tsx`: three distinct, hand-authored
+  abstract SVG compositions, one per concept project, each visualizing
+  that project's own already-written creative "decisions" and reusing
+  only its own established palette. Found and fixed a real design-system
+  violation during self-review (an invented color not in any project's
+  palette) via a grep-based cross-check before commit. Pixel-verified all
+  three via the established `ImageResponse`-proxy technique (a temporary
+  scratch route, deleted immediately after inspection per the
+  ephemeral-evidence rule). Partially closed `CYVEXLY_CHUNK_DEBT.md` item
+  2 — real photographic/screen-sequence imagery, what both reviewers'
+  closure tests actually ask for, remains open pending an Owner framing
+  decision on whether abstract concept artwork is an acceptable
+  permanent answer for fictional case studies.
+- The Browser pane's live-tab screenshot limitation persisted from every
+  prior round, and a related new symptom appeared mid-round
+  (`clientWidth`/`innerWidth` reading `0`, `visibilityState` reading
+  `"hidden"`) that blocked further viewport-dependent measurement — worked
+  around using DOM/fetch verification and the `ImageResponse`-proxy
+  technique instead of claiming untestable geometry as verified. See
+  `CYVEXLY_WATCH.md` and `CYVEXLY_ACTIVE_CHUNK.md`'s round-5 report for
+  full detail.

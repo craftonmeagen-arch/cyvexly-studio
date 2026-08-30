@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
+import { ConceptPreview } from "@/components/concept-preview";
 import { caseStudies } from "@/lib/site-config";
 
 type CaseStudySlug = keyof typeof caseStudies;
@@ -59,10 +60,12 @@ export default async function CaseStudyPage({
             </p>
           </div>
           <div
-            className={`h-56 w-full bg-gradient-to-br sm:h-72 ${study.gradient}`}
+            className={`h-56 w-full overflow-hidden bg-gradient-to-br sm:h-72 ${study.gradient}`}
             role="img"
             aria-label={`${study.name} concept visual placeholder`}
-          />
+          >
+            <ConceptPreview slug={slug} />
+          </div>
         </section>
 
         <section className="mx-auto max-w-4xl px-6 py-16">
@@ -128,6 +131,43 @@ export default async function CaseStudyPage({
           <p className="mt-4 text-sm leading-relaxed text-cool-graphite sm:text-base">
             {study.typographyNote}
           </p>
+
+          <h2 className="mt-12 font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
+            Desktop &amp; mobile experience
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
+            An illustrative preview of the visual direction across
+            breakpoints — not a pixel-accurate screenshot, since{" "}
+            {study.name} is a concept project with no built site behind it.
+          </p>
+          <div className="mt-6 grid gap-6 sm:grid-cols-[1fr_200px]">
+            <div>
+              <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
+                Desktop
+              </p>
+              <div className="overflow-hidden rounded-xl border border-smoke-glass bg-frosted-glass">
+                <div className="flex items-center gap-1.5 border-b border-smoke-glass/70 bg-ice-field px-3 py-2">
+                  <span className="h-2.5 w-2.5 rounded-full bg-smoke-glass" aria-hidden="true" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-smoke-glass" aria-hidden="true" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-smoke-glass" aria-hidden="true" />
+                </div>
+                <div className="h-40 w-full sm:h-48" role="img" aria-label={`${study.name} illustrative desktop preview`}>
+                  <ConceptPreview slug={slug} />
+                </div>
+              </div>
+            </div>
+            <div>
+              <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
+                Mobile
+              </p>
+              <div className="mx-auto max-w-[200px] overflow-hidden rounded-2xl border-4 border-midnight-slate bg-frosted-glass">
+                <div className="h-3 bg-midnight-slate" aria-hidden="true" />
+                <div className="h-56 w-full sm:h-64" role="img" aria-label={`${study.name} illustrative mobile preview`}>
+                  <ConceptPreview slug={slug} />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className="border-y border-smoke-glass/70 bg-ice-field">

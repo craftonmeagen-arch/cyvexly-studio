@@ -136,7 +136,7 @@ boundary on future reasoning.
   new `opengraph-image.tsx` output and, via a temporary throwaway route
   using the same `ImageResponse` pipeline, to check the existing
   `icon.svg` favicon mark's legibility at 16/32/64px (found a real 16px
-  legibility problem - see `CYVEXLY_CHUNK_DEBT.md` item 4). This is not a
+  legibility problem - see `CYVEXLY_CHUNK_DEBT.md` item 3). This is not a
   substitute for real live-page screenshot comparison against the
   mockups (still not reachable - DOM/layout/CSS rendering in an actual
   page context is different from a standalone `ImageResponse` render),
@@ -295,3 +295,65 @@ boundary on future reasoning.
   on the wrong line, which does not cover statements inside a nested `if`
   block). Worth knowing before any future `useEffect` that reads
   `localStorage`/`sessionStorage`/another browser-only store on mount.
+
+## Round 5
+
+- **The Browser pane stopped compositing/reading real viewport geometry
+  partway through the round, with a different symptom than rounds 1-4's
+  screenshot-only failure.** `document.documentElement.clientWidth` and
+  `window.innerWidth` began reading `0`, and `document.visibilityState`
+  read `"hidden"`, on every page — including `/process`, which had
+  measured correctly (1265px desktop, 375px mobile, 753px tablet, all via
+  `getBoundingClientRect()`/`scrollWidth` checks) earlier in the same
+  round before the state changed. Opening a brand-new foreground tab
+  (`tabs_create({foreground: true})`) did not recover it. Re-checked on
+  the unchanged `/process` page after making unrelated changes elsewhere
+  (same `"hidden"` result), confirming this is a session-level state
+  change, not something caused by this round's own code. Treat this as
+  the same family of limitation as rounds 1-4's "Browser pane is not
+  displayed" screenshot failure, now also affecting `clientWidth`/
+  `innerWidth` reads, not just `computer{action:"screenshot"}` — worth
+  re-verifying each round whether it's present from the start or appears
+  mid-round, since this round it clearly appeared partway through.
+- **Successfully reused the round-3 `ImageResponse`-proxy pixel-proof
+  technique for a second, different kind of asset.** Round 3 used it only
+  for a standalone generated-image route (the favicon/OG image). This
+  round proved the same mechanism also works for arbitrary hand-authored
+  decorative SVG artwork meant to be embedded inside a normal page (not
+  itself a special Next.js image-convention file): built a temporary
+  scratch route (`src/app/scratch-concept-check/route.tsx`, no leading
+  underscore — see round 3's private-folder finding) that renders the
+  exact same SVG JSX used in the real page component through
+  `next/og`'s `ImageResponse`, fetched the generated PNGs, and visually
+  confirmed them with the `Read` tool. Confirms `opengraph-image.tsx`'s
+  proof (this codebase's `ImageResponse` pipeline handles a raw nested
+  `<svg>` with `<path>`/`<rect>`/`<circle>` children, per Satori) extends
+  to any SVG-based component, not just the specific favicon/OG-image use
+  case rounds 1-3 tested it on. Deleted the scratch route and all
+  generated PNGs immediately after inspection, per the ephemeral-evidence
+  rule; confirmed via `git status` and a clean re-run of `tsc`/lint/build
+  that nothing was left behind.
+- **Caught a real design-system violation with a grep-based color audit,
+  not by eye.** A first draft of a new hand-authored SVG component used
+  an invented `#0c1a30` for one shape's fill — a color not present in
+  that project's own four-hex palette array in `site-config.ts`, and not
+  used anywhere else in the app's design tokens. This is easy to miss by
+  visual inspection alone (a slightly-darker navy blends in against a
+  dark background) but breaks the "no new colors without a stated reason"
+  discipline every prior round followed for the shared cyber-arctic
+  system. Caught with `grep -oE '#[0-9A-Fa-f]{6}' <file> | sort -u`
+  compared against the union of the relevant palette arrays. Worth
+  running this exact check on any future hand-authored SVG/color work in
+  this app rather than relying on "it looks about right."
+- **This round's own dev-server-process cleanup had to distinguish this
+  project's `next dev` from several other unrelated Node processes for
+  entirely different projects also running on this machine** (not just
+  the previously-logged foreign Vite/EduAILenz process on port 5173 —
+  this time also several `tsx --watch`, `pnpm`, and other `vite.js`
+  processes for unrelated `eduailenz-teams`/`Eduailenze` sandboxes).
+  Confirmed exact ownership via `Get-CimInstance Win32_Process`'s
+  `CommandLine` (looking for this project's own working directory/port)
+  before stopping anything, then confirmed via a failed `curl` afterward
+  that port 5173 no longer responds — same non-interference discipline
+  rounds 2-4 established, now validated against a much busier process
+  list than any prior round encountered.

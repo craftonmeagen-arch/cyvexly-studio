@@ -16,7 +16,7 @@
    until the Owner confirms one; when that happens, add `metadataBase`
    (currently omitted rather than guessed). Round 3 built the actual
    `opengraph-image.tsx` asset (verified real, on-brand, pixel-correct —
-   see `CYVEXLY_CHUNK_DEBT.md` item 4) since that specific file does not
+   see `CYVEXLY_CHUNK_DEBT.md` item 3) since that specific file does not
    need the domain to exist or render correctly, but confirmed via a real
    production `pnpm run build` (not just the dev server, which is
    misleading here) that the auto-generated `og:image`/`twitter:image`

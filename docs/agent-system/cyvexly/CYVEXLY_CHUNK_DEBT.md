@@ -6,35 +6,49 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
 
 ## Open
 
-1. **`/process` uses a simpler card-stack layout than
-   `mockups/04-process-planner.png`'s left panel.** The mockup shows a
-   vertical connected-line timeline (numbered circles joined by a line) with
-   a separate "Typical Timing" summary table and an "Our Collaboration
-   Promise" panel; the shipped page uses stacked cards with the timeframe as
-   a small badge per card, and has no timing-summary table or collaboration-
-   promise panel. This is a genuine gap, not a deliberate adaptation — it
-   was a time-boxed choice to ship a real, content-complete page (all five
-   stages' inputs/deliverables/approval points, matching vision §6.7)
-   without the extra layout/table work. Revisit when Chunk 2 does a
-   dedicated visual pass on this page.
-2. **Remaining sitemap routes that still 404: `/about`, `/privacy`,
+1. **Remaining sitemap routes that still 404: `/about`, `/privacy`,
    `/terms`.** As of round 4, `/services`, `/work` (+ three case-study
    pages), `/pricing`, `/process`, `/contact`, `/faq`, `/accessibility`,
    and `/start` (Project Planner, built round 4) are all built and
    verified — only `/about` and the two legal pages remain, all honestly
    blocked on Owner-supplied facts (see `CYVEXLY_APP_DEBT.md` items 1 and
    3).
-3. **Placeholder work-card imagery.** `selectedWork` / `caseStudies` in
-   `src/lib/site-config.ts` use CSS gradients, not real screenshots/crops,
+2. **Placeholder work-card imagery — partially resolved round 5, real
+   photographic imagery still open.** `selectedWork` / `caseStudies` in
+   `src/lib/site-config.ts` originally used flat two-tone CSS gradients
    for the three concept projects (Aurora Spaces, Nexora Systems, Vellora
-   Care). This is honest (no fabricated client work) but should be replaced
-   with real designed crops/screen sequences — `mockups/03-work-case-study.png`
-   shows real architectural photography and desktop/mobile screen preview
-   panels on the case-study template that this round could not add without
-   a real design asset (round 2 did add a real color-swatch + typography
-   "Visual direction" section per case study, closing part of this gap, but
-   the photographic hero and desktop/mobile screen previews remain).
-4. **Favicon: partially addressed round 2, social-sharing image still
+   Care) — honest (no fabricated client work) but flagged independently
+   by both the Auditor (`CYV-IFA-002`) and the Council (`CYC-R1-F002`) as
+   their own "Next" priority finding. Round 5 replaced the gradients with
+   `src/components/concept-preview.tsx`: three distinct, hand-authored
+   abstract SVG compositions, each a direct visualization of that
+   project's own already-written "decisions" copy (Aurora's
+   full-bleed/minimal-chrome look, Nexora's dense dashboard-panel feel,
+   Vellora's calm product+ingredient+checkout framing), reusing only each
+   project's own existing palette hex values (verified via a grep-based
+   cross-check — see the round-5 report). Pixel-verified via the
+   established `ImageResponse`-proxy technique. Round 5 also performed a
+   direct side-by-side comparison against `mockups/03-work-case-study.png`
+   (the §2.2 visual-plan/target comparison floor) and found a second,
+   more specific gap the earlier wording had not named: the mockup's
+   case-study detail page has a dedicated "Desktop experience" / "Mobile
+   experience" section — two small device-frame previews (a browser-chrome
+   frame and a phone frame) — which did not exist on the shipped page at
+   all, separate from the hero image. Round 5 built this section too
+   (`src/app/work/[slug]/page.tsx`, right after "Visual direction"),
+   reusing the same `ConceptPreview` artwork inside two new device-frame
+   wrappers, honestly labeled "An illustrative preview... not a
+   pixel-accurate screenshot." Verified at desktop/tablet/mobile widths
+   (zero horizontal overflow) and via a fetch/DOM structural check across
+   all three case studies. **Still open:** all of the above are schematic
+   illustrations, not real screenshots — the mockup's own device-frame
+   previews show real photographic/rendered scenes, and both reviewers'
+   closure tests ask for "real designed crops or screen sequences," which
+   needs an actual completed design to photograph (none exists for these
+   fictional concept projects) — an Owner-level framing question (see
+   round-5 recommended next tasks in `CYVEXLY_ACTIVE_CHUNK.md`), not a
+   reachable Builder gap this round.
+3. **Favicon: partially addressed round 2, social-sharing image still
    open.** Added `src/app/icon.svg` — a hand-authored abstract "C/Y signal
    mark" (an open orbit-ring arc plus a Y formed from two converging paths,
    single-color `#0F66E0`, no clichés) per vision §4's logo direction,
@@ -101,7 +115,7 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
    site will ship social-preview meta tags pointing at
    `http://localhost:3000`, which is worse than shipping no preview image
    at all.
-5. **Round-2 mockup comparison found real layout/density gaps on
+4. **Round-2 mockup comparison found real layout/density gaps on
    Services and Pricing vs. `mockups/02-services-pricing.png`** (visual
    floor comparison performed this round — see the round-2 report in
    `CYVEXLY_ACTIVE_CHUNK.md` for the full comparison):

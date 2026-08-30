@@ -2,7 +2,24 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
-import { processSteps } from "@/lib/site-config";
+import { collaborationPromise, processSteps } from "@/lib/site-config";
+
+function CheckIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M4 10.5l3.5 3.5L16 6" />
+    </svg>
+  );
+}
 
 export const metadata: Metadata = {
   title: "Process — Cyvexly Studio",
@@ -33,57 +50,107 @@ export default function ProcessPage() {
         </section>
 
         <section className="mx-auto max-w-4xl px-6 py-20">
-          <ol className="space-y-6">
-            {processSteps.map((step, index) => (
-              <li key={step.number} className="glass-panel rounded-2xl p-7 sm:p-9">
-                <div className="flex flex-wrap items-baseline justify-between gap-3">
-                  <div className="flex items-baseline gap-4">
-                    <span className="font-mono text-sm text-cyber-blue">
-                      {step.number}
-                    </span>
+          <ol className="relative space-y-8 sm:space-y-6">
+            <div
+              className="absolute left-7 top-3 bottom-3 hidden w-px bg-smoke-glass sm:block"
+              aria-hidden="true"
+            />
+            {processSteps.map((step) => (
+              <li
+                key={step.number}
+                className="relative flex flex-col gap-4 sm:flex-row sm:gap-6"
+              >
+                <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center self-start rounded-full border-2 border-cyber-blue bg-arctic-mist font-mono text-lg font-semibold text-cyber-blue">
+                  {step.number}
+                </div>
+
+                <div className="glass-panel flex-1 rounded-2xl p-7 sm:p-9">
+                  <div className="flex flex-wrap items-baseline justify-between gap-3">
                     <h2 className="font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
                       {step.title}
                     </h2>
+                    <span className="rounded-full bg-ice-field px-3 py-1 font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
+                      {step.timeframe}
+                    </span>
                   </div>
-                  <span className="rounded-full bg-ice-field px-3 py-1 font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
-                    {step.timeframe}
-                  </span>
+
+                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
+                    {step.description}
+                  </p>
+
+                  <dl className="mt-6 grid gap-5 border-t border-smoke-glass/70 pt-6 sm:grid-cols-3">
+                    <div>
+                      <dt className="font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
+                        From you
+                      </dt>
+                      <dd className="mt-1 text-sm text-midnight-slate">{step.clientInput}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
+                        From Cyvexly
+                      </dt>
+                      <dd className="mt-1 text-sm text-midnight-slate">{step.deliverable}</dd>
+                    </div>
+                    <div>
+                      <dt className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
+                        <CheckIcon className="h-3 w-3 text-cyber-blue" />
+                        Approval point
+                      </dt>
+                      <dd className="mt-1 text-sm text-midnight-slate">{step.approval}</dd>
+                    </div>
+                  </dl>
                 </div>
-
-                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
-                  {step.description}
-                </p>
-
-                <dl className="mt-6 grid gap-5 border-t border-smoke-glass/70 pt-6 sm:grid-cols-3">
-                  <div>
-                    <dt className="font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
-                      From you
-                    </dt>
-                    <dd className="mt-1 text-sm text-midnight-slate">{step.clientInput}</dd>
-                  </div>
-                  <div>
-                    <dt className="font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
-                      From Cyvexly
-                    </dt>
-                    <dd className="mt-1 text-sm text-midnight-slate">{step.deliverable}</dd>
-                  </div>
-                  <div>
-                    <dt className="font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
-                      Approval point
-                    </dt>
-                    <dd className="mt-1 text-sm text-midnight-slate">{step.approval}</dd>
-                  </div>
-                </dl>
-
-                {index < processSteps.length - 1 && (
-                  <div
-                    className="mx-auto mt-6 h-6 w-px bg-smoke-glass"
-                    aria-hidden="true"
-                  />
-                )}
               </li>
             ))}
           </ol>
+        </section>
+
+        <section className="mx-auto max-w-5xl px-6 pb-20">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="glass-panel rounded-2xl p-7 sm:p-9">
+              <h2 className="font-display text-lg font-semibold text-midnight-slate">
+                Typical timing
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-cool-graphite">
+                Most projects follow this timeline. Your actual dates depend on
+                scope and how quickly feedback comes back.
+              </p>
+              <dl className="mt-6 divide-y divide-smoke-glass/70">
+                {processSteps.map((step) => (
+                  <div
+                    key={step.number}
+                    className="flex items-baseline justify-between gap-4 py-3 first:pt-0 last:pb-0"
+                  >
+                    <dt className="text-sm text-midnight-slate">
+                      <span className="mr-2 font-mono text-xs text-cyber-blue">
+                        {step.number}
+                      </span>
+                      {step.title}
+                    </dt>
+                    <dd className="shrink-0 font-mono text-[11px] uppercase tracking-[0.08em] text-cool-graphite">
+                      {step.timeframe}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            <div className="glass-panel rounded-2xl p-7 sm:p-9">
+              <h2 className="font-display text-lg font-semibold text-midnight-slate">
+                Our collaboration promise
+              </h2>
+              <ul className="mt-6 space-y-4">
+                {collaborationPromise.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-signal-emerald" />
+                    <span className="text-sm leading-relaxed text-midnight-slate">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section className="border-y border-smoke-glass/70 bg-ice-field">

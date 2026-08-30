@@ -273,6 +273,16 @@ export const processSteps = [
   },
 ];
 
+// Grounded in the process stages above (approval points, response time,
+// launch-window support) rather than generic promises — kept as its own
+// list since it's read on the /process page only.
+export const collaborationPromise = [
+  "Every stage names what's waiting on you and what's waiting on Cyvexly before it starts.",
+  "A response within two business days, every time you reach out.",
+  "Approval before the work expands to the next stage — no surprise scope.",
+  "14 days of post-launch defect support included after every project.",
+];
+
 // Curated highlights for the Home preview, kept separate from
 // `pricingPackages` below (full scope list) so each can pick its own
 // best 3-4 items. Keep name/price in sync with `pricingPackages` by hand.

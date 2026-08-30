@@ -50,6 +50,18 @@ requires.
   `mockups/02-services-pricing.png`'s more compact layout — both pages now
   have icon badges (Services round 2, Pricing round 3); the density/framing
   difference itself remains a deliberate adaptation, not fixed.
+- **Round 5, revisiting closed-chunk debt (closed does not mean frozen):**
+  rebuilt `/process`'s steps section as a connected vertical timeline with
+  numbered circle badges, added a "Typical timing" table and an "Our
+  collaboration promise" panel, matching `mockups/04-process-planner.png`'s
+  visual pattern (`CYVEXLY_CHUNK_DEBT.md` item 1 — now resolved). Also
+  replaced the Work grid/case-study flat gradients with three distinct,
+  hand-authored abstract SVG compositions per concept project, grounded in
+  each project's own already-written creative "decisions" and palette
+  (`CYVEXLY_CHUNK_DEBT.md` item 2 — partially resolved; real photographic/
+  screen-sequence imagery, what both the Auditor and Council explicitly
+  asked for, remains open pending an Owner framing decision — see
+  `CYVEXLY_ACTIVE_CHUNK.md`'s round-5 report).
 - Non-goal: Project Planner (its own chunk, given its multi-step form
   complexity).
 
@@ -103,7 +115,7 @@ requires.
   2), and a real attended-session pixel confirmation of the favicon — round
   3 found a genuine 16px legibility concern via a proxy-rendering method
   (not a live browser tab) that needs independent confirmation before any
-  redesign; see `CYVEXLY_CHUNK_DEBT.md` item 4.
+  redesign; see `CYVEXLY_CHUNK_DEBT.md` item 3.
 
 ## Cross-chunk notes
 
