@@ -249,3 +249,38 @@
   responding again). Full account and the root-cause fix for future
   process-stop filters are in `CYVEXLY_WATCH.md` and
   `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
+## Round 7 — 2026-08-30
+
+- Redesigned the favicon/OG-image C/Y signal mark to fix the real 16px
+  legibility defect found round 3, unfixed for three rounds while
+  waiting on an "attended session" that never materialized in this
+  session type. Tested three candidate designs against the current mark
+  with real pixel evidence (16/32/64px, light and dark backgrounds) via
+  the established `ImageResponse`-proxy technique before choosing a
+  single-weight fused orbit-arc-plus-checkmark design; verified through
+  the real shipping `icon.svg`/`opengraph-image` routes in both dev and
+  a clean production build, zero regressions. `CYVEXLY_CHUNK_DEBT.md`
+  item 3's favicon half is now resolved.
+- Ran a real DOM/accessibility-tree-level keyboard-traversal, focus-
+  order, error-announcement, and progress-semantics audit of all nine
+  Planner steps — the Council's own explicit "Next Council question" —
+  using `javascript_tool`, `read_page`'s computed accessibility tree,
+  and `get_page_text`, since live `computer` key presses remain proven
+  unreachable in this session type. Found and verified: correct focus
+  order, native form controls with proper `<label>`/`<fieldset>`/
+  `<legend>` wiring on most steps, a correctly-built `aria-pressed`
+  toggle-group pattern on the one step using custom buttons, real
+  `role="alert"`/`aria-describedby` error wiring throughout, distinguishing
+  `aria-label`s on the review step's eight identical-text "Edit" buttons,
+  a measured-sufficient (5.06:1) focus-visible indicator on the Planner/
+  Contact text-field pattern, and no additional reduced-motion gap
+  beyond the two already-fixed effects. Honestly bounded as a
+  complementary proof layer, not a substitute for real Tab-key testing.
+- Made no code changes for the keyboard audit (verification only).
+  Rotated `CYVEXLY_ACTIVE_CHUNK.md`'s round-6 full report to
+  `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND6_REPORT.md` and
+  `CYVEXLY_WATCH.md`'s round-5 entries to
+  `docs/archive/CYVEXLY_WATCH_ARCHIVE.md` to stay under both files'
+  §7.14 hot-path caps. Landed as one source commit (`97f7b69`) plus this
+  round's documentation-update commit.

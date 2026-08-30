@@ -58,7 +58,34 @@
   standalone server-rendered image route (e.g. Next's `ImageResponse`/
   `next/og` file-convention routes) — used to verify `opengraph-image.tsx`
   and, via a temporary throwaway route, the favicon's small-size
-  rendering. It does not extend to full page layout/CSS screenshots.
+  rendering (round 3's original finding; round 7 reused the same
+  technique to redesign and re-verify the favicon after finding it
+  legitimately blurry at 16px). It does not extend to full page layout/
+  CSS screenshots.
+  **Re-confirmed round 7:** a direct `computer{action:"screenshot"}` test
+  at round start still times out with the same "Browser pane is not
+  displayed" error — third independent confirmation of the same root
+  cause (rounds 1-6, then round 7). Treat this as settled for this
+  session type; a future round should re-test only if there's a specific
+  reason to suspect the environment changed, not as routine ritual.
+  **`read_page` (accessibility-tree extraction) and `get_page_text`
+  confirmed fully functional, round 7** — independent of the compositing
+  limitation, same family as `javascript_tool`/`read_console_messages`/
+  `read_network_requests`. `read_page` gives real computed accessible
+  names/roles/states (e.g. surfaced that Planner progress-rail buttons
+  are named `"Step 1: About you (complete)"`, not just visually
+  color-coded) — genuinely stronger evidence for accessibility claims
+  than manually reading raw ARIA attributes alone.
+  **New, round 7:** `computer{action:"scroll_to"}` using a `read_page`
+  ref DOES move `window.scrollY` in this session, while plain JS
+  `window.scrollTo()` and coordinate-based `computer{action:"scroll"}`
+  (which also requires a prior screenshot — errors immediately without
+  one) do not — useful for revealing more of a long page's
+  accessibility tree via `read_page` without a live screenshot.
+  **Tested and ruled out within the same round:** scrolling this way
+  does not unlock `computer{action:"screenshot"}` — still fails
+  identically afterward. A genuinely separate, narrower capability, not
+  a path toward real screenshots in this session type.
 - Git repository, package manifest, and a runnable Next.js/TypeScript/
   Tailwind application now exist as of round 1 (see `CYVEXLY_ENVIRONMENT.md`).
 - Builder development port reservation: `5173`.

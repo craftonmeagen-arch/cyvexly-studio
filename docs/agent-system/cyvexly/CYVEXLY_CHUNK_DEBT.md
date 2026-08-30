@@ -48,44 +48,30 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
    fictional concept projects) — an Owner-level framing question (see
    round-5 recommended next tasks in `CYVEXLY_ACTIVE_CHUNK.md`), not a
    reachable Builder gap this round.
-3. **Favicon: partially addressed round 2, social-sharing image still
-   open.** Added `src/app/icon.svg` — a hand-authored abstract "C/Y signal
-   mark" (an open orbit-ring arc plus a Y formed from two converging paths,
-   single-color `#0F66E0`, no clichés) per vision §4's logo direction,
-   replacing the Next.js default for browsers that honor the SVG icon link
-   (Next.js emits both; the old `favicon.ico` default remains as a fallback
-   for browsers/contexts that don't). **Verified:** valid build (`○
-   /icon.svg` in the route table), served with correct content-type, and
-   correctly linked in `<head>` (`rel="icon" ... type="image/svg+xml"`) —
-   confirmed via a temporary dev server on a scratch port, not port 5173
-   (see the round-2 report's Audibles for why).
-
-   **Round 3: got real pixel evidence of small-size rendering for the
-   first time, via a proxy method, and found a genuine legibility
-   concern.** This session still cannot screenshot a live browser tab
-   (unchanged limitation — see `CYVEXLY_WATCH.md`), but rendered the exact
-   same path data through Next's `ImageResponse`/`resvg` pipeline (the
-   same rasterizer used for `opengraph-image.tsx`) at 16px, 32px, and 64px
-   in a temporary throwaway route, fetched the real PNG, and visually
-   inspected it — then deleted the temporary route and captures
-   immediately after (ephemeral-evidence rule). At 64px and 32px the mark
-   reads cleanly as an orbit ring + Y. **At 16px — the actual default
-   browser-tab favicon size — it does not: it degrades to an
-   indistinct blur**, and a follow-up test bumping `stroke-width` from
-   2.6 to 3.4 and 4.2 did not meaningfully fix it, pointing to overall
-   shape complexity (two thin overlapping strokes) rather than line
-   weight as the real cause. **Caveat, stated honestly:** `resvg` is a
-   real SVG rasterizer but is not proof of exactly how Chrome/Safari/
-   Firefox render an `<link rel="icon">` SVG in an actual tab (device
-   pixel ratio and browser-specific favicon scaling can differ) — treat
-   this as strong evidence of a real risk, not a final visual verdict.
-   **Recommendation:** the next attended session or Auditor/Council round
-   should confirm this in a real browser tab; if confirmed, the fix is
-   likely a simplified/bolder small-size mark rather than a stroke-width
-   tweak (e.g., a solid-fill glyph or a single dominant shape instead of
-   two thin overlapping strokes), possibly via a `sizes="16x16"` PNG
-   favicon variant alongside the SVG rather than relying on one mark to
-   scale from 16px to 64px.
+3. **Favicon 16px legibility: RESOLVED round 7 (see below); OG-image
+   metadata wiring: still open, domain-blocked (see the second half of
+   this item).** The original hand-authored "C/Y signal mark" (round 2)
+   was found round 3, via the `ImageResponse`-proxy pixel technique, to
+   blur into an indistinct shape at 16px — the actual default browser-
+   tab size — because of shape complexity (two thin overlapping
+   strokes), not line weight (a stroke-width bump to 3.4/4.2 didn't fix
+   it). Rounds 4-6 left this open pending "an attended session," which
+   never materialized in this exact (scheduled/unattended) session type
+   across repeated confirmations. Round 7 redesigned the mark instead of
+   waiting further: a single-weight (`stroke-width 5`) fused orbit-arc-
+   plus-checkmark shape, tested against two other candidates with real
+   pixel evidence at 16/32/64px on light and dark backgrounds via the
+   same proxy technique, applied to `src/app/icon.svg` and
+   `src/app/opengraph-image.tsx`. Verified through the real shipping
+   routes in a clean production build with a full route sweep — zero
+   regressions. **Caveat, still honest:** the proxy rasterizer
+   (`resvg`, via `next/og`) is not proof of exactly how Chrome/Safari/
+   Firefox scale an `<link rel="icon">` SVG in a live tab (round 3's own
+   caveat, still applies) — a real live-tab screenshot would still
+   strengthen this, but the defect itself is fixed on strong evidence,
+   not stalled indefinitely for a proof layer this session type cannot
+   reach. Full method and evidence in `CYVEXLY_ACTIVE_CHUNK.md`'s
+   round-7 report.
 
    **Social-sharing (Open Graph) image asset: built and pixel-verified
    round 3; the metadata wiring remains correctly blocked on the domain

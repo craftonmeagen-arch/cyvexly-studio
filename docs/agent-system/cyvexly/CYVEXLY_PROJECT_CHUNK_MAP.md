@@ -91,8 +91,18 @@ requires.
   motion-aware scroll pattern. Verified the end state is fully visible at
   both widths; the smooth-scroll animation itself is unobservable in this
   session (a session-proof limitation, not an unresolved defect — see
-  `CYVEXLY_WATCH.md`). Real Tab-key keyboard-traversal testing (the
-  Council's own suggested next question) remains open.
+  `CYVEXLY_WATCH.md`).
+- **Round 7:** ran a real DOM/accessibility-tree-level keyboard-
+  traversal, focus-order, error-announcement, and progress-semantics
+  audit of all nine steps — a legitimate alternate method to the still-
+  unreachable live Tab-key path, since `computer` key presses remain
+  proven non-functional in this session type. Found the implementation
+  solidly correct throughout (native form controls with proper label/
+  fieldset wiring on most steps, a correctly-built custom toggle-group
+  pattern on the one step that isn't, real accessible error wiring, a
+  sufficiently-contrasting focus indicator, no missed reduced-motion
+  gap). Real Tab-key traversal in an attended browser remains the one
+  piece this method can't fully substitute for.
 
 ## Chunk 4 — Utility, legal & launch readiness (OPENED round 2, IN PROGRESS)
 
@@ -120,10 +130,12 @@ requires.
   implementation detail. See `CYVEXLY_APP_DEBT.md` item 3.
 - **Remaining:** `/privacy`/`/terms` (Owner-blocked, above), `metadataBase`/
   `sitemap.xml`/canonical URLs (domain-blocked, `CYVEXLY_APP_DEBT.md` item
-  2), and a real attended-session pixel confirmation of the favicon — round
-  3 found a genuine 16px legibility concern via a proxy-rendering method
-  (not a live browser tab) that needs independent confirmation before any
-  redesign; see `CYVEXLY_CHUNK_DEBT.md` item 3.
+  2). **The favicon's 16px legibility defect (found round 3) is fixed as
+  of round 7** — redesigned and pixel-verified via the established proxy
+  technique rather than waiting further on an attended session that never
+  materialized in this session type; see `CYVEXLY_CHUNK_DEBT.md` item 3.
+  A real live-tab screenshot would still strengthen the proof, but is not
+  blocking the fix any longer.
 
 ## Cross-chunk notes
 

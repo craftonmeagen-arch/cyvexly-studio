@@ -23,4 +23,9 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
   concept-preview SVG compositions replacing flat Work/case-study gradients;
   case-study "Desktop & mobile experience" device-frame section), rotated
   out during round 6.
+- `CYVEXLY_CHUNK3_ROUND6_REPORT.md` — round 6 (three Council-flagged
+  fixes: Planner progress-rail auto-scroll, Services/Pricing table
+  overflow, scroll-behavior warning; root-caused the session's frame-
+  compositing limitation to `requestAnimationFrame`; a self-healed
+  cross-role process-interference incident), rotated out during round 7.
 

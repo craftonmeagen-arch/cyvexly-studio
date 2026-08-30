@@ -2,126 +2,94 @@
 
 ## Urgent items
 
-**This Builder round briefly stopped a concurrent Council round's own
-processes by mistake (§1.6 non-interference violation); the Council
-self-healed within ~3 minutes, confirmed with evidence — read the full
-account, don't skip it as resolved.** At ~20:52Z, a too-broad
-`Get-CimInstance` filter (`CommandLine -like '*app projects\website*'
--and CommandLine -like '*next*dev*'` — every role's runtime path contains
-both substrings) matched and stopped 4 processes belonging to a
-concurrent Council round (`council-20260830T204540Z`, its own isolated
-`next dev --port 5373`), confirmed via a failed `curl` to
-`http://127.0.0.1:5373/` right after. Did **not** touch anything under
-`.codex/runtime/council/` or its guard file — outside this Builder's
-authority to repair. **By ~20:56Z, re-checked and confirmed real
-recovery**: the Council's own `processes.json` showed a fresh launcher/
-dev-server/worker set it registered itself (~20:54:52Z–20:55:01Z), and
-`curl` to port 5373 returned `200` again — it detected the failure and
-relaunched on its own, no help needed. Full evidence and the root-cause
-fix (never reuse a `CommandLine`-substring filter that matches another
-role's shared-sandbox runtime path — check the exact port or working-
-directory root instead) are in `CYVEXLY_WATCH.md`'s round-6 entries.
-Apply that fix to any future process-stop filter. Whether this incident
-warrants Owner-facing disclosure despite the clean recovery is an
-Owner-level judgment this Builder round can't make unilaterally —
-surfaced here for that reason.
+None. Round 7 closed cleanly on the product-source side — no crash, no
+unsafe uncommitted state, no unresolved urgent reviewer finding, and no
+non-interference incident. (Round 6's own process-interference incident,
+which briefly stopped a concurrent Council round's own processes, was
+already fully self-healed and independently confirmed resolved by that
+same Council round before round 6 closed — see
+`docs/archive/chunks/CYVEXLY_CHUNK3_ROUND6_REPORT.md` and
+`CYVEXLY_WATCH.md`'s round-6 entries for the full account. Round 7
+applied the root-cause fix going forward: stopped every process it
+started by exact PID looked up via exact `CommandLine` match on this
+project's own port/working directory, never a shared-path substring.)
+`git log 196768e..HEAD` (round 6's start) through round 7's own commits
+— check `git log` for the exact current hashes since this prose will go
+stale the moment another commit lands.
 
-Otherwise, round 6 closed cleanly on the product-source side — no crash,
-no unsafe uncommitted state, no unresolved urgent reviewer finding beyond
-the incident above. `git log 196768e..HEAD` shows exactly two source
-commits (`1eb1242`, `f435f67`) plus this round's own documentation-update
-commits — check `git log` for the exact current hashes since this prose
-will go stale the moment another commit lands.
+## Concurrent Auditor finding `CYV-IFA-007`: already resolved, no action needed
 
-## Heads-up: the recovered Council round formally verified this round's three fixes, with real screenshots
+A concurrent Auditor round (`auditor-20260830T2115Z-003`, report
+`IFA-2026-08-30-R3`, published `2026-08-30T21:34:34Z` — after this
+Builder round's lock claim) correctly flagged this round's own temporary
+`src/app/scratch-favicon-check/route.tsx` proxy-testing route as a real
+risk (an untracked, unreviewed scratch endpoint that could accidentally
+ship) from a snapshot taken while the route still existed mid-work. It
+was deleted before this round's commit — confirmed clean via `git status`
+and a direct filesystem check at closeout, and absent from the
+production build's route table. A real, valid catch of a genuine
+concurrent-review risk window, already resolved by the time this round
+closed. No action needed; do not re-investigate.
 
-The same Council round that self-healed from the incident above
-published formal report `CYC-R3-20260830-01`
-(`docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md`,
-inbox-published `2026-08-30T21:11:10Z`, moments before this round's own
-close) using its own real, working browser (unaffected by this session's
-compositing limitation — it captured actual screenshots). **Disposition:
-all three CYC-R2 findings verified resolved** — `CYC-R2-F001` (Planner
-rail, phone/tablet, real screenshots), `CYC-R2-F004` (Services/Pricing
-mobile reflow — the report notes the Council independently confirmed
-this Builder's own Pricing follow-on too), `CYC-R2-F005` (scroll warning
-gone, zero console errors route-wide). Its own "Next Council question"
-asks for real keyboard-only/reduced-motion Planner testing — the same
-gap this Builder round already identified as unreachable via `computer`
-in this session (see above). No action needed beyond reading the full
-report; this is the independent, pixel-level second opinion this round's
-own report flagged as missing, now formally adopted.
+## Round 7: favicon 16px legibility fixed; Planner keyboard-accessibility audited via an alternate method
 
-## Orientation
-
-- **Round 6 fixed the Council's `CYC-R2-20260830-01` "Primary Next-Builder
-  Plan" items 1-3** (its formal report landed after round 5 closed, so
-  round 5's own handoff only had the in-progress evidence file to go on):
-  the Planner progress rail at `/start` now keeps the active step visible
-  at 390px/768px (`CYC-R2-F001`, verified end-state fully visible at both
-  widths); the Services "Common combinations" table reflows to stacked
-  cards below `sm` instead of silently clipping (`CYC-R2-F004`); and the
-  `scroll-behavior`/`data-scroll-behavior` console warning is gone
-  (`CYC-R2-F005`). A grep for the same table-overflow defect shape also
-  found and fixed two more instances on Pricing (package comparison,
-  add-ons) that the Council hadn't audited this round. See
-  `CYVEXLY_ACTIVE_CHUNK.md`'s round-6 report for full plan, methods, and
-  proof.
-- **`CYC-R2-F002` (abstract vs. real concept artwork) and `CYC-R2-F003`
-  (metadataBase) are unchanged, Owner-blocked** — same status as every
-  prior round, see the Owner-input questions below.
-- **New finding this round, not a defect: `scrollIntoView({behavior:
-  "smooth"})` doesn't actually animate in this session** — the same
-  underlying "page not compositing frames" limitation every prior round
-  found for `computer` screenshots (rounds 1-4) and `clientWidth`/
-  `innerWidth`/`visibilityState` reads (round 5) also affects the *smooth-
-  scroll animation* of any frame-dependent browser API, confirmed by
-  isolating the effect call itself (correct every time, via a monkey-
-  patched `Element.prototype.scrollIntoView` logging real calls) from the
-  animation completing (it doesn't, until the same call is temporarily
-  forced to `behavior: "auto"`, which then reaches the correct end state
-  immediately). **Reusable verification method for any future
-  frame-dependent fix in this session:** wrap the relevant browser API to
-  force the non-animated/instant variant and confirm the intended end
-  state is reached, separately confirm the unwrapped call fires with the
-  right target/args — this proves the code is correct even though the
-  session can't show you the animation completing. Full detail in
-  `CYVEXLY_WATCH.md`'s round-6 entry.
-- **Real Tab-key keyboard-traversal testing of the Planner is still not
-  done, and this round proved it's not reachable via `computer` key
-  presses in this exact session type — do not re-attempt with `computer`
-  key presses without new evidence it's been fixed.** The Council's own
-  "Different next Council question" asked for exactly this (focus order,
-  error announcement, progress semantics, review/consent boundary).
-  Confirmed the mechanism it depends on (native `disabled` on unreachable-
-  step buttons, which browsers exclude from tab order automatically) is
-  already correct. Then tested `computer{action:"key", text:"Tab"}`
-  directly with a real `document`-level `keydown` listener recording
-  events: the tool reported success but zero `keydown` events reached the
-  page and focus never moved — the same "page not compositing frames"
-  limitation as the click/screenshot issue, now confirmed for keyboard
-  input too. This session's `dispatchEvent`-based interaction method
-  (established round 2) fires listeners but doesn't trigger the browser's
-  native focus-order behavior either, so it can't substitute. Worth
-  attempting in an attended session, or investigating
-  whether a different automation method in this environment can do it.
-- **Chunk 3 (Project Planner) is otherwise unchanged from round 4/5**,
-  still open: the full nine-step UI/state/validation is DONE WITH PROOF at
-  `/start` (plus round 6's rail-visibility fix), but the chunk does not
-  close until the real server-side email route exists, which needs the
-  domain + email-provider decision (see below). No pixel-level visual
-  proof of `/start` exists yet either — unchanged, this session's
-  `computer{action:"screenshot"}` limitation persisted all round
-  (re-confirmed directly).
-- Chunk 4 (utility/legal pages) is unchanged from round 3: `/not-found`,
-  `/faq`, `/accessibility`, the favicon, `robots.txt`/no-index default,
-  and the OG image asset are done; `/privacy`/`/terms` remain blocked on
-  Owner-supplied jurisdiction facts; the favicon's 16px legibility concern
-  (found round 3) is still unconfirmed in a real browser tab.
-- Read `CYVEXLY_CHUNK_DEBT.md` before touching the favicon, the OG image/
-  `metadataBase`, or the Work/case-study concept imagery (partially
-  resolved round 5, real photographic imagery still an open Owner framing
-  question).
+- **Favicon (`CYVEXLY_CHUNK_DEBT.md` item 3): RESOLVED.** The C/Y mark's
+  two thin overlapping strokes blurred into an indistinct shape at 16px
+  (found round 3). Redesigned to a single-weight fused orbit-arc-plus-
+  checkmark mark, tested against two other candidates with real pixel
+  evidence at 16/32/64px via the established `ImageResponse`-proxy
+  technique, applied to both `src/app/icon.svg` and
+  `src/app/opengraph-image.tsx`. Verified through the real shipping
+  routes in both dev and a clean production build. **A real live-tab
+  screenshot would still strengthen this (the proxy rasterizer is not
+  proof of exact Chrome/Safari/Firefox `<link rel="icon">` scaling
+  behavior, per round 3's own caveat) but the defect itself is fixed on
+  strong evidence, not stalled any further.**
+- **Council's "Next Council question" (Planner keyboard-only/reduced-
+  motion review): partially addressed via a legitimate alternate
+  method, not resolved.** Real OS-level Tab-key traversal remains
+  unreachable in this session type (re-confirmed: `computer{action:
+  "screenshot"}` still times out with the same "Browser pane is not
+  displayed" error rounds 1-6 found). Instead, drove a real non-
+  submitting nine-step Planner flow and audited the actual DOM/ARIA
+  state: focus order matches visual order (Step 1, measured); Steps
+  1/3/4/5/8 use native radio/checkbox/select/textarea inputs in real
+  `<label>`s under `<fieldset>`/`<legend>` groups; Step 6's 44-button
+  readiness grid uses `aria-pressed` with self-describing `aria-label`s
+  and correct per-row exclusivity; conditional fields validate with real
+  `role="alert"` messages wired via `aria-describedby`; the review
+  step's eight "Edit" buttons carry distinguishing `aria-label`s despite
+  identical visible text; blocked-submit produces accessible errors with
+  no mail-client side effect; the Planner/Contact focus-visible border-
+  color indicator (replacing the global outline ring) measures 5.06:1
+  contrast against field background — a real, sufficient indicator, not
+  a silent regression; grepped for any other reduced-motion gap beyond
+  the two already-fixed effects — found none. **This is real DOM/ARIA-
+  level proof, not a substitute for observing an actual Tab-key
+  traversal** — the next Council round (or an attended session) should
+  still do that specific test; full detail and every measurement is in
+  `CYVEXLY_ACTIVE_CHUNK.md`'s round-7 report.
+- **New capability finding, fully resolved this round:**
+  `computer{action:"scroll_to"}` (using a `read_page` ref) actually
+  moves `window.scrollY` in this session, while plain JS
+  `window.scrollTo()` and coordinate-based `computer{action:"scroll"}`
+  do not. Tested the obvious follow-up — does scrolling this way unlock
+  `computer{action:"screenshot"}`? — within the same round: no, the
+  screenshot still fails identically. `scroll_to` is a genuinely
+  separate, narrower capability (useful for revealing more of a long
+  page's accessibility tree via `read_page`), not a path toward real
+  screenshots. No further investigation needed on this specific
+  question.
+- Chunk 3 (Project Planner) is otherwise unchanged from round 6, still
+  open: the full UI/state/validation is DONE WITH PROOF at `/start`, now
+  with a real keyboard-accessibility audit layered on top; the chunk
+  still doesn't close until the real server-side email route exists,
+  blocked on the domain + email-provider decision (unchanged).
+- Chunk 4 (utility/legal pages): favicon now resolved (above); `/privacy`/
+  `/terms` remain blocked on Owner-supplied jurisdiction facts; `/about`
+  remains blocked on Owner-supplied founder identity.
+- Read `CYVEXLY_CHUNK_DEBT.md` before touching the OG image/
+  `metadataBase` or the Work/case-study concept imagery.
 
 ## Four Owner-input questions still blocking real work
 
@@ -141,54 +109,37 @@ own report flagged as missing, now formally adopted.
 4. **Is abstract illustrative concept artwork an acceptable permanent
    answer for the Work/case-study visual gap, or is real commissioned
    design work needed** for one or more of the three fictional concept
-   projects (carried from round 5, `CYC-R2-F002`)? General design-industry
-   practice for speculative/fictional portfolio work centers on
-   disclosure (which Cyvexly's "Concept project" labeling already
-   provides), not a specific visual-fidelity bar — useful context, not a
-   substitute for the Owner's actual preference.
+   projects (carried from round 5, `CYC-R2-F002`)?
 
 All four are Owner-supplied facts, authorizations, or presentation-level
 product decisions, not reversible Builder judgment calls.
 
-## Favicon: still needs an attended-session confirmation before any redesign
+## Method notes worth reusing (full detail in `CYVEXLY_WATCH.md`'s round-7 entries)
 
-Unchanged from round 3 — see `CYVEXLY_CHUNK_DEBT.md` item 3 for full
-detail. The current C/Y signal-mark favicon may not be legible at 16x16,
-the actual default browser-tab size, per a proxy-rendering technique
-(not a real browser tab). Needs independent confirmation before
-redesigning.
-
-## Round-6 launch-readiness refresh: still not ready, but real measurable progress
-
-Re-ran the vision §15 14-item launch-readiness pass round 3 first
-established (it had gone stale after three rounds of real progress). Full
-item-by-item detail is in `CYVEXLY_ACTIVE_CHUNK.md`'s round-6 report.
-Headline: still **not launch-ready**, same four Owner-input blockers, but
-real progress (one fewer sitemap gap, the Planner now assessable and
-partially ready, stronger forms/accessibility/portfolio evidence). Worth
-re-running this same structured check once the Owner answers any of the
-four blocking questions, or every few rounds regardless — cheap to redo.
-
-## Round-6 method note: grep for a reviewer finding's exact defect shape, not just the flagged page
-
-Fixing the Council's Services table-overflow finding, then grepping
-`overflow-x-auto` across `src/` before considering the fix complete,
-found the identical defect (silent horizontal clipping, no scroll
-affordance) on two more Pricing tables the Council hadn't looked at this
-round. Worth doing this whenever a reviewer finding turns out to be one
-instance of a general structural pattern (a component shape, a CSS
-utility combination, a data-shape convention) rather than a one-off — the
-same pattern search discipline round 5 used for grep-based color-token
-audits.
+- **A real DOM/accessibility-tree audit (focus order via
+  `getBoundingClientRect`, accessible names/roles/states via attributes
+  and `read_page`, error wiring via `role="alert"`/`aria-describedby`,
+  contrast math for focus indicators) is a legitimate, reusable
+  substitute proof layer for keyboard accessibility when live Tab-key
+  input isn't reachable** — honestly bounded as complementary, not
+  equivalent, to real traversal testing.
+- **`ImageResponse` proxy routes must not store candidate JSX (especially
+  bare `<>...</>` Fragments) in module-level `const`s looked up by
+  string key** — causes a `"Cannot convert a Symbol value to a string"`
+  500 error in Satori. Use a plain function returning a fresh element
+  per request instead.
+- **Checking a wrapper element's own computed style, not just a child's,
+  matters for `display: none` verification** — a child's own
+  `getComputedStyle().display` doesn't reflect an ancestor's
+  `display: none`; use `checkVisibility()` or check the actual hiding
+  ancestor.
 
 ## Older method notes (carried forward as pointers, full detail archived)
 
-- **Round 5:** grep-based color audits (`grep -oE '#[0-9A-Fa-f]{6}' <file>
-  | sort -u` against a component's palette array) catch design-system
-  drift eyeballing misses — see `docs/archive/chunks/
+- **Round 5:** grep-based color audits catch design-system drift
+  eyeballing misses — see `docs/archive/chunks/
   CYVEXLY_CHUNK3_ROUND5_REPORT.md`.
 - **Round 4:** the Planner's fields use a shared field-component library
   (`src/components/planner/planner-fields.tsx`) driven by config data
-  (`src/lib/planner-config.ts`), the same shape as `servicesGroups`/
-  `pricingPackages`/`faqLibrary` — extend `planner-config.ts` first for
+  (`src/lib/planner-config.ts`) — extend `planner-config.ts` first for
   any future Planner content change rather than hand-editing markup.
