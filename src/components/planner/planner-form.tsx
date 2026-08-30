@@ -38,7 +38,6 @@ type PlannerData = {
   roleTitle: string;
   companyName: string;
   country: string;
-  timezone: string;
   otherApprovers: string;
   businessDescription: string;
   productsServices: string;
@@ -95,7 +94,6 @@ const emptyData: PlannerData = {
   roleTitle: "",
   companyName: "",
   country: "",
-  timezone: "",
   otherApprovers: "",
   businessDescription: "",
   productsServices: "",
@@ -597,6 +595,14 @@ export function PlannerForm() {
                 error={errors.pages}
                 columns="sm:grid-cols-3"
               />
+              {data.pages.includes("Other") && (
+                <TextField
+                  id="pagesOther"
+                  label="Describe the other page(s) you need"
+                  value={data.pagesOther}
+                  onChange={(v) => set("pagesOther", v)}
+                />
+              )}
               <NotSureToggle
                 id="notSureSitemap"
                 label="Not sure — recommend the sitemap. We'll suggest the right pages for your goals."
@@ -606,6 +612,16 @@ export function PlannerForm() {
                   clearError("pages");
                 }}
               />
+              {data.pages.length > 1 && !data.notSureSitemap && (
+                <TextAreaField
+                  id="essentialPages"
+                  label="Which pages are essential for launch?"
+                  hint="Optional — helps us prioritize if the full list can't all ship at once."
+                  value={data.essentialPages}
+                  onChange={(v) => set("essentialPages", v)}
+                  rows={2}
+                />
+              )}
               <div className="grid gap-5 sm:grid-cols-2">
                 <TextField
                   id="pageCount"
@@ -1126,6 +1142,8 @@ function buildSummaryText(data: PlannerData): string {
   lines.push("", "-- Website & pages --");
   add("Website type", data.websiteType);
   add("Pages", data.notSureSitemap ? "Not sure — recommend the sitemap" : data.pages);
+  add("Other page(s)", data.pagesOther);
+  add("Essential for launch", data.essentialPages);
   add("Approx. page count", data.pageCount);
   add("Needs migration", data.needsMigration);
   add("Multiple languages", data.multipleLanguages);

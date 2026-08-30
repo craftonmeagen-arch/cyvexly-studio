@@ -67,6 +67,7 @@ export const possiblePages = [
   "Contact",
   "Policies",
   "Account / member pages",
+  "Other",
 ];
 
 export const plannerFeatures = [
