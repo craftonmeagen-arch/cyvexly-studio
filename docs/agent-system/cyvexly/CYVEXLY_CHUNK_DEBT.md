@@ -83,6 +83,19 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
 
 ## Resolved round 2
 
+- **Fixed a real heading-hierarchy defect found by direct measurement, not
+  just code review.** After the icon/port work, ran an actual heading-level
+  check (`querySelectorAll('h1,h2,...')`, checked for any level skip) across
+  every round-2 page rather than relying on construction-time judgment. Six
+  of seven passed clean; `/work` skipped H1→H3 with no H2 in between,
+  because `WorkGrid`'s shared project-card component used `<h3>` for card
+  names while `/work/page.tsx` never wraps the grid in its own `<h2>`
+  section (unlike the Services page's own inline "Recent work" markup,
+  which correctly nests similar cards under an `<h2>`). Fixed by changing
+  `work-grid.tsx`'s card heading to `<h2>` (verified the component is only
+  used on `/work`, so this couldn't regress Services); re-measured all seven
+  pages afterward and confirmed zero skipped levels everywhere, including
+  the case-study template, FAQ, Accessibility, and the custom 404.
 - **Fixed a real Next.js 16 runtime bug**: `/work/[slug]` initially typed
   `params` as a plain `{ slug: string }` object (typecheck passed, since the
   hand-written type bypassed the framework's generated `PageProps` check),

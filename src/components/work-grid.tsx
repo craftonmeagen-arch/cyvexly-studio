@@ -57,9 +57,9 @@ export function WorkGrid() {
                 <span className="w-fit rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
                   {project.kind}
                 </span>
-                <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                <h2 className="font-display text-lg font-semibold text-midnight-slate">
                   {project.name}
-                </h3>
+                </h2>
                 <p className="text-sm text-cool-graphite">{project.summary}</p>
                 <div className="mt-1 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
