@@ -59,8 +59,10 @@ requires.
   and social-sharing assets, and the launch-readiness checklist in vision §15.
 - **Progress (round 2):** custom `/not-found` page (replaces Next.js default,
   used for both unmatched routes and `notFound()` calls), full `/faq`
-  library (11 categories, 30 Q&As per vision §6.11), and `/accessibility`
-  statement all built and verified.
+  library (11 categories, 30 Q&As per vision §6.11), `/accessibility`
+  statement, and a hand-authored SVG favicon (`src/app/icon.svg`,
+  build-verified but not pixel-visually confirmed — see `CYVEXLY_WATCH.md`)
+  all built.
 - **Deliberately not attempted this round:** `/privacy` and `/terms`. Unlike
   Accessibility (jurisdiction-agnostic — a WCAG target + contact route),
   Privacy and Terms need jurisdiction-specific legal language (business
@@ -68,9 +70,9 @@ requires.
   Builder round has and must not invent — this is the same class of gap as
   the About page's founder identity: Owner-supplied fact, not a reversible
   implementation detail. See `CYVEXLY_APP_DEBT.md` item 3.
-- **Remaining:** favicon/social-sharing assets (needs real design asset,
-  tracked in `CYVEXLY_CHUNK_DEBT.md` from round 1), launch-readiness
-  checklist pass (vision §15) once more of the site exists.
+- **Remaining:** a real social-sharing (Open Graph) image, a visual
+  pixel-check of the new favicon in an attended session, and a
+  launch-readiness checklist pass (vision §15) once more of the site exists.
 
 ## Cross-chunk notes
 
