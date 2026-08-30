@@ -1,5 +1,15 @@
 # Cyvexly Next Builder Handoff
 
+## Housekeeping note (not urgent, but check early)
+
+`CYVEXLY_ACTIVE_CHUNK.md` is at ~30.4KB against its 30KB/30720-byte
+§7.14 cap (already technically over the round-number threshold — 3
+KB-style, i.e. it's within the cap by bytes but has almost no headroom
+left, ~290 bytes). Round 8 should rotate the round-7 report to
+`docs/archive/chunks/` (matching the pattern already used for rounds
+1-6) near the start of its own work, before adding a round-8 report on
+top of it, rather than risking exceeding the cap mid-round.
+
 ## Urgent items
 
 None. Round 7 closed cleanly on the product-source side — no crash, no
