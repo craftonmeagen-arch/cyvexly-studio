@@ -176,11 +176,22 @@
   palette) via a grep-based cross-check before commit. Pixel-verified all
   three via the established `ImageResponse`-proxy technique (a temporary
   scratch route, deleted immediately after inspection per the
-  ephemeral-evidence rule). Partially closed `CYVEXLY_CHUNK_DEBT.md` item
-  2 — real photographic/screen-sequence imagery, what both reviewers'
-  closure tests actually ask for, remains open pending an Owner framing
-  decision on whether abstract concept artwork is an acceptable
-  permanent answer for fictional case studies.
+  ephemeral-evidence rule). A direct comparison against
+  `mockups/03-work-case-study.png` also found the case-study page was
+  entirely missing a "Desktop & mobile experience" device-frame preview
+  section; built it too, reusing the same artwork, and verified zero
+  overflow at desktop/tablet/mobile widths. Partially closed
+  `CYVEXLY_CHUNK_DEBT.md` item 2 — real photographic/screen-sequence
+  imagery, what both reviewers' closure tests actually ask for, remains
+  open pending an Owner framing decision on whether abstract concept
+  artwork is an acceptable permanent answer for fictional case studies. A
+  brief web search found that general design-industry practice for
+  speculative portfolio work centers on disclosure (which Cyvexly's
+  "Concept project" labeling already provides), not a specific visual-
+  fidelity bar — useful context for that Owner decision, not a substitute
+  for it. Also ran a full clean production-build verification (not just
+  the dev server) as a final check, given this project's own established
+  history of dev/build behavior differences.
 - The Browser pane's live-tab screenshot limitation persisted from every
   prior round, and a related new symptom appeared mid-round
   (`clientWidth`/`innerWidth` reading `0`, `visibilityState` reading
