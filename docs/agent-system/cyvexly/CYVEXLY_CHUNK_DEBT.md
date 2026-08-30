@@ -17,13 +17,13 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
    stages' inputs/deliverables/approval points, matching vision §6.7)
    without the extra layout/table work. Revisit when Chunk 2 does a
    dedicated visual pass on this page.
-2. **Remaining sitemap routes that still 404: `/about`, `/start`,
-   `/privacy`, `/terms`.** As of round 2, `/services`, `/work` (+ three
-   case-study pages), `/pricing`, `/process`, `/contact`, `/faq`, and
-   `/accessibility` are all built and verified — most of the header/footer
-   nav now resolves. `/about` and legal pages are honestly blocked on
-   Owner-supplied facts (see `CYVEXLY_APP_DEBT.md` items 1 and 3); `/start`
-   is Chunk 3 (Project Planner), not yet opened.
+2. **Remaining sitemap routes that still 404: `/about`, `/privacy`,
+   `/terms`.** As of round 4, `/services`, `/work` (+ three case-study
+   pages), `/pricing`, `/process`, `/contact`, `/faq`, `/accessibility`,
+   and `/start` (Project Planner, built round 4) are all built and
+   verified — only `/about` and the two legal pages remain, all honestly
+   blocked on Owner-supplied facts (see `CYVEXLY_APP_DEBT.md` items 1 and
+   3).
 3. **Placeholder work-card imagery.** `selectedWork` / `caseStudies` in
    `src/lib/site-config.ts` use CSS gradients, not real screenshots/crops,
    for the three concept projects (Aurora Spaces, Nexora Systems, Vellora
