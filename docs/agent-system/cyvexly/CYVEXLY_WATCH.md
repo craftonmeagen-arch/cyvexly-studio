@@ -1,125 +1,9 @@
 # Cyvexly Watch Index
 
 Observations and evidence, not new rules. Each entry is a place to look, not a
-boundary on future reasoning. Rounds 1-3 are rotated to
+boundary on future reasoning. Rounds 1-4 are rotated to
 `docs/archive/CYVEXLY_WATCH_ARCHIVE.md` to stay under this file's 20KB cap
 (§7.14) — read that file for full detail; the findings below still apply.
-
-## Round 4
-
-- **A CSS Grid item with no `min-w-0` will not shrink below a deeply
-  nested descendant's min-content size, even through an intervening
-  `overflow-x-auto` container — a real mobile page-width blowout, not a
-  theoretical concern.** `/start`'s `grid gap-8 lg:grid-cols-[1fr_320px]`
-  layout put the Planner's root `glass-panel` div in the `1fr` track. That
-  div contains a progress rail: `<nav className="overflow-x-auto">` around
-  `<ol className="flex min-w-max ...">` (nine step circles + connectors,
-  548px). Grid items default to `min-width: auto`, meaning the browser
-  won't shrink them below their content's min-content size unless told to
-  — and that automatic-minimum-size calculation propagated through the
-  `overflow-x-auto` nav (which had no explicit width of its own) up to the
-  grid item, forcing the *whole page* to 622px wide on a 375px mobile
-  viewport (measured directly via `document.documentElement.scrollWidth`
-  — real page-level overflow, confirmed by finding the actual widest
-  offending elements in the live DOM rather than guessing). Fixed by
-  adding `min-w-0` to the grid-item root div, which let it shrink to its
-  track's actual width; the inner `overflow-x-auto` nav then correctly
-  scrolled *within itself* instead (verified `nav.scrollWidth` 548px vs.
-  `nav.clientWidth` 277px post-fix). Worth checking any future `lg:`-only
-  (or any breakpoint-gated) multi-column grid layout that contains a
-  horizontally-scrollable descendant for the same pattern — this is a
-  well-known CSS Grid gotcha (search "grid blowout min-width auto") that
-  the site's existing single-column mobile-first pages never triggered
-  because none of them combined a breakpoint-gated multi-column grid with
-  an inner scroll container until this page.
-- **The `computer` screenshot limitation from rounds 1-3 persisted,
-  re-confirmed directly rather than assumed from old notes**:
-  `computer{action:"screenshot"}` still times out with "the Browser pane
-  is not displayed, so the page is not compositing frames" in this
-  session. `javascript_tool`-dispatched real DOM events (native-setter
-  `input`/`change` events, `dispatchEvent(new MouseEvent('click', ...))`)
-  remained fully reliable for driving the entire nine-step Planner
-  wizard, matching round 2's established interaction method.
-- **Re-checked `docs/agent-system/cyvexly/inbox/OPERATIONS.md` near
-  closeout (not just at orientation) and found a new entry timestamped
-  after this round's lock claim**: a Council "successor reconciliation"
-  publication at 18:42:09Z. Read it (read-only, no Council file touched):
-  it republishes the exact same stale round-1-era Home-page findings
-  round 3's own handoff already flagged as "nothing new," just under a
-  formal reconciliation status. No new actionable finding; confirms
-  round 3's assessment rather than adding to it. Worth re-checking this
-  inbox file near closeout, not just once at the start, since concurrent
-  reviewer rounds can publish mid-Builder-round (as they did in rounds 1
-  and 3 too).
-- **This round's own "unlabeled input" accessibility check (established
-  rounds 1-2, reused round 3) only queries
-  `input, select, textarea` — it never checked `button` elements**, and a
-  final code re-read (not the automated check) found three real gaps
-  it missed: icon-only progress-rail buttons with no text fallback, and
-  two groups of visually-repeated buttons (asset-status toggles,
-  review-step "Edit" links) sharing identical accessible names across
-  many instances. All three fixed with explicit `aria-label`s. Worth
-  widening that check's selector to include `button` (and checking for
-  duplicate accessible names among same-role siblings) in any future
-  round that builds a form with icon-only or visually-repeated buttons —
-  this project's forms before the Planner only had buttons with unique
-  visible text, so the gap never surfaced until now.
-- **The foreign Vite/EduAILenz process on port 5173 recurred a third
-  time** (rounds 2 and 3 already found it once each), this time as two
-  simultaneous listeners again (confirmed via `Get-CimInstance
-  Win32_Process`: one was this round's own `next dev`, PID stopped at
-  closeout; the other a `vite.js --config vite.config.ts` process, left
-  untouched). Now a well-established standing fact about this machine —
-  not worth re-investigating each round, just re-verify ownership by PID
-  before stopping anything on 5173, same as every prior round.
-- **`window.scrollTo({behavior: "smooth"})` bypasses this project's
-  global CSS `prefers-reduced-motion` rule** (`globals.css`'s
-  `*, *::before, *::after { transition-duration: 0.001ms !important; }`
-  block only overrides `scroll-behavior` set via CSS, not an explicit
-  `behavior: "smooth"` argument passed directly to the JS `scrollTo`
-  call, which browsers honor regardless of the CSS property). Found this
-  while adding the Planner's step-change scroll-to-top — no other page
-  in the app calls `scrollTo` at all (checked via
-  `grep -rn "scrollTo" src`), so this wasn't a pre-existing gap, but is
-  worth checking for any future JS-driven smooth scroll anywhere in this
-  app: guard it with `window.matchMedia("(prefers-reduced-motion:
-  reduce)").matches` and fall back to `"auto"`, the same fix applied
-  here.
-- **A grep-based field-usage audit of `planner-form.tsx` (counting every
-  `PlannerData` key's occurrences in the file) found two real gaps in
-  work already claimed "DONE WITH PROOF" earlier in this same round**: a
-  `pagesOther` field and an `essentialPages` field were typed and
-  initialized but never actually rendered as inputs or included in the
-  submission summary — both explicit vision §9 step-4 requirements
-  ("other" as a page option; "which pages are essential for launch").
-  Live interactive testing alone (clicking through the happy path) did
-  not surface this, because nothing was broken — the fields simply never
-  existed in the rendered UI, so there was nothing to click. A field/prop
-  count against the full data shape is a cheap, fast way to catch this
-  exact "planned in the type, forgotten in the render" class of gap on
-  any future large, config-driven form in this app — worth running before
-  calling a multi-field form step complete, not just after a bug report.
-- **`claude-in-chrome`'s `list_connected_browsers` returned an empty
-  array in this scheduled session** — confirmed directly (not assumed)
-  that there is no attended real-Chrome fallback available for
-  pixel-level screenshot proof in a scheduled Cyvexly Builder run, which
-  makes sense (no user is present to have a Chrome extension connected).
-  Re-verify this each round rather than treating it as permanent — an
-  attended session or a different invocation context could differ.
-- **A new ESLint rule shipped with this project's `eslint-config-next`
-  install, `react-hooks/set-state-in-effect`, flags any direct `setState`
-  call inside a `useEffect` body** — including the legitimate,
-  textbook-correct pattern of restoring state from a browser-only store
-  (`localStorage`) in a post-mount effect rather than a lazy `useState`
-  initializer (which would read `localStorage` during the server render
-  too, where it doesn't exist, and diverge from the client's first
-  render, producing a real hydration mismatch). Resolved with a scoped
-  `/* eslint-disable react-hooks/set-state-in-effect */` /
-  `/* eslint-enable */` pair around just the four `setState` calls inside
-  the `try` block (not a rule-wide disable, and not a `disable-next-line`
-  on the wrong line, which does not cover statements inside a nested `if`
-  block). Worth knowing before any future `useEffect` that reads
-  `localStorage`/`sessionStorage`/another browser-only store on mount.
 
 ## Round 5
 
@@ -293,3 +177,38 @@ boundary on future reasoning. Rounds 1-3 are rotated to
   don't trigger native focus-order behavior, so they can't substitute
   either — a genuine test needs an attended session or a different
   automation surface.
+- **INCIDENT — this Builder round stopped a concurrent Council round's own
+  processes by mistake, a real §1.6 non-interference violation, not a
+  near-miss.** At ~20:52Z, while stopping this round's own leftover dev-
+  server process tree, used a `Get-CimInstance Win32_Process` filter of
+  `CommandLine -like '*app projects\website*' -and CommandLine -like
+  '*next*dev*'` — too broad, since a concurrently-running Council round
+  (`council-20260830T204540Z`, started ~20:45:41Z per its own
+  `.codex/role-state/council.active.json`) was running its own isolated
+  `next dev --port 5373` under `.codex/runtime/council/
+  council-20260830T204540Z/runtime/`, whose command line also contains
+  both substrings. The filter matched and this round stopped 4 of the
+  Council's own processes (PIDs 12292, 37672, 21136, 13128 — 3 of these
+  match exactly the Council's own `processes.json` manifest entries for
+  its launcher/workers; the 4th, 13128, was an unregistered-yet worker
+  visible by path). `curl` to `http://127.0.0.1:5373/` immediately after
+  confirmed the Council's dev server no longer responds. The Council's
+  registered dev-server PID (31940) and its dispatcher PID (36604) were
+  also found gone afterward — not directly targeted by this Builder's
+  stop command, most likely a cascading effect of killing the parent
+  launcher/workers, though this Builder cannot prove that causation with
+  certainty from process evidence alone. **Did not attempt to restart,
+  repair, or touch anything under `.codex/runtime/council/` or
+  `.codex/role-state/council.active.json`** — that is Council-owned
+  infrastructure this Builder has no authority over, and guessing at its
+  exact launch parameters risks compounding the interference rather than
+  fixing it. **Root cause and fix for future rounds:** a process-stop
+  filter for "my own dev server" must check the exact port (5173) and/or
+  the exact working-directory root the process was launched from — not a
+  path substring that every role's runtime shares (`app projects\website`
+  appears in every role's `.codex/runtime/<role>/.../runtime` path, since
+  all roles share the same sandbox root) — before calling `Stop-Process`.
+  This round's own PID-based stops earlier in the round (verified by full
+  exact command line, e.g. the `next dev --port 5173`/`next start --port
+  5173` processes) were correctly scoped; only this final broad filter
+  was not. See the urgent item in `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
