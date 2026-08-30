@@ -166,7 +166,7 @@ boundary on future reasoning.
   Worth remembering for any future scratch/private route work in this
   App Router project.
 - **The same unrelated foreign Vite/EduAILenz process from round 2's port
-  5173 conflict recurred during closeout verification** (node.exe running
+  5173 conflict recurred during closeout verification (round 3)** (node.exe running
   `node_modules\vite\bin\vite.js`, a different PID than round 2's, so a
   fresh process from that other session, not a survivor). This time it
   ran concurrently with this Builder's own `next dev --port 5173` rather
@@ -179,3 +179,53 @@ boundary on future reasoning.
   occurrence. Worth treating this as a standing fact about this machine
   (something outside this project regularly runs a Vite dev server on
   5173) rather than a one-off round-2 fluke.
+
+## Round 4
+
+- **A CSS Grid item with no `min-w-0` will not shrink below a deeply
+  nested descendant's min-content size, even through an intervening
+  `overflow-x-auto` container — a real mobile page-width blowout, not a
+  theoretical concern.** `/start`'s `grid gap-8 lg:grid-cols-[1fr_320px]`
+  layout put the Planner's root `glass-panel` div in the `1fr` track. That
+  div contains a progress rail: `<nav className="overflow-x-auto">` around
+  `<ol className="flex min-w-max ...">` (nine step circles + connectors,
+  548px). Grid items default to `min-width: auto`, meaning the browser
+  won't shrink them below their content's min-content size unless told to
+  — and that automatic-minimum-size calculation propagated through the
+  `overflow-x-auto` nav (which had no explicit width of its own) up to the
+  grid item, forcing the *whole page* to 622px wide on a 375px mobile
+  viewport (measured directly via `document.documentElement.scrollWidth`
+  — real page-level overflow, confirmed by finding the actual widest
+  offending elements in the live DOM rather than guessing). Fixed by
+  adding `min-w-0` to the grid-item root div, which let it shrink to its
+  track's actual width; the inner `overflow-x-auto` nav then correctly
+  scrolled *within itself* instead (verified `nav.scrollWidth` 548px vs.
+  `nav.clientWidth` 277px post-fix). Worth checking any future `lg:`-only
+  (or any breakpoint-gated) multi-column grid layout that contains a
+  horizontally-scrollable descendant for the same pattern — this is a
+  well-known CSS Grid gotcha (search "grid blowout min-width auto") that
+  the site's existing single-column mobile-first pages never triggered
+  because none of them combined a breakpoint-gated multi-column grid with
+  an inner scroll container until this page.
+- **The `computer` screenshot limitation from rounds 1-3 persisted,
+  re-confirmed directly rather than assumed from old notes**:
+  `computer{action:"screenshot"}` still times out with "the Browser pane
+  is not displayed, so the page is not compositing frames" in this
+  session. `javascript_tool`-dispatched real DOM events (native-setter
+  `input`/`change` events, `dispatchEvent(new MouseEvent('click', ...))`)
+  remained fully reliable for driving the entire nine-step Planner
+  wizard, matching round 2's established interaction method.
+- **A new ESLint rule shipped with this project's `eslint-config-next`
+  install, `react-hooks/set-state-in-effect`, flags any direct `setState`
+  call inside a `useEffect` body** — including the legitimate,
+  textbook-correct pattern of restoring state from a browser-only store
+  (`localStorage`) in a post-mount effect rather than a lazy `useState`
+  initializer (which would read `localStorage` during the server render
+  too, where it doesn't exist, and diverge from the client's first
+  render, producing a real hydration mismatch). Resolved with a scoped
+  `/* eslint-disable react-hooks/set-state-in-effect */` /
+  `/* eslint-enable */` pair around just the four `setState` calls inside
+  the `try` block (not a rule-wide disable, and not a `disable-next-line`
+  on the wrong line, which does not cover statements inside a nested `if`
+  block). Worth knowing before any future `useEffect` that reads
+  `localStorage`/`sessionStorage`/another browser-only store on mount.

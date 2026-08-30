@@ -42,7 +42,14 @@
    principle as the About page's founder-identity gap (item 1).
 4. **§4.12 Outcome Reachability Check — Project Planner (Chunk 3)
    email-delivery mechanism.** Performed round 3, before opening Chunk 3,
-   per the round-2 handoff's explicit recommendation.
+   per the round-2 handoff's explicit recommendation. **Round 4 update:**
+   the separable, authorized part of this item (the Planner's UI/state/
+   validation) is now built and verified at `/start` — see
+   `CYVEXLY_ACTIVE_CHUNK.md`'s round-4 report. The blocked part described
+   below (a real automatic confirmation email sent *from* Cyvexly) is
+   unchanged and still needs both authorizations named here. The Planner
+   currently submits via the same `mailto:` interim bridge as Contact,
+   explicitly labeled in the UI as not satisfying this requirement.
    - **Required outcome (vision §6.9):** on Planner submit, (a) Cyvexly
      receives the complete structured answers, and (b) the prospect
      automatically receives a confirmation email summarizing their own

@@ -1,52 +1,55 @@
 # Cyvexly Current State
 
-**Global round:** 3
-**Active chunk:** Chunk 2 — Core marketing pages — CLOSED round 3. Chunk 4
-— Utility/legal pages — opened round 2, in progress. Chunk 3 — Project
-Planner — not yet opened; its foundational email-delivery question was
-formally answered this round (see below) but the UI itself was
-deliberately not started.
-**Chunk-local round:** Chunk 4 round 2
-**Current mission:** Open Chunk 3 and build the Planner's full UI/state/
-validation (vision §6.9/§9) as a dedicated round — round 3's §4.12
-Reachability Check found this is a genuinely separable, authorized slice
-even though real "sent from Cyvexly" email is still blocked on a domain +
-email-provider decision (`CYVEXLY_APP_DEBT.md` item 4). In parallel or
-after, continue Chunk 4: the favicon has a newly-found real 16px
-legibility problem needing an attended-session confirmation and redesign
-(`CYVEXLY_CHUNK_DEBT.md` item 4); `/privacy`/`/terms` remain blocked on
-Owner-supplied jurisdiction facts. Two Owner-input requests still block
-real pages: About-page founder identity, and Privacy/Terms jurisdiction
-(`CYVEXLY_APP_DEBT.md` items 1 and 3) — do not invent either.
-**Accepted source position:** Git repository on branch `master`. Round 3
-landed as one or more commits (Pricing icon parity, robots/no-index
-default, a real OG-image asset, Chunk 2 closure, and documentation
-accuracy/archival follow-ups) after round 2's commits — **treat `git log`
-as the source of truth for the exact count and hashes**; this prose is a
-summary, not a ledger, and will go stale the moment another commit lands.
-Working tree is clean of Builder-owned changes at close; only the same
-pre-existing Auditor/Council-owned files remain uncommitted (correctly
-left untouched across rounds 2 and 3 — see `CYVEXLY_WATCH.md`).
+**Global round:** 4
+**Active chunk:** Chunk 2 — Core marketing pages — CLOSED round 3. Chunk 3
+— Project Planner — opened round 4; full UI/state/validation built and
+verified at `/start`, real "sent from Cyvexly" confirmation email still
+blocked on the domain + email-provider decision. Chunk 4 — Utility/legal
+pages — opened round 2, in progress, unchanged this round.
+**Chunk-local round:** Chunk 3 round 1
+**Current mission:** Route the domain + transactional-email-provider
+decision to the Owner (`CYVEXLY_APP_DEBT.md` item 4) so the Planner's
+real confirmation-email route can be built and Chunk 3 formally closed.
+In parallel or after: get a real pixel-level screenshot of `/start`
+(desktop/tablet/mobile) once an attended session or reviewer round is
+available — this round's verification is thorough on structure,
+interaction, validation, and overflow, but has no pixel-level visual
+proof; confirm the favicon's 16px legibility problem in a real browser
+tab (`CYVEXLY_CHUNK_DEBT.md` item 4, open since round 3); continue Chunk
+4's remaining items. Three Owner-input requests still block real work:
+About-page founder identity, Privacy/Terms jurisdiction, and the
+domain/email-provider decision (`CYVEXLY_APP_DEBT.md` items 1, 3, 4) — do
+not invent any of them.
+**Accepted source position:** Git repository on branch `master`. Round 4
+landed as one or more commits (Project Planner UI at `/start`, a real
+mobile CSS-grid overflow fix found and fixed during verification, and
+documentation updates including archiving round 3's full report) after
+round 3's commits — **treat `git log` as the source of truth for the
+exact count and hashes**; this prose is a summary, not a ledger, and will
+go stale the moment another commit lands. Working tree is clean of
+Builder-owned changes at close; only the same pre-existing Auditor/
+Council-owned files remain uncommitted (correctly left untouched across
+every round — see `CYVEXLY_WATCH.md`).
 
 ## Immediate orientation
 
 - Run `pnpm install` then `pnpm run dev` (or use `.claude/launch.json`,
   configuration `cyvexly-builder`, port `5173`) to see the real app.
 - `pnpm run build`, `pnpm exec tsc --noEmit`, and `pnpm run lint` all pass
-  clean as of this round.
-- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-3 report before planning round 4
-  — it includes a full launch-readiness pass against vision §15's 14
-  items, worth reading before claiming any readiness state.
+  clean as of this round (lint required one scoped, commented
+  `eslint-disable` pair for a new `react-hooks/set-state-in-effect`
+  false positive on a legitimate `localStorage`-restore pattern — see
+  `CYVEXLY_ACTIVE_CHUNK.md`'s round-4 report for why).
+- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-4 report before planning round
+  5 — it includes a real CSS Grid "blowout" mobile-overflow bug that was
+  found and fixed during verification, worth knowing before touching any
+  future `lg:`-only multi-column grid layout containing a
+  horizontally-scrolling descendant.
 - Read `CYVEXLY_CHUNK_DEBT.md` and `CYVEXLY_APP_DEBT.md` before building
   deeply on Services/Pricing (known visual-density gaps vs. mockups), the
-  favicon (new 16px legibility finding), the OG image/`metadataBase`, the
-  About page, or legal pages.
-- Read `CYVEXLY_WATCH.md` for round-3 findings worth knowing before
-  further work: a served image fetched via `curl` and opened with `Read`
-  IS viewable in this unattended session (unlike a live browser-tab
-  screenshot, which still is not) — useful for verifying any
-  `ImageResponse`/generated-image route; `next dev` and `next build`
-  resolve `metadataBase`-dependent absolute URLs differently, so always
-  check real `pnpm run build` output for that class of claim, not just
-  the dev server; and an App Router folder named `_something` is a
-  private-folder convention silently excluded from routing.
+  favicon (16px legibility finding, still open), the OG image/
+  `metadataBase`, the About page, legal pages, or the Planner's
+  email-delivery route.
+- Read `CYVEXLY_WATCH.md` for round-4 findings: the `computer` screenshot
+  limitation persisted (re-confirmed, not just assumed from old notes);
+  the CSS Grid min-width blowout bug and its root cause/fix.

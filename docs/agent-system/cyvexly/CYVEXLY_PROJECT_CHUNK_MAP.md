@@ -53,14 +53,26 @@ requires.
 - Non-goal: Project Planner (its own chunk, given its multi-step form
   complexity).
 
-## Chunk 3 — Project Planner (NOT YET OPENED)
+## Chunk 3 — Project Planner (OPENED round 4, IN PROGRESS)
 
-- Likely outcome: the nine-step conversational Planner (vision §6.9 and §9),
-  submission handling, confirmation state, and summary email — scoped once a
-  form/email-delivery approach is chosen and, if needed, authorized (§4.12
-  Outcome Reachability Check applies: this needs a foundational decision
-  about the email-delivery/backend mechanism before implementation, not just
-  Builder judgment).
+- **Outcome:** the nine-step conversational Planner (vision §6.9 and §9) at
+  `/start`, with a working real transactional-email-based confirmation once
+  authorized (§4.12 Outcome Reachability Check, run round 3: needs a
+  foundational domain + email-provider decision, not just Builder judgment).
+- **Progress (round 4):** the full UI/state/validation is built and verified
+  — all nine steps, per-step required-field validation with "not sure —
+  recommend it" escape hatches (vision §6.9), conditional questions (an
+  "Other" goal text field on step 3, a feature-detail follow-up on step 5),
+  a review/summary step with per-group edit links, required
+  acknowledgement/consent checkboxes, a spam-protection honeypot, and a
+  client-side "save & continue later" draft via `localStorage`. Submission
+  reuses Contact's `mailto:` interim bridge, explicitly labeled as not
+  satisfying the "confirmation email sent from Cyvexly" requirement.
+- **Remaining:** the real server-side email-delivery route, blocked on the
+  domain + transactional-email-provider decision (`CYVEXLY_APP_DEBT.md`
+  item 4, unchanged); a real pixel-level screenshot of `/start` (this
+  round's own session type still cannot screenshot a live browser tab —
+  see `CYVEXLY_WATCH.md`).
 
 ## Chunk 4 — Utility, legal & launch readiness (OPENED round 2, IN PROGRESS)
 

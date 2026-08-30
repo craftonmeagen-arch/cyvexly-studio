@@ -10,4 +10,8 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
   `/contact`, `/work` + 3 case studies; Chunk 4 opened early with
   `/not-found`, `/faq`, `/accessibility`, favicon), rotated out during
   round 3.
+- `CYVEXLY_CHUNK4_ROUND3_REPORT.md` — round 3 (Chunk 2 formal closure,
+  Pricing icon parity, robots/no-index default, OG image, favicon 16px
+  legibility finding, first launch-readiness pass against vision §15),
+  rotated out during round 4.
 

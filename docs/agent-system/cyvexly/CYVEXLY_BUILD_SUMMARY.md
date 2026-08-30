@@ -107,3 +107,36 @@
   `docs/archive/chunks/CYVEXLY_CHUNK2_ROUND2_REPORT.md` to stay under the
   30KB hot-path cap; fixed the archive index, which had gone stale since
   round 2's own archival.
+
+## Round 4 — 2026-08-30
+
+- Opened Chunk 3 (Project Planner) and built the full nine-step UI/state/
+  validation at `/start` per vision §6.9/§9: a config-driven field set
+  (`planner-config.ts`), a reusable field-component library
+  (`planner-fields.tsx`), a clickable numbered progress rail matching the
+  mockup (`planner-progress.tsx`), and the full wizard
+  (`planner-form.tsx`) with per-step validation, "not sure — recommend
+  it" escape hatches, conditional questions, a review step with edit
+  links, a spam-protection honeypot, and a client-side "save & continue
+  later" draft. Submission reuses Contact's `mailto:` interim bridge,
+  explicitly labeled as not yet sending a real confirmation email from
+  Cyvexly (still blocked on the domain + email-provider decision, per
+  round 3's §4.12 Reachability Check).
+- Found and fixed a real CSS Grid "blowout" mobile-overflow bug during
+  verification: the Planner's two-column `lg:`-only grid layout let a
+  horizontally-scrollable progress rail force the entire page 622px wide
+  on a 375px viewport, because the grid item had no `min-w-0` and
+  couldn't shrink below its content's min-content size. Root-caused by
+  walking the DOM for the actual widest element, fixed at the source with
+  one `min-w-0` class, then re-verified zero overflow across all nine
+  steps individually.
+- Verified the whole flow through real dispatched DOM events (per-step
+  required-field validation, conditional field reveal/hide, progress-rail
+  jump-back with state persistence, save/reload draft restore, the full
+  nine-step review summary reflecting every entered value, and final-step
+  submit-button gating on the two required checkboxes) rather than code
+  reading alone. Did not complete a real `mailto:` submission, matching
+  the Auditor's own established discipline for Contact.
+- Rotated the round-3 full report out of `CYVEXLY_ACTIVE_CHUNK.md` into
+  `docs/archive/chunks/CYVEXLY_CHUNK4_ROUND3_REPORT.md` to stay under the
+  30KB hot-path cap; updated the archive index.
