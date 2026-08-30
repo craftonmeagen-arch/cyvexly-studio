@@ -4,12 +4,14 @@
 
 None. Round 4 closed cleanly — no crash, no unsafe uncommitted state, no
 unresolved urgent reviewer finding discovered this round. It landed as
-several follow-on commits after the initial one, not just one — check
-`git log` for the full set (a field-usage audit found and fixed two
-fields typed but never rendered against vision §9, and a
-`prefers-reduced-motion` gap in the new scroll-to-top was found and
-fixed; both are closed, not open work, but the initial commit message
-alone undersells what actually shipped).
+13 commits, not just one — check `git log 09a7653..HEAD` for the full
+set. The "(cont.)" commits are all closed, verified follow-on fixes
+found by re-auditing this round's own work with fresh eyes (a
+field-usage audit found two vision §9 fields typed but never rendered; a
+`prefers-reduced-motion` gap in the new scroll-to-top; three groups of
+Planner buttons with missing or duplicate accessible names for
+assistive technology) — the initial commit message alone undersells
+what actually shipped.
 
 ## Orientation
 
