@@ -84,20 +84,35 @@ thicker line. See `CYVEXLY_CHUNK_DEBT.md` item 4 for full detail.
 ## A concurrent Auditor round published new evidence mid-round (correction)
 
 Unlike round 2, a concurrent reviewer round DID publish new material this
-time. Mid-round, four new Auditor evidence screenshots appeared
-(`auditor-20260830T1738Z-pricing-desktop.png`,
-`-case-study-desktop.png`, `-work-mobile.png`,
-`-work-redesign-empty.png`) plus a delayed "emergency continuity"
-publication of the Council's stale round-1-era report (same content as
-before, nothing new). `CYVEXLY_AUDITOR_ACTIVE_ROUNDS.md`/
-`AUDITOR_CURRENT.md` still only show the completed round-1-era Auditor
-round, so a new Auditor round may still be in progress and could publish
+time. Mid-round, five new Auditor evidence files appeared
+(`auditor-20260830T1738Z-pricing-desktop.png`, `-case-study-desktop.png`,
+`-work-mobile.png`, `-work-redesign-empty.png`, and
+`-metadata-probe.md`), plus a delayed "emergency continuity" publication
+of the Council's stale round-1-era report (same content as before,
+nothing new). `CYVEXLY_AUDITOR_ACTIVE_ROUNDS.md`/`AUDITOR_CURRENT.md`
+still only show the completed round-1-era Auditor round, so a new
+Auditor round (its own header identifies it as `auditor-20260830T1738Z-
+002`, i.e. a second round) may still be in progress and could publish
 its actual report/findings after this Builder round closes — the next
 Builder should re-check `CYVEXLY_REVIEW_INDEX.md`'s current reports
-fresh, not assume this round's read covered everything. All four new
-screenshots were read (not touched) and showed no new defect — they
-independently confirmed this round's Pricing icons, round 2's case-study
-visual-direction section, and Work page mobile/empty-filter states all
-render correctly. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`'s round-3
-report addendum. All Auditor/Council-owned files were left untouched per
-role non-interference, same as every prior round.
+fresh, not assume this round's read covered everything. All five new
+files were read (not touched) and showed no new defect — the four
+screenshots independently confirmed this round's Pricing icons, round
+2's case-study visual-direction section, and Work page mobile/empty-
+filter states all render correctly; the metadata probe independently ran
+`pnpm build` in its own isolated runtime and reached the exact same
+`metadataBase`/`localhost:3000` conclusion this round did, from a
+completely separate process. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`'s
+round-3 report addendum. All Auditor/Council-owned files were left
+untouched per role non-interference, same as every prior round.
+
+## One more small fix landed after this file was first drafted
+
+During final diff-accountability review (comparing the actual git diff
+against this round's own plan, per the governing packet's closeout
+requirement), also: revised the Services/Pricing final-CTA headline
+(see `CYVEXLY_CHUNK_DEBT.md` item 5) and fixed two now-stale paragraphs
+in `CYVEXLY_PROJECT_CHUNK_MAP.md`'s Chunk 4 section that still described
+pre-round-3 state. Both are separate, already-committed follow-on
+commits — check `git log` for their exact hashes rather than assuming
+this file's earlier sections are the complete round-3 change list.
