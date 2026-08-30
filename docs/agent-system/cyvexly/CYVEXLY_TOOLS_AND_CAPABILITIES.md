@@ -31,6 +31,26 @@
   normally in the same unattended session and are the strongest currently
   reachable proof layer for interaction/content/error verification. Full
   pixel screenshot comparison against a mockup needs an attended session.
+  **Root cause, found round 6:** `requestAnimationFrame` never fires at
+  all in this session (a self-rescheduling rAF counter stayed `0` after a
+  real 3-second wait), while `document.visibilityState` stays `"hidden"`
+  throughout — the browser's rendering/animation-frame pipeline is fully
+  suspended, though regular JS execution, event listeners, `setTimeout`,
+  and DOM mutation all work normally. This explains the screenshot
+  failure and why CSS/JS smooth-scroll animations never visibly progress
+  (`scrollIntoView`/`window.scrollTo` with `behavior: "smooth"` — force
+  `behavior: "auto"` on the same call to verify a fix's intended end
+  state instead). **Tried and ruled out, round 6:** explicitly fronting
+  the tab via `tabs_select` does not fix it. A fix would need to make the
+  Browser pane's tab actually visible to its own renderer at the harness
+  level, not something reachable from inside a session.
+  **`computer` key presses confirmed non-functional too, round 6:**
+  tested `computer{action:"key"}` directly with a real `document`-level
+  `keydown` listener — the tool reports success but zero events are
+  recorded and focus never moves. `javascript_tool`-dispatched synthetic
+  events fire listeners but do not trigger a real browser's native
+  focus-order/tab-navigation behavior, so they cannot substitute for
+  genuine keyboard-traversal testing either.
   **Exception found round 3:** a served image fetched with `curl` to a
   local file and then opened with the `Read` tool DOES render as a real
   viewable image in this session, even though a live Browser-pane
