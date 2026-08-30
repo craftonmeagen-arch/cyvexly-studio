@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { plannerSteps } from "@/lib/planner-config";
 
 export function PlannerProgress({
@@ -11,6 +12,22 @@ export function PlannerProgress({
   onStepClick: (step: number) => void;
   maxReachedStep: number;
 }) {
+  const activeStepRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    // Keep the active step visible inside the rail's own horizontal scroll
+    // container at narrow viewports, where all nine circles don't fit —
+    // otherwise the rail can sit scrolled away from the current step with
+    // no visual cue a user would find without discovering the hidden
+    // scroll themselves (found by the Council, CYC-R2-F001).
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    activeStepRef.current?.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  }, [currentStep]);
+
   return (
     <nav aria-label="Project Planner progress" className="overflow-x-auto pb-2">
       <ol className="flex min-w-max items-center gap-1">
@@ -30,6 +47,7 @@ export function PlannerProgress({
                 />
               )}
               <button
+                ref={isCurrent ? activeStepRef : undefined}
                 type="button"
                 onClick={() => isReachable && onStepClick(step.number)}
                 disabled={!isReachable}

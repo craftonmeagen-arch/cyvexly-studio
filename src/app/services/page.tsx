@@ -113,7 +113,28 @@ export default function ServicesPage() {
           <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
             Common combinations
           </h2>
-          <div className="mt-8 overflow-x-auto">
+          {/* Below `sm`, the two-column table doesn't fit a phone-width
+              container without clipping the combination column — reflow to
+              stacked cards instead of relying on a horizontal-scroll
+              affordance (Council finding CYC-R2-F004). */}
+          <div className="mt-8 space-y-4 sm:hidden">
+            {serviceCombinations.map((row) => (
+              <div
+                key={row.audience}
+                className="rounded-xl border border-smoke-glass bg-frosted-glass/60 px-4 py-4"
+              >
+                <p className="font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                  If you&apos;re
+                </p>
+                <p className="mt-1 font-medium text-midnight-slate">{row.audience}</p>
+                <p className="mt-3 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                  A typical combination
+                </p>
+                <p className="mt-1 text-cool-graphite">{row.combination}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 hidden overflow-x-auto sm:block">
             <table className="w-full min-w-[560px] border-collapse text-left text-sm">
               <thead>
                 <tr className="border-b border-smoke-glass">
