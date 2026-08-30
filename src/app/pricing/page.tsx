@@ -315,10 +315,11 @@ export default function PricingPage() {
         <section className="mx-auto max-w-6xl px-6 pb-20">
           <div className="signal-grid-bg relative overflow-hidden rounded-3xl bg-midnight-slate px-8 py-16 text-center sm:px-16">
             <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
-              Not sure which package fits?
+              Ready to make your business unmistakable?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-              Complete the Project Planner and we&apos;ll recommend the right
+              Not sure which package fits? Complete the Project Planner and
+              we&apos;ll recommend the right
               scope instead of guessing.
             </p>
             <div className="mt-8 flex justify-center">

@@ -132,9 +132,19 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
      itself — Pricing having no icons where Services does — was fixed
      round 3; see "Resolved round 3" below. The tables-vs-tiles layout
      choice remains a deliberate adaptation, not fixed.)
-   - Both pages' final-CTA headline ("Not sure which package/services fits/
-     you need?") differs from the mockup's "READY TO BUILD SOMETHING
-     EXCEPTIONAL?" — cosmetic, not fixed this round.
+   - Both pages' final-CTA headline differed from the mockup's "READY TO
+     BUILD SOMETHING EXCEPTIONAL?" — **revisited round 3, not just
+     copied.** Vision §4's own voice guide explicitly favors grounded,
+     practical language over hype ("Avoid: 'We make all your dreams come
+     true.'"), so literally copying the mockup's exclamation-heavy line
+     would have worked against the vision's own instructions, not toward
+     them. Instead changed the headline to "Ready to make your business
+     unmistakable?" on both Services and Pricing (echoes the site's own
+     hero headline for full-circle brand cohesion — a real copywriting
+     technique, not filler) and moved the original "Not sure which
+     services/package..." line down into the supporting paragraph, so
+     both the confident hook and the reassuring detail survive. Verified
+     rendered on both pages via the live dev server.
 
 ## Resolved round 2
 
