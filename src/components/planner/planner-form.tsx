@@ -243,7 +243,8 @@ export function PlannerForm() {
   function goToStep(step: number) {
     setCurrentStep(step);
     setMaxReachedStep((prev) => Math.max(prev, step));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
   }
 
   function handleNext() {
