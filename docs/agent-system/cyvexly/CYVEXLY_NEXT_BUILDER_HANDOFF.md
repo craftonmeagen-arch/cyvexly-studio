@@ -25,10 +25,20 @@ unresolved urgent reviewer finding.
   Builder should independently verify current source/runtime truth and plan
   its own round rather than treating that map as a fixed checklist.
 
-## No active PM prompt, Auditor finding, or Council finding
+## Auditor finding published during this round
 
-Still true as of round 1 close — none were published to the review index
-(`docs/agent-system/cyvexly/reports/`) as of this round, though a concurrent
-Auditor round was observed running during this session (see
-`CYVEXLY_WATCH.md`) — check the review index fresh next round in case it has
-since published.
+The concurrent Auditor round (`auditor-20260830T1324Z-001`, review ID
+`IFA-2026-08-30-R1`) published a real report to
+`docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md` while this Builder
+round was still in progress, with an uncommitted `git status` at this
+Builder's close showing the Auditor's own report/inbox/state files as
+modified/new (left untouched — Auditor-owned, per role non-interference).
+Its top finding, `CYV-IFA-001` ("most home-page internal destinations render
+404"), matches what this round already knew and documented as expected,
+out-of-Chunk-1-scope work in `CYVEXLY_CHUNK_DEBT.md`. The next Builder should
+read `AUDITOR_CURRENT.md` in full and disposition each finding (confirm,
+combine with Chunk 2 planning, or route) before building deeply on any area
+it covers — do not just take this handoff's summary as the disposition.
+
+No Council finding or active PM prompt was observed as of this round's
+close.
