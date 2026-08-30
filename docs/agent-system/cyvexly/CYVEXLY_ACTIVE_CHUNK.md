@@ -383,6 +383,13 @@ bounded, not silently downgraded, and explicitly labeled to the user in
 both the confirmation state and the review step. Chunk 4: unchanged from
 round 3, still `NEEDS COHERENT FOLLOW-UP`.
 
+**Correction after this statement was first drafted:** a field-usage
+audit (see `CYVEXLY_WATCH.md`) found two fields typed and initialized
+but never actually rendered — a real gap against vision §9's "other"
+page option and "essential for launch" question. Fixed and re-verified
+in a follow-on commit before this round closed; see `git log` for the
+exact commit. The completion state above already accounts for the fix.
+
 ### Recommended next tasks
 
 1. Route the domain + transactional-email-provider decisions

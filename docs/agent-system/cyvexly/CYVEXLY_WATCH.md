@@ -215,6 +215,20 @@ boundary on future reasoning.
   `input`/`change` events, `dispatchEvent(new MouseEvent('click', ...))`)
   remained fully reliable for driving the entire nine-step Planner
   wizard, matching round 2's established interaction method.
+- **A grep-based field-usage audit of `planner-form.tsx` (counting every
+  `PlannerData` key's occurrences in the file) found two real gaps in
+  work already claimed "DONE WITH PROOF" earlier in this same round**: a
+  `pagesOther` field and an `essentialPages` field were typed and
+  initialized but never actually rendered as inputs or included in the
+  submission summary — both explicit vision §9 step-4 requirements
+  ("other" as a page option; "which pages are essential for launch").
+  Live interactive testing alone (clicking through the happy path) did
+  not surface this, because nothing was broken — the fields simply never
+  existed in the rendered UI, so there was nothing to click. A field/prop
+  count against the full data shape is a cheap, fast way to catch this
+  exact "planned in the type, forgotten in the render" class of gap on
+  any future large, config-driven form in this app — worth running before
+  calling a multi-field form step complete, not just after a bug report.
 - **`claude-in-chrome`'s `list_connected_browsers` returned an empty
   array in this scheduled session** — confirmed directly (not assumed)
   that there is no attended real-Chrome fallback available for
