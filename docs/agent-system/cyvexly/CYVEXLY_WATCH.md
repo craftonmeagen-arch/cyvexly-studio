@@ -165,3 +165,17 @@ boundary on future reasoning.
   `scratch-favicon-check` (no leading underscore) fixed it immediately.
   Worth remembering for any future scratch/private route work in this
   App Router project.
+- **The same unrelated foreign Vite/EduAILenz process from round 2's port
+  5173 conflict recurred during closeout verification** (node.exe running
+  `node_modules\vite\bin\vite.js`, a different PID than round 2's, so a
+  fresh process from that other session, not a survivor). This time it
+  ran concurrently with this Builder's own `next dev --port 5173` rather
+  than after it died - `netstat` briefly showed two listeners on the same
+  port (one per process, likely one bound IPv4-only and one dual-stack).
+  Confirmed via `Get-CimInstance Win32_Process` before touching anything,
+  stopped only this round's own confirmed `start-server.js` PID, and left
+  the foreign Vite process running untouched - same non-interference
+  judgment round 2 already established, now validated on a second
+  occurrence. Worth treating this as a standing fact about this machine
+  (something outside this project regularly runs a Vite dev server on
+  5173) rather than a one-off round-2 fluke.
