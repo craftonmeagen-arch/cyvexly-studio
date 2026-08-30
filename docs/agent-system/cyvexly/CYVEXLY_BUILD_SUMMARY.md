@@ -200,3 +200,35 @@
   technique instead of claiming untestable geometry as verified. See
   `CYVEXLY_WATCH.md` and `CYVEXLY_ACTIVE_CHUNK.md`'s round-5 report for
   full detail.
+
+## Round 6 — 2026-08-30
+
+- Read the Council's now-formally-published `CYC-R2-20260830-01` report
+  (landed after round 5 closed) and fixed its three reachable, non-Owner-
+  blocked findings: the Planner progress rail at `/start` didn't keep the
+  active step visible at 390px/768px (`CYC-R2-F001`), the Services
+  "Common combinations" table clipped its right column at 390px with no
+  scroll affordance (`CYC-R2-F004`), and a Next.js console warning about
+  `scroll-behavior`/`data-scroll-behavior` on `<html>` (`CYC-R2-F005`).
+- A grep for the same table-overflow defect shape found and fixed two more
+  instances on Pricing (the package-comparison and add-ons tables) that
+  the Council hadn't audited this round — same reflow-to-cards fix applied
+  for consistency.
+- Verified all three fixes through a real dev server (driving the full
+  nine-step Planner via dispatched DOM events, measuring the progress
+  rail and reflowed tables at 390px/768px/1280px), a full sitewide
+  structural sweep (all twelve routes, zero regressions), and a clean
+  production-build pass with real built-HTML grep confirmation for each
+  fix. Isolated and documented a new instance of the session's known
+  frame-compositing limitation (`scrollIntoView({behavior:"smooth"})`
+  doesn't animate here) using a monkey-patch-and-verify technique that
+  proves the fix's logic and intended end state without needing a working
+  live-tab screenshot. See `CYVEXLY_ACTIVE_CHUNK.md`'s round-6 report and
+  `CYVEXLY_WATCH.md` for full detail.
+- Rotated the round-5 full report out of `CYVEXLY_ACTIVE_CHUNK.md` into
+  `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND5_REPORT.md`, and rotated
+  `CYVEXLY_WATCH.md`'s rounds 1-3 into a new
+  `docs/archive/CYVEXLY_WATCH_ARCHIVE.md` to bring both hot-path files
+  back under their §7.14 caps (Watch had grown to ~26.8KB against its
+  20KB cap; a pre-existing overage, not caused by this round, repaired at
+  closeout per §7.14).

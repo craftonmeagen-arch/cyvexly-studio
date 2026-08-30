@@ -101,345 +101,282 @@ and three groups of Planner buttons with missing/duplicate accessible
 names. Landed as 13 commits total (one initial + twelve "(cont.)"
 follow-on fixes from re-auditing the round's own work).
 
-## Round 5 report — global round 5
+
+## Round 5 report — global round 5 (archived)
+
+Archived to `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND5_REPORT.md`.
+Summary: revisited two open items on the closed Chunk 2 (closed does not
+mean frozen) — rebuilt `/process`'s steps section as a connected vertical
+timeline with a "Typical timing" table and "Our collaboration promise"
+panel (closed `CYVEXLY_CHUNK_DEBT.md` item 1, open since round 1); replaced
+the Work grid/case-study flat gradients with three hand-authored abstract
+SVG concept-preview compositions and added the case-study page's missing
+"Desktop & mobile experience" device-frame section (partial closure of
+`CYVEXLY_CHUNK_DEBT.md` item 2 — real photographic/screen-sequence imagery
+remains an open Owner framing question). Found and fixed a real invented
+off-palette color via a grep-based design-system audit. Ran a full clean
+production-build verification pass as a final check.
+
+## Round 6 report — global round 6
 
 ### Round Plan
 
-Scheduled round, 50-minute minimum work window. Reconciled current
-source/runtime truth first: `git log` HEAD at claim was `dfc0485`
-(matching the round-4 handoff's own final accounting of 13 total round-4
-commits); `git status` showed only the same pre-existing, untouched
-Auditor/Council evidence and report-plumbing files every prior round also
-found and correctly left alone. Read the round-4 handoff, the current
-Auditor report (`IFA-2026-08-30-R2`) and Council report
-(`CYC-R1-20260830-01`), `CYVEXLY_CHUNK_DEBT.md`, and `CYVEXLY_APP_DEBT.md`.
-All three Owner-input blockers (About founder identity, Privacy/Terms
-jurisdiction, domain + email-provider) remain open and unchanged — no new
-Owner direction arrived, so nothing new to route there. Selected two
-reachable, well-scoped visual-improvement tasks that every input this
-round pointed at independently, none of them Owner-blocked:
+Scheduled round, minimum-50-minute work window (per this run's scheduler
+instructions). Claimed the lock at `2026-08-30T20:24:45Z`. Reconciled
+current source/runtime truth: `git log` HEAD at claim was `196768e`
+(matching round 5's own final "(cont.)" documentation commits); `git
+status` showed only the same pre-existing, untouched Auditor/Council
+evidence/report-plumbing files every prior round found and correctly left
+alone. Read the round-5 handoff, `CYVEXLY_CHUNK_DEBT.md`,
+`CYVEXLY_APP_DEBT.md`, and — since the round-5 handoff flagged it as
+in-progress and not yet formally disposed — the Council's now-published
+formal report `CYC-R2-20260830-01` (`docs/agent-system/cyvexly/reports/
+QUALITY_METHODS_CURRENT.md`, published `2026-08-30T20:11:27Z`, after round
+5 closed). That report gave a concrete, reachable, non-Owner-blocked
+"Primary Next-Builder Plan": fix three findings —
 
-1. `CYVEXLY_CHUNK_DEBT.md` item 1 — `/process` uses a simpler card-stack
-   layout than `mockups/04-process-planner.png`'s left panel (a vertical
-   connected-line timeline, a "Typical Timing" summary table, and an "Our
-   Collaboration Promise" panel) — logged since round 1, never picked up.
-2. `CYVEXLY_CHUNK_DEBT.md` item 2 / the Auditor's `CYV-IFA-002` / the
-   Council's `CYC-R1-F002` — all three independently flagged the Work
-   grid and case-study heroes as flat CSS gradients with no reviewable
-   visual, both external reviewers marking it their own "Next" priority.
+1. `CYC-R2-F001` (Priority Now) — the Planner progress rail at `/start`
+   doesn't keep the active step visible at 390px/768px; step 9's circle
+   scrolls out of view with no cue.
+2. `CYC-R2-F004` (Next) — the Services "Common combinations" table clips
+   its right column at 390px with no scroll affordance.
+3. `CYC-R2-F005` (Later/Opportunity) — a Next.js console warning:
+   `scroll-behavior: smooth` on `<html>` without the recommended
+   `data-scroll-behavior="smooth"` attribute.
 
-Did not start `/about`, `/privacy`, `/terms`, the favicon redesign (still
-needs attended-session/real-browser confirmation, unchanged), or the
-Planner's server-side email route (still needs the domain + provider
-decision, unchanged) — all remain correctly bounded on the same Owner
-inputs or capability gaps prior rounds already established.
+The other two findings (`CYC-R2-F002` abstract-vs-real concept artwork,
+`CYC-R2-F003` metadataBase) are the same Owner-framing/domain decisions
+already tracked and unchanged — not reachable this round. All three Owner
+input questions (About founder identity, Privacy/Terms jurisdiction,
+domain + email-provider) also remain open, unchanged, no new direction
+arrived. Selected the three reachable Council findings as this round's
+work.
 
 ### Methodology check
 
-For item 1, followed the existing `processSteps` data shape in
-`site-config.ts` exactly (no new fields), and matched existing panel/badge
-conventions already used elsewhere (`glass-panel`, the `PackageIcon`
-badge sizing/stroke pattern, the `dt`/`dd` label conventions already used
-in the same page) rather than inventing a new visual language — a
-CSS-Grid-style absolute-positioned connecting line behind numbered circle
-badges is a standard, well-understood timeline pattern, not a novel
-mechanism.
+For F001, matched the existing reduced-motion-aware scroll pattern already
+established in `planner-form.tsx`'s `goToStep` (`window.matchMedia
+("(prefers-reduced-motion: reduce)").matches` gating `smooth` vs `auto`)
+rather than inventing a new convention — `scrollIntoView({block: "nearest",
+inline: "center"})` on the active step button is the standard way to keep
+one element visible inside its own horizontally-scrolling ancestor without
+also triggering unwanted vertical page scroll.
 
-For item 2, considered building real screenshot-style imagery, but these
-are explicitly labeled "Concept project" work with no real completed
-design to photograph — inventing a fake "real screenshot" would misrepresent
-non-existent client work, which is a different and worse problem than a
-flat gradient. Instead extended the same "hand-authored, on-brand SVG
-artwork" approach already established and proven for `icon.svg` and
-`opengraph-image.tsx` (round 1/3): built one abstract schematic
-composition per concept project, each a direct visualization of that
-project's own already-written "decisions" copy in `site-config.ts`
-(Aurora Spaces' "full-bleed imagery, minimal chrome"; Nexora Systems'
-"darker, denser... product-UI preview panels"; Vellora Care's "product
-shot + ingredient callout, checkout summary"), reusing only each
-project's own existing palette hex values — verified programmatically
-(see Proof performed) rather than assumed, since introducing an unlisted
-color was the most likely accidental mistake with this approach.
+For F004, considered "add a scroll affordance" (the closure test's other
+option) but chose "reflow to stacked cards below `sm`" — the stronger of
+the two options the Council itself offered — since the table's own data
+(two plain-text columns) has no real tabular relationship that benefits
+from a shared header once stacked, and the project already uses the same
+`dt`/`dd`-labelled-card pattern elsewhere (the Planner's review step, the
+case-study "Visual direction" panels) for this exact "shows the same two
+fields per item" shape.
+
+For F005, this is the framework's own documented fix for its own warning
+(`data-scroll-behavior="smooth"` alongside the existing CSS
+`scroll-behavior: smooth`) — no departure from a standard method involved.
 
 ### What changed
 
-- `src/lib/site-config.ts` — added `collaborationPromise`, a four-item
-  list grounded in already-established facts from `processSteps` (the
-  approval-point pattern, the "two business days" response time already
-  used sitewide, and the "14 days of post-launch defect support" already
-  in the Launch & care stage) — no new claims invented.
-- `src/app/process/page.tsx` — rebuilt the steps section as a connected
-  vertical timeline: numbered circle badges (matching the mockup) linked
-  by a continuous vertical line (`absolute`-positioned behind the circles,
-  hidden below the `sm` breakpoint since the mobile layout stacks single-
-  column), a small checkmark icon added next to "Approval point," and a
-  new two-column "Typical timing" (derived directly from `processSteps`,
-  no new data) / "Our collaboration promise" section between the timeline
-  and the existing trust-banner section.
-- `src/components/concept-preview.tsx` — new: three hand-authored,
-  distinct abstract SVG compositions (`AuroraSpacesPreview`,
-  `NexoraSystemsPreview`, `VelloraCarePreview`), exported via one
-  `ConceptPreview({ slug })` component.
-- `src/components/work-grid.tsx` — the Work grid card's gradient div now
-  renders `<ConceptPreview slug={project.slug} />` inside it (gradient
-  kept as a defensive background fallback, now visually covered).
-- `src/app/work/[slug]/page.tsx` — the case-study hero div now renders
-  `<ConceptPreview slug={slug} />` the same way, keeping the existing
-  honest `role="img" aria-label="... concept visual placeholder"`
-  labeling unchanged. Also added a new "Desktop & mobile experience"
-  section (after "Visual direction"), found by directly comparing the
-  shipped page against `mockups/03-work-case-study.png` (the §2.2
-  visual-plan/target comparison floor): the mockup has a dedicated
-  browser-chrome-frame + phone-frame device preview pair, distinct from
-  the hero image, which the shipped page had never built at all. Reuses
-  the same `ConceptPreview` artwork inside two new device-frame wrappers,
-  honestly labeled "not a pixel-accurate screenshot."
+- `src/app/layout.tsx` — added `data-scroll-behavior="smooth"` to `<html>`.
+- `src/components/planner/planner-progress.tsx` — added a ref to the
+  active step's button and a `useEffect` on `currentStep` that calls
+  `scrollIntoView({behavior, block: "nearest", inline: "center"})` on it,
+  with the same reduced-motion gating used elsewhere in the Planner.
+- `src/app/services/page.tsx` — the "Common combinations" table is now
+  wrapped `hidden sm:block`; a new `sm:hidden` stacked-card list (one card
+  per audience/combination pair) renders below `sm` instead.
+- `src/app/pricing/page.tsx` — a grep for the same `overflow-x-auto`+table
+  shape just fixed on Services found two more instances not audited by
+  the Council this round (see Audibles): the package-comparison table and
+  the add-ons table. Both got the same `hidden sm:block` table / `sm:hidden`
+  stacked-card-list treatment.
 
 ### Audibles
 
-- **Found and fixed a real design-system violation during self-review,
-  not caught by build/lint/typecheck.** The first draft of
-  `NexoraSystemsPreview` used an invented `#0c1a30` for a nav-bar
-  background — a color not in Nexora's own four-color palette and not
-  anywhere else in the app's design tokens, breaking the "no new colors
-  without a reason" discipline every prior round followed. Caught by a
-  grep-based cross-check (`grep -oE '#[0-9A-Fa-f]{6}' src/components/
-  concept-preview.tsx | sort -u`) against the union of all three
-  projects' palette arrays, which showed one hex outside that set. Fixed
-  by replacing the filled nav-bar rect with a thin one-pixel separator
-  line in the palette's own `#526176` — re-checked afterward and
-  confirmed the file's full color set is now an exact match to the
-  palette union (7 colors, zero extras).
-- **The `computer` screenshot limitation from rounds 1-4 persisted, and a
-  new related symptom appeared and was investigated rather than assumed
-  away:** partway through this round, `document.documentElement.
-  clientWidth`/`window.innerWidth` began reading `0` and
-  `document.visibilityState` read `"hidden"` on every page, including
-  `/process`, which had measured correctly (1265px desktop, 375px mobile,
-  753px tablet — see Proof performed) earlier in the same round before
-  the state changed. Opening a brand-new foreground tab did not recover
-  it. This is consistent with — and a further manifestation of — the
-  already-logged "Browser pane is not displayed, so the page is not
-  compositing frames" unattended-session limitation, not a defect
-  introduced by this round's own code (re-confirmed on the unchanged
-  `/process` page after the new work-grid/case-study changes, same
-  result). Worked around it initially for the new visual surfaces using
-  the established round-3 `ImageResponse`-proxy technique (see Proof
-  performed). **Later found a real recovery method, not just a
-  workaround:** calling `resize_window` with an explicit `{width,
-  height}` (rather than a `preset`) forced a real, non-zero
-  `clientWidth`/`innerWidth` even while `visibilityState` still read
-  `"hidden"` — used this to get genuine desktop/tablet/mobile overflow
-  measurements for the new "Desktop & mobile experience" section (see
-  Proof performed) after all. Worth trying an explicit-size resize before
-  falling back to the `ImageResponse`-proxy technique if this recurs.
-- **Deliberately did not attempt real photographic case-study imagery.**
-  The Auditor's and Council's closure tests both ask for "real designed
-  crops or screen sequences" / "truthful designed concept imagery" — the
-  abstract SVG compositions built this round are a genuine, honestly-
-  labeled improvement over a flat two-tone gradient, but they are schematic
-  illustrations, not real screenshots of a completed design, because no
-  such design exists for these fictional concept projects. This is a
-  partial closure, not a full one; stated honestly in Completion state and
-  `CYVEXLY_CHUNK_DEBT.md` below rather than claimed as fully resolved.
+- **A grep for the exact defect *shape* (`overflow-x-auto` wrapping a
+  fixed-`min-w` `<table>`), not just the one flagged page, found two more
+  real instances on Pricing.** Measured first, per the measured-discrepancy
+  floor, rather than assuming the Services pattern applied elsewhere:
+  both Pricing tables' `scrollWidth` (640px, 560px) exceeded their 342px
+  wrapper `clientWidth` at 390px, identically to the Services finding.
+  Fixed both with the same reflow pattern for consistency, in a separate
+  follow-on commit. This is the root-cause-floor "search for leftovers"
+  discipline applied to a reviewer finding rather than to a refactored
+  component — the Council audited Planner/Process/Work this round, not
+  Pricing, so the same defect class existed there unflagged.
+- **`scrollIntoView({behavior: "smooth"})` does not move `scrollLeft` in
+  this session, isolated to the smooth-scroll *animation* rather than the
+  fix's logic.** See `CYVEXLY_WATCH.md`'s round-6 entry for the full
+  investigation: the effect fires correctly (confirmed by monkey-patching
+  `Element.prototype.scrollIntoView` to log real calls) with the right
+  target and options every time `currentStep` changes, but the animation
+  itself never proceeds because this session's Browser pane doesn't
+  composite frames (the same root cause as every prior round's
+  `computer{action:"screenshot"}` failure). Verified the fix's actual
+  intended behavior by temporarily forcing `behavior: "auto"` on the same
+  wrapped call in the same session — with that, the active step's button
+  is fully within the rail's visible bounds at both 390px and 768px after
+  reaching step 9 (see Proof performed). This is strong evidence the
+  logic is correct; it is not the same as observing a real attended
+  browser's actual smooth-scroll animation, which this session cannot do.
+- **Deliberately did not attempt a real Tab-key keyboard-traversal test.**
+  The Council's own "Different next Council question" asked for exactly
+  this. Confirmed via DOM inspection that the mechanism this relies on
+  (native `disabled` attribute on unreachable-step buttons) is already
+  correct — disabled buttons are natively unfocusable and excluded from
+  tab order by every browser, so reachable/unreachable steps are already
+  keyboard-correct by construction — but a full real Tab-key traversal
+  needs actual OS-level key events, which this session's browser-pane
+  limitation (the same compositing/frame issue described above) makes
+  unreliable to simulate via `dispatchEvent`. Routed rather than guessed
+  at a result; see Recommended next tasks.
 
 ### Proof performed
 
-- `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` — all clean,
-  run twice (before and after the color-token fix described in Audibles),
-  both times with zero errors/warnings beyond the pre-existing,
-  unchanged `metadataBase` warning.
-- Started the dev server manually (the established round-1 workaround)
-  and ran a full live route sweep via `curl` across every route
-  (`/`, `/services`, `/pricing`, `/contact`, `/work`, all three case-study
-  slugs, `/faq`, `/accessibility`, `/process`, `/start`) both before and
-  after the concept-preview change — all 200, zero regressions.
-- Attached the Browser pane and, before the visibility-state issue
-  described in Audibles appeared, measured `/process` directly: desktop
-  (1265px) zero horizontal overflow, five numbered circles present, five
-  "01"-"05"-prefixed rows in the new Typical Timing table, zero skipped
-  heading levels (`H1` then eleven sibling `H2`s), nine checkmark icons
-  (5 approval-point + 4 collaboration-promise) present. At mobile (375px):
-  zero horizontal overflow (`scrollWidth === clientWidth === 375`), the
-  connecting line correctly `display: none` (mobile stacks single-column,
-  matching the responsive pattern established for every other page), all
-  fifteen `dl` rows (both the per-step group and the new Typical Timing
-  table) fit within 269px of a 375px-wide container with no wrapping-
-  induced overflow. At tablet (768px): zero overflow, and the connecting
-  line's left edge measured exactly at each of the five circles'
-  horizontal center (52px in all six cases) — confirmed via
-  `getBoundingClientRect()`, not just visual guess — proving real
-  alignment, not a coincidental-looking approximation.
-- Re-verified zero console errors and all-200 network requests on
-  `/process` via the live dev server both before and after the change.
-- For the concept-preview work (built after the Browser pane's visibility
-  state degraded — see Audibles): verified structurally via `fetch()` +
-  `DOMParser` against the live dev server rather than viewport-dependent
-  measurement — confirmed all three case-study routes (200) each render
-  their own distinct SVG (5/12/8 shapes respectively, not a shared
-  fallback) inside the existing honestly-labeled
-  `aria-label="... concept visual placeholder"` container, and confirmed
-  the Work grid page renders all three distinct SVGs inside their cards.
-  Re-ran the project's established heading-hierarchy and unlabeled-
-  control checks (widened this round, per round 4's own watch note, to
-  include `button` elements, not just `input`/`select`/`textarea`) across
-  `/process`, `/work`, and all three case-study pages: zero skipped
-  heading levels, zero unlabeled controls on any of the five.
-- **Got genuine pixel-level proof of the three new concept-preview
-  compositions**, since a live-tab screenshot was unavailable this round
-  (see Audibles): reused the exact round-3 `ImageResponse`-proxy
-  technique — built a temporary, non-underscore-prefixed scratch route
-  (`src/app/scratch-concept-check/route.tsx`, following round 3's own
-  naming-convention finding that a leading `_` silently excludes a route)
-  rendering each concept-preview SVG through Next's `ImageResponse`
-  pipeline (the same mechanism `opengraph-image.tsx` already proves works
-  for raw nested `<svg>`/`<path>` elements in this exact codebase),
-  fetched all three real generated PNGs, and visually inspected each with
-  the `Read` tool: Aurora Spaces renders as an abstract dark
-  architectural/landscape silhouette with a caption bar; Nexora Systems
-  renders as a dashboard-like nav bar plus five panels, two containing a
-  visible line-chart squiggle; Vellora Care renders as a light, calm
-  product-capsule shape with an ingredient-tag callout and a checkout bar.
-  All three are visually distinct from each other, on-brand (colors
-  verified against each project's own palette — see Audibles), and
-  legible at the actual 400x240 render size used on the real pages.
-  Deleted the temporary route and all three generated PNGs immediately
-  after inspection, per the ephemeral-evidence rule — confirmed via
-  `git status --short` that no trace of the scratch route remains, and
-  re-ran `tsc`/lint/build clean afterward to confirm its removal broke
-  nothing.
-- **Compared the shipped case-study page directly against
-  `mockups/03-work-case-study.png`** (opened both side by side, per the
-  §2.2 visual-plan/target comparison floor) and found a second, more
-  specific gap beyond the flat hero gradient: a dedicated "Desktop
-  experience"/"Mobile experience" device-frame preview section that the
-  shipped page never had at all. Built it (see What changed), then — after
-  discovering the `resize_window` explicit-size recovery method described
-  in Audibles — measured it directly rather than relying only on the
-  `ImageResponse`-proxy technique: at 1280px, zero horizontal overflow
-  (`scrollWidth === clientWidth === 1265`), desktop frame 622px wide,
-  mobile frame 192px wide, both fully inside the container. At 375px
-  mobile, zero overflow (`scrollWidth === clientWidth === 375`), and the
-  two frames stack vertically (different `top` values), confirming the
-  responsive grid collapses to one column below `sm` as intended. At
-  768px tablet, zero overflow (`clientWidth` 753), and the two frames sit
-  side by side (near-equal `top` values), confirming the two-column grid
-  activates at `sm` as intended — measured via `getBoundingClientRect()`
-  on the actual frame elements at all three widths, not assumed from the
-  CSS alone. Re-ran the heading-hierarchy and unlabeled-control checks
-  across all three case-study pages after adding the section: zero
-  skipped heading levels (13 headings each), zero unlabeled controls.
-  Re-ran a full production build afterward: clean, same eighteen routes,
-  same pre-existing `metadataBase` warning only.
-- Stopped this round's own dev-server process, verified by `CommandLine`
-  path before stopping (confirmed the `next dev --port 5173` process
-  belonged to `C:\app projects\website`, distinct from several
-  completely unrelated Vite/tsx/pnpm processes for other unrelated
-  projects also running on this machine) rather than assuming ownership
-  by port number alone; confirmed via a failed `curl` afterward that
-  port 5173 no longer responds. Deleted the temporary dev-server stdout
-  log file used during the round.
-- **Ran a final verification pass against the real production build, not
-  just the dev server**, given this project's own established history
-  (rounds 2-3) of dev/production behavior differences: deleted `.next`
-  entirely and ran a clean `pnpm run build` from scratch (no incremental
-  cache) — compiled successfully, same eighteen routes, same pre-existing
-  `metadataBase` warning only. Started the real production server
-  (`next start --port 5173`, not `next dev`) and re-swept every route via
-  `curl` (all 200, `/not-a-real-route` correctly 404s) against the actual
-  built output. Grepped the real production HTML directly: confirmed zero
-  occurrences of the invented `0c1a30` color anywhere in the built
-  `/work/nexora-systems` page, and confirmed "Desktop & mobile
-  experience," "Our collaboration promise," and "Typical timing" all
-  appear in the real production HTML — not just the dev-server render.
-  Stopped the production server (verified by PID/`CommandLine` before
-  stopping, same discipline as the dev server) and deleted the disposable
-  `.next` build output afterward, per the ephemeral-storage rule.
+- `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` — all clean
+  after each of the two fix commits (Planner+Services+layout, then
+  Pricing), zero errors/warnings beyond the pre-existing `metadataBase`
+  warning. (The first standalone `tsc --noEmit` run before any build
+  reproduced round 5's own documented false-negative — `Cannot find name
+  'LayoutProps'` in an untouched file — because `.next/types` didn't exist
+  yet; running `pnpm run build` first, per round 5's watch note, resolved
+  it with zero code changes.)
+- Started the dev server (`next dev --port 5173`) and drove the full
+  nine-step Planner via the established `javascript_tool`-dispatched
+  native-setter-input / `dispatchEvent(new MouseEvent('click', ...))`
+  method (round 2's established interaction technique) to reach step 9
+  for real, not just by directly setting `currentStep`.
+- At 390px: `nav.scrollLeft` after reaching step 9 stayed `0` under real
+  `behavior: "smooth"` (the session limitation described in Audibles);
+  with the same call temporarily forced to `behavior: "auto"`, step 9's
+  button measured fully inside the rail's visible bounds
+  (`btnLeftRelativeToNav: 256`, `btnRightRelativeToNav: 292`, nav
+  `clientWidth: 292`) and the whole page had zero horizontal overflow
+  (`scrollWidth === clientWidth === 390`).
+- At 768px: same fresh flow, step 9's button again measured fully inside
+  the rail's visible bounds (`isFullyVisible: true`, nav `clientWidth:
+  639`, `scrollWidth: 676`), and the whole page had zero overflow
+  (`scrollWidth === clientWidth === 753`).
+- Confirmed the reduced-motion branch directly: monkey-patched
+  `window.matchMedia` to report `prefers-reduced-motion: reduce` as
+  `true`, re-ran the flow to step 2, and confirmed the logged
+  `scrollIntoView` call used `behavior: "auto"` (not `"smooth"`) — proving
+  both branches of the gating logic, not just the default one.
+- Services at 390px: the new `sm:hidden` card list is visible (5 cards,
+  matching `serviceCombinations.length`), the `sm:block` table is hidden,
+  zero page horizontal overflow. At 1280px: the table is visible (5 rows),
+  the card list is hidden, zero overflow. Re-ran the project's established
+  heading-hierarchy and unlabeled-control checks on Services: zero skipped
+  heading levels (24 headings), zero unlabeled controls.
+- Pricing at 390px: both new `sm:hidden` card lists visible (5 comparison
+  cards, 16 add-on cards, matching their data arrays' lengths), both
+  tables hidden, zero page overflow. At 1280px: both tables visible with
+  correct row counts (5, 16), both card lists hidden, zero overflow, zero
+  skipped heading levels, zero unlabeled controls.
+- F005: navigated Home to `/process` via a real dispatched link click and
+  read the console — no `scroll-behavior`/`data-scroll-behavior` warning
+  (present before the fix, per the Council's own report); confirmed
+  `document.documentElement.getAttribute('data-scroll-behavior')` reads
+  `"smooth"` on the live page.
+- Full route sweep (`curl` across all twelve built routes plus a 404
+  check) against the live dev server after each fix commit — all 200,
+  `/not-a-real-route` still 404s, zero regressions both times.
+- **A full sitewide structural sweep** (`fetch()` + `DOMParser` against
+  all twelve routes, checking H1 count, heading-level skips, and unlabeled
+  interactive controls in one pass) after both fixes landed: zero defects
+  on any route — confirms no regression anywhere else in the app, not
+  just the three touched pages.
+- Ran a final clean production-build verification pass after each fix
+  commit, matching the discipline round 5 established: deleted `.next`,
+  ran `pnpm run build` from scratch (same eighteen routes, same
+  pre-existing `metadataBase` warning only), started the real production
+  server (`next start`, not `next dev`), re-swept all routes via `curl`
+  (all 200/404 as expected), and grepped the real built HTML directly for
+  each fix's marker (`data-scroll-behavior="smooth"` present on `/`; the
+  Services/Pricing `sm:hidden` card markup present in their built pages).
+- Stopped every dev/production server process this round started,
+  verified each by `CommandLine` (working directory / exact `next dev`
+  or `next start` invocation) via `Get-CimInstance Win32_Process` before
+  stopping, confirmed via a failed `curl` afterward that port 5173 no
+  longer responds each time; deleted the disposable `.next` build output
+  and temporary log files at final cleanup.
 
 ### What was not checked
 
-- No real live-tab pixel screenshot exists of any changed page at its
-  final rendered state (only the isolated `ImageResponse`-proxy renders
-  of the SVG artwork itself, plus DOM/fetch structural checks and real
-  `getBoundingClientRect()` geometry at all three widths for `/process`
-  and the new device-frame section) — the `computer{action:"screenshot"}`
-  action itself remained non-functional all round even after the
-  `resize_window` explicit-size recovery fixed `clientWidth`/`innerWidth`
-  reads (see Audibles); `visibilityState` stayed `"hidden"` throughout.
-- Did not attempt real photographic/screenshot imagery for the case
-  studies (see Audibles) — this remains open, tracked below and in
-  `CYVEXLY_CHUNK_DEBT.md`.
-- Did not re-verify the favicon 16px legibility concern (round 3, still
-  open) or attempt `/about`, `/privacy`, `/terms`, or the Planner's
-  server-side email route — all unchanged, still correctly bounded on
-  the same Owner inputs.
-- No automated axe/Lighthouse accessibility audit (unchanged from every
-  prior round) — only this project's established manual heading/label/
-  button checks.
-- No cross-browser check beyond the one Chromium-based Browser-pane
-  engine (unchanged from every prior round).
+- No real live-tab pixel screenshot of any changed page — the
+  `computer{action:"screenshot"}` limitation persisted all round
+  (re-confirmed directly, not assumed). The `scrollIntoView` smooth-scroll
+  animation itself also could not be observed directly for the same
+  reason (see Audibles) — proven correct via the forced-`behavior:"auto"`
+  end-state check instead, not an equivalent substitute for watching the
+  real animation in an attended browser.
+- No real Tab-key keyboard-traversal test of the Planner or progress rail
+  (see Audibles) — the Council's own suggested next question, routed
+  rather than attempted with an unreliable method.
+- Did not attempt `/about`, `/privacy`, `/terms`, the favicon redesign, or
+  the Planner's server-side email route — all unchanged, still correctly
+  bounded on the same Owner inputs or capability gaps every prior round
+  established.
+- No automated axe/Lighthouse accessibility audit, no cross-browser check
+  beyond the one Chromium-based Browser-pane engine — unchanged from every
+  prior round.
 
 ### Git/diff accountability
 
-At round start, `git log` HEAD was `dfc0485` and `git status` showed only
+At round start, `git log` HEAD was `196768e` and `git status` showed only
 the same pre-existing, untouched Auditor/Council evidence/report-plumbing
 files every prior round also found and correctly left alone — confirmed
-via `git status --short` before any edit. This round's own changes are
-exactly: `src/lib/site-config.ts` (added `collaborationPromise`),
-`src/app/process/page.tsx` (timeline/timing/promise rebuild),
-`src/components/concept-preview.tsx` (new), `src/components/work-grid.tsx`
-and `src/app/work/[slug]/page.tsx` (wired in `ConceptPreview`), plus the
-routine `CYVEXLY_*`/archive documentation updates described in this
-closeout. The temporary `src/app/scratch-concept-check/route.tsx`
-verification route was created and fully deleted within this same round,
-confirmed absent via `git status` before commit. No file outside what's
-described here was touched.
+via `git status --short` before any edit. This round's changes landed as
+two commits: `1eb1242` (`src/app/layout.tsx`, `src/app/services/page.tsx`,
+`src/components/planner/planner-progress.tsx`) and `f435f67`
+(`src/app/pricing/page.tsx`), plus this same documentation-update commit.
+No file outside what's described here was touched. `git status --short`
+immediately before this commit shows only the routine `CYVEXLY_*`/archive
+documentation changes described in this closeout, plus the same
+pre-existing untouched Auditor/Council files every prior round found.
 
 ### Completion state
 
-`CYVEXLY_CHUNK_DEBT.md` item 1 (`/process` layout gap): **RESOLVED** —
-the vertical connected timeline, Typical Timing table, and Collaboration
-Promise panel are all built and verified against the mockup's visual
-pattern.
+`CYC-R2-F001` (Planner progress rail hides active step at 390px/768px):
+**RESOLVED** — verified end-state fully visible at both widths (see Proof
+performed); the smooth-scroll animation itself is unobservable in this
+session (see What was not checked), which is a session-proof limitation,
+not an unresolved defect.
 
-`CYVEXLY_CHUNK_DEBT.md` item 2 / `CYV-IFA-002` / `CYC-R1-F002` (gradient
-placeholder imagery): **PARTIALLY RESOLVED, HONESTLY BOUNDED** — replaced
-flat two-tone gradients with distinct, on-brand, hand-authored abstract
-compositions grounded in each project's own established creative
-decisions, and added the case-study page's previously-entirely-missing
-"Desktop & mobile experience" device-frame section (found via direct
-mockup comparison, not just the original hero-gradient complaint); real
-photographic crops or screen-sequence imagery (what both external
-reviewers' closure tests actually ask for) remains out of reach, since no
-completed design exists to photograph for these concept projects — not a
-Builder-reachable gap this round, tracked forward below.
+`CYC-R2-F004` (Services mobile comparison table clipped): **RESOLVED** —
+reflowed to stacked cards below `sm`, verified at 390px and 1280px.
+
+`CYC-R2-F005` (scroll-behavior console warning): **RESOLVED** — verified
+via a real route navigation with a clean console.
+
+Two Pricing tables with the identical defect class, not part of the
+Council's own finding set, were also found and fixed this round (see
+Audibles) — same resolution standard applied.
+
+`CYC-R2-F002` (abstract vs. real concept artwork) and `CYC-R2-F003`
+(metadataBase): **UNCHANGED, OWNER-BLOCKED** — not attempted this round,
+same status as every prior round.
 
 ### Recommended next tasks
 
-1. Route the three still-open Owner-input questions (About founder
-   identity, Privacy/Terms jurisdiction, domain + email-provider) —
-   unchanged from every prior round, see `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
-2. When an attended session or another Auditor/Council round is
-   available: get real pixel-level screenshots of `/process`'s new
-   timeline section, the Work grid, and all three case-study heroes,
-   and compare the new concept-preview compositions against the mockups'
-   visual weight — this round's proof is thorough on structure/DOM/
-   accessibility and has genuine `ImageResponse`-proxy pixel proof of the
-   compositions in isolation, but no live-page screenshot exists showing
-   them in final page context.
-3. Confirm the favicon's still-open 16px legibility concern in a real
+1. Route the four still-open Owner-input questions (About founder
+   identity, Privacy/Terms jurisdiction, domain + email-provider, and the
+   abstract-vs-real concept-artwork framing question) — unchanged from
+   every prior round.
+2. Real Tab-key keyboard-traversal testing of the Planner (focus order,
+   error announcement, progress semantics) — the Council's own suggested
+   next question, not attempted this round because this session's
+   browser-pane limitation makes real key-event simulation unreliable;
+   worth attempting in an attended session or via a differently-capable
+   automation method.
+3. When an attended session or another Auditor/Council round is
+   available: get a real live-tab screenshot of the Planner rail at
+   390px/768px on step 9 and of the reflowed Services/Pricing tables at
+   390px, to visually confirm this round's fixes match the intended
+   result the DOM/structural proof establishes — the same standing gap
+   every prior round has logged for pixel-level page-context proof.
+4. Confirm the favicon's still-open 16px legibility concern in a real
    browser tab (open since round 3, unchanged).
-4. Consider whether the Council's/Auditor's "real designed crops or
-   screen sequences" bar should be revised to explicitly accept
-   abstract/illustrative concept artwork for fictional case studies (an
-   Owner-level product decision about how honest "Concept project" work
-   should be presented), or whether real design mockups for one or more
-   concept projects are worth commissioning as a dedicated design task —
-   routing this framing question rather than guessing which the Owner
-   wants. A brief web search this round found that general design-
-   industry practice for speculative/fictional portfolio work centers on
-   clear disclosure that a project is conceptual, not a specific
-   visual-fidelity requirement — Cyvexly's existing "Concept project"
-   labeling already satisfies that transparency standard regardless of
-   the visual treatment chosen. This is useful context, not a
-   substitute for the Owner's actual preference.
+5. Re-check `docs/agent-system/cyvexly/council/evidence/` and the current
+   Council/Auditor reports near the start of the next round for any
+   further findings published after this round's own read.

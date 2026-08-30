@@ -85,6 +85,14 @@ requires.
   item 4, unchanged); a real pixel-level screenshot of `/start` (this
   round's own session type still cannot screenshot a live browser tab —
   see `CYVEXLY_WATCH.md`).
+- **Round 6:** fixed a real Council-flagged defect (`CYC-R2-F001`) — the
+  progress rail didn't keep the active step visible at 390px/768px,
+  fixed with a `scrollIntoView` effect matching the existing reduced-
+  motion-aware scroll pattern. Verified the end state is fully visible at
+  both widths; the smooth-scroll animation itself is unobservable in this
+  session (a session-proof limitation, not an unresolved defect — see
+  `CYVEXLY_WATCH.md`). Real Tab-key keyboard-traversal testing (the
+  Council's own suggested next question) remains open.
 
 ## Chunk 4 — Utility, legal & launch readiness (OPENED round 2, IN PROGRESS)
 

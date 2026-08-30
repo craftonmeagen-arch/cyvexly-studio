@@ -18,4 +18,9 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
   Project Planner UI/state/validation at `/start`; CSS Grid mobile-overflow
   fix; field-usage-audit fixes; reduced-motion scroll-to-top fix; button
   accessible-name fixes), rotated out during round 5.
+- `CYVEXLY_CHUNK3_ROUND5_REPORT.md` — round 5 (`/process` connected
+  timeline/typical-timing/collaboration-promise rebuild; three hand-authored
+  concept-preview SVG compositions replacing flat Work/case-study gradients;
+  case-study "Desktop & mobile experience" device-frame section), rotated
+  out during round 6.
 
