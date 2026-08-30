@@ -3,12 +3,15 @@
 ## Urgent items
 
 None. Round 5 closed cleanly — no crash, no unsafe uncommitted state, no
-unresolved urgent reviewer finding discovered this round. It landed as
-three commits (`git log dfc0485..HEAD`): the main round-5 commit
-(`c159226`, the `/process` timeline + concept-preview work) plus two
-small documentation-only "(cont.)" follow-ups (`7a0df11` noting a
-concurrent Council round, `2f213e9` recording an additional
-production-build verification pass performed after the main commit).
+unresolved urgent reviewer finding discovered this round. Check
+`git log dfc0485..HEAD` for the exact commit set: one main commit
+(`c159226`, the `/process` timeline + concept-preview work) plus several
+small documentation-only "(cont.)" follow-ups recording additional
+verification/research performed after the main commit closed (a
+concurrent Council round noted in watch, a production-build verification
+pass, the exact commit list, and design-industry disclosure-practice
+research for the framing question below) — same pattern round 4 used for
+its own "(cont.)" commits.
 
 ## Orientation
 
