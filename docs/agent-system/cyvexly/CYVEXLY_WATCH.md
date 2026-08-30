@@ -365,6 +365,29 @@ boundary on future reasoning.
   orientation): unchanged since the start of this round, so the
   concurrent Council round had not published a new report by the time
   this round closed.
+- **Deleting `.next` for ephemeral-storage cleanup between verification
+  passes made a subsequent standalone `pnpm exec tsc --noEmit` falsely
+  report `error TS2304: Cannot find name 'LayoutProps'`** in
+  `src/app/layout.tsx` — a file this round never touched (confirmed via
+  `git diff dfc0485..HEAD -- src/app/layout.tsx`, empty). Root cause:
+  Next.js generates ambient global types (`LayoutProps`, `PageProps`,
+  etc.) into `.next/types/` during `next build`/`next dev`, and a bare
+  `tsc --noEmit` run depends on that generated declaration file existing
+  — it is not a self-contained typecheck the way it would be in a
+  non-Next.js TypeScript project. Deleting `.next` (done this round after
+  a production-build verification pass, per the ephemeral-storage rule)
+  removed that cache; running `pnpm run build` again (which regenerates
+  `.next/types` as a side effect before its own internal typecheck)
+  immediately fixed the standalone `tsc` call with zero code changes.
+  **Practical rule for future rounds:** if a standalone `tsc --noEmit`
+  ever reports an error in a file the round didn't touch, right after a
+  `.next` deletion, run `pnpm run build` (or `next dev` briefly) first to
+  regenerate the types cache before treating the error as real — don't
+  spend time debugging phantom code errors. This round caught it
+  immediately via `git diff` (confirming the file was unchanged) rather
+  than assuming a real regression, and no incorrect "tsc clean" claim was
+  made before this was discovered (checked: no standalone `tsc` call ran
+  in the gap between deleting `.next` and this discovery).
 - **This round's own dev-server-process cleanup had to distinguish this
   project's `next dev` from several other unrelated Node processes for
   entirely different projects also running on this machine** (not just
