@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { ServiceIcon } from "@/components/service-icon";
+import { ConceptPreview } from "@/components/concept-preview";
 import {
   selectedWork,
   serviceCombinations,
@@ -177,9 +178,11 @@ export default function ServicesPage() {
                   className="group glass-panel flex flex-col overflow-hidden rounded-2xl transition-transform duration-200 hover:-translate-y-1"
                 >
                   <div
-                    className={`h-40 w-full bg-gradient-to-br ${project.gradient}`}
+                    className={`h-40 w-full overflow-hidden bg-gradient-to-br ${project.gradient}`}
                     aria-hidden="true"
-                  />
+                  >
+                    <ConceptPreview slug={project.slug} />
+                  </div>
                   <div className="flex flex-1 flex-col gap-2 p-5">
                     <span className="w-fit rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
                       {project.kind}

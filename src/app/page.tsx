@@ -3,6 +3,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { OrbitGraphic } from "@/components/orbit-graphic";
 import { FaqAccordion } from "@/components/faq-accordion";
+import { ConceptPreview } from "@/components/concept-preview";
 import {
   capabilities,
   credibilityPoints,
@@ -75,9 +76,11 @@ export default function Home() {
                 className="group glass-panel flex flex-col overflow-hidden rounded-2xl transition-transform duration-200 hover:-translate-y-1"
               >
                 <div
-                  className={`h-44 w-full bg-gradient-to-br ${project.gradient}`}
+                  className={`h-44 w-full overflow-hidden bg-gradient-to-br ${project.gradient}`}
                   aria-hidden="true"
-                />
+                >
+                  <ConceptPreview slug={project.slug} />
+                </div>
                 <div className="flex flex-1 flex-col gap-2 p-5">
                   <span className="w-fit rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
                     {project.kind}
