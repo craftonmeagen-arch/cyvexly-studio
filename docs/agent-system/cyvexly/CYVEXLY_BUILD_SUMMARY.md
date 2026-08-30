@@ -140,3 +140,12 @@
 - Rotated the round-3 full report out of `CYVEXLY_ACTIVE_CHUNK.md` into
   `docs/archive/chunks/CYVEXLY_CHUNK4_ROUND3_REPORT.md` to stay under the
   30KB hot-path cap; updated the archive index.
+- With time remaining in the scheduled work window, ran a grep-based
+  field-usage audit of the new `planner-form.tsx` and found two real
+  gaps: a `pagesOther` and an `essentialPages` field were typed and
+  initialized but never rendered (both explicit vision §9 step-4
+  requirements). Fixed and re-verified live. Separately found that the
+  Planner's step-change scroll-to-top used `window.scrollTo({behavior:
+  "smooth"})`, which bypasses the site's global CSS
+  `prefers-reduced-motion` rule; fixed by checking `matchMedia` at call
+  time and verified both branches via a `scrollTo`/`matchMedia` spy.
