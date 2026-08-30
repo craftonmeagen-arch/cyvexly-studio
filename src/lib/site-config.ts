@@ -273,6 +273,9 @@ export const processSteps = [
   },
 ];
 
+// Curated highlights for the Home preview, kept separate from
+// `pricingPackages` below (full scope list) so each can pick its own
+// best 3-4 items. Keep name/price in sync with `pricingPackages` by hand.
 export const pricingPreview = [
   {
     name: "Signal",
@@ -489,6 +492,8 @@ export const servicesFaq = [
   },
 ];
 
+// Full package data for /pricing. See `pricingPreview` above - keep
+// name/price in sync by hand when either changes.
 export const pricingPackages = [
   {
     name: "Signal",
