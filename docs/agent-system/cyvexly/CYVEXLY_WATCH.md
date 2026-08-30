@@ -208,10 +208,18 @@ boundary on future reasoning. Rounds 1-4 are rotated to
   path substring that every role's runtime shares (`app projects\website`
   appears in every role's `.codex/runtime/<role>/.../runtime` path, since
   all roles share the same sandbox root) — before calling `Stop-Process`.
-  This round's own PID-based stops earlier in the round (verified by full
-  exact command line, e.g. the `next dev --port 5173`/`next start --port
-  5173` processes) were correctly scoped; only this final broad filter
-  was not. See the urgent item in `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+  `CYVEXLY_ENVIRONMENT.md`'s Ports section (Builder `5173`, Auditor
+  `5273`, Council `5373`) and its `.codex/runtime/<role>/<round>/
+  processes.json` per-round manifest (each reviewer round registers its
+  own owned PIDs there via `Register-RoleProcess.ps1`) are the
+  authoritative, protocol-aware way to check ownership before stopping
+  anything — check the target's exact bound port (e.g. `netstat` or a
+  failed/succeeded `curl`) or its manifest membership, not a `CommandLine`
+  substring. This round's own PID-based stops earlier in the round
+  (verified by full exact command line, e.g. the `next dev --port 5173`/
+  `next start --port 5173` processes) were correctly scoped; only this
+  final broad filter was not. See the urgent item in
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
   **Update, ~20:56Z, same round: confirmed the Council round self-healed.**
   Re-checked `.codex/runtime/council/council-20260830T204540Z/
   processes.json` (read-only) and found four *new* registered PIDs with
