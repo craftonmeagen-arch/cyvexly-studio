@@ -212,3 +212,18 @@ boundary on future reasoning. Rounds 1-4 are rotated to
   exact command line, e.g. the `next dev --port 5173`/`next start --port
   5173` processes) were correctly scoped; only this final broad filter
   was not. See the urgent item in `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+  **Update, ~20:56Z, same round: confirmed the Council round self-healed.**
+  Re-checked `.codex/runtime/council/council-20260830T204540Z/
+  processes.json` (read-only) and found four *new* registered PIDs with
+  fresh `startTimeUtc` values around `20:54:52Z`–`20:55:01Z` — a new
+  launcher, dev server, and two workers, all under the Council's own
+  runtime path — and `curl` to `http://127.0.0.1:5373/` now returns `200`
+  again. The Council round detected its own dead runtime and relaunched
+  it without any action from this Builder, consistent with each role
+  owning repair authority over its own resources. Its guard file's
+  `dispatcherPid` (`36604`) is stale (unchanged, still the pre-incident
+  value) — the Council's own bookkeeping, not this Builder's to correct.
+  The incident and its root cause above remain fully valid and worth
+  fixing in this Builder's own tooling regardless of the successful
+  recovery; this update only closes the "is Council still broken"
+  question with real evidence rather than leaving it open.

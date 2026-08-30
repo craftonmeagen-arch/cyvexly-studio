@@ -2,37 +2,29 @@
 
 ## Urgent items
 
-**This Builder round stopped a concurrent Council round's own processes by
-mistake — a real §1.6 non-interference violation.** At ~20:52Z, while
-stopping this round's own leftover `next dev` process tree, this
-Builder's `Get-CimInstance Win32_Process` filter (`CommandLine -like
-'*app projects\website*' -and CommandLine -like '*next*dev*'`) was too
-broad and also matched a concurrently-running Council round's
-(`council-20260830T204540Z`, started ~20:45:41Z) own isolated `next dev
---port 5373` under `.codex/runtime/council/council-20260830T204540Z/
-runtime/` — every role's runtime path contains both substrings, since all
-roles share this sandbox root. This Builder stopped 4 of the Council's
-own registered processes; `curl` to `http://127.0.0.1:5373/` immediately
-after confirmed its dev server no longer responds, and its registered
-dev-server PID and dispatcher PID were both found gone afterward too
-(cascading effect, not directly targeted). **Did not touch anything under
-`.codex/runtime/council/` or `.codex/role-state/council.active.json`** —
-Council-owned infrastructure outside this Builder's authority; attempting
-a repair would risk compounding the interference. Full incident detail,
-exact PIDs, and the root-cause/fix for future process-stop filters (check
-the exact port/working-directory root, not a path substring every role
-shares) are in `CYVEXLY_WATCH.md`'s round-6 entry.
-
-**What the next Builder (or whoever reads this first) should do:** verify
-whether the Council round `council-20260830T204540Z` recovered on its own,
-completed despite the interruption, or needs its own stale-guard/orphan
-recovery process — do not assume either way, check current evidence
-(`.codex/role-state/council.active.json`, `docs/agent-system/cyvexly/
-reports/QUALITY_METHODS_CURRENT.md`, `docs/agent-system/cyvexly/inbox/
-OPERATIONS.md`) fresh. If Owner-facing escalation of this incident is
-warranted beyond this written record, that is an Owner-level judgment
-this Builder round is not positioned to make unilaterally — surfaced here
-for exactly that reason.
+**This Builder round briefly stopped a concurrent Council round's own
+processes by mistake (§1.6 non-interference violation); the Council
+self-healed within ~3 minutes, confirmed with evidence — read the full
+account, don't skip it as resolved.** At ~20:52Z, a too-broad
+`Get-CimInstance` filter (`CommandLine -like '*app projects\website*'
+-and CommandLine -like '*next*dev*'` — every role's runtime path contains
+both substrings) matched and stopped 4 processes belonging to a
+concurrent Council round (`council-20260830T204540Z`, its own isolated
+`next dev --port 5373`), confirmed via a failed `curl` to
+`http://127.0.0.1:5373/` right after. Did **not** touch anything under
+`.codex/runtime/council/` or its guard file — outside this Builder's
+authority to repair. **By ~20:56Z, re-checked and confirmed real
+recovery**: the Council's own `processes.json` showed a fresh launcher/
+dev-server/worker set it registered itself (~20:54:52Z–20:55:01Z), and
+`curl` to port 5373 returned `200` again — it detected the failure and
+relaunched on its own, no help needed. Full evidence and the root-cause
+fix (never reuse a `CommandLine`-substring filter that matches another
+role's shared-sandbox runtime path — check the exact port or working-
+directory root instead) are in `CYVEXLY_WATCH.md`'s round-6 entries.
+Apply that fix to any future process-stop filter. Whether this incident
+warrants Owner-facing disclosure despite the clean recovery is an
+Owner-level judgment this Builder round can't make unilaterally —
+surfaced here for that reason.
 
 Otherwise, round 6 closed cleanly on the product-source side — no crash,
 no unsafe uncommitted state, no unresolved urgent reviewer finding beyond
