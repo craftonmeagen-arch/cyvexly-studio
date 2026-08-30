@@ -22,14 +22,16 @@ live-tab screenshot of the new favicon would still strengthen (not
 replace) round 7's proxy-rasterizer pixel evidence. Read
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md` for the full list.
 **Accepted source position:** Git repository on branch `master`. Round 7
-landed as one source commit (`97f7b69` — favicon/OG-image mark redesign)
-plus this round's documentation-update commit, after round 6's several
-"(cont.)" commits — **treat `git log` as the source of truth for the
-exact count and hashes**; this prose is a summary, not a ledger, and
-will go stale the moment another commit lands. Working tree is clean of
-Builder-owned changes at close; only the same pre-existing Auditor/
-Council-owned files remain uncommitted (correctly left untouched across
-every round — see `CYVEXLY_WATCH.md`).
+landed as two source commits — `97f7b69` (favicon/OG-image mark
+redesign) and `ce6d273` (fixes a real edge-clipping bug found in
+`97f7b69`'s own mark, plus a new real `favicon.ico`) — plus this round's
+documentation-update commits, after round 6's several "(cont.)" commits
+— **treat `git log` as the source of truth for the exact count and
+hashes**; this prose is a summary, not a ledger, and will go stale the
+moment another commit lands. Working tree is clean of Builder-owned
+changes at close; only the same pre-existing Auditor/Council-owned files
+remain uncommitted (correctly left untouched across every round — see
+`CYVEXLY_WATCH.md`).
 
 ## Immediate orientation
 
@@ -52,9 +54,13 @@ every round — see `CYVEXLY_WATCH.md`).
   as real — see `CYVEXLY_WATCH.md`'s round-5 entry.
 - Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-7 report before planning round
   8 — it has the full favicon-redesign method (three candidates tested
-  with real pixel evidence via the `ImageResponse` proxy technique) and
-  the full DOM/accessibility-tree keyboard-audit method, both reusable
-  for future work in this session type.
+  with real pixel evidence via the `ImageResponse` proxy technique),
+  the real edge-clipping bug found and fixed in that same redesign (a
+  design approved from a small thumbnail alone was not actually proof
+  it fit its viewBox — measure the true bbox), the new real
+  `favicon.ico` (the old one was never actually replaced by any prior
+  round), and the full DOM/accessibility-tree keyboard-audit method —
+  all reusable for future work in this session type.
 - Read `CYVEXLY_CHUNK_DEBT.md` and `CYVEXLY_APP_DEBT.md` before building
   deeply on the OG image/`metadataBase`, the About page, legal pages,
   the Planner's email-delivery route, or the Work/case-study concept

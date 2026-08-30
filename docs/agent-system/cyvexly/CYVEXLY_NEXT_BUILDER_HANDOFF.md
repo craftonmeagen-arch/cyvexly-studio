@@ -14,8 +14,10 @@ applied the root-cause fix going forward: stopped every process it
 started by exact PID looked up via exact `CommandLine` match on this
 project's own port/working directory, never a shared-path substring.)
 `git log 196768e..HEAD` (round 6's start) through round 7's own commits
-— check `git log` for the exact current hashes since this prose will go
-stale the moment another commit lands.
+(two source commits, `97f7b69` and `ce6d273` — the second fixes a real
+bug in the first, see below — plus documentation commits) — check
+`git log` for the exact current hashes since this prose will go stale
+the moment another commit lands.
 
 ## Concurrent Auditor finding `CYV-IFA-007`: already resolved, no action needed
 
@@ -33,18 +35,30 @@ closed. No action needed; do not re-investigate.
 
 ## Round 7: favicon 16px legibility fixed; Planner keyboard-accessibility audited via an alternate method
 
-- **Favicon (`CYVEXLY_CHUNK_DEBT.md` item 3): RESOLVED.** The C/Y mark's
-  two thin overlapping strokes blurred into an indistinct shape at 16px
-  (found round 3). Redesigned to a single-weight fused orbit-arc-plus-
-  checkmark mark, tested against two other candidates with real pixel
-  evidence at 16/32/64px via the established `ImageResponse`-proxy
-  technique, applied to both `src/app/icon.svg` and
-  `src/app/opengraph-image.tsx`. Verified through the real shipping
-  routes in both dev and a clean production build. **A real live-tab
-  screenshot would still strengthen this (the proxy rasterizer is not
-  proof of exact Chrome/Safari/Firefox `<link rel="icon">` scaling
-  behavior, per round 3's own caveat) but the defect itself is fixed on
-  strong evidence, not stalled any further.**
+- **Favicon (`CYVEXLY_CHUNK_DEBT.md` item 3): RESOLVED, after a real
+  self-caught bug fix within the same round.** The C/Y mark's original
+  two thin overlapping strokes blurred at 16px (found round 3).
+  Redesigned to a single-weight fused orbit-arc-plus-checkmark mark
+  (commit `97f7b69`) — but that first version genuinely overflowed its
+  32x32 viewBox by 14 units on the right edge, only caught later the
+  same round while building a real `favicon.ico` and rendering the mark
+  larger (128/256px), where the clipping became visually obvious. **This
+  had shipped and was recorded as "resolved" in an earlier documentation
+  commit this round — that commit was factually wrong at the time about
+  the fix being complete; the actual fix landed in a follow-on commit
+  (`ce6d273`) the same round, verified via measured bounding-box math,
+  not just re-approving a small thumbnail.** Also discovered and fixed
+  separately: `src/app/favicon.ico` had never actually been replaced by
+  any prior round — it was still the generic Next.js scaffold icon (a
+  black circle/white triangle), not even the old C/Y mark. Built a real
+  branded multi-resolution `.ico` (16/32/48/256px) via the same proxy
+  pipeline plus PIL packing, verified frame-by-frame after packing.
+  Verified through the real shipping routes in both dev and a clean
+  production build after each fix. **A real live-tab screenshot would
+  still strengthen this (the proxy rasterizer is not proof of exact
+  Chrome/Safari/Firefox `<link rel="icon">` scaling behavior, per round
+  3's own caveat) but the defect itself is fixed on strong, measured
+  evidence, not stalled any further.**
 - **Council's "Next Council question" (Planner keyboard-only/reduced-
   motion review): partially addressed via a legitimate alternate
   method, not resolved.** Real OS-level Tab-key traversal remains

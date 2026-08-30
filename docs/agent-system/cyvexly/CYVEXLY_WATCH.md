@@ -244,3 +244,29 @@ boundary on future reasoning. Rounds 1-5 are rotated to
   there's a specific reason to suspect the harness environment changed
   (e.g. a new session type, an explicit fix claim), not as routine
   ritual.
+- **A design "approved" from a small visual thumbnail is not proof it
+  actually fits its intended viewBox/canvas — measure the true
+  geometric bbox.** This round's own favicon redesign shipped with a
+  real bug: the mark overflowed its 32x32 viewBox by 14 units on the
+  right edge, invisible enough at 16-88px thumbnails (the sizes checked
+  before shipping) to get approved and committed. Found only when
+  rendering the same mark larger (128/256px, while building a real
+  `favicon.ico`) made the missing chunk of ring obvious. The reliable
+  fix/verification method: render the design against a deliberately
+  oversized viewBox (e.g. `-20 -20 72 72` for a nominal `0 0 32 32`
+  design) so nothing can be clipped, compute the real ink bounding box
+  from the raw pixel bbox, and convert back to viewBox units — this
+  gives an exact answer instead of a visual guess. Worth doing for any
+  future hand-authored SVG/mark work in this app before considering a
+  design final, not just at the size it happens to look fine at.
+- **PIL's ICO writer can silently produce a file with fewer embedded
+  sizes than requested, with no error, depending on which image is
+  passed as the `save()` target vs. `append_images`.** Passing the
+  smallest image (16x16) as the base with larger images in
+  `append_images` produced a "1 icon, 16x16" file despite requesting
+  four sizes; passing the largest image (256x256) as the base with
+  smaller images in `append_images` correctly embedded all four. Always
+  verify the packed result by reopening it and checking `.info['sizes']`
+  (or extracting each frame via `im.ico.getimage(size)` and viewing it)
+  — never trust that a `save()` call without an exception embedded what
+  was intended.

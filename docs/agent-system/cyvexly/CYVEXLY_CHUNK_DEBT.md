@@ -58,13 +58,24 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
    it). Rounds 4-6 left this open pending "an attended session," which
    never materialized in this exact (scheduled/unattended) session type
    across repeated confirmations. Round 7 redesigned the mark instead of
-   waiting further: a single-weight (`stroke-width 5`) fused orbit-arc-
-   plus-checkmark shape, tested against two other candidates with real
-   pixel evidence at 16/32/64px on light and dark backgrounds via the
-   same proxy technique, applied to `src/app/icon.svg` and
-   `src/app/opengraph-image.tsx`. Verified through the real shipping
-   routes in a clean production build with a full route sweep — zero
-   regressions. **Caveat, still honest:** the proxy rasterizer
+   waiting further: a single-weight fused orbit-arc-plus-checkmark
+   shape, tested against two other candidates with real pixel evidence
+   at 16/32/64px on light and dark backgrounds via the same proxy
+   technique, applied to `src/app/icon.svg` and
+   `src/app/opengraph-image.tsx`. **That first version genuinely
+   overflowed its 32x32 viewBox by 14 units on the right edge** — small
+   enough at the sizes first checked (16/32/64px thumbnails) to escape
+   notice, found later the same round while building a real
+   `favicon.ico` and rendering the mark larger. Measured the true
+   extent precisely (not assumed) and shipped a corrected, rescaled
+   version in a same-round follow-on commit, re-verified via the same
+   bounding-box measurement at every target size. Also built a real
+   branded multi-resolution `favicon.ico` (16/32/48/256px) — the
+   previous file had never actually been replaced by any round, still
+   the generic Next.js scaffold icon. Verified through the real shipping
+   routes in a clean production build with a full route sweep, both
+   after the initial redesign and after the fix — zero regressions.
+   **Caveat, still honest:** the proxy rasterizer
    (`resvg`, via `next/og`) is not proof of exactly how Chrome/Safari/
    Firefox scale an `<link rel="icon">` SVG in a live tab (round 3's own
    caveat, still applies) — a real live-tab screenshot would still

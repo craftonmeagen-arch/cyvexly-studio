@@ -282,5 +282,14 @@
   `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND6_REPORT.md` and
   `CYVEXLY_WATCH.md`'s round-5 entries to
   `docs/archive/CYVEXLY_WATCH_ARCHIVE.md` to stay under both files'
-  §7.14 hot-path caps. Landed as one source commit (`97f7b69`) plus this
-  round's documentation-update commit.
+  §7.14 hot-path caps.
+- **Follow-on, same round:** building a real multi-resolution
+  `favicon.ico` (found: `src/app/favicon.ico` had never actually been
+  replaced — still the generic Next.js scaffold icon, not even the old
+  C/Y mark) surfaced a real bug in the favicon redesign just committed:
+  the mark genuinely overflowed its 32x32 viewBox by 14 units, measured
+  precisely rather than assumed, small enough at the sizes first checked
+  to escape notice. Fixed by rescaling/recentering the same design and
+  re-verifying its true bounding box stays inside the viewBox at every
+  target size. Landed as a second source commit (`ce6d273`) fixing the
+  first (`97f7b69`), plus this round's documentation-update commits.

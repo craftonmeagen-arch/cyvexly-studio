@@ -378,16 +378,76 @@ Tab-key traversal in an attended browser (see What was not checked).
   it unlocks screenshots) — a deeper harness-level explanation isn't
   needed to use the capability, so not pursued further this round.
 
+### Follow-on: a real edge-clipping bug found while building a proper favicon.ico, fixed same round
+
+While generating a genuine multi-resolution `favicon.ico` (see below —
+a separate, previously-undocumented gap this round also found and
+fixed), rendering the new mark at 128px/256px via the same
+`ImageResponse` proxy technique showed the ring visibly cut off at the
+right edge — something round 7's own earlier candidate testing (small
+thumbnails at 16/32/64px, visually approved) had not caught. Rather than
+assume this was a Satori rendering limitation at larger sizes (the
+initial hypothesis), measured the design's true geometric extent
+directly: rendered it against a deliberately oversized test viewBox
+(`-20 -20 72 72`, large enough that nothing could be clipped), computed
+the real ink bounding box in viewBox units from the raw pixel bbox, and
+found it genuinely spanned **x:[7, 46.1], y:[3.6, 32.9]** — 14 units past
+the right edge of the intended 0-32 viewBox, not a rendering artifact.
+The favicon and OG-image commit earlier this round (`97f7b69`) had
+shipped this bug; it was small enough at 16-88px in prior visual checks
+to escape notice (a sliver of missing ring, easy to miss when eyeballing
+a small thumbnail rather than measuring).
+
+**Fix:** recomputed the same design (same shape, same relative
+proportions) scaled by 0.75 and translated to center within the
+viewBox, verified the new true bbox (**x:[1.2, 30.6], y:[5.0, 27.0]**)
+comfortably fits inside 0-32 on both axes using the same oversized-
+viewBox measurement technique, then re-verified all four target favicon
+sizes (16/32/48/256px) individually — each one's own bbox stays within
+its own canvas (the 16px frame's bbox technically touches the pixel
+edge, but that's ordinary sub-pixel antialiasing bleed at ~0.6px
+margin, not the same 14-unit-overflow defect; confirmed by direct visual
+inspection, not just the numeric bbox). Applied to `src/app/icon.svg`
+and `src/app/opengraph-image.tsx`, landed as commit `ce6d273`.
+**Lesson for future rounds doing SVG/mark design work:** approving a
+design from a small visual thumbnail alone is not sufficient proof it
+fits its intended viewBox — measure the actual geometric bbox (render
+against deliberate overflow room, or check `img.getbbox()` against the
+canvas size) whenever a design's precise extent matters, the same
+measured-discrepancy discipline this packet already requires for
+layout/spacing work.
+
+### Also this round: a real favicon.ico was shipped for the first time
+
+Separately from the clipping bug, discovered while building the ICO
+that `src/app/favicon.ico` was still the generic Next.js scaffold
+icon (a black circle with a white triangle) — never actually replaced
+by any prior round. Rounds 2-6 added `icon.svg` as an *additional*
+icon for browsers that honor `<link rel="icon" type="image/svg+xml">`,
+correctly noting the old `.ico` "remains as a fallback," but no round
+had verified what that fallback actually *was*. Built a real branded
+`.ico` at the four sizes the original file had (16/32/48/256px) using
+the same `ImageResponse` pixel pipeline plus PIL for ICO packing,
+verified each embedded frame individually after packing via direct
+low-level frame extraction (`im.ico.getimage(size)`, not just
+re-reading the file's declared `sizes` metadata, which the first two
+packing attempts showed can silently omit frames or embed the wrong
+one without erroring). Landed in the same `ce6d273` commit as the
+clipping fix.
+
 ### Git/diff accountability
 
 At round start, `git log` HEAD was `c13ae7a` and `git status` showed only
 the same pre-existing, untouched Auditor/Council files every prior round
 found, plus fresh concurrent-Auditor-round evidence files (correctly not
-touched). This round's product-source change landed as one commit,
-`97f7b69` (`src/app/icon.svg`, `src/app/opengraph-image.tsx`), plus this
-documentation-update commit. No file outside what's described here was
-touched; `git status --short` immediately before this commit shows only
-the routine `CYVEXLY_*`/archive documentation changes described in this
+touched). This round's product-source changes landed as two commits:
+`97f7b69` (`src/app/icon.svg`, `src/app/opengraph-image.tsx` — the
+initial redesign, which had the clipping bug described above) and
+`ce6d273` (the same two files plus `src/app/favicon.ico` — the geometry
+fix and the new real favicon.ico), plus this round's documentation-update
+commits. No file outside what's described here was touched;
+`git status --short` immediately before the final commit shows only the
+routine `CYVEXLY_*`/archive documentation changes described in this
 closeout, plus the same pre-existing untouched Auditor/Council files.
 
 ### Concurrent Auditor finding disposed: `CYV-IFA-007`
@@ -414,8 +474,12 @@ review, not just at final closeout.
 
 `CYVEXLY_CHUNK_DEBT.md` item 3 (favicon 16px legibility): **RESOLVED** —
 redesigned and pixel-verified at the sizes that matter, shipped through
-both the icon route and the OG image, confirmed in a clean production
-build with zero regressions.
+the icon route, the OG image, and (new this round) a real branded
+`favicon.ico` replacing the never-actually-updated Next.js scaffold
+default. The initial redesign shipped with a real edge-clipping bug
+(measured, not assumed — see above), found and fixed within the same
+round before this report closed. Confirmed in a clean production build
+with zero regressions after both the initial commit and the fix.
 
 Council's "Next Council question" (Planner keyboard/reduced-motion
 review): **partially addressed via an alternate method** — real DOM/
