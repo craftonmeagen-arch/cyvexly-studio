@@ -460,3 +460,13 @@ matching round 3's own reasoning: `CYVEXLY_PROJECT_CHUNK_MAP.md` and
 5. Re-check `docs/agent-system/cyvexly/council/evidence/` and the current
    Council/Auditor reports near the start of the next round for any
    further findings published after this round's own read.
+
+### Closeout addendum: a process-interference incident, self-healed
+
+Near closeout (~20:52Z), this round's own process-stop filter was too
+broad and briefly stopped a concurrent Council round's own dev-server
+processes (a real §1.6 violation) — the Council self-healed within
+minutes, confirmed with direct evidence. This is not part of the planned
+work above; full account, exact evidence, and the root-cause fix for
+future process-stop filters are in `CYVEXLY_WATCH.md`'s round-6 entries
+and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s Urgent items.

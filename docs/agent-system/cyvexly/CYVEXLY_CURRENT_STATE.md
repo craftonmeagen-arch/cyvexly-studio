@@ -10,11 +10,13 @@ email-provider decision. Chunk 4 — Utility/legal pages — opened round 2,
 in progress, unchanged this round.
 **Chunk-local round:** N/A this round (round 6 fixed reviewer-flagged
 cross-cutting bugs on Chunk 2/3 surfaces, not a chunk-opening round)
-**Current mission:** Check `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s Urgent
+**Current mission:** Read `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s Urgent
 items first — round 6 accidentally stopped a concurrent Council round's
-own processes near closeout (a real non-interference violation, not
-resolved by this Builder; full detail there and in `CYVEXLY_WATCH.md`).
-Otherwise: route the domain + transactional-email-provider
+own processes near closeout (a real non-interference violation); the
+Council round self-healed within minutes, confirmed with evidence, but
+the root-cause fix for future process-stop filters still needs applying
+going forward (full detail there and in `CYVEXLY_WATCH.md`). Otherwise:
+route the domain + transactional-email-provider
 decision to the Owner (`CYVEXLY_APP_DEBT.md` item 4) so the Planner's
 real confirmation-email route can be built and Chunk 3 formally closed —
 unchanged, still the single highest-value blocked item. In parallel: real
