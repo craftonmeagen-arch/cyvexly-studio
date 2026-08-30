@@ -470,3 +470,11 @@ minutes, confirmed with direct evidence. This is not part of the planned
 work above; full account, exact evidence, and the root-cause fix for
 future process-stop filters are in `CYVEXLY_WATCH.md`'s round-6 entries
 and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s Urgent items.
+
+That same recovered Council round then independently re-verified this
+round's three fixes using its own real, working browser — including
+actual screenshots this session's own compositing limitation couldn't
+produce — and found all three resolved (published evidence, not yet a
+formal report; see `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s heads-up section
+for detail). This is the independent pixel-level confirmation "What was
+not checked" above flagged as missing.

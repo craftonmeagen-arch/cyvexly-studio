@@ -33,6 +33,29 @@ commits (`1eb1242`, `f435f67`) plus this round's own documentation-update
 commits — check `git log` for the exact current hashes since this prose
 will go stale the moment another commit lands.
 
+## Heads-up: the recovered Council round independently confirmed this round's three fixes with a real screenshot
+
+While closing this round, the same Council round that self-healed from
+the incident above published fresh evidence
+(`docs/agent-system/cyvexly/council/evidence/
+council-20260830T204540Z-r3-live-review.md`, not yet a formal report —
+this Builder read it read-only, touched nothing Council-owned) using its
+own isolated runtime's **real, working browser** (unaffected by this
+session's compositing limitation — it captured actual viewport
+screenshots). It independently re-verified all three of this round's
+fixes: the Planner rail's active step is fully visible at 390px/768px
+after a real nine-step interaction (`scrollLeft`/bounds measurements
+closely matching this round's own forced-`"auto"` DOM proof, plus real
+screenshots this session couldn't produce), the Services/Pricing mobile
+reflow shows zero overflow with readable stacked cards at 390px, and the
+`scroll-behavior` warning is gone with zero console errors/warnings
+route-wide. **This is the independent second-pair-of-eyes confirmation,
+including the pixel-level proof, that this round's own report explicitly
+flagged as missing** — treat it as strong corroborating evidence, not yet
+an adopted formal Council disposition (no formal report/inbox entry
+existed as of this round's own close). Check whether a formal report has
+landed by the time the next round starts.
+
 ## Orientation
 
 - **Round 6 fixed the Council's `CYC-R2-20260830-01` "Primary Next-Builder
@@ -144,15 +167,11 @@ redesigning.
 Re-ran the vision §15 14-item launch-readiness pass round 3 first
 established (it had gone stale after three rounds of real progress). Full
 item-by-item detail is in `CYVEXLY_ACTIVE_CHUNK.md`'s round-6 report.
-Headline: still **not launch-ready**, same four Owner-input blockers as
-before, but item 2 (sitemap) has one fewer gap (`/start` now built), item
-4 (Planner) is newly assessable and partially ready (data capture done,
-delivery still interim), item 10 (forms/confirmations) now covers the
-Planner too, and items 7/11/12 have stronger evidence than round 3's pass.
-Worth re-running this same structured check again once the Owner answers
-any of the four blocking questions, or every few rounds regardless, since
-it's cheap to redo and gives a concrete, current per-item status rather
-than a vague "not ready yet."
+Headline: still **not launch-ready**, same four Owner-input blockers, but
+real progress (one fewer sitemap gap, the Planner now assessable and
+partially ready, stronger forms/accessibility/portfolio evidence). Worth
+re-running this same structured check once the Owner answers any of the
+four blocking questions, or every few rounds regardless — cheap to redo.
 
 ## Round-6 method note: grep for a reviewer finding's exact defect shape, not just the flagged page
 
@@ -166,20 +185,14 @@ utility combination, a data-shape convention) rather than a one-off — the
 same pattern search discipline round 5 used for grep-based color-token
 audits.
 
-## Round-5 method note: grep-based color audits catch design-system drift that eyeballing misses
+## Older method notes (carried forward as pointers, full detail archived)
 
-Round 5 found a real invented color (not in any project's palette) in a
-first draft of new hand-authored SVG artwork, caught only by
-`grep -oE '#[0-9A-Fa-f]{6}' <file> | sort -u` against the palette arrays
-— not by visual inspection. Worth running the same check on any future
-hand-authored SVG/color work in this app before calling it done.
-
-## Round-4 method note: reused the established shared-component + config-data pattern
-
-The Planner's ~60 fields across nine steps were built with one small
-reusable field-component library (`src/components/planner/
-planner-fields.tsx`) driven by config data transcribed from vision §9
-(`src/lib/planner-config.ts`), the same shape the app already uses for
-`servicesGroups`/`pricingPackages`/`faqLibrary`. If a future round
-touches the Planner's content, extend `planner-config.ts` first rather
-than hand-editing step markup directly.
+- **Round 5:** grep-based color audits (`grep -oE '#[0-9A-Fa-f]{6}' <file>
+  | sort -u` against a component's palette array) catch design-system
+  drift eyeballing misses — see `docs/archive/chunks/
+  CYVEXLY_CHUNK3_ROUND5_REPORT.md`.
+- **Round 4:** the Planner's fields use a shared field-component library
+  (`src/components/planner/planner-fields.tsx`) driven by config data
+  (`src/lib/planner-config.ts`), the same shape as `servicesGroups`/
+  `pricingPackages`/`faqLibrary` — extend `planner-config.ts` first for
+  any future Planner content change rather than hand-editing markup.
