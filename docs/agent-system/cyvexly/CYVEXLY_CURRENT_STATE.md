@@ -14,14 +14,14 @@ item 3) — do not invent a jurisdiction. Favicon/social-sharing assets and a
 launch-readiness pass remain. Chunk 3 (Project Planner) is not yet opened and
 needs an Outcome Reachability Check (§4.12) for its email-delivery approach
 before implementation.
-**Accepted source position:** Git repository on branch `master`. As of round 1
-close there were 7 commits (5 labeled "Round 1 (cont.)" — the session that
-produced them continued working past its own round-1 report's stated commit
-count without renumbering the global round; treat `git log` as the source of
-truth over any stale prose count). Round 2's changes (this round) are
-uncommitted in the working tree as of this state update — see the round 2
-report in `CYVEXLY_ACTIVE_CHUNK.md` and the round's own git accountability
-section for what's about to be committed.
+**Accepted source position:** Git repository on branch `master`, 11 commits
+as of this round's close (7 from round 1, 4 from round 2: `5f19573` main
+page build, `896e1c2` favicon + port-conflict note, `8b9031c`
+heading-hierarchy fix, `4bf924f` report archival — treat `git log` as the
+source of truth over any stale prose count in older reports). Working tree
+is clean of Builder-owned changes at close; only pre-existing
+Auditor/Council-owned files remain uncommitted (correctly left untouched —
+see `CYVEXLY_WATCH.md`).
 
 ## Immediate orientation
 
