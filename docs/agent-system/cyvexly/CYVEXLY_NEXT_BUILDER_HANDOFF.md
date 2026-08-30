@@ -15,23 +15,34 @@ unresolved urgent reviewer finding discovered this round.
   photo to close this.** Independently verify this state, then consider
   formally closing Chunk 2 per §7.9.
 - Chunk 4 (utility/legal pages) was opened early this round: `/not-found`,
-  `/faq`, and `/accessibility` are done. `/privacy` and `/terms` are
+  `/faq`, `/accessibility`, and a hand-authored SVG favicon (`icon.svg`,
+  replacing the Next.js default) are done. `/privacy` and `/terms` are
   deliberately not built — they need Owner-supplied jurisdiction facts
   (business location, customer markets) before honest legal text can be
-  drafted (see `CYVEXLY_APP_DEBT.md` item 3, new this round). Favicon/
-  social-sharing assets and a launch-readiness pass (vision §15) remain.
-- Read `CYVEXLY_ACTIVE_CHUNK.md`'s Round 2 report in full before planning —
-  it documents a real Next.js 16 runtime bug found and fixed (dynamic
-  `params` is a Promise), a real visual-comparison gap found and fixed
-  (case-study "visual system excerpt"), and several visual gaps found but
-  deliberately left open and logged rather than fixed.
+  drafted (see `CYVEXLY_APP_DEBT.md` item 3, new this round). A real
+  social-sharing (Open Graph) image and a launch-readiness pass (vision §15)
+  still remain.
+- Read `CYVEXLY_ACTIVE_CHUNK.md`'s Round 2 report (plus its addendum) in
+  full before planning — it documents a real Next.js 16 runtime bug found
+  and fixed (dynamic `params` is a Promise), a real visual-comparison gap
+  found and fixed (case-study "visual system excerpt"), a real
+  heading-hierarchy skip found and fixed (`/work` went H1→H3 with no H2),
+  and several visual gaps found but deliberately left open and logged
+  rather than fixed.
 - Read `CYVEXLY_CHUNK_DEBT.md` before touching Services/Pricing (known
   density/icon-parity gaps vs. mockups, logged not fixed) or the case-study
   template (photographic imagery still placeholder gradients).
-- Read `CYVEXLY_WATCH.md` — it now documents that `computer` tool
-  click/type actions are non-functional in this unattended session (not
-  just screenshots, as round 1 first noted) and the Next.js 16 async-params
-  pattern, so a future round doesn't rediscover either from scratch.
+- Read `CYVEXLY_WATCH.md` before assuming port `5173` is free or that
+  `computer` tool actions work in this unattended session — this round
+  found `computer` click/type actions are non-functional here (not just
+  screenshots, as round 1 first noted; use `javascript_tool`-dispatched real
+  DOM events instead), the Next.js 16 async-params pattern, and a foreign,
+  unrelated dev server ("EduAILenz V2") occupying the reserved Builder port
+  5173 mid-round after this round's own server died — left untouched
+  (ownership not proven to be orphaned Builder infrastructure) and worked
+  around via scratch ports instead. Re-check port 5173 before assuming it's
+  available, and apply the same non-interference judgment if the same
+  foreign process (or a different one) is still there.
 
 ## Two Owner-input questions now blocking real pages (not just documentation)
 
