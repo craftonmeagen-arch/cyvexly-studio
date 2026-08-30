@@ -202,8 +202,16 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
   --noEmit` and `pnpm run lint` clean, `document.querySelector('svg')`
   confirmed present inside the correct badge class for all five package
   cards by name, zero console errors, no horizontal overflow at 375px
-  mobile width. Pixel appearance not confirmed (unattended-session
-  screenshot limitation still applies — see `CYVEXLY_WATCH.md`).
+  mobile width. Pixel appearance not confirmed via a live screenshot
+  (unattended-session limitation still applies — see `CYVEXLY_WATCH.md`),
+  but the concurrent Auditor's `pricing-desktop.png` (see the round-3
+  report addendum) independently confirmed correct rendering, and a
+  manual WCAG contrast check (same formula/method as round 1's original
+  contrast fixes) of the icon stroke color `#0F66E0` against the
+  frosted-glass badge/card background computed to roughly 5:1 — passes
+  both the 4.5:1 text and 3:1 non-text/UI-component thresholds with
+  margin, consistent with round 1's already-verified 5.25:1 for the same
+  color against the arctic-mist page background.
 
 ## Resolved round 1
 
