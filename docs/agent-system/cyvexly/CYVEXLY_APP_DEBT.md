@@ -16,3 +16,17 @@
    until the Owner confirms one; when that happens, add `metadataBase` and
    `openGraph`/`twitter` image metadata (currently omitted rather than
    guessed).
+3. **Privacy Policy and Website Terms need Owner-supplied jurisdiction
+   facts before they can be honestly drafted.** Round 2 built
+   `/accessibility` (jurisdiction-agnostic: a WCAG target and a contact
+   route) but deliberately did not attempt `/privacy` or `/terms`. Vision
+   §6.12 and §12 both note legal text "should be reviewed for the business
+   location and customer markets before launch" — that implies the business
+   location and primary customer markets need to be known facts, not
+   Builder-guessed ones, before drafting text that references applicable
+   consumer-protection or data-privacy regimes (e.g., which state/country
+   law governs, whether GDPR/CCPA-style disclosures apply). Route to the
+   Owner: what is Cyvexly's business location/registration, and which
+   customer markets should the policies explicitly address? Do not invent a
+   jurisdiction to unblock this — draft only once that's known, the same
+   principle as the About page's founder-identity gap (item 1).

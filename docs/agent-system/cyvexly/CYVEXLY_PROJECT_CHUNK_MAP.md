@@ -20,17 +20,27 @@ requires.
 - Closed does not mean frozen — later evidence (e.g. a full Auditor visual
   review) may reopen it.
 
-## Chunk 2 — Core marketing pages (ACTIVE, opened round 1)
+## Chunk 2 — Core marketing pages (NEARLY CLOSED, opened round 1, extended round 2)
 
 - **Outcome:** Services, Work/Portfolio (+ case-study template), Pricing,
   Process, About, and general Contact pages, reusing Chunk 1's design system
   and `src/lib/site-config.ts`.
-- **Progress:** `/process` built and verified in round 1 (see
-  `CYVEXLY_ACTIVE_CHUNK.md`). Services, Work, Pricing, About, Contact remain.
-- **Known gap:** the About page needs a real founder name, first-person
-  story, and portrait from the Owner (vision §6.8) — this is Owner-supplied
-  factual content, not a detail a Builder may invent. Route this rather than
-  fabricate a founder identity; see `CYVEXLY_APP_DEBT.md`.
+- **Progress:** `/process` (round 1), `/services`, `/pricing`, `/contact`,
+  `/work` (+ filterable grid), `/work/[slug]` case-study template with three
+  concept case studies (Aurora Spaces, Nexora Systems, Vellora Care) all
+  built and verified round 2. Five of six pages done.
+- **Remaining/bounded:** `/about` is the only page not built — it needs a
+  real founder name, first-person story, and portrait from the Owner (vision
+  §6.8), which no Builder round may invent. This is an honestly bounded gap
+  per the chunk's own closure boundary ("resolved or explicitly and honestly
+  bounded"), not a reachable defect. See `CYVEXLY_APP_DEBT.md` item 1.
+  **Recommendation:** the next Builder may treat Chunk 2 as closable once it
+  independently confirms this — see `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+- **Known visual gaps vs. mockups** (found via round-2 mockup comparison,
+  see `CYVEXLY_CHUNK_DEBT.md`): Services/Pricing pages are content-complete
+  and match vision text closely, but use denser text-only cards where
+  `mockups/02-services-pricing.png` shows more compact icon-led cards — the
+  Services page gained icon badges in round 2, Pricing did not yet.
 - Non-goal: Project Planner (its own chunk, given its multi-step form
   complexity).
 
@@ -38,12 +48,29 @@ requires.
 
 - Likely outcome: the nine-step conversational Planner (vision §6.9 and §9),
   submission handling, confirmation state, and summary email — scoped once a
-  form/email-delivery approach is chosen and, if needed, authorized.
+  form/email-delivery approach is chosen and, if needed, authorized (§4.12
+  Outcome Reachability Check applies: this needs a foundational decision
+  about the email-delivery/backend mechanism before implementation, not just
+  Builder judgment).
 
-## Chunk 4 — Utility, legal & launch readiness (NOT YET OPENED)
+## Chunk 4 — Utility, legal & launch readiness (OPENED round 2, IN PROGRESS)
 
-- Likely outcome: 404, FAQ library, Privacy/Terms/Accessibility pages, favicon
+- **Outcome:** 404, FAQ library, Privacy/Terms/Accessibility pages, favicon
   and social-sharing assets, and the launch-readiness checklist in vision §15.
+- **Progress (round 2):** custom `/not-found` page (replaces Next.js default,
+  used for both unmatched routes and `notFound()` calls), full `/faq`
+  library (11 categories, 30 Q&As per vision §6.11), and `/accessibility`
+  statement all built and verified.
+- **Deliberately not attempted this round:** `/privacy` and `/terms`. Unlike
+  Accessibility (jurisdiction-agnostic — a WCAG target + contact route),
+  Privacy and Terms need jurisdiction-specific legal language (business
+  location, applicable consumer-protection/data-privacy regime) that no
+  Builder round has and must not invent — this is the same class of gap as
+  the About page's founder identity: Owner-supplied fact, not a reversible
+  implementation detail. See `CYVEXLY_APP_DEBT.md` item 3.
+- **Remaining:** favicon/social-sharing assets (needs real design asset,
+  tracked in `CYVEXLY_CHUNK_DEBT.md` from round 1), launch-readiness
+  checklist pass (vision §15) once more of the site exists.
 
 ## Cross-chunk notes
 

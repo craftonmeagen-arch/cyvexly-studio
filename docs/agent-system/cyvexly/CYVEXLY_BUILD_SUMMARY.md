@@ -31,3 +31,34 @@
 - Opened Chunk 2 (core marketing pages) and built/verified `/process`.
 - See `CYVEXLY_ACTIVE_CHUNK.md` for the full round report and
   `CYVEXLY_CHUNK_DEBT.md` / `CYVEXLY_APP_DEBT.md` for open items.
+
+## Round 2 — 2026-08-30
+
+- Built and verified five more Chunk 2 pages: `/services` (7 service groups
+  with icon badges, "popular website types" section fixing previously-dead
+  footer anchors, service-combination table, FAQ), `/pricing` (5 package
+  tiers, comparison table, add-ons, care plans, payment schedule, FAQ),
+  `/contact` (accessible form with client-side validation and a
+  mailto-bridge submit path, since no email-delivery service is authorized
+  yet), `/work` (filterable portfolio grid), and `/work/[slug]` (case-study
+  template with full content for all three concept projects, including a
+  real color-swatch + typography "visual direction" section added after
+  comparing against `mockups/03-work-case-study.png`).
+- Opened Chunk 4 early and built three of its items: a custom `/not-found`
+  page, the full `/faq` library (11 categories, 30 Q&As), and
+  `/accessibility` statement. Deliberately did not attempt `/privacy` or
+  `/terms` — they need Owner-supplied jurisdiction facts first (see
+  `CYVEXLY_APP_DEBT.md` item 3).
+- Chunk 2 is now effectively complete except the Owner-blocked About page.
+- Found and fixed one real runtime bug (Next.js 16 dynamic `params` is a
+  Promise; a hand-written sync type passed typecheck/build but broke every
+  real request) and one real visual-comparison gap (missing case-study
+  "visual system excerpt") — see `CYVEXLY_WATCH.md` and
+  `CYVEXLY_CHUNK_DEBT.md`.
+- Verified every new and pre-existing route via a live dev server: real
+  rendered content, zero console errors, all network requests successful,
+  working interactions (FAQ accordions, mobile nav, work filter, contact
+  form validation + submit) confirmed via `javascript_tool`-dispatched real
+  DOM events (`computer` click/type actions proved non-functional in this
+  unattended session — see `CYVEXLY_WATCH.md`), and no horizontal overflow
+  at 375px mobile width on any new page.

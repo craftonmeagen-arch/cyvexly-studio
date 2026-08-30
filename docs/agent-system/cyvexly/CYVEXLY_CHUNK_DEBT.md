@@ -1,8 +1,7 @@
 # Cyvexly Chunk Debt
 
-Active-chunk (Chunk 2 — Core marketing pages) findings and reachable
-follow-ups from global round 1, carried over from Chunk 1 (Foundation &
-Home, closed this same round). Not the full backlog — see
+Active-chunk (Chunk 2 — Core marketing pages, extending into Chunk 4 —
+Utility pages) findings and reachable follow-ups. Not the full backlog — see
 `CYVEXLY_PROJECT_CHUNK_MAP.md` for chunk-level direction.
 
 ## Open
@@ -18,22 +17,86 @@ Home, closed this same round). Not the full backlog — see
    stages' inputs/deliverables/approval points, matching vision §6.7)
    without the extra layout/table work. Revisit when Chunk 2 does a
    dedicated visual pass on this page.
-2. **Other sitemap routes 404.** The header/footer link to `/services`,
-   `/work`, `/pricing`, `/process`, `/about`, `/start`, `/contact`, `/faq`,
-   `/privacy`, `/terms`, `/accessibility`. These are intentionally out of
-   Chunk 1's coherent slice (Home + design-system foundation) and are Chunk
-   2/3/4's job per the project map — not a defect to fix inside Chunk 1.
-3. **Placeholder work-card imagery.** `selectedWork` in
-   `src/lib/site-config.ts` uses CSS gradients, not real screenshots/crops,
+2. **Remaining sitemap routes that still 404: `/about`, `/start`,
+   `/privacy`, `/terms`.** As of round 2, `/services`, `/work` (+ three
+   case-study pages), `/pricing`, `/process`, `/contact`, `/faq`, and
+   `/accessibility` are all built and verified — most of the header/footer
+   nav now resolves. `/about` and legal pages are honestly blocked on
+   Owner-supplied facts (see `CYVEXLY_APP_DEBT.md` items 1 and 3); `/start`
+   is Chunk 3 (Project Planner), not yet opened.
+3. **Placeholder work-card imagery.** `selectedWork` / `caseStudies` in
+   `src/lib/site-config.ts` use CSS gradients, not real screenshots/crops,
    for the three concept projects (Aurora Spaces, Nexora Systems, Vellora
-   Care) named in the vision and mockups. This is honest (no fabricated
-   client work) but should be replaced with real designed crops once Chunk 2
-   builds the actual case-study pages for those concepts.
+   Care). This is honest (no fabricated client work) but should be replaced
+   with real designed crops/screen sequences — `mockups/03-work-case-study.png`
+   shows real architectural photography and desktop/mobile screen preview
+   panels on the case-study template that this round could not add without
+   a real design asset (round 2 did add a real color-swatch + typography
+   "Visual direction" section per case study, closing part of this gap, but
+   the photographic hero and desktop/mobile screen previews remain).
 4. **`/favicon.ico` and social-sharing image are still the Next.js
    defaults.** Vision §12 requires a final wordmark/favicon and
-   social-sharing image before launch; out of scope for Chunk 1.
+   social-sharing image before launch; still not built as of round 2.
+5. **Round-2 mockup comparison found real layout/density gaps on
+   Services and Pricing vs. `mockups/02-services-pricing.png`** (visual
+   floor comparison performed this round — see the round-2 report in
+   `CYVEXLY_ACTIVE_CHUNK.md` for the full comparison):
+   - Services: mockup uses a compact 6-card icon-led grid; the shipped page
+     uses 7 denser text-only-until-round-2 cards (now with icon badges added
+     round 2) with more per-card detail (problem/who/included/scope-change/
+     next-action) than the mockup shows — a deliberate adaptation, since
+     vision §6.2's explicit "each service card must answer..." requirement
+     is more specific than the compact mockup thumbnail, but the 7th group
+     ("Care & improvement") doesn't appear in the mockup's 6-card grid at
+     all, worth a second look.
+   - Services "Service Combinations" section: mockup shows icon-math cards
+     (icon + icon + icon = named combo); shipped page uses an audience-type
+     comparison table instead. Different framing, same informational intent
+     — not fixed this round.
+   - Pricing "What's Included in Every Project": mockup shows a per-package
+     checkmark matrix; shipped page uses a flat 12-item checklist (matrix
+     would be redundant since every item is checked for every package in
+     the mockup) — a deliberate, reasoned adaptation, not a gap.
+   - Pricing add-ons/billing tiles: mockup uses compact icon+text tiles;
+     shipped page uses full tables/lists matching vision §7's complete
+     add-on price-range list — again a deliberate adaptation favoring the
+     more detailed written vision over the compact mockup, but Pricing
+     still has no icon badges (Services now does after round 2's fix).
+   - Both pages' final-CTA headline ("Not sure which package/services fits/
+     you need?") differs from the mockup's "READY TO BUILD SOMETHING
+     EXCEPTIONAL?" — cosmetic, not fixed this round.
 
-## Resolved this round
+## Resolved round 2
+
+- **Fixed a real Next.js 16 runtime bug**: `/work/[slug]` initially typed
+  `params` as a plain `{ slug: string }` object (typecheck passed, since the
+  hand-written type bypassed the framework's generated `PageProps` check),
+  but Next.js 16's dynamic `params` is a Promise that must be awaited —
+  every case-study route 404'd at runtime with a logged
+  `sync-dynamic-apis` error until fixed to `params: Promise<{ slug: string
+  }>` + `await params`. Caught only by real dev-server route testing after
+  build/typecheck/lint all passed clean — see `CYVEXLY_WATCH.md`.
+- **Closed a real visual-comparison gap**: opened `mockups/03-work-case-
+  study.png` and found the case-study template was missing the "visual
+  system excerpt" (item 7 of vision §6.5) the mockup shows as a color-swatch
+  + typography specimen panel. Added a real "Visual direction" section per
+  case study (actual project palette hex values rendered as swatches,
+  verified via `getComputedStyle` to match, plus a typography note) rather
+  than leaving the gap unaddressed.
+- **Closed a related icon-parity gap on Services**: `mockups/02-services-
+  pricing.png` shows icon badges on every service card; the initial Services
+  build had none. Added a small hand-authored inline-SVG icon set
+  (`service-icon.tsx`, 7 simple line icons, no external asset needed) rather
+  than leaving it as an unaddressed observation.
+- **Fixed the dangling footer service anchors**: `footerNav.services` in
+  `site-config.ts` has linked to `/services#business-websites` etc. since
+  round 1, but `/services` didn't exist until this round, so those anchors
+  were previously part of a 404 page. The new Services page includes a
+  "Popular website types" section whose card `id`s exactly match those five
+  existing footer anchor targets — verified all 5 (+ the 7 core-service-
+  group anchors) resolve via `document.getElementById`.
+
+## Resolved round 1
 
 - Fixed `.codex/roles/scripts/Claim-BuilderLock.ps1` failing to parse for
   every invocation (not a lock-contention condition) because the file had no

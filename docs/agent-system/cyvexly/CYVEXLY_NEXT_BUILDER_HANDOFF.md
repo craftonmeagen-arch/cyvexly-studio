@@ -2,55 +2,72 @@
 
 ## Urgent items
 
-None. Round 1 closed cleanly — no crash, no uncommitted dirty state, no
-unresolved urgent reviewer finding.
+None. Round 2 closed cleanly — no crash, no unsafe uncommitted state, no
+unresolved urgent reviewer finding discovered this round.
 
 ## Orientation
 
-- Chunk 1 (Foundation & Home) is closed. Chunk 2 (core marketing pages) is
-  open, with `/process` built and verified. Read `CYVEXLY_ACTIVE_CHUNK.md`
-  for the full round-1 report before planning round 2.
-- Read `CYVEXLY_CHUNK_DEBT.md` before building deeper on the Home/Process
-  area (placeholder work-card imagery, default favicon/social image, other
-  routes still 404 pending their own chunk work).
-- Read `CYVEXLY_APP_DEBT.md` before starting the About page — it needs a
-  real founder name, first-person story, and portrait from the Owner. Do not
-  invent founder identity content.
-- Read `CYVEXLY_WATCH.md` — it documents two tooling defects fixed this round
-  (`Claim-BuilderLock.ps1` BOM/encoding, and Next.js's `agentRules`
-  auto-append into `AGENTS.md`), a concurrent-Auditor-evidence observation,
-  and the unattended-session screenshot limitation, so a future round doesn't
-  rediscover any of this from scratch.
-- `CYVEXLY_PROJECT_CHUNK_MAP.md` lays out the likely next chunks. The next
-  Builder should independently verify current source/runtime truth and plan
-  its own round rather than treating that map as a fixed checklist.
+- Chunk 2 (core marketing pages) is now effectively complete: `/`, `/process`,
+  `/services`, `/pricing`, `/contact`, `/work` (+ 3 case studies) all exist,
+  are verified, and pass build/typecheck/lint. Only `/about` remains, and it
+  is honestly bounded on Owner-supplied founder identity (see
+  `CYVEXLY_APP_DEBT.md` item 1) — **do not invent a founder name, story, or
+  photo to close this.** Independently verify this state, then consider
+  formally closing Chunk 2 per §7.9.
+- Chunk 4 (utility/legal pages) was opened early this round: `/not-found`,
+  `/faq`, and `/accessibility` are done. `/privacy` and `/terms` are
+  deliberately not built — they need Owner-supplied jurisdiction facts
+  (business location, customer markets) before honest legal text can be
+  drafted (see `CYVEXLY_APP_DEBT.md` item 3, new this round). Favicon/
+  social-sharing assets and a launch-readiness pass (vision §15) remain.
+- Read `CYVEXLY_ACTIVE_CHUNK.md`'s Round 2 report in full before planning —
+  it documents a real Next.js 16 runtime bug found and fixed (dynamic
+  `params` is a Promise), a real visual-comparison gap found and fixed
+  (case-study "visual system excerpt"), and several visual gaps found but
+  deliberately left open and logged rather than fixed.
+- Read `CYVEXLY_CHUNK_DEBT.md` before touching Services/Pricing (known
+  density/icon-parity gaps vs. mockups, logged not fixed) or the case-study
+  template (photographic imagery still placeholder gradients).
+- Read `CYVEXLY_WATCH.md` — it now documents that `computer` tool
+  click/type actions are non-functional in this unattended session (not
+  just screenshots, as round 1 first noted) and the Next.js 16 async-params
+  pattern, so a future round doesn't rediscover either from scratch.
 
-## Auditor finding published during this round
+## Two Owner-input questions now blocking real pages (not just documentation)
 
-The concurrent Auditor round (`auditor-20260830T1324Z-001`, review ID
-`IFA-2026-08-30-R1`) published a real report to
-`docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md` while this Builder
-round was still in progress, with an uncommitted `git status` at this
-Builder's close showing the Auditor's own report/inbox/state files as
-modified/new (left untouched — Auditor-owned, per role non-interference).
-Its top finding, `CYV-IFA-001` ("most home-page internal destinations render
-404"), matches what this round already knew and documented as expected,
-out-of-Chunk-1-scope work in `CYVEXLY_CHUNK_DEBT.md`. The next Builder should
-read `AUDITOR_CURRENT.md` in full and disposition each finding (confirm,
-combine with Chunk 2 planning, or route) before building deeply on any area
-it covers — do not just take this handoff's summary as the disposition.
+1. **About page founder identity** (carried from round 1): what name/
+   pronoun should the site use, is there a real portrait or should a
+   non-portrait studio image stand in, and what should the first-person
+   story say about why Cyvexly exists?
+2. **Privacy/Terms jurisdiction** (new this round): what is Cyvexly's
+   business location/registration, and which customer markets should the
+   policies explicitly address (for applicable consumer-protection/data-
+   privacy language)?
 
-No Council finding or active PM prompt was observed as of this round's
-close.
+Both are Owner-supplied facts, not reversible Builder judgment calls — see
+`CYVEXLY_APP_DEBT.md` for the full reasoning on each.
 
-**Note on `CYV-IFA-003`:** the Auditor's report (drafted 13:52 UTC, published
-13:59 UTC) lists this as an open "Later/Opportunity" finding describing the
-header's nav still switching on at the `md` (768px) breakpoint with almost no
-logo/nav gap. That describes the *pre-fix* state — this Builder's `md`→`lg`
-breakpoint change (see the round-1 report in `CYVEXLY_ACTIVE_CHUNK.md`) was
-committed at `4b978c8`, and this round independently re-verified with
-`getBoundingClientRect()` that at 768px only the hamburger menu renders (no
-desktop nav row at all, so no logo/nav gap exists to measure) and at 1024px
-the full nav has zero overlap. The next Builder should re-run the Auditor's
-own probe against current source rather than assume either report — but do
-not treat `CYV-IFA-003` as still-open without checking first.
+## Before opening Chunk 3 (Project Planner)
+
+Run the full §4.12 Outcome Reachability Check on the email-delivery/backend
+mechanism before implementing. This round's Contact page uses a `mailto:`
+bridge (functional, verified, honestly documented) as an interim,
+zero-authorization submission mechanism for a short form — but vision §6.9
+describes the Planner needing a confirmation email with a full answer
+summary sent *from Cyvexly*, which a `mailto:` bridge cannot reliably do
+(it would rely on the visitor's own mail client actually sending). Don't
+assume the same pattern scales; this is a real foundational decision to
+route or resolve, not just reuse.
+
+## No Council/Auditor finding newly published this round
+
+The `docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md` and Council
+evidence files present at round start were unchanged (same content,
+timestamps, and untracked-file set) throughout this round — no new Auditor
+or Council round ran concurrently this time, unlike round 1. The existing
+uncommitted Auditor report/evidence files were left untouched, per role
+non-interference; they still describe pre-round-1 source state (its own
+`CYV-IFA-001` "most destinations 404" finding is now substantially resolved,
+per this round's work, but the report itself was not edited by this
+Builder — an Auditor round should re-verify and republish rather than a
+Builder editing a reviewer's report).

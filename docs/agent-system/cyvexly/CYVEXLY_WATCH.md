@@ -42,3 +42,45 @@ boundary on future reasoning.
   compositing frames." DOM/content/console/network inspection and JS-driven
   interaction checks all worked fine in this same unattended session. See
   `CYVEXLY_CHUNK_DEBT.md` item 1.
+
+## Round 2
+
+- **Refinement to the round-1 unattended-session note above: `computer`
+  `left_click`/`type` actions (by ref or coordinate) are silently ineffective
+  in this unattended session, not just screenshots.** Tested directly:
+  clicking a text input via `computer{action:"left_click", ref:...}` then
+  `computer{action:"type"}` left the input's `.value` empty and
+  `document.activeElement` unchanged (stayed `BODY`) — the input never
+  received the simulated events, even though the tool call itself reported
+  success with plausible-looking coordinates. A `computer` click on a
+  `<button type="button">` (the FAQ accordion) once appeared to work in an
+  early test, but a controlled retest (fresh page load, single click, no
+  other clicks in between) showed the same non-effect; the earlier apparent
+  success was very likely a stale read racing an unrelated pending state
+  update from an earlier `javascript_tool`-dispatched click, not the
+  `computer` click itself. **Reliable interaction method for this session
+  remains `javascript_tool` dispatching real DOM events** (`new
+  MouseEvent('click', {bubbles:true, cancelable:true})` via
+  `element.dispatchEvent(...)`, or a native-setter `input` event for text
+  fields — see round-2 evidence testing the FAQ accordion, mobile nav,
+  filter chips, and the Contact form's full validation + submit paths),
+  with an `await new Promise(r => setTimeout(r, 300))` after dispatch since
+  React's state commit is not synchronous with the dispatch call. Do not
+  trust a `computer` click's "success" report as proof of an actual page
+  interaction in this session type; verify the DOM/state change
+  independently every time.
+- **Next.js 16 App Router: dynamic route `params` (and `searchParams`) are a
+  `Promise`, not a plain object — a hand-written prop type that skips the
+  framework's generated `PageProps` helper will typecheck fine but fail at
+  runtime.** Built `/work/[slug]/page.tsx` with `params: { slug: string }`
+  (matching pre-Next.js-15 convention); `tsc --noEmit`, lint, and
+  `next build` all passed clean, but every real request 404'd with a logged
+  `Route "/work/[slug]" used \`params.slug\`. \`params\` is a Promise...`
+  error, only visible by tailing the dev-server log / requesting the route
+  for real. Fixed by typing `params: Promise<{ slug: string }>` and
+  `await`-ing it in both `generateMetadata` and the page component. Worth
+  checking any future dynamic-route work in this app for the same pattern,
+  and a reminder that `pnpm run build`'s "Generating static pages" success
+  for a `generateStaticParams` route does not by itself prove the route
+  works — that build step doesn't execute the same runtime-request code
+  path that surfaced this bug.
