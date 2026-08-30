@@ -131,7 +131,41 @@ export default function PricingPage() {
             <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
               Compare packages
             </h2>
-            <div className="mt-8 overflow-x-auto">
+            {/* Below `sm`, the four-column table doesn't fit a phone-width
+                container without clipping (the same silent overflow-x-auto
+                pattern the Council flagged on Services, CYC-R2-F004) —
+                reflow to stacked cards instead. */}
+            <div className="mt-8 space-y-4 sm:hidden">
+              {pricingPackages.map((pkg) => (
+                <div
+                  key={pkg.name}
+                  className="rounded-xl border border-smoke-glass bg-frosted-glass/60 px-4 py-4"
+                >
+                  <p className="font-display font-semibold text-midnight-slate">{pkg.name}</p>
+                  <dl className="mt-3 space-y-1.5 text-sm">
+                    <div className="flex justify-between gap-3">
+                      <dt className="font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                        Starting price
+                      </dt>
+                      <dd className="text-midnight-slate">{pkg.price}</dd>
+                    </div>
+                    <div className="flex justify-between gap-3">
+                      <dt className="font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                        Core pages
+                      </dt>
+                      <dd className="text-right text-cool-graphite">{pkg.scope[0]}</dd>
+                    </div>
+                    <div className="flex justify-between gap-3">
+                      <dt className="font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                        Typical window
+                      </dt>
+                      <dd className="text-cool-graphite">{pkg.timeline}</dd>
+                    </div>
+                  </dl>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 hidden overflow-x-auto sm:block">
               <table className="w-full min-w-[640px] border-collapse text-left text-sm">
                 <thead>
                   <tr className="border-b border-smoke-glass">
@@ -198,7 +232,18 @@ export default function PricingPage() {
               Budget guidance, not a self-checkout menu — every add-on is
               scoped and confirmed in your proposal.
             </p>
-            <div className="mt-8 overflow-x-auto">
+            <div className="mt-8 space-y-2 sm:hidden">
+              {addOns.map((addOn) => (
+                <div
+                  key={addOn.name}
+                  className="flex items-baseline justify-between gap-3 border-b border-smoke-glass/70 py-3"
+                >
+                  <span className="text-midnight-slate">{addOn.name}</span>
+                  <span className="shrink-0 text-right text-cool-graphite">{addOn.range}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 hidden overflow-x-auto sm:block">
               <table className="w-full min-w-[560px] border-collapse text-left text-sm">
                 <tbody>
                   {addOns.map((addOn) => (
