@@ -215,6 +215,19 @@ boundary on future reasoning.
   `input`/`change` events, `dispatchEvent(new MouseEvent('click', ...))`)
   remained fully reliable for driving the entire nine-step Planner
   wizard, matching round 2's established interaction method.
+- **`window.scrollTo({behavior: "smooth"})` bypasses this project's
+  global CSS `prefers-reduced-motion` rule** (`globals.css`'s
+  `*, *::before, *::after { transition-duration: 0.001ms !important; }`
+  block only overrides `scroll-behavior` set via CSS, not an explicit
+  `behavior: "smooth"` argument passed directly to the JS `scrollTo`
+  call, which browsers honor regardless of the CSS property). Found this
+  while adding the Planner's step-change scroll-to-top — no other page
+  in the app calls `scrollTo` at all (checked via
+  `grep -rn "scrollTo" src`), so this wasn't a pre-existing gap, but is
+  worth checking for any future JS-driven smooth scroll anywhere in this
+  app: guard it with `window.matchMedia("(prefers-reduced-motion:
+  reduce)").matches` and fall back to `"auto"`, the same fix applied
+  here.
 - **A grep-based field-usage audit of `planner-form.tsx` (counting every
   `PlannerData` key's occurrences in the file) found two real gaps in
   work already claimed "DONE WITH PROOF" earlier in this same round**: a
