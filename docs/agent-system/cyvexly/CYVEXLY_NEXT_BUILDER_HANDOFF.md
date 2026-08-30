@@ -115,6 +115,21 @@ the actual default browser-tab size, per a proxy-rendering technique
 (not a real browser tab). Needs independent confirmation before
 redesigning.
 
+## Round-6 launch-readiness refresh: still not ready, but real measurable progress
+
+Re-ran the vision §15 14-item launch-readiness pass round 3 first
+established (it had gone stale after three rounds of real progress). Full
+item-by-item detail is in `CYVEXLY_ACTIVE_CHUNK.md`'s round-6 report.
+Headline: still **not launch-ready**, same four Owner-input blockers as
+before, but item 2 (sitemap) has one fewer gap (`/start` now built), item
+4 (Planner) is newly assessable and partially ready (data capture done,
+delivery still interim), item 10 (forms/confirmations) now covers the
+Planner too, and items 7/11/12 have stronger evidence than round 3's pass.
+Worth re-running this same structured check again once the Owner answers
+any of the four blocking questions, or every few rounds regardless, since
+it's cheap to redo and gives a concrete, current per-item status rather
+than a vague "not ready yet."
+
 ## Round-6 method note: grep for a reviewer finding's exact defect shape, not just the flagged page
 
 Fixing the Council's Services table-overflow finding, then grepping

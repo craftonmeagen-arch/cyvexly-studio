@@ -367,6 +367,75 @@ Audibles) — same resolution standard applied.
 (metadataBase): **UNCHANGED, OWNER-BLOCKED** — not attempted this round,
 same status as every prior round.
 
+### Launch-readiness refresh (vision §15)
+
+With time remaining in the scheduled window, re-ran the structured pass
+against vision §15's 14 launch-readiness items round 3 first established
+(`docs/archive/chunks/CYVEXLY_CHUNK4_ROUND3_REPORT.md`), since three
+rounds of real progress (Chunk 3 opened and built, two Council findings
+fixed) had made that assessment stale. Re-verified each item against
+current source/state rather than assuming round 3's numbers still hold:
+
+1. Positioning/audience consistency — unchanged, **ready**.
+2. Sitemap/utility pages — **improved since round 3**: `/start` (Planner)
+   is now built and live, leaving only `/about`, `/privacy`, `/terms`
+   missing (down from four gaps to three) — **not ready**, but closer.
+3. Package/add-on/care-plan consistency — re-checked `pricingPreview` vs.
+   `pricingPackages` directly this round (name/price extraction, not
+   assumed from round 3's finding): still consistent for all three
+   overlapping tiers, still two separately maintained arrays (a real
+   future-drift risk, unchanged, not refactored for the same reason round
+   3 gave — the arrays intentionally curate different feature subsets).
+4. **Newly assessable — the Planner didn't exist at round 3.** Field
+   capture is complete (all vision §9 fields, verified round 4) —
+   **partially ready**: the data-capture side is done, but delivery is
+   still the interim `mailto:` bridge, not the real "sent from Cyvexly"
+   confirmation vision §6.9 requires (blocked on the domain + provider
+   decision, unchanged).
+5. Proposal/invoice/payment workflow — not built, foundational, **not
+   ready** (expected, its own future chunk).
+6. Payment options described in text per vision §8 — unchanged, no live
+   processing yet (expected pre-launch).
+7. Three portfolio pieces truthfully labeled — **ready**, and stronger
+   than round 3's assessment: round 5 replaced flat gradients with
+   distinct hand-authored concept artwork (still honestly labeled
+   "Concept project").
+8. Every claim/testimonial verifiable — unchanged, **ready** (no
+   testimonials exist; Home correctly uses "what every project includes"
+   instead).
+9. Legal/privacy reflects real jurisdiction — not built, honestly
+   bounded, **not ready** (Owner-blocked, unchanged).
+10. Forms/emails/errors/confirmations — **now covers both Contact and the
+    Planner** (round 3 only had Contact to assess); both are verified and
+    both are honestly labeled as using the interim `mailto:` bridge, not
+    real automated delivery — **partially ready**, same status as round 3
+    but on more surface area.
+11. Desktop/mobile visual QA — content/structure checks done every round;
+    true pixel QA still not reachable — **not fully ready**, and this
+    round strengthened *why*: proved (not just assumed) that neither
+    `computer` clicks, screenshots, nor key presses reach the page in
+    this session type (see Watch).
+12. Accessibility/performance reviewed — structural checks done, no
+    automated axe/Lighthouse audit yet — **partially ready**, on a
+    stronger evidence base this round (a full sitewide heading/label
+    sweep across all twelve routes, zero defects, not just the changed
+    pages).
+13. No accidental preview indexing — unchanged, **ready** (fixed round
+    3).
+14. Domain/email/analytics/social-preview ready — domain undecided,
+    analytics not wired, OG metadata still needs `metadataBase` — **not
+    ready**, unchanged.
+
+**Overall: still not launch-ready, as expected this early — real,
+measurable progress since round 3** (item 2 has one fewer gap, item 4 is
+newly assessable and partially ready, item 10 now covers the Planner too,
+items 7/11/12 have stronger evidence). The remaining gaps are the same
+four Owner-input questions and the same session-level pixel-QA
+limitation every prior round already identified — no new blocker
+surfaced. Recorded here rather than as a new standing checklist file,
+matching round 3's own reasoning: `CYVEXLY_PROJECT_CHUNK_MAP.md` and
+`CYVEXLY_APP_DEBT.md` already carry the open items this surfaced.
+
 ### Recommended next tasks
 
 1. Route the four still-open Owner-input questions (About founder
