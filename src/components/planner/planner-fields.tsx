@@ -179,7 +179,7 @@ export function RadioCardGroup({
   columns?: string;
 }) {
   return (
-    <fieldset>
+    <fieldset aria-invalid={Boolean(error)} aria-describedby={error ? `${name}-error` : undefined}>
       <legend className="text-sm font-medium text-midnight-slate">
         {legend}
         {required && <span className="ml-1 text-warning-coral">*</span>}
@@ -215,7 +215,7 @@ export function RadioCardGroup({
         })}
       </div>
       {error && (
-        <p role="alert" className="mt-1.5 text-xs text-warning-coral">
+        <p id={`${name}-error`} role="alert" className="mt-1.5 text-xs text-warning-coral">
           {error}
         </p>
       )}
@@ -225,6 +225,7 @@ export function RadioCardGroup({
 
 export function CheckboxCardGroup({
   legend,
+  name,
   values,
   onToggle,
   options,
@@ -232,6 +233,7 @@ export function CheckboxCardGroup({
   columns = "sm:grid-cols-2",
 }: {
   legend: string;
+  name: string;
   values: string[];
   onToggle: (id: string) => void;
   options: { id: string; label: string; description?: string }[];
@@ -239,7 +241,7 @@ export function CheckboxCardGroup({
   columns?: string;
 }) {
   return (
-    <fieldset>
+    <fieldset aria-invalid={Boolean(error)} aria-describedby={error ? `${name}-error` : undefined}>
       <legend className="text-sm font-medium text-midnight-slate">{legend}</legend>
       <div className={`mt-3 grid gap-3 ${columns}`}>
         {options.map((option) => {
@@ -255,6 +257,7 @@ export function CheckboxCardGroup({
             >
               <input
                 type="checkbox"
+                name={name}
                 checked={checked}
                 onChange={() => onToggle(option.id)}
                 className="mt-1 h-4 w-4 shrink-0 rounded border-smoke-glass text-cyber-blue focus-visible:outline-2 focus-visible:outline-cyber-blue"
@@ -270,7 +273,7 @@ export function CheckboxCardGroup({
         })}
       </div>
       {error && (
-        <p role="alert" className="mt-1.5 text-xs text-warning-coral">
+        <p id={`${name}-error`} role="alert" className="mt-1.5 text-xs text-warning-coral">
           {error}
         </p>
       )}

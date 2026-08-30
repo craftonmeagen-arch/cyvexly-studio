@@ -240,6 +240,17 @@ export function PlannerForm() {
     return next;
   }
 
+  function focusFirstError(stepErrors: Errors) {
+    const firstKey = Object.keys(stepErrors)[0];
+    if (!firstKey) return;
+    window.requestAnimationFrame(() => {
+      const target =
+        document.getElementById(firstKey) ??
+        document.querySelector<HTMLElement>(`[name="${firstKey}"]`);
+      target?.focus();
+    });
+  }
+
   function goToStep(step: number) {
     setCurrentStep(step);
     setMaxReachedStep((prev) => Math.max(prev, step));
@@ -251,6 +262,7 @@ export function PlannerForm() {
     const stepErrors = validateStep(currentStep);
     if (Object.keys(stepErrors).length > 0) {
       setErrors(stepErrors);
+      focusFirstError(stepErrors);
       return;
     }
     setErrors({});
@@ -277,6 +289,7 @@ export function PlannerForm() {
     const stepErrors = validateStep(9);
     if (Object.keys(stepErrors).length > 0) {
       setErrors(stepErrors);
+      focusFirstError(stepErrors);
       return;
     }
 
@@ -534,6 +547,7 @@ export function PlannerForm() {
               )}
               <CheckboxCardGroup
                 legend="Desired secondary goals"
+                name="secondaryGoals"
                 values={data.secondaryGoals ? data.secondaryGoals.split("|").filter(Boolean) : []}
                 onToggle={(id) => {
                   const list = data.secondaryGoals ? data.secondaryGoals.split("|").filter(Boolean) : [];
@@ -587,6 +601,7 @@ export function PlannerForm() {
               />
               <CheckboxCardGroup
                 legend="Which pages should it include?"
+                name="pages"
                 values={data.pages}
                 onToggle={(id) => {
                   set("pages", toggleValue(data.pages, id));
@@ -654,6 +669,7 @@ export function PlannerForm() {
             <>
               <CheckboxCardGroup
                 legend="Features and integrations"
+                name="features"
                 values={data.features}
                 onToggle={(id) => {
                   set("features", toggleValue(data.features, id));
