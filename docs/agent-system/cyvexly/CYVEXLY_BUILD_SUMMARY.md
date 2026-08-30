@@ -329,3 +329,7 @@
   390px production-runtime matrix advanced all nine steps and proved the same
   first-error focus/error linkage across radio cards, checkbox cards, and
   ordinary checkboxes.
+- A final terminology sweep found the case-study artwork still announced itself
+  as a `concept visual placeholder`. Corrected that stale user-facing accessible
+  label to `abstract concept visual` (`4bdab10`) and proved the final build has
+  15 new-label matches across generated Work HTML/RSC and zero old matches.

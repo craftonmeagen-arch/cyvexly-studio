@@ -19,8 +19,9 @@ proof now complements round 7's DOM audit; physical hardware and cross-browser
 keyboard traversal remain unchecked.
 **Accepted source position:** Git repository on `master`. Round 8's product
 changes are commits `d04dc9d` (Home + Services reuse `ConceptPreview`) and
-`da9c6d9` (Planner first-error focus plus grouped-control error linkage), followed
-by canonical documentation/evidence commits. Treat `git log` as the exact
+`da9c6d9` (Planner first-error focus plus grouped-control error linkage), plus
+`4bdab10` (truthful case-study concept-art accessible label), followed by
+canonical documentation/evidence commits. Treat `git log` as the exact
 ledger. Builder-owned state is clean at close; pre-existing Auditor/Council
 dirty files remain intentionally untouched.
 

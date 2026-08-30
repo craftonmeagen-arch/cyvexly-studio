@@ -5,7 +5,8 @@
 **Session:** `7694882a-69e8-4ed1-8a51-535001d0780d`
 **Product commits:** `d04dc9d` — Home and Services selected-work cards reuse
 `ConceptPreview`; `da9c6d9` — Planner focuses the first invalid control and
-links grouped-control errors
+links grouped-control errors; `4bdab10` — stale case-study “placeholder” label
+becomes truthful “abstract concept visual” terminology
 **PM prompt:** no active prompt
 **Source safety:** Builder-owned source/evidence/docs are committed and clean at
 close. The pre-existing Auditor/Council dirty files remain untouched. Use
@@ -33,6 +34,9 @@ close. The pre-existing Auditor/Council dirty files remain untouched. Use
   and 390 widths. The first run found focus stranded on `Continue` after empty-
   step validation. Fixed it so focus moves to the first invalid field and radio/
   checkbox group errors have stable ARIA linkage.
+- Corrected the case-study artwork's stale user-facing accessible label from
+  `concept visual placeholder` to `abstract concept visual`; final built Work
+  HTML/RSC has 15 new-label matches and zero old-label matches.
 
 ## Verification
 

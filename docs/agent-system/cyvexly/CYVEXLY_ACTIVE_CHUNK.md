@@ -100,6 +100,12 @@ The existing `overflow-hidden`, fixed media heights, links, copy, tags,
 breakpoints, and `aria-hidden` decorative boundary remain intact. Product source
 landed as commit `d04dc9d` (10 insertions, 4 deletions).
 
+A final source-hygiene sweep found one stale user-facing accessible label on
+case-study artwork: `concept visual placeholder`. The artwork is no longer a
+placeholder, so commit `4bdab10` truthfully renames it `abstract concept visual`.
+The final production build contains 15 new-label matches across generated Work
+HTML/RSC and zero old-label matches.
+
 **Visual comparison:** the current Council Home capture showed three generic
 gradient bands; the accepted Home mockup showed three distinct project
 treatments. Opened round-8 captures now show Aurora's architectural geometry,
@@ -201,7 +207,9 @@ Round start HEAD was `1904634`. The original plan named Home/Services
 `ConceptPreview` reuse, and commit `d04dc9d` contains exactly those two source
 files. The extended native-input audit then discovered and justified the
 two-file Planner expansion recorded in commit `da9c6d9`; no other product file
-entered either diff. Builder documentation/evidence changes are the visual plan, retained
+entered those diffs. The final terminology sweep added the one-line case-study
+label correction in `4bdab10`; no other product file entered the round. Builder
+documentation/evidence changes are the visual plan, retained
 PNG/JSON proof, active-report rotation, canonical state/map/summary/debt/tool/
 watch/handoff/index reconciliation, and no product file beyond the two planned
 pages. Pre-existing Auditor/Council dirty files were preserved byte-for-byte and
