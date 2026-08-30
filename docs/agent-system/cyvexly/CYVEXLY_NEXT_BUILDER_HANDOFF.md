@@ -41,7 +41,14 @@ production-build verification pass performed after the main commit).
   for one or more projects to fully satisfy what both external reviewers
   asked for ("real designed crops or screen sequences")? This is a
   product-presentation decision, not a Builder judgment call — route it
-  alongside the other three Owner-input questions below.
+  alongside the other three Owner-input questions below. **Light research
+  context, not a decision:** general design-industry practice for
+  speculative/fictional portfolio work centers on clear disclosure that
+  a project is conceptual, not a specific visual-fidelity bar — Cyvexly's
+  existing "Concept project" labeling already meets that transparency
+  standard regardless of which visual treatment is chosen. This doesn't
+  resolve the Owner's actual preference, but suggests the abstract-artwork
+  path is a normal, defensible industry approach, not a corner-cutting one.
 - **Chunk 3 (Project Planner) is unchanged from round 4**, still open:
   the full nine-step UI/state/validation is DONE WITH PROOF at `/start`,
   but the chunk does not close until the real server-side email route

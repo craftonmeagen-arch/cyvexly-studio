@@ -436,4 +436,10 @@ Builder-reachable gap this round, tracked forward below.
    should be presented), or whether real design mockups for one or more
    concept projects are worth commissioning as a dedicated design task —
    routing this framing question rather than guessing which the Owner
-   wants.
+   wants. A brief web search this round found that general design-
+   industry practice for speculative/fictional portfolio work centers on
+   clear disclosure that a project is conceptual, not a specific
+   visual-fidelity requirement — Cyvexly's existing "Concept project"
+   labeling already satisfies that transparency standard regardless of
+   the visual treatment chosen. This is useful context, not a
+   substitute for the Owner's actual preference.
