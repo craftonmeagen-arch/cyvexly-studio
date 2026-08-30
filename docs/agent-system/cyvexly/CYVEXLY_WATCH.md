@@ -269,3 +269,13 @@ boundary on future reasoning. Rounds 1-4 are rotated to
   level: the fix needs to make this session's Browser pane actually
   visible/foregrounded to its own renderer, not just "select" or "front"
   the tab within the pane's own tab list.
+- **Final confirmation the interrupted Council round closed cleanly on
+  its own, not just recovered.** By ~21:13Z, port 5373 no longer
+  responded and `.codex/role-state/council.active.json` was gone —
+  checked to make sure this wasn't a second failure, not just a
+  screenshot of a live process. It wasn't: the Council's own formal
+  report (`CYC-R3-20260830-01`, published `21:11:10Z`) explicitly states
+  "Complete... closed within the normal work window," so the stopped
+  dev server and released guard are this round's own normal closeout,
+  the same lifecycle a Builder round follows. The incident earlier this
+  round did not leave any lasting damage to the Council's round.
