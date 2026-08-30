@@ -1,0 +1,247 @@
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { ButtonLink } from "@/components/button";
+import { OrbitGraphic } from "@/components/orbit-graphic";
+import { FaqAccordion } from "@/components/faq-accordion";
+import {
+  capabilities,
+  credibilityPoints,
+  faqPreview,
+  pricingPreview,
+  processSteps,
+  selectedWork,
+} from "@/lib/site-config";
+
+export default function Home() {
+  return (
+    <>
+      <SiteHeader />
+
+      <main className="flex-1">
+        {/* Hero */}
+        <section className="signal-grid-bg relative overflow-hidden border-b border-smoke-glass/70">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
+            <div>
+              <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
+                <span className="h-1.5 w-1.5 rounded-full bg-signal-emerald" aria-hidden="true" />
+                Independent web studio · Available worldwide
+              </p>
+              <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-midnight-slate sm:text-5xl">
+                Websites built to make your business{" "}
+                <span className="text-cyber-blue">unmistakable.</span>
+              </h1>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-cool-graphite sm:text-lg">
+                Cyvexly Studio plans, designs, builds, and supports custom websites for
+                businesses ready to look credible, work smarter, and turn more visits into
+                action.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <ButtonLink href="/start">Describe your project</ButtonLink>
+                <ButtonLink href="/services" variant="secondary">
+                  Explore services
+                </ButtonLink>
+              </div>
+            </div>
+            <OrbitGraphic />
+          </div>
+
+          <div className="border-t border-smoke-glass/70 bg-frosted-glass/60">
+            <ul className="mx-auto flex max-w-6xl flex-wrap justify-center gap-x-10 gap-y-3 px-6 py-6 text-xs font-medium text-cool-graphite sm:justify-between">
+              {credibilityPoints.map((point) => (
+                <li key={point.label} className="whitespace-nowrap">
+                  {point.label}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Selected work */}
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <div className="flex items-end justify-between gap-4">
+            <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+              Selected work
+            </h2>
+            <ButtonLink href="/work" variant="text">
+              View all projects →
+            </ButtonLink>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {selectedWork.map((project) => (
+              <a
+                key={project.name}
+                href={project.href}
+                className="group glass-panel flex flex-col overflow-hidden rounded-2xl transition-transform duration-200 hover:-translate-y-1"
+              >
+                <div
+                  className={`h-44 w-full bg-gradient-to-br ${project.gradient}`}
+                  aria-hidden="true"
+                />
+                <div className="flex flex-1 flex-col gap-2 p-5">
+                  <span className="w-fit rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
+                    {project.kind}
+                  </span>
+                  <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                    {project.name}
+                  </h3>
+                  <p className="text-sm text-cool-graphite">{project.summary}</p>
+                  <span className="mt-auto pt-2 text-sm font-medium text-cyber-blue group-hover:text-[#0f66e0]">
+                    View project →
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* Capabilities */}
+        <section className="border-y border-smoke-glass/70 bg-ice-field">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+              What Cyvexly can do
+            </h2>
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {capabilities.map((capability) => (
+                <div key={capability.title} className="glass-panel rounded-2xl p-6">
+                  <h3 className="font-display text-base font-semibold text-midnight-slate">
+                    {capability.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-cool-graphite">
+                    {capability.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* The difference */}
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <div className="glass-panel signal-grid-bg rounded-3xl px-8 py-14 text-center sm:px-16">
+            <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+              We&apos;re not a DIY builder. We&apos;re your independent web partner.
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
+              This isn&apos;t a template or a drag-and-drop. You describe what your business
+              needs, and we shape a custom website around your brand, your users, and your
+              goals — strategy, design, and code working together.
+            </p>
+          </div>
+        </section>
+
+        {/* Process preview */}
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+            Give us the brief. We&apos;ll shape the route.
+          </h2>
+          <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+            {processSteps.map((step) => (
+              <li key={step.number}>
+                <span className="font-mono text-xs text-cyber-blue">{step.number}</span>
+                <h3 className="mt-2 font-display text-base font-semibold text-midnight-slate">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-cool-graphite">
+                  {step.description}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* Pricing preview */}
+        <section className="border-y border-smoke-glass/70 bg-ice-field">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+                Simple starting points
+              </h2>
+              <ButtonLink href="/pricing" variant="text">
+                Need something custom? Let&apos;s talk →
+              </ButtonLink>
+            </div>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {pricingPreview.map((tier) => (
+                <div
+                  key={tier.name}
+                  className={`flex flex-col rounded-2xl p-7 ${
+                    tier.featured
+                      ? "border-2 border-cyber-blue bg-frosted-glass shadow-[0_16px_40px_-16px_rgba(20,120,255,0.35)]"
+                      : "glass-panel"
+                  }`}
+                >
+                  {tier.featured && (
+                    <span className="mb-3 w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
+                      Most popular
+                    </span>
+                  )}
+                  <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                    {tier.name}
+                  </h3>
+                  <p className="mt-1 text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                    Starting at
+                  </p>
+                  <p className="mt-1 font-display text-3xl font-semibold text-cyber-blue">
+                    {tier.price}
+                  </p>
+                  <p className="mt-3 text-sm text-cool-graphite">{tier.description}</p>
+                  <ul className="mt-4 flex-1 space-y-2 text-sm text-midnight-slate">
+                    {tier.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2">
+                        <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-cyber-blue" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <ButtonLink
+                    href="/start"
+                    variant={tier.featured ? "primary" : "secondary"}
+                    className="mt-6 w-full"
+                  >
+                    Describe your project
+                  </ButtonLink>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ preview */}
+        <section className="mx-auto max-w-6xl px-6 py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+              FAQ
+            </h2>
+            <ButtonLink href="/faq" variant="text">
+              View all questions →
+            </ButtonLink>
+          </div>
+          <div className="mt-8">
+            <FaqAccordion items={faqPreview} />
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="mx-auto max-w-6xl px-6 pb-20">
+          <div className="signal-grid-bg relative overflow-hidden rounded-3xl bg-midnight-slate px-8 py-16 text-center sm:px-16">
+            <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
+              Ready to build something extraordinary?
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
+              Describe your project and we&apos;ll respond within two business days.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <ButtonLink href="/start">Describe your project</ButtonLink>
+            </div>
+            <p className="mt-4 text-xs text-[#8090A8]">
+              No payment required · response within two business days
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+    </>
+  );
+}

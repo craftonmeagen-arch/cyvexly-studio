@@ -1,0 +1,21 @@
+.engine-lock
+.codex/runtime/
+.codex/role-state/*.active.json
+.codex/role-state/*.publisher.lock
+.codex/role-state/*.tmp
+node_modules/
+dist/
+build/
+coverage/
+test-results/
+playwright-report/
+*.log
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+.vercel
+.env*
+

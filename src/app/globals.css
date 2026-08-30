@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --color-arctic-mist: #eef4fa;
+  --color-ice-field: #e3ebf3;
+  --color-frosted-glass: #f8fbff;
+  --color-smoke-glass: #d8e1ea;
+  --color-midnight-slate: #10213d;
+  --color-cool-graphite: #526176;
+  --color-cyber-blue: #1478ff;
+  --color-ion-cyan: #36c7ff;
+  --color-signal-emerald: #16b777;
+  --color-warning-coral: #d9435f;
+
+  --background: var(--color-arctic-mist);
+  --foreground: var(--color-midnight-slate);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-arctic-mist: var(--color-arctic-mist);
+  --color-ice-field: var(--color-ice-field);
+  --color-frosted-glass: var(--color-frosted-glass);
+  --color-smoke-glass: var(--color-smoke-glass);
+  --color-midnight-slate: var(--color-midnight-slate);
+  --color-cool-graphite: var(--color-cool-graphite);
+  --color-cyber-blue: var(--color-cyber-blue);
+  --color-ion-cyan: var(--color-ion-cyan);
+  --color-signal-emerald: var(--color-signal-emerald);
+  --color-warning-coral: var(--color-warning-coral);
+
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+* {
+  border-color: var(--color-smoke-glass);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyber-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.glass-panel {
+  background: color-mix(in srgb, var(--color-frosted-glass) 72%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-smoke-glass) 80%, transparent);
+  backdrop-filter: blur(16px);
+}
+
+.signal-grid-bg {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-cyber-blue) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-cyber-blue) 8%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
