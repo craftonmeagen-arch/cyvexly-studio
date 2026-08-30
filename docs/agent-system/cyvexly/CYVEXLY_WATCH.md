@@ -45,10 +45,14 @@ boundary on future reasoning.
 
 ## Round 2
 
-- **Refinement to the round-1 unattended-session note above: `computer`
-  `left_click`/`type` actions (by ref or coordinate) are silently ineffective
-  in this unattended session, not just screenshots.** Tested directly:
-  clicking a text input via `computer{action:"left_click", ref:...}` then
+- **Independently reproduced and precisely isolated the round-1 finding
+  that `computer` `left_click`/`type` actions are silently ineffective in
+  this unattended session** — round 1's own note already said "computer
+  screenshot/click actions fail," but other round-1 summary files
+  (`CYVEXLY_CURRENT_STATE.md`, `CYVEXLY_PROJECT_CHUNK_MAP.md`) understated
+  it as only a screenshot limitation, which risked the click-failure part
+  being missed on a skim. Tested directly this round: clicking a text input
+  via `computer{action:"left_click", ref:...}` then
   `computer{action:"type"}` left the input's `.value` empty and
   `document.activeElement` unchanged (stayed `BODY`) — the input never
   received the simulated events, even though the tool call itself reported
