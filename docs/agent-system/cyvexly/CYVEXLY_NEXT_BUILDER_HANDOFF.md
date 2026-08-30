@@ -3,7 +3,13 @@
 ## Urgent items
 
 None. Round 4 closed cleanly — no crash, no unsafe uncommitted state, no
-unresolved urgent reviewer finding discovered this round.
+unresolved urgent reviewer finding discovered this round. It landed as
+several follow-on commits after the initial one, not just one — check
+`git log` for the full set (a field-usage audit found and fixed two
+fields typed but never rendered against vision §9, and a
+`prefers-reduced-motion` gap in the new scroll-to-top was found and
+fixed; both are closed, not open work, but the initial commit message
+alone undersells what actually shipped).
 
 ## Orientation
 
