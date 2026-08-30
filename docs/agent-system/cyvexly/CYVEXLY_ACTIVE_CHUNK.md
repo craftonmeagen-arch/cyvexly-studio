@@ -219,17 +219,25 @@ For F005, this is the framework's own documented fix for its own warning
   reaching step 9 (see Proof performed). This is strong evidence the
   logic is correct; it is not the same as observing a real attended
   browser's actual smooth-scroll animation, which this session cannot do.
-- **Deliberately did not attempt a real Tab-key keyboard-traversal test.**
-  The Council's own "Different next Council question" asked for exactly
-  this. Confirmed via DOM inspection that the mechanism this relies on
+- **Tested, not just assumed, whether real Tab-key traversal is reachable
+  in this session — it is not, proven directly.** The Council's own
+  "Different next Council question" asked for keyboard-only traversal
+  testing. Confirmed via DOM inspection that the mechanism this depends on
   (native `disabled` attribute on unreachable-step buttons) is already
   correct — disabled buttons are natively unfocusable and excluded from
   tab order by every browser, so reachable/unreachable steps are already
-  keyboard-correct by construction — but a full real Tab-key traversal
-  needs actual OS-level key events, which this session's browser-pane
-  limitation (the same compositing/frame issue described above) makes
-  unreliable to simulate via `dispatchEvent`. Routed rather than guessed
-  at a result; see Recommended next tasks.
+  keyboard-correct by construction. Then tried the real `computer{action:
+  "key", text:"Tab"}` action directly (not attempted by any prior round):
+  focused `fullName` via `element.focus()`, attached a real `keydown`
+  listener on `document` in capture phase, pressed Tab via `computer`,
+  and read both the listener's log and `document.activeElement` back. The
+  tool call reported success ("pressed Tab x1"), but the listener recorded
+  zero `keydown` events and focus never left `fullName` — the key press
+  never reached the page at all, the same "page not compositing frames"
+  session limitation rounds 1-5 found for clicks/screenshots/geometry
+  reads, now confirmed for keyboard input too. This closes the loop
+  honestly: real keyboard-traversal testing is not reachable in this
+  exact session type, not merely unattempted; see Recommended next tasks.
 
 ### Proof performed
 
@@ -311,8 +319,10 @@ For F005, this is the framework's own documented fix for its own warning
   end-state check instead, not an equivalent substitute for watching the
   real animation in an attended browser.
 - No real Tab-key keyboard-traversal test of the Planner or progress rail
-  (see Audibles) — the Council's own suggested next question, routed
-  rather than attempted with an unreliable method.
+  (see Audibles) — the Council's own suggested next question, tested and
+  confirmed unreachable in this session (a real `computer{action:"key",
+  text:"Tab"}` press produced zero `keydown` events on the page), not
+  merely assumed unreliable.
 - Did not attempt `/about`, `/privacy`, `/terms`, the favicon redesign, or
   the Planner's server-side email route — all unchanged, still correctly
   bounded on the same Owner inputs or capability gaps every prior round
@@ -365,10 +375,11 @@ same status as every prior round.
    every prior round.
 2. Real Tab-key keyboard-traversal testing of the Planner (focus order,
    error announcement, progress semantics) — the Council's own suggested
-   next question, not attempted this round because this session's
-   browser-pane limitation makes real key-event simulation unreliable;
-   worth attempting in an attended session or via a differently-capable
-   automation method.
+   next question. This round confirmed `computer{action:"key"}` produces
+   zero real `keydown` events in this session (see Audibles), so this
+   needs either an attended session or a differently-capable automation
+   method; do not re-attempt with `computer` key presses in this same
+   session type without new evidence it's been fixed.
 3. When an attended session or another Auditor/Council round is
    available: get a real live-tab screenshot of the Planner rail at
    390px/768px on step 9 and of the reflowed Services/Pricing tables at

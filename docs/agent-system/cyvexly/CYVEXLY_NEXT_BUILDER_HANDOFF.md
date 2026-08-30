@@ -45,15 +45,22 @@ another commit lands.
   session can't show you the animation completing. Full detail in
   `CYVEXLY_WATCH.md`'s round-6 entry.
 - **Real Tab-key keyboard-traversal testing of the Planner is still not
-  done.** The Council's own "Different next Council question" asked for
-  exactly this (focus order, error announcement, progress semantics,
-  review/consent boundary). Confirmed this round that the mechanism it
-  depends on (native `disabled` on unreachable-step buttons, which
-  browsers exclude from tab order automatically) is already correct, but
-  a full real key-event traversal test needs actual OS-level key events —
-  this session's `dispatchEvent`-based interaction method (established
-  round 2, still the only reliable one) can't reliably simulate real Tab
-  navigation. Worth attempting in an attended session, or investigating
+  done, and this round proved it's not reachable via `computer` key
+  presses in this exact session type — do not re-attempt with `computer`
+  key presses without new evidence it's been fixed.** The Council's own
+  "Different next Council question" asked for exactly this (focus order,
+  error announcement, progress semantics, review/consent boundary).
+  Confirmed the mechanism it depends on (native `disabled` on unreachable-
+  step buttons, which browsers exclude from tab order automatically) is
+  already correct. Then tested `computer{action:"key", text:"Tab"}`
+  directly with a real `document`-level `keydown` listener recording
+  events: the tool reported success but zero `keydown` events reached the
+  page and focus never moved — the same "page not compositing frames"
+  limitation as the click/screenshot issue, now confirmed for keyboard
+  input too. This session's `dispatchEvent`-based interaction method
+  (established round 2) fires listeners but doesn't trigger the browser's
+  native focus-order behavior either, so it can't substitute. Worth
+  attempting in an attended session, or investigating
   whether a different automation method in this environment can do it.
 - **Chunk 3 (Project Planner) is otherwise unchanged from round 4/5**,
   still open: the full nine-step UI/state/validation is DONE WITH PROOF at

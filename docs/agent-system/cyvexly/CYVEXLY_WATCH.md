@@ -1,12 +1,9 @@
 # Cyvexly Watch Index
 
 Observations and evidence, not new rules. Each entry is a place to look, not a
-boundary on future reasoning. Rounds 1-3 (tooling BOM/AGENTS.md fixes, the
-`computer` click/screenshot non-functionality, the `ImageResponse`-proxy
-pixel-proof technique, the private-folder routing convention, the recurring
-foreign port-5173 process) are rotated to `docs/archive/CYVEXLY_WATCH_ARCHIVE.md`
-to stay under this file's 20KB hot-path cap (§7.14) — read that file for full
-round 1-3 detail; the findings below still apply going forward.
+boundary on future reasoning. Rounds 1-3 are rotated to
+`docs/archive/CYVEXLY_WATCH_ARCHIVE.md` to stay under this file's 20KB cap
+(§7.14) — read that file for full detail; the findings below still apply.
 
 ## Round 4
 
@@ -283,3 +280,16 @@ round 1-3 detail; the findings below still apply going forward.
   (`fetch(route).then(r=>r.text())` + `DOMParser`, no live navigation
   needed) and worth doing as a final sanity pass whenever multiple pages
   change in one round.
+- **`computer{action:"key"}` produces zero real keyboard events in this
+  session, proven directly, not just assumed from the click/screenshot
+  limitation.** No prior round had tried a `computer` key press. Focused
+  an input, attached a real `document` `keydown` listener (capture phase),
+  pressed Tab via `computer` (reported success), then checked the
+  listener log and `document.activeElement`: zero events recorded, focus
+  unchanged. Same "page not compositing frames" family as clicks/
+  screenshots — real keyboard/Tab-traversal testing (the Council's own
+  suggested next question) is not reachable via `computer` here.
+  `javascript_tool`-dispatched synthetic key events fire listeners but
+  don't trigger native focus-order behavior, so they can't substitute
+  either — a genuine test needs an attended session or a different
+  automation surface.
