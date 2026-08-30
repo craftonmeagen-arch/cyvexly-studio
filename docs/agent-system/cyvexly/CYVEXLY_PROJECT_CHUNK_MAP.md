@@ -6,26 +6,31 @@ Broad, provisional map from `CYVEXLY_VISION_PLAN.md`, the assignment, and curren
 source reality. Chunks may be split, merged, reordered, or reopened as evidence
 requires.
 
-## Chunk 1 — Foundation & Home (ACTIVE)
+## Chunk 1 — Foundation & Home (CLOSED, round 1)
 
-- **Outcome:** A real, running Next.js/TypeScript/Tailwind application exists as
-  source truth, carrying the cyber-arctic design system (color tokens,
+- **Outcome:** A real, running Next.js/TypeScript/Tailwind application exists
+  as source truth, carrying the cyber-arctic design system (color tokens,
   typography, glass/grid utilities, reusable header/footer/button/FAQ
   components), with a complete, verified Home page.
-- **Relationship to project:** Everything else in the sitemap builds on this
-  foundation and its component library.
-- **Likely closure boundary:** Home page sections match the vision (§6.1) and
-  `mockups/01-home.png` direction; build/lint/typecheck pass; real dev-server
-  rendering and interaction are verified; work is committed as git source
-  truth.
-- **Closeout reference:** see the round report in `CYVEXLY_ACTIVE_CHUNK.md`
-  (global round 1).
+- **Closure evidence:** build/lint/typecheck clean; real dev-server content,
+  console/network, and interaction verified; a real tablet-width nav overlap
+  bug was found (from concurrently-published Auditor screenshots) and fixed;
+  committed as git source truth. See the round-1 report in
+  `CYVEXLY_ACTIVE_CHUNK.md`.
+- Closed does not mean frozen — later evidence (e.g. a full Auditor visual
+  review) may reopen it.
 
-## Chunk 2 — Core marketing pages (NOT YET OPENED)
+## Chunk 2 — Core marketing pages (ACTIVE, opened round 1)
 
-- Likely outcome: Services, Work/Portfolio (+ case-study template), Pricing,
+- **Outcome:** Services, Work/Portfolio (+ case-study template), Pricing,
   Process, About, and general Contact pages, reusing Chunk 1's design system
   and `src/lib/site-config.ts`.
+- **Progress:** `/process` built and verified in round 1 (see
+  `CYVEXLY_ACTIVE_CHUNK.md`). Services, Work, Pricing, About, Contact remain.
+- **Known gap:** the About page needs a real founder name, first-person
+  story, and portrait from the Owner (vision §6.8) — this is Owner-supplied
+  factual content, not a detail a Builder may invent. Route this rather than
+  fabricate a founder identity; see `CYVEXLY_APP_DEBT.md`.
 - Non-goal: Project Planner (its own chunk, given its multi-step form
   complexity).
 
@@ -45,6 +50,10 @@ requires.
 - Payment/proposal workflow (vision §8) and any external service integration
   are foundational/authorization-sensitive; route through §4.12 Outcome
   Reachability Check before committing to a specific provider integration.
-- Full visual screenshot comparison against the mockups is currently only
-  reachable from an attended session with a displayable browser pane (see
-  `CYVEXLY_CHUNK_DEBT.md`).
+- Full visual screenshot comparison against the mockups is not reliably
+  reachable from an unattended Builder session on its own (no working
+  `computer` screenshot in that mode — see `CYVEXLY_WATCH.md`), but round 1
+  found that a concurrently-running Auditor round may publish real rendered
+  screenshots to the shared durable evidence root that a Builder can read and
+  use. Do not assume that evidence will always be available; check for it,
+  and route to an attended session or Auditor/Council when it isn't.

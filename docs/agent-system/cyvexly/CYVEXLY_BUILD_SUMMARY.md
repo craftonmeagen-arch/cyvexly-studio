@@ -24,7 +24,10 @@
   `Claim-BuilderLock.ps1` fail to parse on every invocation, and Next.js
   auto-appending an agent-rules block into the Owner-authored root
   `AGENTS.md`. Details in `CYVEXLY_WATCH.md`.
-- Opened Chunk 1 (Foundation & Home); see `CYVEXLY_ACTIVE_CHUNK.md` for the
-  full round report and `CYVEXLY_CHUNK_DEBT.md` for the one named validation
-  gap (pixel-level visual comparison against the mockup, blocked by this
-  session being unattended).
+- Opened and closed Chunk 1 (Foundation & Home) in the same round; closed the
+  visual-comparison gap using real screenshots a concurrently-running
+  Auditor round happened to publish, which also surfaced and led to a fix
+  for a real tablet-width header overlap bug.
+- Opened Chunk 2 (core marketing pages) and built/verified `/process`.
+- See `CYVEXLY_ACTIVE_CHUNK.md` for the full round report and
+  `CYVEXLY_CHUNK_DEBT.md` / `CYVEXLY_APP_DEBT.md` for open items.

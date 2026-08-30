@@ -5,10 +5,10 @@ type Variant = "primary" | "secondary" | "text";
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-cyber-blue text-white shadow-[0_8px_24px_-8px_rgba(20,120,255,0.55)] hover:bg-[#0f66e0] focus-visible:bg-[#0f66e0]",
+    "bg-cyber-blue text-white shadow-[0_8px_24px_-8px_rgba(15,102,224,0.55)] hover:bg-[#0b4fb0] focus-visible:bg-[#0b4fb0]",
   secondary:
     "glass-panel text-midnight-slate hover:border-cyber-blue/60 hover:text-cyber-blue",
-  text: "text-cyber-blue hover:text-[#0f66e0] px-0",
+  text: "text-cyber-blue hover:text-[#0b4fb0] px-0",
 };
 
 const baseClasses =

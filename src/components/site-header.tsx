@@ -20,7 +20,7 @@ export function SiteHeader() {
 
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-8 md:flex"
+          className="hidden items-center gap-6 lg:flex"
         >
           {primaryNav.map((item) => (
             <Link
@@ -33,7 +33,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <ButtonLink href="/start" variant="primary" className="px-5 py-2.5 text-sm">
             Describe your project
           </ButtonLink>
@@ -41,7 +41,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-smoke-glass text-midnight-slate md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-smoke-glass text-midnight-slate lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -70,7 +70,7 @@ export function SiteHeader() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="border-t border-smoke-glass/70 bg-arctic-mist px-6 pb-6 pt-2 md:hidden"
+          className="border-t border-smoke-glass/70 bg-arctic-mist px-6 pb-6 pt-2 lg:hidden"
         >
           <ul className="flex flex-col gap-1">
             {primaryNav.map((item) => (

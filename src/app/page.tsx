@@ -86,7 +86,7 @@ export default function Home() {
                     {project.name}
                   </h3>
                   <p className="text-sm text-cool-graphite">{project.summary}</p>
-                  <span className="mt-auto pt-2 text-sm font-medium text-cyber-blue group-hover:text-[#0f66e0]">
+                  <span className="mt-auto pt-2 text-sm font-medium text-cyber-blue group-hover:text-[#0b4fb0]">
                     View project →
                   </span>
                 </div>

@@ -1,54 +1,50 @@
 # Cyvexly Active Chunk
 
-**Chunk:** 1 — Foundation & Home
-**Status:** Functionally complete; independent review pending.
+**Chunk:** 2 — Core marketing pages
+**Status:** Opened; `/process` complete, remaining pages pending.
+**Prior chunk:** Chunk 1 — Foundation & Home, closed this same round. See
+"Round 1 report" below for its full record.
 
-**Why it exists:** No Git repository, package manifest, or runnable
-application existed at role-system setup time. Before any page content can be
-built, the project needs a real technical foundation (framework, design
-tokens, reusable chrome) and one fully real, verified page to prove that
-foundation.
+**Why Chunk 2 exists:** Chunk 1 established the technical foundation, design
+system, and Home page. Every other sitemap page (vision §5) reuses that same
+foundation and `src/lib/site-config.ts`.
 
-**Broad outcome:** A Next.js/TypeScript/Tailwind v4 app implementing the
-cyber-arctic design system from `CYVEXLY_VISION_PLAN.md` §4, with a working
-Home page matching vision §6.1 and `mockups/01-home.png`.
+**Broad outcome:** Services, Work/Portfolio (+ case-study template), Pricing,
+Process, About, and general Contact pages.
 
-**What belongs inside it:** design tokens (colors/fonts/glass utilities),
-`SiteHeader`/`SiteFooter`/`ButtonLink`/`FaqAccordion`/`OrbitGraphic`
-components, `src/lib/site-config.ts` as the shared content source, and the
-Home page itself.
+**What belongs inside it:** page-level content and layout for each of those
+routes, extending `src/lib/site-config.ts` where content is shared with Home
+(e.g. `processSteps`), reusing `SiteHeader`/`SiteFooter`/`ButtonLink`.
 
-**Non-goals:** any other sitemap page, the Project Planner, payment/proposal
-workflow, real client imagery, final favicon/social-sharing assets.
+**Non-goals:** the Project Planner (Chunk 3), utility/legal pages (Chunk 4),
+real client case-study imagery (needs Chunk 2's own case-study work first).
 
-**Closure boundary:** build/typecheck/lint clean; real dev-server rendering
-and interaction verified; work committed as git source truth; no meaningful
-reachable defect left untreated in the delivered slice.
+**Closure boundary:** all six pages exist, match their vision sections and
+mockups, pass build/typecheck/lint, and are verified through real dev-server
+rendering and interaction; the About page's Owner-identity gap (see
+`CYVEXLY_APP_DEBT.md`) is either resolved or explicitly and honestly bounded.
 
-## Round 1 report — global round 1, chunk-local round 1
+## Round 1 report — global round 1
 
 ### Round Plan
 
 Establish the actual repository/source baseline (none existed), scaffold a
 standard Next.js + TypeScript + Tailwind v4 app (the common, current stack for
-this class of marketing/service-studio website — supports the required
-responsive design, forms, motion, and future CMS/commerce needs from the
-vision without over-engineering), implement the cyber-arctic design system as
-reusable tokens/components, and build the Home page as the first coherent,
-provable slice. Verify with real build/lint/typecheck and real dev-server use
-(content, structure, console/network, and interaction), then document and
-hand off.
+this class of marketing/service-studio website), implement the cyber-arctic
+design system as reusable tokens/components, and build the Home page as the
+first coherent, provable slice (Chunk 1). With time remaining in the required
+work window, open Chunk 2 and build one further real, fully verified page
+(`/process`) rather than pad the round with documentation alone.
 
 ### Methodology check
 
 Next.js (App Router) + TypeScript + Tailwind CSS is the current standard
-choice for this class of product (marketing/service site with forms,
-motion, future CMS/commerce integrations) and matches the vision's technical
-implications (responsive design, accessible components, eventual CMS
-collections). Chose Tailwind v4's CSS-first `@theme` token approach over a JS
+choice for this class of product (marketing/service site with forms, motion,
+future CMS/commerce integrations) and matches the vision's technical
+implications. Chose Tailwind v4's CSS-first `@theme` token approach over a JS
 config file since that is the framework's current documented pattern.
 
-### What changed
+### What changed — Chunk 1 (Foundation & Home)
 
 - Initialized the Git repository (`git init`) — none existed.
 - Scaffolded a Next.js 16 / React 19 / TypeScript / Tailwind v4 app (via
@@ -78,6 +74,34 @@ config file since that is the framework's current documented pattern.
   gitignore.
 - `package.json` name corrected from the scaffold tool's default
   (`scaffold-tmp`) to `cyvexly-studio-website`.
+- Committed as git source truth (commit `d256298`).
+
+### What changed — Chunk 2 start (Process page)
+
+- `src/lib/site-config.ts` — extended `processSteps` with `clientInput`,
+  `deliverable`, `approval`, and `timeframe` per stage (vision §6.7 requires
+  showing all four per stage; the Home preview only used
+  `number`/`title`/`description`, so this is additive and did not change the
+  Home page's rendering).
+- `src/app/process/page.tsx` — new page: hero, five detailed stage cards
+  (each showing "From you" / "From Cyvexly" / "Approval point" / timeframe),
+  the trust-panel statement, and a final CTA.
+- `src/components/site-header.tsx` — fixed a real tablet-width (768px)
+  defect found from Auditor evidence (see Audibles): moved the header's
+  mobile/desktop nav switch from Tailwind's `md` (768px) to `lg` (1024px)
+  breakpoint, since five nav links + logo + CTA button do not fit at 768px.
+- `src/app/globals.css`, `src/components/button.tsx`, `src/app/page.tsx` —
+  fixed a real WCAG AA text-contrast failure the Auditor's contrast probe
+  found in the vision's suggested "Cyber blue" (`#1478FF` measured 4.07:1 as
+  button text, 3.67:1 as link text; both need 4.5:1). Darkened
+  `--color-cyber-blue` to `#0F66E0` (now 5.25:1 / 4.74:1) and its hover/focus
+  shade to `#0B4FB0`; while checking for the same class of defect,
+  independently found and fixed `--color-signal-emerald` (`#16B777` measured
+  2.35:1, below even the 3:1 floor) by darkening it to `#0A6B45` (now
+  5.4–6.6:1 across the light backgrounds it's used on). See Audibles and
+  `CYVEXLY_CHUNK_DEBT.md` for the full contrast math.
+- Committed as git source truth (see the round-1 commit history for the
+  exact second commit).
 
 ### Audibles
 
@@ -91,81 +115,94 @@ config file since that is the framework's current documented pattern.
   the Owner-authored root `AGENTS.md`** the first time the dev server ran.
   Removed the appended block (root `AGENTS.md` is now byte-identical to its
   pre-round content) and set `agentRules: false` in `next.config.ts` to
-  prevent recurrence; verified by restarting the dev server and confirming
-  `AGENTS.md` was untouched.
+  prevent recurrence; verified across two later dev-server restarts that
+  `AGENTS.md` stayed untouched.
 - **This is an unattended/scheduled session**, so `preview_start({name:
   ...})` refused to launch the dev server. Started it manually via the shell
   tool instead, then attached the Browser pane with
   `preview_start({url: "http://localhost:5173"})`, which worked.
-- **Screenshot/click `computer` actions failed** in this same unattended
-  session ("the Browser pane is not displayed, so the page is not
-  compositing frames"). Used `get_page_text`, `read_page`,
-  `read_console_messages`, `read_network_requests`, and `javascript_tool`
-  (dispatching real `.click()` calls) instead — see Proof below. Full
-  pixel-level visual comparison against `mockups/01-home.png` remains open;
-  see `CYVEXLY_CHUNK_DEBT.md` item 1.
+  Screenshot/click `computer` actions still failed ("the Browser pane is not
+  displayed, so the page is not compositing frames"); used `get_page_text`,
+  `read_page`, `read_console_messages`, `read_network_requests`, and
+  `javascript_tool` (dispatching real `.click()` calls) instead.
+- **A concurrent Auditor round published real desktop/mobile/tablet
+  screenshots** of this Builder's own live dev server to the shared durable
+  evidence root while this round was in progress (see `CYVEXLY_WATCH.md`).
+  Reading those (an evidence file any role may read) closed the visual
+  screenshot-comparison gap this round would otherwise have had to leave
+  open, and surfaced a real defect: at 768px the tablet screenshot showed
+  "About" clipped behind the "Describe your project" button. Fixed as
+  described above and independently re-verified with
+  `getBoundingClientRect()` measurements at 768px and 1024px.
 - **create-next-app refused to scaffold into the non-empty sandbox root**, so
   it was scaffolded into a throwaway `scaffold-tmp/` directory and merged in
   by hand, explicitly skipping the tool's own generated `AGENTS.md`/
   `CLAUDE.md` so the Owner-authored root `AGENTS.md` was never at risk of
-  being overwritten by the merge itself (the later `next dev` auto-append,
-  above, was the actual point of collision).
+  being overwritten by the merge itself.
 
 ### Proof performed
 
-- `pnpm exec tsc --noEmit` — no errors.
-- `pnpm run lint` — no errors or warnings (after excluding `.codex/**`).
-- `pnpm run build` — production build succeeds; `/` prerenders as static
-  content.
-- Dev server on port 5173: fetched real rendered page text (all Home
-  sections present with correct copy — hero, credibility strip, three
-  concept-project cards labeled "Concept project," six capability cards, the
-  "not a DIY builder" statement, five-stage process, Signal/Orbit/Nexus
-  pricing preview, six-question FAQ, final CTA), zero console errors, all
-  network requests (JS/CSS/font chunks) returned 200.
-- Desktop viewport (1280×720): `read_page` confirmed the primary nav (Logo,
-  Services, Work, Pricing, Process, About, Describe your project) renders
-  with correct hrefs.
-- Mobile viewport (375×812): confirmed the primary nav collapses to a menu
-  button; opened it via a real dispatched click and confirmed all six links
-  render in the mobile panel; closed it and confirmed it unmounts.
-- FAQ accordion: dispatched a real click on "How long does a website project
-  take?" and confirmed `aria-expanded` flips to `true` and the correct answer
-  text becomes present in the DOM.
+- `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` — all clean,
+  both after the Home page and again after the Process page and header fix.
+- Home page: fetched real rendered page text (all sections present with
+  correct copy), zero console errors, all network requests returned 200;
+  desktop nav confirmed via `read_page`; mobile menu open/close and FAQ
+  accordion open/close confirmed via real dispatched clicks and DOM
+  inspection at 1280×720 and 375×812.
+- Real screenshots (published by the concurrent Auditor round) of the actual
+  running Home page at desktop and full-page mobile compared against
+  `mockups/01-home.png`: hierarchy, section order, composition, and palette
+  match closely, with no clipping/overlap on desktop or the full mobile
+  scroll.
+- Tablet screenshot (auditor evidence) surfaced the header overlap defect;
+  after the fix, re-verified with `javascript_tool` measuring
+  `getBoundingClientRect()` for the logo/nav/CTA at width 768 (hamburger
+  shown, no desktop nav laid out) and width 1024 (full nav visible, zero
+  overlap).
+- After the color-token fix, re-verified contrast by reading the real
+  computed `color`/`background-color` of the primary button, a text link,
+  and the emerald status dot in the running app and computing WCAG relative
+  luminance/contrast in-browser: 5.25:1, 4.74:1, and 5.92:1 respectively —
+  all now pass the 4.5:1 (text) / 3:1 (UI component) AA floors.
+- `/process`: fetched real rendered page text confirming all five stages
+  render with their timeframe, "from you", "from Cyvexly", and "approval
+  point" fields, plus the trust panel and final CTA; zero console errors.
 
 ### What was not checked
 
-- No pixel-level screenshot comparison against `mockups/01-home.png` (see
-  Audibles/chunk debt).
 - No cross-browser check beyond the one Chromium-based Browser-pane engine.
 - No axe/automated accessibility audit run; only structural checks (heading
-  order, landmark roles, focus-visible styling, aria-expanded/aria-controls
-  on interactive elements, reduced-motion handling) were done by
-  construction and code review.
-- Other sitemap pages do not exist yet, so nav links to them 404 — expected
-  and out of this chunk's scope (see chunk debt item 2).
+  order, landmark roles, focus-visible styling, aria-expanded/aria-controls,
+  reduced-motion handling) were done by construction and code review.
+- Other Chunk 2 pages (Services, Work, Pricing, About, Contact) do not exist
+  yet — in scope for Chunk 2 but not this round.
+- The About page's Owner-identity gap was not resolved (correctly — see
+  `CYVEXLY_APP_DEBT.md`; it needs Owner-supplied facts, not Builder
+  invention).
 
 ### Git/diff accountability
 
-`git status`/`git diff` at close show exactly the files listed under "What
-changed" above (new repository, single commit) — see the round-1 commit
-message for the exact file list. No file outside that list was touched. No
-unexplained files remain.
+Two commits this round: the Chunk 1 root commit (Home page + foundation, 107
+files) and a second commit for the Process page + header breakpoint fix. `git
+status` is clean after both. No file outside what's described above was
+touched.
 
 ### Completion state
 
-`IMPLEMENTED — INDEPENDENT REVIEW PENDING`, with one named validation gap
-(full visual screenshot comparison — see `CYVEXLY_CHUNK_DEBT.md` item 1).
+Chunk 1: `DONE WITH PROOF`. Chunk 2: `NEEDS COHERENT FOLLOW-UP` (one of six
+pages built; About page blocked on Owner-supplied identity content).
 
 ### Recommended next tasks
 
-1. From an attended session (or via Auditor/Council, which may have working
-   screenshot capability in their own isolated runtimes), screenshot
-   `http://localhost:5173` at desktop and mobile and compare against
-   `mockups/01-home.png`; close chunk-debt item 1 either way.
-2. Open Chunk 2 (core marketing pages: Services, Work + case-study template,
-   Pricing, Process, About, Contact) reusing `src/lib/site-config.ts` and the
-   Chunk 1 component library.
+1. Build the remaining Chunk 2 pages (Services, Work + case-study template,
+   Pricing, Contact) reusing `src/lib/site-config.ts` and the existing
+   component library.
+2. Route the About-page founder-identity question to the Owner (see
+   `CYVEXLY_APP_DEBT.md` item 1) before building `/about`.
 3. Once real case-study content exists for Aurora Spaces / Nexora Systems /
    Vellora Care, replace the CSS-gradient placeholders in `selectedWork`
    with real designed crops.
+4. When an attended session or another Auditor/Council round is available,
+   get a full desktop+mobile+tablet screenshot pass on whichever pages exist
+   at that point, rather than relying on incidentally concurrent Auditor
+   evidence.

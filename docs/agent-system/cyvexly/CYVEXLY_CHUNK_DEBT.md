@@ -6,34 +6,18 @@ for chunk-level direction.
 
 ## Open
 
-1. **Full visual screenshot comparison against `mockups/01-home.png` is not
-   yet done.** This scheduled Builder round ran unattended: `preview_start`
-   with a dev-server name is blocked in unattended sessions ("nobody is
-   present to approve the command"), and once the server was started manually
-   with Bash, the Browser pane could not composite frames to produce a
-   screenshot ("the Browser pane is not displayed"). Round 1 verified the
-   real rendered result through DOM/content extraction (`get_page_text`,
-   `read_page`), console/network inspection (no errors, all assets 200,
-   fonts loaded), and real interaction (mobile-menu open/close, FAQ
-   accordion open/close) at both desktop (1280×720) and mobile (375×812)
-   viewports — but this is not a substitute for the required visual-plan/
-   target comparison floor (§2.2). **Reopen condition:** the next Builder (or
-   any attended session with a working Browser pane / screenshot tool)
-   should open `http://localhost:5173`, screenshot desktop and mobile, and
-   compare against `mockups/01-home.png` for hierarchy, density, and
-   composition drift before this chunk is treated as visually converged.
-2. **Other sitemap routes 404.** The header/footer link to `/services`,
+1. **Other sitemap routes 404.** The header/footer link to `/services`,
    `/work`, `/pricing`, `/process`, `/about`, `/start`, `/contact`, `/faq`,
    `/privacy`, `/terms`, `/accessibility`. These are intentionally out of
    Chunk 1's coherent slice (Home + design-system foundation) and are Chunk
    2/3/4's job per the project map — not a defect to fix inside Chunk 1.
-3. **Placeholder work-card imagery.** `selectedWork` in
+2. **Placeholder work-card imagery.** `selectedWork` in
    `src/lib/site-config.ts` uses CSS gradients, not real screenshots/crops,
    for the three concept projects (Aurora Spaces, Nexora Systems, Vellora
    Care) named in the vision and mockups. This is honest (no fabricated
    client work) but should be replaced with real designed crops once Chunk 2
    builds the actual case-study pages for those concepts.
-4. **`/favicon.ico` and social-sharing image are still the Next.js
+3. **`/favicon.ico` and social-sharing image are still the Next.js
    defaults.** Vision §12 requires a final wordmark/favicon and
    social-sharing image before launch; out of scope for Chunk 1.
 
@@ -50,3 +34,46 @@ for chunk-level direction.
 - Fixed `eslint.config.mjs` linting `.codex/runtime/**` (another role's
   disposable build/runtime output, not product source) by adding it to
   `globalIgnores`.
+- **Full visual comparison against `mockups/01-home.png` is now done**, using
+  real screenshots the concurrently-running Auditor round happened to publish
+  to the shared durable evidence root
+  (`docs/agent-system/cyvexly/auditor/evidence/auditor-20260830T1324Z-current-*.png`)
+  while this Builder's own dev server was live — genuine rendered-output
+  evidence of this round's actual Home page, not a substitute. Desktop
+  (1280×720) and the full mobile scroll (375×~8900) match the mockup's
+  hierarchy, composition, and cyber-arctic palette closely: hero layout/copy,
+  credibility strip, three labeled concept-project cards, six capability
+  cards, the "not a DIY builder" statement, five-stage process, three-tier
+  pricing, FAQ, and final CTA all render in the right order with no clipping
+  or overlap on desktop or mobile.
+- **Fixed a real WCAG AA text-contrast failure in the color system.** The
+  concurrent Auditor round's contrast probe
+  (`docs/agent-system/cyvexly/auditor/evidence/auditor-20260830T1324Z-contrast-probe.md`)
+  measured the vision's suggested "Cyber blue" `#1478FF` at 4.07:1 as white
+  button text and 3.67:1 as small link text — both below the 4.5:1 AA
+  threshold for normal text that vision §13 requires. The vision table marks
+  `#1478FF` as a "Suggested value," so darkened the `--color-cyber-blue`
+  token to `#0F66E0` (5.25:1 as button text, 4.74:1 as link text on the
+  arctic-mist background — both now pass) and its hover/focus shade to
+  `#0B4FB0`. While auditing the same class of failure, independently found
+  and fixed the same problem in `--color-signal-emerald` (`#16B777` measured
+  2.35:1 on arctic mist, 2.16:1 on ice-field — failing even the 3:1 large-text/
+  UI-component floor) by darkening it to `#0A6B45` (5.92:1 / 5.45:1 / 6.56:1
+  against arctic mist / ice-field / white). Verified all three pairs by
+  reading real computed styles in the running app and computing WCAG relative
+  luminance/contrast in-browser (same formula the Auditor's probe used), not
+  just by calculation against the source file. Decorative-only uses of the
+  original brighter blue (the orbit graphic's gradient, the work-card
+  gradient placeholders) were left unchanged since WCAG text-contrast rules
+  do not apply to non-text decoration.
+- **Found and fixed a real tablet-width (768px) defect** from that same
+  evidence: the header's desktop nav switched on at Tailwind's `md` (768px)
+  breakpoint, but five nav links + the logo + the "Describe your project"
+  button do not fit at 768px — the tablet screenshot showed "About" clipped
+  behind the CTA button. Root cause was the breakpoint choice, not spacing;
+  fixed by moving the header's mobile/desktop nav switch from `md:` to `lg:`
+  (1024px) in `src/components/site-header.tsx`, so tablet widths now get the
+  hamburger menu instead of a cramped desktop nav. Verified by measuring
+  `getBoundingClientRect()` for the logo/nav/CTA at 768px (hamburger shown,
+  no desktop nav in the layout) and at 1024px (full nav visible, zero
+  overlap between logo/nav/CTA) — typecheck, lint, and build all still pass.
