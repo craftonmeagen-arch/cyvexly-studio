@@ -62,6 +62,9 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    symptom; the separate Owner framing question — whether truthful abstract
    illustration is permanent release-sufficient artwork or commissioned
    higher-fidelity concept design is required — remains open and unchanged.
+   Concurrent Council round 5 then independently verified Home, Services, and
+   Work at desktop/tablet/phone and closed the implementation symptom while
+   explicitly retaining that Owner framing question.
 3. **Favicon 16px legibility: RESOLVED round 7 (see below); OG-image
    metadata wiring: still open, domain-blocked (see the second half of
    this item).** The original hand-authored "C/Y signal mark" (round 2)
