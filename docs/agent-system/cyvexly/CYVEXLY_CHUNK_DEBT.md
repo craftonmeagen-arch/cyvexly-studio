@@ -50,7 +50,7 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    reachable Builder gap this round.
 
    **Round 8 update — all current marketing surfaces now share the accepted
-   truthful abstract artwork.** The current Council report independently found
+   truthful abstract artwork.** Council round 4 independently found
    that Home's Selected work cards still used the original flat gradients even
    though Work/case studies had advanced to `ConceptPreview`; source audit found
    the same stale rendering on Services' Recent work cards. Round 8 fixed both
