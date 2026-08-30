@@ -62,7 +62,7 @@ export default async function CaseStudyPage({
           <div
             className={`h-56 w-full overflow-hidden bg-gradient-to-br sm:h-72 ${study.gradient}`}
             role="img"
-            aria-label={`${study.name} concept visual placeholder`}
+            aria-label={`${study.name} abstract concept visual`}
           >
             <ConceptPreview slug={slug} />
           </div>
