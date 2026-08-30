@@ -31,6 +31,14 @@
   normally in the same unattended session and are the strongest currently
   reachable proof layer for interaction/content/error verification. Full
   pixel screenshot comparison against a mockup needs an attended session.
+  **Exception found round 3:** a served image fetched with `curl` to a
+  local file and then opened with the `Read` tool DOES render as a real
+  viewable image in this session, even though a live Browser-pane
+  screenshot does not. This gives real pixel-level proof for any
+  standalone server-rendered image route (e.g. Next's `ImageResponse`/
+  `next/og` file-convention routes) — used to verify `opengraph-image.tsx`
+  and, via a temporary throwaway route, the favicon's small-size
+  rendering. It does not extend to full page layout/CSS screenshots.
 - Git repository, package manifest, and a runnable Next.js/TypeScript/
   Tailwind application now exist as of round 1 (see `CYVEXLY_ENVIRONMENT.md`).
 - Builder development port reservation: `5173`.
