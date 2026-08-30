@@ -61,9 +61,13 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
      round 2) with more per-card detail (problem/who/included/scope-change/
      next-action) than the mockup shows — a deliberate adaptation, since
      vision §6.2's explicit "each service card must answer..." requirement
-     is more specific than the compact mockup thumbnail, but the 7th group
-     ("Care & improvement") doesn't appear in the mockup's 6-card grid at
-     all, worth a second look.
+     is more specific than the compact mockup thumbnail. Re-verified: the
+     7th group ("Care & improvement") is absent from the mockup's visible
+     6-card grid but IS listed in the same mockup's own footer "Services"
+     column (as "Core & Improvement") — so the mockup's intended taxonomy
+     does include a 7th category, it's just cropped from the main grid
+     capture. This confirms 7 groups is the correct target, not a Builder
+     addition beyond the mockup's intent.
    - Services "Service Combinations" section: mockup shows icon-math cards
      (icon + icon + icon = named combo); shipped page uses an audience-type
      comparison table instead. Different framing, same informational intent
