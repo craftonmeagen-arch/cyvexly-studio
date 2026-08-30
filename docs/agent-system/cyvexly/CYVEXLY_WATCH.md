@@ -227,3 +227,16 @@ boundary on future reasoning. Rounds 1-4 are rotated to
   fixing in this Builder's own tooling regardless of the successful
   recovery; this update only closes the "is Council still broken"
   question with real evidence rather than leaving it open.
+- **Explicitly fronting the tab (`tabs_select`) does not fix the
+  compositing limitation — tested for the first time, ruled out.** Every
+  prior round's screenshot/click/geometry/keyboard findings left open
+  whether the tab simply wasn't focused. Called `tabs_select` on the
+  single open tab (result: "Fronted tab seed"), then re-checked on a
+  neutral external page (`https://example.com`, no project server
+  needed): `document.visibilityState` stayed `"hidden"`,
+  `document.hasFocus()` stayed `false`, and `computer{action:
+  "screenshot"}` still failed with the same "Browser pane is not
+  displayed" error. This is a session-level property of this exact
+  unattended invocation, not a fixable tab-focus issue — worth knowing so
+  a future round doesn't re-try `tabs_select` expecting a different
+  result without new evidence the underlying session type has changed.
