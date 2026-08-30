@@ -13,6 +13,31 @@ pass, the exact commit list, and design-industry disclosure-practice
 research for the framing question below) — same pattern round 4 used for
 its own "(cont.)" commits.
 
+## Heads-up: in-progress Council evidence found real Planner/Services issues, not yet formally published
+
+While closing this round, a concurrent Council round (`council-
+20260830T194545Z`, still in progress — see `CYVEXLY_WATCH.md`) published
+evidence directly to `docs/agent-system/cyvexly/council/evidence/
+council-20260830T194545Z-planner-progress.md` before this round ended.
+This Builder read it (read-only, did not touch it or any Council file)
+since it names concrete, real defects worth knowing before the Council's
+own formal report and inbox entry land: (1) the Planner's progress rail
+at `/start` doesn't auto-scroll to keep the active step visible at 390px/
+768px viewports — at step 9, the rail is clipped after circle 5 and stays
+scrolled to position 0, so a user must discover a hidden horizontal
+scroll to see their own current step; confirmed only at 1440px is the
+active step actually visible without scrolling. (2) The Services page's
+"Common combinations" table renders wider than its container at 390px
+(560px content in a 342px parent) with an unlabeled horizontal-scroll
+affordance and clipped right-column content. (3) A console warning:
+`scroll-behavior: smooth` is set on `<html>` without the Next.js-
+recommended `data-scroll-behavior="smooth"` attribute. **This is the
+Council's own finding, not verified independently by this Builder round**
+— treat it as a strong, specific lead to reproduce and fix, not yet an
+adopted Builder fact, and check whether the Council's own formal report
+(once published to `CYVEXLY_REVIEW_INDEX.md`'s current-report path) adds
+anything further before acting.
+
 ## Orientation
 
 - **Round 5 revisited two open items on the closed Chunk 2 (closed does

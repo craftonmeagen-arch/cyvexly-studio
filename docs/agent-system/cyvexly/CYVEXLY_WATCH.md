@@ -345,6 +345,15 @@ boundary on future reasoning.
   compared against the union of the relevant palette arrays. Worth
   running this exact check on any future hand-authored SVG/color work in
   this app rather than relying on "it looks about right."
+- **That concurrent Council round published evidence naming real Planner
+  and Services defects before its formal report landed** (found via a
+  read-only check of `council/evidence/` near closeout, not acted on this
+  round — see `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s heads-up section for
+  the specifics: a progress-rail auto-scroll gap in the Planner at
+  narrow viewports, a Services table overflow at 390px, and a
+  `scroll-behavior`/`data-scroll-behavior` console warning). Worth
+  checking `council/evidence/` for fresh files near closeout, not just at
+  orientation, since a concurrent round can publish mid-Builder-round.
 - **A live Council round started concurrently during this round**
   (`.codex/runtime/council/council-20260830T194545Z/runtime`, visible via
   `Get-CimInstance Win32_Process` near closeout while stopping this
