@@ -46,9 +46,10 @@ requires.
   founder identity arrives.
 - **Known visual gaps vs. mockups** (found via round-2 mockup comparison,
   see `CYVEXLY_CHUNK_DEBT.md`): Services/Pricing pages are content-complete
-  and match vision text closely, but use denser text-only cards where
-  `mockups/02-services-pricing.png` shows more compact icon-led cards — the
-  Services page gained icon badges in round 2, Pricing did not yet.
+  and match vision text closely, but use denser cards than
+  `mockups/02-services-pricing.png`'s more compact layout — both pages now
+  have icon badges (Services round 2, Pricing round 3); the density/framing
+  difference itself remains a deliberate adaptation, not fixed.
 - Non-goal: Project Planner (its own chunk, given its multi-step form
   complexity).
 
@@ -71,16 +72,26 @@ requires.
   statement, and a hand-authored SVG favicon (`src/app/icon.svg`,
   build-verified but not pixel-visually confirmed — see `CYVEXLY_WATCH.md`)
   all built.
-- **Deliberately not attempted this round:** `/privacy` and `/terms`. Unlike
+- **Progress (round 3):** `robots.txt` and a site-wide no-index default
+  (vision §15's "no accidental preview indexing"), a real on-brand
+  social-sharing (Open Graph) image asset (`opengraph-image.tsx`, its
+  metadata wiring correctly still blocked on the domain decision — see
+  `CYVEXLY_APP_DEBT.md` item 2), and a first full launch-readiness pass
+  against all 14 items in vision §15 (see `CYVEXLY_ACTIVE_CHUNK.md`'s
+  round-3 report for the item-by-item result).
+- **Deliberately not attempted:** `/privacy` and `/terms`. Unlike
   Accessibility (jurisdiction-agnostic — a WCAG target + contact route),
   Privacy and Terms need jurisdiction-specific legal language (business
   location, applicable consumer-protection/data-privacy regime) that no
   Builder round has and must not invent — this is the same class of gap as
   the About page's founder identity: Owner-supplied fact, not a reversible
   implementation detail. See `CYVEXLY_APP_DEBT.md` item 3.
-- **Remaining:** a real social-sharing (Open Graph) image, a visual
-  pixel-check of the new favicon in an attended session, and a
-  launch-readiness checklist pass (vision §15) once more of the site exists.
+- **Remaining:** `/privacy`/`/terms` (Owner-blocked, above), `metadataBase`/
+  `sitemap.xml`/canonical URLs (domain-blocked, `CYVEXLY_APP_DEBT.md` item
+  2), and a real attended-session pixel confirmation of the favicon — round
+  3 found a genuine 16px legibility concern via a proxy-rendering method
+  (not a live browser tab) that needs independent confirmation before any
+  redesign; see `CYVEXLY_CHUNK_DEBT.md` item 4.
 
 ## Cross-chunk notes
 
