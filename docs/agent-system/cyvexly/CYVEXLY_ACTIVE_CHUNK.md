@@ -212,6 +212,10 @@ Tab-key traversal in an attended browser (see What was not checked).
 
 ### What changed
 
+**Note: the path data below is the first-commit (`97f7b69`) version,
+which had a real edge-clipping bug — see "Follow-on" further down for
+the corrected path data actually shipped in `ce6d273`.**
+
 - `src/app/icon.svg` — replaced the two-group thin-stroke orbit+Y mark
   with a single-weight (`stroke-width 5`) fused orbit-arc-plus-checkmark
   design (`M24.5 8.5A12 12 0 1 1 21.5 25` + `M9.5 13L16 20L24.5 8.5`),
