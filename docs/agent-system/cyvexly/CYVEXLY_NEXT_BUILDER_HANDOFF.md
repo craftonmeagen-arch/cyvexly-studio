@@ -3,8 +3,12 @@
 ## Urgent items
 
 None. Round 5 closed cleanly — no crash, no unsafe uncommitted state, no
-unresolved urgent reviewer finding discovered this round. Check `git log`
-for the exact commit set landed this round.
+unresolved urgent reviewer finding discovered this round. It landed as
+three commits (`git log dfc0485..HEAD`): the main round-5 commit
+(`c159226`, the `/process` timeline + concept-preview work) plus two
+small documentation-only "(cont.)" follow-ups (`7a0df11` noting a
+concurrent Council round, `2f213e9` recording an additional
+production-build verification pass performed after the main commit).
 
 ## Orientation
 
