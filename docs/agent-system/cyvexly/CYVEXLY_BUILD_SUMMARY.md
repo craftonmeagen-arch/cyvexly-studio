@@ -62,3 +62,10 @@
   DOM events (`computer` click/type actions proved non-functional in this
   unattended session — see `CYVEXLY_WATCH.md`), and no horizontal overflow
   at 375px mobile width on any new page.
+- With time remaining, continued past the initial page build: added a
+  hand-authored SVG favicon (`icon.svg`, Chunk 4's fourth item this round),
+  then ran a real measured heading-hierarchy check across all seven round-2
+  pages (not just code review) and found/fixed one genuine defect (`/work`
+  skipped H1→H3). Also found the reserved Builder port 5173 occupied by an
+  unrelated foreign process mid-round and worked around it on scratch ports
+  rather than touching it — see `CYVEXLY_WATCH.md`.
