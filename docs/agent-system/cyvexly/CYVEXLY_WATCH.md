@@ -215,6 +215,19 @@ boundary on future reasoning.
   `input`/`change` events, `dispatchEvent(new MouseEvent('click', ...))`)
   remained fully reliable for driving the entire nine-step Planner
   wizard, matching round 2's established interaction method.
+- **This round's own "unlabeled input" accessibility check (established
+  rounds 1-2, reused round 3) only queries
+  `input, select, textarea` — it never checked `button` elements**, and a
+  final code re-read (not the automated check) found three real gaps
+  it missed: icon-only progress-rail buttons with no text fallback, and
+  two groups of visually-repeated buttons (asset-status toggles,
+  review-step "Edit" links) sharing identical accessible names across
+  many instances. All three fixed with explicit `aria-label`s. Worth
+  widening that check's selector to include `button` (and checking for
+  duplicate accessible names among same-role siblings) in any future
+  round that builds a form with icon-only or visually-repeated buttons —
+  this project's forms before the Planner only had buttons with unique
+  visible text, so the gap never surfaced until now.
 - **The foreign Vite/EduAILenz process on port 5173 recurred a third
   time** (rounds 2 and 3 already found it once each), this time as two
   simultaneous listeners again (confirmed via `Get-CimInstance
