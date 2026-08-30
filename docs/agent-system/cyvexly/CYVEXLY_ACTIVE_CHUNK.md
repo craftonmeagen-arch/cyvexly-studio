@@ -326,9 +326,11 @@ implicit.
    new `ImageResponse`-proxy technique, which only covers standalone
    generated images, not full page rendering).
 5. Revisit the logged-but-not-fixed visual gaps in `CYVEXLY_CHUNK_DEBT.md`
-   item 5 (service-combination framing, CTA headline wording) and the
-   pre-existing `/process` layout gap (item 1) during a dedicated
-   visual-polish pass.
+   item 5 (service-combination icon-math framing vs. the current table)
+   and the pre-existing `/process` layout gap (item 1) during a dedicated
+   visual-polish pass. (The CTA-headline-wording part of item 5 was
+   revisited and fixed in a follow-on commit after this report was
+   originally drafted — see the addenda below and `git log`.)
 6. Consider consolidating `pricingPreview`/`pricingPackages` in
    `site-config.ts` into one source of truth if they're touched again for
    any other reason — not urgent on its own (verified currently
