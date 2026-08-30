@@ -345,6 +345,17 @@ boundary on future reasoning.
   compared against the union of the relevant palette arrays. Worth
   running this exact check on any future hand-authored SVG/color work in
   this app rather than relying on "it looks about right."
+- **A live Council round started concurrently during this round**
+  (`.codex/runtime/council/council-20260830T194545Z/runtime`, visible via
+  `Get-CimInstance Win32_Process` near closeout while stopping this
+  round's own dev-server processes). This Builder did not inspect, stop,
+  or otherwise touch that runtime or its processes — same non-interference
+  discipline established in rounds 1 and 3 for concurrent reviewer
+  activity. Re-checked `docs/agent-system/cyvexly/inbox/OPERATIONS.md`
+  near closeout (round 4's own established practice, not just once at
+  orientation): unchanged since the start of this round, so the
+  concurrent Council round had not published a new report by the time
+  this round closed.
 - **This round's own dev-server-process cleanup had to distinguish this
   project's `next dev` from several other unrelated Node processes for
   entirely different projects also running on this machine** (not just
