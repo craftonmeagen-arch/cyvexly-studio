@@ -105,3 +105,27 @@
      transactional-email wiring as an explicitly routed follow-up once
      both the domain and an email-provider authorization exist — not
      invent or silently downgrade the "sent from Cyvexly" requirement.
+   - **Round 4 update — a real, honest limitation of the interim bridge
+     for a form this size, not a new blocker.** Built round 4: the
+     Planner's `mailto:` submission (`/start`) encodes the entire
+     nine-step answer summary into the `mailto:` URL itself, unlike
+     Contact's single short message field. A thoroughly answered
+     submission (long text in several open-ended fields: business
+     description, current problems, sites admired, open notes, etc.)
+     could plausibly produce a `mailto:` URL long enough to hit a
+     mail-client or OS protocol-handler length limit on some platforms —
+     not measured precisely this round (no clean way to intercept
+     `window.location.href` assignment for measurement without
+     triggering a real OS-level mail-client handoff, which this round
+     deliberately avoided — see `CYVEXLY_ACTIVE_CHUNK.md`'s round-4
+     report). This has no clean fix within the current no-backend
+     constraint: truncating the body risks silently dropping real
+     prospect answers, which is worse than the rare failure case it
+     would prevent. The real fix is the same one already tracked above —
+     a server-side email route once authorized, which sends the full
+     structured data directly rather than round-tripping it through a
+     URL. Not a new blocker on opening Chunk 3 or building the Planner
+     (Contact already accepted this class of interim-bridge limitation),
+     but worth the next Builder or Owner knowing before treating the
+     `mailto:` bridge as a durable solution rather than the explicitly
+     temporary one it's labeled as in the UI.
