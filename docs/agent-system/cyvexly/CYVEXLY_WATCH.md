@@ -240,3 +240,24 @@ boundary on future reasoning. Rounds 1-4 are rotated to
   unattended invocation, not a fixable tab-focus issue — worth knowing so
   a future round doesn't re-try `tabs_select` expecting a different
   result without new evidence the underlying session type has changed.
+- **Root-caused the compositing limitation one level deeper:
+  `requestAnimationFrame` never fires in this session at all.** Every
+  prior finding described the symptom ("page not compositing frames") but
+  not the precise mechanism. Started a self-rescheduling `rAF` loop
+  incrementing a counter, waited a real 3 seconds via `computer{action:
+  "wait"}`, then read the counter back: `0` — zero animation frames
+  delivered, while `document.visibilityState` stayed `"hidden"`. Regular
+  JS execution, event listeners, `setTimeout`, and DOM mutation all work
+  normally throughout this session (proven repeatedly this round and
+  every prior round) — only the browser's rendering/animation-frame
+  pipeline is suspended, consistent with a backgrounded/never-visible tab
+  in a real browser engine. This single fact explains every symptom found
+  since round 1: no compositor frames means no screenshot, no smooth-
+  scroll animation progress (this round's finding), and (combined with
+  `visibilityState: "hidden"`) likely contributes to the `computer` click/
+  key non-delivery too, since real input dispatch in a Chromium-family
+  engine is also gated on the page being an active, visible target.
+  Useful for whoever eventually investigates fixing this at the harness
+  level: the fix needs to make this session's Browser pane actually
+  visible/foregrounded to its own renderer, not just "select" or "front"
+  the tab within the pane's own tab list.
