@@ -215,6 +215,14 @@ boundary on future reasoning.
   `input`/`change` events, `dispatchEvent(new MouseEvent('click', ...))`)
   remained fully reliable for driving the entire nine-step Planner
   wizard, matching round 2's established interaction method.
+- **The foreign Vite/EduAILenz process on port 5173 recurred a third
+  time** (rounds 2 and 3 already found it once each), this time as two
+  simultaneous listeners again (confirmed via `Get-CimInstance
+  Win32_Process`: one was this round's own `next dev`, PID stopped at
+  closeout; the other a `vite.js --config vite.config.ts` process, left
+  untouched). Now a well-established standing fact about this machine —
+  not worth re-investigating each round, just re-verify ownership by PID
+  before stopping anything on 5173, same as every prior round.
 - **`window.scrollTo({behavior: "smooth"})` bypasses this project's
   global CSS `prefers-reduced-motion` rule** (`globals.css`'s
   `*, *::before, *::after { transition-duration: 0.001ms !important; }`
