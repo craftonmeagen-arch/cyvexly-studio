@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { FaqAccordion } from "@/components/faq-accordion";
+import { PackageIcon } from "@/components/package-icon";
 import {
   addOns,
   billedSeparately,
@@ -58,7 +59,8 @@ export default function PricingPage() {
                     Most popular
                   </span>
                 )}
-                <h2 className="font-display text-lg font-semibold text-midnight-slate">
+                <PackageIcon name={pkg.name} />
+                <h2 className="mt-3 font-display text-lg font-semibold text-midnight-slate">
                   {pkg.name}
                 </h2>
                 <p className="mt-1 text-xs uppercase tracking-[0.1em] text-cool-graphite">
@@ -93,7 +95,8 @@ export default function PricingPage() {
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {pricingPackages.slice(3).map((pkg) => (
               <div key={pkg.name} className="glass-panel flex flex-col rounded-2xl p-7">
-                <h2 className="font-display text-lg font-semibold text-midnight-slate">
+                <PackageIcon name={pkg.name} />
+                <h2 className="mt-3 font-display text-lg font-semibold text-midnight-slate">
                   {pkg.name}
                 </h2>
                 <p className="mt-1 text-xs uppercase tracking-[0.1em] text-cool-graphite">

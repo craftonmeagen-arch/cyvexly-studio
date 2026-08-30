@@ -69,3 +69,41 @@
   skipped H1→H3). Also found the reserved Builder port 5173 occupied by an
   unrelated foreign process mid-round and worked around it on scratch ports
   rather than touching it — see `CYVEXLY_WATCH.md`.
+
+## Round 3 — 2026-08-30
+
+- Closed Pricing icon-parity debt: added five hand-authored package icons
+  matching the existing Services icon pattern, verified via the real dev
+  server.
+- Independently re-verified and formally closed Chunk 2 (Core marketing
+  pages) per §7.9 — only the Owner-blocked About page remains, honestly
+  bounded.
+- Ran the §4.12 Outcome Reachability Check for Chunk 3's email-delivery
+  mechanism before opening it: sending a real confirmation email "from
+  Cyvexly" is unreachable until both a transactional-email provider and
+  the production domain are decided; the Planner's UI is a genuinely
+  separable, authorized, reachable slice recommended for the next round.
+- Fixed a real launch-readiness gap from vision §15: added `robots.txt`
+  and a site-wide `noindex, nofollow` meta default (opt-in via one env
+  var), since neither existed and the site would have been fully
+  crawlable by default.
+- Built a real, on-brand social-sharing (Open Graph) image via Next's
+  `ImageResponse`, then tested — rather than assumed — whether it needed
+  the undecided domain: the dev server initially suggested it didn't, but
+  checking the actual production build output caught that the
+  auto-generated meta URLs would ship broken (`http://localhost:3000`)
+  without `metadataBase`. The image asset itself is kept; the metadata
+  wiring stays correctly deferred.
+- Found a real, previously-unverified favicon defect using a new proxy
+  technique (a served, `curl`-fetched image opened with `Read` renders
+  as a real viewable image in this session, unlike a live browser-tab
+  screenshot): the current favicon mark is not legible at 16x16, the
+  actual default browser-tab size. Routed to an attended session for
+  confirmation and redesign rather than guessing a fix.
+- Ran a first structured launch-readiness pass against all 14 items in
+  vision §15, producing a concrete current-state list for the next
+  Builder/Owner rather than a general "not ready yet."
+- Rotated the round-2 full report out of `CYVEXLY_ACTIVE_CHUNK.md` into
+  `docs/archive/chunks/CYVEXLY_CHUNK2_ROUND2_REPORT.md` to stay under the
+  30KB hot-path cap; fixed the archive index, which had gone stale since
+  round 2's own archival.

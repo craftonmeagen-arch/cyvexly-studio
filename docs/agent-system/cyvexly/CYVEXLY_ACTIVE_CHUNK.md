@@ -1,16 +1,19 @@
 # Cyvexly Active Chunk
 
-**Chunk:** 2 — Core marketing pages (effectively complete except the
-Owner-blocked About page); Chunk 4 — Utility/legal pages opened early
-(round 2) and in progress.
-**Status:** Chunk 2: `/process`, `/services`, `/pricing`, `/contact`,
-`/work` (+3 case studies) all complete and verified. Only `/about` remains,
-honestly bounded on Owner-supplied founder identity. Chunk 4: `/not-found`,
-`/faq`, `/accessibility` complete; `/privacy`/`/terms` bounded on
-Owner-supplied jurisdiction facts; favicon/social assets and launch-readiness
-pass remain.
-**Prior chunk:** Chunk 1 — Foundation & Home, closed round 1. See "Round 1
-report" below for its full record.
+**Chunk:** 4 — Utility/legal pages (opened round 2, in progress). Chunk 2
+(Core marketing pages) is CLOSED as of round 3 — see
+`CYVEXLY_PROJECT_CHUNK_MAP.md`.
+**Status:** Chunk 4: `/not-found`, `/faq`, `/accessibility` complete;
+`/privacy`/`/terms` bounded on Owner-supplied jurisdiction facts; favicon
+now has real pixel evidence (found a genuine 16px legibility concern, not
+yet fixed); a real, verified, on-brand social-sharing (OG) image asset
+exists but its metadata wiring is correctly still blocked on the domain
+decision; `robots.txt`/meta-robots now default to no-index until the
+domain is live; the launch-readiness pass (vision §15) has been run once —
+see the round-3 report below for the full item-by-item result.
+**Prior chunk:** Chunk 1 — Foundation & Home, closed round 1. Chunk 2 —
+Core marketing pages, closed round 3. See their round reports below/in
+`docs/archive/chunks/` for full records.
 
 **Why Chunk 2 exists:** Chunk 1 established the technical foundation, design
 system, and Home page. Every other sitemap page (vision §5) reuses that same
@@ -43,297 +46,348 @@ built/verified `/process`; fixed two tooling defects and a real
 WCAG contrast failure; closed the visual-comparison gap using a
 concurrent Auditor round's published screenshots.
 
-## Round 2 report — global round 2
+## Round 2 report — global round 2 (archived)
+
+Archived to `docs/archive/chunks/CYVEXLY_CHUNK2_ROUND2_REPORT.md` this
+round to stay under the 30KB hot-path cap (§7.14) — full Round Plan,
+Methodology Check, what changed, Audibles, proof performed, what was not
+checked, git accountability, completion state, and recommended next
+tasks are preserved there unedited. Summary: built and verified five
+more Chunk 2 pages (`/services`, `/pricing`, `/contact`, `/work` + 3
+case-study pages), opened Chunk 4 early and built `/not-found`, `/faq`,
+`/accessibility`, added a hand-authored SVG favicon, and ran a real
+measured heading-hierarchy check that found and fixed one genuine defect
+(`/work` skipped H1->H3 (no H2)). Found and fixed a real Next.js 16 runtime bug
+(dynamic `params` is a Promise) and a real visual-comparison gap (missing
+case-study "visual system excerpt"). Left several visual density/framing
+gaps vs. the mockups deliberately logged rather than fixed.
+
+## Round 3 report — global round 3
 
 ### Round Plan
 
-Reconcile current source/runtime truth (git log showed the prior session had
-continued past its own round-1 report's stated commit count, all as
-"Round 1 (cont.)" commits — read as history, not a blocker). Continue Chunk 2
-with the strongest remaining coherent slice: the four fully-specified,
-unblocked marketing pages (Services, Pricing, Contact, Work + case-study
-template), reusing the existing design system and `site-config.ts` pattern
-established in round 1. Verify every page against the real dev server, not
-just build/typecheck/lint. Given the scheduled task's stated minimum
-work-window (50 minutes, longer than this packet's own 25-minute normal
-window), continue with coherent, reachable follow-on work — a mockup visual
-comparison pass, then Chunk 4's cheapest well-specified items (custom 404,
-FAQ library, Accessibility statement) — rather than stopping once the
-Chunk 2 provisional plan was nominally complete.
+This is a scheduled round with a 50-minute minimum work window (longer than
+the governing packet's own 25-minute normal window). Reconciled current
+source/runtime truth first (git log matched round 2's own final
+accounting; git status showed only the same pre-existing, untouched
+Auditor/Council files as round 2 left them — no new reviewer round ran
+between round 2 and this round). Read the round-2 handoff's recommended
+next tasks and planned a coherent round 3 slice from them: (1) close the
+one well-scoped, low-risk logged debt item (Pricing icon parity vs
+Services), (2) independently verify and, if still true, formally close
+Chunk 2 per §7.9, (3) run the §4.12 Outcome Reachability Check on Chunk
+3's email-delivery mechanism before opening it (explicitly recommended,
+not yet done), and (4) use remaining time on Chunk 4's other remaining
+items (favicon pixel-verification, social-sharing image, a real
+launch-readiness pass against vision §15) rather than starting Chunk 3's
+full multi-step Planner build in the same round — building a partial
+9-step form with no working backend risked a half-finished
+implementation, which the governing packet explicitly warns against;
+better to leave it clearly scoped for a dedicated round than to rush it
+here.
 
 ### Methodology check
 
 Continued the same Next.js App Router + TypeScript + Tailwind v4 stack and
-component patterns from round 1 (`SiteHeader`/`SiteFooter`/`ButtonLink`/
-`FaqAccordion`, `glass-panel`/`signal-grid-bg` utilities, shared
-`site-config.ts` data). For the Contact form, since no email-delivery service
-is authorized yet (a foundational/authorization-sensitive decision per
-§4.12 — same class of gap as the Project Planner in Chunk 3), used a
-`mailto:` bridge (constructs a pre-filled mailto link and sets
-`window.location.href`) rather than inventing a backend/credential — this is
-a real, honestly-labeled, zero-authorization interim mechanism, not a
-disguised fake submission. For the Work page, added client-side category
-filtering (matches vision §6.4's filter-chip requirement) using the
-project's existing `category`/`kind` fields rather than introducing new
-infrastructure.
+component patterns from rounds 1–2. For the Pricing icons, mirrored the
+exact `service-icon.tsx` pattern (same badge size/classes) rather than
+inventing a new icon style. For the OG image and the favicon-legibility
+check, used Next's own `ImageResponse`/`next/og` file-convention (the
+standard, documented Next.js mechanism for this exact problem) rather
+than reaching for an external image-generation tool or asset. For the
+robots/indexing fix, used Next's own `metadata.robots` field and the
+`robots.ts` special-file convention (the standard mechanism), gated
+behind one explicit env var rather than a guessed domain check.
 
 ### What changed
 
-- `src/lib/site-config.ts` — added `pricingPackages`, `projectIncludes`,
-  `addOns`, `carePlans`, `billedSeparately`, `pricingFaq`, `contactTopics`,
-  `servicesGroups` (7 groups), `websiteTypes` (5, matching the pre-existing
-  footer anchor hrefs), `serviceCombinations`, `servicesFaq`, `workFilters`,
-  `caseStudies` (3 full concept case studies, each now including a `palette`
-  + `typographyNote`), and added `slug`/`category` fields to the existing
-  `selectedWork` entries.
-- `src/app/pricing/page.tsx` — new page: 5 package cards, comparison table,
-  "what every project includes," add-ons table, care plans, billed-
-  separately/payment-schedule section, pricing FAQ, CTA (vision §6.6).
-- `src/app/services/page.tsx` — new page: 7 service-group cards (each
-  answering problem/who/included/scope-change/next-action per vision §6.2,
-  now with icon badges), a "popular website types" section whose 5 card
-  `id`s match the pre-existing `footerNav.services` anchor hrefs (previously
-  dangling since `/services` didn't exist), a service-combinations table,
-  reused selected-work cards, FAQ, CTA.
-- `src/components/service-icon.tsx` — new: 7 small hand-authored inline-SVG
-  line icons (no external asset), one per service group.
-- `src/components/contact-form.tsx`, `src/app/contact/page.tsx` — new:
-  accessible contact form (labeled fields, `aria-invalid`/
-  `aria-describedby`, `role="alert"`/`role="status"`) with real client-side
-  validation and a `mailto:`-bridge submit path (vision §6.10).
-- `src/components/work-grid.tsx`, `src/app/work/page.tsx` — new: filterable
-  portfolio grid (All/Business Site/Redesign/Landing Page/Commerce/Concept,
-  vision §6.4).
-- `src/app/work/[slug]/page.tsx` — new: case-study template (vision §6.5)
-  with `generateStaticParams`/`notFound()`, rendering challenge, goals,
-  scope, key decisions, a "Visual direction" color-swatch + typography
-  section (added after mockup comparison — see Audibles), accessibility
-  highlights, intended outcome, CTA.
-- `src/app/faq/page.tsx` — new: full FAQ library, 11 categories / 30 Q&As
-  covering every topic vision §6.11 lists, with an anchor-linked category
-  nav (vision §6.11; Chunk 4).
-- `src/app/accessibility/page.tsx` — new: Accessibility Statement — WCAG 2.2
-  AA target, what that means in practice, ongoing-work note, and a report-a-
-  problem contact route (vision §6.12; Chunk 4). Deliberately did not build
-  `/privacy` or `/terms` in the same pass — see Audibles.
-- `src/app/not-found.tsx` — new: custom 404 replacing the Next.js default,
-  with links back to Home/Services/Work/Planner (vision §6.12; Chunk 4).
-  Applies to both unmatched routes and explicit `notFound()` calls (verified
-  against the case-study template's unknown-slug path).
+- `src/components/package-icon.tsx` — new: five hand-authored inline-SVG
+  icons (Signal, Orbit, Nexus, Commerce, Custom system), matching
+  `service-icon.tsx`'s pattern exactly.
+- `src/app/pricing/page.tsx` — wired `PackageIcon` into both the top
+  three-card grid and the bottom two-card row.
+- `src/app/layout.tsx` — added `robots: { index: isIndexable, follow:
+  isIndexable }` to root metadata, gated on
+  `process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true"` (defaults to
+  no-index/no-follow).
+- `src/app/robots.ts` — new: dynamic `robots.txt`, same env-var gate,
+  defaults to disallow-all.
+- `src/app/opengraph-image.tsx` — new: a real, on-brand 1200x630 OG/
+  Twitter card image via `ImageResponse`, reusing the `icon.svg` mark,
+  real palette tokens, and the recommended launch headline.
+- `docs/agent-system/cyvexly/CYVEXLY_APP_DEBT.md`, `CYVEXLY_CHUNK_DEBT.md`,
+  `CYVEXLY_PROJECT_CHUNK_MAP.md`, `CYVEXLY_WATCH.md`,
+  `CYVEXLY_ENVIRONMENT.md` — see Audibles and Git/diff accountability
+  below; updated to reflect all findings rather than left stale.
 
 ### Audibles
 
-- **Found and fixed a real Next.js 16 runtime bug.** `/work/[slug]/page.tsx`
-  was first written with `params: { slug: string }` (pre-Next.js-15
-  convention). `tsc --noEmit`, `pnpm run lint`, and `pnpm run build` all
-  passed clean — the hand-written type bypassed the framework's generated
-  `PageProps` check. Real dev-server requests to all three case-study routes
-  404'd, and the server log showed `Route "/work/[slug]" used
-  \`params.slug\`. \`params\` is a Promise and must be unwrapped...`. Fixed
-  by typing `params: Promise<{ slug: string }>` and awaiting it in both
-  `generateMetadata` and the page component; re-verified all three routes
-  return 200 with correct content afterward. Recorded in `CYVEXLY_WATCH.md`
-  as a pattern to watch for in any future dynamic route.
-- **Performed a real mockup visual-comparison pass** against
-  `mockups/02-services-pricing.png` and `mockups/03-work-case-study.png`
-  (opened both as images). Found and fixed one genuinely actionable,
-  reachable gap: the case-study template was missing the "visual system
-  excerpt" vision §6.5 item 7 requires and the mockup visually demonstrates
-  (a compact color-palette + typography specimen) — added a real "Visual
-  direction" section per case study using each project's actual gradient hex
-  values as swatches (verified via `getComputedStyle` in the running app,
-  not just source inspection) plus a short typography note. Also found the
-  Services page had no icon badges where the mockup shows them on every
-  card; added a small hand-authored inline-SVG icon set rather than leaving
-  it unaddressed. Named, but deliberately left open (logged in
-  `CYVEXLY_CHUNK_DEBT.md` rather than silently claimed as converged): the
-  Services/Pricing pages are denser and more text-heavy than the mockup's
-  compact cards (a reasoned adaptation favoring the more specific written
-  vision text over the compact thumbnail, per §4.3's "preserve product
-  intent" guidance — not an oversight), Pricing still has no icon badges,
-  and both pages' final-CTA headline wording differs from the mockup.
-- **Refined a round-1 Watch finding.** Round 1's note said
-  `javascript_tool`-dispatched clicks "work normally" in this unattended
-  session. Round 2 found this needs a caveat: a `computer` tool click (by
-  ref) on a submit button and a text input produced zero effect (no state
-  change, no focus, no typed text) across repeated controlled tests, even
-  though the tool call itself reported apparent success. An earlier same-
-  session test that seemed to show a `computer` click succeeding on the FAQ
-  accordion was very likely a false positive — a stale read racing an
-  unrelated `javascript_tool`-dispatched click's delayed state commit, not
-  the `computer` click itself. Standardized on `javascript_tool` dispatching
-  real `MouseEvent`/`input` events (with a short `await setTimeout` after,
-  since React's commit isn't synchronous with the dispatch call) as the
-  session's one reliable interaction-verification method for the rest of
-  this round; updated `CYVEXLY_WATCH.md` accordingly so the next Builder
-  doesn't have to rediscover this.
-- **Chose a `mailto:` bridge for the Contact form's submit action** rather
-  than inventing a backend/email-delivery integration, since no such service
-  is authorized (§4.12 applies — this is the same class of foundational gap
-  as the Project Planner's eventual backend). This is a real, functioning,
-  zero-authorization mechanism (verified: constructs a correct
-  `mailto:hello@cyvexly.com?subject=...&body=...` target and calls
-  `window.location.href = mailto` on valid submit, confirmed via a real
-  submit-flow test with intercepted navigation), not a placeholder disguised
-  as complete. Documented as the current mechanism in the round report
-  rather than silently treated as the final answer — a real email-delivery
-  service is still an open foundational decision for Chunk 3.
+- **Closed Chunk 2 per §7.9.** Independently re-verified via a live route
+  sweep (not just trusting the prior report) that `/`, `/process`,
+  `/services`, `/pricing`, `/contact`, `/work` (+3 case studies) all
+  return 200 and `/about` still 404s. The founder-identity gap is
+  unchanged and still not Builder-reachable (no new Owner input arrived).
+  Closed per the chunk's own boundary; About carried forward as
+  `CYVEXLY_APP_DEBT.md` item 1, not open chunk debt.
+- **Ran the §4.12 Outcome Reachability Check for Chunk 3's email-delivery
+  mechanism** (explicitly recommended by round 2, not yet done). Full
+  writeup in `CYVEXLY_APP_DEBT.md` item 4. Conclusion: sending a real
+  confirmation email *from* Cyvexly is unreachable until both a
+  transactional-email provider (credential) and the production domain
+  (for deliverable sender verification) are authorized/decided — these
+  two gaps compound. The Planner's UI/state/validation is a genuinely
+  separable, authorized, reachable slice that does not need to wait.
+  Recommended (not built this round, to avoid a half-finished
+  implementation) that the next Builder opening Chunk 3 build the full
+  UI now and reuse Contact's `mailto:` interim pattern for submission,
+  explicitly documented as not satisfying the "sent from Cyvexly"
+  requirement.
+- **Found and fixed the "no accidental search indexing" launch-readiness
+  gap from vision §15** — there was no `robots.txt` and no `robots` meta
+  tag anywhere; every response would have been fully crawlable/indexable
+  by default. Fixed with an explicit opt-in env var (see What changed)
+  rather than guessing a domain-based rule.
+- **Tested rather than trusted the assumption that the OG/social-sharing
+  image was blocked on the domain decision.** First evidence (live dev
+  server) suggested it wasn't blocked at all — `og:image` resolved
+  correctly to the real origin even with `metadataBase` unset. Checking
+  the actual `pnpm run build` output caught that this was misleading: the
+  production static build bakes in `http://localhost:3000` as the image
+  URL without `metadataBase` set (`.next/server/app/*.html` inspected
+  directly, not just build stdout). Net finding, stated precisely: the
+  image *asset* is real, on-brand, and domain-independent (built and
+  kept); the *metadata wiring* is genuinely domain-dependent, confirming
+  (with sharper reasoning than round 2 had) that `CYVEXLY_APP_DEBT.md`
+  item 2 was right to defer it, and that `metadataBase` must be set
+  before deploy or production will ship a broken `localhost:3000`
+  social-preview link. Full detail in `CYVEXLY_WATCH.md`.
+- **Found a real proxy method for pixel-level visual proof in this
+  unattended session** (still no live-tab screenshot capability — see
+  `CYVEXLY_WATCH.md`): a `curl`-fetched, server-rendered PNG opened with
+  `Read` renders as a real viewable image here. Used it to visually
+  confirm the new OG image looks right, and then built a temporary
+  `ImageResponse` route reusing the favicon's exact path data at
+  16/32/64px to finally get real pixel evidence for the favicon
+  (previously "not verified" since round 2). **Found a genuine
+  legibility problem at 16px** (the actual default browser-tab favicon
+  size) that a stroke-width increase (2.6 to 3.4 to 4.2) did not fix —
+  points to shape complexity, not line weight, as the real cause. Stated
+  the honest caveat that this rasterizer is not proof of exact
+  real-browser tab rendering. Deleted the temporary route and all scratch
+  capture files immediately after inspection (ephemeral-storage rule) —
+  did not leave a `scratch-favicon-check` route or any leftover PNG in
+  the working tree; verified via `git status` and a directory listing
+  that nothing scratch-related remained.
+- **Ran a first structured launch-readiness pass against vision §15's 14
+  items** (never done as a discrete pass before). Findings, in the
+  vision's own order: (1) positioning/audience consistency — spot-checked
+  via real page nav/footer content across pages, consistent everywhere
+  checked; (2) sitemap/utility pages — 8 of 15 routes live, `/about`,
+  `/start`, `/privacy`, `/terms` remain (all honestly bounded) — **not
+  ready**; (3) package/add-on/care-plan consistency — `pricingPreview`
+  (Home) and `pricingPackages` (Pricing) are two separately maintained
+  arrays, verified currently consistent but a real future-drift risk
+  (new minor watch item, not refactored — the two arrays intentionally
+  curate different feature subsets, so a mechanical dedup would silently
+  change curated content); (4) Planner captures enough info — Chunk 3
+  not built, **not ready** (expected); (5) proposal/invoice/payment
+  workflow — not built, foundational, **not ready** (expected); (6)
+  payment options — described in text per vision §8, no live processing
+  yet (expected pre-launch); (7) three portfolio pieces truthfully
+  labeled — **ready**; (8) every claim/testimonial verifiable — no
+  testimonials exist, Home correctly uses "what every project includes"
+  instead — **ready**; (9) legal/privacy reflects real jurisdiction —
+  not built, honestly bounded — **not ready**; (10) forms/emails/errors/
+  confirmations — Contact verified round 2, Planner doesn't exist yet —
+  **partially ready**; (11) desktop/mobile visual QA — content/structure
+  checks done every round, true pixel QA still not reachable — **not
+  fully ready**; (12) accessibility/performance reviewed — structural
+  checks done, no automated axe/Lighthouse audit yet — **partially
+  ready**; (13) no accidental preview indexing — **fixed this round**,
+  see above — **ready**; (14) domain/email/analytics/social-preview
+  ready — domain undecided, analytics not wired, OG image metadata still
+  needs `metadataBase` — **not ready**. Overall: **not launch-ready**, as
+  expected this early — the useful output is this concrete, current
+  per-item list, which the next Builder or Owner can act on directly
+  rather than re-deriving it from scratch. Recorded here rather than as a
+  new standing checklist file, since `CYVEXLY_PROJECT_CHUNK_MAP.md`/
+  `CYVEXLY_APP_DEBT.md` already carry the open items this surfaced.
 
 ### Proof performed
 
 - `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` — all clean
-  after every page added this round (checked incrementally, not just once
-  at the end).
-- Started the dev server manually (unattended-session workaround from round
-  1) and, for every new route (`/services`, `/pricing`, `/contact`, `/work`,
-  `/work/aurora-spaces`, `/work/nexora-systems`, `/work/vellora-care`,
-  `/faq`, `/accessibility`, `/not-found` via an unmatched path and via the
-  case-study template's `notFound()`) plus the pre-existing `/` and
-  `/process`: confirmed HTTP 200 (404 for intentionally-unmatched paths),
-  fetched real rendered page text confirming correct content, checked
-  `read_console_messages` for zero unexpected errors, and checked
-  `read_network_requests` for all-200/304 asset loads.
-- Real interaction testing via `javascript_tool`-dispatched DOM events (see
-  Audibles for why `computer` actions were not used): FAQ accordion
-  open/toggle on Pricing and FAQ pages (verified `aria-expanded` and panel
-  text), mobile nav open/close on Pricing (verified `aria-expanded` and
-  rendered link count), Work page category filter (verified "Commerce"
-  isolates exactly Vellora Care), Contact form's full validation path (empty
-  submit → all 4 expected field errors + alert banner) and full valid-submit
-  path (filled all fields including checkbox → confirmation state rendered,
-  form reset, no unwanted page navigation observed).
-- Verified the "visual direction" color swatches render the correct actual
-  colors via `getComputedStyle(...).backgroundColor` against the source hex
-  values (not just visual inspection of markup).
-- Verified all 12 Services-page anchor targets (7 service groups + 5
-  website-type cards, including the previously-dangling footer anchor ids)
-  resolve via `document.getElementById`.
-- Checked every new page at 375×812 (mobile preset) for
-  `document.documentElement.scrollWidth > clientWidth` (horizontal overflow)
-  — none found.
-- Ran a full route regression sweep (`curl` HTTP status) across every route,
-  old and new, after all `site-config.ts` changes, plus a live re-check of
-  the Home page (`/`) confirming its FAQ accordion, work cards, and content
-  were unaffected by the shared-config growth.
-- Opened `mockups/02-services-pricing.png` and `mockups/03-work-case-
-  study.png` as images and performed the visual-plan/target comparison
-  required by §2.2/§4.3 — see Audibles for findings, both fixed and
-  deliberately logged as open.
+  after every change this round (checked incrementally).
+- Started the dev server manually (proven workaround) and ran a full live
+  route regression sweep via `curl` across every existing route plus the
+  three new ones (`/robots.txt`, `/opengraph-image`, `/icon.svg`) and one
+  intentionally-unmatched path — all returned the expected status.
+- Verified the Pricing icon fix via `javascript_tool`: confirmed a real
+  `<svg>` exists inside the correct badge class for all five package
+  cards by name (not just "a card exists"), zero console errors, no
+  horizontal overflow at 375px mobile width.
+- Verified `robots.txt` output text and the home page's real rendered
+  `<meta name="robots">` tag both reflect the safe no-index default.
+- Verified the OG image via two independent layers: (1) HTTP-level —
+  fetched the real image at `/opengraph-image`, confirmed
+  `200`/`image/png`, and confirmed the auto-generated `og:image`/
+  `twitter:image` meta tags exist with correct dimensions; (2)
+  pixel-level — fetched the actual PNG bytes and visually inspected them
+  via `Read`, confirming correct colors, correct mark, correct copy, no
+  clipping. Then independently checked the *production* build output
+  (`pnpm run build` stdout plus the generated `.next/server/app/*.html`)
+  and found the `metadataBase`-missing warning and the resulting wrong
+  baked-in URL — a genuinely different, stronger check than the
+  dev-server test alone, which had been misleading.
+- Verified the favicon's small-size rendering via the temporary
+  `ImageResponse` proxy route described in Audibles, at three sizes and
+  three stroke weights; deleted the route and all capture files
+  immediately after.
+- Console/network check on `/pricing` after a fresh (forced) navigation:
+  zero new errors attributable to this round's changes; the only 404s
+  present in console history were pre-existing, expected `/about`
+  requests from an earlier, unrelated navigation in the same tab/session,
+  not a regression.
 
 ### What was not checked
 
-- No cross-browser check beyond the one Chromium-based Browser-pane engine
-  (unchanged from round 1).
-- No axe/automated accessibility audit; structural checks only (labels,
-  aria-invalid/describedby, role=alert/status, heading order, focus-visible
-  by construction/code review).
-- Full pixel screenshot comparison against the mockups was not reachable
-  this round either (same unattended-session limitation as round 1) — the
-  mockup comparison performed was: open the mockup image directly, read its
-  actual visible content/layout, and compare against real fetched page text/
-  DOM structure from the running app. This is real evidence of content and
-  structure, not of exact pixel layout/spacing/typography rendering.
-- `/about`, `/start`, `/privacy`, `/terms` were not built — all four are
-  honestly bounded on Owner-supplied facts or a Chunk 3 authorization
-  decision, not reachable this round (see `CYVEXLY_APP_DEBT.md` and the
-  project chunk map).
-- Did not attempt to resolve the pre-existing placeholder work-card/case-
-  study photographic imagery gap (needs a real design asset, not a text
-  generation task) — partially narrowed (added real color/typography data)
-  but the photographic hero and desktop/mobile screen-preview panels from
-  `mockups/03-work-case-study.png` remain unaddressed.
-- Did not investigate why the prior session's commits are labeled
-  "Round 1 (cont.)" past round 1's own stated commit count, beyond noting it
-  in `CYVEXLY_CURRENT_STATE.md` as a documentation-accuracy observation for
-  the next Builder — not a source-truth risk (git log is unambiguous), just
-  a prose-vs-history mismatch worth a look if it recurs.
+- No cross-browser check beyond the one Chromium-based Browser-pane
+  engine (unchanged from rounds 1–2).
+- No axe/automated accessibility audit (unchanged from round 2).
+- True live-page pixel screenshot comparison against the mockups remains
+  unreachable in this unattended session (unchanged) — the new
+  `ImageResponse`-proxy technique only covers standalone generated-image
+  routes (OG image, the favicon check), not full page layout/CSS
+  rendering in real browser context.
+- Did not attempt to fix the newly-found favicon 16px legibility issue —
+  deliberately routed to an attended session/reviewer round instead of
+  guessing a redesign against an unverified proxy-render caveat.
+- Did not build any part of Chunk 3 (Project Planner UI) — scoped and
+  reasoned about (see Audibles), deliberately not started, to avoid a
+  half-finished multi-step form.
+- Did not attempt `/about`, `/privacy`, `/terms`, `/start`,
+  `sitemap.xml`, or `metadataBase` — all remain correctly bounded on
+  Owner-supplied facts or the domain decision, unchanged from round 2's
+  reasoning (now with a sharper, tested rationale for `metadataBase`
+  specifically).
+- Did not refactor the `pricingPreview`/`pricingPackages` duplication
+  found during the launch-readiness pass — logged as a new minor watch
+  item rather than risked as a scope-creeping "mechanical" change that
+  would actually alter curated content.
 
 ### Git/diff accountability
 
-At round start, `git log` showed 7 commits on `master` (2 from round 1's own
-report plus 5 more labeled "Round 1 (cont.)" that round 1's own report did
-not describe — read as history, not re-litigated). `git status` at round
-start showed only concurrently-running Auditor/Council-owned files as
-modified/untracked (left untouched, per non-interference). This round's own
-changes — all `src/` files listed under "What changed" above, plus the
-documentation files listed in this report's own commit — are what this round
-is responsible for; committed as git source truth in one or more commits
-following this report (see the commit(s) immediately after this report entry
-for the exact hashes). No file outside what's described in this report and
-the routine documentation updates (`CYVEXLY_*` state/debt/watch/handoff/
-summary/chunk-map files) was touched.
-
-### Addendum — favicon, port conflict, and a real heading-hierarchy fix
-
-After the accountability section above was written, this round continued
-with time remaining rather than stopping at a nominally-complete state:
-
-- Added `src/app/icon.svg` — a hand-authored abstract "C/Y signal mark"
-  favicon per vision §4's logo direction (verified via build success and a
-  scratch-port dev server; pixel appearance not visually confirmed — this
-  unattended session has no screenshot capability).
-- Mid-check, found this round's own port-5173 dev server had died and the
-  port was occupied by an unrelated foreign process ("EduAILenz V2", a
-  different product's Vite dev server, not part of this project or role
-  system). Left it untouched per role/process non-interference — its
-  ownership was not proven to be orphaned Builder infrastructure — and
-  verified the rest of this addendum's work on scratch ports instead. Full
-  detail in `CYVEXLY_WATCH.md`.
-- Ran an actual measured heading-hierarchy check (`h1`–`h6` sequence, flagged
-  on any level skip) across all seven round-2 pages against the final
-  production build — stronger proof than the code-review-only check this
-  report's own "What was not checked" section originally logged. Found and
-  fixed one real, reachable defect: `/work` skipped H1→H3 (no H2) because
-  the shared `WorkGrid` card component used `<h3>` while `/work/page.tsx`
-  never wraps the grid in its own `<h2>` section. Fixed by changing the
-  card heading to `<h2>` (confirmed the component is only used on `/work`,
-  so Services' own separate "Recent work" markup was unaffected); re-ran the
-  same measurement across all seven pages afterward and confirmed zero
-  skipped levels remain anywhere, including the case-study template, FAQ,
-  Accessibility, and the custom 404. See `CYVEXLY_CHUNK_DEBT.md`'s "Resolved
-  round 2" section.
-- Committed both as separate follow-on commits (see `git log` for exact
-  hashes: one for the favicon/port finding, one for the heading fix), same
-  non-interference discipline as the main round (Auditor/Council files left
-  untouched throughout).
+At round start, `git log` showed the same commit count round 2's own
+report ended on; `git status` showed only the same pre-existing,
+untouched Auditor/Council files as modified/untracked that round 2 also
+found and correctly left alone. This round's own changes are exactly
+what's listed under "What changed" above plus the routine `CYVEXLY_*`
+documentation updates (this report, `CYVEXLY_CURRENT_STATE.md`,
+`CYVEXLY_PROJECT_CHUNK_MAP.md`, `CYVEXLY_CHUNK_DEBT.md`,
+`CYVEXLY_APP_DEBT.md`, `CYVEXLY_WATCH.md`, `CYVEXLY_BUILD_SUMMARY.md`,
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`, `CYVEXLY_ENVIRONMENT.md`) — committed
+as git source truth in one or more commits following this report (see
+`git log` for exact hashes). No file outside what's described here was
+touched; the temporary `scratch-favicon-check` route and its capture
+files were deleted before any commit, so they never entered source
+history.
 
 ### Completion state
 
-Chunk 2: `NEEDS COHERENT FOLLOW-UP` → now effectively `DONE WITH PROOF`
-except one honestly `FULFILLED TO THE BEST OF CURRENT PRACTICAL ABILITY`
-item (About page — blocked on Owner-supplied founder identity, not a
-reachable gap). Chunk 4: opened early, `NEEDS COHERENT FOLLOW-UP` (3 of ~5
-known items done; Privacy/Terms bounded on Owner-supplied jurisdiction
-facts; favicon/social assets and a launch-readiness pass remain).
+Chunk 2: `DONE WITH PROOF`, formally **CLOSED**. Chunk 4: `NEEDS COHERENT
+FOLLOW-UP` — favicon and OG-image work advanced with real new evidence
+(one genuine defect found and routed, one asset completed), robots/
+indexing fixed, but `/privacy`/`/terms` still bounded and a full
+launch-readiness convergence is still well out (see the per-item list
+above). Chunk 3: still `NOT YET OPENED`, now with its foundational
+email-delivery question formally answered via §4.12 rather than left
+implicit.
 
 ### Recommended next tasks
 
-1. Independently verify Chunk 2's bounded state and, if agreed, formally
-   close it per §7.9 (only the About-page gap remains, and it is not
-   reachable without Owner input).
-2. Continue Chunk 4: favicon/social-sharing image asset (needs a real design
-   asset — likely not a pure code-generation task), then a launch-readiness
-   pass against vision §15 once more of the site exists.
-3. Route two Owner-input requests that are now blocking real pages rather
-   than just documentation: (a) About-page founder identity (vision §6.8,
-   carried from round 1), and (b) Privacy/Terms jurisdiction facts — business
-   location and customer markets to address (vision §6.12/§12, new this
-   round). See `CYVEXLY_APP_DEBT.md` items 1 and 3 for the exact questions.
-4. Before opening Chunk 3 (Project Planner), run the full §4.12 Outcome
-   Reachability Check on the email-delivery/backend mechanism — the Contact
-   page's `mailto:` bridge (this round) is a reasonable interim pattern for
-   a short form, but the Planner is described in vision §6.9 as needing a
-   confirmation email with a full answer summary, which a `mailto:` bridge
-   cannot reliably deliver (the visitor, not Cyvexly, would need to actually
-   send it). Don't assume the same interim mechanism scales to Chunk 3
-   without checking.
-5. When an attended session or another Auditor/Council round is available,
-   get a real pixel-level screenshot comparison of the round-2 pages against
-   `mockups/02-services-pricing.png` and `mockups/03-work-case-study.png` —
-   this round's comparison was real (opened the actual mockup images) but
-   was necessarily content/structure-level, not pixel-level, per the
-   unattended-session screenshot limitation.
-6. Revisit the logged-but-not-fixed visual gaps in `CYVEXLY_CHUNK_DEBT.md`
-   item 5 (Pricing icon parity, service-combination framing, CTA headline
-   wording) during a dedicated visual-polish pass, alongside the pre-existing
-   `/process` layout gap (item 1).
+1. **Open Chunk 3 and build the Planner's full UI/state/validation** (nine
+   steps, vision §6.9/§9) as the coherent, separable, authorized slice
+   identified by this round's Reachability Check. Reuse Contact's
+   `mailto:` interim submit pattern, explicitly labeled as not satisfying
+   the "confirmation email sent from Cyvexly" requirement. This is a
+   substantial build — plan it as its own round rather than a fragment of
+   a broader one.
+2. Route two Owner-input requests still blocking real pages: About-page
+   founder identity, and Privacy/Terms jurisdiction facts (unchanged from
+   round 2, see `CYVEXLY_APP_DEBT.md` items 1 and 3).
+3. Route the now-precisely-scoped domain/email-provider decisions needed
+   before Chunk 3's real "sent from Cyvexly" email and before deploy
+   (`CYVEXLY_APP_DEBT.md` items 2 and 4).
+4. When an attended session or another Auditor/Council round is
+   available: (a) confirm the favicon's 16px legibility problem in a real
+   browser tab and, if confirmed, redesign the small-size mark rather
+   than just thickening strokes; (b) get a real pixel-level screenshot
+   comparison of the round-2 pages against the mockups (still not
+   reachable from this unattended session type even with this round's
+   new `ImageResponse`-proxy technique, which only covers standalone
+   generated images, not full page rendering).
+5. Revisit the logged-but-not-fixed visual gaps in `CYVEXLY_CHUNK_DEBT.md`
+   item 5 (service-combination framing, CTA headline wording) and the
+   pre-existing `/process` layout gap (item 1) during a dedicated
+   visual-polish pass.
+6. Consider consolidating `pricingPreview`/`pricingPackages` in
+   `site-config.ts` into one source of truth if they're touched again for
+   any other reason — not urgent on its own (verified currently
+   consistent), but a real future-drift risk now logged rather than
+   silently carried.
+
+### Addendum — a concurrent Auditor round published real pixel-level evidence mid-round
+
+After the accountability section above was written, `git status` showed
+new modified/untracked files that were not present at round start: fresh
+Council report-plumbing files (a delayed "emergency continuity"
+publication of the same stale `council-20260830T134231Z` round-1-era
+findings — read, contained nothing new, left untouched) and four new
+Auditor evidence screenshots timestamped `auditor-20260830T1738Z-*`
+(`pricing-desktop.png`, `case-study-desktop.png`, `work-mobile.png`,
+`work-redesign-empty.png`). `CYVEXLY_AUDITOR_ACTIVE_ROUNDS.md` and
+`AUDITOR_CURRENT.md` still show only the round-1-era completed round, so
+this looks like a still-in-progress concurrent Auditor round that has
+published evidence but not yet its report — consistent with §7.10's
+expectation that Builder and reviewer rounds may run concurrently.
+Read the four new screenshots (read-only, did not touch any
+Auditor-owned file, same non-interference discipline as every prior
+round) and got the first real pixel-level confirmation of several
+things this round and round 2 could only verify structurally:
+
+- **Pricing page, desktop:** confirms this round's new package icons
+  render correctly on all five cards (Signal, Orbit, Nexus, Commerce,
+  Custom system), with clean layout, correct "Most popular" badge
+  placement, and no visual defects — genuine pixel proof for
+  `CYVEXLY_CHUNK_DEBT.md`'s "Resolved round 3" item, which previously
+  only had DOM/computed-style proof.
+- **Aurora Spaces case study, desktop:** confirms round 2's "Visual
+  direction" color-swatch + typography section (added after the
+  round-2 mockup comparison) renders correctly and looks clean.
+- **Work page, mobile (375px):** confirms the filter chips, project
+  cards, and footer render correctly at real mobile width with no
+  visible overflow or clipping — first real pixel confirmation of a
+  mobile view for this route.
+- **Work page, "Redesign" filter selected:** confirms the zero-match
+  empty state ("No projects match that filter yet.") renders cleanly —
+  an interaction path no prior round had specifically screenshotted.
+
+None of the four surfaced a new defect. This does not replace a
+dedicated mockup-comparison pass (still recommended — see recommended
+next tasks) but is real, independently-produced evidence this round
+would not otherwise have had access to, and is recorded here rather
+than silently used without attribution.
+
+**Independent corroboration, found just before closeout.** A fifth new
+Auditor evidence file appeared during final verification:
+`auditor-20260830T1738Z-metadata-probe.md`, from what its own header
+identifies as round `auditor-20260830T1738Z-002` (a second, newer
+Auditor round, confirming one was genuinely in progress, not just
+evidence left over from the round-1-era round). It independently ran
+`pnpm build` in its own isolated runtime and reached the exact same
+conclusion this round did, from a fully separate runtime and process:
+`metadataBase` is unset, the build warns and bakes
+`http://localhost:3000` into `og:image`/`twitter:image`, and the
+no-index default (`robots.txt` + meta `robots`) is correct and working.
+Independent confirmation, from a different role using a different
+runtime, of both this round's `metadataBase` finding and its
+`robots.txt`/no-index fix.

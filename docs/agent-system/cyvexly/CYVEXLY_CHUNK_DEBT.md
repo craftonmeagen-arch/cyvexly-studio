@@ -44,14 +44,63 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
    /icon.svg` in the route table), served with correct content-type, and
    correctly linked in `<head>` (`rel="icon" ... type="image/svg+xml"`) —
    confirmed via a temporary dev server on a scratch port, not port 5173
-   (see the round-2 report's Audibles for why). **Not verified:** actual
-   pixel-rendered appearance in a browser tab — this unattended session has
-   no working screenshot capability, so this is a code/serve-correctness
-   proof, not a visual one. The next attended session or Auditor/Council
-   round should confirm it actually looks right at 16×16/32×32. A real
-   social-sharing (Open Graph) image is still not built — also blocked on
-   `metadataBase`/domain per `CYVEXLY_APP_DEBT.md` item 2 for the metadata
-   wiring, though the image asset itself doesn't strictly need the domain.
+   (see the round-2 report's Audibles for why).
+
+   **Round 3: got real pixel evidence of small-size rendering for the
+   first time, via a proxy method, and found a genuine legibility
+   concern.** This session still cannot screenshot a live browser tab
+   (unchanged limitation — see `CYVEXLY_WATCH.md`), but rendered the exact
+   same path data through Next's `ImageResponse`/`resvg` pipeline (the
+   same rasterizer used for `opengraph-image.tsx`) at 16px, 32px, and 64px
+   in a temporary throwaway route, fetched the real PNG, and visually
+   inspected it — then deleted the temporary route and captures
+   immediately after (ephemeral-evidence rule). At 64px and 32px the mark
+   reads cleanly as an orbit ring + Y. **At 16px — the actual default
+   browser-tab favicon size — it does not: it degrades to an
+   indistinct blur**, and a follow-up test bumping `stroke-width` from
+   2.6 to 3.4 and 4.2 did not meaningfully fix it, pointing to overall
+   shape complexity (two thin overlapping strokes) rather than line
+   weight as the real cause. **Caveat, stated honestly:** `resvg` is a
+   real SVG rasterizer but is not proof of exactly how Chrome/Safari/
+   Firefox render an `<link rel="icon">` SVG in an actual tab (device
+   pixel ratio and browser-specific favicon scaling can differ) — treat
+   this as strong evidence of a real risk, not a final visual verdict.
+   **Recommendation:** the next attended session or Auditor/Council round
+   should confirm this in a real browser tab; if confirmed, the fix is
+   likely a simplified/bolder small-size mark rather than a stroke-width
+   tweak (e.g., a solid-fill glyph or a single dominant shape instead of
+   two thin overlapping strokes), possibly via a `sizes="16x16"` PNG
+   favicon variant alongside the SVG rather than relying on one mark to
+   scale from 16px to 64px.
+
+   **Social-sharing (Open Graph) image asset: built and pixel-verified
+   round 3; the metadata wiring remains correctly blocked on the domain
+   decision, confirmed by testing rather than assuming.** Added
+   `src/app/opengraph-image.tsx` using Next's `ImageResponse` special-file
+   convention: reuses the exact `icon.svg` C/Y signal-mark path data, the
+   real cyber-arctic palette tokens, the recommended launch headline, and
+   the "Independent web studio · Available worldwide" line (vision §6.1).
+   Fetched the real generated 1200×630 PNG and visually inspected it (not
+   just status/content-type): correct colors, correct mark, correct copy,
+   no clipping, no font-load failure. First tested against the live *dev*
+   server, where the auto-generated `og:image`/`twitter:image` URLs
+   resolved correctly to the real request origin even with `metadataBase`
+   unset — which looked like it disproved the domain-block assumption in
+   `CYVEXLY_APP_DEBT.md` item 2. **That would have been a wrong
+   conclusion:** checking the actual `pnpm run build` output caught it —
+   the build prints `metadataBase property in metadata export is not
+   set ... using "http://localhost:3000"`, and the real static HTML in
+   `.next/server/app/index.html` bakes in
+   `http://localhost:3000/opengraph-image?...` as the absolute
+   `og:image`/`twitter:image` URL. Dev mode resolves per-request;
+   the production static build resolves once at build time using a
+   hardcoded fallback — only the build behavior matters for what actually
+   ships. So: the image generator itself is real, on-brand, and needs no
+   domain to exist — it stays in source now, ready to go. But do not
+   deploy until `metadataBase` is set (per item 2, unchanged), or the live
+   site will ship social-preview meta tags pointing at
+   `http://localhost:3000`, which is worse than shipping no preview image
+   at all.
 5. **Round-2 mockup comparison found real layout/density gaps on
    Services and Pricing vs. `mockups/02-services-pricing.png`** (visual
    floor comparison performed this round — see the round-2 report in
@@ -78,9 +127,11 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
      the mockup) — a deliberate, reasoned adaptation, not a gap.
    - Pricing add-ons/billing tiles: mockup uses compact icon+text tiles;
      shipped page uses full tables/lists matching vision §7's complete
-     add-on price-range list — again a deliberate adaptation favoring the
-     more detailed written vision over the compact mockup, but Pricing
-     still has no icon badges (Services now does after round 2's fix).
+     add-on price-range list — a deliberate adaptation favoring the more
+     detailed written vision over the compact mockup. (Icon-badge parity
+     itself — Pricing having no icons where Services does — was fixed
+     round 3; see "Resolved round 3" below. The tables-vs-tiles layout
+     choice remains a deliberate adaptation, not fixed.)
    - Both pages' final-CTA headline ("Not sure which package/services fits/
      you need?") differs from the mockup's "READY TO BUILD SOMETHING
      EXCEPTIONAL?" — cosmetic, not fixed this round.
@@ -127,6 +178,22 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
   "Popular website types" section whose card `id`s exactly match those five
   existing footer anchor targets — verified all 5 (+ the 7 core-service-
   group anchors) resolve via `document.getElementById`.
+
+## Resolved round 3
+
+- **Closed the Pricing icon-parity gap** (part of item 5): added
+  `src/components/package-icon.tsx`, five hand-authored inline-SVG icons
+  (one per package — Signal: beacon/signal-strength arcs, Orbit: ring +
+  center dot, Nexus: three connected nodes, Commerce: bag, Custom system:
+  gear/compass), matching the existing `service-icon.tsx` pattern (same
+  22px stroke icon in an 11×11 rounded `bg-cyber-blue/10` badge). Wired into
+  both the top three-card grid and the bottom two-card row on
+  `src/app/pricing/page.tsx`. Verified via the real dev server: `tsc
+  --noEmit` and `pnpm run lint` clean, `document.querySelector('svg')`
+  confirmed present inside the correct badge class for all five package
+  cards by name, zero console errors, no horizontal overflow at 375px
+  mobile width. Pixel appearance not confirmed (unattended-session
+  screenshot limitation still applies — see `CYVEXLY_WATCH.md`).
 
 ## Resolved round 1
 

@@ -42,4 +42,11 @@
 - Build/verify: `pnpm run build`, `pnpm exec tsc --noEmit`, `pnpm run lint`.
 - `next.config.ts` sets `agentRules: false` — do not remove this; see
   `CYVEXLY_WATCH.md` for why.
+- `NEXT_PUBLIC_SITE_INDEXABLE` (round 3): unset/anything but the literal
+  string `"true"` = the whole site emits `noindex, nofollow` and
+  `robots.txt` disallows all crawlers (the safe default for a temporary
+  preview domain, per vision §15). Set this env var to `true` on the
+  production deploy once the real domain is connected, or the launched
+  site will never get indexed. See `src/app/layout.tsx` and
+  `src/app/robots.ts`.
 

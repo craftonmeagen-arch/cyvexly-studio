@@ -20,7 +20,7 @@ requires.
 - Closed does not mean frozen — later evidence (e.g. a full Auditor visual
   review) may reopen it.
 
-## Chunk 2 — Core marketing pages (NEARLY CLOSED, opened round 1, extended round 2)
+## Chunk 2 — Core marketing pages (CLOSED, opened round 1, extended round 2, closed round 3)
 
 - **Outcome:** Services, Work/Portfolio (+ case-study template), Pricing,
   Process, About, and general Contact pages, reusing Chunk 1's design system
@@ -34,8 +34,16 @@ requires.
   §6.8), which no Builder round may invent. This is an honestly bounded gap
   per the chunk's own closure boundary ("resolved or explicitly and honestly
   bounded"), not a reachable defect. See `CYVEXLY_APP_DEBT.md` item 1.
-  **Recommendation:** the next Builder may treat Chunk 2 as closable once it
-  independently confirms this — see `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+  **Closed round 3:** independently re-verified via a live route sweep
+  (`curl` against all six pages plus `/about`) that `/`, `/process`,
+  `/services`, `/pricing`, `/contact`, `/work` (+3 case studies) all return
+  200 and `/about` still 404s. The founder-identity gap is unchanged and
+  still not a Builder-reachable decision (no new Owner input arrived this
+  round). Per the chunk's own closure boundary ("resolved or explicitly and
+  honestly bounded"), this satisfies closure — closed with the About page
+  carried forward as `CYVEXLY_APP_DEBT.md` item 1, not as open chunk debt.
+  Closed does not mean frozen: reopens automatically once Owner-supplied
+  founder identity arrives.
 - **Known visual gaps vs. mockups** (found via round-2 mockup comparison,
   see `CYVEXLY_CHUNK_DEBT.md`): Services/Pricing pages are content-complete
   and match vision text closely, but use denser text-only cards where

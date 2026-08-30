@@ -118,3 +118,50 @@ boundary on future reasoning.
   re-check port 5173 availability before assuming it's free, and if the
   same foreign process is still there, apply the same non-interference
   judgment rather than killing it.
+
+## Round 3
+
+- **Found a real, usable proxy for pixel-level visual proof in this
+  unattended session, despite `computer` screenshot still being
+  non-functional.** The Browser pane's `computer{action:"screenshot"}`
+  still fails here exactly as rounds 1-2 found ("the Browser pane is not
+  displayed, so the page is not compositing frames") - re-confirmed this
+  round, not just assumed from old notes. But a *served, downloaded PNG
+  file* fetched via `curl` and then opened with the `Read` tool **does**
+  render as a real viewable image in this session. This means any
+  server-rendered image asset (Next's `ImageResponse`/`next/og`
+  file-convention routes, or any route that returns a real image) can get
+  genuine pixel-level visual verification here, even though a live
+  browser tab cannot be screenshotted. Used this to visually verify the
+  new `opengraph-image.tsx` output and, via a temporary throwaway route
+  using the same `ImageResponse` pipeline, to check the existing
+  `icon.svg` favicon mark's legibility at 16/32/64px (found a real 16px
+  legibility problem - see `CYVEXLY_CHUNK_DEBT.md` item 4). This is not a
+  substitute for real live-page screenshot comparison against the
+  mockups (still not reachable - DOM/layout/CSS rendering in an actual
+  page context is different from a standalone `ImageResponse` render),
+  but it closes a real gap for any standalone generated-image asset.
+- **Next.js resolves `metadataBase`-dependent absolute URLs differently
+  in `next dev` vs `next build`, and only the build behavior is what
+  ships.** Testing `opengraph-image.tsx` against the live dev server
+  showed `og:image`/`twitter:image` correctly resolving to the real dev
+  origin (`http://localhost:5173/...`) even with `metadataBase` unset -
+  this looked like proof that the image route doesn't need the domain
+  decision at all. That would have been the wrong conclusion: `pnpm run
+  build`'s actual output prints `metadataBase property in metadata
+  export is not set ... using "http://localhost:3000"`, and the real
+  static HTML in `.next/server/app/*.html` bakes in that wrong
+  `localhost:3000` URL as the absolute image URL. Dev mode resolves
+  metadata per-request; the production static build resolves once at
+  build time using a hardcoded fallback. **Always check the actual `pnpm
+  run build` output (and ideally the generated `.next/server/app/*.html`)
+  for any `metadataBase`-sensitive claim** - the dev server alone is not
+  sufficient evidence and can actively mislead here.
+- **A route folder whose name starts with `_` (e.g. `src/app/_foo/`) is
+  a Next.js App Router "private folder" convention and is silently
+  excluded from routing** - a first attempt at a temporary verification
+  route at `src/app/_favicon-check/route.tsx` 404'd even after the dev
+  server picked up the file change; renaming the folder to
+  `scratch-favicon-check` (no leading underscore) fixed it immediately.
+  Worth remembering for any future scratch/private route work in this
+  App Router project.
