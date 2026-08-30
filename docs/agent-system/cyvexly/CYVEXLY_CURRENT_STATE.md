@@ -1,74 +1,48 @@
 # Cyvexly Current State
 
-**Global round:** 7
-**Active chunk:** Chunk 3 — Project Planner — the nine-step UI/state/
-validation remains built and verified at `/start`; round 7 added a real
-DOM/accessibility-tree-level keyboard-traversal, focus-order, error-
-announcement, and progress-semantics audit (an alternate method to the
-still-unreachable live Tab-key path). Chunk 4 — Utility/legal pages —
-**the favicon's 16px legibility defect is now fixed** (round 7); other
-items unchanged.
-**Chunk-local round:** N/A this round (round 7 fixed a real bounded
-defect and ran a proof-method audit, not a chunk-opening round)
+**Global round:** 8
+**Active chunks:** Chunk 3 — Project Planner — UI/state/validation remains built
+and verified at `/start`, with real server-side email Owner-blocked; Chunk 4 —
+Utility/legal pages — favicon remains fixed, while legal/domain items remain
+Owner-blocked. Round 8 revisited closed Chunk 2's portfolio-presentation debt
+and closed the reachable Home/Services flat-gradient inconsistency by reusing
+the accepted truthful `ConceptPreview` artwork across both surfaces. Native
+Chromium keyboard proof also found and closed a Planner validation-focus defect.
+**Chunk-local round:** N/A (round 8 revisited a closed-chunk presentation defect
+and upgraded Builder visual-proof capability; no chunk was opened or closed).
 **Current mission:** The same four Owner-input questions still block the
 highest-value remaining work — About founder identity, Privacy/Terms
-jurisdiction, domain + email-provider, and the abstract-vs-real concept-
-artwork framing question (`CYVEXLY_APP_DEBT.md` items 1, 3, 4, and the
-round-5 framing question) — do not invent any of them. Beyond that: a
-real attended-session or differently-capable-automation Tab-key
-traversal of the Planner remains the one piece of the Council's
-keyboard-review ask this round's DOM-level audit couldn't reach; a real
-live-tab screenshot of the new favicon would still strengthen (not
-replace) round 7's proxy-rasterizer pixel evidence. Read
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md` for the full list.
-**Accepted source position:** Git repository on branch `master`. Round 7
-landed as two source commits — `97f7b69` (favicon/OG-image mark
-redesign) and `ce6d273` (fixes a real edge-clipping bug found in
-`97f7b69`'s own mark, plus a new real `favicon.ico`) — plus this round's
-documentation-update commits, after round 6's several "(cont.)" commits
-— **treat `git log` as the source of truth for the exact count and
-hashes**; this prose is a summary, not a ledger, and will go stale the
-moment another commit lands. Working tree is clean of Builder-owned
-changes at close; only the same pre-existing Auditor/Council-owned files
-remain uncommitted (correctly left untouched across every round — see
-`CYVEXLY_WATCH.md`).
+jurisdiction, production domain + email provider, and the abstract-vs-
+commissioned concept-artwork framing question (`CYVEXLY_APP_DEBT.md` items 1,
+3, 4, plus Chunk Debt item 2). Do not invent them. CDP native Chromium Tab/Enter
+proof now complements round 7's DOM audit; physical hardware and cross-browser
+keyboard traversal remain unchecked.
+**Accepted source position:** Git repository on `master`. Round 8's product
+changes are commits `d04dc9d` (Home + Services reuse `ConceptPreview`) and
+`da9c6d9` (Planner first-error focus plus grouped-control error linkage), followed
+by canonical documentation/evidence commits. Treat `git log` as the exact
+ledger. Builder-owned state is clean at close; pre-existing Auditor/Council
+dirty files remain intentionally untouched.
 
 ## Immediate orientation
 
-- Run `pnpm install` then `pnpm run dev` (or use `.claude/launch.json`,
-  configuration `cyvexly-builder`, port `5173`) to see the real app.
-  **Note for scheduled/unattended sessions:** `preview_start({name})`
-  refuses to launch a dev server directly ("nobody is present to
-  approve the command") — start it manually via a background shell
-  command first, then `preview_start({url: "http://localhost:5173"})`.
-  Even then, real screenshots/clicks/key-presses are not reachable in
-  this exact session type (re-confirmed round 7) — see
-  `CYVEXLY_TOOLS_AND_CAPABILITIES.md` and `CYVEXLY_WATCH.md` for what
-  *does* still work (`javascript_tool`, `read_page`'s accessibility
-  tree, `get_page_text`, and — newly found round 7 —
-  `computer{action:"scroll_to"}` using a `read_page` ref).
-- `pnpm run build`, `pnpm exec tsc --noEmit`, and `pnpm run lint` all
-  pass clean as of this round. If a standalone `tsc --noEmit` reports an
-  error in a file you didn't touch right after a `.next` deletion, run
-  `pnpm run build` first to regenerate `.next/types` before treating it
-  as real — see `CYVEXLY_WATCH.md`'s round-5 entry.
-- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-7 report before planning round
-  8 — it has the full favicon-redesign method (three candidates tested
-  with real pixel evidence via the `ImageResponse` proxy technique),
-  the real edge-clipping bug found and fixed in that same redesign (a
-  design approved from a small thumbnail alone was not actually proof
-  it fit its viewBox — measure the true bbox), the new real
-  `favicon.ico` (the old one was never actually replaced by any prior
-  round), and the full DOM/accessibility-tree keyboard-audit method —
-  all reusable for future work in this session type.
-- Read `CYVEXLY_CHUNK_DEBT.md` and `CYVEXLY_APP_DEBT.md` before building
-  deeply on the OG image/`metadataBase`, the About page, legal pages,
-  the Planner's email-delivery route, or the Work/case-study concept
-  imagery (an Owner framing question is open on whether abstract artwork
-  is an acceptable permanent answer). The favicon item is now resolved.
-- Read `CYVEXLY_WATCH.md` for round-7 findings: a real, reusable
-  DOM/accessibility-tree audit method for keyboard accessibility when
-  live key-press input isn't reachable; a `Record<string, ReactNode>`
-  module-level-JSX-lookup pitfall in `ImageResponse` proxy routes; and
-  `scroll_to`'s scroll-position capability (real and reusable, but
-  confirmed not to unlock screenshots).
+- Run `pnpm install` then `pnpm run dev`, or `pnpm exec next dev --port 5173`.
+  Build/verify with `pnpm run build`, `pnpm exec tsc --noEmit`, and
+  `pnpm run lint`.
+- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-8 report before planning round 9.
+  Round 7's full hot-path snapshot/report is archived at
+  `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND7_REPORT.md`.
+- Read `CYVEXLY_CHUNK_DEBT.md` and `CYVEXLY_APP_DEBT.md` before touching the
+  OG image/`metadataBase`, About, legal pages, Planner delivery route, or
+  concept-artwork framing.
+- Full unattended page screenshots are now reachable through local Chrome 151
+  headless + Chrome DevTools Protocol even though the in-app Browser pane
+  remains non-compositing. Use CDP `Emulation.setDeviceMetricsOverride` for
+  exact narrow viewports; raw `--window-size=390,...` on Windows can produce a
+  misleading crop. Details are in `CYVEXLY_TOOLS_AND_CAPABILITIES.md` and
+  `CYVEXLY_WATCH.md`.
+- Round 8 verification: lint, clean production build, post-build typecheck,
+  real 15-route sweep, opened 1440/768/390 rendered captures, and exact CDP
+  geometry/overflow evidence all passed. Native Chromium Tab/Enter traversal at
+  1440/390 also passed after the validation-focus fix. Durable evidence is indexed under
+  `docs/agent-system/cyvexly/builder/evidence/`.

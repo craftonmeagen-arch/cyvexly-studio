@@ -1,0 +1,63 @@
+{
+  "method": "real production runtime with React input/click events; focus outcome from requestAnimationFrame",
+  "scope": "all Planner validation-control shapes at exact 390px",
+  "reducedMotion": true,
+  "capturedAt": "2026-08-30T23:05:10.514Z",
+  "results": [
+    {
+      "key": "primaryGoal",
+      "stepHeading": "03 Goals",
+      "activeId": null,
+      "activeName": "primaryGoal",
+      "activeType": "radio",
+      "controlInvalid": null,
+      "groupInvalid": "true",
+      "describedBy": "primaryGoal-error",
+      "errorText": "Please choose your primary goal."
+    },
+    {
+      "key": "pages",
+      "stepHeading": "04 Website & pages",
+      "activeId": null,
+      "activeName": "pages",
+      "activeType": "checkbox",
+      "controlInvalid": null,
+      "groupInvalid": "true",
+      "describedBy": "pages-error",
+      "errorText": "Select at least one page, or choose \"not sure — recommend the sitemap.\""
+    },
+    {
+      "key": "features",
+      "stepHeading": "05 Features",
+      "activeId": null,
+      "activeName": "features",
+      "activeType": "checkbox",
+      "controlInvalid": null,
+      "groupInvalid": "true",
+      "describedBy": "features-error",
+      "errorText": "Select at least one feature, or choose \"not sure — recommend the right features.\""
+    },
+    {
+      "key": "budgetRange",
+      "stepHeading": "08 Budget & timing",
+      "activeId": null,
+      "activeName": "budgetRange",
+      "activeType": "radio",
+      "controlInvalid": null,
+      "groupInvalid": "true",
+      "describedBy": "budgetRange-error",
+      "errorText": "Please choose a budget range."
+    },
+    {
+      "key": "acknowledgeNotQuote",
+      "stepHeading": "09 Review & submit",
+      "activeId": "acknowledgeNotQuote",
+      "activeName": null,
+      "activeType": "checkbox",
+      "controlInvalid": "true",
+      "groupInvalid": null,
+      "describedBy": "acknowledgeNotQuote-error",
+      "errorText": "Please acknowledge this isn't a final quote."
+    }
+  ]
+}

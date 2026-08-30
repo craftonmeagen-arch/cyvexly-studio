@@ -1,0 +1,558 @@
+{
+  "method": "Chromium DevTools Protocol Input.dispatchKeyEvent",
+  "scope": "native Chromium Tab/Enter focus navigation; not physical hardware or cross-browser proof",
+  "capturedAt": "2026-08-30T22:58:23.511Z",
+  "audits": [
+    {
+      "width": 1440,
+      "height": 900,
+      "continueIndex": 16,
+      "sequence": [
+        {
+          "tag": "a",
+          "id": null,
+          "name": null,
+          "type": null,
+          "text": "CYVEXLY STUDIO",
+          "visible": true,
+          "left": 161,
+          "right": 305,
+          "top": 28,
+          "width": 144,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "name": null,
+          "type": null,
+          "text": "Services",
+          "visible": true,
+          "left": 523,
+          "right": 582,
+          "top": 28,
+          "width": 58,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "name": null,
+          "type": null,
+          "text": "Work",
+          "visible": true,
+          "left": 606,
+          "right": 641,
+          "top": 28,
+          "width": 35,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "name": null,
+          "type": null,
+          "text": "Pricing",
+          "visible": true,
+          "left": 665,
+          "right": 712,
+          "top": 28,
+          "width": 47,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "name": null,
+          "type": null,
+          "text": "Process",
+          "visible": true,
+          "left": 736,
+          "right": 790,
+          "top": 28,
+          "width": 54,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "name": null,
+          "type": null,
+          "text": "About",
+          "visible": true,
+          "left": 814,
+          "right": 854,
+          "top": 28,
+          "width": 40,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "name": null,
+          "type": null,
+          "text": "Describe your project",
+          "visible": true,
+          "left": 1072,
+          "right": 1265,
+          "top": 16,
+          "width": 192,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "name": null,
+          "type": "button",
+          "text": "1",
+          "visible": true,
+          "left": 194,
+          "right": 230,
+          "top": 611,
+          "width": 36,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "fullName",
+          "name": "fullName",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 194,
+          "right": 527,
+          "top": 787,
+          "width": 333,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "workEmail",
+          "name": "workEmail",
+          "type": "email",
+          "text": "",
+          "visible": true,
+          "left": 547,
+          "right": 880,
+          "top": 787,
+          "width": 333,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "contactMethod",
+          "name": "contactMethod",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 194,
+          "right": 527,
+          "top": 872,
+          "width": 333,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "roleTitle",
+          "name": "roleTitle",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 547,
+          "right": 880,
+          "top": 870,
+          "width": 333,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "companyName",
+          "name": "companyName",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 194,
+          "right": 527,
+          "top": 957,
+          "width": 333,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "country",
+          "name": "country",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 547,
+          "right": 880,
+          "top": 936,
+          "width": 333,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "otherApprovers",
+          "name": "otherApprovers",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 194,
+          "right": 880,
+          "top": 996,
+          "width": 686,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "name": null,
+          "type": "button",
+          "text": "Save & continue later",
+          "visible": true,
+          "left": 549,
+          "right": 740,
+          "top": 1057,
+          "width": 191,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "name": null,
+          "type": "button",
+          "text": "Continue →",
+          "visible": true,
+          "left": 752,
+          "right": 880,
+          "top": 997,
+          "width": 127,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        }
+      ],
+      "hiddenNavLeaked": false,
+      "validation": {
+        "active": {
+          "tag": "input",
+          "id": "fullName",
+          "name": "fullName",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 194,
+          "right": 527,
+          "top": 97,
+          "width": 333,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        "alerts": [
+          {
+            "id": "fullName-error",
+            "text": "Please enter your name."
+          },
+          {
+            "id": "workEmail-error",
+            "text": "Please enter a valid email address."
+          },
+          {
+            "id": "contactMethod-error",
+            "text": "Please share a phone or preferred contact method."
+          }
+        ],
+        "invalid": [
+          {
+            "id": "fullName",
+            "describedBy": "fullName-error"
+          },
+          {
+            "id": "workEmail",
+            "describedBy": "workEmail-error"
+          },
+          {
+            "id": "contactMethod",
+            "describedBy": "contactMethod-error"
+          }
+        ],
+        "viewport": {
+          "innerWidth": 1440,
+          "clientWidth": 1425,
+          "scrollWidth": 1425
+        }
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "continueIndex": 11,
+      "sequence": [
+        {
+          "tag": "a",
+          "id": null,
+          "name": null,
+          "type": null,
+          "text": "CYVEXLY STUDIO",
+          "visible": true,
+          "left": 24,
+          "right": 168,
+          "top": 26,
+          "width": 144,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "name": null,
+          "type": "button",
+          "text": "Open menu",
+          "visible": true,
+          "left": 326,
+          "right": 366,
+          "top": 16,
+          "width": 40,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "name": null,
+          "type": "button",
+          "text": "1",
+          "visible": true,
+          "left": 49,
+          "right": 85,
+          "top": 608,
+          "width": 36,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "fullName",
+          "name": "fullName",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 49,
+          "right": 341,
+          "top": 784,
+          "width": 292,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "workEmail",
+          "name": "workEmail",
+          "type": "email",
+          "text": "",
+          "visible": true,
+          "left": 49,
+          "right": 341,
+          "top": 867,
+          "width": 292,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "contactMethod",
+          "name": "contactMethod",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 49,
+          "right": 341,
+          "top": 934,
+          "width": 292,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "roleTitle",
+          "name": "roleTitle",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 49,
+          "right": 341,
+          "top": 998,
+          "width": 292,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "companyName",
+          "name": "companyName",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 49,
+          "right": 341,
+          "top": 1067,
+          "width": 292,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "country",
+          "name": "country",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 49,
+          "right": 341,
+          "top": 1142,
+          "width": 292,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "input",
+          "id": "otherApprovers",
+          "name": "otherApprovers",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 49,
+          "right": 341,
+          "top": 1213,
+          "width": 292,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "name": null,
+          "type": "button",
+          "text": "Save & continue later",
+          "visible": true,
+          "left": 49,
+          "right": 341,
+          "top": 1277,
+          "width": 292,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        {
+          "tag": "button",
+          "id": null,
+          "name": null,
+          "type": "button",
+          "text": "Continue →",
+          "visible": true,
+          "left": 49,
+          "right": 341,
+          "top": 1309,
+          "width": 292,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        }
+      ],
+      "hiddenNavLeaked": false,
+      "validation": {
+        "active": {
+          "tag": "input",
+          "id": "fullName",
+          "name": "fullName",
+          "type": "text",
+          "text": "",
+          "visible": true,
+          "left": 49,
+          "right": 341,
+          "top": -108,
+          "width": 292,
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "borderColor": "rgb(216, 225, 234)"
+        },
+        "alerts": [
+          {
+            "id": "fullName-error",
+            "text": "Please enter your name."
+          },
+          {
+            "id": "workEmail-error",
+            "text": "Please enter a valid email address."
+          },
+          {
+            "id": "contactMethod-error",
+            "text": "Please share a phone or preferred contact method."
+          }
+        ],
+        "invalid": [
+          {
+            "id": "fullName",
+            "describedBy": "fullName-error"
+          },
+          {
+            "id": "workEmail",
+            "describedBy": "workEmail-error"
+          },
+          {
+            "id": "contactMethod",
+            "describedBy": "contactMethod-error"
+          }
+        ],
+        "viewport": {
+          "innerWidth": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390
+        }
+      }
+    }
+  ]
+}

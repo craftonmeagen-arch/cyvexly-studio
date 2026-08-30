@@ -28,4 +28,6 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
   overflow, scroll-behavior warning; root-caused the session's frame-
   compositing limitation to `requestAnimationFrame`; a self-healed
   cross-role process-interference incident), rotated out during round 7.
-
+- `CYVEXLY_CHUNK3_ROUND7_REPORT.md` — round 7 hot-path snapshot and full report
+  (favicon/OG mark redesign, edge-clipping correction, real branded ICO, and
+  Planner DOM/accessibility-tree audit), rotated out during round 8.

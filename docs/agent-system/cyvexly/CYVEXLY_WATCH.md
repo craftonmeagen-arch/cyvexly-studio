@@ -270,3 +270,27 @@ boundary on future reasoning. Rounds 1-5 are rotated to
   (or extracting each frame via `im.ico.getimage(size)` and viewing it)
   — never trust that a `save()` call without an exception embedded what
   was intended.
+
+## Round 8
+
+- **The unattended in-app Browser pane's suspended compositor does not mean
+  real page screenshots are unavailable on this host.** Local Chrome 151 can
+  run independently with `--headless=new`; its DevTools Protocol works from
+  Node 24's built-in `WebSocket`, enabling real page captures and exact viewport
+  geometry without adding dependencies. A raw Windows headless call using
+  `--window-size=390,...` produced a misleading 390px *crop* of a wider minimum
+  layout, which looked like product overflow. `Emulation.setDeviceMetricsOverride`
+  then proved the actual page at an exact 390px CSS viewport had
+  `scrollWidth === clientWidth === 390` and captured the complete selected-work
+  section. Treat raw CLI window sizing as an unvalidated instrument for narrow
+  viewport claims; use CDP device metrics and record `innerWidth`/`clientWidth`/
+  `scrollWidth` as controls. This is a newly reachable proof method, not a
+  change to the known in-app Browser-pane limitation.
+- **CDP `Input.dispatchKeyEvent` reaches native Chromium focus navigation even
+  when the in-app Browser pane's `computer` key action does not.** Round 8 sent
+  real Tab events from a body focus origin through `/start`, then activated
+  `Continue` with Enter at exact 1440x900 and 390x844. For Enter activation,
+  the CDP key-down needs `text` and `unmodifiedText` set to carriage return;
+  omitting those fields moved focus correctly with Tab but did not activate the
+  button. Keep the claim bounded: this proves Chromium's native sequential-
+  focus/input path, not a physical keyboard or another browser.

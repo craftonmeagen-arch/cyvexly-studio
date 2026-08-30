@@ -1,7 +1,7 @@
 # Cyvexly Chunk Debt
 
-Active-chunk (Chunk 2 — Core marketing pages, extending into Chunk 4 —
-Utility pages) findings and reachable follow-ups. Not the full backlog — see
+Active product/chunk findings and reachable follow-ups across the current
+Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
 `CYVEXLY_PROJECT_CHUNK_MAP.md` for chunk-level direction.
 
 ## Open
@@ -48,6 +48,20 @@ Utility pages) findings and reachable follow-ups. Not the full backlog — see
    fictional concept projects) — an Owner-level framing question (see
    round-5 recommended next tasks in `CYVEXLY_ACTIVE_CHUNK.md`), not a
    reachable Builder gap this round.
+
+   **Round 8 update — all current marketing surfaces now share the accepted
+   truthful abstract artwork.** The current Council report independently found
+   that Home's Selected work cards still used the original flat gradients even
+   though Work/case studies had advanced to `ConceptPreview`; source audit found
+   the same stale rendering on Services' Recent work cards. Round 8 fixed both
+   at the source by reusing `ConceptPreview` without changing card geometry,
+   disclosure, links, or responsive breakpoints. Real headless-Chrome/CDP
+   captures opened at exact 390px, 768px, and 1440px show all three distinct
+   compositions with zero horizontal overflow. This closes the reachable
+   cross-surface inconsistency and Council `CYC-R2-F002`'s Home presentation
+   symptom; the separate Owner framing question — whether truthful abstract
+   illustration is permanent release-sufficient artwork or commissioned
+   higher-fidelity concept design is required — remains open and unchanged.
 3. **Favicon 16px legibility: RESOLVED round 7 (see below); OG-image
    metadata wiring: still open, domain-blocked (see the second half of
    this item).** The original hand-authored "C/Y signal mark" (round 2)

@@ -1,0 +1,58 @@
+{
+  "url": "http://127.0.0.1:5173/",
+  "viewport": {
+    "width": 768,
+    "height": 1024
+  },
+  "document": {
+    "clientWidth": 768,
+    "scrollWidth": 768,
+    "bodyScrollWidth": 768
+  },
+  "section": {
+    "x": 0,
+    "y": 958.5625,
+    "width": 768,
+    "height": 617
+  },
+  "cardCount": 3,
+  "previewCount": 3,
+  "cards": [
+    {
+      "name": "Aurora Spaces",
+      "card": {
+        "x": 24,
+        "width": 224
+      },
+      "preview": {
+        "x": 25,
+        "width": 222,
+        "height": 176
+      }
+    },
+    {
+      "name": "Nexora Systems",
+      "card": {
+        "x": 272,
+        "width": 224
+      },
+      "preview": {
+        "x": 273,
+        "width": 222,
+        "height": 176
+      }
+    },
+    {
+      "name": "Vellora Care",
+      "card": {
+        "x": 520,
+        "width": 224
+      },
+      "preview": {
+        "x": 521,
+        "width": 222,
+        "height": 176
+      }
+    }
+  ]
+}

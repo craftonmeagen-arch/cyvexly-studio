@@ -62,6 +62,13 @@ requires.
   screen-sequence imagery, what both the Auditor and Council explicitly
   asked for, remains open pending an Owner framing decision — see
   `CYVEXLY_ACTIVE_CHUNK.md`'s round-5 report).
+- **Round 8, cross-surface reconciliation:** the current Council review found
+  that Home still used the original flat gradients even though Work/case
+  studies had adopted the stronger project-specific abstract artwork; source
+  inspection found Services had the same stale pattern. Both now reuse
+  `ConceptPreview`, verified in real 1440/768/390 headless-Chrome/CDP renders
+  with zero overflow. The reachable inconsistency is closed; the separate Owner
+  decision on abstract-vs-commissioned concept imagery remains open.
 - Non-goal: Project Planner (its own chunk, given its multi-step form
   complexity).
 
@@ -103,6 +110,11 @@ requires.
   sufficiently-contrasting focus indicator, no missed reduced-motion
   gap). Real Tab-key traversal in an attended browser remains the one
   piece this method can't fully substitute for.
+- **Round 8:** the new local-Chrome/CDP path exercised native Chromium Tab and
+  Enter navigation at exact desktop and phone widths. It found and fixed focus
+  remaining on `Continue` after validation, then proved focus moves to the
+  first invalid field with grouped-control errors linked. Physical-hardware and
+  cross-browser traversal remain useful complementary proof, not a blocker.
 
 ## Chunk 4 — Utility, legal & launch readiness (OPENED round 2, IN PROGRESS)
 

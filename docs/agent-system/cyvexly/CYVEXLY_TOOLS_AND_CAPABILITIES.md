@@ -29,8 +29,25 @@
   `read_page`, `read_console_messages`, `read_network_requests`, and
   `javascript_tool` (including dispatching real `.click()` calls) all work
   normally in the same unattended session and are the strongest currently
-  reachable proof layer for interaction/content/error verification. Full
-  pixel screenshot comparison against a mockup needs an attended session.
+  reachable proof layer for interaction/content/error verification through
+  that Browser pane. Full pixel screenshot comparison through the in-app
+  Browser pane needs an attended session. **Round 8 found a stronger
+  unattended alternate already installed on this host:** local Chrome 151 at
+  `C:\Program Files\Google\Chrome\Application\chrome.exe` runs with
+  `--headless=new` and produces real PNG screenshots of the Builder runtime.
+  For exact phone/tablet viewports on Windows, do not rely on
+  `--window-size=390,...` alone — headless Chrome may preserve a larger minimum
+  layout width and merely crop the output. Launch it with a unique Builder-owned
+  `--user-data-dir` plus `--remote-debugging-port`, then use Chrome DevTools
+  Protocol `Emulation.setDeviceMetricsOverride`; Node 24's built-in `WebSocket`
+  client can drive CDP with no added package. Round 8 proved exact 390px and
+  768px layouts, captured section PNGs, and measured `scrollWidth`/card geometry
+  through that route. CDP `Input.dispatchKeyEvent` also drives Chromium's native
+  Tab/Enter behavior even though the in-app Browser pane cannot: round 8 used it
+  to traverse Planner focus order and submit empty-step validation at exact
+  desktop/phone widths. This is native Chromium input, not physical-hardware or
+  cross-browser proof. Clean the unique profile and stop only Chrome processes
+  whose command line contains that exact Builder-owned profile path.
   **Root cause, found round 6:** `requestAnimationFrame` never fires at
   all in this session (a self-rescheduling rAF counter stayed `0` after a
   real 3-second wait), while `document.visibilityState` stays `"hidden"`
@@ -99,4 +116,3 @@ No credential capability is recorded. A role must verify authorization without e
 ## Recovery
 
 Role helpers are in `.codex/roles/scripts/`. Repair only the current role's owned runtime, manifest, cache, evidence, and browser resources. Never attach to or stop another role's runtime or process solely because a port or process name looks familiar.
-

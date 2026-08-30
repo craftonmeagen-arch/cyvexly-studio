@@ -1,0 +1,960 @@
+[
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "/",
+    "document": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "scrollHeight": 4587
+    },
+    "structure": {
+      "h1": 1,
+      "main": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Websites built to make your business unmistakable."
+        },
+        {
+          "level": 2,
+          "text": "Selected work"
+        },
+        {
+          "level": 3,
+          "text": "Aurora Spaces"
+        },
+        {
+          "level": 3,
+          "text": "Nexora Systems"
+        },
+        {
+          "level": 3,
+          "text": "Vellora Care"
+        },
+        {
+          "level": 2,
+          "text": "What Cyvexly can do"
+        },
+        {
+          "level": 3,
+          "text": "Strategy & structure"
+        },
+        {
+          "level": 3,
+          "text": "Website design"
+        },
+        {
+          "level": 3,
+          "text": "Development"
+        },
+        {
+          "level": 3,
+          "text": "Content & CMS"
+        },
+        {
+          "level": 3,
+          "text": "Commerce & integrations"
+        },
+        {
+          "level": 3,
+          "text": "Care & improvement"
+        },
+        {
+          "level": 2,
+          "text": "We're not a DIY builder. We're your independent web partner."
+        },
+        {
+          "level": 2,
+          "text": "Give us the brief. We'll shape the route."
+        },
+        {
+          "level": 3,
+          "text": "Brief & fit"
+        },
+        {
+          "level": 3,
+          "text": "Direction & scope"
+        },
+        {
+          "level": 3,
+          "text": "Design & approval"
+        },
+        {
+          "level": 3,
+          "text": "Build & quality review"
+        },
+        {
+          "level": 3,
+          "text": "Launch & care"
+        },
+        {
+          "level": 2,
+          "text": "Simple starting points"
+        },
+        {
+          "level": 3,
+          "text": "Signal"
+        },
+        {
+          "level": 3,
+          "text": "Orbit"
+        },
+        {
+          "level": 3,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "FAQ"
+        },
+        {
+          "level": 2,
+          "text": "Ready to build something extraordinary?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "emptyControlCount": 0,
+      "emptyControls": [],
+      "imageCount": 0,
+      "emptyAltCount": 0
+    },
+    "selectedWork": {
+      "conceptPreviewCount": 3,
+      "conceptDisclosureCount": 3
+    }
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "/services",
+    "document": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "scrollHeight": 5373
+    },
+    "structure": {
+      "h1": 1,
+      "main": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Everything your business website needs."
+        },
+        {
+          "level": 2,
+          "text": "Strategy & structure"
+        },
+        {
+          "level": 2,
+          "text": "Custom website design"
+        },
+        {
+          "level": 2,
+          "text": "Website development"
+        },
+        {
+          "level": 2,
+          "text": "Content & CMS"
+        },
+        {
+          "level": 2,
+          "text": "Commerce & integrations"
+        },
+        {
+          "level": 2,
+          "text": "Search, performance & accessibility"
+        },
+        {
+          "level": 2,
+          "text": "Care & improvement"
+        },
+        {
+          "level": 2,
+          "text": "Popular website types"
+        },
+        {
+          "level": 3,
+          "text": "Business websites"
+        },
+        {
+          "level": 3,
+          "text": "Website redesigns"
+        },
+        {
+          "level": 3,
+          "text": "Landing pages"
+        },
+        {
+          "level": 3,
+          "text": "E-commerce websites"
+        },
+        {
+          "level": 3,
+          "text": "Website care"
+        },
+        {
+          "level": 2,
+          "text": "Common combinations"
+        },
+        {
+          "level": 2,
+          "text": "Recent work"
+        },
+        {
+          "level": 3,
+          "text": "Aurora Spaces"
+        },
+        {
+          "level": 3,
+          "text": "Nexora Systems"
+        },
+        {
+          "level": 3,
+          "text": "Vellora Care"
+        },
+        {
+          "level": 2,
+          "text": "Common questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "emptyControlCount": 0,
+      "emptyControls": [],
+      "imageCount": 0,
+      "emptyAltCount": 0
+    },
+    "selectedWork": {
+      "conceptPreviewCount": 3,
+      "conceptDisclosureCount": 3
+    }
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "/work",
+    "document": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "scrollHeight": 1807
+    },
+    "structure": {
+      "h1": 1,
+      "main": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Design judgment you can see."
+        },
+        {
+          "level": 2,
+          "text": "Aurora Spaces"
+        },
+        {
+          "level": 2,
+          "text": "Nexora Systems"
+        },
+        {
+          "level": 2,
+          "text": "Vellora Care"
+        },
+        {
+          "level": 2,
+          "text": "Want something like this — but not identical?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "emptyControlCount": 0,
+      "emptyControls": [],
+      "imageCount": 0,
+      "emptyAltCount": 0
+    },
+    "selectedWork": {
+      "conceptPreviewCount": 3,
+      "conceptDisclosureCount": 3
+    }
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "/pricing",
+    "document": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "scrollHeight": 6108
+    },
+    "structure": {
+      "h1": 1,
+      "main": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Clear starting points."
+        },
+        {
+          "level": 2,
+          "text": "Signal"
+        },
+        {
+          "level": 2,
+          "text": "Orbit"
+        },
+        {
+          "level": 2,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "Commerce"
+        },
+        {
+          "level": 2,
+          "text": "Custom system"
+        },
+        {
+          "level": 2,
+          "text": "Compare packages"
+        },
+        {
+          "level": 2,
+          "text": "What every website project includes"
+        },
+        {
+          "level": 2,
+          "text": "Add-ons"
+        },
+        {
+          "level": 2,
+          "text": "Care plans"
+        },
+        {
+          "level": 3,
+          "text": "Care"
+        },
+        {
+          "level": 3,
+          "text": "Care+"
+        },
+        {
+          "level": 3,
+          "text": "Evolve"
+        },
+        {
+          "level": 2,
+          "text": "Billed separately"
+        },
+        {
+          "level": 2,
+          "text": "Payment schedule"
+        },
+        {
+          "level": 2,
+          "text": "Pricing questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "emptyControlCount": 0,
+      "emptyControls": [],
+      "imageCount": 0,
+      "emptyAltCount": 0
+    },
+    "selectedWork": {
+      "conceptPreviewCount": 0,
+      "conceptDisclosureCount": 0
+    }
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "route": "/start",
+    "document": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "scrollHeight": 1765
+    },
+    "structure": {
+      "h1": 1,
+      "main": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Tell us what you need. We'll shape the right route."
+        },
+        {
+          "level": 2,
+          "text": "01 About you"
+        },
+        {
+          "level": 2,
+          "text": "What happens next"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "emptyControlCount": 0,
+      "emptyControls": [],
+      "imageCount": 0,
+      "emptyAltCount": 0
+    },
+    "selectedWork": {
+      "conceptPreviewCount": 0,
+      "conceptDisclosureCount": 0
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "route": "/",
+    "document": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "scrollHeight": 8856
+    },
+    "structure": {
+      "h1": 1,
+      "main": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Websites built to make your business unmistakable."
+        },
+        {
+          "level": 2,
+          "text": "Selected work"
+        },
+        {
+          "level": 3,
+          "text": "Aurora Spaces"
+        },
+        {
+          "level": 3,
+          "text": "Nexora Systems"
+        },
+        {
+          "level": 3,
+          "text": "Vellora Care"
+        },
+        {
+          "level": 2,
+          "text": "What Cyvexly can do"
+        },
+        {
+          "level": 3,
+          "text": "Strategy & structure"
+        },
+        {
+          "level": 3,
+          "text": "Website design"
+        },
+        {
+          "level": 3,
+          "text": "Development"
+        },
+        {
+          "level": 3,
+          "text": "Content & CMS"
+        },
+        {
+          "level": 3,
+          "text": "Commerce & integrations"
+        },
+        {
+          "level": 3,
+          "text": "Care & improvement"
+        },
+        {
+          "level": 2,
+          "text": "We're not a DIY builder. We're your independent web partner."
+        },
+        {
+          "level": 2,
+          "text": "Give us the brief. We'll shape the route."
+        },
+        {
+          "level": 3,
+          "text": "Brief & fit"
+        },
+        {
+          "level": 3,
+          "text": "Direction & scope"
+        },
+        {
+          "level": 3,
+          "text": "Design & approval"
+        },
+        {
+          "level": 3,
+          "text": "Build & quality review"
+        },
+        {
+          "level": 3,
+          "text": "Launch & care"
+        },
+        {
+          "level": 2,
+          "text": "Simple starting points"
+        },
+        {
+          "level": 3,
+          "text": "Signal"
+        },
+        {
+          "level": 3,
+          "text": "Orbit"
+        },
+        {
+          "level": 3,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "FAQ"
+        },
+        {
+          "level": 2,
+          "text": "Ready to build something extraordinary?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "emptyControlCount": 0,
+      "emptyControls": [],
+      "imageCount": 0,
+      "emptyAltCount": 0
+    },
+    "selectedWork": {
+      "conceptPreviewCount": 3,
+      "conceptDisclosureCount": 3
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "route": "/services",
+    "document": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "scrollHeight": 9837
+    },
+    "structure": {
+      "h1": 1,
+      "main": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Everything your business website needs."
+        },
+        {
+          "level": 2,
+          "text": "Strategy & structure"
+        },
+        {
+          "level": 2,
+          "text": "Custom website design"
+        },
+        {
+          "level": 2,
+          "text": "Website development"
+        },
+        {
+          "level": 2,
+          "text": "Content & CMS"
+        },
+        {
+          "level": 2,
+          "text": "Commerce & integrations"
+        },
+        {
+          "level": 2,
+          "text": "Search, performance & accessibility"
+        },
+        {
+          "level": 2,
+          "text": "Care & improvement"
+        },
+        {
+          "level": 2,
+          "text": "Popular website types"
+        },
+        {
+          "level": 3,
+          "text": "Business websites"
+        },
+        {
+          "level": 3,
+          "text": "Website redesigns"
+        },
+        {
+          "level": 3,
+          "text": "Landing pages"
+        },
+        {
+          "level": 3,
+          "text": "E-commerce websites"
+        },
+        {
+          "level": 3,
+          "text": "Website care"
+        },
+        {
+          "level": 2,
+          "text": "Common combinations"
+        },
+        {
+          "level": 2,
+          "text": "Recent work"
+        },
+        {
+          "level": 3,
+          "text": "Aurora Spaces"
+        },
+        {
+          "level": 3,
+          "text": "Nexora Systems"
+        },
+        {
+          "level": 3,
+          "text": "Vellora Care"
+        },
+        {
+          "level": 2,
+          "text": "Common questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "emptyControlCount": 0,
+      "emptyControls": [],
+      "imageCount": 0,
+      "emptyAltCount": 0
+    },
+    "selectedWork": {
+      "conceptPreviewCount": 3,
+      "conceptDisclosureCount": 3
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "route": "/work",
+    "document": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "scrollHeight": 3398
+    },
+    "structure": {
+      "h1": 1,
+      "main": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Design judgment you can see."
+        },
+        {
+          "level": 2,
+          "text": "Aurora Spaces"
+        },
+        {
+          "level": 2,
+          "text": "Nexora Systems"
+        },
+        {
+          "level": 2,
+          "text": "Vellora Care"
+        },
+        {
+          "level": 2,
+          "text": "Want something like this — but not identical?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "emptyControlCount": 0,
+      "emptyControls": [],
+      "imageCount": 0,
+      "emptyAltCount": 0
+    },
+    "selectedWork": {
+      "conceptPreviewCount": 3,
+      "conceptDisclosureCount": 3
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "route": "/pricing",
+    "document": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "scrollHeight": 11368
+    },
+    "structure": {
+      "h1": 1,
+      "main": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Clear starting points."
+        },
+        {
+          "level": 2,
+          "text": "Signal"
+        },
+        {
+          "level": 2,
+          "text": "Orbit"
+        },
+        {
+          "level": 2,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "Commerce"
+        },
+        {
+          "level": 2,
+          "text": "Custom system"
+        },
+        {
+          "level": 2,
+          "text": "Compare packages"
+        },
+        {
+          "level": 2,
+          "text": "What every website project includes"
+        },
+        {
+          "level": 2,
+          "text": "Add-ons"
+        },
+        {
+          "level": 2,
+          "text": "Care plans"
+        },
+        {
+          "level": 3,
+          "text": "Care"
+        },
+        {
+          "level": 3,
+          "text": "Care+"
+        },
+        {
+          "level": 3,
+          "text": "Evolve"
+        },
+        {
+          "level": 2,
+          "text": "Billed separately"
+        },
+        {
+          "level": 2,
+          "text": "Payment schedule"
+        },
+        {
+          "level": 2,
+          "text": "Pricing questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "emptyControlCount": 0,
+      "emptyControls": [],
+      "imageCount": 0,
+      "emptyAltCount": 0
+    },
+    "selectedWork": {
+      "conceptPreviewCount": 0,
+      "conceptDisclosureCount": 0
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "route": "/start",
+    "document": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "scrollHeight": 3051
+    },
+    "structure": {
+      "h1": 1,
+      "main": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Tell us what you need. We'll shape the right route."
+        },
+        {
+          "level": 2,
+          "text": "01 About you"
+        },
+        {
+          "level": 2,
+          "text": "What happens next"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "emptyControlCount": 0,
+      "emptyControls": [],
+      "imageCount": 0,
+      "emptyAltCount": 0
+    },
+    "selectedWork": {
+      "conceptPreviewCount": 0,
+      "conceptDisclosureCount": 0
+    }
+  }
+]
