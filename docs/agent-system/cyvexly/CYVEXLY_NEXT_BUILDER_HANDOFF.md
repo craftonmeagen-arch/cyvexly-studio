@@ -64,6 +64,11 @@ scratch captures/scripts are clean.
   Core Web Vitals were not checked; the controlled constrained profile passed.
 - The Owner supplied the source for this requested site use; no independent
   license, model-release, or third-party-rights audit was available or claimed.
+- Sampled source frames contain baked-in stylized pseudo-interface wording,
+  including truncated/malformed labels. It is mostly small at hero scale, but
+  the Owner should watch the complete loop before release and provide a corrected
+  master if any frame-level wording is unacceptable; CSS cannot repair source
+  pixels honestly.
 - Port 5173 was initially occupied by an unrelated Vite process and was
   preserved; round proof used owned 5183. It exited independently, and final
   checks find 5173, 5183, and 9228 free. A live headless-Chrome profile must live

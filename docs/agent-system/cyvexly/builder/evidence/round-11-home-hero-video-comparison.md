@@ -90,3 +90,8 @@ field Core Web Vitals, and independent media-rights documentation were not
 checked. The 4MB video is accepted as the current Owner-supplied media budget
 with data-saver/reduced-motion protection; future replacement or multi-codec
 compression should be evidence-led, not a silent rewrite of the Owner's asset.
+Representative frame inspection also found stylized pseudo-interface copy baked
+into the supplied source, including truncated or malformed labels. Most is small
+at the shipping hero size and the overlay does not treat it as authoritative
+copy, but the Owner should view the complete 30-second loop before release and
+supply a corrected master if any source-frame wording is unacceptable.
