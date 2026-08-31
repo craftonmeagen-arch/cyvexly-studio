@@ -2,7 +2,8 @@
 
 **Compared:** accepted `mockups/01-home.png`; pre-change
 `round-10-home-desktop-full.png`; final production renders
-`round-12-home-midpage-{desktop,tablet,phone}.png`; runtime metrics
+`round-12-home-midpage-{desktop,tablet,phone}.png` and
+`round-12-home-desktop-full.png`; runtime metrics
 `round-12-home-midpage-runtime-proof.json`.
 
 ## Result
@@ -22,17 +23,31 @@ drops out and each stage becomes a contained glass card, avoiding a false line
 across wrapped rows. The ordered-list semantics, stage order, titles, and copy
 are unchanged.
 
+The opened 1440x4731 full-page render confirms that both additions sit
+coherently between the capability system and pricing preview without obscuring
+the hero, selected work, conversion sequence, or final CTA.
+
 ## Measured states
 
 - Desktop `1440x900`: the difference panel is `1104x313.11`; the process route
   is `1104x211.83`. One diagram, five nodes, five icons, one H1, and no overflow.
 - Tablet `768x1024`: the panel is `720x363`; the two-column composition holds;
   five process cards reflow to two columns then one. No overflow.
+- Compact `720x900`: the panel deliberately returns to a stacked composition
+  while the process remains a balanced two-column card grid. No overflow.
 - Phone `390x844`: the panel is `342x574.83`; the diagram stacks above centered
   copy; five cards form a single readable column. No overflow.
+- An explicit 24px-root phone stress state remains width-contained at 390px;
+  the panel and all five stage cards measure 318px and reflow without clipping.
+- An eight-width breakpoint-boundary audit (390, 639, 640, 767, 768, 1023,
+  1024, 1440px) confirms the process changes from one to two to five columns at
+  the intended 640/1024 boundaries; the connector exists only in the one-row
+  five-column state, and every boundary remains width-contained.
 - The 13-route phone audit found expected 200/404 statuses, exactly one `main`
-  and one H1, no visible unnamed controls, and `scrollWidth === clientWidth` in
-  every case. CDP recorded zero runtime exceptions and zero console errors.
+  and one H1, no heading skips, duplicate IDs, missing image alternatives, or
+  visible unnamed controls, and `scrollWidth === clientWidth` in every case.
+  CDP exposes the process as one list with five children and the partnership
+  graphic as ignored; it recorded zero runtime exceptions and console errors.
 
 ## Visual-plan/target disposition
 

@@ -151,6 +151,14 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 12 Home mid-page system pass:** commit `13d3673` adds an original
+  luminous partnership diagram to the former text-only difference panel and a
+  five-stage icon/node/route grammar to the Home process preview. Exact
+  1440/768/390 production renders, 24px-root phone stress, SVG bounds,
+  accessibility-tree semantics, and a 13-route phone audit pass. This closes
+  two reference-visible structural gaps without opening/closing a chunk or
+  claiming final Owner parity.
+
 - **Round 11 Home hero motion pass:** Owner-supplied source media now replaces
   the static Home orbit as a truthful 30-second looping showcase in commit
   `34a5bd3`. The web derivative is silent, fast-start H.264 with a 12KB poster,

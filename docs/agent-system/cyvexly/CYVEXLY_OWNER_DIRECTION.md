@@ -30,7 +30,7 @@ Do not create, configure, enable, or modify recurring role schedulers or automat
 
 ## Visual fidelity direction 2026-08-30-04
 
-**Status:** PARTIALLY FULFILLED — ROUND 11 HERO MOTION PASS; OWNER REVIEW PENDING
+**Status:** PARTIALLY FULFILLED — ROUND 12 MID-PAGE SYSTEM PASS; OWNER REVIEW PENDING
 **Source:** Owner via Codex side conversation
 **Recorded:** 2026-08-30 America/New_York
 
@@ -54,6 +54,15 @@ hero's luminous technology/art-direction density while retaining the bright
 page, message hierarchy, responsive containment, reduced-motion behavior, and
 truthful claims. This is an implementation of the Owner's supplied media and
 active fidelity direction, not a claim of final visual acceptance.
+
+Round 12 closes two more visible structural gaps against `mockups/01-home.png`:
+the formerly text-only partner statement now has an original luminous
+wireframe system diagram, and the formerly text-only five-stage Home process
+now has a connected desktop signal route with distinct stage icons plus
+contained tablet/phone cards. Opened exact 1440/768/390 production renders and
+a 24px-root phone stress state remain width-contained. The work advances the
+active direction without copying the reference literally or claiming final
+Owner acceptance.
 
 ## Cross-device view consistency direction 2026-08-30-05
 

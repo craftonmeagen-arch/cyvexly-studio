@@ -1,25 +1,26 @@
 # Cyvexly Current State
 
-**Global round:** 11
+**Global round:** 12
 **Active chunks:** Chunk 3 — Project Planner — UI/state/validation remains built
 and verified at `/start`, with real server-side email Owner-blocked; Chunk 4 —
 Utility/legal pages — favicon remains fixed, while legal/domain items remain
-Owner-blocked. Round 11 accepted and hardened the Owner-supplied Home hero
-showcase video as the next active glass/futuristic-fidelity slice.
-**Chunk-local round:** N/A (round 11 revisited shared Home visual-system
+Owner-blocked. Round 12 advanced the active Home glass/futuristic direction
+with a reference-driven partnership diagram and five-stage route system.
+**Chunk-local round:** N/A (round 12 revisited shared Home visual-system
 behavior; no chunk was opened or closed).
 **Current mission:** Owner confirmation is still needed on the original second
 computer for round 9's scale fix and on whether the Home showcase video plus
-round 10's inset glass/icon structure now meet the desired mockup fidelity. The
+rounds 10-12's inset glass, icon, diagram, and route structures now meet the
+desired mockup fidelity. The
 same four Owner-input questions block the highest-value
 remaining content/integration work — About founder identity, Privacy/Terms
 jurisdiction, production domain + email provider, and the abstract-vs-
 commissioned concept-artwork framing question (`CYVEXLY_APP_DEBT.md` items 1,
 3, 4, plus Chunk Debt item 2). Do not invent them.
-**Accepted source position:** Git repository on `master`. Round 11 product commit
-`34a5bd3` replaces the Home orbit with the Owner-supplied 30-second showcase
-media, poster fallback, accessible play/pause behavior, reduced-motion/data-
-saver holds, and responsive glass framing. Treat `git log` as the exact ledger.
+**Accepted source position:** Git repository on `master`. Round 12 product commit
+`13d3673` adds the Home partnership-system diagram and process node/icon/route
+grammar without changing copy or behavior. Round 11 commit `34a5bd3` remains
+the accepted hero video integration. Treat `git log` as the exact ledger.
 Builder-owned source is committed; canonical docs/evidence are updated at close.
 Pre-existing Council dirty files remain intentionally untouched.
 
@@ -30,7 +31,7 @@ Pre-existing Council dirty files remain intentionally untouched.
   `pnpm run lint`. If 5173 is occupied, prove exact ownership before stopping
   anything; round 10 found an unrelated pre-existing EduAILenz Vite process and
   safely used 5183 instead.
-- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-11 report before planning round 12.
+- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-12 report before planning round 13.
   Round 7's full hot-path snapshot/report is archived at
   `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND7_REPORT.md`.
 - Read `CYVEXLY_CHUNK_DEBT.md` and `CYVEXLY_APP_DEBT.md` before touching the
@@ -40,8 +41,8 @@ Pre-existing Council dirty files remain intentionally untouched.
   headless + Chrome DevTools Protocol. Use
   `Emulation.setDeviceMetricsOverride` for exact narrow viewports; raw
   `--window-size=390,...` on Windows can produce a misleading crop.
-- Round 11 verification: lint, production build, post-build typecheck, opened
-  1440/768/390 renders, normal pause/loop behavior, reduced-motion and save-data
-  still states with explicit-play recovery, native Enter, 13 route statuses,
-  12 phone semantic/overflow cases, and media byte-range delivery all passed.
-  Durable evidence is indexed under `docs/agent-system/cyvexly/builder/evidence/`.
+- Round 12 verification: lint, production build, post-build typecheck, opened
+  exact 1440/768/390 changed-surface renders and a 1440x4731 full Home render,
+  24px-root phone stress, SVG bounds, accessibility-tree semantics, and a
+  13-route phone status/structure/overflow audit all passed. Durable evidence
+  is indexed under `docs/agent-system/cyvexly/builder/evidence/`.

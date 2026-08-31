@@ -1,6 +1,6 @@
 {
   "source": "http://127.0.0.1:5183/",
-  "capturedAtUtc": "2026-08-31T07:20:57.182Z",
+  "capturedAtUtc": "2026-08-31T07:39:43.577Z",
   "results": [
     {
       "name": "desktop",
@@ -10,8 +10,8 @@
         "dpr": 1
       },
       "document": {
-        "clientWidth": 1440,
-        "scrollWidth": 1440
+        "clientWidth": 1425,
+        "scrollWidth": 1425
       },
       "h1Count": 1,
       "partnershipGraphicCount": 1,
@@ -27,7 +27,7 @@
       "processIconCount": 5,
       "processIconsHidden": true,
       "panel": {
-        "x": 168,
+        "x": 160.5,
         "y": 2010.734375,
         "width": 1104,
         "height": 313.109375,
@@ -35,7 +35,7 @@
         "bottom": 2323.84375
       },
       "route": {
-        "x": 168,
+        "x": 160.5,
         "y": 2559.84375,
         "width": 1104,
         "height": 211.828125,
@@ -45,7 +45,7 @@
       "clip": {
         "x": 0,
         "y": 1974.734375,
-        "width": 1440,
+        "width": 1425,
         "height": 912.9375
       }
     },
@@ -57,8 +57,8 @@
         "dpr": 1
       },
       "document": {
-        "clientWidth": 768,
-        "scrollWidth": 768
+        "clientWidth": 753,
+        "scrollWidth": 753
       },
       "h1Count": 1,
       "partnershipGraphicCount": 1,
@@ -75,25 +75,72 @@
       "processIconsHidden": true,
       "panel": {
         "x": 24,
-        "y": 2726.15625,
-        "width": 720,
+        "y": 2717.71875,
+        "width": 705,
         "height": 363,
-        "top": 2726.15625,
-        "bottom": 3089.15625
+        "top": 2717.71875,
+        "bottom": 3080.71875
       },
       "route": {
         "x": 24,
-        "y": 3325.15625,
-        "width": 720,
+        "y": 3316.71875,
+        "width": 705,
         "height": 727.234375,
-        "top": 3325.15625,
-        "bottom": 4052.390625
+        "top": 3316.71875,
+        "bottom": 4043.953125
       },
       "clip": {
         "x": 0,
-        "y": 2690.15625,
-        "width": 768,
+        "y": 2681.71875,
+        "width": 753,
         "height": 1478.234375
+      }
+    },
+    {
+      "name": "compact",
+      "viewport": {
+        "innerWidth": 720,
+        "innerHeight": 900,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 705,
+        "scrollWidth": 705
+      },
+      "h1Count": 1,
+      "partnershipGraphicCount": 1,
+      "partnershipGraphicHidden": "true",
+      "partnershipGraphicViewBox": "0 0 360 260",
+      "partnershipGraphicInk": {
+        "x": 28,
+        "y": 26,
+        "width": 304,
+        "height": 218
+      },
+      "processNodeCount": 5,
+      "processIconCount": 5,
+      "processIconsHidden": true,
+      "panel": {
+        "x": 24,
+        "y": 3316.71875,
+        "width": 657,
+        "height": 460.328125,
+        "top": 3316.71875,
+        "bottom": 3777.046875
+      },
+      "route": {
+        "x": 24,
+        "y": 4013.046875,
+        "width": 657,
+        "height": 749.984375,
+        "top": 4013.046875,
+        "bottom": 4763.03125
+      },
+      "clip": {
+        "x": 0,
+        "y": 3280.71875,
+        "width": 705,
+        "height": 1598.3125
       }
     },
     {
@@ -144,6 +191,10 @@
       }
     }
   ],
+  "fullPage": {
+    "width": 1440,
+    "height": 4731
+  },
   "routeAudit": [
     {
       "route": "/",
@@ -151,6 +202,9 @@
       "path": "/",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -161,6 +215,9 @@
       "path": "/services",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -171,6 +228,9 @@
       "path": "/work",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -181,6 +241,9 @@
       "path": "/work/aurora-spaces",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -191,6 +254,9 @@
       "path": "/work/nexora-systems",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -201,6 +267,9 @@
       "path": "/work/vellora-care",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -211,6 +280,9 @@
       "path": "/pricing",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -221,6 +293,9 @@
       "path": "/process",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -231,6 +306,9 @@
       "path": "/contact",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -241,6 +319,9 @@
       "path": "/faq",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -251,6 +332,9 @@
       "path": "/accessibility",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -261,6 +345,9 @@
       "path": "/start",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
@@ -271,11 +358,188 @@
       "path": "/definitely-not-a-route",
       "mainCount": 1,
       "h1Count": 1,
+      "headingSkips": 0,
+      "duplicateIds": 0,
+      "missingImageAlts": 0,
       "unnamedVisibleControls": 0,
       "clientWidth": 390,
       "scrollWidth": 390
     }
   ],
+  "boundaryAudit": [
+    {
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "processColumns": "342px",
+      "processRowCount": 5,
+      "processCardWidths": [
+        342,
+        342,
+        342,
+        342,
+        342
+      ],
+      "processConnectorContent": "none",
+      "panelColumns": "276px",
+      "panelWidth": 342
+    },
+    {
+      "width": 639,
+      "clientWidth": 639,
+      "scrollWidth": 639,
+      "processColumns": "591px",
+      "processRowCount": 5,
+      "processCardWidths": [
+        591,
+        591,
+        591,
+        591,
+        591
+      ],
+      "processConnectorContent": "none",
+      "panelColumns": "525px",
+      "panelWidth": 591
+    },
+    {
+      "width": 640,
+      "clientWidth": 640,
+      "scrollWidth": 640,
+      "processColumns": "286px 286px",
+      "processRowCount": 3,
+      "processCardWidths": [
+        286,
+        286,
+        286,
+        286,
+        286
+      ],
+      "processConnectorContent": "none",
+      "panelColumns": "494px",
+      "panelWidth": 592
+    },
+    {
+      "width": 767,
+      "clientWidth": 767,
+      "scrollWidth": 767,
+      "processColumns": "349.5px 349.5px",
+      "processRowCount": 3,
+      "processCardWidths": [
+        349.5,
+        349.5,
+        349.5,
+        349.5,
+        349.5
+      ],
+      "processConnectorContent": "none",
+      "panelColumns": "621px",
+      "panelWidth": 719
+    },
+    {
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "processColumns": "350px 350px",
+      "processRowCount": 3,
+      "processCardWidths": [
+        350,
+        350,
+        350,
+        350,
+        350
+      ],
+      "processConnectorContent": "none",
+      "panelColumns": "209.516px 372.484px",
+      "panelWidth": 720
+    },
+    {
+      "width": 1023,
+      "clientWidth": 1023,
+      "scrollWidth": 1023,
+      "processColumns": "477.5px 477.5px",
+      "processRowCount": 3,
+      "processCardWidths": [
+        477.5,
+        477.5,
+        477.5,
+        477.5,
+        477.5
+      ],
+      "processConnectorContent": "none",
+      "panelColumns": "301.312px 535.688px",
+      "panelWidth": 975
+    },
+    {
+      "width": 1024,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "processColumns": "179.188px 179.203px 179.203px 179.203px 179.188px",
+      "processRowCount": 1,
+      "processCardWidths": [
+        179.19,
+        179.2,
+        179.2,
+        179.2,
+        179.19
+      ],
+      "processConnectorContent": "\"\"",
+      "panelColumns": "290.156px 515.844px",
+      "panelWidth": 976
+    },
+    {
+      "width": 1440,
+      "clientWidth": 1425,
+      "scrollWidth": 1425,
+      "processColumns": "204.797px 204.797px 204.797px 204.797px 204.812px",
+      "processRowCount": 1,
+      "processCardWidths": [
+        204.8,
+        204.8,
+        204.8,
+        204.8,
+        204.81
+      ],
+      "processConnectorContent": "\"\"",
+      "panelColumns": "336.234px 597.766px",
+      "panelWidth": 1104
+    }
+  ],
+  "root24Stress": {
+    "rootSize": "24px",
+    "clientWidth": 1425,
+    "scrollWidth": 1425,
+    "panelWidth": 1353,
+    "processCardWidths": [
+      246.59375,
+      246.59375,
+      246.609375,
+      246.59375,
+      246.609375
+    ],
+    "clip": {
+      "x": 0,
+      "y": 3176.625,
+      "width": 1425,
+      "height": 1375.890625
+    }
+  },
+  "accessibility": {
+    "process": [
+      {
+        "role": "list",
+        "name": "",
+        "ignored": false,
+        "childCount": 5
+      }
+    ],
+    "partnershipGraphic": [
+      {
+        "role": "none",
+        "ignored": true,
+        "childCount": 0
+      }
+    ]
+  },
   "runtimeExceptionCount": 0,
   "consoleErrorCount": 0
 }

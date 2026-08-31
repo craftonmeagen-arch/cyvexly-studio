@@ -7,9 +7,14 @@ Retain only durable evidence cited by an active report, source decision, or requ
 - `round-12-home-midpage-visual-plan.md` — pre-implementation mockup/current
   comparison, structural target, responsive state map, accessibility boundary,
   and falsifiable proof plan.
-- `round-12-home-midpage-{desktop,tablet,phone}.png` — opened exact 1440x900,
-  768x1024, and 390x844 production renders of the new partnership diagram and
-  five-stage icon/node/route system.
+- `round-12-home-midpage-{desktop,tablet,compact,phone}.png` — opened exact
+  1440x900, 768x1024, 720x900, and 390x844 production renders of the new
+  partnership diagram and five-stage icon/node/route system.
+- `round-12-home-desktop-full.png` — opened 1440x4731 production render
+  confirming the new mid-page composition inside the complete Home flow.
+- `round-12-home-midpage-phone-root24-stress.png` — opened 390px resilience
+  render with an explicit 24px author root; the panel and five cards reflow
+  without horizontal overflow.
 - `round-12-home-midpage-runtime-proof.json` — exact three-viewport geometry,
   SVG ink/viewBox bounds, decorative semantics, 13-route phone status/landmark/
   control-name/overflow audit, and console/runtime exception counts.

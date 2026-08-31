@@ -2,16 +2,17 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global round 11 revisited Home's shared visual
+pages — remains closed, but global round 12 revisited Home's shared visual
 system under the rule that closed chunks are not frozen.
 
 **Current status:** The nine-step Planner UI/state/validation remains built and
 verified at `/start`; real server-side email remains Owner-blocked on the
 production-domain and transactional-email-provider decisions. `/not-found`,
 `/faq`, and `/accessibility` are complete; `/privacy` and `/terms` remain
-Owner-blocked on jurisdiction facts; the favicon is fixed. Round 11 ships the
-Owner-supplied Home hero showcase with accessible, reduced-motion/data-saver-
-aware looping playback.
+Owner-blocked on jurisdiction facts; the favicon is fixed. Round 12 adds a
+reference-driven partnership-system diagram and five-stage icon/node/route
+grammar to the Home mid-page while retaining round 11's accessible showcase
+video.
 
 ## Active chunk boundaries
 
@@ -61,289 +62,12 @@ aware looping playback.
   Full hot-path snapshot/report:
   `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND7_REPORT.md`.
 
-## Round 8 report — global round 8
-
-### Preserved Round Plan
-
-**Session:** `7694882a-69e8-4ed1-8a51-535001d0780d`; lock claimed
-`2026-08-30T22:29:39.5314948Z`; scheduled extended window requires at least 50
-minutes of substantive work and release before minute 60. Closeout was recorded
-at `2026-08-30T23:19:48.5241789Z`, after 50 minutes 9 seconds.
-
-1. Preserve the visual plan and current/mockup comparison; rotate the nearly
-   full round-7 report out of this hot-path file.
-2. Fix the root selected-work inconsistency by integrating the existing
-   truthful `ConceptPreview` artwork into Home and Services cards while
-   preserving geometry, disclosure, links, and responsive behavior.
-3. Prove compilation and the real product via lint, typecheck, production build,
-   route sweep, rendered desktop/tablet/phone comparison, and exact overflow/
-   geometry measurements.
-4. Reconcile state, map, summary, debt, evidence, handoff, cleanup, Git/diff
-   accountability, and source truth; release the lock within the required
-   window.
-
-**Methodology check:** This class of drift should be fixed by reusing the
-established project-card visual component, not creating another image system or
-inventing fictional client screenshots. The Work/case-study implementation is
-the strongest existing pattern, and the Council's current Home capture plus the
-accepted Home mockup provide the baseline/target. Visual plan:
-`docs/agent-system/cyvexly/builder/evidence/round-8-home-work-visual-plan.md`.
-
-**Likely risks:** distorted SVG crops at compact card heights; horizontal
-overflow at 390px; loss of truthful concept disclosure; adopting reviewer-owned
-dirty files; mistaking headless-Chrome window minimums for product geometry.
-
-### Work and proof
-
-**Implemented:** `src/app/page.tsx` and `src/app/services/page.tsx` now import
-and render `ConceptPreview` inside the existing project-gradient media frames.
-The existing `overflow-hidden`, fixed media heights, links, copy, tags,
-breakpoints, and `aria-hidden` decorative boundary remain intact. Product source
-landed as commit `d04dc9d` (10 insertions, 4 deletions).
-
-A final source-hygiene sweep found one stale user-facing accessible label on
-case-study artwork: `concept visual placeholder`. The artwork is no longer a
-placeholder, so commit `4bdab10` truthfully renames it `abstract concept visual`.
-The final production build contains 15 new-label matches across generated Work
-HTML/RSC and zero old-label matches.
-
-**Visual comparison:** the current Council Home capture showed three generic
-gradient bands; the accepted Home mockup showed three distinct project
-treatments. Opened round-8 captures now show Aurora's architectural geometry,
-Nexora's dashboard composition, and Vellora's product/ingredient composition on
-Home and Services. The implementation deliberately remains abstract and labels
-all three `CONCEPT PROJECT`; it closes the reachable cross-surface inconsistency
-without pretending fictional work has real screenshots. The Owner-level choice
-between abstract release artwork and commissioned/higher-fidelity concept work
-remains open.
-
-**Verification:** `pnpm run lint` passed; `pnpm run build` passed and generated
-all 18 expected app routes (only the known domain-blocked `metadataBase`
-localhost warning); post-build `pnpm exec tsc --noEmit` passed. The first
-standalone typecheck before the build reproduced the already-documented missing
-`.next/types` `LayoutProps` artifact after disposable build output was absent;
-the production build regenerated framework types and the identical command then
-passed. A live production-runtime sweep returned 200 for fourteen expected
-routes/assets and the intended 404 for a nonexistent route. Served Home and
-Services HTML each contains all three preview SVGs, concept disclosures, and
-case-study links.
-
-An internal-link graph pass covered 395 link instances across twelve rendered
-pages and 27 unique internal route/hash targets. It found zero unexpected
-status or fragment failures; `/about`, `/privacy`, and `/terms` were the exact
-three expected Owner-blocked 404 targets.
-
-**Rendered evidence:** local Chrome 151 headless + CDP captured and the Builder
-opened Home/Services selected-work sections at exact 390px, 768px, and 1440px.
-Every state has three cards and three previews; exact phone cards are 342px in a
-390px viewport, and `scrollWidth === clientWidth` at every state. Durable PNG/
-JSON evidence and its SHA-addressable files are indexed in
-`builder/evidence/INDEX.md`.
-
-**Extended sitewide audit:** because the requested 50-minute minimum left
-substantive time after the fix, the round used the newly reachable CDP method on
-Home, Services, Work, Pricing, and Planner at exact 1440x900 and 390x844. Ten
-full-page renders were opened. All ten states have one `h1`, one `main`, no
-heading-level skips, no unnamed controls, no unexplained empty image alts, and
-zero horizontal overflow. No second reachable defect was found. The compact
-metrics are retained as `builder/evidence/round-8-sitewide-audit.json`; the ten
-large full-page screenshots were deleted after inspection.
-
-**Planner native-input follow-through:** the newly available CDP path then sent
-native Chromium Tab and Enter input through `/start` at exact 1440x900 and
-390x844. The initial audit found that empty-step validation exposed three
-correctly linked alerts but left focus on `Continue`. Commit `da9c6d9` fixes the
-root interaction: the first invalid control receives focus after validation,
-and radio/checkbox groups now expose stable names plus linked error IDs. The
-post-fix audit traversed 17 desktop and 12 phone tab stops to `Continue`, found
-no hidden desktop navigation leak at phone width, no offscreen or visibly
-unindicated focus stop, no overflow, three linked invalid controls/alerts, and
-`input#fullName` focused after Enter. Durable evidence:
-`builder/evidence/round-8-planner-native-keyboard-audit.json`. A second real-
-runtime 390px matrix advanced through all nine steps and proved first-error
-focus plus stable error linkage for radio cards, checkbox cards, and ordinary
-checkboxes; an identical `prefers-reduced-motion: reduce` run produced the same
-five targets/messages. See
-`builder/evidence/round-8-planner-validation-focus-matrix.json` and
-`builder/evidence/round-8-planner-validation-focus-matrix-reduced-motion.json`.
-
-### Audibles and findings
-
-- Raw Chrome `--window-size=390,...` on Windows initially produced a 390px image
-  that was actually a crop of a wider minimum browser layout, visually
-  resembling horizontal product overflow. The round challenged the instrument
-  rather than reporting a defect: CDP `Emulation.setDeviceMetricsOverride`
-  established a true 390px CSS viewport and proved the product's scroll width is
-  exactly 390px. This newly reachable proof path is now recorded in Tools and
-  Capabilities and Watch.
-- A served-HTML check initially used PowerShell `$home`, which is case-
-  insensitively the reserved `$HOME` constant; that command failed before
-  assigning it and produced invalid zero counts. It changed no repository or
-  runtime state. The check was immediately rerun with task-specific variables
-  (`$homeHtml`, `$servicesHtml`) and returned the valid three-preview result.
-- A concurrent Council round 5 started from `d04dc9d` and independently
-  verified the served branded favicon, scratch-route removal, and unified
-  Home/Services/Work concepts at desktop/tablet/phone. Its canonical state and
-  summary close the implementation symptom behind `CYC-R2-F002` while retaining
-  the Owner's abstract-art release-framing choice. `da9c6d9` landed after its
-  snapshot and remains its explicit fresh-review question. Reviewer files were
-  intentionally not rewritten.
-- The requested extended window enabled a stronger audit than the original
-  visual-integration plan. Its native-input failure was an observable,
-  same-product defect, so the round audibly expanded source scope to
-  `planner-form.tsx` and `planner-fields.tsx`, fixed it, and reran the exact
-  desktop/phone interaction rather than merely documenting the failure.
-
-### What was not checked
-
-- No physical keyboard hardware or cross-browser traversal. Chromium's native
-  focus-navigation path was exercised through CDP `Input.dispatchKeyEvent`;
-  round 7's DOM/ARIA audit remains complementary structural proof.
-- No deployment, external email, domain, legal, or third-party integration; all
-  require existing Owner decisions/authorization.
-- No claim that abstract concept art is the Owner's permanent release choice.
-
-### Git/diff accountability
-
-Round start HEAD was `1904634`. The original plan named Home/Services
-`ConceptPreview` reuse, and commit `d04dc9d` contains exactly those two source
-files. The extended native-input audit then discovered and justified the
-two-file Planner expansion recorded in commit `da9c6d9`; no other product file
-entered those diffs. The final terminology sweep added the one-line case-study
-label correction in `4bdab10`; no other product file entered the round. Builder
-documentation/evidence changes are the visual plan, retained
-PNG/JSON proof, active-report rotation, canonical state/map/summary/debt/tool/
-watch/handoff/index reconciliation, and no product file beyond the two planned
-pages. Pre-existing Auditor/Council dirty files were preserved byte-for-byte and
-excluded from Builder commits.
-
-### Completion state
-
-**DONE WITH PROOF** for the reachable Home/Services selected-work consistency
-defect and Planner validation-focus defect. Chunk 3/4 Owner-blocked gaps remain
-unchanged. Recommended next moves are in `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
-
-## Round 9 report — global round 9
-
-### Preserved Round Plan and methodology
-
-**Session:** `cyvexly-builder-20260830T201526-7f3c1e9b`; start HEAD
-`4fb7c017ca6596d2ee906a5e569874119a6541fd`; no active PM prompt. The full
-pre-implementation visual plan is
-`builder/evidence/round-9-scale-glass-visual-plan.md`.
-
-The round selected the new authenticated Owner directions as one coherent
-shared-design-system slice: reproduce and fix the cross-computer apparent-scale
-failure, then improve the same shared surfaces toward the accepted mockup's
-glassy/futuristic depth. The normal method for a rem-tokenized responsive system
-is to control both the root token basis and breakpoint units; the visual method
-is to improve shared primitives, not decorate individual pages. Proof required
-same-instrument browser-profile, viewport, and DPR controls plus real rendered
-comparison.
-
-### Root cause and implementation
-
-The Owner's two PNGs show the same shared header at materially different
-effective scales even though page zoom was reported as 100%. Both files declare
-the same ~96-DPI metadata, so image metadata did not explain it. Current source
-left `html` font size implicit while Tailwind expressed typography, spacing,
-container widths, and breakpoints in `rem`.
-
-A Builder-owned Chrome profile configured with a 24px default font reproduced
-the failure without page zoom: at 1440px, root/body became 24px, the header
-grew from 1152×76 to 1425×108, H1 from 48px to 72px, and the desktop nav
-disappeared because `lg` moved beyond the viewport. Setting only `html` to 16px
-fixed declaration geometry but not media-query breakpoints, because `rem` in
-media queries follows the browser's initial font basis. The complete source fix
-therefore pins the author design root to 16px and defines Tailwind's sm/md/lg/xl/
-2xl breakpoints in CSS pixels. Browser page zoom still changes the effective CSS
-viewport and triggers responsive reflow; this does not disable legitimate zoom.
-
-Commit `8ec27c1` also advances the Owner's separate visual-fidelity direction:
-the shared `.glass-panel` now has layered translucent gradients, bright rim/inset
-light, deeper cool shadows, 24px blur, and saturation; `.signal-grid-bg` gains
-restrained cyan/blue atmospheric light; the page background gains broad ambient
-glows; the sticky header/mobile sheet read as glass control surfaces; primary
-CTAs use a luminous blue gradient; and the hero orbit gains halo, gloss, rim,
-and shadow layers. Copy, routes, disclosures, interaction, and text colors were
-not changed.
-
-A follow-up minimum-font audit then exposed two narrow-screen overflows that
-the ordinary and custom-default profiles did not: the Pricing add-on range and
-Process timing rows resisted wrapping at 390px when Chrome's minimum font size
-was 24px. Commit `2d82b0b` stacks those rows on phones and restores their
-side-by-side presentation at `sm`; it changes no copy or disclosure.
-
-Final contrast math found the first luminous CTA gradient's center/end stops
-fell below 4.5:1 against white text. Commit `95c365f` keeps the glow/rim/shadow
-but darkens all normal stops to 4.86–5.25:1 and hover stops to 5.44–7.61:1.
-
-### Verification and rendered comparison
-
-- `pnpm run lint` passed.
-- `pnpm run build` passed and generated all 18 expected app routes; only the
-  known Owner/domain-blocked `metadataBase` localhost warning remains.
-- Post-build `pnpm exec tsc --noEmit` passed.
-- Production-runtime route sweep: 15 expected routes/assets returned 200 and a
-  nonexistent route returned the intended 404.
-- Normal-default and custom-24px Chrome profiles now match exactly at 1440px:
-  16px root, 1152×78 header, 144.42×20 logo, 194.28×46 CTA, 48px H1,
-  desktop nav visible, zero overflow.
-- 720px controls also match exactly across both profiles and reflow to the
-  compact header with zero overflow. This is the effective-viewport behavior
-  expected when a user legitimately zooms a 1440px display to 200%.
-- At 1024×768, DPR 1 and 1.5 preserve exact CSS geometry and zero overflow;
-  the DPR changes raster density, not layout truth.
-- Opened production captures at 1440, 1024/DPR1.5, 720, and 390. Home's hero is
-  visibly more luminous and dimensional; opened selected-work/capability cards
-  show clearer glass rims, translucent depth, and shadows without copy loss or
-  crowding. The 390px render retains readable hierarchy, mobile header, and
-  zero horizontal overflow.
-- Four 33-case site audits (11 routes × desktop/laptop/phone) passed in Chrome
-  and Edge using both standard and custom-24px-default profiles: 132 cases,
-  zero failures for root scale, landmark/H1/heading order, accessible control
-  names, responsive nav, shared glass treatment, or horizontal overflow.
-- Native CDP mouse/Tab interaction passed for the 390px menu in all four
-  Chrome/Edge profile combinations: toggle state/name, six links, trigger-to-
-  Services focus order, and zero overflow all matched.
-- An additional 33-case Chrome audit with minimum font size 24px initially
-  found Pricing and Process phone overflow. After `2d82b0b`, the full audit
-  passed with zero failures, proving the fix at large-text accessibility scale.
-- Per-stop WCAG contrast math for the final primary CTA gradient passes 4.5:1
-  in normal and hover states; lint, build, and post-build typecheck were rerun
-  after the color-only correction and passed.
-
-Evidence is indexed in `builder/evidence/INDEX.md`. Owner source captures are
-retained verbatim; temporary Chrome profiles and uncited controls are removed at
-closeout.
-
-### Audibles, limits, and accountability
-
-The initial plan anticipated a root-font fix but required measurement before
-assuming it was sufficient. Post-change browser evidence falsified that partial
-solution for breakpoints, so the round audibly added explicit pixel breakpoint
-tokens and reran both browser profiles. This was a source-layer completion of
-the same planned defect, not scope expansion.
-
-What was not checked: the actual second computer's live browser/OS settings,
-Safari/Firefox, physical-device display scaling, and Owner acceptance of final
-mockup parity. No deployment, external integration, legal route, About content,
-or Planner email work was attempted. The cross-computer defect is implemented
-with controlled proof but awaits Owner confirmation on the original device; the
-visual direction is meaningfully advanced, not declared fulfilled.
-
-Diff-to-plan check: the four product files in `8ec27c1` are exactly the planned
-design-system/root/breakpoint, header, CTA, and orbit surfaces. The two files in
-`2d82b0b` are the measured large-text follow-up; `95c365f` is the final measured
-CTA-contrast correction. Diff-to-belief check found no unexpected Builder
-product file. Pre-existing Council files and evidence
-remained outside Builder commits. The Owner-direction transcription was adopted
-and status-noted without changing the quoted Owner words.
-
-### Completion state
-
-**IMPLEMENTED — OWNER DEVICE CONFIRMATION PENDING** for cross-computer scale;
-**NEEDS COHERENT FOLLOW-UP / OWNER REVIEW** for full mockup-level glass fidelity.
+- **Round 8:** unified truthful concept artwork across Home, Services, and Work;
+  established exact CDP rendering and fixed Planner first-error focus. Full
+  report: `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND8_REPORT.md`.
+- **Round 9:** fixed cross-computer scale drift from browser font defaults/rem
+  breakpoints and strengthened shared glass/large-text resilience. Full report:
+  `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND9_REPORT.md`.
 
 ## Round 10 report — global round 10
 
@@ -527,3 +251,93 @@ accept the complete loop or provide a corrected/crossfaded master.
 
 **DONE WITH PROOF** for the Owner-directed Home showcase slice;
 **OWNER REVIEW STILL ACTIVE** for final mockup parity and original-device scale.
+
+## Round 12 report — global round 12
+
+### Preserved plan and methodology
+
+**Session:** `df61eaf1-567b-4791-92f4-b47a40b8a4b5`; lock claimed
+`2026-08-31T07:03:03.3591738Z`; start HEAD `dc900bb`; no active PM prompt.
+Pre-implementation plan:
+`builder/evidence/round-12-home-midpage-visual-plan.md`.
+
+The accepted Home mockup and latest full render showed two structural gaps
+after rounds 9-11: the bespoke-partner panel was a centered text block without
+the reference's system object, and the five-stage preview remained text-only.
+Another blur/opacity pass would not close either. The normal method was an
+original code-native SVG diagram plus reusable stage icon/route grammar, with
+responsive reflow and no new asset/dependency/platform decision.
+
+### What changed
+
+Product commit `13d3673` adds `PartnershipSignalGraphic`, an original luminous
+wireframe cube/orbit/node system, and places it beside the unchanged partner
+copy in a responsive glass panel. It adds `ProcessIcon` and converts the Home
+ordered list into five numbered nodes and distinct icons joined by one desktop
+route line. Tablet/phone intentionally drop the connector and retain contained
+glass cards. The diagram and icons are decorative; the semantic list, order,
+copy, routes, claims, and interactions are unchanged.
+
+### Rendered comparison and verification
+
+- `pnpm run lint`, clean `pnpm run build`, and post-build
+  `pnpm exec tsc --noEmit` passed. The only build warning is the known
+  Owner/domain-blocked `metadataBase` fallback.
+- Opened exact 1440x900, 768x1024, 720x900, and 390x844 changed-surface
+  production renders plus a 1440x4731 full Home render. The visual/copy panel
+  and route close the two plan gaps without disrupting the surrounding flow.
+- Desktop panel/route measure `1104x313.11` and `1104x211.83`; tablet panel is
+  `720x363`; phone panel is `342x574.83`. Every state has one diagram, five
+  nodes/icons, one H1, and zero horizontal overflow.
+- The original SVG ink measures `304x218` at `x=28,y=26` inside a `360x260`
+  viewBox. A 390px explicit 24px-root stress state keeps the panel and all five
+  process cards at 318px with no clipping/overflow.
+- An eight-width 390-1440px boundary audit confirms one/two/five-column process
+  reflow at the 640/1024 breakpoints and exposes the connector only when all
+  five stages share one row.
+- CDP accessibility output exposes the process as one list with five children
+  and the partnership graphic as ignored. The 13-route phone production audit
+  found expected 200/404 statuses, one main/H1, zero heading skips, duplicate
+  IDs, missing image alternatives, visible unnamed controls, or overflow, and
+  zero console errors/runtime exceptions.
+
+Evidence and the plan-to-render disposition are indexed in
+`builder/evidence/INDEX.md`.
+
+### Audibles, intake, and limits
+
+The first desktop render exposed a real cascade mismatch: Tailwind's
+`lg:border-0`/`lg:bg-transparent` utilities did not beat the later custom
+`.glass-panel` rule. A scoped desktop `.process-route-step` rule corrected the
+actual cascade, and the final render was recaptured/opened. The SVG ink box was
+measured explicitly because round 7 proved thumbnail inspection alone can miss
+viewBox clipping.
+
+Transient model-capacity interruptions occurred during the same invocation.
+Each recovery verified the raw lock still carried this exact session, nonce,
+and original claim time; no second claim or invocation was created, and work
+continued inside the original extended window.
+
+Council `CYC-R13-20260830-01` independently confirmed the prior accepted source
+had clean FAQ/Contact/Work/route/media baselines and repeated that final Home
+parity is Owner-gated. It detected this round's later Home drift but did not
+review it; round 12 therefore relies on Builder production proof and does not
+claim independent adoption.
+
+Not checked: Owner acceptance, the original second computer, physical Safari/
+Firefox, field performance, deployment, external email/domain/legal paths, or
+the complete hero loop's subjective cut. Existing Owner decisions remain.
+
+### Git/diff accountability and completion
+
+Diff-to-plan: `13d3673` contains exactly the planned Home composition, two SVG
+components, shared CSS, and cited plan/render/runtime evidence. Diff-to-belief
+found no unexpected Builder product file. A later evidence-only follow-up adds
+full-page, 24px-root, heading/ID/image-alt, and accessibility-tree proof. Active
+rounds 8-9, Watch rounds 6-7, and Build Summary setup/rounds 1-4 were rotated
+with exact history preserved; all Builder hot files are below caps. Council-
+owned dirty files/evidence and its former 5373 runtime were untouched. No
+scheduler or automation was touched.
+
+**DONE WITH PROOF** for the round-12 Home mid-page structural slice;
+**OWNER REVIEW STILL ACTIVE** for final mockup parity and second-device scale.

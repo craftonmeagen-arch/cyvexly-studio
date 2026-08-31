@@ -31,3 +31,9 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
 - `CYVEXLY_CHUNK3_ROUND7_REPORT.md` — round 7 hot-path snapshot and full report
   (favicon/OG mark redesign, edge-clipping correction, real branded ICO, and
   Planner DOM/accessibility-tree audit), rotated out during round 8.
+- `CYVEXLY_SHARED_HOME_ROUND8_REPORT.md` — global round 8 full report
+  (Home/Services concept-art unification, exact CDP rendering, Planner native
+  focus correction), rotated out during round 12.
+- `CYVEXLY_SHARED_HOME_ROUND9_REPORT.md` — global round 9 full report
+  (cross-computer root/breakpoint scale correction and shared glass/large-text
+  hardening), rotated out during round 12.
