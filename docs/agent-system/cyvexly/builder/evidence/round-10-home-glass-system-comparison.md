@@ -35,6 +35,8 @@ The result remains calmer and less illustration-dense than the mockup's fully ar
   failures for main/header/H1 counts, heading-level skips, duplicate IDs, or
   visible unnamed links/form controls.
 - The explicit 24px-root stress state remains width-contained at 390px; its header becomes 104px tall and content reflows rather than clipping.
+- New-surface contrast passes: graphite text is 5.24–6.08:1 across the three
+  light brand surfaces, and cyber-blue icons are 4.74–5.06:1 on Arctic/Frosted.
 
 ## Runtime audible
 

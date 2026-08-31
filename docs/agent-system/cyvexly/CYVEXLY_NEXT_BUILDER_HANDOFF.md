@@ -48,6 +48,8 @@ automation was modified.
 - Explicit 24px-root, 390px stress render — zero horizontal overflow and clean
   reflow. This complements rather than replaces round 9's browser-profile
   evidence.
+- New graphite text surfaces measure 5.24–6.08:1; cyber-blue icon surfaces
+  measure 4.74–5.06:1.
 - Durable proof is indexed in
   `docs/agent-system/cyvexly/builder/evidence/INDEX.md`.
 

@@ -412,6 +412,10 @@ complete source change:
   the header grows to 104px and content reflows instead of clipping. This is a
   stress state, not presented as normal scale or a replacement for round 9's
   real browser-profile controls.
+- Contrast math for the new icon/text surfaces passes with margin: cool-
+  graphite body text is 5.24–6.08:1 across Ice/Arctic/Frosted backgrounds;
+  cyber-blue signal icons are 4.74–5.06:1 on Arctic/Frosted surfaces (above
+  both the 3:1 non-text floor and 4.5:1 text floor).
 
 ### Audibles, limits, and accountability
 
