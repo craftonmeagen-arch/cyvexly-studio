@@ -1,0 +1,12 @@
+{
+  "review": "IFA-2026-08-31-R6",
+  "minuteZero": "2026-08-31T20:13:22.550Z",
+  "source": {"acceptedCommit": "f0f1eacee667cf7f63be54b4cf3432f71056ab74", "srcFiles": 39, "fingerprint": "4aa73afd7b0cfac313700c241c88df6ef56d71cfdd732e1fab01cee0a57f09b7"},
+  "runtime": {"port": 5273, "tempRoot": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260831T2013Z-006", "builderLockPreserved": true},
+  "narrowSweep": {"requested": [320, 900], "layoutViewport": [305, 900], "routesChecked": 17, "allOneH1": true, "allOneMain": true, "allContained": true},
+  "home320": {"videoReadyState": 4, "videoPaused": false, "videoRect": [25, 692, 255, 143.4375], "controlLabel": "Pause showcase video", "scrollWidth": 305, "clientWidth": 305},
+  "breakpoint": {"requested1023": {"layoutViewport": 1008, "menuVisible": true, "navVisible": false, "copyWidth": 960, "reelWidth": 960, "contained": true}, "requested1024": {"layoutViewport": 1009, "menuVisible": false, "navVisible": true, "reelWidth": 502.15625, "contained": true}},
+  "dynamic404": {"services": {"httpStatus": 404, "serverTitle": "Page not found — Cyvexly Studio", "hydratedTitle": "Service — Cyvexly Studio", "h1": "This page doesn't exist yet.", "main": 1, "recoveryLinks": 4}, "work": {"httpStatus": 404, "serverTitle": "Page not found — Cyvexly Studio", "hydratedTitle": "Project — Cyvexly Studio"}},
+  "finding": "CYV-IFA-008",
+  "browserWarningErrorCount": 0
+}

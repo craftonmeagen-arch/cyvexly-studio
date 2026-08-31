@@ -1,0 +1,21 @@
+{
+  "reviewId": "CYC-R25-20260831-01",
+  "roundId": "council-20260831T174320Z",
+  "schedulerMinuteZeroUtc": "2026-08-31T17:43:20.481Z",
+  "sourceHead": "b5dfd502b998c086903a9dab0b67a1929c0bc4b8",
+  "local": [
+    {"viewport":"1440x900","clientWidth":1425,"scrollWidth":1425,"pageHeight":6100,"cardWidths":[371,371,371,371,371],"cardHeights":[321,321,321,305,305],"main":1,"h1":1},
+    {"viewport":"1280x900","clientWidth":1265,"scrollWidth":1265,"pageHeight":6100,"cardWidths":[371,371,371,371,371],"cardHeights":[321,321,321,305,305],"main":1,"h1":1},
+    {"viewport":"1024x900","clientWidth":1009,"scrollWidth":1009,"pageHeight":6514,"cardWidths":[471,471,471,471,471],"cardHeights":[305,305,305,305,305],"main":1,"h1":1},
+    {"viewport":"768x1024","clientWidth":753,"scrollWidth":753,"pageHeight":8007,"cardWidths":[343,343,343,343,343],"cardHeights":[336,336,321,321,305],"main":1,"h1":1},
+    {"viewport":"720x900","clientWidth":705,"scrollWidth":705,"pageHeight":9066,"cardWidths":[319,319,319,319,319],"cardHeights":[359,359,321,321,343],"main":1,"h1":1},
+    {"viewport":"390x844","clientWidth":375,"scrollWidth":375,"pageHeight":11876,"cardWidths":[327,327,327,327,327],"cardHeights":[412,412,412,412,412],"main":1,"h1":1},
+    {"viewport":"320x844","clientWidth":305,"scrollWidth":305,"pageHeight":13137,"cardWidths":[257,257,257,257,257],"cardHeights":[434,434,434,434,434],"main":1,"h1":1}
+  ],
+  "module": {"cards":5,"serviceLists":5,"serviceNodes":15,"decorativePlusSigns":10,"ctaHref":"/start"},
+  "public": [
+    {"viewport":"1440x900","clientWidth":1425,"scrollWidth":1425,"pageHeight":6100,"cards":5,"main":1,"h1":1},
+    {"viewport":"390x844","clientWidth":375,"scrollWidth":375,"pageHeight":11876,"cards":5,"main":1,"h1":1}
+  ],
+  "diagnostics": {"local":[],"public":[],"fieldPerformanceApi":"unavailable in in-app evaluation realm"}
+}

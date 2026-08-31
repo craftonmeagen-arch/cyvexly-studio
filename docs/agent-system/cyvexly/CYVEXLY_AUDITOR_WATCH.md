@@ -1,7 +1,12 @@
 # Cyvexly Auditor Watch
 
-- Route links can outpace route files: repeat a complete visible same-origin route probe and compare the build route table whenever nav/CTA links change. R3 confirms `/start` is live; `/about`, `/privacy`, and `/terms` remain bounded.
-- Track source movement explicitly. R3's immutable runtime preceded an untracked `scratch-favicon-check` source route that was absent from the build/runtime; never assume reviewer scratch is cleaned until `git status` and the next route table agree.
-- Production build output outranks dev metadata: static builds still fall back to `http://localhost:3000` for OG/Twitter URLs without `metadataBase`. Recheck only after an approved domain exists.
-- Keep explicit no-index controls on previews; do not infer launch readiness from a passing build while domain/legal/Planner backend decisions remain open.
-- Planner client-mail handoff is deliberately transparent but does not satisfy the vision's emailed confirmation copy; do not close `CYV-IFA-006` without a sandboxed server-side test.
+- Re-identify source before every round; current baseline is HEAD `a8fb8cf2390d4786ede30ac9bf67dfa16f412099` and source fingerprint `98dad5e43a8f2c6e4fb878574490c20e7078f6c7a42d08394315c78efd1fc9e3` (40 `src/` files).
+- Keep `CYV-IFA-005` open until an Owner-approved domain is wired into static metadata and verified in a clean build.
+- Keep `CYV-IFA-006` open until a sandboxed server-side receipt and automatic confirmation are proven without sensitive values leaking into logs or URLs.
+- Recheck `CYV-IFA-007` after the next immutable snapshot/build; current `src/` is clean of the earlier scratch route.
+- `CYV-IFA-008` was verified closed in R9: dynamic invalid-slug metadata now preserves the hydrated not-found title/body. Reopen only on regression.
+- Terminal-scroll watch: the global sticky header can overlay the first mobile footer branding paragraph at max scroll; confirm intended behavior or add a safe scroll-offset/visibility treatment in a future Council method.
+- Track `CYV-IFA-009`: restore-ready gating and saved-draft preservation passed in R9; no-draft first use remains unconfirmed and is the next strongest question.
+- Maintain truthful `404` boundaries for About, Privacy, and Terms; do not invent founder or jurisdiction content.
+- Preserve the evidence split: local IAB proof is not public deployment proof; synthetic Playwright is not physical keyboard or cross-browser proof.
+- If `.codex` remains write-denied, use an exact temp copy and disclose the deviation; never touch the Council guard or Builder port/process.

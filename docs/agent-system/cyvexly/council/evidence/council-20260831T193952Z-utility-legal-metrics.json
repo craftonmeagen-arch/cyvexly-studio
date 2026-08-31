@@ -1,0 +1,24 @@
+{
+  "reviewId": "CYC-R27-20260831-01",
+  "roundId": "council-20260831T193952Z",
+  "schedulerMinuteZero": "2026-08-31T19:39:52.110Z",
+  "sourceHead": "f0f1eacee667cf7f63be54b4cf3432f71056ab74",
+  "routes": {
+    "local": {"/privacy": 404, "/terms": 404, "/accessibility": 200, "/contact": 200, "/does-not-exist": 404},
+    "public": {"/privacy": 404, "/terms": 404, "/accessibility": 200, "/contact": 200, "/does-not-exist": 404}
+  },
+  "responsive": {
+    "localAccessibility": [
+      {"width": 1280, "height": 900, "innerWidth": 1280, "clientWidth": 1265, "scrollWidth": 1265, "main": 1, "h1": 1},
+      {"width": 768, "height": 1024, "innerWidth": 768, "clientWidth": 753, "scrollWidth": 753, "main": 1, "h1": 1},
+      {"width": 390, "height": 844, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": 1},
+      {"width": 320, "height": 844, "innerWidth": 320, "clientWidth": 305, "scrollWidth": 305, "main": 1, "h1": 1}
+    ],
+    "publicAccessibilityPhone": {"width": 390, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": 1},
+    "public404Desktop": {"width": 1440, "innerWidth": 1440, "clientWidth": 1425, "scrollWidth": 1425, "main": 1, "h1": 1}
+  },
+  "interactions": {"accessibilityMenu": {"before": "Open menu", "open": "Close menu", "after": "Open menu", "scrollWidth": 375}, "contactFormSubmitted": false},
+  "diagnostics": {"local": [], "public": []},
+  "fieldPerformance": {"localPerformanceType": "undefined", "publicPerformanceType": "undefined"},
+  "findingIds": ["CYC-R27-F001", "CYC-R27-F002", "CYC-R27-F003"]
+}

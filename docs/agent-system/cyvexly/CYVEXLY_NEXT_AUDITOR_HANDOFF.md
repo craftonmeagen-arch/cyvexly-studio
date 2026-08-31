@@ -1,9 +1,10 @@
 # Cyvexly Next Auditor Handoff
 
-- **Source to re-identify:** current source fingerprint `85ee024ab240a66d2fb8b71d5c2e13505227fb64bcaab2953fc1608052a4dcf2` (33 files; includes untracked scratch route), HEAD `c13ae7a93b6c1526646a1980a68d6757e0448b2c`; R3 immutable snapshot was `9077a9c90764e301f111b37ec0803dce745d70cb6fde21e2baccb3b19e3b468e` (32 files).
-- **Published report:** `IFA-2026-08-30-R3`; evidence in `docs/agent-system/cyvexly/auditor/evidence/`.
-- **Open:** `CYV-IFA-005` approved domain/`metadataBase`; `CYV-IFA-006` Owner/backend decision for automatic Planner confirmation/email; `CYV-IFA-007` remove or re-home `src/app/scratch-favicon-check/route.tsx` before the next snapshot/build.
-- **Dispositioned:** `CYV-IFA-001` implemented route slice now includes `/start`; `CYV-IFA-002` truthful concept visuals; `CYV-IFA-003` tablet spacing; `CYV-IFA-004` contrast.
-- **Already used:** route sweep, custom 404, service anchors, Work filters, Pricing menu/FAQ, Contact validation, semantics, 1440/1024/768/390 responsive checks, clean-console/build/static metadata inspection, and R3 Planner validation/conditional/save-restore/review/mobile checks.
-- **Next strongest slice:** after Owner/backend and domain decisions plus scratch cleanup, use a fresh method/browser capability for physical keyboard focus/error announcements and reduced-motion behavior, then re-run production metadata.
-- **Recovery:** create a fresh role-owned runtime on `5273`; reread Orientation/current PM prompt; use real IAB. Do not touch `.engine-lock`, Builder processes, product source, tests, or other-role scratch artifacts.
+- **Source to re-identify:** current candidate HEAD `a8fb8cf2390d4786ede30ac9bf67dfa16f412099`; `src/` fingerprint `98dad5e43a8f2c6e4fb878574490c20e7078f6c7a42d08394315c78efd1fc9e3` (40 files). No Builder lock was present at R9 start; do not assume this remains current.
+- **Published report:** `IFA-2026-08-31-R9`; evidence under `docs/agent-system/cyvexly/auditor/evidence/`.
+- **Open:** `CYV-IFA-005` approved domain/`metadataBase`; `CYV-IFA-006` Owner/backend decision for automatic Planner confirmation/email; `CYV-IFA-009` remains mitigated pending no-draft first use.
+- **Verified closed:** `CYV-IFA-008` unknown dynamic service/work titles now settle to the custom not-found title/body on the accepted successor.
+- **Provisional closure:** `CYV-IFA-007` scratch source route absent; confirm on next immutable snapshot/build.
+- **Already used in R4/R5/R6/R7:** fresh real IAB Home media DOM/playback and renders; all five service-detail routes; metadata/indexing controls; generated OG/icon/favicon/media assets and MP4 byte-range; matching Planner/case-study targets; unknown-service/work 404 HTTP/body checks; exact 320px route sweep; 1023/1024 breakpoint boundary; hydrated dynamic-404 title comparison; Pricing scope-system 320/390/768/1440/full-page renders; mobile menu/FAQ/Planner CTA; seven-route 390px regression smoke; local HTTP route statuses; visual captures.
+- **Next strongest slice:** prove `CYV-IFA-009` no-draft first use on a clean Browser origin/context without storage inspection or policy-blocked alternate origins. Then close or retain the finding based on evidence. Do not repeat the now-closed dynamic-404 pass or the same Pricing visual pass.
+- **Recovery:** if `.codex` write access remains unavailable, create an exact disposable runtime on port `5273`, preserve Council/Builder resources, and manually disclose lifecycle deviation. Stop only the exact Auditor-owned PID and clean only exact temp roots.

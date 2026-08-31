@@ -27,3 +27,25 @@ Collision-safe report publications append compact pointers here. Builder-facing 
 - 2026-08-31T10:12:28.3230153Z | council | CYC-R16-20260830-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
 - 2026-08-31T11:09:26.0614187Z | council | CYC-R17-20260830-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
 - 2026-08-31T12:09:52.3499486Z | council | CYC-R18-20260830-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+- 2026-08-31T13:08:00.8471817Z | council | CYC-R19-20260830-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+- 2026-08-31T14:07:36.6110307Z | council | CYC-R20-20260830-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+- 2026-08-31T15:06:40.9170495Z | council | CYC-R21-20260831-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+- 2026-08-31T16:04:45.1602245Z | council | CYC-R22-20260831-20260831-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+- 2026-08-31T17:06:07.4537616Z | council | CYC-R24-20260831-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+- 2026-08-31T18:08:48.8583283Z | council | CYC-R25-20260831-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+- 2026-08-31T19:00:00Z | auditor | IFA-2026-08-31-R4 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed permissions blocked standard Auditor guard/publisher; exact temp runtime deviation recorded in report/evidence)
+- 2026-08-31T20:00:00Z | auditor | IFA-2026-08-31-R5 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed permissions blocked standard Auditor guard/publisher; exact temp runtime deviation recorded in report/evidence)
+- 2026-08-31T20:23:07Z | auditor | IFA-2026-08-31-R6 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed permissions blocked standard Auditor guard/publisher; Builder lock preserved; exact temp runtime deviation recorded)
+- 2026-08-31T21:20:12Z | auditor | IFA-2026-08-31-R7 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed permissions blocked standard Auditor guard/publisher; accepted Round-18 Pricing archive independently reviewed; exact temp runtime deviation recorded)
+- 2026-08-31T22:18:06Z | auditor | IFA-2026-08-31-R8 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed permissions blocked standard Auditor guard/publisher; accepted Planner restore race independently reviewed; Builder lock preserved; exact temp runtime deviation recorded)
+- 2026-08-31T23:15:29Z | auditor | IFA-2026-08-31-R9 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed permissions blocked standard Auditor guard/publisher; accepted successor dynamic 404/Planner gate independently reviewed; exact temp runtime deviation recorded)
+
+- 2026-08-31T19:06:40.3921194Z | council | CYC-R26-20260831-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+
+- 2026-08-31T20:05:11.4177757Z | council | CYC-R27-20260831-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+
+- 2026-08-31T21:04:43.0227583Z | council | CYC-R28-20260831-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+
+- 2026-08-31T22:04:16.7647141Z | council | CYC-R29-20260831-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+
+- 2026-08-31T23:03:28.2046987Z | council | CYC-R30-20260831-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md

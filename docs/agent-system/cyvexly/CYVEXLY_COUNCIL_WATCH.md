@@ -1,5 +1,78 @@
 # Cyvexly Council Watch
 
+- 2026-08-31 / CYC-R30: the Planner restore gate prevents the saved-draft race,
+  clean and service-prefill flows settle correctly, validation focus remains
+  honest, and dynamic 404 titles survive hydration on local/public. At 390/768
+  the progress rail scrolls to Step 9 but does not show it initially; next
+  proof should test a clearer touch/keyboard affordance. Privacy/Terms remain
+  404 and release-blocking.
+
+- 2026-08-31 / CYC-R29: Pricing scope/card visuals, mouse CTA/FAQ paths,
+  mobile-menu focus return, and local/public `1440/768/390` containment pass.
+  Locator/CUA Enter did not activate controls in the IAB, so keyboard proof is
+  unconfirmed rather than a product defect. Privacy/Terms remain linked 404s
+  and release-blocking; next proof should use attended/different-capability
+  keyboard or motion, Safari/Firefox, second-device scale, or field vitals.
+
+- 2026-08-31 / CYC-R28: the new Pricing scope signal materially improves
+  mockup parity while preserving package facts, five headings, FAQ/Planner
+  behavior, exact desktop-to-320 containment, and public/local agreement.
+  Privacy/Terms remain 404 and release-blocking; Owner visual acceptance stays
+  explicit. Next proof should use field-vitals, keyboard/motion, or cross-
+  browser/device capability.
+
+- 2026-08-31 / CYC-R27: Accessibility and Contact routes are responsive and
+  readable, and the 404 offers Services, Work, and Planner recovery. Privacy
+  and Terms remain linked but unbuilt (404) on local/public; Owner-approved
+  legal content and jurisdiction are required before launch. Next proof should
+  use field-vitals, keyboard/motion, or cross-browser/device capability.
+
+- 2026-08-31 / CYC-R26: Pricing now reads as honest starting points with clear
+  billed-separately/payment boundaries, accessible FAQ disclosure, and direct
+  Planner handoff across desktop/tablet/phone. Public matches local with no
+  overflow or diagnostics. The approved mockup remains richer and more
+  luminous; route that difference to Owner fidelity choice. Next proof should
+  use field-vitals, keyboard/motion, or cross-browser/device capability.
+
+- 2026-08-31 / CYC-R25: Services now communicates five honest audience
+  pathways with icon-led service math, restrained ice-blue glass, and a direct
+  Planner handoff. The opened 1024px edge correction (two columns until 1280)
+  preserved readable labels; local/public 1440→320 views stay contained. Keep
+  this as the coherent pathway grammar; next proof should use a different
+  capability for field vitals, keyboard/motion, or cross-browser/device.
+
+- 2026-08-31 / CYC-R24: Home now reads as a primary integrated reel: 726.56px
+  desktop media beside a 594.44px copy pane, lighter-blue glass, real progress,
+  truthful muted/loop/inline semantics, and clean 1023/768/390/320 containment.
+  Public Render matches local. Preserve scale, contrast, named control, and
+  honest media; Owner acceptance remains gated. Next proof must use a different
+  capability for keyboard/motion, cross-browser/device, or field vitals.
+
+- 2026-08-31 / CYC-R22: public Work/filter/case-study review confirmed
+  provenance-safe Concept labels, real `aria-pressed` filter state, responsive
+  containment, and local/public agreement. Preserve honest abstract visuals;
+  do not infer shipped-client proof from concept cards.
+
+- 2026-08-31 / CYC-R21: public Render Home now matches the accepted source
+  media identity and serves a ready, controllable, range-deliverable video with
+  responsive containment. Keep public/local source identity and named control
+  intact. Treat darker/less dense sampled frames as Owner art direction; next
+  proof should be a materially different capability.
+
+- 2026-08-31 / CYC-R20: native Chromium closed the prior unattended-pane gap
+  for Planner Tab order, menu state, validation focus, and reduced-motion
+  suppression. Treat it as Chromium evidence only; require attended or another
+  browser/device capability before closing physical/OS/cross-browser questions.
+  Preserve native controls and local/no-submission boundaries.
+
+- 2026-08-31 / CYC-R19: with no product-source drift after R18, a changed
+  accessibility/method pass confirmed visible focus treatment, Planner error
+  associations, FAQ disclosure, and mobile-menu focus return. Preserve native
+  controls and local/no-submission boundaries.
+- 2026-08-31 / CYC-R19: unattended Tab/Enter and reduced-motion emulation are
+  not closure evidence on this Browser surface. Require attended/different
+  capability before declaring keyboard or motion regressions.
+
 - 2026-08-31 / CYC-R18: five service-detail routes and Services-to-Planner
   handoff are coherent across desktop/tablet/phone, with clean `320px` and
   `24px`-root containment. Preserve local draft/query precedence, honest

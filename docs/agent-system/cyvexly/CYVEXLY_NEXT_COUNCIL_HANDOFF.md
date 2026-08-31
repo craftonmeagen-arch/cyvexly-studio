@@ -1,206 +1,186 @@
 # Cyvexly Next Council Handoff
 
-## Current Round 18 — CYC-R18-20260830-01
+## Current Round 30 — CYC-R30-20260831-01
 
-- Round: `council-20260831T114400Z`; immutable snapshot head
-  `68fe4a476a89070b968a21852742680571794695`; start fingerprint
-  `329025F57F43D74E228064E5AE842CED8FADE5870A368A27B3D1ECC20F6999B6`.
-- Scheduler timestamp `2026-08-31T11:44:44.512Z`; guard start
-  `2026-08-31T11:46:11.0805216Z`; report published at
-  `2026-08-31T12:09:52.3499486Z` after `25m07.838s`.
-- Browser/process cleanup completed at `2026-08-31T12:11:47.2733650Z`; no
-  Council guard, runtime, or port remains.
-- Evidence: `council/evidence/INDEX.md`, R18 route/contract/semantics/FAQ,
-  Planner mapping, menu, stress, visual, and build-media records.
+- Round `council-20260831T223755Z`; snapshot head
+  `a8fb8cf2390d4786ede30ac9bf67dfa16f412099`; accepted product commits
+  `e716541` and `744cdd8`; scheduler `2026-08-31T22:37:55.157Z`; PM prompt
+  `NO ACTIVE PM PROMPT`.
+- New capability: visible Planner saved-draft/clean/prefill/validation/recovery
+  review, compact progress rail stress, approved mockup comparison, and local/
+  public hydrated dynamic 404 checks. The restore gate and metadata fixes pass;
+  Step 9 is reachable by rail scroll but initially hidden at 390/768, needing
+  a clearer affordance and native keyboard proof.
+- Privacy/Terms still return `404` locally and publicly and remain the
+  release-blocking trust/legal slice. Owner visual acceptance remains explicit.
+- Evidence: R30 Planner/404 review, metrics, and indexed captures. Published
+  `2026-08-31T23:03:28.2046987Z` after `25m33.047699s` from scheduler minute
+  zero; cleanup verified `2026-08-31T23:04:22.4042186Z`
+  (`26m27.247219s` total), before the hard edge. No guard, runtime, port,
+  registered Council process, or Council-owned Browser tab remains.
 
-R18 accepts the bounded service-detail and Planner handoff slice. Preserve
-  route boundaries, local/no-submission behavior, query/draft precedence, and
-  the `lg` tablet stack fix. Next Council question: use an attended or
-  different capability for physical keyboard, reduced motion, Safari/Firefox,
-  second-device scale, and field-vitals proof; separately obtain Owner choice
-  on the mockup's brighter globe/device/artwork fidelity. Do not infer
-  delivery, legal, or server-side acceptance.
+Next Council should use native keyboard/OS motion or another cross-browser/
+device capability for the compact progress affordance, or review the
+Owner-approved Privacy/Terms route work. Do not infer legal, jurisdiction,
+domain, analytics, payment, email, or cookie facts.
 
-## Current Round 17 — CYC-R17-20260830-01
+## Current Round 29 — CYC-R29-20260831-01
 
-- Round: `council-20260831T104400Z`; snapshot head
-  `62c6b7e6bb4e36ebc05b59a78f6b98b513ed1858`; start fingerprint
-  `9E720D490C57AA368EA78E5EF74899D4F18F211B53E5C5291303D710CF547005`.
-- Scheduler timestamp: `2026-08-31T10:44:13.466Z`; durable guard start:
-  `2026-08-31T10:44:26.4131184Z`.
-- Status: report published at `2026-08-31T11:09:26.0614187Z` after
-  `25m12.595s` from scheduler minute zero; browser reset and exact cleanup
-  completed at `2026-08-31T11:09:57.1499760Z`.
-- Evidence: `council/evidence/INDEX.md`, Planner validation/Step 2 captures,
-  route-boundary probes, Home viewpoints, and build evidence.
+- Round `council-20260831T213854Z`; snapshot head
+  `409ef8026ae6c93b49f3090a950bea7f1d2a2b7b`; accepted product `7ec9c5c`;
+  scheduler `2026-08-31T21:38:54.271Z`; PM prompt `NO ACTIVE PM PROMPT`.
+- New capability: independent keyboard-like/focus and mouse interaction review
+  of Pricing CTA/FAQ/menu plus local/public responsive agreement. Mouse paths,
+  focus-visible treatment, exact containment, one main/H1, five package
+  headings, and clean diagnostics pass. IAB locator/CUA Enter did not dispatch
+  activation, so carry keyboard proof as unconfirmed pending attended or a
+  different input capability.
+- Privacy/Terms still return 404 locally and publicly and remain the
+  release-blocking trust/legal slice. Owner visual acceptance remains explicit.
+- After the immutable snapshot was taken, the shared working tree acquired an
+  unrelated `src/components/planner/planner-form.tsx` edit. It was excluded
+  from this round and must be independently reviewed by a future Council.
+- Evidence: R29 keyboard/interaction review/metrics and indexed captures.
+  Published `2026-08-31T22:04:16.7647141Z` after `25m22.493714s` from
+  scheduler minute zero; cleanup verified `2026-08-31T22:05:48.5092603Z`
+  (`26m54.238260s` total), before the hard edge. No guard, runtime, port,
+  registered Council process, or Council-owned Browser tab remains.
 
-Round 17 confirms Planner first-error focus and local progression boundaries,
-documented legal/lifecycle route status, required Home viewpoints, and build
-health. Keep those boundaries stable. The next Council should review the
-post-closeout service-detail routes and service-to-Planner handoff/prefill from
-a fresh snapshot, then use an attended/different capability for keyboard,
-reduced motion, cross-browser, and second-device proof.
+Next Council should use attended/different-capability keyboard or OS motion,
+Safari/Firefox, second-device scale, or field Web Vitals. Do not infer legal,
+jurisdiction, domain, analytics, payment, email, or cookie facts.
 
-Post-R17 closeout at `2026-08-31T11:10:02.5800731Z` revealed unreviewed
-Builder/product drift outside the immutable R17 snapshot/runtime. Preserve
-Builder ownership; do not infer acceptance from R17.
+## Current Round 28 — CYC-R28-20260831-01
 
-## Prior Round 16 — CYC-R16-20260830-01
+- Round `council-20260831T203923Z`; snapshot head
+  `409ef8026ae6c93b49f3090a950bea7f1d2a2b7b`; accepted product `7ec9c5c`;
+  scheduler `2026-08-31T20:39:23.149Z`; PM prompt `NO ACTIVE PM PROMPT`.
+- Pricing scope signal materially closes the prior visual gap without
+  unsupported claims: split copy/signal field, five package cards, featured
+  Orbit state, exact `1440/1024/1023/768/390/320` containment, hidden
+  decorative SVG, FAQ expansion, Planner CTA, and public/local agreement pass.
+- Privacy/Terms remain linked but 404 on both deployments; keep this as the
+  release-blocking trust/legal slice. Owner visual acceptance remains explicit.
+- Evidence: R28 Pricing scope review/metrics and indexed captures. Published
+  `2026-08-31T21:04:43.0227583Z` after `25m19.874s`; cleanup verified
+  `2026-08-31T21:05:48.7435289Z`; no guard, runtime, port, or registered
+  Council process remains.
 
-- Round: `council-20260831T094700Z`; snapshot head
-  `62c6b7e6bb4e36ebc05b59a78f6b98b513ed1858`; start fingerprint
-  `3CB3FBEF12A2CFBAAA9C447B2DDC5FD01CA2D65642A256BD7A8AACF1DC6EDDD7`.
-- Scheduler timestamp: `2026-08-31T09:47:12.417Z`; durable guard start:
-  `2026-08-31T09:47:41.9693393Z`.
-- Status: report published at `2026-08-31T10:12:28.3230153Z` after
-  `25m15.906s` from scheduler minute zero; browser reset and exact cleanup
-  completed at `2026-08-31T10:12:53.2667543Z`.
-- Evidence: `council/evidence/INDEX.md`, final-CTA/Home captures,
-  breakpoint/semantic metrics, route smoke, media HTTP, and build evidence.
+Next Council should use a different capability for attended keyboard/OS motion,
+Safari/Firefox, second-device scale, or field Web Vitals. Do not infer legal,
+jurisdiction, domain, analytics, payment, email, or cookie facts.
 
-Round 16 confirms the committed final-CTA planetary/network slice as coherent,
-responsive, semantic, and materially closer to the approved mockup. Preserve
-its containment, decorative boundary, copy, and `/start` action. The next
-Council should use an attended/different capability for physical keyboard,
-reduced motion, Safari/Firefox, and second-device scale, while the Owner names
-the next largest parity gap.
+## Current Round 27 — CYC-R27-20260831-01
 
-Post-R17 closeout, at `2026-08-31T11:10:02.5800731Z`, new unreviewed
-Builder/product changes appeared outside the immutable R17 snapshot/runtime:
-service-detail routes, service-to-Planner links/prefill, and related
-configuration/styles. Take a fresh snapshot and review that service-detail /
-Planner handoff slice independently; preserve Builder ownership and do not
-infer acceptance from R17.
+- Round `council-20260831T193952Z`; snapshot head
+  `f0f1eacee667cf7f63be54b4cf3432f71056ab74`; scheduler
+  `2026-08-31T19:39:52.110Z`; PM prompt `NO ACTIVE PM PROMPT`.
+- Snapshot was established before the Builder claimed `.engine-lock` at
+  `2026-08-31T19:42:46.680Z`; later shared-working-tree edits were excluded.
+- Utility/legal review found Accessibility and Contact coherent and the 404
+  useful, but Privacy and Terms remain linked and return 404 on local/public.
+  This is release-blocking until Owner-approved content, jurisdiction, and
+  actual-tool disclosures are implemented; do not invent legal text.
+- Evidence: R27 utility/legal review/metrics and indexed captures. Published
+  `2026-08-31T20:05:11.4177757Z` after `25m19.308s`; cleanup verified
+  `2026-08-31T20:06:01.5220337Z`; no guard, runtime, port, or registered
+  Council process remains.
 
-## Prior Round 15 — CYC-R15-20260830-01
-## Current Round 15 — CYC-R15-20260830-01
+Next Council should use a different capability for attended keyboard/OS motion,
+Safari/Firefox, second-device scale, or field Web Vitals after the trust/legal
+slice. Do not infer jurisdiction, legal, analytics, payment, email, or cookie
+facts from the current copy.
 
-- Round: `council-20260831T084900Z`; snapshot head
-  `061fb00bf74da16ed5b824b77444b3b194de9652`; start fingerprint
-  `0B35F235B04E04AC86671FE74EA9CA0202F0DC7879A69E4E70C903077234CB23`.
-- Scheduler timestamp: `2026-08-31T08:49:11.413Z`; durable guard start:
-  `2026-08-31T08:49:31.0640546Z`.
-- Status: report published at `2026-08-31T09:14:27.4907497Z` after
-  `25m16.077s` from scheduler minute zero; browser reset and exact cleanup
-  completed at `2026-08-31T09:14:54.0428451Z`.
-- Evidence: `council/evidence/INDEX.md`, compact review/captures,
-  route/a11y/control/planner-save audits, full-loop samples, Pricing check,
-  media HTTP proof, and build evidence.
+## Current Round 26 — CYC-R26-20260831-01
 
-Round 15 confirmed compact containment and utility-flow integrity and observed
-the full Hero Showcase loop seam in Chromium. Keep proven responsive rules and
-the honest concept-art boundary. The next Council should use an attended or
-different capability for physical keyboard traversal, reduced-motion behavior,
-Safari/Firefox parity, and second-device scale; the Owner still chooses the
-largest remaining globe/device/artwork mismatch.
+- Round `council-20260831T184121Z`; snapshot head
+  `f0f1eacee667cf7f63be54b4cf3432f71056ab74`; scheduler
+  `2026-08-31T18:41:21.337Z`; PM prompt `NO ACTIVE PM PROMPT`.
+- Reviewed Pricing cards, billed-separately/payment explanation, FAQ/menu,
+  and Pricing-to-Planner handoff in local/public Render plus approved Services/
+  Pricing mockup at `1440/1280/1024/768/720/390/320`. One main/H1, honest
+  price boundaries, exact containment, and clean diagnostics pass. No
+  release-blocking defect; mockup parity remains Owner Decision and field
+  Web Vitals are unconfirmed because the IAB Performance API is unavailable.
+- Evidence: R26 Pricing review/metrics and indexed local/public captures.
+  Published `2026-08-31T19:06:40.3921194Z` after `25m19.055s`; cleanup verified
+  `2026-08-31T19:07:23.2187124Z`; no guard, runtime, port, or registered
+  Council process remains.
 
-Post-closeout at `2026-08-31T09:16:07.9170640Z`, the working tree gained
-unreviewed final-CTA changes in `src/app/page.tsx`, `src/app/globals.css`, and
-`src/components/final-cta-signal-graphic.tsx`. They were not in the immutable
-R15 snapshot/runtime and were not edited by Council. Snapshot and review this
-final-CTA slice independently before acceptance.
+Next Council should use a different capability for field vitals, attended
+keyboard/OS motion, Safari/Firefox, or second-device scale. Do not infer final
+mockup acceptance or invent domain, legal, founder, or email-provider facts.
 
-## Prior Round 14 — CYC-R14-20260830-01
-## Current Round 14 — CYC-R14-20260830-01
+## Current Round 25 — CYC-R25-20260831-01
 
-- Round: `council-20260831T075100Z`; snapshot head
-  `061fb00bf74da16ed5b824b77444b3b194de9652`; start fingerprint
-  `F2A50D189A58054D0BC1899FB5D526E14EFE1C4368BF6EE71692622FE11B2573`.
-- Scheduler timestamp: `2026-08-31T07:51:10.391Z`; durable guard start:
-  `2026-08-31T07:51:40.1950260Z`.
-- Status: report published at `2026-08-31T08:16:26.3022507Z` after
-  `25m15.911s` from scheduler minute zero; browser reset and exact cleanup
-  completed at `2026-08-31T08:17:30.0372871Z`.
-- Evidence: `council/evidence/INDEX.md`, Home mid-page review, clean
-  production Home/Process captures, measurements, route/a11y/control/console
-  audits, media HTTP proof, and build evidence.
+- Round `council-20260831T174320Z`; snapshot head
+  `b5dfd502b998c086903a9dab0b67a1929c0bc4b8`; scheduler
+  `2026-08-31T17:43:20.481Z`; PM prompt `NO ACTIVE PM PROMPT`.
+- Reviewed `/services` pathway cards and connected Planner handoff in local and
+  public Render at `1440/1280/1024/768/720/390/320`; five cards/fifteen named
+  nodes, one main/H1, exact containment, readable breakpoint correction, and
+  clean diagnostics. No release-blocking defect. Owner acceptance remains
+  explicit; in-app field-performance API is unavailable.
+- Evidence: R25 Services review/metrics and indexed local/public captures.
+  Published `2026-08-31T18:08:48.8583283Z` after `25m28.377s`; cleanup verified
+  `2026-08-31T18:10:20.1392949Z`; no guard, runtime, port, or registered
+  Council process remains.
 
-Round 14 confirmed the new partnership diagram and five-stage process route as
-coherent, responsive, semantic, and materially closer to the approved visual
-direction. Preserve the responsive connector/card rules. Keep final
-globe/device/artwork parity, full-loop, physical keyboard, cross-browser,
-field-vitals, second-device, and delivery/legal decisions behind Owner or
-attended-capability decisions.
+Next Council should use a different capability: attended/different-capability
+field vitals, keyboard/OS motion, Safari/Firefox, or second-device scale. Do
+not repeat Services token tuning. Keep public-domain metadata, legal identity,
+server-side Planner email, founder identity, and concept-artwork framing behind
+Owner decisions.
 
-## Prior Round 13 — CYC-R13-20260830-01
+## Current Round 24 — CYC-R24-20260831-01
 
-- Round: `council-20260831T064900Z`; snapshot head
-  `dc900bb92d1605f3b56c1044a3aa813afbf11d22`; start fingerprint
-  `BABD0863221F2355F27E5F883D532A00C19C4C3F389D0E583A4F8E563B0BBCD1`.
-- Scheduler timestamp: `2026-08-31T06:49:39.226Z`; durable guard start:
-  `2026-08-31T06:50:13.3589754Z`.
-- Status: report published at `2026-08-31T07:15:08.3560196Z` after
-  `25m29.130s` from scheduler minute zero; browser reset and exact cleanup
-  completed at `2026-08-31T07:18:05.1867511Z`.
-- Evidence: `council/evidence/INDEX.md`, R13 FAQ/Contact review, clean
-  production Home/FAQ/Contact captures, route/a11y probes, Work filter and
-  case-study checks, media HTTP/control audit, and build evidence.
+- Round `council-20260831T164049Z`; snapshot head
+  `dbcbc0bd3169000cd58331f2eff79fbc17d4ed5c`; start fingerprint
+  `1F6CAB78985627766DD848016BACB8915B683CA353314E085A5386A2F50AD67E`.
+- Scheduler `2026-08-31T16:40:49.578Z`; guard created
+  `2026-08-31T16:44:22.8217482Z`; published
+  `2026-08-31T17:06:07.4537616Z` after `25m17.876s`; cleanup verified
+  `2026-08-31T17:08:23.9556481Z`; no guard, runtime, port, or registered
+  Council process remains.
+- Evidence: `council/evidence/INDEX.md`, R24 Home hero review/metrics, local
+  and public desktop/tablet/phone/boundary captures, and Owner mockup.
 
-Round 13 found the FAQ and Contact utility path coherent, explicit, and
-responsive; empty Contact validation was exercised without external submit.
-All 15 production routes retain one main, one H1, and zero overflow at desktop
-and phone. The approved Home mockup remains more luminous/art-directed than
-the live implementation. Keep final parity, delivery/legal/metadata, full
-loop, physical keyboard, cross-browser, field Web Vitals, and second-device
-scale behind Owner or attended-capability decisions.
+R24 confirms the Builder's integrated Home hero reel at source and public
+runtime: 594.44px copy beside a 726.56px reel at 1440px, stacked copy/actions
+before media below `lg`, contained 1023px and 320px stress cases, one H1, no
+horizontal overflow, truthful muted/loop/inline 30-second video, visible
+progress, named Pause/Play, healthy routes, and no browser diagnostics. No
+release-blocking defect was found. Owner visual acceptance remains explicit;
+do not infer it from Council proof.
 
-Post-publication, the current working tree contains unreviewed modifications
-to `src/app/page.tsx` and `src/app/globals.css` (see
-`council/evidence/council-20260831T064900Z-post-publication-drift.md`). They
-were not in the immutable R13 snapshot/runtime and were not edited by Council;
-the next Council must review them independently.
+Next Council should choose a materially different capability rather than repeat
+hero geometry: attended physical keyboard or OS reduced-motion, Safari/Firefox,
+second-device scale, or production-like field vitals. Keep metadataBase,
+legal/domain/email identity, server-side Planner/Contact delivery, and Owner
+artwork acceptance gated behind their explicit decisions.
 
-## Durable open questions
+## Prior Round 22 — CYC-R22-20260831-01
 
-- Owner selects the largest remaining globe/device/artwork discrepancy and
-  accepts the full loop or requests a bounded fidelity slice.
-- Use an attended/different capability for physical keyboard traversal,
-  reduced-motion, Safari/Firefox, field Web Vitals, and second-computer scale.
-- Keep metadataBase, About/Privacy/Terms, and server-side Planner/Contact
-  delivery behind explicit domain, identity, jurisdiction, provider, and
-  retention decisions.
-- Builder rotates the over-cap `CYVEXLY_BUILD_SUMMARY.md`; Council did not edit
-  Builder-owned files.
+R22 confirmed public Work/filter/case-study coherence, honest Concept labels,
+filter semantics, responsive containment, and local/public agreement. Preserve
+provenance-safe concept visuals and carry forward video, OS motion, keyboard,
+cross-browser/device, vitals, and delivery/legal gaps.
 
-## Prior Round 12 — CYC-R12-20260830-01
+## Prior Round 21 — CYC-R21-20260831-01
 
-- Round: `council-20260831T054800Z`; immutable snapshot source head
-  `c0a8cc8805fe8bf478f254cdde65e4f8e47a3281`; current workspace HEAD observed
-  later `dc900bb` (documentation/evidence-only drift); start dirty fingerprint
-  `51E05A2AB859FACD2D6E38FEC080D20B3D70A4009616F441FEA186F37923FAD4`.
-- Scheduler timestamp: `2026-08-31T05:48:38.165Z`; durable guard start:
-  `2026-08-31T05:50:50.8938779Z`.
-- Status: report published at `2026-08-31T06:16:37.6938186Z` after
-  `25m46.800s` substantive work; browser reset and exact cleanup completed at
-  `2026-08-31T06:18:15.5043775Z`.
-- Evidence: `council/evidence/INDEX.md`, R12 Hero media follow-up, clean
-  Home desktop/tablet/phone/full captures, connected mobile captures, route
-  probes, media preference/control audits, and opened source frames.
+R21 confirmed the deployed Home video/source identity, poster, named control,
+muted loop/inline behavior, byte-range delivery, responsive containment, and
+mobile menu/handoff. Preserve this slice; the darker/less dense frame is an
+Owner-gated art question.
 
-Round 12 independently served the current product in a Council-owned clean
-production runtime. The Home Hero Showcase Video remains contained and
-accessible at desktop/tablet/phone sizes; menu, FAQ, Planner empty validation,
-and explicit Play/Pause all worked. All 15 route targets retained one main,
-one H1, zero overflow, and no missing image alts. Builder's constrained,
-data-saver, reduced-motion, range, and loop evidence materially closes the
-previous media-proof gap. The approved Home mockup remains brighter and more
-art-directed; the complete loop's end-to-start cut still needs Owner viewing.
+## Prior Round 20 — CYC-R20-20260830-01
 
-## Durable open questions
+R20 confirmed Chromium Planner keyboard order, menu state, validation focus and
+ARIA associations, reduced-motion suppression, and local/no-submission
+boundaries. Treat it as Chromium-only evidence.
 
-- Owner selects the largest remaining globe/device/artwork discrepancy and
-  accepts the full-loop seam or requests a crossfaded/corrected master.
-- Use an attended/different capability for physical keyboard, reduced-motion,
-  Safari/Firefox, field Web Vitals, and original second-computer scale proof.
-- Keep metadataBase, About/Privacy/Terms, and server-side Planner delivery
-  behind explicit domain, jurisdiction, identity, and email-provider decisions.
-- Builder rotates the over-cap `CYVEXLY_BUILD_SUMMARY.md` before the next green
-  repository-wide hot-file check; Council did not edit Builder-owned files.
+## Durable recovery facts
 
-## Recovery facts
-
-- Lane: Cyvexly; role: Council; port: `5373`.
-- R12 publication, browser reset, role-owned process stop, runtime deletion, and
-  guard removal are complete; no Council listener remains on port `5373`.
-- The next Council must create a fresh immutable snapshot and independently
-  reconcile this handoff before choosing another question.
+- Lane: Cyvexly; role: Council; Council port reservation: `5373`.
+- Full older receipts and evidence remain in the report archive and evidence
+  index; this hot handoff is intentionally rotated to current actionable work.

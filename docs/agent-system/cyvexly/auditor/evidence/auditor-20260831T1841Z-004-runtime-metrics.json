@@ -1,0 +1,20 @@
+{
+  "review": "IFA-2026-08-31-R4",
+  "head": "f0f1eacee667cf7f63be54b4cf3432f71056ab74",
+  "sourceFingerprint": "4aa73afd7b0cfac313700c241c88df6ef56d71cfdd732e1fab01cee0a57f09b7",
+  "runtime": {"host": "localhost", "port": 5273, "path": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260831T1841Z-004b", "pid": 47912},
+  "home": {
+    "desktop": {"requested": [1440, 900], "layoutViewport": [1425, 900], "scrollWidth": 1425, "clientWidth": 1425, "reel": [666.4375, 220.84375, 726.5625, 420.0625]},
+    "phone": {"requested": [390, 844], "layoutViewport": [375, 844], "scrollWidth": 375, "clientWidth": 375, "reel": [16, 659, 343, 200.8125]},
+    "video": {"count": 1, "duration": 30, "readyState": 4, "muted": true, "loop": true, "playsInline": true, "ariaHidden": true, "source": "/media/cyvexly-services-loop.mp4", "poster": "/media/cyvexly-services-poster.webp", "pauseLabel": "Play showcase video", "playLabel": "Pause showcase video", "playAdvanceSeconds": 1.2636, "warningErrorLogs": 0}
+  },
+  "serviceDetails": [
+    {"slug":"business-websites","title":"Business websites — Cyvexly Studio","h1":"Turn your expertise into a website people understand and trust.","planner":"/start?service=business-websites","caseStudy":"/work/aurora-spaces","status":200,"h1Count":1,"mainCount":1,"scrollWidth":375,"clientWidth":375},
+    {"slug":"website-redesigns","title":"Website redesigns — Cyvexly Studio","h1":"Replace an outdated website with a clearer path to action.","planner":"/start?service=website-redesigns","caseStudy":"/work/nexora-systems","status":200,"h1Count":1,"mainCount":1,"scrollWidth":375,"clientWidth":375},
+    {"slug":"landing-pages","title":"Landing pages — Cyvexly Studio","h1":"Give your campaign a focused place to convert attention into action.","planner":"/start?service=landing-pages","caseStudy":"/work/nexora-systems","status":200,"h1Count":1,"mainCount":1,"scrollWidth":375,"clientWidth":375},
+    {"slug":"ecommerce-websites","title":"E-commerce websites — Cyvexly Studio","h1":"Make products easier to understand, choose, and buy.","planner":"/start?service=ecommerce-websites","caseStudy":"/work/vellora-care","status":200,"h1Count":1,"mainCount":1,"scrollWidth":375,"clientWidth":375},
+    {"slug":"website-care","title":"Website care — Cyvexly Studio","h1":"Keep your website current without turning upkeep into your job.","planner":"/start?service=website-care","caseStudy":"/work/vellora-care","status":200,"h1Count":1,"mainCount":1,"scrollWidth":375,"clientWidth":375}
+  ],
+  "negativeRoutes": {"/services/not-a-real-service":404,"/about":404,"/privacy":404,"/terms":404},
+  "checks": {"lint":"passed","tsc":"passed","build":"blocked by isolated-junction/HTTPS environment limits"}
+}

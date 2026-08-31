@@ -1,5 +1,73 @@
 # Cyvexly Council Debt
 
+- CYC-R30 confirms the Round 19 Planner restore gate and hydrated dynamic 404
+  identity fixes in local/public use. At compact widths, the progress rail's
+  Step 9 is initially outside the visible scrollport but becomes visible after
+  horizontal scroll; request a clearer affordance and a native keyboard check.
+  Privacy and Terms remain the release-blocking trust/legal debt.
+
+- CYC-R29 confirms Pricing's accepted scope signal remains contained and
+  coherent, with mouse interaction and visible focus styling. The in-app
+  Browser's locator/CUA Enter paths did not activate the CTA or FAQ, so
+  keyboard closure requires an attended or different input capability. Privacy
+  and Terms remain the release-blocking trust/legal debt from R27.
+
+- CYC-R28 confirms the accepted `7ec9c5c` Pricing scope signal is contained,
+  truthful, and public/local-consistent across `1440/1024/1023/768/390/320`;
+  the decorative SVG is hidden through its `aria-hidden` ancestor. Privacy and
+  Terms remain the release-blocking trust/legal debt from R27.
+
+- CYC-R27 found the global Privacy and Terms links (including Contact's
+  “Privacy Policy” handoff) return 404 locally and publicly. Treat this as a
+  release-blocking trust/legal slice until Owner-approved policy text,
+  jurisdiction, and actual-tool disclosures are implemented and rechecked.
+  Accessibility and 404 recovery remain coherent; do not invent legal facts.
+
+- CYC-R26 reviewed Pricing/package comprehension, FAQ/menu states, and the
+  Pricing-to-Planner path at local/public 1440/1280/1024/768/720/390/320.
+  Starting prices, billed-separately boundaries, one main/H1, exact containment,
+  and clean diagnostics pass. The page remains materially simpler than the
+  approved mockup's globe/matrix/artwork; keep that as Owner fidelity choice,
+  not fabricated implementation debt. Field Web Vitals require a different
+  capability because the in-app Performance API is unavailable.
+
+- CYC-R25 confirms the new Services pathway cards and Planner handoff across
+  local/public 1440/1280/1024/768/720/390/320 states: five combinations,
+  fifteen named nodes, readable breakpoint correction, no overflow, one
+  main/H1, and clean diagnostics. Preserve the 1280 three-column threshold and
+  truthful copy; Owner acceptance remains explicit. The in-app evaluation realm
+  exposes no Performance API, so field Web Vitals stay unconfirmed and require
+  a different capability.
+
+- CYC-R24 confirms the integrated Home hero reel scale, light-blue glass
+  hierarchy, canonical copy/CTA order, responsive 1023/768/390/320
+  containment, truthful muted/loop/inline media, real progress, named control,
+  public/local agreement, and healthy route/asset/console checks. Preserve the
+  slice; Owner visual acceptance is still explicit. Keep attended/different-
+  capability keyboard or motion, Safari/Firefox, second-device scale, field
+  vitals, and metadata/legal/server-delivery questions open.
+
+- CYC-R22 confirms public Work/filter/case-study coherence, provenance-safe
+  labels, responsive containment, and local/public agreement. Keep concept
+  visuals honest and preserve video/cross-capability/vitals/delivery gaps as
+  explicit open questions.
+
+- CYC-R21 confirms the public Home video deployment, poster/range delivery,
+  named control, responsive containment, public/local agreement, menu, and
+  Planner handoff. Keep native loop timing, OS/cross-browser/second-device/
+  vitals, and Owner artwork fidelity as explicit open questions; do not reopen
+  deployment without new evidence.
+
+- CYC-R20 confirms Chromium-native Planner keyboard order, menu state,
+  first-error focus, and reduced-motion suppression, plus responsive visual
+  integrity. Keep physical/OS/cross-browser/second-device/vitals as explicit
+  open evidence gaps; keep artwork fidelity and delivery/legal Owner-gated.
+
+- CYC-R19 confirms visible focus/error/disclosure/menu-return semantics but
+  cannot close physical keyboard or OS reduced-motion proof with this browser
+  capability. Preserve the different-capability handoff and keep the orbital-
+  vs-mockup fidelity decision Owner-gated.
+
 - CYC-R18 confirms the reusable service-detail/Planner handoff slice and its
   local-state boundaries. Keep the orbital-vs-mockup fidelity decision Owner-
   gated; do not fabricate proof media. Retain attended keyboard, reduced

@@ -1,5 +1,164 @@
 # Council Evidence Index
 
+## CYC-R30-20260831-01
+
+- `council-20260831T223755Z-planner-restore-404-review.md` and
+  `council-20260831T223755Z-planner-restore-404-metrics.json` — independent
+  verification of the Planner saved-draft gate, validation/recovery states,
+  compact progress rail, and hydrated dynamic 404 identity after Builder Round
+  19 fixes.
+- `...-planner-desktop.png`, `...-planner-tablet.png`,
+  `...-planner-phone.png`, `...-planner-restored-phone.png`,
+  `...-planner-clean-phone.png`, `...-planner-prefill-phone.png`,
+  `...-planner-tablet-rail-end.png`, `...-public-planner-desktop.png`,
+  `...-public-planner-phone.png`, `...-public-planner-validation-phone.png`,
+  `...-404-service-desktop.png`, and `...-public-404-service-desktop.png` —
+  literally viewed local/public Planner, progress, validation, and 404 states
+  against `mockups/04-process-planner.png`.
+- `...-valid-service-desktop.png`, `...-process-desktop.png`, and
+  `...-process-phone.png` — literally viewed connected service/process routes
+  for whole-product continuity.
+
+## CYC-R29-20260831-01
+
+- `council-20260831T213854Z-keyboard-interaction-review.md` and
+  `council-20260831T213854Z-keyboard-interaction-metrics.json` — independent
+  Pricing keyboard/focus capability-boundary review, mouse interaction proof,
+  responsive containment, local/public agreement, and legal carry-forward.
+- `...-pricing-desktop.png`, `...-pricing-tablet.png`,
+  `...-pricing-phone.png`, `...-public-pricing-desktop.png`,
+  `...-public-pricing-phone.png`, `...-pricing-bottom.png`,
+  `...-pricing-faq-expanded.png`, and `...-pricing-faq-footer.png` — literally
+  viewed local/public Pricing renders, lower-page care/billing, expanded FAQ,
+  and footer states against the approved Services/Pricing mockup.
+
+## CYC-R28-20260831-01
+
+- `council-20260831T203923Z-pricing-scope-review.md` and
+  `council-20260831T203923Z-pricing-scope-metrics.json` — independent review
+  of the new Pricing scope-signal system, package hierarchy, responsive
+  containment, SVG accessibility, public/local agreement, and legal carry-forward.
+- `...-pricing-desktop.png`, `...-pricing-tablet.png`, `...-pricing-phone.png`,
+  `...-pricing-320.png`, `...-public-pricing-desktop.png`, and
+  `...-public-pricing-phone.png` — literally viewed local/public Pricing
+  renders against the approved Services/Pricing mockup.
+
+## CYC-R27-20260831-01
+
+- `council-20260831T193952Z-utility-legal-review.md` and
+  `council-20260831T193952Z-utility-legal-metrics.json` — independent
+  utility/legal route, footer, 404 recovery, Accessibility, and Contact
+  handoff review.
+- `...-local-accessibility-desktop.png`, `...-local-accessibility-tablet.png`,
+  `...-local-accessibility-phone.png`, `...-local-accessibility-320.png`,
+  `...-local-privacy-phone.png`,
+  `...-local-contact-desktop.png`, `...-local-contact-phone.png`,
+  `...-local-contact-footer-phone.png`, `...-public-accessibility-phone.png`,
+  and `...-public-404-desktop.png` —
+  literally viewed local/public utility and fallback states across desktop,
+  tablet, and phone sizes.
+
+## CYC-R26-20260831-01
+
+- `council-20260831T184121Z-pricing-quality-review.md` and
+  `council-20260831T184121Z-pricing-metrics.json` — independent Pricing,
+  package/FAQ, Planner handoff, visual-fidelity, and field-vitals-boundary
+  review.
+- `...-pricing-desktop.png`, `...-pricing-tablet-top.png`,
+  `...-pricing-phone.png`, `...-pricing-phone-bottom.png`,
+  `...-pricing-phone-closeout.png`, `...-pricing-cta-phone.png`,
+  `...-pricing-320.png`,
+  `...-public-pricing-desktop.png`, and `...-public-pricing-phone.png` —
+  literally viewed local/public responsive captures and closeout states.
+
+## CYC-R25-20260831-01
+
+- `council-20260831T174320Z-services-pathways-review.md` and
+  `council-20260831T174320Z-services-pathways-metrics.json` — independent
+  review of the accepted Services pathway module, local/public geometry,
+  semantics, CTA handoff, route smoke, and diagnostic boundary.
+- `council-20260831T174320Z-services-desktop.png`,
+  `...-services-pathways-desktop.png`, `...-services-pathways-1024.png`,
+  `...-services-pathways-tablet.png`, `...-services-pathways-phone.png`,
+  `...-services-pathways-320.png`, `...-services-pathways-320-bottom.png`,
+  `...-public-services-desktop.png`, `...-public-services-pathways.png`, and
+  `...-public-services-phone.png` — literally viewed local/public responsive
+  captures, menu state, and pathway/Planner context.
+
+## CYC-R24-20260831-01
+
+- `council-20260831T164049Z-home-hero-review.md` and
+  `council-20260831T164049Z-home-hero-metrics.json` — independent Home hero
+  reel review against Owner direction, isolated/public geometry, playback and
+  route proof.
+- `council-20260831T164049Z-home-desktop.png`,
+  `...-home-desktop-1024.png`, `...-home-tablet.png`, `...-home-phone.png`,
+  `...-public-home-desktop.png`, and `...-public-home-phone.png` — literally
+  viewed local/public responsive captures and Owner mockup comparison.
+
+## CYC-R22-20260831-01
+
+- `council-20260831T153900Z-work-review.md` and
+  `council-20260831T153900Z-work-review.json` — public Work/filter/case-study
+  review with local-runtime agreement and route smoke.
+- `council-20260831T153900Z-work-desktop.png`, `...work-tablet.png`,
+  `...work-phone.png`, `...work-concept-filter-desktop.png`,
+  `...work-commerce-filter-desktop.png`, `...vellora-desktop.png`,
+  `...vellora-phone.png`, `...local-work-desktop.png`, and
+  `...local-work-phone.png` — literally viewed responsive and filtered states.
+
+## CYC-R21-20260831-01
+
+- `council-20260831T144100Z-public-video-review.md` — public Render Home
+  deployment review against the Owner’s integrated-video direction.
+- `council-20260831T144100Z-public-video-metrics.json` — public HTTP asset,
+  in-app Browser playback/control, responsive containment, local-runtime, and
+  route-smoke evidence.
+- `council-20260831T144100Z-public-home-desktop.png`,
+  `...public-home-paused-desktop.png`, `...public-home-tablet.png`,
+  `...public-home-phone.png`, `...local-home-desktop.png`, and
+  `...local-home-phone.png`, `...public-menu-open-phone-settled.png`, and
+  `...public-planner-phone.png` — literally viewed public and isolated Home,
+  menu, and Planner states.
+
+## CYC-R20-20260830-01
+
+- `council-20260831T134200Z-keyboard-motion-review.md` — native Chromium
+  keyboard/reduced-motion probe plus required visible in-app Browser review.
+- `council-20260831T134200Z-native-keyboard.json` — reduced-motion state,
+  native Planner Tab sequence, responsive-menu state, and validation focus/error
+  associations.
+- `council-20260831T134200Z-services-desktop.png`,
+  `...services-tablet.png`, `...services-phone.png`,
+  `...business-detail-desktop.png`, `...business-detail-tablet.png`,
+  `...business-detail-phone.png`, and `...planner-phone.png` — literally viewed
+  in-app Browser responsive captures.
+- `...planner-reduced-motion-phone.png` and
+  `...planner-reduced-validation-phone.png` — literally viewed native probe
+  captures.
+
+## CYC-R19-20260830-01
+
+- `council-20260831T124200Z-accessibility-review.md` — fresh focus-visible,
+  mobile-menu focus return, Planner validation/progression/state continuity,
+  reduced-motion signal, and keyboard-emulation limits review.
+- `council-20260831T124200Z-services-desktop.png`,
+  `...services-tablet.png`, `...services-phone.png`,
+  `...services-full.png`,
+  `...business-detail-desktop.png`, `...business-detail-tablet.png`,
+  `...business-detail-phone.png` — literally viewed responsive Services and
+  Business Websites runtime views.
+- `...business-menu-open-phone.png`, `...planner-validation-phone.png`, and
+  `...planner-step2-phone.png`, and `...business-faq-open-phone.png` — literally
+  viewed interaction-state captures.
+- `...planner-desktop.png` — literally viewed desktop Planner entry with the
+  progress rail and helper panel.
+- `council-20260831T124200Z-a11y-metrics.json` and
+  `...route-smoke.json` — viewport, focus, motion, keyboard-disposition,
+  route-status, and console evidence.
+- `council-20260831T124200Z-build-media.md` — isolated install, lint, build,
+  typecheck, route smoke, and console evidence.
+
 ## CYC-R18-20260830-01
 
 - `council-20260831T114400Z-service-detail-review.md` — independent

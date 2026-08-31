@@ -1,0 +1,36 @@
+{
+  "reviewId": "CYC-R19-20260830-01",
+  "viewports": [
+    { "width": 1440, "height": 900, "surface": "services", "overflow": false },
+    { "width": 768, "height": 1024, "surface": "services", "overflow": false },
+    { "width": 390, "height": 844, "surface": "services", "overflow": false },
+    { "width": 1440, "height": 900, "surface": "business-detail", "overflow": false },
+    { "width": 768, "height": 1024, "surface": "business-detail", "overflow": false },
+    { "width": 390, "height": 844, "surface": "business-detail", "overflow": false },
+    { "width": 390, "height": 844, "surface": "planner-validation", "overflow": false },
+    { "width": 390, "height": 844, "surface": "planner-step2", "overflow": false }
+  ],
+  "landmarks": { "businessDetailMain": 1, "businessDetailH1": 1 },
+  "mobileMenu": {
+    "opened": true,
+    "visibleLinks": ["Services", "Work", "Pricing", "Process", "About", "Describe your project"],
+    "focusOnOpen": "Close menu",
+    "focusAfterClose": "Open menu"
+  },
+  "plannerValidation": {
+    "errors": ["fullName", "workEmail", "contactMethod"],
+    "focusedField": "fullName",
+    "focusOutlineStyle": "solid",
+    "invalidInputsExposeErrorDescriptions": true
+  },
+  "motion": {
+    "prefersReducedMotion": false,
+    "rootScrollBehavior": "smooth",
+    "runningCssAnimations": []
+  },
+  "keyboard": {
+    "inAppCuaTabAdvanced": false,
+    "inAppLocatorEnterActivated": false,
+    "disposition": "unconfirmed; attended/different capability required"
+  }
+}

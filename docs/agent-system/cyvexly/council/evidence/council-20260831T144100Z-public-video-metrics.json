@@ -1,0 +1,79 @@
+{
+  "round": "council-20260831T144100Z",
+  "reviewId": "CYC-R21-20260831-01",
+  "public": {
+    "homeStatus": 200,
+    "homeBytes": 112459,
+    "videoCount": 1,
+    "source": "https://cyvexly-studio.onrender.com/media/cyvexly-services-loop.mp4",
+    "posterStatus": 200,
+    "posterType": "image/webp",
+    "rangeStatus": 206,
+    "range": "bytes 0-1023/3978486",
+    "rangeType": "video/mp4",
+    "etag": "ki45jt85ws2epv"
+  },
+  "publicBrowserDesktop": {
+    "viewport": "1440x900",
+    "videoWidth": 526,
+    "videoHeight": 295,
+    "figureWidth": 528,
+    "videoRatioOfViewport": 0.365,
+    "readyState": 4,
+    "durationSeconds": 30,
+    "paused": false,
+    "muted": true,
+    "loop": true,
+    "playsInlineAttribute": "",
+    "scrollWidth": 1425,
+    "clientWidth": 1425,
+    "consoleErrors": 0
+  },
+  "publicBrowserInteraction": {
+    "pause": {"paused": true, "label": "Play showcase video"},
+    "play": {"paused": false, "label": "Pause showcase video", "timeAdvancedSeconds": 1.49}
+  },
+  "publicBrowserPhone": {
+    "viewport": "390x844",
+    "videoRect": {"left": 25, "right": 350, "top": 686.5, "bottom": 868.4375, "width": 325, "height": 181.9375},
+    "videoCount": 1,
+    "scrollWidth": 375,
+    "clientWidth": 375,
+    "consoleErrors": 0,
+    "menuOpen": {"expanded": "true", "links": ["Services", "Work", "Pricing", "Process", "About", "Describe your project"], "navRect": {"left": 13, "right": 362, "top": 81, "bottom": 428}},
+    "menuClose": {"expanded": "false", "focusLabel": "Open menu"}
+  },
+  "publicBrowserTablet": {
+    "viewport": "768x1024",
+    "videoRect": {"left": 24, "right": 729, "top": 571.40625, "bottom": 967.96875, "width": 705, "height": 396.5625},
+    "videoCount": 1,
+    "scrollWidth": 753,
+    "clientWidth": 753,
+    "consoleErrors": 0
+  },
+  "publicPlannerPhone": {
+    "viewport": "390x844",
+    "startingPointText": "Starting point added: Business websites.",
+    "stepCount": 9,
+    "scrollWidth": 375,
+    "clientWidth": 375,
+    "noPaymentCopyVisible": true
+  },
+  "localBrowser": {
+    "port": 5373,
+    "desktopVideoCount": 1,
+    "desktopSource": "http://localhost:5373/media/cyvexly-services-loop.mp4",
+    "desktopScrollWidth": 1425,
+    "desktopClientWidth": 1425,
+    "phoneVideoCount": 1,
+    "phoneScrollWidth": 375,
+    "phoneClientWidth": 375
+  },
+  "routeSmoke": [
+    {"path": "/", "status": 200},
+    {"path": "/services", "status": 200},
+    {"path": "/start?service=business-websites", "status": 200},
+    {"path": "/accessibility", "status": 200},
+    {"path": "/services/not-a-service", "status": 404}
+  ]
+}

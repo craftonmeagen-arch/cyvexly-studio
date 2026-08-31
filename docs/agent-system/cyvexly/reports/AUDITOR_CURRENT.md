@@ -2,95 +2,40 @@
 
 ## Review identity
 
-- Review ID: `IFA-2026-08-30-R3`
-- Round: `auditor-20260830T2115Z-003`
+- Review ID: `IFA-2026-08-31-R9`
+- Round: `auditor-20260831T2250Z-009`
 - Role: Cyvexly Independent Forensic Auditor
-- Round start: `2026-08-30T21:15:25.5640403Z`
-- Auditor runtime: `.codex/runtime/auditor/auditor-20260830T2115Z-003/runtime`, port `5273`
-- Start source: HEAD `c13ae7a93b6c1526646a1980a68d6757e0448b2c`; start dirty fingerprint `A9F188D660EBFC282F1B53E424A6A006CB21FCC899A86768E3B2C8173CC40903`
-- Immutable start snapshot `src/` fingerprint: `9077a9c90764e301f111b37ec0803dce745d70cb6fde21e2baccb3b19e3b468e` (32 files)
-- Current source candidate: `85ee024ab240a66d2fb8b71d5c2e13505227fb64bcaab2953fc1608052a4dcf2` (33 files; includes a post-snapshot untracked scratch route); current dirty fingerprint `82AE83058CE8D463F252907EBCAA82FF7EF187F3CB9779EA112E1046A0CE53CC`
-- Fingerprint method: SHA-256 over sorted `src/` relative paths, NUL separators, and Base64 file bytes. Source truth was read; product source/tests and `.engine-lock` were not edited.
-- PM prompt: `NO ACTIVE PM PROMPT`; standing Auditor role applied.
+- Heartbeat minute zero: `2026-08-31T22:50:55.457Z`
+- Source: accepted HEAD `a8fb8cf2390d4786ede30ac9bf67dfa16f412099` (`Record Round 19 runtime fixes`) on `main`
+- Source fingerprint: `98dad5e43a8f2c6e4fb878574490c20e7078f6c7a42d08394315c78efd1fc9e3` (40 `src/` files)
+- Runtime: exact disposable accepted-commit archive at `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260831T2250Z-009`, port `5273` (removed after review)
+- PM prompt ID/status: `NO ACTIVE PM PROMPT`; standing Auditor role applied.
+
+## Isolation deviation
+
+The standard `Start-ReviewRound.ps1`/guard again could not write `.codex/role-state/auditor.active.json` because managed permissions deny `.codex` writes. No Builder lock was present at round start. I used an exact accepted-commit archive and a role-owned temporary runtime, and manually routed the report. I did not touch `.engine-lock`, Builder/Council resources, product source, tests, or the scheduler automation. This is not a claim that the standard Auditor guard/manifest lifecycle succeeded.
 
 ## Scope and method
 
-This round focused on the newly landed Project Planner, disposition of the prior gradient-only concept portfolio finding, and a fresh route/interaction sweep. I used the real in-app browser in the isolated Auditor runtime, DOM snapshots and Playwright controls, a default desktop view plus `390x844` phone override, source/diff inspection, production `pnpm lint` and `pnpm build`, static build metadata inspection, and opened visual captures. The production build passed and listed `/start`, all three case-study slugs, `/opengraph-image`, and `/robots.txt`; it repeated the known `metadataBase` localhost fallback warning.
+This successor pass rechecked the prior dynamic-route metadata finding and the Planner restore race with a fresh real Codex in-app Browser pass at requested `390×844` (actual `375×844` layout). It compared local HTTP and hydrated route behavior, checked valid dynamic-route regressions, observed `/start` gate timing, created and restored a draft through visible UI, opened mobile captures, ran local diagnostics, and ran direct ESLint/TypeScript. No localStorage inspection, storage clearing, external form submission, or public-deployment claim was made.
 
-The browser session was unattended/hidden. Synthetic control interaction is useful for DOM state, but it cannot substitute for a physical keyboard-only traversal or visible reduced-motion animation; those remain unclaimed. No valid Planner or Contact submission was triggered because it would open an external mail client.
+## Results and disposition
 
-## New Builder work reviewed
-
-- `/start` and the nine-step Planner (`planner-form.tsx`, `planner-fields.tsx`, `planner-progress.tsx`, `planner-config.ts`) are now present and reachable.
-- `concept-preview.tsx` replaces the prior flat gradient placeholders with three distinct, disclosed abstract SVG compositions. Case-study pages include desktop/mobile visual-direction previews.
-- Round-6 process, Services/Pricing reflow, `data-scroll-behavior="smooth"`, robots, OG image, package icons, and route metadata were included in the source movement and were checked for regression through route and build probes.
-
-## Findings and dispositions
-
-### CYV-IFA-001 — Resolved for the implemented route slice — route completeness
-
-The previously missing `/start` route now renders the Project Planner. The visible route sweep reached `/`, `/services`, `/work`, `/pricing`, `/process`, `/contact`, `/faq`, `/accessibility`, `/start`, and `/work/aurora-spaces`; `nexora-systems` and `vellora-care` were also exercised. `/about`, `/privacy`, and `/terms` still render the intentional custom 404 and remain Owner/Chunk debt rather than being claimed as implemented.
-
-**Disposition:** close the broad route-slice finding; retain the three bounded routes in existing project debt and re-run the visible-link probe when they land.
-
-**Evidence:** `auditor-20260830T2115Z-route-probe.md`.
-
-### CYV-IFA-002 — Resolved — truthful concept portfolio visuals
-
-The Work grid and case-study hero/visual-direction surfaces now render three hand-authored SVG compositions keyed to each concept's existing palette and written design decisions. The full Work and Vellora case-study captures were opened and visually inspected; cards retain the explicit `CONCEPT PROJECT` disclosure. This is truthful abstract concept art, not fabricated client work or results.
-
-**Disposition:** close the prior gradient-placeholder finding. If the Owner later requires photographic or higher-fidelity screen sequences, treat that as a new framing decision rather than reopening this resolved implementation finding.
-
-**Evidence:** `auditor-20260830T2115Z-route-probe.md`, `auditor-20260830T2115Z-work-full.png`, `auditor-20260830T2115Z-case-study.png`.
-
-### CYV-IFA-005 — Owner Decision / Priority Before Deployment — production `metadataBase` remains unresolved
-
-The production build still warns that `metadataBase` is unset and falls back to `http://localhost:3000`. Static `.next/server/app/*.html` and `.rsc` metadata contain `og:image` and `twitter:image` URLs rooted at `http://localhost:3000/opengraph-image?...`, while preview robots remain correctly `noindex, nofollow` by default.
-
-**Consequence:** deploying before the public domain is approved and wired would ship social previews pointing at an unreachable localhost origin.
-
-**Closure test:** obtain the Owner-approved public domain, set `metadataBase` from approved deployment configuration, rebuild, inspect static HTML for approved absolute OG/Twitter URLs, and explicitly verify the intended indexability state only when the real domain is live.
-
-**Evidence:** prior `auditor-20260830T1738Z-metadata-probe.md`; this round's build output reproduced the warning.
-
-### CYV-IFA-006 — Owner Decision / Priority Before Deployment — Planner has no server-side confirmation/email path
-
-The valid Step 9 handler builds a complete `mailto:hello@cyvexly.com` summary, removes the local draft, navigates to the user's own mail client, and sets a confirmation panel that explicitly says Cyvexly does not yet send an automatic confirmation email. The vision's Planner contract requires a confirmation state with an emailed copy (`CYVEXLY_VISION_PLAN.md` §6.9 and §9). The UI is transparent about this interim behavior, so this is not deceptive copy; it is an unimplemented lead-capture/delivery capability.
-
-**Consequence:** a prospect can abandon the mail-client handoff, there is no durable submission record or automatic confirmation, and the studio cannot verify receipt from the site. This is a launch-readiness decision involving an external email provider/backend, not an Auditor-authorized implementation choice.
-
-**Closure test:** choose and Owner-authorize the email/storage provider and consent/data-retention behavior; implement a server-side submission route with success/error/retry states and an emailed copy; exercise it only in a sandbox recipient, then verify no sensitive values leak into logs or URLs.
-
-**Evidence:** `auditor-20260830T2115Z-planner-probe.md`; valid submit intentionally not triggered.
-
-### CYV-IFA-007 — Priority Now — untracked scratch favicon route remains in current source
-
-After the immutable round snapshot, the current worktree gained untracked `src/app/scratch-favicon-check/route.tsx` (last write `2026-08-30T21:29:37Z`). It is a temporary `ImageResponse` comparison endpoint with query-controlled size/background, is absent from the Auditor runtime/build route table, and is not linked or documented. The live runtime correctly returned the custom 404 because it predates this source movement.
-
-**Consequence:** the next source snapshot or an indiscriminate commit can accidentally ship an unreviewed scratch endpoint and change the public route surface. This also breaks the project cleanup contract that temporary reviewer routes be deleted after evidence capture.
-
-**Closure test:** remove the scratch route (or explicitly place it under an approved role-owned disposable runtime outside product `src/`), verify `git status --short` has no such product file, rebuild, and compare the route table. Auditor did not edit this other-role artifact.
-
-**Evidence:** `auditor-20260830T2115Z-route-probe.md`; current source `git status --short` and file inspection.
-
-## Builder claims
-
-- **Confirmed:** `/start` is reachable; Planner validation, conditional fields, save/restore, review/edit, progress semantics, mobile header/rail, Work filters, concept visuals, case-study routes, route titles, and the round-6 responsive/build changes behaved as described in the reviewed states.
-- **Confirmed:** `pnpm lint` and `pnpm build` pass in the Auditor runtime. The known localhost `metadataBase` warning remains.
-- **Refuted/blocked:** Full launch-ready Planner delivery is not confirmed because the implemented submit path is a transparent client-mail interim, not the vision's automatic confirmation/email capability; `/about`, `/privacy`, `/terms`, and production-domain metadata remain bounded/Owner-gated.
-- **Unconfirmed:** physical keyboard-only traversal, visible reduced-motion animation, valid external mail side effects, cross-browser behavior, deployment, and real integrations.
-
-## What was not checked
-
-No product source or tests were edited. No valid Planner/Contact submission, external mail, payment, authentication, deployment, production-domain, database, or third-party credential path was exercised. The current source's scratch route was inspected but not added to the Auditor runtime, and no other role's temporary artifact was modified.
+- **`CYV-IFA-008` — verified closed on this accepted successor.** Unknown `/services/not-a-real-service` and `/work/not-a-real-project` returned HTTP 404 and, after hydration, both settled at `Page not found — Cyvexly Studio` with `This page doesn't exist yet.`, one `main`, and exact 375px containment. Valid service/work slugs returned HTTP 200 and retained authored titles. The invalid-slug `generateMetadata` branches now call `notFound()`, so generic `Service`/`Project` titles no longer overwrite the not-found title.
+- **`CYV-IFA-009` — mitigated but not fully closed.** Raw `/start` HTML now includes a `Preparing your Planner` gate, saved-draft check copy, one `main`/H1, and no form or Full name control before restore readiness. At 390×844, checkpoints were gate-only at initial/100ms/500ms and settled at Step 1 by 1700ms. A visible-UI draft (`R9 Draft Test`, `555-0100`) restored with the draft message and values preserved after reload. A true no-draft first-use path could not be isolated without prohibited storage inspection/clearing; alternate origins were blocked by Browser URL policy. Closure still requires no-draft proof.
+- Browser warning/error diagnostics were empty; sampled mobile pages had `scrollWidth === clientWidth === 375`. Direct ESLint and TypeScript passed in the exact runtime. The Builder's clean optimized-build proof remains the build record; no new optimized-build, public, email, keyboard, reduced-motion, cross-browser, or legal/domain claim was made.
+- Existing debt remains: `CYV-IFA-005` approved domain/`metadataBase`, `CYV-IFA-006` server-side Planner receipt/confirmation email, and provisional `CYV-IFA-007` scratch-route closure pending another immutable snapshot/build. The terminal sticky-header/footer overlay remains a watch observation from R7.
 
 ## Evidence and routing
 
-- Evidence index: `docs/agent-system/cyvexly/auditor/evidence/INDEX.md`
-- Planner evidence: `docs/agent-system/cyvexly/auditor/evidence/auditor-20260830T2115Z-planner-probe.md`
-- Route/visual evidence: `docs/agent-system/cyvexly/auditor/evidence/auditor-20260830T2115Z-route-probe.md`
-- Visual captures: `auditor-20260830T2115Z-planner-mobile.png`, `auditor-20260830T2115Z-work-full.png`, `auditor-20260830T2115Z-work-desktop.png`, `auditor-20260830T2115Z-case-study.png`.
+- `docs/agent-system/cyvexly/auditor/evidence/auditor-20260831T2250Z-009-successor-404-planner-gate.md`
+- `docs/agent-system/cyvexly/auditor/evidence/auditor-20260831T2250Z-009-runtime-metrics.json`
+- Opened `auditor-20260831T2250Z-009-work-404.png`, `auditor-20260831T2250Z-009-planner-gate.png`, and `auditor-20260831T2250Z-009-planner-restored-step1.png`.
+
+## Cleanup
+
+The Auditor viewport was reset, the valid review tab was closed, the exact Auditor-owned Node process on port `5273` was stopped, and the exact temporary runtime was removed. Two policy-generated `data:` error tabs from failed alternate-origin attempts remained non-actionable because Browser URL policy blocked their normal close; no raw browser/CDP workaround was used. Port `5273` is no longer listening, `.engine-lock` is absent, and the scheduler automation remains active. The report was manually routed because managed permissions blocked the standard guard/publisher.
 
 ## Strongest next Auditor question
 
-After the Owner decides the email/backend and public-domain metadata questions and the scratch route is cleaned, independently test Planner keyboard focus/error announcement/reduced-motion behavior in a fresh method/browser capability. Then re-run the route and static metadata probe against the approved deployment configuration.
+Re-prove `CYV-IFA-009` no-draft first use on a clean Browser origin/context that does not require storage inspection or policy-blocked alternate origins, then close or retain the finding based on actual evidence. Do not repeat the now-closed dynamic-404 pass unless source changes.

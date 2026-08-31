@@ -1,0 +1,48 @@
+{
+  "review": "IFA-2026-08-31-R9",
+  "minuteZero": "2026-08-31T22:50:55.457Z",
+  "source": {
+    "acceptedCommit": "a8fb8cf2390d4786ede30ac9bf67dfa16f412099",
+    "srcFiles": 40,
+    "fingerprint": "98dad5e43a8f2c6e4fb878574490c20e7078f6c7a42d08394315c78efd1fc9e3"
+  },
+  "runtime": {
+    "port": 5273,
+    "tempRoot": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260831T2250Z-009",
+    "builderLockAtStart": false,
+    "mutableSourceExcluded": true,
+    "standardGuard": "blocked: managed permission denied .codex role-state write"
+  },
+  "dynamic404": {
+    "http": {
+      "/services/not-a-real-service": 404,
+      "/work/not-a-real-project": 404,
+      "/services/business-websites": 200,
+      "/work/aurora-spaces": 200,
+      "/work/nexora-systems": 200,
+      "/work/vellora-care": 200
+    },
+    "hydratedUnknownRoutes": {
+      "service": {"title": "Page not found — Cyvexly Studio", "h1": "This page doesn't exist yet.", "mainCount": 1},
+      "work": {"title": "Page not found — Cyvexly Studio", "h1": "This page doesn't exist yet.", "mainCount": 1}
+    },
+    "mobileLayout": {"requested": [390, 844], "inner": [390, 844], "layout": [375, 844], "scrollWidth": 375},
+    "validRouteTitles": {
+      "/services/business-websites": "Business websites — Cyvexly Studio",
+      "/work/aurora-spaces": "Aurora Spaces — Cyvexly Studio"
+    }
+  },
+  "planner": {
+    "initialHtml": {"status": 200, "hasPreparing": true, "hasDraftCheckCopy": true, "hasForm": false, "hasFullName": false, "mainCount": 1, "h1Count": 1},
+    "restoreGate": [
+      {"label": "initial", "hasPreparing": true, "hasFullName": false},
+      {"label": "100ms", "hasPreparing": true, "hasFullName": false},
+      {"label": "500ms", "hasPreparing": true, "hasFullName": false},
+      {"label": "1700ms", "hasPreparing": false, "step": "STEP 1 OF 9", "heading": "01 About you", "fullName": "R9 Draft Test", "contactMethod": "555-0100"}
+    ],
+    "savedDraftCreatedThroughVisibleUi": true,
+    "preHydrationInteractiveInput": "not available: Full name field absent during gate",
+    "noDraftFirstUse": "unconfirmed: existing browser draft retained; storage inspection/clearing prohibited and alternate origin blocked by browser policy"
+  },
+  "verification": {"browserWarningErrorCount": 0, "eslint": "pass", "tsc": "pass", "visualEvidence": ["auditor-20260831T2250Z-009-planner-gate.png", "auditor-20260831T2250Z-009-planner-restored-step1.png", "auditor-20260831T2250Z-009-work-404.png"]}
+}

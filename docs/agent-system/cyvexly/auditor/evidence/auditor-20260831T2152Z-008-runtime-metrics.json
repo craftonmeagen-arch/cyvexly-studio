@@ -1,0 +1,128 @@
+{
+  "review": "IFA-2026-08-31-R8",
+  "minuteZero": "2026-08-31T21:52:54.538Z",
+  "source": {
+    "acceptedCommit": "409ef8026ae6c93b49f3090a950bea7f1d2a2b7b",
+    "srcFiles": 40,
+    "fingerprint": "590e92c75077e172da3d0409accba8512217cd0f5ff1036b1f2ea422541a6b98"
+  },
+  "runtime": {
+    "port": 5273,
+    "tempRoot": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260831T2152Z-008",
+    "builderLockPreserved": true,
+    "mutableSourceExcluded": true
+  },
+  "planner": {
+    "viewport": {
+      "requested": [
+        390,
+        844
+      ],
+      "layout": [
+        375,
+        844
+      ],
+      "contained": true
+    },
+    "restoreTimeline": [
+      {
+        "afterMs": 0,
+        "step": "1",
+        "heading": "01 About you"
+      },
+      {
+        "afterMs": 50,
+        "step": "1",
+        "heading": "01 About you"
+      },
+      {
+        "afterMs": 200,
+        "step": "1",
+        "heading": "01 About you"
+      },
+      {
+        "afterMs": 500,
+        "step": "3",
+        "heading": "03 Goals"
+      },
+      {
+        "afterMs": 1100,
+        "step": "3",
+        "heading": "03 Goals"
+      },
+      {
+        "afterMs": 2300,
+        "step": "3",
+        "heading": "03 Goals"
+      }
+    ],
+    "race": {
+      "beforeTyping": {
+        "step": "1",
+        "heading": "01 About you"
+      },
+      "typedFields": [
+        "fullName",
+        "workEmail",
+        "contactMethod"
+      ],
+      "afterHydration": {
+        "step": "3",
+        "heading": "03 Goals",
+        "typedFieldsVisible": false
+      },
+      "returnToStep1": {
+        "step": "1",
+        "valuesReplaced": true
+      }
+    },
+    "sourceCause": "useEffect reads STORAGE_KEY after mount and sets data/currentStep/maxReachedStep, replacing the interactive Step 1 render.",
+    "desktopConfirmation": {
+      "requested": [
+        1440,
+        900
+      ],
+      "layout": [
+        1425,
+        900
+      ],
+      "timeline": [
+        {
+          "cumulativeMs": 0,
+          "step": "1",
+          "heading": "01 About you"
+        },
+        {
+          "cumulativeMs": 100,
+          "step": "1",
+          "heading": "01 About you"
+        },
+        {
+          "cumulativeMs": 300,
+          "step": "1",
+          "heading": "01 About you"
+        },
+        {
+          "cumulativeMs": 600,
+          "step": "3",
+          "heading": "03 Goals"
+        },
+        {
+          "cumulativeMs": 1100,
+          "step": "3",
+          "heading": "03 Goals"
+        },
+        {
+          "cumulativeMs": 1900,
+          "step": "3",
+          "heading": "03 Goals"
+        }
+      ]
+    }
+  },
+  "browserWarningErrorCount": 0,
+  "visualEvidence": [
+    "auditor-20260831T2152Z-008-planner-restored-step3.png",
+    "auditor-20260831T2152Z-008-planner-restored-step3-settled.png"
+  ]
+}

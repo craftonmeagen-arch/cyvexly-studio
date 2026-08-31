@@ -1,0 +1,208 @@
+{
+  "review": "IFA-2026-08-31-R7",
+  "minuteZero": "2026-08-31T20:54:23.445Z",
+  "source": {
+    "acceptedCommit": "409ef8026ae6c93b49f3090a950bea7f1d2a2b7b",
+    "srcFiles": 40,
+    "fingerprint": "590e92c75077e172da3d0409accba8512217cd0f5ff1036b1f2ea422541a6b98"
+  },
+  "runtime": {
+    "port": 5273,
+    "tempRoot": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260831T2054Z-007",
+    "guardDeviation": "managed .codex write denial",
+    "notes": [
+      "Local Webpack dev server used fallback fonts after managed HTTPS EACCES blocked Google Fonts fetches.",
+      "Direct isolated ESLint invocation was stopped after stalling under the junction runtime."
+    ]
+  },
+  "pricing": {
+    "requested320": {
+      "layout": [
+        305,
+        900
+      ],
+      "doc": [
+        305,
+        305
+      ],
+      "scope": [
+        250.21875,
+        145.28125
+      ],
+      "visual": [
+        257,
+        158.46875
+      ],
+      "descendantBounds": {
+        "maxRight": 305,
+        "minLeft": 0
+      }
+    },
+    "requested390": {
+      "layout": [
+        375,
+        844
+      ],
+      "doc": [
+        375,
+        375
+      ],
+      "hero": [
+        375,
+        698.109375
+      ],
+      "copy": [
+        327,
+        410
+      ],
+      "visual": [
+        327,
+        199.109375
+      ],
+      "scope": [
+        320.21875,
+        185.921875
+      ],
+      "cards": [
+        327,
+        327,
+        327,
+        327,
+        327
+      ]
+    },
+    "requested768": {
+      "layout": [
+        753,
+        1024
+      ],
+      "doc": [
+        753,
+        753
+      ],
+      "copy": [
+        302.84375,
+        564.75
+      ],
+      "visual": [
+        370.15625,
+        232.53125
+      ]
+    },
+    "requested1440": {
+      "layout": [
+        1425,
+        900
+      ],
+      "doc": [
+        1425,
+        1425
+      ],
+      "copy": [
+        475.1875,
+        402
+      ],
+      "visual": [
+        580.8125,
+        354.84375
+      ],
+      "cards": [
+        352,
+        352,
+        352,
+        540,
+        540
+      ]
+    },
+    "boundary": [
+      {
+        "requested": 1023,
+        "layout": 1008,
+        "doc": [
+          1008,
+          1008
+        ],
+        "compactMenu": true,
+        "primaryCards": [
+          960,
+          960,
+          960
+        ]
+      },
+      {
+        "requested": 1024,
+        "layout": 1009,
+        "doc": [
+          1009,
+          1009
+        ],
+        "desktopNav": true,
+        "primaryCards": [
+          304.328125,
+          304.328125,
+          304.34375
+        ]
+      }
+    ]
+  },
+  "interactions": {
+    "mobileMenu": {
+      "opened": true,
+      "closed": true,
+      "linksVisible": 6,
+      "ctaNavigation": {
+        "destination": "/start",
+        "plannerTitle": "Project Planner — Cyvexly Studio",
+        "menuPresentAfterNavigation": false
+      }
+    },
+    "faqClick": {
+      "expanded": true,
+      "answerPresent": true
+    },
+    "ctaNavigation": {
+      "destination": "/start",
+      "plannerTitle": "Project Planner — Cyvexly Studio"
+    }
+  },
+  "smoke390": {
+    "routes": 7,
+    "allOneH1": true,
+    "allOneMain": true,
+    "allContained": true
+  },
+  "semantics": {
+    "scopeAriaHidden": true,
+    "scopeFocusableDescendants": 0,
+    "duplicateIds": []
+  },
+  "browserWarningErrorCount": 0,
+  "serverPricing": {
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "title": "Pricing — Cyvexly Studio"
+  },
+  "visualEvidence": [
+    "auditor-20260831T2054Z-007-pricing-320.png",
+    "auditor-20260831T2054Z-007-pricing-390.png",
+    "auditor-20260831T2054Z-007-pricing-768.png",
+    "auditor-20260831T2054Z-007-pricing-1440.png",
+    "auditor-20260831T2054Z-007-pricing-full.png",
+    "auditor-20260831T2054Z-007-pricing-full-390.png",
+    "auditor-20260831T2054Z-007-pricing-bottom-390.png"
+  ],
+  "observation": "At terminal 390px scroll, sticky header overlays the first footer branding paragraph; content is recoverable by scrolling slightly upward.",
+  "terminals": {
+    "mobile390": {
+      "headerBottom": 82,
+      "footerFirstBrandingTop": -1.21875,
+      "footerFirstBrandingBottom": 58.78125,
+      "footerBottom": 843.78125
+    },
+    "desktop1440": {
+      "headerBottom": 88,
+      "footerFirstBrandingTop": 603.25,
+      "footerBottom": 900.25
+    }
+  }
+}

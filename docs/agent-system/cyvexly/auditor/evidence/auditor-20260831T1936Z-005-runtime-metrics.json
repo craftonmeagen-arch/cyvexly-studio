@@ -1,0 +1,12 @@
+{
+  "review": "IFA-2026-08-31-R5",
+  "minuteZero": "2026-08-31T19:36:21.996Z",
+  "head": "f0f1eacee667cf7f63be54b4cf3432f71056ab74",
+  "sourceFingerprint": "4aa73afd7b0cfac313700c241c88df6ef56d71cfdd732e1fab01cee0a57f09b7",
+  "scratchRoutePresent": false,
+  "runtime": {"port": 5273, "tempRoot": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260831T1936Z-005"},
+  "metadata": {"title": "Cyvexly Studio — Websites built to make your business unmistakable", "robots": "noindex, nofollow", "liveOgPrefix": "http://localhost:5273/opengraph-image?", "liveTwitterPrefix": "http://localhost:5273/opengraph-image?", "canonical": null, "lang": "en", "browserWarningErrorCount": 0},
+  "latestAvailableBuildArtifact": {"timestamp": "2026-08-31T13:25:41", "staticOgPrefix": "http://localhost:3000/opengraph-image?", "staticTwitterPrefix": "http://localhost:3000/opengraph-image?", "staticRobots": "noindex, nofollow"},
+  "assets": {"robots": {"status": 200, "contentType": "text/plain", "bytes": 27}, "opengraph": {"status": 200, "contentType": "image/png", "bytes": 85215}, "icon": {"status": 200, "contentType": "image/svg+xml", "bytes": 362}, "favicon": {"status": 200, "contentType": "image/x-icon", "bytes": 10622}, "video": {"status": 200, "contentType": "video/mp4", "bytes": 3978486, "rangeStatus": 206, "range": "bytes 0-1023/3978486", "rangeBytes": 1024}, "poster": {"status": 200, "contentType": "image/webp", "bytes": 12006}},
+  "checks": {"sourceClean": true, "publicRender": "blocked by managed HTTPS socket policy", "freshOptimizedBuild": "not conclusive; isolated junction and font-fetch restrictions"}
+}

@@ -1,0 +1,25 @@
+{
+  "reviewId": "CYC-R28-20260831-01",
+  "roundId": "council-20260831T203923Z",
+  "schedulerMinuteZero": "2026-08-31T20:39:23.149Z",
+  "sourceHead": "409ef8026ae6c93b49f3090a950bea7f1d2a2b7b",
+  "acceptedProductSource": "7ec9c5c8e952bcfc4ce5538c92bbee1cffcf0474",
+  "responsiveLocal": [
+    {"width": 1440, "height": 900, "innerWidth": 1440, "clientWidth": 1425, "scrollWidth": 1425, "scrollHeight": 6188, "main": 1, "h1": 1, "packageHeadings": 5},
+    {"width": 1024, "height": 900, "innerWidth": 1024, "clientWidth": 1009, "scrollWidth": 1009, "scrollHeight": 6296, "scopeWidth": 502.15625, "packageWidths": [304, 304, 304, 469, 469]},
+    {"width": 1023, "height": 900, "innerWidth": 1023, "clientWidth": 1008, "scrollWidth": 1008, "scrollHeight": 7406, "scopeWidth": 510.40625, "packageWidths": [960, 960, 960, 468, 468]},
+    {"width": 768, "height": 1024, "innerWidth": 768, "clientWidth": 753, "scrollWidth": 753, "scrollHeight": 7805, "main": 1, "h1": 1, "packageHeadings": 5},
+    {"width": 390, "height": 844, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "scrollHeight": 11771, "scopeWidth": 327, "scopeHeight": 199.109375, "main": 1, "h1": 1, "packageHeadings": 5},
+    {"width": 320, "height": 844, "innerWidth": 320, "clientWidth": 305, "scrollWidth": 305, "scrollHeight": 12687, "scopeWidth": 257, "scopeHeight": 158.46875, "main": 1, "h1": 1}
+  ],
+  "responsivePublic": {
+    "desktop": {"width": 1440, "innerWidth": 1440, "clientWidth": 1425, "scrollWidth": 1425, "scrollHeight": 6188, "main": 1, "h1": 1, "scope": true, "packageHeadings": 5},
+    "phone": {"width": 390, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "scrollHeight": 11771, "main": 1, "h1": 1, "scope": true, "packageHeadings": 5}
+  },
+  "interactions": {"faqBefore": "false", "faqAfter": "true", "pricingCtaHref": "/start", "plannerH1": "Tell us what you need. We'll shape the right route."},
+  "scopeAccessibility": {"svgAriaHidden": null, "ancestorAriaHidden": "true", "svgTabIndex": -1, "descendantFocusable": 0},
+  "routes": {"privacy": 404, "terms": 404, "unknown": 404, "pricing": 200, "start": 200},
+  "diagnostics": {"local": [], "public": []},
+  "fieldPerformance": {"localPerformanceType": "undefined", "publicPerformanceType": "undefined"},
+  "findingIds": ["CYC-R28-F001", "CYC-R28-F002", "CYC-R28-F003"]
+}

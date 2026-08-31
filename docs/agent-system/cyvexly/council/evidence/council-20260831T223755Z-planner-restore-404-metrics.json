@@ -1,0 +1,37 @@
+{
+  "reviewId": "CYC-R30-20260831-01",
+  "roundId": "council-20260831T223755Z",
+  "schedulerMinuteZero": "2026-08-31T22:37:55.157Z",
+  "sourceHead": "a8fb8cf2390d4786ede30ac9bf67dfa16f412099",
+  "acceptedProductCommits": ["e716541", "744cdd8"],
+  "runtime": {"port": 5373, "pid": 2808, "build": "optimized Next 23 pages", "eslint": "pass", "postBuildTypeScript": "pass", "metadataBaseWarning": true},
+  "plannerLocal": {
+    "desktop": {"width": 1440, "height": 900, "innerWidth": 1440, "clientWidth": 1425, "scrollWidth": 1425, "scrollHeight": 1834, "main": 1, "h1": 1, "step": "01 About you"},
+    "tablet": {"width": 768, "height": 1024, "innerWidth": 768, "clientWidth": 753, "scrollWidth": 753, "scrollHeight": 2169, "main": 1, "h1": 1, "step": "01 About you"},
+    "phone": {"width": 390, "height": 844, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "scrollHeight": 3165, "main": 1, "h1": 1, "step": "01 About you"}
+  },
+  "plannerPublic": {
+    "desktop": {"width": 1440, "innerWidth": 1440, "clientWidth": 1425, "scrollWidth": 1425, "main": 1, "h1": 1, "step": "01 About you", "form": true},
+    "phone": {"width": 390, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "scrollHeight": 3075, "main": 1, "h1": 1, "step": "01 About you", "form": true}
+  },
+  "rawInitialHtml": {
+    "local": {"status": 200, "hasPreparingPlanner": true, "hasAriaBusy": true, "hasForm": false, "hasFullName": false, "main": 1, "h1": 1},
+    "public": {"status": 200, "hasPreparingPlanner": true, "hasAriaBusy": true, "hasForm": false, "hasFullName": false, "main": 1, "h1": 1}
+  },
+  "savedDraft": {"origin": "http://192.168.1.7:5373", "savedStep": 3, "reloadStep": 3, "backStep": 1, "restoredMessage": true, "name": "Council R30 Test", "emailVisibleInCapture": true, "contact": "555-0130", "businessDescription": true},
+  "cleanOrigin": {"origin": "http://127.0.0.1:5373", "step": 1, "startingPoint": false, "scrollWidth": 375, "clientWidth": 375},
+  "prefill": {"origin": "http://127.0.0.1:5373", "step": 1, "startingPoint": "Starting point added: Business websites", "scrollWidth": 375, "clientWidth": 375},
+  "validation": {"publicPhone": {"alerts": 3, "invalidIds": ["fullName", "workEmail", "contactMethod"], "focused": "fullName", "scrollWidth": 375, "clientWidth": 375}},
+  "progressRail": {"tablet": {"scrollportWidth": 639, "contentWidth": 676, "initialStep9Visible": false, "endScrollLeft": 37, "endStep9Visible": true}, "phone": {"scrollportWidth": 277, "contentWidth": 548, "initialStep9Visible": false, "endScrollLeft": 271, "endStep9Visible": true}, "allNineButtonsNamed": true},
+  "dynamic404": {
+    "localService": {"status": 404, "title": "Page not found — Cyvexly Studio", "robots": "noindex, nofollow", "main": 1, "h1": 1, "recoveryLinks": 4, "scrollWidth": 1425, "clientWidth": 1425},
+    "localWork": {"status": 404, "title": "Page not found — Cyvexly Studio", "robots": "noindex, nofollow", "main": 1, "h1": 1, "recoveryLinks": 4, "scrollWidth": 1425, "clientWidth": 1425},
+    "publicService": {"status": 404, "title": "Page not found — Cyvexly Studio", "robots": "noindex, nofollow", "main": 1, "h1": 1, "recoveryLinks": 4},
+    "publicWork": {"status": 404, "title": "Page not found — Cyvexly Studio", "robots": "noindex, nofollow", "main": 1, "h1": 1, "recoveryLinks": 4}
+  },
+  "routeSmoke": {"core200": true, "validDynamic200": true, "invalidDynamic404": true, "privacyLocal": 404, "privacyPublic": 404, "termsLocal": 404, "termsPublic": 404},
+  "connectedRoutes": {"validServiceLocalDesktop": {"title": "Business websites — Cyvexly Studio", "h1": "Turn your expertise into a website people understand and trust.", "scrollWidth": 1425, "clientWidth": 1425}, "processLocalDesktop": {"title": "Process — Cyvexly Studio", "h1": "Give us the brief. We'll shape the route.", "scrollWidth": 1425, "clientWidth": 1425}, "processLocalPhone": {"title": "Process — Cyvexly Studio", "h1": "Give us the brief. We'll shape the route.", "scrollWidth": 375, "clientWidth": 375}},
+  "diagnostics": {"local": [], "cleanOrigin": [], "public": []},
+  "fieldPerformance": {"localPerformanceType": "undefined", "publicPerformanceType": "undefined"},
+  "findingIds": ["CYC-R30-F001", "CYC-R30-F002", "CYC-R30-F003", "CYC-R30-F004", "CYC-R30-F005"]
+}

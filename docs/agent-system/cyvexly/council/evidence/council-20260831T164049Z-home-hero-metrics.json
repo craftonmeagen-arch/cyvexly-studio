@@ -1,0 +1,92 @@
+{
+  "reviewId": "CYC-R24-20260831-01",
+  "roundId": "council-20260831T164049Z",
+  "schedulerMinuteZeroUtc": "2026-08-31T16:40:49.578Z",
+  "sourceHead": "dbcbc0bd3169000cd58331f2eff79fbc17d4ed5c",
+  "builderChange": "14e12d4 Build integrated Home hero reel",
+  "ownerReference": {
+    "path": "mockups/05-home-hero-video-owner-direction.png",
+    "sha256": "854c011d40a8662a9d95f82ae841b8db77661203969d3feea8e677099bec0083"
+  },
+  "build": {
+    "offlineInstall": "pass",
+    "lint": "pass",
+    "optimizedBuild": "pass",
+    "typecheck": "pass",
+    "knownWarning": "Next metadataBase fallback to http://localhost:3000"
+  },
+  "local": {
+    "desktop1440": {
+      "viewport": [1440, 900],
+      "contentWidth": 1425,
+      "heroStage": [1425, 717.25],
+      "copyPane": [594.4375, 499.25],
+      "reelShell": [726.5625, 420.0625],
+      "h1Count": 1,
+      "videoCount": 1,
+      "video": {"readyState": 4, "duration": 30, "muted": true, "loop": true, "playsInline": true, "paused": false},
+      "consoleDiagnostics": []
+    },
+    "desktop1024": {
+      "viewport": [1024, 900],
+      "screenshot": "council-20260831T164049Z-home-desktop-1024.png",
+      "scrollWidthEqualsClientWidth": true
+    },
+    "tablet768": {
+      "viewport": [768, 1024],
+      "contentWidth": 753,
+      "heroStage": [753, 1197.4375],
+      "copyPane": [705, 409.5],
+      "reelShell": [705, 407.9375],
+      "scrollWidthEqualsClientWidth": true,
+      "video": {"readyState": 4, "duration": 30, "muted": true, "loop": true, "playsInline": true, "paused": false}
+    },
+    "phone390": {
+      "viewport": [390, 844],
+      "contentWidth": 375,
+      "heroStage": [375, 1191.8125],
+      "copyPane": [343, 489],
+      "reelShell": [343, 200.8125],
+      "scrollWidthEqualsClientWidth": true,
+      "video": {"readyState": 4, "duration": 30, "muted": true, "loop": true, "playsInline": true, "paused": false}
+    },
+    "narrow320": {
+      "viewport": [320, 844],
+      "contentWidth": 305,
+      "copyPane": [273, 513],
+      "reelShell": [273, 161.4375],
+      "scrollWidthEqualsClientWidth": true,
+      "video": {"readyState": 4, "duration": 30, "muted": true, "loop": true, "playsInline": true, "paused": false}
+    },
+    "edge1023": {
+      "viewport": [1023, 900],
+      "contentWidth": 1008,
+      "copyPane": [960, 409.5],
+      "reelShell": [960, 551.375],
+      "scrollWidthEqualsClientWidth": true
+    },
+    "playbackControl": {
+      "pause": {"paused": true, "label": "Play showcase video"},
+      "play": {"paused": false, "label": "Pause showcase video"},
+      "progress": {"currentTime": 1.595708, "duration": 30, "style": "width: 5.15198%;"}
+    },
+    "routeSmoke": {"/": 200, "/work": 200, "/services": 200, "/start": 200, "/does-not-exist": 404},
+    "asset": {"status": 200, "contentType": "video/mp4", "contentLength": 3978486}
+  },
+  "public": {
+    "desktop1440": {"h1Count": 1, "contentWidth": 1425, "copyPaneWidth": 594.4375, "reelShellWidth": 726.5625, "scrollWidthEqualsClientWidth": true, "videoReadyState": 4, "videoDuration": 30, "muted": true, "loop": true, "consoleDiagnostics": []},
+    "phone390": {"contentWidth": 375, "h1Count": 1, "scrollWidthEqualsClientWidth": true, "videoReadyState": 4, "videoDuration": 30, "muted": true, "loop": true, "menuOpenInitially": false, "mobileMenuOpenClose": "pass"},
+    "asset": {"status": 200, "contentType": "video/mp4", "contentLength": 3978486, "acceptRanges": "bytes"}
+  },
+  "captures": [
+    "council-20260831T164049Z-home-desktop.png",
+    "council-20260831T164049Z-home-desktop-1024.png",
+    "council-20260831T164049Z-home-tablet.png",
+    "council-20260831T164049Z-home-phone.png",
+    "council-20260831T164049Z-home-edge1023.png",
+    "council-20260831T164049Z-home-narrow320.png",
+    "council-20260831T164049Z-public-home-desktop.png",
+    "council-20260831T164049Z-public-home-phone.png"
+  ],
+  "openLimitations": ["OS-level reduced-motion", "Safari/Firefox", "physical second-device", "field-vitals", "delivery/legal decision"]
+}

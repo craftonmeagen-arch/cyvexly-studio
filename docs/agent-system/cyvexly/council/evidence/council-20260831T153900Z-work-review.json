@@ -1,0 +1,35 @@
+{
+  "round": "council-20260831T153900Z",
+  "reviewId": "CYC-R22-20260831-01",
+  "publicWork": {
+    "desktop": {"viewport": "1440x900", "h1": "Design judgment you can see.", "cards": 3, "scrollWidth": 1425, "clientWidth": 1425},
+    "tablet": {"viewport": "768x1024", "h1": "Design judgment you can see.", "cards": 3, "scrollWidth": 753, "clientWidth": 753, "bodyRight": 753},
+    "phone": {"viewport": "390x844", "h1": "Design judgment you can see.", "cards": 3, "scrollWidth": 375, "clientWidth": 375}
+  },
+  "filters": {
+    "concept": {"pressed": "Concept", "visibleCards": ["Aurora Spaces", "Nexora Systems", "Vellora Care"]},
+    "commerce": {"pressed": "Commerce", "visibleCards": ["Vellora Care"]}
+  },
+  "caseStudy": {
+    "path": "/work/vellora-care",
+    "h1": "Vellora Care",
+    "mainCount": 1,
+    "h1Count": 1,
+    "scrollWidth": 1425,
+    "clientWidth": 1425,
+    "conceptLabel": true
+  },
+  "localRuntime": {
+    "port": 5373,
+    "work": {"h1": "Design judgment you can see.", "cards": 3, "scrollWidth": 1425, "clientWidth": 1425},
+    "caseStudy": {"h1": "Vellora Care", "mainCount": 1, "scrollWidth": 1425, "clientWidth": 1425}
+  },
+  "routeSmoke": [
+    {"path": "/", "status": 200},
+    {"path": "/work", "status": 200},
+    {"path": "/work/vellora-care", "status": 200},
+    {"path": "/services", "status": 200},
+    {"path": "/services/not-a-service", "status": 404}
+  ],
+  "consoleErrors": 0
+}

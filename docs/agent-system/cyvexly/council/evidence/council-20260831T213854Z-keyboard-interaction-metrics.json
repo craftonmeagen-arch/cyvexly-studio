@@ -1,0 +1,23 @@
+{
+  "reviewId": "CYC-R29-20260831-01",
+  "roundId": "council-20260831T213854Z",
+  "schedulerMinuteZero": "2026-08-31T21:38:54.271Z",
+  "sourceHead": "409ef8026ae6c93b49f3090a950bea7f1d2a2b7b",
+  "acceptedProductSource": "7ec9c5c8e952bcfc4ce5538c92bbee1cffcf0474",
+  "responsiveLocal": [
+    {"width": 1440, "height": 900, "innerWidth": 1440, "clientWidth": 1425, "scrollWidth": 1425, "scrollHeight": 6188, "main": 1, "h1": 1, "packageHeadings": 5},
+    {"width": 768, "height": 1024, "innerWidth": 768, "clientWidth": 753, "scrollWidth": 753, "scrollHeight": 7805, "main": 1, "h1": 1, "packageHeadings": 5},
+    {"width": 390, "height": 844, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "scrollHeight": 11771, "scopeWidth": 327, "scopeHeight": 199.109375, "main": 1, "h1": 1, "packageHeadings": 5}
+  ],
+  "responsivePublic": {
+    "desktop": {"width": 1440, "height": 900, "innerWidth": 1440, "clientWidth": 1425, "scrollWidth": 1425, "scrollHeight": 6188, "main": 1, "h1": 1, "scopeHidden": true, "packageHeadings": 5},
+    "phone": {"width": 390, "height": 844, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "scrollHeight": 11771, "scopeWidth": 320.21875, "main": 1, "h1": 1, "packageHeadings": 5}
+  },
+  "keyboardBoundary": {"ctaElement": "native_a_href_start_tabIndex_0", "faqElement": "native_button_aria_expanded_tabIndex_0", "ctaEnterPath": "focused_without_navigation", "ctaPathAfterEnter": "/pricing", "faqEnterBefore": "false", "faqEnterAfter": "false", "mouseFaqAfter": "true", "mouseCtaPath": "/start", "focusOutline": "solid", "cuaEnter": "did_not_activate", "disposition": "unconfirmed_due_to_IAB_input_capability"},
+  "mobileMenu": {"mouseOpen": "true", "mouseClose": "false", "focusReturnedTo": "Open menu", "focusOutline": "solid"},
+  "scopeAccessibility": {"ancestorAriaHidden": "true", "svgTabIndex": -1, "descendantFocusable": 0},
+  "routes": {"coreLocalAndPublic": 200, "privacyLocal": 404, "privacyPublic": 404, "termsLocal": 404, "termsPublic": 404, "unknownLocal": 404, "unknownPublic": 404},
+  "diagnostics": {"local": [], "public": []},
+  "fieldPerformance": {"localPerformanceType": "undefined", "publicPerformanceType": "undefined"},
+  "findingIds": ["CYC-R29-F001", "CYC-R29-F002", "CYC-R29-F003", "CYC-R29-F004"]
+}

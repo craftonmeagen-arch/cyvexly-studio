@@ -1,0 +1,15 @@
+{
+  "reviewId": "CYC-R19-20260830-01",
+  "status": {
+    "/services": 200,
+    "/services/business-websites": 200,
+    "/services/website-redesigns": 200,
+    "/services/landing-pages": 200,
+    "/services/ecommerce-websites": 200,
+    "/services/website-care": 200,
+    "/start?service=business-websites": 200,
+    "/services/not-a-service": 404
+  },
+  "consoleWarningsAndErrors": [],
+  "sourceDiffSinceR18": "none in product source"
+}
