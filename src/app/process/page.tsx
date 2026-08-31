@@ -119,15 +119,15 @@ export default function ProcessPage() {
                 {processSteps.map((step) => (
                   <div
                     key={step.number}
-                    className="flex items-baseline justify-between gap-4 py-3 first:pt-0 last:pb-0"
+                    className="flex flex-col items-start gap-1 py-3 first:pt-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
                   >
-                    <dt className="text-sm text-midnight-slate">
+                    <dt className="min-w-0 text-sm text-midnight-slate">
                       <span className="mr-2 font-mono text-xs text-cyber-blue">
                         {step.number}
                       </span>
                       {step.title}
                     </dt>
-                    <dd className="shrink-0 font-mono text-[11px] uppercase tracking-[0.08em] text-cool-graphite">
+                    <dd className="min-w-0 max-w-full font-mono text-[11px] uppercase tracking-[0.08em] text-cool-graphite sm:max-w-[58%] sm:text-right">
                       {step.timeframe}
                     </dd>
                   </div>

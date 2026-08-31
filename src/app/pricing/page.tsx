@@ -236,10 +236,10 @@ export default function PricingPage() {
               {addOns.map((addOn) => (
                 <div
                   key={addOn.name}
-                  className="flex items-baseline justify-between gap-3 border-b border-smoke-glass/70 py-3"
+                  className="flex flex-col items-start gap-1 border-b border-smoke-glass/70 py-3"
                 >
                   <span className="text-midnight-slate">{addOn.name}</span>
-                  <span className="shrink-0 text-right text-cool-graphite">{addOn.range}</span>
+                  <span className="max-w-full text-cool-graphite">{addOn.range}</span>
                 </div>
               ))}
             </div>
