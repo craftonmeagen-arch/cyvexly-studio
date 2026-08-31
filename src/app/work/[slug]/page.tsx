@@ -19,7 +19,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const study = caseStudies[slug as CaseStudySlug];
-  if (!study) return { title: "Project — Cyvexly Studio" };
+  if (!study) notFound();
   return {
     title: `${study.name} — Cyvexly Studio`,
     description: study.challenge,

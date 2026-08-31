@@ -20,7 +20,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   if (!isServiceSlug(slug)) {
-    return { title: "Service — Cyvexly Studio" };
+    notFound();
   }
 
   const service = serviceDetails[slug];
