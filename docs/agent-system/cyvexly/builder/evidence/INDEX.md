@@ -24,6 +24,10 @@ Retain only durable evidence cited by an active report, source decision, or requ
   13-route phone-width semantic/overflow sweep, 65-case shared-header boundary
   sweep, 26-case landmark/heading/control-name audit, and 24px-root stress
   metrics.
+- `round-10-production-route-link-audit.json` — clean production runtime status
+  sweep (15 expected routes/assets at 200, intentional unknown route at 404)
+  plus 300 rendered internal-link instances across 15 unique targets; only the
+  three documented Owner-blocked routes return 404.
 - `round-10-home-glass-system-comparison.md` — post-implementation rendered
   comparison, measured acceptance, honest remaining gap, and runtime audibles.
 

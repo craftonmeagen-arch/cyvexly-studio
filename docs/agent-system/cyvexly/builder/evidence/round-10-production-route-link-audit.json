@@ -1,0 +1,42 @@
+{
+  "capturedAt": "2026-08-31T03:40:00Z",
+  "runtime": "Builder-owned Next production server on 127.0.0.1:5183",
+  "routes": [
+    { "route": "/", "status": 200 },
+    { "route": "/services", "status": 200 },
+    { "route": "/work", "status": 200 },
+    { "route": "/work/aurora-spaces", "status": 200 },
+    { "route": "/work/nexora-systems", "status": 200 },
+    { "route": "/work/vellora-care", "status": 200 },
+    { "route": "/pricing", "status": 200 },
+    { "route": "/process", "status": 200 },
+    { "route": "/start", "status": 200 },
+    { "route": "/contact", "status": 200 },
+    { "route": "/faq", "status": 200 },
+    { "route": "/accessibility", "status": 200 },
+    { "route": "/icon.svg", "status": 200 },
+    { "route": "/opengraph-image", "status": 200 },
+    { "route": "/robots.txt", "status": 200 },
+    { "route": "/not-a-real-route", "status": 404 }
+  ],
+  "internalLinkInstances": 300,
+  "uniqueInternalTargets": 15,
+  "targetStatusSummary": {
+    "expected200": [
+      "/",
+      "/accessibility",
+      "/contact",
+      "/faq",
+      "/pricing",
+      "/process",
+      "/services",
+      "/start",
+      "/work",
+      "/work/aurora-spaces",
+      "/work/nexora-systems",
+      "/work/vellora-care"
+    ],
+    "knownOwnerBlocked404": ["/about", "/privacy", "/terms"],
+    "unexpectedFailures": []
+  }
+}

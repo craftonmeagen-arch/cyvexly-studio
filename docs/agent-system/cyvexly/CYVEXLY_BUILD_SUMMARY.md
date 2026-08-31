@@ -378,4 +378,7 @@
   occupied by an
   unrelated pre-lock EduAILenz Vite process; it was preserved and proof ran on
   Builder-owned 5183.
+- A final clean production runtime status sweep passed all 15 expected routes/
+  assets plus the intended 404. Across 300 internal-link instances, the only
+  failing targets are the three already-bounded Owner-blocked routes.
 - The four Owner decisions and second-computer confirmation remain unchanged.

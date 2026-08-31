@@ -43,6 +43,9 @@ automation was modified.
   scale, H1, overflow, and correct compact/desktop mode at five boundary widths.
 - 26-case structural matrix — all 13 routes pass phone/desktop landmark,
   heading-order, duplicate-ID, and visible control-name checks.
+- Final production status/link audit — all 15 expected routes/assets return
+  200, unknown route returns 404, and 300 rendered internal-link instances have
+  no unexpected target failure (only known blocked About/Privacy/Terms 404s).
 - Native CDP Tab/Enter on the compact header — logo → menu trigger; Enter opens
   with `aria-expanded=true`; focus continues through all five nav links and CTA.
 - Explicit 24px-root, 390px stress render — zero horizontal overflow and clean

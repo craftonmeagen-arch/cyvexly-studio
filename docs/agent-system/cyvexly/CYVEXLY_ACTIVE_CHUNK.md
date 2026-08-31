@@ -405,6 +405,10 @@ complete source change:
 - A separate 26-case phone/desktop structural audit recorded zero failures for
   main/header/H1 counts, heading skips, duplicate IDs, or visible unnamed
   links/form controls.
+- A final clean production runtime returned 200 for all 15 expected routes/
+  assets and the intended 404 for an unknown route. Its 300 rendered internal-
+  link instances resolve to 15 unique targets; the only 404 targets are the
+  already-documented Owner-blocked `/about`, `/privacy`, and `/terms`.
 - Native CDP Tab reaches logo then the named menu trigger; Enter opens the
   compact sheet with `aria-expanded=true`; subsequent Tabs reach Services,
   Work, Pricing, Process, About, and the project CTA in visible order.
