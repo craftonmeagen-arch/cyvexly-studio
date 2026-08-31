@@ -176,3 +176,17 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   `.next/cache` were removed; a clean rebuild then passed without the warning.
   This is a place to inspect owned build artifacts, not permission to delete
   reviewer evidence or user files.
+
+## Round 19
+
+- **A correct 404 server title can still be replaced after hydration by
+  streamed dynamic metadata.** Invalid service/work routes returned HTTP 404
+  and the expected title in raw HTML, but their `generateMetadata` fallback
+  changed the live document to generic `Service`/`Project` titles. Call
+  `notFound()` from the invalid metadata branch and test both raw response and
+  hydrated document; either layer alone would have missed this defect.
+- **Browser-only draft restoration must gate the first interactive render.**
+  Mount-effect restoration ran after Step 1 became editable, so a quick user
+  could type before a saved Step 3 draft replaced state. Render a stable,
+  non-interactive status until storage read/validation finishes, release the
+  gate in `finally`, and verify saved, clean-origin, and query-prefill paths.

@@ -2,6 +2,23 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 19 — dynamic 404 metadata and Planner restore gate
+
+- `round-19-dynamic-404-metadata-plan.md` — baseline, framework hypothesis,
+  source boundary, regression matrix, and raw/hydrated/public falsifiers written
+  before implementation.
+- `round-19-planner-restore-gate-visual-plan.md` — preserved loading-state
+  visual plan, state ordering, responsive shell, semantics, and saved/clean/
+  prefill proof matrix written before implementation.
+- `round-19-dynamic-404-runtime-proof.json` — baseline/final server and
+  hydrated titles, 404 semantics, recovery navigation, eight valid dynamic
+  routes, public ETags, and verification disposition.
+- `round-19-planner-restore-runtime-proof.json` — initial HTML gate semantics,
+  visible-control Step 3 draft restoration, clean-origin/prefill regressions,
+  public adoption, and honest limits.
+- `round-19-dynamic-404-planner-restore-verification.md` — source reasoning,
+  local/public proof, build results, plan accountability, and limits.
+
 ## Global round 18 — Pricing scope signal system
 
 - `round-18-pricing-scope-system-visual-plan.md` — preserved baseline,

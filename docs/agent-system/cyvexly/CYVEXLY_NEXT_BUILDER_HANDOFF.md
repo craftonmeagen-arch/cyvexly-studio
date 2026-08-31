@@ -1,55 +1,45 @@
 # Cyvexly Next Builder Handoff
 
-## Round 18 closeout
+## Round 19 closeout
 
-**Session:** `builder-20260831T194253Z-r18`
-**Lock claim:** `2026-08-31T19:42:46.6802742Z`
-**Accepted product source:** `7ec9c5c` on `main`
-**Prior Services source:** `b5dfd50`
-**Prior Home source:** `14e12d4`
+**Session:** `builder-20260831T213918Z-r19`
+**Lock claim:** `2026-08-31T21:39:18.9107395Z`
+**Accepted product source:** `e716541` and `744cdd8` on `main`
+**Prior Pricing source:** `7ec9c5c`
 **PM prompt:** no active prompt
 **Source safety:** Auditor/Council concurrent records and evidence stayed
-unstaged and untouched. No scheduler or automation was read, modified, paused,
-deleted, rescheduled, or otherwise touched.
+unstaged and untouched. The recurring scheduler/automation remained active and
+was not read, modified, paused, deleted, rescheduled, or otherwise touched.
 
 ## Completed work
 
-- Replaced Pricing's centered text-only entry with a split glass composition:
-  protected canonical copy plus an original five-package scope signal.
-- Expressed only already-supported facts in the decorative visual: Signal,
-  Orbit, Nexus, Commerce, Custom, and the `brief / scope / proposal` path.
-- Coordinated the unchanged package cards in an ice-blue constellation field
-  with restrained node/edge light and a stronger featured Orbit state.
-- Preserved all package prices, descriptions, scope lists, timelines, order,
-  Planner links, FAQ, comparison/add-on structures, and external assets.
-- Fixed two render-discovered source defects before adoption: overlap-clipped
-  card tops, then 14–17px horizontal overflow from a rotated decorative
-  pseudo-element.
-- Cleaned stale Builder-owned `.next/dev` and `.next/cache` after one
-  intermediate build reported a cache-persistence disk-space warning. A clean
-  rebuild then passed without that warning.
+- Resolved Auditor `CYV-IFA-008`: invalid service/work dynamic metadata calls
+  `notFound()`, preventing streamed fallback titles from replacing the custom
+  404 title after hydration.
+- Resolved fresh Auditor `CYV-IFA-009`: the Planner now shows a calm,
+  non-interactive status until browser draft restoration/prefill resolution is
+  complete. The form is never exposed in the overwrite window.
+- Kept both corrections narrow. Valid route metadata, Planner fields and
+  validation, saved-draft precedence, service prefill, copy, dependencies, and
+  Owner-blocked integrations remain unchanged.
 
 ## Verification
 
-- Opened the approved Pricing mockup, exact pre-change Council desktop/phone
-  evidence, final local 1440/768/390 renders, a complete five-card desktop
-  composition, a 390px 24px-root stress render, and public 1440/390 renders.
-- Exact 1440/1024/1023/768/390/320 and 390-root24 states report zero horizontal
-  overflow, one main/H1, five package headings/Planner links, no heading skip,
-  and no empty accessible control name.
-- The original SVG is hidden from assistive technology and contains no
-  focusable descendant.
-- Native Chromium Enter reaches `/start` with its expected H1 and expands the
-  Pricing FAQ with the correct controlled state.
-- ESLint, optimized 23-page build, post-build TypeScript, 22 local page/asset
-  requests, known-404 controls, and local/public Home MP4 byte-range regression
-  pass. Only the known Owner/domain-blocked `metadataBase` warning and
-  `/about` prefetch remain.
-- Product commit `7ec9c5c` is pushed to `origin/main`. Public Pricing changed
-  from ETag `"3azyangk3w2jpn"` to `"v7ek1wa7sw2w4f"`; opened desktop/phone
-  output matches local production and passes containment plus Planner/FAQ input.
-- Durable plan, renders, metrics, public proof, and comparison are indexed under
-  `docs/agent-system/cyvexly/builder/evidence/`.
+- Baseline and fixed local optimized runtimes prove the 404 title mismatch and
+  correction at both server and hydrated layers. Both invalid routes retain
+  404/noindex, one main/H1, four recovery links, exact containment, and clean
+  browser state. All eight valid dynamic routes remain 200.
+- Raw `/start` HTML contains the polite busy state and no form/Full name field.
+  A visible-control draft saved at Step 3 reloads at Step 3 with preserved
+  synthetic name/contact; clean-origin and service-prefill flows settle at
+  Step 1 without overflow.
+- ESLint, optimized 23-page build, and post-build TypeScript pass with only the
+  known Owner/domain-blocked `metadataBase` warning.
+- Both commits are pushed to `origin/main`. Public invalid routes retain the
+  exact hydrated 404 title, and public Planner initial HTML has the gate while
+  settled output has the correct title/H1, one main, and no horizontal overflow.
+- Durable plans, raw metrics, verification narrative, and public proof are
+  indexed under `docs/agent-system/cyvexly/builder/evidence/`.
 
 ## Blockers and honest limits
 
@@ -59,22 +49,24 @@ deleted, rescheduled, or otherwise touched.
 - `/about` remains Owner-blocked on founder identity/story/image. Privacy/Terms
   jurisdiction, production-domain metadata, transactional email, and abstract-
   versus-commissioned concept-art framing remain Owner decisions.
-- Physical Safari/Firefox and field Web Vitals were not available in Round 18.
+- The in-app Browser did not honor an exact 390px viewport in Round 19, so the
+  Planner correction does not claim a new exact-phone screenshot. Physical
+  Safari/Firefox and field Web Vitals were unavailable.
 
 ## Recommended next tasks
 
-1. Ask the Owner to hard-refresh public `/pricing` and judge the new split
-   scope visual, glass depth, package scanability, and phone/tablet scaling.
-2. If the original device still looks zoomed, capture its viewport, DPR,
-   browser default/minimum font settings, page zoom, and OS display scale before
+1. Prefer a coherent, independently evidenced product slice rather than
+   reopening these now-proved defects without new evidence.
+2. Ask the Owner to review the deployed Round 16–18 visual work and confirm the
+   original second-device scale result.
+3. If the original device still looks zoomed, capture viewport, DPR, browser
+   default/minimum font settings, page zoom, and OS display scale before
    changing shared CSS.
-3. Prefer a different coherent capability in Round 19 unless new Owner/reviewer
-   evidence identifies a concrete Pricing/Home/Services defect.
 4. Route founder/legal/domain/email/art-framing decisions without inventing
-   facts. Keep `main` as the deployment/source branch.
+   facts. Keep `main` as deployment/source branch and never touch the scheduler.
 
 ## Completion state
 
-**DONE WITH PUBLIC PROOF** for Round 18's Pricing scope signal system.
-**OWNER REVIEW PENDING** for visual acceptance and original second-device
-confirmation.
+**DONE WITH PUBLIC PROOF** for Round 19's dynamic-404 metadata and Planner draft
+restore gate. **OWNER REVIEW PENDING** only for the existing visual/device
+acceptance items.

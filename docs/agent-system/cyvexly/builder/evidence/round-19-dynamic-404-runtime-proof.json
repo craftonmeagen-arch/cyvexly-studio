@@ -1,0 +1,86 @@
+{
+  "round": 19,
+  "acceptedProductCommit": "e716541",
+  "finding": "CYV-IFA-008",
+  "baseline": {
+    "runtime": "optimized Next.js production server",
+    "servicesInvalid": {
+      "path": "/services/not-a-real-service",
+      "httpStatus": 404,
+      "serverTitle": "Page not found — Cyvexly Studio",
+      "hydratedTitle": "Service — Cyvexly Studio"
+    },
+    "workInvalid": {
+      "path": "/work/not-a-real-project",
+      "httpStatus": 404,
+      "serverTitle": "Page not found — Cyvexly Studio",
+      "hydratedTitle": "Project — Cyvexly Studio"
+    }
+  },
+  "fix": "Invalid dynamic slugs call notFound() from generateMetadata so streamed metadata cannot replace the 404 title after hydration.",
+  "localFinal": {
+    "servicesInvalid": {
+      "httpStatus": 404,
+      "hydratedTitle": "Page not found — Cyvexly Studio",
+      "robotsNoIndex": true,
+      "mainCount": 1,
+      "h1Count": 1,
+      "recoveryLinkCount": 4,
+      "horizontalOverflowPx": 0,
+      "browserWarningOrErrorCount": 0
+    },
+    "workInvalid": {
+      "httpStatus": 404,
+      "hydratedTitle": "Page not found — Cyvexly Studio",
+      "robotsNoIndex": true,
+      "mainCount": 1,
+      "h1Count": 1,
+      "recoveryLinkCount": 4,
+      "horizontalOverflowPx": 0,
+      "browserWarningOrErrorCount": 0
+    },
+    "recoveryNavigation": {
+      "from": "/services/not-a-real-service",
+      "link": "Services",
+      "to": "/services",
+      "result": "pass"
+    }
+  },
+  "validRouteRegression": {
+    "serviceRoutes": [
+      "/services/business-websites",
+      "/services/online-stores",
+      "/services/custom-web-apps",
+      "/services/website-health",
+      "/services/security-reliability"
+    ],
+    "workRoutes": [
+      "/work/aurora-spaces",
+      "/work/northstar-health",
+      "/work/vellora-commerce"
+    ],
+    "allHttp200WithExpectedTitle": true
+  },
+  "publicFinal": {
+    "baseUrl": "https://cyvexly-studio.onrender.com",
+    "servicesInvalid": {
+      "httpStatus": 404,
+      "etagBefore": "\"xpk68qbvcecxg\"",
+      "etagAfter": "\"s5jno3iwl3csj\"",
+      "hydratedTitle": "Page not found — Cyvexly Studio"
+    },
+    "workInvalid": {
+      "httpStatus": 404,
+      "etagBefore": "\"10chde7foj5crg\"",
+      "etagAfter": "\"r7o53k4ericmj\"",
+      "hydratedTitle": "Page not found — Cyvexly Studio"
+    },
+    "allEightValidDynamicRoutesHttp200": true,
+    "scratchFaviconCheckHttp404": true
+  },
+  "verification": {
+    "eslint": "pass",
+    "optimizedBuild": "pass (23 pages; known metadataBase warning only)",
+    "postBuildTypeScript": "pass"
+  }
+}

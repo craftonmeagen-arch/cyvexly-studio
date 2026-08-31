@@ -55,3 +55,6 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
 - `CYVEXLY_SHARED_DEPLOYMENT_ROUND15_REPORT.md` — global round 15 full report
   (deployment-branch/source repair that made the accepted Home video visible
   and proved on public Render), rotated out during round 18.
+- `CYVEXLY_SHARED_HOME_ROUND16_REPORT.md` — global round 16 full report
+  (larger integrated Home hero reel, glass-stage composition, playback and
+  public deployment proof), rotated out during round 19.

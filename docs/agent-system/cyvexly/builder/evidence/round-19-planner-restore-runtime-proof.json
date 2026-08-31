@@ -1,0 +1,74 @@
+{
+  "round": 19,
+  "acceptedProductCommit": "744cdd8",
+  "finding": "CYV-IFA-009",
+  "baseline": {
+    "source": "fresh Auditor R8 evidence",
+    "behavior": "The interactive Step 1 form rendered before the mount effect restored a saved Step 3 draft, so immediate input could be overwritten.",
+    "evidence": "auditor/evidence/auditor-20260831T2152Z-008-planner-restore-race.md"
+  },
+  "fix": {
+    "storageGate": true,
+    "interactiveFormHiddenUntilDraftCheckCompletes": true,
+    "transientHeading": "Preparing your Planner",
+    "transientStatusSemantics": {
+      "role": "status",
+      "ariaLive": "polite",
+      "ariaBusy": true
+    },
+    "layoutContinuity": "The gate uses the established glass-panel width and a 22rem minimum height to avoid a collapsed flash."
+  },
+  "initialServerHtml": {
+    "path": "/start",
+    "httpStatus": 200,
+    "hasPreparingPlanner": true,
+    "hasDraftCheckCopy": true,
+    "hasForm": false,
+    "hasFullNameField": false,
+    "mainCount": 1,
+    "h1Count": 1
+  },
+  "savedDraftBrowserProof": {
+    "createdThroughVisiblePlannerUI": true,
+    "savedAtStep": 3,
+    "reloadSettledAtStep": 3,
+    "restoredFullName": "Round 19 Test",
+    "restoredContactNumber": "555-0100",
+    "restoredMessageVisible": true
+  },
+  "cleanOriginBrowserProof": {
+    "url": "http://192.168.1.7:5173/start",
+    "settledAtStep": 1,
+    "mainCount": 1,
+    "horizontalOverflowPx": 0,
+    "browserWarningOrErrorCount": 0
+  },
+  "prefillRegression": {
+    "url": "http://192.168.1.7:5173/start?service=business-websites",
+    "settledAtStep": 1,
+    "message": "Starting point added: Business websites",
+    "horizontalOverflowPx": 0
+  },
+  "publicFinal": {
+    "baseUrl": "https://cyvexly-studio.onrender.com",
+    "initialHtmlHttpStatus": 200,
+    "initialHtmlHasPreparingPlanner": true,
+    "initialHtmlHasForm": false,
+    "initialHtmlHasFullNameField": false,
+    "initialHtmlHasAriaBusy": true,
+    "settledTitle": "Project Planner — Cyvexly Studio",
+    "settledPath": "/start",
+    "settledH1": "Tell us what you need. We'll shape the right route.",
+    "settledMainCount": 1,
+    "settledHorizontalOverflowPx": 0
+  },
+  "verification": {
+    "eslint": "pass",
+    "optimizedBuild": "pass (23 pages; known metadataBase warning only)",
+    "postBuildTypeScript": "pass"
+  },
+  "honestLimits": [
+    "The in-app Browser viewport stayed at its available desktop size, so exact 390px post-fix geometry was not claimed.",
+    "The synthetic email field was not used as preservation evidence because browser fill did not reliably set it; name and contact number provided the saved-draft proof."
+  ]
+}

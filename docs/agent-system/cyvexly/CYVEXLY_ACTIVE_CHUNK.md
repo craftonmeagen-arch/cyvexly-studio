@@ -2,7 +2,7 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global rounds 15-18 repaired its public deployment
+pages — remains closed, but global rounds 15-19 repaired its public deployment
 path, implemented the later Owner-directed hero composition, and reconciled the
 Services combination and Pricing scope modules under the rule that closed
 chunks are not frozen.
@@ -11,7 +11,9 @@ chunks are not frozen.
 verified at `/start`; real server-side email remains Owner-blocked on the
 production-domain and transactional-email-provider decisions. `/not-found`,
 `/faq`, and `/accessibility` are complete; `/privacy` and `/terms` remain
-Owner-blocked on jurisdiction facts; the favicon is fixed. Round 18 replaces
+Owner-blocked on jurisdiction facts; the favicon is fixed. Round 19 prevents
+invalid dynamic-route metadata from replacing the correct hydrated 404 title
+and gates the Planner until saved-draft restoration completes. Round 18 replaces
 Pricing's sparse text-only entry with a split glass scope signal and coordinated
 package field while preserving every package fact. Round 17 replaces
 the Services combination table with five mockup-aligned, icon-led glass
@@ -94,93 +96,6 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
 - **Round 15:** repaired the deployment/source branch mismatch so the accepted
   Home video appeared on the real Render site. Full report:
   `docs/archive/chunks/CYVEXLY_SHARED_DEPLOYMENT_ROUND15_REPORT.md`.
-
-## Round 16 report — global round 16
-
-### Preserved plan and selection
-
-**Session:** `builder-20260831T110720-7c9b5e92d4f1`; lock claimed
-`2026-08-31T15:07:46.1928578Z`; start HEAD `dc0f104`; no active PM prompt.
-Pre-implementation plan:
-`builder/evidence/round-16-home-hero-reel-visual-plan.md`.
-
-Owner direction 2026-08-31-07 and its approved lighter-blue reference named a
-specific remaining visual defect: although the real 30-second media worked,
-its 528×297 desktop footprint and flat surrounding field still read like a
-thumbnail. The selected coherent slice expands the Home-only hero geometry and
-coordinates the copy, player, atmosphere, and credibility rail. It does not
-change routes, claims, media provenance, or infrastructure.
-
-### What changed
-
-Product commit `14e12d4` changes Home to a stage up to 1440px with an asymmetric
-`0.9fr / 1.1fr` desktop grid. The copy now sits on a protected translucent
-blue-white glass pane. Scoped layered grids, pale refractions, frosted edges,
-and controlled spectral glow implement the Owner's lighter ice-blue direction.
-
-The video shell now has a padded luminous bezel while the inner viewport keeps
-the exact 16:9 ratio. A small truthful `Muted loop · 00:30` label and real
-`currentTime / duration` progress line strengthen the studio-reel treatment.
-The existing muted/inline/loop/poster/Play-Pause/reduced-motion/save-data/
-visibility behavior remains intact.
-
-### Rendered comparison and verification
-
-- At 1440×900, the copy is `594.44×499.25` and the reel is
-  `726.56×420.06`, 198.56px or 37.6% wider than the prior 528px baseline. The
-  reel occupies about 51.0% of the layout viewport and the credibility rail
-  follows at `1408×88`; no horizontal overflow occurs.
-- Opened exact desktop, 768×1024 tablet, and 390×844 phone production renders.
-  Tablet stacks a 705px reel; phone keeps a 343×200.81 reel directly after the
-  stacked actions and remains exactly width-contained.
-- The 1023/1024 boundary retains the intended stacked/two-column switch with no
-  overflow. H1/body/eyebrow conservative contrast against white is
-  16.07:1/6.31:1/7.05:1.
-- Real playback advanced, Pause held at zero observed drift, Play resumed, and
-  a natural 30-second boundary wrapped without ending. Reduced-motion Chrome
-  held the poster and exposed the Play control. The clean Cyvexly browser tab
-  had zero warning/error logs.
-- One `main`/H1, canonical CTA order, decorative-video semantics, figure
-  caption, named control, and phone containment pass. Every production
-  prerender-manifest route/asset returned 200 with expected HTML landmarks.
-- Final ESLint, optimized 23-page build, and immediate post-build TypeScript
-  pass. Only the known Owner/domain-blocked `metadataBase` warning remains.
-
-Exact values, hashes, source-accountability, relay audible, and honest limits
-are recorded in `round-16-home-hero-reel-verification.md` and indexed under
-`builder/evidence/INDEX.md`.
-
-### Audibles, limits, and accountability
-
-An in-app `127.0.0.1:5173` tab began resolving to an unrelated app even though
-the proven Builder listener and direct Windows HTTP still served Cyvexly. No
-unowned process was stopped. A clean `localhost:5173` tab restored the correct
-task relay, and title/content identity plus a clean console were rechecked.
-
-The Network Information API is unavailable in this in-app browser, so the
-Round 16 runtime did not fabricate a new save-data result; the unchanged branch
-and listener retain Round 15's full proof. Physical Safari/Firefox, field Web
-Vitals, the original second computer, and Owner visual acceptance were not
-available. Existing founder/legal/domain/email/art-framing decisions remain.
-
-Diff-to-plan contains the intended Home markup, scoped glass CSS, video progress
-state, preserved plan, rendered evidence, and canonical records. The
-Owner-supplied reference and quoted direction are preserved. Council-owned
-concurrent files/evidence remained excluded; no scheduler or automation was
-touched.
-
-### Completion state
-
-After `git push origin main`, public Render changed from ETag
-`{"ki45jt85ws2epv"}` to `{"l3tca9huev2fqm"}` within about 61 seconds. Opened
-live proof showed the Round 16 stage, a contained `638.56×370.56` reel in the
-available desktop tab, `readyState=4`, 1.264 seconds of playback advance, a
-named Pause control, no media error, no overflow, and zero console warnings or
-errors.
-
-**DONE WITH PUBLIC PROOF** for Round 16's larger integrated Home hero reel and
-light-ice-blue glass slice; **OWNER REVIEW PENDING** for visual acceptance and
-original second-device confirmation.
 
 ## Round 17 report — global round 17
 
@@ -346,3 +261,67 @@ email-provider and concept-artwork decisions remain unchanged.
 **DONE WITH PUBLIC PROOF** for Round 18's Pricing scope signal system;
 **OWNER REVIEW PENDING** for final visual acceptance and original second-device
 confirmation.
+
+## Round 19 report — global round 19
+
+### Preserved plans and selection
+
+**Session:** `builder-20260831T213918Z-r19`; lock claimed
+`2026-08-31T21:39:18.9107395Z`; start HEAD `409ef80`; no active PM prompt.
+Plans: `builder/evidence/round-19-dynamic-404-metadata-plan.md` and
+`builder/evidence/round-19-planner-restore-gate-visual-plan.md`.
+
+Fresh Auditor evidence supplied two reproducible defects. `CYV-IFA-008` showed
+that invalid service/work routes returned the correct 404 server title but
+streamed `Service`/`Project` fallback metadata over it after hydration.
+`CYV-IFA-009` showed the Planner exposing interactive Step 1 before restoring a
+saved later-step draft, allowing immediate user input to be overwritten. These
+concrete runtime defects took priority over another visual-system expansion.
+
+### What changed
+
+Product commit `e716541` calls `notFound()` from invalid dynamic
+`generateMetadata` branches, preventing fallback metadata from superseding the
+404 state. Product commit `744cdd8` adds a browser-storage readiness gate to
+`PlannerForm`: a stable glass status panel is shown while a saved draft is
+checked, and the interactive step appears only after restore/prefill resolution
+finishes. Storage failures release the gate through `finally`.
+
+### Runtime and deployment proof
+
+- Baseline invalid routes were HTTP 404 with the correct server HTML title but
+  hydrated to generic `Service`/`Project` titles. Final local and public pages
+  retain `Page not found — Cyvexly Studio`, `noindex`, one main/H1, four
+  recovery links, no overflow, and no browser warning/error.
+- All five valid service details and three valid work details remain HTTP 200
+  with expected titles. `/scratch-favicon-check` remains absent and publicly
+  404, completing the prior provisional cleanup confirmation.
+- Initial optimized `/start` HTML contains `Preparing your Planner`, polite
+  busy-state semantics, one main/H1, and no form or Full name field.
+- A draft created through visible Planner controls, saved at Step 3, and
+  reloaded settled at Step 3; Back showed the preserved synthetic name/contact
+  and restore message. A clean-origin run settled at Step 1, and the
+  `business-websites` prefill preserved its starting-point message.
+- Public `/start` initial HTML has the gate and no early form; opened settled
+  output has the correct Planner title/H1, one main, and zero horizontal
+  overflow. The invalid-route public ETags/content also changed as expected.
+- ESLint, optimized 23-page build, and immediate post-build TypeScript pass.
+  Only the documented Owner/domain-blocked `metadataBase` warning remains.
+
+### Limits and accountability
+
+The in-app Browser did not honor an exact phone viewport in this round, so no
+new exact-390 Planner screenshot is claimed. Auditor's phone evidence proves
+the baseline race; the fixed transient is constrained to the same glass shell
+and was opened in the real browser. Physical Safari/Firefox, field Web Vitals,
+the original second computer, and Owner visual acceptance remain unavailable.
+
+Only the two named defects and Builder records changed. Concurrent Auditor/
+Council records and evidence remained excluded. No scheduler or automation was
+read, modified, paused, deleted, rescheduled, or otherwise touched.
+
+### Completion state
+
+**DONE WITH PUBLIC PROOF** for the hydrated dynamic-404 title and Planner draft
+restore gate. **OWNER REVIEW PENDING** remains for rounds 16–18 visual direction
+and original second-device confirmation.

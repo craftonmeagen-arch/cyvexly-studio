@@ -93,6 +93,12 @@ requires.
   The approved mockup's orbital hierarchy is now represented without copying
   its thumbnail-density tables or changing any package fact. This revisits the
   closed chunk without changing its Owner-blocked About boundary.
+- **Round 19, dynamic 404 metadata correction:** invalid service/work slugs now
+  call `notFound()` during metadata generation, so streamed fallback metadata
+  cannot overwrite the hydrated 404 title. Both invalid routes retain 404,
+  noindex, landmarks, recovery links, containment, and clean browser state;
+  all eight valid dynamic routes remain 200. This is a cross-chunk runtime
+  correction and does not change the closed marketing-page boundary.
 - Non-goal: Project Planner (its own chunk, given its multi-step form
   complexity).
 
@@ -113,9 +119,8 @@ requires.
   satisfying the "confirmation email sent from Cyvexly" requirement.
 - **Remaining:** the real server-side email-delivery route, blocked on the
   domain + transactional-email-provider decision (`CYVEXLY_APP_DEBT.md`
-  item 4, unchanged); a real pixel-level screenshot of `/start` (this
-  round's own session type still cannot screenshot a live browser tab —
-  see `CYVEXLY_WATCH.md`).
+  item 4, unchanged). Physical cross-browser/device confirmation remains
+  useful complementary proof, not a source blocker.
 - **Round 6:** fixed a real Council-flagged defect (`CYC-R2-F001`) — the
   progress rail didn't keep the active step visible at 390px/768px,
   fixed with a `scrollIntoView` effect matching the existing reduced-
@@ -139,6 +144,10 @@ requires.
   remaining on `Continue` after validation, then proved focus moves to the
   first invalid field with grouped-control errors linked. Physical-hardware and
   cross-browser traversal remain useful complementary proof, not a blocker.
+- **Round 19:** fixed `CYV-IFA-009` by gating the interactive form until the
+  browser draft check completes. Initial HTML exposes a polite busy status and
+  no form; saved Step 3, clean-origin Step 1, and service-prefill Step 1 flows
+  pass locally, while public initial and settled output confirm deployment.
 
 ## Chunk 4 — Utility, legal & launch readiness (OPENED round 2, IN PROGRESS)
 
@@ -157,6 +166,10 @@ requires.
   `CYVEXLY_APP_DEBT.md` item 2), and a first full launch-readiness pass
   against all 14 items in vision §15 (see `CYVEXLY_ACTIVE_CHUNK.md`'s
   round-3 report for the item-by-item result).
+- **Progress (round 19):** invalid dynamic service/work paths now preserve the
+  custom 404 title through hydration. `/scratch-favicon-check` remains absent
+  from source/build and publicly returns 404, completing the prior provisional
+  cleanup confirmation.
 - **Deliberately not attempted:** `/privacy` and `/terms`. Unlike
   Accessibility (jurisdiction-agnostic — a WCAG target + contact route),
   Privacy and Terms need jurisdiction-specific legal language (business

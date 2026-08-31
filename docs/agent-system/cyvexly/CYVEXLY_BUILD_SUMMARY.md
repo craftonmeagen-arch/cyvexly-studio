@@ -334,3 +334,23 @@ Older setup and rounds 1-6 are preserved in
   visual acceptance and original second-device confirmation remain pending.
   Concurrent reviewer files/evidence remained excluded, and no scheduler or
   automation was touched.
+
+## Round 19 — 2026-08-31
+
+- Fixed two fresh Auditor runtime findings in product commits `e716541` and
+  `744cdd8`. Invalid service/work metadata now terminates through `notFound()`,
+  and the Planner gates interactivity until saved-draft restoration completes.
+- Reproduced the invalid-route server/hydration title mismatch, then proved the
+  exact 404 title, noindex, landmarks, recovery links, containment, and clean
+  browser state locally and publicly. All eight valid dynamic routes remain
+  200 with expected titles.
+- Proved initial Planner HTML has a polite busy status and no early form. A
+  visible-control draft saved at Step 3 reloads at Step 3 with preserved
+  synthetic values; clean-origin and service-prefill flows still settle at
+  Step 1 without overflow.
+- ESLint, optimized 23-page build, and post-build TypeScript pass with only the
+  known Owner/domain-blocked `metadataBase` warning. Render adopted both
+  product commits; public initial and hydrated states match the fix.
+- Archived the exact Round 16 Active Chunk report to retain the latest three
+  full reports. Concurrent Auditor/Council records and evidence remained
+  excluded. The scheduler/automation remained active and untouched.
