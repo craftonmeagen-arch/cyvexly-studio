@@ -173,6 +173,7 @@ export function PlannerForm({
   const [maxReachedStep, setMaxReachedStep] = useState(1);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"form" | "submitted">("form");
+  const [isStorageReady, setIsStorageReady] = useState(false);
   const [restored, setRestored] = useState(false);
   const [prefilledService, setPrefilledService] = useState<string | null>(null);
   const [savedNote, setSavedNote] = useState(false);
@@ -183,22 +184,24 @@ export function PlannerForm({
     // lazy useState initializer instead would make the client's first render
     // diverge from the server-rendered (storage-less) HTML and produce a
     // real hydration mismatch. See https://react.dev/learn/you-might-not-need-an-effect#fetching-data.
+    /* eslint-disable react-hooks/set-state-in-effect */
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
       if (raw) {
         const parsed = JSON.parse(raw) as { data: PlannerData; step: number };
-        /* eslint-disable react-hooks/set-state-in-effect */
         setData({ ...emptyData, ...parsed.data });
         setCurrentStep(parsed.step ?? 1);
         setMaxReachedStep(parsed.step ?? 1);
         setRestored(true);
-        /* eslint-enable react-hooks/set-state-in-effect */
       } else if (initialSelectionRef.current) {
         setPrefilledService(initialSelectionRef.current.serviceName);
       }
     } catch {
       // Corrupt or unavailable storage — start fresh rather than block the Planner.
+    } finally {
+      setIsStorageReady(true);
     }
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
   function set<K extends keyof PlannerData>(key: K, value: PlannerData[K]) {
@@ -336,6 +339,32 @@ export function PlannerForm({
     () => websiteTypes.find((type) => type.id === data.websiteType)?.label ?? "",
     [data.websiteType],
   );
+
+  if (!isStorageReady) {
+    return (
+      <div
+        role="status"
+        aria-live="polite"
+        aria-busy="true"
+        className="glass-panel flex min-h-[22rem] min-w-0 items-center justify-center rounded-2xl p-6 text-center sm:p-8"
+      >
+        <div className="max-w-md">
+          <span
+            className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-cyber-blue/10 shadow-[0_10px_30px_-16px_rgba(15,102,224,0.8)]"
+            aria-hidden="true"
+          >
+            <span className="h-2.5 w-2.5 rounded-full bg-cyber-blue shadow-[0_0_16px_rgba(54,199,255,0.9)]" />
+          </span>
+          <h2 className="mt-5 font-display text-xl font-semibold text-midnight-slate">
+            Preparing your Planner
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
+            Checking this device for a saved draft before you begin.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   if (status === "submitted") {
     return (
