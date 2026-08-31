@@ -109,11 +109,21 @@ indexed in `builder/evidence/INDEX.md`. No scheduler or automation was touched.
 
 ## Home hero video scale and placement direction 2026-08-31-07
 
-**Status:** ACTIVE — OWNER VISUAL DIRECTION FOR A FUTURE BUILDER PASS
+**Status:** IMPLEMENTED — ROUND 16 PUBLIC DEPLOYMENT/OWNER REVIEW PENDING
 **Source:** Owner via Codex side conversation
 **Recorded:** 2026-08-31 America/New_York
 
 > “I like your version better and the size . add the mockup and your ur description. the video in the actual looks like a thumbnail and not like what you have. add all this to owners direction”
+
+Follow-up material and contrast direction from the Owner:
+
+> “also there is a translucent background of some kind that you have. we need something like that to give a futuristic glassy blue look.”
+
+> “yes but it looks like that messes with the contrast a bit. so maybe lighter? grayish?”
+
+> “ok sorry maybe just ligher blue than the first”
+
+> “yeah that works. ok add that as the mockup and remove the other one you have in place. explain in words my wishes in owners direction”
 
 The live Home video currently reads too much like a thumbnail. Replace that
 small-media impression with the larger, integrated hero-reel treatment shown
@@ -126,6 +136,10 @@ scores, or metrics into production.
 
 Durable visual reference:
 `mockups/05-home-hero-video-owner-direction.png`.
+
+This file now contains the Owner-approved lighter-blue version. It replaces the
+earlier reference at the same path; the earlier, more neutral mockup is not an
+alternative direction and must not be treated as co-equal guidance.
 
 Implementation direction:
 
@@ -142,6 +156,23 @@ Implementation direction:
   frosted edge, restrained depth, and spectral glow. It should feel like a
   premium Cyvexly studio reel, not a banner advertisement or generic embedded
   player.
+- Give the Home hero a clearly visible translucent futuristic-glass background,
+  not merely a flat blue gradient. Use overlapping frosted panes, believable
+  backdrop blur and refraction, soft depth, thin illuminated edges, fine grids,
+  and restrained signal traces so the page feels dimensional and technologically
+  advanced.
+- The accepted background color is light ice blue: visibly bluer than neutral
+  pearl gray, but appreciably lighter and less saturated than the first blue
+  exploration. Do not wash the full copy area in saturated royal blue or cyan,
+  and do not reduce the result to an almost colorless gray treatment.
+- Protect reading contrast with a quiet translucent blue-white glass field
+  behind the headline, supporting copy, and actions. Background lines and
+  refractions beneath that field should be faint and softly blurred; headline
+  text remains near-black midnight slate and body text remains dark graphite.
+- Concentrate the strongest cyber blue in the primary CTA, thin glass edges,
+  small signal accents, and the video rim/glow. Navigation and the credibility
+  rail may reveal the pale-blue atmosphere through frosted glass, but their text
+  and controls must remain immediately readable.
 - Retain an intentional poster frame plus a clear Pause/Play control. If the
   reel autoplays, it must be muted, inline, and looping; never autoplay audible
   media.
@@ -160,3 +191,14 @@ navigation; outcome-led copy and CTAs on the left; a large playable studio reel
 on the right; then credibility and Selected Work. Small generated lettering in
 the image is non-authoritative; canonical product copy and truthful content
 requirements continue to govern implementation.
+
+Round 16 implements this direction in product commit `14e12d4`: the Home-only
+stage expands to approximately 1440px, the desktop reel grows from 528px to
+726.56px in the measured 1440 viewport, the copy receives its own quiet
+translucent field, and the player receives a light-ice-blue glass bezel plus
+real playback progress. Exact desktop/tablet/phone renders, breakpoint
+geometry, playback/loop/Pause/Play, reduced-motion, semantics, containment,
+console, route, lint, build, and TypeScript proof are indexed in
+`builder/evidence/INDEX.md`. The accepted real video remains unchanged; no
+invented mockup screens or generated claims were copied. The implementation is
+awaiting Owner review on the public site.

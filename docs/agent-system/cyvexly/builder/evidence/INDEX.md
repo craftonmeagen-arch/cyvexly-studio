@@ -2,6 +2,20 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 16 — integrated Home hero reel
+
+- `round-16-home-hero-reel-visual-plan.md` — preserved Owner-reference
+  baseline, measured discrepancy, responsive spatial target, accessibility/
+  playback boundaries, risks, and falsifiable proof plan.
+- `round-16-home-hero-{desktop,tablet,phone}.png` — opened optimized-production
+  renders at exact 1440×900, 768×1024, and 390×844 viewports. They show the
+  wider primary reel, protected copy glass, light-ice-blue layered atmosphere,
+  stacked compact layouts, and zero horizontal overflow.
+- `round-16-home-hero-reel-verification.md` — exact baseline/final geometry,
+  Owner-reference disposition, breakpoint measurements, color/contrast,
+  playback/Pause/Play/natural-loop/reduced-motion, semantics, console, route,
+  build, diff-accountability, and honest-limit record.
+
 ## Global round 15 — live Home video deployment recovery
 
 - `round-15-live-video-deployment-plan.md` — preserved pre-repair source/

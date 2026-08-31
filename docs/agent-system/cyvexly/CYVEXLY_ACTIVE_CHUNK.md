@@ -2,19 +2,20 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global round 15 repaired its public deployment
-path under the rule that closed chunks are not frozen.
+pages — remains closed, but global rounds 15-16 repaired its public deployment
+path and implemented the later Owner-directed hero composition under the rule
+that closed chunks are not frozen.
 
 **Current status:** The nine-step Planner UI/state/validation remains built and
 verified at `/start`; real server-side email remains Owner-blocked on the
 production-domain and transactional-email-provider decisions. `/not-found`,
 `/faq`, and `/accessibility` are complete; `/privacy` and `/terms` remain
-Owner-blocked on jurisdiction facts; the favicon is fixed. Round 15 makes the
-accepted Home video visible on the real Render site by aligning the deployment
-branch with accepted source. Round 14's five focused service-detail journeys
-and safe Planner preselection remain intact alongside rounds 11-13's Home video
-and luminous visual systems. Owner direction 2026-08-31-07 records a larger,
-integrated hero-reel redesign as a separate next-round visual slice.
+Owner-blocked on jurisdiction facts; the favicon is fixed. Round 16 implements
+Owner direction 2026-08-31-07 as a larger integrated Home reel inside a
+light-ice-blue glass stage. Round 15 makes the accepted Home video visible on
+the real Render site by aligning the deployment branch with accepted source.
+Round 14's five focused service-detail journeys and safe Planner preselection
+remain intact alongside rounds 11-13's Home video and luminous visual systems.
 
 ## Active chunk boundaries
 
@@ -76,85 +77,12 @@ integrated hero-reel redesign as a separate next-round visual slice.
 - **Round 11:** integrated the Owner-supplied Home showcase video with honest
   provenance, motion/data-saver controls, and responsive media proof. Full
   report: `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND11_REPORT.md`.
-
-## Round 13 report — global round 13
-
-### Preserved plan and selection
-
-**Session:** `4492410c-d32b-41c5-b78a-b4db0829c967`; lock claim
-`2026-08-31T08:56:05.8814291Z`; start HEAD `061fb00`; no active PM prompt.
-The pre-implementation plan is
-`builder/evidence/round-13-home-final-cta-visual-plan.md`.
-
-Council `CYC-R14-20260830-01` independently confirmed the round-12 source and
-named richer final-CTA art as a remaining parity gap. Comparing that source to
-`mockups/01-home.png` showed a normal, reachable slice: replace the flat radial
-wash with a compact split system composition. Portfolio photography and real
-client screens remained blocked on truthful Owner-supplied or approved media.
-
-### What changed
-
-Product commit `1df0203` adds `FinalCtaSignalGraphic`, an original inline SVG
-planetary horizon with orbital traces, routes, and signal nodes. Home's existing
-headline, supporting copy, `/start` action, and response note now sit in a left
-copy layer against the graphic; scoped CSS supplies the glass depth, grid, and
-protective dark overlay. Below 768px the copy centers and the horizon lowers.
-The SVG is decorative and cannot add accessibility-tree noise.
-
-### Rendered comparison and verification
-
-- `pnpm run lint`, a clean `pnpm run build`, and immediate post-build
-  `pnpm exec tsc --noEmit` passed. The only build warning is the known
-  Owner/domain-blocked `metadataBase` fallback.
-- Opened exact 1440x900, 768x1024, and 390x844 final-CTA renders plus a full
-  1440px Home render. Desktop changes from a flat `1104x316` baseline to a
-  split `1104x338` panel; tablet is `705x416`; phone is `327x432` and remains
-  centered/contained. See the indexed comparison for the baseline disposition.
-- Nine width states at 320/390/639/640/767/768/1023/1024/1440 retain one panel,
-  one CTA heading/action, one page H1, correct center/left reflow, and zero
-  horizontal overflow. A 390px explicit 24px-root state is also contained.
-- Conservative contrast calculations pass with substantial margin: heading
-  14.97–17.87:1, body 11.12–13.28:1, note 8.66–10.34:1.
-- The accessibility tree exposes the real heading/link and no named planet,
-  horizon, or network node. Native CDP mouse input verified its post-scroll hit
-  target was the real `/start` anchor and navigated successfully.
-- A 16-route phone production sweep reports expected 200/404 statuses, one
-  `main` and H1, complete image alternatives, and zero overflow. Runtime
-  exceptions and unexpected warning/error logs are zero. The only logged 404
-  paths are the documented Owner-blocked `/about`, `/privacy`, and `/terms`
-  prefetches.
-
-### Audibles, limits, and accountability
-
-The preferred in-app Browser runtime failed before session creation with
-`failed to write kernel assets: The system cannot find the path specified.`
-No browser/plugin state was changed. The already-proven Builder-owned local
-Chrome/CDP route supplied exact product proof instead.
-
-The first native-click sample returned `/` because smooth scrolling was still
-moving and its coordinates were stale. The instrument was corrected to force
-non-smooth scrolling, wait for layout, and prove `elementFromPoint` resolved to
-the intended link before dispatching native input; it then reached `/start`.
-This refuted a product defect. Browser error logs were also classified rather
-than hidden: every one is an expected prefetch of Owner-blocked route debt.
-
-The SVG's `getBBox()` extends below/right of its `720x360` viewBox by design:
-the planet continues beyond the visible horizon and is clipped by the panel's
-`overflow:hidden`. Opened renders at every target show the intended crop.
-
-Diff-to-plan: `1df0203` contains exactly the planned Home markup, scoped CSS,
-SVG component, and preserved plan. Council-owned dirty files/evidence were not
-staged or modified, and no scheduler or automation was touched.
-
-Not checked: Owner acceptance, the original second computer, physical Safari/
-Firefox, field performance, deployment/cache behavior, or replacement
-portfolio media. Existing founder/legal/domain/email and concept-art decisions
-remain.
-
-### Completion state
-
-**DONE WITH PROOF** for the round-13 Home final-CTA system slice;
-**OWNER REVIEW STILL ACTIVE** for final mockup parity and second-device scale.
+- **Round 12:** added the Home partnership diagram and five-stage process-route
+  visual system. Full report:
+  `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND12_REPORT.md`.
+- **Round 13:** replaced the flat Home final CTA with a split luminous
+  planetary/network composition. Full report:
+  `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND13_REPORT.md`.
 
 ## Round 14 report — global round 14
 
@@ -327,3 +255,90 @@ founder/legal/domain/email/art-framing decisions remain unchanged.
 **DONE WITH PROOF** for the Owner-reported live-video gap. The showcase is now
 visible and working on the real website. **OWNER REVIEW STILL ACTIVE** for final
 mockup parity and original second-device scale.
+
+## Round 16 report — global round 16
+
+### Preserved plan and selection
+
+**Session:** `builder-20260831T110720-7c9b5e92d4f1`; lock claimed
+`2026-08-31T15:07:46.1928578Z`; start HEAD `dc0f104`; no active PM prompt.
+Pre-implementation plan:
+`builder/evidence/round-16-home-hero-reel-visual-plan.md`.
+
+Owner direction 2026-08-31-07 and its approved lighter-blue reference named a
+specific remaining visual defect: although the real 30-second media worked,
+its 528×297 desktop footprint and flat surrounding field still read like a
+thumbnail. The selected coherent slice expands the Home-only hero geometry and
+coordinates the copy, player, atmosphere, and credibility rail. It does not
+change routes, claims, media provenance, or infrastructure.
+
+### What changed
+
+Product commit `14e12d4` changes Home to a stage up to 1440px with an asymmetric
+`0.9fr / 1.1fr` desktop grid. The copy now sits on a protected translucent
+blue-white glass pane. Scoped layered grids, pale refractions, frosted edges,
+and controlled spectral glow implement the Owner's lighter ice-blue direction.
+
+The video shell now has a padded luminous bezel while the inner viewport keeps
+the exact 16:9 ratio. A small truthful `Muted loop · 00:30` label and real
+`currentTime / duration` progress line strengthen the studio-reel treatment.
+The existing muted/inline/loop/poster/Play-Pause/reduced-motion/save-data/
+visibility behavior remains intact.
+
+### Rendered comparison and verification
+
+- At 1440×900, the copy is `594.44×499.25` and the reel is
+  `726.56×420.06`, 198.56px or 37.6% wider than the prior 528px baseline. The
+  reel occupies about 51.0% of the layout viewport and the credibility rail
+  follows at `1408×88`; no horizontal overflow occurs.
+- Opened exact desktop, 768×1024 tablet, and 390×844 phone production renders.
+  Tablet stacks a 705px reel; phone keeps a 343×200.81 reel directly after the
+  stacked actions and remains exactly width-contained.
+- The 1023/1024 boundary retains the intended stacked/two-column switch with no
+  overflow. H1/body/eyebrow conservative contrast against white is
+  16.07:1/6.31:1/7.05:1.
+- Real playback advanced, Pause held at zero observed drift, Play resumed, and
+  a natural 30-second boundary wrapped without ending. Reduced-motion Chrome
+  held the poster and exposed the Play control. The clean Cyvexly browser tab
+  had zero warning/error logs.
+- One `main`/H1, canonical CTA order, decorative-video semantics, figure
+  caption, named control, and phone containment pass. Every production
+  prerender-manifest route/asset returned 200 with expected HTML landmarks.
+- Final ESLint, optimized 23-page build, and immediate post-build TypeScript
+  pass. Only the known Owner/domain-blocked `metadataBase` warning remains.
+
+Exact values, hashes, source-accountability, relay audible, and honest limits
+are recorded in `round-16-home-hero-reel-verification.md` and indexed under
+`builder/evidence/INDEX.md`.
+
+### Audibles, limits, and accountability
+
+An in-app `127.0.0.1:5173` tab began resolving to an unrelated app even though
+the proven Builder listener and direct Windows HTTP still served Cyvexly. No
+unowned process was stopped. A clean `localhost:5173` tab restored the correct
+task relay, and title/content identity plus a clean console were rechecked.
+
+The Network Information API is unavailable in this in-app browser, so the
+Round 16 runtime did not fabricate a new save-data result; the unchanged branch
+and listener retain Round 15's full proof. Physical Safari/Firefox, field Web
+Vitals, the original second computer, and Owner visual acceptance were not
+available. Existing founder/legal/domain/email/art-framing decisions remain.
+
+Diff-to-plan contains the intended Home markup, scoped glass CSS, video progress
+state, preserved plan, rendered evidence, and canonical records. The
+Owner-supplied reference and quoted direction are preserved. Council-owned
+concurrent files/evidence remained excluded; no scheduler or automation was
+touched.
+
+### Completion state
+
+After `git push origin main`, public Render changed from ETag
+`{"ki45jt85ws2epv"}` to `{"l3tca9huev2fqm"}` within about 61 seconds. Opened
+live proof showed the Round 16 stage, a contained `638.56×370.56` reel in the
+available desktop tab, `readyState=4`, 1.264 seconds of playback advance, a
+named Pause control, no media error, no overflow, and zero console warnings or
+errors.
+
+**DONE WITH PUBLIC PROOF** for Round 16's larger integrated Home hero reel and
+light-ice-blue glass slice; **OWNER REVIEW PENDING** for visual acceptance and
+original second-device confirmation.

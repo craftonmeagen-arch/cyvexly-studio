@@ -126,3 +126,20 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   branch, and real public artifact instead of treating `git push` as the
   boundary. This is a source-identity checkpoint to apply when deployment
   behavior is in scope, not a reason to add hosting checks to unrelated rounds.
+
+## Round 16
+
+- **A percentage alone can conceal a thumbnail-scale composition.** The prior
+  reel occupied 45.8% of its 1152px content frame, yet its 528px absolute width,
+  broad unframed copy field, and flat surrounding grid still read as a small
+  card to the Owner. Expanding the Home-only stage, measuring absolute viewport
+  area, and coordinating the copy pane, media bezel, and atmospheric layers
+  produced the material change. Future visual reviews should record both local
+  component ratio and whole-viewport hierarchy.
+- **In-app `127.0.0.1` and `localhost` can resolve to different task relays.**
+  During final verification, a previously valid `127.0.0.1:5173` tab exposed
+  an unrelated app while direct Windows HTTP and the proven Builder listener
+  still served Cyvexly. Navigating a clean tab to `localhost:5173` restored the
+  correct task route and a clean console. Always recheck page title/content
+  identity after a local-browser relay change; do not treat a shared port label
+  alone as process ownership evidence.

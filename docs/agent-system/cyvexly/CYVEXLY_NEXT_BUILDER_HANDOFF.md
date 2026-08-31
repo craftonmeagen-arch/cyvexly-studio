@@ -1,78 +1,77 @@
 # Cyvexly Next Builder Handoff
 
-## Round 15 closeout
+## Round 16 closeout
 
-**Session:** `builder-20260831T091345658Z-b8c1c2b439ba`
-**Lock claim:** `2026-08-31T13:13:46.0974085Z`
-**Accepted product source:** `57480e3` on `main`
+**Session:** `builder-20260831T110720-7c9b5e92d4f1`
+**Lock claim:** `2026-08-31T15:07:46.1928578Z`
+**Accepted product source:** `14e12d4` on `main`
 **Video source commit:** `34a5bd3`
+**Owner direction:** `2026-08-31-07`
 **PM prompt:** no active prompt
-**Source safety:** remote `main` was fast-forwarded without force from
-`c13ae7a` to accepted source `57480e3`; remote `master` was preserved at the
-same source. Council-owned files and evidence remained untouched. No scheduler
-or automation was modified.
+**Source safety:** Council-owned concurrent files/evidence stayed unstaged and
+untouched. No scheduler or automation was modified.
 
 ## Completed work
 
-- Reproduced the Owner's report on the real public Render Home: it served the
-  older orbital hero and contained no video despite accepted local source.
-- Proved the deployment mismatch: GitHub's default/deployed `main` was 52
-  commits behind accepted `master`, with no `main`-only commits.
-- Fast-forwarded `origin/main` to `57480e3`, then renamed the local accepted
-  branch to `main` and configured it to track `origin/main`.
-- Watched the public HTML change, then proved the accepted 30-second showcase
-  appears, loads, autoplays muted, loops, and has a visible Pause/Play control.
-- Preserved remote `master` as a recoverable historical pointer rather than
-  deleting it during the incident repair.
+- Implemented the Owner-approved larger integrated Home hero reel rather than
+  another token-only glass adjustment.
+- Expanded the Home-only stage, changed desktop to an asymmetric copy/media
+  grid, and grew the measured 1440-viewport player from 528px to 726.56px.
+- Added the accepted lighter ice-blue translucent atmosphere, a protected copy
+  pane, a luminous padded reel bezel, truthful duration metadata, and a real
+  playback-progress line.
+- Preserved the accepted video bytes, canonical copy, CTA order, routes,
+  semantics, reduced-motion/save-data/visibility behavior, and mobile sequence.
+- Preserved the Owner-approved mockup at
+  `mockups/05-home-hero-video-owner-direction.png` and the exact Owner quotes in
+  `CYVEXLY_OWNER_DIRECTION.md`.
 
 ## Verification
 
-- The public Home, poster, and MP4 return 200; the MP4 returns `video/mp4` and
-  supports byte-range delivery with 206 responses.
-- Real public desktop and exact 390x844 phone renders show the video without
-  horizontal overflow. Playback advances, Pause/Play works, and the loop
-  crosses the 30-second boundary without ending.
-- Reduced-motion and data-saver preferences begin paused and allow explicit
-  user playback; normal preference begins playing. All modes remain muted,
-  inline, and error-free.
-- Public smoke covered 22 expected pages/assets plus expected 404 behavior;
-  browser console warnings/errors were empty.
-- The media is H.264/yuv420p, 1280x720, silent, 30 seconds, approximately
-  3.98 MB, with `moov` before `mdat` for fast-start delivery.
-- Lint, optimized build (23 pages), immediate post-build TypeScript, and local
-  route checks pass. The known domain-blocked `metadataBase` warning remains.
-- Durable plan, before/after renders, and verification are indexed in
+- Opened exact 1440×900, 768×1024, and 390×844 optimized-production renders.
+  Desktop reel is `726.56×420.06`; tablet reel is `705×407.94`; phone reel is
+  `343×200.81` directly after the actions. Every state is width-contained.
+- Measured both sides of the 1024 breakpoint. The layout switches from stacked
+  at 1023 to the intended two-column/header state at 1024 without overflow.
+- Normal playback advances; Pause holds; Play resumes; a natural 30-second
+  boundary loops without ending. Reduced-motion Chrome holds the poster and
+  exposes the Play control. The Network Information API was unavailable in the
+  round browser, so the unchanged save-data path retains Round 15's proof.
+- The clean Cyvexly browser tab has zero warning/error logs. One H1/main,
+  canonical CTA order, captioned decorative video semantics, named control,
+  and route landmarks pass.
+- ESLint, optimized 23-page build, immediate post-build TypeScript, and every
+  prerender-manifest route/asset pass. Only the known domain-blocked
+  `metadataBase` warning remains.
+- Public Render changed ETag/content about 61 seconds after the product push.
+  Opened live proof shows the Round 16 stage, advancing error-free playback,
+  named Pause control, exact width containment, and a clean console.
+- Durable plan, three renders, and exact verification are indexed under
   `docs/agent-system/cyvexly/builder/evidence/INDEX.md`.
 
 ## Blockers and honest limits
 
-- The Owner has not yet confirmed the live result on the exact computer that
-  first exposed the missing-video or scale issue.
-- The Owner's newer, separately recorded visual direction says the live video
-  still reads like a thumbnail and should become a larger integrated hero reel.
-  This round repaired deployment truth and did not absorb that new redesign
-  into the already bounded incident slice.
+- Owner visual acceptance of the deployed Round 16 result is pending.
+- The original second computer has not yet confirmed Round 9's scale fix.
 - `/about` remains Owner-blocked on founder identity/story/image. Privacy/Terms
   jurisdiction, production-domain metadata, transactional email, and abstract-
   versus-commissioned concept-art framing remain Owner decisions.
-- Physical Safari/Firefox, field Web Vitals, and the original second computer
-  were not available in this round.
+- Physical Safari/Firefox, field Web Vitals, and a new real data-saver-capable
+  browser run were not available in Round 16.
 
 ## Recommended next tasks
 
-1. Ask the Owner to hard-refresh the public Home and confirm the video on the
-   exact affected computer; capture viewport, DPR, browser font settings, and
-   OS display scale if its apparent zoom still differs.
-2. Treat `CYVEXLY_OWNER_DIRECTION.md`'s 2026-08-31-07 larger integrated Home
-   hero-video direction and its durable mockup as the next visual source. Plan,
-   implement, render, and compare it in a fresh Builder round.
-3. Route founder/legal/domain/email/art-framing decisions without inventing
-   facts. Build `/about` only when real founder inputs arrive.
-4. Keep `main` as the deployment/source branch. Do not delete remote `master`
-   unless the Owner separately authorizes cleanup after a safe retention period.
+1. Ask the Owner to hard-refresh the public Home and judge the reel scale,
+   pale-blue glass depth, and first-screen balance on both computers.
+2. If the original device still looks zoomed, capture its browser, viewport,
+   DPR, default/minimum font settings, and OS display scale before changing CSS.
+3. Prefer a different coherent visual/system slice in Round 17; do not keep
+   tuning this hero without new Owner or reviewer evidence.
+4. Route founder/legal/domain/email/art-framing decisions without inventing
+   facts. Keep `main` as the deployment/source branch.
 
 ## Completion state
 
-**DONE WITH PUBLIC PROOF** for round 15's live-video deployment repair.
-**OWNER DEVICE CONFIRMATION PENDING** for the original computer and final visual
-fidelity judgment.
+**DONE WITH PUBLIC PROOF** for Round 16's larger integrated Home hero reel and
+light-ice-blue glass direction. **OWNER REVIEW PENDING** for visual acceptance
+and original second-device confirmation.

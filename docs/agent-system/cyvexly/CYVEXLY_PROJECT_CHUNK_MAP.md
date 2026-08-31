@@ -158,6 +158,15 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 16 integrated Home hero reel:** Owner direction 2026-08-31-07 is
+  implemented in product commit `14e12d4` without formally reopening a closed
+  chunk. The Home-only stage expands to approximately 1440px, the measured
+  desktop reel grows from 528px to 726.56px, and coordinated light-ice-blue
+  glass layers protect the copy and integrate the player. Real progress,
+  Pause/Play, loop, reduced-motion, responsive, semantic, route, lint, build,
+  and type proof pass. The accepted media and product claims are unchanged;
+  Owner visual acceptance and original second-device confirmation remain.
+
 - **Round 15 live Home video deployment recovery:** the Owner's report that the
   video still did not appear publicly exposed a source/deployment identity
   defect, not another media-component defect. Render/GitHub served default

@@ -1,104 +1,7 @@
 # Cyvexly Build Summary
 
-Older setup and rounds 1-4 are preserved in
+Older setup and rounds 1-6 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
-
-## Round 5 — 2026-08-30
-
-- Revisited two open items from the closed Chunk 2 (closed does not mean
-  frozen), both independently flagged as reachable, well-scoped, and not
-  Owner-blocked by every input read this round.
-- Rebuilt `/process`'s steps section as a connected vertical timeline
-  (numbered circle badges linked by a continuous line, matching
-  `mockups/04-process-planner.png`), added a "Typical timing" summary
-  table (derived directly from existing `processSteps` data) and an "Our
-  collaboration promise" panel (grounded in already-established facts —
-  approval points, two-business-day response time, 14-day post-launch
-  support). Closed `CYVEXLY_CHUNK_DEBT.md` item 1, open since round 1.
-- Replaced the Work grid/case-study flat two-tone gradients — flagged
-  independently by both the Auditor (`CYV-IFA-002`) and the Council
-  (`CYC-R1-F002`) as their own "Next" priority finding — with
-  `src/components/concept-preview.tsx`: three distinct, hand-authored
-  abstract SVG compositions, one per concept project, each visualizing
-  that project's own already-written creative "decisions" and reusing
-  only its own established palette. Found and fixed a real design-system
-  violation during self-review (an invented color not in any project's
-  palette) via a grep-based cross-check before commit. Pixel-verified all
-  three via the established `ImageResponse`-proxy technique (a temporary
-  scratch route, deleted immediately after inspection per the
-  ephemeral-evidence rule). A direct comparison against
-  `mockups/03-work-case-study.png` also found the case-study page was
-  entirely missing a "Desktop & mobile experience" device-frame preview
-  section; built it too, reusing the same artwork, and verified zero
-  overflow at desktop/tablet/mobile widths. Partially closed
-  `CYVEXLY_CHUNK_DEBT.md` item 2 — real photographic/screen-sequence
-  imagery, what both reviewers' closure tests actually ask for, remains
-  open pending an Owner framing decision on whether abstract concept
-  artwork is an acceptable permanent answer for fictional case studies. A
-  brief web search found that general design-industry practice for
-  speculative portfolio work centers on disclosure (which Cyvexly's
-  "Concept project" labeling already provides), not a specific visual-
-  fidelity bar — useful context for that Owner decision, not a substitute
-  for it. Also ran a full clean production-build verification (not just
-  the dev server) as a final check, given this project's own established
-  history of dev/build behavior differences.
-- The Browser pane's live-tab screenshot limitation persisted from every
-  prior round, and a related new symptom appeared mid-round
-  (`clientWidth`/`innerWidth` reading `0`, `visibilityState` reading
-  `"hidden"`) that blocked further viewport-dependent measurement — worked
-  around using DOM/fetch verification and the `ImageResponse`-proxy
-  technique instead of claiming untestable geometry as verified. See
-  `CYVEXLY_WATCH.md` and `CYVEXLY_ACTIVE_CHUNK.md`'s round-5 report for
-  full detail.
-
-## Round 6 — 2026-08-30
-
-- Read the Council's now-formally-published `CYC-R2-20260830-01` report
-  (landed after round 5 closed) and fixed its three reachable, non-Owner-
-  blocked findings: the Planner progress rail at `/start` didn't keep the
-  active step visible at 390px/768px (`CYC-R2-F001`), the Services
-  "Common combinations" table clipped its right column at 390px with no
-  scroll affordance (`CYC-R2-F004`), and a Next.js console warning about
-  `scroll-behavior`/`data-scroll-behavior` on `<html>` (`CYC-R2-F005`).
-- A grep for the same table-overflow defect shape found and fixed two more
-  instances on Pricing (the package-comparison and add-ons tables) that
-  the Council hadn't audited this round — same reflow-to-cards fix applied
-  for consistency.
-- Verified all three fixes through a real dev server (driving the full
-  nine-step Planner via dispatched DOM events, measuring the progress
-  rail and reflowed tables at 390px/768px/1280px), a full sitewide
-  structural sweep (all twelve routes, zero regressions), and a clean
-  production-build pass with real built-HTML grep confirmation for each
-  fix. Isolated and documented a new instance of the session's known
-  frame-compositing limitation (`scrollIntoView({behavior:"smooth"})`
-  doesn't animate here) using a monkey-patch-and-verify technique that
-  proves the fix's logic and intended end state without needing a working
-  live-tab screenshot. See `CYVEXLY_ACTIVE_CHUNK.md`'s round-6 report and
-  `CYVEXLY_WATCH.md` for full detail.
-- Rotated the round-5 full report out of `CYVEXLY_ACTIVE_CHUNK.md` into
-  `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND5_REPORT.md`, and rotated
-  `CYVEXLY_WATCH.md`'s rounds 1-4 (in two passes, as new content needed
-  the room) into `docs/archive/CYVEXLY_WATCH_ARCHIVE.md` to bring both
-  hot-path files back under their §7.14 caps (Watch had grown to ~26.8KB
-  against its 20KB cap; a pre-existing overage, not caused by this round,
-  repaired at closeout per §7.14).
-- Refreshed the vision §15 launch-readiness pass round 3 first established
-  (gone stale after three rounds of real progress): still not launch-ready,
-  same four Owner-input blockers, but concrete measurable progress (fewer
-  sitemap gaps, the Planner now assessable and partially ready, stronger
-  accessibility/portfolio evidence). Tested `computer{action:"key"}`
-  directly for the first time and confirmed it produces zero real keyboard
-  events in this session (same frame-compositing limitation as clicks/
-  screenshots), closing the loop on the Council's suggested keyboard-
-  traversal-testing follow-up honestly rather than leaving it untried.
-- **Incident:** near closeout, a too-broad process-stop filter briefly
-  stopped a concurrently-running Council round's own dev-server processes
-  (`council-20260830T204540Z`, port 5373) — a real cross-role
-  non-interference violation. The Council round self-healed within
-  minutes, confirmed with direct evidence (fresh registered PIDs, port
-  responding again). Full account and the root-cause fix for future
-  process-stop filters are in `CYVEXLY_WATCH.md` and
-  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 ## Round 7 — 2026-08-30
 
@@ -347,3 +250,29 @@ Older setup and rounds 1-4 are preserved in
   environment continuity, and round records were added. Council-owned
   concurrent files/runtime were preserved; no scheduler or automation was
   touched.
+
+## Round 16 — 2026-08-31
+
+- Implemented Owner direction 2026-08-31-07 in product commit `14e12d4`. The
+  Home-only hero expands to a roughly 1440px stage, the measured desktop reel
+  grows from 528px to 726.56px, and an asymmetric grid gives media primary
+  visual weight without displacing the canonical headline/actions.
+- Added a protected translucent copy pane, coordinated light-ice-blue grids,
+  refractions, edges, and glow, plus a padded player bezel. The real accepted
+  30-second media remains unchanged; its new progress signal is derived from
+  native playback state and the existing named control remains authoritative.
+- Opened exact 1440/768/390 production renders. Desktop, tablet, phone, and the
+  1023/1024 breakpoint are contained; phone keeps the full-width reel directly
+  after the actions. Normal playback, Pause/Play, natural loop, reduced-motion,
+  semantics, contrast, console, prerender-manifest route smoke, lint, optimized
+  build, and post-build TypeScript pass.
+- Public Render changed ETag/content about 61 seconds after the product push;
+  the opened live Home has the Round 16 stage, advancing error-free video,
+  named Pause control, exact width containment, and a clean console.
+- Preserved the Owner-approved lighter-blue mockup and exact quoted direction.
+  Rotated Build Summary rounds 5-6 and the exact Active Chunk round-13 report
+  into archives to keep hot paths bounded. Council-owned concurrent files and
+  evidence were excluded, and no scheduler or automation was touched.
+- Owner acceptance on the public result and confirmation on the original
+  second computer remain. Existing founder/legal/domain/email/art-framing
+  decisions are unchanged.
