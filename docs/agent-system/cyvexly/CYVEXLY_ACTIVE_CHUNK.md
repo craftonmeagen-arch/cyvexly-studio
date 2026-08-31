@@ -273,6 +273,10 @@ Process timing rows resisted wrapping at 390px when Chrome's minimum font size
 was 24px. Commit `2d82b0b` stacks those rows on phones and restores their
 side-by-side presentation at `sm`; it changes no copy or disclosure.
 
+Final contrast math found the first luminous CTA gradient's center/end stops
+fell below 4.5:1 against white text. Commit `95c365f` keeps the glow/rim/shadow
+but darkens all normal stops to 4.86–5.25:1 and hover stops to 5.44–7.61:1.
+
 ### Verification and rendered comparison
 
 - `pnpm run lint` passed.
@@ -304,6 +308,9 @@ side-by-side presentation at `sm`; it changes no copy or disclosure.
 - An additional 33-case Chrome audit with minimum font size 24px initially
   found Pricing and Process phone overflow. After `2d82b0b`, the full audit
   passed with zero failures, proving the fix at large-text accessibility scale.
+- Per-stop WCAG contrast math for the final primary CTA gradient passes 4.5:1
+  in normal and hover states; lint, build, and post-build typecheck were rerun
+  after the color-only correction and passed.
 
 Evidence is indexed in `builder/evidence/INDEX.md`. Owner source captures are
 retained verbatim; temporary Chrome profiles and uncited controls are removed at
@@ -326,8 +333,9 @@ visual direction is meaningfully advanced, not declared fulfilled.
 
 Diff-to-plan check: the four product files in `8ec27c1` are exactly the planned
 design-system/root/breakpoint, header, CTA, and orbit surfaces. The two files in
-`2d82b0b` are the measured large-text follow-up. Diff-to-belief check found no
-unexpected Builder product file. Pre-existing Council files and evidence
+`2d82b0b` are the measured large-text follow-up; `95c365f` is the final measured
+CTA-contrast correction. Diff-to-belief check found no unexpected Builder
+product file. Pre-existing Council files and evidence
 remained outside Builder commits. The Owner-direction transcription was adopted
 and status-noted without changing the quoted Owner words.
 

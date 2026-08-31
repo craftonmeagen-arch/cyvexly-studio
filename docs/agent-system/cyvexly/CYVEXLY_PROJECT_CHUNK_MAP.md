@@ -157,7 +157,8 @@ requires.
   root sizing plus rem-based breakpoints scaled the whole system and changed its
   layout mode. Commit `8ec27c1` stabilizes the root and breakpoints and upgrades
   the shared glass/header/CTA/orbit surfaces; `2d82b0b` hardens Pricing and
-  Process phone rows for minimum-font enlargement. Controlled Chrome/Edge
+  Process phone rows for minimum-font enlargement; `95c365f` restores 4.5:1+
+  contrast across every luminous CTA gradient stop. Controlled Chrome/Edge
   profile, DPR, compact-viewport, interaction, and large-text proof passes;
   Owner confirmation on the original computer and final mockup-fidelity
   judgment remain the honest closure conditions.

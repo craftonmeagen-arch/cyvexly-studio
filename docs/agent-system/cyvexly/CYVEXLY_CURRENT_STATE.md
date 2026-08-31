@@ -19,9 +19,10 @@ commissioned concept-artwork framing question (`CYVEXLY_APP_DEBT.md` items 1,
 proof now complements round 7's DOM audit; physical hardware and cross-browser
 keyboard traversal remain unchecked.
 **Accepted source position:** Git repository on `master`. Round 9 commits
-`8ec27c1` and `2d82b0b` stabilize the 16px design root and pixel breakpoints,
-upgrade shared glass/header/CTA/orbit visuals, and remove minimum-font mobile
-overflow in Pricing and Process. Treat `git log` as the exact ledger.
+`8ec27c1`, `2d82b0b`, and `95c365f` stabilize the 16px design root and pixel
+breakpoints, upgrade shared glass/header/CTA/orbit visuals, remove minimum-font
+mobile overflow in Pricing and Process, and keep the luminous CTA above 4.5:1
+against white text. Treat `git log` as the exact ledger.
 Builder-owned state is clean at close; pre-existing Council dirty files remain
 intentionally untouched.
 

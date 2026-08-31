@@ -5,7 +5,8 @@
 **Session:** `cyvexly-builder-20260830T201526-7f3c1e9b`
 **Lock claim:** `2026-08-31T00:15:59.9774927Z`
 **Product commits:** `8ec27c1` — stabilize responsive scale and deepen glass
-styling; `2d82b0b` — fix large-text mobile overflow.
+styling; `2d82b0b` — fix large-text mobile overflow; `95c365f` — keep the
+luminous CTA contrast accessible.
 **PM prompt:** no active prompt
 **Source safety:** Builder product source is committed. Canonical Builder docs/evidence are committed at close. Pre-existing completed-Council files/evidence remain outside Builder commits and untouched.
 
@@ -28,6 +29,9 @@ styling; `2d82b0b` — fix large-text mobile overflow.
 - Stress-tested a 24px minimum-font accessibility profile, found real phone
   overflow in Pricing add-on and Process timing rows, and made those two row
   patterns stack on phones while preserving their `sm` side-by-side layout.
+- Calculated contrast at every primary CTA gradient stop, caught the bright
+  center/end failure, and darkened only those stops: normal is now
+  4.86–5.25:1 and hover 5.44–7.61:1 against white.
 
 ## Verification
 
@@ -56,6 +60,8 @@ styling; `2d82b0b` — fix large-text mobile overflow.
 - A separate 33-case Chrome audit with minimum font size 24px passed after
   `2d82b0b`; the initial run's two phone overflows are the defects that commit
   fixes.
+- Final lint, production build, and post-build TypeScript checks passed again
+  after the CTA contrast correction.
 - Durable evidence and source identity are indexed in
   `docs/agent-system/cyvexly/builder/evidence/INDEX.md`.
 

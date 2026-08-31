@@ -350,5 +350,8 @@
   mobile-menu interaction checks. A separate minimum-font-24 audit exposed two
   phone overflows; commit `2d82b0b` fixed Pricing add-on and Process timing-row
   wrapping, after which all 33 large-text cases passed.
+- Final CTA gradient-stop contrast math caught a sub-4.5:1 bright stop; commit
+  `95c365f` retains the luminous treatment with 4.86–5.25:1 normal and
+  5.44–7.61:1 hover contrast. Final lint/build/typecheck passed.
 - Actual second-computer confirmation and Owner visual-parity judgment remain;
   no launch/domain/legal/email blockers changed.
