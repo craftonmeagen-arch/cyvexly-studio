@@ -2,16 +2,16 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global round 13 revisited Home's shared visual
-system under the rule that closed chunks are not frozen.
+pages — remains closed, but global round 14 revisited its vision-required
+service-detail routes under the rule that closed chunks are not frozen.
 
 **Current status:** The nine-step Planner UI/state/validation remains built and
 verified at `/start`; real server-side email remains Owner-blocked on the
 production-domain and transactional-email-provider decisions. `/not-found`,
 `/faq`, and `/accessibility` are complete; `/privacy` and `/terms` remain
-Owner-blocked on jurisdiction facts; the favicon is fixed. Round 13 adds a
-reference-driven planetary/network final CTA while retaining round 12's
-partnership and process systems and round 11's accessible showcase video.
+Owner-blocked on jurisdiction facts; the favicon is fixed. Round 14 adds five
+focused service-detail journeys and safe Planner preselection while retaining
+rounds 11-13's Home video and luminous visual systems.
 
 ## Active chunk boundaries
 
@@ -70,72 +70,9 @@ partnership and process systems and round 11's accessible showcase video.
 - **Round 10:** ran the wider method audit and added the inset glass header,
   credibility icon rail, and capability-card grammar. Full report:
   `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND10_REPORT.md`.
-
-## Round 11 report — global round 11
-
-### Plan and implementation
-
-**Session:** `184dd314-df8f-4e46-8a1f-37dcb993f775`; lock claimed
-`2026-08-31T05:09:16.0099645Z`; start HEAD `a1245d8`; no active PM prompt.
-Pre-implementation plan:
-`builder/evidence/round-11-home-hero-video-plan.md`.
-
-The Owner supplied `yes_security_and_reliabilty_a.mp4` and directed that it be
-added to Home. Commit `34a5bd3` replaces the static orbit with the 30-second
-showcase's web derivatives: silent fast-start H.264/yuv420p at 1280x720
-(3,978,486 bytes) and a 12,006-byte WebP poster. `HeroShowcaseVideo` provides
-responsive glass framing, supplementary figure description, and a named,
-stateful Play/Pause control. It autoplays only while visible and ordinary motion
-is allowed; reduced motion and `navigator.connection.saveData` hold the poster.
-Explicit Play remains available, and explicit user pause survives later
-visibility/connection changes. The unused `OrbitGraphic` was removed.
-
-### Rendered comparison and proof
-
-Opened exact 1440x900, 768x1024, and 390x844 production captures. The media
-measures 528x297, 705x396.56, and 342x192.38 respectively, stays within the
-existing hero grid, keeps copy/actions first, and has no phone caption/control
-overlap. A reduced-motion phone capture shows the poster-first still. The dark
-systems panel materially advances the mockup's luminous motion/device direction
-without claiming final Owner parity.
-
-Normal playback advanced 0.904s, the pause control held with zero drift, and a
-29.7s seek looped to 0.887s. Reduced motion started paused at time 0; native
-Enter on Play advanced 0.893s. A before probe proved save-data still autoplayed
-to 1.4s; after the fix it held time 0, explicit Play advanced 0.899s, live
-save-data changes paused/resumed, and user pause stayed fixed. MP4/WebP HEAD and
-1,024-byte 206 range delivery passed. Thirteen expected route statuses and
-twelve 390px content routes passed one-main/one-H1, named-control, and overflow
-checks with no unexpected console/runtime error. Lint, production build, and
-post-build TypeScript passed; only the known domain-blocked `metadataBase`
-warning remains. A cold 150ms/~1.64Mbps run measured video/poster LCP at 1.004s,
-CLS `0.00009`, active playback, and zero overflow after eight seconds.
-
-### Audibles, limits, and accountability
-
-The first post-fix build found a Builder instrumentation fault: a live Chrome
-profile under project `.codex/tmp` was swept by Turbopack/Tailwind, which failed
-on Chrome's locked Cookies DB. The exact owned Chrome tree/profile was removed;
-moving the profile to OS temp made the identical build pass. This is now in
-Watch. Port 5173 remained occupied by an unrelated Vite process and was not
-touched; proof used Builder-owned 5183. It later exited independently; final
-checks found 5173, 5183, and 9228 free.
-
-Source diff-to-plan is the Owner media/poster, Home/component/CSS integration,
-the data-saver correction found by planned performance testing, and removal of
-the now-dead orbit component. Council-owned dirty files/evidence and the shared
-inbox remained outside Builder commits. No schedule or automation was touched.
-
-Not checked: the Owner's original second computer, physical Safari/Firefox,
-deployment/cache behavior, or field Core Web Vitals. The four existing Owner
-decisions remain unchanged. Source-frame QA found baked-in stylized malformed/
-truncated labels and a visible end-to-start cut; the Owner should watch and
-accept the complete loop or provide a corrected/crossfaded master.
-
-### Completion state
-
-**DONE WITH PROOF** for the Owner-directed Home showcase slice;
-**OWNER REVIEW STILL ACTIVE** for final mockup parity and original-device scale.
+- **Round 11:** integrated the Owner-supplied Home showcase video with honest
+  provenance, motion/data-saver controls, and responsive media proof. Full
+  report: `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND11_REPORT.md`.
 
 ## Round 12 report — global round 12
 
@@ -305,3 +242,83 @@ remain.
 
 **DONE WITH PROOF** for the round-13 Home final-CTA system slice;
 **OWNER REVIEW STILL ACTIVE** for final mockup parity and second-device scale.
+
+## Round 14 report — global round 14
+
+### Preserved plan and selection
+
+**Session:** `2384d0ba-a516-43bc-8615-01195c1455f2`; lock claimed
+`2026-08-31T10:48:25.4775496Z`; start HEAD `62c6b7e`; no active PM prompt.
+Pre-implementation plan:
+`builder/evidence/round-14-service-detail-visual-plan.md`.
+
+The vision-required `/services/[service]` system was the largest coherent,
+reachable marketing gap: the Services page had complete group cards and five
+short website-type descriptions, but the five detail pages required by vision
+§6.3 did not exist. Footer links only scrolled to those short cards. This slice
+did not require Owner-only founder, legal, domain, email-provider, or
+commissioned-art facts and did not reopen Chunk 2 formally.
+
+### What changed
+
+Product commit `930e050` adds a typed five-offer content model and a single
+reusable static detail template for Business Websites, Website Redesigns,
+Landing Pages, E-commerce Websites, and Website Care. Every page carries the
+required outcome-led headline, problem/outcome, inclusions, labeled concept
+example, client inputs, price/timing factors, package/starting price, FAQ, and
+Planner CTA. A code-native orbital signal and existing glass vocabulary extend
+the accepted reference without fabricating media or results.
+
+Services cards and footer items now link to the real routes while the five
+legacy fragment IDs remain valid. `/start?service=` maps each offer into the
+closest existing Planner website type/goal; Website Care also selects Care
+interest. The Planner announces the editable starting point. A saved browser
+draft is authoritative and always restores over the query.
+
+### Rendered comparison and verification
+
+- Final lint, TypeScript, and optimized production build pass; 23 pages are
+  generated including all five static service routes. Only the known
+  domain-blocked `metadataBase` warning remains.
+- All five routes return 200 with unique title/H1, one `main`, no duplicate
+  IDs, and service-correct Planner links; an unknown service returns 404.
+- Opened and inspected exact 1440/768/390 Business Websites renders, a 390px
+  E-commerce render, and the phone Planner preselection. 320px and 390px with
+  a 24px root remain exactly width-contained.
+- The first 768px render exposed a real local issue: switching to the split
+  hero at `md` made the H1 column unnecessarily narrow. Moving the split to
+  `lg` yields a readable 720px-wide stacked tablet hero; the final render is
+  retained.
+- Native clicks traversed Services → Business Websites → the preselected
+  Planner. Saving each of the five query states produced exactly the expected
+  Planner type/goal/care values. A saved redesign draft stayed checked when an
+  e-commerce query was added, proving query input cannot overwrite user work.
+- Unnamed buttons/links are zero; heading structure is coherent; FAQ controls
+  expose collapsed state; reduced-motion reports zero active animations.
+
+Durable proof is indexed in `builder/evidence/INDEX.md`; the exact results and
+known audibles are in `round-14-service-detail-verification.md`.
+
+### Audibles, limits, and accountability
+
+The in-app Browser bootstrap again failed before browser selection with the
+known kernel-assets path error. Installed Chrome through the established local
+Playwright fallback supplied real product proof without touching Council's
+runtime. The service template itself has no failed resource; desktop Link
+prefetch still logs the pre-existing `/about` 404, already Owner-blocked on
+founder identity. It was classified, not hidden or filled with invented copy.
+
+The first native-navigation test used an exact accessible name that omitted the
+visible arrow and therefore timed out; correcting the instrument to the actual
+`Explore business websites →` name proved navigation. No product fix was
+needed. Council-owned dirty files/evidence and its live port remained outside
+Builder commits. No scheduler or automation was touched.
+
+Not checked: Owner acceptance, the original second computer, physical Safari/
+Firefox, field performance, deployment/cache behavior, or replacement concept
+media. Existing founder/legal/domain/email and art-framing decisions remain.
+
+### Completion state
+
+**DONE WITH PROOF** for the five-service detail and Planner-handoff system;
+**OWNER REVIEW STILL ACTIVE** for Home mockup parity and second-device scale.

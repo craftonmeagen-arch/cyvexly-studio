@@ -296,3 +296,29 @@ Older setup and rounds 1-4 are preserved in
 - Lint, clean production build, and post-build TypeScript pass. Round 10's full
   report rotated to the chunk archive so Active Chunk retains the latest three
   reports and remains below its hot-file cap.
+
+## Round 14 — 2026-08-31
+
+- Completed the vision §6.3 service-detail gap with one typed, reusable static
+  template and exactly five routes: Business Websites, Website Redesigns,
+  Landing Pages, E-commerce Websites, and Website Care. Product commit:
+  `930e050`.
+- Each detail journey includes the required outcome, problem, inclusions,
+  labeled concept example, client inputs, price/timing factors, related
+  package/starting price, FAQs, and `Include this in my project` CTA. The
+  code-native orbital signal extends the cyber-arctic system without inventing
+  client results or media.
+- Converted Services-card/footer dead-end anchors into real route entries while
+  preserving the legacy IDs. `/start?service=` adds an announced, editable
+  type/goal/care starting point only when no local saved draft exists; saved
+  user work stays authoritative.
+- Lint, TypeScript, and optimized build pass with 23 generated pages. All five
+  routes return 200 with correct title/H1/main/Planner links and no duplicate
+  IDs. Exact 1440/768/390, 320px, 24px-root, long-copy, native navigation,
+  reduced-motion, semantics, and all-five Planner mapping proofs pass.
+- Visual review found and fixed a too-narrow exact-768px split hero by reserving
+  the split for `lg`; the final stacked tablet render is retained. The known
+  Owner-blocked `metadataBase` warning and `/about` prefetch 404 remain honestly
+  bounded.
+- Rotated round 11's exact Active Chunk report to the chunk archive so the hot
+  path retains the latest three reports and remains below its cap.

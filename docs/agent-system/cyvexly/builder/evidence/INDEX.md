@@ -2,6 +2,22 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 14 — focused service-detail journeys
+
+- `round-14-service-detail-visual-plan.md` — pre-implementation baseline,
+  reference hierarchy, reusable/responsive rules, saved-draft boundary, and
+  rendered acceptance plan.
+- `round-14-business-{desktop,tablet,phone}.png` — opened optimized-production
+  renders at 1440, 768, and 390 widths. The tablet file is the final post-fix
+  stacked hero, not the rejected narrow split.
+- `round-14-ecommerce-phone.png` — opened 390px long-copy control for the most
+  operationally dense service.
+- `round-14-planner-prefill-phone.png` — opened 390px Planner render with the
+  announced Business Websites starting point.
+- `round-14-service-detail-verification.md` — exact build, route, responsive,
+  native navigation, all-five Planner mapping, saved-draft precedence,
+  semantics/reduced-motion, visual refinement, audibles, and honest limits.
+
 ## Global round 13 — Home final-CTA system
 
 - `round-13-home-final-cta-visual-plan.md` — preserved source/reference

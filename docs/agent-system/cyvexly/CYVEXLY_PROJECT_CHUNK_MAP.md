@@ -69,6 +69,13 @@ requires.
   `ConceptPreview`, verified in real 1440/768/390 headless-Chrome/CDP renders
   with zero overflow. The reachable inconsistency is closed; the separate Owner
   decision on abstract-vs-commissioned concept imagery remains open.
+- **Round 14, service-detail completion:** commit `930e050` fulfills vision
+  §6.3 with one reusable `/services/[slug]` template and exactly five focused
+  routes. Services/footer entry points now reach them, and each offer hands an
+  editable starting state to the Planner without overwriting a saved draft.
+  Desktop/tablet/phone, 320px, 24px-root, native-navigation, semantics, and
+  production-build proof pass. This revisits the closed chunk without reopening
+  it or resolving the separate Owner-blocked About gap.
 - Non-goal: Project Planner (its own chunk, given its multi-step form
   complexity).
 

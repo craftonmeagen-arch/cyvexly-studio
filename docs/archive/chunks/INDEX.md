@@ -40,3 +40,6 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
 - `CYVEXLY_SHARED_HOME_ROUND10_REPORT.md` — global round 10 full report
   (wider methodology audit, inset glass header, credibility icon rail, and
   capability-card visual grammar), rotated out during round 13.
+- `CYVEXLY_SHARED_HOME_ROUND11_REPORT.md` — global round 11 full report
+  (Owner-supplied Home showcase-video integration, motion/data-saver controls,
+  media delivery, and responsive proof), rotated out during round 14.
