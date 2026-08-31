@@ -1,0 +1,281 @@
+{
+  "source": "http://127.0.0.1:5183/",
+  "capturedAtUtc": "2026-08-31T07:20:57.182Z",
+  "results": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440
+      },
+      "h1Count": 1,
+      "partnershipGraphicCount": 1,
+      "partnershipGraphicHidden": "true",
+      "partnershipGraphicViewBox": "0 0 360 260",
+      "partnershipGraphicInk": {
+        "x": 28,
+        "y": 26,
+        "width": 304,
+        "height": 218
+      },
+      "processNodeCount": 5,
+      "processIconCount": 5,
+      "processIconsHidden": true,
+      "panel": {
+        "x": 168,
+        "y": 2010.734375,
+        "width": 1104,
+        "height": 313.109375,
+        "top": 2010.734375,
+        "bottom": 2323.84375
+      },
+      "route": {
+        "x": 168,
+        "y": 2559.84375,
+        "width": 1104,
+        "height": 211.828125,
+        "top": 2559.84375,
+        "bottom": 2771.671875
+      },
+      "clip": {
+        "x": 0,
+        "y": 1974.734375,
+        "width": 1440,
+        "height": 912.9375
+      }
+    },
+    {
+      "name": "tablet",
+      "viewport": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 768,
+        "scrollWidth": 768
+      },
+      "h1Count": 1,
+      "partnershipGraphicCount": 1,
+      "partnershipGraphicHidden": "true",
+      "partnershipGraphicViewBox": "0 0 360 260",
+      "partnershipGraphicInk": {
+        "x": 28,
+        "y": 26,
+        "width": 304,
+        "height": 218
+      },
+      "processNodeCount": 5,
+      "processIconCount": 5,
+      "processIconsHidden": true,
+      "panel": {
+        "x": 24,
+        "y": 2726.15625,
+        "width": 720,
+        "height": 363,
+        "top": 2726.15625,
+        "bottom": 3089.15625
+      },
+      "route": {
+        "x": 24,
+        "y": 3325.15625,
+        "width": 720,
+        "height": 727.234375,
+        "top": 3325.15625,
+        "bottom": 4052.390625
+      },
+      "clip": {
+        "x": 0,
+        "y": 2690.15625,
+        "width": 768,
+        "height": 1478.234375
+      }
+    },
+    {
+      "name": "phone",
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 390,
+        "scrollWidth": 390
+      },
+      "h1Count": 1,
+      "partnershipGraphicCount": 1,
+      "partnershipGraphicHidden": "true",
+      "partnershipGraphicViewBox": "0 0 360 260",
+      "partnershipGraphicInk": {
+        "x": 28,
+        "y": 26,
+        "width": 304,
+        "height": 218
+      },
+      "processNodeCount": 5,
+      "processIconCount": 5,
+      "processIconsHidden": true,
+      "panel": {
+        "x": 24,
+        "y": 3940.75,
+        "width": 342,
+        "height": 574.828125,
+        "top": 3940.75,
+        "bottom": 4515.578125
+      },
+      "route": {
+        "x": 24,
+        "y": 4779.578125,
+        "width": 342,
+        "height": 1225.390625,
+        "top": 4779.578125,
+        "bottom": 6004.96875
+      },
+      "clip": {
+        "x": 0,
+        "y": 3904.75,
+        "width": 390,
+        "height": 2216.21875
+      }
+    }
+  ],
+  "routeAudit": [
+    {
+      "route": "/",
+      "status": 200,
+      "path": "/",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/services",
+      "status": 200,
+      "path": "/services",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/work",
+      "status": 200,
+      "path": "/work",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "status": 200,
+      "path": "/work/aurora-spaces",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/work/nexora-systems",
+      "status": 200,
+      "path": "/work/nexora-systems",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/work/vellora-care",
+      "status": 200,
+      "path": "/work/vellora-care",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/pricing",
+      "status": 200,
+      "path": "/pricing",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/process",
+      "status": 200,
+      "path": "/process",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "path": "/contact",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/faq",
+      "status": 200,
+      "path": "/faq",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/accessibility",
+      "status": 200,
+      "path": "/accessibility",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/start",
+      "status": 200,
+      "path": "/start",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/definitely-not-a-route",
+      "status": 404,
+      "path": "/definitely-not-a-route",
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0,
+      "clientWidth": 390,
+      "scrollWidth": 390
+    }
+  ],
+  "runtimeExceptionCount": 0,
+  "consoleErrorCount": 0
+}

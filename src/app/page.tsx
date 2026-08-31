@@ -6,6 +6,8 @@ import { FaqAccordion } from "@/components/faq-accordion";
 import { ConceptPreview } from "@/components/concept-preview";
 import { CredibilityIcon } from "@/components/credibility-icon";
 import { ServiceIcon } from "@/components/service-icon";
+import { PartnershipSignalGraphic } from "@/components/partnership-signal-graphic";
+import { ProcessIcon } from "@/components/process-icon";
 import {
   capabilities,
   credibilityPoints,
@@ -135,15 +137,21 @@ export default function Home() {
 
         {/* The difference */}
         <section className="mx-auto max-w-6xl px-6 py-20">
-          <div className="glass-panel signal-grid-bg rounded-3xl px-8 py-14 text-center sm:px-16">
-            <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
-              We&apos;re not a DIY builder. We&apos;re your independent web partner.
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
-              This isn&apos;t a template or a drag-and-drop. You describe what your business
-              needs, and we shape a custom website around your brand, your users, and your
-              goals — strategy, design, and code working together.
-            </p>
+          <div className="partnership-panel glass-panel signal-grid-bg relative grid overflow-hidden rounded-3xl px-8 py-10 text-center sm:px-12 md:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] md:items-center md:gap-10 md:text-left lg:px-16">
+            <PartnershipSignalGraphic />
+            <div className="relative z-10">
+              <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyber-blue">
+                Built around your business
+              </p>
+              <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+                We&apos;re not a DIY builder. We&apos;re your independent web partner.
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base md:mx-0">
+                This isn&apos;t a template or a drag-and-drop. You describe what your business
+                needs, and we shape a custom website around your brand, your users, and your
+                goals — strategy, design, and code working together.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -152,11 +160,12 @@ export default function Home() {
           <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
             Give us the brief. We&apos;ll shape the route.
           </h2>
-          <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          <ol className="process-route mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
             {processSteps.map((step) => (
-              <li key={step.number}>
-                <span className="font-mono text-xs text-cyber-blue">{step.number}</span>
-                <h3 className="mt-2 font-display text-base font-semibold text-midnight-slate">
+              <li key={step.number} className="process-route-step glass-panel rounded-2xl p-5 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-none">
+                <span className="process-node font-mono text-xs text-cyber-blue">{step.number}</span>
+                <ProcessIcon number={step.number} />
+                <h3 className="mt-4 font-display text-base font-semibold text-midnight-slate">
                   {step.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-cool-graphite">

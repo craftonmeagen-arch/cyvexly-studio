@@ -2,6 +2,20 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 12 — Home mid-page visual system
+
+- `round-12-home-midpage-visual-plan.md` — pre-implementation mockup/current
+  comparison, structural target, responsive state map, accessibility boundary,
+  and falsifiable proof plan.
+- `round-12-home-midpage-{desktop,tablet,phone}.png` — opened exact 1440x900,
+  768x1024, and 390x844 production renders of the new partnership diagram and
+  five-stage icon/node/route system.
+- `round-12-home-midpage-runtime-proof.json` — exact three-viewport geometry,
+  SVG ink/viewBox bounds, decorative semantics, 13-route phone status/landmark/
+  control-name/overflow audit, and console/runtime exception counts.
+- `round-12-home-midpage-comparison.md` — post-implementation comparison
+  against the accepted mockup and plan, measured disposition, and honest gaps.
+
 ## Global round 11 — Home hero showcase video
 
 - `round-11-home-hero-video-plan.md` — pre-acceptance source provenance,
