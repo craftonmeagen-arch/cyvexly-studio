@@ -371,7 +371,7 @@
   compact menu, card section, and explicit 24px-root stress state. The header
   depth and icon-led rhythm are materially closer to `mockups/01-home.png`;
   final Owner parity remains an active judgment, not a Builder claim.
-- Lint, TypeScript, production build, a 13-route phone-width H1/overflow sweep,
+- Lint, clean production build, post-build TypeScript, a 13-route phone-width H1/overflow sweep,
   a 65-case shared-header boundary matrix, exact geometry/icon counts, native
   CDP Tab/Enter compact-menu traversal, a 26-case structural semantics/control
   audit, and the 24px-root resilience stress check passed. Port 5173 was

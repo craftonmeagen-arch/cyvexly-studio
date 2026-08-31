@@ -39,7 +39,7 @@ at close. Pre-existing Council dirty files remain intentionally untouched.
   headless + Chrome DevTools Protocol. Use
   `Emulation.setDeviceMetricsOverride` for exact narrow viewports; raw
   `--window-size=390,...` on Windows can produce a misleading crop.
-- Round 10 verification: lint, production build, pre-build typecheck, opened
+- Round 10 verification: lint, clean production build, post-build typecheck, opened
   1440/768/390 renders plus open-menu/card/24px-root stress states, exact
   geometry and icon counts, a 13-route phone semantic/overflow sweep, and
   native CDP Tab/Enter traversal of the compact header all passed. Durable

@@ -383,9 +383,11 @@ complete source change:
 
 ### Rendered comparison and verification
 
-- `pnpm run lint` and pre-build `pnpm exec tsc --noEmit` passed.
-- `pnpm run build` passed, generating all 18 expected app routes. The only
-  warning is the known Owner/domain-blocked `metadataBase` fallback.
+- `pnpm run lint` passed. A clean `pnpm run build` regenerated Next's route/
+  layout globals, passed its internal TypeScript stage, and generated all 18
+  expected app routes; the only warning is the known Owner/domain-blocked
+  `metadataBase` fallback. Standalone post-build `pnpm exec tsc --noEmit`
+  passed.
 - Opened exact 1440×900, 768×1024, and 390×844 production captures plus an
   expanded-phone-menu capture, card-section capture, and 1440×4672 full-page
   render. The inset header, icon rail, and capability cards visibly close the
@@ -424,6 +426,13 @@ showed the menu open. The instrument was corrected to wait for the React
 commit. Native Enter also required CDP `rawKeyDown` plus the character event;
 after correcting the instrument, the durable JSON records the passing state and
 focus order. Neither was a product defect.
+
+A final clean-state check intentionally deleted `.next` before invoking the
+standalone compiler. `tsc --noEmit` then reported `LayoutProps` missing because
+that Next global lives in generated `.next/types`; running the clean production
+build regenerated it, and the immediate post-build compiler passed. This is a
+verification-order dependency, not a source regression; future fresh checks
+must build or run Next type generation before standalone `tsc`.
 
 Diff-to-plan check: the five product files in `6b81922` are exactly the planned
 header, Home structure/config, icon component, and shared CSS. Diff-to-belief

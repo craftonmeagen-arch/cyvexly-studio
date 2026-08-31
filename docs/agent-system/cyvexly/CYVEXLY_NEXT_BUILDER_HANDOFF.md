@@ -29,7 +29,9 @@ automation was modified.
 ## Verification
 
 - `pnpm run lint` — pass.
-- `pnpm exec tsc --noEmit` — pass.
+- Post-build `pnpm exec tsc --noEmit` — pass. On a clean checkout, build (or
+  Next type generation) must precede standalone `tsc` because `LayoutProps` is
+  generated under `.next/types`.
 - `pnpm run build` — pass, all 18 expected routes; only the known domain-
   blocked `metadataBase` warning.
 - Exact 1440/768/390 production geometry — root 16px, one H1, viewport/document

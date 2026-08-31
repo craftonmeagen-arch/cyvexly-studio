@@ -281,3 +281,9 @@ boundary on future reasoning. Rounds 1-5 are rotated to
   turn fixed the instrument. On Chrome 151, native Enter activation required
   `rawKeyDown`, a carriage-return `char` event, then `keyUp`; Tab alone worked
   with ordinary key events. Preserve both details in future interaction scripts.
+- **On a fresh tree, generate Next route/layout types before standalone
+  `tsc`.** Deleting `.next` and invoking `tsc --noEmit` directly reports the
+  generated `LayoutProps` global as missing. `next build` regenerates
+  `.next/types` and runs its own TypeScript phase; the immediate post-build
+  standalone compiler then passes. Keep the clean verification order as lint →
+  build (or `next typegen`) → standalone `tsc`.
