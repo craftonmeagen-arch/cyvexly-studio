@@ -80,7 +80,7 @@ scratch captures/scripts are clean.
   checks find 5173, 5183, and 9228 free. A live headless-Chrome profile must live
   outside the project tree because Turbopack/Tailwind may scan and collide with
   its locked database files.
-- `CYVEXLY_ACTIVE_CHUNK.md` (30,418 bytes) and `CYVEXLY_WATCH.md` (20,139 bytes)
+- `CYVEXLY_ACTIVE_CHUNK.md` (30,612 bytes) and `CYVEXLY_WATCH.md` (20,139 bytes)
   are within but very near their 30KB/20KB hot-path caps. Round 12 must rotate
   the oldest active report and Watch material before adding substantive text.
 
