@@ -95,3 +95,8 @@ into the supplied source, including truncated or malformed labels. Most is small
 at the shipping hero size and the overlay does not treat it as authoritative
 copy, but the Owner should view the complete 30-second loop before release and
 supply a corrected master if any source-frame wording is unacceptable.
+First/last-frame inspection also shows different compositions (the performance
+dashboard ends before the opening orb), so the functional browser loop has a
+visible restart rather than a frame-seamless cycle. If that cut is too abrupt in
+the Owner's full-loop review, the honest fix is a revised/crossfaded media master,
+not a CSS claim that the source is seamless.

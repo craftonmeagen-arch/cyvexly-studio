@@ -69,6 +69,10 @@ scratch captures/scripts are clean.
   the Owner should watch the complete loop before release and provide a corrected
   master if any frame-level wording is unacceptable; CSS cannot repair source
   pixels honestly.
+- The loop function is proven, but first/last-frame inspection shows a visible
+  restart from the ending performance dashboard to the opening orb. Ask the
+  Owner whether that cut is acceptable; otherwise derive/obtain a deliberately
+  crossfaded master rather than calling the current source seamless.
 - Port 5173 was initially occupied by an unrelated Vite process and was
   preserved; round proof used owned 5183. It exited independently, and final
   checks find 5173, 5183, and 9228 free. A live headless-Chrome profile must live
