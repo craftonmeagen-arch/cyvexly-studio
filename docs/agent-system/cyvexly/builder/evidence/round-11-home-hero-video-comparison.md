@@ -64,6 +64,10 @@ Opened evidence:
   video/poster as LCP at 1.004s, CLS `0.00009`, active playback at 6.105s, and
   zero overflow. After eight seconds the browser had fetched the 12KB poster
   and about 991KB across video byte ranges, not the complete 3.98MB file.
+- A 720-frame global-average luminance scan found a maximum adjacent-frame YAVG
+  delta of 5.054 and no delta above 10 (8-bit studio-range signal). This rules
+  out a full-frame brightness jump in the sampled metric, but is not a WCAG
+  local flash-area analysis; reduced-motion still remains the safety boundary.
 - The media is silent. Its imagery is supplementary, `aria-hidden` on the
   `<video>`, and represented by a concise figure caption. The visible playback
   control exposes its changing Play/Pause name, pressed state, and controlled

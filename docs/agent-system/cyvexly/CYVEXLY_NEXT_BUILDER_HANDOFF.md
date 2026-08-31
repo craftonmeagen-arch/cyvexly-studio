@@ -44,6 +44,8 @@ scratch captures/scripts are clean.
 - MP4/WebP MIME, byte lengths, `Accept-Ranges`, and 1,024-byte 206 responses pass.
 - A cold 150ms/~1.64Mbps desktop run measured video/poster LCP at 1.004s, CLS
   `0.00009`, active playback after eight seconds, and zero overflow.
+- A 720-frame global-luminance scan found no adjacent average-brightness delta
+  above 10; this is not a substitute for a WCAG local flash-area analysis.
 - Council `CYC-R11-20260830-01` independently accepted the visual direction and
   found no responsive/semantic regression. Its requested provenance,
   reduced-motion, and constrained-network evidence gaps are now covered by the
