@@ -519,7 +519,9 @@ inbox remained outside Builder commits. No schedule or automation was touched.
 
 Not checked: the Owner's original second computer, physical Safari/Firefox,
 deployment/cache behavior, or field Core Web Vitals. The four existing Owner
-decisions remain unchanged.
+decisions remain unchanged. Source-frame QA found baked-in stylized malformed/
+truncated labels and a visible end-to-start cut; the Owner should watch and
+accept the complete loop or provide a corrected/crossfaded master.
 
 ### Completion state
 
