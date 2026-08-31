@@ -1,0 +1,1329 @@
+{
+  "source": {
+    "head": "1df0203",
+    "startHead": "061fb00",
+    "state": "committed Round 13 product source",
+    "changedProductFiles": [
+      "src/app/page.tsx",
+      "src/app/globals.css",
+      "src/components/final-cta-signal-graphic.tsx"
+    ],
+    "runtime": "http://localhost:5173",
+    "browser": "Chrome 151 / CDP 9230",
+    "server": "Next production"
+  },
+  "capturedAtUtc": "2026-08-31T09:26:50.496Z",
+  "desktop": {
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "rootSize": "16px"
+    },
+    "document": {
+      "clientWidth": 1425,
+      "scrollWidth": 1425,
+      "scrollHeight": 4753
+    },
+    "panel": {
+      "x": 160.5,
+      "y": 3948.671875,
+      "width": 1104,
+      "height": 338,
+      "right": 1264.5,
+      "bottom": 4286.671875
+    },
+    "copy": {
+      "x": 161.5,
+      "y": 3949.671875,
+      "width": 639.15625,
+      "height": 336,
+      "right": 800.65625,
+      "bottom": 4285.671875
+    },
+    "graphic": {
+      "x": 569.234375,
+      "y": 3949.671875,
+      "width": 727.3125,
+      "height": 349.4375,
+      "right": 1296.546875,
+      "bottom": 4299.109375
+    },
+    "heading": {
+      "x": 225.5,
+      "y": 4005.671875,
+      "width": 511.15625,
+      "height": 72,
+      "right": 736.65625,
+      "bottom": 4077.671875
+    },
+    "cta": {
+      "x": 225.5,
+      "y": 4151.671875,
+      "width": 194.28125,
+      "height": 46,
+      "right": 419.78125,
+      "bottom": 4197.671875
+    },
+    "note": {
+      "x": 225.5,
+      "y": 4213.671875,
+      "width": 511.15625,
+      "height": 16,
+      "right": 736.65625,
+      "bottom": 4229.671875
+    },
+    "layout": {
+      "textAlign": "left",
+      "graphicOpacity": "1"
+    },
+    "structure": {
+      "h1Count": 1,
+      "finalCtaCount": 1,
+      "finalCtaHeadingCount": 1,
+      "finalCtaStartLinkCount": 1,
+      "graphicAriaHidden": "true",
+      "svgRole": "presentation",
+      "viewBox": "0 0 720 360",
+      "svgInk": {
+        "x": 58,
+        "y": 23,
+        "width": 753,
+        "height": 689
+      },
+      "headingText": "Ready to build something extraordinary?",
+      "ctaText": "Describe your project",
+      "noteText": "No payment required · response within two business days"
+    },
+    "colors": {
+      "heading": "rgb(255, 255, 255)",
+      "paragraph": "rgb(213, 223, 237)",
+      "note": "rgb(185, 198, 218)"
+    },
+    "overflow": false,
+    "containment": true
+  },
+  "tablet": {
+    "viewport": {
+      "innerWidth": 768,
+      "innerHeight": 1024,
+      "dpr": 1,
+      "rootSize": "16px"
+    },
+    "document": {
+      "clientWidth": 753,
+      "scrollWidth": 753,
+      "scrollHeight": 6235
+    },
+    "panel": {
+      "x": 24,
+      "y": 5328.953125,
+      "width": 705,
+      "height": 416,
+      "right": 729,
+      "bottom": 5744.953125
+    },
+    "copy": {
+      "x": 25,
+      "y": 5329.953125,
+      "width": 407.734375,
+      "height": 414,
+      "right": 432.734375,
+      "bottom": 5743.953125
+    },
+    "graphic": {
+      "x": 285.109375,
+      "y": 5329.953125,
+      "width": 463.96875,
+      "height": 430.546875,
+      "right": 749.078125,
+      "bottom": 5760.5
+    },
+    "heading": {
+      "x": 73,
+      "y": 5385.953125,
+      "width": 311.734375,
+      "height": 108,
+      "right": 384.734375,
+      "bottom": 5493.953125
+    },
+    "cta": {
+      "x": 73,
+      "y": 5593.953125,
+      "width": 194.28125,
+      "height": 46,
+      "right": 267.28125,
+      "bottom": 5639.953125
+    },
+    "note": {
+      "x": 73,
+      "y": 5655.953125,
+      "width": 311.734375,
+      "height": 32,
+      "right": 384.734375,
+      "bottom": 5687.953125
+    },
+    "layout": {
+      "textAlign": "left",
+      "graphicOpacity": "1"
+    },
+    "structure": {
+      "h1Count": 1,
+      "finalCtaCount": 1,
+      "finalCtaHeadingCount": 1,
+      "finalCtaStartLinkCount": 1,
+      "graphicAriaHidden": "true",
+      "svgRole": "presentation",
+      "viewBox": "0 0 720 360",
+      "svgInk": {
+        "x": 58,
+        "y": 23,
+        "width": 753,
+        "height": 689
+      },
+      "headingText": "Ready to build something extraordinary?",
+      "ctaText": "Describe your project",
+      "noteText": "No payment required · response within two business days"
+    },
+    "colors": {
+      "heading": "rgb(255, 255, 255)",
+      "paragraph": "rgb(213, 223, 237)",
+      "note": "rgb(185, 198, 218)"
+    },
+    "overflow": false,
+    "containment": true
+  },
+  "boundaryAudit": [
+    {
+      "viewport": {
+        "innerWidth": 320,
+        "innerHeight": 844,
+        "dpr": 1,
+        "rootSize": "16px"
+      },
+      "document": {
+        "clientWidth": 305,
+        "scrollWidth": 305,
+        "scrollHeight": 10344
+      },
+      "panel": {
+        "x": 24,
+        "y": 8897.890625,
+        "width": 257,
+        "height": 432,
+        "right": 281,
+        "bottom": 9329.890625
+      },
+      "copy": {
+        "x": 25,
+        "y": 8898.890625,
+        "width": 255,
+        "height": 422.25,
+        "right": 280,
+        "bottom": 9321.140625
+      },
+      "graphic": {
+        "x": -26,
+        "y": 9075.1875,
+        "width": 420.75,
+        "height": 352.59375,
+        "right": 394.75,
+        "bottom": 9427.78125
+      },
+      "heading": {
+        "x": 57,
+        "y": 8946.890625,
+        "width": 191,
+        "height": 96,
+        "right": 248,
+        "bottom": 9042.890625
+      },
+      "cta": {
+        "x": 57,
+        "y": 9159.140625,
+        "width": 191,
+        "height": 66,
+        "right": 248,
+        "bottom": 9225.140625
+      },
+      "note": {
+        "x": 57,
+        "y": 9241.140625,
+        "width": 191,
+        "height": 32,
+        "right": 248,
+        "bottom": 9273.140625
+      },
+      "layout": {
+        "textAlign": "center",
+        "graphicOpacity": "0.82"
+      },
+      "structure": {
+        "h1Count": 1,
+        "finalCtaCount": 1,
+        "finalCtaHeadingCount": 1,
+        "finalCtaStartLinkCount": 1,
+        "graphicAriaHidden": "true",
+        "svgRole": "presentation",
+        "viewBox": "0 0 720 360",
+        "svgInk": {
+          "x": 58,
+          "y": 23,
+          "width": 753,
+          "height": 689
+        },
+        "headingText": "Ready to build something extraordinary?",
+        "ctaText": "Describe your project",
+        "noteText": "No payment required · response within two business days"
+      },
+      "colors": {
+        "heading": "rgb(255, 255, 255)",
+        "paragraph": "rgb(213, 223, 237)",
+        "note": "rgb(185, 198, 218)"
+      },
+      "overflow": false,
+      "containment": true
+    },
+    {
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "dpr": 1,
+        "rootSize": "16px"
+      },
+      "document": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "scrollHeight": 9804
+      },
+      "panel": {
+        "x": 24,
+        "y": 8358.40625,
+        "width": 327,
+        "height": 432,
+        "right": 351,
+        "bottom": 8790.40625
+      },
+      "copy": {
+        "x": 25,
+        "y": 8359.40625,
+        "width": 325,
+        "height": 379.5,
+        "right": 350,
+        "bottom": 8738.90625
+      },
+      "graphic": {
+        "x": -40,
+        "y": 8535.703125,
+        "width": 536.25,
+        "height": 352.59375,
+        "right": 496.25,
+        "bottom": 8888.296875
+      },
+      "heading": {
+        "x": 57,
+        "y": 8407.40625,
+        "width": 261,
+        "height": 96,
+        "right": 318,
+        "bottom": 8503.40625
+      },
+      "cta": {
+        "x": 90.359375,
+        "y": 8596.90625,
+        "width": 194.28125,
+        "height": 46,
+        "right": 284.640625,
+        "bottom": 8642.90625
+      },
+      "note": {
+        "x": 57,
+        "y": 8658.90625,
+        "width": 261,
+        "height": 32,
+        "right": 318,
+        "bottom": 8690.90625
+      },
+      "layout": {
+        "textAlign": "center",
+        "graphicOpacity": "0.82"
+      },
+      "structure": {
+        "h1Count": 1,
+        "finalCtaCount": 1,
+        "finalCtaHeadingCount": 1,
+        "finalCtaStartLinkCount": 1,
+        "graphicAriaHidden": "true",
+        "svgRole": "presentation",
+        "viewBox": "0 0 720 360",
+        "svgInk": {
+          "x": 58,
+          "y": 23,
+          "width": 753,
+          "height": 689
+        },
+        "headingText": "Ready to build something extraordinary?",
+        "ctaText": "Describe your project",
+        "noteText": "No payment required · response within two business days"
+      },
+      "colors": {
+        "heading": "rgb(255, 255, 255)",
+        "paragraph": "rgb(213, 223, 237)",
+        "note": "rgb(185, 198, 218)"
+      },
+      "overflow": false,
+      "containment": true
+    },
+    {
+      "viewport": {
+        "innerWidth": 639,
+        "innerHeight": 844,
+        "dpr": 1,
+        "rootSize": "16px"
+      },
+      "document": {
+        "clientWidth": 624,
+        "scrollWidth": 624,
+        "scrollHeight": 9096
+      },
+      "panel": {
+        "x": 24,
+        "y": 7650.21875,
+        "width": 576,
+        "height": 432,
+        "right": 600,
+        "bottom": 8082.21875
+      },
+      "copy": {
+        "x": 25,
+        "y": 7651.21875,
+        "width": 574,
+        "height": 276.75,
+        "right": 599,
+        "bottom": 7927.96875
+      },
+      "graphic": {
+        "x": -89.796875,
+        "y": 7827.515625,
+        "width": 947.09375,
+        "height": 352.59375,
+        "right": 857.296875,
+        "bottom": 8180.109375
+      },
+      "heading": {
+        "x": 57,
+        "y": 7699.21875,
+        "width": 510,
+        "height": 32,
+        "right": 567,
+        "bottom": 7731.21875
+      },
+      "cta": {
+        "x": 214.859375,
+        "y": 7801.96875,
+        "width": 194.28125,
+        "height": 46,
+        "right": 409.140625,
+        "bottom": 7847.96875
+      },
+      "note": {
+        "x": 57,
+        "y": 7863.96875,
+        "width": 510,
+        "height": 16,
+        "right": 567,
+        "bottom": 7879.96875
+      },
+      "layout": {
+        "textAlign": "center",
+        "graphicOpacity": "0.82"
+      },
+      "structure": {
+        "h1Count": 1,
+        "finalCtaCount": 1,
+        "finalCtaHeadingCount": 1,
+        "finalCtaStartLinkCount": 1,
+        "graphicAriaHidden": "true",
+        "svgRole": "presentation",
+        "viewBox": "0 0 720 360",
+        "svgInk": {
+          "x": 58,
+          "y": 23,
+          "width": 753,
+          "height": 689
+        },
+        "headingText": "Ready to build something extraordinary?",
+        "ctaText": "Describe your project",
+        "noteText": "No payment required · response within two business days"
+      },
+      "colors": {
+        "heading": "rgb(255, 255, 255)",
+        "paragraph": "rgb(213, 223, 237)",
+        "note": "rgb(185, 198, 218)"
+      },
+      "overflow": false,
+      "containment": true
+    },
+    {
+      "viewport": {
+        "innerWidth": 640,
+        "innerHeight": 844,
+        "dpr": 1,
+        "rootSize": "16px"
+      },
+      "document": {
+        "clientWidth": 625,
+        "scrollWidth": 625,
+        "scrollHeight": 8259
+      },
+      "panel": {
+        "x": 24,
+        "y": 7136.609375,
+        "width": 577,
+        "height": 432,
+        "right": 601,
+        "bottom": 7568.609375
+      },
+      "copy": {
+        "x": 25,
+        "y": 7137.609375,
+        "width": 575,
+        "height": 346,
+        "right": 600,
+        "bottom": 7483.609375
+      },
+      "graphic": {
+        "x": -90,
+        "y": 7313.90625,
+        "width": 948.75,
+        "height": 352.59375,
+        "right": 858.75,
+        "bottom": 7666.5
+      },
+      "heading": {
+        "x": 73,
+        "y": 7185.609375,
+        "width": 479,
+        "height": 72,
+        "right": 552,
+        "bottom": 7257.609375
+      },
+      "cta": {
+        "x": 215.359375,
+        "y": 7357.609375,
+        "width": 194.28125,
+        "height": 46,
+        "right": 409.640625,
+        "bottom": 7403.609375
+      },
+      "note": {
+        "x": 73,
+        "y": 7419.609375,
+        "width": 479,
+        "height": 16,
+        "right": 552,
+        "bottom": 7435.609375
+      },
+      "layout": {
+        "textAlign": "center",
+        "graphicOpacity": "0.82"
+      },
+      "structure": {
+        "h1Count": 1,
+        "finalCtaCount": 1,
+        "finalCtaHeadingCount": 1,
+        "finalCtaStartLinkCount": 1,
+        "graphicAriaHidden": "true",
+        "svgRole": "presentation",
+        "viewBox": "0 0 720 360",
+        "svgInk": {
+          "x": 58,
+          "y": 23,
+          "width": 753,
+          "height": 689
+        },
+        "headingText": "Ready to build something extraordinary?",
+        "ctaText": "Describe your project",
+        "noteText": "No payment required · response within two business days"
+      },
+      "colors": {
+        "heading": "rgb(255, 255, 255)",
+        "paragraph": "rgb(213, 223, 237)",
+        "note": "rgb(185, 198, 218)"
+      },
+      "overflow": false,
+      "containment": true
+    },
+    {
+      "viewport": {
+        "innerWidth": 767,
+        "innerHeight": 844,
+        "dpr": 1,
+        "rootSize": "16px"
+      },
+      "document": {
+        "clientWidth": 752,
+        "scrollWidth": 752,
+        "scrollHeight": 8040
+      },
+      "panel": {
+        "x": 24,
+        "y": 6917.71875,
+        "width": 704,
+        "height": 432,
+        "right": 728,
+        "bottom": 7349.71875
+      },
+      "copy": {
+        "x": 25,
+        "y": 6918.71875,
+        "width": 702,
+        "height": 284,
+        "right": 727,
+        "bottom": 7202.71875
+      },
+      "graphic": {
+        "x": -115.40625,
+        "y": 7095.015625,
+        "width": 1158.296875,
+        "height": 352.59375,
+        "right": 1042.890625,
+        "bottom": 7447.609375
+      },
+      "heading": {
+        "x": 73,
+        "y": 6966.71875,
+        "width": 606,
+        "height": 36,
+        "right": 679,
+        "bottom": 7002.71875
+      },
+      "cta": {
+        "x": 278.859375,
+        "y": 7076.71875,
+        "width": 194.28125,
+        "height": 46,
+        "right": 473.140625,
+        "bottom": 7122.71875
+      },
+      "note": {
+        "x": 73,
+        "y": 7138.71875,
+        "width": 606,
+        "height": 16,
+        "right": 679,
+        "bottom": 7154.71875
+      },
+      "layout": {
+        "textAlign": "center",
+        "graphicOpacity": "0.82"
+      },
+      "structure": {
+        "h1Count": 1,
+        "finalCtaCount": 1,
+        "finalCtaHeadingCount": 1,
+        "finalCtaStartLinkCount": 1,
+        "graphicAriaHidden": "true",
+        "svgRole": "presentation",
+        "viewBox": "0 0 720 360",
+        "svgInk": {
+          "x": 58,
+          "y": 23,
+          "width": 753,
+          "height": 689
+        },
+        "headingText": "Ready to build something extraordinary?",
+        "ctaText": "Describe your project",
+        "noteText": "No payment required · response within two business days"
+      },
+      "colors": {
+        "heading": "rgb(255, 255, 255)",
+        "paragraph": "rgb(213, 223, 237)",
+        "note": "rgb(185, 198, 218)"
+      },
+      "overflow": false,
+      "containment": true
+    },
+    {
+      "viewport": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "dpr": 1,
+        "rootSize": "16px"
+      },
+      "document": {
+        "clientWidth": 753,
+        "scrollWidth": 753,
+        "scrollHeight": 6235
+      },
+      "panel": {
+        "x": 24,
+        "y": 5328.953125,
+        "width": 705,
+        "height": 416,
+        "right": 729,
+        "bottom": 5744.953125
+      },
+      "copy": {
+        "x": 25,
+        "y": 5329.953125,
+        "width": 407.734375,
+        "height": 414,
+        "right": 432.734375,
+        "bottom": 5743.953125
+      },
+      "graphic": {
+        "x": 285.109375,
+        "y": 5329.953125,
+        "width": 463.96875,
+        "height": 430.546875,
+        "right": 749.078125,
+        "bottom": 5760.5
+      },
+      "heading": {
+        "x": 73,
+        "y": 5385.953125,
+        "width": 311.734375,
+        "height": 108,
+        "right": 384.734375,
+        "bottom": 5493.953125
+      },
+      "cta": {
+        "x": 73,
+        "y": 5593.953125,
+        "width": 194.28125,
+        "height": 46,
+        "right": 267.28125,
+        "bottom": 5639.953125
+      },
+      "note": {
+        "x": 73,
+        "y": 5655.953125,
+        "width": 311.734375,
+        "height": 32,
+        "right": 384.734375,
+        "bottom": 5687.953125
+      },
+      "layout": {
+        "textAlign": "left",
+        "graphicOpacity": "1"
+      },
+      "structure": {
+        "h1Count": 1,
+        "finalCtaCount": 1,
+        "finalCtaHeadingCount": 1,
+        "finalCtaStartLinkCount": 1,
+        "graphicAriaHidden": "true",
+        "svgRole": "presentation",
+        "viewBox": "0 0 720 360",
+        "svgInk": {
+          "x": 58,
+          "y": 23,
+          "width": 753,
+          "height": 689
+        },
+        "headingText": "Ready to build something extraordinary?",
+        "ctaText": "Describe your project",
+        "noteText": "No payment required · response within two business days"
+      },
+      "colors": {
+        "heading": "rgb(255, 255, 255)",
+        "paragraph": "rgb(213, 223, 237)",
+        "note": "rgb(185, 198, 218)"
+      },
+      "overflow": false,
+      "containment": true
+    },
+    {
+      "viewport": {
+        "innerWidth": 1023,
+        "innerHeight": 1024,
+        "dpr": 1,
+        "rootSize": "16px"
+      },
+      "document": {
+        "clientWidth": 1008,
+        "scrollWidth": 1008,
+        "scrollHeight": 6044
+      },
+      "panel": {
+        "x": 24,
+        "y": 5214.140625,
+        "width": 960,
+        "height": 364,
+        "right": 984,
+        "bottom": 5578.140625
+      },
+      "copy": {
+        "x": 25,
+        "y": 5215.140625,
+        "width": 555.625,
+        "height": 362,
+        "right": 580.625,
+        "bottom": 5577.140625
+      },
+      "graphic": {
+        "x": 379.46875,
+        "y": 5215.140625,
+        "width": 632.265625,
+        "height": 376.46875,
+        "right": 1011.734375,
+        "bottom": 5591.609375
+      },
+      "heading": {
+        "x": 73,
+        "y": 5271.140625,
+        "width": 459.625,
+        "height": 72,
+        "right": 532.625,
+        "bottom": 5343.140625
+      },
+      "cta": {
+        "x": 73,
+        "y": 5443.140625,
+        "width": 194.28125,
+        "height": 46,
+        "right": 267.28125,
+        "bottom": 5489.140625
+      },
+      "note": {
+        "x": 73,
+        "y": 5505.140625,
+        "width": 459.625,
+        "height": 16,
+        "right": 532.625,
+        "bottom": 5521.140625
+      },
+      "layout": {
+        "textAlign": "left",
+        "graphicOpacity": "1"
+      },
+      "structure": {
+        "h1Count": 1,
+        "finalCtaCount": 1,
+        "finalCtaHeadingCount": 1,
+        "finalCtaStartLinkCount": 1,
+        "graphicAriaHidden": "true",
+        "svgRole": "presentation",
+        "viewBox": "0 0 720 360",
+        "svgInk": {
+          "x": 58,
+          "y": 23,
+          "width": 753,
+          "height": 689
+        },
+        "headingText": "Ready to build something extraordinary?",
+        "ctaText": "Describe your project",
+        "noteText": "No payment required · response within two business days"
+      },
+      "colors": {
+        "heading": "rgb(255, 255, 255)",
+        "paragraph": "rgb(213, 223, 237)",
+        "note": "rgb(185, 198, 218)"
+      },
+      "overflow": false,
+      "containment": true
+    },
+    {
+      "viewport": {
+        "innerWidth": 1024,
+        "innerHeight": 1024,
+        "dpr": 1,
+        "rootSize": "16px"
+      },
+      "document": {
+        "clientWidth": 1009,
+        "scrollWidth": 1009,
+        "scrollHeight": 4832
+      },
+      "panel": {
+        "x": 24,
+        "y": 4002.0625,
+        "width": 961,
+        "height": 364,
+        "right": 985,
+        "bottom": 4366.0625
+      },
+      "copy": {
+        "x": 25,
+        "y": 4003.0625,
+        "width": 556.21875,
+        "height": 362,
+        "right": 581.21875,
+        "bottom": 4365.0625
+      },
+      "graphic": {
+        "x": 379.828125,
+        "y": 4003.0625,
+        "width": 632.9375,
+        "height": 376.46875,
+        "right": 1012.765625,
+        "bottom": 4379.53125
+      },
+      "heading": {
+        "x": 89,
+        "y": 4059.0625,
+        "width": 428.21875,
+        "height": 72,
+        "right": 517.21875,
+        "bottom": 4131.0625
+      },
+      "cta": {
+        "x": 89,
+        "y": 4231.0625,
+        "width": 194.28125,
+        "height": 46,
+        "right": 283.28125,
+        "bottom": 4277.0625
+      },
+      "note": {
+        "x": 89,
+        "y": 4293.0625,
+        "width": 428.21875,
+        "height": 16,
+        "right": 517.21875,
+        "bottom": 4309.0625
+      },
+      "layout": {
+        "textAlign": "left",
+        "graphicOpacity": "1"
+      },
+      "structure": {
+        "h1Count": 1,
+        "finalCtaCount": 1,
+        "finalCtaHeadingCount": 1,
+        "finalCtaStartLinkCount": 1,
+        "graphicAriaHidden": "true",
+        "svgRole": "presentation",
+        "viewBox": "0 0 720 360",
+        "svgInk": {
+          "x": 58,
+          "y": 23,
+          "width": 753,
+          "height": 689
+        },
+        "headingText": "Ready to build something extraordinary?",
+        "ctaText": "Describe your project",
+        "noteText": "No payment required · response within two business days"
+      },
+      "colors": {
+        "heading": "rgb(255, 255, 255)",
+        "paragraph": "rgb(213, 223, 237)",
+        "note": "rgb(185, 198, 218)"
+      },
+      "overflow": false,
+      "containment": true
+    },
+    {
+      "viewport": {
+        "innerWidth": 1440,
+        "innerHeight": 1024,
+        "dpr": 1,
+        "rootSize": "16px"
+      },
+      "document": {
+        "clientWidth": 1425,
+        "scrollWidth": 1425,
+        "scrollHeight": 4753
+      },
+      "panel": {
+        "x": 160.5,
+        "y": 3948.671875,
+        "width": 1104,
+        "height": 338,
+        "right": 1264.5,
+        "bottom": 4286.671875
+      },
+      "copy": {
+        "x": 161.5,
+        "y": 3949.671875,
+        "width": 639.15625,
+        "height": 336,
+        "right": 800.65625,
+        "bottom": 4285.671875
+      },
+      "graphic": {
+        "x": 569.234375,
+        "y": 3949.671875,
+        "width": 727.3125,
+        "height": 349.4375,
+        "right": 1296.546875,
+        "bottom": 4299.109375
+      },
+      "heading": {
+        "x": 225.5,
+        "y": 4005.671875,
+        "width": 511.15625,
+        "height": 72,
+        "right": 736.65625,
+        "bottom": 4077.671875
+      },
+      "cta": {
+        "x": 225.5,
+        "y": 4151.671875,
+        "width": 194.28125,
+        "height": 46,
+        "right": 419.78125,
+        "bottom": 4197.671875
+      },
+      "note": {
+        "x": 225.5,
+        "y": 4213.671875,
+        "width": 511.15625,
+        "height": 16,
+        "right": 736.65625,
+        "bottom": 4229.671875
+      },
+      "layout": {
+        "textAlign": "left",
+        "graphicOpacity": "1"
+      },
+      "structure": {
+        "h1Count": 1,
+        "finalCtaCount": 1,
+        "finalCtaHeadingCount": 1,
+        "finalCtaStartLinkCount": 1,
+        "graphicAriaHidden": "true",
+        "svgRole": "presentation",
+        "viewBox": "0 0 720 360",
+        "svgInk": {
+          "x": 58,
+          "y": 23,
+          "width": 753,
+          "height": 689
+        },
+        "headingText": "Ready to build something extraordinary?",
+        "ctaText": "Describe your project",
+        "noteText": "No payment required · response within two business days"
+      },
+      "colors": {
+        "heading": "rgb(255, 255, 255)",
+        "paragraph": "rgb(213, 223, 237)",
+        "note": "rgb(185, 198, 218)"
+      },
+      "overflow": false,
+      "containment": true
+    }
+  ],
+  "largeText": {
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "rootSize": "24px"
+    },
+    "document": {
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "scrollHeight": 17229
+    },
+    "panel": {
+      "x": 36,
+      "y": 14914.59375,
+      "width": 303,
+      "height": 740.5,
+      "right": 339,
+      "bottom": 15655.09375
+    },
+    "copy": {
+      "x": 37,
+      "y": 14915.59375,
+      "width": 301,
+      "height": 738.5,
+      "right": 338,
+      "bottom": 15654.09375
+    },
+    "graphic": {
+      "x": -23.203125,
+      "y": 15218.375,
+      "width": 496.640625,
+      "height": 605.5625,
+      "right": 473.4375,
+      "bottom": 15823.9375
+    },
+    "heading": {
+      "x": 85,
+      "y": 14987.59375,
+      "width": 205,
+      "height": 192,
+      "right": 290,
+      "bottom": 15179.59375
+    },
+    "cta": {
+      "x": 85,
+      "y": 15388.09375,
+      "width": 205,
+      "height": 98,
+      "right": 290,
+      "bottom": 15486.09375
+    },
+    "note": {
+      "x": 85,
+      "y": 15510.09375,
+      "width": 205,
+      "height": 72,
+      "right": 290,
+      "bottom": 15582.09375
+    },
+    "layout": {
+      "textAlign": "center",
+      "graphicOpacity": "0.82"
+    },
+    "structure": {
+      "h1Count": 1,
+      "finalCtaCount": 1,
+      "finalCtaHeadingCount": 1,
+      "finalCtaStartLinkCount": 1,
+      "graphicAriaHidden": "true",
+      "svgRole": "presentation",
+      "viewBox": "0 0 720 360",
+      "svgInk": {
+        "x": 58,
+        "y": 23,
+        "width": 753,
+        "height": 689
+      },
+      "headingText": "Ready to build something extraordinary?",
+      "ctaText": "Describe your project",
+      "noteText": "No payment required · response within two business days"
+    },
+    "colors": {
+      "heading": "rgb(255, 255, 255)",
+      "paragraph": "rgb(213, 223, 237)",
+      "note": "rgb(185, 198, 218)"
+    },
+    "overflow": false,
+    "containment": true
+  },
+  "routeAudit": [
+    {
+      "route": "/",
+      "status": 200,
+      "pathname": "/",
+      "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/services",
+      "status": 200,
+      "pathname": "/services",
+      "title": "Services — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/work",
+      "status": 200,
+      "pathname": "/work",
+      "title": "Work — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/pricing",
+      "status": 200,
+      "pathname": "/pricing",
+      "title": "Pricing — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/process",
+      "status": 200,
+      "pathname": "/process",
+      "title": "Process — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "pathname": "/contact",
+      "title": "Contact — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/faq",
+      "status": 200,
+      "pathname": "/faq",
+      "title": "FAQ — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/accessibility",
+      "status": 200,
+      "pathname": "/accessibility",
+      "title": "Accessibility Statement — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/start",
+      "status": 200,
+      "pathname": "/start",
+      "title": "Project Planner — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "status": 200,
+      "pathname": "/work/aurora-spaces",
+      "title": "Aurora Spaces — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/work/nexora-systems",
+      "status": 200,
+      "pathname": "/work/nexora-systems",
+      "title": "Nexora Systems — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/work/vellora-care",
+      "status": 200,
+      "pathname": "/work/vellora-care",
+      "title": "Vellora Care — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/about",
+      "status": 404,
+      "pathname": "/about",
+      "title": "Page not found — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/privacy",
+      "status": 404,
+      "pathname": "/privacy",
+      "title": "Page not found — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/terms",
+      "status": 404,
+      "pathname": "/terms",
+      "title": "Page not found — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    },
+    {
+      "route": "/not-a-real-route",
+      "status": 404,
+      "pathname": "/not-a-real-route",
+      "title": "Page not found — Cyvexly Studio",
+      "mainCount": 1,
+      "h1Count": 1,
+      "missingImageAltCount": 0,
+      "overflow": false
+    }
+  ],
+  "contrast": {
+    "headingOnLeftDark": 17.87,
+    "bodyOnLeftDark": 13.28,
+    "noteOnLeftDark": 10.34,
+    "headingOnMidDark": 14.97,
+    "bodyOnMidDark": 11.12,
+    "noteOnMidDark": 8.66
+  },
+  "accessibility": {
+    "headingMatches": 0,
+    "ctaLinkMatches": 1,
+    "decorativeGraphicNamedNodes": 0
+  },
+  "navigation": {
+    "activatedBy": "CDP native mouse input",
+    "hitTarget": {
+      "x": 322.640625,
+      "y": 506.671875,
+      "scrollY": 3668,
+      "hitTag": "A",
+      "hitText": "Describe your project",
+      "hitHref": "/start",
+      "hitIsTarget": true
+    },
+    "pathname": "/start"
+  },
+  "runtimeExceptionCount": 0,
+  "consoleWarningErrorCount": 5,
+  "consoleWarningErrorDetails": [
+    {
+      "level": "error",
+      "source": "network",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:5173/about?_rsc=5CB68i4pnAekjehf"
+    },
+    {
+      "level": "error",
+      "source": "network",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:5173/about?_rsc=5CB68i4pnAekjehf"
+    },
+    {
+      "level": "error",
+      "source": "network",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:5173/privacy?_rsc=5CB68i4pnAekjehf"
+    },
+    {
+      "level": "error",
+      "source": "network",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:5173/terms?_rsc=5CB68i4pnAekjehf"
+    },
+    {
+      "level": "error",
+      "source": "network",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://localhost:5173/about?_rsc=pTSI3JhkgIOf7eAs"
+    }
+  ],
+  "consoleDisposition": {
+    "uniqueLoggedPaths": [
+      "/about",
+      "/privacy",
+      "/terms"
+    ],
+    "knownOwnerBlockedPrefetchCount": 5,
+    "unexpectedWarningErrorCount": 0
+  }
+}

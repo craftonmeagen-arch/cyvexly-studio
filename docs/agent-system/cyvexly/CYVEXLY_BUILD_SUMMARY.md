@@ -275,3 +275,24 @@ Older setup and rounds 1-4 are preserved in
 - Rotated rounds 8-9 from Active Chunk, rounds 1-7 from Watch, and setup/rounds
   1-4 from Build Summary. All Builder hot files are back below their caps with
   exact history preserved in `docs/archive/`.
+
+## Round 13 — 2026-08-31
+
+- Used the Council-confirmed round-12 source and accepted Home mockup to select
+  the largest remaining reachable parity gap: the final CTA's missing luminous
+  system artwork. Portfolio imagery stayed bounded rather than being invented.
+- Product commit `1df0203` converts the flat centered CTA into a compact split
+  glass panel with an original decorative planetary/network horizon. Existing
+  copy and `/start` behavior remain unchanged; phone centers the copy and lowers
+  the horizon while desktop/tablet retain the split hierarchy.
+- Opened exact 1440/768/390 changed-surface renders and a full Home capture.
+  Nine 320-1440 width boundaries and a 390px/24px-root state are contained with
+  zero document overflow. Heading/body/note contrast is 14.97+/11.12+/8.66+.
+- Native CDP input hit the real CTA link and reached `/start`; the accessibility
+  tree ignores the visual SVG. A 16-route phone production sweep passed status,
+  `main`/H1, image-alt, and overflow checks. Runtime exceptions and unexpected
+  console warnings/errors are zero; logged 404 prefetches are only the three
+  documented Owner-blocked routes.
+- Lint, clean production build, and post-build TypeScript pass. Round 10's full
+  report rotated to the chunk archive so Active Chunk retains the latest three
+  reports and remains below its hot-file cap.

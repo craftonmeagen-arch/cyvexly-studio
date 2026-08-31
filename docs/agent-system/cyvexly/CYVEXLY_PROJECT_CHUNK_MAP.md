@@ -151,6 +151,14 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 13 Home final-CTA system pass:** commit `1df0203` replaces the flat
+  centered final CTA treatment with a compact split glass composition and an
+  original luminous planetary/network horizon. Exact 1440/768/390 production
+  renders, a full Home capture, 320px and 24px-root stress, native `/start`
+  activation, nine-width containment, and a 16-route phone audit pass. This
+  closes the largest remaining reachable reference gap without inventing
+  portfolio media, opening/closing a chunk, or claiming final Owner parity.
+
 - **Round 12 Home mid-page system pass:** commit `13d3673` adds an original
   luminous partnership diagram to the former text-only difference panel and a
   five-stage icon/node/route grammar to the Home process preview. Exact

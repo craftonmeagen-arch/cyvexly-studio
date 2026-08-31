@@ -1,0 +1,30 @@
+{
+  "viewport": {
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "dpr": 1
+  },
+  "document": {
+    "clientWidth": 1425,
+    "scrollWidth": 1425
+  },
+  "panel": {
+    "x": 160.5,
+    "y": 3948.671875,
+    "width": 1104,
+    "height": 338
+  },
+  "section": {
+    "x": 136.5,
+    "y": 3948.671875,
+    "width": 1152,
+    "height": 418
+  },
+  "backgroundColor": "rgba(0, 0, 0, 0)",
+  "heading": "Ready to build something extraordinary?",
+  "ctaName": "Describe your project",
+  "h1Count": 1,
+  "finalCtaCount": 1,
+  "overflow": false,
+  "consoleReady": true
+}

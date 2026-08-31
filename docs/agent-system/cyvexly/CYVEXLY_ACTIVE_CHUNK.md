@@ -2,17 +2,16 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global round 12 revisited Home's shared visual
+pages — remains closed, but global round 13 revisited Home's shared visual
 system under the rule that closed chunks are not frozen.
 
 **Current status:** The nine-step Planner UI/state/validation remains built and
 verified at `/start`; real server-side email remains Owner-blocked on the
 production-domain and transactional-email-provider decisions. `/not-found`,
 `/faq`, and `/accessibility` are complete; `/privacy` and `/terms` remain
-Owner-blocked on jurisdiction facts; the favicon is fixed. Round 12 adds a
-reference-driven partnership-system diagram and five-stage icon/node/route
-grammar to the Home mid-page while retaining round 11's accessible showcase
-video.
+Owner-blocked on jurisdiction facts; the favicon is fixed. Round 13 adds a
+reference-driven planetary/network final CTA while retaining round 12's
+partnership and process systems and round 11's accessible showcase video.
 
 ## Active chunk boundaries
 
@@ -68,123 +67,9 @@ video.
 - **Round 9:** fixed cross-computer scale drift from browser font defaults/rem
   breakpoints and strengthened shared glass/large-text resilience. Full report:
   `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND9_REPORT.md`.
-
-## Round 10 report — global round 10
-
-### Plan and wider methodology audit
-
-**Session:** `9360f300-ea8b-4a05-8e88-652cc7d738cb`; lock claim
-`2026-08-31T03:02:48.2441232Z`; start HEAD `95232d5`; no active PM prompt.
-The pre-implementation plan is
-`builder/evidence/round-10-home-glass-system-visual-plan.md`.
-
-This every-fifth-numbered round ran the required wider methodology audit.
-Rounds 7–9 made genuine progress through pixel evidence, CDP rendering,
-responsive root/breakpoint correction, and richer glass tokens. Comparing the
-latest 1440 render to `mockups/01-home.png` showed the remaining high-reach gap
-was structural: flat full-width header framing, text-only credibility claims,
-and iconless capability cards. Repeating another blur/opacity adjustment would
-have been a weak loop. The selected method mapped those discrepancies to
-normal, reusable Next/CSS/SVG components with no new dependency, credential,
-platform exception, or foundational choice.
-
-### What changed
-
-Product commit `6b81922` (`Deepen Home glass system structure`) contains the
-complete source change:
-
-- `site-header.tsx` now places the shared desktop and compact navigation inside
-  an inset, rounded `.glass-shell`, retaining the existing navigation labels,
-  CTA, mobile state, and 1024px mode boundary.
-- `credibility-icon.tsx` adds five hand-authored line icons. `site-config.ts`
-  gives each truthful credibility claim and capability a stable visual ID;
-  copy is unchanged.
-- Home's credibility section remains a semantic list but now renders as an
-  icon-led translucent signal rail; all six capability cards reuse the existing
-  `ServiceIcon` visual language.
-- `globals.css` adds reusable shell, signal-rail, signal-icon, card-edge, and
-  pointer-safe light-sheen layers. No text color, page scale, breakpoint,
-  route, claim, or disclosure changed.
-
-### Rendered comparison and verification
-
-- `pnpm run lint` passed. A clean `pnpm run build` regenerated Next's route/
-  layout globals, passed its internal TypeScript stage, and generated all 18
-  expected app routes; the only warning is the known Owner/domain-blocked
-  `metadataBase` fallback. Standalone post-build `pnpm exec tsc --noEmit`
-  passed.
-- Opened exact 1440×900, 768×1024, and 390×844 production captures plus an
-  expanded-phone-menu capture, card-section capture, and 1440×4672 full-page
-  render. The inset header, icon rail, and capability cards visibly close the
-  three discrepancies named in the plan while the full render verifies both
-  capability rows and the unchanged lower-page flow. See
-  `builder/evidence/round-10-home-glass-system-comparison.md`.
-- At all three standard viewports, document/body width equals viewport width,
-  root is 16px, exactly one H1 renders, and all five credibility/six capability
-  icons are present. Header shell geometry is 1152×76, 744×70, and 366×70.
-- The 13-route phone sweep found one H1 and zero horizontal overflow on every
-  built content/case-study/not-found route.
-- A 65-case shared-header matrix (13 routes at 390/768/1023/1024/1440)
-  recorded zero failures for shell containment, root scale, one-H1 structure,
-  overflow, and the exact compact/desktop mode boundary.
-- A separate 26-case phone/desktop structural audit recorded zero failures for
-  main/header/H1 counts, heading skips, duplicate IDs, or visible unnamed
-  links/form controls.
-- A final clean production runtime returned 200 for all 15 expected routes/
-  assets and the intended 404 for an unknown route. Its 300 rendered internal-
-  link instances resolve to 15 unique targets; the only 404 targets are the
-  already-documented Owner-blocked `/about`, `/privacy`, and `/terms`.
-- Native CDP Tab reaches logo then the named menu trigger; Enter opens the
-  compact sheet with `aria-expanded=true`; subsequent Tabs reach Services,
-  Work, Pricing, Process, About, and the project CTA in visible order.
-- An explicit 24px-root 390px resilience stress render remains width-contained;
-  the header grows to 104px and content reflows instead of clipping. This is a
-  stress state, not presented as normal scale or a replacement for round 9's
-  real browser-profile controls.
-- Contrast math for the new icon/text surfaces passes with margin: cool-
-  graphite body text is 5.24–6.08:1 across Ice/Arctic/Frosted backgrounds;
-  cyber-blue signal icons are 4.74–5.06:1 on Arctic/Frosted surfaces (above
-  both the 3:1 non-text floor and 4.5:1 text floor).
-
-### Audibles, limits, and accountability
-
-Port 5173 was occupied before this lock by PID 21440, an unrelated Vite runtime
-serving `EduAILenz V2`. Its ownership was not provable, so it was preserved;
-the production proof used Builder-owned 5183. This is the exact-process rule in
-practice, not a test omission. The unrelated 5173 listener later exited without
-Builder intervention; final closeout found 5173, 5183, and 9227 all free.
-
-The first scripted menu-state sample inspected the same JavaScript turn as the
-React `.click()` and recorded the old closed state while the following PNG
-showed the menu open. The instrument was corrected to wait for the React
-commit. Native Enter also required CDP `rawKeyDown` plus the character event;
-after correcting the instrument, the durable JSON records the passing state and
-focus order. Neither was a product defect.
-
-A final clean-state check intentionally deleted `.next` before invoking the
-standalone compiler. `tsc --noEmit` then reported `LayoutProps` missing because
-that Next global lives in generated `.next/types`; running the clean production
-build regenerated it, and the immediate post-build compiler passed. This is a
-verification-order dependency, not a source regression; future fresh checks
-must build or run Next type generation before standalone `tsc`. The alternative
-was then tested from another clean `.next`: `pnpm exec next typegen` succeeded,
-and the immediate standalone compiler passed.
-
-Diff-to-plan check: the five product files in `6b81922` are exactly the planned
-header, Home structure/config, icon component, and shared CSS. Diff-to-belief
-found no unexpected Builder source file. The working tree's pre-existing
-Council reports/evidence and shared inbox line remained outside Builder commits
-and were not rewritten. No schedule or automation was touched.
-
-What was not checked: the Owner's original second computer, physical Safari/
-Firefox, deployment, external email, domain, legal text, or Owner acceptance of
-final visual parity. The same four Owner decisions remain genuinely blocked.
-
-### Completion state
-
-**DONE WITH PROOF** for the round-10 structural glass slice;
-**OWNER REVIEW STILL ACTIVE** for final mockup-level visual parity and original-
-device scale confirmation.
+- **Round 10:** ran the wider method audit and added the inset glass header,
+  credibility icon rail, and capability-card grammar. Full report:
+  `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND10_REPORT.md`.
 
 ## Round 11 report — global round 11
 
@@ -340,4 +225,83 @@ owned dirty files/evidence and its former 5373 runtime were untouched. No
 scheduler or automation was touched.
 
 **DONE WITH PROOF** for the round-12 Home mid-page structural slice;
+**OWNER REVIEW STILL ACTIVE** for final mockup parity and second-device scale.
+
+## Round 13 report — global round 13
+
+### Preserved plan and selection
+
+**Session:** `4492410c-d32b-41c5-b78a-b4db0829c967`; lock claim
+`2026-08-31T08:56:05.8814291Z`; start HEAD `061fb00`; no active PM prompt.
+The pre-implementation plan is
+`builder/evidence/round-13-home-final-cta-visual-plan.md`.
+
+Council `CYC-R14-20260830-01` independently confirmed the round-12 source and
+named richer final-CTA art as a remaining parity gap. Comparing that source to
+`mockups/01-home.png` showed a normal, reachable slice: replace the flat radial
+wash with a compact split system composition. Portfolio photography and real
+client screens remained blocked on truthful Owner-supplied or approved media.
+
+### What changed
+
+Product commit `1df0203` adds `FinalCtaSignalGraphic`, an original inline SVG
+planetary horizon with orbital traces, routes, and signal nodes. Home's existing
+headline, supporting copy, `/start` action, and response note now sit in a left
+copy layer against the graphic; scoped CSS supplies the glass depth, grid, and
+protective dark overlay. Below 768px the copy centers and the horizon lowers.
+The SVG is decorative and cannot add accessibility-tree noise.
+
+### Rendered comparison and verification
+
+- `pnpm run lint`, a clean `pnpm run build`, and immediate post-build
+  `pnpm exec tsc --noEmit` passed. The only build warning is the known
+  Owner/domain-blocked `metadataBase` fallback.
+- Opened exact 1440x900, 768x1024, and 390x844 final-CTA renders plus a full
+  1440px Home render. Desktop changes from a flat `1104x316` baseline to a
+  split `1104x338` panel; tablet is `705x416`; phone is `327x432` and remains
+  centered/contained. See the indexed comparison for the baseline disposition.
+- Nine width states at 320/390/639/640/767/768/1023/1024/1440 retain one panel,
+  one CTA heading/action, one page H1, correct center/left reflow, and zero
+  horizontal overflow. A 390px explicit 24px-root state is also contained.
+- Conservative contrast calculations pass with substantial margin: heading
+  14.97–17.87:1, body 11.12–13.28:1, note 8.66–10.34:1.
+- The accessibility tree exposes the real heading/link and no named planet,
+  horizon, or network node. Native CDP mouse input verified its post-scroll hit
+  target was the real `/start` anchor and navigated successfully.
+- A 16-route phone production sweep reports expected 200/404 statuses, one
+  `main` and H1, complete image alternatives, and zero overflow. Runtime
+  exceptions and unexpected warning/error logs are zero. The only logged 404
+  paths are the documented Owner-blocked `/about`, `/privacy`, and `/terms`
+  prefetches.
+
+### Audibles, limits, and accountability
+
+The preferred in-app Browser runtime failed before session creation with
+`failed to write kernel assets: The system cannot find the path specified.`
+No browser/plugin state was changed. The already-proven Builder-owned local
+Chrome/CDP route supplied exact product proof instead.
+
+The first native-click sample returned `/` because smooth scrolling was still
+moving and its coordinates were stale. The instrument was corrected to force
+non-smooth scrolling, wait for layout, and prove `elementFromPoint` resolved to
+the intended link before dispatching native input; it then reached `/start`.
+This refuted a product defect. Browser error logs were also classified rather
+than hidden: every one is an expected prefetch of Owner-blocked route debt.
+
+The SVG's `getBBox()` extends below/right of its `720x360` viewBox by design:
+the planet continues beyond the visible horizon and is clipped by the panel's
+`overflow:hidden`. Opened renders at every target show the intended crop.
+
+Diff-to-plan: `1df0203` contains exactly the planned Home markup, scoped CSS,
+SVG component, and preserved plan. Council-owned dirty files/evidence were not
+staged or modified, and no scheduler or automation was touched.
+
+Not checked: Owner acceptance, the original second computer, physical Safari/
+Firefox, field performance, deployment/cache behavior, or replacement
+portfolio media. Existing founder/legal/domain/email and concept-art decisions
+remain.
+
+### Completion state
+
+**DONE WITH PROOF** for the round-13 Home final-CTA system slice;
 **OWNER REVIEW STILL ACTIVE** for final mockup parity and second-device scale.

@@ -2,6 +2,26 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 13 — Home final-CTA system
+
+- `round-13-home-final-cta-visual-plan.md` — preserved source/reference
+  baseline, responsive target, accessibility/contrast constraints, risks,
+  proof plan, and falsifiers written before implementation.
+- `round-13-home-final-cta-baseline-{desktop,phone}.{png,json}` — opened exact
+  round-12 production baseline and geometry showing the flat radial-wash CTA.
+- `round-13-home-final-cta-final-{desktop,phone}.{png,json}` and
+  `round-13-home-final-cta-final-tablet.png` — opened exact production
+  final-CTA renders and primary geometry at 1440, 390, and 768 widths.
+- `round-13-home-final-full.png` — opened full Home production capture verifying
+  the new CTA in the complete page rhythm.
+- `round-13-home-final-cta-runtime-proof.json` — committed-source nine-width
+  boundary geometry (including 320px), explicit 24px-root stress, contrast,
+  decorative accessibility-tree result, native `/start` activation with
+  post-scroll hit-target proof, 16-route phone status/landmark/H1/image-alt/
+  overflow audit, and complete console disposition.
+- `round-13-home-final-cta-comparison.md` — rendered baseline/final disposition,
+  measured acceptance, instrument correction, and honest remaining limits.
+
 ## Global round 12 — Home mid-page visual system
 
 - `round-12-home-midpage-visual-plan.md` — pre-implementation mockup/current

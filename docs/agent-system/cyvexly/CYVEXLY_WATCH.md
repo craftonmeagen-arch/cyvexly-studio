@@ -92,3 +92,23 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   `360x260` (`x=28`, `y=26`), leaving positive clearance on every edge. This
   directly applies the favicon overflow lesson without assuming that a clean
   screenshot proves unclipped source geometry.
+
+## Round 13
+
+- **Wait for scroll completion before synthesizing pointer input.** The first
+  CTA proof computed coordinates while the page's smooth scroll was still in
+  flight, so the point was outside the viewport and the path stayed `/`.
+  Forcing `scroll-behavior:auto`, waiting for layout, and checking
+  `elementFromPoint(...).closest('a')` before dispatching the mouse events
+  correctly proved `/start` navigation. Preserve the hit-target control in
+  later CDP interaction claims.
+- **A deliberate horizon crop can make SVG `getBBox()` exceed the viewBox.**
+  Unlike an accidentally clipped standalone mark, the final-CTA planet is
+  intentionally larger than the visible frame and the containing panel owns
+  the crop. Judge this pattern from both source intent and opened responsive
+  renders; do not apply a blanket ink-within-viewBox rule to compositional art.
+- **The in-app Browser runtime may fail before it creates a session.** This
+  round received `failed to write kernel assets: The system cannot find the
+  path specified.` before any page interaction. No plugin state was changed;
+  exact Builder-owned Chrome/CDP evidence remained available as the documented
+  fallback.

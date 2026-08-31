@@ -37,3 +37,6 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
 - `CYVEXLY_SHARED_HOME_ROUND9_REPORT.md` — global round 9 full report
   (cross-computer root/breakpoint scale correction and shared glass/large-text
   hardening), rotated out during round 12.
+- `CYVEXLY_SHARED_HOME_ROUND10_REPORT.md` — global round 10 full report
+  (wider methodology audit, inset glass header, credibility icon rail, and
+  capability-card visual grammar), rotated out during round 13.
