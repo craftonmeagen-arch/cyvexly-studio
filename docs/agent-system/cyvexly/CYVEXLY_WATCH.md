@@ -286,4 +286,6 @@ boundary on future reasoning. Rounds 1-5 are rotated to
   generated `LayoutProps` global as missing. `next build` regenerates
   `.next/types` and runs its own TypeScript phase; the immediate post-build
   standalone compiler then passes. Keep the clean verification order as lint →
-  build (or `next typegen`) → standalone `tsc`.
+  build (or `next typegen`) → standalone `tsc`. Round 10 separately proved
+  `pnpm exec next typegen && pnpm exec tsc --noEmit` succeeds from a clean
+  `.next`.

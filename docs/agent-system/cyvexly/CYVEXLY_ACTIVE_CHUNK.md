@@ -432,7 +432,9 @@ standalone compiler. `tsc --noEmit` then reported `LayoutProps` missing because
 that Next global lives in generated `.next/types`; running the clean production
 build regenerated it, and the immediate post-build compiler passed. This is a
 verification-order dependency, not a source regression; future fresh checks
-must build or run Next type generation before standalone `tsc`.
+must build or run Next type generation before standalone `tsc`. The alternative
+was then tested from another clean `.next`: `pnpm exec next typegen` succeeded,
+and the immediate standalone compiler passed.
 
 Diff-to-plan check: the five product files in `6b81922` are exactly the planned
 header, Home structure/config, icon component, and shared CSS. Diff-to-belief
