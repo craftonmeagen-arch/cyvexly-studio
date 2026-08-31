@@ -1,8 +1,8 @@
 # Round 13 Home final CTA visual plan
 
-**Session:** `4492410c-d32b-41c5-b78a-b4db0829c967`  
-**Lock claim:** `2026-08-31T08:56:05.8814291Z`  
-**Start source:** `061fb00` on `master`  
+**Session:** `4492410c-d32b-41c5-b78a-b4db0829c967`
+**Lock claim:** `2026-08-31T08:56:05.8814291Z`
+**Start source:** `061fb00` on `master`
 **PM prompt:** no active prompt
 
 ## Intended outcome
