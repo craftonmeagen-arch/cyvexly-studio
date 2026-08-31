@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 
 const VIDEO_ID = "cyvexly-services-showcase";
+const PLAYBACK_RATE = 0.75;
 
 type NavigatorWithConnection = Navigator & {
   connection?: {
@@ -12,11 +13,16 @@ type NavigatorWithConnection = Navigator & {
   };
 };
 
+function applyPlaybackPreferences(video: HTMLVideoElement) {
+  video.muted = true;
+  video.defaultPlaybackRate = PLAYBACK_RATE;
+  video.playbackRate = PLAYBACK_RATE;
+}
+
 export function HeroShowcaseVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const pausedByUserRef = useRef(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -36,10 +42,11 @@ export function HeroShowcaseVideo() {
         return;
       }
 
-      video.muted = true;
+      applyPlaybackPreferences(video);
       void video.play().catch(() => setIsPlaying(false));
     };
 
+    applyPlaybackPreferences(video);
     syncPlayback();
     reducedMotion.addEventListener("change", syncPlayback);
     connection?.addEventListener?.("change", syncPlayback);
@@ -59,7 +66,7 @@ export function HeroShowcaseVideo() {
 
     if (video.paused) {
       pausedByUserRef.current = false;
-      video.muted = true;
+      applyPlaybackPreferences(video);
       void video.play().catch(() => setIsPlaying(false));
       return;
     }
@@ -68,14 +75,10 @@ export function HeroShowcaseVideo() {
     video.pause();
   };
 
-  const syncProgress = () => {
-    const video = videoRef.current;
-    if (!video || !Number.isFinite(video.duration) || video.duration <= 0) {
-      setProgress(0);
-      return;
-    }
-
-    setProgress((video.currentTime / video.duration) * 100);
+  const handleSurfaceKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    togglePlayback();
   };
 
   return (
@@ -83,7 +86,16 @@ export function HeroShowcaseVideo() {
       className="hero-video-shell relative isolate rounded-[2rem] border border-white/90 p-2 sm:p-3"
       aria-labelledby="hero-showcase-caption"
     >
-      <div className="relative aspect-video w-full overflow-hidden rounded-[1.45rem] bg-midnight-slate sm:rounded-[1.35rem]">
+      <div
+        className="hero-video-surface relative aspect-video w-full cursor-pointer overflow-hidden rounded-[1.45rem] bg-midnight-slate focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ion-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:rounded-[1.35rem]"
+        role="button"
+        tabIndex={0}
+        aria-controls={VIDEO_ID}
+        aria-label={isPlaying ? "Pause showcase video" : "Play showcase video"}
+        aria-pressed={isPlaying}
+        onClick={togglePlayback}
+        onKeyDown={handleSurfaceKeyDown}
+      >
         <video
           ref={videoRef}
           id={VIDEO_ID}
@@ -97,8 +109,7 @@ export function HeroShowcaseVideo() {
           controlsList="nodownload nofullscreen noplaybackrate"
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
-          onTimeUpdate={syncProgress}
-          onLoadedMetadata={syncProgress}
+          onLoadedMetadata={(event) => applyPlaybackPreferences(event.currentTarget)}
           aria-hidden="true"
         >
           <source src="/media/cyvexly-services-loop.mp4" type="video/mp4" />
@@ -118,17 +129,7 @@ export function HeroShowcaseVideo() {
           Cyvexly systems
         </div>
 
-        <div className="pointer-events-none absolute right-5 top-5 hidden items-center gap-2 rounded-full border border-white/15 bg-[#071526]/65 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.14em] text-white/80 backdrop-blur-md sm:flex">
-          Muted loop <span aria-hidden="true">·</span> 00:30
-        </div>
-
-        <div className="pointer-events-none absolute bottom-4 left-4 right-16 sm:bottom-5 sm:left-5">
-          <div className="mb-3 h-px overflow-hidden bg-white/25" aria-hidden="true">
-            <span
-              className="block h-full bg-gradient-to-r from-ion-cyan to-white shadow-[0_0_10px_rgba(54,199,255,0.9)]"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
+        <div className="pointer-events-none absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5">
           <p className="font-display text-sm font-medium tracking-tight text-white sm:text-base">
             Strategy · Design · Development · Reliability
           </p>
@@ -136,25 +137,6 @@ export function HeroShowcaseVideo() {
             Digital experiences engineered to perform
           </p>
         </div>
-
-        <button
-          type="button"
-          onClick={togglePlayback}
-          className="absolute bottom-4 right-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-[#071526]/75 text-white shadow-lg backdrop-blur-md transition-colors hover:bg-[#0d2a48] sm:bottom-5 sm:right-5"
-          aria-controls={VIDEO_ID}
-          aria-label={isPlaying ? "Pause showcase video" : "Play showcase video"}
-          aria-pressed={isPlaying}
-        >
-          {isPlaying ? (
-            <svg viewBox="0 0 20 20" className="h-4 w-4" aria-hidden="true">
-              <path d="M6.25 4.5h2.5v11h-2.5zm5 0h2.5v11h-2.5z" fill="currentColor" />
-            </svg>
-          ) : (
-            <svg viewBox="0 0 20 20" className="h-4 w-4" aria-hidden="true">
-              <path d="m7 4.6 8 5.4-8 5.4z" fill="currentColor" />
-            </svg>
-          )}
-        </button>
       </div>
 
       <figcaption id="hero-showcase-caption" className="sr-only">
