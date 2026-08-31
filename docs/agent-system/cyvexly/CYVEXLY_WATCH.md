@@ -130,50 +130,13 @@ boundary on future reasoning. Rounds 1-5 are rotated to
   fixing in this Builder's own tooling regardless of the successful
   recovery; this update only closes the "is Council still broken"
   question with real evidence rather than leaving it open.
-- **Explicitly fronting the tab (`tabs_select`) does not fix the
-  compositing limitation — tested for the first time, ruled out.** Every
-  prior round's screenshot/click/geometry/keyboard findings left open
-  whether the tab simply wasn't focused. Called `tabs_select` on the
-  single open tab (result: "Fronted tab seed"), then re-checked on a
-  neutral external page (`https://example.com`, no project server
-  needed): `document.visibilityState` stayed `"hidden"`,
-  `document.hasFocus()` stayed `false`, and `computer{action:
-  "screenshot"}` still failed with the same "Browser pane is not
-  displayed" error. This is a session-level property of this exact
-  unattended invocation, not a fixable tab-focus issue — worth knowing so
-  a future round doesn't re-try `tabs_select` expecting a different
-  result without new evidence the underlying session type has changed.
-- **Root-caused the compositing limitation one level deeper:
-  `requestAnimationFrame` never fires in this session at all.** Every
-  prior finding described the symptom ("page not compositing frames") but
-  not the precise mechanism. Started a self-rescheduling `rAF` loop
-  incrementing a counter, waited a real 3 seconds via `computer{action:
-  "wait"}`, then read the counter back: `0` — zero animation frames
-  delivered, while `document.visibilityState` stayed `"hidden"`. Regular
-  JS execution, event listeners, `setTimeout`, and DOM mutation all work
-  normally throughout this session (proven repeatedly this round and
-  every prior round) — only the browser's rendering/animation-frame
-  pipeline is suspended, consistent with a backgrounded/never-visible tab
-  in a real browser engine. This single fact explains every symptom found
-  since round 1: no compositor frames means no screenshot, no smooth-
-  scroll animation progress (this round's finding), and (combined with
-  `visibilityState: "hidden"`) likely contributes to the `computer` click/
-  key non-delivery too, since real input dispatch in a Chromium-family
-  engine is also gated on the page being an active, visible target.
-  Useful for whoever eventually investigates fixing this at the harness
-  level: the fix needs to make this session's Browser pane actually
-  visible/foregrounded to its own renderer, not just "select" or "front"
-  the tab within the pane's own tab list.
-- **Final confirmation the interrupted Council round closed cleanly on
-  its own, not just recovered.** By ~21:13Z, port 5373 no longer
-  responded and `.codex/role-state/council.active.json` was gone —
-  checked to make sure this wasn't a second failure, not just a
-  screenshot of a live process. It wasn't: the Council's own formal
-  report (`CYC-R3-20260830-01`, published `21:11:10Z`) explicitly states
-  "Complete... closed within the normal work window," so the stopped
-  dev server and released guard are this round's own normal closeout,
-  the same lifecycle a Builder round follows. The incident earlier this
-  round did not leave any lasting damage to the Council's round.
+- **The unattended in-app browser's compositor is suspended, not merely
+  unfocused.** Fronting the tab left it hidden/unfocused and screenshots
+  unavailable; a three-second self-rescheduling `requestAnimationFrame` test
+  delivered zero frames while timers and DOM mutation worked. Harness work must
+  make the pane genuinely visible, not just select its tab. The interrupted
+  Council round later self-recovered and formally closed (`CYC-R3-20260830-01`),
+  so the incident left no lasting Council damage.
 
 ## Round 7
 
