@@ -1,0 +1,25 @@
+{
+  "profilePort": 9231,
+  "opened": {
+    "rootFontSize": "16px",
+    "expanded": "true",
+    "buttonLabel": "Close menu",
+    "navVisible": true,
+    "navLinks": [
+      "Services",
+      "Work",
+      "Pricing",
+      "Process",
+      "About",
+      "Describe your project"
+    ],
+    "focus": "mobile-nav",
+    "scrollWidth": 375,
+    "clientWidth": 375
+  },
+  "nextTab": {
+    "tag": "A",
+    "text": "Services",
+    "href": "/services"
+  }
+}

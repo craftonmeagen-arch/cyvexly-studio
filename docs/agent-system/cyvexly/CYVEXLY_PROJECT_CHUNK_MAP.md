@@ -151,6 +151,17 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 9 shared responsive/visual-system correction:** authenticated Owner
+  evidence exposed an apparent cross-computer scale mismatch at 100% page zoom.
+  A controlled 24px-default Chrome profile reproduced the root cause: implicit
+  root sizing plus rem-based breakpoints scaled the whole system and changed its
+  layout mode. Commit `8ec27c1` stabilizes the root and breakpoints and upgrades
+  the shared glass/header/CTA/orbit surfaces; `2d82b0b` hardens Pricing and
+  Process phone rows for minimum-font enlargement. Controlled Chrome/Edge
+  profile, DPR, compact-viewport, interaction, and large-text proof passes;
+  Owner confirmation on the original computer and final mockup-fidelity
+  judgment remain the honest closure conditions.
+
 - Payment/proposal workflow (vision §8) and any external service integration
   are foundational/authorization-sensitive; route through §4.12 Outcome
   Reachability Check before committing to a specific provider integration.

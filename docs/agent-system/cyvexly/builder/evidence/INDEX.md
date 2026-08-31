@@ -2,6 +2,54 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 9 — scale consistency and glass-fidelity pass
+
+- `round-9-scale-glass-visual-plan.md` — preserved baseline, root-cause
+  hypothesis, spatial/visual target, responsive state map, proof plan, and
+  falsifiers written before source implementation.
+- `round-9-owner-reference-apparent-large.png` and
+  `round-9-owner-reference-normal.png` — exact Owner-supplied 1917×889 and
+  1701×815 source captures, retained with source provenance for comparison.
+- `round-9-pre-fix-font24-profile-1440.json` — controlled pre-fix reproduction:
+  24px author root, 1425×108 header, 72px H1, hidden desktop navigation at a
+  1440px viewport despite 100% page zoom.
+- `round-9-case-study-standard-profile-1440.{png,json}` and
+  `round-9-case-study-font24-profile-1440.{png,json}` — production-runtime
+  post-fix pair. CSS geometry matches exactly across the normal and custom-24px
+  browser-default profiles: 16px root, 1152×78 header, 48px H1, visible desktop
+  nav/CTA, and zero overflow.
+- `round-9-case-study-1024-dpr1.5.{png,json}` — opened high-DPR laptop render;
+  same CSS geometry as the DPR-1 control and zero overflow.
+- `round-9-home-1440.{png,json}` and
+  `round-9-home-1440-glass-cards.{png,json}` — opened production Home hero and
+  card-surface captures used for mockup comparison after the shared glass,
+  atmosphere, header, CTA, and orbit upgrade.
+- `round-9-home-720-zoom-proxy.{png,json}` and
+  `round-9-home-390.{png,json}` — opened compact/zoom-equivalent and phone
+  production renders; both reflow to the compact header and record zero
+  horizontal overflow.
+- `round-9-sitewide-standard-profile.json`,
+  `round-9-sitewide-font24-profile.json`,
+  `round-9-sitewide-edge-standard-profile.json`, and
+  `round-9-sitewide-edge-font24-profile.json` — four 33-case production audits
+  spanning 11 routes at desktop, high-DPR laptop, and phone widths; all 132
+  cases pass responsive scale, semantic/control-name, nav, glass, and overflow
+  checks.
+- `round-9-header-interaction-{standard-profile,font24-profile,
+  edge-standard-profile,edge-font24-profile}.json` — native CDP mouse/Tab proof
+  for the 390px menu in both engines and both browser-default profiles.
+- `round-9-sitewide-minimum-font24-profile.json` — 33-case post-fix Chrome
+  accessibility stress audit at minimum font size 24px. It records zero failures
+  after `2d82b0b` removed Pricing/Process phone overflow.
+- `round-9-pricing-390-minimum-font24.{png,json}` and
+  `round-9-process-390-minimum-font24.{png,json}` — opened post-fix large-text
+  phone renders and geometry records for the two routes changed by `2d82b0b`;
+  each page remains width-contained at the 390px audit viewport.
+
+The Builder also ran a temporary custom-24px-profile 720px control and a DPR-1
+1024px control. Both matched their standard-profile/DPR counterparts exactly;
+their exhausted screenshots and temporary profiles were deleted at closeout.
+
 ## Global round 8 — Home/Services selected-work reconciliation
 
 - `round-8-home-work-visual-plan.md` — pre-implementation baseline, target,

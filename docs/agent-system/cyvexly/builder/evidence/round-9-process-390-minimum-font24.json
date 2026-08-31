@@ -1,0 +1,39 @@
+{
+  "url": "http://127.0.0.1:5173/process",
+  "viewport": {
+    "innerWidth": 390,
+    "innerHeight": 844,
+    "devicePixelRatio": 1,
+    "clientWidth": 375,
+    "scrollWidth": 375
+  },
+  "rootFontSize": "24px",
+  "bodyFontSize": "24px",
+  "header": {
+    "x": 0,
+    "y": 0,
+    "width": 375,
+    "height": 72
+  },
+  "logo": {
+    "x": 24,
+    "y": 18.86,
+    "width": 222.38,
+    "height": 34.28
+  },
+  "cta": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "h1": {
+    "x": 24,
+    "y": -4122,
+    "width": 327,
+    "height": 135
+  },
+  "h1FontSize": "36px",
+  "desktopNavVisible": false,
+  "overflowing": []
+}

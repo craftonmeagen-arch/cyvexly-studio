@@ -333,3 +333,22 @@
   as a `concept visual placeholder`. Corrected that stale user-facing accessible
   label to `abstract concept visual` (`4bdab10`) and proved the final build has
   15 new-label matches across generated Work HTML/RSC and zero old matches.
+
+## Round 9 — 2026-08-30
+
+- Reproduced the Owner-observed 100%-zoom cross-computer scale discrepancy with
+  a custom 24px browser-default profile and traced it to the implicit rem design
+  root plus rem media-query breakpoints.
+- Commit `8ec27c1` pins the author root at 16px, defines Tailwind breakpoints in
+  CSS pixels, and upgrades the shared glass primitive, grid atmosphere, header,
+  primary CTA, and hero orbit toward the accepted mockup's luminous depth.
+- Normal and custom-24px browser profiles now produce exact matching geometry
+  at 1440px; DPR 1/1.5 and 720px/390px states retain correct reflow and zero
+  overflow. Lint, build, typecheck, real route sweep, and opened rendered
+  comparison passed.
+- Chrome and Edge then passed 132 route/profile/viewport checks and four native
+  mobile-menu interaction checks. A separate minimum-font-24 audit exposed two
+  phone overflows; commit `2d82b0b` fixed Pricing add-on and Process timing-row
+  wrapping, after which all 33 large-text cases passed.
+- Actual second-computer confirmation and Owner visual-parity judgment remain;
+  no launch/domain/legal/email blockers changed.

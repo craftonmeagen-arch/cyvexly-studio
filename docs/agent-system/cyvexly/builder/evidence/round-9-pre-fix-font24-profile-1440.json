@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:5173/work/aurora-spaces",
+  "viewport": {
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "devicePixelRatio": 1,
+    "clientWidth": 1425,
+    "scrollWidth": 1425
+  },
+  "rootFontSize": "24px",
+  "bodyFontSize": "24px",
+  "header": {
+    "x": 0,
+    "y": 0,
+    "width": 1425,
+    "height": 108
+  },
+  "logo": {
+    "x": 36,
+    "y": 39,
+    "width": 216.63,
+    "height": 30
+  },
+  "cta": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0
+  },
+  "h1": {
+    "x": 76.5,
+    "y": 361,
+    "width": 1272,
+    "height": 90
+  },
+  "h1FontSize": "72px",
+  "desktopNavVisible": false
+}

@@ -1,0 +1,1043 @@
+[
+  {
+    "profilePort": 9231,
+    "route": "/",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/services",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "Services — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/work",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "Work — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/work/aurora-spaces",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "Aurora Spaces — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/pricing",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "Pricing — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/process",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "Process — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/contact",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "Contact — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/faq",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "FAQ — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/accessibility",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "Accessibility Statement — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": null
+  },
+  {
+    "profilePort": 9231,
+    "route": "/start",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "Project Planner — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/not-a-real-route",
+    "scenario": {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "title": "Page not found — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "dpr": 1,
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/services",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "Services — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/work",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "Work — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/work/aurora-spaces",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "Aurora Spaces — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/pricing",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "Pricing — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/process",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "Process — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/contact",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "Contact — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/faq",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "FAQ — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/accessibility",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "Accessibility Statement — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": null
+  },
+  {
+    "profilePort": 9231,
+    "route": "/start",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "Project Planner — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/not-a-real-route",
+    "scenario": {
+      "name": "laptop",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1.5
+    },
+    "title": "Page not found — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "dpr": 1.5,
+      "clientWidth": 1009,
+      "scrollWidth": 1009
+    },
+    "desktopNavVisible": true,
+    "menuButtonVisible": false,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/services",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "Services — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/work",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "Work — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/work/aurora-spaces",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "Aurora Spaces — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/pricing",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "Pricing — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/process",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "Process — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/contact",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "Contact — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/faq",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "FAQ — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/accessibility",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "Accessibility Statement — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": null
+  },
+  {
+    "profilePort": 9231,
+    "route": "/start",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "Project Planner — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  },
+  {
+    "profilePort": 9231,
+    "route": "/not-a-real-route",
+    "scenario": {
+      "name": "phone",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "title": "Page not found — Cyvexly Studio",
+    "rootFontSize": "16px",
+    "mainCount": 1,
+    "h1Count": 1,
+    "headingSkips": [],
+    "unnamedButtons": 0,
+    "unnamedLinks": 0,
+    "viewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "dpr": 1,
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "desktopNavVisible": false,
+    "menuButtonVisible": true,
+    "glass": {
+      "backdropFilter": "blur(24px) saturate(1.42)",
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderTopColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px"
+    }
+  }
+]

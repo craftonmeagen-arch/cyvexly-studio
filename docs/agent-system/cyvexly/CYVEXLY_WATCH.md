@@ -294,3 +294,13 @@ boundary on future reasoning. Rounds 1-5 are rotated to
   omitting those fields moved focus correctly with Tab but did not activate the
   button. Keep the claim bounded: this proves Chromium's native sequential-
   focus/input path, not a physical keyboard or another browser.
+
+## Round 9
+
+- **A 100%-zoom mismatch can still come from browser font preferences.** A 24px
+  default-font profile reproduced the Owner's apparent zoom: rem geometry grew
+  1.5× and the rem breakpoint hid desktop navigation. A 16px root corrected
+  declarations, but media-query rems still followed the browser's initial basis;
+  explicit pixel breakpoints completed the fix. A separate 24px minimum-font
+  stress test then found two phone rows that resisted wrapping, demonstrating
+  why default-font and minimum-font profiles must be tested independently.
