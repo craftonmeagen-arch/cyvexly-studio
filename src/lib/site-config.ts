@@ -35,11 +35,11 @@ export const footerNav = {
 };
 
 export const credibilityPoints = [
-  { label: "Independent & owner-led" },
-  { label: "Custom strategy, no templates" },
-  { label: "Clean code, fast performance" },
-  { label: "Secure, reliable & future-ready" },
-  { label: "Clear communication at every step" },
+  { id: "owner-led", label: "Independent & owner-led" },
+  { id: "custom-strategy", label: "Custom strategy, no templates" },
+  { id: "clean-code", label: "Clean code, fast performance" },
+  { id: "secure", label: "Secure, reliable & future-ready" },
+  { id: "communication", label: "Clear communication at every step" },
 ];
 
 export const selectedWork = [
@@ -196,29 +196,35 @@ export const caseStudies = {
 
 export const capabilities = [
   {
+    id: "strategy-structure",
     title: "Strategy & structure",
     description:
       "We research, plan, and map the right structure to meet your business goals.",
   },
   {
+    id: "website-design",
     title: "Website design",
     description:
       "Pixel-precise, brand-aligned designs that communicate value and build trust.",
   },
   {
+    id: "website-development",
     title: "Development",
     description:
       "Clean, scalable code for fast, secure, and reliable websites.",
   },
   {
+    id: "content-cms",
     title: "Content & CMS",
     description: "Clear content structure and an easy-to-manage CMS tailored to your workflow.",
   },
   {
+    id: "commerce-integrations",
     title: "Commerce & integrations",
     description: "Robust e-commerce and seamless third-party integrations that just work.",
   },
   {
+    id: "care-improvement",
     title: "Care & improvement",
     description:
       "Ongoing maintenance, updates, and optimization for long-term performance.",

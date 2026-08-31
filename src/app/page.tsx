@@ -4,6 +4,8 @@ import { ButtonLink } from "@/components/button";
 import { OrbitGraphic } from "@/components/orbit-graphic";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { ConceptPreview } from "@/components/concept-preview";
+import { CredibilityIcon } from "@/components/credibility-icon";
+import { ServiceIcon } from "@/components/service-icon";
 import {
   capabilities,
   credibilityPoints,
@@ -46,11 +48,15 @@ export default function Home() {
             <OrbitGraphic />
           </div>
 
-          <div className="border-t border-smoke-glass/70 bg-frosted-glass/60">
-            <ul className="mx-auto flex max-w-6xl flex-wrap justify-center gap-x-10 gap-y-3 px-6 py-6 text-xs font-medium text-cool-graphite sm:justify-between">
+          <div className="signal-rail border-t border-white/80">
+            <ul className="mx-auto grid max-w-6xl gap-px px-3 py-3 text-xs font-medium text-cool-graphite sm:grid-cols-2 sm:px-6 lg:grid-cols-5">
               {credibilityPoints.map((point) => (
-                <li key={point.label} className="whitespace-nowrap">
-                  {point.label}
+                <li
+                  key={point.id}
+                  className="flex min-w-0 items-center gap-3 rounded-xl px-3 py-3.5"
+                >
+                  <CredibilityIcon id={point.id} />
+                  <span className="leading-snug">{point.label}</span>
                 </li>
               ))}
             </ul>
@@ -73,7 +79,7 @@ export default function Home() {
               <a
                 key={project.name}
                 href={project.href}
-                className="group glass-panel flex flex-col overflow-hidden rounded-2xl transition-transform duration-200 hover:-translate-y-1"
+                className="group glass-panel glass-panel-interactive flex flex-col overflow-hidden rounded-2xl transition-transform duration-200 hover:-translate-y-1"
               >
                 <div
                   className={`h-44 w-full overflow-hidden bg-gradient-to-br ${project.gradient}`}
@@ -106,13 +112,21 @@ export default function Home() {
             </h2>
             <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {capabilities.map((capability) => (
-                <div key={capability.title} className="glass-panel rounded-2xl p-6">
-                  <h3 className="font-display text-base font-semibold text-midnight-slate">
-                    {capability.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-cool-graphite">
-                    {capability.description}
-                  </p>
+                <div
+                  key={capability.id}
+                  className="glass-panel glass-panel-signal relative overflow-hidden rounded-2xl p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <ServiceIcon id={capability.id} />
+                    <div className="min-w-0">
+                      <h3 className="font-display text-base font-semibold text-midnight-slate">
+                        {capability.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-cool-graphite">
+                        {capability.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
