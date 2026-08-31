@@ -80,9 +80,10 @@ scratch captures/scripts are clean.
 2. Recheck the original second computer at 100% zoom. If it still differs,
    capture effective CSS viewport, DPR, computed root size, browser font
    settings, and OS display scale before changing source.
-3. If media performance remains the chosen priority, measure a cold constrained-
-   network LCP and compare an evidence-backed smaller/multi-codec derivative;
-   do not silently rewrite the Owner's source or sacrifice poster quality.
+3. If media performance remains the chosen priority, compare the current cold
+   1.004s controlled LCP baseline against an evidence-backed smaller/multi-codec
+   derivative under the same profile; do not silently rewrite the Owner's source
+   or sacrifice poster quality.
 4. Route the four long-standing Owner decisions. Domain/email unlock metadata
    and real Planner delivery; founder/jurisdiction unlock missing routes.
 
