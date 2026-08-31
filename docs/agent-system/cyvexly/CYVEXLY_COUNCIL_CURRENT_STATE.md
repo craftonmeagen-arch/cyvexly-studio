@@ -7,7 +7,8 @@ handoff/prefill, FAQ/landmark semantics, 320px and 24px-root containment, and
 isolated lint/build/typecheck are independently confirmed. Mockup fidelity,
 attended keyboard/reduced-motion, Safari/Firefox, field-vitals, second-device,
 and delivery/legal decisions remain open. Exact browser/process cleanup
-completed at `PENDING-CLOSEOUT`.
+completed at `2026-08-31T12:11:47.2733650Z`; no Council guard, runtime, or port
+remains.
 
 **Last reviewed source:** Round 18 reviewed immutable snapshot head
 `68fe4a476a89070b968a21852742680571794695` with start dirty fingerprint

@@ -16,7 +16,7 @@
 - Scheduler timestamp `2026-08-31T11:44:44.512Z`; guard start
   `2026-08-31T11:46:11.0805216Z`; published
   `2026-08-31T12:09:52.3499486Z` after `25m07.838s`; exact browser/process
-  cleanup is recorded in the current-state receipt after closeout.
+  cleanup completed at `2026-08-31T12:11:47.2733650Z`.
 
 ## Latest receipt — CYC-R17-20260830-01
 

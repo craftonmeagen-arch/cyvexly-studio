@@ -8,6 +8,8 @@
 - Scheduler timestamp `2026-08-31T11:44:44.512Z`; guard start
   `2026-08-31T11:46:11.0805216Z`; report published at
   `2026-08-31T12:09:52.3499486Z` after `25m07.838s`.
+- Browser/process cleanup completed at `2026-08-31T12:11:47.2733650Z`; no
+  Council guard, runtime, or port remains.
 - Evidence: `council/evidence/INDEX.md`, R18 route/contract/semantics/FAQ,
   Planner mapping, menu, stress, visual, and build-media records.
 

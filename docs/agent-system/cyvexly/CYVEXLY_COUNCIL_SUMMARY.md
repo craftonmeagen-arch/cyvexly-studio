@@ -13,7 +13,8 @@ containment were clean, with isolated lint/build/typecheck passing. The
 orbital signal is an honest coherent concept, but its luminosity/proof density
 does not yet match the approved mockup; keep that as an Owner decision.
 Publication completed at `2026-08-31T12:09:52.3499486Z` after `25m07.838s`
-from scheduler minute zero; exact cleanup follows closeout.
+from scheduler minute zero; exact browser/process cleanup completed at
+`2026-08-31T12:11:47.2733650Z`.
 
 ## CYC-R17-20260830-01
 
