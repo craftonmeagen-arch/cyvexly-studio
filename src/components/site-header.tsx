@@ -9,7 +9,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-smoke-glass/70 bg-arctic-mist/80 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 border-b border-white/75 bg-arctic-mist/70 shadow-[0_12px_34px_-28px_rgba(15,102,224,0.55),inset_0_-1px_0_rgba(54,199,255,0.12)] backdrop-blur-2xl supports-[backdrop-filter]:bg-arctic-mist/62">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
@@ -41,7 +41,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-smoke-glass text-midnight-slate lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/90 bg-white/45 text-midnight-slate shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_10px_24px_-20px_rgba(15,102,224,0.7)] lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -70,7 +70,7 @@ export function SiteHeader() {
         <nav
           id="mobile-nav"
           aria-label="Mobile"
-          className="border-t border-smoke-glass/70 bg-arctic-mist px-6 pb-6 pt-2 lg:hidden"
+          className="border-t border-white/75 bg-arctic-mist/92 px-6 pb-6 pt-2 shadow-[0_18px_36px_-28px_rgba(16,33,61,0.6)] backdrop-blur-2xl lg:hidden"
         >
           <ul className="flex flex-col gap-1">
             {primaryNav.map((item) => (
