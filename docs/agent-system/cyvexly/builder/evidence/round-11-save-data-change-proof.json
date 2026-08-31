@@ -1,0 +1,45 @@
+{
+  "generatedAtUtc": "2026-08-31T05:30:49.252Z",
+  "results": [
+    {
+      "label": "initial-playing",
+      "saveData": false,
+      "paused": false,
+      "currentTime": 1.11,
+      "buttonLabel": "Pause showcase video",
+      "pressed": "true"
+    },
+    {
+      "label": "save-data-enabled-pauses",
+      "saveData": true,
+      "paused": true,
+      "currentTime": 1.111,
+      "buttonLabel": "Play showcase video",
+      "pressed": "false"
+    },
+    {
+      "label": "save-data-disabled-resumes",
+      "saveData": false,
+      "paused": false,
+      "currentTime": 1.875,
+      "buttonLabel": "Pause showcase video",
+      "pressed": "true"
+    },
+    {
+      "label": "user-paused",
+      "saveData": false,
+      "paused": true,
+      "currentTime": 1.876,
+      "buttonLabel": "Play showcase video",
+      "pressed": "false"
+    },
+    {
+      "label": "user-pause-survives-connection-changes",
+      "saveData": false,
+      "paused": true,
+      "currentTime": 1.876,
+      "buttonLabel": "Play showcase video",
+      "pressed": "false"
+    }
+  ]
+}

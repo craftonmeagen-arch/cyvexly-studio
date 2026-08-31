@@ -1,0 +1,42 @@
+{
+  "generatedAtUtc": "2026-08-31T05:22:12.668Z",
+  "label": "Pause showcase video",
+  "saveData": true,
+  "reducedMotion": false,
+  "paused": false,
+  "currentTime": 1.4,
+  "readyState": 4,
+  "pressed": "true",
+  "resources": [
+    {
+      "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+      "transferSize": 0,
+      "encodedBodySize": 31340,
+      "duration": 2.3
+    },
+    {
+      "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+      "transferSize": 0,
+      "encodedBodySize": 22320,
+      "duration": 2.5
+    },
+    {
+      "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "transferSize": 0,
+      "encodedBodySize": 48432,
+      "duration": 2.8
+    },
+    {
+      "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+      "transferSize": 300,
+      "encodedBodySize": 12006,
+      "duration": 6.6
+    },
+    {
+      "name": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+      "transferSize": 300,
+      "encodedBodySize": 0,
+      "duration": 74.3
+    }
+  ]
+}

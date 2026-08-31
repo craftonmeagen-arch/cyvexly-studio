@@ -382,3 +382,25 @@
   assets plus the intended 404. Across 300 internal-link instances, the only
   failing targets are the three already-bounded Owner-blocked routes.
 - The four Owner decisions and second-computer confirmation remain unchanged.
+
+## Round 11 — 2026-08-31
+
+- Replaced Home's static orbit with the Owner-supplied 30-second systems
+  showcase, delivered as a silent fast-start H.264 loop with a 12KB WebP poster,
+  responsive glass framing, and a visible accessible Play/Pause control.
+- Preserved autoplay only for visible, ordinary-motion sessions. Reduced motion
+  and the browser's explicit data-saving preference hold the poster; explicit
+  Play remains available, and an explicit user pause survives later visibility/
+  connection changes. Product commit: `34a5bd3`.
+- Opened exact 1440/768/390 production renders and proved normal advance/pause,
+  the 30-second loop, reduced-motion still/native Enter playback, save-data
+  before/after and live-change behavior, correct MIME/range delivery, 13 route
+  statuses, and 12 phone semantic/overflow states. A cold 150ms/~1.64Mbps run
+  recorded video/poster LCP at 1.004s and negligible layout shift.
+- Lint, production build, and post-build TypeScript passed. The first post-fix
+  build exposed that a live Chrome profile inside the project tree can be swept
+  by Turbopack/Tailwind and fail on Chrome's locked cookie DB; the owned profile
+  was removed, rerun outside the tree, and the build passed with only the known
+  domain-blocked `metadataBase` warning.
+- Existing Owner decisions and original-device confirmation remain unchanged;
+  final mockup parity stays an Owner judgment.

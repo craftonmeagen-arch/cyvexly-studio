@@ -1,0 +1,1604 @@
+{
+  "generatedAtUtc": "2026-08-31T05:30:23.202Z",
+  "baseUrl": "http://127.0.0.1:5183/",
+  "viewports": {
+    "desktop": {
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "scrollHeight": 4605
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 168,
+          "y": 236,
+          "width": 528,
+          "height": 155.48,
+          "top": 236,
+          "right": 696,
+          "bottom": 391.48,
+          "left": 168
+        }
+      },
+      "figure": {
+        "x": 744,
+        "y": 242.11,
+        "width": 528,
+        "height": 297,
+        "top": 242.11,
+        "right": 1272,
+        "bottom": 539.11,
+        "left": 744
+      },
+      "video": {
+        "rect": {
+          "x": 745,
+          "y": 243.11,
+          "width": 526,
+          "height": 295,
+          "top": 243.11,
+          "right": 1271,
+          "bottom": 538.11,
+          "left": 745
+        },
+        "paused": false,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 1.2,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 1215,
+          "y": 482.11,
+          "width": 36,
+          "height": 36,
+          "top": 482.11,
+          "right": 1251,
+          "bottom": 518.11,
+          "left": 1215
+        },
+        "label": "Pause showcase video",
+        "pressed": "true",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": false,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 3.2
+        }
+      ]
+    },
+    "laptop": {
+      "viewport": {
+        "width": 1024,
+        "height": 800,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 1024,
+        "scrollWidth": 1024,
+        "scrollHeight": 4670
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 24,
+          "y": 236,
+          "width": 464,
+          "height": 155.48,
+          "top": 236,
+          "right": 488,
+          "bottom": 391.48,
+          "left": 24
+        }
+      },
+      "figure": {
+        "x": 536,
+        "y": 274.73,
+        "width": 464,
+        "height": 261,
+        "top": 274.73,
+        "right": 1000,
+        "bottom": 535.73,
+        "left": 536
+      },
+      "video": {
+        "rect": {
+          "x": 537,
+          "y": 275.73,
+          "width": 462,
+          "height": 259,
+          "top": 275.73,
+          "right": 999,
+          "bottom": 534.73,
+          "left": 537
+        },
+        "paused": true,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.179,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 943,
+          "y": 478.73,
+          "width": 36,
+          "height": 36,
+          "top": 478.73,
+          "right": 979,
+          "bottom": 514.73,
+          "left": 943
+        },
+        "label": "Play showcase video",
+        "pressed": "false",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": false,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 2.8
+        }
+      ]
+    },
+    "tablet": {
+      "viewport": {
+        "width": 768,
+        "height": 1024,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "scrollHeight": 5738
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 24,
+          "y": 230,
+          "width": 720,
+          "height": 103.66,
+          "top": 230,
+          "right": 744,
+          "bottom": 333.66,
+          "left": 24
+        }
+      },
+      "figure": {
+        "x": 24,
+        "y": 571.41,
+        "width": 720,
+        "height": 405,
+        "top": 571.41,
+        "right": 744,
+        "bottom": 976.41,
+        "left": 24
+      },
+      "video": {
+        "rect": {
+          "x": 25,
+          "y": 572.41,
+          "width": 718,
+          "height": 403,
+          "top": 572.41,
+          "right": 743,
+          "bottom": 975.41,
+          "left": 25
+        },
+        "paused": false,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 1.432,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 687,
+          "y": 919.41,
+          "width": 36,
+          "height": 36,
+          "top": 919.41,
+          "right": 723,
+          "bottom": 955.41,
+          "left": 687
+        },
+        "label": "Pause showcase video",
+        "pressed": "true",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": false,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 3.7
+        }
+      ]
+    },
+    "phone": {
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "scrollHeight": 9007
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 24,
+          "y": 214,
+          "width": 342,
+          "height": 116.63,
+          "top": 214,
+          "right": 366,
+          "bottom": 330.63,
+          "left": 24
+        }
+      },
+      "figure": {
+        "x": 24,
+        "y": 646.63,
+        "width": 342,
+        "height": 192.38,
+        "top": 646.63,
+        "right": 366,
+        "bottom": 839,
+        "left": 24
+      },
+      "video": {
+        "rect": {
+          "x": 25,
+          "y": 647.63,
+          "width": 340,
+          "height": 190.38,
+          "top": 647.63,
+          "right": 365,
+          "bottom": 838,
+          "left": 25
+        },
+        "paused": false,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 1.425,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 313,
+          "y": 786,
+          "width": 36,
+          "height": 36,
+          "top": 786,
+          "right": 349,
+          "bottom": 822,
+          "left": 313
+        },
+        "label": "Pause showcase video",
+        "pressed": "true",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": false,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 2.5
+        }
+      ]
+    }
+  },
+  "playback": {
+    "playingStart": {
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "scrollHeight": 4605
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 168,
+          "y": 236,
+          "width": 528,
+          "height": 155.48,
+          "top": 236,
+          "right": 696,
+          "bottom": 391.48,
+          "left": 168
+        }
+      },
+      "figure": {
+        "x": 744,
+        "y": 242.11,
+        "width": 528,
+        "height": 297,
+        "top": 242.11,
+        "right": 1272,
+        "bottom": 539.11,
+        "left": 744
+      },
+      "video": {
+        "rect": {
+          "x": 745,
+          "y": 243.11,
+          "width": 526,
+          "height": 295,
+          "top": 243.11,
+          "right": 1271,
+          "bottom": 538.11,
+          "left": 745
+        },
+        "paused": false,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 1.229,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 1215,
+          "y": 482.11,
+          "width": 36,
+          "height": 36,
+          "top": 482.11,
+          "right": 1251,
+          "bottom": 518.11,
+          "left": 1215
+        },
+        "label": "Pause showcase video",
+        "pressed": "true",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": false,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 2.8
+        }
+      ]
+    },
+    "playingEnd": {
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "scrollHeight": 4605
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 168,
+          "y": 236,
+          "width": 528,
+          "height": 155.48,
+          "top": 236,
+          "right": 696,
+          "bottom": 391.48,
+          "left": 168
+        }
+      },
+      "figure": {
+        "x": 744,
+        "y": 242.11,
+        "width": 528,
+        "height": 297,
+        "top": 242.11,
+        "right": 1272,
+        "bottom": 539.11,
+        "left": 744
+      },
+      "video": {
+        "rect": {
+          "x": 745,
+          "y": 243.11,
+          "width": 526,
+          "height": 295,
+          "top": 243.11,
+          "right": 1271,
+          "bottom": 538.11,
+          "left": 745
+        },
+        "paused": false,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 2.145,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 1215,
+          "y": 482.11,
+          "width": 36,
+          "height": 36,
+          "top": 482.11,
+          "right": 1251,
+          "bottom": 518.11,
+          "left": 1215
+        },
+        "label": "Pause showcase video",
+        "pressed": "true",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": false,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 2.8
+        }
+      ]
+    },
+    "advancedSeconds": 0.916,
+    "pausedStart": {
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "scrollHeight": 4605
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 168,
+          "y": 236,
+          "width": 528,
+          "height": 155.48,
+          "top": 236,
+          "right": 696,
+          "bottom": 391.48,
+          "left": 168
+        }
+      },
+      "figure": {
+        "x": 744,
+        "y": 242.11,
+        "width": 528,
+        "height": 297,
+        "top": 242.11,
+        "right": 1272,
+        "bottom": 539.11,
+        "left": 744
+      },
+      "video": {
+        "rect": {
+          "x": 745,
+          "y": 243.11,
+          "width": 526,
+          "height": 295,
+          "top": 243.11,
+          "right": 1271,
+          "bottom": 538.11,
+          "left": 745
+        },
+        "paused": true,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 2.147,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 1215,
+          "y": 482.11,
+          "width": 36,
+          "height": 36,
+          "top": 482.11,
+          "right": 1251,
+          "bottom": 518.11,
+          "left": 1215
+        },
+        "label": "Play showcase video",
+        "pressed": "false",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": false,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 2.8
+        }
+      ]
+    },
+    "pausedEnd": {
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "scrollHeight": 4605
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 168,
+          "y": 236,
+          "width": 528,
+          "height": 155.48,
+          "top": 236,
+          "right": 696,
+          "bottom": 391.48,
+          "left": 168
+        }
+      },
+      "figure": {
+        "x": 744,
+        "y": 242.11,
+        "width": 528,
+        "height": 297,
+        "top": 242.11,
+        "right": 1272,
+        "bottom": 539.11,
+        "left": 744
+      },
+      "video": {
+        "rect": {
+          "x": 745,
+          "y": 243.11,
+          "width": 526,
+          "height": 295,
+          "top": 243.11,
+          "right": 1271,
+          "bottom": 538.11,
+          "left": 745
+        },
+        "paused": true,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 2.147,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 1215,
+          "y": 482.11,
+          "width": 36,
+          "height": 36,
+          "top": 482.11,
+          "right": 1251,
+          "bottom": 518.11,
+          "left": 1215
+        },
+        "label": "Play showcase video",
+        "pressed": "false",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": false,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 2.8
+        }
+      ]
+    },
+    "pausedDriftSeconds": 0,
+    "looped": {
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "scrollHeight": 4605
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 168,
+          "y": 236,
+          "width": 528,
+          "height": 155.48,
+          "top": 236,
+          "right": 696,
+          "bottom": 391.48,
+          "left": 168
+        }
+      },
+      "figure": {
+        "x": 744,
+        "y": 242.11,
+        "width": 528,
+        "height": 297,
+        "top": 242.11,
+        "right": 1272,
+        "bottom": 539.11,
+        "left": 744
+      },
+      "video": {
+        "rect": {
+          "x": 745,
+          "y": 243.11,
+          "width": 526,
+          "height": 295,
+          "top": 243.11,
+          "right": 1271,
+          "bottom": 538.11,
+          "left": 745
+        },
+        "paused": false,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.982,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 1215,
+          "y": 482.11,
+          "width": 36,
+          "height": 36,
+          "top": 482.11,
+          "right": 1251,
+          "bottom": 518.11,
+          "left": 1215
+        },
+        "label": "Pause showcase video",
+        "pressed": "true",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": false,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 2.8
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+          "initiatorType": "video",
+          "transferSize": 3978786,
+          "encodedBodySize": 3978486,
+          "decodedBodySize": 3978486,
+          "duration": 36.2
+        }
+      ]
+    }
+  },
+  "reducedMotion": {
+    "initial": {
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "scrollHeight": 9007
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 24,
+          "y": 214,
+          "width": 342,
+          "height": 116.63,
+          "top": 214,
+          "right": 366,
+          "bottom": 330.63,
+          "left": 24
+        }
+      },
+      "figure": {
+        "x": 24,
+        "y": 646.63,
+        "width": 342,
+        "height": 192.38,
+        "top": 646.63,
+        "right": 366,
+        "bottom": 839,
+        "left": 24
+      },
+      "video": {
+        "rect": {
+          "x": 25,
+          "y": 647.63,
+          "width": 340,
+          "height": 190.38,
+          "top": 647.63,
+          "right": 365,
+          "bottom": 838,
+          "left": 25
+        },
+        "paused": true,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 313,
+          "y": 786,
+          "width": 36,
+          "height": 36,
+          "top": 786,
+          "right": 349,
+          "bottom": 822,
+          "left": 313
+        },
+        "label": "Play showcase video",
+        "pressed": "false",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": true,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 2.3
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 34.2
+        }
+      ]
+    },
+    "beforeEnter": {
+      "active": "Play showcase video",
+      "paused": true
+    },
+    "afterEnter": {
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1
+      },
+      "document": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "scrollHeight": 9007
+      },
+      "h1": {
+        "count": 1,
+        "rect": {
+          "x": 24,
+          "y": 214,
+          "width": 342,
+          "height": 116.63,
+          "top": 214,
+          "right": 366,
+          "bottom": 330.63,
+          "left": 24
+        }
+      },
+      "figure": {
+        "x": 24,
+        "y": 646.63,
+        "width": 342,
+        "height": 192.38,
+        "top": 646.63,
+        "right": 366,
+        "bottom": 839,
+        "left": 24
+      },
+      "video": {
+        "rect": {
+          "x": 25,
+          "y": 647.63,
+          "width": 340,
+          "height": 190.38,
+          "top": 647.63,
+          "right": 365,
+          "bottom": 838,
+          "left": 25
+        },
+        "paused": false,
+        "ended": false,
+        "muted": true,
+        "loop": true,
+        "currentTime": 0.89,
+        "duration": 30,
+        "readyState": 4,
+        "networkState": 1,
+        "poster": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+        "preload": "metadata",
+        "playsInline": true
+      },
+      "button": {
+        "rect": {
+          "x": 313,
+          "y": 786,
+          "width": 36,
+          "height": 36,
+          "top": 786,
+          "right": 349,
+          "bottom": 822,
+          "left": 313
+        },
+        "label": "Pause showcase video",
+        "pressed": "true",
+        "controls": "cyvexly-services-showcase"
+      },
+      "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+      "reducedMotion": true,
+      "mediaResources": [
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 31340,
+          "decodedBodySize": 31340,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 22320,
+          "decodedBodySize": 22320,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "initiatorType": "link",
+          "transferSize": 0,
+          "encodedBodySize": 48432,
+          "decodedBodySize": 48432,
+          "duration": 0
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 2.3
+        },
+        {
+          "name": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+          "initiatorType": "video",
+          "transferSize": 300,
+          "encodedBodySize": 0,
+          "decodedBodySize": 0,
+          "duration": 34.2
+        }
+      ]
+    },
+    "explicitPlayAdvance": 0.89
+  },
+  "networkEvents": [
+    {
+      "method": "Network.responseReceived",
+      "params": {
+        "requestId": "48036.1965",
+        "loaderId": "9DF04D7BA3151E299228DAE437F63A99",
+        "timestamp": 223367.075002,
+        "type": "Font",
+        "response": {
+          "url": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "Accept-Ranges": "bytes",
+            "Cache-Control": "public, max-age=31536000, immutable",
+            "Content-Length": "31340",
+            "ETag": "W/\"7a6c-1a056481f10\"",
+            "Date": "Mon, 31 Aug 2026 05:27:00 GMT",
+            "Last-Modified": "Mon, 31 Aug 2026 05:26:02 GMT",
+            "Content-Type": "font/woff2"
+          },
+          "mimeType": "font/woff2",
+          "charset": "",
+          "connectionReused": false,
+          "connectionId": 0,
+          "remoteIPAddress": "127.0.0.1",
+          "remotePort": 5183,
+          "fromDiskCache": true,
+          "fromServiceWorker": false,
+          "fromPrefetchCache": false,
+          "encodedDataLength": 0,
+          "timing": {
+            "requestTime": 223354.728974,
+            "proxyStart": -1,
+            "proxyEnd": -1,
+            "dnsStart": -1,
+            "dnsEnd": -1,
+            "connectStart": -1,
+            "connectEnd": -1,
+            "sslStart": -1,
+            "sslEnd": -1,
+            "workerStart": -1,
+            "workerReady": -1,
+            "workerFetchStart": -1,
+            "workerRespondWithSettled": -1,
+            "sendStart": 0.091,
+            "sendEnd": 0.091,
+            "pushStart": 0,
+            "pushEnd": 0,
+            "receiveHeadersStart": 0.579,
+            "receiveHeadersEnd": 0.869
+          },
+          "responseTime": 1788154020363.367,
+          "protocol": "http/1.1",
+          "alternateProtocolUsage": "unspecifiedReason",
+          "securityState": "secure"
+        },
+        "hasExtraInfo": false,
+        "frameId": "1DD6CBECFA77E1D9D96D802ADF573000"
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "params": {
+        "requestId": "48036.1966",
+        "loaderId": "9DF04D7BA3151E299228DAE437F63A99",
+        "timestamp": 223367.07511,
+        "type": "Font",
+        "response": {
+          "url": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "Accept-Ranges": "bytes",
+            "Cache-Control": "public, max-age=31536000, immutable",
+            "Content-Length": "22320",
+            "ETag": "W/\"5730-1a056481e0d\"",
+            "Date": "Mon, 31 Aug 2026 05:27:00 GMT",
+            "Last-Modified": "Mon, 31 Aug 2026 05:26:01 GMT",
+            "Content-Type": "font/woff2"
+          },
+          "mimeType": "font/woff2",
+          "charset": "",
+          "connectionReused": false,
+          "connectionId": 0,
+          "remoteIPAddress": "127.0.0.1",
+          "remotePort": 5183,
+          "fromDiskCache": true,
+          "fromServiceWorker": false,
+          "fromPrefetchCache": false,
+          "encodedDataLength": 0,
+          "timing": {
+            "requestTime": 223354.729308,
+            "proxyStart": -1,
+            "proxyEnd": -1,
+            "dnsStart": -1,
+            "dnsEnd": -1,
+            "connectStart": -1,
+            "connectEnd": -1,
+            "sslStart": -1,
+            "sslEnd": -1,
+            "workerStart": -1,
+            "workerReady": -1,
+            "workerFetchStart": -1,
+            "workerRespondWithSettled": -1,
+            "sendStart": 0.058,
+            "sendEnd": 0.058,
+            "pushStart": 0,
+            "pushEnd": 0,
+            "receiveHeadersStart": 1.307,
+            "receiveHeadersEnd": 1.417
+          },
+          "responseTime": 1788154020365.157,
+          "protocol": "http/1.1",
+          "alternateProtocolUsage": "unspecifiedReason",
+          "securityState": "secure"
+        },
+        "hasExtraInfo": false,
+        "frameId": "1DD6CBECFA77E1D9D96D802ADF573000"
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "params": {
+        "requestId": "48036.1967",
+        "loaderId": "9DF04D7BA3151E299228DAE437F63A99",
+        "timestamp": 223367.075198,
+        "type": "Font",
+        "response": {
+          "url": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "Accept-Ranges": "bytes",
+            "Cache-Control": "public, max-age=31536000, immutable",
+            "Content-Length": "48432",
+            "ETag": "W/\"bd30-1a056481f10\"",
+            "Date": "Mon, 31 Aug 2026 05:27:00 GMT",
+            "Last-Modified": "Mon, 31 Aug 2026 05:26:02 GMT",
+            "Content-Type": "font/woff2"
+          },
+          "mimeType": "font/woff2",
+          "charset": "",
+          "connectionReused": false,
+          "connectionId": 0,
+          "remoteIPAddress": "127.0.0.1",
+          "remotePort": 5183,
+          "fromDiskCache": true,
+          "fromServiceWorker": false,
+          "fromPrefetchCache": false,
+          "encodedDataLength": 0,
+          "timing": {
+            "requestTime": 223354.729474,
+            "proxyStart": -1,
+            "proxyEnd": -1,
+            "dnsStart": -1,
+            "dnsEnd": -1,
+            "connectStart": -1,
+            "connectEnd": -1,
+            "sslStart": -1,
+            "sslEnd": -1,
+            "workerStart": -1,
+            "workerReady": -1,
+            "workerFetchStart": -1,
+            "workerRespondWithSettled": -1,
+            "sendStart": 0.045,
+            "sendEnd": 0.045,
+            "pushStart": 0,
+            "pushEnd": 0,
+            "receiveHeadersStart": 1.167,
+            "receiveHeadersEnd": 1.391
+          },
+          "responseTime": 1788154020378.829,
+          "protocol": "http/1.1",
+          "alternateProtocolUsage": "unspecifiedReason",
+          "securityState": "secure"
+        },
+        "hasExtraInfo": false,
+        "frameId": "1DD6CBECFA77E1D9D96D802ADF573000"
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "params": {
+        "requestId": "48036.1977",
+        "loaderId": "9DF04D7BA3151E299228DAE437F63A99",
+        "timestamp": 223367.078853,
+        "type": "Image",
+        "response": {
+          "url": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+          "status": 304,
+          "statusText": "Not Modified",
+          "headers": {
+            "Accept-Ranges": "bytes",
+            "Cache-Control": "public, max-age=0",
+            "Keep-Alive": "timeout=5",
+            "ETag": "W/\"2ee6-1a055f58bd9\"",
+            "Date": "Mon, 31 Aug 2026 05:30:35 GMT",
+            "Last-Modified": "Mon, 31 Aug 2026 03:55:50 GMT",
+            "Connection": "keep-alive"
+          },
+          "mimeType": "image/webp",
+          "charset": "",
+          "connectionReused": true,
+          "connectionId": 2934,
+          "remoteIPAddress": "127.0.0.1",
+          "remotePort": 5183,
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "fromPrefetchCache": false,
+          "encodedDataLength": 243,
+          "timing": {
+            "requestTime": 223367.076497,
+            "proxyStart": -1,
+            "proxyEnd": -1,
+            "dnsStart": -1,
+            "dnsEnd": -1,
+            "connectStart": -1,
+            "connectEnd": -1,
+            "sslStart": -1,
+            "sslEnd": -1,
+            "workerStart": -1,
+            "workerReady": -1,
+            "workerFetchStart": -1,
+            "workerRespondWithSettled": -1,
+            "sendStart": 0.426,
+            "sendEnd": 0.513,
+            "pushStart": 0,
+            "pushEnd": 0,
+            "receiveHeadersStart": 1.391,
+            "receiveHeadersEnd": 1.549
+          },
+          "responseTime": 1788154235600.884,
+          "protocol": "http/1.1",
+          "alternateProtocolUsage": "unspecifiedReason",
+          "securityState": "secure"
+        },
+        "hasExtraInfo": true,
+        "frameId": "1DD6CBECFA77E1D9D96D802ADF573000"
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "params": {
+        "requestId": "48036.2006",
+        "loaderId": "9DF04D7BA3151E299228DAE437F63A99",
+        "timestamp": 223367.101488,
+        "type": "Media",
+        "response": {
+          "url": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+          "status": 206,
+          "statusText": "Partial Content",
+          "headers": {
+            "Cache-Control": "public, max-age=0",
+            "ETag": "W/\"3cb4f6-1a055f5e7c3\"",
+            "Content-Range": "bytes 0-3978485/3978486",
+            "Accept-Ranges": "bytes",
+            "Content-Length": "3978486",
+            "Date": "Mon, 31 Aug 2026 05:30:35 GMT",
+            "Last-Modified": "Mon, 31 Aug 2026 03:56:14 GMT",
+            "Content-Type": "video/mp4"
+          },
+          "mimeType": "video/mp4",
+          "charset": "",
+          "connectionReused": true,
+          "connectionId": 2934,
+          "remoteIPAddress": "127.0.0.1",
+          "remotePort": 5183,
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "fromPrefetchCache": false,
+          "encodedDataLength": 245,
+          "timing": {
+            "requestTime": 223367.095066,
+            "proxyStart": -1,
+            "proxyEnd": -1,
+            "dnsStart": -1,
+            "dnsEnd": -1,
+            "connectStart": -1,
+            "connectEnd": -1,
+            "sslStart": -1,
+            "sslEnd": -1,
+            "workerStart": -1,
+            "workerReady": -1,
+            "workerFetchStart": -1,
+            "workerRespondWithSettled": -1,
+            "sendStart": 0.737,
+            "sendEnd": 0.871,
+            "pushStart": 0,
+            "pushEnd": 0,
+            "receiveHeadersStart": 1.939,
+            "receiveHeadersEnd": 2.261
+          },
+          "responseTime": 1788154235620.001,
+          "protocol": "http/1.1",
+          "alternateProtocolUsage": "unspecifiedReason",
+          "securityState": "secure"
+        },
+        "hasExtraInfo": true,
+        "frameId": "1DD6CBECFA77E1D9D96D802ADF573000"
+      }
+    },
+    {
+      "method": "Network.responseReceived",
+      "params": {
+        "requestId": "48036.2015",
+        "loaderId": "9DF04D7BA3151E299228DAE437F63A99",
+        "timestamp": 223368.454137,
+        "type": "Media",
+        "response": {
+          "url": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+          "status": 206,
+          "statusText": "Partial Content",
+          "headers": {
+            "Cache-Control": "public, max-age=0",
+            "ETag": "W/\"3cb4f6-1a055f5e7c3\"",
+            "Content-Range": "bytes 1048576-3978485/3978486",
+            "Accept-Ranges": "bytes",
+            "Content-Length": "2929910",
+            "Date": "Mon, 31 Aug 2026 05:30:36 GMT",
+            "Last-Modified": "Mon, 31 Aug 2026 03:56:14 GMT",
+            "Content-Type": "video/mp4"
+          },
+          "mimeType": "video/mp4",
+          "charset": "",
+          "connectionReused": true,
+          "connectionId": 2922,
+          "remoteIPAddress": "127.0.0.1",
+          "remotePort": 5183,
+          "fromDiskCache": false,
+          "fromServiceWorker": false,
+          "fromPrefetchCache": false,
+          "encodedDataLength": 245,
+          "timing": {
+            "requestTime": 223368.451639,
+            "proxyStart": -1,
+            "proxyEnd": -1,
+            "dnsStart": -1,
+            "dnsEnd": -1,
+            "connectStart": -1,
+            "connectEnd": -1,
+            "sslStart": -1,
+            "sslEnd": -1,
+            "workerStart": -1,
+            "workerReady": -1,
+            "workerFetchStart": -1,
+            "workerRespondWithSettled": -1,
+            "sendStart": 0.775,
+            "sendEnd": 0.84,
+            "pushStart": 0,
+            "pushEnd": 0,
+            "receiveHeadersStart": 1.713,
+            "receiveHeadersEnd": 1.91
+          },
+          "responseTime": 1788154236976.348,
+          "protocol": "http/1.1",
+          "alternateProtocolUsage": "unspecifiedReason",
+          "securityState": "secure"
+        },
+        "hasExtraInfo": true,
+        "frameId": "1DD6CBECFA77E1D9D96D802ADF573000"
+      }
+    }
+  ]
+}

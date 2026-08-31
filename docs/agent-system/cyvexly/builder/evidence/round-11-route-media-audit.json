@@ -1,0 +1,294 @@
+{
+  "generatedAtUtc": "2026-08-31T05:29:49.415Z",
+  "baseUrl": "http://127.0.0.1:5183",
+  "statuses": [
+    {
+      "route": "/",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 90634,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/services",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 102434,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/work",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 37624,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/pricing",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 118825,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/process",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 64628,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 35516,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/faq",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 66060,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/accessibility",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 36095,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/start",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 41150,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 53679,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/work/nexora-systems",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 60797,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/work/vellora-care",
+      "status": 200,
+      "expected": 200,
+      "pass": true,
+      "bytes": 55837,
+      "hasMain": true,
+      "h1Count": 1
+    },
+    {
+      "route": "/does-not-exist",
+      "status": 404,
+      "expected": 404,
+      "pass": true,
+      "bytes": 29817,
+      "hasMain": true,
+      "h1Count": 1
+    }
+  ],
+  "media": [
+    {
+      "path": "/media/cyvexly-services-loop.mp4",
+      "head": {
+        "status": 200,
+        "contentType": "video/mp4",
+        "contentLength": "3978486",
+        "acceptRanges": "bytes",
+        "cacheControl": "public, max-age=0"
+      },
+      "range": {
+        "status": 206,
+        "contentRange": "bytes 0-1023/3978486",
+        "bytes": 1024
+      }
+    },
+    {
+      "path": "/media/cyvexly-services-poster.webp",
+      "head": {
+        "status": 200,
+        "contentType": "image/webp",
+        "contentLength": "12006",
+        "acceptRanges": "bytes",
+        "cacheControl": "public, max-age=0"
+      },
+      "range": {
+        "status": 206,
+        "contentRange": "bytes 0-1023/12006",
+        "bytes": 1024
+      }
+    }
+  ],
+  "phone": [
+    {
+      "route": "/",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/services",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/work",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/pricing",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/process",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/contact",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/faq",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/accessibility",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/start",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/work/nexora-systems",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    },
+    {
+      "route": "/work/vellora-care",
+      "viewport": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "mainCount": 1,
+      "h1Count": 1,
+      "unnamedVisibleControls": 0
+    }
+  ],
+  "expectedBlockedRouteErrors": [
+    {
+      "method": "Log.entryAdded",
+      "params": {
+        "entry": {
+          "source": "network",
+          "level": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+          "timestamp": 1788154186816.47,
+          "url": "http://127.0.0.1:5183/privacy?_rsc=h2vb-LAkAGynSY5z",
+          "networkRequestId": "48036.1336"
+        }
+      }
+    }
+  ],
+  "unexpectedErrors": [],
+  "pass": true
+}

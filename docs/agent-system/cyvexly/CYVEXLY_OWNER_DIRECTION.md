@@ -30,7 +30,7 @@ Do not create, configure, enable, or modify recurring role schedulers or automat
 
 ## Visual fidelity direction 2026-08-30-04
 
-**Status:** PARTIALLY FULFILLED — ROUND 10 STRUCTURAL GLASS PASS; OWNER REVIEW PENDING
+**Status:** PARTIALLY FULFILLED — ROUND 11 HERO MOTION PASS; OWNER REVIEW PENDING
 **Source:** Owner via Codex side conversation
 **Recorded:** 2026-08-30 America/New_York
 
@@ -46,6 +46,14 @@ icon-led five-claim credibility rail, and icon-bearing capability cards, all
 verified in opened 1440/768/390 production renders and a native keyboard/menu
 check. The result closes three visible structural gaps against
 `mockups/01-home.png`; it still does not claim Owner acceptance or final parity.
+
+Round 11 replaces the remaining static hero orbit with the Owner-supplied
+30-second systems showcase as a muted, looping, poster-backed glass media panel.
+Opened 1440/768/390 production renders confirm the new motion increases the
+hero's luminous technology/art-direction density while retaining the bright
+page, message hierarchy, responsive containment, reduced-motion behavior, and
+truthful claims. This is an implementation of the Owner's supplied media and
+active fidelity direction, not a claim of final visual acceptance.
 
 ## Cross-device view consistency direction 2026-08-30-05
 

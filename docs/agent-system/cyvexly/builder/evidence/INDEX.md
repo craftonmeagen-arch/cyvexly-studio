@@ -2,6 +2,34 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 11 — Home hero showcase video
+
+- `round-11-home-hero-video-plan.md` — pre-acceptance source provenance,
+  reference comparison, responsive/motion/accessibility constraints, media
+  budget, and falsifiable proof plan.
+- `round-11-home-desktop.png`, `round-11-home-tablet.png`, and
+  `round-11-home-phone.png` — opened exact 1440x900, 768x1024, and 390x844
+  production renders of the repeating showcase media in the live Home hero.
+- `round-11-home-phone-reduced-motion-still.png` — opened exact phone render
+  showing the poster-first still state when reduced motion is requested.
+- `round-11-hero-runtime-proof.json` — exact four-viewport geometry, normal
+  advance/pause/loop behavior, reduced-motion state, and native Enter playback.
+- `round-11-save-data-baseline.json` and
+  `round-11-save-data-post-fix-explicit-play.json` — controlled before/after
+  evidence that the browser's data-saving preference now prevents autoplay
+  while retaining explicit playback.
+- `round-11-save-data-change-proof.json` — live connection-change pause/resume
+  plus proof that an explicit user pause survives later connection changes.
+- `round-11-route-media-audit.json` — production status and 390px semantic/
+  overflow matrix plus MIME, content length, range-request, and console/runtime
+  checks.
+- `round-11-constrained-media-proof.json` and
+  `round-11-home-desktop-constrained.png` — opened cold-cache production render
+  and CDP evidence under 150ms latency/~1.64Mbps download: video/poster LCP at
+  1.004s, CLS `0.00009`, active playback, and zero horizontal overflow.
+- `round-11-home-hero-video-comparison.md` — post-implementation rendered
+  comparison, asset hashes/provenance, measured acceptance, and honest limits.
+
 ## Global round 10 — structural Home glass-system pass
 
 - `round-10-home-glass-system-visual-plan.md` — pre-implementation reference,

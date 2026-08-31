@@ -47,7 +47,11 @@
   to traverse Planner focus order and submit empty-step validation at exact
   desktop/phone widths. This is native Chromium input, not physical-hardware or
   cross-browser proof. Clean the unique profile and stop only Chrome processes
-  whose command line contains that exact Builder-owned profile path.
+  whose command line contains that exact Builder-owned profile path. **Round 11
+  hardening:** place the live profile under the OS temp root, not inside the
+  project tree; Turbopack/Tailwind may scan project `.codex/tmp` and panic on
+  Chrome's locked Cookies database. Retained screenshots/JSON can still be
+  written to the Builder evidence root after capture.
   **Root cause, found round 6:** `requestAnimationFrame` never fires at
   all in this session (a self-rescheduling rAF counter stayed `0` after a
   real 3-second wait), while `document.visibilityState` stays `"hidden"`

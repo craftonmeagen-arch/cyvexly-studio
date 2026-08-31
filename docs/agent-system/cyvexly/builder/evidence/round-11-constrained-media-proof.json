@@ -1,0 +1,418 @@
+{
+  "generatedAtUtc": "2026-08-31T05:40:08.349Z",
+  "elapsedMs": 8706,
+  "profile": {
+    "latencyMs": 150,
+    "downloadBytesPerSecond": 204800,
+    "uploadBytesPerSecond": 98304,
+    "connectionType": "cellular4g",
+    "cacheDisabled": true
+  },
+  "perf": {
+    "lcp": [
+      {
+        "startTime": 904,
+        "size": 83655,
+        "element": "H1",
+        "url": null
+      },
+      {
+        "startTime": 1004,
+        "size": 154965,
+        "element": "VIDEO",
+        "url": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp"
+      }
+    ],
+    "cls": 0.00009004616805170822
+  },
+  "navigation": {
+    "responseStart": 9.199999988079071,
+    "domContentLoadedEventEnd": 632.2999999821186,
+    "loadEventEnd": 1986.199999988079,
+    "transferSize": 15214,
+    "encodedBodySize": 14914
+  },
+  "video": {
+    "paused": false,
+    "currentTime": 6.105,
+    "readyState": 4,
+    "networkState": 2
+  },
+  "viewport": {
+    "innerWidth": 1440,
+    "clientWidth": 1425,
+    "scrollWidth": 1425
+  },
+  "resources": [
+    {
+      "name": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+      "transferSize": 31640,
+      "encodedBodySize": 31340,
+      "duration": 911.9000000059605
+    },
+    {
+      "name": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+      "transferSize": 22620,
+      "encodedBodySize": 22320,
+      "duration": 724.2999999821186
+    },
+    {
+      "name": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "transferSize": 48732,
+      "encodedBodySize": 48432,
+      "duration": 1267.199999988079
+    },
+    {
+      "name": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+      "transferSize": 12306,
+      "encodedBodySize": 12006,
+      "duration": 716.0999999940395
+    },
+    {
+      "name": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+      "transferSize": 300,
+      "encodedBodySize": 0,
+      "duration": 5694.699999988079
+    },
+    {
+      "name": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+      "transferSize": 300,
+      "encodedBodySize": 0,
+      "duration": 322.5
+    },
+    {
+      "name": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+      "transferSize": 300,
+      "encodedBodySize": 0,
+      "duration": 332.09999999403954
+    },
+    {
+      "name": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+      "transferSize": 300,
+      "encodedBodySize": 0,
+      "duration": 333.90000000596046
+    }
+  ],
+  "network": [
+    {
+      "requestId": "48036.2082",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/services?_rsc=5CB68i4pnAekjehf",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 350
+    },
+    {
+      "requestId": "48036.2083",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/work?_rsc=5CB68i4pnAekjehf",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 348
+    },
+    {
+      "requestId": "48036.2084",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/pricing?_rsc=5CB68i4pnAekjehf",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 350
+    },
+    {
+      "requestId": "48036.2085",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/process?_rsc=5CB68i4pnAekjehf",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 351
+    },
+    {
+      "requestId": "748F84DD1B5E8D7DEE36917FA10F0AD0",
+      "type": "Document",
+      "url": "http://127.0.0.1:5183/",
+      "status": 200,
+      "mimeType": "text/html",
+      "encodedBytes": 0
+    },
+    {
+      "requestId": "48036.2097",
+      "type": "Stylesheet",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/28gzoovqzb2ol.css",
+      "status": 200,
+      "mimeType": "text/css",
+      "encodedBytes": 10024
+    },
+    {
+      "requestId": "48036.2098",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/0an2y83bg272y.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 1986
+    },
+    {
+      "requestId": "48036.2099",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/35aq8yx60snji.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 7679
+    },
+    {
+      "requestId": "48036.2118",
+      "type": "Image",
+      "url": "http://127.0.0.1:5183/media/cyvexly-services-poster.webp",
+      "status": 200,
+      "mimeType": "image/webp",
+      "encodedBytes": 12006
+    },
+    {
+      "requestId": "48036.2095",
+      "type": "Font",
+      "url": "http://127.0.0.1:5183/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+      "status": 200,
+      "mimeType": "font/woff2",
+      "encodedBytes": 22320
+    },
+    {
+      "requestId": "48036.2094",
+      "type": "Font",
+      "url": "http://127.0.0.1:5183/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+      "status": 200,
+      "mimeType": "font/woff2",
+      "encodedBytes": 31340
+    },
+    {
+      "requestId": "48036.2103",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/3jw568b-pdfkg.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 3680
+    },
+    {
+      "requestId": "48036.2102",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/turbopack-05voa418urp6b.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 4323
+    },
+    {
+      "requestId": "48036.2104",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/0gctnnm07b_zh.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 1629
+    },
+    {
+      "requestId": "48036.2119",
+      "type": "Media",
+      "url": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+      "status": 206,
+      "mimeType": "video/mp4",
+      "encodedBytes": 752258
+    },
+    {
+      "requestId": "48036.2096",
+      "type": "Font",
+      "url": "http://127.0.0.1:5183/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "status": 200,
+      "mimeType": "font/woff2",
+      "encodedBytes": 48432
+    },
+    {
+      "requestId": "48036.2105",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/0fcjm1_d48e-b.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 5687
+    },
+    {
+      "requestId": "48036.2101",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/3uvlnotx8mi2p.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 45150
+    },
+    {
+      "requestId": "48036.2100",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/02za_yhvj1nh-.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 71694
+    },
+    {
+      "requestId": "48036.2151",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/?_rsc=5CB68i4pnAekjehf",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 338
+    },
+    {
+      "requestId": "48036.2152",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/services?_rsc=5CB68i4pnAekjehf",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 350
+    },
+    {
+      "requestId": "48036.2153",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/work?_rsc=5CB68i4pnAekjehf",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 348
+    },
+    {
+      "requestId": "48036.2154",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/pricing?_rsc=5CB68i4pnAekjehf",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 350
+    },
+    {
+      "requestId": "48036.2155",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/process?_rsc=5CB68i4pnAekjehf",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 351
+    },
+    {
+      "requestId": "48036.2156",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/about?_rsc=5CB68i4pnAekjehf",
+      "status": 404,
+      "mimeType": "text/x-component",
+      "encodedBytes": 232
+    },
+    {
+      "requestId": "48036.2157",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/start?_rsc=5CB68i4pnAekjehf",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 348
+    },
+    {
+      "requestId": "48036.2158",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/?_rsc=yIp22O3xgPPxC28X",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 2086
+    },
+    {
+      "requestId": "48036.2159",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/?_rsc=8nTjltbQWvg6NcbE",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 7104
+    },
+    {
+      "requestId": "48036.2160",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/services?_rsc=sf1YpdcMRkAgPkSR",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 7602
+    },
+    {
+      "requestId": "48036.2161",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/work?_rsc=w8QaQBDeNiATQLUS",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 2720
+    },
+    {
+      "requestId": "48036.2162",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/pricing?_rsc=e-TVHDPN8vGDTXUP",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 8377
+    },
+    {
+      "requestId": "48036.2164",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/process?_rsc=IhKohg-rjhpDwQDT",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 4690
+    },
+    {
+      "requestId": "48036.2165",
+      "type": "Fetch",
+      "url": "http://127.0.0.1:5183/start?_rsc=vlcLANeV5UDHa9Q_",
+      "status": 200,
+      "mimeType": "text/x-component",
+      "encodedBytes": 2706
+    },
+    {
+      "requestId": "48036.2163",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/24p_g6_pv937l.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 6652
+    },
+    {
+      "requestId": "48036.2166",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/0dcmu1fhd7yyr.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 5430
+    },
+    {
+      "requestId": "48036.2167",
+      "type": "Script",
+      "url": "http://127.0.0.1:5183/_next/static/chunks/3_gcxv8dn88kt.js",
+      "status": 200,
+      "mimeType": "application/javascript",
+      "encodedBytes": 15347
+    },
+    {
+      "requestId": "48036.2168",
+      "type": "Media",
+      "url": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+      "status": 206,
+      "mimeType": "video/mp4",
+      "encodedBytes": 32253
+    },
+    {
+      "requestId": "48036.2169",
+      "type": "Media",
+      "url": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+      "status": 206,
+      "mimeType": "video/mp4",
+      "encodedBytes": 32253
+    },
+    {
+      "requestId": "48036.2170",
+      "type": "Media",
+      "url": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+      "status": 206,
+      "mimeType": "video/mp4",
+      "encodedBytes": 33753
+    },
+    {
+      "requestId": "48036.2171",
+      "type": "Media",
+      "url": "http://127.0.0.1:5183/media/cyvexly-services-loop.mp4",
+      "status": 206,
+      "mimeType": "video/mp4",
+      "encodedBytes": 140253
+    }
+  ]
+}

@@ -289,3 +289,18 @@ boundary on future reasoning. Rounds 1-5 are rotated to
   build (or `next typegen`) → standalone `tsc`. Round 10 separately proved
   `pnpm exec next typegen && pnpm exec tsc --noEmit` succeeds from a clean
   `.next`.
+
+## Round 11
+
+- **Keep live Chrome profiles outside the project tree.** A Builder-owned
+  headless profile under `.codex/tmp/<session>/chrome-profile` held its Cookies
+  database open while Turbopack/Tailwind scanned the project, causing a
+  deterministic build panic on that locked file. The exact owned Chrome tree
+  was stopped, the profile removed, and the same build passed. A profile under
+  the OS temp root then supported all remaining CDP proof without entering the
+  build graph. The failure was instrumentation placement, not product source.
+- **Autoplay media must honor explicit data-saving intent as well as reduced
+  motion.** Controlled `navigator.connection.saveData=true` emulation proved
+  the initial Home video still autoplayed. The component now holds the poster,
+  responds to live connection changes, permits explicit Play, and preserves a
+  user pause through later changes; durable before/after evidence is indexed.

@@ -151,6 +151,15 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 11 Home hero motion pass:** Owner-supplied source media now replaces
+  the static Home orbit as a truthful 30-second looping showcase in commit
+  `34a5bd3`. The web derivative is silent, fast-start H.264 with a 12KB poster,
+  an accessible Play/Pause control, visibility/reduced-motion/data-saver
+  autoplay holds, and explicit-play recovery. Exact 1440/768/390 production
+  renders, loop/pause/native-Enter proof, route/overflow checks, and HTTP range
+  delivery pass. This advances the active visual direction without opening or
+  closing a chunk or claiming final Owner parity.
+
 - **Round 10 structural glass-system pass:** the mandatory wider methodology
   audit found that rounds 7–9 had reached diminishing returns from token-level
   adjustments, while the Owner mockup gap was now compositional. Commit
