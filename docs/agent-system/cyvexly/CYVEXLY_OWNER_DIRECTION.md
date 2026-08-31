@@ -85,3 +85,78 @@ Investigate and fix the observed cross-computer scale inconsistency. The site mu
 Owner-provided visual evidence: `Screenshot 2026-08-30 200831.png` and `Screenshot 2026-08-30 200855.png`.
 
 Round 9 reproduced a concrete 100%-page-zoom cause: the design system inherited a browser profile's non-default 24px base font size through rem-based tokens and responsive breakpoints, enlarging the entire interface and changing its desktop/mobile mode. Commit `8ec27c1` pins the author design root at 16px and defines responsive breakpoints in CSS pixels. In controlled Chrome and Edge profiles, the normal-default and 24px-default profiles now produce matching geometry and responsive states across desktop, high-DPR laptop, and phone viewports. A separate minimum-font-24 audit found and commit `2d82b0b` fixed two phone overflow cases. The actual second computer still needs Owner confirmation because its browser/OS configuration was not directly inspected.
+
+## Live Home video direction 2026-08-31-06
+
+**Status:** FULFILLED — ROUND 15 PUBLIC DEPLOYMENT PROOF
+**Source:** Owner via Codex active conversation
+**Recorded:** 2026-08-31 America/New_York
+
+> “it still didn't show up on the website... the video”
+
+Round 15 traced the discrepancy to source/deployment identity rather than the
+video component: GitHub/Render were still serving repository default branch
+`main` at pre-video commit `c13ae7a`, while the accepted Builder history had
+been pushed only to `master` at `57480e3`. Because `main` had zero independent
+commits and was a strict ancestor, the Builder fast-forwarded it without force,
+then renamed the local branch to track `origin/main` so ordinary future pushes
+reach the deployment branch. The public Render site changed within about 51
+seconds and now visibly serves the 30-second showcase at desktop and phone
+widths. Public MIME/range delivery, real playback, Pause/Play, loop boundary,
+reduced-motion/data-saver holds, explicit recovery, responsive containment,
+route smoke, console, lint, build, and TypeScript all pass. Durable proof is
+indexed in `builder/evidence/INDEX.md`. No scheduler or automation was touched.
+
+## Home hero video scale and placement direction 2026-08-31-07
+
+**Status:** ACTIVE — OWNER VISUAL DIRECTION FOR A FUTURE BUILDER PASS
+**Source:** Owner via Codex side conversation
+**Recorded:** 2026-08-31 America/New_York
+
+> “I like your version better and the size . add the mockup and your ur description. the video in the actual looks like a thumbnail and not like what you have. add all this to owners direction”
+
+The live Home video currently reads too much like a thumbnail. Replace that
+small-media impression with the larger, integrated hero-reel treatment shown
+in the Owner reference below. This direction concerns the video composition,
+scale, hierarchy, and surrounding glass treatment; it does not authorize
+copying image-generation text artifacts, invented interfaces, brands, claims,
+scores, or metrics into production.
+
+![Owner reference for the larger integrated Home hero video](../../../mockups/05-home-hero-video-owner-direction.png)
+
+Durable visual reference:
+`mockups/05-home-hero-video-owner-direction.png`.
+
+Implementation direction:
+
+- Place the video in the Home hero's primary visual/media position beside the
+  headline and actions, rather than in a separate strip above the navigation or
+  as a small card that resembles a thumbnail.
+- On desktop, give the video approximately 46–50% of the hero width in a
+  substantial 16:9 smoke-glass player. Its height and presence should visually
+  balance the full message-and-actions column.
+- Preserve the headline, supporting message, and unmistakable primary CTA in
+  the left column. The video must demonstrate capability without competing
+  with or covering that first-minute information.
+- Integrate the player into the arctic cyber-blue hero atmosphere with a crisp
+  frosted edge, restrained depth, and spectral glow. It should feel like a
+  premium Cyvexly studio reel, not a banner advertisement or generic embedded
+  player.
+- Retain an intentional poster frame plus a clear Pause/Play control. If the
+  reel autoplays, it must be muted, inline, and looping; never autoplay audible
+  media.
+- For reduced-motion or playback failure, hold the designed poster frame while
+  keeping the page message and actions complete without motion. If spoken or
+  meaning-carrying audio is later introduced, provide captions and a transcript.
+- On mobile, stack the video at full available content width immediately below
+  the hero actions and above the credibility strip. It should remain prominent
+  while avoiding horizontal overflow or excessive first-screen displacement.
+- Keep the credibility strip directly after the hero and let Selected Work
+  remain the next major proof section.
+
+The reference was created from the written Cyvexly vision rather than from the
+current website or earlier mockups. Its intended hierarchy is: compact glass
+navigation; outcome-led copy and CTAs on the left; a large playable studio reel
+on the right; then credibility and Selected Work. Small generated lettering in
+the image is non-authoritative; canonical product copy and truthful content
+requirements continue to govern implementation.

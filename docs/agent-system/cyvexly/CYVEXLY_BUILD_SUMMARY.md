@@ -322,3 +322,28 @@ Older setup and rounds 1-4 are preserved in
   bounded.
 - Rotated round 11's exact Active Chunk report to the chunk archive so the hot
   path retains the latest three reports and remains below its cap.
+
+## Round 15 — 2026-08-31
+
+- Resolved the Owner-reported live-video gap at the deployment/source layer.
+  The public Render Home was serving default branch `main` at pre-video commit
+  `c13ae7a`, while accepted Builder source had moved 52 commits ahead on
+  `master`; the old public page had the Orbit graphic and no video/control.
+- Proved `main` had zero unique commits, then safely fast-forwarded it to
+  `57480e3` without force. Render changed its public ETag/content about 51
+  seconds later. The local branch is now `main` tracking `origin/main` so a
+  future ordinary push reaches the deployment branch; remote `master` remains
+  preserved at the same source.
+- Opened before, final desktop, and final phone public renders. The real site
+  now has the contained 16:9 systems showcase and visible Play/Pause control;
+  the old Orbit is absent and phone/desktop remain width-contained.
+- Public poster/full/range requests pass correct WebP/MP4 MIME and byte-range
+  behavior. Real browser playback, Pause/Play, the 30-second loop boundary,
+  reduced-motion and data-saver holds plus explicit recovery, console, media
+  decode, silent H.264 fast-start encoding, full route smoke, lint, optimized
+  build, and post-build TypeScript pass.
+- Product bytes were already correct, so no source/media edit was made. Three
+  cited public captures, plan/verification records, Owner provenance, branch/
+  environment continuity, and round records were added. Council-owned
+  concurrent files/runtime were preserved; no scheduler or automation was
+  touched.

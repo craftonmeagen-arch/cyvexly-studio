@@ -2,16 +2,19 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global round 14 revisited its vision-required
-service-detail routes under the rule that closed chunks are not frozen.
+pages — remains closed, but global round 15 repaired its public deployment
+path under the rule that closed chunks are not frozen.
 
 **Current status:** The nine-step Planner UI/state/validation remains built and
 verified at `/start`; real server-side email remains Owner-blocked on the
 production-domain and transactional-email-provider decisions. `/not-found`,
 `/faq`, and `/accessibility` are complete; `/privacy` and `/terms` remain
-Owner-blocked on jurisdiction facts; the favicon is fixed. Round 14 adds five
-focused service-detail journeys and safe Planner preselection while retaining
-rounds 11-13's Home video and luminous visual systems.
+Owner-blocked on jurisdiction facts; the favicon is fixed. Round 15 makes the
+accepted Home video visible on the real Render site by aligning the deployment
+branch with accepted source. Round 14's five focused service-detail journeys
+and safe Planner preselection remain intact alongside rounds 11-13's Home video
+and luminous visual systems. Owner direction 2026-08-31-07 records a larger,
+integrated hero-reel redesign as a separate next-round visual slice.
 
 ## Active chunk boundaries
 
@@ -73,96 +76,6 @@ rounds 11-13's Home video and luminous visual systems.
 - **Round 11:** integrated the Owner-supplied Home showcase video with honest
   provenance, motion/data-saver controls, and responsive media proof. Full
   report: `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND11_REPORT.md`.
-
-## Round 12 report — global round 12
-
-### Preserved plan and methodology
-
-**Session:** `df61eaf1-567b-4791-92f4-b47a40b8a4b5`; lock claimed
-`2026-08-31T07:03:03.3591738Z`; start HEAD `dc900bb`; no active PM prompt.
-Pre-implementation plan:
-`builder/evidence/round-12-home-midpage-visual-plan.md`.
-
-The accepted Home mockup and latest full render showed two structural gaps
-after rounds 9-11: the bespoke-partner panel was a centered text block without
-the reference's system object, and the five-stage preview remained text-only.
-Another blur/opacity pass would not close either. The normal method was an
-original code-native SVG diagram plus reusable stage icon/route grammar, with
-responsive reflow and no new asset/dependency/platform decision.
-
-### What changed
-
-Product commit `13d3673` adds `PartnershipSignalGraphic`, an original luminous
-wireframe cube/orbit/node system, and places it beside the unchanged partner
-copy in a responsive glass panel. It adds `ProcessIcon` and converts the Home
-ordered list into five numbered nodes and distinct icons joined by one desktop
-route line. Tablet/phone intentionally drop the connector and retain contained
-glass cards. The diagram and icons are decorative; the semantic list, order,
-copy, routes, claims, and interactions are unchanged.
-
-### Rendered comparison and verification
-
-- `pnpm run lint`, clean `pnpm run build`, and post-build
-  `pnpm exec tsc --noEmit` passed. The only build warning is the known
-  Owner/domain-blocked `metadataBase` fallback.
-- Opened exact 1440x900, 768x1024, 720x900, and 390x844 changed-surface
-  production renders plus a 1440x4731 full Home render. The visual/copy panel
-  and route close the two plan gaps without disrupting the surrounding flow.
-- Desktop panel/route measure `1104x313.11` and `1104x211.83`; tablet panel is
-  `720x363`; phone panel is `342x574.83`. Every state has one diagram, five
-  nodes/icons, one H1, and zero horizontal overflow.
-- The original SVG ink measures `304x218` at `x=28,y=26` inside a `360x260`
-  viewBox. A 390px explicit 24px-root stress state keeps the panel and all five
-  process cards at 318px with no clipping/overflow.
-- An eight-width 390-1440px boundary audit confirms one/two/five-column process
-  reflow at the 640/1024 breakpoints and exposes the connector only when all
-  five stages share one row.
-- CDP accessibility output exposes the process as one list with five children
-  and the partnership graphic as ignored. The 13-route phone production audit
-  found expected 200/404 statuses, one main/H1, zero heading skips, duplicate
-  IDs, missing image alternatives, visible unnamed controls, or overflow, and
-  zero console errors/runtime exceptions.
-
-Evidence and the plan-to-render disposition are indexed in
-`builder/evidence/INDEX.md`.
-
-### Audibles, intake, and limits
-
-The first desktop render exposed a real cascade mismatch: Tailwind's
-`lg:border-0`/`lg:bg-transparent` utilities did not beat the later custom
-`.glass-panel` rule. A scoped desktop `.process-route-step` rule corrected the
-actual cascade, and the final render was recaptured/opened. The SVG ink box was
-measured explicitly because round 7 proved thumbnail inspection alone can miss
-viewBox clipping.
-
-Transient model-capacity interruptions occurred during the same invocation.
-Each recovery verified the raw lock still carried this exact session, nonce,
-and original claim time; no second claim or invocation was created, and work
-continued inside the original extended window.
-
-Council `CYC-R13-20260830-01` independently confirmed the prior accepted source
-had clean FAQ/Contact/Work/route/media baselines and repeated that final Home
-parity is Owner-gated. It detected this round's later Home drift but did not
-review it; round 12 therefore relies on Builder production proof and does not
-claim independent adoption.
-
-Not checked: Owner acceptance, the original second computer, physical Safari/
-Firefox, field performance, deployment, external email/domain/legal paths, or
-the complete hero loop's subjective cut. Existing Owner decisions remain.
-
-### Git/diff accountability and completion
-
-Diff-to-plan: `13d3673` contains exactly the planned Home composition, two SVG
-components, shared CSS, and cited plan/render/runtime evidence. Diff-to-belief
-found no unexpected Builder product file. A later evidence-only follow-up adds
-full-page, 24px-root, heading/ID/image-alt, and accessibility-tree proof. Active
-rounds 8-9, Watch rounds 6-7, and Build Summary setup/rounds 1-4 were rotated
-with exact history preserved; all Builder hot files are below caps. Council-
-owned dirty files/evidence and its former 5373 runtime were untouched. No
-scheduler or automation was touched.
-
-**DONE WITH PROOF** for the round-12 Home mid-page structural slice;
-**OWNER REVIEW STILL ACTIVE** for final mockup parity and second-device scale.
 
 ## Round 13 report — global round 13
 
@@ -322,3 +235,95 @@ media. Existing founder/legal/domain/email and art-framing decisions remain.
 
 **DONE WITH PROOF** for the five-service detail and Planner-handoff system;
 **OWNER REVIEW STILL ACTIVE** for Home mockup parity and second-device scale.
+
+## Round 15 report — global round 15
+
+### Preserved plan, intake, and methodology
+
+**Session:** `builder-20260831T091345658Z-b8c1c2b439ba`; lock claimed
+`2026-08-31T13:13:46.0974085Z`; start HEAD `57480e3`; no active PM prompt.
+Pre-repair plan:
+`builder/evidence/round-15-live-video-deployment-plan.md`.
+
+The Owner reported, “it still didn't show up on the website... the video”. The
+accepted source already contained the Round 11 video and later local/browser
+proof, so another media edit would have treated the visible symptom. The normal
+connected-Render method is to deploy a configured Git branch on push. A real
+public baseline, GitHub default branch, and branch graph identified a stronger
+root-cause test: compare public output to `main` and `master`, then fast-forward
+only if no independent `main` work existed.
+
+### Root cause and completed work
+
+The public Render Home had zero video/control elements and the exact old Orbit
+labels. GitHub default/deployment source `main` remained at pre-video commit
+`c13ae7a`; accepted Builder source had been pushed only to `master` at
+`57480e3`, 52 commits ahead. `main` had zero unique commits and was a strict
+ancestor. A non-force `git push origin master:main` safely published the full
+accepted continuous history. The public ETag/content changed about 51 seconds
+later and began serving the video.
+
+The local branch was renamed from `master` to `main` and now tracks
+`origin/main`, closing the recurrence path for ordinary future pushes. Remote
+`master` remains preserved at the same source. No product code, media byte,
+hosting setting, domain, credential, scheduler, or automation was changed.
+
+### Public rendered comparison and verification
+
+- Opened `round-15-live-home-before.png`: old Orbit graphic, no video/control.
+- Opened final desktop/default and exact 390×844 phone captures: one contained
+  16:9 showcase, visible Pause control, preserved copy/actions, no old Orbit,
+  and no horizontal overflow. Phone shell is `327×183.94` at `x=24`.
+- Public poster is `200 image/webp` (12,006 bytes); full MP4 is
+  `200 video/mp4` (3,978,486 bytes); `bytes=0-1023` returns `206` and the exact
+  `Content-Range`.
+- Real browser video decoded at 1280×720/30 seconds with `readyState=4`, no
+  error, and advancing playback. Pause held (0–0.088 seconds observed drift),
+  Play advanced 1.21–1.49 seconds, and the 29.7-second boundary wrapped to
+  1.092 seconds without entering `ended`.
+- Separate Chrome 151 preference states: reduced motion and data saver each
+  held at time `0` with the poster/Play control; explicit Play advanced about
+  1.19 seconds in both. Normal state remained muted, looping, and inline.
+- MP4 probe: silent H.264 High, 1280×720, 24 fps, 30 seconds, YUV420p,
+  ~1.06 Mbps; `moov` precedes `mdat`, confirming fast-start structure.
+- Live console warning/error log is empty. All 22 expected public pages/assets
+  return `200`; unknown service and the three documented Owner-blocked routes
+  return their expected `404`; expected HTML pages retain `main`/H1 baselines.
+- Local lint, optimized 23-page build, and post-build TypeScript pass. The only
+  build warning is the known Owner/domain-blocked `metadataBase` fallback.
+
+Exact values, the official Render method, hashes, branch/source evidence, and
+limits are in `round-15-live-video-deployment-verification.md`.
+
+### Audibles, diff accountability, and limits
+
+The first local preference-test launch combined proof and cleanup and was
+blocked before execution by the command safety layer; nothing started or was
+removed. Launch, proof, ownership check, and cleanup were split. The only
+Builder-owned Chrome profile was placed under the OS temp root, Browser.close
+ended Chrome, and the exact verified profile was moved to the Recycle Bin. The
+temporary helper script was deleted. No Council process, runtime, evidence, or
+dirty file was touched.
+
+Diff-to-plan: implementation consists of the planned safe branch fast-forward,
+public deployment verification, recurrence-proof local tracking, three cited
+captures, verification/plan records, and canonical continuity updates. No
+product file changed because current source was correct. Diff-to-belief found
+only those Builder-owned records plus the deliberate round-12 latest-three
+archive rotation; all other dirty paths are concurrent Council-owned records
+and remain excluded from Builder adoption. A newer Owner-directed hero-video
+mockup and its 2026-08-31-07 direction arrived during closeout, were visually
+reviewed, and are preserved as authoritative input for a separate next-round
+redesign; they do not alter this deployment-repair claim.
+
+The Render dashboard/settings and logs were not credential-accessible, but the
+strict before/after branch/output fingerprints, public ETag change, official
+platform behavior, and real render prove the deployed result. Physical Safari/
+Firefox and the Owner's original second computer were not checked. Existing
+founder/legal/domain/email/art-framing decisions remain unchanged.
+
+### Completion state
+
+**DONE WITH PROOF** for the Owner-reported live-video gap. The showcase is now
+visible and working on the real website. **OWNER REVIEW STILL ACTIVE** for final
+mockup parity and original second-device scale.

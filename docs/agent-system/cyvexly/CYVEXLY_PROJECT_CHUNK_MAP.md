@@ -158,6 +158,18 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 15 live Home video deployment recovery:** the Owner's report that the
+  video still did not appear publicly exposed a source/deployment identity
+  defect, not another media-component defect. Render/GitHub served default
+  branch `main` at pre-video commit `c13ae7a`, while accepted source had moved
+  52 commits ahead on `master`. `main` had zero unique work, so a non-force
+  fast-forward published the accepted history; the local Builder branch now
+  tracks `origin/main` to prevent recurrence. The real public site changed
+  within about 51 seconds and passes opened desktop/phone render, playback,
+  loop, reduced-motion/data-saver, MIME/range, route, console, build, and type
+  proof. This corrects deployment truth without opening/closing a chunk or
+  changing the separate domain/metadata decision.
+
 - **Round 13 Home final-CTA system pass:** commit `1df0203` replaces the flat
   centered final CTA treatment with a compact split glass composition and an
   original luminous planetary/network horizon. Exact 1440/768/390 production

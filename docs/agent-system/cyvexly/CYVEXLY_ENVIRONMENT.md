@@ -32,6 +32,13 @@
 
 - Stack: Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind
   CSS v4. Package manager: pnpm (`packageManager` pinned in `package.json`).
+- Source/deployment branch: local `main` tracks `origin/main`. The public Render
+  service at `https://cyvexly-studio.onrender.com/` deploys this branch. Round
+  15 proved that pushing only the historical `master` branch leaves the public
+  site stale even when GitHub contains the commits; use `main` for accepted
+  source and verify the public route after a deployment-relevant push. Remote
+  `master` is retained only as a same-source historical branch and is not the
+  Builder upstream.
 - Install: `pnpm install` (use `CI=true pnpm install` if it prompts to
   recreate `node_modules` after the folder was moved/copied — pnpm's linked
   store references can break across a move).
@@ -49,4 +56,3 @@
   production deploy once the real domain is connected, or the launched
   site will never get indexed. See `src/app/layout.tsx` and
   `src/app/robots.ts`.
-

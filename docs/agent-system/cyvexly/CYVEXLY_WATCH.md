@@ -112,3 +112,17 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   path specified.` before any page interaction. No plugin state was changed;
   exact Builder-owned Chrome/CDP evidence remained available as the documented
   fallback.
+
+## Round 15
+
+- **A successful push is not deployment proof when the pushed branch differs
+  from the hosting branch.** GitHub contained the video and all later product
+  work on `master`, but its default `main` branch remained at round 6 and the
+  public Render HTML matched that exact old source. The safe falsifier was a
+  branch graph: `main` had zero unique commits and was a strict ancestor, so a
+  non-force fast-forward changed the public ETag/content within about 51
+  seconds. The local Builder branch now tracks `origin/main`. Future release
+  claims should compare the accepted commit, configured/default deployment
+  branch, and real public artifact instead of treating `git push` as the
+  boundary. This is a source-identity checkpoint to apply when deployment
+  behavior is in scope, not a reason to add hosting checks to unrelated rounds.

@@ -2,6 +2,22 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 15 — live Home video deployment recovery
+
+- `round-15-live-video-deployment-plan.md` — preserved pre-repair source/
+  deployment baseline, branch-falsifier method, visual target, safety boundary,
+  and public acceptance plan.
+- `round-15-live-home-before.png` — opened public Render baseline showing the
+  obsolete Orbit hero served from stale `main` source.
+- `round-15-live-home-after-{desktop,phone}.png` — opened real public renders
+  after the fast-forward deployment, showing the video/control in contained
+  default and exact 390×844 layouts.
+- `round-15-live-video-deployment-verification.md` — branch root cause, official
+  platform method, deployment timing/ETag change, HTTP range/MIME proof,
+  desktop/phone interaction, normal/reduced-motion/data-saver/loop behavior,
+  encoding/fast-start details, full route smoke, build proof, cleanup, and
+  honest limits.
+
 ## Global round 14 — focused service-detail journeys
 
 - `round-14-service-detail-visual-plan.md` — pre-implementation baseline,

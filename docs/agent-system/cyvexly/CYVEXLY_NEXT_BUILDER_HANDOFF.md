@@ -1,67 +1,78 @@
 # Cyvexly Next Builder Handoff
 
-## Round 14 closeout
+## Round 15 closeout
 
-**Session:** `2384d0ba-a516-43bc-8615-01195c1455f2`
-**Lock claim:** `2026-08-31T10:48:25.4775496Z`
-**Product commit:** `930e050` — Build focused service detail journeys
+**Session:** `builder-20260831T091345658Z-b8c1c2b439ba`
+**Lock claim:** `2026-08-31T13:13:46.0974085Z`
+**Accepted product source:** `57480e3` on `main`
+**Video source commit:** `34a5bd3`
 **PM prompt:** no active prompt
-**Source safety:** Builder product source, evidence, and canonical records are
-committed/reconciled at close. Council-owned dirty files/evidence and its live
-runtime were preserved. No scheduler or automation was modified.
+**Source safety:** remote `main` was fast-forwarded without force from
+`c13ae7a` to accepted source `57480e3`; remote `master` was preserved at the
+same source. Council-owned files and evidence remained untouched. No scheduler
+or automation was modified.
 
 ## Completed work
 
-- Added one reusable typed `/services/[slug]` template and exactly five vision-
-  required service routes with full outcome/scope/proof/input/price/FAQ content.
-- Extended the cyber-arctic reference language through a code-native orbital
-  signal and grouped glass composition; no media or client outcome was invented.
-- Connected Services cards and footer links to the real routes while preserving
-  legacy fragment IDs.
-- Added announced, editable Planner preselection for all five offers. Existing
-  saved drafts take precedence and are never silently overwritten.
-- Rotated round 11's exact Active Chunk report to the archive and corrected the
-  Current State ledger: `34a5bd3` is the hero-video integration; `13d3673` is
-  the round-12 mid-page system.
+- Reproduced the Owner's report on the real public Render Home: it served the
+  older orbital hero and contained no video despite accepted local source.
+- Proved the deployment mismatch: GitHub's default/deployed `main` was 52
+  commits behind accepted `master`, with no `main`-only commits.
+- Fast-forwarded `origin/main` to `57480e3`, then renamed the local accepted
+  branch to `main` and configured it to track `origin/main`.
+- Watched the public HTML change, then proved the accepted 30-second showcase
+  appears, loads, autoplays muted, loops, and has a visible Pause/Play control.
+- Preserved remote `master` as a recoverable historical pointer rather than
+  deleting it during the incident repair.
 
 ## Verification
 
-- Lint, TypeScript, optimized production build (23 pages), and diff checks pass;
-  only the known Owner/domain-blocked `metadataBase` warning remains.
-- All five detail routes return 200 with unique title/H1, one `main`, no
-  duplicate IDs, and correct Planner links; unknown service returns 404.
-- Opened exact 1440/768/390 detail renders, a 390px E-commerce control, and the
-  phone Planner prefill. 320px and 24px-root stress remain width-contained.
-- A too-narrow 768px split hero was found in the first render, fixed by moving
-  the split to `lg`, rebuilt, and recaptured cleanly.
-- Native Services → detail → Planner activation, every query mapping, saved-
-  draft precedence, heading/control semantics, and reduced-motion all pass.
-- Durable proof is indexed under
+- The public Home, poster, and MP4 return 200; the MP4 returns `video/mp4` and
+  supports byte-range delivery with 206 responses.
+- Real public desktop and exact 390x844 phone renders show the video without
+  horizontal overflow. Playback advances, Pause/Play works, and the loop
+  crosses the 30-second boundary without ending.
+- Reduced-motion and data-saver preferences begin paused and allow explicit
+  user playback; normal preference begins playing. All modes remain muted,
+  inline, and error-free.
+- Public smoke covered 22 expected pages/assets plus expected 404 behavior;
+  browser console warnings/errors were empty.
+- The media is H.264/yuv420p, 1280x720, silent, 30 seconds, approximately
+  3.98 MB, with `moov` before `mdat` for fast-start delivery.
+- Lint, optimized build (23 pages), immediate post-build TypeScript, and local
+  route checks pass. The known domain-blocked `metadataBase` warning remains.
+- Durable plan, before/after renders, and verification are indexed in
   `docs/agent-system/cyvexly/builder/evidence/INDEX.md`.
 
 ## Blockers and honest limits
 
-- `/about` remains Owner-blocked on real founder identity/story/image; its
-  existing Link prefetch still produces the classified 404 on desktop routes.
-- Privacy/Terms jurisdiction, production domain/metadata, transactional email,
-  and abstract-vs-commissioned concept-art framing remain Owner decisions.
-- Final Home/mockup parity and the original second-computer scale correction
-  still require Owner review.
-- Physical Safari/Firefox, field Web Vitals, deployment/cache behavior, and
-  physical device/keyboard proof were not checked.
+- The Owner has not yet confirmed the live result on the exact computer that
+  first exposed the missing-video or scale issue.
+- The Owner's newer, separately recorded visual direction says the live video
+  still reads like a thumbnail and should become a larger integrated hero reel.
+  This round repaired deployment truth and did not absorb that new redesign
+  into the already bounded incident slice.
+- `/about` remains Owner-blocked on founder identity/story/image. Privacy/Terms
+  jurisdiction, production-domain metadata, transactional email, and abstract-
+  versus-commissioned concept-art framing remain Owner decisions.
+- Physical Safari/Firefox, field Web Vitals, and the original second computer
+  were not available in this round.
 
 ## Recommended next tasks
 
-1. Ask the Owner to select the next target: provide/approve higher-fidelity
-   concept media, or name the remaining non-asset Home mockup mismatch.
-2. Recheck the original second computer at 100% zoom and record CSS viewport,
-   DPR, browser font settings, and OS scale before any further scale changes.
-3. Route founder/legal/domain/email decisions; do not invent them. Once founder
-   facts arrive, build `/about` and remove its prefetch 404.
-4. Have a fresh Council/Auditor review `930e050` if independent adoption is the
-   next priority.
+1. Ask the Owner to hard-refresh the public Home and confirm the video on the
+   exact affected computer; capture viewport, DPR, browser font settings, and
+   OS display scale if its apparent zoom still differs.
+2. Treat `CYVEXLY_OWNER_DIRECTION.md`'s 2026-08-31-07 larger integrated Home
+   hero-video direction and its durable mockup as the next visual source. Plan,
+   implement, render, and compare it in a fresh Builder round.
+3. Route founder/legal/domain/email/art-framing decisions without inventing
+   facts. Build `/about` only when real founder inputs arrive.
+4. Keep `main` as the deployment/source branch. Do not delete remote `master`
+   unless the Owner separately authorizes cleanup after a safe retention period.
 
 ## Completion state
 
-**DONE WITH PROOF** for round 14's service-detail and Planner-handoff system.
-**OWNER REVIEW PENDING** for Home fidelity, concept media, and second-device scale.
+**DONE WITH PUBLIC PROOF** for round 15's live-video deployment repair.
+**OWNER DEVICE CONFIRMATION PENDING** for the original computer and final visual
+fidelity judgment.
