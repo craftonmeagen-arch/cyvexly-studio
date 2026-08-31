@@ -84,6 +84,15 @@ requires.
   three-column layout intentionally waits until 1280px so compact desktops do
   not repeat the cross-device cramped-scale problem. This revisits the closed
   chunk without changing its Owner-blocked About boundary.
+- **Round 18, Pricing scope-system reconciliation:** replaced the sparse
+  centered Pricing entry with a split glass composition and an original
+  five-package scope signal, then coordinated the unchanged package cards in a
+  luminous constellation field. Exact 1440/1024/1023/768/390/320 and 24px-root
+  states, native Planner/FAQ input, complete five-card visual inspection,
+  build/route/media regression, and opened public desktop/phone proof pass.
+  The approved mockup's orbital hierarchy is now represented without copying
+  its thumbnail-density tables or changing any package fact. This revisits the
+  closed chunk without changing its Owner-blocked About boundary.
 - Non-goal: Project Planner (its own chunk, given its multi-step form
   complexity).
 

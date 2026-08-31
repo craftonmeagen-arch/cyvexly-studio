@@ -1,28 +1,28 @@
 # Cyvexly Current State
 
-**Global round:** 17
+**Global round:** 18
 **Active chunks:** Chunk 3 — Project Planner — UI/state/validation remains built
 and verified at `/start`, with real server-side email Owner-blocked; Chunk 4 —
 Utility/legal pages — favicon remains fixed, while legal/domain items remain
-Owner-blocked. Round 17 reconciles the Services combination section with the
-accepted mockup's icon-math/glass language; Round 16 remains the larger
+Owner-blocked. Round 18 reconciles Pricing's sparse entry/package field with
+the accepted mockup's orbital glass language; Round 17 remains the Services
+icon-math pathways, and Round 16 remains the larger
 integrated Home hero reel, Round 15 the live-video deployment/source repair,
 and Round 14 the five-route service-detail and Planner-preselection source.
-**Chunk-local round:** N/A (round 17 revisits closed Chunk 2 visual debt; no
+**Chunk-local round:** N/A (round 18 revisits closed Chunk 2 visual debt; no
 chunk was opened or closed).
-**Current mission:** The Round 17 product slice replaces `/services`' sparse
-audience table with five icon-led glass service pathways, preserving all prior
-combination facts while adding concise outcomes and a direct Planner handoff.
-The responsive composition uses three columns only from 1280px, two through
-compact desktop/tablet, and one vertical service path on phone. Optimized
-production renders at 1440/768/390, seven-width containment/semantic metrics,
-native Planner navigation, a 20-route/asset smoke, clean console, lint,
-TypeScript, and build all pass. After the Round 17 push, public Render changed
-ETag/content and opened desktop/phone proof matches local production with all
-five cards, exact containment, and a clean console. Owner acceptance remains
-pending for both this Services slice and Round 16's Home visual direction;
+**Current mission:** The Round 18 product slice replaces `/pricing`'s centered
+text-only entry with a protected split-glass composition, an original five-node
+scope signal, and a coordinated luminous package field while preserving every
+package fact and lower-page structure. Optimized 1440/768/390 renders, a full
+five-card composition, 1023/1024/320 and 24px-root states, native Planner/FAQ
+input, 22-route/asset smoke, Home-video range regression, lint, TypeScript, and
+the 23-page build pass. Public Render changed ETag/content and opened desktop/
+phone proof matches local production with exact containment and successful
+Planner/FAQ behavior. Owner acceptance remains pending for this Pricing slice,
+Round 17 Services, and Round 16 Home;
 confirmation is also still needed on the original second computer for Round
-9's scale fix. Rounds 10-16's inset
+9's scale fix. Rounds 10-17's inset
 glass, icons, diagrams, routes, CTAs, service details, and live hero remain
 accepted source. The same four Owner-input questions block the highest-value
 remaining content/integration work — About founder identity, Privacy/Terms
@@ -31,9 +31,10 @@ commissioned concept-artwork framing question (`CYVEXLY_APP_DEBT.md` items 1,
 3, 4, plus Chunk Debt item 2). Do not invent them.
 **Accepted source position:** Git repository on local `main`, tracking
 `origin/main`; remote `master` is retained as a historical pointer and is not
-the deployment upstream. Round 17 product commit `b5dfd50` is pushed to
-`origin/main`; public Render updated from ETag `"jlon5lh8er29b7"` to
-`"4w3peakpmy2p3t"` and opened desktop/phone proof passes.
+the deployment upstream. Round 18 product commit `7ec9c5c` is pushed to
+`origin/main`; public Pricing updated from ETag `"3azyangk3w2jpn"` to
+`"v7ek1wa7sw2w4f"` and opened desktop/phone proof passes. Round 17 product
+commit `b5dfd50` remains accepted source.
 Round 16 product commit `14e12d4` remains accepted source; its canonical
 closeout records follow it in history. Round 15
 fast-forwarded public Render source from
@@ -51,8 +52,10 @@ Concurrent Council dirty files remain intentionally untouched.
   `pnpm run lint`. If 5173 is occupied, prove exact ownership before stopping
   anything; round 10 found an unrelated pre-existing EduAILenz Vite process and
   safely used 5183 instead.
-- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-17 report before planning round 18.
-  Round 14's full report is archived at
+- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-18 report before planning round 19.
+  Round 15's full report is archived at
+  `docs/archive/chunks/CYVEXLY_SHARED_DEPLOYMENT_ROUND15_REPORT.md`; Round 14's
+  full report remains at
   `docs/archive/chunks/CYVEXLY_SHARED_SERVICES_ROUND14_REPORT.md`; Round 7's
   older hot-path snapshot/report remains at
   `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND7_REPORT.md`.
@@ -83,3 +86,8 @@ Concurrent Council dirty files remain intentionally untouched.
   nodes, native `/start` handoff, 20-route/asset optimized-runtime smoke, clean
   console, lint, build, and TypeScript pass. The 1024 edge inspection moved the
   three-column switch to 1280px for readable compact-desktop scaling.
+- Round 18 verification: approved-mockup/current/final Pricing comparison,
+  exact 1440/1024/1023/768/390/320 and 24px-root containment, complete five-
+  package rendered inspection, decorative semantics, native Planner/FAQ
+  input, 22-route/asset smoke, Home MP4 range regression, clean optimized
+  build/lint/TypeScript, and opened public desktop/phone proof all pass.

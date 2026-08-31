@@ -30,7 +30,7 @@ Do not create, configure, enable, or modify recurring role schedulers or automat
 
 ## Visual fidelity direction 2026-08-30-04
 
-**Status:** PARTIALLY FULFILLED — ROUND 13 FINAL-CTA SYSTEM PASS; OWNER REVIEW PENDING
+**Status:** PARTIALLY FULFILLED — ROUND 18 PRICING SCOPE-SYSTEM PASS; OWNER REVIEW PENDING
 **Source:** Owner via Codex side conversation
 **Recorded:** 2026-08-30 America/New_York
 
@@ -71,6 +71,16 @@ centered phone adaptation. Exact 1440/768/390 and full-Home renders plus 320px
 and 24px-root stress checks are contained. This is forward fidelity work, not a
 claim of final Owner acceptance; portfolio imagery remains bounded by truthful
 asset provenance.
+
+Round 18 applies the same reference-driven method to Pricing rather than
+repeating another Home/Services token adjustment. The former centered
+text-only entry is now a split pale-blue glass composition with an original
+five-package scope signal, and the unchanged package cards share a luminous
+constellation field. Opened local/public 1440/768/390 renders, a complete
+five-card composition, 1023/1024/320 boundaries, and a 24px-root phone stress
+state are contained. This materially advances the approved Pricing mockup's
+orbital/glass hierarchy without changing package facts or claiming Owner
+acceptance.
 
 ## Cross-device view consistency direction 2026-08-30-05
 

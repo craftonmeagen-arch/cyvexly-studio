@@ -154,3 +154,25 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   For dense labelled diagrams, inspect line wrapping and scanability on both
   sides of the breakpoint; `scrollWidth === clientWidth` is necessary but not
   sufficient responsive proof.
+
+## Round 18
+
+- **A negative overlap and an overflow-clipped stage are incompatible even
+  when component boxes measure correctly.** The first Pricing render pulled
+  the package row 56px into the hero but left `overflow: hidden` on its stage,
+  visually cutting off each card's top while the DOM rectangles still existed.
+  Inspect rendered pixels at overlap boundaries; geometry alone does not prove
+  visible paint.
+- **Once the overlap clip was removed, a rotated pseudo-element became the
+  horizontal-overflow source.** The decorative package ellipse expanded
+  14–17px beyond the root at every viewport even though no ordinary element
+  rectangle exceeded the client width. Bounding the pseudo-element and
+  removing its rotation restored exact containment. When element-overflow
+  scans are empty but `scrollWidth` is larger, inspect transformed
+  pseudo-elements and paint-only decoration.
+- **A successful build can still expose exhausted disposable cache state.**
+  One optimized build completed all 23 pages but could not persist a Turbopack
+  SST file for lack of disk space. Verified stale Builder-owned `.next/dev` and
+  `.next/cache` were removed; a clean rebuild then passed without the warning.
+  This is a place to inspect owned build artifacts, not permission to delete
+  reviewer evidence or user files.

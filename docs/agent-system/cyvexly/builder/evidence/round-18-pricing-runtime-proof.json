@@ -1,0 +1,1327 @@
+{
+  "source": "round-18 candidate optimized production runtime",
+  "baseUrl": "http://localhost:5173",
+  "viewports": [
+    {
+      "name": "desktop",
+      "requested": "1440x900",
+      "viewport": {
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "devicePixelRatio": 1
+      },
+      "root": {
+        "clientWidth": 1425,
+        "scrollWidth": 1425,
+        "scrollHeight": 6188
+      },
+      "computedRootFont": "16px",
+      "hero": {
+        "x": 0,
+        "y": 88,
+        "width": 1425,
+        "height": 563,
+        "bottom": 651
+      },
+      "copy": {
+        "x": 160.5,
+        "y": 152,
+        "width": 475.1875,
+        "height": 402,
+        "bottom": 554
+      },
+      "visual": {
+        "x": 683.6875,
+        "y": 175.578125,
+        "width": 580.8125,
+        "height": 354.84375,
+        "bottom": 530.421875
+      },
+      "packageStage": {
+        "x": 0,
+        "y": 595,
+        "width": 1425,
+        "height": 1268,
+        "bottom": 1863
+      },
+      "packages": [
+        {
+          "name": "Signal",
+          "rect": {
+            "x": 160.5,
+            "y": 595,
+            "width": 352,
+            "height": 539
+          }
+        },
+        {
+          "name": "Orbit",
+          "rect": {
+            "x": 536.5,
+            "y": 595,
+            "width": 352,
+            "height": 539
+          }
+        },
+        {
+          "name": "Nexus",
+          "rect": {
+            "x": 912.5,
+            "y": 595,
+            "width": 352,
+            "height": 539
+          }
+        },
+        {
+          "name": "Commerce",
+          "rect": {
+            "x": 160.5,
+            "y": 1158,
+            "width": 540,
+            "height": 624
+          }
+        },
+        {
+          "name": "Custom system",
+          "rect": {
+            "x": 724.5,
+            "y": 1158,
+            "width": 540,
+            "height": 624
+          }
+        }
+      ],
+      "mainCount": 1,
+      "h1Count": 1,
+      "packageHeadingCount": 5,
+      "packageCtaCount": 5,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Clear starting points."
+        },
+        {
+          "level": 2,
+          "text": "Signal"
+        },
+        {
+          "level": 2,
+          "text": "Orbit"
+        },
+        {
+          "level": 2,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "Commerce"
+        },
+        {
+          "level": 2,
+          "text": "Custom system"
+        },
+        {
+          "level": 2,
+          "text": "Compare packages"
+        },
+        {
+          "level": 2,
+          "text": "What every website project includes"
+        },
+        {
+          "level": 2,
+          "text": "Add-ons"
+        },
+        {
+          "level": 2,
+          "text": "Care plans"
+        },
+        {
+          "level": 3,
+          "text": "Care"
+        },
+        {
+          "level": 3,
+          "text": "Care+"
+        },
+        {
+          "level": 3,
+          "text": "Evolve"
+        },
+        {
+          "level": 2,
+          "text": "Billed separately"
+        },
+        {
+          "level": 2,
+          "text": "Payment schedule"
+        },
+        {
+          "level": 2,
+          "text": "Pricing questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "headingSkips": [],
+      "emptyControlNames": 0,
+      "graphicHidden": true,
+      "graphicFocusableCount": 0,
+      "firstCardTop": 595,
+      "overflowing": [],
+      "diagnostics": [
+        {
+          "method": "Log.entryAdded",
+          "params": {
+            "entry": {
+              "source": "network",
+              "level": "error",
+              "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+              "timestamp": 1788207332190.673,
+              "url": "http://localhost:5173/about?_rsc=bME4Q4px3YJ1rAzL",
+              "networkRequestId": "27112.125"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "tablet",
+      "requested": "768x1024",
+      "viewport": {
+        "innerWidth": 768,
+        "innerHeight": 1024,
+        "devicePixelRatio": 1
+      },
+      "root": {
+        "clientWidth": 753,
+        "scrollWidth": 753,
+        "scrollHeight": 7805
+      },
+      "computedRootFont": "16px",
+      "hero": {
+        "x": 0,
+        "y": 82,
+        "width": 753,
+        "height": 677.75,
+        "bottom": 759.75
+      },
+      "copy": {
+        "x": 24,
+        "y": 138,
+        "width": 302.84375,
+        "height": 564.75,
+        "bottom": 702.75
+      },
+      "visual": {
+        "x": 358.84375,
+        "y": 304.109375,
+        "width": 370.15625,
+        "height": 232.53125,
+        "bottom": 536.640625
+      },
+      "packageStage": {
+        "x": 0,
+        "y": 759.75,
+        "width": 753,
+        "height": 2332,
+        "bottom": 3091.75
+      },
+      "packages": [
+        {
+          "name": "Signal",
+          "rect": {
+            "x": 24,
+            "y": 823.75,
+            "width": 705,
+            "height": 484
+          }
+        },
+        {
+          "name": "Orbit",
+          "rect": {
+            "x": 24,
+            "y": 1331.75,
+            "width": 705,
+            "height": 519
+          }
+        },
+        {
+          "name": "Nexus",
+          "rect": {
+            "x": 24,
+            "y": 1874.75,
+            "width": 705,
+            "height": 484
+          }
+        },
+        {
+          "name": "Commerce",
+          "rect": {
+            "x": 24,
+            "y": 2382.75,
+            "width": 340.5,
+            "height": 644
+          }
+        },
+        {
+          "name": "Custom system",
+          "rect": {
+            "x": 388.5,
+            "y": 2382.75,
+            "width": 340.5,
+            "height": 644
+          }
+        }
+      ],
+      "mainCount": 1,
+      "h1Count": 1,
+      "packageHeadingCount": 5,
+      "packageCtaCount": 5,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Clear starting points."
+        },
+        {
+          "level": 2,
+          "text": "Signal"
+        },
+        {
+          "level": 2,
+          "text": "Orbit"
+        },
+        {
+          "level": 2,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "Commerce"
+        },
+        {
+          "level": 2,
+          "text": "Custom system"
+        },
+        {
+          "level": 2,
+          "text": "Compare packages"
+        },
+        {
+          "level": 2,
+          "text": "What every website project includes"
+        },
+        {
+          "level": 2,
+          "text": "Add-ons"
+        },
+        {
+          "level": 2,
+          "text": "Care plans"
+        },
+        {
+          "level": 3,
+          "text": "Care"
+        },
+        {
+          "level": 3,
+          "text": "Care+"
+        },
+        {
+          "level": 3,
+          "text": "Evolve"
+        },
+        {
+          "level": 2,
+          "text": "Billed separately"
+        },
+        {
+          "level": 2,
+          "text": "Payment schedule"
+        },
+        {
+          "level": 2,
+          "text": "Pricing questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "headingSkips": [],
+      "emptyControlNames": 0,
+      "graphicHidden": true,
+      "graphicFocusableCount": 0,
+      "firstCardTop": 823.75,
+      "overflowing": [],
+      "diagnostics": []
+    },
+    {
+      "name": "phone",
+      "requested": "390x844",
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "devicePixelRatio": 1
+      },
+      "root": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "scrollHeight": 11771
+      },
+      "computedRootFont": "16px",
+      "hero": {
+        "x": 0,
+        "y": 82,
+        "width": 375,
+        "height": 657.109375,
+        "bottom": 739.109375
+      },
+      "copy": {
+        "x": 24,
+        "y": 114,
+        "width": 327,
+        "height": 369,
+        "bottom": 483
+      },
+      "visual": {
+        "x": 24,
+        "y": 507,
+        "width": 327,
+        "height": 199.109375,
+        "bottom": 706.109375
+      },
+      "packageStage": {
+        "x": 0,
+        "y": 739.109375,
+        "width": 375,
+        "height": 2948,
+        "bottom": 3687.109375
+      },
+      "packages": [
+        {
+          "name": "Signal",
+          "rect": {
+            "x": 24,
+            "y": 803.109375,
+            "width": 327,
+            "height": 504
+          }
+        },
+        {
+          "name": "Orbit",
+          "rect": {
+            "x": 24,
+            "y": 1331.109375,
+            "width": 327,
+            "height": 539
+          }
+        },
+        {
+          "name": "Nexus",
+          "rect": {
+            "x": 24,
+            "y": 1894.109375,
+            "width": 327,
+            "height": 504
+          }
+        },
+        {
+          "name": "Commerce",
+          "rect": {
+            "x": 24,
+            "y": 2422.109375,
+            "width": 327,
+            "height": 644
+          }
+        },
+        {
+          "name": "Custom system",
+          "rect": {
+            "x": 24,
+            "y": 3090.109375,
+            "width": 327,
+            "height": 532
+          }
+        }
+      ],
+      "mainCount": 1,
+      "h1Count": 1,
+      "packageHeadingCount": 5,
+      "packageCtaCount": 5,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Clear starting points."
+        },
+        {
+          "level": 2,
+          "text": "Signal"
+        },
+        {
+          "level": 2,
+          "text": "Orbit"
+        },
+        {
+          "level": 2,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "Commerce"
+        },
+        {
+          "level": 2,
+          "text": "Custom system"
+        },
+        {
+          "level": 2,
+          "text": "Compare packages"
+        },
+        {
+          "level": 2,
+          "text": "What every website project includes"
+        },
+        {
+          "level": 2,
+          "text": "Add-ons"
+        },
+        {
+          "level": 2,
+          "text": "Care plans"
+        },
+        {
+          "level": 3,
+          "text": "Care"
+        },
+        {
+          "level": 3,
+          "text": "Care+"
+        },
+        {
+          "level": 3,
+          "text": "Evolve"
+        },
+        {
+          "level": 2,
+          "text": "Billed separately"
+        },
+        {
+          "level": 2,
+          "text": "Payment schedule"
+        },
+        {
+          "level": 2,
+          "text": "Pricing questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "headingSkips": [],
+      "emptyControlNames": 0,
+      "graphicHidden": true,
+      "graphicFocusableCount": 0,
+      "firstCardTop": 803.109375,
+      "overflowing": [],
+      "diagnostics": []
+    },
+    {
+      "name": "edge-1023",
+      "requested": "1023x900",
+      "viewport": {
+        "innerWidth": 1023,
+        "innerHeight": 900,
+        "devicePixelRatio": 1
+      },
+      "root": {
+        "clientWidth": 1008,
+        "scrollWidth": 1008,
+        "scrollHeight": 7406
+      },
+      "computedRootFont": "16px",
+      "hero": {
+        "x": 0,
+        "y": 82,
+        "width": 1008,
+        "height": 544.25,
+        "bottom": 626.25
+      },
+      "copy": {
+        "x": 24,
+        "y": 138,
+        "width": 417.59375,
+        "height": 431.25,
+        "bottom": 569.25
+      },
+      "visual": {
+        "x": 473.59375,
+        "y": 196.640625,
+        "width": 510.40625,
+        "height": 313.96875,
+        "bottom": 510.609375
+      },
+      "packageStage": {
+        "x": 0,
+        "y": 626.25,
+        "width": 1008,
+        "height": 2312,
+        "bottom": 2938.25
+      },
+      "packages": [
+        {
+          "name": "Signal",
+          "rect": {
+            "x": 24,
+            "y": 690.25,
+            "width": 960,
+            "height": 484
+          }
+        },
+        {
+          "name": "Orbit",
+          "rect": {
+            "x": 24,
+            "y": 1198.25,
+            "width": 960,
+            "height": 519
+          }
+        },
+        {
+          "name": "Nexus",
+          "rect": {
+            "x": 24,
+            "y": 1741.25,
+            "width": 960,
+            "height": 484
+          }
+        },
+        {
+          "name": "Commerce",
+          "rect": {
+            "x": 24,
+            "y": 2249.25,
+            "width": 468,
+            "height": 624
+          }
+        },
+        {
+          "name": "Custom system",
+          "rect": {
+            "x": 516,
+            "y": 2249.25,
+            "width": 468,
+            "height": 624
+          }
+        }
+      ],
+      "mainCount": 1,
+      "h1Count": 1,
+      "packageHeadingCount": 5,
+      "packageCtaCount": 5,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Clear starting points."
+        },
+        {
+          "level": 2,
+          "text": "Signal"
+        },
+        {
+          "level": 2,
+          "text": "Orbit"
+        },
+        {
+          "level": 2,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "Commerce"
+        },
+        {
+          "level": 2,
+          "text": "Custom system"
+        },
+        {
+          "level": 2,
+          "text": "Compare packages"
+        },
+        {
+          "level": 2,
+          "text": "What every website project includes"
+        },
+        {
+          "level": 2,
+          "text": "Add-ons"
+        },
+        {
+          "level": 2,
+          "text": "Care plans"
+        },
+        {
+          "level": 3,
+          "text": "Care"
+        },
+        {
+          "level": 3,
+          "text": "Care+"
+        },
+        {
+          "level": 3,
+          "text": "Evolve"
+        },
+        {
+          "level": 2,
+          "text": "Billed separately"
+        },
+        {
+          "level": 2,
+          "text": "Payment schedule"
+        },
+        {
+          "level": 2,
+          "text": "Pricing questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "headingSkips": [],
+      "emptyControlNames": 0,
+      "graphicHidden": true,
+      "graphicFocusableCount": 0,
+      "firstCardTop": 690.25,
+      "overflowing": [],
+      "diagnostics": []
+    },
+    {
+      "name": "edge-1024",
+      "requested": "1024x900",
+      "viewport": {
+        "innerWidth": 1024,
+        "innerHeight": 900,
+        "devicePixelRatio": 1
+      },
+      "root": {
+        "clientWidth": 1009,
+        "scrollWidth": 1009,
+        "scrollHeight": 6296
+      },
+      "computedRootFont": "16px",
+      "hero": {
+        "x": 0,
+        "y": 88,
+        "width": 1009,
+        "height": 592.25,
+        "bottom": 680.25
+      },
+      "copy": {
+        "x": 24,
+        "y": 152,
+        "width": 410.84375,
+        "height": 431.25,
+        "bottom": 583.25
+      },
+      "visual": {
+        "x": 482.84375,
+        "y": 213.03125,
+        "width": 502.15625,
+        "height": 309.1875,
+        "bottom": 522.21875
+      },
+      "packageStage": {
+        "x": 0,
+        "y": 624.25,
+        "width": 1009,
+        "height": 1288,
+        "bottom": 1912.25
+      },
+      "packages": [
+        {
+          "name": "Signal",
+          "rect": {
+            "x": 24,
+            "y": 624.25,
+            "width": 304.328125,
+            "height": 559
+          }
+        },
+        {
+          "name": "Orbit",
+          "rect": {
+            "x": 352.328125,
+            "y": 624.25,
+            "width": 304.328125,
+            "height": 559
+          }
+        },
+        {
+          "name": "Nexus",
+          "rect": {
+            "x": 680.65625,
+            "y": 624.25,
+            "width": 304.34375,
+            "height": 559
+          }
+        },
+        {
+          "name": "Commerce",
+          "rect": {
+            "x": 24,
+            "y": 1207.25,
+            "width": 468.5,
+            "height": 624
+          }
+        },
+        {
+          "name": "Custom system",
+          "rect": {
+            "x": 516.5,
+            "y": 1207.25,
+            "width": 468.5,
+            "height": 624
+          }
+        }
+      ],
+      "mainCount": 1,
+      "h1Count": 1,
+      "packageHeadingCount": 5,
+      "packageCtaCount": 5,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Clear starting points."
+        },
+        {
+          "level": 2,
+          "text": "Signal"
+        },
+        {
+          "level": 2,
+          "text": "Orbit"
+        },
+        {
+          "level": 2,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "Commerce"
+        },
+        {
+          "level": 2,
+          "text": "Custom system"
+        },
+        {
+          "level": 2,
+          "text": "Compare packages"
+        },
+        {
+          "level": 2,
+          "text": "What every website project includes"
+        },
+        {
+          "level": 2,
+          "text": "Add-ons"
+        },
+        {
+          "level": 2,
+          "text": "Care plans"
+        },
+        {
+          "level": 3,
+          "text": "Care"
+        },
+        {
+          "level": 3,
+          "text": "Care+"
+        },
+        {
+          "level": 3,
+          "text": "Evolve"
+        },
+        {
+          "level": 2,
+          "text": "Billed separately"
+        },
+        {
+          "level": 2,
+          "text": "Payment schedule"
+        },
+        {
+          "level": 2,
+          "text": "Pricing questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "headingSkips": [],
+      "emptyControlNames": 0,
+      "graphicHidden": true,
+      "graphicFocusableCount": 0,
+      "firstCardTop": 624.25,
+      "overflowing": [],
+      "diagnostics": [
+        {
+          "method": "Log.entryAdded",
+          "params": {
+            "entry": {
+              "source": "network",
+              "level": "error",
+              "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+              "timestamp": 1788207337091.966,
+              "url": "http://localhost:5173/about?_rsc=bME4Q4px3YJ1rAzL",
+              "networkRequestId": "15912.123"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "narrow-320",
+      "requested": "320x844",
+      "viewport": {
+        "innerWidth": 320,
+        "innerHeight": 844,
+        "devicePixelRatio": 1
+      },
+      "root": {
+        "clientWidth": 305,
+        "scrollWidth": 305,
+        "scrollHeight": 12687
+      },
+      "computedRootFont": "16px",
+      "hero": {
+        "x": 0,
+        "y": 82,
+        "width": 305,
+        "height": 754.46875,
+        "bottom": 836.46875
+      },
+      "copy": {
+        "x": 24,
+        "y": 114,
+        "width": 257,
+        "height": 507,
+        "bottom": 621
+      },
+      "visual": {
+        "x": 24,
+        "y": 645,
+        "width": 257,
+        "height": 158.46875,
+        "bottom": 803.46875
+      },
+      "packageStage": {
+        "x": 0,
+        "y": 836.46875,
+        "width": 305,
+        "height": 3188,
+        "bottom": 4024.46875
+      },
+      "packages": [
+        {
+          "name": "Signal",
+          "rect": {
+            "x": 24,
+            "y": 900.46875,
+            "width": 257,
+            "height": 524
+          }
+        },
+        {
+          "name": "Orbit",
+          "rect": {
+            "x": 24,
+            "y": 1448.46875,
+            "width": 257,
+            "height": 579
+          }
+        },
+        {
+          "name": "Nexus",
+          "rect": {
+            "x": 24,
+            "y": 2051.46875,
+            "width": 257,
+            "height": 524
+          }
+        },
+        {
+          "name": "Commerce",
+          "rect": {
+            "x": 24,
+            "y": 2599.46875,
+            "width": 257,
+            "height": 744
+          }
+        },
+        {
+          "name": "Custom system",
+          "rect": {
+            "x": 24,
+            "y": 3367.46875,
+            "width": 257,
+            "height": 592
+          }
+        }
+      ],
+      "mainCount": 1,
+      "h1Count": 1,
+      "packageHeadingCount": 5,
+      "packageCtaCount": 5,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Clear starting points."
+        },
+        {
+          "level": 2,
+          "text": "Signal"
+        },
+        {
+          "level": 2,
+          "text": "Orbit"
+        },
+        {
+          "level": 2,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "Commerce"
+        },
+        {
+          "level": 2,
+          "text": "Custom system"
+        },
+        {
+          "level": 2,
+          "text": "Compare packages"
+        },
+        {
+          "level": 2,
+          "text": "What every website project includes"
+        },
+        {
+          "level": 2,
+          "text": "Add-ons"
+        },
+        {
+          "level": 2,
+          "text": "Care plans"
+        },
+        {
+          "level": 3,
+          "text": "Care"
+        },
+        {
+          "level": 3,
+          "text": "Care+"
+        },
+        {
+          "level": 3,
+          "text": "Evolve"
+        },
+        {
+          "level": 2,
+          "text": "Billed separately"
+        },
+        {
+          "level": 2,
+          "text": "Payment schedule"
+        },
+        {
+          "level": 2,
+          "text": "Pricing questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "headingSkips": [],
+      "emptyControlNames": 0,
+      "graphicHidden": true,
+      "graphicFocusableCount": 0,
+      "firstCardTop": 900.46875,
+      "overflowing": [],
+      "diagnostics": []
+    },
+    {
+      "name": "phone-root24",
+      "requested": "390x844",
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "devicePixelRatio": 1
+      },
+      "root": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "scrollHeight": 21469
+      },
+      "computedRootFont": "24px",
+      "hero": {
+        "x": 0,
+        "y": 122,
+        "width": 375,
+        "height": 1144.875,
+        "bottom": 1266.875
+      },
+      "copy": {
+        "x": 36,
+        "y": 170,
+        "width": 303,
+        "height": 822.5,
+        "bottom": 992.5
+      },
+      "visual": {
+        "x": 36,
+        "y": 1028.5,
+        "width": 303,
+        "height": 189.375,
+        "bottom": 1217.875
+      },
+      "packageStage": {
+        "x": 0,
+        "y": 1266.875,
+        "width": 375,
+        "height": 5502,
+        "bottom": 6768.875
+      },
+      "packages": [
+        {
+          "name": "Signal",
+          "rect": {
+            "x": 36,
+            "y": 1362.875,
+            "width": 303,
+            "height": 904
+          }
+        },
+        {
+          "name": "Orbit",
+          "rect": {
+            "x": 36,
+            "y": 2302.875,
+            "width": 303,
+            "height": 979
+          }
+        },
+        {
+          "name": "Nexus",
+          "rect": {
+            "x": 36,
+            "y": 3317.875,
+            "width": 303,
+            "height": 904
+          }
+        },
+        {
+          "name": "Commerce",
+          "rect": {
+            "x": 36,
+            "y": 4257.875,
+            "width": 303,
+            "height": 1318
+          }
+        },
+        {
+          "name": "Custom system",
+          "rect": {
+            "x": 36,
+            "y": 5611.875,
+            "width": 303,
+            "height": 1060
+          }
+        }
+      ],
+      "mainCount": 1,
+      "h1Count": 1,
+      "packageHeadingCount": 5,
+      "packageCtaCount": 5,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Clear starting points."
+        },
+        {
+          "level": 2,
+          "text": "Signal"
+        },
+        {
+          "level": 2,
+          "text": "Orbit"
+        },
+        {
+          "level": 2,
+          "text": "Nexus"
+        },
+        {
+          "level": 2,
+          "text": "Commerce"
+        },
+        {
+          "level": 2,
+          "text": "Custom system"
+        },
+        {
+          "level": 2,
+          "text": "Compare packages"
+        },
+        {
+          "level": 2,
+          "text": "What every website project includes"
+        },
+        {
+          "level": 2,
+          "text": "Add-ons"
+        },
+        {
+          "level": 2,
+          "text": "Care plans"
+        },
+        {
+          "level": 3,
+          "text": "Care"
+        },
+        {
+          "level": 3,
+          "text": "Care+"
+        },
+        {
+          "level": 3,
+          "text": "Evolve"
+        },
+        {
+          "level": 2,
+          "text": "Billed separately"
+        },
+        {
+          "level": 2,
+          "text": "Payment schedule"
+        },
+        {
+          "level": 2,
+          "text": "Pricing questions"
+        },
+        {
+          "level": 2,
+          "text": "Ready to make your business unmistakable?"
+        },
+        {
+          "level": 2,
+          "text": "Studio"
+        },
+        {
+          "level": 2,
+          "text": "Services"
+        },
+        {
+          "level": 2,
+          "text": "Contact"
+        }
+      ],
+      "headingSkips": [],
+      "emptyControlNames": 0,
+      "graphicHidden": true,
+      "graphicFocusableCount": 0,
+      "firstCardTop": 1362.875,
+      "overflowing": [],
+      "diagnostics": []
+    }
+  ],
+  "interactions": {
+    "packageCta": {
+      "path": "/start",
+      "h1": "Tell us what you need. We'll shape the right route."
+    },
+    "faq": {
+      "expanded": "true",
+      "controls": "faq-panel-0",
+      "answerVisible": true
+    },
+    "diagnostics": []
+  }
+}

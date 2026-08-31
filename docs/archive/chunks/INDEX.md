@@ -52,3 +52,6 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
 - `CYVEXLY_SHARED_SERVICES_ROUND14_REPORT.md` — global round 14 full report
   (five focused service-detail journeys, safe Planner preselection, and
   responsive/semantic proof), rotated out during round 17.
+- `CYVEXLY_SHARED_DEPLOYMENT_ROUND15_REPORT.md` — global round 15 full report
+  (deployment-branch/source repair that made the accepted Home video visible
+  and proved on public Render), rotated out during round 18.

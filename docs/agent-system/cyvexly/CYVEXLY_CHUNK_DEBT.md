@@ -177,8 +177,21 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
      hero headline for full-circle brand cohesion — a real copywriting
      technique, not filler) and moved the original "Not sure which
      services/package..." line down into the supporting paragraph, so
-     both the confident hook and the reassuring detail survive. Verified
-     rendered on both pages via the live dev server.
+   both the confident hook and the reassuring detail survive. Verified
+   rendered on both pages via the live dev server.
+
+   **Round 18 update — Pricing's reachable orbital/glass entry gap is
+   resolved.** Fresh Council R26 confirmed that package truth, lower-page
+   content, responsiveness, FAQ, and Planner routing were strong but the route
+   remained materially lighter than the approved mockup. Round 18 therefore
+   changed component grammar rather than copy or package facts: a protected
+   split-glass entry now pairs with an original five-package scope signal, and
+   the unchanged cards sit in one coordinated luminous field. Opened local/
+   public 1440/768/390 renders, a complete five-card composition, 1023/1024/320
+   and 24px-root states, native Planner/FAQ input, and route/media regression
+   pass. The matrix/checklist and detailed add-on adaptations above remain
+   deliberate because the written vision is more specific than the compact
+   mockup; final visual acceptance remains the Owner's judgment.
 
 ## Resolved round 2
 

@@ -2,6 +2,30 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 18 — Pricing scope signal system
+
+- `round-18-pricing-scope-system-visual-plan.md` — preserved baseline,
+  approved-mockup comparison, split hero/package-field target, responsive state
+  map, truth/accessibility boundaries, and falsifiable proof plan written
+  before implementation.
+- `round-18-pricing-{desktop,tablet,phone}.png` — opened exact optimized-
+  production entry renders at 1440×900, 768×1024, and 390×844.
+- `round-18-pricing-desktop-packages.png` — opened complete 1440px hero and
+  five-card package field, including the overlapping first row and two-card
+  secondary row.
+- `round-18-pricing-phone-root24.png` — opened exact 390px resilience render
+  with an explicit 24px author root; content expands vertically without width
+  overflow.
+- `round-18-pricing-runtime-proof.json` — seven normal/boundary/resilience
+  states, exact geometry/containment, headings/control names, decorative-graphic
+  semantics, native Planner/FAQ activation, and diagnostics.
+- `round-18-public-pricing-{desktop,phone}.png` and
+  `round-18-public-pricing-runtime-proof.json` — deployed Render match,
+  containment, semantics, native interactions, and diagnostic disposition.
+- `round-18-pricing-scope-system-verification.md` — rendered before/after
+  disposition, two responsive-defect corrections, local/public route/media/
+  build proof, diff accountability, and honest limits.
+
 ## Global round 17 — Services combination pathways
 
 - `round-17-services-combinations-plan.md` — preserved baseline, mockup

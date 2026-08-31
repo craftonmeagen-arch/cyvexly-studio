@@ -307,3 +307,30 @@ Older setup and rounds 1-6 are preserved in
   verification. Rotated the exact Round 14 Active Chunk report into the archive
   to keep three active reports. Concurrent Council files/evidence remained
   excluded, and no scheduler or automation was touched.
+
+## Round 18 — 2026-08-31
+
+- Implemented the approved-mockup Pricing scope-system gap in product commit
+  `7ec9c5c`: canonical copy now sits in a protected split-glass entry beside an
+  original five-package orbital signal, and the unchanged package cards share
+  a coordinated luminous constellation field.
+- Preserved every package name, price, description, scope, timeline, order,
+  CTA, FAQ, and lower comparison/add-on structure. The SVG is decorative,
+  non-focusable, static, and code-native; no external asset, dependency, or
+  unsupported claim was added.
+- Opened exact 1440/768/390 optimized renders, the complete five-card desktop
+  composition, a 390px 24px-root stress state, and final public desktop/phone
+  views. Exact 1440/1024/1023/768/390/320 and root24 states are width-contained
+  with one main/H1, no heading skip, and no empty control name.
+- Rendered inspection found and fixed clipped overlap-card tops, then found and
+  fixed a 14–17px horizontal scrollbar created by a rotated decorative ellipse.
+  Native Chromium Enter reaches the Planner and expands the Pricing FAQ.
+- ESLint, optimized 23-page build, post-build TypeScript, 22 page/asset
+  requests, known-404 controls, and local/public Home MP4 range regression
+  pass. Stale Builder-owned `.next/dev` and `.next/cache` were removed after an
+  intermediate cache-persistence space warning; the clean rebuild passed.
+- Public Pricing changed from ETag `"3azyangk3w2jpn"` to
+  `"v7ek1wa7sw2w4f"`; opened Render output matches local production. Owner
+  visual acceptance and original second-device confirmation remain pending.
+  Concurrent reviewer files/evidence remained excluded, and no scheduler or
+  automation was touched.
