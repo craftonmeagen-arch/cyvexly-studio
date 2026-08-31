@@ -1,9 +1,9 @@
 # Round 14 service-detail verification
 
-**Session:** `2384d0ba-a516-43bc-8615-01195c1455f2`  
-**Product commit:** `930e050` (`Build focused service detail journeys`)  
-**Baseline source:** `62c6b7e`  
-**Reference:** `mockups/02-services-pricing.png` and vision §6.3  
+**Session:** `2384d0ba-a516-43bc-8615-01195c1455f2`
+**Product commit:** `930e050` (`Build focused service detail journeys`)
+**Baseline source:** `62c6b7e`
+**Reference:** `mockups/02-services-pricing.png` and vision §6.3
 **Runtime:** optimized Next.js production server on Builder-owned port 5173
 
 ## Shipped surface

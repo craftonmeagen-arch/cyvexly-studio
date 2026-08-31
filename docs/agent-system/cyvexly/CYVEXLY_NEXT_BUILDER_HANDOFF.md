@@ -2,10 +2,10 @@
 
 ## Round 14 closeout
 
-**Session:** `2384d0ba-a516-43bc-8615-01195c1455f2`  
-**Lock claim:** `2026-08-31T10:48:25.4775496Z`  
-**Product commit:** `930e050` — Build focused service detail journeys  
-**PM prompt:** no active prompt  
+**Session:** `2384d0ba-a516-43bc-8615-01195c1455f2`
+**Lock claim:** `2026-08-31T10:48:25.4775496Z`
+**Product commit:** `930e050` — Build focused service detail journeys
+**PM prompt:** no active prompt
 **Source safety:** Builder product source, evidence, and canonical records are
 committed/reconciled at close. Council-owned dirty files/evidence and its live
 runtime were preserved. No scheduler or automation was modified.
@@ -63,5 +63,5 @@ runtime were preserved. No scheduler or automation was modified.
 
 ## Completion state
 
-**DONE WITH PROOF** for round 14's service-detail and Planner-handoff system.  
+**DONE WITH PROOF** for round 14's service-detail and Planner-handoff system.
 **OWNER REVIEW PENDING** for Home fidelity, concept media, and second-device scale.

@@ -1,7 +1,7 @@
 # Round 14 service-detail visual plan
 
-**Session:** `2384d0ba-a516-43bc-8615-01195c1455f2`  
-**Prepared before product implementation:** 2026-08-31  
+**Session:** `2384d0ba-a516-43bc-8615-01195c1455f2`
+**Prepared before product implementation:** 2026-08-31
 **Reference:** `mockups/02-services-pricing.png`, current `/services` render at source `62c6b7e`, and the established cyber-arctic component system.
 
 ## Baseline and gap
