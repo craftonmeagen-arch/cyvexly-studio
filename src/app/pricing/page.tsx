@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { PackageIcon } from "@/components/package-icon";
+import { PricingScopeSignal } from "@/components/pricing-scope-signal";
 import {
   addOns,
   billedSeparately,
@@ -26,34 +27,43 @@ export default function PricingPage() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="signal-grid-bg border-b border-smoke-glass/70">
-          <div className="mx-auto max-w-3xl px-6 py-20 text-center">
-            <p className="text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
-              Pricing
-            </p>
-            <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
-              Clear starting points.
-            </h1>
-            <p className="mt-5 text-base leading-relaxed text-cool-graphite sm:text-lg">
-              Final quotes are shaped around your goals, content, pages, and
-              features. No website project is identical, so every proposal is
-              written in plain language before work begins.
-            </p>
+        <section className="pricing-hero-stage relative overflow-hidden border-b border-smoke-glass/70">
+          <div className="pricing-hero-layout relative z-10 mx-auto grid max-w-6xl items-center gap-6 px-6 py-8 md:grid-cols-[0.9fr_1.1fr] md:gap-8 md:py-14 lg:gap-12 lg:pb-24 lg:pt-16">
+            <div className="pricing-hero-copy relative rounded-3xl px-6 py-7 sm:px-8 sm:py-9">
+              <p className="font-mono text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
+                Pricing
+              </p>
+              <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
+                Clear starting points.
+              </h1>
+              <p className="mt-5 text-base leading-relaxed text-cool-graphite sm:text-lg">
+                Final quotes are shaped around your goals, content, pages, and
+                features. No website project is identical, so every proposal is
+                written in plain language before work begins.
+              </p>
+              <p className="mt-6 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
+                <span className="h-1.5 w-1.5 rounded-full bg-signal-emerald" />
+                Scope first · proposal before work
+              </p>
+            </div>
+
+            <div className="pricing-scope-visual relative overflow-hidden rounded-[1.75rem] p-3 sm:p-5">
+              <PricingScopeSignal />
+            </div>
           </div>
         </section>
 
         {/* Package cards */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
-          <div className="grid gap-6 lg:grid-cols-3">
-            {pricingPackages.slice(0, 3).map((pkg) => (
-              <div
-                key={pkg.name}
-                className={`flex flex-col rounded-2xl p-7 ${
-                  pkg.featured
-                    ? "border-2 border-cyber-blue bg-frosted-glass shadow-[0_16px_40px_-16px_rgba(20,120,255,0.35)]"
-                    : "glass-panel"
-                }`}
-              >
+        <section className="pricing-package-stage relative border-b border-smoke-glass/70">
+          <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 lg:-mt-14 lg:pb-20 lg:pt-0">
+            <div className="grid gap-6 lg:grid-cols-3">
+              {pricingPackages.slice(0, 3).map((pkg) => (
+                <div
+                  key={pkg.name}
+                  className={`glass-panel pricing-package-card flex flex-col rounded-2xl p-7 ${
+                    pkg.featured ? "pricing-package-card-featured" : ""
+                  }`}
+                >
                 {pkg.featured && (
                   <span className="mb-3 w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
                     Most popular
@@ -88,13 +98,13 @@ export default function PricingPage() {
                 >
                   Describe your project
                 </ButtonLink>
-              </div>
-            ))}
-          </div>
+                </div>
+              ))}
+            </div>
 
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
-            {pricingPackages.slice(3).map((pkg) => (
-              <div key={pkg.name} className="glass-panel flex flex-col rounded-2xl p-7">
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
+              {pricingPackages.slice(3).map((pkg) => (
+                <div key={pkg.name} className="glass-panel pricing-package-card flex flex-col rounded-2xl p-7">
                 <PackageIcon name={pkg.name} />
                 <h2 className="mt-3 font-display text-lg font-semibold text-midnight-slate">
                   {pkg.name}
@@ -120,8 +130,9 @@ export default function PricingPage() {
                 <ButtonLink href="/start" variant="secondary" className="mt-6 w-full">
                   Describe your project
                 </ButtonLink>
-              </div>
-            ))}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
