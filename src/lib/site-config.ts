@@ -465,23 +465,51 @@ export const websiteTypes = [
 export const serviceCombinations = [
   {
     audience: "New businesses needing a credible first site",
-    combination: "Strategy & structure + Custom website design + Website development",
+    services: [
+      { id: "strategy-structure", label: "Strategy & structure" },
+      { id: "website-design", label: "Custom website design" },
+      { id: "website-development", label: "Website development" },
+    ],
+    outcome: "A clear foundation, a distinctive visual system, and a complete working site.",
   },
   {
     audience: "Established businesses with an outdated site",
-    combination: "Website redesign + Content & CMS + Search, performance & accessibility",
+    services: [
+      { id: "website-design", label: "Website redesign" },
+      { id: "content-cms", label: "Content & CMS" },
+      {
+        id: "search-performance-accessibility",
+        label: "Search, performance & accessibility",
+      },
+    ],
+    outcome: "A sharper story, easier updates, and a faster, more usable customer experience.",
   },
   {
     audience: "Professional & creative service providers",
-    combination: "Custom website design + Content & CMS + Care & improvement",
+    services: [
+      { id: "website-design", label: "Custom website design" },
+      { id: "content-cms", label: "Content & CMS" },
+      { id: "care-improvement", label: "Care & improvement" },
+    ],
+    outcome: "A credible portfolio-led presence that stays current as the practice evolves.",
   },
   {
     audience: "Startups & digital products",
-    combination: "Strategy & structure + Website development + Commerce & integrations",
+    services: [
+      { id: "strategy-structure", label: "Strategy & structure" },
+      { id: "website-development", label: "Website development" },
+      { id: "commerce-integrations", label: "Commerce & integrations" },
+    ],
+    outcome: "A focused launch path with a scalable build and the tools needed to operate.",
   },
   {
     audience: "Small online stores",
-    combination: "Commerce & integrations + Content & CMS + Care & improvement",
+    services: [
+      { id: "commerce-integrations", label: "Commerce & integrations" },
+      { id: "content-cms", label: "Content & CMS" },
+      { id: "care-improvement", label: "Care & improvement" },
+    ],
+    outcome: "A store that is easy to merchandise, ready to sell, and supported after launch.",
   },
 ];
 

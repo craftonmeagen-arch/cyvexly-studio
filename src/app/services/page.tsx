@@ -113,52 +113,72 @@ export default function ServicesPage() {
         </section>
 
         {/* Service combinations by client type */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
-            Common combinations
-          </h2>
-          {/* Below `sm`, the two-column table doesn't fit a phone-width
-              container without clipping the combination column — reflow to
-              stacked cards instead of relying on a horizontal-scroll
-              affordance (Council finding CYC-R2-F004). */}
-          <div className="mt-8 space-y-4 sm:hidden">
-            {serviceCombinations.map((row) => (
-              <div
-                key={row.audience}
-                className="rounded-xl border border-smoke-glass bg-frosted-glass/60 px-4 py-4"
-              >
-                <p className="font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
-                  If you&apos;re
-                </p>
-                <p className="mt-1 font-medium text-midnight-slate">{row.audience}</p>
-                <p className="mt-3 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
-                  A typical combination
-                </p>
-                <p className="mt-1 text-cool-graphite">{row.combination}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 hidden overflow-x-auto sm:block">
-            <table className="w-full min-w-[560px] border-collapse text-left text-sm">
-              <thead>
-                <tr className="border-b border-smoke-glass">
-                  <th scope="col" className="py-3 pr-4 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
-                    If you&apos;re
-                  </th>
-                  <th scope="col" className="py-3 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
-                    A typical combination
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {serviceCombinations.map((row) => (
-                  <tr key={row.audience} className="border-b border-smoke-glass/70">
-                    <td className="py-3 pr-4 font-medium text-midnight-slate">{row.audience}</td>
-                    <td className="py-3 text-cool-graphite">{row.combination}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <section className="service-combinations-stage border-y border-smoke-glass/70 px-6 py-20">
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-2xl">
+              <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-cyber-blue">
+                Service pathways
+              </p>
+              <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+                Combinations that work together.
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-cool-graphite sm:text-base">
+                Most projects need more than one discipline. Start with the
+                pathway closest to your business; we&apos;ll shape the exact scope
+                after learning what you need.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-6">
+              {serviceCombinations.map((combination, index) => (
+                <article
+                  key={combination.audience}
+                  className={`service-combination-card glass-panel glass-panel-signal relative overflow-hidden rounded-2xl p-5 sm:p-6 xl:col-span-2 ${
+                    index === 3 ? "xl:col-start-2" : ""
+                  }`}
+                >
+                  <p className="font-mono text-[10px] uppercase tracking-[0.13em] text-[#315a8d]">
+                    A strong start for
+                  </p>
+                  <h3 className="mt-2 min-h-12 font-display text-base font-semibold leading-snug text-midnight-slate">
+                    {combination.audience}
+                  </h3>
+
+                  <div
+                    className="combination-path mt-5"
+                    role="list"
+                    aria-label="Typical service combination"
+                  >
+                    {combination.services.map((service, serviceIndex) => (
+                      <div key={service.label} className="contents">
+                        <div className="combination-service-node" role="listitem">
+                          <ServiceIcon id={service.id} />
+                          <span>{service.label}</span>
+                        </div>
+                        {serviceIndex < combination.services.length - 1 && (
+                          <span className="combination-plus" aria-hidden="true">
+                            +
+                          </span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="mt-5 border-t border-cyber-blue/10 pt-4 text-sm leading-relaxed text-cool-graphite">
+                    {combination.outcome}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/80 bg-white/45 px-5 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-xl sm:px-6">
+              <p className="text-sm text-cool-graphite">
+                Not sure which path fits? That&apos;s exactly what the Project Planner is for.
+              </p>
+              <ButtonLink href="/start" variant="secondary" className="shrink-0 text-sm">
+                Find your starting point →
+              </ButtonLink>
+            </div>
           </div>
         </section>
 
