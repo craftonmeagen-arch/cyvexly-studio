@@ -8,7 +8,8 @@
 **PM prompt:** no active prompt
 **Source safety:** Builder product source is committed. Council-owned dirty
 files/evidence and the shared inbox remain intentionally untouched. No scheduler
-or automation was modified.
+or automation was modified. Owned runtime/Chrome processes are stopped, the OS-
+temp Chrome profile is removed, and Builder scratch captures/scripts are clean.
 
 ## Completed work
 
@@ -58,11 +59,12 @@ or automation was modified.
   Core Web Vitals were not checked; the controlled constrained profile passed.
 - The Owner supplied the source for this requested site use; no independent
   license, model-release, or third-party-rights audit was available or claimed.
-- Port 5173 was occupied by an unrelated Vite process and was preserved; round
-  proof used owned 5183. A live headless-Chrome profile must live outside the
-  project tree because Turbopack/Tailwind may scan and collide with its locked
-  database files.
-- `CYVEXLY_ACTIVE_CHUNK.md` (30,206 bytes) and `CYVEXLY_WATCH.md` (20,139 bytes)
+- Port 5173 was initially occupied by an unrelated Vite process and was
+  preserved; round proof used owned 5183. It exited independently, and final
+  checks find 5173, 5183, and 9228 free. A live headless-Chrome profile must live
+  outside the project tree because Turbopack/Tailwind may scan and collide with
+  its locked database files.
+- `CYVEXLY_ACTIVE_CHUNK.md` (30,418 bytes) and `CYVEXLY_WATCH.md` (20,139 bytes)
   are within but very near their 30KB/20KB hot-path caps. Round 12 must rotate
   the oldest active report and Watch material before adding substantive text.
 

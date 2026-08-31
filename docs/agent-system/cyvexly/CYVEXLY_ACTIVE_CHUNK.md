@@ -509,7 +509,8 @@ profile under project `.codex/tmp` was swept by Turbopack/Tailwind, which failed
 on Chrome's locked Cookies DB. The exact owned Chrome tree/profile was removed;
 moving the profile to OS temp made the identical build pass. This is now in
 Watch. Port 5173 remained occupied by an unrelated Vite process and was not
-touched; proof used Builder-owned 5183.
+touched; proof used Builder-owned 5183. It later exited independently; final
+checks found 5173, 5183, and 9228 free.
 
 Source diff-to-plan is the Owner media/poster, Home/component/CSS integration,
 the data-saver correction found by planned performance testing, and removal of
