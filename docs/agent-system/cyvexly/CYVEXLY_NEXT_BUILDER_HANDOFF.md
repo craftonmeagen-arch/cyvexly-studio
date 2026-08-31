@@ -9,7 +9,8 @@
 **Source safety:** Builder product source is committed. Council-owned dirty
 files/evidence and the shared inbox remain intentionally untouched. No scheduler
 or automation was modified. Owned runtime/Chrome processes are stopped, the OS-
-temp Chrome profile is removed, and Builder scratch captures/scripts are clean.
+temp Chrome profile and disposable `.next` output are removed, and Builder
+scratch captures/scripts are clean.
 
 ## Completed work
 
