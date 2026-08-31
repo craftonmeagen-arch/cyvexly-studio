@@ -25,25 +25,25 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="signal-grid-bg relative overflow-hidden border-b border-smoke-glass/70">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:py-28 lg:grid-cols-2">
-            <div>
-              <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
+        <section className="home-hero-stage relative isolate overflow-hidden border-b border-smoke-glass/70">
+          <div className="home-hero-layout relative z-10 mx-auto grid max-w-[90rem] items-center gap-6 px-4 py-16 sm:gap-8 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:px-8 xl:gap-10">
+            <div className="home-hero-copy relative overflow-hidden rounded-[1.75rem] px-5 py-6 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
+              <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-[#315a8d]">
                 <span className="h-1.5 w-1.5 rounded-full bg-signal-emerald" aria-hidden="true" />
                 Independent web studio · Available worldwide
               </p>
-              <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.08] tracking-tight text-midnight-slate sm:text-5xl">
+              <h1 className="mt-5 font-display text-[2.15rem] font-semibold leading-[1.06] tracking-tight text-midnight-slate sm:text-5xl xl:text-[3.45rem]">
                 Websites built to make your business{" "}
                 <span className="text-cyber-blue">unmistakable.</span>
               </h1>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-cool-graphite sm:text-lg">
+              <p className="mt-5 max-w-xl text-[0.9375rem] leading-6 text-cool-graphite sm:mt-6 sm:text-lg sm:leading-relaxed">
                 Cyvexly Studio plans, designs, builds, and supports custom websites for
                 businesses ready to look credible, work smarter, and turn more visits into
                 action.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <ButtonLink href="/start">Describe your project</ButtonLink>
-                <ButtonLink href="/services" variant="secondary">
+              <div className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
+                <ButtonLink href="/start" className="px-4 py-2.5 text-[0.8125rem] sm:px-6 sm:py-3 sm:text-sm">Describe your project</ButtonLink>
+                <ButtonLink href="/services" variant="secondary" className="px-4 py-2.5 text-[0.8125rem] sm:px-6 sm:py-3 sm:text-sm">
                   Explore services
                 </ButtonLink>
               </div>
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
 
           <div className="signal-rail border-t border-white/80">
-            <ul className="mx-auto grid max-w-6xl gap-px px-3 py-3 text-xs font-medium text-cool-graphite sm:grid-cols-2 sm:px-6 lg:grid-cols-5">
+            <ul className="mx-auto grid max-w-[88rem] gap-px px-3 py-3 text-xs font-medium text-cool-graphite sm:grid-cols-2 sm:px-6 lg:grid-cols-5 lg:px-8">
               {credibilityPoints.map((point) => (
                 <li
                   key={point.id}

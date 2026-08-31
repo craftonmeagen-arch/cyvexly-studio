@@ -16,6 +16,7 @@ export function HeroShowcaseVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const pausedByUserRef = useRef(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -67,12 +68,22 @@ export function HeroShowcaseVideo() {
     video.pause();
   };
 
+  const syncProgress = () => {
+    const video = videoRef.current;
+    if (!video || !Number.isFinite(video.duration) || video.duration <= 0) {
+      setProgress(0);
+      return;
+    }
+
+    setProgress((video.currentTime / video.duration) * 100);
+  };
+
   return (
     <figure
-      className="hero-video-shell relative isolate aspect-video overflow-hidden rounded-[1.75rem] border border-white/80 bg-midnight-slate"
+      className="hero-video-shell relative isolate rounded-[2rem] border border-white/90 p-2 sm:p-3"
       aria-labelledby="hero-showcase-caption"
     >
-      <div className="relative h-full w-full overflow-hidden rounded-[inherit]">
+      <div className="relative aspect-video w-full overflow-hidden rounded-[1.45rem] bg-midnight-slate sm:rounded-[1.35rem]">
         <video
           ref={videoRef}
           id={VIDEO_ID}
@@ -86,6 +97,8 @@ export function HeroShowcaseVideo() {
           controlsList="nodownload nofullscreen noplaybackrate"
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
+          onTimeUpdate={syncProgress}
+          onLoadedMetadata={syncProgress}
           aria-hidden="true"
         >
           <source src="/media/cyvexly-services-loop.mp4" type="video/mp4" />
@@ -105,7 +118,17 @@ export function HeroShowcaseVideo() {
           Cyvexly systems
         </div>
 
+        <div className="pointer-events-none absolute right-5 top-5 hidden items-center gap-2 rounded-full border border-white/15 bg-[#071526]/65 px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.14em] text-white/80 backdrop-blur-md sm:flex">
+          Muted loop <span aria-hidden="true">·</span> 00:30
+        </div>
+
         <div className="pointer-events-none absolute bottom-4 left-4 right-16 sm:bottom-5 sm:left-5">
+          <div className="mb-3 h-px overflow-hidden bg-white/25" aria-hidden="true">
+            <span
+              className="block h-full bg-gradient-to-r from-ion-cyan to-white shadow-[0_0_10px_rgba(54,199,255,0.9)]"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
           <p className="font-display text-sm font-medium tracking-tight text-white sm:text-base">
             Strategy · Design · Development · Reliability
           </p>
