@@ -427,7 +427,8 @@ complete source change:
 Port 5173 was occupied before this lock by PID 21440, an unrelated Vite runtime
 serving `EduAILenz V2`. Its ownership was not provable, so it was preserved;
 the production proof used Builder-owned 5183. This is the exact-process rule in
-practice, not a test omission.
+practice, not a test omission. The unrelated 5173 listener later exited without
+Builder intervention; final closeout found 5173, 5183, and 9227 all free.
 
 The first scripted menu-state sample inspected the same JavaScript turn as the
 React `.click()` and recorded the old closed state while the following PNG

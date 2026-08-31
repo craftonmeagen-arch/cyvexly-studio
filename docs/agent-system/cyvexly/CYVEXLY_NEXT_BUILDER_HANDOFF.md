@@ -69,8 +69,10 @@ automation was modified.
   behavior were not checked.
 - Builder port 5173 was occupied before the lock by an unrelated Vite process
   serving `EduAILenz V2` (PID 21440). It was preserved because ownership was
-  not provable; round-10 production proof used owned port 5183. Recheck current
-  truth next round and never stop it by path/substring assumption.
+  not provable; round-10 production proof used owned port 5183. It exited
+  independently before closeout—Builder did not stop it—and final 5173/5183/
+  9227 checks were free. Recheck current truth next round and never stop a
+  process by path/substring assumption.
 
 ## Recommended next tasks
 
