@@ -8,6 +8,7 @@ import { CredibilityIcon } from "@/components/credibility-icon";
 import { ServiceIcon } from "@/components/service-icon";
 import { PartnershipSignalGraphic } from "@/components/partnership-signal-graphic";
 import { ProcessIcon } from "@/components/process-icon";
+import { FinalCtaSignalGraphic } from "@/components/final-cta-signal-graphic";
 import {
   capabilities,
   credibilityPoints,
@@ -250,19 +251,22 @@ export default function Home() {
 
         {/* Final CTA */}
         <section className="mx-auto max-w-6xl px-6 pb-20">
-          <div className="signal-grid-bg relative overflow-hidden rounded-3xl bg-midnight-slate px-8 py-16 text-center sm:px-16">
-            <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
-              Ready to build something extraordinary?
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-              Describe your project and we&apos;ll respond within two business days.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <ButtonLink href="/start">Describe your project</ButtonLink>
+          <div className="final-cta-shell relative overflow-hidden rounded-3xl" data-final-cta>
+            <FinalCtaSignalGraphic />
+            <div className="final-cta-copy relative z-10 px-8 py-12 text-center sm:px-12 md:max-w-[58%] md:py-14 md:text-left lg:px-16">
+              <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
+                Ready to build something extraordinary?
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#D5DFED] sm:text-base md:mx-0">
+                Describe your project and we&apos;ll respond within two business days.
+              </p>
+              <div className="mt-8 flex justify-center md:justify-start">
+                <ButtonLink href="/start">Describe your project</ButtonLink>
+              </div>
+              <p className="mt-4 text-xs text-[#B9C6DA]">
+                No payment required · response within two business days
+              </p>
             </div>
-            <p className="mt-4 text-xs text-[#8090A8]">
-              No payment required · response within two business days
-            </p>
           </div>
         </section>
       </main>
