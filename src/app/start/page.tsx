@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PlannerForm } from "@/components/planner/planner-form";
+import { getServicePlannerSelection } from "@/lib/planner-config";
 
 export const metadata: Metadata = {
   title: "Project Planner — Cyvexly Studio",
@@ -24,7 +25,15 @@ const whatHappensNext = [
   },
 ];
 
-export default function StartPage() {
+export default async function StartPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ service?: string | string[] }>;
+}) {
+  const query = await searchParams;
+  const service = typeof query.service === "string" ? query.service : undefined;
+  const initialSelection = getServicePlannerSelection(service);
+
   return (
     <>
       <SiteHeader />
@@ -48,7 +57,7 @@ export default function StartPage() {
 
         <section className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
           <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
-            <PlannerForm />
+            <PlannerForm initialSelection={initialSelection} />
 
             <aside className="glass-panel h-fit rounded-2xl p-6 lg:sticky lg:top-24">
               <h2 className="font-display text-sm font-semibold text-midnight-slate">

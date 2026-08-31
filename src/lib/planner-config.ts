@@ -154,3 +154,49 @@ export const contentReadinessOptions = [
   "Mostly, with some support",
   "Not yet — we'll need help staying on track",
 ];
+
+export const servicePlannerSelections = {
+  "business-websites": {
+    serviceName: "Business websites",
+    websiteType: "business-site",
+    primaryGoal: "credibility",
+    careInterest: "",
+    openNotes: "",
+  },
+  "website-redesigns": {
+    serviceName: "Website redesigns",
+    websiteType: "redesign",
+    primaryGoal: "replace",
+    careInterest: "",
+    openNotes: "",
+  },
+  "landing-pages": {
+    serviceName: "Landing pages",
+    websiteType: "landing-page",
+    primaryGoal: "launch",
+    careInterest: "",
+    openNotes: "",
+  },
+  "ecommerce-websites": {
+    serviceName: "E-commerce websites",
+    websiteType: "ecommerce",
+    primaryGoal: "sell",
+    careInterest: "",
+    openNotes: "",
+  },
+  "website-care": {
+    serviceName: "Website care",
+    websiteType: "not-sure",
+    primaryGoal: "credibility",
+    careInterest: "Yes",
+    openNotes: "I'm interested in ongoing website care for an existing site.",
+  },
+} as const;
+
+export type ServicePlannerSelection =
+  (typeof servicePlannerSelections)[keyof typeof servicePlannerSelections];
+
+export function getServicePlannerSelection(value: string | undefined) {
+  if (!value || !(value in servicePlannerSelections)) return undefined;
+  return servicePlannerSelections[value as keyof typeof servicePlannerSelections];
+}

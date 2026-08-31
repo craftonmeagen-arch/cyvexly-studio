@@ -21,11 +21,11 @@ export const footerNav = {
     { label: "About", href: "/about" },
   ],
   services: [
-    { label: "Business websites", href: "/services#business-websites" },
-    { label: "Website redesigns", href: "/services#website-redesigns" },
-    { label: "Landing pages", href: "/services#landing-pages" },
-    { label: "E-commerce websites", href: "/services#ecommerce-websites" },
-    { label: "Website care", href: "/services#website-care" },
+    { label: "Business websites", href: "/services/business-websites" },
+    { label: "Website redesigns", href: "/services/website-redesigns" },
+    { label: "Landing pages", href: "/services/landing-pages" },
+    { label: "E-commerce websites", href: "/services/ecommerce-websites" },
+    { label: "Website care", href: "/services/website-care" },
   ],
   legal: [
     { label: "Privacy", href: "/privacy" },

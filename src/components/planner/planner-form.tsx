@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { ButtonLink } from "@/components/button";
 import { siteConfig } from "@/lib/site-config";
 import {
@@ -15,6 +15,7 @@ import {
   plannerSteps,
   possiblePages,
   primaryGoals,
+  type ServicePlannerSelection,
   timingOptions,
   visualSpectrums,
   websiteTypes,
@@ -151,13 +152,29 @@ function toggleValue(list: string[], value: string): string[] {
   return list.includes(value) ? list.filter((item) => item !== value) : [...list, value];
 }
 
-export function PlannerForm() {
-  const [data, setData] = useState<PlannerData>(emptyData);
+export function PlannerForm({
+  initialSelection,
+}: {
+  initialSelection?: ServicePlannerSelection;
+}) {
+  const initialSelectionRef = useRef(initialSelection);
+  const [data, setData] = useState<PlannerData>(() =>
+    initialSelection
+      ? {
+          ...emptyData,
+          websiteType: initialSelection.websiteType,
+          primaryGoal: initialSelection.primaryGoal,
+          careInterest: initialSelection.careInterest,
+          openNotes: initialSelection.openNotes,
+        }
+      : emptyData,
+  );
   const [currentStep, setCurrentStep] = useState(1);
   const [maxReachedStep, setMaxReachedStep] = useState(1);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"form" | "submitted">("form");
   const [restored, setRestored] = useState(false);
+  const [prefilledService, setPrefilledService] = useState<string | null>(null);
   const [savedNote, setSavedNote] = useState(false);
 
   useEffect(() => {
@@ -176,6 +193,8 @@ export function PlannerForm() {
         setMaxReachedStep(parsed.step ?? 1);
         setRestored(true);
         /* eslint-enable react-hooks/set-state-in-effect */
+      } else if (initialSelectionRef.current) {
+        setPrefilledService(initialSelectionRef.current.serviceName);
       }
     } catch {
       // Corrupt or unavailable storage — start fresh rather than block the Planner.
@@ -355,6 +374,14 @@ export function PlannerForm() {
         <p className="mt-4 rounded-xl border border-cyber-blue/30 bg-cyber-blue/5 px-4 py-3 text-xs text-midnight-slate">
           We restored a saved draft from this device. Continue where you left off, or start over
           by clearing individual fields.
+        </p>
+      )}
+
+      {prefilledService && !restored && currentStep === 1 && (
+        <p className="mt-4 rounded-xl border border-signal-emerald/30 bg-signal-emerald/5 px-4 py-3 text-xs text-midnight-slate">
+          <span className="font-medium">Starting point added: {prefilledService}.</span>{" "}
+          We selected the closest Planner options for you. You can change every answer before
+          sending.
         </p>
       )}
 

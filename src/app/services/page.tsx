@@ -95,7 +95,7 @@ export default function ServicesPage() {
                 <div
                   key={type.id}
                   id={type.id}
-                  className="glass-panel scroll-mt-24 rounded-2xl p-6"
+                  className="glass-panel glass-panel-interactive scroll-mt-24 rounded-2xl p-6"
                 >
                   <h3 className="font-display text-base font-semibold text-midnight-slate">
                     {type.name}
@@ -103,6 +103,9 @@ export default function ServicesPage() {
                   <p className="mt-2 text-sm leading-relaxed text-cool-graphite">
                     {type.description}
                   </p>
+                  <ButtonLink href={`/services/${type.id}`} variant="text" className="mt-4 text-sm">
+                    Explore {type.name.toLowerCase()} →
+                  </ButtonLink>
                 </div>
               ))}
             </div>
