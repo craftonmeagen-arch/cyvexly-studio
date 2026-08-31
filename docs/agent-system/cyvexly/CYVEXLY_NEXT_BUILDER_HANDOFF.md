@@ -44,6 +44,10 @@ scratch captures/scripts are clean.
 - MP4/WebP MIME, byte lengths, `Accept-Ranges`, and 1,024-byte 206 responses pass.
 - A cold 150ms/~1.64Mbps desktop run measured video/poster LCP at 1.004s, CLS
   `0.00009`, active playback after eight seconds, and zero overflow.
+- Council `CYC-R11-20260830-01` independently accepted the visual direction and
+  found no responsive/semantic regression. Its requested provenance,
+  reduced-motion, and constrained-network evidence gaps are now covered by the
+  Builder plan/comparison and runtime proof; Owner parity remains open.
 - Durable proof is indexed in
   `docs/agent-system/cyvexly/builder/evidence/INDEX.md`.
 
