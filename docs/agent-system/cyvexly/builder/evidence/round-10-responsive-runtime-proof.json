@@ -1,0 +1,1348 @@
+{
+  "capturedAt": "2026-08-31T03:29:57.860Z",
+  "appBase": "http://127.0.0.1:5183",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "name": "desktop",
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "rootFontSize": "16px",
+      "h1Count": 1,
+      "headerShell": {
+        "x": 144,
+        "y": 12,
+        "width": 1152,
+        "height": 76
+      },
+      "heroHeading": {
+        "x": 168,
+        "y": 269.375,
+        "width": 528,
+        "height": 155.484375
+      },
+      "signalRail": {
+        "x": 0,
+        "y": 760,
+        "width": 1440,
+        "height": 89
+      },
+      "credibilityIcons": 5,
+      "capabilityIcons": 6,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "name": "tablet",
+      "viewportWidth": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "rootFontSize": "16px",
+      "h1Count": 1,
+      "headerShell": {
+        "x": 12,
+        "y": 12,
+        "width": 744,
+        "height": 70
+      },
+      "heroHeading": {
+        "x": 24,
+        "y": 246,
+        "width": 336,
+        "height": 207.3125
+      },
+      "signalRail": {
+        "x": 0,
+        "y": 875.5625,
+        "width": 768,
+        "height": 219
+      },
+      "credibilityIcons": 5,
+      "capabilityIcons": 6,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "phone",
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "rootFontSize": "16px",
+      "h1Count": 1,
+      "headerShell": {
+        "x": 12,
+        "y": 12,
+        "width": 366,
+        "height": 70
+      },
+      "heroHeading": {
+        "x": 24,
+        "y": 214,
+        "width": 342,
+        "height": 116.625
+      },
+      "signalRail": {
+        "x": 0,
+        "y": 1068.625,
+        "width": 390,
+        "height": 349
+      },
+      "credibilityIcons": 5,
+      "capabilityIcons": 6,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true
+    }
+  ],
+  "routes": [
+    {
+      "route": "/",
+      "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Websites built to make your business unmistakable."
+    },
+    {
+      "route": "/services",
+      "title": "Services — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Everything your business website needs."
+    },
+    {
+      "route": "/work",
+      "title": "Work — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Design judgment you can see."
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "title": "Aurora Spaces — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Aurora Spaces"
+    },
+    {
+      "route": "/work/nexora-systems",
+      "title": "Nexora Systems — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Nexora Systems"
+    },
+    {
+      "route": "/work/vellora-care",
+      "title": "Vellora Care — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Vellora Care"
+    },
+    {
+      "route": "/pricing",
+      "title": "Pricing — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Clear starting points."
+    },
+    {
+      "route": "/process",
+      "title": "Process — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Give us the brief. We'll shape the route."
+    },
+    {
+      "route": "/start",
+      "title": "Project Planner — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Tell us what you need. We'll shape the right route."
+    },
+    {
+      "route": "/contact",
+      "title": "Contact — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Have a quick question?"
+    },
+    {
+      "route": "/faq",
+      "title": "FAQ — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Questions, answered plainly."
+    },
+    {
+      "route": "/accessibility",
+      "title": "Accessibility Statement — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "Accessibility Statement"
+    },
+    {
+      "route": "/not-a-real-route",
+      "title": "Page not found — Cyvexly Studio",
+      "h1Count": 1,
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "hasHorizontalOverflow": false,
+      "statusMarker": "This page doesn't exist yet."
+    }
+  ],
+  "phoneMenu": {
+    "expanded": "true",
+    "label": "Close menu",
+    "navPresent": true
+  },
+  "keyboard": {
+    "openedByKeyboard": {
+      "expanded": "true",
+      "navPresent": true
+    },
+    "focusSequence": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "label": null,
+        "href": "/"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "label": "Open menu",
+        "href": null
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "label": null,
+        "href": "/services"
+      },
+      {
+        "tag": "A",
+        "text": "Work",
+        "label": null,
+        "href": "/work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing",
+        "label": null,
+        "href": "/pricing"
+      },
+      {
+        "tag": "A",
+        "text": "Process",
+        "label": null,
+        "href": "/process"
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "label": null,
+        "href": "/about"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "label": null,
+        "href": "/start"
+      }
+    ]
+  },
+  "root24Stress": {
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "bodyWidth": 390,
+    "rootFontSize": "24px",
+    "hasHorizontalOverflow": false,
+    "headerHeight": 104,
+    "h1Width": 348.59375
+  },
+  "sharedHeaderAudit": [
+    {
+      "route": "/",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/services",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/nexora-systems",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/vellora-care",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/pricing",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/process",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/start",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/faq",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/accessibility",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/not-a-real-route",
+      "width": 390,
+      "rootFontSize": "16px",
+      "shellWidth": 366,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/services",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/nexora-systems",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/vellora-care",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/pricing",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/process",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/start",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/faq",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/accessibility",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/not-a-real-route",
+      "width": 768,
+      "rootFontSize": "16px",
+      "shellWidth": 744,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/services",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/nexora-systems",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/vellora-care",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/pricing",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/process",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/start",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/faq",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/accessibility",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/not-a-real-route",
+      "width": 1023,
+      "rootFontSize": "16px",
+      "shellWidth": 999,
+      "shellWithinViewport": true,
+      "primaryNavVisible": false,
+      "menuButtonVisible": true,
+      "expectedMode": "compact",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/services",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/nexora-systems",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/vellora-care",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/pricing",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/process",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/start",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/faq",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/accessibility",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/not-a-real-route",
+      "width": 1024,
+      "rootFontSize": "16px",
+      "shellWidth": 1000,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/services",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/nexora-systems",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/work/vellora-care",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/pricing",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/process",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/start",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/faq",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/accessibility",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    },
+    {
+      "route": "/not-a-real-route",
+      "width": 1440,
+      "rootFontSize": "16px",
+      "shellWidth": 1152,
+      "shellWithinViewport": true,
+      "primaryNavVisible": true,
+      "menuButtonVisible": false,
+      "expectedMode": "desktop",
+      "h1Count": 1,
+      "hasHorizontalOverflow": false
+    }
+  ],
+  "structuralAudit": [
+    {
+      "route": "/",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/services",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/work",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/work/nexora-systems",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/work/vellora-care",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/pricing",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/process",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/start",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/faq",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/accessibility",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/not-a-real-route",
+      "width": 390,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/services",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/work",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/work/nexora-systems",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/work/vellora-care",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/pricing",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/process",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/start",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/faq",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/accessibility",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/not-a-real-route",
+      "width": 1440,
+      "mainCount": 1,
+      "headerCount": 1,
+      "h1Count": 1,
+      "headingSkips": [],
+      "unnamedControls": [],
+      "duplicateIds": []
+    }
+  ]
+}

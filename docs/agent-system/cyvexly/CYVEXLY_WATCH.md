@@ -267,3 +267,17 @@ boundary on future reasoning. Rounds 1-5 are rotated to
   explicit pixel breakpoints completed the fix. A separate 24px minimum-font
   stress test then found two phone rows that resisted wrapping, demonstrating
   why default-font and minimum-font profiles must be tested independently.
+
+## Round 10
+
+- **When the reference gap is compositional, change the component grammar—not
+  just blur/opacity tokens.** Mapping the mockup to an inset shell, icon rail,
+  and icon-bearing card pattern produced a larger visible fidelity gain than a
+  fourth global glass-token adjustment would have, while keeping the change
+  reusable and testable.
+- **Read React state after its commit, and synthesize Enter as a complete CDP
+  key sequence.** A same-turn `.click()` read returned the old `aria-expanded`
+  value even though the subsequent PNG showed the open menu. Waiting one render
+  turn fixed the instrument. On Chrome 151, native Enter activation required
+  `rawKeyDown`, a carriage-return `char` event, then `keyUp`; Tab alone worked
+  with ordinary key events. Preserve both details in future interaction scripts.

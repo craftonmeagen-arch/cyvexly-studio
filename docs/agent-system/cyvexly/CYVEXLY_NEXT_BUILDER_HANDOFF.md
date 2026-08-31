@@ -1,101 +1,86 @@
 # Cyvexly Next Builder Handoff
 
-## Round 9 closeout
+## Round 10 closeout
 
-**Session:** `cyvexly-builder-20260830T201526-7f3c1e9b`
-**Lock claim:** `2026-08-31T00:15:59.9774927Z`
-**Product commits:** `8ec27c1` — stabilize responsive scale and deepen glass
-styling; `2d82b0b` — fix large-text mobile overflow; `95c365f` — keep the
-luminous CTA contrast accessible.
+**Session:** `9360f300-ea8b-4a05-8e88-652cc7d738cb`
+**Lock claim:** `2026-08-31T03:02:48.2441232Z`
+**Product commit:** `6b81922` — deepen Home glass system structure
 **PM prompt:** no active prompt
-**Source safety:** Builder product source is committed. Canonical Builder docs/evidence are committed at close. Pre-existing completed-Council files/evidence remain outside Builder commits and untouched.
+**Source safety:** Builder product source is committed. Canonical Builder docs/
+evidence are committed at close. Pre-existing Council files/evidence and the
+shared inbox line remain outside Builder commits and untouched. No scheduler or
+automation was modified.
 
 ## Completed work
 
-- Preserved both Owner screenshots as durable evidence and wrote the visual/
-  responsive plan before implementation.
-- Reproduced the “zoomed-in at 100%” shape in a controlled Chrome profile with
-  24px browser-default text. The implicit root made rem-based type, spacing,
-  max-widths, and breakpoints scale together: at 1440px the case-study header
-  moved from 1152×76 to 1425×108, H1 from 48px to 72px, and desktop nav hid.
-- Fixed both source layers: `html` now establishes the 16px design-token basis,
-  and Tailwind sm/md/lg/xl/2xl breakpoint tokens are explicit CSS-pixel values.
-  Setting only the root was tested and found insufficient because media-query
-  rems still use the browser's initial font basis.
-- Advanced the Owner's glass-fidelity direction through shared primitives: more
-  dimensional glass panels, atmospheric signal grids/page glows, a glassier
-  sticky/mobile header, luminous primary CTA, and a halo/gloss/rim hero orbit.
-  No content, routes, claims, project disclosures, or text colors changed.
-- Stress-tested a 24px minimum-font accessibility profile, found real phone
-  overflow in Pricing add-on and Process timing rows, and made those two row
-  patterns stack on phones while preserving their `sm` side-by-side layout.
-- Calculated contrast at every primary CTA gradient stop, caught the bright
-  center/end failure, and darkened only those stops: normal is now
-  4.86–5.25:1 and hover 5.44–7.61:1 against white.
+- Ran the mandatory round-10 wider methodology audit and changed method from
+  another glass-token tweak to mockup-to-component structural comparison.
+- Rebuilt the shared header as an inset luminous glass shell, including the
+  compact menu sheet, without changing navigation labels, CTA, state, or the
+  1024px responsive boundary.
+- Added five hand-authored line icons to Home's truthful credibility list and
+  reused the established service icons on all six capability cards.
+- Added reusable glass shell, signal rail/icon, card signal edge, and pointer-
+  safe light-sheen CSS layers. Copy, routes, breakpoints, and scale are
+  unchanged.
+- Preserved a before-plan and post-render comparison. Opened 1440/768/390 Home,
+  1440 full-page/card, open-menu, and 24px-root stress evidence.
 
 ## Verification
 
 - `pnpm run lint` — pass.
-- `pnpm run build` — pass, all 18 expected routes; only the known Owner/domain-
-  blocked `metadataBase` localhost warning.
-- `pnpm exec tsc --noEmit` after build — pass.
-- Production route sweep — 15 expected routes/assets returned 200;
-  `/not-a-real-route` returned 404.
-- Normal-default and custom-24px Chrome profiles at 1440 now match exactly:
-  16px root, 1152×78 header, 144.42×20 logo, 194.28×46 CTA, 48px H1,
-  desktop nav visible, zero overflow.
-- The same profiles match exactly at a 720px effective viewport and reflow to
-  the compact header with zero overflow (the responsive state expected when a
-  1440px display is legitimately page-zoomed to 200%).
-- DPR 1 and 1.5 at 1024 preserve exact CSS geometry and zero overflow.
-- Opened production renders at 1440, 1024/DPR1.5, 720, and 390, including the
-  Home glass-card section. The new depth/glow treatment is coherent and no
-  clipping, crowding, or copy loss was observed.
-- Chrome and Edge each passed 33-case audits in both standard and custom-24px-
-  default profiles: 132 route/profile/viewport cases with zero failures across
-  11 routes at desktop, high-DPR laptop, and phone widths.
-- The 390px mobile menu passed native CDP mouse/Tab checks in all four browser/
-  profile combinations: expanded state/name, six-link sheet, focus order, and
-  width containment.
-- A separate 33-case Chrome audit with minimum font size 24px passed after
-  `2d82b0b`; the initial run's two phone overflows are the defects that commit
-  fixes.
-- Final lint, production build, and post-build TypeScript checks passed again
-  after the CTA contrast correction.
-- Durable evidence and source identity are indexed in
+- `pnpm exec tsc --noEmit` — pass.
+- `pnpm run build` — pass, all 18 expected routes; only the known domain-
+  blocked `metadataBase` warning.
+- Exact 1440/768/390 production geometry — root 16px, one H1, viewport/document
+  widths equal, five credibility icons and six capability icons.
+- 13-route production phone sweep — one H1 and zero horizontal overflow on
+  every built content/case-study/not-found route.
+- 65-case shared-header matrix — all 13 routes pass shell containment, root
+  scale, H1, overflow, and correct compact/desktop mode at five boundary widths.
+- 26-case structural matrix — all 13 routes pass phone/desktop landmark,
+  heading-order, duplicate-ID, and visible control-name checks.
+- Native CDP Tab/Enter on the compact header — logo → menu trigger; Enter opens
+  with `aria-expanded=true`; focus continues through all five nav links and CTA.
+- Explicit 24px-root, 390px stress render — zero horizontal overflow and clean
+  reflow. This complements rather than replaces round 9's browser-profile
+  evidence.
+- Durable proof is indexed in
   `docs/agent-system/cyvexly/builder/evidence/INDEX.md`.
 
 ## Blockers and honest limits
 
-- The actual second computer was not directly inspected. The controlled root
-  cause is fixed with exact browser-profile/DPR proof, but the Owner should
-  confirm that original machine now renders normally. If not, capture its
-  effective CSS viewport, `devicePixelRatio`, computed root size, browser text
-  size, and OS display scaling before another visual adjustment.
-- The shared glass pass materially improves fidelity but is not self-certified
-  as on par with the mockup. Owner visual judgment remains the closure test.
+- The actual second computer was not inspected. Round 9's controlled fix still
+  needs Owner confirmation on that machine.
+- Round 10 materially closes three mockup discrepancies but is not self-
+  certified as final parity. Owner visual judgment remains active.
 - Existing Owner inputs remain unchanged: About founder identity/story/image;
   Privacy/Terms jurisdiction and markets; production domain plus transactional
   email provider/credential; abstract-versus-commissioned concept-art framing.
 - Physical Safari/Firefox, deployment, external mail, and production-device
   behavior were not checked.
+- Builder port 5173 was occupied before the lock by an unrelated Vite process
+  serving `EduAILenz V2` (PID 21440). It was preserved because ownership was
+  not provable; round-10 production proof used owned port 5183. Recheck current
+  truth next round and never stop it by path/substring assumption.
 
 ## Recommended next tasks
 
-1. Ask the Owner to reload the original second computer at 100% page zoom and
-   confirm header/type/card scale. If it still differs, gather the measured
-   browser/OS values above rather than guessing.
-2. Ask the Owner to compare the new Home hero/cards against `mockups/01-home.png`
-   and name the largest remaining glass/futuristic discrepancy. Continue with a
-   measured shared-system pass, not isolated page decoration.
+1. Ask the Owner to compare `round-10-home-desktop.png` and
+   `round-10-home-desktop-glass-cards.png` with `mockups/01-home.png` and name
+   the largest remaining visual gap. Likely high-value candidates are the hero
+   globe's illustration density and the lower-page process/pricing icon rhythm,
+   but do not assume which matters most.
+2. Ask the Owner to reload the original second computer at 100% page zoom. If
+   it still differs, gather effective CSS viewport, DPR, computed root size,
+   browser text settings, and OS display scale before adjusting the design.
 3. Route the four long-standing Owner decisions. Domain/email input unlocks
    metadata and real Planner delivery; founder/jurisdiction input unlocks the
    three missing routes.
 4. When a second browser or physical keyboard is available, complement the
-   current Chromium/CDP proof; do not reopen the fixed root/breakpoint issue
-   without contradictory evidence.
+   current Chromium/CDP proof.
 
 ## Completion state
 
-**IMPLEMENTED — OWNER DEVICE CONFIRMATION PENDING** for cross-computer scale.
-**NEEDS COHERENT FOLLOW-UP / OWNER REVIEW** for final mockup-level visual parity.
+**DONE WITH PROOF** for round 10's structural glass slice.
+**OWNER REVIEW PENDING** for final mockup parity and second-computer scale.

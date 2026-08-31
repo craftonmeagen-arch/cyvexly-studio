@@ -355,3 +355,27 @@
   5.44–7.61:1 hover contrast. Final lint/build/typecheck passed.
 - Actual second-computer confirmation and Owner visual-parity judgment remain;
   no launch/domain/legal/email blockers changed.
+
+## Round 10 — 2026-08-30
+
+- Ran the every-fifth-round wider methodology audit. Rounds 7–9 had improved
+  evidence quality, responsive scale, and glass tokens, but another opacity/
+  blur tweak would have repeated a diminishing method. Round 10 instead mapped
+  the accepted Home mockup to reusable structural primitives.
+- Commit `6b81922` ships an inset rounded shared glass header/mobile sheet,
+  five hand-authored credibility icons in a translucent signal rail, and the
+  established service icons plus restrained signal edges on all six Home
+  capability cards. Copy, claims, links, breakpoints, and root scale remain
+  unchanged.
+- Opened production renders at exact 1440, 768, and 390 widths plus the open
+  compact menu, card section, and explicit 24px-root stress state. The header
+  depth and icon-led rhythm are materially closer to `mockups/01-home.png`;
+  final Owner parity remains an active judgment, not a Builder claim.
+- Lint, TypeScript, production build, a 13-route phone-width H1/overflow sweep,
+  a 65-case shared-header boundary matrix, exact geometry/icon counts, native
+  CDP Tab/Enter compact-menu traversal, a 26-case structural semantics/control
+  audit, and the 24px-root resilience stress check passed. Port 5173 was
+  occupied by an
+  unrelated pre-lock EduAILenz Vite process; it was preserved and proof ran on
+  Builder-owned 5183.
+- The four Owner decisions and second-computer confirmation remain unchanged.

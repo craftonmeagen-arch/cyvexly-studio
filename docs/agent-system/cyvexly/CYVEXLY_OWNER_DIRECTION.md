@@ -30,7 +30,7 @@ Do not create, configure, enable, or modify recurring role schedulers or automat
 
 ## Visual fidelity direction 2026-08-30-04
 
-**Status:** PARTIALLY FULFILLED — ROUND 9 SHARED-SURFACE PASS; OWNER REVIEW PENDING
+**Status:** PARTIALLY FULFILLED — ROUND 10 STRUCTURAL GLASS PASS; OWNER REVIEW PENDING
 **Source:** Owner via Codex side conversation
 **Recorded:** 2026-08-30 America/New_York
 
@@ -39,6 +39,13 @@ Do not create, configure, enable, or modify recurring role schedulers or automat
 The current implementation is not yet accepted as visually on par with the mockup. Continue refining the product's glassy, futuristic visual treatment toward the mockup's standard while preserving usability, accessibility, responsiveness, and truthful product representation.
 
 Round 9 upgraded the shared glass primitive, signal-grid atmosphere, sticky header, primary CTA, and hero orbit, with rendered desktop/mobile comparison against the accepted Home mockup. This is meaningful forward fidelity work, not a claim of Owner acceptance or final parity; keep the direction active until the Owner evaluates the result.
+
+Round 10 changed method from another token-only adjustment to a reference-driven
+component-structure pass. It shipped an inset rounded glass header shell, an
+icon-led five-claim credibility rail, and icon-bearing capability cards, all
+verified in opened 1440/768/390 production renders and a native keyboard/menu
+check. The result closes three visible structural gaps against
+`mockups/01-home.png`; it still does not claim Owner acceptance or final parity.
 
 ## Cross-device view consistency direction 2026-08-30-05
 

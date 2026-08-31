@@ -2,6 +2,31 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 10 — structural Home glass-system pass
+
+- `round-10-home-glass-system-visual-plan.md` — pre-implementation reference,
+  measured discrepancy, responsive constraints, methodology change, and proof
+  plan.
+- `round-10-home-desktop.png`, `round-10-home-tablet.png`, and
+  `round-10-home-phone.png` — opened exact 1440×900, 768×1024, and 390×844
+  production renders of the new inset glass header, hero, and icon-led
+  credibility system.
+- `round-10-home-desktop-full.png` — opened 1440×4672 full-page production
+  render verifying both capability rows and the complete lower-page flow.
+- `round-10-home-desktop-glass-cards.png` — opened production comparison of
+  the selected-work and newly icon-bearing capability glass cards.
+- `round-10-home-phone-menu.png` — opened exact 390×844 production render of
+  the expanded glass navigation sheet.
+- `round-10-home-phone-root-24-stress.png` — opened explicit 24px-root
+  resilience stress render; the interface reflows and remains width-contained.
+- `round-10-responsive-runtime-proof.json` — exact viewport/root/header/H1/
+  icon geometry, corrected mobile-menu state, native CDP Tab/Enter focus order,
+  13-route phone-width semantic/overflow sweep, 65-case shared-header boundary
+  sweep, 26-case landmark/heading/control-name audit, and 24px-root stress
+  metrics.
+- `round-10-home-glass-system-comparison.md` — post-implementation rendered
+  comparison, measured acceptance, honest remaining gap, and runtime audibles.
+
 ## Global round 9 — scale consistency and glass-fidelity pass
 
 - `round-9-scale-glass-visual-plan.md` — preserved baseline, root-cause

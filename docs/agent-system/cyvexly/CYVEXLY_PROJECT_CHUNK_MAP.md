@@ -151,6 +151,15 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 10 structural glass-system pass:** the mandatory wider methodology
+  audit found that rounds 7–9 had reached diminishing returns from token-level
+  adjustments, while the Owner mockup gap was now compositional. Commit
+  `6b81922` therefore adds a reusable inset glass header shell, icon-led Home
+  credibility rail, and icon-bearing capability card grammar. Exact
+  1440/768/390 production renders, native compact-header keyboard proof, and a
+  13-route phone overflow sweep pass. This advances the active Owner visual
+  direction without opening/closing a chunk or claiming final parity.
+
 - **Round 9 shared responsive/visual-system correction:** authenticated Owner
   evidence exposed an apparent cross-computer scale mismatch at 100% page zoom.
   A controlled 24px-default Chrome profile reproduced the root cause: implicit
