@@ -43,3 +43,12 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
 - `CYVEXLY_SHARED_HOME_ROUND11_REPORT.md` — global round 11 full report
   (Owner-supplied Home showcase-video integration, motion/data-saver controls,
   media delivery, and responsive proof), rotated out during round 14.
+- `CYVEXLY_SHARED_HOME_ROUND12_REPORT.md` — global round 12 full report
+  (Home partnership diagram and five-stage process-route visual system),
+  rotated out during round 15.
+- `CYVEXLY_SHARED_HOME_ROUND13_REPORT.md` — global round 13 full report
+  (split luminous Home final-CTA composition and responsive proof), rotated
+  out during round 16.
+- `CYVEXLY_SHARED_SERVICES_ROUND14_REPORT.md` — global round 14 full report
+  (five focused service-detail journeys, safe Planner preselection, and
+  responsive/semantic proof), rotated out during round 17.

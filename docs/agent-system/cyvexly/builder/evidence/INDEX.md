@@ -2,6 +2,26 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 17 — Services combination pathways
+
+- `round-17-services-combinations-plan.md` — preserved baseline, mockup
+  comparison, glass/pathway target, responsive state map, semantic contract,
+  and falsifiable proof plan written before implementation.
+- `round-17-services-combinations-baseline.png` — opened 1440px local baseline
+  showing the prior sparse table adaptation inside the complete Services page.
+- `round-17-services-combinations-desktop.png` — final optimized-production
+  1440px complete-page render.
+- `round-17-services-combinations-tablet.png` — final 768px responsive pathway
+  render with the two-column service-node state.
+- `round-17-public-services-{desktop,phone}.png` — opened public Render proof
+  after the ETag/source update, showing all five paths at 1440px and the
+  vertical service-node state at 390px.
+- `round-17-services-combinations-runtime-proof.json` — seven-width containment,
+  breakpoint geometry, list/article semantics, native Planner navigation,
+  20-route/asset smoke, clean console, and build/check disposition.
+- `round-17-services-combinations-verification.md` — rendered before/after,
+  1024px breakpoint correction, plan/diff accountability, and honest limits.
+
 ## Global round 16 — integrated Home hero reel
 
 - `round-16-home-hero-reel-visual-plan.md` — preserved Owner-reference

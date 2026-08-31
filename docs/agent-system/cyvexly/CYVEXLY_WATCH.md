@@ -143,3 +143,14 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   correct task route and a clean console. Always recheck page title/content
   identity after a local-browser relay change; do not treat a shared port label
   alone as process ownership evidence.
+
+## Round 17
+
+- **A breakpoint can be overflow-safe and still be visually too early.** The
+  first Services pathway render at 1024px fit three 307px cards with no root
+  overflow, but the longest service label wrapped into a cramped five-line
+  cluster. Holding the three-card composition until 1280px yields 471px
+  two-column cards at compact desktop and 371px three-column cards at 1280.
+  For dense labelled diagrams, inspect line wrapping and scanability on both
+  sides of the breakpoint; `scrollWidth === clientWidth` is necessary but not
+  sufficient responsive proof.

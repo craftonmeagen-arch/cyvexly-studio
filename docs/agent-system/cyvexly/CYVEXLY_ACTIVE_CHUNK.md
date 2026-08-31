@@ -2,20 +2,22 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global rounds 15-16 repaired its public deployment
-path and implemented the later Owner-directed hero composition under the rule
-that closed chunks are not frozen.
+pages — remains closed, but global rounds 15-17 repaired its public deployment
+path, implemented the later Owner-directed hero composition, and reconciled the
+Services combination module under the rule that closed chunks are not frozen.
 
 **Current status:** The nine-step Planner UI/state/validation remains built and
 verified at `/start`; real server-side email remains Owner-blocked on the
 production-domain and transactional-email-provider decisions. `/not-found`,
 `/faq`, and `/accessibility` are complete; `/privacy` and `/terms` remain
-Owner-blocked on jurisdiction facts; the favicon is fixed. Round 16 implements
-Owner direction 2026-08-31-07 as a larger integrated Home reel inside a
-light-ice-blue glass stage. Round 15 makes the accepted Home video visible on
-the real Render site by aligning the deployment branch with accepted source.
-Round 14's five focused service-detail journeys and safe Planner preselection
-remain intact alongside rounds 11-13's Home video and luminous visual systems.
+Owner-blocked on jurisdiction facts; the favicon is fixed. Round 17 replaces
+the Services combination table with five mockup-aligned, icon-led glass
+pathways and a Planner handoff, including compact-desktop breakpoint hardening.
+Round 16 implements Owner direction 2026-08-31-07 as a larger integrated Home
+reel inside a light-ice-blue glass stage. Round 15 makes the accepted Home
+video visible on the real Render site by aligning the deployment branch with
+accepted source. Round 14's five focused service-detail journeys and safe
+Planner preselection remain intact alongside rounds 11-13's Home systems.
 
 ## Active chunk boundaries
 
@@ -83,86 +85,9 @@ remain intact alongside rounds 11-13's Home video and luminous visual systems.
 - **Round 13:** replaced the flat Home final CTA with a split luminous
   planetary/network composition. Full report:
   `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND13_REPORT.md`.
-
-## Round 14 report — global round 14
-
-### Preserved plan and selection
-
-**Session:** `2384d0ba-a516-43bc-8615-01195c1455f2`; lock claimed
-`2026-08-31T10:48:25.4775496Z`; start HEAD `62c6b7e`; no active PM prompt.
-Pre-implementation plan:
-`builder/evidence/round-14-service-detail-visual-plan.md`.
-
-The vision-required `/services/[service]` system was the largest coherent,
-reachable marketing gap: the Services page had complete group cards and five
-short website-type descriptions, but the five detail pages required by vision
-§6.3 did not exist. Footer links only scrolled to those short cards. This slice
-did not require Owner-only founder, legal, domain, email-provider, or
-commissioned-art facts and did not reopen Chunk 2 formally.
-
-### What changed
-
-Product commit `930e050` adds a typed five-offer content model and a single
-reusable static detail template for Business Websites, Website Redesigns,
-Landing Pages, E-commerce Websites, and Website Care. Every page carries the
-required outcome-led headline, problem/outcome, inclusions, labeled concept
-example, client inputs, price/timing factors, package/starting price, FAQ, and
-Planner CTA. A code-native orbital signal and existing glass vocabulary extend
-the accepted reference without fabricating media or results.
-
-Services cards and footer items now link to the real routes while the five
-legacy fragment IDs remain valid. `/start?service=` maps each offer into the
-closest existing Planner website type/goal; Website Care also selects Care
-interest. The Planner announces the editable starting point. A saved browser
-draft is authoritative and always restores over the query.
-
-### Rendered comparison and verification
-
-- Final lint, TypeScript, and optimized production build pass; 23 pages are
-  generated including all five static service routes. Only the known
-  domain-blocked `metadataBase` warning remains.
-- All five routes return 200 with unique title/H1, one `main`, no duplicate
-  IDs, and service-correct Planner links; an unknown service returns 404.
-- Opened and inspected exact 1440/768/390 Business Websites renders, a 390px
-  E-commerce render, and the phone Planner preselection. 320px and 390px with
-  a 24px root remain exactly width-contained.
-- The first 768px render exposed a real local issue: switching to the split
-  hero at `md` made the H1 column unnecessarily narrow. Moving the split to
-  `lg` yields a readable 720px-wide stacked tablet hero; the final render is
-  retained.
-- Native clicks traversed Services → Business Websites → the preselected
-  Planner. Saving each of the five query states produced exactly the expected
-  Planner type/goal/care values. A saved redesign draft stayed checked when an
-  e-commerce query was added, proving query input cannot overwrite user work.
-- Unnamed buttons/links are zero; heading structure is coherent; FAQ controls
-  expose collapsed state; reduced-motion reports zero active animations.
-
-Durable proof is indexed in `builder/evidence/INDEX.md`; the exact results and
-known audibles are in `round-14-service-detail-verification.md`.
-
-### Audibles, limits, and accountability
-
-The in-app Browser bootstrap again failed before browser selection with the
-known kernel-assets path error. Installed Chrome through the established local
-Playwright fallback supplied real product proof without touching Council's
-runtime. The service template itself has no failed resource; desktop Link
-prefetch still logs the pre-existing `/about` 404, already Owner-blocked on
-founder identity. It was classified, not hidden or filled with invented copy.
-
-The first native-navigation test used an exact accessible name that omitted the
-visible arrow and therefore timed out; correcting the instrument to the actual
-`Explore business websites →` name proved navigation. No product fix was
-needed. Council-owned dirty files/evidence and its live port remained outside
-Builder commits. No scheduler or automation was touched.
-
-Not checked: Owner acceptance, the original second computer, physical Safari/
-Firefox, field performance, deployment/cache behavior, or replacement concept
-media. Existing founder/legal/domain/email and art-framing decisions remain.
-
-### Completion state
-
-**DONE WITH PROOF** for the five-service detail and Planner-handoff system;
-**OWNER REVIEW STILL ACTIVE** for Home mockup parity and second-device scale.
+- **Round 14:** added five focused service-detail journeys and safe Planner
+  preselection. Full report:
+  `docs/archive/chunks/CYVEXLY_SHARED_SERVICES_ROUND14_REPORT.md`.
 
 ## Round 15 report — global round 15
 
@@ -342,3 +267,82 @@ errors.
 **DONE WITH PUBLIC PROOF** for Round 16's larger integrated Home hero reel and
 light-ice-blue glass slice; **OWNER REVIEW PENDING** for visual acceptance and
 original second-device confirmation.
+
+## Round 17 report — global round 17
+
+### Preserved plan and selection
+
+**Session:** `builder-20260831T130319-4f5c7a12e8b9`; lock claimed
+`2026-08-31T17:03:48.6940636Z`; start HEAD `dbcbc0b`; no active PM prompt.
+Pre-implementation plan:
+`builder/evidence/round-17-services-combinations-plan.md`.
+
+Fresh Council R24 independently passed Round 16's Home hero and recommended a
+materially different capability. The strongest reachable mockup/Owner-fidelity
+gap was `/services`' Common combinations section: an honest but visually sparse
+audience table where the accepted Services mockup showed icon-led service math.
+Founder/legal/domain/email-provider and concept-artwork questions remained
+Owner-blocked and were not used as excuses to fabricate content.
+
+### What changed
+
+The Services page now renders five audience pathway cards, preserving every
+prior combination. Each card uses three existing Cyvexly line icons and named
+service nodes, decorative plus connectors, and a concise outcome derived from
+the existing audience/discipline facts. A direct `Find your starting point`
+handoff reaches the Project Planner.
+
+The module receives its own ice-blue grid field, white edge light, cyan inner
+glow, controlled blur, and responsive three/two/one-column composition. The
+implementation remains server-rendered and does not add hidden state,
+carousels, unsupported claims, or external assets.
+
+### Rendered comparison and verification
+
+- Opened the full 1440px pre-change baseline and final optimized-production
+  Services page, plus focused 1440/768/390 final renders. All five cards and
+  fifteen service nodes are visible and readable.
+- The first 1024px boundary render technically fit three 307px cards but made
+  the longest label unnecessarily cramped. Moving the three-column switch from
+  1024 to 1280 yields 471px cards at compact desktop and 371px cards at 1280.
+- Exact 1440/1280/1024/768/720 zoom-equivalent/390/320 checks all report
+  `scrollWidth === clientWidth`. The page retains one `main` and H1; the module
+  exposes five article cards, five named service lists, and fifteen list items.
+- Native activation of the module CTA reached `/start` and its correct H1 in
+  both local production and the deployed public site. The clean Cyvexly browser
+  tab reported zero warning/error logs.
+- Twenty built routes/assets returned 200. ESLint, `tsc --noEmit`, and the
+  23-page optimized build pass. Only the known Owner/domain-blocked
+  `metadataBase` warning remains.
+- A 480-instance/27-target internal-link audit found no unexpected failure;
+  the only 404s remain the documented Owner-blocked About/Privacy/Terms routes.
+
+Exact metrics and the route list are in
+`round-17-services-combinations-runtime-proof.json`; baseline/final disposition
+and the breakpoint audible are in
+`round-17-services-combinations-verification.md`.
+
+### Audibles, limits, and accountability
+
+The responsive correction was made only after opening the 1024 result, and it
+stays within the preserved plan's desktop/tablet/phone state map. Diff-to-plan
+contains the planned structured data, server-rendered pathway markup,
+Services-scoped CSS, Planner handoff, and durable comparison evidence.
+
+Physical Safari/Firefox, field Web Vitals, the Owner's original second
+computer, and Owner visual acceptance were unavailable. Founder identity,
+legal jurisdiction, production domain/email provider, and concept-artwork
+framing remain unchanged. Concurrent Council files/evidence were excluded. No
+scheduler or automation was read, modified, paused, deleted, rescheduled, or
+otherwise touched.
+
+### Completion state
+
+Product commit `b5dfd50` is pushed on `main`. Public Render changed from ETag
+`"jlon5lh8er29b7"` without the new copy to `"4w3peakpmy2p3t"` with the new
+pathway heading. Opened live 1440/390 proof shows all five cards and fifteen
+nodes, exact width containment, one main/H1, and zero console warnings/errors.
+
+**DONE WITH PUBLIC PROOF** for Round 17's Services combination pathways;
+**OWNER REVIEW PENDING** for final visual acceptance and original second-device
+confirmation.

@@ -276,3 +276,34 @@ Older setup and rounds 1-6 are preserved in
 - Owner acceptance on the public result and confirmation on the original
   second computer remain. Existing founder/legal/domain/email/art-framing
   decisions are unchanged.
+
+## Round 17 — 2026-08-31
+
+- Revisited the closed Services marketing slice in product commit `b5dfd50`
+  after fresh Council R24
+  explicitly recommended moving beyond the accepted Home hero. Replaced the
+  remaining mockup-divergent combination table with five server-rendered,
+  icon-led glass pathways while preserving every existing audience/service
+  combination and adding only concise, supportable outcome copy.
+- The new module uses three named service nodes, decorative plus connectors,
+  an outcome, and a direct Planner handoff per card. The established line icons,
+  ice-blue grid atmosphere, white edge light, cyan inner glow, and restrained
+  glass depth bring this route closer to the accepted Services mockup without
+  fabricating client work, prices, or operational claims.
+- Opened optimized-production baseline/final renders at 1440/768/390 and
+  measured 1280/1024/720 zoom-equivalent/320 boundaries. The first edge
+  comparison found the three-column state unnecessarily cramped at 1024, so
+  the final breakpoint holds two columns until 1280. All seven widths are
+  exactly contained.
+- One main/H1, five article cards, five named service lists, fifteen list items,
+  native Planner navigation, 20 built routes/assets, and zero browser warnings
+  or errors pass. ESLint, `tsc --noEmit`, and the 23-page optimized build pass;
+  only the documented Owner/domain-blocked `metadataBase` warning remains.
+- Public Render changed ETag/content after the product push. Opened public
+  desktop and phone views show all five paths, exact width containment, and a
+  clean browser console.
+- Preserved the pre-implementation plan, full-page baseline/final evidence,
+  focused desktop/tablet/phone renders, exact runtime metrics, and diff-to-plan
+  verification. Rotated the exact Round 14 Active Chunk report into the archive
+  to keep three active reports. Concurrent Council files/evidence remained
+  excluded, and no scheduler or automation was touched.

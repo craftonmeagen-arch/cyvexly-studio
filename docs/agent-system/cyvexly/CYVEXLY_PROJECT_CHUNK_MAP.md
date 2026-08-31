@@ -76,6 +76,14 @@ requires.
   Desktop/tablet/phone, 320px, 24px-root, native-navigation, semantics, and
   production-build proof pass. This revisits the closed chunk without reopening
   it or resolving the separate Owner-blocked About gap.
+- **Round 17, Services combination-pathway reconciliation:** replaced the
+  remaining text-table adaptation identified in Chunk Debt item 4 with five
+  mockup-aligned, icon-led glass pathways. Every existing audience/service
+  combination remains present, now with an honest outcome and Planner handoff.
+  Optimized-production proof passes at 1440/1280/1024/768/720/390/320 widths; the
+  three-column layout intentionally waits until 1280px so compact desktops do
+  not repeat the cross-device cramped-scale problem. This revisits the closed
+  chunk without changing its Owner-blocked About boundary.
 - Non-goal: Project Planner (its own chunk, given its multi-step form
   complexity).
 

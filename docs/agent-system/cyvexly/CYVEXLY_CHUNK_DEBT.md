@@ -145,10 +145,16 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
      does include a 7th category, it's just cropped from the main grid
      capture. This confirms 7 groups is the correct target, not a Builder
      addition beyond the mockup's intent.
-   - Services "Service Combinations" section: mockup shows icon-math cards
-     (icon + icon + icon = named combo); shipped page uses an audience-type
-     comparison table instead. Different framing, same informational intent
-     — not fixed this round.
+   - Services "Service Combinations" section: **RESOLVED round 17.** The
+     mockup's icon-math framing is now implemented as five honest audience
+     pathway cards, preserving every prior combination while expressing each
+     through three labelled service icons, visible plus connectors, a concise
+     outcome, and a Planner handoff. Opened optimized-production renders at
+     1440/768/390 plus 1280/1024/320 boundary metrics confirm the luminous
+     glass treatment, three/two/one-column states, semantic service lists, and
+     zero horizontal overflow. The denser seven core-service cards above this
+     module remain the deliberate vision-specific adaptation described in the
+     preceding bullet.
    - Pricing "What's Included in Every Project": mockup shows a per-package
      checkmark matrix; shipped page uses a flat 12-item checklist (matrix
      would be redundant since every item is checked for every package in

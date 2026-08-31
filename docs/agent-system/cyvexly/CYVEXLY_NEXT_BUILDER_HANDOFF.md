@@ -1,77 +1,79 @@
 # Cyvexly Next Builder Handoff
 
-## Round 16 closeout
+## Round 17 closeout
 
-**Session:** `builder-20260831T110720-7c9b5e92d4f1`
-**Lock claim:** `2026-08-31T15:07:46.1928578Z`
-**Accepted product source:** `14e12d4` on `main`
-**Video source commit:** `34a5bd3`
-**Owner direction:** `2026-08-31-07`
+**Session:** `builder-20260831T130319-4f5c7a12e8b9`
+**Lock claim:** `2026-08-31T17:03:48.6940636Z`
+**Accepted product source:** `b5dfd50` on `main`
+**Prior Home source:** `14e12d4`
 **PM prompt:** no active prompt
 **Source safety:** Council-owned concurrent files/evidence stayed unstaged and
-untouched. No scheduler or automation was modified.
+untouched. No scheduler or automation was read, modified, paused, deleted,
+rescheduled, or otherwise touched.
 
 ## Completed work
 
-- Implemented the Owner-approved larger integrated Home hero reel rather than
-  another token-only glass adjustment.
-- Expanded the Home-only stage, changed desktop to an asymmetric copy/media
-  grid, and grew the measured 1440-viewport player from 528px to 726.56px.
-- Added the accepted lighter ice-blue translucent atmosphere, a protected copy
-  pane, a luminous padded reel bezel, truthful duration metadata, and a real
-  playback-progress line.
-- Preserved the accepted video bytes, canonical copy, CTA order, routes,
-  semantics, reduced-motion/save-data/visibility behavior, and mobile sequence.
-- Preserved the Owner-approved mockup at
-  `mockups/05-home-hero-video-owner-direction.png` and the exact Owner quotes in
-  `CYVEXLY_OWNER_DIRECTION.md`.
+- Replaced `/services`' sparse audience table with five mockup-aligned,
+  icon-led glass service pathways while preserving every prior combination.
+- Added three named service nodes, visible decorative plus connectors, and a
+  concise outcome to each audience card without inventing client results,
+  prices, or unsupported operational claims.
+- Added a direct `Find your starting point` handoff to the Project Planner.
+- Added a Services-scoped pale-blue grid field, white edge light, cyan inner
+  glow, restrained blur, and responsive three/two/one-column composition.
+- Corrected the wide-layout threshold after the opened 1024px render showed
+  the longest service label was unnecessarily cramped: compact desktop now
+  keeps two columns and three columns begin at 1280px.
 
 ## Verification
 
-- Opened exact 1440×900, 768×1024, and 390×844 optimized-production renders.
-  Desktop reel is `726.56×420.06`; tablet reel is `705×407.94`; phone reel is
-  `343×200.81` directly after the actions. Every state is width-contained.
-- Measured both sides of the 1024 breakpoint. The layout switches from stacked
-  at 1023 to the intended two-column/header state at 1024 without overflow.
-- Normal playback advances; Pause holds; Play resumes; a natural 30-second
-  boundary loops without ending. Reduced-motion Chrome holds the poster and
-  exposes the Play control. The Network Information API was unavailable in the
-  round browser, so the unchanged save-data path retains Round 15's proof.
-- The clean Cyvexly browser tab has zero warning/error logs. One H1/main,
-  canonical CTA order, captioned decorative video semantics, named control,
-  and route landmarks pass.
-- ESLint, optimized 23-page build, immediate post-build TypeScript, and every
-  prerender-manifest route/asset pass. Only the known domain-blocked
-  `metadataBase` warning remains.
-- Public Render changed ETag/content about 61 seconds after the product push.
-  Opened live proof shows the Round 16 stage, advancing error-free playback,
-  named Pause control, exact width containment, and a clean console.
-- Durable plan, three renders, and exact verification are indexed under
-  `docs/agent-system/cyvexly/builder/evidence/INDEX.md`.
+- Opened the full pre-change baseline and final 1440px optimized-production
+  page, plus focused 1440/768/390 final renders.
+- Exact 1440/1280/1024/768/720 zoom-equivalent/390/320 checks report zero
+  horizontal overflow.
+- One main/H1, five article cards, five named service lists, fifteen list items,
+  and zero browser warning/error logs pass.
+- Native activation of the new CTA reached `/start` and its correct H1 in both
+  local production and the deployed public site.
+- Twenty built routes/assets returned 200. ESLint, `tsc --noEmit`, and the
+  optimized 23-page build pass. Only the known domain-blocked `metadataBase`
+  warning remains.
+- A 480-instance/27-target rendered-link audit found no unexpected failure;
+  only the documented Owner-blocked About/Privacy/Terms links return 404.
+- The public Home still includes the accepted video element/source, and its
+  MP4 byte-range request returns `206 video/mp4`; the Services change did not
+  regress the earlier live-video repair.
+- Durable baseline/final renders, visual plan, metrics, route list, and
+  diff-to-plan verification are indexed under
+  `docs/agent-system/cyvexly/builder/evidence/`.
+- Public Render changed from ETag `"jlon5lh8er29b7"` to
+  `"4w3peakpmy2p3t"`. Opened public 1440/390 views match local production:
+  five cards/fifteen nodes, exact containment, and a clean console.
 
 ## Blockers and honest limits
 
-- Owner visual acceptance of the deployed Round 16 result is pending.
+- Owner acceptance of the deployed Services pathway module and Round 16 Home
+  composition is pending.
 - The original second computer has not yet confirmed Round 9's scale fix.
 - `/about` remains Owner-blocked on founder identity/story/image. Privacy/Terms
   jurisdiction, production-domain metadata, transactional email, and abstract-
   versus-commissioned concept-art framing remain Owner decisions.
-- Physical Safari/Firefox, field Web Vitals, and a new real data-saver-capable
-  browser run were not available in Round 16.
+- Physical Safari/Firefox and field Web Vitals were not available in Round 17.
 
 ## Recommended next tasks
 
-1. Ask the Owner to hard-refresh the public Home and judge the reel scale,
-   pale-blue glass depth, and first-screen balance on both computers.
-2. If the original device still looks zoomed, capture its browser, viewport,
-   DPR, default/minimum font settings, and OS display scale before changing CSS.
-3. Prefer a different coherent visual/system slice in Round 17; do not keep
-   tuning this hero without new Owner or reviewer evidence.
+1. Ask the Owner to hard-refresh public `/services` and judge the pathway
+   module's glass depth, scanability, and compact-desktop/phone scaling.
+2. If the original device still looks zoomed, capture its viewport, DPR,
+   browser default/minimum font settings, page zoom, and OS display scale before
+   changing shared CSS.
+3. Prefer a different coherent capability in Round 18 unless new Owner or
+   reviewer evidence identifies a concrete Services/Home defect.
 4. Route founder/legal/domain/email/art-framing decisions without inventing
    facts. Keep `main` as the deployment/source branch.
 
 ## Completion state
 
-**DONE WITH PUBLIC PROOF** for Round 16's larger integrated Home hero reel and
-light-ice-blue glass direction. **OWNER REVIEW PENDING** for visual acceptance
-and original second-device confirmation.
+**DONE WITH PUBLIC PROOF** for Round 17's Services combination pathways.
+**OWNER REVIEW PENDING** for visual acceptance and original second-device
+confirmation.

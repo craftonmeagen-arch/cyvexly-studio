@@ -1,0 +1,100 @@
+{
+  "round": 17,
+  "surface": "/services service-combination pathways",
+  "productCommit": "b5dfd502b998c086903a9dab0b67a1929c0bc4b8",
+  "runtime": "optimized Next.js production server on Builder-owned port 5173",
+  "structure": {
+    "main": 1,
+    "h1": 1,
+    "combinationCards": 5,
+    "serviceNodes": 15,
+    "namedServiceLists": 5,
+    "serviceListItems": 15,
+    "serviceIconSvgs": 15,
+    "decorativePlusSigns": 10,
+    "plannerCtaHref": "/start",
+    "plannerCtaBoxAt390": { "width": 224.05, "height": 46 },
+    "unnamedLinks": 0,
+    "unnamedButtons": 0
+  },
+  "responsive": [
+    { "requestedWidth": 1440, "clientWidth": 1425, "scrollWidth": 1425, "overflow": false, "columns": 3 },
+    { "requestedWidth": 1280, "clientWidth": 1265, "scrollWidth": 1265, "overflow": false, "columns": 3 },
+    { "requestedWidth": 1024, "clientWidth": 1009, "scrollWidth": 1009, "overflow": false, "columns": 2 },
+    { "requestedWidth": 768, "clientWidth": 753, "scrollWidth": 753, "overflow": false, "columns": 2 },
+    { "requestedWidth": 720, "clientWidth": 705, "scrollWidth": 705, "overflow": false, "columns": 2, "purpose": "compact/zoom-equivalent proxy" },
+    { "requestedWidth": 390, "clientWidth": 375, "scrollWidth": 375, "overflow": false, "columns": 1 },
+    { "requestedWidth": 320, "clientWidth": 305, "scrollWidth": 305, "overflow": false, "columns": 1 }
+  ],
+  "navigation": {
+    "activatedLabel": "Find your starting point →",
+    "destination": "/start",
+    "destinationH1": "Tell us what you need. We'll shape the right route.",
+    "localProductionPass": true,
+    "publicDeploymentPass": true
+  },
+  "routeSmoke": {
+    "checked": 20,
+    "status200": 20,
+    "failures": 0,
+    "includes": [
+      "/",
+      "/services",
+      "/services/business-websites",
+      "/services/website-redesigns",
+      "/services/landing-pages",
+      "/services/ecommerce-websites",
+      "/services/website-care",
+      "/pricing",
+      "/process",
+      "/accessibility",
+      "/contact",
+      "/faq",
+      "/start",
+      "/work",
+      "/work/aurora-spaces",
+      "/work/nexora-systems",
+      "/work/vellora-care",
+      "/robots.txt",
+      "/icon.svg",
+      "/opengraph-image"
+    ]
+  },
+  "internalLinkAudit": {
+    "renderedInstances": 480,
+    "uniqueTargets": 27,
+    "status200": 24,
+    "knownOwnerBlocked404": ["/about", "/privacy", "/terms"],
+    "unexpectedFailures": 0
+  },
+  "homeVideoRegression": {
+    "homeStatus": 200,
+    "videoElementAndSourcePresent": true,
+    "rangeStatus": 206,
+    "contentType": "video/mp4",
+    "contentRange": "bytes 0-1023/3978486",
+    "returnedBytes": 1024
+  },
+  "browserWarningsOrErrors": 0,
+  "publicDeployment": {
+    "url": "https://cyvexly-studio.onrender.com/services",
+    "etagBefore": "\"jlon5lh8er29b7\"",
+    "etagAfter": "\"4w3peakpmy2p3t\"",
+    "updatedCopyPresent": true,
+    "desktop": { "clientWidth": 1425, "scrollWidth": 1425, "cards": 5, "nodes": 15, "browserWarningsOrErrors": 0 },
+    "phone": { "clientWidth": 375, "scrollWidth": 375, "cards": 5, "nodes": 15, "browserWarningsOrErrors": 0 }
+  },
+  "evidenceSha256": {
+    "round-17-services-combinations-baseline.png": "1AC9C023481E02E24E81CE30ADECF0B2F67A318436E5BB1E52DA0E7D910DD1DE",
+    "round-17-services-combinations-desktop.png": "2A45DE2D6CEB72F5A2613BF7F908E0B7E7FAB7E78E0C58C154008E1CEE34A273",
+    "round-17-services-combinations-tablet.png": "8C3CAFE945A0502CE701957FE00456EBF686D066D800A90D7373348F8D21B8A6",
+    "round-17-public-services-desktop.png": "3A749871FAF669B29DF563696F80E5E416AE4C56E2F2AB033A3CD9AD0A2E1F54",
+    "round-17-public-services-phone.png": "A3F0225F4E96D707AB2E64FEADEE72B5B3E426AEB6A96835E020B9432A69CEE2"
+  },
+  "checks": {
+    "eslint": "pass",
+    "typescriptNoEmit": "pass",
+    "optimizedBuild": "pass; 23 generated pages",
+    "knownBuildWarning": "metadataBase remains intentionally unset pending Owner-supplied public domain"
+  }
+}
