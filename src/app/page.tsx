@@ -1,7 +1,7 @@
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
-import { OrbitGraphic } from "@/components/orbit-graphic";
+import { HeroShowcaseVideo } from "@/components/hero-showcase-video";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { ConceptPreview } from "@/components/concept-preview";
 import { CredibilityIcon } from "@/components/credibility-icon";
@@ -23,7 +23,7 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero */}
         <section className="signal-grid-bg relative overflow-hidden border-b border-smoke-glass/70">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:py-28 lg:grid-cols-2">
             <div>
               <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
                 <span className="h-1.5 w-1.5 rounded-full bg-signal-emerald" aria-hidden="true" />
@@ -45,7 +45,7 @@ export default function Home() {
                 </ButtonLink>
               </div>
             </div>
-            <OrbitGraphic />
+            <HeroShowcaseVideo />
           </div>
 
           <div className="signal-rail border-t border-white/80">

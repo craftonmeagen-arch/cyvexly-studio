@@ -182,3 +182,25 @@ body {
   background-repeat: no-repeat, no-repeat, repeat, repeat;
   background-size: auto, auto, 44px 44px, 44px 44px;
 }
+
+.hero-video-shell {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    inset 0 0 0 1px color-mix(in srgb, var(--color-ion-cyan) 16%, transparent),
+    0 30px 72px -32px rgba(3, 24, 52, 0.82),
+    0 16px 46px -28px rgba(15, 102, 224, 0.78);
+}
+
+.hero-video-shell::before {
+  position: absolute;
+  z-index: -1;
+  inset: -18%;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--color-ion-cyan) 24%, transparent), transparent 66%);
+  content: "";
+  filter: blur(24px);
+}
+
+.hero-video-shell video {
+  filter: saturate(1.08) contrast(1.04);
+}
