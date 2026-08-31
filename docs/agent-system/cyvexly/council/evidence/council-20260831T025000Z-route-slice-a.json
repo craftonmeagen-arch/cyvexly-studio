@@ -1,0 +1,90 @@
+[
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/",
+    "scrollWidth": 1425,
+    "title": "Cyvexly Studio — Websites built to make your business unmistakable"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/services",
+    "scrollWidth": 1425,
+    "title": "Services — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/work",
+    "scrollWidth": 1425,
+    "title": "Work — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/work/aurora-spaces",
+    "scrollWidth": 1425,
+    "title": "Aurora Spaces — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/work/nexora-systems",
+    "scrollWidth": 1425,
+    "title": "Nexora Systems — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/work/vellora-care",
+    "scrollWidth": 1425,
+    "title": "Vellora Care — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/pricing",
+    "scrollWidth": 1425,
+    "title": "Pricing — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/process",
+    "scrollWidth": 1425,
+    "title": "Process — Cyvexly Studio"
+  }
+]

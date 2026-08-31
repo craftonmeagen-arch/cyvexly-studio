@@ -1,0 +1,90 @@
+{
+  "raw": [
+    {
+      "desktop": true,
+      "h1": {
+        "h": 155,
+        "w": 528
+      },
+      "header": {
+        "h": 79,
+        "w": 1425
+      },
+      "menu": true,
+      "overflow": false,
+      "root": "16px",
+      "width": 1440
+    },
+    {
+      "desktop": true,
+      "h1": {
+        "h": 155,
+        "w": 457
+      },
+      "header": {
+        "h": 79,
+        "w": 1009
+      },
+      "menu": true,
+      "overflow": false,
+      "root": "16px",
+      "width": 1024
+    },
+    {
+      "desktop": true,
+      "h1": {
+        "h": 104,
+        "w": 657
+      },
+      "header": {
+        "h": 73,
+        "w": 705
+      },
+      "menu": true,
+      "overflow": false,
+      "root": "16px",
+      "width": 720
+    },
+    {
+      "desktop": true,
+      "h1": {
+        "h": 156,
+        "w": 327
+      },
+      "header": {
+        "h": 73,
+        "w": 375
+      },
+      "menu": true,
+      "overflow": false,
+      "root": "16px",
+      "width": 390
+    }
+  ],
+  "visible": [
+    {
+      "menuVisible": false,
+      "overflow": false,
+      "primaryVisible": true,
+      "width": 1440
+    },
+    {
+      "menuVisible": false,
+      "overflow": false,
+      "primaryVisible": true,
+      "width": 1024
+    },
+    {
+      "menuVisible": true,
+      "overflow": false,
+      "primaryVisible": false,
+      "width": 720
+    },
+    {
+      "menuVisible": true,
+      "overflow": false,
+      "primaryVisible": false,
+      "width": 390
+    }
+  ]
+}

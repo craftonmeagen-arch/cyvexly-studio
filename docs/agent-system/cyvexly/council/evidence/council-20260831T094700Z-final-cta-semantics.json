@@ -1,0 +1,40 @@
+{
+  "body": {
+    "color": "rgb(213, 223, 237)",
+    "fontSize": "16px",
+    "lineHeight": "26px",
+    "textAlign": "left"
+  },
+  "graphic": {
+    "ariaHidden": "true",
+    "pointerEvents": "none",
+    "svgRole": "presentation",
+    "tabindex": null
+  },
+  "heading": {
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "30px",
+    "lineHeight": "36px",
+    "textAlign": "left"
+  },
+  "ids": [
+    "final-cta-glow",
+    "final-cta-planet",
+    "final-cta-horizon",
+    "final-cta-orbit",
+    "final-cta-planet-clip"
+  ],
+  "link": {
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "14px",
+    "lineHeight": "20px",
+    "textAlign": "left"
+  },
+  "note": {
+    "color": "rgb(185, 198, 218)",
+    "fontSize": "12px",
+    "lineHeight": "16px",
+    "textAlign": "left"
+  },
+  "panel": true
+}

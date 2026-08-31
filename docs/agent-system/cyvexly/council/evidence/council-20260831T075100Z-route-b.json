@@ -1,0 +1,126 @@
+{
+  "viewport": "390x844",
+  "runtime": "production",
+  "routes": [
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/",
+      "title": "Cyvexly Studio — Websites built to make your business unmistakable"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/services",
+      "title": "Services — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/work",
+      "title": "Work — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/pricing",
+      "title": "Pricing — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/process",
+      "title": "Process — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/about",
+      "title": "Page not found — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/start",
+      "title": "Project Planner — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/contact",
+      "title": "Contact — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/faq",
+      "title": "FAQ — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/privacy",
+      "title": "Page not found — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/terms",
+      "title": "Page not found — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/accessibility",
+      "title": "Accessibility Statement — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/cookies",
+      "title": "Page not found — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/thank-you",
+      "title": "Page not found — Cyvexly Studio"
+    },
+    {
+      "h1": 1,
+      "main": 1,
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/404",
+      "title": "Page not found — Cyvexly Studio"
+    }
+  ]
+}

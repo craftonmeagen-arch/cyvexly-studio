@@ -1,0 +1,549 @@
+{
+  "desktopCta": [
+    {
+      "backgroundImage": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+      "borderColor": "rgb(216, 225, 234)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.34) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.72) 0px 12px 30px -12px",
+      "className": "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200 border border-white/35 bg-[linear-gradient(135deg,#0f66e0_0%,#1269e0_52%,#1671d1_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.34),0_12px_30px_-12px_rgba(15,102,224,0.72)] hover:bg-[linear-gradient(135deg,#0b4fb0_0%,#0d5ecb_58%,#1467ce_100%)] focus-visible:bg-[#0b4fb0] px-5 py-2.5 text-sm",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "height": 46,
+      "href": "/start",
+      "width": 194
+    },
+    {
+      "backgroundImage": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+      "borderColor": "rgb(216, 225, 234)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.34) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.72) 0px 12px 30px -12px",
+      "className": "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200 border border-white/35 bg-[linear-gradient(135deg,#0f66e0_0%,#1269e0_52%,#1671d1_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.34),0_12px_30px_-12px_rgba(15,102,224,0.72)] hover:bg-[linear-gradient(135deg,#0b4fb0_0%,#0d5ecb_58%,#1467ce_100%)] focus-visible:bg-[#0b4fb0] ",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "height": 46,
+      "href": "/start",
+      "width": 194
+    },
+    {
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px",
+      "className": "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200 glass-panel text-midnight-slate hover:border-cyber-blue/60 hover:text-cyber-blue mt-6 w-full",
+      "color": "rgb(16, 33, 61)",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "height": 46,
+      "href": "/start",
+      "width": 294
+    },
+    {
+      "backgroundImage": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+      "borderColor": "rgb(216, 225, 234)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.34) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.72) 0px 12px 30px -12px",
+      "className": "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200 border border-white/35 bg-[linear-gradient(135deg,#0f66e0_0%,#1269e0_52%,#1671d1_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.34),0_12px_30px_-12px_rgba(15,102,224,0.72)] hover:bg-[linear-gradient(135deg,#0b4fb0_0%,#0d5ecb_58%,#1467ce_100%)] focus-visible:bg-[#0b4fb0] mt-6 w-full",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "height": 46,
+      "href": "/start",
+      "width": 292
+    },
+    {
+      "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "borderColor": "rgba(255, 255, 255, 0.82)",
+      "boxShadow": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px",
+      "className": "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200 glass-panel text-midnight-slate hover:border-cyber-blue/60 hover:text-cyber-blue mt-6 w-full",
+      "color": "rgb(16, 33, 61)",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "height": 46,
+      "href": "/start",
+      "width": 294
+    },
+    {
+      "backgroundImage": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+      "borderColor": "rgb(216, 225, 234)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.34) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.72) 0px 12px 30px -12px",
+      "className": "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors duration-200 border border-white/35 bg-[linear-gradient(135deg,#0f66e0_0%,#1269e0_52%,#1671d1_100%)] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.34),0_12px_30px_-12px_rgba(15,102,224,0.72)] hover:bg-[linear-gradient(135deg,#0b4fb0_0%,#0d5ecb_58%,#1467ce_100%)] focus-visible:bg-[#0b4fb0] ",
+      "color": "rgb(255, 255, 255)",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "height": 46,
+      "href": "/start",
+      "width": 194
+    }
+  ],
+  "contrast": {
+    "hover": {
+      "end": 5.438878788721357,
+      "mid": 6.033522376269717,
+      "start": 7.609963421882304
+    },
+    "normal": {
+      "end": 4.86465215811105,
+      "mid": 5.0937326450103075,
+      "start": 5.253646350669356
+    }
+  },
+  "mobile": {
+    "ctas": [
+      {
+        "backgroundImage": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+        "display": "inline-flex",
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "backgroundImage": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+        "display": "flex",
+        "h": 46,
+        "w": 194,
+        "x": 24,
+        "y": 521
+      },
+      {
+        "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+        "display": "flex",
+        "h": 46,
+        "w": 269,
+        "x": 53,
+        "y": 5752
+      },
+      {
+        "backgroundImage": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+        "display": "flex",
+        "h": 46,
+        "w": 267,
+        "x": 54,
+        "y": 6200
+      },
+      {
+        "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+        "display": "flex",
+        "h": 46,
+        "w": 269,
+        "x": 53,
+        "y": 6613
+      },
+      {
+        "backgroundImage": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+        "display": "flex",
+        "h": 46,
+        "w": 194,
+        "x": 90,
+        "y": 7730
+      }
+    ],
+    "headings": [
+      "Websites built to make your business unmistakable.",
+      "Selected work",
+      "What Cyvexly can do"
+    ],
+    "innerWidth": 390,
+    "navText": "ServicesWorkPricingProcessAbout",
+    "overflow": false,
+    "scrollWidth": 375
+  },
+  "tablet": {
+    "ctas": [
+      {
+        "h": 46,
+        "w": 194,
+        "x": 24,
+        "y": 647
+      },
+      {
+        "h": 66,
+        "w": 161,
+        "x": 53,
+        "y": 3846
+      }
+    ],
+    "h1": {
+      "h": 207,
+      "w": 329,
+      "x": 24,
+      "y": 237
+    },
+    "innerWidth": 768,
+    "openMenu": true,
+    "overflow": false,
+    "scrollWidth": 753
+  },
+  "pricingDesktop": {
+    "h1": "Clear starting points.",
+    "links": [
+      {
+        "bg": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+        "box": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.34) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.72) 0px 12px 30px -12px",
+        "color": "rgb(255, 255, 255)",
+        "h": 46,
+        "w": 194,
+        "x": 1070,
+        "y": 16
+      },
+      {
+        "bg": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+        "box": "rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, color(srgb 0.211765 0.780392 1 / 0.08) 0px 0px 0px 1px inset, rgba(16, 33, 61, 0.48) 0px 18px 48px -34px, rgba(15, 102, 224, 0.35) 0px 7px 22px -18px",
+        "color": "rgb(16, 33, 61)",
+        "h": 46,
+        "w": 294,
+        "x": 190,
+        "y": 986
+      },
+      {
+        "bg": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+        "box": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.34) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.72) 0px 12px 30px -12px",
+        "color": "rgb(255, 255, 255)",
+        "h": 46,
+        "w": 292,
+        "x": 567,
+        "y": 985
+      }
+    ],
+    "overflow": false,
+    "scrollWidth": 1425
+  },
+  "pricingPhone": {
+    "h1": "Clear starting points.",
+    "innerWidth": 390,
+    "overflow": false,
+    "visibleCtas": [
+      {
+        "h": 46,
+        "w": 269,
+        "x": 53
+      },
+      {
+        "h": 46,
+        "w": 267,
+        "x": 54
+      },
+      {
+        "h": 46,
+        "w": 269,
+        "x": 53
+      },
+      {
+        "h": 46,
+        "w": 269,
+        "x": 53
+      },
+      {
+        "h": 46,
+        "w": 269,
+        "x": 53
+      },
+      {
+        "h": 46,
+        "w": 194,
+        "x": 90
+      }
+    ]
+  },
+  "processPhone": {
+    "h1": "Give us the brief. We'll shape the route.",
+    "innerWidth": 390,
+    "main": true,
+    "overflow": false
+  },
+  "planner": {
+    "initial": {
+      "buttons": [
+        {
+          "disabled": false,
+          "text": "Open menu"
+        },
+        {
+          "disabled": false,
+          "text": "1"
+        },
+        {
+          "disabled": true,
+          "text": "2"
+        },
+        {
+          "disabled": true,
+          "text": "3"
+        },
+        {
+          "disabled": true,
+          "text": "4"
+        },
+        {
+          "disabled": true,
+          "text": "5"
+        },
+        {
+          "disabled": true,
+          "text": "6"
+        },
+        {
+          "disabled": true,
+          "text": "7"
+        },
+        {
+          "disabled": true,
+          "text": "8"
+        },
+        {
+          "disabled": true,
+          "text": "9"
+        }
+      ],
+      "h1": "Tell us what you need. We'll shape the right route.",
+      "inputs": [
+        {
+          "id": "planner-company-website",
+          "required": false,
+          "type": "text"
+        },
+        {
+          "id": "fullName",
+          "required": false,
+          "type": "text"
+        },
+        {
+          "id": "workEmail",
+          "required": false,
+          "type": "email"
+        },
+        {
+          "id": "contactMethod",
+          "required": false,
+          "type": "text"
+        },
+        {
+          "id": "roleTitle",
+          "required": false,
+          "type": "text"
+        },
+        {
+          "id": "companyName",
+          "required": false,
+          "type": "text"
+        },
+        {
+          "id": "country",
+          "required": false,
+          "type": "text"
+        },
+        {
+          "id": "otherApprovers",
+          "required": false,
+          "type": "text"
+        }
+      ]
+    },
+    "after": {
+      "active": "fullName",
+      "alerts": [
+        "Please enter your name.",
+        "Please enter a valid email address.",
+        "Please share a phone or preferred contact method."
+      ],
+      "errorText": [
+        "A calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.",
+        "Please enter your name.",
+        "Please enter a valid email address.",
+        "Please share a phone or preferred contact method.",
+        "● No payment required"
+      ],
+      "inputs": [
+        {
+          "aria": null,
+          "id": "planner-company-website",
+          "name": "planner-company-website"
+        },
+        {
+          "aria": "true",
+          "id": "fullName",
+          "name": "fullName"
+        },
+        {
+          "aria": "true",
+          "id": "workEmail",
+          "name": "workEmail"
+        },
+        {
+          "aria": "true",
+          "id": "contactMethod",
+          "name": "contactMethod"
+        },
+        {
+          "aria": "false",
+          "id": "roleTitle",
+          "name": "roleTitle"
+        },
+        {
+          "aria": "false",
+          "id": "companyName",
+          "name": "companyName"
+        },
+        {
+          "aria": "false",
+          "id": "country",
+          "name": "country"
+        },
+        {
+          "aria": "false",
+          "id": "otherApprovers",
+          "name": "otherApprovers"
+        }
+      ]
+    }
+  },
+  "faq": {
+    "before": "false",
+    "after": "true",
+    "answerContainsTiming": true
+  },
+  "consoleWarnings": [],
+  "ctaNavigation": {
+    "from": "/",
+    "clicked": "main link Describe your project",
+    "resultUrl": "http://localhost:5373/start",
+    "resultTitle": "Project Planner — Cyvexly Studio"
+  },
+  "contrastSample": {
+    "normalStartToMid": {
+      "min": 5.094,
+      "at": 1
+    },
+    "normalMidToEnd": {
+      "min": 4.865,
+      "at": 1
+    },
+    "hoverStartToMid": {
+      "min": 6.034,
+      "at": 1
+    },
+    "hoverMidToEnd": {
+      "min": 5.439,
+      "at": 1
+    }
+  },
+  "contactValidation": {
+    "alerts": [
+      "Please fix the highlighted fields below."
+    ],
+    "invalid": [
+      "name",
+      "email",
+      "message",
+      "consent"
+    ],
+    "url": "/contact"
+  },
+  "plannerProgression": {
+    "activeElement": "BUTTON",
+    "h1": "Tell us what you need. We'll shape the right route.",
+    "overflow": false,
+    "stepText": "PROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n2\n3\n4\n5\n6\n7\n8\n9\n\nSTEP 2 OF 9\n\n02 The business\nShort description of the business*\nProducts / services offered\nCurrent website URL, if any\nBusiness stage\nSelect one\nLaunching\nGrowing\nEstablished\nRebranding\nGeographic market\nSelect one\nLocal\nRegional\nNational\nW",
+    "url": "/start"
+  },
+  "ctaHandoffs": [
+    {
+      "from": "/services",
+      "exists": 1,
+      "result": "http://localhost:5373/start"
+    },
+    {
+      "from": "/work",
+      "exists": 1,
+      "result": "http://localhost:5373/start"
+    },
+    {
+      "from": "/pricing",
+      "exists": 1,
+      "result": "http://localhost:5373/start"
+    },
+    {
+      "from": "/process",
+      "exists": 1,
+      "result": "http://localhost:5373/start"
+    }
+  ],
+  "scaleStates": [
+    {
+      "menuVisible": false,
+      "overflow": false,
+      "primaryVisible": true,
+      "width": 1440
+    },
+    {
+      "menuVisible": false,
+      "overflow": false,
+      "primaryVisible": true,
+      "width": 1024
+    },
+    {
+      "menuVisible": true,
+      "overflow": false,
+      "primaryVisible": false,
+      "width": 720
+    },
+    {
+      "menuVisible": true,
+      "overflow": false,
+      "primaryVisible": false,
+      "width": 390
+    }
+  ],
+  "workSemantics": {
+    "conceptLabels": [
+      false
+    ],
+    "filters": [
+      {
+        "pressed": null,
+        "text": "Open menu"
+      },
+      {
+        "pressed": "true",
+        "text": "All"
+      },
+      {
+        "pressed": "false",
+        "text": "Business Site"
+      },
+      {
+        "pressed": "false",
+        "text": "Redesign"
+      },
+      {
+        "pressed": "false",
+        "text": "Landing Page"
+      },
+      {
+        "pressed": "false",
+        "text": "Commerce"
+      },
+      {
+        "pressed": "false",
+        "text": "Concept"
+      }
+    ],
+    "imgs": [],
+    "overflow": false
+  },
+  "serviceAnchor": {
+    "hash": "#business-websites",
+    "overflow": false,
+    "path": "/services",
+    "target": true,
+    "targetText": "Business websitesA complete, credible presence for a service business or professional: clear offer, "
+  },
+  "menuContainment": {
+    "innerWidth": 390,
+    "links": 6,
+    "menu": {
+      "right": 375,
+      "w": 375,
+      "x": 0
+    },
+    "overflow": false
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "generatedAt": "2026-08-30T23:55:37.581Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "smoke": [
+    {
+      "route": "/",
+      "heading": 28,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/services",
+      "heading": 24,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/work",
+      "heading": 8,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/pricing",
+      "heading": 20,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/process",
+      "heading": 13,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/contact",
+      "heading": 5,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/faq",
+      "heading": 16,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/accessibility",
+      "heading": 9,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/start",
+      "heading": 6,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/work/aurora-spaces",
+      "heading": 13,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/work/nexora-systems",
+      "heading": 13,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/work/vellora-care",
+      "heading": 13,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/about",
+      "heading": 4,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/privacy",
+      "heading": 4,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    },
+    {
+      "route": "/terms",
+      "heading": 4,
+      "metrics": {
+        "innerWidth": 390,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "emptyAlts": 0,
+        "unnamedLinks": 0,
+        "h1": 1,
+        "main": 1
+      },
+      "logs": []
+    }
+  ]
+}

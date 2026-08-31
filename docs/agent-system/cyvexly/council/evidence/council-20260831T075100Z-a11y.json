@@ -1,0 +1,44 @@
+[
+  {
+    "duplicateIds": [],
+    "missingAlts": 0,
+    "path": "/",
+    "unnamedVisibleControls": 0
+  },
+  {
+    "duplicateIds": [],
+    "missingAlts": 0,
+    "path": "/process",
+    "unnamedVisibleControls": 0
+  },
+  {
+    "duplicateIds": [],
+    "missingAlts": 0,
+    "path": "/services",
+    "unnamedVisibleControls": 0
+  },
+  {
+    "duplicateIds": [],
+    "missingAlts": 0,
+    "path": "/work",
+    "unnamedVisibleControls": 0
+  },
+  {
+    "duplicateIds": [],
+    "missingAlts": 0,
+    "path": "/start",
+    "unnamedVisibleControls": 0
+  },
+  {
+    "duplicateIds": [],
+    "missingAlts": 0,
+    "path": "/contact",
+    "unnamedVisibleControls": 0
+  },
+  {
+    "duplicateIds": [],
+    "missingAlts": 0,
+    "path": "/faq",
+    "unnamedVisibleControls": 0
+  }
+]

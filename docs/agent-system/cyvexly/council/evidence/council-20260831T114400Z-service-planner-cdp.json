@@ -1,0 +1,2018 @@
+{
+  "chrome": "Chrome/151.0.7922.175",
+  "capturedAtUtc": "2026-08-31T11:59:13.472Z",
+  "results": [
+    {
+      "name": "services-desktop",
+      "path": "/services",
+      "width": 1440,
+      "height": 1000,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-services-desktop.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-services-desktop-viewport.png",
+      "metrics": {
+        "path": "/services",
+        "title": "Services — Cyvexly Studio",
+        "h1": [
+          "Everything your business website needs."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nServices\nWork\nPricing\nProcess\nAbout\nDescribe your project\n\nSERVICES\n\nEverything your business website needs.\n\nFrom the first page decision to the day it goes live — one studio, one point of contact, no production line.\n\nStrategy & structure\n\nThe problem: It's unclear what pages, structure, and priorities will actually move your business forward.\n\nWho needs it: Any business starting a new site or rethinking an existing one.\n\nGoals and audience definition\nCompetitive review\nSitemap and page priorities\nContent direction\nConversion path planning\n\nWhat may change the scope: Number of audiences, competitors reviewed, and page count.\n\nStart with the Project Planner →\nCustom website design\n\nThe problem: Generic templates don't communicate what makes your business different.\n\nWho needs it: Businesses that need a distinctive, brand-aligned look and feel.\n\nVisual direction\nResponsive",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "Start with the Project Planner →",
+            "href": "/start"
+          },
+          {
+            "text": "See package details →",
+            "href": "/start"
+          },
+          {
+            "text": "See package details →",
+            "href": "/start"
+          },
+          {
+            "text": "See add-on pricing →",
+            "href": "/start"
+          },
+          {
+            "text": "See Commerce package →",
+            "href": "/start"
+          },
+          {
+            "text": "Read our accessibility target →",
+            "href": "/start"
+          },
+          {
+            "text": "Compare care plans →",
+            "href": "/start"
+          },
+          {
+            "text": "Explore business websites →",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Explore website redesigns →",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Explore landing pages →",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "Explore e-commerce websites →",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Explore website care →",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "View all projects →",
+            "href": "/work"
+          },
+          {
+            "text": "Concept projectAurora SpacesImmersive website concept for a luxury architecture studio.",
+            "href": "/work/aurora-spaces"
+          },
+          {
+            "text": "Concept projectNexora SystemsSaaS platform concept for an AI analytics company.",
+            "href": "/work/nexora-systems"
+          },
+          {
+            "text": "Concept projectVellora CareE-commerce concept for a premium skincare brand.",
+            "href": "/work/vellora-care"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "Do I need to know exactly which services I need?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can I add services after the project starts?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Is copywriting included?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Do you handle hosting and domains?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "services-tablet",
+      "path": "/services",
+      "width": 768,
+      "height": 1024,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-services-tablet.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-services-tablet-viewport.png",
+      "metrics": {
+        "path": "/services",
+        "title": "Services — Cyvexly Studio",
+        "h1": [
+          "Everything your business website needs."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nOpen menu\n\nSERVICES\n\nEverything your business website needs.\n\nFrom the first page decision to the day it goes live — one studio, one point of contact, no production line.\n\nStrategy & structure\n\nThe problem: It's unclear what pages, structure, and priorities will actually move your business forward.\n\nWho needs it: Any business starting a new site or rethinking an existing one.\n\nGoals and audience definition\nCompetitive review\nSitemap and page priorities\nContent direction\nConversion path planning\n\nWhat may change the scope: Number of audiences, competitors reviewed, and page count.\n\nStart with the Project Planner →\nCustom website design\n\nThe problem: Generic templates don't communicate what makes your business different.\n\nWho needs it: Businesses that need a distinctive, brand-aligned look and feel.\n\nVisual direction\nResponsive page designs\nInteraction direction\nComponent st",
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "Start with the Project Planner →",
+            "href": "/start"
+          },
+          {
+            "text": "See package details →",
+            "href": "/start"
+          },
+          {
+            "text": "See package details →",
+            "href": "/start"
+          },
+          {
+            "text": "See add-on pricing →",
+            "href": "/start"
+          },
+          {
+            "text": "See Commerce package →",
+            "href": "/start"
+          },
+          {
+            "text": "Read our accessibility target →",
+            "href": "/start"
+          },
+          {
+            "text": "Compare care plans →",
+            "href": "/start"
+          },
+          {
+            "text": "Explore business websites →",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Explore website redesigns →",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Explore landing pages →",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "Explore e-commerce websites →",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Explore website care →",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "View all projects →",
+            "href": "/work"
+          },
+          {
+            "text": "Concept projectAurora SpacesImmersive website concept for a luxury architecture studio.",
+            "href": "/work/aurora-spaces"
+          },
+          {
+            "text": "Concept projectNexora SystemsSaaS platform concept for an AI analytics company.",
+            "href": "/work/nexora-systems"
+          },
+          {
+            "text": "Concept projectVellora CareE-commerce concept for a premium skincare brand.",
+            "href": "/work/vellora-care"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "Do I need to know exactly which services I need?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can I add services after the project starts?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Is copywriting included?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Do you handle hosting and domains?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "services-phone",
+      "path": "/services",
+      "width": 390,
+      "height": 844,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-services-phone.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-services-phone-viewport.png",
+      "metrics": {
+        "path": "/services",
+        "title": "Services — Cyvexly Studio",
+        "h1": [
+          "Everything your business website needs."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nOpen menu\n\nSERVICES\n\nEverything your business website needs.\n\nFrom the first page decision to the day it goes live — one studio, one point of contact, no production line.\n\nStrategy & structure\n\nThe problem: It's unclear what pages, structure, and priorities will actually move your business forward.\n\nWho needs it: Any business starting a new site or rethinking an existing one.\n\nGoals and audience definition\nCompetitive review\nSitemap and page priorities\nContent direction\nConversion path planning\n\nWhat may change the scope: Number of audiences, competitors reviewed, and page count.\n\nStart with the Project Planner →\nCustom website design\n\nThe problem: Generic templates don't communicate what makes your business different.\n\nWho needs it: Businesses that need a distinctive, brand-aligned look and feel.\n\nVisual direction\nResponsive page designs\nInteraction direction\nComponent st",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "Start with the Project Planner →",
+            "href": "/start"
+          },
+          {
+            "text": "See package details →",
+            "href": "/start"
+          },
+          {
+            "text": "See package details →",
+            "href": "/start"
+          },
+          {
+            "text": "See add-on pricing →",
+            "href": "/start"
+          },
+          {
+            "text": "See Commerce package →",
+            "href": "/start"
+          },
+          {
+            "text": "Read our accessibility target →",
+            "href": "/start"
+          },
+          {
+            "text": "Compare care plans →",
+            "href": "/start"
+          },
+          {
+            "text": "Explore business websites →",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Explore website redesigns →",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Explore landing pages →",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "Explore e-commerce websites →",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Explore website care →",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "View all projects →",
+            "href": "/work"
+          },
+          {
+            "text": "Concept projectAurora SpacesImmersive website concept for a luxury architecture studio.",
+            "href": "/work/aurora-spaces"
+          },
+          {
+            "text": "Concept projectNexora SystemsSaaS platform concept for an AI analytics company.",
+            "href": "/work/nexora-systems"
+          },
+          {
+            "text": "Concept projectVellora CareE-commerce concept for a premium skincare brand.",
+            "href": "/work/vellora-care"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "Do I need to know exactly which services I need?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can I add services after the project starts?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Is copywriting included?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Do you handle hosting and domains?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "business-detail-desktop",
+      "path": "/services/business-websites",
+      "width": 1440,
+      "height": 1000,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-business-detail-desktop.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-business-detail-desktop-viewport.png",
+      "metrics": {
+        "path": "/services/business-websites",
+        "title": "Business websites — Cyvexly Studio",
+        "h1": [
+          "Turn your expertise into a website people understand and trust."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nServices\nWork\nPricing\nProcess\nAbout\nDescribe your project\n← All services\n\nA CLEAR, CREDIBLE DIGITAL HOME\n\nTurn your expertise into a website people understand and trust.\n\nA complete website for a service business or professional team, shaped around the questions clients ask before they inquire.\n\nInclude this in my project\nSee pricing\n\nBUSINESS WEBSITES · SERVICE SIGNAL\n\nOFFER\nPROOF\nINQUIRY\nCLARITY\n\nTHE COMMON PROBLEM\n\nWhat gets in the way\n\nYour business may be strong while your website feels vague, dated, or difficult to navigate. Visitors cannot quickly tell what you do, who it is for, or why they should choose you.\n\nTHE INTENDED OUTCOME\n\nWhat the work should change\n\nA focused, responsive site that explains your value, makes services easy to scan, and gives qualified visitors a confident next step.\n\nPRACTICAL SCOPE\n\nWhat's included\n01\n\nGoals, audience, sitemap, and conver",
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "← All services",
+            "href": "/services"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=business-websites"
+          },
+          {
+            "text": "See pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Explore the case study →",
+            "href": "/work/aurora-spaces"
+          },
+          {
+            "text": "Compare pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=business-websites"
+          },
+          {
+            "text": "Return to all services",
+            "href": "/services"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "How many pages does a business website include?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can you help organize our services and copy?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Will we be able to update the site ourselves?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "business-detail-tablet",
+      "path": "/services/business-websites",
+      "width": 768,
+      "height": 1024,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-business-detail-tablet.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-business-detail-tablet-viewport.png",
+      "metrics": {
+        "path": "/services/business-websites",
+        "title": "Business websites — Cyvexly Studio",
+        "h1": [
+          "Turn your expertise into a website people understand and trust."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nOpen menu\n← All services\n\nA CLEAR, CREDIBLE DIGITAL HOME\n\nTurn your expertise into a website people understand and trust.\n\nA complete website for a service business or professional team, shaped around the questions clients ask before they inquire.\n\nInclude this in my project\nSee pricing\n\nBUSINESS WEBSITES · SERVICE SIGNAL\n\nOFFER\nPROOF\nINQUIRY\nCLARITY\n\nTHE COMMON PROBLEM\n\nWhat gets in the way\n\nYour business may be strong while your website feels vague, dated, or difficult to navigate. Visitors cannot quickly tell what you do, who it is for, or why they should choose you.\n\nTHE INTENDED OUTCOME\n\nWhat the work should change\n\nA focused, responsive site that explains your value, makes services easy to scan, and gives qualified visitors a confident next step.\n\nPRACTICAL SCOPE\n\nWhat's included\n01\n\nGoals, audience, sitemap, and conversion-path planning\n\n02\n\nCustom visual direction ",
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "← All services",
+            "href": "/services"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=business-websites"
+          },
+          {
+            "text": "See pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Explore the case study →",
+            "href": "/work/aurora-spaces"
+          },
+          {
+            "text": "Compare pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=business-websites"
+          },
+          {
+            "text": "Return to all services",
+            "href": "/services"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "How many pages does a business website include?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can you help organize our services and copy?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Will we be able to update the site ourselves?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "business-detail-phone",
+      "path": "/services/business-websites",
+      "width": 390,
+      "height": 844,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-business-detail-phone.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-business-detail-phone-viewport.png",
+      "metrics": {
+        "path": "/services/business-websites",
+        "title": "Business websites — Cyvexly Studio",
+        "h1": [
+          "Turn your expertise into a website people understand and trust."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nOpen menu\n← All services\n\nA CLEAR, CREDIBLE DIGITAL HOME\n\nTurn your expertise into a website people understand and trust.\n\nA complete website for a service business or professional team, shaped around the questions clients ask before they inquire.\n\nInclude this in my project\nSee pricing\n\nBUSINESS WEBSITES · SERVICE SIGNAL\n\nOFFER\nPROOF\nINQUIRY\nCLARITY\n\nTHE COMMON PROBLEM\n\nWhat gets in the way\n\nYour business may be strong while your website feels vague, dated, or difficult to navigate. Visitors cannot quickly tell what you do, who it is for, or why they should choose you.\n\nTHE INTENDED OUTCOME\n\nWhat the work should change\n\nA focused, responsive site that explains your value, makes services easy to scan, and gives qualified visitors a confident next step.\n\nPRACTICAL SCOPE\n\nWhat's included\n01\n\nGoals, audience, sitemap, and conversion-path planning\n\n02\n\nCustom visual direction ",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "← All services",
+            "href": "/services"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=business-websites"
+          },
+          {
+            "text": "See pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Explore the case study →",
+            "href": "/work/aurora-spaces"
+          },
+          {
+            "text": "Compare pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=business-websites"
+          },
+          {
+            "text": "Return to all services",
+            "href": "/services"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "How many pages does a business website include?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can you help organize our services and copy?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Will we be able to update the site ourselves?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "redesign-detail-phone",
+      "path": "/services/website-redesigns",
+      "width": 390,
+      "height": 844,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-redesign-detail-phone.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-redesign-detail-phone-viewport.png",
+      "metrics": {
+        "path": "/services/website-redesigns",
+        "title": "Website redesigns — Cyvexly Studio",
+        "h1": [
+          "Replace an outdated website with a clearer path to action."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nOpen menu\n← All services\n\nA STRATEGIC REBUILD, NOT A SURFACE RESKIN\n\nReplace an outdated website with a clearer path to action.\n\nA structured redesign for an established business whose current site no longer reflects its quality, offer, or customer journey.\n\nInclude this in my project\nSee pricing\n\nWEBSITE REDESIGNS · SERVICE SIGNAL\n\nAUDIT\nREFRAME\nREBUILD\nRENEWAL\n\nTHE COMMON PROBLEM\n\nWhat gets in the way\n\nYour current site may have accumulated unclear pages, dated visuals, mobile friction, or content that no longer matches the business. Changing colors alone will not solve the underlying structure.\n\nTHE INTENDED OUTCOME\n\nWhat the work should change\n\nA modern system that preserves what still works, resolves the important usability gaps, and makes the next version easier to maintain.\n\nPRACTICAL SCOPE\n\nWhat's included\n01\n\nCurrent-site review and content inventory\n\n02\n\nRevised ",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "← All services",
+            "href": "/services"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=website-redesigns"
+          },
+          {
+            "text": "See pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Explore the case study →",
+            "href": "/work/nexora-systems"
+          },
+          {
+            "text": "Compare pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=website-redesigns"
+          },
+          {
+            "text": "Return to all services",
+            "href": "/services"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "Do we have to replace every part of our current site?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can you migrate our existing content?+",
+            "expanded": "false"
+          },
+          {
+            "text": "What happens to our current search rankings?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "landing-detail-phone",
+      "path": "/services/landing-pages",
+      "width": 390,
+      "height": 844,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-landing-detail-phone.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-landing-detail-phone-viewport.png",
+      "metrics": {
+        "path": "/services/landing-pages",
+        "title": "Landing pages — Cyvexly Studio",
+        "h1": [
+          "Give your campaign a focused place to convert attention into action."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nOpen menu\n← All services\n\nONE OFFER, ONE AUDIENCE, ONE CLEAR ACTION\n\nGive your campaign a focused place to convert attention into action.\n\nA purpose-built landing page for a launch, event, campaign, or single service — without the distractions of a full website journey.\n\nInclude this in my project\nSee pricing\n\nLANDING PAGES · SERVICE SIGNAL\n\nPROMISE\nPROOF\nACTION\nFOCUS\n\nTHE COMMON PROBLEM\n\nWhat gets in the way\n\nCampaign traffic often lands on a general page that asks visitors to interpret too much. The message, proof, and action compete with unrelated navigation and content.\n\nTHE INTENDED OUTCOME\n\nWhat the work should change\n\nA fast, responsive page that keeps one audience moving from the promise to the evidence and into one measurable action.\n\nPRACTICAL SCOPE\n\nWhat's included\n01\n\nOffer, audience, and conversion-goal definition\n\n02\n\nPage outline and content hierarchy\n\n03\n\nC",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "← All services",
+            "href": "/services"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=landing-pages"
+          },
+          {
+            "text": "See pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Explore the case study →",
+            "href": "/work/nexora-systems"
+          },
+          {
+            "text": "Compare pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=landing-pages"
+          },
+          {
+            "text": "Return to all services",
+            "href": "/services"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "Is a landing page the same as a one-page website?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can the page connect to our CRM or email platform?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can you guarantee a conversion rate?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ecommerce-detail-phone",
+      "path": "/services/ecommerce-websites",
+      "width": 390,
+      "height": 844,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-ecommerce-detail-phone.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-ecommerce-detail-phone-viewport.png",
+      "metrics": {
+        "path": "/services/ecommerce-websites",
+        "title": "E-commerce websites — Cyvexly Studio",
+        "h1": [
+          "Make products easier to understand, choose, and buy."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nOpen menu\n← All services\n\nA STORE PLANNED AROUND TRUST AND CHECKOUT\n\nMake products easier to understand, choose, and buy.\n\nA commerce site for a small-to-medium catalog, designed around product clarity, operational requirements, and a calm route to purchase.\n\nInclude this in my project\nSee pricing\n\nE-COMMERCE WEBSITES · SERVICE SIGNAL\n\nDISCOVER\nCHOOSE\nCHECKOUT\nCOMMERCE\n\nTHE COMMON PROBLEM\n\nWhat gets in the way\n\nA store can look polished and still lose customers through weak product information, confusing collections, unexpected checkout requirements, or an operations plan that arrives too late.\n\nTHE INTENDED OUTCOME\n\nWhat the work should change\n\nA responsive storefront that connects product presentation to checkout while making shipping, tax, content, and owner workflows part of the plan from the start.\n\nPRACTICAL SCOPE\n\nWhat's included\n01\n\nStore, collection, product, cart",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "← All services",
+            "href": "/services"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=ecommerce-websites"
+          },
+          {
+            "text": "See pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Explore the case study →",
+            "href": "/work/vellora-care"
+          },
+          {
+            "text": "Compare pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=ecommerce-websites"
+          },
+          {
+            "text": "Return to all services",
+            "href": "/services"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "Which commerce platform do you use?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Are platform and payment fees included?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can you enter all of our products?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "care-detail-phone",
+      "path": "/services/website-care",
+      "width": 390,
+      "height": 844,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-care-detail-phone.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-care-detail-phone-viewport.png",
+      "metrics": {
+        "path": "/services/website-care",
+        "title": "Website care — Cyvexly Studio",
+        "h1": [
+          "Keep your website current without turning upkeep into your job."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nOpen menu\n← All services\n\nA DEPENDABLE LANE FOR POST-LAUNCH CHANGES\n\nKeep your website current without turning upkeep into your job.\n\nOngoing maintenance, content support, and prioritized improvement for businesses that want a reliable owner-led point of contact after launch.\n\nInclude this in my project\nSee pricing\n\nWEBSITE CARE · SERVICE SIGNAL\n\nMONITOR\nUPDATE\nIMPROVE\nCONTINUITY\n\nTHE COMMON PROBLEM\n\nWhat gets in the way\n\nSmall updates linger, software and content age, and nobody owns the routine checks. The site slowly becomes less accurate and less useful even when the business keeps moving.\n\nTHE INTENDED OUTCOME\n\nWhat the work should change\n\nA defined monthly support lane with clear capacity and response priority, so maintenance and improvements are handled deliberately instead of becoming emergencies.\n\nPRACTICAL SCOPE\n\nWhat's included\n01\n\nMonitoring and maintenance whe",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "← All services",
+            "href": "/services"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=website-care"
+          },
+          {
+            "text": "See pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Explore the case study →",
+            "href": "/work/vellora-care"
+          },
+          {
+            "text": "Compare pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=website-care"
+          },
+          {
+            "text": "Return to all services",
+            "href": "/services"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "Do I need a care plan for a site Cyvexly builds?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can you care for a website built by someone else?+",
+            "expanded": "false"
+          },
+          {
+            "text": "What if a request is larger than my monthly allowance?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ecommerce-detail-narrow",
+      "path": "/services/ecommerce-websites",
+      "width": 320,
+      "height": 800,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-ecommerce-detail-narrow.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-ecommerce-detail-narrow-viewport.png",
+      "metrics": {
+        "path": "/services/ecommerce-websites",
+        "title": "E-commerce websites — Cyvexly Studio",
+        "h1": [
+          "Make products easier to understand, choose, and buy."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nOpen menu\n← All services\n\nA STORE PLANNED AROUND TRUST AND CHECKOUT\n\nMake products easier to understand, choose, and buy.\n\nA commerce site for a small-to-medium catalog, designed around product clarity, operational requirements, and a calm route to purchase.\n\nInclude this in my project\nSee pricing\n\nE-COMMERCE WEBSITES · SERVICE SIGNAL\n\nDISCOVER\nCHOOSE\nCHECKOUT\nCOMMERCE\n\nTHE COMMON PROBLEM\n\nWhat gets in the way\n\nA store can look polished and still lose customers through weak product information, confusing collections, unexpected checkout requirements, or an operations plan that arrives too late.\n\nTHE INTENDED OUTCOME\n\nWhat the work should change\n\nA responsive storefront that connects product presentation to checkout while making shipping, tax, content, and owner workflows part of the plan from the start.\n\nPRACTICAL SCOPE\n\nWhat's included\n01\n\nStore, collection, product, cart",
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "← All services",
+            "href": "/services"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=ecommerce-websites"
+          },
+          {
+            "text": "See pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Explore the case study →",
+            "href": "/work/vellora-care"
+          },
+          {
+            "text": "Compare pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Include this in my project",
+            "href": "/start?service=ecommerce-websites"
+          },
+          {
+            "text": "Return to all services",
+            "href": "/services"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "Which commerce platform do you use?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Are platform and payment fees included?+",
+            "expanded": "false"
+          },
+          {
+            "text": "Can you enter all of our products?+",
+            "expanded": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "planner-prefill-phone",
+      "path": "/start?service=business-websites",
+      "width": 390,
+      "height": 844,
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-planner-prefill-phone.png",
+      "viewportScreenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-planner-prefill-phone-viewport.png",
+      "metrics": {
+        "path": "/start?service=business-websites",
+        "title": "Project Planner — Cyvexly Studio",
+        "h1": [
+          "Tell us what you need. We'll shape the right route."
+        ],
+        "main": 1,
+        "bodyText": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\nSTEP 1 OF 9\n\nStarting point added: Business websites. We selected the closest Planner options for you. You can change every answer before sending.\n\n01 About you\nFull name*\nWork email*\nPhone or preferred contact method*\nRole / title\nCompany name\nCountry and time zone\nWho else will approve the project?\n← Back\nSave & continue later\nContinue →\n●\nNo payment required\n●\nWe respond within two business days\nWhat happens next\n1\nWe plan your project\nWe review your answers and create a tailored project plan.\n2\nYou review & refine\nWe share the plan for your feedback and confirmation.\n3\nWe build & launch\nOnce approved, ",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflow": false,
+        "links": [
+          {
+            "text": "CYVEXLY STUDIO",
+            "href": "/"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Describe your project",
+            "href": "/start"
+          },
+          {
+            "text": "Services",
+            "href": "/services"
+          },
+          {
+            "text": "Work",
+            "href": "/work"
+          },
+          {
+            "text": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "text": "Process",
+            "href": "/process"
+          },
+          {
+            "text": "About",
+            "href": "/about"
+          },
+          {
+            "text": "Business websites",
+            "href": "/services/business-websites"
+          },
+          {
+            "text": "Website redesigns",
+            "href": "/services/website-redesigns"
+          },
+          {
+            "text": "Landing pages",
+            "href": "/services/landing-pages"
+          },
+          {
+            "text": "E-commerce websites",
+            "href": "/services/ecommerce-websites"
+          },
+          {
+            "text": "Website care",
+            "href": "/services/website-care"
+          },
+          {
+            "text": "hello@cyvexly.com",
+            "href": "mailto:hello@cyvexly.com"
+          },
+          {
+            "text": "General contact",
+            "href": "/contact"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms"
+          },
+          {
+            "text": "Accessibility",
+            "href": "/accessibility"
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Open menu",
+            "expanded": "false"
+          },
+          {
+            "text": "1",
+            "expanded": null
+          },
+          {
+            "text": "2",
+            "expanded": null
+          },
+          {
+            "text": "3",
+            "expanded": null
+          },
+          {
+            "text": "4",
+            "expanded": null
+          },
+          {
+            "text": "5",
+            "expanded": null
+          },
+          {
+            "text": "6",
+            "expanded": null
+          },
+          {
+            "text": "7",
+            "expanded": null
+          },
+          {
+            "text": "8",
+            "expanded": null
+          },
+          {
+            "text": "9",
+            "expanded": null
+          },
+          {
+            "text": "← Back",
+            "expanded": null
+          },
+          {
+            "text": "Save & continue later",
+            "expanded": null
+          },
+          {
+            "text": "Continue →",
+            "expanded": null
+          }
+        ]
+      }
+    }
+  ]
+}

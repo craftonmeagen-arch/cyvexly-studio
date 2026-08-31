@@ -1,0 +1,112 @@
+[
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/",
+    "skips": [],
+    "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/services",
+    "skips": [],
+    "title": "Services — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/work",
+    "skips": [],
+    "title": "Work — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/work/aurora-spaces",
+    "skips": [],
+    "title": "Aurora Spaces — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/work/nexora-systems",
+    "skips": [],
+    "title": "Nexora Systems — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/",
+    "skips": [],
+    "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/services",
+    "skips": [],
+    "title": "Services — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/work",
+    "skips": [],
+    "title": "Work — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/work/aurora-spaces",
+    "skips": [],
+    "title": "Aurora Spaces — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/work/nexora-systems",
+    "skips": [],
+    "title": "Nexora Systems — Cyvexly Studio",
+    "unnamed": 0
+  }
+]

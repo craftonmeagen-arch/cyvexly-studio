@@ -1,0 +1,155 @@
+{
+  "capturedAtUtc": "2026-08-31T12:01:52.099Z",
+  "routes": [
+    {
+      "h1Count": 1,
+      "h2": [
+        "What gets in the way",
+        "What the work should change",
+        "What's included",
+        "Aurora Spaces",
+        "Typical client inputs",
+        "What affects price and timing",
+        "Orbit · From $3,500",
+        "Common questions",
+        "Start with the service selected. Shape the rest around your business.",
+        "Studio",
+        "Services",
+        "Contact"
+      ],
+      "mainCount": 1,
+      "path": "/services/business-websites",
+      "sections": {
+        "cta": true,
+        "example": true,
+        "faq": true,
+        "included": true,
+        "inputs": true,
+        "outcome": true,
+        "package": true,
+        "problem": true,
+        "scope": true
+      }
+    },
+    {
+      "h1Count": 1,
+      "h2": [
+        "What gets in the way",
+        "What the work should change",
+        "What's included",
+        "Nexora Systems",
+        "Typical client inputs",
+        "What affects price and timing",
+        "Nexus · From $5,800",
+        "Common questions",
+        "Start with the service selected. Shape the rest around your business.",
+        "Studio",
+        "Services",
+        "Contact"
+      ],
+      "mainCount": 1,
+      "path": "/services/website-redesigns",
+      "sections": {
+        "cta": true,
+        "example": true,
+        "faq": true,
+        "included": true,
+        "inputs": true,
+        "outcome": true,
+        "package": true,
+        "problem": true,
+        "scope": true
+      }
+    },
+    {
+      "h1Count": 1,
+      "h2": [
+        "What gets in the way",
+        "What the work should change",
+        "What's included",
+        "Nexora Systems",
+        "Typical client inputs",
+        "What affects price and timing",
+        "Signal · From $1,800",
+        "Common questions",
+        "Start with the service selected. Shape the rest around your business.",
+        "Studio",
+        "Services",
+        "Contact"
+      ],
+      "mainCount": 1,
+      "path": "/services/landing-pages",
+      "sections": {
+        "cta": true,
+        "example": true,
+        "faq": true,
+        "included": true,
+        "inputs": true,
+        "outcome": true,
+        "package": true,
+        "problem": true,
+        "scope": true
+      }
+    },
+    {
+      "h1Count": 1,
+      "h2": [
+        "What gets in the way",
+        "What the work should change",
+        "What's included",
+        "Vellora Care",
+        "Typical client inputs",
+        "What affects price and timing",
+        "Commerce · From $8,500",
+        "Common questions",
+        "Start with the service selected. Shape the rest around your business.",
+        "Studio",
+        "Services",
+        "Contact"
+      ],
+      "mainCount": 1,
+      "path": "/services/ecommerce-websites",
+      "sections": {
+        "cta": true,
+        "example": true,
+        "faq": true,
+        "included": true,
+        "inputs": true,
+        "outcome": true,
+        "package": true,
+        "problem": true,
+        "scope": true
+      }
+    },
+    {
+      "h1Count": 1,
+      "h2": [
+        "What gets in the way",
+        "What the work should change",
+        "What's included",
+        "Vellora Care",
+        "Typical client inputs",
+        "What affects price and timing",
+        "Care · From $99/mo",
+        "Common questions",
+        "Start with the service selected. Shape the rest around your business.",
+        "Studio",
+        "Services",
+        "Contact"
+      ],
+      "mainCount": 1,
+      "path": "/services/website-care",
+      "sections": {
+        "cta": true,
+        "example": true,
+        "faq": true,
+        "included": true,
+        "inputs": true,
+        "outcome": true,
+        "package": true,
+        "problem": true,
+        "scope": true
+      }
+    }
+  ]
+}

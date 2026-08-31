@@ -1,0 +1,92 @@
+[
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/",
+    "title": "Cyvexly Studio — Websites built to make your business unmistakable"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/services",
+    "title": "Services — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/work",
+    "title": "Work — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/work/aurora-spaces",
+    "title": "Aurora Spaces — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/work/nexora-systems",
+    "title": "Nexora Systems — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/work/vellora-care",
+    "title": "Vellora Care — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/pricing",
+    "title": "Pricing — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/process",
+    "title": "Process — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/faq",
+    "title": "FAQ — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/contact",
+    "title": "Contact — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/start",
+    "title": "Project Planner — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/accessibility",
+    "title": "Accessibility Statement — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/about",
+    "title": "Page not found — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/privacy",
+    "title": "Page not found — Cyvexly Studio"
+  },
+  {
+    "h1": 1,
+    "overflow": false,
+    "route": "/terms",
+    "title": "Page not found — Cyvexly Studio"
+  }
+]

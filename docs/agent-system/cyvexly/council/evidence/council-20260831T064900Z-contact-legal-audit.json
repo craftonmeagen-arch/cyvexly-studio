@@ -1,0 +1,92 @@
+{
+  "contact": {
+    "buttons": [
+      "Open menu",
+      "Send message"
+    ],
+    "fields": [
+      {
+        "autocomplete": "name",
+        "label": "Name",
+        "name": "name",
+        "required": false,
+        "tag": "input"
+      },
+      {
+        "autocomplete": "email",
+        "label": "Email",
+        "name": "email",
+        "required": false,
+        "tag": "input"
+      },
+      {
+        "autocomplete": null,
+        "label": "Topic",
+        "name": "topic",
+        "required": false,
+        "tag": "select"
+      },
+      {
+        "autocomplete": null,
+        "label": "Message",
+        "name": "message",
+        "required": false,
+        "tag": "textarea"
+      },
+      {
+        "autocomplete": null,
+        "label": "I'd like Cyvexly Studio to reply to this message.",
+        "name": "consent",
+        "required": false,
+        "tag": "input"
+      }
+    ],
+    "mailtos": [
+      {
+        "href": "mailto:hello@cyvexly.com",
+        "text": "hello@cyvexly.com"
+      },
+      {
+        "href": "mailto:hello@cyvexly.com",
+        "text": "hello@cyvexly.com"
+      }
+    ],
+    "planner": [
+      "Describe your project",
+      "Describe your project →",
+      "Project Planner"
+    ]
+  },
+  "legal": [
+    {
+      "h1": "This page doesn't exist yet.",
+      "notFound": true,
+      "path": "/about",
+      "title": "Page not found — Cyvexly Studio"
+    },
+    {
+      "h1": "This page doesn't exist yet.",
+      "notFound": true,
+      "path": "/privacy",
+      "title": "Page not found — Cyvexly Studio"
+    },
+    {
+      "h1": "This page doesn't exist yet.",
+      "notFound": true,
+      "path": "/terms",
+      "title": "Page not found — Cyvexly Studio"
+    },
+    {
+      "h1": "Accessibility Statement",
+      "notFound": false,
+      "path": "/accessibility",
+      "title": "Accessibility Statement — Cyvexly Studio"
+    },
+    {
+      "h1": "This page doesn't exist yet.",
+      "notFound": true,
+      "path": "/cookies",
+      "title": "Page not found — Cyvexly Studio"
+    }
+  ]
+}

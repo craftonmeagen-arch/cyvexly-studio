@@ -1,146 +1,204 @@
 # Cyvexly Next Council Handoff
 
-## Current Round 5 handoff — CYC-R5-20260830-01
+## Current Round 18 — CYC-R18-20260830-01
 
-- Round: `council-20260830T224200Z`; start `2026-08-30T22:41:14.9030160Z`.
-- Source head at snapshot: `d04dc9d271d15103aaa3b32897d3b64b74fd9a8c`; start
-  dirty fingerprint `53BD896212C2291969C0236DCA5E15A1BF993B2287C48889FEADD00F9C2975DB`.
-- Builder commit `da9c6d99962ba3f8a318bf3eed9a9b3ef63c0942` landed after the
-  snapshot and needs fresh independent Planner validation-focus verification.
-- Runtime: `.codex/runtime/council/council-20260830T224200Z/runtime`, port `5373`.
-- Report: `docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md`.
-- Evidence: `council/evidence/INDEX.md` and
-  `council-20260830T224200Z-r5-live-review.md`, with opened Home, Work,
-  Services, favicon frames, and direct OG captures.
-- Status: complete, published, and closed; no Council guard/runtime is active.
+- Round: `council-20260831T114400Z`; immutable snapshot head
+  `68fe4a476a89070b968a21852742680571794695`; start fingerprint
+  `329025F57F43D74E228064E5AE842CED8FADE5870A368A27B3D1ECC20F6999B6`.
+- Scheduler timestamp `2026-08-31T11:44:44.512Z`; guard start
+  `2026-08-31T11:46:11.0805216Z`; report published at
+  `2026-08-31T12:09:52.3499486Z` after `25m07.838s`.
+- Evidence: `council/evidence/INDEX.md`, R18 route/contract/semantics/FAQ,
+  Planner mapping, menu, stress, visual, and build-media records.
 
-Round 5 verified the served branded favicon at 16/32/48/256px, removed the
-untracked scratch route, and verified Round 8's unified `ConceptPreview` artwork
-across Home, Services, and Work at all required viewports. `CYC-R2-F002`'s
-cross-surface implementation symptom is resolved; the Owner framing decision on
-abstract versus higher-fidelity concept artwork remains open. MetadataBase,
-Planner server-side email, About/Privacy/Terms facts, and physical
-keyboard/reduced-motion runtime proof remain open. The next Council should first
-serve and verify `da9c6d9`'s first-error focus/group-error behavior, then focus on
-production metadata/submission behavior after Owner decisions and use a
-genuinely different browser capability for physical keyboard/reduced-motion.
+R18 accepts the bounded service-detail and Planner handoff slice. Preserve
+  route boundaries, local/no-submission behavior, query/draft precedence, and
+  the `lg` tablet stack fix. Next Council question: use an attended or
+  different capability for physical keyboard, reduced motion, Safari/Firefox,
+  second-device scale, and field-vitals proof; separately obtain Owner choice
+  on the mockup's brighter globe/device/artwork fidelity. Do not infer
+  delivery, legal, or server-side acceptance.
 
-## Current Round 4 handoff — CYC-R4-20260830-01
+## Current Round 17 — CYC-R17-20260830-01
 
-- Round: `council-20260830T214320Z`; start `2026-08-30T21:44:14.4243672Z`.
-- Source: start head `97f7b69522937783e8e3eb2581f0832f1c420f5b`, dirty fingerprint
-  `DC426D4823C140A8820AC26CCCD9DFB4E74CD24646D97B5502372CD6FC9EAEB2`; close
-  head `a12f122ca0ccc08a659acb012f8cc75c6c46db01` (docs-only drift).
-- Runtime: `.codex/runtime/council/council-20260830T214320Z/runtime`, port `5373`.
-- Report: `docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md`.
-- Evidence: `council/evidence/INDEX.md`, favicon frames/ICO, OG capture, and
-  Home visual-gap capture/note.
-- Findings: `CYC-R4-F001` actual first favicon remains Vercel triangle;
-  `CYC-R4-F002` untracked `src/app/scratch-favicon-ico/route.tsx`; retained
-  `CYC-R2-F002` Home visual gap. MetadataBase, Planner email/backend, and
-  keyboard/reduced-motion remain open.
-- Status: complete, published, and closed; no Council guard/runtime is active.
+- Round: `council-20260831T104400Z`; snapshot head
+  `62c6b7e6bb4e36ebc05b59a78f6b98b513ed1858`; start fingerprint
+  `9E720D490C57AA368EA78E5EF74899D4F18F211B53E5C5291303D710CF547005`.
+- Scheduler timestamp: `2026-08-31T10:44:13.466Z`; durable guard start:
+  `2026-08-31T10:44:26.4131184Z`.
+- Status: report published at `2026-08-31T11:09:26.0614187Z` after
+  `25m12.595s` from scheduler minute zero; browser reset and exact cleanup
+  completed at `2026-08-31T11:09:57.1499760Z`.
+- Evidence: `council/evidence/INDEX.md`, Planner validation/Step 2 captures,
+  route-boundary probes, Home viewpoints, and build evidence.
 
-The next Council should verify the effective branded favicon after Builder
-correction, confirm scratch-route cleanup, and run the explicit Planner
-keyboard-only/reduced-motion review. Do not treat the isolated SVG/OG success as
-browser-tab proof, and retain the Owner-gated metadataBase/email decisions.
+Round 17 confirms Planner first-error focus and local progression boundaries,
+documented legal/lifecycle route status, required Home viewpoints, and build
+health. Keep those boundaries stable. The next Council should review the
+post-closeout service-detail routes and service-to-Planner handoff/prefill from
+a fresh snapshot, then use an attended/different capability for keyboard,
+reduced motion, cross-browser, and second-device proof.
 
-## Current Round 3 handoff — CYC-R3-20260830-01
+Post-R17 closeout at `2026-08-31T11:10:02.5800731Z` revealed unreviewed
+Builder/product drift outside the immutable R17 snapshot/runtime. Preserve
+Builder ownership; do not infer acceptance from R17.
 
-- Round: `council-20260830T204540Z`
-- Council identity: `1c574079e1af46caa87ea493142ad829`
-- Source head/fingerprint: `b1f3f4e7f902507be64148c214bace3acb9374b2` /
-  `217D939FCCD963C74A3AED5072A382BF5AF50506EE1E3F5842DD70ABCB7FD78F`
-- Runtime: `.codex/runtime/council/council-20260830T204540Z/runtime`, port `5373`.
-- Report: `docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md`
-- Evidence: `council/evidence/council-20260830T204540Z-r3-live-review.md`
-- Status: complete, published, and closed; no Council guard/runtime is active.
+## Prior Round 16 — CYC-R16-20260830-01
 
-Round 3 independently verified closure of `CYC-R2-F001` (Planner active-step
-visibility), `CYC-R2-F004` (Services/Pricing mobile table reflow), and
-`CYC-R2-F005` (smooth-scroll warning). It also exercised Planner validation,
-mobile navigation, Pricing FAQ disclosure, route-wide semantics/overflow, and
-lint plus a clean production build. Open debt is `CYC-R2-F002` concept visual
-concreteness, `CYC-R2-F003` Owner-gated metadataBase, and the explicit Planner
-keyboard-only/reduced-motion review.
+- Round: `council-20260831T094700Z`; snapshot head
+  `62c6b7e6bb4e36ebc05b59a78f6b98b513ed1858`; start fingerprint
+  `3CB3FBEF12A2CFBAAA9C447B2DDC5FD01CA2D65642A256BD7A8AACF1DC6EDDD7`.
+- Scheduler timestamp: `2026-08-31T09:47:12.417Z`; durable guard start:
+  `2026-08-31T09:47:41.9693393Z`.
+- Status: report published at `2026-08-31T10:12:28.3230153Z` after
+  `25m15.906s` from scheduler minute zero; browser reset and exact cleanup
+  completed at `2026-08-31T10:12:53.2667543Z`.
+- Evidence: `council/evidence/INDEX.md`, final-CTA/Home captures,
+  breakpoint/semantic metrics, route smoke, media HTTP, and build evidence.
 
-The next Council should run that keyboard/reduced-motion Planner pass at
-desktop, tablet, and phone, including focus order, error announcement, progress
-semantics, review/consent boundaries, and behavior after viewport changes.
+Round 16 confirms the committed final-CTA planetary/network slice as coherent,
+responsive, semantic, and materially closer to the approved mockup. Preserve
+its containment, decorative boundary, copy, and `/start` action. The next
+Council should use an attended/different capability for physical keyboard,
+reduced motion, Safari/Firefox, and second-device scale, while the Owner names
+the next largest parity gap.
+
+Post-R17 closeout, at `2026-08-31T11:10:02.5800731Z`, new unreviewed
+Builder/product changes appeared outside the immutable R17 snapshot/runtime:
+service-detail routes, service-to-Planner links/prefill, and related
+configuration/styles. Take a fresh snapshot and review that service-detail /
+Planner handoff slice independently; preserve Builder ownership and do not
+infer acceptance from R17.
+
+## Prior Round 15 — CYC-R15-20260830-01
+## Current Round 15 — CYC-R15-20260830-01
+
+- Round: `council-20260831T084900Z`; snapshot head
+  `061fb00bf74da16ed5b824b77444b3b194de9652`; start fingerprint
+  `0B35F235B04E04AC86671FE74EA9CA0202F0DC7879A69E4E70C903077234CB23`.
+- Scheduler timestamp: `2026-08-31T08:49:11.413Z`; durable guard start:
+  `2026-08-31T08:49:31.0640546Z`.
+- Status: report published at `2026-08-31T09:14:27.4907497Z` after
+  `25m16.077s` from scheduler minute zero; browser reset and exact cleanup
+  completed at `2026-08-31T09:14:54.0428451Z`.
+- Evidence: `council/evidence/INDEX.md`, compact review/captures,
+  route/a11y/control/planner-save audits, full-loop samples, Pricing check,
+  media HTTP proof, and build evidence.
+
+Round 15 confirmed compact containment and utility-flow integrity and observed
+the full Hero Showcase loop seam in Chromium. Keep proven responsive rules and
+the honest concept-art boundary. The next Council should use an attended or
+different capability for physical keyboard traversal, reduced-motion behavior,
+Safari/Firefox parity, and second-device scale; the Owner still chooses the
+largest remaining globe/device/artwork mismatch.
+
+Post-closeout at `2026-08-31T09:16:07.9170640Z`, the working tree gained
+unreviewed final-CTA changes in `src/app/page.tsx`, `src/app/globals.css`, and
+`src/components/final-cta-signal-graphic.tsx`. They were not in the immutable
+R15 snapshot/runtime and were not edited by Council. Snapshot and review this
+final-CTA slice independently before acceptance.
+
+## Prior Round 14 — CYC-R14-20260830-01
+## Current Round 14 — CYC-R14-20260830-01
+
+- Round: `council-20260831T075100Z`; snapshot head
+  `061fb00bf74da16ed5b824b77444b3b194de9652`; start fingerprint
+  `F2A50D189A58054D0BC1899FB5D526E14EFE1C4368BF6EE71692622FE11B2573`.
+- Scheduler timestamp: `2026-08-31T07:51:10.391Z`; durable guard start:
+  `2026-08-31T07:51:40.1950260Z`.
+- Status: report published at `2026-08-31T08:16:26.3022507Z` after
+  `25m15.911s` from scheduler minute zero; browser reset and exact cleanup
+  completed at `2026-08-31T08:17:30.0372871Z`.
+- Evidence: `council/evidence/INDEX.md`, Home mid-page review, clean
+  production Home/Process captures, measurements, route/a11y/control/console
+  audits, media HTTP proof, and build evidence.
+
+Round 14 confirmed the new partnership diagram and five-stage process route as
+coherent, responsive, semantic, and materially closer to the approved visual
+direction. Preserve the responsive connector/card rules. Keep final
+globe/device/artwork parity, full-loop, physical keyboard, cross-browser,
+field-vitals, second-device, and delivery/legal decisions behind Owner or
+attended-capability decisions.
+
+## Prior Round 13 — CYC-R13-20260830-01
+
+- Round: `council-20260831T064900Z`; snapshot head
+  `dc900bb92d1605f3b56c1044a3aa813afbf11d22`; start fingerprint
+  `BABD0863221F2355F27E5F883D532A00C19C4C3F389D0E583A4F8E563B0BBCD1`.
+- Scheduler timestamp: `2026-08-31T06:49:39.226Z`; durable guard start:
+  `2026-08-31T06:50:13.3589754Z`.
+- Status: report published at `2026-08-31T07:15:08.3560196Z` after
+  `25m29.130s` from scheduler minute zero; browser reset and exact cleanup
+  completed at `2026-08-31T07:18:05.1867511Z`.
+- Evidence: `council/evidence/INDEX.md`, R13 FAQ/Contact review, clean
+  production Home/FAQ/Contact captures, route/a11y probes, Work filter and
+  case-study checks, media HTTP/control audit, and build evidence.
+
+Round 13 found the FAQ and Contact utility path coherent, explicit, and
+responsive; empty Contact validation was exercised without external submit.
+All 15 production routes retain one main, one H1, and zero overflow at desktop
+and phone. The approved Home mockup remains more luminous/art-directed than
+the live implementation. Keep final parity, delivery/legal/metadata, full
+loop, physical keyboard, cross-browser, field Web Vitals, and second-device
+scale behind Owner or attended-capability decisions.
+
+Post-publication, the current working tree contains unreviewed modifications
+to `src/app/page.tsx` and `src/app/globals.css` (see
+`council/evidence/council-20260831T064900Z-post-publication-drift.md`). They
+were not in the immutable R13 snapshot/runtime and were not edited by Council;
+the next Council must review them independently.
+
+## Durable open questions
+
+- Owner selects the largest remaining globe/device/artwork discrepancy and
+  accepts the full loop or requests a bounded fidelity slice.
+- Use an attended/different capability for physical keyboard traversal,
+  reduced-motion, Safari/Firefox, field Web Vitals, and second-computer scale.
+- Keep metadataBase, About/Privacy/Terms, and server-side Planner/Contact
+  delivery behind explicit domain, identity, jurisdiction, provider, and
+  retention decisions.
+- Builder rotates the over-cap `CYVEXLY_BUILD_SUMMARY.md`; Council did not edit
+  Builder-owned files.
+
+## Prior Round 12 — CYC-R12-20260830-01
+
+- Round: `council-20260831T054800Z`; immutable snapshot source head
+  `c0a8cc8805fe8bf478f254cdde65e4f8e47a3281`; current workspace HEAD observed
+  later `dc900bb` (documentation/evidence-only drift); start dirty fingerprint
+  `51E05A2AB859FACD2D6E38FEC080D20B3D70A4009616F441FEA186F37923FAD4`.
+- Scheduler timestamp: `2026-08-31T05:48:38.165Z`; durable guard start:
+  `2026-08-31T05:50:50.8938779Z`.
+- Status: report published at `2026-08-31T06:16:37.6938186Z` after
+  `25m46.800s` substantive work; browser reset and exact cleanup completed at
+  `2026-08-31T06:18:15.5043775Z`.
+- Evidence: `council/evidence/INDEX.md`, R12 Hero media follow-up, clean
+  Home desktop/tablet/phone/full captures, connected mobile captures, route
+  probes, media preference/control audits, and opened source frames.
+
+Round 12 independently served the current product in a Council-owned clean
+production runtime. The Home Hero Showcase Video remains contained and
+accessible at desktop/tablet/phone sizes; menu, FAQ, Planner empty validation,
+and explicit Play/Pause all worked. All 15 route targets retained one main,
+one H1, zero overflow, and no missing image alts. Builder's constrained,
+data-saver, reduced-motion, range, and loop evidence materially closes the
+previous media-proof gap. The approved Home mockup remains brighter and more
+art-directed; the complete loop's end-to-start cut still needs Owner viewing.
+
+## Durable open questions
+
+- Owner selects the largest remaining globe/device/artwork discrepancy and
+  accepts the full-loop seam or requests a crossfaded/corrected master.
+- Use an attended/different capability for physical keyboard, reduced-motion,
+  Safari/Firefox, field Web Vitals, and original second-computer scale proof.
+- Keep metadataBase, About/Privacy/Terms, and server-side Planner delivery
+  behind explicit domain, jurisdiction, identity, and email-provider decisions.
+- Builder rotates the over-cap `CYVEXLY_BUILD_SUMMARY.md` before the next green
+  repository-wide hot-file check; Council did not edit Builder-owned files.
 
 ## Recovery facts
 
-- Lane: Cyvexly
-- Review ID: `CYC-R3-20260830-01`
-- Round ID: `council-20260830T204540Z`
-- Council identity: `1c574079e1af46caa87ea493142ad829`
-- Round start: `2026-08-30T20:45:41.8799653Z`
-- Reviewed source custody: Council immutable snapshot/runtime created by `Start-ReviewRound.ps1`.
-- Reviewed source head: `b1f3f4e7f902507be64148c214bace3acb9374b2`
-- Reviewed source dirty fingerprint: `217D939FCCD963C74A3AED5072A382BF5AF50506EE1E3F5842DD70ABCB7FD78F`
-- Reviewed runtime: `.codex/runtime/council/council-20260830T204540Z/runtime`, Council port `5373`.
-
-## Historical Round 2 handoff (superseded)
-
-Round 2 reviewed `/start`, `/process`, `/work`, and `/services` through the
-real in-app browser at desktop `1440×900`, tablet `768×1024`, and phone
-`390×844`. The complete report is
-`docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md` and the live
-evidence is `council/evidence/council-20260830T194545Z-planner-progress.md`.
-
-Open findings: `CYC-R2-F001` active Planner progress step hidden at phone/tablet
-widths; `CYC-R2-F004` Services mobile combinations table clipped in an unlabeled
-horizontal scroller; `CYC-R2-F005` one Next.js smooth-scroll console warning;
-`CYC-R2-F003` Owner domain decision still gates metadataBase; `CYC-R2-F002`
-abstract concept visuals are only a partial closure of the prior gradient gap.
-The next strongest question is the Planner keyboard-only and reduced-motion
-path, including focus order, error announcement, and progress semantics.
-
-## Work actually performed
-
-- Read the complete Council guide, Council Orientation Document, AGENTS entry, assignment, Owner direction, vision index/plan sections, PM prompt, tools/capabilities, Builder evidence, Council state, coverage/debt/watch/environment records, Builder handoff, and current Auditor report.
-- Prepared the isolated Council runtime and installed dependencies from the locked package set.
-- Used the in-app browser against the Council runtime and captured/opened desktop `1440×900`, tablet `768×1024`, and phone `390×844` full-page captures.
-- Exercised the mobile menu open/close flow and FAQ accordion expand/collapse flow.
-- Verified no horizontal overflow at the three required widths, heading/landmark structure, non-empty link names, responsive nav switching, and no browser console warnings/errors during the observed page load.
-- `pnpm exec tsc --noEmit` passed in the Council runtime. A production `pnpm run build` probe stalled in Next/Turbopack and was interrupted; a subsequent dev runtime was started for browser observation.
-
-## Evidence retained
-
-- `docs/agent-system/cyvexly/council/evidence/council-20260830T134231Z-desktop-full.png`
-- `docs/agent-system/cyvexly/council/evidence/council-20260830T134231Z-tablet-full.png`
-- `docs/agent-system/cyvexly/council/evidence/council-20260830T134231Z-phone-full.png`
-- Computed contrast evidence from the reviewed runtime: white on `#1478FF` = `4.07:1`; `#1478FF` on `#EEF4FA` = `3.67:1`; `#16B777` on `#EEF4FA` = `2.35:1`.
-
-## Findings reached
-
-- `CYC-R1-F001` — Priority Now / accessibility: normal-size primary CTA text on `#1478FF` rendered at `4.07:1`, below the `4.5:1` AA threshold; text links using the same blue on arctic background rendered at `3.67:1`. The current working tree later showed an uncommitted color change to `#0F66E0`; successor must re-verify the accepted source rather than assume closure.
-- `CYC-R1-F002` — Next / visual coherence: selected-work cards render as flat CSS gradients in the reviewed runtime while the approved Home mockup calls for large visual project treatments. Replace only with truthful designed concept-work imagery once the case-study surfaces exist; retain explicit Concept project labels.
-- Responsive menu and FAQ interaction were visibly usable at phone size; no overflow was observed at desktop, tablet, or phone.
-
-## Not checked / incomplete
-
-- The stalled production build was not reconciled to a root cause.
-- Full route-by-route navigation beyond the Home flow and an attended pixel-level side-by-side comparison were not completed.
-- Cross-browser, automated accessibility, keyboard-only, reduced-motion runtime,
-  real form submission, and connected Services/Work → Project Planner coverage
-  remain open debt.
-
-## Runtime and cleanup status
-
-- Round 2 published as `CYC-R2-20260830-01` through the collision-safe
-  publisher.
-- Identity-verified cleanup completed successfully; the Council guard and
-  disposable round root were removed, role-owned server processes were stopped,
-  and cited captures/reports were preserved.
-- No Auditor guard was active during reconciliation. No Builder lock, process,
-  port, browser state, or product source was touched.
-
-## Exact next Council action
-
-Read the complete Council guide and this handoff first. Start a fresh Council
-round when new accepted work arrives or the next standing review fires. Inspect
-the Planner keyboard-only and reduced-motion path at desktop, tablet, and phone,
-including focus order, error announcement, progress semantics, review/consent
-boundaries, and behavior after viewport changes.
+- Lane: Cyvexly; role: Council; port: `5373`.
+- R12 publication, browser reset, role-owned process stop, runtime deletion, and
+  guard removal are complete; no Council listener remains on port `5373`.
+- The next Council must create a fresh immutable snapshot and independently
+  reconcile this handoff before choosing another question.

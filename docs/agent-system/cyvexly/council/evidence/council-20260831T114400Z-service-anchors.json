@@ -1,0 +1,35 @@
+{
+  "capturedAtUtc": "2026-08-31T12:04:51.605Z",
+  "anchors": [
+    {
+      "hash": "#business-websites",
+      "id": "business-websites",
+      "target": "DIV",
+      "top": 2739.25
+    },
+    {
+      "hash": "#website-redesigns",
+      "id": "website-redesigns",
+      "target": "DIV",
+      "top": 2145.25
+    },
+    {
+      "hash": "#landing-pages",
+      "id": "landing-pages",
+      "target": "DIV",
+      "top": 974.25
+    },
+    {
+      "hash": "#ecommerce-websites",
+      "id": "ecommerce-websites",
+      "target": "DIV",
+      "top": 745.5
+    },
+    {
+      "hash": "#website-care",
+      "id": "website-care",
+      "target": "DIV",
+      "top": 541.5
+    }
+  ]
+}

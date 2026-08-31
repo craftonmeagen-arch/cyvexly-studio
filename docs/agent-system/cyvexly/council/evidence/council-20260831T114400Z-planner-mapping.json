@@ -1,0 +1,238 @@
+{
+  "capturedAtUtc": "2026-08-31T11:58:31.758Z",
+  "results": [
+    {
+      "slug": "business-websites",
+      "before": {
+        "path": "/start?service=business-websites",
+        "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\nSTEP 1 OF 9\n\nStarting point added: Business websites. We selected the closest Planner options for you. You can change every answer before sending.\n\n01 About you\nFull name*\nWork email*\nPhone or preferred contact method*\nRole / title\nCompany name\nCountry and time zone\nWho else will approve the project?\n← Back\nSave & continue later\nContinue →\n●\nNo payment required\n●\nWe respond within two business days\nWhat happens next\n1\nWe plan your project\nWe review your answers and create a tailored project plan.\n2\nYou review & refine\nWe share the plan for your feedback and confirmation.\n3\nWe build & launch\nOnce approved, we design, build, and launch your site.\n\nCYVEXLY STUDIO\n\nIndependent web design and development studio. Remote & worldwide.\n\nAvailable for new projects\n\nSTUDIO\nServices\nWork\nPricing\nProcess\nAbout\nSERVICES\nBusiness websites\nWebsite redesigns\nLanding pages\nE-commerce websites\nWebsite care\nCONTACT\nhell",
+        "overflow": false
+      },
+      "fill": true,
+      "continue1": true,
+      "step2": {
+        "step": "02 The business",
+        "fields": [
+          "planner-company-website",
+          "businessDescription",
+          "productsServices",
+          "currentWebsite",
+          "customerGroups",
+          "competitors",
+          "differentiation"
+        ]
+      },
+      "fill2": true,
+      "continue2": true,
+      "step3": {
+        "step": "03 Goals",
+        "checked": [
+          {
+            "name": "primaryGoal",
+            "value": "credibility"
+          }
+        ]
+      },
+      "continue3": true,
+      "step4": {
+        "step": "04 Website & pages",
+        "checked": [
+          {
+            "name": "websiteType",
+            "value": "business-site"
+          }
+        ],
+        "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n4\n5\n6\n7\n8\n9\n\nSTEP 4 OF 9\n\n04 Website & pages\nWhat kind of website do you need?*\nLanding page\nA focused page for one goal or campaign.\nBusiness site\nA complete site for your business.\nPortfolio\nShowcase your work and case studies.\nBlog / publication\nContent-first, regularly updated.\nE-commerce\nSell products or services online.\nNonprofit / community\nMission, programs, and support.\nEvent\nA single event or recurring series.\nMembership\nGated content or member accounts.\nRedesign\nRefresh and improve an existing site.\nNot sure\nWe'll help you figure out the right fit.\nWhich pages should it include?\nHome\nAbout\nServices\nIndividual service pages\nWork / Portfolio\nCase studies\nProducts / Shop\nBlog / Insights\nResources\nTeam\nCareers\nPricing\nFAQ\nBooking\nContact\nPolicies\nAccount / member pages\nOther\nNot sure — recommend the sitemap. We'll suggest the right pages for your goals.\nApproximate page count (optional)\n\nThis helps us plan the right structure.\n\nDoes an existing site need content migration?\nSelect one\nYes\nNo\nNot sure\nAre multiple languages needed?\nSelect one\nYes\nNo\nNot sure\n← Back\nSave & continue later\nContinue →\n●\nNo payment"
+      }
+    },
+    {
+      "slug": "website-redesigns",
+      "before": {
+        "path": "/start?service=website-redesigns",
+        "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\nSTEP 1 OF 9\n\nStarting point added: Website redesigns. We selected the closest Planner options for you. You can change every answer before sending.\n\n01 About you\nFull name*\nWork email*\nPhone or preferred contact method*\nRole / title\nCompany name\nCountry and time zone\nWho else will approve the project?\n← Back\nSave & continue later\nContinue →\n●\nNo payment required\n●\nWe respond within two business days\nWhat happens next\n1\nWe plan your project\nWe review your answers and create a tailored project plan.\n2\nYou review & refine\nWe share the plan for your feedback and confirmation.\n3\nWe build & launch\nOnce approved, we design, build, and launch your site.\n\nCYVEXLY STUDIO\n\nIndependent web design and development studio. Remote & worldwide.\n\nAvailable for new projects\n\nSTUDIO\nServices\nWork\nPricing\nProcess\nAbout\nSERVICES\nBusiness websites\nWebsite redesigns\nLanding pages\nE-commerce websites\nWebsite care\nCONTACT\nhell",
+        "overflow": false
+      },
+      "fill": true,
+      "continue1": true,
+      "step2": {
+        "step": "02 The business",
+        "fields": [
+          "planner-company-website",
+          "businessDescription",
+          "productsServices",
+          "currentWebsite",
+          "customerGroups",
+          "competitors",
+          "differentiation"
+        ]
+      },
+      "fill2": true,
+      "continue2": true,
+      "step3": {
+        "step": "03 Goals",
+        "checked": [
+          {
+            "name": "primaryGoal",
+            "value": "replace"
+          }
+        ]
+      },
+      "continue3": true,
+      "step4": {
+        "step": "04 Website & pages",
+        "checked": [
+          {
+            "name": "websiteType",
+            "value": "redesign"
+          }
+        ],
+        "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n4\n5\n6\n7\n8\n9\n\nSTEP 4 OF 9\n\n04 Website & pages\nWhat kind of website do you need?*\nLanding page\nA focused page for one goal or campaign.\nBusiness site\nA complete site for your business.\nPortfolio\nShowcase your work and case studies.\nBlog / publication\nContent-first, regularly updated.\nE-commerce\nSell products or services online.\nNonprofit / community\nMission, programs, and support.\nEvent\nA single event or recurring series.\nMembership\nGated content or member accounts.\nRedesign\nRefresh and improve an existing site.\nNot sure\nWe'll help you figure out the right fit.\nWhich pages should it include?\nHome\nAbout\nServices\nIndividual service pages\nWork / Portfolio\nCase studies\nProducts / Shop\nBlog / Insights\nResources\nTeam\nCareers\nPricing\nFAQ\nBooking\nContact\nPolicies\nAccount / member pages\nOther\nNot sure — recommend the sitemap. We'll suggest the right pages for your goals.\nApproximate page count (optional)\n\nThis helps us plan the right structure.\n\nDoes an existing site need content migration?\nSelect one\nYes\nNo\nNot sure\nAre multiple languages needed?\nSelect one\nYes\nNo\nNot sure\n← Back\nSave & continue later\nContinue →\n●\nNo payment"
+      }
+    },
+    {
+      "slug": "landing-pages",
+      "before": {
+        "path": "/start?service=landing-pages",
+        "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\nSTEP 1 OF 9\n\nStarting point added: Landing pages. We selected the closest Planner options for you. You can change every answer before sending.\n\n01 About you\nFull name*\nWork email*\nPhone or preferred contact method*\nRole / title\nCompany name\nCountry and time zone\nWho else will approve the project?\n← Back\nSave & continue later\nContinue →\n●\nNo payment required\n●\nWe respond within two business days\nWhat happens next\n1\nWe plan your project\nWe review your answers and create a tailored project plan.\n2\nYou review & refine\nWe share the plan for your feedback and confirmation.\n3\nWe build & launch\nOnce approved, we design, build, and launch your site.\n\nCYVEXLY STUDIO\n\nIndependent web design and development studio. Remote & worldwide.\n\nAvailable for new projects\n\nSTUDIO\nServices\nWork\nPricing\nProcess\nAbout\nSERVICES\nBusiness websites\nWebsite redesigns\nLanding pages\nE-commerce websites\nWebsite care\nCONTACT\nhello@cy",
+        "overflow": false
+      },
+      "fill": true,
+      "continue1": true,
+      "step2": {
+        "step": "02 The business",
+        "fields": [
+          "planner-company-website",
+          "businessDescription",
+          "productsServices",
+          "currentWebsite",
+          "customerGroups",
+          "competitors",
+          "differentiation"
+        ]
+      },
+      "fill2": true,
+      "continue2": true,
+      "step3": {
+        "step": "03 Goals",
+        "checked": [
+          {
+            "name": "primaryGoal",
+            "value": "launch"
+          }
+        ]
+      },
+      "continue3": true,
+      "step4": {
+        "step": "04 Website & pages",
+        "checked": [
+          {
+            "name": "websiteType",
+            "value": "landing-page"
+          }
+        ],
+        "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n4\n5\n6\n7\n8\n9\n\nSTEP 4 OF 9\n\n04 Website & pages\nWhat kind of website do you need?*\nLanding page\nA focused page for one goal or campaign.\nBusiness site\nA complete site for your business.\nPortfolio\nShowcase your work and case studies.\nBlog / publication\nContent-first, regularly updated.\nE-commerce\nSell products or services online.\nNonprofit / community\nMission, programs, and support.\nEvent\nA single event or recurring series.\nMembership\nGated content or member accounts.\nRedesign\nRefresh and improve an existing site.\nNot sure\nWe'll help you figure out the right fit.\nWhich pages should it include?\nHome\nAbout\nServices\nIndividual service pages\nWork / Portfolio\nCase studies\nProducts / Shop\nBlog / Insights\nResources\nTeam\nCareers\nPricing\nFAQ\nBooking\nContact\nPolicies\nAccount / member pages\nOther\nNot sure — recommend the sitemap. We'll suggest the right pages for your goals.\nApproximate page count (optional)\n\nThis helps us plan the right structure.\n\nDoes an existing site need content migration?\nSelect one\nYes\nNo\nNot sure\nAre multiple languages needed?\nSelect one\nYes\nNo\nNot sure\n← Back\nSave & continue later\nContinue →\n●\nNo payment"
+      }
+    },
+    {
+      "slug": "ecommerce-websites",
+      "before": {
+        "path": "/start?service=ecommerce-websites",
+        "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\nSTEP 1 OF 9\n\nStarting point added: E-commerce websites. We selected the closest Planner options for you. You can change every answer before sending.\n\n01 About you\nFull name*\nWork email*\nPhone or preferred contact method*\nRole / title\nCompany name\nCountry and time zone\nWho else will approve the project?\n← Back\nSave & continue later\nContinue →\n●\nNo payment required\n●\nWe respond within two business days\nWhat happens next\n1\nWe plan your project\nWe review your answers and create a tailored project plan.\n2\nYou review & refine\nWe share the plan for your feedback and confirmation.\n3\nWe build & launch\nOnce approved, we design, build, and launch your site.\n\nCYVEXLY STUDIO\n\nIndependent web design and development studio. Remote & worldwide.\n\nAvailable for new projects\n\nSTUDIO\nServices\nWork\nPricing\nProcess\nAbout\nSERVICES\nBusiness websites\nWebsite redesigns\nLanding pages\nE-commerce websites\nWebsite care\nCONTACT\nhe",
+        "overflow": false
+      },
+      "fill": true,
+      "continue1": true,
+      "step2": {
+        "step": "02 The business",
+        "fields": [
+          "planner-company-website",
+          "businessDescription",
+          "productsServices",
+          "currentWebsite",
+          "customerGroups",
+          "competitors",
+          "differentiation"
+        ]
+      },
+      "fill2": true,
+      "continue2": true,
+      "step3": {
+        "step": "03 Goals",
+        "checked": [
+          {
+            "name": "primaryGoal",
+            "value": "sell"
+          }
+        ]
+      },
+      "continue3": true,
+      "step4": {
+        "step": "04 Website & pages",
+        "checked": [
+          {
+            "name": "websiteType",
+            "value": "ecommerce"
+          }
+        ],
+        "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n4\n5\n6\n7\n8\n9\n\nSTEP 4 OF 9\n\n04 Website & pages\nWhat kind of website do you need?*\nLanding page\nA focused page for one goal or campaign.\nBusiness site\nA complete site for your business.\nPortfolio\nShowcase your work and case studies.\nBlog / publication\nContent-first, regularly updated.\nE-commerce\nSell products or services online.\nNonprofit / community\nMission, programs, and support.\nEvent\nA single event or recurring series.\nMembership\nGated content or member accounts.\nRedesign\nRefresh and improve an existing site.\nNot sure\nWe'll help you figure out the right fit.\nWhich pages should it include?\nHome\nAbout\nServices\nIndividual service pages\nWork / Portfolio\nCase studies\nProducts / Shop\nBlog / Insights\nResources\nTeam\nCareers\nPricing\nFAQ\nBooking\nContact\nPolicies\nAccount / member pages\nOther\nNot sure — recommend the sitemap. We'll suggest the right pages for your goals.\nApproximate page count (optional)\n\nThis helps us plan the right structure.\n\nDoes an existing site need content migration?\nSelect one\nYes\nNo\nNot sure\nAre multiple languages needed?\nSelect one\nYes\nNo\nNot sure\n← Back\nSave & continue later\nContinue →\n●\nNo payment"
+      }
+    },
+    {
+      "slug": "website-care",
+      "before": {
+        "path": "/start?service=website-care",
+        "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\nSTEP 1 OF 9\n\nStarting point added: Website care. We selected the closest Planner options for you. You can change every answer before sending.\n\n01 About you\nFull name*\nWork email*\nPhone or preferred contact method*\nRole / title\nCompany name\nCountry and time zone\nWho else will approve the project?\n← Back\nSave & continue later\nContinue →\n●\nNo payment required\n●\nWe respond within two business days\nWhat happens next\n1\nWe plan your project\nWe review your answers and create a tailored project plan.\n2\nYou review & refine\nWe share the plan for your feedback and confirmation.\n3\nWe build & launch\nOnce approved, we design, build, and launch your site.\n\nCYVEXLY STUDIO\n\nIndependent web design and development studio. Remote & worldwide.\n\nAvailable for new projects\n\nSTUDIO\nServices\nWork\nPricing\nProcess\nAbout\nSERVICES\nBusiness websites\nWebsite redesigns\nLanding pages\nE-commerce websites\nWebsite care\nCONTACT\nhello@cyv",
+        "overflow": false
+      },
+      "fill": true,
+      "continue1": true,
+      "step2": {
+        "step": "02 The business",
+        "fields": [
+          "planner-company-website",
+          "businessDescription",
+          "productsServices",
+          "currentWebsite",
+          "customerGroups",
+          "competitors",
+          "differentiation"
+        ]
+      },
+      "fill2": true,
+      "continue2": true,
+      "step3": {
+        "step": "03 Goals",
+        "checked": [
+          {
+            "name": "primaryGoal",
+            "value": "credibility"
+          }
+        ]
+      },
+      "continue3": true,
+      "step4": {
+        "step": "04 Website & pages",
+        "checked": [
+          {
+            "name": "websiteType",
+            "value": "not-sure"
+          }
+        ],
+        "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n4\n5\n6\n7\n8\n9\n\nSTEP 4 OF 9\n\n04 Website & pages\nWhat kind of website do you need?*\nLanding page\nA focused page for one goal or campaign.\nBusiness site\nA complete site for your business.\nPortfolio\nShowcase your work and case studies.\nBlog / publication\nContent-first, regularly updated.\nE-commerce\nSell products or services online.\nNonprofit / community\nMission, programs, and support.\nEvent\nA single event or recurring series.\nMembership\nGated content or member accounts.\nRedesign\nRefresh and improve an existing site.\nNot sure\nWe'll help you figure out the right fit.\nWhich pages should it include?\nHome\nAbout\nServices\nIndividual service pages\nWork / Portfolio\nCase studies\nProducts / Shop\nBlog / Insights\nResources\nTeam\nCareers\nPricing\nFAQ\nBooking\nContact\nPolicies\nAccount / member pages\nOther\nNot sure — recommend the sitemap. We'll suggest the right pages for your goals.\nApproximate page count (optional)\n\nThis helps us plan the right structure.\n\nDoes an existing site need content migration?\nSelect one\nYes\nNo\nNot sure\nAre multiple languages needed?\nSelect one\nYes\nNo\nNot sure\n← Back\nSave & continue later\nContinue →\n●\nNo payment"
+      },
+      "carePath": {
+        "notSurePages": true,
+        "continue4": true,
+        "notSureFeatures": true,
+        "continue5": true,
+        "continue6": true,
+        "continue7": true,
+        "step8": {
+          "step": "08 Budget & timing",
+          "careInterest": "Yes",
+          "text": "CYVEXLY STUDIO\nOpen menu\n\nPROJECT PLANNER\n\nTell us what you need. We'll shape the right route.\n\nA calm, conversational brief in nine short steps. Choose “not sure — recommend it” anywhere technical knowledge would otherwise be required. No payment is requested here.\n\n8\n9\n\nSTEP 8 OF 9\n\n08 Budget & timing\nBudget range*\n$1,800–$3,000\n$3,000–$5,000\n$5,000–$8,000\n$8,000–$15,000\n$15,000+\nNot sure — recommend a scope\nDesired launch date\nWhy that date matters\nTiming*\nFlexible\n2–4 weeks\n1–2 months\n2–3 months\n3+ months\nCan content and decision-makers meet that timing?\nSelect one\nYes, we can meet that timing\nMostly, with some support\nNot yet — we'll need help staying on track\nInterest in ongoing care after launch?\nSelect one\nYes\nNo\nNot sure yet\n← Back\nSave & continue later\nContinue →\n●\nNo payment required\n●\nWe respond within two business days\nWhat happens next\n1\nWe plan your project\nWe review your answers and create a tailored project plan.\n2\nYou review & refine\nWe share the plan for your feedback and confirmation.\n3\nWe build & launch\nOnce approved, we design, build, and launch your site.\n\nCYVEXLY STUDIO\n\nIndependent web design and development studio. Remote & worldwide.\n\nAvailable for new pr"
+        }
+      }
+    }
+  ]
+}

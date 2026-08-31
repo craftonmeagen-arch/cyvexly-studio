@@ -1,0 +1,50 @@
+{
+  "desktop": {
+    "connector": "\"\"",
+    "icons": 5,
+    "nodes": 5,
+    "overflow": false,
+    "panel": {
+      "bottom": 2323.84375,
+      "height": 313.109375,
+      "left": 160.5,
+      "right": 1264.5,
+      "top": 2010.734375,
+      "width": 1104,
+      "x": 160.5,
+      "y": 2010.734375
+    },
+    "steps": 5,
+    "svgHidden": "true"
+  },
+  "tablet": {
+    "connector": "none",
+    "overflow": false,
+    "panel": {
+      "bottom": 3080.71875,
+      "height": 363,
+      "left": 24,
+      "right": 729,
+      "top": 2717.71875,
+      "width": 705,
+      "x": 24,
+      "y": 2717.71875
+    },
+    "steps": 5
+  },
+  "phone": {
+    "connector": "none",
+    "overflow": false,
+    "panel": {
+      "bottom": 4546.015625,
+      "height": 574.828125,
+      "left": 24,
+      "right": 351,
+      "top": 3971.1875,
+      "width": 327,
+      "x": 24,
+      "y": 3971.1875
+    },
+    "steps": 5
+  }
+}

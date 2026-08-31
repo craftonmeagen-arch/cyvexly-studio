@@ -1,0 +1,29 @@
+{
+  "menu": {
+    "expanded": "true",
+    "overflow": false,
+    "visibleMenuText": true
+  },
+  "playback": {
+    "pre14": {
+      "label": "Pause showcase video",
+      "paused": false
+    },
+    "paused14": {
+      "label": "Play showcase video",
+      "paused": true
+    },
+    "resumed14": {
+      "label": "Pause showcase video",
+      "paused": false
+    }
+  },
+  "media": {
+    "partnershipAriaHidden": "true",
+    "video": {
+      "loop": true,
+      "muted": true,
+      "src": "http://localhost:5373/media/cyvexly-services-loop.mp4"
+    }
+  }
+}

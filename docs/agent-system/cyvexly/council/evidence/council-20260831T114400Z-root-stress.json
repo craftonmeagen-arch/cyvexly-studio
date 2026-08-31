@@ -1,0 +1,32 @@
+{
+  "capturedAtUtc": "2026-08-31T12:00:26.894Z",
+  "checks": [
+    {
+      "name": "services",
+      "path": "/services",
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-services-24px-viewport.png",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": false,
+      "h1": "Everything your business website needs."
+    },
+    {
+      "name": "business-detail",
+      "path": "/services/business-websites",
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-business-detail-24px-viewport.png",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": false,
+      "h1": "Turn your expertise into a website people understand and trust."
+    },
+    {
+      "name": "ecommerce-detail",
+      "path": "/services/ecommerce-websites",
+      "screenshot": "C:/app projects/website/docs/agent-system/cyvexly/council/evidence/council-20260831T114400Z-ecommerce-detail-24px-viewport.png",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflow": false,
+      "h1": "Make products easier to understand, choose, and buy."
+    }
+  ]
+}

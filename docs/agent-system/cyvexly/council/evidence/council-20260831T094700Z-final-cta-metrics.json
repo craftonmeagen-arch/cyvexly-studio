@@ -1,0 +1,65 @@
+[
+  {
+    "align": "left",
+    "clientWidth": 1425,
+    "graphic": {
+      "ariaHidden": "true",
+      "pointer": "none",
+      "role": "presentation",
+      "svgCount": 1
+    },
+    "heading": "Ready to build something extraordinary?",
+    "label": "desktop",
+    "links": 1,
+    "overflow": false,
+    "panel": {
+      "height": 338,
+      "width": 1104,
+      "x": 160.5,
+      "y": 3948.671875
+    },
+    "scrollWidth": 1425
+  },
+  {
+    "align": "left",
+    "clientWidth": 753,
+    "graphic": {
+      "ariaHidden": "true",
+      "pointer": "none",
+      "role": "presentation",
+      "svgCount": 1
+    },
+    "heading": "Ready to build something extraordinary?",
+    "label": "tablet",
+    "links": 1,
+    "overflow": false,
+    "panel": {
+      "height": 416,
+      "width": 705,
+      "x": 24,
+      "y": 5328.953125
+    },
+    "scrollWidth": 753
+  },
+  {
+    "align": "center",
+    "clientWidth": 375,
+    "graphic": {
+      "ariaHidden": "true",
+      "pointer": "none",
+      "role": "presentation",
+      "svgCount": 1
+    },
+    "heading": "Ready to build something extraordinary?",
+    "label": "phone",
+    "links": 1,
+    "overflow": false,
+    "panel": {
+      "height": 432,
+      "width": 327,
+      "x": 24,
+      "y": 8358.40625
+    },
+    "scrollWidth": 375
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/start",
+    "skips": [],
+    "title": "Project Planner — Cyvexly Studio",
+    "unnamed": 6
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/accessibility",
+    "skips": [],
+    "title": "Accessibility Statement — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/about",
+    "skips": [],
+    "title": "Page not found — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/privacy",
+    "skips": [],
+    "title": "Page not found — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/terms",
+    "skips": [],
+    "title": "Page not found — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/start",
+    "skips": [],
+    "title": "Project Planner — Cyvexly Studio",
+    "unnamed": 6
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/accessibility",
+    "skips": [],
+    "title": "Accessibility Statement — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/about",
+    "skips": [],
+    "title": "Page not found — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/privacy",
+    "skips": [],
+    "title": "Page not found — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/terms",
+    "skips": [],
+    "title": "Page not found — Cyvexly Studio",
+    "unnamed": 0
+  }
+]

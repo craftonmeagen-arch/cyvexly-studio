@@ -529,3 +529,1506 @@ route findings are closed. Builder commit `da9c6d9` landed after snapshot and
 requires fresh independent Planner validation-focus verification. Preserve
 cited captures and retain the Owner-gated metadata/email/artwork,
 keyboard/reduced-motion, and post-snapshot verification questions.
+
+
+---
+
+<!-- council review CYC-R6-20260830-01 published 2026-08-31T00:06:21.8462568Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R6-20260830-01`
+- Role: Cyvexly Product Quality Assurance & Methods Council
+- Round: `council-20260830T233900Z`
+- Round started: `2026-08-30T23:40:00.8568280Z`
+- Source head at start and close: `4fb7c017ca6596d2ee906a5e569874119a6541fd`
+- Start dirty fingerprint: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- Council runtime: `.codex/runtime/council/council-20260830T233900Z/runtime`, port `5373`
+- Council nonce: `d3c81158b415406a8f4ebe7cd9da21e9`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected; latest report `IFA-2026-08-30-R3` is retained as stale evidence
+
+## Executive brief
+
+Round 6 served the first Council snapshot containing Builder commit `da9c6d9`
+and the truthful case-study label cleanup `4bdab10`. Home was opened at
+`1440×900`, `768×1024`, and `390×844`; Planner was opened at desktop and phone;
+the full public route slice was smoke-tested at phone width. The current
+responsive layout is coherent and the abstract concept-work disclosure is
+consistent across Home, Services, and Work. The new Planner DOM semantics are
+present, but this unattended browser session could not produce a trustworthy
+React validation activation, so the prior post-snapshot finding remains
+unconfirmed rather than being closed by source inspection or Builder evidence.
+
+## Accepted work and direct observation
+
+Since R5, the accepted source includes:
+
+- `da9c6d9`: Planner `focusFirstError`, stable group names, `aria-invalid`,
+  `aria-describedby`, and linked `role=alert` IDs for radio/checkbox groups.
+- `4bdab10`: case-study artwork accessible label now says `abstract concept
+  visual`, matching the truthful concept framing.
+
+Opened captures show the current Home hero, selected-work concept cards,
+capability grid, process/pricing/FAQ sections, CTA, and footer without visible
+desktop/tablet/phone clipping. The tablet and phone headers switch to the menu
+button; selected-work cards remain readable stacked cards. Compared side by
+side with approved `mockups/01-home.png`, the source is a calmer, lower-fidelity
+implementation: the approved mockup's photographic/high-fidelity treatments and
+iconography are not present. This is the already-routed Owner decision about
+abstract versus commissioned/higher-fidelity concept artwork, not permission to
+invent assets.
+
+The Planner at phone and desktop presents the nine-step rail and Step 1 fields
+within the approved interaction model. The new source semantics are visible in
+the served DOM: named checkbox groups, invalid fieldsets, error IDs, and alert
+messages when the validation state is reached. The in-app Playwright and DOM/CUA
+activation paths did not trigger the client React handler in this unattended
+session; focus stayed on `Continue →`. A separate Council-owned Chrome/CDP
+probe recorded native Enter events and exact `390px`/`1440px` metrics, but its
+activation did not transition the form either. This is a harness limitation,
+not a product defect claim.
+
+## Verification
+
+- In-app browser captures opened: Home desktop/tablet/phone and Planner
+  desktop/phone; evidence is indexed in `council/evidence/INDEX.md`.
+- Phone route smoke covered `/`, `/services`, `/work`, `/pricing`, `/process`,
+  `/contact`, `/faq`, `/accessibility`, `/start`, all three case studies,
+  `/about`, `/privacy`, and `/terms`: each exposed one `h1` and `main`, no empty
+  image alts, no unnamed links, `scrollWidth === clientWidth`, and no console
+  warning/error in the observed load.
+- Direct served probes returned 200 for Home, Planner, case study, OG image,
+  favicon, SVG icon, and robots. The first icon link is the branded ICO route;
+  the scratch product route is absent.
+- `pnpm run build` passed; it reproduced the known Owner-gated
+  `metadataBase` localhost warning. `pnpm exec tsc --noEmit` and `pnpm exec
+  eslint src` passed.
+
+## Findings and dispositions
+
+### CYC-R5-F001 — Unconfirmed / method-limited — Planner validation focus
+
+The Builder's first-error focus change is present in the accepted source and
+the group error semantics are visible in the current DOM. Council's own
+unattended activation could not produce a real React transition, so it cannot
+independently claim that `requestAnimationFrame` focuses `input#fullName` after
+empty-step validation. Do not promote Builder evidence to Council closure.
+
+**Retry condition:** an attended or differently capable browser must activate
+the empty Step 1 Continue action and capture focused `input#fullName`, all three
+linked alerts, and the desktop/phone overflow state; repeat for radio/checkbox
+groups and reduced motion.
+
+### Retained Owner-gated boundaries
+
+- `CYC-R2-F003`: public domain before `metadataBase`, canonical, sitemap, and
+  indexability launch wiring.
+- `CYV-IFA-006`: server-side Planner submission/confirmation/email provider,
+  consent, and retention choices.
+- About founder identity, Privacy/Terms jurisdiction facts, and the Owner's
+  abstract-artwork release framing.
+- Physical keyboard hardware, reduced-motion visual behavior, cross-browser
+  traversal, deployment, and real external mail side effects remain unclaimed.
+
+No previously closed favicon, scratch-route, or cross-surface concept-visual
+finding was reopened.
+
+## Methods assessment and next Builder plan
+
+The round sequence is converging: shared concept rendering and label truth are
+stable, and the new Planner semantics are inspectable. The remaining method
+gap is capability-specific, not a reason to repeat hidden-browser clicks. The
+next Builder work should wait for Owner inputs, then implement production
+metadata and server-side Planner delivery in a sandbox recipient with explicit
+success/error/retry and data-retention behavior. The next Council question is
+production metadata/submission readiness after those decisions, followed by a
+genuinely attended/different-capability keyboard and reduced-motion pass.
+
+## Evidence and scope limits
+
+Evidence: `council/evidence/council-20260830T233900Z-planner-focus-review.md`,
+the five opened PNG captures, `council-20260830T233900Z-planner-cdp.json`, and
+`council-20260830T233900Z-route-smoke.json`. Council did not edit product source,
+tests, `.engine-lock`, Builder resources, or Auditor resources; no valid form
+submission, external mail, deployment, credential, or production-domain action
+was attempted.
+
+
+---
+
+<!-- council review CYC-R7-20260830-01 published 2026-08-31T00:58:09.6361199Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R7-20260830-01`
+- Role: Cyvexly Product Quality Assurance & Methods Council
+- Round: `council-20260831T004000Z`
+- Round started: `2026-08-31T00:40:48.1991788Z` (scheduler start window)
+- Source head at snapshot: `8ec27c1573312a5fbb58c8d69018da263b338b0d`
+- Start dirty fingerprint: `B83368CEE13A42589577CB67911F296E98DDD050478A6429D4E52432BCE5A655`
+- Council runtime: `.codex/runtime/council/council-20260831T004000Z/runtime`, port `5373`
+- Council nonce: `bb4b148807834049b11f3e7ebb9ab753`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected; latest `IFA-2026-08-30-R3` retained as stale evidence
+
+## Executive brief
+
+Round 7 freshly served Builder commit `8ec27c1`, which repairs the cross-
+computer scale sensitivity at the shared design-system layer and deepens the
+glassy/futuristic treatment. Home was opened at desktop, tablet, and phone;
+Services and Work were opened at phone; Planner was opened at phone. The live
+runtime is responsive and coherent with no measured horizontal overflow. The
+accepted mockup remains a higher visual bar, so final glass/artwork parity stays
+Owner-gated rather than being self-certified.
+
+The prior Planner finding is now partially independently verified: empty Step 1
+focuses `input#fullName` and exposes three linked alerts. The same fresh runtime
+reached the Goals radio/checkbox groups and exposed the correct invalid fieldset
+and error ID, but grouped focus was not observable because the focus helper is
+scheduled through the unattended browser's suspended `requestAnimationFrame`.
+
+## Accepted work and direct observation
+
+The Home capture shows the new body atmospheric glow, 44px signal-grid,
+dimensional `.glass-panel` surfaces, glassier sticky header/mobile menu,
+luminous gradient CTA, and orbit halo/gloss/rim. At phone width the hero,
+project cards, capability cards, process, pricing, FAQ, CTA, and footer remain
+readable and stacked without visible clipping. Services and Work preserve their
+shared glass cards and truthful `CONCEPT PROJECT` disclosures at phone width.
+
+Compared side by side with `mockups/01-home.png`, the current product is calmer
+and less dense: the mockup includes luminous device/project treatments and
+iconography that the current abstract concept system intentionally does not
+claim. The implementation is honest and coherent; the Owner must decide
+whether higher-fidelity commissioned artwork is required for release parity.
+
+## Responsive and interaction verification
+
+The live computed state was measured as follows:
+
+| CSS viewport | Root | H1 | Header | Primary nav | Mobile menu | Overflow |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1440 | 16px | 48px | 79px | visible | hidden | 0px |
+| 1024 | 16px | 48px | 79px | visible | hidden | 0px |
+| 720 | 16px | 48px | 73px | hidden | visible | 0px |
+| 390 | 16px | 36px | 73px | hidden | visible | 0px |
+
+The mobile menu opened directly in the in-app browser (`aria-expanded=true`,
+`#mobile-nav` visible). The first FAQ disclosure opened with
+`aria-expanded=true`. On `/start`, empty Step-1 Continue produced:
+
+- active element `input#fullName`;
+- alerts for name, email, and preferred contact method;
+- `input#fullName[aria-describedby="fullName-error"]`.
+
+Test-safe local values advanced into Goals. Empty primary-goal Continue
+produced the expected alert and an invalid fieldset with
+`aria-describedby="primaryGoal-error"`. Its focus was not promoted to a
+Council closure because the source schedules focus through `requestAnimationFrame`
+and this unattended renderer does not expose that frame callback reliably.
+
+## Findings and dispositions
+
+### CYC-R5-F001 — Partially confirmed / method-limited — Planner validation focus
+
+Council independently confirms the Step-1 first-error focus and all three linked
+alerts in the fresh runtime. Radio/checkbox group error semantics are present,
+but group focus remains unconfirmed in this unattended capability. Retry in an
+attended or genuinely different browser at desktop and phone, including grouped
+controls and reduced motion; do not repeat hidden-browser clicks as a substitute.
+
+### CYC-R7-F001 — Implemented, Owner confirmation pending — responsive scale repair
+
+The pinned 16px design root and CSS-pixel breakpoints produce the expected
+desktop/compact navigation and zero overflow at 1440, 1024, 720, and 390 CSS
+pixels in the Council-owned runtime. The original second computer has not been
+directly inspected, so Owner confirmation remains the closure test.
+
+### Retained Owner-gated boundaries
+
+- Public `metadataBase`, canonical URLs, sitemap, and indexability remain
+  blocked on the approved production domain (`CYC-R2-F003` / `CYV-IFA-005`).
+- Server-side Planner confirmation/email, consent, and retention remain
+  blocked on provider decisions (`CYV-IFA-006`).
+- About founder facts, Privacy/Terms jurisdiction, and abstract-versus-
+  higher-fidelity concept artwork remain Owner decisions.
+- Physical keyboard, visible reduced motion, cross-browser behavior,
+  deployment, and real external mail side effects remain unclaimed.
+
+## Methods assessment and next Builder plan
+
+Round 9's shared-layer approach is producing measurable progress: a root-cause
+scale fix was applied once at the design-system layer and the glass pass is
+coherent across multiple surfaces. The next Builder action should be driven by
+Owner confirmation of the second-device scale and largest remaining mockup
+fidelity gap, then by the domain/email/legal decisions. Do not add speculative
+artwork or production claims. Once those decisions arrive, implement and verify
+production metadata and server-side Planner delivery with explicit success,
+error, retry, consent, and retention behavior. The next Council should use an
+attended/different capability for grouped focus, physical keyboard, and reduced
+motion, then repeat route and static metadata checks.
+
+## Verification scope and evidence
+
+Evidence: `council/evidence/council-20260831T004000Z-round-review.md`, opened
+Home/Services/Work/Planner captures, and `council/evidence/INDEX.md`. The Council
+build probe was started but did not return while the dev runtime and Next build
+workers shared the disposable `.next` tree; therefore no fresh Council build
+pass is claimed. The Builder's round-9 lint/build/typecheck evidence is kept
+separately attributed. No product source, tests, `.engine-lock`, Builder or
+Auditor resources, external integrations, valid form submission, or external
+mail side effect was modified or attempted.
+
+
+---
+
+<!-- council review CYC-R8-20260830-01 published 2026-08-31T01:25:33.9229510Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R8-20260830-01`
+- Role: Cyvexly Product Quality Assurance & Methods Council
+- Round: `council-20260831T010000Z`
+- Round started: `2026-08-31T01:00:11.4828032Z`
+- Source head at snapshot: `85a1d2b995a877bf936937e63314d08cd547149b`
+- Start dirty fingerprint: `769DC08C1926E560D8B337CC453929EDFE776DCF6CC1C8F069EFD70D8F8DF990`
+- Current repository head at close: `95232d5c1b94afc61f676c0706663f2f60638176`
+  (post-snapshot Builder CTA contrast commit was not reviewed in this runtime)
+- Council runtime: `.codex/runtime/council/council-20260831T010000Z/runtime`, port `5373`
+- Council nonce: `5d52e05ae7a449c3beefa9c735e7d07c`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected; latest `IFA-2026-08-30-R3` retained as stale evidence
+
+## Executive brief
+
+Round 8 freshly served the source after Builder commit `2d82b0b`, which fixes a
+large-text/compact-width failure shape in two paired label/value patterns:
+Pricing add-on rows and Process timing rows. Both pages were opened and viewed
+end to end in the real Council in-app browser at `390×844` (CSS client width
+`375`). The values now stack into readable lines, cards and CTAs remain intact,
+and both routes report zero horizontal overflow.
+
+This closes the implementation gap for these two rows. It does not change the
+separate Owner-gated scale confirmation, glass/artwork parity, production
+metadata/email, legal facts, or physical keyboard/reduced-motion boundaries.
+
+## Direct visual observation
+
+Pricing's phone render keeps the five package cards, comparison cards, care
+plans, FAQ, CTA, and footer within the viewport. In the Add-ons section each
+label is followed by its range on a separate line; long ranges no longer
+compete with the label or force a narrow horizontal row. Process's phone render
+keeps all five timeline cards, Typical timing, collaboration promise, CTA, and
+footer readable. Typical timing rows show the number/title and timeframe in a
+vertical rhythm rather than clipping the timeframe off the right edge.
+
+The direct computed check found `scrollWidth - clientWidth = 0` on both routes.
+At Pricing the representative add-on row has
+`display:flex; flex-direction:column`; at Process the representative timing row
+has the same phone-first direction and retains the `sm:flex-row` override in
+source for larger layouts. The existing glass panels, cool-blue hierarchy, and
+truthful copy remain consistent with the prior Council observations.
+
+At `1440px`, the same Process timing rows computed as `display:flex;
+flex-direction:row` with a `402px` content width, confirming that the compact
+reflow preserves the intended desktop comparison layout.
+
+At phone width, bounding-box checks contained both children inside the
+representative Pricing `327px` row (`x=24..351`) and Process timing `269px` row
+(`x=53..322`), with no right-edge escape or overlap.
+At `1440px`, the Pricing comparison table remained a `1104px` table row with
+zero internal overflow, preserving the desktop presentation.
+At `768px`, the responsive comparison table remained active with zero page
+overflow, confirming a stable breakpoint handoff between phone and desktop.
+
+A source pattern sweep found no additional non-wrapping paired rows matching the
+fixed failure shape. Remaining `justify-between` uses are wrapped FAQ/header
+controls, `flex-wrap` process metadata, or already mobile-first Planner/footer
+layouts; the full 15-route phone stress pass found no new overflow.
+
+## Finding and disposition
+
+### CYC-R8-F001 — Resolved — large-text/compact-width paired rows
+
+Before `2d82b0b`, the Pricing add-on and Process timing rows used a horizontal
+`justify-between` pattern with non-wrapping value behavior, a fragile shape when
+the browser's default text size is large or the effective viewport is narrow.
+The accepted source now uses column-first rows on compact widths and restores
+the horizontal arrangement at `sm` and above. Council's fresh runtime visually
+confirmed readable stacked values and zero horizontal overflow on both routes at
+phone width. No content or desktop information architecture changed.
+
+## Retained boundaries
+
+- The round-9 16px design root/CSS-pixel breakpoint repair is independently
+  confirmed, but the Owner still must verify the original second computer.
+- The round-9 glass pass is coherent and materially richer, but final
+  mockup-level luminous artwork/iconography remains an Owner decision.
+- Public `metadataBase`, canonical URLs, sitemap/indexability, server-side
+  Planner confirmation/email, consent/retention, About founder facts, and
+  Privacy/Terms jurisdiction remain Owner-gated.
+- Grouped Planner first-error focus, physical keyboard, visible reduced motion,
+  cross-browser behavior, deployment, and real external mail remain unclaimed.
+
+## Methods assessment and next plan
+
+The large-text issue was addressed at the shared row-pattern level, with the
+desktop override preserved instead of duplicating page-specific markup. The
+next Builder pass should reuse this pattern for any new paired label/value rows
+and validate the custom 24px profile before adding more content. The next
+Council should inspect remaining paired data surfaces under a genuinely large
+text profile, then return to Owner scale/artwork decisions and production
+metadata/submission readiness after the required domain/email/legal inputs.
+
+The primary `Describe your project` CTA was also activated from Home, Services,
+and Work at phone width; each resolved to `/start` without triggering a form
+submission.
+
+## Evidence and scope limits
+
+Evidence: `council/evidence/council-20260831T010000Z-large-text-mobile-review.md`,
+the opened Pricing/Process phone captures, and `council/evidence/INDEX.md`.
+Builder custom-24px evidence was read as context only and not promoted as
+Council execution. No product source, tests, `.engine-lock`, Builder or Auditor
+resources, external integrations, valid form submission, or external mail side
+effect was modified or attempted.
+
+The fresh runtime's direct ESLint command passed (`exit 0`). A standalone
+TypeScript check before a successful production build reported the known
+generated-artifact error `Cannot find name 'LayoutProps'` in `src/app/layout.tsx`;
+the concurrent dev/build probe did not finish generating `.next/types`, so the
+Council does not claim a clean typecheck or production build in this round.
+
+## Post-snapshot source drift
+
+During this round, Builder commit `95c365f` changed the primary CTA gradient in
+`src/components/button.tsx` for contrast, followed by docs-only commit
+`95232d5`. The Council runtime remained the immutable `85a1d2b` snapshot; the
+CTA change was therefore not independently reviewed or promoted. The next
+fresh Council snapshot should inspect its visual and contrast effect.
+
+
+---
+
+<!-- council review CYC-R9-20260830-01 published 2026-08-31T03:17:11.3143310Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R9-20260830-01`
+- Role: Cyvexly Product Quality Assurance & Methods Council
+- Round: `council-20260831T025000Z`
+- Round started: `2026-08-31T02:52:01.5315237Z`
+- Source head at snapshot: `95232d5c1b94afc61f676c0706663f2f60638176`
+- Start dirty fingerprint: `41440C449D805ED64FBBA67442949A741F35EDDEB9ED2C0D723E61EA070C5A43`
+- Council runtime: `.codex/runtime/council/council-20260831T025000Z/runtime`, port `5373`
+- Council nonce: `f82a9bf0af3b46a9a65f97d3d2dbcc3c`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected; latest independent evidence retained as context
+
+## Executive brief
+
+Round 9 freshly served the current accepted source, including Builder commit
+`95c365f`, and independently reviewed its primary CTA contrast correction in the
+real in-app browser. The CTA's normal and hover gradient samples now clear the
+WCAG AA 4.5:1 threshold at every stop and across 201 interpolated samples. The
+primary CTA remains visually prominent and reaches the usable Project Planner.
+
+The broader live review found no responsive regression: Home was literally
+viewed at desktop, tablet, and phone sizes; Pricing and Process were viewed at
+desktop/phone or phone sizes; all 15 route targets were stress-tested at both
+desktop and phone widths. Existing compact reflow, mobile menu, FAQ disclosure,
+Planner empty-state, and Contact validation behavior remained coherent.
+
+The approved mockup comparison still does not support a final visual-parity
+claim. The shared glass/grid treatment is coherent and richer than the earlier
+baseline, but the live Home hero orbit and restrained project/capability cards
+remain visibly less luminous and less information-rich than
+`mockups/01-home.png`. Preserve that as an Owner framing/artwork decision and
+do not fabricate portfolio proof.
+
+## Findings and dispositions
+
+### CYC-R9-F001 — Resolved — primary CTA contrast
+
+The fresh runtime computed the current normal CTA gradient as
+`#0f66e0 → #1269e0 → #1671d1` with white text. Relative luminance ratios were
+`5.254:1`, `5.094:1`, and `4.865:1`; the hover stops were `7.610:1`, `6.034:1`,
+and `5.439:1`. Sampling 201 interpolated points found the same minima: `4.865:1`
+normal and `5.439:1` hover. The correction in `95c365f` resolves the previous
+bright center/end concern. A direct Home CTA click resolved to `/start` without
+submitting data.
+
+### CYC-R9-F002 — Owner decision retained — mockup-level glass/artwork parity
+
+At `1440×900`, `768×1024`, and `390×844`, the actual page is calm, readable,
+and consistently glass/grid-based. Side-by-side comparison with the approved
+Home mockup shows a meaningful remaining fidelity gap: the hero is a simple
+hand-authored SVG orbit rather than the mockup's luminous device treatment, and
+the selected-work/capability panels lack the mockup's richer imagery,
+iconography, and layered detail. The implementation is honest about concept
+projects and remains coherent; the Owner must decide whether this is release
+sufficient or whether more commissioned/approved artwork is needed.
+
+### CYC-R9-F003 — Resolved — responsive and route baseline
+
+The 15-route desktop and 15-route phone probes found one `main` and one `h1`
+per render, zero document overflow, zero empty links, zero missing image alts,
+and no console warnings or errors. Pricing and Process compact rows remained
+readable. `/about`, `/privacy`, and `/terms` continue to render the intentional
+custom 404 and remain documented Owner/jurisdiction debt rather than a new
+regression.
+
+### CYC-R9-F004 — Confirmed — important interaction states
+
+The compact mobile menu opened to a six-link navigation sheet and closed again.
+The FAQ timing disclosure changed `aria-expanded` to `true` and exposed the
+truthful package timing ranges. Empty Planner Step 1 Continue focused
+`input#fullName` and surfaced its three linked alerts. Empty Contact submit
+kept the user on `/contact`, marked the four required controls invalid, and
+showed the correction alert. These checks are browser-harness interaction
+proof, not physical-keyboard or cross-browser closure.
+
+## Methods assessment and next Builder plan
+
+The Builder addressed the CTA issue at the shared ButtonLink variant, which is
+the right scope for consistent contrast across Home, navigation, pricing cards,
+and closing CTAs. The Council's independent fresh-runtime contrast and route
+checks confirm no responsive or interaction regression.
+
+Next Builder work should be Owner-led and measured: ask for the second-device
+scale confirmation and a concrete priority for the remaining mockup-fidelity
+gap, then refine shared glass/artwork primitives only against that direction.
+Keep the concept disclosure intact. Separately, do not wire production
+metadata, Privacy/Terms, About facts, or server-side Planner email until the
+Owner supplies domain, jurisdiction, founder, and transactional-provider
+decisions. The next Council should use a different question—preferably the
+remaining large-text paired-data surfaces or an attended/different capability
+for grouped Planner focus and reduced motion.
+
+## Evidence and scope limits
+
+Evidence is indexed in `council/evidence/INDEX.md`, led by
+`council-20260831T025000Z-cta-contrast-review.md` and its cited screenshots and
+JSON probes. `pnpm exec eslint .` and `pnpm exec tsc --noEmit` both exited 0 in
+the isolated Council runtime. Council did not edit product source or tests,
+claim production deployment, submit a valid form, send mail, or touch Builder,
+Auditor, or `.engine-lock` resources.
+
+
+
+---
+
+<!-- council review CYC-R10-20260830-01 published 2026-08-31T04:15:36.7102297Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R10-20260830-01`
+- Role: Cyvexly Product Quality Assurance & Methods Council
+- Round: `council-20260831T035000Z`
+- Round started: `2026-08-31T03:50:18.0339270Z`
+- Source head at snapshot: `a1245d8d449d32b723a785db2a14fae0ea3998f2`
+- Start dirty fingerprint: `1B85F03232656FA96FDAA2FC2D2AA0861ACE0920797F23DE43BE649172D9E495`
+- Council runtime: `.codex/runtime/council/council-20260831T035000Z/runtime`, port `5373`
+- Council nonce: `94383597789e4abd89fa923f8cb2315c`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected; prior independent evidence retained as context
+
+## Executive brief
+
+Round 10 freshly served the post-R9 source and independently reviewed the
+Builder's shared glass-system structure pass. The new inset header shell, five
+credibility icons, six capability/service icons, and signal-edge treatment are
+visible at desktop, tablet, and phone sizes. The result is materially closer to
+the approved Home direction without inventing portfolio proof or changing the
+16px root and compact breakpoint behavior.
+
+The live review also opened Services, Work, Pricing, and Process in the
+Council-owned in-app browser, exercised mobile navigation, FAQ disclosure, and
+empty Planner validation, and stress-tested all 15 route targets at 1440px and
+390px. No overflow, landmark, heading, image-alt, menu, or route regression was
+found. Lint, typecheck, and production build passed in the isolated runtime;
+the existing `metadataBase` localhost fallback warning remains domain-gated.
+
+## Findings and dispositions
+
+### CYC-R10-F001 — Resolved/accepted — shared glass-system structure
+
+At `1440×900`, `768×1024`, and `390×844`, the header is an inset rounded shell
+with consistent spacing, the credibility rail exposes five crisp line icons,
+and the six Home capability cards expose service icons and signal edges. The
+fresh scale evidence reports a 16px root, zero overflow, one `main` and one
+`h1` at all three sizes, and correct full/compact navigation states. This
+closes the structural visual question raised by the Builder's round-10 plan;
+the closure test is preserved icon/shell behavior under the next accepted
+visual change.
+
+### CYC-R10-F002 — Owner decision retained — mockup-level visual parity
+
+Side-by-side opened comparison with `mockups/01-home.png` confirms meaningful
+progress, but not final parity. The live hero remains a restrained orbit SVG,
+and selected-work/capability panels remain less luminous, layered, and
+art-directed than the approved mockup's device/globe treatment and richer
+artwork. This is an Owner choice about release sufficiency and approved
+artwork, not a reason to fabricate evidence. Closure requires an Owner-selected
+largest discrepancy and a fresh visual comparison against that target.
+
+### CYC-R10-F003 — Resolved/no regression — shared shell and route resilience
+
+Fresh route-a/b/c probes covered all 15 route targets at desktop and phone:
+each render had one `main`, one `h1`, no horizontal overflow, heading skips,
+or missing image alts. Contact labels and Planner labels were confirmed in
+the live DOM; `/about`, `/privacy`, and `/terms` remain intentional custom 404s
+and existing Owner/jurisdiction debt. Pricing desktop, Services phone, Work
+phone, and Process phone captures show the shell and card language continues
+through connected routes without clipping.
+
+### CYC-R10-F004 — Confirmed — important interaction states
+
+The phone menu opened to six links inside the shell and closed again. The FAQ
+timing disclosure changed `aria-expanded` from false to true and exposed its
+answer. Empty Planner Step 1 focused `input#fullName` and surfaced the three
+expected validation alerts. CTA styling and handoff remain unchanged from the
+R9 contrast closure. These are in-app browser proofs, not physical-keyboard,
+cross-browser, reduced-motion, or valid external-delivery closure.
+
+### CYC-R10-F005 — Confirmed — verification health
+
+`pnpm exec eslint .`, `pnpm exec tsc --noEmit`, and `pnpm run build` all passed
+in the disposable Council runtime. The build emitted only the known
+`metadataBase` fallback warning. No Council-owned source or test changes were
+made.
+
+## Methods assessment and Primary Next-Builder Plan
+
+The Builder's component-level structural pass was the right method: it
+improved the shared shell and repeated card language in one coherent slice and
+produced a visible result without token churn or semantic debt. The next
+Builder round should be Owner-led: select the single largest remaining
+mockup-fidelity gap, then refine only the shared hero/artwork primitive and
+connected cards needed for that direction while retaining concept disclosures.
+Do not begin production metadata, About/Privacy/Terms facts, or server-side
+Planner delivery until the Owner supplies domain, jurisdiction, founder, and
+transactional-provider decisions.
+
+The strongest different next Council question is an attended or genuinely
+different capability for grouped Planner focus, physical keyboard behavior,
+reduced motion, and cross-browser confirmation after the Owner visual choice.
+
+## Evidence and scope limits
+
+Evidence is indexed in `council/evidence/INDEX.md`, led by the R10 report
+evidence, Home desktop/tablet/phone/full captures, Services/Work/Process phone
+captures, Pricing desktop, route-a/b/c probes, and `control-audit.json`.
+Council did not edit product source or tests, submit a valid form, send mail,
+claim deployment, or touch Builder, Auditor, or `.engine-lock` resources.
+
+### Post-publication correction note (2026-08-31)
+
+At closeout, a new uncommitted Builder delta was present after the immutable
+R10 snapshot: `HeroShowcaseVideo`, two public media assets, related Home
+layout/import changes, and `.hero-video-shell` CSS. The R10 runtime did not
+serve this delta, so no claim in the report applies to it. The next fresh
+Council must inspect the new hero media path. Durable evidence:
+`council/evidence/council-20260831T035000Z-post-snapshot-drift.md`.
+
+
+---
+
+<!-- council review CYC-R11-20260830-01 published 2026-08-31T05:14:29.8503163Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R11-20260830-01`
+- Role: Cyvexly Product Quality Assurance & Methods Council
+- Round: `council-20260831T044800Z`
+- Round started: `2026-08-31T04:49:15.5241348Z`
+- Source state: `GIT_WORKTREE`, head `a1245d8d449d32b723a785db2a14fae0ea3998f2`
+- Start dirty fingerprint: `B6E641956B2F688BB9DC14C61F98A233FB4A521C28CEE50422D4D09AC8575E35`
+- Council runtime: `.codex/runtime/council/council-20260831T044800Z/runtime`, port `5373`
+- Council nonce: `19c5acdff0ab4503a9cf43794326d785`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected
+
+## Executive brief
+
+Round 11 freshly served the previously unreviewed working-tree Hero Showcase
+Video change. The Home hero now uses a local 30-second 1280×720 H.264 loop with
+a 12 KB WebP poster, muted autoplay, and an explicit play/pause button. It is a
+meaningful visual convergence toward the approved futuristic direction and is
+materially stronger than the restrained orbit, while remaining honest about
+the product and concept work.
+
+The fresh Council-owned in-app browser literally viewed Home at desktop,
+laptop, tablet, and phone sizes, plus a full phone and desktop page. Services
+was viewed end to end at phone width. All 15 route targets were stress-tested
+at 1440px and 390px. The new media loaded locally without console warnings,
+maintained a fixed aspect ratio, and introduced no overflow or landmark drift.
+Lint, typecheck, and production build passed; the known `metadataBase`
+localhost fallback warning remains domain-gated.
+
+## Findings and dispositions
+
+### CYC-R11-F001 — Next/accepted direction — Hero Showcase Video convergence
+
+Opened desktop and full-page renders show the new dark-blue systems footage,
+cyan highlights, service caption, and pause control occupying the intended hero
+media frame. At `1440×900`, the video is `454.5×254.8` in the 1024 laptop
+breakpoint and `528×297` at desktop; at `768×1024` it stacks at `703×394.6`,
+and at `390×844` it stacks at `325×181.9`. All measured renders had zero
+horizontal overflow. The video is substantially closer to the mockup's
+futuristic energy, but the approved reference still uses a bright globe/device
+composition and lighter art-directed field. Final parity remains an Owner
+decision; closure requires the Owner's selected discrepancy and a fresh
+side-by-side comparison.
+
+### CYC-R11-F002 — Next — media performance and reduced-motion proof
+
+The local MP4 is 3,978,486 bytes, 30 seconds, 1280×720 H.264; the poster is
+12,006 bytes. `preload="metadata"` is present, but the client starts muted
+autoplay when the document is visible. The play/pause control worked: current
+time advanced while playing and stopped after pause, with `aria-label` and
+`aria-pressed` transitions. HEAD requests returned `200 video/mp4` and
+`200 image/webp`. This is useful product media, not proof of a performance
+budget: the next Builder/Council pass should measure first-load/LCP on a
+constrained connection and verify the `prefers-reduced-motion` path in a
+genuinely different capability. If the budget is missed, prefer poster-first
+or deferred playback while retaining the accessible control.
+
+### CYC-R11-F003 — Resolved/no regression — responsive and semantic continuity
+
+Fresh route-a/b/c probes covered all 15 targets at desktop and phone. Every
+render had one `main`, one `h1`, zero horizontal overflow, zero missing image
+alts, and no heading-skip signal from the probe. `/about`, `/privacy`, and
+`/terms` remain intentional custom 404s and existing Owner/jurisdiction debt.
+The Home figure exposes a caption in the accessibility tree, keeps the video
+decorative with `aria-hidden`, and exposes one visible enabled play/pause button.
+Services phone remains visually coherent with the shared shell and card system.
+
+### CYC-R11-F004 — Confirmed — important interaction states
+
+At phone width, the menu opened to five route links plus its project CTA (six
+links total) and closed without overflow. The timing FAQ disclosure changed
+`aria-expanded` from false to true and exposed the `2–3 weeks` answer. Empty
+Planner Step 1 focused `fullName`, exposed three linked alerts, and retained
+accessible names for Full name, Work email, and Phone or preferred contact
+method. These are in-app browser proofs, not physical-keyboard, cross-browser,
+reduced-motion, or valid external-delivery closure.
+
+### CYC-R11-F005 — Observation — Builder evidence boundary
+
+The Hero Showcase Video and media arrived as an uncommitted working-tree
+delta, with no matching round-11 Builder visual plan or asset evidence in the
+Builder lane. The Council independently reviewed the actual runtime, but the
+Builder should document asset provenance/rights, target media budget, poster
+fallback, reduced-motion behavior, and the intended visual comparison before
+claiming this slice complete. This protects source-to-evidence traceability;
+it is not a request for the Council to edit Builder records.
+
+### CYC-R11-F006 — Confirmed — verification health
+
+`pnpm exec eslint .`, `pnpm exec tsc --noEmit`, and `pnpm run build` all passed
+in the disposable Council runtime. The build emitted only the known
+`metadataBase` fallback warning. No Council-owned source or product source was
+changed by this review.
+
+## Methods assessment and Primary Next-Builder Plan
+
+Replacing the generic orbit with a real local motion asset was a high-leverage
+visual method: it directly addressed the Owner's futuristic-fidelity concern
+while keeping the existing hero layout, content, and CTA path intact. The next
+Builder slice should be evidence-led and bounded: (1) document the media
+provenance and target performance budget, (2) verify poster-first and reduced
+motion behavior, (3) choose whether the remaining globe/device mismatch is an
+Owner-approved artwork request, and (4) only then refine connected lower-page
+artwork. Preserve concept disclosures and do not start production metadata,
+legal facts, or server-side Planner delivery without the required Owner inputs.
+
+The strongest different next Council question is a constrained-network and
+reduced-motion media audit in an attended or otherwise genuinely different
+capability, followed by physical keyboard and cross-browser checks.
+
+## Evidence and scope limits
+
+Evidence is indexed in `council/evidence/INDEX.md`, led by the R11 Home
+desktop/tablet/phone/full captures, Services phone capture, route-a/b/c probes,
+Home accessibility excerpt, and `control-audit.json`. Council did not edit
+product source or tests, submit a valid form, send mail, claim deployment, or
+touch Builder, Auditor, or `.engine-lock` resources.
+
+
+---
+
+<!-- council review CYC-R12-20260830-01 published 2026-08-31T06:16:37.6938186Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R12-20260830-01`
+- Role: Cyvexly Product Quality, Assurance & Methods Council
+- Round: `council-20260831T054800Z`
+- Scheduler timestamp: `2026-08-31T05:48:38.165Z`
+- Durable guard start: `2026-08-31T05:50:50.8938779Z`
+- Source state: `GIT_WORKTREE`; immutable Council snapshot head
+  `c0a8cc8805fe8bf478f254cdde65e4f8e47a3281` (current workspace HEAD at
+  publication preparation is `dc900bb`; post-snapshot drift is documentation/
+  evidence only: `CYVEXLY_ACTIVE_CHUNK.md`, `CYVEXLY_NEXT_BUILDER_HANDOFF.md`,
+  and the Builder hero comparison note)
+- Start dirty fingerprint: `51E05A2AB859FACD2D6E38FEC080D20B3D70A4009616F441FEA186F37923FAD4`
+- Council runtime: `.codex/runtime/council/council-20260831T054800Z/runtime`, port `5373`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected
+
+## Executive brief
+
+Round 12 reviewed accepted Builder follow-up work after Round 11: the Hero Showcase Video now has documented constrained-network, poster-first, data-saver, reduced-motion, range-delivery, and loop evidence. A fresh Council-owned production runtime was served and literally viewed at desktop, tablet, and phone sizes. The hero is visually stronger and responsive, and the media controls and important flows remain usable. The approved Home mockup is still materially brighter and more art-directed; final parity remains Owner-gated.
+
+## Findings and dispositions
+
+### CYC-R12-F001 — Next — media direction is stronger, parity remains open
+
+Fresh opened production captures at `1440×900`, `768×1024`, and `390×844` show the dark systems footage in a bounded 16:9 glass panel. Copy and CTAs retain priority, the tablet stacks cleanly, and the phone panel stays contained. Comparing the opened runtime with `mockups/01-home.png` confirms meaningful futuristic convergence, but the reference still has the brighter globe/device composition and richer lower-page artwork. Closure test: Owner selects the largest remaining discrepancy and approves the visual target before another fidelity pass.
+
+### CYC-R12-F002 — Confirmed/Next — performance and motion safeguards are evidenced, field proof remains open
+
+Builder evidence now records a cold `150ms`/approximately `1.64Mbps` run with poster LCP near `1.004s`, CLS `0.00009`, active playback after eight seconds, and 206 range delivery. It also records save-data and reduced-motion poster-first behavior, explicit native Enter play, and a luminance scan. The live Council runtime verified the poster-backed muted loop, named Play/Pause control, and explicit pause/play state transitions. Physical keyboard hardware, Safari/Firefox, field Core Web Vitals, and local flash-area analysis remain unconfirmed. Closure test: repeat the same proof in an attended/different capability and inspect the full loop for acceptable end-to-start composition.
+
+### CYC-R12-F003 — Resolved/no regression — responsive, semantic, and route baseline
+
+All 15 route targets at desktop and phone had exactly one `main` and one `h1`, zero horizontal overflow, and zero missing image alts. The Home figure exposes its caption via `aria-labelledby`; decorative video is `aria-hidden`; the playback button is visible, enabled, named, and target-linked. `/about`, `/privacy`, and `/terms` remain intentional Owner-blocked 404s, not regressions.
+
+### CYC-R12-F004 — Confirmed — important flows remain coherent
+
+At phone width the compact menu opened with `aria-expanded=true`, exposed five route links plus the project CTA, and closed cleanly. The timing FAQ transitioned from `aria-expanded=false` to `true` and exposed its `2–3 weeks` answer. Empty Planner Step 1 focused `fullName`, exposed three linked alerts, and marked the three required fields invalid. No external submission was made.
+
+### CYC-R12-F005 — Observation — Council hot-file check surfaced pre-existing Builder cap debt
+
+`Test-HotFileCaps.ps1` reports `CYVEXLY_BUILD_SUMMARY.md` at `25,436` bytes against its `24,576`-byte cap. This is outside Council ownership and was not edited. It should be rotated by the Builder before the next closeout; otherwise the repository-wide cap check cannot be green even though Council hot files are within limits.
+
+## Methods assessment and Primary Next-Builder Plan
+
+The Builder's method improved materially: a real constrained profile and preference branches answered the prior evidence gap instead of repeating visual token work. The next coherent Builder slice is: (1) preserve the documented media budget and provenance, (2) let the Owner judge the loop seam and remaining globe/device/artwork mismatch, and (3) if the Owner chooses performance as priority, compare a smaller or multi-codec derivative against the recorded cold baseline without silently replacing supplied media. Keep metadata, legal routes, and server-side Planner delivery behind their explicit Owner decisions. Rotate the over-cap Builder summary as a separate methods-hygiene repair.
+
+The strongest different next Council question is an attended/different-capability verification of reduced-motion, physical keyboard traversal, cross-browser behavior, and the full-loop visual seam, followed by original-second-device scale confirmation.
+
+## Evidence and limits
+
+Durable evidence is indexed in `docs/agent-system/cyvexly/council/evidence/INDEX.md`, including opened clean production Home desktop/tablet/phone/full captures, Services/Pricing/Process phone captures, route-a/b JSON, media preference/control audits, and the opened first/last source frames. The Council used the fresh in-app browser, direct Playwright interaction, DOM/accessibility snapshots, source/diff inspection, HTTP HEAD/range checks, ffprobe, and isolated lint/build/typecheck. The Council did not edit product source/tests, submit Planner data, or touch Builder, Auditor, or `.engine-lock` resources.
+
+During verification, rebuilding the disposable production server while it was
+running briefly left one stale CSS chunk reference and an unstyled Contact
+capture. Council stopped/restarted only its registered production processes,
+reloaded the route, confirmed the styled render, and overwrote the uncited
+capture. The cited Contact image is the stabilized post-restart state.
+
+
+---
+
+<!-- council review CYC-R13-20260830-01 published 2026-08-31T07:15:08.3560196Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R13-20260830-01`
+- Role: Cyvexly Product Quality, Assurance & Methods Council
+- Round: `council-20260831T064900Z`
+- Scheduler timestamp (minute zero): `2026-08-31T06:49:39.226Z`
+- Durable guard start: `2026-08-31T06:50:13.3589754Z`
+- Source state: `GIT_WORKTREE`; immutable Council snapshot head
+  `dc900bb92d1605f3b56c1044a3aa813afbf11d22`; no product-source changes were
+  observed during this round.
+- Start dirty fingerprint:
+  `BABD0863221F2355F27E5F883D532A00C19C4C3F389D0E583A4F8E563B0BBCD1`
+- Council runtime: `.codex/runtime/council/council-20260831T064900Z/runtime`,
+  port `5373`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected
+
+## Executive brief
+
+Round 13 selected a different meaningful question from the prior Hero Showcase
+Video follow-up: whether the FAQ, Contact, Work-filter, case-study, Planner,
+and legal/route surfaces form a coherent final utility path while preserving
+the established responsive and media baseline. A fresh production build was
+served in the isolated Council runtime. The FAQ Project timing anchor and
+disclosure worked at desktop and phone; empty Contact validation produced its
+alert plus four field-level `aria-invalid` states; the Commerce filter exposed
+Vellora Care and its case-study handoff. All 15 route targets retained one
+`main`, one `h1`, and zero horizontal overflow at `1440×900` and `390×844`.
+The Home remains visibly less luminous and less art-directed than the approved
+mockup, so final parity and launch-boundary decisions remain Owner-gated.
+
+## Findings and dispositions
+
+### CYC-R13-F001 — Confirmed/Next — FAQ and Contact are coherent but delivery remains interim
+
+Opened production captures show a legible responsive FAQ hierarchy with
+category anchors and disclosure cards. Expanding “How long does a typical
+project take?” changed `aria-expanded` from `false` to `true` and exposed the
+published `2–3 weeks` Signal answer at both viewports. Contact keeps the
+branded grid/hero, labelled Name/Email/Topic/Message/consent controls, direct
+`mailto:hello@cyvexly.com` fallback, and Project Planner links. Submitting the
+empty form was intentionally used only as a validation probe: the page showed
+“Please fix the highlighted fields below.” and marked four controls invalid;
+no external submission occurred. The mailto delivery boundary remains the
+documented Owner-gated interim path. Closure test: Owner chooses the final
+server-side email/storage and data-retention behavior, then Council verifies
+success/error/retry and receipt in a sandbox.
+
+### CYC-R13-F002 — Confirmed/no regression — production route and interaction baseline
+
+The fresh production route sweep reached all 15 configured targets at desktop
+and phone. Every target exposed one `main`, one `h1`, and zero horizontal
+overflow; nine image-bearing content routes had zero missing image alts. The
+Commerce Work filter selected `Vellora Care`, and `/work/vellora-care` exposed
+one `main`, one `h1`, zero overflow, and `/start`/`/contact` CTAs. `/about`,
+`/privacy`, `/terms`, `/cookies`, and `/thank-you` continue to render the
+documented intentional not-found or lifecycle/legal boundaries, not a new
+regression.
+
+### CYC-R13-F003 — Confirmed/Next — media delivery remains bounded and observable
+
+The production Home video was literally viewed at desktop and phone sizes.
+The element was muted, looping, ready to play, and paired with a named
+Pause/Play control; the clean production console had no warnings or errors.
+`HEAD /media/cyvexly-services-loop.mp4` returned `200` with `video/mp4`,
+`3,978,486` bytes, and `Accept-Ranges: bytes`; a `bytes=0-1023` request
+returned `206` with the expected `Content-Range`. Builder's prior constrained,
+data-saver, reduced-motion, and loop evidence remains useful, but physical
+keyboard hardware, Safari/Firefox, field Web Vitals, and complete-loop
+end-to-start acceptance remain unclaimed. Closure test: use an attended or
+different capability and inspect the full loop and keyboard path.
+
+### CYC-R13-F004 — Next — final visual parity is still an Owner framing decision
+
+Fresh clean production Home captures at desktop, tablet, phone, and full-page
+views were opened and compared with `mockups/01-home.png`. The live glass/grid
+system and dark systems panel are coherent, but the approved reference still
+has the brighter globe/device hero, richer selected-work/capability artwork,
+and denser art direction. This is not permission to fabricate portfolio
+evidence. Closure test: Owner selects the largest remaining globe/device/
+artwork discrepancy and accepts the target or requests a bounded fidelity
+slice.
+
+### CYC-R13-F005 — Observation — repository hot-file cap remains blocked by Builder ownership
+
+`Test-HotFileCaps.ps1` still reports the pre-existing Builder-owned
+`CYVEXLY_BUILD_SUMMARY.md` at `25,436` bytes against its `24,576`-byte cap.
+Council hot files remain within their caps; Council did not edit Builder-owned
+records. Builder should rotate that summary before the next repository-wide
+green cap check.
+
+## Methods assessment and Primary Next-Builder Plan
+
+The product utility path is coherent and honest in the current implementation:
+FAQ answers are discoverable, Contact validation is explicit, Work filtering
+preserves concept disclosure, and route semantics remain stable. The next
+Builder slice should not be token churn: preserve the current responsive/
+semantic baseline, then execute only the Owner-selected visual parity slice or
+the Owner-authorized delivery/metadata work. In parallel, rotate the over-cap
+Builder summary without rewriting Council evidence. Keep About/Privacy/Terms,
+metadataBase, server-side Planner delivery, full-loop acceptance, keyboard,
+cross-browser, and second-device scale behind their stated Owner/capability
+decisions.
+
+The strongest different next Council question is attended/different-capability
+verification of physical keyboard traversal, reduced-motion and full-loop
+behavior, plus original second-device scale confirmation after Owner selects
+the final visual target.
+
+## Evidence and limits
+
+Durable evidence is indexed in `docs/agent-system/cyvexly/council/evidence/INDEX.md`,
+including opened clean Home/FAQ/Contact production captures at desktop/phone,
+the FAQ/Contact review, production route probes, Work filter and case-study
+checks, Contact/legal audit, a11y landmarks, media HTTP proof, control audit,
+and build/a11y evidence. The Council used the fresh in-app browser, direct
+Playwright interaction, literal image viewing, route/landmark probes, source
+reconciliation, HTTP HEAD/range checks, and isolated lint/typecheck/build.
+The Council did not edit product source/tests, submit Planner or Contact data,
+or touch Builder, Auditor, or `.engine-lock` resources. The runtime was
+restarted only within Council ownership after the production build to avoid
+stale development assets; the clean cited captures are post-restart.
+
+---
+
+<!-- council correction CYC-R13-20260830-01 recorded 2026-08-31T07:18:36Z -->
+
+## Post-publication correction
+
+The immutable R13 snapshot/runtime contained no product-source changes. After
+publication and cleanup, the current working tree was found to contain
+unreviewed modifications to `src/app/page.tsx` and `src/app/globals.css`.
+Those files were not in the Council runtime and were not edited by Council;
+the evidence and next-round routing are recorded in
+`council/evidence/council-20260831T064900Z-post-publication-drift.md`.
+
+
+---
+
+<!-- council review CYC-R14-20260830-01 published 2026-08-31T08:16:26.3022507Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R14-20260830-01`
+- Role: Cyvexly Product Quality, Assurance & Methods Council
+- Round: `council-20260831T075100Z`
+- Scheduler timestamp (minute zero): `2026-08-31T07:51:10.391Z`
+- Durable guard start: `2026-08-31T07:51:40.1950260Z`
+- Source state: `GIT_WORKTREE`; immutable Council snapshot head
+  `061fb00bf74da16ed5b824b77444b3b194de9652` (Builder product commit
+  `13d3673` plus its closeout records).
+- Start dirty fingerprint:
+  `F2A50D189A58054D0BC1899FB5D526E14EFE1C4368BF6EE71692622FE11B2573`
+- Council runtime: `.codex/runtime/council/council-20260831T075100Z/runtime`,
+  port `5373`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected
+
+## Executive brief
+
+Round 14 independently reviewed the accepted Builder Round 12 Home mid-page
+slice after the previous Council's snapshot boundary: an original partnership
+system diagram and a five-stage process route with distinct icons and a
+responsive connector. Fresh in-app-browser use and literally viewed clean
+production captures at desktop, tablet, phone, and full-page sizes confirm that
+the new structures are coherent, contained, semantic, and meaningfully closer
+to the approved visual direction. The overall Home still falls short of the
+reference's luminous globe/device hero and richer lower-page artwork; final
+parity remains Owner-gated.
+
+## Findings and dispositions
+
+### CYC-R14-F001 — Confirmed/Next — the mid-page structure slice closes its named gaps
+
+The partnership panel now has an original wireframe cube, orbit traces, signal
+nodes, and adjacent “Built around your business” copy. The five-stage Home
+process now reads as a route: numbered nodes, distinct line icons, and one
+desktop connector. At tablet/phone widths the connector disappears and each
+stage becomes a contained glass card, avoiding a false line across wrapped
+rows. The ordered-list semantics, stage order, copy, and links remain intact.
+Production measurements recorded desktop panel `1104×313.11` with five
+nodes/icons and a connector; tablet panel `705×363` with connector `none`; and
+phone panel `327×574.83` with connector `none`; all had zero overflow.
+Closure test: retain these responsive rules while the Owner selects the next
+single highest-value parity gap; do not reopen this slice as token-only tuning.
+
+### CYC-R14-F002 — Confirmed/no regression — connected Home experience and controls
+
+Opened Home renders remain coherent from hero through selected work,
+capabilities, partnership panel, process, pricing, FAQ, CTA, and footer. The
+compact phone menu opened (`aria-expanded=true`) and closed without overflow.
+The Hero Showcase Video toggled from Pause to Play and back, remaining muted,
+looping, and inline; the partnership graphic reports `aria-hidden=true` and
+process icons are decorative. The 15-route production sweep retained one
+`main`, one `h1`, zero overflow, and zero missing image alts at desktop and
+phone. Focused changed/connected routes had no duplicate IDs or visible
+unnamed controls; console warnings/errors were empty.
+
+### CYC-R14-F003 — Next/Owner Decision — meaningful convergence, final parity open
+
+The side-by-side opened Home comparison with `mockups/01-home.png` confirms
+real convergence: the formerly text-only panel has a visual system object and
+the formerly detached process columns have route grammar. The live page is
+still less luminous and less art-directed than the reference, which retains a
+bright globe/device hero, more elaborate project artwork, and richer final-CTA
+art. This is an Owner framing decision, not permission to fabricate portfolio
+proof. Closure test: Owner names the largest remaining discrepancy and either
+accepts the target or authorizes one bounded fidelity slice.
+
+### CYC-R14-F004 — Confirmed/Next — build and media proof remain healthy but bounded
+
+Council's isolated `pnpm lint`, `pnpm exec tsc --noEmit`, and `pnpm build` all
+passed. Build output repeats the known `metadataBase` localhost fallback
+warning, which remains domain/Owner-blocked. Production media delivery returns
+`200` `video/mp4`, `3,978,486` bytes, `Accept-Ranges: bytes`, and `206` for a
+1,024-byte range request. These checks do not close physical keyboard,
+Safari/Firefox, field Web Vitals, full-loop end-to-start, or original
+second-device-scale proof.
+
+### CYC-R14-F005 — Confirmed — repository hot-file caps are green
+
+`Test-HotFileCaps.ps1` passed across the repository. Builder's rotated
+`CYVEXLY_BUILD_SUMMARY.md` is now `17,540` bytes against its `24,576`-byte cap;
+all Council hot files also remain within their limits. Council did not edit
+Builder-owned records.
+
+## Methods assessment and Primary Next-Builder Plan
+
+The Builder method converged this round: it mapped two visible mockup gaps to
+one coherent code-native structure slice, wrote a visual plan before editing,
+preserved truthfulness and accessibility, and supplied exact responsive proof.
+The next Builder slice should be Owner-led rather than another generic polish
+pass: keep the diagram/process rules stable, ask the Owner to choose the single
+largest globe/device/artwork mismatch, then implement and render only that
+bounded target. Keep metadataBase, About/Privacy/Terms, server-side Planner/
+Contact delivery, and concept-art framing behind explicit Owner decisions.
+Rotate the over-cap Builder summary separately.
+
+The strongest different next Council question is an attended/different-
+capability verification of physical keyboard traversal, reduced-motion and
+full-loop behavior, Safari/Firefox parity, and the original second-computer
+scale after the Owner names the final visual target.
+
+## Evidence and limits
+
+Durable evidence is indexed in `docs/agent-system/cyvexly/council/evidence/INDEX.md`,
+including the opened clean Home desktop/tablet/phone/full captures, Process
+desktop/phone captures, the mid-page review, production structure
+measurements, route/a11y/control/console audits, media HTTP proof, and build
+evidence. The Council used the fresh in-app browser, direct Playwright
+interaction, literal image viewing, source/diff reconciliation, route/landmark
+probes, HTTP HEAD/range checks, and isolated lint/typecheck/build. Council did
+not edit product source/tests, submit Planner or Contact data, or touch
+Builder, Auditor, or `.engine-lock` resources. The runtime was restarted only
+within Council ownership after the build so cited captures are clean
+production state.
+
+
+---
+
+<!-- council review CYC-R15-20260830-01 published 2026-08-31T09:14:27.4907497Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R15-20260830-01`
+- Role: Cyvexly Product Quality, Assurance & Methods Council
+- Round: `council-20260831T084900Z`
+- Scheduler timestamp (minute zero): `2026-08-31T08:49:11.413Z`
+- Durable guard start: `2026-08-31T08:49:31.0640546Z`
+- Source state: `GIT_WORKTREE`; immutable Council snapshot head
+  `061fb00bf74da16ed5b824b77444b3b194de9652`; no product-source drift since
+  R14.
+- Start dirty fingerprint:
+  `0B35F235B04E04AC86671FE74EA9CA0202F0DC7879A69E4E70C903077234CB23`
+- Council runtime: `.codex/runtime/council/council-20260831T084900Z/runtime`,
+  port `5373`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected
+
+## Executive brief
+
+Round 15 selected a genuinely different question because no Builder source
+drift arrived after R14: does the reachable product remain contained and
+usable at an unusually compact `320px` viewport, and can this capability close
+the Hero Showcase loop seam? Fresh in-app-browser use and literally viewed
+production captures at desktop, tablet, phone, full-page, and compact utility
+flows confirm a coherent, semantic, no-overflow experience. The 30-second
+video loop wrapped end-to-start in Chromium. Final visual parity and attended
+cross-capability proof remain open.
+
+## Findings and dispositions
+
+### CYC-R15-F001 — Confirmed — compact route and utility containment
+
+The `320px` production sweep reached all 15 configured targets with one `main`,
+one `h1`, zero horizontal overflow, and zero missing image alts. Home, Planner,
+Contact, FAQ, Work, Process, and Services also had no duplicate IDs or visible
+unnamed controls. Literally viewed Home, Planner, and Contact compact captures
+keep copy, fields, cards, labels, and CTAs contained and readable without
+clipping. Preserve this narrow-width behavior; do not trade it for visual
+parity token churn.
+
+### CYC-R15-F002 — Confirmed — utility-flow state integrity
+
+At compact width, the menu opened and closed with `aria-expanded` true/false,
+six visible menu links, and no overflow. The muted, looping, inline video
+paused and resumed through its named control. FAQ timing disclosure exposed
+its answer and showed a 2px Cyber Blue focus ring. Work filtering exposed only
+Vellora Care for Commerce and all three concept cards for Concept, with correct
+pressed states. Empty Contact validation remained local and marked `name`,
+`email`, `message`, and `consent` invalid. Planner Save & continue later
+produced its local status message without external data submission.
+
+### CYC-R15-F003 — Confirmed/bounded — Hero Showcase full loop
+
+Production playback was observed for the 30-second asset through the wrap from
+`29.83s` to `0.87s`, remaining `readyState=4`, muted, inline, and unpaused. The
+loop-seam question is closed for this Chromium capability. Reduced-motion
+emulation, Safari/Firefox, field Web Vitals, and the Owner's second device are
+not proven here.
+
+### CYC-R15-F004 — Next/Owner Decision — final visual parity remains open
+
+The side-by-side opened Home comparison still shows meaningful convergence in
+the glass/grid system, partnership object, process route, and honest concept
+artwork. The approved mockup remains brighter and more art-directed, especially
+the globe/device hero and richer project/final-CTA artwork. Owner must name the
+single largest remaining discrepancy before another bounded fidelity slice;
+Council does not authorize fabricated portfolio proof.
+
+### CYC-R15-F005 — Confirmed/Methods note — build and caps
+
+`pnpm lint` passed. A clean-runtime `pnpm exec tsc --noEmit` before build
+reported the generated Next global `LayoutProps` missing; after `pnpm build`
+created `.next` artifacts, the same typecheck passed and production served
+successfully. This is a setup-order boundary, not a source regression.
+Media HEAD/range delivery remains `200`/`206` with the expected MP4 headers, and
+`Test-HotFileCaps.ps1` is green, including the rotated Builder summary.
+
+## Methods assessment and Primary Next-Builder Plan
+
+The current method produces useful progress without repeating the prior
+mid-page review: it stress-tested a new compact breakpoint, utility state
+transitions, local validation/save boundaries, and a full playback wrap while
+preserving direct visual review. The next Builder slice should remain Owner-led:
+choose one highest-value globe/device/artwork mismatch, keep the proven compact
+containment rules stable, and render only that bounded target. Keep metadata,
+legal identity, server-side delivery, and external-mail behavior behind explicit
+Owner decisions.
+
+The strongest different next Council question is an attended/different-
+capability review of physical keyboard traversal, reduced-motion behavior,
+Safari/Firefox parity, and second-device scale, now that compact containment and
+the Chromium loop seam are independently observed.
+
+## Evidence and limits
+
+Durable evidence is indexed in `docs/agent-system/cyvexly/council/evidence/INDEX.md`,
+including the compact review, clean required-viewpoint captures, compact
+Home/Planner/Contact views, route/a11y/control/planner-save audits, full-loop
+samples, media HTTP proof, and build evidence. Council did not edit product
+source/tests, submit Planner or Contact data, or touch Builder, Auditor, or
+`.engine-lock` resources. The browser's unattended key-press harness did not
+advance native Tab/Enter traversal reliably, so physical keyboard acceptance is
+not claimed.
+
+
+---
+
+<!-- council review CYC-R16-20260830-01 published 2026-08-31T10:12:28.3230153Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R16-20260830-01`
+- Role: Cyvexly Product Quality, Assurance & Methods Council
+- Round: `council-20260831T094700Z`
+- Scheduler timestamp (minute zero): `2026-08-31T09:47:12.417Z`
+- Durable guard start: `2026-08-31T09:47:41.9693393Z`
+- Source state: `GIT_WORKTREE`; immutable Council snapshot head
+  `62c6b7e6bb4e36ebc05b59a78f6b98b513ed1858`, including committed Builder
+  final-CTA work (`1df0203`) and current Council records.
+- Start dirty fingerprint:
+  `3CB3FBEF12A2CFBAAA9C447B2DDC5FD01CA2D65642A256BD7A8AACF1DC6EDDD7`
+- Council runtime: `.codex/runtime/council/council-20260831T094700Z/runtime`,
+  port `5373`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected
+
+## Executive brief
+
+Round 16 independently reviewed the final Home CTA signal slice that was
+recorded as unreviewed drift after R15 and subsequently committed by the
+Builder. Fresh in-app-browser use and literally viewed clean production
+captures at desktop, tablet, phone, and full-page sizes confirm a coherent
+dark planetary/network CTA with preserved copy, route, and decorative semantics.
+The slice closes a named reference gap without inventing portfolio proof; the
+rest of the Home remains less luminous than the approved mockup.
+
+## Findings and dispositions
+
+### CYC-R16-F001 — Confirmed — final CTA visual system and responsive behavior
+
+The final CTA now provides the late-page art direction the previous flat block
+lacked: a dark rounded shell, left-anchored copy from `768px` upward, and an
+original blue planetary/network horizon. At phone width the copy centers and
+the horizon drops behind the lower field. The full Home rhythm remains coherent
+through selected work, capabilities, partnership/process, pricing, FAQ, CTA,
+and footer. Literally viewed desktop/tablet/phone/full-page captures align with
+the visual plan and show no clipping or competing art.
+
+### CYC-R16-F002 — Confirmed — containment and semantic boundary
+
+Fresh breakpoint probes at `320`, `390`, `639`, `640`, `767`, `768`, `1023`,
+`1024`, and `1440` retained one CTA panel, one CTA heading, one `/start` link,
+and zero document overflow. The large lower-right SVG ink is intentionally
+cropped by the shell. The graphic is `aria-hidden="true"`, its SVG is
+`role="presentation"`, pointer events are disabled, and no duplicate IDs were
+found. The real `/start` link navigated to the Planner and rendered its expected
+heading.
+
+### CYC-R16-F003 — Confirmed/no regression — production route baseline
+
+All 15 production routes at desktop and phone retained one `main`, one `h1`,
+zero missing image alts, and zero horizontal overflow. The clean production
+build served successfully. Media delivery retained `200` MP4 HEAD and `206`
+range responses with the expected byte count and `Accept-Ranges` header.
+
+### CYC-R16-F004 — Confirmed/Next — bounded parity progress, Owner decision open
+
+The final CTA now meaningfully converges on the approved mockup's lower-page
+signal horizon while preserving the honest concept-art boundary. The approved
+reference still has a brighter globe/device hero and richer project imagery;
+Council does not authorize fabricated portfolio media. Owner should choose the
+single largest remaining parity discrepancy before another bounded slice.
+
+### CYC-R16-F005 — Confirmed/Methods note — build and proof boundaries
+
+`pnpm lint`, `pnpm build`, and immediate post-build `pnpm exec tsc --noEmit`
+passed in the isolated runtime. The build still carries the known
+`metadataBase` localhost fallback warning, which remains an Owner/domain
+decision. Physical keyboard traversal, reduced-motion emulation, Safari/
+Firefox, field Web Vitals, deployment, and second-device scale remain outside
+this unattended Chromium proof.
+
+## Methods assessment and Primary Next-Builder Plan
+
+The Builder method converted the Council's named final-CTA visual gap into one
+bounded, code-native SVG slice, wrote a plan first, preserved copy/route/
+accessibility, and supplied responsive measurements. Keep the final-CTA
+containment, decorative semantics, and compact alignment stable. The next
+Builder slice should be Owner-led: select one remaining globe/device or
+portfolio-art direction target, then implement only that fidelity target without
+token churn or fabricated evidence. Keep metadata, legal identity, and
+server-side delivery behind explicit Owner decisions.
+
+The strongest different next Council question is an attended/different-
+capability pass for physical keyboard traversal, reduced-motion behavior,
+Safari/Firefox parity, and second-device scale after the Owner names the next
+visual target.
+
+## Evidence and limits
+
+Durable evidence is indexed in `docs/agent-system/cyvexly/council/evidence/INDEX.md`,
+including literally viewed final-CTA/Home captures, breakpoint and semantic
+measurements, the all-route smoke, media HTTP proof, and build evidence. Council
+did not edit product source/tests, submit Planner or Contact data, or touch
+Builder, Auditor, or `.engine-lock` resources. This report accepts only the
+immutable R16 snapshot; any later working-tree drift must be routed to a
+successor Council.
+
+
+---
+
+<!-- council review CYC-R17-20260830-01 published 2026-08-31T11:09:26.0614187Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R17-20260830-01`
+- Role: Cyvexly Product Quality, Assurance & Methods Council
+- Round: `council-20260831T104400Z`
+- Scheduler timestamp (minute zero): `2026-08-31T10:44:13.466Z`
+- Durable guard start: `2026-08-31T10:44:26.4131184Z`
+- Source state: `GIT_WORKTREE`; immutable Council snapshot head
+  `62c6b7e6bb4e36ebc05b59a78f6b98b513ed1858`; no new product-source drift
+  after R16.
+- Start dirty fingerprint:
+  `9E720D490C57AA368EA78E5EF74899D4F18F211B53E5C5291303D710CF547005`
+- Council runtime: `.codex/runtime/council/council-20260831T104400Z/runtime`,
+  port `5373`
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied
+- Auditor: no active Auditor guard detected
+
+## Executive brief
+
+Round 17 selected a new utility and boundary question because no Builder source
+arrived after R16: does the Project Planner surface first-step validation and
+first-error focus clearly, and do legal/lifecycle routes remain explicit in
+production? Fresh in-app-browser use and literally viewed clean Home and
+Planner captures confirm the validation/focus path, a local saved-draft notice,
+and a contained Step 2 transition. Direct route status checks preserve the
+documented 200/404 boundaries. No external data was submitted.
+
+## Findings and dispositions
+
+### CYC-R17-F001 — Confirmed — Planner validation and first-error focus
+
+Clicking an empty Step 1 `Continue →` produced “Please enter your name.”,
+marked `fullName`, `workEmail`, and `contactMethod` invalid, and moved focus to
+`#fullName`, the first invalid field. The phone capture shows field-level error
+copy and a visible focus ring without overflow. This closes the previously
+unconfirmed first-error focus question for the in-app browser capability.
+
+### CYC-R17-F002 — Confirmed — Planner progression and local-state boundary
+
+Review-only name/contact input advanced to “02 The business” without external
+submission. The Step 2 capture preserves the progress rail, labels, fields,
+Back/Continue controls, and “What happens next” panel. The browser displayed
+the expected “We restored a saved draft from this device” notice from the
+Council's prior local save probe; no network or external data path was used.
+The unattended email fill helper did not reflect a typed value in the DOM, so
+Council did not attempt Planner completion or submit.
+
+### CYC-R17-F003 — Confirmed — legal and lifecycle route boundaries
+
+Direct production HTTP checks returned `200` for `/`, `/services`, `/work`,
+`/pricing`, `/process`, `/start`, `/contact`, `/faq`, and `/accessibility`.
+The documented `/about`, `/privacy`, `/terms`, `/cookies`, `/thank-you`, and
+`/404` boundaries returned `404`. Browser checks on the reviewed boundary paths
+retained one `main`, one `h1`, and zero overflow; these remain intentional
+Owner/content boundaries rather than newly fabricated pages.
+
+### CYC-R17-F004 — Confirmed/no regression — required viewpoint smoke
+
+Fresh clean production Home captures at `1440×900`, `768×1024`, `390×844`,
+and full-page sizes remain coherent, responsive, and consistent with the
+accepted glass/grid, media, partnership, process, pricing, FAQ, and final-CTA
+system. No source drift was present after the R16 snapshot.
+
+### CYC-R17-F005 — Confirmed/Next — build health and capability limits
+
+`pnpm lint`, `pnpm build`, and immediate post-build `pnpm exec tsc --noEmit`
+passed in the isolated runtime. Physical keyboard traversal, reduced-motion
+emulation, Safari/Firefox, field Web Vitals, deployment, and second-device
+scale remain outside this unattended Chromium proof. The email fill-helper
+limitation is a test-harness boundary, not a claimed product defect.
+
+## Methods assessment and Primary Next-Builder Plan
+
+The review method answered a distinct product question with direct visible
+validation states and route-status evidence instead of repeating the final-CTA
+visual pass. The Planner's first-error focus and honest boundary behavior are
+now independently confirmed. The next Builder slice should remain Owner-led:
+select one remaining globe/device or portfolio-art gap, keep the proven CTA and
+Planner containment stable, and avoid token churn or fabricated claims. Keep
+metadata, legal identity, server-side delivery, and external-mail behavior
+behind explicit Owner decisions.
+
+The strongest different next Council question is an attended/different-
+capability review of physical keyboard traversal, reduced-motion behavior,
+Safari/Firefox parity, and second-device scale.
+
+## Evidence and limits
+
+Durable evidence is indexed in `docs/agent-system/cyvexly/council/evidence/INDEX.md`,
+including required Home viewpoints, Planner validation/Step 2 captures, route
+boundary probes, and isolated build evidence. Council did not edit product
+source/tests, submit Planner or Contact data, or touch Builder, Auditor, or
+`.engine-lock` resources. Any later working-tree drift must be routed to a
+successor Council.
+
+
+---
+
+<!-- council review CYC-R18-20260830-01 published 2026-08-31T12:09:52.3499486Z -->
+
+# Cyvexly Council Quality & Methods Report
+
+## Review identity
+
+- Review ID: `CYC-R18-20260830-01`
+- Role: Cyvexly Product Quality, Assurance & Methods Council
+- Round: `council-20260831T114400Z`
+- Scheduler timestamp (minute zero): `2026-08-31T11:44:44.512Z`
+- Durable guard start: `2026-08-31T11:46:11.0805216Z`
+- Source state: `GIT_WORKTREE`; immutable Council snapshot head
+  `68fe4a476a89070b968a21852742680571794695`; no source drift after the
+  accepted service-detail commit `930e050`.
+- Start dirty fingerprint:
+  `329025F57F43D74E228064E5AE842CED8FADE5870A368A27B3D1ECC20F6999B6`
+- Council runtime: `.codex/runtime/council/council-20260831T114400Z/runtime`,
+  port `5373`; visual fallback Chrome CDP port `9339`.
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied.
+- Auditor: no active Auditor guard detected.
+
+## Executive brief
+
+Round 18 independently reviewed the post-R17 accepted five-service detail and
+Planner-handoff system. Direct in-app use plus opened exact viewport captures
+confirm a coherent, truthful extension of the existing glass/grid/signal
+system. All five detail routes satisfy the vision content contract and remain
+responsive, semantic, and contained. Native Services → detail → Planner use
+works, and a fresh browser profile confirms every service's intended Planner
+mapping. No external data was submitted.
+
+## Findings and dispositions
+
+### CYC-R18-F001 — Confirmed — five service-detail journeys and route boundaries
+
+`/services/business-websites`, `/website-redesigns`, `/landing-pages`,
+`/ecommerce-websites`, and `/website-care` each return `200`, expose one
+unique outcome-led H1 and one `main`, and link to the correct case-study and
+Planner query. The vision-required problem, outcome, inclusions, concept-work
+label, client inputs, scope controls, starting price/timing, FAQ, and CTA are
+present on every route. An unknown slug returns the expected `404`; duplicate
+IDs, missing image alts, unnamed controls, and document overflow are absent.
+
+### CYC-R18-F002 — Confirmed — service-to-Planner handoff and user-control boundary
+
+The real in-app path Services → Business Websites → `Include this in my
+project` reaches `/start?service=business-websites`. In a fresh browser profile,
+advancing through Steps 1–2 exposes the intended mapping for all five offers:
+business-site/credibility, redesign/replace, landing-page/launch,
+ecommerce/sell, and not-sure/credibility plus Care `Yes`. The UI announces the
+starting point as editable. The existing in-app browser's saved-draft notice
+remains in control rather than being silently overwritten by a new query. Empty
+Step 1 still returns three field-level alerts, focuses `fullName`, and remains
+contained. No Planner or Contact submission was triggered.
+
+### CYC-R18-F003 — Confirmed/no regression — responsive visual and interaction
+
+Opened Services at desktop/tablet/phone and Business Websites detail at
+`1440×1000`, `768×1024`, and `390×844`; also opened E-commerce, Redesign,
+Landing Pages, and Website Care phone first views. The mobile menu opens to a
+readable stacked panel with `aria-expanded=true`; the detail FAQ opens with its
+answer and expanded state. A `320px` E-commerce view and `390px` explicit
+`24px` root-font stress retain exact-width containment. Full Business detail
+captures show the sections read as one route from offer to proof to inquiry.
+
+### CYC-R18-F004 — Owner Decision / Next — remaining service-detail fidelity
+
+The reusable detail system is materially more useful than the prior dead-end
+cards and uses honest concept previews. Its orbital signal is legible and
+service-labeled, but the five pages share one visual grammar and remain less
+luminous/dense than the approved Services mockup's globe/workspace and richer
+proof treatment. This is an active Owner fidelity decision, not a source defect
+or permission to fabricate client media. Closure requires Owner selection of
+the honest signal direction versus approved higher-fidelity media, followed by
+an opened comparison at the matching service route.
+
+### CYC-R18-F005 — Confirmed/Next — method and launch-readiness boundaries
+
+The Builder's method produced a coherent typed model and reusable template,
+found a too-narrow tablet split in the first render, and repaired it before
+acceptance. Council's isolated lint, production build, and immediate post-build
+typecheck pass; the known `metadataBase` localhost fallback remains
+Owner/domain-blocked. Physical keyboard, attended reduced motion,
+Safari/Firefox, field Web Vitals, second-device scale, deployment/cache,
+server-side email, and legal/domain identity remain unconfirmed.
+
+## Methods assessment and Primary Next-Builder Plan
+
+Round 18 confirms that the Builder converted the vision's five focused service
+journeys into a reusable, content-complete system without portfolio fabrication
+or token-only churn. Preserve the `lg` tablet stacking fix, route boundaries,
+concept-project labels, local Planner no-submission boundary, and query-versus-
+saved-draft precedence. The next Builder slice should be Owner-led: either
+select one approved higher-fidelity service visual direction or leave the
+honest signal system stable and move to the next load-bearing Owner decision
+(founder/legal/domain/email). Do not broaden the template or add integrations
+without authorization.
+
+The strongest different next Council question is an attended/different-
+capability review of physical keyboard traversal, reduced-motion behavior,
+Safari/Firefox parity, and second-device scale against the now-connected
+service-to-Planner journey.
+
+## Evidence and limits
+
+Durable evidence is indexed in `docs/agent-system/cyvexly/council/evidence/INDEX.md`,
+including opened Services/detail/Planner captures, route/status probes,
+content-contract checks, Planner mapping, menu/FAQ state, semantic audits, and
+24px-root stress. Council did not edit product source/tests, submit form data,
+touch `.engine-lock`, or control Builder/Auditor resources.

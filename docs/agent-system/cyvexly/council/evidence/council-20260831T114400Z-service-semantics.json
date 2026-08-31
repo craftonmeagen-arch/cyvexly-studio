@@ -1,0 +1,315 @@
+{
+  "capturedAtUtc": "2026-08-31T12:02:06.496Z",
+  "routes": [
+    {
+      "dup": [],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Turn your expertise into a website people understand and trust."
+        },
+        {
+          "tag": "H2",
+          "text": "What gets in the way"
+        },
+        {
+          "tag": "H2",
+          "text": "What the work should change"
+        },
+        {
+          "tag": "H2",
+          "text": "What's included"
+        },
+        {
+          "tag": "H2",
+          "text": "Aurora Spaces"
+        },
+        {
+          "tag": "H2",
+          "text": "Typical client inputs"
+        },
+        {
+          "tag": "H2",
+          "text": "What affects price and timing"
+        },
+        {
+          "tag": "H2",
+          "text": "Orbit · From $3,500"
+        },
+        {
+          "tag": "H2",
+          "text": "Common questions"
+        },
+        {
+          "tag": "H2",
+          "text": "Start with the service selected. Shape the rest around your business."
+        },
+        {
+          "tag": "H2",
+          "text": "Studio"
+        },
+        {
+          "tag": "H2",
+          "text": "Services"
+        },
+        {
+          "tag": "H2",
+          "text": "Contact"
+        }
+      ],
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/services/business-websites",
+      "unnamedButtons": 0,
+      "unnamedLinks": 0
+    },
+    {
+      "dup": [],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Replace an outdated website with a clearer path to action."
+        },
+        {
+          "tag": "H2",
+          "text": "What gets in the way"
+        },
+        {
+          "tag": "H2",
+          "text": "What the work should change"
+        },
+        {
+          "tag": "H2",
+          "text": "What's included"
+        },
+        {
+          "tag": "H2",
+          "text": "Nexora Systems"
+        },
+        {
+          "tag": "H2",
+          "text": "Typical client inputs"
+        },
+        {
+          "tag": "H2",
+          "text": "What affects price and timing"
+        },
+        {
+          "tag": "H2",
+          "text": "Nexus · From $5,800"
+        },
+        {
+          "tag": "H2",
+          "text": "Common questions"
+        },
+        {
+          "tag": "H2",
+          "text": "Start with the service selected. Shape the rest around your business."
+        },
+        {
+          "tag": "H2",
+          "text": "Studio"
+        },
+        {
+          "tag": "H2",
+          "text": "Services"
+        },
+        {
+          "tag": "H2",
+          "text": "Contact"
+        }
+      ],
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/services/website-redesigns",
+      "unnamedButtons": 0,
+      "unnamedLinks": 0
+    },
+    {
+      "dup": [],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Give your campaign a focused place to convert attention into action."
+        },
+        {
+          "tag": "H2",
+          "text": "What gets in the way"
+        },
+        {
+          "tag": "H2",
+          "text": "What the work should change"
+        },
+        {
+          "tag": "H2",
+          "text": "What's included"
+        },
+        {
+          "tag": "H2",
+          "text": "Nexora Systems"
+        },
+        {
+          "tag": "H2",
+          "text": "Typical client inputs"
+        },
+        {
+          "tag": "H2",
+          "text": "What affects price and timing"
+        },
+        {
+          "tag": "H2",
+          "text": "Signal · From $1,800"
+        },
+        {
+          "tag": "H2",
+          "text": "Common questions"
+        },
+        {
+          "tag": "H2",
+          "text": "Start with the service selected. Shape the rest around your business."
+        },
+        {
+          "tag": "H2",
+          "text": "Studio"
+        },
+        {
+          "tag": "H2",
+          "text": "Services"
+        },
+        {
+          "tag": "H2",
+          "text": "Contact"
+        }
+      ],
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/services/landing-pages",
+      "unnamedButtons": 0,
+      "unnamedLinks": 0
+    },
+    {
+      "dup": [],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Make products easier to understand, choose, and buy."
+        },
+        {
+          "tag": "H2",
+          "text": "What gets in the way"
+        },
+        {
+          "tag": "H2",
+          "text": "What the work should change"
+        },
+        {
+          "tag": "H2",
+          "text": "What's included"
+        },
+        {
+          "tag": "H2",
+          "text": "Vellora Care"
+        },
+        {
+          "tag": "H2",
+          "text": "Typical client inputs"
+        },
+        {
+          "tag": "H2",
+          "text": "What affects price and timing"
+        },
+        {
+          "tag": "H2",
+          "text": "Commerce · From $8,500"
+        },
+        {
+          "tag": "H2",
+          "text": "Common questions"
+        },
+        {
+          "tag": "H2",
+          "text": "Start with the service selected. Shape the rest around your business."
+        },
+        {
+          "tag": "H2",
+          "text": "Studio"
+        },
+        {
+          "tag": "H2",
+          "text": "Services"
+        },
+        {
+          "tag": "H2",
+          "text": "Contact"
+        }
+      ],
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/services/ecommerce-websites",
+      "unnamedButtons": 0,
+      "unnamedLinks": 0
+    },
+    {
+      "dup": [],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Keep your website current without turning upkeep into your job."
+        },
+        {
+          "tag": "H2",
+          "text": "What gets in the way"
+        },
+        {
+          "tag": "H2",
+          "text": "What the work should change"
+        },
+        {
+          "tag": "H2",
+          "text": "What's included"
+        },
+        {
+          "tag": "H2",
+          "text": "Vellora Care"
+        },
+        {
+          "tag": "H2",
+          "text": "Typical client inputs"
+        },
+        {
+          "tag": "H2",
+          "text": "What affects price and timing"
+        },
+        {
+          "tag": "H2",
+          "text": "Care · From $99/mo"
+        },
+        {
+          "tag": "H2",
+          "text": "Common questions"
+        },
+        {
+          "tag": "H2",
+          "text": "Start with the service selected. Shape the rest around your business."
+        },
+        {
+          "tag": "H2",
+          "text": "Studio"
+        },
+        {
+          "tag": "H2",
+          "text": "Services"
+        },
+        {
+          "tag": "H2",
+          "text": "Contact"
+        }
+      ],
+      "missingAlt": 0,
+      "overflow": false,
+      "path": "/services/website-care",
+      "unnamedButtons": 0,
+      "unnamedLinks": 0
+    }
+  ]
+}

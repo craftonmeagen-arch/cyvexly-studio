@@ -1,0 +1,470 @@
+{
+  "source": "a1245d8+uncommitted HeroShowcaseVideo/media/Home delta",
+  "hero": {
+    "desktop": {
+      "buttonLabel": "Pause showcase video",
+      "controls": false,
+      "muted": true,
+      "overflow": false,
+      "paused": false,
+      "poster": "http://localhost:5373/media/cyvexly-services-poster.webp",
+      "pressed": "true",
+      "rect": {
+        "h": 297,
+        "w": 528,
+        "x": 736.5,
+        "y": 242.109375
+      },
+      "src": "http://localhost:5373/media/cyvexly-services-loop.mp4",
+      "video": true
+    },
+    "tablet": {
+      "menu": true,
+      "overflow": false,
+      "shell": {
+        "bottom": 82,
+        "height": 70,
+        "left": 12,
+        "right": 741,
+        "top": 12,
+        "width": 729,
+        "x": 12,
+        "y": 12
+      },
+      "videoRect": {
+        "bottom": 966.96875,
+        "height": 394.5625,
+        "left": 25,
+        "right": 728,
+        "top": 572.40625,
+        "width": 703,
+        "x": 25,
+        "y": 572.40625
+      }
+    },
+    "phone": {
+      "h1": 1,
+      "menuLabel": "Open menu",
+      "overflow": false,
+      "shell": {
+        "bottom": 82,
+        "height": 70,
+        "left": 12,
+        "right": 363,
+        "top": 12,
+        "width": 351,
+        "x": 12,
+        "y": 12
+      },
+      "videoRect": {
+        "bottom": 868.4375,
+        "height": 181.9375,
+        "left": 25,
+        "right": 350,
+        "top": 686.5,
+        "width": 325,
+        "x": 25,
+        "y": 686.5
+      }
+    },
+    "playback": {
+      "afterPause": {
+        "label": "Play showcase video",
+        "paused": true,
+        "pressed": "false"
+      },
+      "afterPlay": {
+        "label": "Pause showcase video",
+        "paused": false,
+        "pressed": "true"
+      }
+    },
+    "media": {
+      "videoBytes": 3978486,
+      "durationSeconds": 30,
+      "resolution": "1280x720",
+      "codec": "h264",
+      "posterBytes": 12006
+    }
+  },
+  "menu": {
+    "expanded": "true",
+    "links": 0,
+    "nav": false,
+    "overflow": false
+  },
+  "faq": {
+    "expanded": "true",
+    "answerCount": 1
+  },
+  "planner": {
+    "labels": {
+      "fullName": 1,
+      "email": 1,
+      "contact": 1
+    },
+    "validation": {
+      "active": "fullName",
+      "alerts": [
+        "Please enter your name.",
+        "Please enter a valid email address.",
+        "Please share a phone or preferred contact method."
+      ],
+      "invalid": [],
+      "overflow": false
+    },
+    "errors": {
+      "alerts": [
+        "fullName-error",
+        "workEmail-error",
+        "contactMethod-error"
+      ],
+      "ariaInvalid": [
+        "fullName",
+        "workEmail",
+        "contactMethod"
+      ],
+      "describedBy": [
+        {
+          "describedby": "fullName-error",
+          "id": "fullName"
+        },
+        {
+          "describedby": "workEmail-error",
+          "id": "workEmail"
+        },
+        {
+          "describedby": "contactMethod-error",
+          "id": "contactMethod"
+        }
+      ]
+    }
+  },
+  "routes": {
+    "a": [
+      {
+        "width": 1440,
+        "route": "/",
+        "h1": 1,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "skips": 0,
+        "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+        "video": true
+      },
+      {
+        "width": 1440,
+        "route": "/services",
+        "h1": 1,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "skips": 0,
+        "title": "Services — Cyvexly Studio",
+        "video": false
+      },
+      {
+        "width": 1440,
+        "route": "/work",
+        "h1": 1,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "skips": 0,
+        "title": "Work — Cyvexly Studio",
+        "video": false
+      },
+      {
+        "width": 1440,
+        "route": "/work/aurora-spaces",
+        "h1": 1,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "skips": 0,
+        "title": "Aurora Spaces — Cyvexly Studio",
+        "video": false
+      },
+      {
+        "width": 1440,
+        "route": "/work/nexora-systems",
+        "h1": 1,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "skips": 0,
+        "title": "Nexora Systems — Cyvexly Studio",
+        "video": false
+      },
+      {
+        "width": 390,
+        "route": "/",
+        "h1": 1,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "skips": 0,
+        "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+        "video": true
+      },
+      {
+        "width": 390,
+        "route": "/services",
+        "h1": 1,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "skips": 0,
+        "title": "Services — Cyvexly Studio",
+        "video": false
+      },
+      {
+        "width": 390,
+        "route": "/work",
+        "h1": 1,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "skips": 0,
+        "title": "Work — Cyvexly Studio",
+        "video": false
+      },
+      {
+        "width": 390,
+        "route": "/work/aurora-spaces",
+        "h1": 1,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "skips": 0,
+        "title": "Aurora Spaces — Cyvexly Studio",
+        "video": false
+      },
+      {
+        "width": 390,
+        "route": "/work/nexora-systems",
+        "h1": 1,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "skips": 0,
+        "title": "Nexora Systems — Cyvexly Studio",
+        "video": false
+      }
+    ],
+    "b": [
+      {
+        "width": 1440,
+        "route": "/work/vellora-care",
+        "h1": 1,
+        "headingCount": 13,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Vellora Care — Cyvexly Studio"
+      },
+      {
+        "width": 1440,
+        "route": "/pricing",
+        "h1": 1,
+        "headingCount": 20,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Pricing — Cyvexly Studio"
+      },
+      {
+        "width": 1440,
+        "route": "/process",
+        "h1": 1,
+        "headingCount": 13,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Process — Cyvexly Studio"
+      },
+      {
+        "width": 1440,
+        "route": "/faq",
+        "h1": 1,
+        "headingCount": 16,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "FAQ — Cyvexly Studio"
+      },
+      {
+        "width": 1440,
+        "route": "/contact",
+        "h1": 1,
+        "headingCount": 5,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Contact — Cyvexly Studio"
+      },
+      {
+        "width": 390,
+        "route": "/work/vellora-care",
+        "h1": 1,
+        "headingCount": 13,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Vellora Care — Cyvexly Studio"
+      },
+      {
+        "width": 390,
+        "route": "/pricing",
+        "h1": 1,
+        "headingCount": 20,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Pricing — Cyvexly Studio"
+      },
+      {
+        "width": 390,
+        "route": "/process",
+        "h1": 1,
+        "headingCount": 13,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Process — Cyvexly Studio"
+      },
+      {
+        "width": 390,
+        "route": "/faq",
+        "h1": 1,
+        "headingCount": 16,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "FAQ — Cyvexly Studio"
+      },
+      {
+        "width": 390,
+        "route": "/contact",
+        "h1": 1,
+        "headingCount": 5,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Contact — Cyvexly Studio"
+      }
+    ],
+    "c": [
+      {
+        "width": 1440,
+        "route": "/start",
+        "h1": 1,
+        "inputs": 8,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Project Planner — Cyvexly Studio"
+      },
+      {
+        "width": 1440,
+        "route": "/accessibility",
+        "h1": 1,
+        "inputs": 0,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Accessibility Statement — Cyvexly Studio"
+      },
+      {
+        "width": 1440,
+        "route": "/about",
+        "h1": 1,
+        "inputs": 0,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Page not found — Cyvexly Studio"
+      },
+      {
+        "width": 1440,
+        "route": "/privacy",
+        "h1": 1,
+        "inputs": 0,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Page not found — Cyvexly Studio"
+      },
+      {
+        "width": 1440,
+        "route": "/terms",
+        "h1": 1,
+        "inputs": 0,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Page not found — Cyvexly Studio"
+      },
+      {
+        "width": 390,
+        "route": "/start",
+        "h1": 1,
+        "inputs": 8,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Project Planner — Cyvexly Studio"
+      },
+      {
+        "width": 390,
+        "route": "/accessibility",
+        "h1": 1,
+        "inputs": 0,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Accessibility Statement — Cyvexly Studio"
+      },
+      {
+        "width": 390,
+        "route": "/about",
+        "h1": 1,
+        "inputs": 0,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Page not found — Cyvexly Studio"
+      },
+      {
+        "width": 390,
+        "route": "/privacy",
+        "h1": 1,
+        "inputs": 0,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Page not found — Cyvexly Studio"
+      },
+      {
+        "width": 390,
+        "route": "/terms",
+        "h1": 1,
+        "inputs": 0,
+        "main": true,
+        "missingAlts": 0,
+        "overflow": false,
+        "title": "Page not found — Cyvexly Studio"
+      }
+    ]
+  },
+  "build": {
+    "eslint": "pass",
+    "tsc": "pass",
+    "build": "pass",
+    "knownWarning": "metadataBase fallback to localhost"
+  },
+  "console": {
+    "errorsOrWarnings": []
+  }
+}

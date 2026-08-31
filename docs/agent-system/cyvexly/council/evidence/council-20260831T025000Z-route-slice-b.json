@@ -1,0 +1,86 @@
+[
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "forms": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/about",
+    "scrollWidth": 1425,
+    "title": "Page not found — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "forms": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/faq",
+    "scrollWidth": 1425,
+    "title": "FAQ — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "forms": 1,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/contact",
+    "scrollWidth": 1425,
+    "title": "Contact — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "forms": 1,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/start",
+    "scrollWidth": 1425,
+    "title": "Project Planner — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "forms": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/privacy",
+    "scrollWidth": 1425,
+    "title": "Page not found — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "forms": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/terms",
+    "scrollWidth": 1425,
+    "title": "Page not found — Cyvexly Studio"
+  },
+  {
+    "brokenImgAlts": 0,
+    "emptyLinks": 0,
+    "forms": 0,
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "overflow": false,
+    "path": "/accessibility",
+    "scrollWidth": 1425,
+    "title": "Accessibility Statement — Cyvexly Studio"
+  }
+]

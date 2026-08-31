@@ -1,0 +1,21 @@
+{
+  "cta": [
+    {
+      "href": "/start",
+      "text": "Describe your project"
+    },
+    {
+      "href": "/start",
+      "text": "Describe your project"
+    },
+    {
+      "href": "/contact",
+      "text": "General contact"
+    }
+  ],
+  "h1": "Vellora Care",
+  "main": 1,
+  "overflow": false,
+  "path": "/work/vellora-care",
+  "title": "Vellora Care — Cyvexly Studio"
+}

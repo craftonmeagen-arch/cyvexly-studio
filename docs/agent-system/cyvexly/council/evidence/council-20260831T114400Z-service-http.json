@@ -1,0 +1,45 @@
+{
+  "capturedAtUtc": "2026-08-31T11:55:51.616Z",
+  "routes": [
+    {
+      "path": "/services",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/services/business-websites",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/services/website-redesigns",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/services/landing-pages",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/services/ecommerce-websites",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/services/website-care",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/services/not-a-service",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/start?service=business-websites",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8"
+    }
+  ]
+}

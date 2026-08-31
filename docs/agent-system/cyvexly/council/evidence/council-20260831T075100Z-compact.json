@@ -1,0 +1,27 @@
+{
+  "clientWidth": 720,
+  "connector": "none",
+  "innerWidth": 720,
+  "overflow": false,
+  "panel": {
+    "bottom": 3785.484375,
+    "height": 460.328125,
+    "left": 24,
+    "right": 696,
+    "top": 3325.15625,
+    "width": 672,
+    "x": 24,
+    "y": 3325.15625
+  },
+  "route": {
+    "bottom": 4748.71875,
+    "height": 727.234375,
+    "left": 24,
+    "right": 696,
+    "top": 4021.484375,
+    "width": 672,
+    "x": 24,
+    "y": 4021.484375
+  },
+  "scrollWidth": 720
+}

@@ -1,0 +1,5 @@
+  - figure "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.":
+    - generic: Cyvexly systems
+    - paragraph: Strategy · Design · Development · Reliability
+    - button "Pause showcase video" [pressed]:
+    - generic: A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.

@@ -1,0 +1,38 @@
+[
+  {
+    "route": "/pricing",
+    "visibleButtons": 0,
+    "visibleLinks": 0,
+    "console": []
+  },
+  {
+    "route": "/process",
+    "visibleButtons": 0,
+    "visibleLinks": 0,
+    "console": []
+  },
+  {
+    "route": "/contact",
+    "visibleButtons": 0,
+    "visibleLinks": 0,
+    "console": []
+  },
+  {
+    "route": "/work",
+    "visibleButtons": 0,
+    "visibleLinks": 0,
+    "console": []
+  },
+  {
+    "route": "/services",
+    "visibleButtons": 0,
+    "visibleLinks": 0,
+    "console": []
+  },
+  {
+    "route": "/start",
+    "visibleButtons": 0,
+    "visibleLinks": 0,
+    "console": []
+  }
+]

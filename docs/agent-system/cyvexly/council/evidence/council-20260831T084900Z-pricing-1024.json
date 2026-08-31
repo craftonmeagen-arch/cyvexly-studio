@@ -1,0 +1,15 @@
+{
+  "clientWidth": 1024,
+  "overflow": false,
+  "scrollWidth": 1024,
+  "tableWraps": [
+    {
+      "scrollParent": "mt-8 hidden overflow-x-auto sm:block",
+      "width": 976
+    },
+    {
+      "scrollParent": "mt-8 hidden overflow-x-auto sm:block",
+      "width": 976
+    }
+  ]
+}

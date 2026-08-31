@@ -1,0 +1,255 @@
+{
+  "landmarks": {
+    "h1": 1,
+    "main": 1
+  },
+  "missingAlt": 0,
+  "overflow": false,
+  "url": "http://localhost:5373/",
+  "video": {
+    "ariaHidden": "true",
+    "button": {
+      "controls": "cyvexly-services-showcase",
+      "label": "Pause showcase video",
+      "pressed": "true",
+      "visible": true
+    },
+    "caption": "A visual showcase of Cyvexly Studio services, including strategy, commerce, web applications, security, reliability, and performance.",
+    "currentTime": 0.021221,
+    "duration": 30,
+    "exists": true,
+    "figureLabelledby": "hero-showcase-caption",
+    "loop": true,
+    "muted": true,
+    "paused": false,
+    "poster": "/media/cyvexly-services-poster.webp",
+    "rect": {
+      "h": 181.9375,
+      "w": 325,
+      "x": 25,
+      "y": 686.5
+    }
+  },
+  "viewport": {
+    "innerHeight": 844,
+    "innerWidth": 390
+  },
+  "visibleControls": [
+    {
+      "aria": null,
+      "href": "/",
+      "tag": "A",
+      "text": "CYVEXLY STUDIO"
+    },
+    {
+      "aria": "Open menu",
+      "href": null,
+      "tag": "BUTTON",
+      "text": "Open menu"
+    },
+    {
+      "aria": null,
+      "href": "/start",
+      "tag": "A",
+      "text": "Describe your project"
+    },
+    {
+      "aria": null,
+      "href": "/services",
+      "tag": "A",
+      "text": "Explore services"
+    },
+    {
+      "aria": "Pause showcase video",
+      "href": null,
+      "tag": "BUTTON",
+      "text": ""
+    },
+    {
+      "aria": null,
+      "href": "/work",
+      "tag": "A",
+      "text": "View all projects →"
+    },
+    {
+      "aria": null,
+      "href": "/work/aurora-spaces",
+      "tag": "A",
+      "text": "Concept projectAurora SpacesImmersive website concept for a luxury architecture "
+    },
+    {
+      "aria": null,
+      "href": "/work/nexora-systems",
+      "tag": "A",
+      "text": "Concept projectNexora SystemsSaaS platform concept for an AI analytics company.V"
+    },
+    {
+      "aria": null,
+      "href": "/work/vellora-care",
+      "tag": "A",
+      "text": "Concept projectVellora CareE-commerce concept for a premium skincare brand.View "
+    },
+    {
+      "aria": null,
+      "href": "/pricing",
+      "tag": "A",
+      "text": "Need something custom? Let's talk →"
+    },
+    {
+      "aria": null,
+      "href": "/start",
+      "tag": "A",
+      "text": "Describe your project"
+    },
+    {
+      "aria": null,
+      "href": "/start",
+      "tag": "A",
+      "text": "Describe your project"
+    },
+    {
+      "aria": null,
+      "href": "/start",
+      "tag": "A",
+      "text": "Describe your project"
+    },
+    {
+      "aria": null,
+      "href": "/faq",
+      "tag": "A",
+      "text": "View all questions →"
+    },
+    {
+      "aria": null,
+      "href": null,
+      "tag": "BUTTON",
+      "text": "How long does a website project take?+"
+    },
+    {
+      "aria": null,
+      "href": null,
+      "tag": "BUTTON",
+      "text": "What do you need from me to get started?+"
+    },
+    {
+      "aria": null,
+      "href": null,
+      "tag": "BUTTON",
+      "text": "Will I be able to update my website myself?+"
+    },
+    {
+      "aria": null,
+      "href": null,
+      "tag": "BUTTON",
+      "text": "Do you offer ongoing support?+"
+    },
+    {
+      "aria": null,
+      "href": null,
+      "tag": "BUTTON",
+      "text": "Do you work with businesses outside my industry?+"
+    },
+    {
+      "aria": null,
+      "href": null,
+      "tag": "BUTTON",
+      "text": "How do payments work?+"
+    },
+    {
+      "aria": null,
+      "href": "/start",
+      "tag": "A",
+      "text": "Describe your project"
+    },
+    {
+      "aria": null,
+      "href": "/services",
+      "tag": "A",
+      "text": "Services"
+    },
+    {
+      "aria": null,
+      "href": "/work",
+      "tag": "A",
+      "text": "Work"
+    },
+    {
+      "aria": null,
+      "href": "/pricing",
+      "tag": "A",
+      "text": "Pricing"
+    },
+    {
+      "aria": null,
+      "href": "/process",
+      "tag": "A",
+      "text": "Process"
+    },
+    {
+      "aria": null,
+      "href": "/about",
+      "tag": "A",
+      "text": "About"
+    },
+    {
+      "aria": null,
+      "href": "/services#business-websites",
+      "tag": "A",
+      "text": "Business websites"
+    },
+    {
+      "aria": null,
+      "href": "/services#website-redesigns",
+      "tag": "A",
+      "text": "Website redesigns"
+    },
+    {
+      "aria": null,
+      "href": "/services#landing-pages",
+      "tag": "A",
+      "text": "Landing pages"
+    },
+    {
+      "aria": null,
+      "href": "/services#ecommerce-websites",
+      "tag": "A",
+      "text": "E-commerce websites"
+    },
+    {
+      "aria": null,
+      "href": "/services#website-care",
+      "tag": "A",
+      "text": "Website care"
+    },
+    {
+      "aria": null,
+      "href": "mailto:hello@cyvexly.com",
+      "tag": "A",
+      "text": "hello@cyvexly.com"
+    },
+    {
+      "aria": null,
+      "href": "/contact",
+      "tag": "A",
+      "text": "General contact"
+    },
+    {
+      "aria": null,
+      "href": "/privacy",
+      "tag": "A",
+      "text": "Privacy"
+    },
+    {
+      "aria": null,
+      "href": "/terms",
+      "tag": "A",
+      "text": "Terms"
+    },
+    {
+      "aria": null,
+      "href": "/accessibility",
+      "tag": "A",
+      "text": "Accessibility"
+    }
+  ]
+}

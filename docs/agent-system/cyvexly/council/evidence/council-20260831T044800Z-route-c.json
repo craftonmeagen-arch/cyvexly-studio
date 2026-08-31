@@ -1,0 +1,102 @@
+[
+  {
+    "width": 1440,
+    "route": "/start",
+    "h1": 1,
+    "inputs": 8,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Project Planner — Cyvexly Studio"
+  },
+  {
+    "width": 1440,
+    "route": "/accessibility",
+    "h1": 1,
+    "inputs": 0,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Accessibility Statement — Cyvexly Studio"
+  },
+  {
+    "width": 1440,
+    "route": "/about",
+    "h1": 1,
+    "inputs": 0,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Page not found — Cyvexly Studio"
+  },
+  {
+    "width": 1440,
+    "route": "/privacy",
+    "h1": 1,
+    "inputs": 0,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Page not found — Cyvexly Studio"
+  },
+  {
+    "width": 1440,
+    "route": "/terms",
+    "h1": 1,
+    "inputs": 0,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Page not found — Cyvexly Studio"
+  },
+  {
+    "width": 390,
+    "route": "/start",
+    "h1": 1,
+    "inputs": 8,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Project Planner — Cyvexly Studio"
+  },
+  {
+    "width": 390,
+    "route": "/accessibility",
+    "h1": 1,
+    "inputs": 0,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Accessibility Statement — Cyvexly Studio"
+  },
+  {
+    "width": 390,
+    "route": "/about",
+    "h1": 1,
+    "inputs": 0,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Page not found — Cyvexly Studio"
+  },
+  {
+    "width": 390,
+    "route": "/privacy",
+    "h1": 1,
+    "inputs": 0,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Page not found — Cyvexly Studio"
+  },
+  {
+    "width": 390,
+    "route": "/terms",
+    "h1": 1,
+    "inputs": 0,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Page not found — Cyvexly Studio"
+  }
+]

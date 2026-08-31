@@ -2,145 +2,107 @@
 
 ## Review identity
 
-- Review ID: `CYC-R5-20260830-01`
-- Role: Cyvexly Product Quality Assurance & Methods Council
-- Round: `council-20260830T224200Z`
-- Round started: `2026-08-30T22:41:14.9030160Z`
-- Source head at start: `d04dc9d271d15103aaa3b32897d3b64b74fd9a8c`
-- Dirty-tree fingerprint at round start: `53BD896212C2291969C0236DCA5E15A1BF993B2287C48889FEADD00F9C2975DB`
-- Current source head at close: `da9c6d99962ba3f8a318bf3eed9a9b3ef63c0942`; current dirty-tree
-  fingerprint before publication: `0EFB1199436F02FC5F4105D4EEE15F52F92C78B642517B7829FB122A74DF561E`.
-- Council nonce: `b2cae96a86204e0986d80f55445d0a5a`
-- Runtime: isolated Council runtime at `http://127.0.0.1:5373`
-- PM state: `NO ACTIVE PM PROMPT`; standing Council review
-- Auditor state: no active Auditor guard was present during this round
-- Status: Complete; publish through the collision-safe Council publisher and close within the normal work window
+- Review ID: `CYC-R18-20260830-01`
+- Role: Cyvexly Product Quality, Assurance & Methods Council
+- Round: `council-20260831T114400Z`
+- Scheduler timestamp (minute zero): `2026-08-31T11:44:44.512Z`
+- Durable guard start: `2026-08-31T11:46:11.0805216Z`
+- Source state: `GIT_WORKTREE`; immutable Council snapshot head
+  `68fe4a476a89070b968a21852742680571794695`; no source drift after the
+  accepted service-detail commit `930e050`.
+- Start dirty fingerprint:
+  `329025F57F43D74E228064E5AE842CED8FADE5870A368A27B3D1ECC20F6999B6`
+- Council runtime: `.codex/runtime/council/council-20260831T114400Z/runtime`,
+  port `5373`; visual fallback Chrome CDP port `9339`.
+- PM prompt: `NO ACTIVE PM PROMPT`; standing Council role applied.
+- Auditor: no active Auditor guard detected.
 
-## Scope and method
+## Executive brief
 
-This round independently reviewed accepted Round 7 follow-on work and Round 8's
-cross-surface concept-visual unification. It used the immutable Council runtime
-captured at start head `d04dc9d`; a further Builder commit (`da9c6d9`, Planner
-validation focus) landed after snapshot creation and was source-inspected but
-not served by this independent runtime. The review used in-app browser visible
-captures opened for inspection, side-by-side comparison
-with `mockups/01-home.png`, direct served asset fetches and opened raster frames,
-route-wide DOM/overflow probes, source/status inspection, and isolated lint,
-typecheck, and production-build checks. Home was captured at `1440x900`,
-`768x1024`, and `390x844`; Work at desktop; Services at phone. This is a
-different question from R4's stale-favicon discovery: the effective ICO and
-cross-surface rendering were checked as served outcomes.
-
-## Accepted work since CYC-R4
-
-- `ce6d273` corrected the favicon mark's measured viewBox clipping and shipped
-  a real multi-resolution `src/app/favicon.ico`; `1a77970`, `aee303f`, and
-  `1904634` document that work and rotate Builder hot-path state.
-- `d04dc9d` reuses `ConceptPreview` in Home Selected work and Services Recent
-  work, bringing those surfaces into the same truthful visual system as Work.
-- `da9c6d9` adds first-error focus and linked group-error semantics to the
-  Planner. It landed after this Council snapshot; Builder evidence was read, but
-  Council does not promote that claim to independent runtime verification here.
-- The current `icon.svg` and Open Graph mark use the corrected scaled orbit/check
-  path. Source status for `src/` is clean at close; no scratch route remains.
+Round 18 independently reviewed the post-R17 accepted five-service detail and
+Planner-handoff system. Direct in-app use plus opened exact viewport captures
+confirm a coherent, truthful extension of the existing glass/grid/signal
+system. All five detail routes satisfy the vision content contract and remain
+responsive, semantic, and contained. Native Services → detail → Planner use
+works, and a fresh browser profile confirms every service's intended Planner
+mapping. No external data was submitted.
 
 ## Findings and dispositions
 
-### CYC-R4-F001 — Effective browser favicon
+### CYC-R18-F001 — Confirmed — five service-detail journeys and route boundaries
 
-**Disposition: verified resolved.** The live head exposes `/favicon.ico?...`
-before `/icon.svg?...`, and the served ICO contains branded orbit/check frames
-at `16x16`, `32x32`, `48x48`, and `256x256`. The opened 16px and 32px frames are
-recognizable and no longer the Vercel triangle. The previous closure test is
-satisfied by the actual served asset, not only source inspection.
+`/services/business-websites`, `/website-redesigns`, `/landing-pages`,
+`/ecommerce-websites`, and `/website-care` each return `200`, expose one
+unique outcome-led H1 and one `main`, and link to the correct case-study and
+Planner query. The vision-required problem, outcome, inclusions, concept-work
+label, client inputs, scope controls, starting price/timing, FAQ, and CTA are
+present on every route. An unknown slug returns the expected `404`; duplicate
+IDs, missing image alts, unnamed controls, and document overflow are absent.
 
-### CYC-R4-F002 — Untracked scratch favicon route
+### CYC-R18-F002 — Confirmed — service-to-Planner handoff and user-control boundary
 
-**Disposition: verified resolved.** `src/app/scratch-favicon-ico/route.tsx` is
-absent from current source status, the isolated runtime returns the normal 404
-for that path, and the production build route table contains no scratch route.
+The real in-app path Services → Business Websites → `Include this in my
+project` reaches `/start?service=business-websites`. In a fresh browser profile,
+advancing through Steps 1–2 exposes the intended mapping for all five offers:
+business-site/credibility, redesign/replace, landing-page/launch,
+ecommerce/sell, and not-sure/credibility plus Care `Yes`. The UI announces the
+starting point as editable. The existing in-app browser's saved-draft notice
+remains in control rather than being silently overwritten by a new query. Empty
+Step 1 still returns three field-level alerts, focuses `fullName`, and remains
+contained. No Planner or Contact submission was triggered.
 
-### CYC-R2-F002 — Concept visual concreteness
+### CYC-R18-F003 — Confirmed/no regression — responsive visual and interaction
 
-**Disposition: implementation symptom verified resolved; Owner framing decision
-retained.** Home and Services now reuse the distinct, truthful `ConceptPreview`
-compositions already present on Work/case studies. Opened Home, Work, and
-Services captures show no remaining flat-gradient cross-surface inconsistency,
-and every card remains explicitly labeled `CONCEPT PROJECT`. The approved
-mockup still uses higher-fidelity photographic/rendered scenes, so whether
-abstract illustration is release-sufficient or commissioned concept design is
-required remains an Owner decision; do not reopen the fixed implementation
-symptom as a defect or fabricate client proof.
+Opened Services at desktop/tablet/phone and Business Websites detail at
+`1440×1000`, `768×1024`, and `390×844`; also opened E-commerce, Redesign,
+Landing Pages, and Website Care phone first views. The mobile menu opens to a
+readable stacked panel with `aria-expanded=true`; the detail FAQ opens with its
+answer and expanded state. A `320px` E-commerce view and `390px` explicit
+`24px` root-font stress retain exact-width containment. Full Business detail
+captures show the sections read as one route from offer to proof to inquiry.
 
-### CYC-R5-F001 — Post-snapshot Planner validation-focus change needs fresh verification
+### CYC-R18-F004 — Owner Decision / Next — remaining service-detail fidelity
 
-**Disposition: Observation / Priority Next verification.** Commit `da9c6d9`
-landed after the Council snapshot and changes product source in
-`planner-form.tsx` and `planner-fields.tsx`: it focuses the first invalid control
-and links radio/checkbox group errors with stable names and IDs. The change is
-plausible and Builder's separate native-Chromium evidence reports the expected
-focus/error behavior, but this Council's isolated runtime predates it. A fresh
-round must serve the current head and independently exercise empty-step
-validation at desktop and phone before marking this verification debt closed.
+The reusable detail system is materially more useful than the prior dead-end
+cards and uses honest concept previews. Its orbital signal is legible and
+service-labeled, but the five pages share one visual grammar and remain less
+luminous/dense than the approved Services mockup's globe/workspace and richer
+proof treatment. This is an active Owner fidelity decision, not a source defect
+or permission to fabricate client media. Closure requires Owner selection of
+the honest signal direction versus approved higher-fidelity media, followed by
+an opened comparison at the matching service route.
 
-### Coordinated debt retained
+### CYC-R18-F005 — Confirmed/Next — method and launch-readiness boundaries
 
-- `CYC-R2-F003` / Auditor `CYV-IFA-005`: `metadataBase` remains an Owner/domain
-  decision; build output still warns and static social metadata falls back to
-  localhost until the public domain is approved and wired.
-- Auditor `CYV-IFA-006`: Planner server-side email/backend capability remains an
-  Owner-gated launch decision.
-- Planner physical keyboard-only traversal and visibly reduced-motion behavior
-  remain unconfirmed. This round's DOM focusable-order probe at phone width
-  found the expected header/progress/form ordering and the source contains both
-  reduced-motion branches, but it is not a physical Tab-key claim. Playwright/
-  DOM clicks did not toggle controls in this unattended session; prior R3 is the
-  last successful live interaction evidence.
-- About, Privacy, and Terms remain intentional 404-backed Owner/Chunk debt.
+The Builder's method produced a coherent typed model and reusable template,
+found a too-narrow tablet split in the first render, and repaired it before
+acceptance. Council's isolated lint, production build, and immediate post-build
+typecheck pass; the known `metadataBase` localhost fallback remains
+Owner/domain-blocked. Physical keyboard, attended reduced motion,
+Safari/Firefox, field Web Vitals, second-device scale, deployment/cache,
+server-side email, and legal/domain identity remain unconfirmed.
 
-## Additional live quality checks
+## Methods assessment and Primary Next-Builder Plan
 
-- Twelve public routes loaded at all three required widths: each had one `h1`,
-  one `main`, no empty image alt values, no unnamed links, and no horizontal
-  overflow (`scrollWidth == clientWidth` at each viewport). Browser diagnostics
-  after the sweep were empty.
-- The direct served Open Graph PNG is 1200x630, uses the corrected cyan mark,
-  and was opened for visual inspection. The live favicon's four ICO sizes were
-  extracted and opened.
-- `pnpm run lint`, `pnpm exec tsc --noEmit`, and `pnpm run build` passed in the
-  isolated `d04dc9d` runtime. Build generated 18 expected routes, with only the
-  known `metadataBase` localhost fallback warning; the post-snapshot `da9c6d9`
-  source was not rebuilt by this round.
+Round 18 confirms that the Builder converted the vision's five focused service
+journeys into a reusable, content-complete system without portfolio fabrication
+or token-only churn. Preserve the `lg` tablet stacking fix, route boundaries,
+concept-project labels, local Planner no-submission boundary, and query-versus-
+saved-draft precedence. The next Builder slice should be Owner-led: either
+select one approved higher-fidelity service visual direction or leave the
+honest signal system stable and move to the next load-bearing Owner decision
+(founder/legal/domain/email). Do not broaden the template or add integrations
+without authorization.
 
-## Primary next-Builder plan
+The strongest different next Council question is an attended/different-
+capability review of physical keyboard traversal, reduced-motion behavior,
+Safari/Firefox parity, and second-device scale against the now-connected
+service-to-Planner journey.
 
-1. Freshly verify `da9c6d9`'s Planner first-error focus and linked group-error
-   semantics from a runtime built from the current head, at desktop and phone.
-2. Resolve the Owner's public-domain and transactional-email decisions, then
-   set `metadataBase` and implement the server-side Planner delivery path with
-   explicit consent, success/error/retry states, and sandbox-recipient proof.
-3. Keep the unified truthful concept visuals and disclosure; obtain the Owner's
-   decision on whether higher-fidelity commissioned concept imagery is required
-   before spending another implementation round on artwork.
-4. If a genuinely attended or differently capable browser becomes available,
-   complete the physical Planner Tab-key and reduced-motion observation; until
-   then preserve the honest DOM-level boundary.
-5. Obtain Owner facts for About, Privacy, and Terms before filling those routes.
+## Evidence and limits
 
-## Next Council question
-
-On the next round, independently verify the post-snapshot Planner validation-
-focus commit first, then inspect production metadata and the Planner submission
-boundary after the Owner-gated domain/email decisions. Revisit keyboard/reduced-
-motion with a genuinely different browser capability. Do not repeat the now-
-closed favicon or cross-surface gradient review without new source or a
-contradictory artifact.
-
-## Handoff
-
-Round 5 verified the actual branded favicon and the Round 8 unified concept
-visual system across Home, Services, and Work. The former R4 favicon and scratch
-route findings are closed. Builder commit `da9c6d9` landed after snapshot and
-requires fresh independent Planner validation-focus verification. Preserve
-cited captures and retain the Owner-gated metadata/email/artwork,
-keyboard/reduced-motion, and post-snapshot verification questions.
+Durable evidence is indexed in `docs/agent-system/cyvexly/council/evidence/INDEX.md`,
+including opened Services/detail/Planner captures, route/status probes,
+content-contract checks, Planner mapping, menu/FAQ state, semantic audits, and
+24px-root stress. Council did not edit product source/tests, submit form data,
+touch `.engine-lock`, or control Builder/Auditor resources.

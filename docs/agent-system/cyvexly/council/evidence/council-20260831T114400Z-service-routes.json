@@ -1,0 +1,85 @@
+{
+  "capturedAtUtc": "2026-08-31T11:55:14.268Z",
+  "routes": [
+    {
+      "caseLinks": [
+        "/work/aurora-spaces"
+      ],
+      "h1": [
+        "Turn your expertise into a website people understand and trust."
+      ],
+      "main": 1,
+      "overflow": false,
+      "path": "/services/business-websites",
+      "planner": [
+        "/start?service=business-websites",
+        "/start?service=business-websites"
+      ],
+      "title": "Business websites — Cyvexly Studio"
+    },
+    {
+      "caseLinks": [
+        "/work/nexora-systems"
+      ],
+      "h1": [
+        "Replace an outdated website with a clearer path to action."
+      ],
+      "main": 1,
+      "overflow": false,
+      "path": "/services/website-redesigns",
+      "planner": [
+        "/start?service=website-redesigns",
+        "/start?service=website-redesigns"
+      ],
+      "title": "Website redesigns — Cyvexly Studio"
+    },
+    {
+      "caseLinks": [
+        "/work/nexora-systems"
+      ],
+      "h1": [
+        "Give your campaign a focused place to convert attention into action."
+      ],
+      "main": 1,
+      "overflow": false,
+      "path": "/services/landing-pages",
+      "planner": [
+        "/start?service=landing-pages",
+        "/start?service=landing-pages"
+      ],
+      "title": "Landing pages — Cyvexly Studio"
+    },
+    {
+      "caseLinks": [
+        "/work/vellora-care"
+      ],
+      "h1": [
+        "Make products easier to understand, choose, and buy."
+      ],
+      "main": 1,
+      "overflow": false,
+      "path": "/services/ecommerce-websites",
+      "planner": [
+        "/start?service=ecommerce-websites",
+        "/start?service=ecommerce-websites"
+      ],
+      "title": "E-commerce websites — Cyvexly Studio"
+    },
+    {
+      "caseLinks": [
+        "/work/vellora-care"
+      ],
+      "h1": [
+        "Keep your website current without turning upkeep into your job."
+      ],
+      "main": 1,
+      "overflow": false,
+      "path": "/services/website-care",
+      "planner": [
+        "/start?service=website-care",
+        "/start?service=website-care"
+      ],
+      "title": "Website care — Cyvexly Studio"
+    }
+  ]
+}

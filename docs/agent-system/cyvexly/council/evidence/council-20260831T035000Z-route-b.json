@@ -1,0 +1,112 @@
+[
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/work/vellora-care",
+    "skips": [],
+    "title": "Vellora Care — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/pricing",
+    "skips": [],
+    "title": "Pricing — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/process",
+    "skips": [],
+    "title": "Process — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/faq",
+    "skips": [],
+    "title": "FAQ — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 1440,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/contact",
+    "skips": [],
+    "title": "Contact — Cyvexly Studio",
+    "unnamed": 4
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/work/vellora-care",
+    "skips": [],
+    "title": "Vellora Care — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/pricing",
+    "skips": [],
+    "title": "Pricing — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/process",
+    "skips": [],
+    "title": "Process — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/faq",
+    "skips": [],
+    "title": "FAQ — Cyvexly Studio",
+    "unnamed": 0
+  },
+  {
+    "h1": 1,
+    "innerWidth": 390,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "route": "/contact",
+    "skips": [],
+    "title": "Contact — Cyvexly Studio",
+    "unnamed": 4
+  }
+]

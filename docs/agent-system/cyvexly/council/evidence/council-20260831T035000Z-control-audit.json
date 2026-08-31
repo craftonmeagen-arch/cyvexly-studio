@@ -1,0 +1,125 @@
+{
+  "source": "a1245d8",
+  "scale": [
+    {
+      "capabilities": 6,
+      "credibility": 5,
+      "h1": 1,
+      "menu": false,
+      "overflow": false,
+      "primary": true,
+      "root": "16px",
+      "shell": {
+        "h": 76,
+        "w": 1152,
+        "x": 136.5
+      },
+      "width": 1440
+    },
+    {
+      "capabilities": 6,
+      "credibility": 5,
+      "h1": 1,
+      "menu": true,
+      "overflow": false,
+      "primary": false,
+      "root": "16px",
+      "shell": {
+        "h": 70,
+        "w": 729,
+        "x": 12
+      },
+      "width": 768
+    },
+    {
+      "capabilities": 6,
+      "credibility": 5,
+      "h1": 1,
+      "menu": true,
+      "overflow": false,
+      "primary": false,
+      "root": "16px",
+      "shell": {
+        "h": 70,
+        "w": 351,
+        "x": 12
+      },
+      "width": 390
+    }
+  ],
+  "cta": [
+    {
+      "bg": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+      "color": "rgb(255, 255, 255)",
+      "h": 0,
+      "w": 0
+    },
+    {
+      "bg": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+      "color": "rgb(255, 255, 255)",
+      "h": 46,
+      "w": 194
+    },
+    {
+      "bg": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "color": "rgb(16, 33, 61)",
+      "h": 46,
+      "w": 269
+    },
+    {
+      "bg": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+      "color": "rgb(255, 255, 255)",
+      "h": 46,
+      "w": 267
+    },
+    {
+      "bg": "linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none",
+      "color": "rgb(16, 33, 61)",
+      "h": 46,
+      "w": 269
+    },
+    {
+      "bg": "linear-gradient(135deg, rgb(15, 102, 224) 0%, rgb(18, 105, 224) 52%, rgb(22, 113, 209) 100%)",
+      "color": "rgb(255, 255, 255)",
+      "h": 46,
+      "w": 194
+    }
+  ],
+  "menuOpenObs10": {
+    "expanded": "true",
+    "links": 6,
+    "nav": true,
+    "overflow": false
+  },
+  "faq": {
+    "before": "false",
+    "after": "true",
+    "answerFound": true
+  },
+  "planner": {
+    "active": "fullName",
+    "alerts": [
+      "Please enter your name.",
+      "Please enter a valid email address.",
+      "Please share a phone or preferred contact method."
+    ],
+    "invalid": [
+      "fullName",
+      "workEmail",
+      "contactMethod"
+    ],
+    "overflow": false
+  },
+  "forms": {
+    "contactLabels": ["Name", "Email", "Topic", "Message", "I'd like Cyvexly Studio to reply to this message."],
+    "plannerLabels": ["Full name", "Work email", "Phone or preferred contact method"]
+  },
+  "icons": {
+    "credibility": 5,
+    "capabilities": 6
+  },
+  "build": {
+    "status": "pass",
+    "knownWarning": "metadataBase fallback to localhost"
+  }
+}

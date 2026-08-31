@@ -1,0 +1,35 @@
+{
+  "capturedAtUtc": "2026-08-31T12:05:48.538Z",
+  "routes": [
+    {
+      "slug": "business-websites",
+      "expanded": "true",
+      "controls": "faq-panel-0",
+      "panelText": "Orbit includes up to seven core pages. Fewer or additional pages can be scoped around your actual content and visitor journey."
+    },
+    {
+      "slug": "website-redesigns",
+      "expanded": "true",
+      "controls": "faq-panel-0",
+      "panelText": "No. The first review identifies useful content and functionality worth preserving, then separates it from the parts creating confusion or friction."
+    },
+    {
+      "slug": "landing-pages",
+      "expanded": "true",
+      "controls": "faq-panel-0",
+      "panelText": "They can look similar, but a landing page is shaped around one campaign and action. A one-page business site usually has to explain a broader company and may serve several visitor needs."
+    },
+    {
+      "slug": "ecommerce-websites",
+      "expanded": "true",
+      "controls": "faq-panel-0",
+      "panelText": "The recommendation follows your catalog, editing workflow, integrations, and operating requirements. We do not force every store into the same platform before discovery."
+    },
+    {
+      "slug": "website-care",
+      "expanded": "true",
+      "controls": "faq-panel-0",
+      "panelText": "No. Every project includes 14 days of post-launch defect support. A care plan is for ongoing updates, maintenance, or improvement after that window."
+    }
+  ]
+}

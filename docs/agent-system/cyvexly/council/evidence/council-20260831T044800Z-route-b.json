@@ -1,0 +1,102 @@
+[
+  {
+    "width": 1440,
+    "route": "/work/vellora-care",
+    "h1": 1,
+    "headingCount": 13,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Vellora Care — Cyvexly Studio"
+  },
+  {
+    "width": 1440,
+    "route": "/pricing",
+    "h1": 1,
+    "headingCount": 20,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Pricing — Cyvexly Studio"
+  },
+  {
+    "width": 1440,
+    "route": "/process",
+    "h1": 1,
+    "headingCount": 13,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Process — Cyvexly Studio"
+  },
+  {
+    "width": 1440,
+    "route": "/faq",
+    "h1": 1,
+    "headingCount": 16,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "FAQ — Cyvexly Studio"
+  },
+  {
+    "width": 1440,
+    "route": "/contact",
+    "h1": 1,
+    "headingCount": 5,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Contact — Cyvexly Studio"
+  },
+  {
+    "width": 390,
+    "route": "/work/vellora-care",
+    "h1": 1,
+    "headingCount": 13,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Vellora Care — Cyvexly Studio"
+  },
+  {
+    "width": 390,
+    "route": "/pricing",
+    "h1": 1,
+    "headingCount": 20,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Pricing — Cyvexly Studio"
+  },
+  {
+    "width": 390,
+    "route": "/process",
+    "h1": 1,
+    "headingCount": 13,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Process — Cyvexly Studio"
+  },
+  {
+    "width": 390,
+    "route": "/faq",
+    "h1": 1,
+    "headingCount": 16,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "FAQ — Cyvexly Studio"
+  },
+  {
+    "width": 390,
+    "route": "/contact",
+    "h1": 1,
+    "headingCount": 5,
+    "main": true,
+    "missingAlts": 0,
+    "overflow": false,
+    "title": "Contact — Cyvexly Studio"
+  }
+]

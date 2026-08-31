@@ -1,0 +1,27 @@
+{
+  "mobileMenu": {
+    "body": true,
+    "close": true,
+    "overflow": false
+  },
+  "media": {
+    "autoplay": false,
+    "currentSrc": "http://localhost:5373/media/cyvexly-services-loop.mp4",
+    "loop": true,
+    "muted": true
+  },
+  "playback": {
+    "before": {
+      "label": "Pause showcase video",
+      "paused": false
+    },
+    "afterPause": {
+      "label": "Play showcase video",
+      "paused": true
+    },
+    "afterPlay": {
+      "label": "Pause showcase video",
+      "paused": false
+    }
+  }
+}

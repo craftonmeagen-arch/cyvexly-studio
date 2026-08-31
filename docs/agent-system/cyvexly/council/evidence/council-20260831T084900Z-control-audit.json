@@ -1,0 +1,50 @@
+{
+  "faqStateR15": {
+    "answer": null,
+    "borderColor": "rgb(216, 225, 234)",
+    "expanded": "true",
+    "focusVisible": true,
+    "focused": true,
+    "outline": "rgb(15, 102, 224) solid 2px"
+  },
+  "openStateR15": {
+    "expanded": "true",
+    "menuLinks": [
+      "Services",
+      "Work",
+      "Pricing",
+      "Process",
+      "About",
+      "Describe your project"
+    ],
+    "overflow": false
+  },
+  "closeStateR15": {
+    "expanded": "false",
+    "overflow": false
+  },
+  "videoStateBeforeR15": {
+    "currentSrc": "http://localhost:5373/media/cyvexly-services-loop.mp4",
+    "loop": true,
+    "muted": true,
+    "paused": false,
+    "readyState": 4
+  },
+  "videoPausedR15": {
+    "paused": true
+  },
+  "videoPlayingR15": {
+    "paused": false
+  },
+  "contactStateR15": {
+    "alert": "Please fix the highlighted fields below.",
+    "focused": null,
+    "invalid": [
+      "name",
+      "email",
+      "message",
+      "consent"
+    ],
+    "overflow": false
+  }
+}
