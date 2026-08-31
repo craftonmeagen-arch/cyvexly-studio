@@ -2,10 +2,10 @@
 
 ## Round 11 closeout
 
-**Session:** `184dd314-df8f-4e46-8a1f-37dcb993f775`  
-**Lock claim:** `2026-08-31T05:09:16.0099645Z`  
-**Product commit:** `34a5bd3` — add accessible Home showcase video  
-**PM prompt:** no active prompt  
+**Session:** `184dd314-df8f-4e46-8a1f-37dcb993f775`
+**Lock claim:** `2026-08-31T05:09:16.0099645Z`
+**Product commit:** `34a5bd3` — add accessible Home showcase video
+**PM prompt:** no active prompt
 **Source safety:** Builder product source is committed. Council-owned dirty
 files/evidence and the shared inbox remain intentionally untouched. No scheduler
 or automation was modified.
@@ -81,5 +81,5 @@ or automation was modified.
 
 ## Completion state
 
-**DONE WITH PROOF** for round 11's Owner-directed hero showcase slice.  
+**DONE WITH PROOF** for round 11's Owner-directed hero showcase slice.
 **OWNER REVIEW PENDING** for final mockup parity and second-computer scale.

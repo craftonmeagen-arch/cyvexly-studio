@@ -1,7 +1,7 @@
 # Round 11 Home Hero Video Comparison
 
-**Product commit:** `34a5bd3` — `Add accessible Home showcase video`  
-**Reference:** `mockups/01-home.png`  
+**Product commit:** `34a5bd3` — `Add accessible Home showcase video`
+**Reference:** `mockups/01-home.png`
 **Owner direction:** add the Owner-supplied showcase media to Home as a
 repeating advertisement of Cyvexly's offer.
 

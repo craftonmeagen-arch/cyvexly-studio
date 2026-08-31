@@ -1,7 +1,7 @@
 # Round 11 Home Hero Video Plan
 
-**Session:** `184dd314-df8f-4e46-8a1f-37dcb993f775`  
-**Start source:** `a1245d8` plus an uncommitted Owner-directed Home media delta  
+**Session:** `184dd314-df8f-4e46-8a1f-37dcb993f775`
+**Start source:** `a1245d8` plus an uncommitted Owner-directed Home media delta
 **Status:** preserved before this round's source acceptance or correction
 
 ## Source and provenance
