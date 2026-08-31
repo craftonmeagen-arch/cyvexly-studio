@@ -163,8 +163,9 @@ unindicated focus stop, no overflow, three linked invalid controls/alerts, and
 runtime 390px matrix advanced through all nine steps and proved first-error
 focus plus stable error linkage for radio cards, checkbox cards, and ordinary
 checkboxes; an identical `prefers-reduced-motion: reduce` run produced the same
-five targets/messages. See `builder/evidence/round-8-planner-validation-focus-
-matrix.json` and `round-8-planner-validation-focus-matrix-reduced-motion.json`.
+five targets/messages. See
+`builder/evidence/round-8-planner-validation-focus-matrix.json` and
+`builder/evidence/round-8-planner-validation-focus-matrix-reduced-motion.json`.
 
 ### Audibles and findings
 
