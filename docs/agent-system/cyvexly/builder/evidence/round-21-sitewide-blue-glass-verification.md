@@ -74,10 +74,13 @@ accent at 5.06:1 and graphite body at 6.07:1.
   switch, and none of the removed playback text. The 1152–853 widths also act
   as layout proxies for common 125–150% desktop zoom states.
 - Work renders six named filters; activating Business Site changes the selected
-  button and card count from three to two while retaining focus.
+  button and card count from three to two while retaining focus. The same
+  interaction passes again on the adopted public site.
 - Home media is muted, inline, looping, actively advancing, without native or
   custom visible playback controls and without the removed `Muted loop` text.
 - Planner service-query route reaches Step 1 at 390px with zero overflow.
+  Public Planner query entry and public Home muted-loop playback without native,
+  custom, or removed visible chrome pass again after adoption.
 
 ## Accountability and limits
 

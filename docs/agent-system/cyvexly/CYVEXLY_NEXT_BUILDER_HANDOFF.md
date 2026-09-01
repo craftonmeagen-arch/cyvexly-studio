@@ -30,6 +30,7 @@
 - Public Render changed ETag and serves the shared `site-atmosphere` after the
   `main` push; a 68-state public matrix across six routes and eleven widths
   from 1440 through 320 passes, including desktop-zoom proxy widths.
+- Public Work filter, Home media, and Planner query-entry interactions pass.
 
 ## Blockers and next tasks
 

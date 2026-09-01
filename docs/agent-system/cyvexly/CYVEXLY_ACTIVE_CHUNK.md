@@ -346,6 +346,7 @@ atmosphere to `"10h74cxm9iq2hzw"` with it after the `main` push. A 68-state
 public matrix across six routes and eleven widths from 1440 through 320 passes
 atmosphere, landmark, containment, and responsive-navigation checks, including
 1152–853 layout proxies for common desktop zoom states.
+Public Work filter, Home media, and Planner query-entry interactions also pass.
 
 Concurrent reviewer files stayed untouched and unstaged. No scheduler or
 automation was read or changed. Physical Safari/Firefox, field Web Vitals, the
