@@ -30,6 +30,8 @@
 - Public Render changed ETag and serves the shared `site-atmosphere` after the
   `main` push; a 68-state public matrix across six routes and eleven widths
   from 1440 through 320 passes, including desktop-zoom proxy widths.
+- The matrix has zero unnamed controls, missing image alternatives,
+  aria-hidden focusable descendants, or heading-level skips.
 - Public Work filter, Home media, and Planner query-entry interactions pass.
 - Public reduced-motion Home and the expanded 320px mobile menu pass.
 - Public 17-page/32-link internal route and fragment crawl has zero unexpected

@@ -73,6 +73,10 @@ accent at 5.06:1 and graphite body at 6.07:1.
   atmosphere/main/H1, zero overflow, the correct desktop/mobile navigation
   switch, and none of the removed playback text. The 1152–853 widths also act
   as layout proxies for common 125–150% desktop zoom states.
+- The same 68-state matrix reports zero unnamed controls, missing image
+  alternatives, focusable descendants inside `aria-hidden` decoration, or
+  heading-level skips. An initial scanner false-positive correctly identified
+  the Planner honeypot as `tabIndex=-1`; the corrected focusability test passes.
 - Opened the public 320px Home, Services, and Planner tops after explicitly
   resetting scroll position. Header, protected copy, button wrapping, and intro
   boundaries remain legible and unclipped at the narrowest audited width.
