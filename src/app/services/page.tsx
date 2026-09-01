@@ -177,7 +177,11 @@ export default function ServicesPage() {
               <p className="text-sm text-cool-graphite">
                 Not sure which path fits? That&apos;s exactly what the Project Planner is for.
               </p>
-              <ButtonLink href="/start" variant="secondary" className="shrink-0 text-sm">
+              <ButtonLink
+                href="/start"
+                variant="secondary"
+                className="min-w-0 max-w-full whitespace-normal text-center text-sm"
+              >
                 Find your starting point →
               </ButtonLink>
             </div>

@@ -1,12 +1,50 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { primaryNav } from "@/lib/site-config";
 import { ButtonLink } from "@/components/button";
 
+const desktopNavigationQuery = "(min-width: 1024px)";
+
+function isCurrentPath(pathname: string, href: string) {
+  return pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
+}
+
 export function SiteHeader() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const desktopNavigation = window.matchMedia(desktopNavigationQuery);
+    const closeCompactNavigation = (event: MediaQueryListEvent) => {
+      if (event.matches) setOpen(false);
+    };
+
+    desktopNavigation.addEventListener("change", closeCompactNavigation);
+    return () => {
+      desktopNavigation.removeEventListener("change", closeCompactNavigation);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const closeWithFocusReturn = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+
+      event.preventDefault();
+      setOpen(false);
+      window.requestAnimationFrame(() => menuButtonRef.current?.focus());
+    };
+
+    document.addEventListener("keydown", closeWithFocusReturn);
+    return () => {
+      document.removeEventListener("keydown", closeWithFocusReturn);
+    };
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-50 px-3 pt-3">
@@ -14,6 +52,7 @@ export function SiteHeader() {
       <div className="flex items-center justify-between px-4 py-3.5 sm:px-6">
         <Link
           href="/"
+          aria-current={pathname === "/" ? "page" : undefined}
           className="font-display text-sm font-semibold tracking-[0.18em] text-midnight-slate"
         >
           CYVEXLY STUDIO
@@ -27,6 +66,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isCurrentPath(pathname, item.href) ? "page" : undefined}
               className="text-sm font-medium text-cool-graphite transition-colors hover:text-midnight-slate"
             >
               {item.label}
@@ -35,12 +75,18 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden lg:block">
-          <ButtonLink href="/start" variant="primary" className="px-5 py-2.5 text-sm">
+          <ButtonLink
+            href="/start"
+            variant="primary"
+            aria-current={pathname === "/start" ? "page" : undefined}
+            className="px-5 py-2.5 text-sm"
+          >
             Describe your project
           </ButtonLink>
         </div>
 
         <button
+          ref={menuButtonRef}
           type="button"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/90 bg-white/45 text-midnight-slate shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_10px_24px_-20px_rgba(15,102,224,0.7)] lg:hidden"
           aria-expanded={open}
@@ -78,6 +124,7 @@ export function SiteHeader() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  aria-current={isCurrentPath(pathname, item.href) ? "page" : undefined}
                   className="block rounded-lg px-2 py-3 text-base font-medium text-midnight-slate"
                   onClick={() => setOpen(false)}
                 >
@@ -86,7 +133,13 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
-          <ButtonLink href="/start" variant="primary" className="mt-4 w-full">
+          <ButtonLink
+            href="/start"
+            variant="primary"
+            aria-current={pathname === "/start" ? "page" : undefined}
+            className="mt-4 w-full"
+            onClick={() => setOpen(false)}
+          >
             Describe your project
           </ButtonLink>
         </nav>
