@@ -87,6 +87,9 @@ accent at 5.06:1 and graphite body at 6.07:1.
 - Public reduced-motion emulation holds the Home reel paused at time zero and
   reports no atmosphere animation. At 320px the mobile menu expands to six
   named links with `aria-expanded="true"` and zero horizontal overflow.
+- A post-adoption crawl of 17 public seed pages resolves 32 unique internal
+  route/fragment links with zero unexpected failure; only the three documented
+  Owner-blocked About/Privacy/Terms destinations return 404.
 
 ## Accountability and limits
 

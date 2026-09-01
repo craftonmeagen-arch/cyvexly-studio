@@ -32,6 +32,8 @@
   from 1440 through 320 passes, including desktop-zoom proxy widths.
 - Public Work filter, Home media, and Planner query-entry interactions pass.
 - Public reduced-motion Home and the expanded 320px mobile menu pass.
+- Public 17-page/32-link internal route and fragment crawl has zero unexpected
+  failure; About/Privacy/Terms remain the three documented Owner-blocked 404s.
 
 ## Blockers and next tasks
 
