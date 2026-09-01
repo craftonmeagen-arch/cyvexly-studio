@@ -137,7 +137,7 @@ export default function PricingPage() {
         </section>
 
         {/* Comparison grid */}
-        <section className="border-y border-smoke-glass/70 bg-ice-field">
+        <section className="glass-section border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
               Compare packages
@@ -234,7 +234,7 @@ export default function PricingPage() {
         </section>
 
         {/* Add-ons */}
-        <section className="border-y border-smoke-glass/70 bg-ice-field">
+        <section className="glass-section border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
               Add-ons
@@ -297,7 +297,7 @@ export default function PricingPage() {
         </section>
 
         {/* Billed separately + payment */}
-        <section className="border-y border-smoke-glass/70 bg-ice-field">
+        <section className="glass-section border-y border-smoke-glass/70">
           <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2">
             <div>
               <h2 className="font-display text-xl font-semibold text-midnight-slate sm:text-2xl">

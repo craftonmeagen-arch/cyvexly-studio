@@ -46,9 +46,9 @@ export default async function ServiceDetailPage({
       <SiteHeader />
 
       <main className="flex-1">
-        <section className="signal-grid-bg border-b border-smoke-glass/70">
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 md:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.86fr)]">
-            <div>
+        <section className="page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16">
+          <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.86fr)] lg:gap-10">
+            <div className="page-intro-shell rounded-3xl px-6 py-8 sm:px-8 sm:py-10">
               <ButtonLink href="/services" variant="text" className="text-sm">
                 ← All services
               </ButtonLink>
@@ -103,7 +103,7 @@ export default async function ServiceDetailPage({
           </article>
         </section>
 
-        <section className="border-y border-smoke-glass/70 bg-ice-field/70">
+        <section className="glass-section border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
             <p className="font-mono text-xs uppercase tracking-[0.14em] text-cool-graphite">
               Practical scope

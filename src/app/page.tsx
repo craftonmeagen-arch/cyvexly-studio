@@ -108,7 +108,7 @@ export default function Home() {
         </section>
 
         {/* Capabilities */}
-        <section className="border-y border-smoke-glass/70 bg-ice-field">
+        <section className="glass-section border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
               What Cyvexly can do
@@ -178,7 +178,7 @@ export default function Home() {
         </section>
 
         {/* Pricing preview */}
-        <section className="border-y border-smoke-glass/70 bg-ice-field">
+        <section className="glass-section border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">

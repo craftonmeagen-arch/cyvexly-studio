@@ -14,8 +14,8 @@ export default function NotFound() {
       <SiteHeader />
 
       <main className="flex-1">
-        <section className="signal-grid-bg flex min-h-[60vh] items-center border-b border-smoke-glass/70">
-          <div className="mx-auto max-w-2xl px-6 py-20 text-center">
+        <section className="page-intro-stage flex min-h-[60vh] items-center border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16">
+          <div className="page-intro-shell mx-auto max-w-2xl rounded-3xl px-6 py-10 text-center sm:px-10 sm:py-12">
             <p className="font-mono text-sm text-cyber-blue">404</p>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
               This page doesn&apos;t exist yet.

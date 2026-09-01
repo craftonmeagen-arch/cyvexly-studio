@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { SiteAtmosphere } from "@/components/site-atmosphere";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -38,7 +39,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-scroll-behavior="smooth"
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetBrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-arctic-mist text-midnight-slate">
+      <body className="site-root min-h-full flex flex-col bg-arctic-mist text-midnight-slate">
+        <SiteAtmosphere />
         {children}
       </body>
     </html>

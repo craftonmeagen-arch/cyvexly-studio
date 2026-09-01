@@ -53,11 +53,255 @@ html {
 
 body {
   background:
-    radial-gradient(circle at 12% -8%, color-mix(in srgb, var(--color-ion-cyan) 14%, transparent), transparent 34rem),
-    radial-gradient(circle at 94% 18%, color-mix(in srgb, var(--color-cyber-blue) 10%, transparent), transparent 38rem),
-    var(--background);
+    radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), transparent 28rem),
+    radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), transparent 32rem),
+    radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), transparent 38rem),
+    linear-gradient(135deg, #e8f5fd 0%, #e2f2fc 46%, #edf8fe 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.site-root {
+  position: relative;
+  isolation: isolate;
+}
+
+.site-root > :not(.site-atmosphere) {
+  position: relative;
+  z-index: 1;
+}
+
+.site-atmosphere {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-atmosphere::before,
+.site-atmosphere::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.site-atmosphere::before {
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(15, 102, 224, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 102, 224, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.28) 72%, transparent);
+}
+
+.site-atmosphere::after {
+  top: -16vh;
+  right: 16vw;
+  width: min(36rem, 48vw);
+  height: 130vh;
+  border-inline: 1px solid rgba(255, 255, 255, 0.52);
+  background: linear-gradient(112deg, transparent 14%, rgba(255, 255, 255, 0.2) 48%, rgba(126, 203, 255, 0.07) 70%, transparent 88%);
+  box-shadow: inset 0 0 0 1px rgba(54, 199, 255, 0.035);
+  transform: rotate(13deg);
+}
+
+.site-atmosphere-plane {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  border-radius: 4rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(126, 203, 255, 0.065));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.64),
+    0 46px 96px -68px rgba(15, 102, 224, 0.58);
+}
+
+.site-atmosphere-plane-left {
+  top: 16vh;
+  left: -18rem;
+  width: 34rem;
+  height: 42rem;
+  transform: rotate(-17deg);
+}
+
+.site-atmosphere-plane-right {
+  right: -16rem;
+  bottom: -10rem;
+  width: 38rem;
+  height: 34rem;
+  transform: rotate(18deg);
+}
+
+.site-atmosphere-wiring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+}
+
+.site-atmosphere-wire-soft {
+  stroke: rgba(15, 102, 224, 0.14);
+  stroke-width: 1;
+}
+
+.site-atmosphere-wire-bright {
+  stroke: rgba(255, 255, 255, 0.72);
+  stroke-width: 1.25;
+}
+
+.site-atmosphere-nodes {
+  fill: rgba(54, 199, 255, 0.42);
+  stroke: rgba(255, 255, 255, 0.82);
+  stroke-width: 1.5;
+}
+
+.site-atmosphere-data {
+  position: absolute;
+  color: rgba(49, 90, 141, 0.34);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+}
+
+.site-atmosphere-data-a {
+  top: 7rem;
+  left: 4.5vw;
+}
+
+.site-atmosphere-data-b {
+  top: 11rem;
+  right: 5.5vw;
+}
+
+.site-atmosphere-data-c {
+  top: 46%;
+  right: 2.75vw;
+}
+
+.site-atmosphere-data-d {
+  bottom: 8rem;
+  left: 3.5vw;
+}
+
+.page-intro-stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 76% 15%, rgba(151, 215, 255, 0.42), transparent 31rem),
+    radial-gradient(ellipse at 14% 86%, rgba(255, 255, 255, 0.86), transparent 28rem),
+    linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94));
+}
+
+.page-intro-stage::before,
+.page-intro-stage::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.page-intro-stage::before {
+  z-index: -1;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(15, 102, 224, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 102, 224, 0.07) 1px, transparent 1px),
+    repeating-linear-gradient(124deg, transparent 0 9rem, rgba(255, 255, 255, 0.4) 9.05rem 9.12rem, transparent 9.2rem 16rem);
+  background-size: 44px 44px, 44px 44px, auto;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.56));
+}
+
+.page-intro-stage::after {
+  z-index: -1;
+  top: -10rem;
+  right: -8rem;
+  width: 34rem;
+  height: 30rem;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 4rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(105, 190, 250, 0.1));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transform: rotate(-11deg);
+}
+
+.page-intro-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 251, 255, 0.74) 58%, rgba(218, 239, 253, 0.6)),
+    rgba(242, 249, 254, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.94);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 0 0 1px rgba(54, 199, 255, 0.08),
+    0 34px 76px -54px rgba(16, 33, 61, 0.5),
+    0 20px 50px -38px rgba(15, 102, 224, 0.58);
+  backdrop-filter: blur(30px) saturate(138%);
+}
+
+.page-intro-shell::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(118deg, transparent 14%, rgba(255, 255, 255, 0.46) 43%, transparent 70%),
+    radial-gradient(circle at 97% 4%, rgba(54, 199, 255, 0.12), transparent 11rem);
+  content: "";
+  pointer-events: none;
+}
+
+.page-intro-shell::after {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.15rem;
+  width: 4.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(15, 102, 224, 0.24));
+  content: "";
+  pointer-events: none;
+}
+
+.page-intro-shell > * {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-section {
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)),
+    rgba(227, 239, 248, 0.76);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.68),
+    inset 0 -1px 0 rgba(15, 102, 224, 0.045);
+  backdrop-filter: blur(8px) saturate(116%);
+}
+
+@media (max-width: 639px) {
+  .site-atmosphere-data-b,
+  .site-atmosphere-data-c,
+  .site-atmosphere-plane-right {
+    display: none;
+  }
+
+  .site-atmosphere::after {
+    right: -12rem;
+    opacity: 0.58;
+  }
+
+  .site-atmosphere-wiring {
+    width: 150%;
+    transform: translateX(-17%);
+  }
+
+  .page-intro-stage::after {
+    right: -20rem;
+  }
+
+  .page-intro-shell {
+    border-radius: 1.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

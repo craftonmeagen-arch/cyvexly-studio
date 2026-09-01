@@ -39,8 +39,8 @@ export default async function StartPage({
       <SiteHeader />
 
       <main className="flex-1">
-        <section className="signal-grid-bg border-b border-smoke-glass/70">
-          <div className="mx-auto max-w-3xl px-6 py-16 text-center sm:py-20">
+        <section className="page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16">
+          <div className="page-intro-shell mx-auto max-w-3xl rounded-3xl px-6 py-10 text-center sm:px-10 sm:py-12">
             <p className="text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
               Project Planner
             </p>

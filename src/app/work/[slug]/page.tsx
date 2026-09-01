@@ -40,24 +40,26 @@ export default async function CaseStudyPage({
       <SiteHeader />
 
       <main className="flex-1">
-        <section className="signal-grid-bg border-b border-smoke-glass/70">
-          <div className="mx-auto max-w-4xl px-6 py-16">
-            <ButtonLink href="/work" variant="text" className="text-sm">
-              ← All work
-            </ButtonLink>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <span className="rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
-                {study.status}
-              </span>
-              <span className="text-sm text-cool-graphite">{study.businessType}</span>
+        <section className="page-intro-stage border-b border-smoke-glass/70">
+          <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
+            <div className="page-intro-shell rounded-3xl px-6 py-8 sm:px-10 sm:py-10">
+              <ButtonLink href="/work" variant="text" className="text-sm">
+                ← All work
+              </ButtonLink>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <span className="rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
+                  {study.status}
+                </span>
+                <span className="text-sm text-cool-graphite">{study.businessType}</span>
+              </div>
+              <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
+                {study.name}
+              </h1>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
+                <span className="font-medium text-midnight-slate">Audience: </span>
+                {study.audience}
+              </p>
             </div>
-            <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
-              {study.name}
-            </h1>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
-              <span className="font-medium text-midnight-slate">Audience: </span>
-              {study.audience}
-            </p>
           </div>
           <div
             className={`h-56 w-full overflow-hidden bg-gradient-to-br sm:h-72 ${study.gradient}`}
@@ -170,7 +172,7 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
-        <section className="border-y border-smoke-glass/70 bg-ice-field">
+        <section className="glass-section border-y border-smoke-glass/70">
           <div className="mx-auto max-w-4xl px-6 py-16">
             <h2 className="font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
               Accessibility highlights

@@ -15,8 +15,8 @@ export default function AccessibilityPage() {
       <SiteHeader />
 
       <main className="flex-1">
-        <section className="signal-grid-bg border-b border-smoke-glass/70">
-          <div className="mx-auto max-w-3xl px-6 py-20 text-center">
+        <section className="page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16">
+          <div className="page-intro-shell mx-auto max-w-3xl rounded-3xl px-6 py-10 text-center sm:px-10 sm:py-12">
             <p className="text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
               Accessibility
             </p>
@@ -27,7 +27,7 @@ export default function AccessibilityPage() {
         </section>
 
         <section className="mx-auto max-w-3xl px-6 py-16">
-          <div className="space-y-10 text-sm leading-relaxed text-cool-graphite sm:text-base">
+          <div className="glass-panel space-y-10 rounded-3xl px-6 py-8 text-sm leading-relaxed text-cool-graphite sm:px-10 sm:py-10 sm:text-base">
             <div>
               <h2 className="font-display text-lg font-semibold text-midnight-slate">
                 Our commitment
