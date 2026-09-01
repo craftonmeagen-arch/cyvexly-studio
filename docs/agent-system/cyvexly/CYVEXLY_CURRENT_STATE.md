@@ -20,6 +20,11 @@ match the authoritative hierarchy without clipping or contrast loss. Final
 composited validation contrast starts at 4.6388:1. A discovered Contact error-
 focus defect is fixed: four errors remain associated and blank submission now
 focuses `#name`; Planner retains three linked errors and focuses `#fullName`.
+Fresh Council R39 evidence independently inspected accepted product `06fbadd`,
+closed R38's contrast finding at 5.5660:1 in its sampled Contact/Planner state,
+and passed the Round 24 route-family glass, focus, sticky-header, interaction,
+media, containment, build, and mockup-comparison checks. Its current-report
+publication was still in progress at Builder closeout; the evidence is preserved.
 
 **Immediate next mission:** hold the implemented theme stable for Owner visual
 review and original second-computer confirmation. Do not reinterpret mockup 06

@@ -29,9 +29,11 @@ adopted publicly
   `3chp4ua-pf_73.css` containing `.cyber-focal-panel` and
 `.glass-content-field`; opened public desktop/phone renders match local truth.
 - Auditor R18 reviewed pre-R23 Round 22 source and closed the sticky/continuation
-  finding; Council R38 duplicated the pre-fix contrast defect already closed by
-  Round 23. Neither reviewer inspected Round 24 source, so this closeout does
-  not claim independent Round 24 acceptance.
+  finding. Fresh Council R39 evidence independently inspected accepted product
+  `06fbadd`, closed R38's contrast finding, and passed the Round 24 glass,
+  focus, sticky-header, interaction, media, containment, build, and exact-mockup
+  comparison checks. R39 current-report publication was still in progress at
+  Builder closeout; preserve the reviewer-owned evidence and records.
 
 ## Immediate next mission
 

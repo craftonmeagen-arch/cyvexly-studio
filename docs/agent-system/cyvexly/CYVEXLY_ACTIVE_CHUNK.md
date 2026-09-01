@@ -303,6 +303,12 @@ only the Owner/domain-blocked `metadataBase` warning remains. Commits `2983699`,
 `3chp4ua-pf_73.css` containing the new shared primitives; opened public renders
 and the public 198-state matrix match optimized local truth.
 
+Fresh Council R39 evidence independently inspected product `06fbadd`, closed
+R38's contrast finding at 5.5660:1 in its sampled validation state, and passed
+the Round 24 glass/mockup, focus, sticky-header, interaction, media,
+containment, and build checks. Current-report publication was still in progress
+at Builder closeout; reviewer-owned files remain untouched.
+
 Concurrent Auditor/Council records were preserved and excluded. No scheduler or
 automation was read, modified, paused, deleted, renamed, or rescheduled. Owner
 visual acceptance/original second-computer confirmation, physical Safari/
