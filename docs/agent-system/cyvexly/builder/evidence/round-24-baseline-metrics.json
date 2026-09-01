@@ -1,0 +1,1528 @@
+{
+  "label": "round-24-baseline",
+  "capturedAt": "2026-09-01T16:09:47.082Z",
+  "results": [
+    {
+      "route": {
+        "name": "home",
+        "path": "/"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "round-24-baseline-home-desktop.jpg",
+      "path": "/",
+      "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 4865,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "home-hero-stage relative isolate overflow-hidden border-b border-smoke-glass/70",
+          "top": 88,
+          "height": 717,
+          "width": 1440,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 74% 20%, rgba(174, 220, 255, 0.72), rgba(0, 0, 0, 0) 672px), radial-gradient(at 10% 78%, rgba(255, 255, 255, 0.92), rgba(0, 0, 0, 0) 544px), linear-gradient(118deg, rgba(240, 249, 255, 0.98), rgba(217, 237, 252, 0.9) 54%, rgba(231, 244, 255, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 805,
+          "height": 599,
+          "width": 1440,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 1404,
+          "height": 551,
+          "width": 1440,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 1955,
+          "height": 475,
+          "width": 1440,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 2430,
+          "height": 450,
+          "width": 1440,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 2880,
+          "height": 663,
+          "width": 1440,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 3543,
+          "height": 436,
+          "width": 1440,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 3979,
+          "height": 500,
+          "width": 1440,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 88,
+        "width": 1440,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 4479,
+        "height": 386,
+        "width": 1440,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 26,
+      "darkStages": 2
+    },
+    {
+      "route": {
+        "name": "services",
+        "path": "/services"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "round-24-baseline-services-desktop.jpg",
+      "path": "/services",
+      "title": "Services — Cyvexly Studio",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 6252,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 88,
+          "height": 458,
+          "width": 1440,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 546,
+          "height": 2127,
+          "width": 1440,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 2673,
+          "height": 728,
+          "width": 1440,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "service-combinations-stage border-y border-smoke-glass/70 px-6 py-20",
+          "top": 3401,
+          "height": 1088,
+          "width": 1440,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.94), rgba(0, 0, 0, 0) 384px), radial-gradient(circle at 82% 28%, rgba(133, 207, 255, 0.3), rgba(0, 0, 0, 0) 448px), linear-gradient(rgba(15, 102, 224, 0.055) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(90deg, rgba(15, 102, 224, 0.055) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(145deg, rgb(234, 244, 252), rgb(220, 236, 248) 58%, rgb(232, 243, 251))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 4489,
+          "height": 547,
+          "width": 1440,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 5036,
+          "height": 358,
+          "width": 1440,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 5394,
+          "height": 472,
+          "width": 1440,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 88,
+        "width": 1440,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 5866,
+        "height": 386,
+        "width": 1440,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 25,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "service-detail",
+        "path": "/services/business-websites"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "round-24-baseline-service-detail-desktop.jpg",
+      "path": "/services/business-websites",
+      "title": "Business websites — Cyvexly Studio",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 4511,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 88,
+          "height": 660,
+          "width": 1440,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto grid max-w-6xl gap-6 px-6 py-16 md:grid-cols-2 md:py-20",
+          "top": 748,
+          "height": 380,
+          "width": 1152,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 1128,
+          "height": 569,
+          "width": 1440,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-6xl px-6 py-16 md:py-20",
+          "top": 1697,
+          "height": 529,
+          "width": 1152,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "border-y border-smoke-glass/70 bg-ice-field/70",
+          "top": 2226,
+          "height": 532,
+          "width": 1440,
+          "backgroundColor": "oklab(0.936341 -0.00514111 -0.0127947 / 0.7)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-6xl px-6 py-16 md:py-20",
+          "top": 2757,
+          "height": 384,
+          "width": 1152,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "border-y border-smoke-glass/70 bg-ice-field/70",
+          "top": 3141,
+          "height": 402,
+          "width": 1440,
+          "backgroundColor": "oklab(0.936341 -0.00514111 -0.0127947 / 0.7)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-6xl px-6 py-16 md:py-20",
+          "top": 3543,
+          "height": 582,
+          "width": 1152,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 88,
+        "width": 1440,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 4125,
+        "height": 386,
+        "width": 1440,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 15,
+      "darkStages": 1
+    },
+    {
+      "route": {
+        "name": "work-detail",
+        "path": "/work/aurora-spaces"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "round-24-baseline-work-detail-desktop.jpg",
+      "path": "/work/aurora-spaces",
+      "title": "Aurora Spaces — Cyvexly Studio",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 3685,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70",
+          "top": 88,
+          "height": 734,
+          "width": 1440,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-4xl px-6 py-16",
+          "top": 822,
+          "height": 1623,
+          "width": 896,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 2445,
+          "height": 234,
+          "width": 1440,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-4xl px-6 py-16",
+          "top": 2679,
+          "height": 256,
+          "width": 896,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-6xl px-6 pb-20",
+          "top": 2935,
+          "height": 364,
+          "width": 1152,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 88,
+        "width": 1440,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 3299,
+        "height": 386,
+        "width": 1440,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 3,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "contact",
+        "path": "/contact"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "round-24-baseline-contact-desktop.jpg",
+      "path": "/contact",
+      "title": "Contact — Cyvexly Studio",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 1571,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 88,
+          "height": 412,
+          "width": 1440,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-5xl px-6 py-20",
+          "top": 500,
+          "height": 685,
+          "width": 1024,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 88,
+        "width": 1440,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 1185,
+        "height": 386,
+        "width": 1440,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 1,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "planner",
+        "path": "/start"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "round-24-baseline-planner-desktop.jpg",
+      "path": "/start",
+      "title": "Project Planner — Cyvexly Studio",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 1842,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 88,
+          "height": 487,
+          "width": 1440,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-6xl px-6 py-16 sm:py-20",
+          "top": 575,
+          "height": 881,
+          "width": 1152,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 88,
+        "width": 1440,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 1456,
+        "height": 386,
+        "width": 1440,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 2,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "accessibility",
+        "path": "/accessibility"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "round-24-baseline-accessibility-desktop.jpg",
+      "path": "/accessibility",
+      "title": "Accessibility Statement — Cyvexly Studio",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 2077,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 88,
+          "height": 319,
+          "width": 1440,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-3xl px-6 py-16",
+          "top": 407,
+          "height": 1284,
+          "width": 768,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 88,
+        "width": 1440,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 1691,
+        "height": 386,
+        "width": 1440,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 1,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "not-found",
+        "path": "/definitely-missing"
+      },
+      "viewport": {
+        "name": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "screenshot": "round-24-baseline-not-found-desktop.jpg",
+      "path": "/definitely-missing",
+      "title": "Page not found — Cyvexly Studio",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 1014,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage flex min-h-[60vh] items-center border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 88,
+          "height": 540,
+          "width": 1440,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 88,
+        "width": 1440,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 628,
+        "height": 386,
+        "width": 1440,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 3,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "home",
+        "path": "/"
+      },
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "round-24-baseline-home-phone.jpg",
+      "path": "/",
+      "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 9793,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "home-hero-stage relative isolate overflow-hidden border-b border-smoke-glass/70",
+          "top": 82,
+          "height": 1164,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 74% 20%, rgba(174, 220, 255, 0.72), rgba(0, 0, 0, 0) 672px), radial-gradient(at 10% 78%, rgba(255, 255, 255, 0.92), rgba(0, 0, 0, 0) 544px), linear-gradient(118deg, rgba(240, 249, 255, 0.98), rgba(217, 237, 252, 0.9) 54%, rgba(231, 244, 255, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 1246,
+          "height": 1389,
+          "width": 390,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 2635,
+          "height": 1205,
+          "width": 390,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 3840,
+          "height": 737,
+          "width": 390,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 4576,
+          "height": 1491,
+          "width": 390,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 6068,
+          "height": 1535,
+          "width": 390,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 7603,
+          "height": 694,
+          "width": 390,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 8297,
+          "height": 594,
+          "width": 390,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 82,
+        "width": 390,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 8891,
+        "height": 902,
+        "width": 390,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 26,
+      "darkStages": 2
+    },
+    {
+      "route": {
+        "name": "services",
+        "path": "/services"
+      },
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "round-24-baseline-services-phone.jpg",
+      "path": "/services",
+      "title": "Services — Cyvexly Studio",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 11750,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 82,
+          "height": 444,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 526,
+          "height": 3871,
+          "width": 390,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 4397,
+          "height": 1438,
+          "width": 390,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "service-combinations-stage border-y border-smoke-glass/70 px-6 py-20",
+          "top": 5834,
+          "height": 2704,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.94), rgba(0, 0, 0, 0) 384px), radial-gradient(circle at 82% 28%, rgba(133, 207, 255, 0.3), rgba(0, 0, 0, 0) 448px), linear-gradient(rgba(15, 102, 224, 0.055) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(90deg, rgba(15, 102, 224, 0.055) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(145deg, rgb(234, 244, 252), rgb(220, 236, 248) 58%, rgb(232, 243, 251))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 8538,
+          "height": 1213,
+          "width": 390,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 9751,
+          "height": 526,
+          "width": 390,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "glass-continuation border-y border-smoke-glass/70",
+          "top": 10277,
+          "height": 571,
+          "width": 390,
+          "backgroundColor": "rgba(235, 246, 253, 0.66)",
+          "backgroundImage": "linear-gradient(122deg, rgba(255, 255, 255, 0.34), rgba(222, 240, 252, 0.46) 48%, rgba(250, 253, 255, 0.38)), none",
+          "backdropFilter": "blur(11px) saturate(1.22)",
+          "boxShadow": "rgba(255, 255, 255, 0.64) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.04) 0px -1px 0px 0px inset"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 82,
+        "width": 390,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 10848,
+        "height": 902,
+        "width": 390,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 25,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "service-detail",
+        "path": "/services/business-websites"
+      },
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "round-24-baseline-service-detail-phone.jpg",
+      "path": "/services/business-websites",
+      "title": "Business websites — Cyvexly Studio",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 7140,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 82,
+          "height": 1030,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto grid max-w-6xl gap-6 px-6 py-16 md:grid-cols-2 md:py-20",
+          "top": 1112,
+          "height": 657,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 1769,
+          "height": 1191,
+          "width": 390,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-6xl px-6 py-16 md:py-20",
+          "top": 2960,
+          "height": 687,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "border-y border-smoke-glass/70 bg-ice-field/70",
+          "top": 3647,
+          "height": 989,
+          "width": 390,
+          "backgroundColor": "oklab(0.936341 -0.00514111 -0.0127947 / 0.7)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-6xl px-6 py-16 md:py-20",
+          "top": 4635,
+          "height": 451,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "border-y border-smoke-glass/70 bg-ice-field/70",
+          "top": 5086,
+          "height": 472,
+          "width": 390,
+          "backgroundColor": "oklab(0.936341 -0.00514111 -0.0127947 / 0.7)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-6xl px-6 py-16 md:py-20",
+          "top": 5558,
+          "height": 680,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 82,
+        "width": 390,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 6238,
+        "height": 902,
+        "width": 390,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 15,
+      "darkStages": 1
+    },
+    {
+      "route": {
+        "name": "work-detail",
+        "path": "/work/aurora-spaces"
+      },
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "round-24-baseline-work-detail-phone.jpg",
+      "path": "/work/aurora-spaces",
+      "title": "Aurora Spaces — Cyvexly Studio",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 4737,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70",
+          "top": 82,
+          "height": 655,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-4xl px-6 py-16",
+          "top": 737,
+          "height": 2140,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "glass-section border-y border-smoke-glass/70",
+          "top": 2878,
+          "height": 262,
+          "width": 390,
+          "backgroundColor": "rgba(227, 239, 248, 0.76)",
+          "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+          "backdropFilter": "blur(8px) saturate(1.16)",
+          "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-4xl px-6 py-16",
+          "top": 3140,
+          "height": 284,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-6xl px-6 pb-20",
+          "top": 3424,
+          "height": 412,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 82,
+        "width": 390,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 3835,
+        "height": 902,
+        "width": 390,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 3,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "contact",
+        "path": "/contact"
+      },
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "round-24-baseline-contact-phone.jpg",
+      "path": "/contact",
+      "title": "Contact — Cyvexly Studio",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 2694,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 82,
+          "height": 417,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-5xl px-6 py-20",
+          "top": 499,
+          "height": 1293,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 82,
+        "width": 390,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 1792,
+        "height": 902,
+        "width": 390,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 1,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "planner",
+        "path": "/start"
+      },
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "round-24-baseline-planner-phone.jpg",
+      "path": "/start",
+      "title": "Project Planner — Cyvexly Studio",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 3078,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 82,
+          "height": 496,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-6xl px-6 py-16 sm:py-20",
+          "top": 578,
+          "height": 1598,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 82,
+        "width": 390,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 2176,
+        "height": 902,
+        "width": 390,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 2,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "accessibility",
+        "path": "/accessibility"
+      },
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "round-24-baseline-accessibility-phone.jpg",
+      "path": "/accessibility",
+      "title": "Accessibility Statement — Cyvexly Studio",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 2927,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 82,
+          "height": 301,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        },
+        {
+          "tag": "section",
+          "className": "mx-auto max-w-3xl px-6 py-16",
+          "top": 383,
+          "height": 1642,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "none",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 82,
+        "width": 390,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 2025,
+        "height": 902,
+        "width": 390,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 1,
+      "darkStages": 0
+    },
+    {
+      "route": {
+        "name": "not-found",
+        "path": "/definitely-missing"
+      },
+      "viewport": {
+        "name": "phone",
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "round-24-baseline-not-found-phone.jpg",
+      "path": "/definitely-missing",
+      "title": "Page not found — Cyvexly Studio",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 1527,
+      "mainCount": 1,
+      "h1Count": 1,
+      "sections": [
+        {
+          "tag": "section",
+          "className": "page-intro-stage flex min-h-[60vh] items-center border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16",
+          "top": 82,
+          "height": 543,
+          "width": 390,
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "backgroundImage": "radial-gradient(at 76% 15%, rgba(151, 215, 255, 0.42), rgba(0, 0, 0, 0) 496px), radial-gradient(at 14% 86%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), linear-gradient(118deg, rgba(232, 246, 255, 0.94), rgba(220, 239, 252, 0.9) 54%, rgba(235, 247, 254, 0.94))",
+          "backdropFilter": "none",
+          "boxShadow": "none"
+        }
+      ],
+      "header": {
+        "tag": "header",
+        "className": "sticky top-0 z-50 px-3 pt-3",
+        "top": 0,
+        "height": 82,
+        "width": 390,
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "backdropFilter": "none",
+        "boxShadow": "none"
+      },
+      "footer": {
+        "tag": "footer",
+        "className": "glass-section border-t border-smoke-glass/70",
+        "top": 625,
+        "height": 902,
+        "width": 390,
+        "backgroundColor": "rgba(227, 239, 248, 0.76)",
+        "backgroundImage": "linear-gradient(120deg, rgba(255, 255, 255, 0.34), rgba(222, 239, 251, 0.5) 52%, rgba(255, 255, 255, 0.28)), none",
+        "backdropFilter": "blur(8px) saturate(1.16)",
+        "boxShadow": "rgba(255, 255, 255, 0.68) 0px 1px 0px 0px inset, rgba(15, 102, 224, 0.043) 0px -1px 0px 0px inset"
+      },
+      "atmosphere": true,
+      "glassPanels": 3,
+      "darkStages": 0
+    }
+  ]
+}
