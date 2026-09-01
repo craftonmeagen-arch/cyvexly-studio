@@ -84,6 +84,9 @@ accent at 5.06:1 and graphite body at 6.07:1.
 - Planner service-query route reaches Step 1 at 390px with zero overflow.
   Public Planner query entry and public Home muted-loop playback without native,
   custom, or removed visible chrome pass again after adoption.
+- Public reduced-motion emulation holds the Home reel paused at time zero and
+  reports no atmosphere animation. At 320px the mobile menu expands to six
+  named links with `aria-expanded="true"` and zero horizontal overflow.
 
 ## Accountability and limits
 
