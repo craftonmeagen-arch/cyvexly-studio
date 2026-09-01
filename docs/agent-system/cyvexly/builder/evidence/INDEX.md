@@ -2,6 +2,31 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 25 — Shared navigation resilience and scale containment
+
+- `round-25-navigation-resilience-plan.md` — fifth-round methodology audit,
+  W3C/Next pattern selection, pixel-stable header target, proof boundary, and
+  verification-discovered root-24 CTA addendum.
+- `round-25-baseline-navigation-runtime.json` and
+  `round-25-baseline-header-*.png` — accepted optimized baseline proving the
+  missing Escape/current semantics and stale breakpoint state.
+- `round-25-final-navigation-runtime.json` — native keyboard/focus/history/
+  resize proof, 114-case route/width matrix, 19-route root-24 sweep, exact CTA
+  geometry, and diagnostics.
+- `round-25-final-header-*.png` — opened final header states; all three are
+  byte-identical to their baseline counterpart.
+- `round-25-final-{service-detail-390,planner-768,work-detail-1440}.png` —
+  opened representative dynamic/form/work route-family renders.
+- `round-25-final-services-cta-390.png` and
+  `round-25-final-services-cta-root24-390.png` — opened normal and enlarged-root
+  wrapping/containment proof for the discovered Services CTA defect.
+- `round-25-public-navigation-runtime.json` and
+  `round-25-public-header-*.png` — adopted Render semantics, native interaction,
+  containment, diagnostics, and byte-identical local/public visual proof.
+- `round-25-navigation-resilience-verification.md` — implementation,
+  interaction, route-matrix, visual-invariance, build/public, reviewer
+  disposition, accountability, and limits.
+
 ## Global round 24 — Authoritative every-page full-height blue glass
 
 - `round-24-sitewide-blue-glass-visual-plan.md` — pre-implementation reading

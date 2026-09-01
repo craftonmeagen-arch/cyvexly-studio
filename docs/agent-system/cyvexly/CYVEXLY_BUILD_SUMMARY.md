@@ -357,3 +357,27 @@ Older setup and rounds 1-8 are preserved in
   Render adopted CSS `3chp4ua-pf_73.css` with the new shared primitives. Owner
   visual acceptance/original second-computer confirmation and Owner-blocked
   launch facts remain pending. The scheduler/automation was untouched.
+
+## Round 25 — 2026-09-01
+
+- The required fifth-round audit compared recent visual/token/structure
+  methods, fresh Auditor R20/Council R40 convergence, and primary W3C/Next
+  patterns. It selected a reachable shared navigation-lifecycle gap instead of
+  reopening the accepted blue-glass theme.
+- Product commit `e38851f` adds compact-menu Escape close/focus return, clears
+  hidden open state at the 1024px desktop transition, and exposes exact
+  `aria-current="page"` semantics for Home, standard/nested Services and Work,
+  Pricing, Process, and Planner.
+- A 19-route 24px-root audit found `/services` alone at 402px because its final
+  Planner CTA could not shrink. Removing only that constraint permits a
+  centered two-line enlarged-text wrap and restores 390/390 containment without
+  changing normal copy, theme, or geometry.
+- All 114 optimized route/width states and 19 enlarged-root states pass status,
+  landmarks/headings, sticky header, closed state, current semantics, and
+  containment. Native keyboard/history/resize proof and opened dynamic/form/
+  work/CTA renders pass; three header before/after PNG pairs are byte-identical.
+- Full lint and optimized 23-page build pass. Council R41 independently passes
+  the candidate's IAB behavior and visual/build checks; its initial finding is
+  only the expected public-adoption gate while Render still serves Round 24.
+  Render then adopts ETag `44zd3ca5e02ryz`; public Escape/focus/current/
+  breakpoint/containment proof and byte-identical local/public renders pass.

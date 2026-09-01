@@ -191,6 +191,12 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 25 shared navigation resilience:** product commit `e38851f` adds
+  native Escape/focus return, desktop-breakpoint state reconciliation, and
+  exact standard/nested current-page semantics without changing the approved
+  header pixels. A verification-discovered Services CTA correction also closes
+  390px/24px-root overflow. All 114 normal and 19 enlarged-root cases pass;
+  Render ETag `44zd3ca5e02ryz` passes the same public interaction/semantic proof.
 - **Round 24 authoritative every-page theme:** plan/baseline commit `2983699`,
   product commit `5656584`, and focus correction `06fbadd` implement Owner
   direction `2026-09-01-10` over every full public page height. Shared
@@ -251,52 +257,6 @@ requires.
   loop, reduced-motion/data-saver, MIME/range, route, console, build, and type
   proof. This corrects deployment truth without opening/closing a chunk or
   changing the separate domain/metadata decision.
-
-- **Round 13 Home final-CTA system pass:** commit `1df0203` replaces the flat
-  centered final CTA treatment with a compact split glass composition and an
-  original luminous planetary/network horizon. Exact 1440/768/390 production
-  renders, a full Home capture, 320px and 24px-root stress, native `/start`
-  activation, nine-width containment, and a 16-route phone audit pass. This
-  closes the largest remaining reachable reference gap without inventing
-  portfolio media, opening/closing a chunk, or claiming final Owner parity.
-
-- **Round 12 Home mid-page system pass:** commit `13d3673` adds an original
-  luminous partnership diagram to the former text-only difference panel and a
-  five-stage icon/node/route grammar to the Home process preview. Exact
-  1440/768/390 production renders, 24px-root phone stress, SVG bounds,
-  accessibility-tree semantics, and a 13-route phone audit pass. This closes
-  two reference-visible structural gaps without opening/closing a chunk or
-  claiming final Owner parity.
-
-- **Round 11 Home hero motion pass:** Owner-supplied source media now replaces
-  the static Home orbit as a truthful 30-second looping showcase in commit
-  `34a5bd3`. The web derivative is silent, fast-start H.264 with a 12KB poster,
-  an accessible Play/Pause control, visibility/reduced-motion/data-saver
-  autoplay holds, and explicit-play recovery. Exact 1440/768/390 production
-  renders, loop/pause/native-Enter proof, route/overflow checks, and HTTP range
-  delivery pass. This advances the active visual direction without opening or
-  closing a chunk or claiming final Owner parity.
-
-- **Round 10 structural glass-system pass:** the mandatory wider methodology
-  audit found that rounds 7–9 had reached diminishing returns from token-level
-  adjustments, while the Owner mockup gap was now compositional. Commit
-  `6b81922` therefore adds a reusable inset glass header shell, icon-led Home
-  credibility rail, and icon-bearing capability card grammar. Exact
-  1440/768/390 production renders, native compact-header keyboard proof, and a
-  13-route phone overflow sweep pass. This advances the active Owner visual
-  direction without opening/closing a chunk or claiming final parity.
-
-- **Round 9 shared responsive/visual-system correction:** authenticated Owner
-  evidence exposed an apparent cross-computer scale mismatch at 100% page zoom.
-  A controlled 24px-default Chrome profile reproduced the root cause: implicit
-  root sizing plus rem-based breakpoints scaled the whole system and changed its
-  layout mode. Commit `8ec27c1` stabilizes the root and breakpoints and upgrades
-  the shared glass/header/CTA/orbit surfaces; `2d82b0b` hardens Pricing and
-  Process phone rows for minimum-font enlargement; `95c365f` restores 4.5:1+
-  contrast across every luminous CTA gradient stop. Controlled Chrome/Edge
-  profile, DPR, compact-viewport, interaction, and large-text proof passes;
-  Owner confirmation on the original computer and final mockup-fidelity
-  judgment remain the honest closure conditions.
 
 - Payment/proposal workflow (vision §8) and any external service integration
   are foundational/authorization-sensitive; route through §4.12 Outcome

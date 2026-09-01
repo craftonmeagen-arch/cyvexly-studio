@@ -2,7 +2,7 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global rounds 15-24 repaired its public deployment
+pages — remains closed, but global rounds 15-25 repaired its public deployment
 path, implemented the later Owner-directed hero composition, and reconciled the
 Services combination and Pricing scope modules under the rule that closed
 chunks are not frozen.
@@ -21,9 +21,9 @@ glass environment across route families with protected copy fields and verified
 contrast. Round 22 restores the shared sticky header, completes Home/Services section
 continuity, and defers the unavailable About link without inventing content.
 Round 23 repairs shared validation contrast. Round 24 implements authoritative
-Owner direction `2026-09-01-10` over every full public page height and proves
-the exact route family/viewport matrix locally and publicly.
-Round 18 replaces
+Owner direction `2026-09-01-10` over every full public page height. Round 25
+hardens the shared navigation lifecycle/current semantics and closes one
+enlarged-root Services overflow without changing that appearance. Round 18 replaces
 Pricing's sparse text-only entry with a split glass scope signal and coordinated
 package field while preserving every package fact. Round 17 replaces
 the Services combination table with five mockup-aligned, icon-led glass
@@ -115,76 +115,6 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
 Rounds 18 and 19 are archived at
 `docs/archive/chunks/CYVEXLY_SHARED_PRICING_ROUND18_REPORT.md` and
 `docs/archive/chunks/CYVEXLY_SHARED_FOUNDATIONS_ROUND19_REPORT.md`.
-
-## Round 22 report — global round 22
-
-### Direction, interruption recovery, and selection
-
-**Session:** `cyvexly-builder-20260901T0458Z-r22-6f3a9d1c`; lock claimed
-`2026-09-01T04:57:51.8468608Z`; nonce
-`269e48a7c81f4268ac9e415ce463ecfb`; start HEAD `a7e07ca`.
-Pre-implementation plan:
-`builder/evidence/round-22-continuation-glass-visual-plan.md`.
-
-The original turn ended without closeout. Reconciliation found no matching
-closeout, live Builder process/listener, lease activity, or repository activity
-after the last Round 22 byte. The state was VERIFIED INTERRUPTED. A PM
-continuation explicitly authorized resuming under the exact preserved lock.
-Every dirty byte was retained; no reset, manual deletion, replacement lock, or
-scheduler change occurred.
-
-Fresh Auditor `IFA-2026-09-01-R14` supplied `CYV-IFA-010`: the shared direct-
-child atmosphere selector overrode the header's sticky/z50 utilities. Council
-R35 found incomplete visual continuation on transparent Home/Services sections;
-fresh Council R36 confirmed the visible About link still led to an unavailable
-Owner-blocked route. These observations defined the bounded mission.
-
-### What changed
-
-Product commit `4265fa4` narrows the root stacking selector to `main` and
-`footer`, restoring the header's authored sticky/z50 behavior. A shared
-`glass-continuation` field wraps five Home and three Services sections with a
-pale blue translucent fill, restrained blur, and protected card/copy contrast.
-
-The About item is deferred from primary/footer navigation until Owner-approved
-founder/studio facts exist. No About content or route was fabricated. Privacy
-and Terms remain visibly linked release blockers. Home media, Planner, Work,
-canonical copy, and route behavior are otherwise unchanged.
-
-### Rendered and runtime proof
-
-- Opened preserved baseline and final Home/Services desktop, tablet, and phone
-  renders. The continuation fields are clearly blue/glass without decorative
-  interference beneath copy.
-- Authored token and rendered-field normal-text checks meet or exceed 4.5:1.
-- ESLint, post-build TypeScript, optimized 23-page build, and build-ID
-  existence pass.
-- Hydrated optimized-runtime evidence contains 154 states: 18 routes at 1280,
-  1024, 960, 768, 640, 480, 390, and 320 plus ten focused Home/Services states.
-  There are zero containment, status, sticky-header, landmark, heading-order,
-  control-name, hidden-focusable, or broken-image failures.
-- Every state computes the header as sticky/z50/top-0 after scroll. Focused
-  390/320 menus expand, no route advertises `/about`, and Home video remains
-  native-control-free at `0.75×`.
-
-The first dev audit used `127.0.0.1`, which Next.js rejected as a JavaScript
-chunk origin; the server-rendered layout was valid but interactions were false
-negatives. Final evidence uses `localhost` against the optimized build. The
-hidden-focusable detector was also corrected to honor actual `tabIndex`, so the
-Planner's hidden `tabindex="-1"` honeypot is not misclassified.
-
-### Limits, accountability, and completion
-
-Physical Safari/Firefox, field Web Vitals, the Owner's original second
-computer, and final Owner visual acceptance remain unavailable. The four Owner
-input blockers remain unchanged. Concurrent Auditor/Council files and evidence
-were preserved and excluded from Builder commits. The recurring scheduler was
-not read, modified, paused, deleted, renamed, or rescheduled.
-
-Product source `4265fa4` is pushed to `origin/main`. Public Home/Services return
-200 and a hydrated 1440/390 Render smoke confirms the continuation fields,
-sticky header, exact containment, and expanded phone menus.
-**DONE WITH PUBLIC ADOPTION PROOF; OWNER REVIEW PENDING.**
 
 ## Round 23 report — global round 23
 
@@ -314,5 +244,64 @@ automation was read, modified, paused, deleted, renamed, or rescheduled. Owner
 visual acceptance/original second-computer confirmation, physical Safari/
 Firefox, field Web Vitals, and Owner-blocked domain/legal/email/founder facts
 remain pending.
+
+**DONE WITH PUBLIC ADOPTION PROOF; OWNER VISUAL REVIEW PENDING.**
+
+## Round 25 report — global round 25
+
+### Wider audit, plan, and implementation
+
+**Session:** `cyvexly-builder-20260901T175628Z-r25`; lock claimed
+`2026-09-01T17:57:10.3295788Z`; nonce
+`649de4413dc448d0b2e1981460b8eb2a`; start HEAD `2cd9121`.
+
+The required fifth-round audit found fresh Auditor R20/Council R40 convergence
+on accepted Round 24 product truth and only Owner-bound launch work. Comparing
+recent token, structure, and route-family passes showed another visual pass
+would be churn. The preimplementation plan in commit `26a768a` therefore chose
+the shared header's missing Escape/focus lifecycle, breakpoint-state
+reconciliation, and current-location semantics, grounded in W3C disclosure
+navigation and Next route-aware client patterns. The exact Owner mockup 06
+appearance remained a pixel-stable constraint.
+
+Product commit `e38851f` closes that slice. Escape now closes the compact
+disclosure and returns focus to its trigger; entry to the 1024px desktop mode
+clears hidden compact state; Home, standard/nested Services/Work, Pricing,
+Process, and Planner links expose exact `aria-current="page"` semantics.
+The existing route-link close remained correct and was not duplicated.
+
+### Verification-discovered scale correction and proof
+
+The 114-case normal matrix passed, but its separate 19-route 390px/24px-root
+sweep found `/services` at 402px: “Find your starting point” was prevented from
+shrinking inside its padded row. The visual-plan addendum bounded the correction
+before source change. Removing only that constraint permits a centered
+two-line large-text wrap; the route now measures 390/390 while its normal CTA
+remains a compact 224×46. Copy, panels, theme, and breakpoints are unchanged.
+
+All 114 route/width cases and 19 enlarged-root cases pass status, one main/H1,
+sticky header, closed state, expected current semantics, and horizontal
+containment. Native CDP proves Tab/Enter, Escape/focus return, route/Back close,
+and 390→1024→390 reconciliation. Three opened header before/after pairs are
+byte-identical. Opened dynamic-service phone, clean Planner tablet, work-detail
+desktop, and normal/root24 CTA frames preserve the approved protected
+blue-glass hierarchy. Unexpected console errors are zero; only the known
+Privacy/Terms 404 network entries appear.
+
+### Build, reviewer disposition, deployment, and completion
+
+Full ESLint and optimized Next build/TypeScript/static generation pass, with
+only the known Owner-domain-blocked `metadataBase` warning. Council R41
+independently built/linted the immutable candidate and reproduced Escape/focus,
+history, breakpoint, current semantics, visual coherence, and clean diagnostics.
+It found no local product defect; its only finding is the public adoption gate.
+
+Product commit `e38851f` is pushed and local/origin/external refs match. Render
+changed from pre-R25 ETag `8pc78tpgnj2ry5` to `44zd3ca5e02ryz`. Fresh public
+Chrome/CDP passes Escape/focus return, current semantics, native Tab/Enter,
+route/Back close, 390→1024→390 reconciliation, exact containment, and clean
+diagnostics. Public header PNGs are byte-identical to optimized local truth.
+This closes Council `CYC-R41-F001`. Concurrent reviewer work remains excluded.
+Scheduler/automation state remains Owner-controlled and untouched.
 
 **DONE WITH PUBLIC ADOPTION PROOF; OWNER VISUAL REVIEW PENDING.**

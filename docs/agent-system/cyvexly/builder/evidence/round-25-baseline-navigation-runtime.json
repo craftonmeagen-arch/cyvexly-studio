@@ -1,0 +1,268 @@
+{
+  "phase": "baseline",
+  "browser": "local Google Chrome / raw CDP",
+  "baseUrl": "http://127.0.0.1:5173",
+  "debugPort": 9335,
+  "profilePath": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-r25-baseline-chrome",
+  "generatedAt": "2026-09-01T18:09:22.434Z",
+  "visual": {
+    "desktopClosed": {
+      "path": "/services",
+      "viewport": {
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "clientWidth": 1440,
+        "scrollWidth": 1440
+      },
+      "header": {
+        "top": 0,
+        "width": 1440
+      },
+      "expanded": "false",
+      "mobileNavPresent": false,
+      "active": {
+        "tag": "BODY",
+        "text": "08.31204817.6CYV / 09CYVEXLY STUDIOServicesWorkPricingProcessDescribe your projectOpen menuServicesEverything your busin",
+        "href": null,
+        "controls": null
+      },
+      "current": [],
+      "h1Count": 1
+    },
+    "phoneClosed": {
+      "path": "/services",
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      },
+      "header": {
+        "top": 0,
+        "width": 390
+      },
+      "expanded": "false",
+      "mobileNavPresent": false,
+      "active": {
+        "tag": "BODY",
+        "text": "08.31204817.6CYV / 09CYVEXLY STUDIOServicesWorkPricingProcessDescribe your projectOpen menuServicesEverything your busin",
+        "href": null,
+        "controls": null
+      },
+      "current": [],
+      "h1Count": 1
+    },
+    "phoneOpen": {
+      "path": "/services",
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      },
+      "header": {
+        "top": 0,
+        "width": 390
+      },
+      "expanded": "true",
+      "mobileNavPresent": true,
+      "active": {
+        "tag": "BODY",
+        "text": "08.31204817.6CYV / 09CYVEXLY STUDIOServicesWorkPricingProcessDescribe your projectClose menuServicesWorkPricingProcessDe",
+        "href": null,
+        "controls": null
+      },
+      "current": [],
+      "h1Count": 1
+    }
+  },
+  "interactions": {
+    "escape": {
+      "path": "/services",
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      },
+      "header": {
+        "top": 0,
+        "width": 390
+      },
+      "expanded": "true",
+      "mobileNavPresent": true,
+      "active": {
+        "tag": "BODY",
+        "text": "08.31204817.6CYV / 09CYVEXLY STUDIOServicesWorkPricingProcessDescribe your projectClose menuServicesWorkPricingProcessDe",
+        "href": null,
+        "controls": null
+      },
+      "current": [],
+      "h1Count": 1
+    },
+    "routeChange": {
+      "path": "/services",
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      },
+      "header": {
+        "top": 0,
+        "width": 390
+      },
+      "expanded": "false",
+      "mobileNavPresent": false,
+      "active": {
+        "tag": "BODY",
+        "text": "08.31204817.6CYV / 09(self.__next_f=self.__next_f||[]).push([0])self.__next_f.push([1,\"1:\\\"$Sreact.fragment\\\"\\n2:I[13616",
+        "href": null,
+        "controls": null
+      },
+      "current": [],
+      "h1Count": 1
+    },
+    "desktopBreakpoint": {
+      "path": "/services",
+      "viewport": {
+        "innerWidth": 1024,
+        "innerHeight": 800,
+        "clientWidth": 1024,
+        "scrollWidth": 1024
+      },
+      "header": {
+        "top": 0,
+        "width": 1024
+      },
+      "expanded": "true",
+      "mobileNavPresent": true,
+      "active": {
+        "tag": "BODY",
+        "text": "08.31204817.6CYV / 09CYVEXLY STUDIOServicesWorkPricingProcessDescribe your projectClose menuServicesWorkPricingProcessDe",
+        "href": null,
+        "controls": null
+      },
+      "current": [],
+      "h1Count": 1
+    },
+    "returnToPhone": {
+      "path": "/services",
+      "viewport": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      },
+      "header": {
+        "top": 0,
+        "width": 390
+      },
+      "expanded": "true",
+      "mobileNavPresent": true,
+      "active": {
+        "tag": "BODY",
+        "text": "08.31204817.6CYV / 09CYVEXLY STUDIOServicesWorkPricingProcessDescribe your projectClose menuServicesWorkPricingProcessDe",
+        "href": null,
+        "controls": null
+      },
+      "current": [],
+      "h1Count": 1
+    },
+    "keyboard": {
+      "firstTab": {
+        "path": "/services",
+        "viewport": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "clientWidth": 390,
+          "scrollWidth": 390
+        },
+        "header": {
+          "top": 0,
+          "width": 390
+        },
+        "expanded": "false",
+        "mobileNavPresent": false,
+        "active": {
+          "tag": "A",
+          "text": "CYVEXLY STUDIO",
+          "href": "/",
+          "controls": null
+        },
+        "current": [],
+        "h1Count": 1
+      },
+      "secondTab": {
+        "path": "/services",
+        "viewport": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "clientWidth": 390,
+          "scrollWidth": 390
+        },
+        "header": {
+          "top": 0,
+          "width": 390
+        },
+        "expanded": "false",
+        "mobileNavPresent": false,
+        "active": {
+          "tag": "BUTTON",
+          "text": "Open menu",
+          "href": null,
+          "controls": "mobile-nav"
+        },
+        "current": [],
+        "h1Count": 1
+      },
+      "enter": {
+        "path": "/services",
+        "viewport": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "clientWidth": 390,
+          "scrollWidth": 390
+        },
+        "header": {
+          "top": 0,
+          "width": 390
+        },
+        "expanded": "true",
+        "mobileNavPresent": true,
+        "active": {
+          "tag": "BUTTON",
+          "text": "Close menu",
+          "href": null,
+          "controls": "mobile-nav"
+        },
+        "current": [],
+        "h1Count": 1
+      },
+      "thirdTab": {
+        "path": "/services",
+        "viewport": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "clientWidth": 390,
+          "scrollWidth": 390
+        },
+        "header": {
+          "top": 0,
+          "width": 390
+        },
+        "expanded": "true",
+        "mobileNavPresent": true,
+        "active": {
+          "tag": "A",
+          "text": "Services",
+          "href": "/services",
+          "controls": null
+        },
+        "current": [],
+        "h1Count": 1
+      }
+    }
+  },
+  "console": []
+}

@@ -102,3 +102,17 @@ durable cited evidence, canonical Round 25 closeout, and no modification to
 Owner-controlled scheduler/automation state. Physical assistive-technology and
 Safari/Firefox checks remain named complementary limits rather than claimed
 proof.
+
+## Verification-discovered responsive addendum
+
+The first 19-route matrix passed all 114 normal-width cases, then a separate
+390px/24px-root stress profile exposed one bounded existing defect on
+`/services`: the final “Find your starting point” CTA retained intrinsic width
+inside a padded wrapping row and extended the document from 390px to 402px.
+The exact overflow trace identifies that anchor; every other route and the
+shared atmosphere remain contained by their intended clipping layer. Because
+this profile directly represents the Owner's cross-computer apparent-zoom
+concern, Round 25 will also remove only the CTA's no-shrink constraint and
+permit its text to wrap within its existing panel. The normal 390px and desktop
+appearance must remain unchanged, the 24px-root route matrix must become fully
+contained, and no copy, section, theme, or breakpoint may change.

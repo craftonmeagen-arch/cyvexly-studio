@@ -1,30 +1,28 @@
 # Cyvexly Current State
 
-**Global round:** 24
+**Global round:** 25
 **Active chunks:** Chunk 3 — Project Planner; Chunk 4 — Utility/legal and launch
 readiness. Both remain in progress because real Planner delivery and final
 legal/domain work require Owner decisions. Marketing chunks remain closed but
 revisitable.
 
-**Round 24 outcome:** authenticated Owner direction `2026-09-01-10` is
-implemented as a shared full-height theme across all 17 generated public pages
-plus custom 404. The exact mockup 06 concept now continues through the complete
-page height: bright ice-blue architectural field, grid/traces/depth, protected
-translucent copy/forms/nav/cards/CTAs, and controlled dark cyber focal stages.
-No sampled direct section remains transparent or falls back to a flat-white old
-theme. Product commits `5656584` and `06fbadd` are pushed and publicly adopted.
+**Round 25 outcome:** the required wider-method audit preserved authenticated
+Owner direction `2026-09-01-10` and selected shared navigation resilience
+instead of another visual-token pass. Product commit `e38851f` adds native
+Escape close/focus return, clears hidden compact-menu state at the 1024px
+desktop boundary, and supplies exact route-aware `aria-current` semantics.
+The resulting header is pixel-identical at opened 1440/390 viewpoints.
 
-Optimized-local and public audits each pass 198/198 hydrated states (18 rendered
-states × eleven widths, 1440–320). Opened 1440/768/390 route-family renders
-match the authoritative hierarchy without clipping or contrast loss. Final
-composited validation contrast starts at 4.6388:1. A discovered Contact error-
-focus defect is fixed: four errors remain associated and blank submission now
-focuses `#name`; Planner retains three linked errors and focuses `#fullName`.
-Fresh Council R39 evidence independently inspected accepted product `06fbadd`,
-closed R38's contrast finding at 5.5660:1 in its sampled Contact/Planner state,
-and passed the Round 24 route-family glass, focus, sticky-header, interaction,
-media, containment, build, and mockup-comparison checks. Its current-report
-publication was still in progress at Builder closeout; the evidence is preserved.
+The 114-case route/width audit passed every normal state. Its separate
+19-route 390px/24px-root sweep exposed one pre-existing Services CTA overflow
+(402px document width); the same product commit removes only that no-shrink
+constraint and now passes 390/390 with a readable two-line enlarged-text CTA.
+All route, structure, sticky-header, interaction, containment, and unexpected-
+console checks pass. Council R41 independently reproduced the local candidate's
+Escape/focus, history, breakpoint, semantics, render, lint, and build behavior;
+its only finding was the public-adoption gate. Render then changed to ETag
+`44zd3ca5e02ryz`; public Escape/focus/current/breakpoint/containment proof and
+byte-identical local/public header renders close that gate.
 
 **Immediate next mission:** hold the implemented theme stable for Owner visual
 review and original second-computer confirmation. Do not reinterpret mockup 06
@@ -32,13 +30,18 @@ or expand blocked launch facts. The next reachable product work remains gated
 by the Owner decisions listed below; respond to fresh reviewer evidence if it
 identifies a source defect against current Round 24 public truth.
 
-**Accepted source position:** local `main` tracks `origin/main`; HEAD product
-commit `06fbadd` is adopted by Render at
-`https://cyvexly-studio.onrender.com/`. `origin/master` is historical and is
-not the deployment branch. Treat `git log` as the exact ledger.
+**Accepted source position:** local `main`, `origin/main`, and the external
+remote ref match product commit `e38851f`. Public Render at
+`https://cyvexly-studio.onrender.com/` adopted ETag `44zd3ca5e02ryz` with the
+new current semantics, Escape behavior, and wrapping-safe CTA.
+`origin/master` is historical and is not the deployment branch. Treat
+`git log` as the exact ledger.
 
 ## Current product truth
 
+- Round 25 commit `e38851f` hardens shared navigation lifecycle/current-page
+  semantics and closes the reproduced Services enlarged-root overflow without
+  changing the authoritative visual system.
 - Round 24 commits `5656584`/`06fbadd` complete the authoritative every-route
   theme slice and first-invalid Contact focus correction with public proof.
 - Round 22 commit `4265fa4` restores sticky/z50 navigation, adds protected
@@ -72,6 +75,12 @@ Terms visible links remain known release blockers. The explicit interim
 
 ## Verification and orientation
 
+- Round 25: 114/114 exact-width optimized states and 19/19 24px-root states
+  pass; native Escape/focus, Tab/Enter, history, breakpoint reconciliation,
+  route-aware current semantics, byte-identical header renders, representative
+  form/dynamic/work views, lint, build, and independent Council R41 local proof
+  pass. Public Render interaction/semantic proof closes Council R41's initial
+  deployment gate.
 - Round 24: 198/198 optimized-local and 198/198 public states pass across all
   route families and eleven widths; opened full-height comparisons,
   interactions, composited contrast, build, and Render CSS adoption pass.

@@ -229,3 +229,21 @@ boundary on future reasoning. Rounds 1-7 are rotated to
 - **Translucent error surfaces need final-pixel proof.** Scanning the exact
   rendered Contact/Planner rectangles proves a 4.6388:1 minimum, including the
   tinted Contact summary that authored-token math alone would not establish.
+
+## Round 25
+
+- **A CSS-hidden disclosure can retain live open state across a breakpoint.**
+  Test open compact navigation through the exact 1023/1024 transition and back;
+  subscribe to the desktop media-query change and clear state when it matches.
+- **Programmatic current-page context should follow route families, not visual
+  styling.** `aria-current="page"` can mark `/services/*` and `/work/*` at their
+  parent destinations without changing pixels or inventing menu roles.
+- **Normal-width matrices do not replace large-text stress.** Every one of 114
+  exact-width states passed before the separate 24px-root sweep found a single
+  12px Services overflow. Exact overflowing-element geometry isolated the
+  no-shrink CTA; bounded shrink/wrap fixed it without altering normal layout.
+- **Disable smooth scroll before viewport-centered evidence capture.** The
+  first CTA screenshots were taken while a long smooth scroll was still in
+  flight even though geometry later settled correctly. Force `scroll-behavior:
+  auto`, record target top/bottom, and open the corrected frames before citing
+  them.

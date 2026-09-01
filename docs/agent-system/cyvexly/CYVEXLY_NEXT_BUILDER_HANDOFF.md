@@ -1,43 +1,38 @@
 # Cyvexly Next Builder Handoff
 
-## Round 24 closeout
+## Round 25 closeout
 
-**Session:** `cyvexly-builder-20260901T160800Z-r24`
-**Start source:** `e8ef2b6` on `main`
-**Accepted product source:** `06fbadd` on `main`, pushed to `origin/main` and
-adopted publicly
+**Session:** `cyvexly-builder-20260901T175628Z-r25`
+**Start source:** `2cd9121` on `main`
+**Accepted product source:** `e38851f` on `main`, pushed to `origin/main` and
+adopted publicly at Render ETag `44zd3ca5e02ryz`
 **Completion:** DONE WITH PUBLIC ADOPTION PROOF; OWNER VISUAL REVIEW PENDING
 
 ## Completed work
 
-- Implemented authenticated Owner direction `2026-09-01-10` against exact
-  `mockups/06-sitewide-blue-glass-owner-direction.png` across all 17 generated
-  public pages plus custom 404, over their full page height.
-- Preserved a pre-source route-family inventory and 1440/390 baseline in commit
-  `2983699`. Product commit `5656584` adds the shared full-height ice-blue
-  architectural environment, stronger protected translucent surfaces, dedicated
-  long-copy/form fields, and controlled dark cyber focal stages.
-- The first optimized audit exposed a real Contact first-error focus defect.
-  Commit `06fbadd` focuses `#name`; repeated local/public proof passes with four
-  linked Contact errors and three linked Planner errors/focus `#fullName`.
-- Opened full-page 1440/768/390 route-family comparisons. Both optimized-local
-  and public audits pass 198/198 hydrated states across all route states and
-  eleven widths (1440–320), including zoom proxies, containment, semantics,
-  sticky header, images, forms, interactions, and zero transparent direct
-  sections. Composited warning contrast starts at 4.6388:1.
-- ESLint and optimized 23-page build pass. Render adopted CSS
-  `3chp4ua-pf_73.css` containing `.cyber-focal-panel` and
-`.glass-content-field`; opened public desktop/phone renders match local truth.
-- Auditor R18 reviewed pre-R23 Round 22 source and closed the sticky/continuation
-  finding. Fresh Council R39 evidence independently inspected accepted product
-  `06fbadd`, closed R38's contrast finding, and passed the Round 24 glass,
-  focus, sticky-header, interaction, media, containment, build, and exact-mockup
-  comparison checks. R39 current-report publication was still in progress at
-  Builder closeout; preserve the reviewer-owned evidence and records.
+- The fifth-round methodology audit preserved exact Owner mockup 06 and chose
+  shared navigation resilience rather than another token/stacking pass.
+  Preimplementation plan commit: `26a768a`.
+- Product commit `e38851f` adds compact-menu Escape close/focus return, clears
+  hidden open state on entry to the 1024px desktop layout, and supplies exact
+  `aria-current="page"` semantics for Home, standard/nested Services/Work,
+  Pricing, Process, and Planner.
+- The 19-route large-root sweep found one existing `/services` overflow at
+  402px. Removing only the final Planner CTA's no-shrink constraint restores
+  390/390 containment with a readable two-line 24px-root wrap; normal 390px
+  geometry remains compact.
+- 114/114 normal route/width cases and 19/19 24px-root cases pass status,
+  structure, sticky header, compact state, exact current semantics, and
+  containment. Native Tab/Enter/Escape/history/resize proof passes. Three
+  before/after header views are byte-identical; opened dynamic/form/work/CTA
+  views preserve the protected blue-glass hierarchy.
+- Full lint and optimized 23-page build pass. Council R41 independently passes
+  the candidate's build, IAB behavior, semantics, and visuals. Its only finding
+  is public adoption: initial Render probes remained on Round 24.
 
 ## Immediate next mission
 
-Hold the Round 24 visual contract stable for Owner review and original
+Hold the Round 24/25 visual contract stable for Owner review and original
 second-computer confirmation. The authoritative mockup and frozen Owner wording
 remain controlling; do not reinterpret them or roll routes back to the old
 theme. Re-open source only for fresh Owner direction or evidence of a defect
@@ -56,11 +51,11 @@ items 2–4. The truthful interim `mailto:` paths remain unchanged.
 
 ## Evidence and boundaries
 
-Durable Round 24 plan, baseline, optimized/public renders, 396 aggregate matrix
-states, composited contrast, and verification report are indexed in
-`builder/evidence/INDEX.md`. Round 21's full report moved to
-`docs/archive/chunks/CYVEXLY_SHARED_THEME_ROUND21_REPORT.md`, leaving Rounds
-22–24 active. Concurrent Auditor/Council records were preserved and excluded.
+Durable Round 25 plan, baseline/final renders, native interaction and
+114+19-case matrix, CTA stress proof, and verification report are indexed in
+`builder/evidence/INDEX.md`. Round 22's full report moved to
+`docs/archive/chunks/CYVEXLY_SHARED_THEME_ROUND22_REPORT.md`, leaving Rounds
+23–25 active. Concurrent Auditor/Council records were preserved and excluded.
 
 Physical Safari/Firefox, physical keyboard hardware, field Web Vitals, real
 email delivery, original second-computer hardware, and Owner visual acceptance
