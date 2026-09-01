@@ -342,7 +342,9 @@ chrome, valid route/assets plus known-404 controls, MP4 range delivery, ESLint,
 TypeScript, and the optimized 23-page build pass.
 
 Public Render changed from ETag `"kzfa6xg2yc2f7v"` without the shared
-atmosphere to `"10h74cxm9iq2hzw"` with it after the `main` push.
+atmosphere to `"10h74cxm9iq2hzw"` with it after the `main` push. A 20-state
+public matrix across six routes at 1440/1024/768/390/320 passes atmosphere,
+landmark, containment, and responsive-navigation checks.
 
 Concurrent reviewer files stayed untouched and unstaged. No scheduler or
 automation was read or changed. Physical Safari/Firefox, field Web Vitals, the

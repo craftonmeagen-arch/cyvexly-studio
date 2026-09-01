@@ -28,7 +28,8 @@
   TypeScript, and optimized 23-page build pass.
 - Durable proof is indexed in `builder/evidence/INDEX.md`.
 - Public Render changed ETag and serves the shared `site-atmosphere` after the
-  `main` push.
+  `main` push; a 20-state public matrix across six routes and
+  1440/1024/768/390/320 widths passes.
 
 ## Blockers and next tasks
 
