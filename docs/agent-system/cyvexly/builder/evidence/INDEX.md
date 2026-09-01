@@ -2,6 +2,26 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 27 — Home architectural-glass fidelity correction
+
+- `round-27-home-fidelity-plan.md` — public baseline measurements, exact
+  mockup authority, structural target, contrast/responsive boundaries, and
+  falsifiers written before source work.
+- `round-27-home-fidelity-target.html` — focused responsive visualization of
+  the intended Home architecture before implementation.
+- `round-27-live-baseline-home-1440.png` — visible public in-app Browser
+  baseline that shows the flatter grid/two-card reading the Owner rejected.
+- `round-27-home-1440-final.png` and
+  `round-27-home-1440-full-page.png` — final visible local first-viewport and
+  complete-Home inspection.
+- `round-27-home-768-implemented.png` and
+  `round-27-home-390-final.png` — opened contained tablet/phone renders.
+- `round-27-home-runtime.json` — exact responsive geometry, sticky header,
+  media state/interaction, diagnostics, and build disposition.
+- `round-27-home-fidelity-verification.md` — rendered comparison,
+  plan-to-product accounting, responsive/interaction proof, scope, and honest
+  Owner-acceptance boundary.
+
 ## Global round 26 — Owner-visible cyber-glass fidelity repair
 
 - `round-26-owner-visible-theme-repair-plan.md` — preserves the rejected live

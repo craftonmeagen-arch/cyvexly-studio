@@ -400,3 +400,24 @@ Older setup and rounds 1-8 are preserved in
 - ESLint, TypeScript, and optimized 23-page build pass. The Round 26 commit is
   pushed to `origin/main`; public deployment and Owner visual acceptance remain
   pending.
+
+## Round 27 — 2026-09-01
+
+- Opened the public Home at 1440×900 in the visible in-app Browser and measured
+  the Owner-rejected baseline: correct copy/media proportions but a flat grid
+  and two opaque-card reading versus mockup 06's architectural glass space.
+- Changed component grammar instead of repeating a global opacity pass. Home
+  now has layered architectural planes, luminous columns and beams, circuit
+  traces/nodes, coordinate marks, a reflected floor, a protected double-rim
+  copy pane, a deeper media chassis, and an inset credibility deck.
+- Preserved the established headline/actions, truthful content, real media,
+  `0.75×` looping playback, data-saving/reduced-motion behavior, and absence of
+  visible/native playback chrome.
+- Opened final 1440×900, 768×1024, and 390×844 renders plus the complete Home.
+  All states are exactly width-contained with one main/H1; phone retains one
+  architectural column while hiding secondary density. Sticky/z50 navigation,
+  pointer pause, native Enter resume, and clean browser diagnostics pass.
+- ESLint, optimized 23-page build, and post-build TypeScript pass. Durable
+  target visualization, baseline/final PNGs, runtime metrics, and verification
+  are indexed under `builder/evidence/`. The Round 27 commit is pushed to
+  `origin/main`; public Render adoption and Owner acceptance remain pending.

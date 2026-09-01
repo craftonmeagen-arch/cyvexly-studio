@@ -1,40 +1,42 @@
 # Cyvexly Current State
 
-**Global round:** 26
+**Global round:** 27
 **Active chunks:** Chunk 3 — Project Planner; Chunk 4 — Utility/legal and launch
 readiness. Both remain in progress because real Planner delivery and final
 legal/domain work require Owner decisions. Marketing chunks remain closed but
 revisitable.
 
-**Round 26 outcome:** the Owner explicitly rejected the public Round 24/25
-appearance as visually unchanged and unlike the agreed mockup. The Builder
-therefore reopened the shared visual layer as a defect repair. The result makes
-the full-height ice-blue environment unmistakable: stronger architectural
-grids, luminous wires/nodes/rails, translucent section continuation, brighter
-rim-lit glass fields, an inset branded header, and a controlled dark cyber
-footer. Home retains the approved split copy/media composition and removed
-playback chrome; canonical copy, routes, pricing, and form behavior are
-unchanged.
+**Round 27 outcome:** the Owner again found that Home did not match the exact
+approved mockup. The Builder opened the public Home in the visible in-app
+Browser at 1440×900, measured the correct-but-flat split baseline, and changed
+method from global opacity/token tuning to Home-specific structural glass.
+Home now contains discrete architectural planes, luminous columns and beams,
+circuit traces and nodes, coordinates, a reflected floor, a protected
+double-rim copy pane, an instrumented media chassis, and an inset credibility
+deck. The source video, `0.75×` playback, removed playback chrome, canonical
+copy, routes, pricing, and form behavior remain unchanged.
 
-Opened Home/Services complete-page renders plus Pricing tablet and
-Planner/Contact phone renders show the treatment across route families. All
-five measured states are exactly width-contained with one main, one visible H1,
-sticky/z50 navigation, and the shared atmosphere. ESLint, TypeScript, and the
-optimized 23-page build pass. This is material implementation proof, not a
-claim of Owner acceptance.
+Opened desktop/tablet/phone renders are exactly width-contained with one main,
+one H1, sticky/z50 navigation, and intentional decoration reduction on phone.
+Pointer pause and native Enter resume pass; browser diagnostics are clean.
+ESLint, TypeScript, and the optimized 23-page build pass. This is rendered
+implementation proof, not a claim of Owner acceptance.
 
 **Immediate next mission:** confirm public deployment adoption and obtain Owner
-visual review against mockup 06. Do not soften or reinterpret this direction,
-and do not treat low-opacity selector presence as visual parity. Preserve the
-current protected-copy contrast and responsive reduction of decorative density.
+visual review against mockup 06. Preserve the new architectural Home grammar,
+protected-copy contrast, responsive density reduction, and unchanged media
+behavior unless rendered public evidence shows a defect.
 
-**Accepted source position:** Round 26 is committed to local `main` and pushed
+**Accepted source position:** Round 27 is committed to local `main` and pushed
 to `origin/main`; use `git log` as the exact commit ledger. Public Render at
 `https://cyvexly-studio.onrender.com/` may lag the push until its deployment
 finishes. `origin/master` is historical and is not the deployment branch.
 
 ## Current product truth
 
+- Round 27 materially restructures the Home hero around the authoritative
+  glass-architecture composition after the Owner found Round 26 insufficient.
+  Owner public visual acceptance remains pending.
 - Round 26 materially strengthens the shared site-wide environment and glass
   hierarchy after the Owner rejected the prior visible result. Owner public
   visual acceptance remains pending.
@@ -74,6 +76,10 @@ Terms visible links remain known release blockers. The explicit interim
 
 ## Verification and orientation
 
+- Round 27: visible in-app Browser 1440/768/390 and complete-Home renders pass
+  visual inspection and exact containment. Media pause/resume, removed native
+  controls, sticky header, clean diagnostics, ESLint, TypeScript, and optimized
+  23-page build pass.
 - Round 26: opened 1440 Home viewport/full page, 1100 Services full page, 768
   Pricing, and 390 Planner/Contact renders pass visual inspection and exact
   containment. ESLint, TypeScript, and optimized 23-page build pass.

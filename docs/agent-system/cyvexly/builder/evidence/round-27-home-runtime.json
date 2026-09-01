@@ -1,0 +1,52 @@
+{
+  "round": 27,
+  "browser": "visible Codex in-app Browser",
+  "source": "local Builder runtime on http://localhost:5173/",
+  "desktop": {
+    "viewport": "1440x900",
+    "clientWidth": 1425,
+    "scrollWidth": 1425,
+    "mainCount": 1,
+    "h1Count": 1,
+    "hero": { "width": 1425, "height": 746.25 },
+    "copy": { "width": 594.4375, "height": 501.25 },
+    "media": { "width": 726.5625, "height": 420.0625 },
+    "credibilityRail": { "width": 1361, "height": 92 },
+    "header": { "position": "sticky", "zIndex": "50" }
+  },
+  "tablet": {
+    "viewport": "768x1024",
+    "clientWidth": 753,
+    "scrollWidth": 753,
+    "mainCount": 1,
+    "h1Count": 1,
+    "copyWidth": 705,
+    "mediaWidth": 705,
+    "compactMenuVisible": true
+  },
+  "phone": {
+    "viewport": "390x844",
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "mainCount": 1,
+    "h1Count": 1,
+    "copyWidth": 343,
+    "mediaWidth": 343,
+    "visibleArchitecturalColumns": 1
+  },
+  "media": {
+    "nativeControls": false,
+    "loop": true,
+    "muted": true,
+    "playbackRate": 0.75,
+    "pointerPause": "pass",
+    "enterResume": "pass"
+  },
+  "diagnostics": { "warningOrErrorLogs": 0 },
+  "build": {
+    "eslint": "pass",
+    "nextOptimizedBuild": "pass (23 pages)",
+    "typescriptNoEmit": "pass",
+    "knownMetadataBaseWarning": "unchanged Owner/domain-blocked warning"
+  }
+}

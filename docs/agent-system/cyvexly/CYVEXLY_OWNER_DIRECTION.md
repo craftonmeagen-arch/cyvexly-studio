@@ -401,3 +401,24 @@ composition. Opened Home, Services, Pricing, Planner, and Contact renders show
 the new treatment across desktop, tablet, and phone without horizontal
 overflow. This records implementation progress only. Owner acceptance remains
 pending until the pushed public result is visible and reviewed.
+
+## Home architectural-glass fidelity correction 2026-09-01-12
+
+**Status:** ROUND 27 IMPLEMENTED AND PUSHED — PUBLIC DEPLOYMENT/OWNER REVIEW PENDING
+**Source:** Owner via Codex active conversation
+**Recorded:** 2026-09-01 America/New_York
+
+> “Look at the home page. Still doesn't match the mockup. Fix. Visualize the
+> fix. Commit and push”
+
+> “did you do it?”
+
+This direction keeps `mockups/06-sitewide-blue-glass-owner-direction.png` as
+the exact visual authority and rejects treating Round 26's stronger global
+tokens as final Home parity. Round 27 changes the Home component grammar:
+discrete layered glass planes, luminous columns/beams, circuit traces/nodes,
+coordinate marks, a reflected floor, a double-rim protected copy field, a
+deeper media chassis, and an inset credibility deck. The established copy,
+video source, `0.75×` playback, removed playback chrome, routes, and responsive
+content remain unchanged. The visible in-app Browser result is retained at
+desktop/tablet/phone widths; only the Owner can grant final acceptance.

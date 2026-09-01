@@ -4,6 +4,10 @@ Archived full round reports, rotated out of `CYVEXLY_ACTIVE_CHUNK.md` to
 stay under its 30KB hot-path cap (§7.14). Chunk 2 itself closed at global
 round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
 
+- `CYVEXLY_SHARED_THEME_ROUND24_REPORT.md` — authoritative every-page
+  full-height blue-glass implementation, 198-state local/public proof, Contact
+  focus correction, and deployment adoption.
+
 - `CYVEXLY_CHUNK2_ROUND1_REPORT.md` — round 1 (Chunk 1 close + Chunk 2
   open, `/process`), rotated out during round 2.
 - `CYVEXLY_CHUNK2_ROUND2_REPORT.md` — round 2 (`/services`, `/pricing`,

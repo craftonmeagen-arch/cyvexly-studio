@@ -191,6 +191,14 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 27 Home architectural-glass correction:** after the Owner found the
+  Round 26 Home still short of exact mockup 06, the Builder changed the Home
+  component grammar rather than repeating a global token pass. Layered planes,
+  luminous columns/beams, traces/nodes, coordinates, floor reflection,
+  double-rim protected copy, deeper media chassis, and inset credibility deck
+  now define the first viewport. Visible 1440/768/390 in-app Browser proof,
+  media interaction, containment, lint, TypeScript, and build pass; public
+  adoption and Owner acceptance remain pending.
 - **Round 26 Owner-visible theme repair:** the Owner rejected the Round 24/25
   live appearance as unchanged. Round 26 materially strengthens the shared
   full-height blue environment, architectural signal layers, protected glass,

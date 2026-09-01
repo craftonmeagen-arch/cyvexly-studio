@@ -86,6 +86,9 @@ export function HeroShowcaseVideo() {
       className="hero-video-shell relative isolate rounded-[2rem] border border-white/90 p-2 sm:p-3"
       aria-labelledby="hero-showcase-caption"
     >
+      <span className="hero-video-edge hero-video-edge-top" aria-hidden="true" />
+      <span className="hero-video-edge hero-video-edge-right" aria-hidden="true" />
+      <span className="hero-video-edge hero-video-edge-bottom" aria-hidden="true" />
       <div
         className="hero-video-surface relative aspect-video w-full cursor-pointer overflow-hidden rounded-[1.45rem] bg-midnight-slate focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ion-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:rounded-[1.35rem]"
         role="button"

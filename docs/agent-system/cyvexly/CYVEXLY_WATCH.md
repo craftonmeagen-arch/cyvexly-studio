@@ -259,3 +259,15 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   Strengthening grids, rails, wires, and blue depth is useful only when copy and
   forms remain on calm translucent fields. Reduce mobile decoration and switch
   footer text explicitly when introducing a dark focal stage.
+
+## Round 27
+
+- **When stronger global tokens still read flat, add discrete scene structure.**
+  The public Round 26 Home had strong blue color, grids, and glass shadows but
+  still read as two opaque cards. Separate architectural planes, columns,
+  beams, floor, traces, and a nested media/copy chassis produced the visible
+  depth change without increasing decoration directly beneath text.
+- **Responsive density is a composition decision, not only containment.** The
+  390px state is exactly width-contained, but it also intentionally keeps only
+  one column and one plane while hiding secondary beams/coordinates. This
+  retains the cyber-glass identity without making the mobile copy field noisy.

@@ -2,7 +2,7 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global rounds 15-25 repaired its public deployment
+pages — remains closed, but global rounds 15-27 repaired its public deployment
 path, implemented the later Owner-directed hero composition, and reconciled the
 Services combination and Pricing scope modules under the rule that closed
 chunks are not frozen.
@@ -23,7 +23,10 @@ continuity, and defers the unavailable About link without inventing content.
 Round 23 repairs shared validation contrast. Round 24 implements authoritative
 Owner direction `2026-09-01-10` over every full public page height. Round 25
 hardens the shared navigation lifecycle/current semantics and closes one
-enlarged-root Services overflow without changing that appearance. Round 18 replaces
+enlarged-root Services overflow without changing that appearance. Round 26
+strengthens the shared visible environment after Owner rejection. Round 27
+rebuilds Home's first viewport as a discrete architectural-glass scene after
+the Owner found Round 26 insufficient. Round 18 replaces
 Pricing's sparse text-only entry with a split glass scope signal and coordinated
 package field while preserving every package fact. Round 17 replaces
 the Services combination table with five mockup-aligned, icon-led glass
@@ -116,68 +119,8 @@ Rounds 18 and 19 are archived at
 `docs/archive/chunks/CYVEXLY_SHARED_PRICING_ROUND18_REPORT.md` and
 `docs/archive/chunks/CYVEXLY_SHARED_FOUNDATIONS_ROUND19_REPORT.md`.
 
-## Round 24 report — global round 24
-
-### Plan, route inventory, and implementation
-
-**Session:** `cyvexly-builder-20260901T160800Z-r24`; lock claimed
-`2026-09-01T16:05:33.5421000Z`; nonce
-`3d55a2f6573c410683d56569c360445e`; start HEAD `e8ef2b6`.
-
-Plan/baseline commit `2983699` reads exact authoritative mockup 06 and
-inventories 17 generated pages plus custom 404 across bespoke marketing,
-standard marketing, five service-detail, three work-detail, form, Planner, and
-utility families. Baseline full-page renders proved remaining transparent/flat
-direct sections on dynamic and utility families.
-
-Product commit `5656584` supplies the full-height architectural field and
-shared surface primitives, reinforces protected glass, gives long Contact/work
-copy an explicit field, and standardizes final marketing CTAs on controlled dark
-cyber stages. The source does not change claims, copy, price, scope, media, or
-truthful concept artwork. It implements the approved mockup hierarchy rather
-than an agent-preferred style.
-
-### Rendered, semantic, and interaction proof
-
-Opened optimized 1440/768/390 full-page comparisons across Home, Services,
-service detail, work detail, Contact, Planner, Accessibility, and 404 show a
-continuous bright ice-blue environment with no flat-white fallback gap. Direct
-section transparency falls to zero. Protected copy and form fields remain calm
-and legible; dark navy/cyan stages provide controlled focal contrast.
-
-Optimized-local and public matrices each pass 198/198 hydrated states: all 18
-route states at eleven widths from 1440 to 320, including desktop zoom proxies.
-Containment, sticky header, landmarks, H1/heading order, named controls,
-focusability, images/alts, atmosphere/surfaces, mobile menu, FAQ, Work filter,
-Home video (`0.75×`, muted/looping, no native controls/progress), and reduced
-motion pass.
-
-The first interaction pass found Contact did not focus the first invalid field.
-Commit `06fbadd` corrects it; repeated local/public proof gives four linked
-errors and focus `#name`, while Planner gives three linked errors and focus
-`#fullName`. Final composited warning contrast starts at 4.6388:1.
-
-### Build, deployment, accountability, and completion
-
-ESLint and optimized Next build/TypeScript/static generation for 23 pages pass;
-only the Owner/domain-blocked `metadataBase` warning remains. Commits `2983699`,
-`5656584`, and `06fbadd` are pushed to `origin/main`. Render changed to CSS
-`3chp4ua-pf_73.css` containing the new shared primitives; opened public renders
-and the public 198-state matrix match optimized local truth.
-
-Fresh Council R39 evidence independently inspected product `06fbadd`, closed
-R38's contrast finding at 5.5660:1 in its sampled validation state, and passed
-the Round 24 glass/mockup, focus, sticky-header, interaction, media,
-containment, and build checks. Current-report publication was still in progress
-at Builder closeout; reviewer-owned files remain untouched.
-
-Concurrent Auditor/Council records were preserved and excluded. No scheduler or
-automation was read, modified, paused, deleted, renamed, or rescheduled. Owner
-visual acceptance/original second-computer confirmation, physical Safari/
-Firefox, field Web Vitals, and Owner-blocked domain/legal/email/founder facts
-remain pending.
-
-**DONE WITH PUBLIC ADOPTION PROOF; OWNER VISUAL REVIEW PENDING.**
+Round 24 is archived at
+`docs/archive/chunks/CYVEXLY_SHARED_THEME_ROUND24_REPORT.md`.
 
 ## Round 25 report — global round 25
 
@@ -280,6 +223,60 @@ blocked `metadataBase` warning remains unchanged. Durable plan, PNGs, runtime
 metrics, and verification are indexed under `builder/evidence/INDEX.md`.
 
 The Round 26 commit is pushed to `origin/main`. Public Render adoption and
+Owner visual acceptance remain pending. Concurrent Council files and the Owner
+attachment were preserved and excluded. No scheduler or automation was read,
+modified, paused, deleted, renamed, or rescheduled.
+
+**IMPLEMENTED AND PUSHED; PUBLIC ADOPTION/OWNER REVIEW PENDING.**
+
+## Round 27 report — global round 27
+
+### Owner correction, measured baseline, and visual plan
+
+**Session:** `root-home-fidelity-20260901-r27`; lock claimed
+`2026-09-01T22:26:22.2800465Z`; nonce
+`0db3f29b33ba4136bbc7708b6a9c0995`; start HEAD `7a9c6a1`.
+
+The Owner explicitly said Home still did not match the agreed mockup and
+required a fix, visualization, commit, and push. The Builder opened public
+Render in the visible in-app Browser at 1440×900 beside authoritative mockup
+06. The measured baseline had the correct split dimensions—594px protected
+copy and 727px media—but still read as two opaque cards over a flat blue grid.
+
+The plan and responsive target visualization under `builder/evidence/` were
+written before source work. They changed method from another global token pass
+to a Home-specific architectural scene with explicit contrast, media, and
+phone-density falsifiers.
+
+### Implementation and visible result
+
+Home now renders three layered glass planes, three luminous columns, two
+cross-stage beams, circuit traces and nodes, coordinate marks, and a reflected
+floor behind the hero. The copy becomes a protected double-rim glass pane; the
+real video sits in a brighter nested chassis with edge rails and base
+reflection; the credibility points move into one inset glass deck.
+
+Opened visible in-app Browser renders at 1440×900, 768×1024, and 390×844 plus
+the complete desktop Home show the architectural depth while retaining calm
+copy. Phone intentionally keeps one column/plane and hides secondary density.
+The existing headline, actions, truthful content, real video, `0.75×`
+playback, reduced-motion/data-saving behavior, and removed playback chrome are
+unchanged.
+
+### Verification and completion
+
+Desktop, tablet, and phone each have exact `scrollWidth === clientWidth`, one
+main, one H1, and the expected sticky/z50 or compact navigation state. Pointer
+pause and native Enter resume update the accessible media surface; the video
+remains muted/looping at `0.75×` with no native controls. Browser warning/error
+diagnostics are empty.
+
+ESLint, optimized 23-page build, and post-build TypeScript pass. The known
+Owner/domain-blocked `metadataBase` warning remains unchanged. Durable plan,
+target visualization, baseline/final PNGs, runtime metrics, and verification
+are indexed under `builder/evidence/`.
+
+The Round 27 commit is pushed to `origin/main`. Public Render adoption and
 Owner visual acceptance remain pending. Concurrent Council files and the Owner
 attachment were preserved and excluded. No scheduler or automation was read,
 modified, paused, deleted, renamed, or rescheduled.

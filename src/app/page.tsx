@@ -9,6 +9,7 @@ import { ServiceIcon } from "@/components/service-icon";
 import { PartnershipSignalGraphic } from "@/components/partnership-signal-graphic";
 import { ProcessIcon } from "@/components/process-icon";
 import { FinalCtaSignalGraphic } from "@/components/final-cta-signal-graphic";
+import { HomeGlassArchitecture } from "@/components/home-glass-architecture";
 import {
   capabilities,
   credibilityPoints,
@@ -26,6 +27,7 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero */}
         <section className="home-hero-stage relative isolate overflow-hidden border-b border-smoke-glass/70">
+          <HomeGlassArchitecture />
           <div className="home-hero-layout relative z-10 mx-auto grid max-w-[90rem] items-center gap-6 px-4 py-16 sm:gap-8 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:px-8 xl:gap-10">
             <div className="home-hero-copy relative overflow-hidden rounded-[1.75rem] px-5 py-6 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
               <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-[#315a8d]">
@@ -51,18 +53,20 @@ export default function Home() {
             <HeroShowcaseVideo />
           </div>
 
-          <div className="signal-rail border-t border-white/80">
-            <ul className="mx-auto grid max-w-[88rem] gap-px px-3 py-3 text-xs font-medium text-cool-graphite sm:grid-cols-2 sm:px-6 lg:grid-cols-5 lg:px-8">
-              {credibilityPoints.map((point) => (
-                <li
-                  key={point.id}
-                  className="flex min-w-0 items-center gap-3 rounded-xl px-3 py-3.5"
-                >
-                  <CredibilityIcon id={point.id} />
-                  <span className="leading-snug">{point.label}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="home-signal-rail-wrap relative z-10 px-3 pb-6 sm:px-6 lg:px-8">
+            <div className="signal-rail home-signal-rail mx-auto max-w-[88rem] overflow-hidden rounded-[1.5rem]">
+              <ul className="grid gap-px px-3 py-3 text-xs font-medium text-cool-graphite sm:grid-cols-2 sm:px-6 lg:grid-cols-5 lg:px-8">
+                {credibilityPoints.map((point) => (
+                  <li
+                    key={point.id}
+                    className="flex min-w-0 items-center gap-3 rounded-xl px-3 py-3.5"
+                  >
+                    <CredibilityIcon id={point.id} />
+                    <span className="leading-snug">{point.label}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
