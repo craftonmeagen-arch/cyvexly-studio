@@ -42,7 +42,8 @@ export default function ServicesPage() {
         </section>
 
         {/* Core service groups */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
+        <section className="glass-continuation border-y border-smoke-glass/70">
+          <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="grid gap-6 lg:grid-cols-2">
             {servicesGroups.map((group) => (
               <div key={group.id} id={group.id} className="glass-panel scroll-mt-24 rounded-2xl p-7">
@@ -77,6 +78,7 @@ export default function ServicesPage() {
                 </ButtonLink>
               </div>
             ))}
+          </div>
           </div>
         </section>
 
@@ -222,17 +224,20 @@ export default function ServicesPage() {
         </section>
 
         {/* FAQ */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
+        <section className="glass-continuation border-y border-smoke-glass/70">
+          <div className="mx-auto max-w-6xl px-6 py-20">
           <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
             Common questions
           </h2>
           <div className="mt-8">
             <FaqAccordion items={servicesFaq} />
           </div>
+          </div>
         </section>
 
         {/* CTA */}
-        <section className="mx-auto max-w-6xl px-6 pb-20">
+        <section className="glass-continuation border-y border-smoke-glass/70">
+          <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="signal-grid-bg relative overflow-hidden rounded-3xl bg-midnight-slate px-8 py-16 text-center sm:px-16">
             <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
               Ready to make your business unmistakable?
@@ -244,6 +249,7 @@ export default function ServicesPage() {
             <div className="mt-8 flex justify-center">
               <ButtonLink href="/start">Describe your project</ButtonLink>
             </div>
+          </div>
           </div>
         </section>
       </main>

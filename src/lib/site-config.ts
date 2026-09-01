@@ -9,7 +9,6 @@ export const primaryNav = [
   { label: "Work", href: "/work" },
   { label: "Pricing", href: "/pricing" },
   { label: "Process", href: "/process" },
-  { label: "About", href: "/about" },
 ];
 
 export const footerNav = {
@@ -18,7 +17,6 @@ export const footerNav = {
     { label: "Work", href: "/work" },
     { label: "Pricing", href: "/pricing" },
     { label: "Process", href: "/process" },
-    { label: "About", href: "/about" },
   ],
   services: [
     { label: "Business websites", href: "/services/business-websites" },

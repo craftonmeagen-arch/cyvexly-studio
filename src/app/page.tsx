@@ -67,7 +67,8 @@ export default function Home() {
         </section>
 
         {/* Selected work */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
+        <section className="glass-continuation border-y border-smoke-glass/70">
+          <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
               Selected work
@@ -105,6 +106,7 @@ export default function Home() {
               </a>
             ))}
           </div>
+          </div>
         </section>
 
         {/* Capabilities */}
@@ -137,7 +139,8 @@ export default function Home() {
         </section>
 
         {/* The difference */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
+        <section className="glass-continuation border-y border-smoke-glass/70">
+          <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="partnership-panel glass-panel signal-grid-bg relative grid overflow-hidden rounded-3xl px-8 py-10 text-center sm:px-12 md:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] md:items-center md:gap-10 md:text-left lg:px-16">
             <PartnershipSignalGraphic />
             <div className="relative z-10">
@@ -154,10 +157,12 @@ export default function Home() {
               </p>
             </div>
           </div>
+          </div>
         </section>
 
         {/* Process preview */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
+        <section className="glass-continuation border-y border-smoke-glass/70">
+          <div className="mx-auto max-w-6xl px-6 py-20">
           <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
             Give us the brief. We&apos;ll shape the route.
           </h2>
@@ -175,6 +180,7 @@ export default function Home() {
               </li>
             ))}
           </ol>
+          </div>
         </section>
 
         {/* Pricing preview */}
@@ -235,7 +241,8 @@ export default function Home() {
         </section>
 
         {/* FAQ preview */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
+        <section className="glass-continuation border-y border-smoke-glass/70">
+          <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
               FAQ
@@ -247,10 +254,12 @@ export default function Home() {
           <div className="mt-8">
             <FaqAccordion items={faqPreview} />
           </div>
+          </div>
         </section>
 
         {/* Final CTA */}
-        <section className="mx-auto max-w-6xl px-6 pb-20">
+        <section className="glass-continuation border-y border-smoke-glass/70">
+          <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="final-cta-shell relative overflow-hidden rounded-3xl" data-final-cta>
             <FinalCtaSignalGraphic />
             <div className="final-cta-copy relative z-10 px-8 py-12 text-center sm:px-12 md:max-w-[58%] md:py-14 md:text-left lg:px-16">
@@ -267,6 +276,7 @@ export default function Home() {
                 No payment required · response within two business days
               </p>
             </div>
+          </div>
           </div>
         </section>
       </main>
