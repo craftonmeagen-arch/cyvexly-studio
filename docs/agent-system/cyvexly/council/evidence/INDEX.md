@@ -1,5 +1,35 @@
 # Council Evidence Index
 
+## CYC-R42-20260901-01
+
+- `council-20260901T192231Z-planner-clean-first-use.md` — clean public Planner
+  origin, progress semantics, blank validation/focus, responsive views, and
+  draft-restoration boundary.
+
+## CYC-R41-20260901-01
+
+- `council-20260901T182329Z-round25-navigation-resilience.md` — independent
+  IAB behavior/visual proof of the active Round 25 candidate plus public
+  pre-adoption release gate.
+
+## CYC-R40-20260901-01
+
+- `council-20260901T172528Z-route-crawl-launch-boundary.md` — independent
+  route-graph crawl, IAB visual/handoff/404 boundary smoke, and launch-debt
+  disposition after Round 24 publication.
+
+## CYC-R39-20260901-01
+
+- `council-20260901T162757Z-round24-fix-verification.md` — independent Round 24
+  contrast/focus closure, responsive glass/sticky verification, route/landmark,
+  media/filter/FAQ smoke, and launch carry-forward boundaries.
+
+## CYC-R38-20260901-01
+
+- `council-20260901T152955Z-builder-fix-contrast-glass.md` — independent
+  sticky/glass responsive verification, Contact/Planner contrast measurement,
+  validation semantics, route containment, media, and diagnostics.
+
 ## CYC-R37-20260901-01
 
 - `council-20260901T123530Z-release-metadata-planner-smoke.md` — release route

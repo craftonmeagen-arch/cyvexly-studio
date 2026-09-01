@@ -3377,3 +3377,278 @@ Next Council question: after Builder wiring changes, do public metadata, legal r
 ## Publication and cleanup
 
 Durable evidence is `docs/agent-system/cyvexly/council/evidence/council-20260901T123530Z-release-metadata-planner-smoke.md`. Candidate report is ready for role publication; runtime and browser tabs must be closed by the round cleanup helper.
+
+
+---
+
+<!-- council review CYC-R38-20260901-01 published 2026-09-01T15:55:08.9879435Z -->
+
+# Cyvexly Council report — CYC-R38-20260901-01
+
+## Review identity and timing
+
+- Scheduler minute zero: `2026-09-01T15:29:55.774Z`; round `20260901T152955Z-heartbeat`.
+- Source head: `3b7a57efa7bce97a0b9c10bf8ec2bc8d6a3ec91d`; clean dirty fingerprint `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`.
+- Fresh isolated Council runtime on port 5373; PM prompt: `NO ACTIVE PM PROMPT`.
+
+## Review question and method
+
+The Builder committed sticky-navigation and glass-continuity changes after R35/R36, and the Auditor published new `CYV-IFA-011` normal-text contrast evidence. This Council round independently tested whether those fixes hold while checking the new contrast risk. I used a fresh production build, real in-app Browser DOM snapshots/evaluation/screenshots, blank Contact validation, FAQ expansion, sticky-header scroll/hit testing, Home/Services computed section surfaces, media semantics, detail-route containment, and direct HTTP status checks. States were 320px phone, 390px phone, and 1440px desktop where the Browser viewport capability allowed. No valid form or mailto side effect was triggered.
+
+## Findings and dispositions
+
+### Priority Now — CYC-R38-F001 — Shared validation error text fails normal-text AA
+
+- Reviewed source: `src/components/contact-form.tsx` and shared `src/components/planner/planner-fields.tsx`; live Contact blank-submit state.
+- Condition: field errors render at `12px` in `rgb(217, 67, 95)` (`text-warning-coral`) over the frosted field background `rgb(248, 251, 255)`. Computed contrast is `4.113931535668164:1`, below the `4.5:1` WCAG AA normal-text threshold.
+- Gap/consequence: Contact and Planner users with validation failures may not be able to read the corrective text reliably; this is a release accessibility defect even though the errors are correctly announced and associated.
+- Uncertainty: final contrast over every blur/composited state can vary; this measured live state is already below threshold and is sufficient to keep the finding open.
+- Observable closure: darken the shared error token or provide a compliant local treatment; verify actual computed/composited ratio ≥4.5:1 at Contact and Planner phone/desktop states, with unchanged `aria-invalid` and `aria-describedby` behavior.
+
+### Carry-forward — CYC-R37-F001/F002/F003
+
+Approved domain/`metadataBase` and launch robots remain Owner-blocked; visible Privacy/Terms links and `/sitemap.xml` remain 404; Planner/Contact remain an explicitly disclosed client-mail bridge without automatic Cyvexly confirmation. R38 rechecked route status and did not duplicate these stable findings.
+
+### Resolved/verified in this round
+
+- The prior site-wide transparent continuation gap is resolved in the reviewed Builder source: Home and Services sections compute shared nontransparent `glass-continuation`/`glass-section` surfaces at 320px and 1440px.
+- The sticky header/z-index regression is resolved in the reviewed source/runtime: `position: sticky`, `top: 0`, `z-index: 50`; after scrolling, the header captures the top hit target. Mobile menu semantics and route containment remained coherent.
+
+### Observation — CYC-R38-F002 — Interim contact handoff remains truthful
+
+Blank Contact validation is clear and associated; the valid submit path remains `mailto:` and the UI explicitly says the user's own mail client must send it. This is not a new defect beyond the carried-forward Planner delivery requirement.
+
+## What was not checked
+
+No final public domain or deployment metadata, legal/founder facts, real email delivery, reduced-motion emulation, physical keyboard hardware, Safari/Firefox, second-device scaling, or production vitals were available. No valid submission was sent.
+
+## Primary Next-Builder Plan
+
+1. Fix the shared warning-coral error treatment to meet normal-text AA in Contact and Planner, then rerun validation and screenshot/contrast proof at phone and desktop widths.
+2. Preserve the verified sticky header and glass-continuity treatment while checking the same error token in every conditional Planner field.
+3. Keep R37 domain, legal-route, sitemap, and server-confirmation decisions explicit; do not guess Owner facts or silently replace the disclosed mailto bridge.
+
+Next Council question: after the shared error-color fix, does the full Planner/Contact validation and focus/announcement contract remain readable and correct across narrow phone and desktop states while the repaired sticky/glass surfaces remain stable?
+
+## Publication and cleanup
+
+Durable evidence: `docs/agent-system/cyvexly/council/evidence/council-20260901T152955Z-builder-fix-contrast-glass.md`. Candidate report is ready for publication after the normal substantive window; close Browser tabs and run the exact round cleanup helper.
+
+
+---
+
+<!-- council review CYC-R39-20260901-01 published 2026-09-01T16:53:11.3854215Z -->
+
+# Cyvexly Council report — CYC-R39-20260901-01
+
+## Review identity and timing
+
+- Scheduler minute zero: `2026-09-01T16:27:57.175Z`; round `20260901T162757Z-heartbeat`.
+- Source head: `06fbadd6448b4e8e8c77d1618b1c4e6cb14238f2`; dirty fingerprint `4EDDB01E548F1D926F193B15C3CBBA135C47BBDC652E6191FE0F66AE653252D1`.
+- Fresh isolated Council runtime on port 5373; PM prompt: `NO ACTIVE PM PROMPT`.
+
+## Review question and method
+
+The Builder's Round 24 commits repaired shared form-error contrast and Contact first-invalid focus, and carried the approved blue-glass environment across public route families. R39 independently verified those fixes rather than repeating R38's pre-fix defect. The real in-app Browser covered Contact and Planner blank validation at phone width, Home/Services/Work/Pricing/Process/FAQ/Accessibility and detail routes at phone/tablet/desktop widths, menu/FAQ/filter/CTA states, sticky-header scroll hit testing, media semantics, direct route status, and clean diagnostics. I viewed the approved sitewide mockup and rendered Home captures side by side. No valid form or mailto side effect was triggered.
+
+## Findings and dispositions
+
+### No new Priority Now defect — R38/CYV-IFA-011 independently closed
+
+The shared error token is now `rgb(189, 45, 73)` and measures `5.565983806114899:1` against the frosted input background, clearing normal-text AA at Contact and Planner. Contact focuses `name`; Planner focuses `fullName`; linked `aria-invalid`/`aria-describedby` behavior remains correct. This supersedes R38's `4.1139:1` finding and independently confirms Builder Round 24's contrast closure.
+
+### No new navigation/visual defect — Round 24 contract verified
+
+Sticky header position/z-index and top hit target pass. Home/Services continuation surfaces are shared nontransparent glass across phone/tablet/desktop; rendered hierarchy, dark media focal panel, Work filters/empty state, FAQ state, route landmarks, and 390/768/1440 containment remain coherent. The prior R35/R38 visual and sticky findings are closed in the current source. Owner visual acceptance and mockup fidelity remain Owner decisions, not inferred acceptance.
+
+### Carry-forward launch decisions (not new findings)
+
+- `metadataBase`, canonical/OG/Twitter absolute URLs, sitemap, and launch indexability remain blocked on an Owner-approved domain/setting; preview HTML still emits `noindex,nofollow` and localhost OG fallback.
+- Privacy/Terms remain bounded 404s pending Owner jurisdiction facts; About remains bounded pending founder identity facts.
+- Planner/Contact remain explicitly disclosed client-mail bridges pending an authorized server/provider path and verified sending domain for automatic internal/prospect confirmation.
+
+## Method and product assessment
+
+The sequence is converging: the Builder converted Council/Auditor observations into a shared token fix and first-error focus fix, then used a route/viewport matrix and composited contrast proof. Council's independent Browser checks agree with the current evidence. Remaining work is authority-bound launch wiring rather than speculative visual/token churn.
+
+## What was not checked
+
+No public deployment origin, final domain, legal/founder content, real email delivery, physical keyboard hardware, Safari/Firefox, production vitals, or Owner's second-computer acceptance was available. Reduced-motion was represented in Builder evidence but not independently toggled in this Council Browser session.
+
+## Primary Next-Builder Plan
+
+1. Hold the verified Round 24 visual, sticky, route, and accessibility contract; do not reopen closed glass/contrast work without new evidence.
+2. Obtain Owner decisions for domain/indexability, legal/founder facts, and transactional email/provider credentials; then implement and prove the corresponding launch wiring.
+3. Keep preview no-index and truthful mailto disclosures until those decisions are implemented and end-to-end verified.
+
+Next Council question: after an approved launch-wiring change, does the same responsive visual/accessibility contract remain intact on the public origin, with metadata/legal routes and Planner confirmation truthful end to end?
+
+## Publication and cleanup
+
+Durable evidence: `docs/agent-system/cyvexly/council/evidence/council-20260901T162757Z-round24-fix-verification.md`. Publish after the normal substantive window, reset the viewport, close Council tabs, then run exact round cleanup.
+
+
+---
+
+<!-- council review CYC-R40-20260901-01 published 2026-09-01T17:50:46.0067682Z -->
+
+# Cyvexly Council report — CYC-R40-20260901-01
+
+## Review identity and timing
+
+- Scheduler minute zero: `2026-09-01T17:25:28.342Z`; round `20260901T172528Z-heartbeat`.
+- Source head: `2cd912158e5b7214534f71df5332eedffb8eae9f`; dirty fingerprint `8CA19FA00FAF9A97640E6020C4B7D307EA7FDFC0160D676F6FFB3652C2C8C33C`.
+- Fresh isolated Council runtime on port `5373`; PM prompt: `NO ACTIVE PM PROMPT`.
+
+## Review question and method
+
+R40 deliberately changed method from R39's contrast/focus and responsive interaction smoke. It crawled every same-origin link emitted by 17 implemented seed routes (27 normalized targets, including assets), then used the real in-app Browser for a desktop Home visual check, mobile FAQ visual check, Contact→Planner→Back handoff, Planner client-mail disclosure inspection, and direct not-found-boundary verification. No form or mailto side effect was triggered.
+
+## Findings and dispositions
+
+### No new Priority Now defect — route contract is stable
+
+The normalized crawl returned 25 HTTP 200 targets and only the known `/privacy` and `/terms` 404s. `/about` is not advertised in the current route set. Direct unknown-route handling is bounded (HTTP 404, `Page not found — Cyvexly Studio`, one H1). This does not supersede the known legal/metadata launch debt from R37–R39.
+
+### No new navigation/visual defect — current Round 24 contract holds
+
+Real IAB checks show the approved blue-glass Home composition at 1440×900, coherent compact FAQ at 390×844, and successful Contact→Planner→Back navigation. FAQ, Planner, and not-found checks produced no warning/error diagnostics. R39's independently closed contrast (`5.566:1`), first-invalid focus, sticky/glass, route containment, media, FAQ, and filter findings remain closed. No evidence justified reopening them.
+
+### Carry-forward launch decisions (not new findings)
+
+- Obtain Owner-approved domain/indexability settings before replacing preview `noindex,nofollow`, localhost OG/Twitter fallback, unset canonical/metadataBase, and missing sitemap.
+- Obtain Owner jurisdiction/founder facts before adding legal/About routes; `/privacy` and `/terms` remain bounded 404s.
+- Preserve the truthful Planner/Contact mailto bridge until an authorized provider, credentials, sending domain, and end-to-end automatic confirmation path are available.
+- Final fidelity to approved mockup 06 (current abstract hero video versus the richer reference composition) remains an Owner acceptance decision, not an inferred Council defect.
+
+## Method and product assessment
+
+The independent methods converge: Builder Round 24's route/viewport and composited-contrast proof, Auditor R19's source/runtime review, R39's interaction smoke, and R40's route-graph crawl all agree that current product work is stable. Remaining work is authority-bound launch wiring, not speculative token or stacking churn.
+
+## What was not checked
+
+No public deployment origin, final domain, production legal/founder content, real email delivery, physical keyboard hardware, Safari/Firefox, production vitals, or Owner second-computer acceptance was available. Reduced-motion was not independently toggled in this round.
+
+## Primary Next-Builder Plan
+
+1. Hold the verified Round 24 visual, route, sticky, glass, contrast, focus, and interaction contract; do not reopen closed work without fresh evidence.
+2. Obtain Owner decisions for domain/indexability, legal/founder facts, and transactional email/provider credentials; implement and prove launch wiring only after those decisions.
+3. Keep preview no-index and truthful mailto disclosures until public metadata, legal routes, sitemap, and server/provider-backed confirmation are end-to-end verified.
+
+Next Council question: after an approved launch-wiring change, does this same route graph and responsive visual/accessibility contract remain true on the public origin, with legal routes and Planner confirmation truthful end to end?
+
+## Publication and cleanup
+
+Durable evidence: `docs/agent-system/cyvexly/council/evidence/council-20260901T172528Z-route-crawl-launch-boundary.md`. Publish after the normal substantive window, reset the viewport, close Council tabs, then run exact round cleanup.
+
+
+---
+
+<!-- council review CYC-R41-20260901-01 published 2026-09-01T18:50:23.5768273Z -->
+
+# Cyvexly Council report — CYC-R41-20260901-01
+
+## Review identity and timing
+
+- Scheduler minute zero: `2026-09-01T18:23:29.969Z`; round `20260901T182329Z-heartbeat`.
+- Source head at Council entry: `26a768a9389b901c0be002f7e5a76e345915a45a`; dirty fingerprint `C35CC3462824692A5297603542782E4378A6AD21DECA33691CC0797819A83A0B`. During review Builder committed/pushed the same candidate as `e38851f`; the immutable Council snapshot remained the reviewed source.
+- Fresh isolated Council runtime on port `5373`; PM prompt: `NO ACTIVE PM PROMPT`.
+- Builder lock was active for `cyvexly-builder-20260901T175628Z-r25` at entry and released after `e38851f`/closeout; Council preserved it and reviewed only its own snapshot/runtime.
+
+## Review question and method
+
+R41 changed method from R40's route-graph crawl to an independent interaction and release-boundary review of the active Round 25 navigation-resilience candidate. The real in-app Browser rendered and inspected Home/Services at 1440×900, 768×1024, 390×844, and 320×844; exercised native Escape, focus return, route navigation/history, 1023/1024 breakpoint reconciliation, nested `aria-current` semantics, and one-main/one-H1 landmarks. Approved mockup 06 was viewed beside the current Home render. A read-only public `/services` probe tested adoption; no form/mailto side effect occurred.
+
+## Candidate findings and dispositions
+
+### `CYC-R41-F001` — Resolved before round close: public adoption matches local candidate
+
+The local candidate passes the intended behavior: compact nav opens with `aria-expanded="true"`, native Escape closes and returns focus to the trigger, mobile route activation closes the panel, browser Back preserves a closed state, 1024px closes stale compact state, 1023px restores the mobile trigger, and nested service/work/planner routes expose the correct current-page marker. Builder's 114-case final matrix reports zero failures, and Council's own IAB diagnostics were empty.
+
+After Builder commit/push `e38851f` propagated, the public Render origin returned ETag `{"44zd3ca5e02ryz"}` and reproduced the same behavior at `/services`: Services `aria-current`, Escape/focus return, Work route closure, Back recovery, 1024/1023 breakpoint reconciliation, and clean diagnostics all passed. A final recheck after the subsequent docs-only closeout deployment (ETag `{"es8or65zfo2ryz"}`) reproduced the current marker, Escape/focus return, and clean diagnostics. Round 25's public adoption gate is therefore satisfied; no new Priority Now defect was established.
+
+### No new visual/accessibility defect in the candidate
+
+The viewed 1440/768/390/320 renders preserve the approved blue-glass hierarchy, coherent Services cards, mobile header geometry, and wrapping-safe Services Planner CTA. Home remains visually consistent with Round 24's accepted implementation; richer mockup-06 artwork, the deferred About identity, and final visual acceptance remain Owner decisions. One `main`, one `h1`, nested parent current markers, sticky header, and clean diagnostics were observed on the sampled routes.
+
+### Carry-forward launch decisions (not new findings)
+
+- Keep preview `noindex,nofollow`, localhost OG/Twitter fallback, missing canonical/sitemap, and public-origin adoption gated on Owner-approved domain/indexability settings.
+- Keep `/privacy` and `/terms` bounded until Owner supplies jurisdiction-approved content; do not invent About identity facts.
+- Keep truthful Planner/Contact mailto disclosure until an authorized provider, credentials, sending domain, and automatic confirmation path are available.
+
+## Method and product assessment
+
+The sequence is producing meaningful progress: Builder's fifth-round method shifted from visual/token work to a single shared navigation lifecycle concern and a narrow 24px-root CTA containment repair. Council independently confirms the local candidate and then confirms public adoption after `e38851f` propagated. Auditor R20's separate legal/metadata/accessibility pass agrees that no source regression is established on the accepted product baseline.
+
+## What was not checked
+
+The public probe covered `/services` behavior plus public Home renders at desktop/tablet and narrow Services at phone/320. Physical keyboard hardware, Safari/Firefox, reduced-motion, production vitals, clean no-draft Planner first use, production legal/domain facts, real email delivery, and Owner second-computer visual acceptance remain unverified. Builder's lock/session was preserved at entry and released after closeout; Council did not interfere.
+
+## Primary Next-Builder Plan
+
+1. Hold the accepted Round 25 shared-header lifecycle/current-page semantics, Services CTA wrapping fix, and unchanged Round 24 visual contract.
+2. Keep the known domain/indexability/legal/founder/email decisions explicit and unchanged; do not reopen closed contrast/glass/sticky work without fresh evidence.
+3. Use the next Builder slice only for Owner-authorized launch wiring or a newly falsified product contract, with public proof preserved.
+
+Next Council question: now that Round 25 is publicly adopted, does the public origin retain the lifecycle/current-page and approved visual contract while the next Owner-authorized launch-wiring slice lands?
+
+## Publication and cleanup
+
+Durable evidence: `docs/agent-system/cyvexly/council/evidence/council-20260901T182329Z-round25-navigation-resilience.md`. Publish after the normal substantive window, reset the viewport, close Council tabs, then run exact round cleanup.
+
+
+---
+
+<!-- council review CYC-R42-20260901-01 published 2026-09-01T19:47:47.1558876Z -->
+
+# Cyvexly Council report — CYC-R42-20260901-01
+
+## Review identity and timing
+
+- Scheduler minute zero: `2026-09-01T19:22:31.445Z`; round `20260901T192231Z-heartbeat`.
+- Source head: `4b087446eb41a947d2b051d30a524ca2c1f83c35`; dirty fingerprint `58F3A0B3E48513C09F7ECA0CA84F575A8333B969E162F3B4ABDEAA8F5F874261`.
+- Fresh isolated Council runtime on port `5373`; PM prompt: `NO ACTIVE PM PROMPT`.
+
+## Review question and method
+
+R42 deliberately changed method from R41's navigation-resilience/adoption review to a clean public-origin Planner first-use and validation review. Without clearing storage or using a policy workaround, a new public-origin tab was opened and inspected at 1440×900, 768×1024, and 390×844 beside approved `mockups/04-process-planner.png`. The clean Step 1 state, progress semantics, blank validation/focus, responsive hierarchy, and diagnostics were exercised. No valid submission or mailto side effect was triggered.
+
+## Findings and dispositions
+
+### No new Priority Now defect — clean Planner first use and validation are truthful
+
+Public `/start` settled as `Project Planner — Cyvexly Studio` with no restored-draft notice, blank Step 1 fields, one `main`, one `h1`, and `Describe your project` as the current primary destination. Blank `Continue →` produced four alerts, three invalid fields, focus on `#fullName`, and linked `aria-describedby="fullName-error"`; the visible phone state remained legible and contained. The progress rail correctly marks Step 1 as current and disables Steps 2–9 until valid progression. No warning/error diagnostics appeared.
+
+The local role runtime showed its expected restored-draft banner, which confirms restoration is scoped to an existing origin/context rather than leaking into a clean public first use. This closes the specific clean-origin uncertainty without claiming every browser profile or device is clean.
+
+### No new visual/accessibility defect — Planner hierarchy holds across viewpoints
+
+Public Planner renders at 1440, 768, and 390 preserve the Round 24/25 blue-glass hierarchy, two-column desktop form/next-steps composition, compact mobile header, progress rail, and readable validation treatment. The richer globe/illustration and denser content shown in approved mockup 04 are an Owner fidelity decision, not a fabricated defect. Step-one Back is disabled while Save and Continue remain enabled, matching the state model.
+
+### Carry-forward launch decisions (not new findings)
+
+- Keep preview `noindex,nofollow`, localhost OG/Twitter fallback, missing canonical/sitemap, and final public metadata gated on Owner-approved domain/indexability settings.
+- Keep `/privacy` and `/terms` bounded until Owner supplies jurisdiction-approved content; do not invent About identity facts.
+- Keep truthful Planner/Contact mailto disclosure until an authorized provider, credentials, sending domain, and automatic confirmation path are available.
+- Treat physical keyboard, Safari/Firefox, reduced-motion, field vitals, and Owner second-computer acceptance as unverified complementary proof.
+
+## Method and product assessment
+
+Builder Round 25's behavior changes are now public and stable. Council's new clean-origin Planner proof complements Auditor R21's navigation/filter pass without repeating its Work method. The team is converging on truthful state boundaries; remaining work is Owner-authorized launch wiring and final acceptance, not speculative UI churn.
+
+## What was not checked
+
+No valid form submission, automatic confirmation delivery, alternate user profile/device, physical keyboard/assistive technology, Safari/Firefox, reduced-motion, production vitals, or metadata/legal route re-check was performed in this round. Existing R37/R40 launch debt remains unchanged.
+
+## Primary Next-Builder Plan
+
+1. Hold the verified Round 25 navigation, Planner validation, draft-restoration, and responsive visual contracts; do not reopen closed contrast/glass/sticky work without new evidence.
+2. Obtain Owner domain/indexability, legal/founder, and transactional-email decisions; then implement and prove the server/provider-backed launch wiring while retaining truthful interim copy.
+3. Preserve a clean-origin Planner first-use check in the next public release smoke and add alternate-device/assistive-technology proof only when those capabilities are available.
+
+Next Council question: after the next Owner-authorized launch-wiring change, does a clean public Planner first use remain draft-free, truthful, and visually/accessibly coherent alongside the updated metadata/legal/email boundary?
+
+## Publication and cleanup
+
+Durable evidence: `docs/agent-system/cyvexly/council/evidence/council-20260901T192231Z-planner-clean-first-use.md`. Publish after the normal substantive window, reset the viewport, close Council tabs, then run exact round cleanup.

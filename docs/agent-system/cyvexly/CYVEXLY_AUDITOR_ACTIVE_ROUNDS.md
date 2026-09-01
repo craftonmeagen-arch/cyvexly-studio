@@ -2,6 +2,42 @@
 
 Latest completed receipt:
 
+- **Review / round:** `IFA-2026-09-01-R21` / `auditor-20260901T1837Z-021`
+- **Window:** heartbeat minute zero `2026-09-01T18:37:00.377Z`; substantive Work-filter/navigation-resilience work crossed the governing 25-minute active-work floor before publication.
+- **Source:** accepted product `06fbadd6448b4e8e8c77d1618b1c4e6cb14238f2` / `src/` tree `d9f3e4a976e08f4acc11307b152bcb388d6885a6`. Repository HEAD `26a768a` has Builder-owned `src/app/services/page.tsx` and `src/components/site-header.tsx` changes; Builder lock `cyvexly-builder-20260901T175628Z-r25` is preserved and mutable source is excluded.
+- **Environment:** exact archive/runtime at `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T1837Z-021`, real IAB tab `5`, port `5273`; standard guard remains write-denied and routing is manual. Council resources and scheduler remain untouched.
+- **Scope:** Work filter matrix at desktop/phone, explicit empty-state behavior, filtered Work → Planner → browser Back recovery, four-route mobile primary navigation, mobile containment, runtime diagnostics, and ESLint.
+- **Finding/disposition:** no new defect assigned; `CYV-IFA-005`, `CYV-IFA-006`, and `CYV-IFA-009` remain open; `CYV-IFA-010` and `CYV-IFA-011` remain closed. ESLint and TypeScript passed. Physical keyboard traversal remains unconfirmed because the IAB locator `press("Tab")` did not advance focus.
+- **Evidence:** `auditor/evidence/auditor-20260901T1837Z-021-navigation-filter-probe.md`, `auditor-20260901T1837Z-021-runtime-metrics.json`, and two opened phone captures.
+- **Cleanup:** exact IAB tab/viewport, Auditor server PID `21860` plus launcher `34412`, and runtime were removed after publication; port `5273` is clear. Builder lock r25 cleared naturally at closeout. HEAD advanced to `4b08744` / source tree `3ea8774a` after the accepted review and was not inspected; guard completion remained unavailable because its state file is write-denied.
+
+- **Review / round:** `IFA-2026-09-01-R20` / `auditor-20260901T1731Z-020`
+- **Window:** heartbeat minute zero `2026-09-01T17:31:58.542Z`; substantive Accessibility/legal/metadata/404 work crossed the governing 25-minute active-work floor before publication.
+- **Source:** docs-only HEAD `2cd912158e5b7214534f71df5332eedffb8eae9f`; accepted product `src/` tree `d9f3e4a976e08f4acc11307b152bcb388d6885a6` unchanged from R19. No Builder lock was present at entry; Builder session `cyvexly-builder-20260901T175628Z-r25` claimed the lock near closeout and was preserved. Mutable HEAD later advanced to `26a768a`, which was not inspected.
+- **Environment:** exact archive/runtime at `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T1731Z-020`, real IAB, port `5273`; standard guard remained write-denied and routing was manual. Council port/resources and scheduler were untouched.
+- **Scope:** Accessibility Statement desktop/phone semantics and visuals, legal/invalid 404 boundaries, custom-404 forward/back, metadata/indexing/robots/OG/sitemap, clean alternate Planner-origin policy boundary, diagnostics, and lint.
+- **Finding/disposition:** `CYV-IFA-005` re-confirmed open (preview noindex expected; canonical/metadataBase/production OG URL still absent). No new defect assigned. `CYV-IFA-009` remains open due policy-blocked clean origin; `CYV-IFA-010` and `CYV-IFA-011` remain closed.
+- **Evidence:** `auditor/evidence/auditor-20260901T1731Z-020-legal-metadata-probe.md`, `auditor-20260901T1731Z-020-runtime-metrics.json`, and four opened captures.
+- **Cleanup:** exact IAB tabs, Auditor server `38560`, and runtime removed; port `5273` clear. `Complete-ReviewRound.ps1` returned no-active-guard (exit 1) after cleanup. Builder lock r25 was preserved; Council resources and scheduler remain untouched.
+
+- **Review / round:** `IFA-2026-09-01-R19` / `auditor-20260901T1633Z-019`
+- **Window:** heartbeat minute zero `2026-09-01T16:33:57.340Z`; substantive Round 23/24 contrast, focus, and route-family glass work crossed the governing 25-minute floor before publication.
+- **Source:** immutable accepted product `06fbadd6448b4e8e8c77d1618b1c4e6cb14238f2`; Git `src/` tree `d9f3e4a976e08f4acc11307b152bcb388d6885a6` (nine-file source delta from the R18 baseline). Later mutable HEAD `2cd9121` was not inspected.
+- **Environment:** exact archive/runtime at `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T1633Z-019`, real IAB, port `5273`; Builder lock `cyvexly-builder-20260901T160800Z-r24` was preserved. Standard guard remained write-denied; routing was manual.
+- **Scope:** Contact empty-submit first-invalid focus and error semantics/contrast, full-height blue-glass route-family sweep, 390/320 containment and sticky/menu stress, FAQ disclosure, Work Commerce filter, HTTP route smoke, and Browser diagnostics.
+- **Finding/disposition:** `CYV-IFA-011` **verified closed** at `#bd2d49` with measured ratios `5.3002–5.5660:1`; no new defect assigned. `CYV-IFA-005`, `CYV-IFA-006`, and `CYV-IFA-009` remain open; `CYV-IFA-010` and `CYV-IFA-008` remain closed.
+- **Evidence:** `auditor/evidence/auditor-20260901T1633Z-019-round23-24-probe.md`, `auditor-20260901T1633Z-019-runtime-metrics.json`, and five opened captures.
+- **Cleanup:** after the floor, IAB viewport reset and tab `2` closed; exact Auditor server `42784`, temp runtime, and screenshot profiles removed; port `5273` clear. `Complete-ReviewRound.ps1` returned no-active-guard (exit 1) after cleanup. Builder lock was preserved while active and cleared naturally during the window; Council resources and scheduler automation remain untouched.
+
+- **Review / round:** `IFA-2026-09-01-R18` / `auditor-20260901T1530Z-018`
+- **Window:** heartbeat minute zero `2026-09-01T15:29:25.880Z`; substantive Round 22 source/runtime review crossed the 25-minute active-work floor before publication.
+- **Source:** current HEAD `3b7a57efa7bce97a0b9c10bf8ec2bc8d6a3ec91d` (docs-only successor); accepted product source `4265fa4`; Git `src/` tree `aaab79e355b7536536b12b37315f3759b7a38514` (41 files), with four source files changed since R17.
+- **Environment:** exact accepted-HEAD runtime at `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T1530Z-018`, real in-app Browser tab `1`, IAB widths 1440/1280/1024/768/390/320, port `5273`; `.engine-lock` was absent and no Builder/Council resource was touched. Standard guard remained write-denied; routing was manual.
+- **Scope:** fresh Round 22 sticky-header cascade repair, Home/Services continuation-glass bands, About-link truth boundary, responsive containment, FAQ/menu/CTA recovery, and heading/control semantics; R17 Contact contrast method was not repeated.
+- **Finding/disposition:** `CYV-IFA-010` is **verified closed**: header computes `position: sticky; top: 0; z-index: 50` through desktop/phone terminal scroll and remains above the open menu. Continuation bands match layout widths with zero overflow and preserve dark proof/CTA surfaces; no new defect assigned. `CYV-IFA-011` remains open; `CYV-IFA-005`, `CYV-IFA-006`, and `CYV-IFA-009` remain open; `CYV-IFA-008` remains closed and `CYV-IFA-007` provisional.
+- **Evidence:** `auditor-20260901T1530Z-018-round22-continuation.md`, `auditor-20260901T1530Z-018-runtime-metrics.json`, and four opened captures.
+- **Cleanup:** temporary IAB viewport reset, Browser tab `1` closed, exact Auditor server/Chrome chains stopped, exact temp runtime/profiles removed, port `5273` verified clear. Builder session `cyvexly-builder-20260901T153920Z-r23` claimed the lock and advanced HEAD to `2227961` during the window; that source and lock were preserved and not inspected. Scheduler automation remains active.
+
 - **Review / round:** `IFA-2026-09-01-R17` / `auditor-20260901T1231Z-017`
 - **Window:** heartbeat minute zero `2026-09-01T12:31:27.6180525Z`; substantive Contact/FAQ interaction work crossed the 25-minute active-work floor before publication.
 - **Source:** current HEAD `a7e07ca30a40757fa00ee3d7d6452918edba5137` (docs-only successor); accepted product source `1437f5b`, Git `src/` tree `50dc64c9ab91752979b5e50113b398fa047f2b1f` (41 files), no `src/` diff.

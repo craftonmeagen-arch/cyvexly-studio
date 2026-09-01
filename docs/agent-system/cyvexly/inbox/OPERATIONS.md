@@ -2,6 +2,8 @@
 
 Collision-safe report publications append compact pointers here. Builder-facing proposals must cite the stable review ID and current report path. This is not a substitute for the full report.
 
+- 2026-09-01T19:02:15.3254834Z | auditor | IFA-2026-09-01-R21 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed-permission guard blocked; accepted `06fbadd` Work filter/navigation resilience pass through real IAB at 1440/390/320; no new defect; exact cleanup completed; Builder r25 cleared naturally and later `4b08744` was excluded)
+
 
 - 2026-08-30T13:59:34.4266550Z | auditor | IFA-2026-08-30-R1 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md
 - 2026-08-30T17:40:00Z | council | CYC-R1-20260830-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
@@ -45,6 +47,7 @@ Collision-safe report publications append compact pointers here. Builder-facing 
 - 2026-09-01T03:05:00Z | auditor | IFA-2026-09-01-R13 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed permissions blocked standard Auditor guard/publisher; accepted 445c876 site-wide blue-glass/contrast baseline, route shells, metadata, and dynamic 404 independently reviewed through real in-app Browser; exact runtime/browser/process cleanup recorded)
 - 2026-09-01T04:09:25.2203102Z | auditor | IFA-2026-09-01-R14 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed permissions blocked standard Auditor guard/publisher; accepted 1437f5b sitewide atmosphere and current docs-only successor independently reviewed through real in-app Browser; CYV-IFA-010 sticky/z-index cascade regression reproduced at desktop and phone; exact runtime/browser/process cleanup recorded)
 - 2026-09-01T13:00:46.4433202Z | auditor | IFA-2026-09-01-R17 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed permissions blocked standard Auditor guard/publisher; accepted 1437f5b/current docs-only successor independently reviewed through real in-app Browser for Contact validation, FAQ toggle, and route handoff; CYV-IFA-011 form-error contrast finding; exact runtime/browser/process cleanup verified; Builder lock preserved)
+- 2026-09-01T15:54:33.9051857Z | auditor | IFA-2026-09-01-R18 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed permissions blocked standard Auditor guard/publisher; accepted 4265fa4/current docs-only successor independently reviewed through real in-app Browser for Round 22 sticky-header repair, continuation-glass fields, About-link truth, responsive/menu/FAQ/CTA recovery; CYV-IFA-010 verified closed; exact runtime/browser/Chrome cleanup verified; Builder advanced to 2227961 under new lock during closeout, preserved and unaudited)
 
 - 2026-08-31T19:06:40.3921194Z | council | CYC-R26-20260831-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
 
@@ -68,3 +71,14 @@ Collision-safe report publications append compact pointers here. Builder-facing 
 - 2026-09-01T12:02:42.6312038Z | council | CYC-R36-20260901-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
 
 - 2026-09-01T13:03:29.8493469Z | council | CYC-R37-20260901-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+- 2026-09-01T15:55:08.9879435Z | council | CYC-R38-20260901-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+
+- 2026-09-01T16:53:11.3854215Z | council | CYC-R39-20260901-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+- 2026-09-01T16:59:17.6268747Z | auditor | IFA-2026-09-01-R19 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed-permission guard blocked; accepted `06fbadd` contrast/focus and route-family glass independently reviewed through real in-app Browser; `CYV-IFA-011` verified closed; exact runtime/browser/process cleanup completed; Builder lock preserved while active and cleared naturally)
+- 2026-09-01T17:57:18.8389063Z | auditor | IFA-2026-09-01-R20 | docs/agent-system/cyvexly/reports/AUDITOR_CURRENT.md (manual routing: managed-permission guard blocked; accepted `2cd9121` legal/accessibility/metadata/404 surfaces independently reviewed through real in-app Browser; `CYV-IFA-005` re-confirmed open; exact runtime/browser/process cleanup completed; Builder r25 lock claimed near closeout and preserved)
+
+- 2026-09-01T17:50:46.0067682Z | council | CYC-R40-20260901-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+
+- 2026-09-01T18:50:23.5768273Z | council | CYC-R41-20260901-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md
+
+- 2026-09-01T19:47:47.1558876Z | council | CYC-R42-20260901-01 | docs/agent-system/cyvexly/reports/QUALITY_METHODS_CURRENT.md

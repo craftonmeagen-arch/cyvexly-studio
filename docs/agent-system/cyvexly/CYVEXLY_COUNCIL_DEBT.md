@@ -1,5 +1,34 @@
 # Cyvexly Council Debt
 
+- CYC-R42 finds no new Priority Now defect. Clean public Planner first use and
+  blank validation/focus now have direct 1440/768/390 proof; provider-backed
+  email, metadata/indexability, legal/founder facts, alternate-device and
+  assistive-tech proof remain open. Publish after the normal round window.
+
+- CYC-R41 confirms Round 25 header/CTA candidate and public Render agree after
+  Builder commit/push `e38851f`; Escape/focus, current-page, route/history,
+  breakpoint, and responsive proof pass. Keep the public contract stable.
+  Published `2026-09-01T18:50:23.5768273Z`; cleanup verified
+  `2026-09-01T18:51:32.9376914Z`.
+
+- CYC-R40 finds no new Priority Now defect. The route graph has only the known
+  `/privacy` and `/terms` legal 404s; metadata/indexability, sitemap, domain,
+  founder/legal facts, and provider-backed confirmation remain Owner-blocked
+  launch debt. Published `2026-09-01T17:50:46.0067682Z`; cleanup verified
+  `2026-09-01T17:51:36.4515396Z`.
+
+- CYC-R39 closes the R38 shared validation contrast finding: current
+  `#bd2d49` error text over `#f8fbff` measures `5.565983806114899:1`, and
+  first-invalid focus now works in Contact/Planner. Keep launch metadata,
+  legal/sitemap, and server-confirmation decisions open. Published
+  `2026-09-01T16:53:11.3854215Z`.
+
+- CYC-R38: shared Contact/Planner validation errors use `#d9435f` at 12px over
+  `#f8fbff`; measured contrast `4.113931535668164:1`, below normal-text AA.
+  Darken or otherwise strengthen the shared treatment and re-prove actual
+  composited contrast with unchanged ARIA associations. Published
+  `2026-09-01T15:55:08.9879435Z`.
+
 - CYC-R37: release metadata has localhost OG/Twitter URLs (`metadataBase`
   unset) and preview noindex robots; Owner domain/indexability decision is
   required. Privacy/Terms and sitemap are 404. Planner/Contact mailto bridges

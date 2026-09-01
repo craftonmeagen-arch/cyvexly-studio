@@ -1,0 +1,115 @@
+{
+  "reviewId": "IFA-2026-09-01-R21",
+  "roundId": "auditor-20260901T1837Z-021",
+  "acceptedSource": {
+    "commit": "06fbadd6448b4e8e8c77d1618b1c4e6cb14238f2",
+    "sourceTree": "d9f3e4a976e08f4acc11307b152bcb388d6885a6"
+  },
+  "mutableBoundary": {
+    "headAtEntry": "26a768a9389b901c0be002f7e5a76e345915a45a",
+    "srcWorkingTreeChanges": [
+      "src/app/services/page.tsx",
+      "src/components/site-header.tsx"
+    ],
+    "builderLock": "cyvexly-builder-20260901T175628Z-r25",
+    "mutableSourceInspected": false,
+    "headObservedAtPublication": "4b087446eb41a947d2b051d30a524ca2c1f83c35",
+    "sourceTreeObservedAtPublication": "3ea8774a77b0a5b0ace44350cb658231ef0cdc98",
+    "publicationSourceInspected": false,
+    "builderLockAtPublication": "absent"
+  },
+  "runtime": {
+    "path": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260901T1837Z-021",
+    "host": "localhost",
+    "port": 5273,
+    "serverLauncherPid": 34412,
+    "serverPid": 21860,
+    "browser": "real in-app Browser",
+    "tabId": "5",
+    "viewports": [
+      "1440x900",
+      "390x844 (375px layout)"
+    ]
+  },
+  "workFilters": {
+    "desktop": {
+      "All": { "cards": 3, "pressed": true, "overflow": false },
+      "Business Site": { "cards": 2, "pressed": true, "overflow": false },
+      "Redesign": { "cards": 0, "emptyState": true, "pressed": true, "overflow": false },
+      "Landing Page": { "cards": 0, "emptyState": true, "pressed": true, "overflow": false },
+      "Commerce": { "cards": 1, "pressed": true, "overflow": false },
+      "Concept": { "cards": 3, "pressed": true, "overflow": false }
+    },
+    "phone": {
+      "Redesign": { "cards": 0, "emptyState": true, "pressed": true, "layoutWidth": 375, "overflow": false },
+      "Landing Page": { "cards": 0, "emptyState": true, "pressed": true, "layoutWidth": 375, "overflow": false },
+      "Commerce": { "cards": 1, "pressed": true, "layoutWidth": 375, "overflow": false },
+      "All": { "cards": 3, "pressed": true, "layoutWidth": 375, "overflow": false }
+    },
+    "narrow320": {
+      "All": { "cards": 3, "pressed": true, "layoutWidth": 305, "overflow": false },
+      "Business Site": { "cards": 2, "pressed": true, "layoutWidth": 305, "overflow": false },
+      "Redesign": { "cards": 0, "emptyState": true, "pressed": true, "layoutWidth": 305, "overflow": false },
+      "Landing Page": { "cards": 0, "emptyState": true, "pressed": true, "layoutWidth": 305, "overflow": false },
+      "Commerce": { "cards": 1, "pressed": true, "layoutWidth": 305, "overflow": false },
+      "Concept": { "cards": 3, "pressed": true, "layoutWidth": 305, "overflow": false }
+    }
+  },
+  "navigation": {
+    "plannerRecovery": {
+      "from": "/work",
+      "to": "/start",
+      "mainCount": 1,
+      "h1": "Tell us what you need. We'll shape the right route.",
+      "savedDraftNotice": true,
+      "restoredName": "R9 Draft Test",
+      "overflow": false,
+      "backPath": "/work",
+      "backFilter": "All"
+    },
+    "mobilePrimarySweep": [
+      { "path": "/work", "menuOpened": true, "menuClosedAfterNavigation": true, "mainCount": 1, "overflow": false },
+      { "path": "/pricing", "menuOpened": true, "menuClosedAfterNavigation": true, "mainCount": 1, "overflow": false },
+      { "path": "/process", "menuOpened": true, "menuClosedAfterNavigation": true, "mainCount": 1, "overflow": false },
+      { "path": "/services", "menuOpened": true, "menuClosedAfterNavigation": true, "mainCount": 1, "overflow": false }
+    ],
+    "caseStudyMedia": {
+      "path": "/work/aurora-spaces",
+      "viewport": "320x844 (305px layout)",
+      "mainCount": 1,
+      "h1": "Aurora Spaces",
+      "semanticRoleImages": 3,
+      "descriptiveNames": true,
+      "overflow": false,
+      "backLink": "/work"
+    },
+    "terminalScrollMenu": {
+      "path": "/work",
+      "viewport": "320x844",
+      "scrollY": 1300,
+      "header": { "position": "sticky", "top": 0, "zIndex": "50" },
+      "menu": { "opened": true, "top": 81, "zIndex": "auto" },
+      "overflow": false
+    }
+  },
+  "verification": {
+    "browserWarningsErrors": [],
+    "eslintExitCode": 0,
+    "tscExitCode": 0,
+    "openedEvidence": [
+      "auditor/evidence/auditor-20260901T1837Z-021-work-redesign-390.png",
+      "auditor/evidence/auditor-20260901T1837Z-021-services-390.png"
+    ],
+    "keyboardMethod": "IAB locator press(Tab) did not advance focus; physical traversal unconfirmed"
+  },
+  "disposition": "No new defect assigned; existing CYV-IFA-005, CYV-IFA-006, and CYV-IFA-009 remain open; CYV-IFA-010 and CYV-IFA-011 remain closed."
+  ,"cleanup": {
+    "browserTabsClosed": true,
+    "runtimeRemoved": true,
+    "serverPidStopped": 21860,
+    "launcherPidStopped": 34412,
+    "port5273Clear": true,
+    "builderLockPreservedDuringReview": true,
+    "builderLockClearedNaturallyAtPublication": true
+  }
+}

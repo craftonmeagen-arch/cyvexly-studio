@@ -1,5 +1,62 @@
 # Cyvexly Council Summary
 
+## CYC-R42-20260901-01
+
+R42 changed method from R41's navigation-resilience review to a clean
+public-origin Planner check. A fresh public tab had no restored-draft notice;
+1440/768/390 renders preserve the blue-glass hierarchy, and blank Step 1
+validation yields four alerts, three linked invalid fields, and `fullName`
+focus. Progress/Back/Save/Continue semantics and diagnostics pass. Local
+restoration remains correctly scoped to an existing origin. No new Priority Now
+defect; mockup-04 artwork differences and provider-backed delivery remain
+Owner decisions. Evidence: `council/evidence/council-20260901T192231Z-planner-clean-first-use.md`.
+
+## CYC-R41-20260901-01
+
+R41 independently reviewed the active Round 25 navigation-resilience candidate
+using native IAB interaction rather than R40's route crawl. Local 390/320/768/
+1440 checks pass Escape/focus return, route/history closure, 1024/1023 resize
+reconciliation, nested `aria-current`, visual hierarchy, and landmarks; the
+Builder's 114-case matrix has zero failures. Builder commit `e38851f` then
+propagated to Render; Council re-proved public `/services` current-page marker,
+Escape/focus, route/history, and 1024/1023 breakpoint behavior with clean
+diagnostics. No new product defect.
+Evidence: `council/evidence/council-20260901T182329Z-round25-navigation-resilience.md`.
+
+## CYC-R40-20260901-01
+
+R40 changed method from R39: a 17-route same-origin crawl found 27 normalized
+targets, 25 HTTP 200 and only the known `/privacy` and `/terms` 404s; `/about`
+is not advertised. IAB Home at 1440×900, FAQ at 390×844, Contact→Planner→Back,
+Planner's truthful mailto disclosure, and bounded not-found state were clean.
+No new Priority Now defect; metadata/legal/sitemap/domain/mailto decisions carry
+forward. Evidence: `council/evidence/council-20260901T172528Z-route-crawl-launch-boundary.md`.
+
+## CYC-R39-20260901-01
+
+R39 independently reviewed the current Round 24 source after Builder commits
+`2227961` and `06fbadd`. Contact and Planner errors now use `rgb(189, 45, 73)`
+and measure `5.565983806114899:1` over frosted inputs; Contact focuses `name`,
+Planner focuses `fullName`, and ARIA associations remain correct. Sitewide
+glass, sticky header, route containment, media, Work filters, FAQ, and clean
+diagnostics pass at phone/tablet/desktop states. R37 launch metadata/legal/
+mailto decisions carry forward. Published `2026-09-01T16:53:11.3854215Z`.
+
+Evidence: `council/evidence/council-20260901T162757Z-round24-fix-verification.md`.
+
+## CYC-R38-20260901-01
+
+R38 independently rechecked the Builder's sticky-navigation and site-wide glass
+continuity work at phone, tablet, and desktop viewport states. Header sticky
+position/z-index and hit target, nontransparent Home/Services continuation
+surfaces, route landmarks/containment, media semantics, FAQ, and Contact/Planner
+error associations pass. The Auditor's new issue persists: shared 12px
+warning-coral validation text measures `4.113931535668164:1` over frosted input
+background, below normal-text AA. R37 launch metadata/legal/mailto debt carries
+forward. Published `2026-09-01T15:55:08.9879435Z`.
+
+Evidence: `council/evidence/council-20260901T152955Z-builder-fix-contrast-glass.md`.
+
 ## CYC-R37-20260901-01
 
 R37 tested release-facing wiring on a fresh isolated build. Core routes and the

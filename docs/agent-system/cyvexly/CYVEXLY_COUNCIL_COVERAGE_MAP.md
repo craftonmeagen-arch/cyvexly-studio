@@ -1,5 +1,64 @@
 # Cyvexly Council Coverage Map
 
+## Reviewed in CYC-R42-20260901-01
+
+- Surfaces: clean public Planner first use, Step 1 progress rail/control
+  semantics, blank validation/focus, local restored-draft contrast, and public
+  Planner renders at 1440/768/390 against approved mockup 04.
+- Dimensions: no restored-draft notice on fresh public origin, one main/H1,
+  `aria-current="step"`, disabled future steps, Back/Save/Continue states,
+  three invalid fields/four alerts, `fullName` focus/description, and clean
+  diagnostics.
+- Disposition: no new Priority Now defect. Clean-origin uncertainty is reduced
+  by direct public proof; provider-backed email, metadata/legal, and alternate
+  device/assistive-tech boundaries carry forward.
+
+## Reviewed in CYC-R41-20260901-01
+
+- Surfaces: active Round 25 shared header and Services CTA working tree,
+  Home/Services at 1440/768/390/320, nested service/work/Planner routes,
+  mobile disclosure/history/breakpoint states, and public `/services` adoption.
+- Dimensions: native Escape and focus return, `aria-expanded`/`aria-controls`,
+  route/history closure, 1024/1023 media boundary, parent `aria-current`,
+  one-main/one-H1 landmarks, CTA wrapping-safe classes, and clean diagnostics.
+- Disposition: local candidate passes; public origin is still pre-R25 and must
+  be adopted/re-proved before Builder can claim completion. Existing launch
+  metadata/legal/email decisions carry forward.
+
+## Reviewed in CYC-R40-20260901-01
+
+- Surfaces: same-origin link graph from 17 implemented seed routes, all five
+  service details and three work details, static assets, direct 404 boundary,
+  Home desktop, FAQ phone, Contact→Planner handoff, and Planner disclosure.
+- Dimensions: 27 normalized targets (25 HTTP 200, known `/privacy` and `/terms`
+  404s), `/about` absent from advertised links, IAB 1440×900 and 390×844,
+  Back navigation, one-H1 not-found state, and Browser warning/error logs.
+- Disposition: no new Priority Now defect. R37–R39 metadata/legal/mailto
+  launch debt carries; R39 contrast/focus/sticky/glass closures remain closed.
+
+## Reviewed in CYC-R39-20260901-01
+
+- Surfaces: current Round 24 source after contrast/focus fixes, sitewide glass
+  route families, Home/Services/Work/Pricing/Process/FAQ/Accessibility, detail
+  routes, Planner/Contact validation, media, menu, filters, and utilities.
+- Viewpoints: real IAB phone `390`, tablet `768`, and desktop `1440` states;
+  approved sitewide mockup and rendered Home/Contact captures viewed.
+- Disposition: R38/CYV-IFA-011 error contrast closes at `5.566:1`; first-error
+  focus closes; sticky/glass work remains verified. Metadata/legal/sitemap/
+  server-confirmation remain Owner-blocked carry-forward.
+
+## Reviewed in CYC-R38-20260901-01
+
+- Surfaces: Home/Services continuation glass at 320/768/1440, sticky header
+  scroll and hit target, Contact/Planner blank validation, FAQ expansion,
+  media contract, detail routes, and route/landmark containment.
+- Dimensions: computed composited error contrast, `aria-invalid`/
+  `aria-describedby`, `aria-expanded`, sticky `z-index`, section backgrounds,
+  one main/H1, no horizontal overflow, and clean Browser diagnostics.
+- Disposition: Builder glass/sticky fixes independently verified; shared
+  warning-coral text remains Priority Now at `4.1139:1` vs 4.5:1 AA. R37
+  metadata/legal/mailto findings carry forward.
+
 ## Reviewed in CYC-R37-20260901-01
 
 - Surfaces: fresh production build, Home server metadata, route/link matrix,

@@ -1,0 +1,84 @@
+{
+  "reviewId": "IFA-2026-09-01-R18",
+  "round": "auditor-20260901T1530Z-018",
+  "heartbeatMinuteZero": "2026-09-01T15:29:25.880Z",
+  "head": "3b7a57efa7bce97a0b9c10bf8ec2bc8d6a3ec91d",
+  "headAtCleanup": "22279618f07b0d6e0f7682b65cf8af8d778f4207",
+  "productSourceCommit": "4265fa4",
+  "sourceTree": "aaab79e355b7536536b12b37315f3759b7a38514",
+  "sourceFiles": 41,
+  "sourceDiffFromR17": [
+    "src/app/globals.css",
+    "src/app/page.tsx",
+    "src/app/services/page.tsx",
+    "src/lib/site-config.ts"
+  ],
+  "builderLock": {
+    "activeAtEntry": false,
+    "activeAtCleanup": true,
+    "cleanupSessionId": "cyvexly-builder-20260901T153920Z-r23",
+    "cleanupClaimedAtUtc": "2026-09-01T15:39:21.3490866Z",
+    "preserved": true,
+    "note": "No .engine-lock was present at entry. Builder claimed a new lock and advanced HEAD after the immutable audit snapshot; the new source was not inspected or touched."
+  },
+  "runtime": {
+    "path": "C:/Users/Tcraf/AppData/Local/Temp/cyvexly-auditor-20260901T1530Z-018",
+    "port": 5273,
+    "browser": "Codex In-app Browser",
+    "tabId": "1",
+    "processChain": [8780, 32248],
+    "requestedViewports": [
+      {"width": 1280, "height": 720},
+      {"width": 1024, "height": 900},
+      {"width": 768, "height": 1024},
+      {"width": 390, "height": 844},
+      {"width": 320, "height": 844}
+    ]
+  },
+  "changedSurface": {
+    "selector": ".site-root > main, .site-root > footer",
+    "continuationClass": ".glass-continuation",
+    "aboutLinksRemoved": true
+  },
+  "desktopHome": {
+    "viewport": "1280x720",
+    "layoutWidth": 1265,
+    "scrollWidth": 1265,
+    "mainCount": 1,
+    "h1Count": 1,
+    "continuationCount": 5,
+    "continuationWidths": [1265, 1265, 1265, 1265, 1265],
+    "continuationBackground": "rgba(235, 246, 253, 0.66)",
+    "continuationBackdrop": "blur(11px) saturate(1.22)",
+    "aboutLinks": 0,
+    "faq": {"beforeExpanded": false, "afterExpanded": true, "closedExpandedCount": 0},
+    "stickyAfterFooterScroll": {"position": "sticky", "zIndex": "50", "top": 0, "elementAtPoint": "HEADER"}
+  },
+  "desktopServices": {
+    "viewport": "1280x720",
+    "layoutWidth": 1265,
+    "scrollWidth": 1265,
+    "mainCount": 1,
+    "h1Count": 1,
+    "continuationCount": 3,
+    "continuationWidths": [1265, 1265, 1265],
+    "aboutLinks": 0,
+    "faq": {"beforeExpanded": false, "afterExpanded": true, "closedExpandedCount": 0},
+    "ctaRoute": "/start",
+    "backRoute": "/services"
+  },
+  "responsive": {
+    "home390": {"layoutWidth": 375, "scrollWidth": 375, "continuationCount": 5, "menuButton": "Open menu", "headerPosition": "sticky", "headerZIndex": "50"},
+    "services390": {"layoutWidth": 375, "scrollWidth": 375, "continuationCount": 3, "menuButton": "Open menu", "headerPosition": "sticky", "headerZIndex": "50"},
+    "home320": {"layoutWidth": 305, "scrollWidth": 305, "continuationCount": 5, "mainCount": 1, "h1Count": 1},
+    "services320": {"layoutWidth": 305, "scrollWidth": 305, "continuationCount": 3, "mainCount": 1, "h1Count": 1},
+    "home768": {"layoutWidth": 753, "scrollWidth": 753, "menuButton": "Open menu"},
+    "home1024": {"layoutWidth": 1009, "scrollWidth": 1009, "menuButton": "Open menu"},
+    "menuAtTerminalScroll": {"headerHeight": 377, "visibleLinks": ["Services", "Work", "Pricing", "Process", "Describe your project"], "aboutLinks": 0, "topElement": "HEADER", "allLinksWithinViewport": true},
+    "menuServicesActivation": {"route": "/services", "menuClosed": true, "scrollY": 0}
+  },
+  "aboutBoundary": {"route": "/about", "httpStatus": 404, "hydratedTitle": "Page not found — Cyvexly Studio", "mainCount": 1, "h1Count": 1, "aboutLinks": 0},
+  "headingHierarchy": {"homeHeadingCount": 25, "servicesHeadingCount": 26, "skips": 0},
+  "verification": {"eslintExit": 0, "tscExit": 0, "browserWarningOrErrorCount": 0},
+  "result": "Round 22 sticky-header and continuation-glass changes verified across desktop, tablet, phone, and 320px states; CYV-IFA-010 is eligible for verified closure. No new defect assigned. CYV-IFA-011 contrast debt remains open."
+}

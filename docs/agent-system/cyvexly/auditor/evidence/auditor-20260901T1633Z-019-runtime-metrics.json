@@ -1,0 +1,82 @@
+{
+  "reviewId": "IFA-2026-09-01-R19",
+  "roundId": "auditor-20260901T1633Z-019",
+  "heartbeatMinuteZeroUtc": "2026-09-01T16:33:57.340Z",
+  "acceptedSource": {
+    "commit": "06fbadd6448b4e8e8c77d1618b1c4e6cb14238f2",
+    "tree": "d9f3e4a976e08f4acc11307b152bcb388d6885a6",
+    "changedSourceFilesSinceR18Baseline": 9,
+    "laterHeadObservedAfterEntry": "2cd912158e5b7214534f71df5332eedffb8eae9f",
+    "laterHeadInspected": false
+  },
+  "runtime": {
+    "path": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260901T1633Z-019",
+    "port": 5273,
+    "browser": "Codex in-app Browser",
+    "guard": "failed managed-permission UnauthorizedAccessException; manual exact archive/runtime used"
+  },
+  "routeSmoke": {
+    "/contact": 200,
+    "/faq": 200,
+    "/pricing": 200,
+    "/process": 200,
+    "/services": 200,
+    "/work": 200,
+    "/work/aurora-spaces": 200,
+    "/about": 404
+  },
+  "desktop1440": {
+    "viewport": [1440, 1000],
+    "layoutWidth": 1425,
+    "horizontalOverflow": 0,
+    "routes": ["/contact", "/faq", "/pricing", "/process", "/services", "/work", "/work/aurora-spaces"],
+    "header": {"position": "sticky", "top": 0, "zIndex": "50"},
+    "browserWarningsOrErrors": 0
+  },
+  "phone390": {
+    "requestedViewport": [390, 844],
+    "layoutWidth": 375,
+    "horizontalOverflow": 0,
+    "routeCount": 7,
+    "header": {"position": "sticky", "top": 0, "zIndex": "50"}
+  },
+  "phone320": {
+    "requestedViewport": [320, 844],
+    "layoutWidth": 305,
+    "horizontalOverflow": 0,
+    "menuOpenHeaderHeight": 377,
+    "menuOpenHeaderPosition": "sticky",
+    "terminalScrollHeaderTop": 0,
+    "terminalScrollY": 582
+  },
+  "contactValidation": {
+    "submittedEmpty": true,
+    "summaryAlert": "Please fix the highlighted fields below.",
+    "invalidIds": ["name", "email", "message", "consent"],
+    "ariaDescribedBy": ["name-error", "email-error", "message-error", "consent-error"],
+    "firstFocusedId": "name",
+    "warningTokenRgb": [189, 45, 73],
+    "warningTokenHex": "#bd2d49",
+    "contrastRatios": {"frostedF8FBFF": 5.5659838061, "contentEBF7FE": 5.3001828208, "arcticEFF7FC": 5.3310506266}
+  },
+  "interactions": {
+    "faqExpanded": true,
+    "workCommerceAriaPressed": true,
+    "workCommerceVisibleCards": ["/work/vellora-care"]
+  },
+  "semantics": {
+    "routeCount": 7,
+    "eachRouteOneMain": true,
+    "eachRouteOneH1": true,
+    "unnamedLinksAcrossSample": 0
+  },
+  "verification": {"eslintExit": 0, "turbopackBuild": "blocked: out-of-root dependency junction", "webpackBuild": "blocked: managed HTTPS EACCES fetching Google Fonts"},
+  "evidence": [
+    "auditor-20260901T1633Z-019-round23-24-probe.md",
+    "auditor-20260901T1633Z-019-contact.png",
+    "auditor-20260901T1633Z-019-pricing.png",
+    "auditor-20260901T1633Z-019-work-aurora.png",
+    "auditor-20260901T1633Z-019-contact-390.png",
+    "auditor-20260901T1633Z-019-contact-390-error-viewport.png"
+  ]
+}

@@ -1,5 +1,40 @@
 # Auditor Evidence Index
 
+## IFA-2026-09-01-R21
+
+- `auditor-20260901T1837Z-021-navigation-filter-probe.md` — accepted `06fbadd` Work filter matrix, explicit empty states, mobile navigation route sweep, Planner/browser-Back recovery, containment, and method limits.
+- `auditor-20260901T1837Z-021-runtime-metrics.json` — machine-readable source custody, filter/navigation, responsive, and verification metrics.
+- `auditor-20260901T1837Z-021-work-redesign-390.png` — opened and visually inspected phone Work Redesign empty-filter render.
+- `auditor-20260901T1837Z-021-services-390.png` — opened and visually inspected phone Services route render.
+
+## IFA-2026-09-01-R20
+
+- `auditor-20260901T1731Z-020-legal-metadata-probe.md` — accepted HEAD `2cd9121` legal/accessibility/404 recovery, responsive containment, metadata/indexing, robots/OG/sitemap, and clean Planner-origin policy-boundary review.
+- `auditor-20260901T1731Z-020-runtime-metrics.json` — machine-readable source custody, route/404, metadata, responsive, interaction, and verification metrics.
+- `auditor-20260901T1731Z-020-accessibility.png` — opened and visually inspected desktop Accessibility Statement render.
+- `auditor-20260901T1731Z-020-accessibility-390.png` — opened and visually inspected phone Accessibility Statement render.
+- `auditor-20260901T1731Z-020-404-phone.png` — opened and visually inspected phone custom-404 recovery render.
+- `auditor-20260901T1731Z-020-og-image.png` — opened and visually inspected generated OG image returned by the local route.
+
+## IFA-2026-09-01-R19
+
+- `auditor-20260901T1633Z-019-round23-24-probe.md` — accepted `06fbadd` Contact contrast/focus, full-height route-family glass, responsive containment, FAQ/Work interactions, HTTP smoke, and verification limits.
+- `auditor-20260901T1633Z-019-runtime-metrics.json` — machine-readable custody, route, responsive, semantic, validation, contrast, interaction, and build-boundary metrics.
+- `auditor-20260901T1633Z-019-contact.png` — opened and visually inspected 1440px Contact render.
+- `auditor-20260901T1633Z-019-pricing.png` — opened and visually inspected full 1440px Pricing render.
+- `auditor-20260901T1633Z-019-work-aurora.png` — opened and visually inspected full 1440px Aurora Spaces case-study render.
+- `auditor-20260901T1633Z-019-contact-390.png` — opened and visually inspected full phone Contact validation render.
+- `auditor-20260901T1633Z-019-contact-390-error-viewport.png` — opened and visually inspected focused first-error phone viewport.
+
+## IFA-2026-09-01-R18
+
+- `auditor-20260901T1530Z-018-round22-continuation.md` — accepted Round 22 sticky-header repair, continuation-glass visual/containment, About truth boundary, responsive/menu/FAQ/CTA stress, and verified closure of `CYV-IFA-010`.
+- `auditor-20260901T1530Z-018-runtime-metrics.json` — machine-readable source identity, responsive, sticky, menu, route, hierarchy, and diagnostics metrics.
+- `auditor-20260901T1530Z-018-home-1440.png` — opened Home desktop top render.
+- `auditor-20260901T1530Z-018-home-full.png` — opened Home desktop full-page continuation render.
+- `auditor-20260901T1530Z-018-services-full.png` — opened Services desktop full-page continuation render.
+- `auditor-20260901T1530Z-018-services-tablet.png` — opened Services tablet hero/continuation render.
+
 ## IFA-2026-09-01-R17
 
 - `auditor-20260901T1231Z-017-contact-faq-validation.md` — Contact blank-submit validation, FAQ expansion/collapse, route handoff, containment, atmosphere semantics, diagnostics, and `CYV-IFA-011` contrast finding.

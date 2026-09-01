@@ -1,5 +1,34 @@
 # Cyvexly Auditor Summary
 
+## IFA-2026-09-01-R21 — 2026-09-01
+
+- Re-identified accepted product `06fbadd` (`src/` tree `d9f3e4a...`) while Builder lock r25 and mutable `26a768a` source changes were excluded. The standard guard remained write-denied; exact port-5273 runtime and manual routing were used.
+- Fresh real-IAB Work/navigation pass: all six Work filters update `aria-pressed` and show explicit empty state for zero-result categories; desktop/phone card counts and phone `375/375` containment pass. Filtered Work → Planner → browser Back recovers without a stale menu.
+- Opened phone Work/Services renders; mobile menu route sweep to Work, Pricing, Process, and Services closes the menu and settles each destination with one main/H1 and zero overflow. Warm Browser logs empty; ESLint and TypeScript passed. No new defect assigned.
+- `CYV-IFA-005`, `CYV-IFA-006`, and `CYV-IFA-009` remain open; `CYV-IFA-010` and `CYV-IFA-011` remain closed. IAB `press("Tab")` did not advance focus, so physical keyboard remains unconfirmed as a tooling limit. Evidence/report routed under `auditor-20260901T1837Z-021-*`.
+- After the floor, exact Browser/server/runtime cleanup completed; port `5273` is clear. Builder r25 cleared naturally and HEAD advanced to `4b08744` / source tree `3ea8774a` after the accepted review; that successor was not inspected.
+
+## IFA-2026-09-01-R20 — 2026-09-01
+
+- Re-identified docs-only HEAD `2cd9121` with unchanged product `src/` tree `d9f3e4a...`; no Builder lock was present at entry. The standard guard remained write-denied, so an exact port-5273 archive/runtime and manual routing were used. Builder r25 claimed the lock near closeout and was preserved; later mutable HEAD `26a768a` was not inspected.
+- Performed a fresh Accessibility/legal/metadata/404 pass through real IAB at 1440/390: `/accessibility` semantics and visuals pass; legal/invalid routes preserve intentional custom 404 truth; custom-404 Services → Back recovery passes; no phone overflow; Browser warn/error logs empty; OG PNG visually inspected.
+- Re-confirmed `CYV-IFA-005` open: preview `noindex,nofollow` is present, but canonical/metadataBase/`og:url` are absent and OG/Twitter images point at localhost; `/robots.txt` disallows all and `/sitemap.xml` is 404 as expected for the Owner-blocked preview state. `CYV-IFA-009` remains open because the alternate clean Planner origin is policy-blocked. No new defect assigned.
+- ESLint passed; exact IAB/runtime/server cleanup completed and `Complete-ReviewRound.ps1` again reported no active guard. Evidence/report are routed under `auditor-20260901T1731Z-020-*`.
+
+## IFA-2026-09-01-R19 — 2026-09-01
+
+- Re-identified immutable accepted product `06fbadd` (`src/` tree `d9f3e4a...`) while Builder lock `cyvexly-builder-20260901T160800Z-r24` was active; later mutable HEAD `2cd9121` was excluded. The standard guard remained write-denied, so an exact port-5273 archive/runtime and manual routing were used.
+- Used real IAB at 1440/390/320 on Contact, FAQ, Pricing, Process, Services, Work, and Aurora. Blank Contact submit now focuses `#name`; all four errors remain associated and the shared `#bd2d49` token measures `5.3002–5.5660:1` against observed frosted/content baselines.
+- Full-height pale-blue/glass treatment, dark focal panels, zero-overflow 375/305px layouts, sticky header/menu, FAQ disclosure, Work Commerce filter, seven valid HTTP 200s, intentional `/about` 404, one-main/one-H1 semantics, and empty Browser warn/error logs passed. `CYV-IFA-011` verified closed; no new defect assigned.
+- ESLint passed. Turbopack build hit the isolated-junction root boundary and Webpack build hit managed HTTPS font-fetch EACCES; both are recorded as environment limits. Evidence/report are routed under `auditor-20260901T1633Z-019-*`; exact runtime/tab/process cleanup follows publication.
+
+## IFA-2026-09-01-R18 — 2026-09-01
+
+- Re-identified current HEAD `3b7a57e` and accepted product commit `4265fa4` (`src/` tree `aaab79e...`, 41 files, four-file delta from R17). No Builder lock was present; the standard guard remained write-denied and an exact role-owned runtime was used.
+- Audited Round 22's sticky-header cascade repair, Home/Services continuation-glass bands, and About-link truth boundary through real IAB interaction at 1440/1280/1024/768/390/320 states. FAQ toggles, compact menu, terminal-scroll stacking, Services CTA → Planner → Back, heading/control semantics, and diagnostics passed.
+- Verified `CYV-IFA-010` closed: the header remains sticky at z50/top0 and stays above the open menu after terminal scroll. Continuation bands are exact-width/zero-overflow and opened Home/Services desktop/tablet captures preserve visual hierarchy and dark CTA panels. `CYV-IFA-011` and Owner/domain/legal debt remain open.
+- Published R18 report/evidence and cleaned exact IAB/Chrome/runtime resources. Builder session `cyvexly-builder-20260901T153920Z-r23` claimed the lock and advanced HEAD to `2227961` during closeout; that later source was preserved and not audited.
+
 ## IFA-2026-09-01-R17 — 2026-09-01
 
 - Re-identified current HEAD `a7e07ca` as a docs-only successor of product source `1437f5b`; `src/` tree `50dc64c9...` has 41 files and no diff. An active Builder lock with mutable Home/Services/CSS changes was preserved; cleanup status also showed `src/lib/site-config.ts`; only an exact accepted-HEAD archive was reviewed.

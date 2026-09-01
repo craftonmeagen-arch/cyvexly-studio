@@ -1,5 +1,87 @@
 # Cyvexly Next Council Handoff
 
+## CYC-R42-20260901-01
+
+R42 directly observed a clean public-origin Planner first use at 1440/768/390:
+no restored-draft notice, one main/H1, current Planner destination, correct
+progress rail semantics, blank validation focus on `fullName` with linked
+errors, readable contained phone state, and clean diagnostics. The local role
+origin separately showed the expected restored-draft banner. No new Priority
+Now defect; no valid submission or mailto side effect.
+
+- Evidence: `council/evidence/council-20260901T192231Z-planner-clean-first-use.md`.
+- Builder next: hold the Round 25 navigation and Planner contracts; obtain
+  Owner domain/indexability/legal/founder/email decisions before launch wiring.
+  Preserve truthful interim mailto copy and clean-origin proof.
+- R42 publish and cleanup remain pending until the normal substantive window.
+
+## CYC-R41-20260901-01
+
+R41 independently verified the active Round 25 working-tree candidate at
+1440/768/390/320. Native Escape closes the compact nav and restores trigger
+focus; mobile route/history closure, 1024/1023 breakpoint reconciliation,
+nested `aria-current`, one-main/one-H1 structure, and clean diagnostics pass.
+Builder commit `e38851f` propagated to Render during review. Public `/services`
+now reproduces the current-page marker, Escape/focus return, route/history
+closure, 1024/1023 breakpoint reconciliation, and clean diagnostics.
+
+- Evidence: `council/evidence/council-20260901T182329Z-round25-navigation-resilience.md`.
+- Builder next: complete canonical Round 25 closeout and preserve the public
+  behavior/24px-root containment proof. Keep launch decisions Owner-bound and
+  do not reopen closed contrast/glass/sticky work without fresh evidence.
+- R41 published `2026-09-01T18:50:23.5768273Z`; cleanup verified
+  `2026-09-01T18:51:32.9376914Z` (`28m02.9686914s` from scheduler minute zero).
+  No Council guard, runtime, process, or port remains.
+
+## CYC-R40-20260901-01
+
+R40's independent route-graph method found 27 normalized same-origin targets
+from 17 seeds (25 HTTP 200; known `/privacy` and `/terms` 404s only). `/about`
+is not advertised. Home/FAQ IAB visuals, Contact→Planner→Back, Planner's
+truthful client-mail disclosure, and direct not-found handling pass with clean
+diagnostics. No new Priority Now defect.
+
+- Evidence: `council/evidence/council-20260901T172528Z-route-crawl-launch-boundary.md`.
+- Builder next: hold the verified Round 24 contract; obtain Owner domain,
+  indexability, legal/founder, and transactional-email decisions before launch
+  wiring. Do not reopen closed contrast/glass/sticky work without new evidence.
+- R40 published `2026-09-01T17:50:46.0067682Z`; cleanup verified
+  `2026-09-01T17:51:36.4515396Z` (`26m08.1095396s` from scheduler minute zero).
+  No Council guard, runtime, process, or port remains.
+
+## CYC-R39-20260901-01
+
+R39 independently verified the current Round 24 source after the shared error
+contrast and Contact focus fixes. Contact/Planner validation now measures
+`5.566:1` at phone and desktop-compatible states, focuses the first invalid
+field, and preserves linked ARIA errors. Sticky navigation, sitewide glass,
+route containment, media, filters, and landmarks pass at 390/768/1440.
+
+- Evidence: `council/evidence/council-20260901T162757Z-round24-fix-verification.md`.
+- Builder next: hold this visual/accessibility contract; obtain Owner domain,
+  legal/founder, indexability, and transactional-email decisions before launch
+  wiring. Do not reopen closed token/stacking work without new evidence.
+- R39 published `2026-09-01T16:53:11.3854215Z`; cleanup verified
+  `2026-09-01T16:54:31.0648195Z` (`26m33.8898195s` from scheduler minute
+  zero). No Council guard, runtime, process, or port remains.
+
+## CYC-R38-20260901-01
+
+R38 independently verified Builder sticky-navigation and glass-continuity fixes
+across phone/tablet/desktop states. Sticky header hit target, nontransparent
+Home/Services continuation surfaces, route containment, media, FAQ, and
+validation associations pass. Priority Now: shared 12px warning-coral errors
+measure `4.1139:1` over frosted inputs, below 4.5:1 normal-text AA, affecting
+Contact and Planner.
+
+- Evidence: `council/evidence/council-20260901T152955Z-builder-fix-contrast-glass.md`.
+- Builder next: darken/strengthen the shared error treatment and prove ≥4.5:1
+  at Contact/Planner phone and desktop states without changing ARIA behavior;
+  retain R37 domain/legal/sitemap/mailto decisions.
+- R38 published `2026-09-01T15:55:08.9879435Z`; cleanup verified
+  `2026-09-01T15:57:21.6447999Z` (`27m25.8707999s` from scheduler minute
+  zero). No Council guard, runtime, process, or port remains.
+
 ## CYC-R37-20260901-01
 
 R37 reviewed release metadata, route/link integrity, and truthful Planner/

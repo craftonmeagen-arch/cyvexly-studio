@@ -1,5 +1,81 @@
 # Cyvexly Council Current State
 
+## CYC-R42-20260901-01
+
+- Scheduler minute zero `2026-09-01T19:22:31.445Z`; round
+  `20260901T192231Z-heartbeat`; source head `4b08744`; PM prompt `NO ACTIVE PM PROMPT`.
+- Fresh public-origin Planner review at 1440/768/390: clean Step 1 had no
+  restored-draft notice, one main/H1, current Planner CTA, correct progress
+  semantics, blank validation focus on `fullName` with linked errors, and clean
+  diagnostics. Local role origin separately showed the expected restored-draft
+  banner. No valid submission or mailto side effect; no new Priority Now defect.
+- Report/evidence prepared; publish and exact cleanup wait for the normal
+  substantive window. Evidence:
+  `council/evidence/council-20260901T192231Z-planner-clean-first-use.md`.
+
+## CYC-R41-20260901-01
+
+- Scheduler minute zero `2026-09-01T18:23:29.969Z`; round
+  `20260901T182329Z-heartbeat`; snapshot head `26a768a`; accepted product
+  commit `e38851f`; PM prompt `NO ACTIVE PM PROMPT`.
+- Independent IAB review of active Round 25 candidate: native Escape closes
+  mobile nav and returns focus, route/history closes stale state, 1024/1023
+  breakpoint reconciliation works, nested `aria-current` semantics resolve,
+  390/320 CTA containment and 1440/768/390/320 visuals hold, and diagnostics
+  are clean. Builder's 114-case matrix has zero failures.
+- Builder committed/pushed the candidate as `e38851f`; public Render then
+  adopted it (new ETag `{"44zd3ca5e02ryz"}`). Council re-proved public
+  `aria-current`, Escape/focus, route/history, 1024/1023 breakpoint behavior,
+  and 1440/768/390/320 visual states. No new defect; Builder lock remains
+  preserved.
+- Report `CYC-R41-20260901-01` published at `2026-09-01T18:50:23.5768273Z`;
+  cleanup verified at `2026-09-01T18:51:32.9376914Z` (`28m02.9686914s`
+  from scheduler minute zero). Exact Council guard/runtime/process/port `5373`
+  are absent. Evidence:
+  `council/evidence/council-20260901T182329Z-round25-navigation-resilience.md`.
+
+## CYC-R40-20260901-01
+
+- Scheduler minute zero `2026-09-01T17:25:28.342Z`; round
+  `20260901T172528Z-heartbeat`; source head `2cd9121`; PM prompt `NO ACTIVE PM PROMPT`.
+- New route-graph method: 17 seed routes produced 27 normalized same-origin
+  targets, with 25 HTTP 200 and only known `/privacy` and `/terms` 404s;
+  `/about` is not advertised. IAB Home/FAQ visuals, Contact→Planner→Back,
+  truthful Planner mailto disclosure, and bounded not-found handling pass with
+  clean diagnostics. No new Priority Now defect.
+- Report `CYC-R40-20260901-01` published at `2026-09-01T17:50:46.0067682Z`;
+  cleanup verified at `2026-09-01T17:51:36.4515396Z` (`26m08.1095396s`
+  from scheduler minute zero). Exact guard/runtime/process/port `5373` are
+  absent. Evidence: `council/evidence/council-20260901T172528Z-route-crawl-launch-boundary.md`.
+
+## CYC-R39-20260901-01
+
+- Scheduler minute zero `2026-09-01T16:27:57.175Z`; round
+  `20260901T162757Z-heartbeat`; source head `06fbadd`; PM prompt `NO ACTIVE PM PROMPT`.
+- Current Round 24 source independently closes R38/CYV-IFA-011: shared Contact
+  and Planner error text is `5.566:1` with first-invalid focus and linked ARIA
+  behavior. Sticky header, sitewide glass, route containment, media, filters,
+  and landmarks pass at phone/tablet/desktop states. R37 launch debt carries.
+- Report `CYC-R39-20260901-01` published at `2026-09-01T16:53:11.3854215Z`;
+  cleanup verified at `2026-09-01T16:54:31.0648195Z` (`26m33.8898195s`
+  from scheduler minute zero). Exact guard, runtime, processes, and port
+  `5373` are absent. Evidence:
+  `council/evidence/council-20260901T162757Z-round24-fix-verification.md`.
+
+## CYC-R38-20260901-01
+
+- Scheduler minute zero `2026-09-01T15:29:55.774Z`; round
+  `20260901T152955Z-heartbeat`; source head `3b7a57e`; PM prompt `NO ACTIVE PM PROMPT`.
+- Fresh IAB review of Builder sticky-navigation/glass-continuity changes and
+  Auditor `CYV-IFA-011`: header sticky/z-index, Home/Services glass surfaces,
+  landmarks, media, route containment, FAQ, and validation associations pass;
+  shared 12px warning-coral errors remain `4.1139:1` and fail normal-text AA.
+- Report `CYC-R38-20260901-01` published at `2026-09-01T15:55:08.9879435Z`;
+  cleanup verified at `2026-09-01T15:57:21.6447999Z` (`27m25.8707999s`
+  from scheduler minute zero). Exact guard, runtime, processes, and port
+  `5373` are absent. Evidence:
+  `council/evidence/council-20260901T152955Z-builder-fix-contrast-glass.md`.
+
 ## CYC-R37-20260901-01
 
 - Scheduler minute zero `2026-09-01T12:35:30.631Z`; round

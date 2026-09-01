@@ -1,5 +1,32 @@
 # Cyvexly Council Watch
 
+- 2026-09-01 / CYC-R42: clean public Planner first use is now observed without
+  a restored draft; blank validation focuses `fullName` and remains linked and
+  contained. Continue watching the truthful mailto boundary, domain/legal
+  wiring, alternate-device/assistive-tech proof, and progress-rail affordance.
+
+- 2026-09-01 / CYC-R41: Round 25 public adoption is now verified after
+  `e38851f`. Continue watching Escape/focus, current-page, breakpoint, and
+  24px-root CTA behavior while preserving the Round 24 visual/contrast/glass
+  contract. Published `2026-09-01T18:50:23.5768273Z`; cleanup verified
+  `2026-09-01T18:51:32.9376914Z`.
+
+- 2026-09-01 / CYC-R40: route graph and IAB handoff remain stable after
+  docs-only Round 24 publication; watch only approved launch wiring (public
+  origin, legal routes, metadata/sitemap, and provider-backed confirmation).
+  Keep the current contrast/focus/sticky/glass contract closed unless fresh
+  evidence appears.
+
+- 2026-09-01 / CYC-R39: contrast and first-error focus now pass in Contact and
+  Planner; continue watching the shared token if palette or backgrounds move.
+  Hold sticky/glass route contract. Next review should target approved launch
+  wiring/public origin or another unverified capability, not token churn.
+
+- 2026-09-01 / CYC-R38: watch shared warning-coral validation text in Contact
+  and every conditional Planner field; current live ratio is `4.1139:1` at
+  12px. Recheck at phone/desktop after a token or background fix. Sticky header
+  and glass-continuity fixes now pass; preserve them while closing contrast.
+
 - 2026-09-01 / CYC-R37: watch release trust wiring: configure approved
   `metadataBase`/canonical/OG/Twitter and launch robots; close visible legal
   and sitemap 404s; retain truthful mailto disclosure until provider-backed
