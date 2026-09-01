@@ -354,3 +354,23 @@ Older setup and rounds 1-6 are preserved in
 - Archived the exact Round 16 Active Chunk report to retain the latest three
   full reports. Concurrent Auditor/Council records and evidence remained
   excluded. The scheduler/automation remained active and untouched.
+
+## Round 20 — 2026-08-31
+
+- Implemented the Owner's newest Home reel direction in product commit
+  `d6cd17c`: removed the visible muted/duration pill, advancing progress line,
+  and circular Pause/Play control while preserving the substantial glass reel,
+  source media, poster, identifier, and capability caption.
+- Slowed authored playback from measured `1.0×` to `0.75×`; a 30-second source
+  cycle now takes about 40 seconds. The complete clean media surface remains a
+  named click/keyboard toggle, so removing the visible control does not remove
+  the pause mechanism.
+- Opened and preserved 1440/768/390 before/after renders. All final states have
+  zero residual playback chrome and exact width containment; native media
+  advanced about 1.58 seconds over two real seconds and click, Enter, and Space
+  each toggled the reel correctly.
+- ESLint, optimized 23-page build, post-build TypeScript, Home HTTP 200, MP4
+  MIME/range delivery, and built-output absence of the removed strings/state
+  pass. Public adoption is recorded in the Round 20 verification evidence.
+- Concurrent Auditor/Council records and evidence were excluded. The recurring
+  scheduler/automation remained active and untouched.

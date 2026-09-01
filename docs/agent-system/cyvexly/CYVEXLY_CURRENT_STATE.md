@@ -1,17 +1,21 @@
 # Cyvexly Current State
 
-**Global round:** 19
+**Global round:** 20
 **Active chunks:** Chunk 3 — Project Planner — UI/state/validation remains built
 and verified at `/start`, with real server-side email Owner-blocked; Chunk 4 —
 Utility/legal pages — favicon remains fixed, while legal/domain items remain
 Owner-blocked. Round 18 reconciles Pricing's sparse entry/package field with
 the accepted mockup's orbital glass language; Round 17 remains the Services
-icon-math pathways, and Round 16 remains the larger
+icon-math pathways, Round 20 is the Owner-directed Home reel chrome cleanup,
+and Round 16 remains the larger
 integrated Home hero reel, Round 15 the live-video deployment/source repair,
 and Round 14 the five-route service-detail and Planner-preselection source.
-**Chunk-local round:** N/A (round 19 fixes cross-chunk runtime defects; no
+**Chunk-local round:** N/A (round 20 revisits the closed Home slice; no
 chunk was opened or closed).
-**Current mission:** Round 19 resolves two fresh Auditor findings. Invalid
+**Current mission:** Round 20 removes the Home reel's visible muted/duration
+pill, advancing timeline, and circular playback control, and slows the reel to
+`0.75×`. The complete media surface remains the named click/keyboard pause
+mechanism. Round 19's two fixes remain accepted: invalid
 dynamic service/work slugs now terminate metadata generation with `notFound()`,
 so the correct 404 title survives hydration; public Render and all eight valid
 dynamic routes pass. The Planner now withholds interactive Step 1 behind a
@@ -28,8 +32,10 @@ commissioned concept-artwork framing question (`CYVEXLY_APP_DEBT.md` items 1,
 3, 4, plus Chunk Debt item 2). Do not invent them.
 **Accepted source position:** Git repository on local `main`, tracking
 `origin/main`; remote `master` is retained as a historical pointer and is not
-the deployment upstream. Round 19 product commits `e716541` and `744cdd8` are
-pushed to `origin/main` and adopted publicly. Round 18 product commit `7ec9c5c`,
+the deployment upstream. Round 20 product commit `d6cd17c` is pushed to
+`origin/main` and adopted publicly. Round 19 product commits `e716541` and
+`744cdd8` are pushed to `origin/main` and adopted publicly. Round 18 product
+commit `7ec9c5c`,
 Round 17 `b5dfd50`, and Round 16 `14e12d4` remain accepted source. Treat
 `git log` as the exact ledger.
 Builder-owned source is committed; canonical docs/evidence are updated at close.
@@ -85,3 +91,9 @@ Concurrent Council dirty files remain intentionally untouched.
   valid dynamic routes, server HTML without an early Planner form, saved-draft
   Step 3 restore, clean-origin and service-prefill flows, public adoption,
   lint, optimized build, and post-build TypeScript all pass.
+- Round 20 verification: opened 1440/768/390 Home renders remove all three
+  visible playback-chrome elements while preserving hero geometry and exact
+  containment. Native media measures `0.75×` and about 1.58 seconds of advance
+  over two seconds; click, Enter, and Space toggle the named reel surface.
+  Lint, optimized build, post-build TypeScript, Home 200, and MP4 range
+  delivery pass.

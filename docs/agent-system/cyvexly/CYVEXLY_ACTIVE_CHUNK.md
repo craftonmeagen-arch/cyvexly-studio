@@ -2,7 +2,7 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global rounds 15-19 repaired its public deployment
+pages — remains closed, but global rounds 15-20 repaired its public deployment
 path, implemented the later Owner-directed hero composition, and reconciled the
 Services combination and Pricing scope modules under the rule that closed
 chunks are not frozen.
@@ -13,7 +13,10 @@ production-domain and transactional-email-provider decisions. `/not-found`,
 `/faq`, and `/accessibility` are complete; `/privacy` and `/terms` remain
 Owner-blocked on jurisdiction facts; the favicon is fixed. Round 19 prevents
 invalid dynamic-route metadata from replacing the correct hydrated 404 title
-and gates the Planner until saved-draft restoration completes. Round 18 replaces
+and gates the Planner until saved-draft restoration completes. Round 20 removes
+the Home reel's visible muted/duration, progress, and circular playback chrome,
+slows playback to `0.75×`, and preserves pause/resume on the complete named
+media surface. Round 18 replaces
 Pricing's sparse text-only entry with a split glass scope signal and coordinated
 package field while preserving every package fact. Round 17 replaces
 the Services combination table with five mockup-aligned, icon-led glass
@@ -96,85 +99,11 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
 - **Round 15:** repaired the deployment/source branch mismatch so the accepted
   Home video appeared on the real Render site. Full report:
   `docs/archive/chunks/CYVEXLY_SHARED_DEPLOYMENT_ROUND15_REPORT.md`.
-
-## Round 17 report — global round 17
-
-### Preserved plan and selection
-
-**Session:** `builder-20260831T130319-4f5c7a12e8b9`; lock claimed
-`2026-08-31T17:03:48.6940636Z`; start HEAD `dbcbc0b`; no active PM prompt.
-Pre-implementation plan:
-`builder/evidence/round-17-services-combinations-plan.md`.
-
-Fresh Council R24 independently passed Round 16's Home hero and recommended a
-materially different capability. The strongest reachable mockup/Owner-fidelity
-gap was `/services`' Common combinations section: an honest but visually sparse
-audience table where the accepted Services mockup showed icon-led service math.
-Founder/legal/domain/email-provider and concept-artwork questions remained
-Owner-blocked and were not used as excuses to fabricate content.
-
-### What changed
-
-The Services page now renders five audience pathway cards, preserving every
-prior combination. Each card uses three existing Cyvexly line icons and named
-service nodes, decorative plus connectors, and a concise outcome derived from
-the existing audience/discipline facts. A direct `Find your starting point`
-handoff reaches the Project Planner.
-
-The module receives its own ice-blue grid field, white edge light, cyan inner
-glow, controlled blur, and responsive three/two/one-column composition. The
-implementation remains server-rendered and does not add hidden state,
-carousels, unsupported claims, or external assets.
-
-### Rendered comparison and verification
-
-- Opened the full 1440px pre-change baseline and final optimized-production
-  Services page, plus focused 1440/768/390 final renders. All five cards and
-  fifteen service nodes are visible and readable.
-- The first 1024px boundary render technically fit three 307px cards but made
-  the longest label unnecessarily cramped. Moving the three-column switch from
-  1024 to 1280 yields 471px cards at compact desktop and 371px cards at 1280.
-- Exact 1440/1280/1024/768/720 zoom-equivalent/390/320 checks all report
-  `scrollWidth === clientWidth`. The page retains one `main` and H1; the module
-  exposes five article cards, five named service lists, and fifteen list items.
-- Native activation of the module CTA reached `/start` and its correct H1 in
-  both local production and the deployed public site. The clean Cyvexly browser
-  tab reported zero warning/error logs.
-- Twenty built routes/assets returned 200. ESLint, `tsc --noEmit`, and the
-  23-page optimized build pass. Only the known Owner/domain-blocked
-  `metadataBase` warning remains.
-- A 480-instance/27-target internal-link audit found no unexpected failure;
-  the only 404s remain the documented Owner-blocked About/Privacy/Terms routes.
-
-Exact metrics and the route list are in
-`round-17-services-combinations-runtime-proof.json`; baseline/final disposition
-and the breakpoint audible are in
-`round-17-services-combinations-verification.md`.
-
-### Audibles, limits, and accountability
-
-The responsive correction was made only after opening the 1024 result, and it
-stays within the preserved plan's desktop/tablet/phone state map. Diff-to-plan
-contains the planned structured data, server-rendered pathway markup,
-Services-scoped CSS, Planner handoff, and durable comparison evidence.
-
-Physical Safari/Firefox, field Web Vitals, the Owner's original second
-computer, and Owner visual acceptance were unavailable. Founder identity,
-legal jurisdiction, production domain/email provider, and concept-artwork
-framing remain unchanged. Concurrent Council files/evidence were excluded. No
-scheduler or automation was read, modified, paused, deleted, rescheduled, or
-otherwise touched.
-
-### Completion state
-
-Product commit `b5dfd50` is pushed on `main`. Public Render changed from ETag
-`"jlon5lh8er29b7"` without the new copy to `"4w3peakpmy2p3t"` with the new
-pathway heading. Opened live 1440/390 proof shows all five cards and fifteen
-nodes, exact width containment, one main/H1, and zero console warnings/errors.
-
-**DONE WITH PUBLIC PROOF** for Round 17's Services combination pathways;
-**OWNER REVIEW PENDING** for final visual acceptance and original second-device
-confirmation.
+- **Round 16:** implemented the larger integrated Owner-directed Home reel.
+  Full report: `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND16_REPORT.md`.
+- **Round 17:** replaced the Services combination table with five icon-led
+  audience pathways. Full report:
+  `docs/archive/chunks/CYVEXLY_SHARED_SERVICES_ROUND17_REPORT.md`.
 
 ## Round 18 report — global round 18
 
@@ -325,3 +254,64 @@ read, modified, paused, deleted, rescheduled, or otherwise touched.
 **DONE WITH PUBLIC PROOF** for the hydrated dynamic-404 title and Planner draft
 restore gate. **OWNER REVIEW PENDING** remains for rounds 16–18 visual direction
 and original second-device confirmation.
+
+## Round 20 report — global round 20
+
+### Preserved direction and visual plan
+
+**Session:** `builder-20260831T234220Z-owner-video-cleanup`; lock claimed
+`2026-08-31T23:42:21.6657567Z`; start HEAD `05a2403`; no active PM prompt.
+Pre-implementation plan:
+`builder/evidence/round-20-home-video-cleanup-visual-plan.md`.
+
+The opened 1440 baseline measured the existing 726.56×420.06px reel at `1.0×`
+and visibly confirmed the three Owner-named distractions: top-right muted/time
+pill, advancing timeline, and circular Pause control. The plan retained the
+successful glass composition and changed only playback presentation/tempo.
+
+### What changed
+
+Product commit `d6cd17c` removes all three visible playback-chrome elements and
+their progress state. The retained studio identifier and lower capability copy
+now sit in a clean cinematic field. Authored playback is `0.75×`, applied on
+mount, metadata readiness, and explicit resume. The complete media surface is
+the named click/keyboard toggle with a focus-visible outline, preserving a
+pause mechanism without restoring visible chrome. Muted inline looping,
+poster, visibility, reduced-motion, and data-saver holds remain intact.
+
+### Rendered and runtime proof
+
+- Opened and preserved the exact 1440 baseline and final 1440/768/390 renders.
+  Desktop figure geometry remains 726.56×420.06px; tablet and phone stack at
+  705×407.94px and 343×200.81px. All report exact width containment.
+- Final DOM/runtime has zero native player buttons, zero `Muted loop` text, and
+  zero progress spans. The named surface reports Pause/Play state correctly.
+- Native media reports `muted=true`, `loop=true`, and `playbackRate=0.75`; it
+  advanced 1.579 seconds over two real seconds. Click, Enter, and Space each
+  toggled pause/resume and preserved the slower rate.
+- ESLint, optimized 23-page build, immediate post-build TypeScript, Home 200,
+  a 22/22 production route/asset sweep, MP4 `video/mp4` plus
+  `206 bytes 0-1023/3978486`, and built-output absence of
+  the removed text/progress state pass. The known Owner/domain-blocked
+  `metadataBase` warning is unchanged.
+
+### Limits and accountability
+
+The in-app Browser blocked a repeat navigation after the production server
+restart, so the cited responsive screenshots are the real hot-reloaded app
+renders and the optimized output is covered by build, HTTP, and static-output
+proof rather than a second claimed screenshot set. This is not a substitute
+claim. Physical Safari/Firefox, the original second computer, field Web Vitals,
+and final Owner visual acceptance remain unavailable.
+
+Only the Owner-directed Home component and Builder/canonical records changed.
+Concurrent Auditor/Council records and evidence remained excluded. No
+scheduler or automation was read, modified, paused, deleted, rescheduled, or
+otherwise touched.
+
+### Completion state
+
+Product commit `d6cd17c` is pushed to `origin/main`; public ETag changed from
+`"17zuriw8lcv2fqm"` to `"a75ifwpw1u2f7v"`, with no removed text and passing
+Home/media delivery. **OWNER REVIEW PENDING** for the cleaned reel and
+the earlier unresolved visual/device acceptance items.

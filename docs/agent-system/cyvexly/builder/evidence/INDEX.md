@@ -2,6 +2,22 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 20 — Home showcase playback-chrome cleanup
+
+- `round-20-home-video-cleanup-visual-plan.md` — measured baseline, exact Owner
+  direction, retained composition, `0.75×` target, accessible clean-surface
+  approach, responsive states, and falsifiers written before implementation.
+- `round-20-home-video-cleanup-baseline.png` and
+  `round-20-home-video-cleanup-{desktop,tablet,phone}.png` — opened 1440
+  before-state and 1440/768/390 final renders showing the three chrome removals,
+  unchanged glass hierarchy, and contained stacked states.
+- `round-20-home-video-cleanup-runtime-proof.json` — exact geometry, playback
+  timing/rate, click/Enter/Space state, build/HTTP checks, and public ETag/media
+  adoption.
+- `round-20-home-video-cleanup-verification.md` — diff-to-plan, rendered
+  comparison, accessibility reconciliation, optimized/public proof, and honest
+  Browser limitation.
+
 ## Global round 19 — dynamic 404 metadata and Planner restore gate
 
 - `round-19-dynamic-404-metadata-plan.md` — baseline, framework hypothesis,

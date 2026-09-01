@@ -1,0 +1,99 @@
+{
+  "round": 20,
+  "productCommit": "d6cd17c16d23962ca34c67dca0489fe27fe4ce67",
+  "baseline": {
+    "viewport": "1440x900",
+    "figure": { "width": 726.5625, "height": 420.0625 },
+    "playbackRate": 1,
+    "mutedLoopPill": true,
+    "progressSignal": true,
+    "nativePlaybackButton": true
+  },
+  "final": {
+    "desktop": {
+      "viewport": "1440x900",
+      "figure": { "width": 726.5625, "height": 420.0625 },
+      "clientWidth": 1425,
+      "scrollWidth": 1425
+    },
+    "tablet": {
+      "viewport": "768x1024",
+      "figure": { "width": 705, "height": 407.9375 },
+      "clientWidth": 753,
+      "scrollWidth": 753
+    },
+    "phone": {
+      "requestedViewport": "390x844",
+      "layoutClientWidth": 375,
+      "figure": { "width": 343, "height": 200.8125 },
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    "playback": {
+      "playbackRate": 0.75,
+      "sourceDurationSeconds": 30,
+      "effectiveCycleSeconds": 40,
+      "advanceOverTwoRealSeconds": 1.578685,
+      "muted": true,
+      "loop": true
+    },
+    "chrome": {
+      "nativePlaybackButtonCount": 0,
+      "mutedLoopTextPresent": false,
+      "progressSpanCount": 0
+    },
+    "accessibleSurface": {
+      "role": "button",
+      "tabIndex": 0,
+      "playingLabel": "Pause showcase video",
+      "pausedLabel": "Play showcase video",
+      "clickToggle": "pass",
+      "enterToggle": "pass",
+      "spaceToggle": "pass"
+    }
+  },
+  "verification": {
+    "eslint": "pass",
+    "optimizedBuildPages": 23,
+    "postBuildTypeScript": "pass",
+    "localHomeStatus": 200,
+    "localMediaStatus": 206,
+    "localMediaContentRange": "bytes 0-1023/3978486",
+    "localRouteAssetSweep": "22/22 expected routes and assets returned 200",
+    "optimizedHomeHtml": {
+      "cleanSurfaceClassPresent": true,
+      "buttonRolePresent": true,
+      "playLabelPresent": true,
+      "mutedLoopTextPresent": false,
+      "nativeVideoControlsPresent": false
+    },
+    "builtMutedLoopMatchCount": 0,
+    "builtProgressStateMatchCount": 0,
+    "publicBefore": {
+      "checkedAtUtc": "2026-08-31T23:55:36.5835327Z",
+      "etag": "\"17zuriw8lcv2fqm\"",
+      "mutedLoopTextPresent": true
+    },
+    "publicAfter": {
+      "checkedAtUtc": "2026-08-31T23:59:51.5688867Z",
+      "etag": "\"a75ifwpw1u2f7v\"",
+      "mutedLoopTextPresent": false,
+      "cleanSurfaceClassPresent": true,
+      "homeStatus": 200,
+      "mediaStatus": 206,
+      "mediaType": "video/mp4",
+      "mediaContentRange": "bytes 0-1023/3978486"
+    },
+    "publicStabilityRecheck": {
+      "checkedAtUtc": "2026-09-01T00:06:44.1940656Z",
+      "etag": "\"a75ifwpw1u2f7v\"",
+      "mutedLoopTextPresent": false,
+      "cleanSurfaceClassPresent": true
+    }
+  },
+  "limits": [
+    "The in-app Browser blocked a repeat navigation after the local production-server restart, so no second optimized-runtime screenshot set is claimed.",
+    "Public adoption is proven by changed ETag/HTML and media range delivery, not by a new public screenshot in this round.",
+    "Physical Safari/Firefox, field Web Vitals, and the Owner's original second computer were unavailable."
+  ]
+}

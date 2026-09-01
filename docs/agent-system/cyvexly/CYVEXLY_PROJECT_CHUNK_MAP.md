@@ -188,6 +188,15 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 20 Home reel playback-chrome cleanup:** Owner direction
+  2026-08-31-08 supersedes Round 16's visible-control treatment for the current
+  Home showcase. Commit `d6cd17c` removes the muted/duration pill, timeline,
+  and circular control, slows authored playback to `0.75×`, and makes the
+  unadorned media surface the named click/keyboard pause target. Opened
+  1440/768/390 renders, exact containment, media timing, interaction, lint,
+  optimized build, TypeScript, and range-delivery proof pass without changing
+  the source asset, hero size, copy, or reduced-motion/data-saving holds.
+
 - **Round 16 integrated Home hero reel:** Owner direction 2026-08-31-07 is
   implemented in product commit `14e12d4` without formally reopening a closed
   chunk. The Home-only stage expands to approximately 1440px, the measured

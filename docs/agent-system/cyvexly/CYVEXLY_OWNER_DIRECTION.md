@@ -212,3 +212,21 @@ console, route, lint, build, and TypeScript proof are indexed in
 `builder/evidence/INDEX.md`. The accepted real video remains unchanged; no
 invented mockup screens or generated claims were copied. The implementation is
 awaiting Owner review on the public site.
+
+## Home showcase playback-chrome direction 2026-08-31-08
+
+**Status:** FULFILLED — ROUND 20 PUBLIC DEPLOYMENT PROOF
+**Source:** Owner via Codex active conversation
+**Recorded:** 2026-08-31 America/New_York
+
+> “the video has shows muted video in the top right corner. and there is a play bar that keeps going. and the paly and stop button needs to be removed it can be slower too.”
+
+This newer direction supersedes the Round 16 requirement for a visible
+Pause/Play control and progress treatment on the current Home showcase. Remove
+the top-right muted/duration pill, advancing progress line, and circular
+playback control. Retain the clean media bezel, studio identifier, capability
+caption, muted inline loop, poster, and reduced-motion/data-saving holds. Slow
+the authored playback rate to `0.75×` (a 30-second source cycle takes about 40
+seconds). The complete reel surface remains a named click/keyboard pause target
+so the playback chrome disappears without discarding the site's motion and
+keyboard accessibility commitments.
