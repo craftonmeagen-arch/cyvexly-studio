@@ -2,6 +2,26 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 24 — Authoritative every-page full-height blue glass
+
+- `round-24-sitewide-blue-glass-visual-plan.md` — pre-implementation reading
+  of authoritative mockup 06, 18-state route-family inventory, baseline
+  findings, implementation slice, risks, and planned proof.
+- `round-24-baseline-metrics.json` and `round-24-baseline-*.jpg` — preserved
+  pre-change 1440/390 full-page baseline across eight representative states.
+- `round-24-optimized-metrics.json` and `round-24-optimized-*.jpg` — opened
+  optimized full-page desktop/tablet/phone proof across the same route families.
+- `round-24-optimized-all-route-audit.json` — 198/198 passing local states over
+  all 18 route states and eleven widths, including zoom proxies and interactions.
+- `round-24-optimized-composited-contrast.json`,
+  `round-24-optimized-contrast-targets.json`, and three associated PNGs — final
+  composited Contact/Planner warning contrast, minimum 4.6388:1.
+- `round-24-public-all-route-audit.json`, `round-24-public-metrics.json`, and
+  `round-24-public-*.jpg` — 198/198 public states plus opened representative
+  public desktop/phone visual proof after Render adopted the new CSS artifact.
+- `round-24-sitewide-blue-glass-verification.md` — plan-to-product comparison,
+  source/build/public proof, defect disposition, limits, and accountability.
+
 ## Global round 23 — Contact and Planner error contrast
 
 - `round-23-error-contrast-visual-plan.md` — measured baseline, single-token

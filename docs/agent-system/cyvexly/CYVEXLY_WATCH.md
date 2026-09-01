@@ -217,3 +217,15 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   Builder exists. Reconcile the exact session/nonce, live processes, listener,
   last activity, closeout, and dirty bytes. Resume only through the prescribed
   verified-interruption path and release the original lock only after closeout.
+
+## Round 24
+
+- **A root background does not make transparent child sections visually
+  intentional.** Inventory computed direct-section surfaces and open full-page
+  renders; Round 24 found fallbacks below otherwise convincing introductions.
+- **Wide visual matrices should include interactions.** The first 198-state pass
+  found no geometry defect but exposed Contact focus staying on submit; the
+  corrected repeat focused `#name` locally and publicly.
+- **Translucent error surfaces need final-pixel proof.** Scanning the exact
+  rendered Contact/Planner rectangles proves a 4.6388:1 minimum, including the
+  tinted Contact summary that authored-token math alone would not establish.

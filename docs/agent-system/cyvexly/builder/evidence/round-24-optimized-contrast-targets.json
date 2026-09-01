@@ -1,0 +1,179 @@
+{
+  "capturedAt": "2026-09-01T16:25:30.048Z",
+  "baseUrl": "http://localhost:5173",
+  "states": [
+    {
+      "name": "contact-desktop",
+      "route": "/contact",
+      "width": 1440,
+      "height": 1000,
+      "action": "document.querySelector('form button[type=submit]').click()",
+      "screenshot": "round-24-optimized-contrast-contact-desktop.png",
+      "targets": [
+        {
+          "index": 0,
+          "id": "summary",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 711.953125,
+            "y": 613.25,
+            "width": 463.046875,
+            "height": 46
+          }
+        },
+        {
+          "index": 1,
+          "id": "name-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 711.953125,
+            "y": 763.25,
+            "width": 221.515625,
+            "height": 16
+          }
+        },
+        {
+          "index": 2,
+          "id": "email-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 953.46875,
+            "y": 763.25,
+            "width": 221.53125,
+            "height": 16
+          }
+        },
+        {
+          "index": 3,
+          "id": "message-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 711.953125,
+            "y": 1058.25,
+            "width": 463.046875,
+            "height": 16
+          }
+        },
+        {
+          "index": 4,
+          "id": "consent-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 711.953125,
+            "y": 1120.25,
+            "width": 463.046875,
+            "height": 16
+          }
+        }
+      ]
+    },
+    {
+      "name": "contact-phone",
+      "route": "/contact",
+      "width": 390,
+      "height": 844,
+      "action": "document.querySelector('form button[type=submit]').click()",
+      "screenshot": "round-24-optimized-contrast-contact-phone.png",
+      "targets": [
+        {
+          "index": 0,
+          "id": "summary",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 49,
+            "y": 1206.3125,
+            "width": 292,
+            "height": 46
+          }
+        },
+        {
+          "index": 1,
+          "id": "name-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 49,
+            "y": 1356.3125,
+            "width": 292,
+            "height": 16
+          }
+        },
+        {
+          "index": 2,
+          "id": "email-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 49,
+            "y": 1472.3125,
+            "width": 292,
+            "height": 16
+          }
+        },
+        {
+          "index": 3,
+          "id": "message-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 49,
+            "y": 1767.3125,
+            "width": 292,
+            "height": 16
+          }
+        },
+        {
+          "index": 4,
+          "id": "consent-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 49,
+            "y": 1849.3125,
+            "width": 292,
+            "height": 16
+          }
+        }
+      ]
+    },
+    {
+      "name": "planner-phone",
+      "route": "/start",
+      "width": 390,
+      "height": 844,
+      "action": "[...document.querySelectorAll('button')].find(b=>b.textContent.includes('Continue')).click()",
+      "screenshot": "round-24-optimized-contrast-planner-phone.png",
+      "targets": [
+        {
+          "index": 0,
+          "id": "fullName-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 49,
+            "y": 891,
+            "width": 292,
+            "height": 16
+          }
+        },
+        {
+          "index": 1,
+          "id": "workEmail-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 49,
+            "y": 1007,
+            "width": 292,
+            "height": 16
+          }
+        },
+        {
+          "index": 2,
+          "id": "contactMethod-error",
+          "color": "rgb(189, 45, 73)",
+          "rect": {
+            "x": 49,
+            "y": 1127,
+            "width": 292,
+            "height": 16
+          }
+        }
+      ]
+    }
+  ]
+}

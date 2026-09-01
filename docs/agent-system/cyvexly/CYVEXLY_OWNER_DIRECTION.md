@@ -340,7 +340,7 @@ approved concept, not a visual reinterpretation.
 
 ## Every-page full-height theme authority 2026-09-01-10
 
-**Status:** ACTIVE — DEDICATED EVERY-ROUTE IMPLEMENTATION REQUIRED
+**Status:** IMPLEMENTED WITH PUBLIC PROOF — OWNER VISUAL REVIEW PENDING
 **Source:** Owner via Project Manager continuation relay
 **Recorded:** 2026-09-01 America/New_York
 
@@ -362,3 +362,16 @@ visually plan a coherent site-wide pass before source changes, inspect every
 public route family at desktop/tablet/phone, and correct remaining flat or
 fallback-old-theme surfaces without weakening contrast. This interpretation is
 not Owner-authored wording.
+
+### Round 24 implementation status
+
+Round 24 preserves the frozen Owner wording above and implements it across all
+17 generated public pages plus custom 404. The pre-implementation plan reads
+the exact mockup, inventories every route family, and identifies remaining flat
+gaps before source work. Shared full-height environment/surface primitives,
+protected long-form/form fields, and controlled dark focal stages eliminate the
+measured fallbacks without changing product claims or introducing unapproved
+imagery. Opened desktop/tablet/phone renders, 198-state optimized and public
+matrices, composited contrast (minimum 4.6388:1), interactions, build, push, and
+Render artifact adoption pass. This records implementation evidence; only the
+Owner can grant final visual acceptance.

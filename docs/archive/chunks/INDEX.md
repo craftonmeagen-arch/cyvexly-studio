@@ -70,3 +70,6 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
 - `CYVEXLY_SHARED_HOME_ROUND20_REPORT.md` — global round 20 full report
   (Owner-directed Home showcase playback-chrome cleanup and slower playback),
   rotated out during round 23.
+- `CYVEXLY_SHARED_THEME_ROUND21_REPORT.md` — global round 21 full report
+  (shared blue-glass atmosphere, protected route introductions, responsive and
+  public adoption proof), rotated out during round 24.

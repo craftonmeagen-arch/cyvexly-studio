@@ -2,7 +2,7 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global rounds 15-22 repaired its public deployment
+pages — remains closed, but global rounds 15-24 repaired its public deployment
 path, implemented the later Owner-directed hero composition, and reconciled the
 Services combination and Pricing scope modules under the rule that closed
 chunks are not frozen.
@@ -20,6 +20,9 @@ media surface. Round 21 carries the Owner-approved pale-blue architectural
 glass environment across route families with protected copy fields and verified
 contrast. Round 22 restores the shared sticky header, completes Home/Services section
 continuity, and defers the unavailable About link without inventing content.
+Round 23 repairs shared validation contrast. Round 24 implements authoritative
+Owner direction `2026-09-01-10` over every full public page height and proves
+the exact route family/viewport matrix locally and publicly.
 Round 18 replaces
 Pricing's sparse text-only entry with a split glass scope signal and coordinated
 package field while preserving every package fact. Round 17 replaces
@@ -112,46 +115,6 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
 Rounds 18 and 19 are archived at
 `docs/archive/chunks/CYVEXLY_SHARED_PRICING_ROUND18_REPORT.md` and
 `docs/archive/chunks/CYVEXLY_SHARED_FOUNDATIONS_ROUND19_REPORT.md`.
-
-## Round 21 report — global round 21
-
-### Direction, implementation, and proof
-
-**Session:** `cyvexly-builder-bd3c7973ece948fd8bb8884acd3fc359`;
-lock claimed `2026-09-01T03:06:50.3015216Z`; start HEAD `445c876`; no active
-PM prompt. Pre-implementation plan:
-`builder/evidence/round-21-sitewide-blue-glass-visual-plan.md`.
-
-Product commit `1437f5b` implements Owner direction 2026-08-31-09 through one root-level,
-assistive-technology-hidden atmosphere, protected glass introduction fields
-across standard/dynamic/utility routes, and translucent continuation sections.
-Home and Pricing keep their accepted bespoke compositions. Canonical copy,
-routes, Work filters, Planner behavior, and the cleaned Home reel are unchanged.
-
-Opened optimized Home, Work, Services, Pricing, Process, Planner,
-Accessibility, service-detail, case-study, and 404 desktop/phone captures.
-Every sampled state has one main/H1 and exact width containment. Final
-composited introduction pixels produce 5.06:1 or better for normal text. Work
-filtering, Planner query entry, active muted looping Home media without restored
-chrome, valid route/assets plus known-404 controls, MP4 range delivery, ESLint,
-TypeScript, and the optimized 23-page build pass.
-
-Public Render changed from ETag `"kzfa6xg2yc2f7v"` without the shared
-atmosphere to `"10h74cxm9iq2hzw"` with it after the `main` push. A 68-state
-public matrix across six routes and eleven widths from 1440 through 320 passes
-atmosphere, landmark, containment, and responsive-navigation checks, including
-1152–853 layout proxies for common desktop zoom states.
-Public Work filter, Home media, and Planner query-entry interactions also pass.
-
-Concurrent reviewer files stayed untouched and unstaged. No scheduler or
-automation was read or changed. Physical Safari/Firefox, field Web Vitals, the
-original second computer, and Owner visual acceptance remain unavailable. The
-four Owner-input blockers are unchanged.
-
-### Completion state
-
-**DONE WITH PUBLIC ADOPTION PROOF** for Round 21's shared blue-glass system;
-**OWNER REVIEW PENDING** for final visual acceptance.
 
 ## Round 22 report — global round 22
 
@@ -290,3 +253,60 @@ families before claiming convergence.
 **DONE WITH PUBLIC ADOPTION PROOF** for `CYV-IFA-011`. The new every-route
 theme mission is active and separate; Owner-blocked legal/domain/email/founder
 facts remain unchanged.
+
+## Round 24 report — global round 24
+
+### Plan, route inventory, and implementation
+
+**Session:** `cyvexly-builder-20260901T160800Z-r24`; lock claimed
+`2026-09-01T16:05:33.5421000Z`; nonce
+`3d55a2f6573c410683d56569c360445e`; start HEAD `e8ef2b6`.
+
+Plan/baseline commit `2983699` reads exact authoritative mockup 06 and
+inventories 17 generated pages plus custom 404 across bespoke marketing,
+standard marketing, five service-detail, three work-detail, form, Planner, and
+utility families. Baseline full-page renders proved remaining transparent/flat
+direct sections on dynamic and utility families.
+
+Product commit `5656584` supplies the full-height architectural field and
+shared surface primitives, reinforces protected glass, gives long Contact/work
+copy an explicit field, and standardizes final marketing CTAs on controlled dark
+cyber stages. The source does not change claims, copy, price, scope, media, or
+truthful concept artwork. It implements the approved mockup hierarchy rather
+than an agent-preferred style.
+
+### Rendered, semantic, and interaction proof
+
+Opened optimized 1440/768/390 full-page comparisons across Home, Services,
+service detail, work detail, Contact, Planner, Accessibility, and 404 show a
+continuous bright ice-blue environment with no flat-white fallback gap. Direct
+section transparency falls to zero. Protected copy and form fields remain calm
+and legible; dark navy/cyan stages provide controlled focal contrast.
+
+Optimized-local and public matrices each pass 198/198 hydrated states: all 18
+route states at eleven widths from 1440 to 320, including desktop zoom proxies.
+Containment, sticky header, landmarks, H1/heading order, named controls,
+focusability, images/alts, atmosphere/surfaces, mobile menu, FAQ, Work filter,
+Home video (`0.75×`, muted/looping, no native controls/progress), and reduced
+motion pass.
+
+The first interaction pass found Contact did not focus the first invalid field.
+Commit `06fbadd` corrects it; repeated local/public proof gives four linked
+errors and focus `#name`, while Planner gives three linked errors and focus
+`#fullName`. Final composited warning contrast starts at 4.6388:1.
+
+### Build, deployment, accountability, and completion
+
+ESLint and optimized Next build/TypeScript/static generation for 23 pages pass;
+only the Owner/domain-blocked `metadataBase` warning remains. Commits `2983699`,
+`5656584`, and `06fbadd` are pushed to `origin/main`. Render changed to CSS
+`3chp4ua-pf_73.css` containing the new shared primitives; opened public renders
+and the public 198-state matrix match optimized local truth.
+
+Concurrent Auditor/Council records were preserved and excluded. No scheduler or
+automation was read, modified, paused, deleted, renamed, or rescheduled. Owner
+visual acceptance/original second-computer confirmation, physical Safari/
+Firefox, field Web Vitals, and Owner-blocked domain/legal/email/founder facts
+remain pending.
+
+**DONE WITH PUBLIC ADOPTION PROOF; OWNER VISUAL REVIEW PENDING.**

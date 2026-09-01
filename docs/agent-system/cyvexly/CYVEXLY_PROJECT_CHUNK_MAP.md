@@ -191,12 +191,19 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 24 authoritative every-page theme:** plan/baseline commit `2983699`,
+  product commit `5656584`, and focus correction `06fbadd` implement Owner
+  direction `2026-09-01-10` over every full public page height. Shared
+  environment/surface primitives remove all measured transparent direct-section
+  fallbacks while preserving protected content and approved dark focal stages.
+  Both optimized and public 198-state matrices pass across 18 route states and
+  eleven widths; opened full-page 1440/768/390 proof and composited contrast
+  pass. Owner visual acceptance remains pending; blocked launch facts are
+  unchanged.
 - **Round 23 shared validation contrast:** product commit `2227961` closes
   Auditor `CYV-IFA-011` at the semantic token. Final composited Contact/Planner
-  errors start at 4.6881:1 and public adoption passes. New Owner direction
-  `2026-09-01-10` now requires a dedicated full-height every-route pass against
-  `mockups/06-sitewide-blue-glass-owner-direction.png`; rounds 21–22 are
-  foundations, not closure of that authoritative theme.
+  errors start at 4.6881:1 and public adoption passes. The later every-route
+  theme authority is implemented and proved by Round 24 above.
 
 - **Round 22 sticky-header and continuation reconciliation:** fixed the shared
   CSS cascade that overrode the authored sticky/z50 header, carried the

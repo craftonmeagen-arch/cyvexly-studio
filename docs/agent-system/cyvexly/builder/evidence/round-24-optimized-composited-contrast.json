@@ -1,0 +1,27 @@
+{
+  "source": "Round 24 optimized Next.js runtime on localhost:5173 from Builder source 06fbadd",
+  "foreground": "rgb(189, 45, 73)",
+  "method": "Chrome full-page PNGs with target text made transparent after layout; Pillow scanned every inset background pixel inside the same rendered target rectangles; WCAG 2 relative-luminance contrast was calculated against the opaque authored foreground",
+  "states": [
+    {
+      "route": "/contact",
+      "viewport": "1440x1000",
+      "summary_contrast_range": "4.6388:1 to 4.8726:1",
+      "field_error_contrast_range": "5.0337:1 to 5.6351:1"
+    },
+    {
+      "route": "/contact",
+      "viewport": "390x844",
+      "summary_contrast_range": "4.6786:1 to 4.8824:1",
+      "field_error_contrast_range": "5.0302:1 to 5.6351:1"
+    },
+    {
+      "route": "/start",
+      "viewport": "390x844",
+      "field_error_contrast_range": "5.2950:1 to 5.6452:1"
+    }
+  ],
+  "minimum_observed_ratio": "4.6388:1",
+  "threshold": "4.5:1",
+  "result": "PASS"
+}

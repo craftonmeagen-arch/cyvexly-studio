@@ -266,3 +266,43 @@
 - A same-round `favicon.ico` pass exposed a real 32×32 viewBox overflow in the
   first redesign. The mark was rescaled/recentered and re-verified at every
   target size. Source commits were `97f7b69` followed by corrective `ce6d273`.
+
+## Round 8 — 2026-08-30
+
+- Closed the current Council's independently confirmed Home selected-work
+  presentation gap at the source: Home still rendered flat gradient bands while
+  Work/case studies used truthful project-specific abstract SVGs. A whole-source
+  pattern search found Services had the same stale rendering, so both surfaces
+  now reuse the existing `ConceptPreview` component rather than introducing a
+  second artwork system.
+- Preserved card geometry, responsive breakpoints, links, and explicit
+  `CONCEPT PROJECT` disclosure. Product change committed as `d04dc9d`.
+- Established a stronger unattended visual-proof method: local Chrome 151
+  headless + Chrome DevTools Protocol, driven by Node 24's built-in WebSocket.
+  This bypasses the in-app Browser pane's known suspended compositor without
+  changing it. CDP exact device metrics also exposed that raw Windows
+  `--window-size=390` can misleadingly crop a wider minimum layout; exact CDP
+  390px evidence proved the product itself has no horizontal overflow.
+- Verification passed: lint, production build (only the known Owner/domain-
+  blocked `metadataBase` warning), post-build typecheck, 15-route live sweep,
+  opened Home/Services visual captures at 1440/768/390, exact
+  `scrollWidth === clientWidth` checks, three-card/three-preview counts, and
+  source/diff reconciliation. Rotated round 7 from the near-full active hot-path
+  file and retained only cited round-8 captures/metrics.
+- Audited 395 internal-link instances across twelve rendered pages and 27 unique
+  route/hash targets: no unexpected status or fragment failure; only the known
+  Owner-blocked About, Privacy, and Terms targets returned 404.
+- Used CDP native Chromium Tab/Enter dispatch to close round 7's remaining
+  keyboard-proof gap at exact 1440px and 390px. The first run found validation
+  alerts were correctly exposed but focus remained on `Continue`; fixed the
+  Planner to focus its first invalid control and gave radio/checkbox groups
+  stable names plus linked error IDs (`da9c6d9`). The identical post-fix run
+  passed with no offscreen/unindicated focus stop, hidden desktop-nav leak at
+  phone width, or overflow, and focused `input#fullName` after Enter. A second
+  390px production-runtime matrix advanced all nine steps and proved the same
+  first-error focus/error linkage across radio cards, checkbox cards, and
+  ordinary checkboxes.
+- A final terminology sweep found the case-study artwork still announced itself
+  as a `concept visual placeholder`. Corrected that stale user-facing accessible
+  label to `abstract concept visual` (`4bdab10`) and proved the final build has
+  15 new-label matches across generated Work HTML/RSC and zero old matches.

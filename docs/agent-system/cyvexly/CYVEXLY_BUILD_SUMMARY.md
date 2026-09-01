@@ -1,47 +1,7 @@
 # Cyvexly Build Summary
 
-Older setup and rounds 1-7 are preserved in
+Older setup and rounds 1-8 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
-
-## Round 8 — 2026-08-30
-
-- Closed the current Council's independently confirmed Home selected-work
-  presentation gap at the source: Home still rendered flat gradient bands while
-  Work/case studies used truthful project-specific abstract SVGs. A whole-source
-  pattern search found Services had the same stale rendering, so both surfaces
-  now reuse the existing `ConceptPreview` component rather than introducing a
-  second artwork system.
-- Preserved card geometry, responsive breakpoints, links, and explicit
-  `CONCEPT PROJECT` disclosure. Product change committed as `d04dc9d`.
-- Established a stronger unattended visual-proof method: local Chrome 151
-  headless + Chrome DevTools Protocol, driven by Node 24's built-in WebSocket.
-  This bypasses the in-app Browser pane's known suspended compositor without
-  changing it. CDP exact device metrics also exposed that raw Windows
-  `--window-size=390` can misleadingly crop a wider minimum layout; exact CDP
-  390px evidence proved the product itself has no horizontal overflow.
-- Verification passed: lint, production build (only the known Owner/domain-
-  blocked `metadataBase` warning), post-build typecheck, 15-route live sweep,
-  opened Home/Services visual captures at 1440/768/390, exact
-  `scrollWidth === clientWidth` checks, three-card/three-preview counts, and
-  source/diff reconciliation. Rotated round 7 from the near-full active hot-path
-  file and retained only cited round-8 captures/metrics.
-- Audited 395 internal-link instances across twelve rendered pages and 27 unique
-  route/hash targets: no unexpected status or fragment failure; only the known
-  Owner-blocked About, Privacy, and Terms targets returned 404.
-- Used CDP native Chromium Tab/Enter dispatch to close round 7's remaining
-  keyboard-proof gap at exact 1440px and 390px. The first run found validation
-  alerts were correctly exposed but focus remained on `Continue`; fixed the
-  Planner to focus its first invalid control and gave radio/checkbox groups
-  stable names plus linked error IDs (`da9c6d9`). The identical post-fix run
-  passed with no offscreen/unindicated focus stop, hidden desktop-nav leak at
-  phone width, or overflow, and focused `input#fullName` after Enter. A second
-  390px production-runtime matrix advanced all nine steps and proved the same
-  first-error focus/error linkage across radio cards, checkbox cards, and
-  ordinary checkboxes.
-- A final terminology sweep found the case-study artwork still announced itself
-  as a `concept visual placeholder`. Corrected that stale user-facing accessible
-  label to `abstract concept visual` (`4bdab10`) and proved the final build has
-  15 new-label matches across generated Work HTML/RSC and zero old matches.
 
 ## Round 9 — 2026-08-30
 
@@ -372,3 +332,28 @@ Older setup and rounds 1-7 are preserved in
 - Council R37 metadata/legal/email findings remain Owner-blocked. New Owner
   direction `2026-09-01-10` makes mockup 06 the authoritative full-height theme
   for every route; the dedicated every-route pass is the immediate next round.
+
+## Round 24 — 2026-09-01
+
+- Planned against authoritative mockup 06 before source work and inventoried all
+  17 generated public pages plus custom 404. Preserved 1440/390 baselines showed
+  direct-section fallbacks on dynamic service/work, form, and utility families.
+- Commit `5656584` adds a shared full-height architectural ice-blue environment,
+  stronger protected glass surfaces, long-copy fields, and reusable dark cyber
+  focal stages. It removes every measured flat/transparent direct-section gap
+  without changing copy, facts, pricing, or truthful concept artwork.
+- The first optimized interaction audit exposed Contact error focus remaining on
+  submit. Commit `06fbadd` focuses the first invalid field; repeated local and
+  public validation now gives four linked Contact errors/focus `#name` and three
+  linked Planner errors/focus `#fullName`.
+- Opened 1440/768/390 full-page renders across eight route families and public
+  desktop/phone counterparts match the approved hierarchy without clipping or
+  contrast loss. Final composited warning contrast starts at 4.6388:1.
+- ESLint and optimized 23-page build pass. Optimized-local and public audits each
+  pass 198/198 hydrated states (18 route states × eleven widths, 1440–320),
+  including zoom proxies, sticky header, semantics, images, interactions, Home
+  media, exact containment, and zero transparent direct sections.
+- Commits `2983699`, `5656584`, and `06fbadd` are pushed to `origin/main`.
+  Render adopted CSS `3chp4ua-pf_73.css` with the new shared primitives. Owner
+  visual acceptance/original second-computer confirmation and Owner-blocked
+  launch facts remain pending. The scheduler/automation was untouched.

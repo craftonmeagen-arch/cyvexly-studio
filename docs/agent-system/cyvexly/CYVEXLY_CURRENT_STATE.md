@@ -1,42 +1,41 @@
 # Cyvexly Current State
 
-**Global round:** 23
+**Global round:** 24
 **Active chunks:** Chunk 3 — Project Planner; Chunk 4 — Utility/legal and launch
 readiness. Both remain in progress because real Planner delivery and final
 legal/domain work require Owner decisions. Marketing chunks remain closed but
 revisitable.
 
-**Round 23 outcome:** Auditor `IFA-2026-09-01-R17` / `CYV-IFA-011` is fixed at
-the shared source token. Contact and Planner error text now uses `#bd2d49`.
-Opened optimized/public Contact 1440/390 and Planner 390 validation states
-preserve the accepted cyber/blue-glass hierarchy and measure at least 4.6881:1
-against final composited pixels. Contact retains four associated errors;
-Planner retains three Step 1 errors and focuses `#fullName`; all states are
-width-contained with sticky/z50 navigation. Product commit `2227961` is pushed
-to `origin/main` and publicly adopted.
-Council R38 independently duplicated the pre-fix contrast defect as
-`CYC-R38-F001`; Round 23's exact proof satisfies its closure condition. Auditor
-R18 independently closes the prior sticky-header regression and passes Round
-22's continuation/About-link result against accepted pre-R23 source.
+**Round 24 outcome:** authenticated Owner direction `2026-09-01-10` is
+implemented as a shared full-height theme across all 17 generated public pages
+plus custom 404. The exact mockup 06 concept now continues through the complete
+page height: bright ice-blue architectural field, grid/traces/depth, protected
+translucent copy/forms/nav/cards/CTAs, and controlled dark cyber focal stages.
+No sampled direct section remains transparent or falls back to a flat-white old
+theme. Product commits `5656584` and `06fbadd` are pushed and publicly adopted.
 
-**Immediate next mission:** authenticated Owner direction
-`2026-09-01-10` makes `mockups/06-sitewide-blue-glass-owner-direction.png` the
-authoritative new full-height theme for every page, with no agent visual
-reinterpretation. The next Builder must run a dedicated site-wide every-route
-round: create a pre-implementation visual plan against that exact reference,
-inventory every route family's full page height, implement the bright ice-blue
-cyber-glass environment and protected content surfaces consistently, eliminate
-flat-white/fallback-old-theme gaps, and open desktop/tablet/phone renders across
-all route families with composited contrast proof. Round 23 deliberately did
-not expand into this new source scope during closeout.
+Optimized-local and public audits each pass 198/198 hydrated states (18 rendered
+states × eleven widths, 1440–320). Opened 1440/768/390 route-family renders
+match the authoritative hierarchy without clipping or contrast loss. Final
+composited validation contrast starts at 4.6388:1. A discovered Contact error-
+focus defect is fixed: four errors remain associated and blank submission now
+focuses `#name`; Planner retains three linked errors and focuses `#fullName`.
+
+**Immediate next mission:** hold the implemented theme stable for Owner visual
+review and original second-computer confirmation. Do not reinterpret mockup 06
+or expand blocked launch facts. The next reachable product work remains gated
+by the Owner decisions listed below; respond to fresh reviewer evidence if it
+identifies a source defect against current Round 24 public truth.
 
 **Accepted source position:** local `main` tracks `origin/main`; HEAD product
-commit `2227961` is adopted by Render at
+commit `06fbadd` is adopted by Render at
 `https://cyvexly-studio.onrender.com/`. `origin/master` is historical and is
 not the deployment branch. Treat `git log` as the exact ledger.
 
 ## Current product truth
 
+- Round 24 commits `5656584`/`06fbadd` complete the authoritative every-route
+  theme slice and first-invalid Contact focus correction with public proof.
 - Round 22 commit `4265fa4` restores sticky/z50 navigation, adds protected
   continuation fields to Home/Services, and defers the unavailable About link.
 - Round 21 commit `1437f5b` establishes the shared blue-glass atmosphere and
@@ -68,6 +67,9 @@ Terms visible links remain known release blockers. The explicit interim
 
 ## Verification and orientation
 
+- Round 24: 198/198 optimized-local and 198/198 public states pass across all
+  route families and eleven widths; opened full-height comparisons,
+  interactions, composited contrast, build, and Render CSS adoption pass.
 - Round 23: ESLint, optimized 23-page build, post-build TypeScript, real
   validation paths, composited contrast, exact containment, focus, sticky
   header, and public adoption pass. Durable evidence is indexed under
@@ -79,7 +81,7 @@ Terms visible links remain known release blockers. The explicit interim
   metrics for unattended pixel proof. Verify exact ownership before stopping a
   process.
 - Read `CYVEXLY_ACTIVE_CHUNK.md` for the latest three reports, then
-  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`, Owner direction `2026-09-01-10`, current
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`, Owner direction, current
   reviewer reports, and both debt files before planning.
 - The recurring scheduler/automation is Owner-controlled and must never be
   read, modified, paused, deleted, renamed, or rescheduled by the Builder.
