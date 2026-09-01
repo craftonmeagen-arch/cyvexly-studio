@@ -68,9 +68,11 @@ accent at 5.06:1 and graphite body at 6.07:1.
 - Public Render changed from ETag `"kzfa6xg2yc2f7v"` without the new shared
   atmosphere to `"10h74cxm9iq2hzw"` with it after `1437f5b` reached `main`.
 - A post-adoption public matrix covered Home, Work, Services, Pricing, Process,
-  and Planner at 1024, 768, and 320 CSS pixels, plus opened 1440 Home and 390
-  Work. All 20 states expose one atmosphere/main/H1, zero overflow, the correct
-  desktop/mobile navigation switch, and none of the removed playback text.
+  and Planner at 1440, 1280, 1152, 1024, 960, 853, 768, 640, 480, 390, and 320
+  CSS pixels, plus opened 1440 Home and 390 Work. All 68 states expose one
+  atmosphere/main/H1, zero overflow, the correct desktop/mobile navigation
+  switch, and none of the removed playback text. The 1152–853 widths also act
+  as layout proxies for common 125–150% desktop zoom states.
 - Work renders six named filters; activating Business Site changes the selected
   button and card count from three to two while retaining focus.
 - Home media is muted, inline, looping, actively advancing, without native or
