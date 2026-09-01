@@ -10,6 +10,10 @@
    to the Owner: what name/pronoun should the site use, is there a real
    portrait or should a non-portrait studio image stand in for now, and what
    should the first-person story actually say about why Cyvexly exists.
+   **Round 22 containment:** fresh Council review found the still-visible
+   global About link routed visitors to a known 404. Primary/footer navigation
+   now defers that link until this Owner input exists. The route itself remains
+   open and must not be represented as complete.
 2. **Public domain is undecided.** Vision §15 allows a temporary Render
    preview URL before the owned domain is connected. No Builder round should
    hardcode a production domain into metadata, sitemap, or canonical URLs

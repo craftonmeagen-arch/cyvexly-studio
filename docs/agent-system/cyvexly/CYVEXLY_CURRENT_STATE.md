@@ -1,24 +1,31 @@
 # Cyvexly Current State
 
-**Global round:** 21
+**Global round:** 22
 **Active chunks:** Chunk 3 — Project Planner — UI/state/validation remains built
 and verified at `/start`, with real server-side email Owner-blocked; Chunk 4 —
 Utility/legal pages — favicon remains fixed, while legal/domain items remain
-Owner-blocked. Round 18 reconciles Pricing's sparse entry/package field with
+Owner-blocked. Round 22 restores the shared sticky-header cascade, carries the
+approved blue-glass treatment through Home and Services continuation fields,
+and defers the visible About link until an Owner-approved page can exist. Round
+18 reconciles Pricing's sparse entry/package field with
 the accepted mockup's orbital glass language; Round 17 remains the Services
 icon-math pathways, Round 20 is the Owner-directed Home reel chrome cleanup,
 and Round 16 remains the larger
 integrated Home hero reel, Round 15 the live-video deployment/source repair,
 and Round 14 the five-route service-detail and Planner-preselection source;
 Round 21 is the site-wide blue-glass atmosphere/protected-copy system.
-**Chunk-local round:** N/A (round 21 revisits shared visual infrastructure; no
+**Chunk-local round:** N/A (round 22 revisits shared visual infrastructure; no
 chunk was opened or closed).
-**Current mission:** Round 21 implements Owner direction 2026-08-31-09 across
-public route families: one pale ice-blue architectural atmosphere, protected
-glass introductions, and translucent section continuation, with decorative
-wires/numerals kept outside the information hierarchy. Final composited-pixel
-samples pass from 5.06:1 upward for normal text. Round 20's removed Home reel
-chrome and `0.75×` playback remain intact. Round 19's two fixes remain accepted: invalid
+**Current mission:** Round 22 closes Auditor `CYV-IFA-010` and fresh Council
+continuity/link-truth findings without weakening Owner direction
+2026-08-31-09. The shared header again computes sticky at `z-index: 50` after
+scroll. Home has five and Services three full-width pale blue translucent
+continuation fields; normal-text checks meet or exceed 4.5:1. The unavailable
+About route is no longer advertised in global navigation, while its content
+remains blocked on Owner identity facts. A 154-state optimized-runtime matrix
+across 18 routes and eight widths from 1280 through 320 has zero verified
+failures. Round 20's removed Home reel chrome and `0.75×` playback remain
+intact. Round 19's two fixes remain accepted: invalid
 dynamic service/work slugs now terminate metadata generation with `notFound()`,
 so the correct 404 title survives hydration; public Render and all eight valid
 dynamic routes pass. The Planner now withholds interactive Step 1 behind a
@@ -28,21 +35,22 @@ saved-draft/clean-origin/prefill flows, public settled output, lint, TypeScript,
 and the optimized 23-page build pass. Round 18 Pricing, Round 17 Services, and
 Round 16 Home remain accepted source with Owner visual acceptance pending;
 confirmation is also still needed on the original second computer for Round
-9's scale fix. Round 21 is awaiting Owner visual review. The same four Owner-input questions block the highest-value
+9's scale fix. Round 22 is awaiting Owner visual review. The same four Owner-input questions block the highest-value
 remaining content/integration work — About founder identity, Privacy/Terms
 jurisdiction, production domain + email provider, and the abstract-vs-
 commissioned concept-artwork framing question (`CYVEXLY_APP_DEBT.md` items 1,
 3, 4, plus Chunk Debt item 2). Do not invent them.
 **Accepted source position:** Git repository on local `main`, tracking
 `origin/main`; remote `master` is retained as a historical pointer and is not
-the deployment upstream. Round 21 product commit `1437f5b` is pushed to
+the deployment upstream. Round 22 product commit `4265fa4` is pushed to
+`origin/main` and adopted publicly. Round 21 product commit `1437f5b` is pushed to
 `origin/main` and adopted publicly. Round 20 product
 commit `d6cd17c` is adopted publicly. Round 19 product commits `e716541` and
 `744cdd8` are pushed to `origin/main` and adopted publicly. Round 18 product
 commit `7ec9c5c`,
 Round 17 `b5dfd50`, and Round 16 `14e12d4` remain accepted source. Treat
 `git log` as the exact ledger.
-Builder-owned Round 21 source is committed and pushed; canonical docs/evidence
+Builder-owned Round 22 source is committed and pushed; canonical docs/evidence
 are updated at close.
 Concurrent Council dirty files remain intentionally untouched.
 
@@ -53,7 +61,7 @@ Concurrent Council dirty files remain intentionally untouched.
   `pnpm run lint`. If 5173 is occupied, prove exact ownership before stopping
   anything; round 10 found an unrelated pre-existing EduAILenz Vite process and
   safely used 5183 instead.
-- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-19 report before planning round 20.
+- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-22 report before planning the next round.
   Round 15's full report is archived at
   `docs/archive/chunks/CYVEXLY_SHARED_DEPLOYMENT_ROUND15_REPORT.md`; Round 14's
   full report remains at
@@ -102,3 +110,10 @@ Concurrent Council dirty files remain intentionally untouched.
   over two seconds; click, Enter, and Space toggle the named reel surface.
   Lint, optimized build, post-build TypeScript, Home 200, and MP4 range
   delivery pass.
+- Round 22 verification: optimized build ID `ryML6Ss3MzdIr216pJ3EN`, lint,
+  TypeScript, and a 154-state hydrated production matrix pass. Every state has
+  exact viewport containment, sticky/z50 header geometry after scroll, one
+  main/H1, valid headings and named controls, no hidden focusables or broken
+  images, and expected status. Focused 390/320 menus open; Home video remains
+  control-free at `0.75×`; `/about` is absent from all internal-link sets.
+  Public Home/Services adoption also passes at 1440 and 390 after deployment.

@@ -199,3 +199,21 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   copy. Verify final composited pixels: Round 21's protected fields keep
   graphite/cyber normal text at 6.07:1/5.06:1 or better while still reading as
   glass.
+
+## Round 22
+
+- **A root stacking helper must not silently override a component's positioning
+  contract.** `.site-root > :not(.site-atmosphere)` changed the header from its
+  authored sticky/z50 state to relative/z1. Scope shared stacking rules to the
+  elements that actually need them and assert computed position/z-index after
+  scroll across route families.
+- **Page-ready is not hydration-ready when a development origin is blocked.**
+  The first CDP pass loaded HTML/CSS from `127.0.0.1`, while Next.js blocked
+  cross-origin JavaScript chunks and produced false menu/video interaction
+  results. Use the configured `localhost` origin and prove a hydrated behavior
+  (not only `document.readyState`) before interaction claims.
+- **Interruption recovery begins with identity and byte preservation.** A stale
+  lock is neither automatic permission to delete work nor proof that a live
+  Builder exists. Reconcile the exact session/nonce, live processes, listener,
+  last activity, closeout, and dirty bytes. Resume only through the prescribed
+  verified-interruption path and release the original lock only after closeout.

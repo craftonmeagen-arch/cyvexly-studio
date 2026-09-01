@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-09-01T13:24:00Z",
+  "method": "WCAG 2.x relative-luminance calculations for authored text tokens against the palest and darkest representative continuation-field colors, supplemented by rendered-image pixel samples away from cards, shadows, and text antialiasing",
+  "authoredTokenChecks": [
+    { "foreground": "#10213d", "background": "#def0fc", "ratio": 13.75 },
+    { "foreground": "#526176", "background": "#def0fc", "ratio": 5.40 },
+    { "foreground": "#0f66e0", "background": "#def0fc", "ratio": 4.50 },
+    { "foreground": "#10213d", "background": "#ebf6fd", "ratio": 14.64 },
+    { "foreground": "#526176", "background": "#ebf6fd", "ratio": 5.75 },
+    { "foreground": "#0f66e0", "background": "#ebf6fd", "ratio": 4.79 },
+    { "foreground": "#10213d", "background": "#f8fbff", "ratio": 15.48 },
+    { "foreground": "#526176", "background": "#f8fbff", "ratio": 6.08 },
+    { "foreground": "#0f66e0", "background": "#f8fbff", "ratio": 5.06 }
+  ],
+  "renderedFieldSamples": {
+    "home": {
+      "midnightSlateRange": [14.0, 15.48],
+      "coolGraphiteRange": [5.62, 5.84],
+      "cyberBlueRange": [4.63, 4.87]
+    },
+    "services": {
+      "coolGraphiteMinimum": 5.55,
+      "cyberBlueMinimum": 4.62
+    }
+  },
+  "threshold": 4.5,
+  "result": "pass"
+}

@@ -170,6 +170,9 @@ requires.
   custom 404 title through hydration. `/scratch-favicon-check` remains absent
   from source/build and publicly returns 404, completing the prior provisional
   cleanup confirmation.
+- **Progress (round 22):** the unavailable About route is no longer advertised
+  in primary or footer navigation. This is a truthful deferral, not route
+  completion; the Owner identity-fact blocker remains unchanged.
 - **Deliberately not attempted:** `/privacy` and `/terms`. Unlike
   Accessibility (jurisdiction-agnostic — a WCAG target + contact route),
   Privacy and Terms need jurisdiction-specific legal language (business
@@ -187,6 +190,14 @@ requires.
   blocking the fix any longer.
 
 ## Cross-chunk notes
+
+- **Round 22 sticky-header and continuation reconciliation:** fixed the shared
+  CSS cascade that overrode the authored sticky/z50 header, carried the
+  Owner-approved blue-glass language through five Home and three Services
+  section fields, and deferred the visible dead About link. A hydrated
+  optimized-runtime matrix covers 154 states across 18 routes and eight widths
+  from 1280 through 320 with zero verified failures. Normal-text contrast is
+  at least 4.5:1 and Owner visual review remains pending.
 
 - **Round 21 site-wide blue-glass reconciliation:** Owner direction
   2026-08-31-09 is implemented through one shared pale-blue architectural

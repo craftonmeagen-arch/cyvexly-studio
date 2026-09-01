@@ -12,7 +12,10 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    and `/start` (Project Planner, built round 4) are all built and
    verified — only `/about` and the two legal pages remain, all honestly
    blocked on Owner-supplied facts (see `CYVEXLY_APP_DEBT.md` items 1 and
-   3).
+   3). **Round 22:** `/about` is no longer linked in visible global navigation
+   until approved identity content exists. `/privacy` and `/terms` links remain
+   visible release blockers because they are expected policy destinations,
+   not optional studio-navigation copy.
 2. **Placeholder work-card imagery — partially resolved round 5, real
    photographic imagery still open.** `selectedWork` / `caseStudies` in
    `src/lib/site-config.ts` originally used flat two-tone CSS gradients

@@ -1,54 +1,59 @@
 # Cyvexly Next Builder Handoff
 
-## Round 21 closeout
+## Round 22 closeout
 
-**Session:** `cyvexly-builder-bd3c7973ece948fd8bb8884acd3fc359`
-**Start source:** `445c876` on `main`
-**Accepted product source:** `1437f5b` on `main`, pushed to `origin/main`
-**PM prompt:** no active prompt
+**Session:** `cyvexly-builder-20260901T0458Z-r22-6f3a9d1c`
+**Start source:** `a7e07ca` on `main`
+**Accepted product source:** `4265fa4` on `main`, pushed to `origin/main`
+**PM continuation:** verified-interruption recovery under the exact preserved Round 22 lock
 
 ## Completed work
 
-- Implemented Owner direction 2026-08-31-09 across public route families: a
-  pale ice-blue architectural atmosphere, protected glass copy fields, and
-  translucent continuation sections.
-- Kept wires/numerals low-opacity, decorative, pointer-inert, and hidden from
-  assistive technology.
-- Preserved canonical copy, route behavior, Work filters, Planner flow, Home
-  media source, and Round 20's removal of visible playback chrome.
+- Fixed the cascade defect that changed the shared sticky header to relative/z1.
+- Added full-width pale blue translucent continuation fields around five Home
+  sections and three Services sections, while retaining protected glass cards
+  and readable copy contrast.
+- Removed the globally visible About link until the Owner supplies approved
+  founder/studio facts for a truthful page; no content or route was invented.
+- Preserved Home video source, no native controls, `0.75×` playback, Planner
+  behavior, Work filtering, and all canonical marketing copy.
 
 ## Verification
 
-- Opened optimized desktop/phone proof across Home, Work, Services, Pricing,
-  Process, Planner, Accessibility, service detail, case study, and 404.
-- All sampled states have one main/H1 and zero horizontal overflow.
-- Final composited-pixel normal-text contrast starts at 5.06:1.
-- Work filtering, Planner query entry, Home muted-loop playback without visible
-  controls, valid routes/assets plus known 404s, MP4 byte ranges, lint,
-  TypeScript, and optimized 23-page build pass.
+- Lint, TypeScript, optimized 23-page build, and build-ID existence pass.
+- Hydrated optimized-runtime audit covers 154 states: 18 routes at 1280, 1024,
+  960, 768, 640, 480, 390, and 320, plus ten focused Home/Services states.
+- Zero containment, status, sticky-header, landmark, heading, control-name,
+  hidden-focusable, or broken-image failures.
+- Header computes sticky/z50/top-0 after scroll in every state; focused 390 and
+  320 menus open; video has no native controls and measures `0.75×`.
+- Home and Services rendered comparisons were opened after implementation.
+  Authored/rendered text contrast meets or exceeds 4.5:1.
+- No audited page advertises `/about`.
+- Public Home/Services return 200 and pass hydrated desktop/phone adoption
+  checks after Render deployed `4265fa4`.
 - Durable proof is indexed in `builder/evidence/INDEX.md`.
-- Public Render changed ETag and serves the shared `site-atmosphere` after the
-  `main` push; a 68-state public matrix across six routes and eleven widths
-  from 1440 through 320 passes, including desktop-zoom proxy widths.
-- The matrix has zero unnamed controls, missing image alternatives,
-  aria-hidden focusable descendants, or heading-level skips.
-- Public Work filter, Home media, and Planner query-entry interactions pass.
-- Public reduced-motion Home and the expanded 320px mobile menu pass.
-- Public 17-page/32-link internal route and fragment crawl has zero unexpected
-  failure; About/Privacy/Terms remain the three documented Owner-blocked 404s.
+
+## Interruption accounting
+
+- The old Round 22 Builder had no closeout, live process/listener, or activity
+  after its last known byte; the state was therefore VERIFIED INTERRUPTED.
+- The exact original lock/nonce and every dirty byte were preserved. The PM
+  continuation resumed that same mission; no reset, replacement claim, manual
+  byte deletion, or scheduler mutation occurred.
 
 ## Blockers and next tasks
 
 - Owner visual acceptance and original second-computer confirmation remain
-  pending. Do not weaken protected text fields to increase decoration.
-- About founder identity, Privacy/Terms jurisdiction, production domain/email
-  provider, and concept-art framing remain Owner decisions.
-- Recommended next task: use fresh Owner/Auditor/Council evidence. Preserve the
-  shared system and fix only observed contrast, responsive, or visual issues.
+  pending.
+- About founder identity, Privacy/Terms jurisdiction and approved copy,
+  production domain/email provider, and concept-art framing remain Owner
+  decisions. Privacy and Terms visible links remain known release blockers.
+- Recommended next task: act only on fresh Owner/Auditor/Council evidence.
+  Preserve the shared atmosphere and protected copy fields.
 - Never read, modify, pause, delete, rename, reschedule, or otherwise touch the
   recurring scheduler/automation.
 
 ## Completion state
 
-**DONE WITH PUBLIC ADOPTION PROOF** for the Round 21 system. **OWNER REVIEW
-PENDING**.
+**DONE WITH PUBLIC ADOPTION PROOF. OWNER REVIEW PENDING.**

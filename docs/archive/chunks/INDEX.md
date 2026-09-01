@@ -61,3 +61,9 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
 - `CYVEXLY_SHARED_SERVICES_ROUND17_REPORT.md` — global round 17 full report
   (five icon-led Services audience pathways, compact-desktop breakpoint
   hardening, and public deployment proof), rotated out during round 20.
+- `CYVEXLY_SHARED_PRICING_ROUND18_REPORT.md` — global round 18 full report
+  (Pricing scope-signal entry, package-field reconciliation, responsive and
+  public proof), rotated out during round 22.
+- `CYVEXLY_SHARED_FOUNDATIONS_ROUND19_REPORT.md` — global round 19 full report
+  (dynamic 404 metadata correction and Planner draft-restore gate), rotated out
+  during round 22.

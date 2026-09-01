@@ -249,3 +249,20 @@
   responding again). Full account and the root-cause fix for future
   process-stop filters are in `CYVEXLY_WATCH.md` and
   `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
+## Round 7 — 2026-08-30
+
+- Redesigned the favicon/OG-image C/Y signal mark to fix the real 16px
+  legibility defect found round 3, unfixed for three rounds while waiting on an
+  attended session that never materialized in this session type. Three
+  candidates were pixel-tested at 16/32/64px before selecting the fused
+  orbit-arc-plus-checkmark design; real icon/OG routes and a production build
+  passed.
+- Audited all nine Planner steps at the DOM/accessibility-tree level for focus
+  order, labels, fieldsets/legends, `aria-pressed`, alert/described-by wiring,
+  repeated Edit-button names, and the 5.06:1 focus indicator. The method was
+  explicitly bounded as complementary to real Tab-key testing.
+- Rotated prior reports/evidence to keep hot-path files under their caps.
+- A same-round `favicon.ico` pass exposed a real 32×32 viewBox overflow in the
+  first redesign. The mark was rescaled/recentered and re-verified at every
+  target size. Source commits were `97f7b69` followed by corrective `ce6d273`.

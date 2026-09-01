@@ -233,7 +233,7 @@ keyboard accessibility commitments.
 
 ## Site-wide blue-glass atmosphere and contrast direction 2026-08-31-09
 
-**Status:** IMPLEMENTED IN ROUND 21 — OWNER REVIEW PENDING
+**Status:** IMPLEMENTED IN ROUND 21; CONTINUITY CORRECTION IN ROUND 22 — OWNER REVIEW PENDING
 **Source:** Owner via Codex active conversation
 **Recorded:** 2026-08-31 America/New_York
 
@@ -315,3 +315,16 @@ present across all public routes and rendered verification shows both the
 approved blue-glass atmosphere and dependable content contrast. A Home-only
 restyle, token-only color adjustment, or isolated set of glass cards does not
 satisfy the goal. Owner review remains required after implementation.
+
+### Round 22 continuity correction
+
+Fresh rendered/reviewer evidence showed that several Home and Services
+sections still read as comparatively flat gaps inside the shared environment,
+and a shared selector unintentionally overrode the sticky header's authored
+stacking. Round 22 restores sticky/z50 navigation and adds full-width protected
+pale-blue translucent fields around five Home and three Services continuation
+sections. It does not increase decoration beneath copy or alter canonical
+messaging. Authored and rendered-field normal-text checks meet or exceed 4.5:1;
+154 optimized-runtime states across 18 routes and eight widths have exact
+containment. This correction is part of the same Owner direction, not a new
+visual direction, and remains subject to Owner review.

@@ -1,51 +1,7 @@
 # Cyvexly Build Summary
 
-Older setup and rounds 1-6 are preserved in
+Older setup and rounds 1-7 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
-
-## Round 7 — 2026-08-30
-
-- Redesigned the favicon/OG-image C/Y signal mark to fix the real 16px
-  legibility defect found round 3, unfixed for three rounds while
-  waiting on an "attended session" that never materialized in this
-  session type. Tested three candidate designs against the current mark
-  with real pixel evidence (16/32/64px, light and dark backgrounds) via
-  the established `ImageResponse`-proxy technique before choosing a
-  single-weight fused orbit-arc-plus-checkmark design; verified through
-  the real shipping `icon.svg`/`opengraph-image` routes in both dev and
-  a clean production build, zero regressions. `CYVEXLY_CHUNK_DEBT.md`
-  item 3's favicon half is now resolved.
-- Ran a real DOM/accessibility-tree-level keyboard-traversal, focus-
-  order, error-announcement, and progress-semantics audit of all nine
-  Planner steps — the Council's own explicit "Next Council question" —
-  using `javascript_tool`, `read_page`'s computed accessibility tree,
-  and `get_page_text`, since live `computer` key presses remain proven
-  unreachable in this session type. Found and verified: correct focus
-  order, native form controls with proper `<label>`/`<fieldset>`/
-  `<legend>` wiring on most steps, a correctly-built `aria-pressed`
-  toggle-group pattern on the one step using custom buttons, real
-  `role="alert"`/`aria-describedby` error wiring throughout, distinguishing
-  `aria-label`s on the review step's eight identical-text "Edit" buttons,
-  a measured-sufficient (5.06:1) focus-visible indicator on the Planner/
-  Contact text-field pattern, and no additional reduced-motion gap
-  beyond the two already-fixed effects. Honestly bounded as a
-  complementary proof layer, not a substitute for real Tab-key testing.
-- Made no code changes for the keyboard audit (verification only).
-  Rotated `CYVEXLY_ACTIVE_CHUNK.md`'s round-6 full report to
-  `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND6_REPORT.md` and
-  `CYVEXLY_WATCH.md`'s round-5 entries to
-  `docs/archive/CYVEXLY_WATCH_ARCHIVE.md` to stay under both files'
-  §7.14 hot-path caps.
-- **Follow-on, same round:** building a real multi-resolution
-  `favicon.ico` (found: `src/app/favicon.ico` had never actually been
-  replaced — still the generic Next.js scaffold icon, not even the old
-  C/Y mark) surfaced a real bug in the favicon redesign just committed:
-  the mark genuinely overflowed its 32x32 viewBox by 14 units, measured
-  precisely rather than assumed, small enough at the sizes first checked
-  to escape notice. Fixed by rescaling/recentering the same design and
-  re-verifying its true bounding box stays inside the viewBox at every
-  target size. Landed as a second source commit (`ce6d273`) fixing the
-  first (`97f7b69`), plus this round's documentation-update commits.
 
 ## Round 8 — 2026-08-30
 
@@ -385,3 +341,19 @@ Older setup and rounds 1-6 are preserved in
   at 5.06:1. Work/Planner/Home-media interactions, route/MP4, lint, TypeScript,
   and the optimized 23-page build pass.
   Public Render changed ETag and serves the shared atmosphere after the push.
+
+## Round 22 — 2026-09-01
+
+- Recovered a verified-interrupted Builder mission under its exact preserved
+  lock and dirty-byte set; no reset, replacement claim, or scheduler mutation.
+- Fixed Auditor `CYV-IFA-010`: the shared direct-child selector no longer
+  overrides the sticky header's position/z-index.
+- Added full-width protected blue-glass continuation fields to five Home and
+  three Services sections, preserving the Owner-approved atmosphere and at
+  least 4.5:1 normal-text contrast.
+- Deferred the visible global About link after fresh Council evidence confirmed
+  the Owner-blocked route still returned 404; no identity content was invented.
+- Product commit `4265fa4` is pushed to `origin/main`. Lint, TypeScript,
+  optimized build, and a hydrated 154-state/18-route/eight-width production
+  audit pass with zero verified failures. Public Home/Services adoption also
+  passes at 1440 and 390 after Render deployed the commit.

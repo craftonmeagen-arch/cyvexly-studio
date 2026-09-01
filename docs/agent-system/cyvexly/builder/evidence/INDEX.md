@@ -2,6 +2,28 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 22 — Sticky header and blue-glass continuation
+
+- `round-22-continuation-glass-visual-plan.md` — measured baseline,
+  Owner-direction mapping, protected-field composition, responsive intent, and
+  falsifiers recorded before implementation, plus verified-interruption
+  continuation addendum.
+- `round-22-continuity-baseline-{home,services}.png` — pre-change comparison.
+- `round-22-home-continuation-{desktop,tablet,phone}.png`,
+  `round-22-home-lower-continuation-desktop.png`,
+  `round-22-services-continuation-{desktop,phone}.png`, and
+  `round-22-services-lower-continuation-phone.png` — opened optimized-runtime
+  proof for full-width fields, sticky navigation, and narrow menu state.
+- `round-22-continuation-glass-runtime.json` — 154 hydrated production states
+  across 18 routes and eight widths, plus focused Home/Services states.
+- `round-22-continuation-glass-contrast.json` — authored-token calculations and
+  rendered-field samples.
+- `round-22-continuation-glass-verification.md` — source/build/runtime,
+  interruption recovery, harness correction, public adoption, and limits.
+- `round-22-public-{home,services}-continuation-{desktop,phone}.png` and
+  `round-22-public-continuation-glass-runtime.json` — opened public Render
+  desktop/phone adoption proof after `4265fa4` deployed.
+
 ## Global round 21 — Site-wide blue-glass atmosphere
 
 - `round-21-sitewide-blue-glass-visual-plan.md` — approved-reference analysis,
