@@ -1,44 +1,43 @@
 # Cyvexly Current State
 
-**Global round:** 25
+**Global round:** 26
 **Active chunks:** Chunk 3 — Project Planner; Chunk 4 — Utility/legal and launch
 readiness. Both remain in progress because real Planner delivery and final
 legal/domain work require Owner decisions. Marketing chunks remain closed but
 revisitable.
 
-**Round 25 outcome:** the required wider-method audit preserved authenticated
-Owner direction `2026-09-01-10` and selected shared navigation resilience
-instead of another visual-token pass. Product commit `e38851f` adds native
-Escape close/focus return, clears hidden compact-menu state at the 1024px
-desktop boundary, and supplies exact route-aware `aria-current` semantics.
-The resulting header is pixel-identical at opened 1440/390 viewpoints.
+**Round 26 outcome:** the Owner explicitly rejected the public Round 24/25
+appearance as visually unchanged and unlike the agreed mockup. The Builder
+therefore reopened the shared visual layer as a defect repair. The result makes
+the full-height ice-blue environment unmistakable: stronger architectural
+grids, luminous wires/nodes/rails, translucent section continuation, brighter
+rim-lit glass fields, an inset branded header, and a controlled dark cyber
+footer. Home retains the approved split copy/media composition and removed
+playback chrome; canonical copy, routes, pricing, and form behavior are
+unchanged.
 
-The 114-case route/width audit passed every normal state. Its separate
-19-route 390px/24px-root sweep exposed one pre-existing Services CTA overflow
-(402px document width); the same product commit removes only that no-shrink
-constraint and now passes 390/390 with a readable two-line enlarged-text CTA.
-All route, structure, sticky-header, interaction, containment, and unexpected-
-console checks pass. Council R41 independently reproduced the local candidate's
-Escape/focus, history, breakpoint, semantics, render, lint, and build behavior;
-its only finding was the public-adoption gate. Render then changed to ETag
-`44zd3ca5e02ryz`; public Escape/focus/current/breakpoint/containment proof and
-byte-identical local/public header renders close that gate.
+Opened Home/Services complete-page renders plus Pricing tablet and
+Planner/Contact phone renders show the treatment across route families. All
+five measured states are exactly width-contained with one main, one visible H1,
+sticky/z50 navigation, and the shared atmosphere. ESLint, TypeScript, and the
+optimized 23-page build pass. This is material implementation proof, not a
+claim of Owner acceptance.
 
-**Immediate next mission:** hold the implemented theme stable for Owner visual
-review and original second-computer confirmation. Do not reinterpret mockup 06
-or expand blocked launch facts. The next reachable product work remains gated
-by the Owner decisions listed below; respond to fresh reviewer evidence if it
-identifies a source defect against current Round 24 public truth.
+**Immediate next mission:** confirm public deployment adoption and obtain Owner
+visual review against mockup 06. Do not soften or reinterpret this direction,
+and do not treat low-opacity selector presence as visual parity. Preserve the
+current protected-copy contrast and responsive reduction of decorative density.
 
-**Accepted source position:** local `main`, `origin/main`, and the external
-remote ref match product commit `e38851f`. Public Render at
-`https://cyvexly-studio.onrender.com/` adopted ETag `44zd3ca5e02ryz` with the
-new current semantics, Escape behavior, and wrapping-safe CTA.
-`origin/master` is historical and is not the deployment branch. Treat
-`git log` as the exact ledger.
+**Accepted source position:** Round 26 is committed to local `main` and pushed
+to `origin/main`; use `git log` as the exact commit ledger. Public Render at
+`https://cyvexly-studio.onrender.com/` may lag the push until its deployment
+finishes. `origin/master` is historical and is not the deployment branch.
 
 ## Current product truth
 
+- Round 26 materially strengthens the shared site-wide environment and glass
+  hierarchy after the Owner rejected the prior visible result. Owner public
+  visual acceptance remains pending.
 - Round 25 commit `e38851f` hardens shared navigation lifecycle/current-page
   semantics and closes the reproduced Services enlarged-root overflow without
   changing the authoritative visual system.
@@ -75,6 +74,9 @@ Terms visible links remain known release blockers. The explicit interim
 
 ## Verification and orientation
 
+- Round 26: opened 1440 Home viewport/full page, 1100 Services full page, 768
+  Pricing, and 390 Planner/Contact renders pass visual inspection and exact
+  containment. ESLint, TypeScript, and optimized 23-page build pass.
 - Round 25: 114/114 exact-width optimized states and 19/19 24px-root states
   pass; native Escape/focus, Tab/Enter, history, breakpoint reconciliation,
   route-aware current semantics, byte-identical header renders, representative

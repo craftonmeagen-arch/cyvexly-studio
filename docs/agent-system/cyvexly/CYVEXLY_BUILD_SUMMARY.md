@@ -381,3 +381,22 @@ Older setup and rounds 1-8 are preserved in
   only the expected public-adoption gate while Render still serves Round 24.
   Render then adopts ETag `44zd3ca5e02ryz`; public Escape/focus/current/
   breakpoint/containment proof and byte-identical local/public renders pass.
+
+## Round 26 — 2026-09-01
+
+- Reopened the every-page visual theme after the Owner explicitly rejected the
+  prior live appearance as unchanged and unlike the agreed mockup.
+- Rebuilt the shared visual layer so the full-height environment is visibly
+  blue and architectural: stronger grids/refraction, luminous rails/wires/
+  nodes, deeper translucent continuation fields, rim-lit protected panels, an
+  inset branded header, and a controlled dark cyber footer.
+- Preserved canonical copy, pricing, route behavior, form behavior, the real
+  Home media, its authored playback direction, and the Owner-controlled
+  scheduler/automation.
+- Opened the 1440 Home viewport against mockup 06, then inspected complete Home
+  and Services pages plus Pricing tablet and Planner/Contact phone states. All
+  measured states are exactly width-contained with sticky/z50 navigation and
+  shared atmosphere.
+- ESLint, TypeScript, and optimized 23-page build pass. The Round 26 commit is
+  pushed to `origin/main`; public deployment and Owner visual acceptance remain
+  pending.

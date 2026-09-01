@@ -1,63 +1,53 @@
 # Cyvexly Next Builder Handoff
 
-## Round 25 closeout
+## Round 26 closeout
 
-**Session:** `cyvexly-builder-20260901T175628Z-r25`
-**Start source:** `2cd9121` on `main`
-**Accepted product source:** `e38851f` on `main`, pushed to `origin/main` and
-adopted publicly at Render ETag `44zd3ca5e02ryz`
-**Completion:** DONE WITH PUBLIC ADOPTION PROOF; OWNER VISUAL REVIEW PENDING
+**Session:** `root-fidelity-20260901-7f2c9b11`
+**Start source:** `2def780` on `main`
+**Accepted product source:** Round 26 commit on `main`, pushed to `origin/main`;
+use `git log` for the exact immutable hash
+**Completion:** IMPLEMENTED AND PUSHED; PUBLIC ADOPTION/OWNER REVIEW PENDING
 
 ## Completed work
 
-- The fifth-round methodology audit preserved exact Owner mockup 06 and chose
-  shared navigation resilience rather than another token/stacking pass.
-  Preimplementation plan commit: `26a768a`.
-- Product commit `e38851f` adds compact-menu Escape close/focus return, clears
-  hidden open state on entry to the 1024px desktop layout, and supplies exact
-  `aria-current="page"` semantics for Home, standard/nested Services/Work,
-  Pricing, Process, and Planner.
-- The 19-route large-root sweep found one existing `/services` overflow at
-  402px. Removing only the final Planner CTA's no-shrink constraint restores
-  390/390 containment with a readable two-line 24px-root wrap; normal 390px
-  geometry remains compact.
-- 114/114 normal route/width cases and 19/19 24px-root cases pass status,
-  structure, sticky header, compact state, exact current semantics, and
-  containment. Native Tab/Enter/Escape/history/resize proof passes. Three
-  before/after header views are byte-identical; opened dynamic/form/work/CTA
-  views preserve the protected blue-glass hierarchy.
-- Full lint and optimized 23-page build pass. Council R41 independently passes
-  the candidate's build, IAB behavior, semantics, and visuals. Its only finding
-  is public adoption: initial Render probes remained on Round 24.
+- Recorded the Owner's explicit rejection of the Round 24/25 visible result and
+  treated it as a reopened visual defect, not as a request to reinterpret the
+  approved concept.
+- Strengthened the shared full-height ice-blue environment, grids, refraction,
+  translucent planes, luminous wires/nodes/rails, protected panel edges,
+  section continuation, branded inset header, and controlled dark cyber footer.
+- Preserved mockup 06's core hierarchy on Home: protected outcome-led copy,
+  large dark media stage, and credibility rail. The approved real video,
+  `0.75×` authored playback, and removal of visible playback chrome remain
+  unchanged.
+- Preserved canonical copy, route purpose, pricing, forms, navigation behavior,
+  and the Owner-controlled scheduler/automation.
+
+## Verification
+
+- Opened `round-26-home-1440-viewport.png` against the exact authoritative
+  mockup, then inspected complete Home/Services pages plus Pricing tablet and
+  Planner/Contact phone states.
+- All five measured states report exact width containment, one main, one visible
+  H1, sticky/z50 navigation, shared atmosphere, and three architectural rails.
+- `pnpm run lint`, `pnpm exec tsc --noEmit`, and `pnpm run build` pass; all 23
+  generated pages/routes complete. The known Owner/domain-blocked
+  `metadataBase` warning is unchanged.
+- Durable plan, renders, metrics, and verification are indexed under
+  `builder/evidence/INDEX.md`.
 
 ## Immediate next mission
 
-Hold the Round 24/25 visual contract stable for Owner review and original
-second-computer confirmation. The authoritative mockup and frozen Owner wording
-remain controlling; do not reinterpret them or roll routes back to the old
-theme. Re-open source only for fresh Owner direction or evidence of a defect
-against current public Round 24 truth.
+Check that Render adopts the pushed Round 26 source, then obtain Owner visual
+review against `mockups/06-sitewide-blue-glass-owner-direction.png`. The Owner
+has not accepted final parity. Do not use prior matrix success, faint selector
+presence, or low-opacity decoration as a substitute for rendered visual proof.
 
-The next currently known launch work is blocked on Owner decisions:
+The known launch work remains blocked on Owner decisions: founder About
+content, jurisdiction-approved Privacy/Terms, production domain/indexability,
+transactional-email provider/credentials/domain, and final concept-art release
+sufficiency. Do not invent substitutes.
 
-1. founder identity/story/portrait for About;
-2. jurisdiction-approved Privacy/Terms content;
-3. production domain and indexability for metadata/canonical/sitemap/robots;
-4. transactional-email provider, credentials, and verified sending domain;
-5. whether current truthful concept artwork is release-sufficient.
-
-Do not invent substitutes. Council R37 findings `CYC-R37-F001`–`F003` map to
-items 2–4. The truthful interim `mailto:` paths remain unchanged.
-
-## Evidence and boundaries
-
-Durable Round 25 plan, baseline/final renders, native interaction and
-114+19-case matrix, CTA stress proof, and verification report are indexed in
-`builder/evidence/INDEX.md`. Round 22's full report moved to
-`docs/archive/chunks/CYVEXLY_SHARED_THEME_ROUND22_REPORT.md`, leaving Rounds
-23–25 active. Concurrent Auditor/Council records were preserved and excluded.
-
-Physical Safari/Firefox, physical keyboard hardware, field Web Vitals, real
-email delivery, original second-computer hardware, and Owner visual acceptance
-were not available. The recurring scheduler/automation was not read, modified,
-paused, deleted, renamed, or rescheduled and remains Owner-controlled.
+The recurring scheduler/automation was not read, modified, paused, deleted,
+renamed, or rescheduled and remains Owner-controlled. Concurrent Council files
+and the Owner's attachment were preserved and excluded from the Builder commit.

@@ -2,6 +2,25 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 26 — Owner-visible cyber-glass fidelity repair
+
+- `round-26-owner-visible-theme-repair-plan.md` — preserves the rejected live
+  appearance, exact mockup authority, root cause, responsive target, and
+  falsifiers before the repair.
+- `round-26-home-1440-viewport.png` — opened 1440×900 Home comparison showing
+  the luminous architectural environment, protected copy, dark media stage,
+  inset header, and credibility rail in one viewport.
+- `round-26-home-1440-full.png` and `round-26-services-1100-full.png` — opened
+  complete-page evidence that the environment and protected glass continue
+  through lower sections.
+- `round-26-pricing-768-full.png`, `round-26-planner-390-full.png`, and
+  `round-26-contact-390-full.png` — opened tablet/phone route-family proof.
+- `round-26-render-metrics.json` — exact width containment, structure,
+  atmosphere, sticky header, and computed surface records for all five states.
+- `round-26-owner-visible-theme-repair-verification.md` — rendered comparison,
+  usability boundary, build results, scope accounting, and honest Owner-review
+  limit.
+
 ## Global round 25 — Shared navigation resilience and scale containment
 
 - `round-25-navigation-resilience-plan.md` — fifth-round methodology audit,

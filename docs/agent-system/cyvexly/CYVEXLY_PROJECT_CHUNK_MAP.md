@@ -191,6 +191,12 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 26 Owner-visible theme repair:** the Owner rejected the Round 24/25
+  live appearance as unchanged. Round 26 materially strengthens the shared
+  full-height blue environment, architectural signal layers, protected glass,
+  header, and footer without changing product facts or playback direction.
+  Opened desktop/tablet/phone route-family renders and build checks pass;
+  public adoption and Owner acceptance remain pending.
 - **Round 25 shared navigation resilience:** product commit `e38851f` adds
   native Escape/focus return, desktop-breakpoint state reconciliation, and
   exact standard/nested current-page semantics without changing the approved

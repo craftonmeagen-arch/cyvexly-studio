@@ -247,3 +247,15 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   flight even though geometry later settled correctly. Force `scroll-behavior:
   auto`, record target top/bottom, and open the corrected frames before citing
   them.
+
+## Round 26
+
+- **Selector and matrix success do not prove visual fidelity.** The public site
+  contained the expected atmosphere selectors and passed broad geometry tests,
+  yet the Owner correctly saw a pale old-theme result. Open the rendered page
+  against the exact authority and require a materially visible difference in
+  color, depth, glass edges, and full-height continuity.
+- **Full-height atmosphere needs both environment and protected information.**
+  Strengthening grids, rails, wires, and blue depth is useful only when copy and
+  forms remain on calm translucent fields. Reduce mobile decoration and switch
+  footer text explicitly when introducing a dark focal stage.

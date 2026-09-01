@@ -375,3 +375,29 @@ imagery. Opened desktop/tablet/phone renders, 198-state optimized and public
 matrices, composited contrast (minimum 4.6388:1), interactions, build, push, and
 Render artifact adoption pass. This records implementation evidence; only the
 Owner can grant final visual acceptance.
+
+## Owner rejection and visible fidelity correction 2026-09-01-11
+
+**Status:** ROUND 26 IMPLEMENTED AND PUSHED — PUBLIC DEPLOYMENT/OWNER REVIEW PENDING
+**Source:** Owner via Codex active conversation
+**Recorded:** 2026-09-01 America/New_York
+
+> “there are no changes here. Looks nothing like the agreed upon mockup”
+
+> “Fix the issue”
+
+> “Then commit and push”
+
+This is direct Owner rejection of the prior Round 24/25 visible result. Earlier
+implementation and deployment evidence does not override that judgment. The
+exact concept in `mockups/06-sitewide-blue-glass-owner-direction.png` remains
+the authority; the correction must be materially visible in rendered output,
+not inferred from selector presence, low-opacity decoration, or test matrices.
+
+Round 26 strengthens the shared full-height blue environment, architectural
+grids/rails/wires, translucent rim-lit fields, inset glass navigation, and dark
+cyber footer while preserving protected copy/forms and the approved Home media
+composition. Opened Home, Services, Pricing, Planner, and Contact renders show
+the new treatment across desktop, tablet, and phone without horizontal
+overflow. This records implementation progress only. Owner acceptance remains
+pending until the pushed public result is visible and reviewed.

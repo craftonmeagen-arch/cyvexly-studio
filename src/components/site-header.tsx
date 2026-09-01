@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { primaryNav } from "@/lib/site-config";
@@ -47,14 +48,22 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 px-3 pt-3">
-      <div className="glass-shell mx-auto max-w-6xl overflow-hidden rounded-2xl">
+    <header className="site-header sticky top-0 z-50 px-3 pt-3">
+      <div className="glass-shell site-header-shell mx-auto max-w-6xl overflow-hidden rounded-2xl">
       <div className="flex items-center justify-between px-4 py-3.5 sm:px-6">
         <Link
           href="/"
           aria-current={pathname === "/" ? "page" : undefined}
-          className="font-display text-sm font-semibold tracking-[0.18em] text-midnight-slate"
+          className="site-brand-link flex items-center gap-2.5 font-display text-sm font-semibold tracking-[0.18em] text-midnight-slate"
         >
+          <Image
+            src="/icon.svg"
+            alt=""
+            aria-hidden="true"
+            width="24"
+            height="24"
+            className="site-brand-mark"
+          />
           CYVEXLY STUDIO
         </Link>
 
