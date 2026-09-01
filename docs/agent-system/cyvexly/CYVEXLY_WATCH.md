@@ -190,3 +190,12 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   could type before a saved Step 3 draft replaced state. Render a stable,
   non-interactive status until storage read/validation finishes, release the
   gate in `finally`, and verify saved, clean-origin, and query-prefill paths.
+
+## Round 21
+
+- **A site-wide atmosphere needs protected information fields, not simply more
+  transparency.** One fixed environment can unify routes cheaply, but reading
+  surfaces need enough opacity and blur that decoration cannot compete with
+  copy. Verify final composited pixels: Round 21's protected fields keep
+  graphite/cyber normal text at 6.07:1/5.06:1 or better while still reading as
+  glass.

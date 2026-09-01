@@ -2,7 +2,7 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global rounds 15-20 repaired its public deployment
+pages — remains closed, but global rounds 15-21 repaired its public deployment
 path, implemented the later Owner-directed hero composition, and reconciled the
 Services combination and Pricing scope modules under the rule that closed
 chunks are not frozen.
@@ -16,7 +16,9 @@ invalid dynamic-route metadata from replacing the correct hydrated 404 title
 and gates the Planner until saved-draft restoration completes. Round 20 removes
 the Home reel's visible muted/duration, progress, and circular playback chrome,
 slows playback to `0.75×`, and preserves pause/resume on the complete named
-media surface. Round 18 replaces
+media surface. Round 21 carries the Owner-approved pale-blue architectural
+glass environment across route families with protected copy fields and verified
+contrast. Round 18 replaces
 Pricing's sparse text-only entry with a split glass scope signal and coordinated
 package field while preserving every package fact. Round 17 replaces
 the Services combination table with five mockup-aligned, icon-led glass
@@ -315,3 +317,39 @@ Product commit `d6cd17c` is pushed to `origin/main`; public ETag changed from
 `"17zuriw8lcv2fqm"` to `"a75ifwpw1u2f7v"`, with no removed text and passing
 Home/media delivery. **OWNER REVIEW PENDING** for the cleaned reel and
 the earlier unresolved visual/device acceptance items.
+
+## Round 21 report — global round 21
+
+### Direction, implementation, and proof
+
+**Session:** `cyvexly-builder-bd3c7973ece948fd8bb8884acd3fc359`;
+lock claimed `2026-09-01T03:06:50.3015216Z`; start HEAD `445c876`; no active
+PM prompt. Pre-implementation plan:
+`builder/evidence/round-21-sitewide-blue-glass-visual-plan.md`.
+
+Product commit `1437f5b` implements Owner direction 2026-08-31-09 through one root-level,
+assistive-technology-hidden atmosphere, protected glass introduction fields
+across standard/dynamic/utility routes, and translucent continuation sections.
+Home and Pricing keep their accepted bespoke compositions. Canonical copy,
+routes, Work filters, Planner behavior, and the cleaned Home reel are unchanged.
+
+Opened optimized Home, Work, Services, Pricing, Process, Planner,
+Accessibility, service-detail, case-study, and 404 desktop/phone captures.
+Every sampled state has one main/H1 and exact width containment. Final
+composited introduction pixels produce 5.06:1 or better for normal text. Work
+filtering, Planner query entry, active muted looping Home media without restored
+chrome, valid route/assets plus known-404 controls, MP4 range delivery, ESLint,
+TypeScript, and the optimized 23-page build pass.
+
+Public Render changed from ETag `"kzfa6xg2yc2f7v"` without the shared
+atmosphere to `"10h74cxm9iq2hzw"` with it after the `main` push.
+
+Concurrent reviewer files stayed untouched and unstaged. No scheduler or
+automation was read or changed. Physical Safari/Firefox, field Web Vitals, the
+original second computer, and Owner visual acceptance remain unavailable. The
+four Owner-input blockers are unchanged.
+
+### Completion state
+
+**DONE WITH PUBLIC ADOPTION PROOF** for Round 21's shared blue-glass system;
+**OWNER REVIEW PENDING** for final visual acceptance.

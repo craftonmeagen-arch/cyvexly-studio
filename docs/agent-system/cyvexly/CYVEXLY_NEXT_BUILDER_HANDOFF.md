@@ -1,55 +1,47 @@
 # Cyvexly Next Builder Handoff
 
-## Round 20 closeout
+## Round 21 closeout
 
-**Session:** `builder-20260831T234220Z-owner-video-cleanup`
-**Lock claim:** `2026-08-31T23:42:21.6657567Z`
-**Accepted product source:** `d6cd17c` on `main`
+**Session:** `cyvexly-builder-bd3c7973ece948fd8bb8884acd3fc359`
+**Start source:** `445c876` on `main`
+**Accepted product source:** `1437f5b` on `main`, pushed to `origin/main`
 **PM prompt:** no active prompt
-**Source safety:** concurrent Auditor/Council records and evidence stayed
-unstaged and untouched. The recurring scheduler/automation remained active and
-was not read, modified, paused, deleted, rescheduled, or otherwise touched.
 
 ## Completed work
 
-- Implemented Owner direction 2026-08-31-08: removed the Home reel's visible
-  muted/time pill, advancing progress line, and circular Play/Pause control.
-- Slowed authored playback from `1.0×` to `0.75×`, turning the 30-second
-  source into an approximately 40-second loop.
-- Kept the clean full media surface as the named click/Enter/Space pause target,
-  preserving focus visibility without restoring persistent visual chrome.
-- Preserved the accepted reel size, source media, poster, identifier, lower
-  capability copy, muted inline loop, visibility behavior, reduced-motion hold,
-  and data-saver hold.
+- Implemented Owner direction 2026-08-31-09 across public route families: a
+  pale ice-blue architectural atmosphere, protected glass copy fields, and
+  translucent continuation sections.
+- Kept wires/numerals low-opacity, decorative, pointer-inert, and hidden from
+  assistive technology.
+- Preserved canonical copy, route behavior, Work filters, Planner flow, Home
+  media source, and Round 20's removal of visible playback chrome.
 
 ## Verification
 
-- Opened exact baseline and final 1440/768/390 renders; all three removed
-  elements are absent and the Home remains exactly width-contained.
-- Native media reports `0.75×` and advanced 1.579 seconds over two seconds.
-  Click, Enter, and Space each toggle state; resumed playback stays at `0.75×`.
-- ESLint, optimized 23-page build, immediate post-build TypeScript, Home 200,
-  MP4 MIME/range delivery, and built-output absence of the removed text/state
-  pass.
-- Product commit is pushed to `origin/main`; public adoption proof is recorded
-  in the Round 20 evidence and active report.
+- Opened optimized desktop/phone proof across Home, Work, Services, Pricing,
+  Process, Planner, Accessibility, service detail, case study, and 404.
+- All sampled states have one main/H1 and zero horizontal overflow.
+- Final composited-pixel normal-text contrast starts at 5.06:1.
+- Work filtering, Planner query entry, Home muted-loop playback without visible
+  controls, valid routes/assets plus known 404s, MP4 byte ranges, lint,
+  TypeScript, and optimized 23-page build pass.
+- Durable proof is indexed in `builder/evidence/INDEX.md`.
+- Public Render changed ETag and serves the shared `site-atmosphere` after the
+  `main` push.
 
-## Blockers and honest limits
+## Blockers and next tasks
 
-- Owner acceptance of the cleaned Home reel and prior visual direction remains
-  pending; the original second computer has not confirmed Round 9's scale fix.
+- Owner visual acceptance and original second-computer confirmation remain
+  pending. Do not weaken protected text fields to increase decoration.
 - About founder identity, Privacy/Terms jurisdiction, production domain/email
   provider, and concept-art framing remain Owner decisions.
-- Physical Safari/Firefox and field Web Vitals were unavailable.
-
-## Recommended next tasks
-
-1. Use fresh Owner or independent evidence; do not restore the removed playback
-   chrome without newer Owner direction.
-2. Ask the Owner to review the deployed Home reel and original second device.
-3. Keep `main` as deployment/source branch and never touch the scheduler.
+- Recommended next task: use fresh Owner/Auditor/Council evidence. Preserve the
+  shared system and fix only observed contrast, responsive, or visual issues.
+- Never read, modify, pause, delete, rename, reschedule, or otherwise touch the
+  recurring scheduler/automation.
 
 ## Completion state
 
-**DONE** for Round 20's Home showcase cleanup. **OWNER REVIEW PENDING** for the
-cleaned reel and earlier visual/device acceptance items.
+**DONE WITH PUBLIC ADOPTION PROOF** for the Round 21 system. **OWNER REVIEW
+PENDING**.

@@ -2,6 +2,22 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 21 — Site-wide blue-glass atmosphere
+
+- `round-21-sitewide-blue-glass-visual-plan.md` — approved-reference analysis,
+  composition, responsive states, contrast targets, and falsifiers recorded
+  before source implementation.
+- `round-21-sitewide-blue-glass-{home-desktop,work-desktop,work-phone,
+  services-desktop,pricing-desktop,process-phone,planner-phone,
+  accessibility-phone,service-detail-desktop,case-study-desktop,
+  not-found-phone}.png` — opened optimized-runtime visual proof across route
+  families and both desktop/phone states.
+- `round-21-sitewide-blue-glass-runtime.json` — exact CDP geometry, atmosphere,
+  protected-field, media-control, semantics, and overflow metrics.
+- `round-21-sitewide-blue-glass-verification.md` — implementation accounting,
+  final composited-pixel contrast, interactions, route/media smoke, build
+  checks, known blockers, and honest limits.
+
 ## Global round 20 — Home showcase playback-chrome cleanup
 
 - `round-20-home-video-cleanup-visual-plan.md` — measured baseline, exact Owner

@@ -233,7 +233,7 @@ keyboard accessibility commitments.
 
 ## Site-wide blue-glass atmosphere and contrast direction 2026-08-31-09
 
-**Status:** ACTIVE — OWNER-APPROVED MOCKUP; IMPLEMENTATION PENDING
+**Status:** IMPLEMENTED IN ROUND 21 — OWNER REVIEW PENDING
 **Source:** Owner via Codex active conversation
 **Recorded:** 2026-08-31 America/New_York
 

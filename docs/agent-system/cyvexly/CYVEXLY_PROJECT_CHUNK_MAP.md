@@ -188,6 +188,15 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 21 site-wide blue-glass reconciliation:** Owner direction
+  2026-08-31-09 is implemented through one shared pale-blue architectural
+  atmosphere, protected glass introductions across standard/dynamic/utility
+  routes, and translucent continuation sections. Home and Pricing retain
+  their bespoke accepted compositions; Round 20's removed playback chrome
+  remains removed. Optimized desktop/phone renders, final composited-pixel
+  contrast (lowest normal-text pair 5.06:1), containment, interactions,
+  build, and route/media regression pass. Owner review remains pending.
+
 - **Round 20 Home reel playback-chrome cleanup:** Owner direction
   2026-08-31-08 supersedes Round 16's visible-control treatment for the current
   Home showcase. Commit `d6cd17c` removes the muted/duration pill, timeline,

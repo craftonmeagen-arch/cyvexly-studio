@@ -1,0 +1,692 @@
+{
+  "capturedAt": "2026-09-01T03:28:58.528Z",
+  "source": "optimized Round 21 product source 1437f5b",
+  "results": [
+    {
+      "name": "home-desktop",
+      "path": "/",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "round-21-sitewide-blue-glass-home-desktop.png",
+      "metrics": {
+        "url": "http://localhost:5173/",
+        "title": "Cyvexly Studio — Websites built to make your business unmistakable",
+        "viewport": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "clientWidth": 1440,
+          "scrollWidth": 1440
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": false,
+          "shellExists": false,
+          "shellRect": null,
+          "samplePoint": null
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu",
+            "How long does a website project take?+",
+            "What do you need from me to get started?+",
+            "Will I be able to update my website myself?+",
+            "Do you offer ongoing support?+",
+            "Do you work with businesses outside my industry?+",
+            "How do payments work?+"
+          ],
+          "homeVideoNativeControls": false,
+          "removedPlaybackText": false,
+          "workFilters": 1
+        }
+      }
+    },
+    {
+      "name": "work-desktop",
+      "path": "/work",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "round-21-sitewide-blue-glass-work-desktop.png",
+      "metrics": {
+        "url": "http://localhost:5173/work",
+        "title": "Work — Cyvexly Studio",
+        "viewport": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "clientWidth": 1440,
+          "scrollWidth": 1440
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": true,
+          "shellExists": true,
+          "shellRect": {
+            "left": 336,
+            "top": 152,
+            "right": 1104,
+            "bottom": 480.5,
+            "width": 768,
+            "height": 328.5
+          },
+          "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 251, 255, 0.74) 58%, rgba(218, 239, 253, 0.6)), none",
+          "backgroundColor": "rgba(242, 249, 254, 0.82)",
+          "backdropFilter": "blur(30px) saturate(1.38)",
+          "borderColor": "rgba(255, 255, 255, 0.94)",
+          "samplePoint": {
+            "x": 356,
+            "y": 461
+          }
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu",
+            "All",
+            "Business Site",
+            "Redesign",
+            "Landing Page",
+            "Commerce",
+            "Concept"
+          ],
+          "homeVideoNativeControls": null,
+          "removedPlaybackText": false,
+          "workFilters": 6
+        }
+      }
+    },
+    {
+      "name": "work-phone",
+      "path": "/work",
+      "width": 390,
+      "height": 844,
+      "screenshot": "round-21-sitewide-blue-glass-work-phone.png",
+      "metrics": {
+        "url": "http://localhost:5173/work",
+        "title": "Work — Cyvexly Studio",
+        "viewport": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "clientWidth": 390,
+          "scrollWidth": 390
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": true,
+          "shellExists": true,
+          "shellRect": {
+            "left": 16,
+            "top": 130,
+            "right": 374,
+            "bottom": 432,
+            "width": 358,
+            "height": 302
+          },
+          "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 251, 255, 0.74) 58%, rgba(218, 239, 253, 0.6)), none",
+          "backgroundColor": "rgba(242, 249, 254, 0.82)",
+          "backdropFilter": "blur(30px) saturate(1.38)",
+          "borderColor": "rgba(255, 255, 255, 0.94)",
+          "samplePoint": {
+            "x": 36,
+            "y": 412
+          }
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu",
+            "All",
+            "Business Site",
+            "Redesign",
+            "Landing Page",
+            "Commerce",
+            "Concept"
+          ],
+          "homeVideoNativeControls": null,
+          "removedPlaybackText": false,
+          "workFilters": 6
+        }
+      }
+    },
+    {
+      "name": "services-desktop",
+      "path": "/services",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "round-21-sitewide-blue-glass-services-desktop.png",
+      "metrics": {
+        "url": "http://localhost:5173/services",
+        "title": "Services — Cyvexly Studio",
+        "viewport": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "clientWidth": 1440,
+          "scrollWidth": 1440
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": true,
+          "shellExists": true,
+          "shellRect": {
+            "left": 336,
+            "top": 152,
+            "right": 1104,
+            "bottom": 480.5,
+            "width": 768,
+            "height": 328.5
+          },
+          "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 251, 255, 0.74) 58%, rgba(218, 239, 253, 0.6)), none",
+          "backgroundColor": "rgba(242, 249, 254, 0.82)",
+          "backdropFilter": "blur(30px) saturate(1.38)",
+          "borderColor": "rgba(255, 255, 255, 0.94)",
+          "samplePoint": {
+            "x": 356,
+            "y": 461
+          }
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu",
+            "Do I need to know exactly which services I need?+",
+            "Can I add services after the project starts?+",
+            "Is copywriting included?+",
+            "Do you handle hosting and domains?+"
+          ],
+          "homeVideoNativeControls": null,
+          "removedPlaybackText": false,
+          "workFilters": 0
+        }
+      }
+    },
+    {
+      "name": "pricing-desktop",
+      "path": "/pricing",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "round-21-sitewide-blue-glass-pricing-desktop.png",
+      "metrics": {
+        "url": "http://localhost:5173/pricing",
+        "title": "Pricing — Cyvexly Studio",
+        "viewport": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "clientWidth": 1440,
+          "scrollWidth": 1440
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": false,
+          "shellExists": false,
+          "shellRect": null,
+          "samplePoint": null
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu",
+            "Are these prices final?+",
+            "How does payment work?+",
+            "What payment methods do you accept?+",
+            "What happens if my project grows beyond the package scope?+",
+            "Do care plans require a contract?+",
+            "Not sure which package fits?+"
+          ],
+          "homeVideoNativeControls": null,
+          "removedPlaybackText": false,
+          "workFilters": 0
+        }
+      }
+    },
+    {
+      "name": "process-phone",
+      "path": "/process",
+      "width": 390,
+      "height": 844,
+      "screenshot": "round-21-sitewide-blue-glass-process-phone.png",
+      "metrics": {
+        "url": "http://localhost:5173/process",
+        "title": "Process — Cyvexly Studio",
+        "viewport": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "clientWidth": 390,
+          "scrollWidth": 390
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": true,
+          "shellExists": true,
+          "shellRect": {
+            "left": 16,
+            "top": 130,
+            "right": 374,
+            "bottom": 503,
+            "width": 358,
+            "height": 373
+          },
+          "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 251, 255, 0.74) 58%, rgba(218, 239, 253, 0.6)), none",
+          "backgroundColor": "rgba(242, 249, 254, 0.82)",
+          "backdropFilter": "blur(30px) saturate(1.38)",
+          "borderColor": "rgba(255, 255, 255, 0.94)",
+          "samplePoint": {
+            "x": 36,
+            "y": 483
+          }
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu"
+          ],
+          "homeVideoNativeControls": null,
+          "removedPlaybackText": false,
+          "workFilters": 0
+        }
+      }
+    },
+    {
+      "name": "planner-phone",
+      "path": "/start",
+      "width": 390,
+      "height": 844,
+      "screenshot": "round-21-sitewide-blue-glass-planner-phone.png",
+      "metrics": {
+        "url": "http://localhost:5173/start",
+        "title": "Project Planner — Cyvexly Studio",
+        "viewport": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "clientWidth": 390,
+          "scrollWidth": 390
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": true,
+          "shellExists": true,
+          "shellRect": {
+            "left": 16,
+            "top": 130,
+            "right": 374,
+            "bottom": 529,
+            "width": 358,
+            "height": 399
+          },
+          "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 251, 255, 0.74) 58%, rgba(218, 239, 253, 0.6)), none",
+          "backgroundColor": "rgba(242, 249, 254, 0.82)",
+          "backdropFilter": "blur(30px) saturate(1.38)",
+          "borderColor": "rgba(255, 255, 255, 0.94)",
+          "samplePoint": {
+            "x": 36,
+            "y": 509
+          }
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu",
+            "Step 1: About you",
+            "Step 2: The business",
+            "Step 3: Goals",
+            "Step 4: Website & pages",
+            "Step 5: Features",
+            "Step 6: Brand & content",
+            "Step 7: Visual direction",
+            "Step 8: Budget & timing",
+            "Step 9: Review & submit",
+            "← Back",
+            "Save & continue later",
+            "Continue →"
+          ],
+          "homeVideoNativeControls": null,
+          "removedPlaybackText": false,
+          "workFilters": 0
+        }
+      }
+    },
+    {
+      "name": "accessibility-phone",
+      "path": "/accessibility",
+      "width": 390,
+      "height": 844,
+      "screenshot": "round-21-sitewide-blue-glass-accessibility-phone.png",
+      "metrics": {
+        "url": "http://localhost:5173/accessibility",
+        "title": "Accessibility Statement — Cyvexly Studio",
+        "viewport": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "clientWidth": 390,
+          "scrollWidth": 390
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": true,
+          "shellExists": true,
+          "shellRect": {
+            "left": 16,
+            "top": 130,
+            "right": 374,
+            "bottom": 334,
+            "width": 358,
+            "height": 204
+          },
+          "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 251, 255, 0.74) 58%, rgba(218, 239, 253, 0.6)), none",
+          "backgroundColor": "rgba(242, 249, 254, 0.82)",
+          "backdropFilter": "blur(30px) saturate(1.38)",
+          "borderColor": "rgba(255, 255, 255, 0.94)",
+          "samplePoint": {
+            "x": 36,
+            "y": 314
+          }
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu"
+          ],
+          "homeVideoNativeControls": null,
+          "removedPlaybackText": false,
+          "workFilters": 0
+        }
+      }
+    },
+    {
+      "name": "service-detail-desktop",
+      "path": "/services/business-websites",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "round-21-sitewide-blue-glass-service-detail-desktop.png",
+      "metrics": {
+        "url": "http://localhost:5173/services/business-websites",
+        "title": "Business websites — Cyvexly Studio",
+        "viewport": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "clientWidth": 1440,
+          "scrollWidth": 1440
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": true,
+          "shellExists": true,
+          "shellRect": {
+            "left": 144,
+            "top": 152,
+            "right": 741.84375,
+            "bottom": 683.234375,
+            "width": 597.84375,
+            "height": 531.234375
+          },
+          "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 251, 255, 0.74) 58%, rgba(218, 239, 253, 0.6)), none",
+          "backgroundColor": "rgba(242, 249, 254, 0.82)",
+          "backdropFilter": "blur(30px) saturate(1.38)",
+          "borderColor": "rgba(255, 255, 255, 0.94)",
+          "samplePoint": {
+            "x": 164,
+            "y": 663
+          }
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu",
+            "How many pages does a business website include?+",
+            "Can you help organize our services and copy?+",
+            "Will we be able to update the site ourselves?+"
+          ],
+          "homeVideoNativeControls": null,
+          "removedPlaybackText": false,
+          "workFilters": 0
+        }
+      }
+    },
+    {
+      "name": "case-study-desktop",
+      "path": "/work/aurora-spaces",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "round-21-sitewide-blue-glass-case-study-desktop.png",
+      "metrics": {
+        "url": "http://localhost:5173/work/aurora-spaces",
+        "title": "Aurora Spaces — Cyvexly Studio",
+        "viewport": {
+          "innerWidth": 1440,
+          "innerHeight": 900,
+          "clientWidth": 1440,
+          "scrollWidth": 1440
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": true,
+          "shellExists": true,
+          "shellRect": {
+            "left": 232,
+            "top": 152,
+            "right": 1208,
+            "bottom": 469,
+            "width": 976,
+            "height": 317
+          },
+          "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 251, 255, 0.74) 58%, rgba(218, 239, 253, 0.6)), none",
+          "backgroundColor": "rgba(242, 249, 254, 0.82)",
+          "backdropFilter": "blur(30px) saturate(1.38)",
+          "borderColor": "rgba(255, 255, 255, 0.94)",
+          "samplePoint": {
+            "x": 252,
+            "y": 449
+          }
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu"
+          ],
+          "homeVideoNativeControls": null,
+          "removedPlaybackText": false,
+          "workFilters": 0
+        }
+      }
+    },
+    {
+      "name": "not-found-phone",
+      "path": "/not-a-real-route",
+      "width": 390,
+      "height": 844,
+      "screenshot": "round-21-sitewide-blue-glass-not-found-phone.png",
+      "metrics": {
+        "url": "http://localhost:5173/not-a-real-route",
+        "title": "Page not found — Cyvexly Studio",
+        "viewport": {
+          "innerWidth": 390,
+          "innerHeight": 844,
+          "clientWidth": 390,
+          "scrollWidth": 390
+        },
+        "landmarks": {
+          "main": 1,
+          "h1": 1
+        },
+        "atmosphere": {
+          "count": 1,
+          "ariaHidden": "true",
+          "pointerEvents": "none",
+          "position": "fixed",
+          "wirePaths": 7,
+          "dataLabels": 4
+        },
+        "body": {
+          "backgroundImage": "radial-gradient(circle at 48% 18%, rgba(255, 255, 255, 0.86), rgba(0, 0, 0, 0) 448px), radial-gradient(circle at 8% 6%, rgba(54, 199, 255, 0.14), rgba(0, 0, 0, 0) 512px), radial-gradient(circle at 96% 34%, rgba(15, 102, 224, 0.1), rgba(0, 0, 0, 0) 608px), linear-gradient(135deg, rgb(232, 245, 253) 0%, rgb(226, 242, 252) 46%, rgb(237, 248, 254) 100%)",
+          "color": "rgb(16, 33, 61)"
+        },
+        "intro": {
+          "exists": true,
+          "shellExists": true,
+          "shellRect": {
+            "left": 16,
+            "top": 130,
+            "right": 374,
+            "bottom": 576,
+            "width": 358,
+            "height": 446
+          },
+          "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 251, 255, 0.74) 58%, rgba(218, 239, 253, 0.6)), none",
+          "backgroundColor": "rgba(242, 249, 254, 0.82)",
+          "backdropFilter": "blur(30px) saturate(1.38)",
+          "borderColor": "rgba(255, 255, 255, 0.94)",
+          "samplePoint": {
+            "x": 36,
+            "y": 556
+          }
+        },
+        "controls": {
+          "namedButtons": [
+            "Open menu"
+          ],
+          "homeVideoNativeControls": null,
+          "removedPlaybackText": false,
+          "workFilters": 0
+        }
+      }
+    }
+  ]
+}

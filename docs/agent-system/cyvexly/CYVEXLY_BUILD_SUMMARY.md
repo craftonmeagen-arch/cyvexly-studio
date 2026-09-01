@@ -374,3 +374,14 @@ Older setup and rounds 1-6 are preserved in
   pass. Public adoption is recorded in the Round 20 verification evidence.
 - Concurrent Auditor/Council records and evidence were excluded. The recurring
   scheduler/automation remained active and untouched.
+
+## Round 21 — 2026-08-31
+
+- Implemented the Owner-approved site-wide blue-glass direction with one pale-
+  blue atmosphere, protected route-introduction fields, translucent section
+  continuation, and restrained decorative wiring/numerals.
+- Opened optimized proof across ten route families and phone/desktop states.
+  Every sample is width-contained; final composited normal-text contrast starts
+  at 5.06:1. Work/Planner/Home-media interactions, route/MP4, lint, TypeScript,
+  and the optimized 23-page build pass.
+  Public Render changed ETag and serves the shared atmosphere after the push.
