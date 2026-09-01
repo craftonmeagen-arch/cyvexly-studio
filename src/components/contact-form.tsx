@@ -33,6 +33,9 @@ export function ContactForm() {
     if (Object.keys(nextErrors).length > 0) {
       setErrors(nextErrors);
       setStatus("error");
+      window.requestAnimationFrame(() => {
+        form.querySelector<HTMLElement>('[aria-invalid="true"]')?.focus();
+      });
       return;
     }
 
