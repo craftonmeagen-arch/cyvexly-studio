@@ -1,0 +1,41 @@
+{
+  "roundId": "council-20260901T013229Z",
+  "reviewId": "CYC-R33-20260901-01",
+  "schedulerMinuteZero": "2026-09-01T01:32:29.597Z",
+  "snapshotHead": "8e7ad528fe186c0b7a3b5e43ae579a8ce135d9d1",
+  "local": {
+    "homeDesktop": {"viewport": "1440x900", "clientWidth": 1425, "scrollWidth": 1425, "scrollHeight": 4775, "main": 1, "h1": 1},
+    "homePhone": {"viewport": "390x844", "clientWidth": 375, "scrollWidth": 375, "scrollHeight": 9779, "main": 1, "h1": 1, "video": true, "surfaceLabel": "Pause showcase video"},
+    "servicesDesktop": {"viewport": "1440x900", "clientWidth": 1425, "scrollWidth": 1425, "scrollHeight": 6100, "main": 1, "h1": 1},
+    "servicesTablet": {"viewport": "768x1024", "clientWidth": 753, "scrollWidth": 753, "scrollHeight": 8007, "main": 1, "h1": 1},
+    "phoneRoutes": {
+      "services": {"viewport": "390x844", "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": 1},
+      "pricing": {"viewport": "390x844", "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": 1},
+      "process": {"viewport": "390x844", "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": 1},
+      "planner": {"viewport": "390x844", "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": 1},
+      "accessibility": {"viewport": "390x844", "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": 1},
+      "privacy": {"status": 404, "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": 1},
+      "terms": {"status": 404, "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": 1}
+    },
+    "servicesTextContrastNominal": {"headingRatio": 14.503997955005287, "bodyRatio": 5.69210944707917, "note": "DOM color ratios against body field; not composited-pixel proof"}
+  },
+  "public": {"servicesPhone": {"viewport": "390x844", "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": 1, "title": "Services — Cyvexly Studio"}},
+  "diagnostics": {"iabWarningsErrors": []},
+  "capturedEvidence": [
+    "council-20260901T013229Z-home-desktop.png",
+    "council-20260901T013229Z-home-phone.png",
+    "council-20260901T013229Z-services-desktop.png",
+    "council-20260901T013229Z-services-tablet.png",
+    "council-20260901T013229Z-services-phone.png",
+    "council-20260901T013229Z-services-public-phone.png",
+    "council-20260901T013229Z-services-phone-lower.png",
+    "council-20260901T013229Z-pricing-phone.png",
+    "council-20260901T013229Z-pricing-phone-lower.png",
+    "council-20260901T013229Z-process-phone.png",
+    "council-20260901T013229Z-planner-prefill-phone.png",
+    "council-20260901T013229Z-accessibility-phone.png",
+    "council-20260901T013229Z-business-websites-phone.png",
+    "council-20260901T013229Z-privacy-phone.png",
+    "council-20260901T013229Z-terms-phone.png"
+  ]
+}

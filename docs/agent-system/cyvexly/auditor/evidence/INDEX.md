@@ -1,5 +1,14 @@
 # Auditor Evidence Index
 
+## IFA-2026-09-01-R17
+
+- `auditor-20260901T1231Z-017-contact-faq-validation.md` — Contact blank-submit validation, FAQ expansion/collapse, route handoff, containment, atmosphere semantics, diagnostics, and `CYV-IFA-011` contrast finding.
+- `auditor-20260901T1231Z-017-runtime-metrics.json` — machine-readable source, lock, runtime, validation, contrast, FAQ, handoff, atmosphere, and diagnostics metrics.
+- `auditor-20260901T1231Z-017-contact-validation.png` — opened desktop Contact validation state.
+- `auditor-20260901T1231Z-017-contact-phone-validation.png` — opened phone Contact validation state.
+- `auditor-20260901T1231Z-017-contact-all-errors-phone.png` — opened phone state with all required validation errors.
+- `auditor-20260901T1231Z-017-faq-expanded-phone.png` — opened phone FAQ expanded state with focus ring and answer.
+
 ## IFA-2026-08-30-R1
 
 - `auditor-20260830T1324Z-route-probe.md` — in-app-browser route results and built route table; supports `CYV-IFA-001`.
@@ -77,3 +86,36 @@
 - `auditor-20260831T2250Z-009-work-404.png` — opened and visually inspected mobile custom 404 render.
 - `auditor-20260831T2250Z-009-planner-gate.png` — opened and visually inspected mobile restore-gate render.
 - `auditor-20260831T2250Z-009-planner-restored-step1.png` — opened and visually inspected mobile restored Step 1 render.
+
+## IFA-2026-08-31-R10
+
+- `auditor-20260831T2346Z-010-home-services-probe.md` — fresh standing-role Home showcase playback/control stress plus Services pathways, FAQ, Process responsive/accessibility, and route recovery evidence.
+- `auditor-20260831T2346Z-010-runtime-metrics.json` — machine-readable media, responsive containment, Services semantics, Process stage completeness, diagnostics, and verification metrics.
+- `auditor-20260831T2346Z-010-home-320.png`, `auditor-20260831T2346Z-010-home-390.png`, `auditor-20260831T2346Z-010-home-768.png`, `auditor-20260831T2346Z-010-home-1440.png` — opened and visually inspected Home showcase states.
+- `auditor-20260831T2346Z-010-services-390-top.png`, `auditor-20260831T2346Z-010-services-390-pathways.png`, `auditor-20260831T2346Z-010-services-390-faq.png`, `auditor-20260831T2346Z-010-services-390-full.png` — opened and visually inspected Services entry, pathway cards, FAQ, and full mobile flow.
+- `auditor-20260831T2346Z-010-process-390-top.png`, `auditor-20260831T2346Z-010-process-390-full.png`, `auditor-20260831T2346Z-010-process-1024.png` — opened and visually inspected Process mobile entry, complete stage flow, and compact-desktop connector state.
+
+## IFA-2026-09-01-R11
+
+- `auditor-20260901T0047Z-011-home-video-cleanup-probe.md` — accepted Home cleanup source diff, visible media/control stress, responsive containment, navigation smoke, and build/capability limits.
+- `auditor-20260901T0047Z-011-runtime-metrics.json` — machine-readable source fingerprint, media state, interaction, responsive, diagnostics, and verification metrics.
+- `auditor-20260901T0047Z-011-home-390.png`, `auditor-20260901T0047Z-011-home-390-full.png`, `auditor-20260901T0047Z-011-home-768.png`, `auditor-20260901T0047Z-011-home-1440.png` — opened and visually inspected cleaned Home phone, full phone, tablet, and desktop renders.
+
+## IFA-2026-09-01-R12
+
+- `auditor-20260901T0148Z-012-planner-restore-probe.md` — Planner restore-ready gate, saved-draft/service-entry precedence, Browser-policy limits, and disposition.
+- `auditor-20260901T0148Z-012-runtime-metrics.json` — machine-readable Planner state, containment, diagnostics, capability limits, and evidence references.
+- `auditor-20260901T0148Z-012-planner-restore-full.jpg` — opened and visually inspected full-page restored Planner state.
+
+## IFA-2026-09-01-R13
+
+- `auditor-20260901T0242Z-013-sitewide-blueglass-baseline.md` — site-wide visual/contrast baseline, route shell smoke, metadata, dynamic 404, and disposition.
+- `auditor-20260901T0242Z-013-runtime-metrics.json` — machine-readable route, visual-style, contrast-screening, metadata, and diagnostic metrics.
+- `auditor-20260901T0242Z-013-home-blueglass.png`, `auditor-20260901T0242Z-013-services-blueglass.png`, `auditor-20260901T0242Z-013-pricing-blueglass.png` — opened and visually inspected representative full-page blue-glass states.
+
+## IFA-2026-09-01-R14
+
+- `auditor-20260901T0339Z-014-header-cascade.md` — isolated desktop/phone header top-and-scroll reproduction, route-shell smoke, atmosphere semantics, and `CYV-IFA-010` disposition.
+- `auditor-20260901T0339Z-014-runtime-metrics.json` — machine-readable source, viewport, route, computed-style, header-scroll, menu, and diagnostic metrics.
+- `auditor-20260901T0339Z-014-home-header-top.png`, `auditor-20260901T0339Z-014-home-header-scrolled.png` — opened top and scrolled Home states showing the header leaving the viewport.
+- `auditor-20260901T0339Z-014-services-phone.png`, `auditor-20260901T0339Z-014-services-desktop.png` — opened phone and desktop Services blue-glass states.

@@ -1,0 +1,48 @@
+{
+  "review": "IFA-2026-08-31-R10",
+  "minuteZero": "2026-08-31T23:46:26.996Z",
+  "source": {
+    "acceptedCommit": "05a2403184c53f3d80f522e7ae958052dda324c5",
+    "srcFiles": 40,
+    "fingerprint": "98dad5e43a8f2c6e4fb878574490c20e7078f6c7a42d08394315c78efd1fc9e3",
+    "sourceDiffSinceR9": "none"
+  },
+  "runtime": {
+    "port": 5273,
+    "tempRoot": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260831T2346Z-010",
+    "builderLockAtStart": true,
+    "builderLock": "builder-20260831T234220Z-owner-video-cleanup",
+    "standardGuard": "blocked: managed permission denied .codex role-state write"
+  },
+  "homeShowcase": {
+    "viewports": [
+      {"requested": [320, 900], "inner": [320, 900], "layout": [305, 305], "figure": [16, 549, 273, 161.44], "video": [25, 558, 255, 143.44], "button": [228, 649.44, 36, 36]},
+      {"requested": [390, 844], "inner": [390, 844], "layout": [375, 375], "figure": [16, 525, 343, 200.81], "video": [25, 534, 325, 182.81], "button": [298, 664.81, 36, 36]},
+      {"requested": [768, 1024], "inner": [768, 1024], "layout": [753, 753], "figure": [24, 453.5, 705, 407.9], "video": [37, 466.5, 679, 381.9], "button": [660, 792.4, 36, 36]},
+      {"requested": [1024, 900], "inner": [1024, 900], "layout": [1009, 1009], "figure": [474.8, 197, 502.2, 293.8], "video": [487.8, 210, 476.2, 267.8], "button": [908, 421.8, 36, 36]},
+      {"requested": [1440, 900], "inner": [1440, 900], "layout": [1425, 1425], "figure": [666.4, 80.8, 726.6, 420.1], "video": [679.4, 93.8, 700.6, 394.1], "button": [1324, 431.91, 36, 36]}
+    ],
+    "baseline": {"duration": 30, "readyState": 4, "muted": true, "loop": true, "controls": false, "inline": true, "advanceSeconds": 2.0473},
+    "pauseHoldSeconds": 0,
+    "resumeAdvanceSeconds": 1.2841,
+    "rapidToggle": {"paused": true, "label": "Play showcase video", "pressed": false},
+    "controlCount": 1,
+    "diagnostics": []
+  },
+  "services": {
+    "combinationCards": 5,
+    "nodesPerCard": [3, 3, 3, 3, 3],
+    "detailNavigation": {"path": "/services/business-websites", "title": "Business websites — Cyvexly Studio", "backPath": "/services"},
+    "mobileMenu": {"links": ["Services", "Work", "Pricing", "Process", "About", "Describe your project"], "servicesLinkPath": "/services", "closesOnNavigation": true},
+    "faqQuestionsExercised": 4,
+    "faqFinalExpanded": 0,
+    "layout": {"clientWidth": 375, "scrollWidth": 375}
+  },
+  "process": {
+    "mobile": {"inner": [390, 844], "layout": [375, 375], "items": 5, "connectorDisplay": "none", "itemWidth": 327},
+    "compactDesktop": {"inner": [1024, 900], "layout": [1009, 1009], "items": 5, "connectorDisplay": "block", "connectorHeight": 1418, "itemWidth": 848},
+    "completeness": {"eachStageHasFromYou": true, "eachStageHasFromCyvexly": true, "eachStageHasApprovalPoint": true},
+    "ctaNavigation": {"path": "/start", "backPath": "/process"}
+  },
+  "verification": {"eslint": "pass", "tsc": "pass", "visualEvidence": ["auditor-20260831T2346Z-010-home-320.png", "auditor-20260831T2346Z-010-home-390.png", "auditor-20260831T2346Z-010-home-768.png", "auditor-20260831T2346Z-010-home-1440.png", "auditor-20260831T2346Z-010-services-390-top.png", "auditor-20260831T2346Z-010-services-390-pathways.png", "auditor-20260831T2346Z-010-services-390-faq.png", "auditor-20260831T2346Z-010-services-390-full.png", "auditor-20260831T2346Z-010-process-390-top.png", "auditor-20260831T2346Z-010-process-390-full.png", "auditor-20260831T2346Z-010-process-1024.png"]}
+}

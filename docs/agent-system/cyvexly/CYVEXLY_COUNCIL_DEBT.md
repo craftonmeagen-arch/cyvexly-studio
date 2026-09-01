@@ -1,5 +1,55 @@
 # Cyvexly Council Debt
 
+- CYC-R37: release metadata has localhost OG/Twitter URLs (`metadataBase`
+  unset) and preview noindex robots; Owner domain/indexability decision is
+  required. Privacy/Terms and sitemap are 404. Planner/Contact mailto bridges
+  remain truthful but do not deliver automatic internal/prospect confirmation.
+  Published `2026-09-01T13:03:29.8493469Z`; evidence in R37 release smoke.
+
+- CYC-R36: Header/Footer `/about` is a global 404 dead end. Existing Owner debt
+  requires founder identity facts; implement an approved route or defer/remove
+  the visible link until facts exist. Privacy/Terms remain linked 404 release
+  blockers. Default interaction, media delivery, Planner state recovery, and
+  containment pass; reduced-motion/cross-browser/device/vitals remain open.
+  Published `2026-09-01T12:02:42.6312038Z`.
+
+- CYC-R35: site-wide visual completion remains open. Home and Services mix
+  atmospheric hero/intro and `glass-section` bands with transparent major
+  continuation sections; close with an Owner-compatible shared treatment and
+  composited proof at `1440/768/390/320` plus public adoption. Privacy/Terms
+  remain linked 404 release blockers; Owner legal facts are required. Mockup
+  artwork remains an Owner fidelity decision. Fresh build warning is non-
+  blocking and should be explained or tracked as build hygiene. Published
+  `2026-09-01T04:27:34.5279616Z`; cleanup verified
+  `2026-09-01T04:30:26.4639804Z` (`29m23.3029804s` total).
+
+- CYC-R34 confirms Work filter truth, honest Concept labels, CUA keyboard-like
+  activation, case-study semantics/handoffs, and `1440/768/390/320`
+  containment. Keep the richer approved Work mockup versus abstract SVG
+  previews as an Owner fidelity decision, not fabricated portfolio debt. Work
+  also confirms the R33 transparent-intro/protected-glass gap. Privacy and
+  Terms remain the release-blocking trust/legal debt; physical/cross-browser/
+  second-device/vitals and final Owner acceptance stay open. Published at
+  `2026-09-01T03:00:22.2206401Z`; cleanup verified
+  `2026-09-01T03:01:24.4972556Z` (`26m22.6082556s` total), before hard edge.
+
+- CYC-R33 finds a bounded visual-system debt: non-Home public introductions
+  use transparent grid fields while Owner direction calls for calm protected
+  glass fields. Preserve strong nominal copy contrast and verify final
+  composited contrast when a shared PageIntro field is implemented. Privacy and
+  Terms remain the release-blocking trust/legal debt; platform/field-vitals and
+  Owner acceptance remain open.
+
+- CYC-R32 confirms Home showcase cleanup and responsive/local-public media
+  agreement. Owner visual acceptance remains gated; physical/cross-browser and
+  field-vitals proof remain unavailable. Privacy and Terms remain the
+  release-blocking trust/legal debt.
+
+- CYC-R31 reconfirms the responsive Planner shell and Accessibility route at
+  320/390/768; compact Step 9 still needs a clearer cue and native keyboard/
+  motion proof. Privacy and Terms remain the release-blocking trust/legal debt.
+  Root-24 stress remains a CDP method debt because IAB DOM is read-only.
+
 - CYC-R30 confirms the Round 19 Planner restore gate and hydrated dynamic 404
   identity fixes in local/public use. At compact widths, the progress rail's
   Step 9 is initially outside the visible scrollport but becomes visible after

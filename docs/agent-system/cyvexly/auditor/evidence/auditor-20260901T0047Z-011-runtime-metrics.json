@@ -1,0 +1,37 @@
+{
+  "review": "IFA-2026-09-01-R11",
+  "minuteZero": "2026-09-01T00:46:58.785Z",
+  "source": {
+    "acceptedCommit": "8e7ad528fe186c0b7a3b5e43ae579a8ce135d9d1",
+    "srcFiles": 40,
+    "fingerprint": "db2aadb38ba593ef91da40a60881f8ca6804984feb192b19829a5c1b5c457ead",
+    "diffSinceR10": {
+      "files": ["src/components/hero-showcase-video.tsx"],
+      "insertions": 27,
+      "deletions": 45
+    }
+  },
+  "runtime": {
+    "port": 5273,
+    "tempRoot": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260901T0047Z-011",
+    "standardGuard": "blocked: managed permission denied .codex role-state write",
+    "builderLockAtEntrance": false
+  },
+  "homeShowcase": {
+    "viewports": [
+      {"requested": [320, 900], "inner": [320, 900], "layout": [305, 305], "figure": [16, 683, 273, 161.4375], "surface": [25, 692, 255, 143.4375]},
+      {"requested": [390, 844], "inner": [390, 844], "layout": [375, 375], "figure": [16, 659, 343, 200.8125], "surface": [25, 668, 325, 182.8125]},
+      {"requested": [768, 1024], "inner": [768, 1024], "layout": [753, 753], "figure": [24, 587.5, 705, 407.9375], "surface": [37, 600.5, 679, 381.9375]},
+      {"requested": [1024, 900], "inner": [1024, 900], "layout": [1009, 1009], "figure": [474.84375, 336.953125, 502.15625, 293.828125], "surface": [487.84375, 349.953125, 476.15625, 267.828125]},
+      {"requested": [1440, 900], "inner": [1440, 900], "layout": [1425, 1425], "figure": [666.4375, 220.84375, 726.5625, 420.0625], "surface": [679.4375, 233.84375, 700.5625, 394.0625]}
+    ],
+    "cleanChrome": {"nestedButtons": 0, "progressElements": 0, "mutedTimePill": false, "visiblePlaybackBar": false},
+    "media": {"readyState": 4, "durationSeconds": 30, "muted": true, "loop": true, "playsInline": true, "controls": false, "defaultPlaybackRate": 0.75, "playbackRate": 0.75, "poster": "/media/cyvexly-services-poster.webp", "ariaHidden": true},
+    "interaction": {"pauseHoldSeconds": 0, "pauseHoldWindowSeconds": 1.6, "resumeAdvanceSeconds": 2.628539, "resumeWindowSeconds": 3.2, "rapidClicks": 3, "rapidFinal": {"paused": true, "label": "Play showcase video", "pressed": false}, "enterFinal": {"paused": true, "label": "Play showcase video"}, "spaceFinal": {"paused": false, "label": "Pause showcase video"}},
+    "semantics": {"role": "button", "tabIndex": 0, "controls": "cyvexly-services-showcase", "pauseCount": 1, "playCount": 1, "focusable": true, "captionPresent": true},
+    "sessionPreferences": {"visibility": "visible", "hidden": false, "prefersReducedMotion": false, "saveData": null}
+  },
+  "navigation": {"mobileMenuLinks": ["Services", "Work", "Pricing", "Process", "About", "Describe your project"], "mobileMenuContained": true, "mobileMenuCloses": true},
+  "verification": {"browserDiagnostics": [], "eslint": "pass", "tsc": "pass", "optimizedBuild": "blocked: Turbopack rejects out-of-root node_modules junction; webpack fallback blocked by Google Fonts HTTPS EACCES", "visualEvidence": ["auditor-20260901T0047Z-011-home-390.png", "auditor-20260901T0047Z-011-home-390-full.png", "auditor-20260901T0047Z-011-home-768.png", "auditor-20260901T0047Z-011-home-1440.png"]},
+  "finding": {"newDefect": false, "observation": "Pause/resume discoverability relies on pointer cursor, focus ring, and accessible name after visible chrome removal; intentional Owner tradeoff."}
+}

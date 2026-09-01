@@ -1,0 +1,58 @@
+{
+  "reviewId": "IFA-2026-09-01-R12",
+  "round": "auditor-20260901T0148Z-012",
+  "heartbeatMinuteZero": "2026-09-01T01:45:59.921Z",
+  "head": "8e7ad528fe186c0b7a3b5e43ae579a8ce135d9d1",
+  "sourceFingerprint": "db2aadb38ba593ef91da40a60881f8ca6804984feb192b19829a5c1b5c457ead",
+  "runtime": {
+    "path": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260901T0148Z-012",
+    "port": 5273,
+    "serverCommand": "pnpm exec next dev --webpack -p 5273",
+    "browser": "browser14",
+    "tabId": "16"
+  },
+  "capabilityLimits": {
+    "publicUrl": {
+      "url": "https://cyvexly-studio.onrender.com/",
+      "result": "blocked",
+      "reason": "Browser security policy: saved user permission blocks this action"
+    },
+    "cleanAlternateOrigin": {
+      "url": "http://127.0.0.1:5273/planner",
+      "result": "blocked",
+      "reason": "Browser security policy: saved user permission blocks this action"
+    },
+    "storage": "not inspected or cleared"
+  },
+  "observedStates": [
+    {
+      "url": "http://localhost:5273/start",
+      "title": "Project Planner — Cyvexly Studio",
+      "viewport": {"innerWidth": 1280, "innerHeight": 720, "clientWidth": 1265, "scrollWidth": 1265},
+      "loadingState": "Preparing your Planner / Checking this device for a saved draft before you begin.",
+      "settledState": {
+        "restoreNotice": "We restored a saved draft from this device. Continue where you left off, or start over by clearing individual fields.",
+        "step": "Step 1 of 9",
+        "fullName": "R9 Draft Test",
+        "workEmail": "",
+        "contactMethod": "555-0100",
+        "progressButtons": 9,
+        "enabledProgressButtons": 1
+      },
+      "diagnostics": {"links": 22, "buttons": 13, "images": 0, "browserWarningOrErrorCount": 0}
+    },
+    {
+      "url": "http://localhost:5273/start?service=landing-pages",
+      "settledState": {
+        "restoreNotice": true,
+        "draftRemainedInControl": true,
+        "servicePrefillNotice": false
+      }
+    }
+  ],
+  "evidence": {
+    "visualCapture": "auditor-20260901T0148Z-012-planner-restore-full.jpg",
+    "visualCaptureOpened": true
+  },
+  "result": "No new defect established; CYV-IFA-009 remains partially mitigated pending true no-draft first-use proof."
+}

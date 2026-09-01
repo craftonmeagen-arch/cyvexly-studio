@@ -1,5 +1,103 @@
 # Cyvexly Council Coverage Map
 
+## Reviewed in CYC-R37-20260901-01
+
+- Surfaces: fresh production build, Home server metadata, route/link matrix,
+  Planner IAB snapshot, Planner/Contact source submit paths, and diagnostics.
+- Viewports: IAB default desktop Planner/Home; HTTP/server-rendered checks.
+- Dimensions: status/title reachability, robots/OG/Twitter metadata, legal and
+  discovery routes, truthful interim handoff copy, nine-step Planner semantics.
+- Disposition: core routes and Planner semantics pass preview smoke; localhost
+  social metadata, preview robots, legal/discovery 404s, and mailto handoff are
+  open release debt pending Owner/domain/provider decisions.
+
+## Reviewed in CYC-R36-20260901-01
+
+- Surfaces: Home media control and motion contract, mobile menu, Planner
+  validation/progress/backtracking/save-reload, Home/Services/Work/Planner
+  narrow containment, local/public video delivery, and Header/Footer internal
+  link reachability including `/about`, `/privacy`, and `/terms`.
+- Viewports: local `320/390/1440`; public Home `390` and About `390`.
+- Dimensions: named media state/`aria-pressed`, muted/loop/`0.75×`, validation
+  focus and errors, progress `aria-current`/disabled states, state restore,
+  one H1, exact containment, HTTP/title smoke, and Browser diagnostics.
+- Disposition: media/menu/Planner/default-motion behavior and containment pass;
+  About is a Priority Now global dead link pending Owner facts or deferral;
+  Privacy/Terms remain release blockers; reduced-motion OS/cross-browser/device
+  behavior remains unverified.
+
+## Reviewed in CYC-R35-20260901-01
+
+- Surfaces: current Home and Services continuation treatment, hero/intro
+  atmosphere, full Home phone continuity, Work Business Site/Redesign filters,
+  Planner entry, mobile menu, local/public legal route smoke, and approved
+  site-wide blue-glass Owner mockup comparison.
+- Viewports: local Home `1440/390`, Services `1440/390`, Work/Planner `390`;
+  public Home desktop/tablet/phone, Services desktop/phone, and Work/Planner
+  phone. Home phone `clientWidth=scrollWidth=375`.
+- Dimensions: computed section background/blur classes, visible continuity,
+  one-main/H1 route landmarks, `aria-pressed` filter truth and empty state,
+  local/public route identity, 404 status/title, mobile menu, build output, and
+  Browser diagnostics.
+- Disposition: containment, menu, filters, empty state, route smoke, and
+  diagnostics pass. Site-wide blue-glass completion remains Priority Now
+  incomplete across transparent continuation sections; Privacy/Terms remain
+  release-blocking; mockup fidelity is Owner decision; local/public visual
+  proof is now available through the Council runtime at `127.0.0.1:5373`.
+
+## Reviewed in CYC-R34-20260901-01
+
+- Surfaces: Work index and every filter, truthful empty states, all three
+  case-study routes, Aurora lower content and `/start` handoff, approved
+  `mockups/03-work-case-study.png`, local/public Work comparison, and CUA
+  keyboard-like activation.
+- Viewports: local Work `1440/768/390/320`, Aurora `768/390/320`, and public
+  Work `390`; exact containment held at layout widths `1425/753/375/305`.
+- Dimensions: filter state/`aria-pressed`, card truthfulness, role-image
+  semantics, one-main/one-H1 landmarks, route smoke, local/public contract,
+  responsive wrapping, owner-art fidelity, site-wide PageIntro carry-forward,
+  and browser diagnostics.
+- Disposition: filters, empty states, case-study continuity, and responsive
+  containment pass; richer mockup artwork and the transparent Work intro are
+  Owner-direction decisions/gaps. Privacy/Terms remain release-blocking.
+
+## Reviewed in CYC-R33-20260901-01
+
+- Surfaces: site-wide blue-glass direction across Home, Services, Pricing,
+  Process, Planner, Accessibility, service detail, custom 404/legal states,
+  lower card surfaces, mobile menu, Services → Planner handoff, and public
+  Services comparison; approved `mockups/06-sitewide-blue-glass-owner-direction.png`.
+- Viewports: local Home `1440/390`, Services `1440/768/390`, other routes
+  `390`; exact containment at `375/753/1425` layout widths.
+- Dimensions: shared atmosphere, protected hero fields, contrast, landmarks,
+  route identity, menu state, service-prefill, local/public agreement, route
+  smoke, and browser diagnostics.
+- Disposition: atmosphere and handoffs pass; non-Home introductions are
+  transparent grid fields rather than protected glass panes, a bounded next
+  visual-system slice. Privacy/Terms remain 404 release blockers.
+
+## Reviewed in CYC-R32-20260901-01
+
+- Surfaces: accepted Home showcase cleanup, local/public Home, selected-work
+  continuity, mobile menu, approved Home visual direction, and media assets.
+- Viewports: local `1440/1024/768/390/320`; public `1440/390`.
+- Dimensions: clean media affordance, click/Enter/Space state changes,
+  playback rate/mute/loop, reduced-motion/data-saver source contract, exact
+  containment, one main/H1, local/public adoption, MIME/range delivery, and
+  build diagnostics.
+- Disposition: cleanup and responsive shell pass; Owner fidelity acceptance
+  remains gated; Privacy/Terms and platform/field-vitals limits carry forward.
+
+## Reviewed in CYC-R31-20260901-01
+
+- Surfaces: Planner responsive shell and progress rail at 320/390/768, local
+  Accessibility, local/public Privacy and Terms, and approved Planner mockup.
+- Dimensions: visible hierarchy, one-main/H1 semantics, exact containment,
+  progress-button naming/aria-current, route identity, source route existence,
+  and IAB root-24 capability boundary.
+- Disposition: Planner and Accessibility pass; Privacy/Terms remain linked 404
+  release blockers; compact final-step cue remains Next; root-24 needs CDP.
+
 ## Reviewed in CYC-R30-20260831-01
 
 - Surfaces: accepted Round 19 Planner restore gate and dynamic 404 metadata
@@ -133,8 +231,9 @@
 
 ## Next unreviewed proof
 
-Attended physical keyboard or Safari/Firefox/second-device/production-like
-vitals; do not repeat the same Chromium-only probe without a new question.
+Shared PageIntro contrast/compositing after Builder implementation, then
+attended physical keyboard or Safari/Firefox/second-device/production-like
+vitals; do not repeat the same route review without a new question.
 
 ## Reviewed in CYC-R19-20260830-01
 

@@ -485,3 +485,190 @@ Managed permissions blocked the standard Auditor guard/publisher from writing `.
 ## Evidence and cleanup
 
 See `auditor/evidence/auditor-20260831T2250Z-009-successor-404-planner-gate.md`, `auditor/evidence/auditor-20260831T2250Z-009-runtime-metrics.json`, and the opened work-404/Planner gate/Planner restored-step1 PNG captures. The valid review tab was closed, viewport reset, exact Auditor-owned server stopped, port `5273` verified clear, and exact temp runtime removed. Two policy-generated `data:` error tabs remained non-actionable; no raw browser/CDP workaround was used. Scheduler automation remains active.
+
+---
+
+<!-- auditor review IFA-2026-08-31-R10 published after substantive window; manually routed because managed permissions blocked the standard guard/publisher -->
+
+# Independent Forensic Auditor Report
+
+## Review identity
+
+- Review ID: `IFA-2026-08-31-R10`
+- Round: `auditor-20260831T2346Z-010`
+- Source reviewed: accepted HEAD `05a2403184c53f3d80f522e7ae958052dda324c5`; fingerprint `98dad5e43a8f2c6e4fb878574490c20e7078f6c7a42d08394315c78efd1fc9e3` (40 `src/` files)
+- Runtime: exact accepted-commit archive `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260831T2346Z-010`, port `5273`
+- Heartbeat minute zero: `2026-08-31T23:46:26.996Z`
+
+## Isolation and method
+
+Managed permissions blocked the standard Auditor guard/publisher from writing `.codex`; an exact accepted-commit archive and role-owned runtime were used and manually routed. The Builder lock was active at start (`builder-20260831T234220Z-owner-video-cleanup`), so mutable work was excluded. Repository HEAD advanced through `d6cd17c` to `8e7ad52` during the window and the lock then cleared; those successors were not audited. A fresh real in-app Browser pass covered Home showcase playback/control stress and responsive containment, Services combination cards/menu/FAQ/detail-route recovery, and Process stage completeness/responsive behavior/CTA recovery. Local HTTP, browser diagnostics, ESLint, and TypeScript were checked.
+
+## Results and disposition
+
+- Home video loaded ready with 30-second muted looping inline playback, one named custom control, pause hold/resume, rapid toggle settling, and exact requested-width containment. Opened 320/390/768/1440 captures showed readable media; no new defect was established.
+- Services showed five three-node combination cards with outcomes; Business Websites detail navigation and browser Back recovered correctly; mobile menu and four-question FAQ exercised cleanly with zero final expansions and no overflow.
+- Process showed five stages, each with `From you`, `From Cyvexly`, and `Approval point`; mobile/1024 connector behavior and exact containment passed; `/start` CTA and browser Back recovered correctly. No new defect was established.
+- Existing debt remains `CYV-IFA-005`, `CYV-IFA-006`, mitigated/pending `CYV-IFA-009`, and provisional `CYV-IFA-007`; `CYV-IFA-008` remains verified closed from R9. Sticky-header terminal overlay remains a watch observation.
+- Reduced-motion/save-data, physical keyboard, cross-browser, public deployment, optimized build, external email, domain/legal/founder facts, and Owner visual acceptance remain unconfirmed.
+
+## Evidence and cleanup
+
+See `auditor/evidence/auditor-20260831T2346Z-010-home-services-probe.md`, `auditor-20260831T2346Z-010-runtime-metrics.json`, and the eleven opened PNG captures listed in the evidence index. The exact Auditor runtime, server, browser tab, and viewport were cleaned after publication; the Builder lock was not touched and had cleared naturally before close. Scheduler automation remains active.
+
+---
+
+<!-- auditor review IFA-2026-09-01-R11 published after substantive window; manually routed because managed permissions blocked the standard guard/publisher -->
+
+# Independent Forensic Auditor Report
+
+## Review identity
+
+- Review ID: `IFA-2026-09-01-R11`
+- Round: `auditor-20260901T0047Z-011`
+- Source reviewed: accepted HEAD `8e7ad528fe186c0b7a3b5e43ae579a8ce135d9d1`; fingerprint `db2aadb38ba593ef91da40a60881f8ca6804984feb192b19829a5c1b5c457ead` (40 `src/` files)
+- Runtime: exact accepted-commit archive `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T0047Z-011`, port `5273`
+- Heartbeat minute zero: `2026-09-01T00:46:58.785Z`
+
+## Isolation and method
+
+Managed permissions blocked the standard Auditor guard/publisher from writing `.codex`; an exact accepted-commit archive and role-owned runtime were used and manually routed. No Builder lock was active at entrance and no Builder/Council resource was touched. The source diff since R10 was limited to `hero-showcase-video.tsx`: removal of visible muted/time/progress/button chrome, `0.75×` playback, and a named click/keyboard surface. A fresh real in-app Browser pass used exact 320/390/768/1024/1440 responsive states, opened 390/768/1440 captures, click/pause/resume/rapid-toggle stress, Enter/Space activation, accessibility state checks, mobile menu recovery, and empty browser diagnostics. Direct ESLint and TypeScript passed; both optimized-build paths were attempted.
+
+## Results and disposition
+
+- The cleaned reel has no nested button, progress element, muted/time pill, or visible playback bar. One focusable `role="button"` surface exposes dynamic Play/Pause labels, `aria-pressed`, and `aria-controls`; the video remains muted, inline, looping, poster-backed, and `aria-hidden`.
+- Stable media reported `readyState=4`, 30-second duration, `controls=false`, `defaultPlaybackRate=0.75`, and `playbackRate=0.75`. Pause held `currentTime` for 1.6 seconds; resume advanced about 2.63 seconds over 3.2 seconds. Rapid clicks settled paused, and Enter/Space toggled the surface. No new product defect was established.
+- Requested widths stayed exactly contained at layout widths 305/375/753/1009/1425. Opened phone/tablet/desktop captures show the intended clean cinematic panel without clipping or residual chrome. Home mobile navigation remained contained with six expected links and clean close recovery.
+- Observation only: pause/resume discoverability relies on cursor/focus/assistive naming rather than a visible control, an intentional Owner tradeoff. Existing debt remains `CYV-IFA-005`, `CYV-IFA-006`, mitigated `CYV-IFA-009`, and provisional `CYV-IFA-007`; `CYV-IFA-008` remains verified closed.
+- Source ESLint and TypeScript passed. Turbopack build was blocked by the out-of-root dependency junction; webpack build was blocked by sandbox-denied Google Fonts HTTPS fetches. No new optimized-build or public-deployment claim is made.
+
+## Evidence and cleanup
+
+See `auditor/evidence/auditor-20260901T0047Z-011-home-video-cleanup-probe.md`, `auditor-20260901T0047Z-011-runtime-metrics.json`, and the four opened PNG captures listed in the evidence index. The exact Auditor runtime, server, Browser tabs, viewport, and process chain were cleaned after publication; scheduler automation remains active.
+
+---
+
+<!-- auditor review IFA-2026-09-01-R12 published after substantive window; manually routed because managed permissions blocked the standard guard/publisher -->
+
+# Independent Forensic Auditor Report
+
+## Review identity
+
+- Review ID: `IFA-2026-09-01-R12`
+- Round: `auditor-20260901T0148Z-012`
+- Source reviewed: accepted HEAD `8e7ad528fe186c0b7a3b5e43ae579a8ce135d9d1`; fingerprint `db2aadb38ba593ef91da40a60881f8ca6804984feb192b19829a5c1b5c457ead` (40 `src/` files)
+- Runtime: exact accepted-commit archive `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T0148Z-012`, port `5273`
+- Heartbeat minute zero: `2026-09-01T01:45:59.921Z`
+
+## Isolation and method
+
+Managed permissions again blocked the standard Auditor guard/publisher from writing `.codex`; an exact accepted-commit archive and role-owned runtime were used and manually routed. No Builder lock was active at entrance. R11 already covered the local Home video chrome cleanup, so R12 exercised the Planner restore-ready gate and saved-draft precedence through the real in-app Browser. The public Render URL and an alternate `127.0.0.1` origin were explicitly rejected by saved Browser permissions; no workaround or storage inspection/clearing was attempted.
+
+## Results and disposition
+
+- Planner first render exposes the busy “Preparing your Planner” status; settled render exposes the restored-draft notice, Step 1 of 9, and visible prior draft values.
+- `/start?service=landing-pages` retains the restored draft rather than applying the service prefill, matching the authored precedence rule. At the active `1280×720` binding, `scrollWidth` equals `clientWidth` (`1265`) and browser warn/error logs are empty.
+- No new defect established. `CYV-IFA-009` remains partially mitigated pending true no-draft first-use proof on a clean Browser origin/context; public adoption remains unconfirmed.
+
+## Evidence and cleanup
+
+See `auditor/evidence/auditor-20260901T0148Z-012-planner-restore-probe.md`, `auditor/evidence/auditor-20260901T0148Z-012-runtime-metrics.json`, and the opened full-page Planner capture. The exact R12 Browser tabs, viewport, process chain, port, and temporary runtime were cleaned after publication; `.engine-lock` and scheduler automation were untouched.
+
+---
+
+<!-- auditor review IFA-2026-09-01-R13 published after substantive window; manually routed because managed permissions blocked the standard guard/publisher -->
+
+# Independent Forensic Auditor Report
+
+## Review identity
+
+- Review ID: `IFA-2026-09-01-R13`
+- Round: `auditor-20260901T0242Z-013`
+- Source reviewed: accepted HEAD `445c8763457bdbafb74171d232d6e302e25472c5`; source fingerprint `db2aadb38ba593ef91da40a60881f8ca6804984feb192b19829a5c1b5c457ead` (40 `src/` files; docs-only successor of R12)
+- Runtime: exact accepted-commit archive `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T0242Z-013`, port `5273`
+- Heartbeat minute zero: `2026-09-01T02:42:31.956Z`
+
+## Isolation and method
+
+Managed permissions again blocked the standard Auditor guard/publisher from writing `.codex`; an exact accepted-commit archive and role-owned runtime were used and manually routed. No Builder lock was active at entrance. R13 established a site-wide visual/semantics baseline against the Owner-approved blue-glass direction using representative Home, Services, and Pricing captures, fixed-token contrast screening, all public route shells, Home metadata, and the dynamic invalid-service boundary. R11 Home video and R12 Planner restore passes were not repeated.
+
+## Results and disposition
+
+- Fifteen sampled public/intentional routes each rendered exactly one main and one H1 with exact `1265/1265` width containment at the active 1280px Browser binding; browser warn/error diagnostics were empty.
+- Shared pale-blue body gradients and translucent blurred glass panels were present across representative routes, with opened captures showing protected dark copy. Fixed-token contrast screening exceeded AA thresholds, but final composited-pixel verification and Owner acceptance remain bounded.
+- Home preview metadata remains preview-only (`noindex, nofollow`), has no canonical link, and emits localhost OG/Twitter image URLs; `CYV-IFA-005` remains open. `CYV-IFA-008` remains verified closed; `CYV-IFA-009` remains partially mitigated. No new defect assigned.
+
+## Evidence and cleanup
+
+See `auditor/evidence/auditor-20260901T0242Z-013-sitewide-blueglass-baseline.md`, `auditor/evidence/auditor-20260901T0242Z-013-runtime-metrics.json`, and the three opened captures listed in the evidence index. The exact R13 Browser tab, viewport, process chain, port, and temporary runtime were cleaned after publication; `.engine-lock` and scheduler automation were untouched.
+
+---
+
+<!-- auditor review IFA-2026-09-01-R14 published 2026-09-01T04:09:25.2203102Z -->
+
+# Independent Forensic Auditor Report
+
+## Review identity
+
+- Review ID: `IFA-2026-09-01-R14`
+- Round: `auditor-20260901T0339Z-014`
+- Heartbeat minute zero: `2026-09-01T03:39:32.771Z`
+- Reviewed source: current HEAD `a7e07ca30a40757fa00ee3d7d6452918edba5137` (docs-only successor); accepted product source `1437f5b` on `main`
+- Source fingerprint: Git `src/` tree `50dc64c9ab91752979b5e50113b398fa047f2b1f` (41 files; no `src/` diff from `1437f5b`)
+- Runtime: exact accepted-HEAD archive at `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T0339Z-014`, port `5273`, real Codex in-app Browser tab `20`
+
+## Scope and method
+
+The standard Auditor guard remained write-denied under managed permissions; this report and the evidence were manually routed. The Builder lock was clear before runtime creation and was preserved. Direct ESLint (`0` errors, `0` warnings) and TypeScript (`tsc --noEmit` exit `0`) passed before the Browser run. The real in-app Browser covered the default `1280×720` binding and a temporary `390×844` phone override, with route-shell, atmosphere, mobile-menu, and scroll behavior checks.
+
+## Finding
+
+### `CYV-IFA-010` — P1 — site-wide header loses sticky behavior
+
+The blue-glass commit adds `.site-root > :not(.site-atmosphere) { position: relative; z-index: 1; }` in `src/app/globals.css:70–73`. This selector matches the direct `SiteHeader` `<header>` authored as `sticky top-0 z-50` (`src/components/site-header.tsx:12`) and wins the cascade. The isolated runtime computed `position: relative; z-index: 1` at both desktop and phone widths. After a 592px desktop scroll the header rect was `top=-592,bottom=-504`; after a 618px phone scroll it was `top=-618,bottom=-189`. The persistent header/navigation is lost while reading pages, and the authored z-50 stacking level is defeated. Preserve the header's position/z-index while establishing the atmosphere layer, then re-run top/scroll checks.
+
+## Other results
+
+- The responsive phone menu still opened (`aria-expanded="true"`) and exposed six links.
+- Home, Services, Work, Pricing, Process, Contact, FAQ, Accessibility, Planner, a valid service detail, a valid case study, and invalid service routes settled to one `main` and one `h1`; phone states were exactly contained at `375/375`.
+- `.site-atmosphere` rendered once with `aria-hidden="true"`, `pointer-events: none`, and `position: fixed`; Services' protected intro computed to `blur(30px) saturate(1.38)`; Browser warning/error diagnostics were empty.
+- Existing `CYV-IFA-005`, `CYV-IFA-006`, and partially mitigated `CYV-IFA-009` remain open; `CYV-IFA-008` remains verified closed and `CYV-IFA-007` provisional. No other new defect was established.
+
+## Evidence and cleanup
+
+See `auditor/evidence/auditor-20260901T0339Z-014-header-cascade.md`, `auditor/evidence/auditor-20260901T0339Z-014-runtime-metrics.json`, and the four opened captures listed there. After publication, the temporary viewport and tab `20` were reset/closed, only the exact Auditor process chain was stopped, the exact temporary runtime was removed, port `5273` was verified clear, and `.engine-lock` was rechecked untouched. The scheduler automation remains active. Public Render, final composited contrast across every state, reduced motion, physical keyboard, cross-browser, field vitals, and Owner acceptance remain unconfirmed.
+
+---
+
+<!-- auditor review IFA-2026-09-01-R17 published after the substantive floor -->
+
+# Independent Forensic Auditor Report
+
+## Review identity
+
+- Review ID: `IFA-2026-09-01-R17`
+- Round: `auditor-20260901T1231Z-017`
+- Heartbeat minute zero: `2026-09-01T12:31:27.6180525Z`
+- Reviewed accepted source: HEAD `a7e07ca30a40757fa00ee3d7d6452918edba5137`; product source `1437f5b`; Git `src/` tree `50dc64c9ab91752979b5e50113b398fa047f2b1f` (41 files, no `src/` diff)
+- Runtime: exact accepted-HEAD archive at `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T1231Z-017`, port `5273`, real Codex in-app Browser tab `1`
+
+## Scope and method
+
+The Builder lock was active with uncommitted `globals.css`, Home, and Services changes at review entry, so only an immutable accepted-HEAD archive was reviewed. Cleanup verification later also showed `src/lib/site-config.ts` among the mutable Builder files; it was left untouched. The real in-app Browser exercised Contact form validation, FAQ expansion/collapse, and Contact → Planner → Back at a temporary 390×844 viewport. No valid form was submitted and no external mail action occurred. The standard Auditor guard remained write-denied; report/evidence routing is manual.
+
+## Findings and disposition
+
+### `CYV-IFA-011` — P1 — form error text fails normal-text contrast
+
+Contact field errors use 12px `rgb(217, 67, 95)` (`--color-warning-coral`) over `rgb(248, 251, 255)` frosted inputs. The measured ratio is `4.1139:1`, below WCAG AA's `4.5:1` normal-text threshold. The same token is used by shared Planner error components. Error semantics are otherwise correct: summary `role=alert`, four field messages, `aria-invalid="true"`, and exact `375/375` phone containment. Darken the error color or provide a stronger field treatment, then recheck composited states.
+
+### Other results
+
+- FAQ accessibility question toggled false → true, exposed its answer, and returned to zero expanded questions.
+- Contact → Planner navigation and browser Back returned to the expected routes with one main/H1 and exact containment.
+- Shared atmosphere remained fixed, `aria-hidden="true"`, and pointer-inert. Browser warning/error diagnostics were empty.
+- `CYV-IFA-005`, `CYV-IFA-006`, `CYV-IFA-009`, and prior `CYV-IFA-010` remain open; `CYV-IFA-008` remains verified closed and `CYV-IFA-007` provisional.
+
+## Evidence and cleanup
+
+See `auditor/evidence/auditor-20260901T1231Z-017-contact-faq-validation.md`, `auditor/evidence/auditor-20260901T1231Z-017-runtime-metrics.json`, and the four opened captures listed there. After publication, the exact Auditor viewport/tab/process chain/temp runtime were cleaned; port `5273` was clear and the active Builder lock and scheduler automation remained untouched. Public Render, physical keyboard, reduced-motion, cross-browser, field-vitals, and Owner acceptance remain unconfirmed.

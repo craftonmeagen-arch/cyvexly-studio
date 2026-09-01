@@ -1,0 +1,212 @@
+{
+  "reviewId": "IFA-2026-09-01-R14",
+  "round": "auditor-20260901T0339Z-014",
+  "heartbeatMinuteZero": "2026-09-01T03:39:32.771Z",
+  "head": "a7e07ca30a40757fa00ee3d7d6452918edba5137",
+  "headMessage": "docs: record public semantic matrix",
+  "productSourceCommit": "1437f5b",
+  "sourceTree": "50dc64c9ab91752979b5e50113b398fa047f2b1f",
+  "sourceFiles": 41,
+  "sourceDiffFromProductCommit": [],
+  "runtime": {
+    "path": "C:/Users/Tcraf/AppData/Local/Temp/cyvexly-auditor-20260901T0339Z-014",
+    "port": 5273,
+    "serverCommand": "next.cmd dev --webpack -p 5273",
+    "browser": "Codex In-app Browser",
+    "tabId": "20",
+    "desktopViewport": {
+      "innerWidth": 1280,
+      "innerHeight": 720,
+      "clientWidth": 1265
+    },
+    "phoneViewport": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "clientWidth": 375
+    }
+  },
+  "routeShellSmoke": [
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "Cyvexly Studio — Websites built to make your business unmistakable"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/services",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "Services — Cyvexly Studio"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/work",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "Work — Cyvexly Studio"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/pricing",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "Pricing — Cyvexly Studio"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/process",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "Process — Cyvexly Studio"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/contact",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "Contact — Cyvexly Studio"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/faq",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "FAQ — Cyvexly Studio"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/accessibility",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "Accessibility Statement — Cyvexly Studio"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/start",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "Project Planner — Cyvexly Studio"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/services/business-websites",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "Business websites — Cyvexly Studio"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/work/aurora-spaces",
+      "pointerEvents": "none",
+      "scrollWidth": 375,
+      "title": "Aurora Spaces — Cyvexly Studio"
+    },
+    {
+      "ariaHidden": "true",
+      "atmosphere": true,
+      "bodyCopy": true,
+      "clientWidth": 375,
+      "h1": 1,
+      "main": 1,
+      "path": "/services/not-a-real-service",
+      "scrollWidth": 375,
+      "title": "Page not found — Cyvexly Studio"
+    }
+  ],
+  "headerCascade": {
+    "selector": ".site-root > :not(.site-atmosphere)",
+    "computedPosition": "relative",
+    "computedZIndex": "1",
+    "authoredHeaderClass": "sticky top-0 z-50 px-3 pt-3",
+    "desktopTop": {
+      "scrollY": 0,
+      "top": 0
+    },
+    "desktopAfterScroll": {
+      "bottom": -504,
+      "position": "relative",
+      "scrollY": 592,
+      "top": -592,
+      "zIndex": "1"
+    },
+    "mobileTop": {
+      "innerHeight": 844,
+      "innerWidth": 390,
+      "menu": "false",
+      "position": "relative",
+      "scrollY": 0,
+      "top": 0,
+      "zIndex": "1"
+    },
+    "mobileAfterScroll": {
+      "bottom": -189,
+      "position": "relative",
+      "scrollY": 618,
+      "top": -618,
+      "zIndex": "1"
+    },
+    "observation": "Custom unlayered selector overrides Tailwind sticky/z-50 on the direct SiteHeader child; header scrolls out of view."
+  },
+  "visualBaseline": {
+    "servicesDesktopCapture": "auditor-20260901T0339Z-014-services-desktop.png",
+    "servicesPhoneCapture": "auditor-20260901T0339Z-014-services-phone.png",
+    "homeHeaderTopCapture": "auditor-20260901T0339Z-014-home-header-top.png",
+    "homeHeaderScrolledCapture": "auditor-20260901T0339Z-014-home-header-scrolled.png",
+    "atmosphere": {
+      "count": 1,
+      "ariaHidden": "true",
+      "pointerEvents": "none"
+    },
+    "introBackdropFilter": "blur(30px) saturate(1.38)"
+  },
+  "browserDiagnostics": {
+    "warningOrErrorCount": 0
+  },
+  "result": "New CYV-IFA-010 finding: site-root stacking selector defeats the global sticky header; no other new route/atmosphere defect established."
+}

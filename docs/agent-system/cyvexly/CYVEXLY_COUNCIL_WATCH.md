@@ -1,5 +1,52 @@
 # Cyvexly Council Watch
 
+- 2026-09-01 / CYC-R37: watch release trust wiring: configure approved
+  `metadataBase`/canonical/OG/Twitter and launch robots; close visible legal
+  and sitemap 404s; retain truthful mailto disclosure until provider-backed
+  confirmation is proven. Next Council should recheck public-domain HTML and
+  desktop/mobile intake after those decisions.
+
+- 2026-09-01 / CYC-R36: interaction/state smoke passes locally and publicly for
+  media, menu, Planner validation/progress/recovery, range delivery, and 320px
+  containment. Watch the false navigation contract: visible `/about` still
+  lands on a custom 404, alongside the known Privacy/Terms 404 release debt.
+  Next proof should use attended reduced-motion/keyboard or another browser/
+  device capability after Owner/link/legal decisions.
+
+- 2026-09-01 / CYC-R35: fresh local/public Home and Services review shows the
+  same site-wide glass gap in a more consequential form: hero/intro and some
+  bands are glass, while Selected work, partnership, Process, FAQ, CTA, and
+  Services continuation sections are transparent. Keep the closure outcome
+  shared and composited, not token churn. Work filters/empty state, menu,
+  Planner entry, containment, and diagnostics pass. Privacy/Terms remain 404
+  and release-blocking; mockup fidelity is Owner choice. Next proof should use
+  a different capability after visual/legal closure.
+
+- 2026-09-01 / CYC-R34: Work filters and all three concept case studies pass
+  honest counts/empty states, CUA `Enter`/`Space`, role-image semantics,
+  responsive containment, and the local/public phone contract. The approved
+  Work mockup remains materially richer; route that difference to Owner
+  fidelity choice. Work's intro still has no protected glass field; Privacy/
+  Terms remain linked 404 and release-blocking. Next proof should use an
+  attended/different capability or fresh Owner/source evidence.
+
+- 2026-09-01 / CYC-R33: site-wide blue-glass review passes atmosphere,
+  containment, route handoffs, and local/public Services agreement. Watch the
+  distinction between a decorative `signal-grid-bg` and a protected glass
+  information field: non-Home intros currently have no background/blur/shadow,
+  even though nominal text contrast is strong. Next Builder slice should be a
+  shared PageIntro field with composited contrast proof, not token churn.
+
+- 2026-09-01 / CYC-R32: Home showcase chrome cleanup, muted `0.75×` loop,
+  click/Enter/Space surface state, 320–1440 containment, and public/local
+  media delivery pass. Owner visual acceptance remains gated; legal and
+  cross-platform/field-vitals gaps remain.
+
+- 2026-08-31 / CYC-R31: Planner remained contained and legible at
+  `320/390/768`; nine progress controls are named and Accessibility resolves.
+  Step 9 is initially outside the compact rail; Privacy/Terms remain 404 and
+  release-blocking. The IAB cannot mutate root styles; use native CDP next.
+
 - 2026-08-31 / CYC-R30: the Planner restore gate prevents the saved-draft race,
   clean and service-prefill flows settle correctly, validation focus remains
   honest, and dynamic 404 titles survive hydration on local/public. At 390/768

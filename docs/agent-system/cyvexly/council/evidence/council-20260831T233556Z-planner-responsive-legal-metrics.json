@@ -1,0 +1,27 @@
+{
+  "reviewId": "CYC-R31-20260901-01",
+  "roundId": "council-20260831T233556Z",
+  "schedulerMinuteZero": "2026-08-31T23:35:56.196Z",
+  "sourceHead": "05a2403184c53f3d80f522e7ae958052dda324c5",
+  "acceptedProductCommits": ["e716541", "744cdd8"],
+  "sourceDirtyFingerprint": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "runtime": {"port": 5373, "pid": 39000, "build": "optimized Next 23 pages", "eslint": "pass", "postBuildTypeScript": "pass", "metadataBaseWarning": true},
+  "plannerLocal": {
+    "narrowPhone": {"width": 320, "height": 844, "innerWidth": 320, "clientWidth": 305, "scrollWidth": 305, "scrollHeight": 3255, "main": 1, "h1": 1, "step": "1"},
+    "phone": {"width": 390, "height": 844, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "scrollHeight": 3075, "main": 1, "h1": 1, "step": "1"},
+    "tablet": {"width": 768, "height": 1024, "innerWidth": 768, "clientWidth": 753, "scrollWidth": 753, "main": 1, "h1": 1, "step": "1", "progressScrollport": 639, "progressContent": 676}
+  },
+  "progressRail": {"phone": {"scrollportWidth": 277, "contentWidth": 548, "initialStep9Visible": false, "endScrollLeft": 271, "endStep9Visible": true}, "tablet": {"scrollportWidth": 639, "contentWidth": 676, "initialStep9Visible": false, "endScrollLeft": 37, "endStep9Visible": true}, "allNineButtonsNamed": true},
+  "legalRoutes": {
+    "localPrivacy": {"status": 404, "title": "Page not found — Cyvexly Studio", "heading": "This page doesn't exist yet.", "robots": "noindex", "main": 1},
+    "localTerms": {"status": 404, "title": "Page not found — Cyvexly Studio", "heading": "This page doesn't exist yet.", "robots": "noindex", "main": 1},
+    "publicPrivacy": {"status": 404, "title": "Page not found — Cyvexly Studio", "heading": "This page doesn't exist yet.", "robots": "noindex"},
+    "publicTerms": {"status": 404, "title": "Page not found — Cyvexly Studio", "heading": "This page doesn't exist yet.", "robots": "noindex"}
+  },
+  "routeSource": {"privacyPage": false, "termsPage": false, "accessibilityPage": true, "footerPrivacyLink": true, "footerTermsLink": true},
+  "accessibilityLocal": {"status": 200, "title": "Accessibility Statement — Cyvexly Studio", "heading": "Accessibility Statement", "main": 1, "scrollWidth": 375, "clientWidth": 375},
+  "diagnostics": {"local": [], "public": []},
+  "fieldPerformance": {"localPerformanceType": "undefined", "publicPerformanceType": "undefined"},
+  "iAbRoot24Probe": {"attempted": true, "result": "read-only DOM rejected stylesheet mutation", "productClaim": false},
+  "findingIds": ["CYC-R31-F001", "CYC-R31-F002", "CYC-R31-F003", "CYC-R31-F004", "CYC-R31-F005"]
+}

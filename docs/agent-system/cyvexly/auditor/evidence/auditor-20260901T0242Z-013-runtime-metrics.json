@@ -1,0 +1,51 @@
+{
+  "reviewId": "IFA-2026-09-01-R13",
+  "round": "auditor-20260901T0242Z-013",
+  "heartbeatMinuteZero": "2026-09-01T02:42:31.956Z",
+  "head": "445c8763457bdbafb74171d232d6e302e25472c5",
+  "headMessage": "Record site-wide blue-glass Owner direction",
+  "sourceFingerprint": "db2aadb38ba593ef91da40a60881f8ca6804984feb192b19829a5c1b5c457ead",
+  "sourceDiffFromR12Head": [],
+  "runtime": {
+    "path": "C:\\Users\\Tcraf\\AppData\\Local\\Temp\\cyvexly-auditor-20260901T0242Z-013",
+    "port": 5273,
+    "serverCommand": "pnpm exec next dev --webpack -p 5273",
+    "browser": "browser14",
+    "tabId": "18",
+    "viewport": {"innerWidth": 1280, "innerHeight": 720, "clientWidth": 1265}
+  },
+  "routeShellSmoke": [
+    {"path":"/","title":"Cyvexly Studio — Websites built to make your business unmistakable","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/services","title":"Services — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/work","title":"Work — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/pricing","title":"Pricing — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/process","title":"Process — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/contact","title":"Contact — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/faq","title":"FAQ — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/accessibility","title":"Accessibility Statement — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/start","title":"Project Planner — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/services/business-websites","title":"Business websites — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/work/aurora-spaces","title":"Aurora Spaces — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/about","title":"Page not found — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/privacy","title":"Page not found — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/terms","title":"Page not found — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265},
+    {"path":"/not-found","title":"Page not found — Cyvexly Studio","h1":1,"main":1,"clientWidth":1265,"scrollWidth":1265}
+  ],
+  "dynamic404": {"path":"/services/not-a-real-service","title":"Page not found — Cyvexly Studio","h1":"This page doesn't exist yet.","bodyCopyPresent":true,"main":1},
+  "visualBaseline": {
+    "bodyBackground": "rgb(238, 244, 250)",
+    "bodyBackgroundImage": "two restrained blue radial gradients",
+    "glassPanel": {"background":"color(srgb 0.972549 0.984314 1 / 0.7)","backgroundImage":"linear-gradient(145deg, rgba(255, 255, 255, 0.76), rgba(248, 251, 255, 0.48) 48%, rgba(216, 225, 234, 0.34)), none","backdropFilter":"blur(24px) saturate(1.42)","border":"rgba(255, 255, 255, 0.82)"},
+    "capturesOpened": ["auditor-20260901T0242Z-013-home-blueglass.png","auditor-20260901T0242Z-013-services-blueglass.png","auditor-20260901T0242Z-013-pricing-blueglass.png"]
+  },
+  "contrastScreeningRatios": {"midnightOnMist":14.5,"graphiteOnMist":5.69,"whiteOnCyber":5.25,"signalEmeraldOnMist":5.92,"midnightOnGlass":15.48,"note":"Fixed-token screening only; final composited pixels over gradients/blur remain unverified."},
+  "metadata": {
+    "robots": "noindex, nofollow",
+    "canonical": null,
+    "ogImage": "http://localhost:5273/opengraph-image?...",
+    "twitterImage": "http://localhost:5273/opengraph-image?...",
+    "finding": "CYV-IFA-005 remains open"
+  },
+  "browserDiagnostics": {"warningOrErrorCount": 0},
+  "result": "No new defect assigned; site-wide local visual/semantic baseline passed, with production metadata and Owner acceptance bounded."
+}

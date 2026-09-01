@@ -1,0 +1,28 @@
+{
+  "reviewId": "CYC-R32-20260901-01",
+  "roundId": "council-20260901T003258Z",
+  "schedulerMinuteZero": "2026-09-01T00:32:58.594Z",
+  "sourceHead": "8e7ad528fe186c0b7a3b5e43ae579a8ce135d9d1",
+  "acceptedProductCommit": "d6cd17c",
+  "sourceDirtyFingerprint": "07451D29E01DB3464934083195BE55EED97EE84124FB8BF5AE691D98C321B1A8",
+  "runtime": {"port": 5373, "pid": 42088, "build": "optimized Next 23 pages", "eslint": "pass", "postBuildTypeScript": "pass", "metadataBaseWarning": true, "tailwindOptimizerWarnings": 2},
+  "homeLocal": {
+    "desktop": {"width": 1440, "height": 900, "innerWidth": 1440, "clientWidth": 1425, "scrollWidth": 1425, "scrollHeight": 4775, "main": 1, "h1": 1, "video": true, "surfaceLabel": "Pause showcase video", "muted": true, "paused": false, "playbackRate": 0.75, "duration": 30},
+    "compactDesktop": {"width": 1024, "height": 900, "innerWidth": 1024, "clientWidth": 1009, "scrollWidth": 1009, "scrollHeight": 4989, "main": 1, "h1": 1, "video": true, "surfaceLabel": "Pause showcase video", "muted": true, "paused": false, "playbackRate": 0.75},
+    "tablet": {"width": 768, "height": 1024, "innerWidth": 768, "clientWidth": 753, "scrollWidth": 753, "scrollHeight": 6214, "main": 1, "h1": 1, "video": true, "surfaceLabel": "Pause showcase video", "muted": true, "paused": false, "playbackRate": 0.75, "duration": 30},
+    "phone": {"width": 390, "height": 844, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "scrollHeight": 9779, "main": 1, "h1": 1, "video": true, "surfaceLabel": "Pause showcase video", "muted": true, "paused": false, "playbackRate": 0.75, "duration": 30},
+    "narrowPhone": {"width": 320, "height": 844, "innerWidth": 320, "clientWidth": 305, "scrollWidth": 305, "main": 1, "h1": 1, "video": true, "surfaceLabel": "Pause showcase video", "muted": true, "paused": false, "playbackRate": 0.75, "duration": 30}
+  },
+  "homePublic": {
+    "desktop": {"width": 1440, "innerWidth": 1440, "clientWidth": 1425, "scrollWidth": 1425, "main": 1, "h1": "Websites built to make your business unmistakable.", "surfaceLabel": "Pause showcase video", "muted": true, "paused": false, "playbackRate": 0.75, "duration": 30},
+    "phone": {"width": 390, "innerWidth": 390, "clientWidth": 375, "scrollWidth": 375, "main": 1, "h1": "Websites built to make your business unmistakable.", "surfaceLabel": "Pause showcase video", "muted": true, "paused": false, "playbackRate": 0.75, "duration": 30}
+  },
+  "routeSmoke": {"localHome": 200, "publicHome": 200},
+  "interaction": {"clickPause": {"paused": true, "label": "Play showcase video", "pressed": "false"}, "enterPause": {"paused": true, "label": "Play showcase video"}, "spaceResume": {"paused": false, "label": "Pause showcase video", "pressed": "true", "rate": 0.75}, "rapidTogglePairs": 3, "rapidToggleFinal": {"paused": false, "label": "Pause showcase video", "muted": true, "rate": 0.75}},
+  "assetDelivery": {"local": {"contentType": "video/mp4", "acceptRanges": "bytes", "rangeStatus": 206, "range": "bytes 0-1023/3978486", "length": 3978486, "posterStatus": 200, "posterType": "image/webp"}, "public": {"contentType": "video/mp4", "acceptRanges": "bytes", "rangeStatus": 206, "range": "bytes 0-1023/3978486", "length": 3978486, "posterStatus": 200, "posterType": "image/webp"}},
+  "connectedSelectedWork": {"desktopScrollY": 758, "cardCount": 3, "headings": ["Selected work", "What Cyvexly can do", "We're not a DIY builder. We're your independent web partner.", "Give us the brief. We'll shape the route.", "Simple starting points"], "scrollWidth": 1425, "clientWidth": 1425},
+  "homeToPlanner": {"status": 200, "path": "/start", "title": "Project Planner — Cyvexly Studio", "heading": "Tell us what you need. We'll shape the right route.", "main": 1, "scrollWidth": 375, "clientWidth": 375},
+  "sourceContract": {"removedVisibleProgress": true, "removedVisibleTimePill": true, "removedSeparateControl": true, "reducedMotionHold": true, "dataSaverHold": true, "visibilityHold": true},
+  "diagnostics": {"localHome": [], "publicHome": []},
+  "findingIds": ["CYC-R32-F001", "CYC-R32-F002", "CYC-R32-F003", "CYC-R32-F004", "CYC-R32-F005"]
+}

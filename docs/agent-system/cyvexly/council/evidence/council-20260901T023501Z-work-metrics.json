@@ -1,0 +1,34 @@
+{
+  "round": "CYC-R34-20260901-01",
+  "schedulerMinuteZeroUtc": "2026-09-01T02:35:01.889Z",
+  "snapshotHead": "445c8763457bdbafb74171d232d6e302e25472c5",
+  "runtime": {"port": 5373, "mode": "next start from immutable snapshot"},
+  "filterMatrix": [
+    {"filter":"All","pressed":["All"],"cards":["/work/aurora-spaces","/work/nexora-systems","/work/vellora-care"],"empty":false},
+    {"filter":"Business Site","pressed":["Business Site"],"cards":["/work/aurora-spaces","/work/nexora-systems"],"empty":false},
+    {"filter":"Redesign","pressed":["Redesign"],"cards":[],"empty":true},
+    {"filter":"Landing Page","pressed":["Landing Page"],"cards":[],"empty":true},
+    {"filter":"Commerce","pressed":["Commerce"],"cards":["/work/vellora-care"],"empty":false},
+    {"filter":"Concept","pressed":["Concept"],"cards":["/work/aurora-spaces","/work/nexora-systems","/work/vellora-care"],"empty":false}
+  ],
+  "viewports": {
+    "workDesktop": {"width": 1440, "layoutWidth": 1425, "scrollWidth": 1425, "scrollHeight": 1820, "main": 1, "h1": "Design judgment you can see."},
+    "workTablet": {"width": 768, "layoutWidth": 753, "scrollWidth": 753, "scrollHeight": 2310, "main": 1, "h1": "Design judgment you can see."},
+    "workPhone": {"width": 390, "layoutWidth": 375, "scrollWidth": 375, "scrollHeight": 3455, "main": 1, "h1": "Design judgment you can see."},
+    "workNarrow": {"width": 320, "layoutWidth": 305, "scrollWidth": 305, "scrollHeight": 3568, "main": 1, "h1": "Design judgment you can see."},
+    "auroraTablet": {"width": 768, "layoutWidth": 753, "scrollWidth": 753, "scrollHeight": 3709, "main": 1, "h1": "Aurora Spaces", "roleImages": 3},
+    "auroraPhone": {"width": 390, "layoutWidth": 375, "scrollWidth": 375, "scrollHeight": 4781, "main": 1, "h1": "Aurora Spaces", "roleImages": 3},
+    "auroraNarrow": {"width": 320, "layoutWidth": 305, "scrollWidth": 305, "scrollHeight": 5077, "main": 1, "h1": "Aurora Spaces", "roleImages": 3}
+  },
+  "allCaseStudiesPhone": [
+    {"path":"/work/aurora-spaces","title":"Aurora Spaces — Cyvexly Studio","h1":"Aurora Spaces","main":1,"images":0,"layoutWidth":375,"scrollWidth":375},
+    {"path":"/work/nexora-systems","title":"Nexora Systems — Cyvexly Studio","h1":"Nexora Systems","main":1,"images":0,"layoutWidth":375,"scrollWidth":375},
+    {"path":"/work/vellora-care","title":"Vellora Care — Cyvexly Studio","h1":"Vellora Care","main":1,"images":0,"layoutWidth":375,"scrollWidth":375}
+  ],
+  "routeSmoke": {"/work":200,"/work/aurora-spaces":200,"/work/nexora-systems":200,"/work/vellora-care":200,"/start":200,"/privacy":404,"/terms":404},
+  "browserDiagnostics": {"errors": [], "warnings": []},
+  "verification": {"typescript":"passed","eslint":"passed","publicWorkPhone":"matched local card/label/landmark/containment contract; public All state observed"},
+  "artifacts": [
+    "council-20260901T023501Z-work-desktop.png","council-20260901T023501Z-work-tablet.png","council-20260901T023501Z-work-phone.png","council-20260901T023501Z-work-narrow.png","council-20260901T023501Z-work-filter-business-desktop.png","council-20260901T023501Z-work-filter-redesign-desktop.png","council-20260901T023501Z-work-filter-commerce-phone.png","council-20260901T023501Z-aurora-desktop.png","council-20260901T023501Z-aurora-tablet.png","council-20260901T023501Z-aurora-phone.png","council-20260901T023501Z-aurora-lower-desktop.png","council-20260901T023501Z-work-public-phone-actual.png"
+  ]
+}

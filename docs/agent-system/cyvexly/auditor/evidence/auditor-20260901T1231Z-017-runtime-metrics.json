@@ -1,0 +1,89 @@
+{
+  "reviewId": "IFA-2026-09-01-R17",
+  "round": "auditor-20260901T1231Z-017",
+  "heartbeatMinuteZero": "2026-09-01T12:31:27.6180525Z",
+  "head": "a7e07ca30a40757fa00ee3d7d6452918edba5137",
+  "productSourceCommit": "1437f5b",
+  "sourceTree": "50dc64c9ab91752979b5e50113b398fa047f2b1f",
+  "sourceFiles": 41,
+  "sourceDiffFromAccepted": [],
+  "builderLock": {
+    "active": true,
+    "sessionId": "cyvexly-builder-20260901T0458Z-r22-6f3a9d1c",
+    "claimedAtUtc": "2026-09-01T04:57:51.8468608Z",
+    "preserved": true
+  },
+  "runtime": {
+    "path": "C:/Users/Tcraf/AppData/Local/Temp/cyvexly-auditor-20260901T1231Z-017",
+    "port": 5273,
+    "browser": "Codex In-app Browser",
+    "tabId": "1",
+    "requestedPhoneViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "layoutViewport": {
+      "width": 375,
+      "height": 844
+    }
+  },
+  "contactValidation": {
+    "path": "/contact",
+    "main": 1,
+    "h1": 1,
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "alert": "Please fix the highlighted fields below.",
+    "errorIds": [
+      "name-error",
+      "email-error",
+      "message-error",
+      "consent-error"
+    ],
+    "ariaInvalid": [
+      "name",
+      "email",
+      "message",
+      "consent"
+    ],
+    "errorColor": "rgb(217, 67, 95)",
+    "errorBackground": "rgb(248, 251, 255)",
+    "errorFontSize": "12px",
+    "contrastRatio": 4.113931535668164,
+    "normalTextAA": false,
+    "submission": false
+  },
+  "faqInteraction": {
+    "path": "/faq",
+    "target": "Do you follow accessibility standards?",
+    "beforeExpanded": false,
+    "afterExpanded": true,
+    "closedExpandedCount": 0,
+    "answerVisible": true,
+    "clientWidth": 375,
+    "scrollWidth": 375
+  },
+  "handoff": {
+    "from": "/contact",
+    "to": "/start",
+    "backTo": "/contact",
+    "oneMainH1": true,
+    "contained": true
+  },
+  "atmosphere": {
+    "count": 1,
+    "ariaHidden": "true",
+    "pointerEvents": "none",
+    "position": "fixed"
+  },
+  "diagnostics": {
+    "warningOrErrorCount": 0
+  },
+  "captures": [
+    "auditor-20260901T1231Z-017-contact-validation.png",
+    "auditor-20260901T1231Z-017-contact-phone-validation.png",
+    "auditor-20260901T1231Z-017-contact-all-errors-phone.png",
+    "auditor-20260901T1231Z-017-faq-expanded-phone.png"
+  ],
+  "result": "New CYV-IFA-011: form error text uses warning-coral at 4.11:1 against frosted input background, below WCAG AA 4.5:1 for 12px normal text. Contact validation semantics and FAQ interaction otherwise passed."
+}

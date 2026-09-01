@@ -2,40 +2,39 @@
 
 ## Review identity
 
-- Review ID: `IFA-2026-08-31-R9`
-- Round: `auditor-20260831T2250Z-009`
+- Review ID: `IFA-2026-09-01-R17`
+- Round: `auditor-20260901T1231Z-017`
 - Role: Cyvexly Independent Forensic Auditor
-- Heartbeat minute zero: `2026-08-31T22:50:55.457Z`
-- Source: accepted HEAD `a8fb8cf2390d4786ede30ac9bf67dfa16f412099` (`Record Round 19 runtime fixes`) on `main`
-- Source fingerprint: `98dad5e43a8f2c6e4fb878574490c20e7078f6c7a42d08394315c78efd1fc9e3` (40 `src/` files)
-- Runtime: exact disposable accepted-commit archive at `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260831T2250Z-009`, port `5273` (removed after review)
-- PM prompt ID/status: `NO ACTIVE PM PROMPT`; standing Auditor role applied.
+- Heartbeat minute zero: `2026-09-01T12:31:27.6180525Z`
+- Reviewed accepted source: HEAD `a7e07ca30a40757fa00ee3d7d6452918edba5137`; product source `1437f5b` on `main`
+- Source fingerprint: Git `src/` tree `50dc64c9ab91752979b5e50113b398fa047f2b1f` (41 files; no `src/` diff from `1437f5b`)
+- Runtime: exact accepted-HEAD archive at `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T1231Z-017`, port `5273`, real Codex in-app Browser tab `1`
+- PM prompt/status: `NO ACTIVE PM PROMPT`; standing Auditor role applied
 
-## Isolation deviation
+## Isolation and method
 
-The standard `Start-ReviewRound.ps1`/guard again could not write `.codex/role-state/auditor.active.json` because managed permissions deny `.codex` writes. No Builder lock was present at round start. I used an exact accepted-commit archive and a role-owned temporary runtime, and manually routed the report. I did not touch `.engine-lock`, Builder/Council resources, product source, tests, or the scheduler automation. This is not a claim that the standard Auditor guard/manifest lifecycle succeeded.
+The Builder lock was active with uncommitted changes in `globals.css`, Home, and Services (`cyvexly-builder-20260901T0458Z-r22-6f3a9d1c`) at review entry. Per Auditor rules, I used only an exact immutable accepted-HEAD archive with a role-owned dependency junction and did not read or alter the mutable Builder tree. At cleanup verification, the Builder status also exposed `src/lib/site-config.ts`; it was likewise left untouched. The standard Auditor guard remained write-denied, so this report and evidence were manually routed. Product source/tests, Builder/Council resources, and scheduler automation were not edited.
 
-## Scope and method
-
-This successor pass rechecked the prior dynamic-route metadata finding and the Planner restore race with a fresh real Codex in-app Browser pass at requested `390×844` (actual `375×844` layout). It compared local HTTP and hydrated route behavior, checked valid dynamic-route regressions, observed `/start` gate timing, created and restored a draft through visible UI, opened mobile captures, ran local diagnostics, and ran direct ESLint/TypeScript. No localStorage inspection, storage clearing, external form submission, or public-deployment claim was made.
+This round used a different reachable surface and method from R14: direct visible Contact-form operation and validation at a temporary `390×844` phone viewport, FAQ expansion/collapse, and the Contact → Planner → Back handoff. No valid form was submitted and no `mailto:` navigation or external side effect was triggered.
 
 ## Results and disposition
 
-- **`CYV-IFA-008` — verified closed on this accepted successor.** Unknown `/services/not-a-real-service` and `/work/not-a-real-project` returned HTTP 404 and, after hydration, both settled at `Page not found — Cyvexly Studio` with `This page doesn't exist yet.`, one `main`, and exact 375px containment. Valid service/work slugs returned HTTP 200 and retained authored titles. The invalid-slug `generateMetadata` branches now call `notFound()`, so generic `Service`/`Project` titles no longer overwrite the not-found title.
-- **`CYV-IFA-009` — mitigated but not fully closed.** Raw `/start` HTML now includes a `Preparing your Planner` gate, saved-draft check copy, one `main`/H1, and no form or Full name control before restore readiness. At 390×844, checkpoints were gate-only at initial/100ms/500ms and settled at Step 1 by 1700ms. A visible-UI draft (`R9 Draft Test`, `555-0100`) restored with the draft message and values preserved after reload. A true no-draft first-use path could not be isolated without prohibited storage inspection/clearing; alternate origins were blocked by Browser URL policy. Closure still requires no-draft proof.
-- Browser warning/error diagnostics were empty; sampled mobile pages had `scrollWidth === clientWidth === 375`. Direct ESLint and TypeScript passed in the exact runtime. The Builder's clean optimized-build proof remains the build record; no new optimized-build, public, email, keyboard, reduced-motion, cross-browser, or legal/domain claim was made.
-- Existing debt remains: `CYV-IFA-005` approved domain/`metadataBase`, `CYV-IFA-006` server-side Planner receipt/confirmation email, and provisional `CYV-IFA-007` scratch-route closure pending another immutable snapshot/build. The terminal sticky-header/footer overlay remains a watch observation from R7.
+- **New `CYV-IFA-011` (P1, WCAG normal-text contrast):** Contact field-level errors render at `12px` in `rgb(217, 67, 95)` (`--color-warning-coral`) over the frosted input background `rgb(248, 251, 255)`. The measured contrast is `4.1139:1`, below the `4.5:1` normal-text AA threshold. This affects all Contact errors and the shared Planner error components using the same token. The errors are correctly surfaced and associated, but the error color needs a darker treatment or stronger background before release.
+- Contact validation remained semantically sound: activating **Send message** with blank values exposed the summary alert, four field-level messages (`name-error`, `email-error`, `message-error`, `consent-error`), and `aria-invalid="true"` on each corresponding control. The page stayed on `/contact` with one `main`, one `h1`, and exact phone containment (`375/375`).
+- On `/faq`, **Do you follow accessibility standards?** toggled `aria-expanded` from `false` to `true`, exposed its answer, and returned to zero expanded questions after a second activation. The page retained one `main`, one `h1`, and exact phone containment.
+- The visible Contact **Describe your project →** link reached `/start`; browser Back returned to `/contact`, with one `main`/`h1` and exact containment. The shared atmosphere remained one fixed, `aria-hidden="true"`, pointer-inert layer.
+- Browser warning/error diagnostics were empty. The accepted source was independently exercised; the active Builder changes remain excluded until committed and re-identified. Existing `CYV-IFA-005`, `CYV-IFA-006`, `CYV-IFA-009`, and `CYV-IFA-010` remain open; `CYV-IFA-008` remains verified closed and `CYV-IFA-007` provisional.
 
-## Evidence and routing
+## Verification limits
 
-- `docs/agent-system/cyvexly/auditor/evidence/auditor-20260831T2250Z-009-successor-404-planner-gate.md`
-- `docs/agent-system/cyvexly/auditor/evidence/auditor-20260831T2250Z-009-runtime-metrics.json`
-- Opened `auditor-20260831T2250Z-009-work-404.png`, `auditor-20260831T2250Z-009-planner-gate.png`, and `auditor-20260831T2250Z-009-planner-restored-step1.png`.
+Public Render remained unavailable under the saved Browser permission boundary. The saved Browser context contains an existing Planner draft, so no-draft first use remains unconfirmed. Physical keyboard hardware, reduced-motion preference, Safari/Firefox, field vitals, external email side effects, and Owner visual acceptance remain unconfirmed. A focus-category click probe was abandoned after a Browser dispatch timeout; no product conclusion was drawn from it.
+
+Evidence: `auditor/evidence/auditor-20260901T1231Z-017-contact-faq-validation.md`, `auditor/evidence/auditor-20260901T1231Z-017-runtime-metrics.json`, and the opened Contact/FAQ captures listed in that evidence file.
 
 ## Cleanup
 
-The Auditor viewport was reset, the valid review tab was closed, the exact Auditor-owned Node process on port `5273` was stopped, and the exact temporary runtime was removed. Two policy-generated `data:` error tabs from failed alternate-origin attempts remained non-actionable because Browser URL policy blocked their normal close; no raw browser/CDP workaround was used. Port `5273` is no longer listening, `.engine-lock` is absent, and the scheduler automation remains active. The report was manually routed because managed permissions blocked the standard guard/publisher.
+The temporary phone viewport was reset, Browser tab `1` was closed, only the exact Auditor process chain was stopped, and only `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T1231Z-017` was removed. Port `5273` is clear and the active Builder lock remains untouched; mutable Builder status included `src/app/globals.css`, `src/app/page.tsx`, `src/app/services/page.tsx`, and `src/lib/site-config.ts`, all preserved. The scheduler automation remains active.
 
 ## Strongest next Auditor question
 
-Re-prove `CYV-IFA-009` no-draft first use on a clean Browser origin/context that does not require storage inspection or policy-blocked alternate origins, then close or retain the finding based on actual evidence. Do not repeat the now-closed dynamic-404 pass unless source changes.
+After the Builder commits the current Round 22 changes, re-identify the source and verify both `CYV-IFA-010` sticky/z-index behavior and `CYV-IFA-011` error-text contrast at desktop and phone widths. Then pursue a production-capable metadata check or clean no-draft Planner proof.
