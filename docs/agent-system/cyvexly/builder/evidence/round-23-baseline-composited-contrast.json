@@ -1,0 +1,27 @@
+{
+  "source": "Round 23 baseline Chrome screenshots from accepted source 3b7a57e",
+  "foreground": "rgb(217, 67, 95)",
+  "method": "Pillow samples from empty background pixels inside the same rendered error and summary rectangles; WCAG 2 relative-luminance contrast against the opaque authored foreground",
+  "states": [
+    {
+      "route": "/contact",
+      "viewport": "1440x1000",
+      "field_error_contrast_range": "4.1065:1 to 4.1394:1",
+      "summary_error_contrast_range": "3.5387:1 to 3.5784:1"
+    },
+    {
+      "route": "/contact",
+      "viewport": "390x844",
+      "field_error_contrast_range": "4.0314:1 to 4.1065:1",
+      "summary_error_contrast_range": "3.5484:1 to 3.6232:1"
+    },
+    {
+      "route": "/start",
+      "viewport": "390x844",
+      "field_error_contrast_range": "4.0965:1 to 4.1394:1"
+    }
+  ],
+  "maximum_observed_ratio": "4.1394:1",
+  "threshold": "4.5:1",
+  "result": "FAIL"
+}

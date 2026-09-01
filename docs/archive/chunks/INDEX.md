@@ -67,3 +67,6 @@ round 3 — see `CYVEXLY_PROJECT_CHUNK_MAP.md` for the closure record.
 - `CYVEXLY_SHARED_FOUNDATIONS_ROUND19_REPORT.md` — global round 19 full report
   (dynamic 404 metadata correction and Planner draft-restore gate), rotated out
   during round 22.
+- `CYVEXLY_SHARED_HOME_ROUND20_REPORT.md` — global round 20 full report
+  (Owner-directed Home showcase playback-chrome cleanup and slower playback),
+  rotated out during round 23.

@@ -1,119 +1,85 @@
 # Cyvexly Current State
 
-**Global round:** 22
-**Active chunks:** Chunk 3 — Project Planner — UI/state/validation remains built
-and verified at `/start`, with real server-side email Owner-blocked; Chunk 4 —
-Utility/legal pages — favicon remains fixed, while legal/domain items remain
-Owner-blocked. Round 22 restores the shared sticky-header cascade, carries the
-approved blue-glass treatment through Home and Services continuation fields,
-and defers the visible About link until an Owner-approved page can exist. Round
-18 reconciles Pricing's sparse entry/package field with
-the accepted mockup's orbital glass language; Round 17 remains the Services
-icon-math pathways, Round 20 is the Owner-directed Home reel chrome cleanup,
-and Round 16 remains the larger
-integrated Home hero reel, Round 15 the live-video deployment/source repair,
-and Round 14 the five-route service-detail and Planner-preselection source;
-Round 21 is the site-wide blue-glass atmosphere/protected-copy system.
-**Chunk-local round:** N/A (round 22 revisits shared visual infrastructure; no
-chunk was opened or closed).
-**Current mission:** Round 22 closes Auditor `CYV-IFA-010` and fresh Council
-continuity/link-truth findings without weakening Owner direction
-2026-08-31-09. The shared header again computes sticky at `z-index: 50` after
-scroll. Home has five and Services three full-width pale blue translucent
-continuation fields; normal-text checks meet or exceed 4.5:1. The unavailable
-About route is no longer advertised in global navigation, while its content
-remains blocked on Owner identity facts. A 154-state optimized-runtime matrix
-across 18 routes and eight widths from 1280 through 320 has zero verified
-failures. Round 20's removed Home reel chrome and `0.75×` playback remain
-intact. Round 19's two fixes remain accepted: invalid
-dynamic service/work slugs now terminate metadata generation with `notFound()`,
-so the correct 404 title survives hydration; public Render and all eight valid
-dynamic routes pass. The Planner now withholds interactive Step 1 behind a
-calm status gate until the browser draft check completes, preventing a saved
-later-step draft from overwriting immediate input. Raw server HTML, visible
-saved-draft/clean-origin/prefill flows, public settled output, lint, TypeScript,
-and the optimized 23-page build pass. Round 18 Pricing, Round 17 Services, and
-Round 16 Home remain accepted source with Owner visual acceptance pending;
-confirmation is also still needed on the original second computer for Round
-9's scale fix. Round 22 is awaiting Owner visual review. The same four Owner-input questions block the highest-value
-remaining content/integration work — About founder identity, Privacy/Terms
-jurisdiction, production domain + email provider, and the abstract-vs-
-commissioned concept-artwork framing question (`CYVEXLY_APP_DEBT.md` items 1,
-3, 4, plus Chunk Debt item 2). Do not invent them.
-**Accepted source position:** Git repository on local `main`, tracking
-`origin/main`; remote `master` is retained as a historical pointer and is not
-the deployment upstream. Round 22 product commit `4265fa4` is pushed to
-`origin/main` and adopted publicly. Round 21 product commit `1437f5b` is pushed to
-`origin/main` and adopted publicly. Round 20 product
-commit `d6cd17c` is adopted publicly. Round 19 product commits `e716541` and
-`744cdd8` are pushed to `origin/main` and adopted publicly. Round 18 product
-commit `7ec9c5c`,
-Round 17 `b5dfd50`, and Round 16 `14e12d4` remain accepted source. Treat
-`git log` as the exact ledger.
-Builder-owned Round 22 source is committed and pushed; canonical docs/evidence
-are updated at close.
-Concurrent Council dirty files remain intentionally untouched.
+**Global round:** 23
+**Active chunks:** Chunk 3 — Project Planner; Chunk 4 — Utility/legal and launch
+readiness. Both remain in progress because real Planner delivery and final
+legal/domain work require Owner decisions. Marketing chunks remain closed but
+revisitable.
 
-## Immediate orientation
+**Round 23 outcome:** Auditor `IFA-2026-09-01-R17` / `CYV-IFA-011` is fixed at
+the shared source token. Contact and Planner error text now uses `#bd2d49`.
+Opened optimized/public Contact 1440/390 and Planner 390 validation states
+preserve the accepted cyber/blue-glass hierarchy and measure at least 4.6881:1
+against final composited pixels. Contact retains four associated errors;
+Planner retains three Step 1 errors and focuses `#fullName`; all states are
+width-contained with sticky/z50 navigation. Product commit `2227961` is pushed
+to `origin/main` and publicly adopted.
+Council R38 independently duplicated the pre-fix contrast defect as
+`CYC-R38-F001`; Round 23's exact proof satisfies its closure condition. Auditor
+R18 independently closes the prior sticky-header regression and passes Round
+22's continuation/About-link result against accepted pre-R23 source.
 
-- Run `pnpm install` then `pnpm run dev`, or `pnpm exec next dev --port 5173`.
-  Build/verify with `pnpm run build`, `pnpm exec tsc --noEmit`, and
-  `pnpm run lint`. If 5173 is occupied, prove exact ownership before stopping
-  anything; round 10 found an unrelated pre-existing EduAILenz Vite process and
-  safely used 5183 instead.
-- Read `CYVEXLY_ACTIVE_CHUNK.md`'s round-22 report before planning the next round.
-  Round 15's full report is archived at
-  `docs/archive/chunks/CYVEXLY_SHARED_DEPLOYMENT_ROUND15_REPORT.md`; Round 14's
-  full report remains at
-  `docs/archive/chunks/CYVEXLY_SHARED_SERVICES_ROUND14_REPORT.md`; Round 7's
-  older hot-path snapshot/report remains at
-  `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND7_REPORT.md`.
-- Read `CYVEXLY_CHUNK_DEBT.md` and `CYVEXLY_APP_DEBT.md` before touching the
-  OG image/`metadataBase`, About, legal pages, Planner delivery route, or
-  concept-artwork framing.
-- Full unattended page screenshots are reachable through local Chrome 151
-  headless + Chrome DevTools Protocol. Use
-  `Emulation.setDeviceMetricsOverride` for exact narrow viewports; raw
-  `--window-size=390,...` on Windows can produce a misleading crop.
-- Round 14 verification: lint, production build, post-build typecheck, all five
-  service routes, exact 1440/768/390 renders, 320px and 24px-root stress,
-  Planner mapping/saved-draft precedence, reduced motion, semantics, and native
-  Services → detail → Planner navigation all passed. Durable evidence
-  is indexed under `docs/agent-system/cyvexly/builder/evidence/`.
-- Round 15 deployment verification: public before/desktop/phone renders, branch
-  ancestry, public ETag change, MP4/WebP MIME and range, normal/reduced-motion/
-  data-saver playback, loop boundary, 22-route/asset smoke, console, lint,
-  optimized build, and post-build typecheck pass. Public URL and deployment
-  branch are recorded in `CYVEXLY_ENVIRONMENT.md`.
-- Round 16 verification: exact desktop/tablet/phone production renders,
-  1023/1024 boundary geometry, playback/Pause/Play/natural-loop and
-  reduced-motion behavior, semantics, overflow, console, prerender-manifest
-  route smoke, lint, optimized build, and post-build TypeScript pass. Durable
-  proof is indexed under `docs/agent-system/cyvexly/builder/evidence/`.
-- Round 17 verification: preserved before/after Services renders, exact
-  1440/1280/1024/768/720/390/320 containment, five named service lists/fifteen
-  nodes, native `/start` handoff, 20-route/asset optimized-runtime smoke, clean
-  console, lint, build, and TypeScript pass. The 1024 edge inspection moved the
-  three-column switch to 1280px for readable compact-desktop scaling.
-- Round 18 verification: approved-mockup/current/final Pricing comparison,
-  exact 1440/1024/1023/768/390/320 and 24px-root containment, complete five-
-  package rendered inspection, decorative semantics, native Planner/FAQ
-  input, 22-route/asset smoke, Home MP4 range regression, clean optimized
-  build/lint/TypeScript, and opened public desktop/phone proof all pass.
-- Round 19 verification: pre/post-hydration invalid-route titles, all eight
-  valid dynamic routes, server HTML without an early Planner form, saved-draft
-  Step 3 restore, clean-origin and service-prefill flows, public adoption,
-  lint, optimized build, and post-build TypeScript all pass.
-- Round 20 verification: opened 1440/768/390 Home renders remove all three
-  visible playback-chrome elements while preserving hero geometry and exact
-  containment. Native media measures `0.75×` and about 1.58 seconds of advance
-  over two seconds; click, Enter, and Space toggle the named reel surface.
-  Lint, optimized build, post-build TypeScript, Home 200, and MP4 range
-  delivery pass.
-- Round 22 verification: optimized build ID `ryML6Ss3MzdIr216pJ3EN`, lint,
-  TypeScript, and a 154-state hydrated production matrix pass. Every state has
-  exact viewport containment, sticky/z50 header geometry after scroll, one
-  main/H1, valid headings and named controls, no hidden focusables or broken
-  images, and expected status. Focused 390/320 menus open; Home video remains
-  control-free at `0.75×`; `/about` is absent from all internal-link sets.
-  Public Home/Services adoption also passes at 1440 and 390 after deployment.
+**Immediate next mission:** authenticated Owner direction
+`2026-09-01-10` makes `mockups/06-sitewide-blue-glass-owner-direction.png` the
+authoritative new full-height theme for every page, with no agent visual
+reinterpretation. The next Builder must run a dedicated site-wide every-route
+round: create a pre-implementation visual plan against that exact reference,
+inventory every route family's full page height, implement the bright ice-blue
+cyber-glass environment and protected content surfaces consistently, eliminate
+flat-white/fallback-old-theme gaps, and open desktop/tablet/phone renders across
+all route families with composited contrast proof. Round 23 deliberately did
+not expand into this new source scope during closeout.
+
+**Accepted source position:** local `main` tracks `origin/main`; HEAD product
+commit `2227961` is adopted by Render at
+`https://cyvexly-studio.onrender.com/`. `origin/master` is historical and is
+not the deployment branch. Treat `git log` as the exact ledger.
+
+## Current product truth
+
+- Round 22 commit `4265fa4` restores sticky/z50 navigation, adds protected
+  continuation fields to Home/Services, and defers the unavailable About link.
+- Round 21 commit `1437f5b` establishes the shared blue-glass atmosphere and
+  protected route introductions. These are foundations, not completion of the
+  newer Owner full-height every-route standard.
+- Round 20 commit `d6cd17c` keeps the Home reel free of visible playback chrome
+  at authored `0.75×`, with the whole named media surface as pause/resume.
+- Round 19 commits `e716541`/`744cdd8` preserve invalid-route 404 metadata and
+  gate Planner interactivity until draft restoration completes.
+- Round 18 Pricing, Round 17 Services, Round 16 Home, Round 15 deployment, and
+  Round 14 service-detail/Planner-preselection work remain accepted source.
+
+## Owner-blocked launch facts
+
+Do not invent these:
+
+1. founder identity/story/portrait for `/about`;
+2. business jurisdiction and approved Privacy/Terms content;
+3. production domain and launch indexability, needed for `metadataBase`,
+   canonical/sitemap/OG/Twitter URLs and robots;
+4. transactional-email provider, credentials, and verified sending domain for
+   real Planner/Contact delivery;
+5. whether truthful abstract concept artwork is release-sufficient or a
+   commissioned higher-fidelity concept set is required.
+
+Council `CYC-R37-F001` through `F003` map directly to items 2–4. Privacy and
+Terms visible links remain known release blockers. The explicit interim
+`mailto:` disclosures remain truthful and unchanged.
+
+## Verification and orientation
+
+- Round 23: ESLint, optimized 23-page build, post-build TypeScript, real
+  validation paths, composited contrast, exact containment, focus, sticky
+  header, and public adoption pass. Durable evidence is indexed under
+  `builder/evidence/`.
+- Round 22: 154 hydrated optimized states across 18 routes/eight widths passed
+  containment, sticky header, landmarks, headings, controls, focusability,
+  images, menu, Home media, and visible-link truth.
+- Builder runtime uses port `5173`; use Chrome headless + CDP exact device
+  metrics for unattended pixel proof. Verify exact ownership before stopping a
+  process.
+- Read `CYVEXLY_ACTIVE_CHUNK.md` for the latest three reports, then
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`, Owner direction `2026-09-01-10`, current
+  reviewer reports, and both debt files before planning.
+- The recurring scheduler/automation is Owner-controlled and must never be
+  read, modified, paused, deleted, renamed, or rescheduled by the Builder.

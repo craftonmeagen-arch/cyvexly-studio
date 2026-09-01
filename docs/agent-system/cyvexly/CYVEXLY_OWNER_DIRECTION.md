@@ -233,7 +233,7 @@ keyboard accessibility commitments.
 
 ## Site-wide blue-glass atmosphere and contrast direction 2026-08-31-09
 
-**Status:** IMPLEMENTED IN ROUND 21; CONTINUITY CORRECTION IN ROUND 22 — OWNER REVIEW PENDING
+**Status:** PARTIALLY FULFILLED — ROUNDS 21–22 FOUNDATION; NEW FULL-HEIGHT EVERY-ROUTE PASS REQUIRED
 **Source:** Owner via Codex active conversation
 **Recorded:** 2026-08-31 America/New_York
 
@@ -328,3 +328,37 @@ messaging. Authored and rendered-field normal-text checks meet or exceed 4.5:1;
 154 optimized-runtime states across 18 routes and eight widths have exact
 containment. This correction is part of the same Owner direction, not a new
 visual direction, and remains subject to Owner review.
+
+### Round 23 contrast correction
+
+Auditor evidence found that the shared Contact/Planner warning coral did not
+meet normal-text AA contrast on the actual form glass. Round 23 changes only
+that semantic token, from `#d9435f` to `#bd2d49`. Opened local/public renders
+retain the approved blue-glass hierarchy, while final composited error-state
+contrast now starts at 4.6881:1. This is a readability correction inside the
+approved concept, not a visual reinterpretation.
+
+## Every-page full-height theme authority 2026-09-01-10
+
+**Status:** ACTIVE — DEDICATED EVERY-ROUTE IMPLEMENTATION REQUIRED
+**Source:** Owner via Project Manager continuation relay
+**Recorded:** 2026-09-01 America/New_York
+
+Faithful transcription of the relayed Owner direction:
+
+> “mockups/06-sitewide-blue-glass-owner-direction.png is the authoritative NEW
+> THEME for every page, full page height—not merely a Home reference. Define it
+> canonically and require bright ice-blue cyber-glass environment, luminous
+> architectural grid/wires/traces/coordinates and depth layers, protected
+> translucent panels for all copy/forms/nav/cards/CTAs, controlled dark
+> high-tech focal imagery/stages, consistent glow/refraction/blur/shadows, no
+> flat white gaps or fallback old-theme pages, WCAG/readability protected, and
+> no agent reinterpretation.”
+
+Agent interpretation: Rounds 21–22 establish reusable atmosphere and protected
+field foundations, but they do not close this newer full-height every-route
+standard. The next Builder must treat the exact mockup as authoritative,
+visually plan a coherent site-wide pass before source changes, inspect every
+public route family at desktop/tablet/phone, and correct remaining flat or
+fallback-old-theme surfaces without weakening contrast. This interpretation is
+not Owner-authored wording.

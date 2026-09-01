@@ -191,6 +191,13 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 23 shared validation contrast:** product commit `2227961` closes
+  Auditor `CYV-IFA-011` at the semantic token. Final composited Contact/Planner
+  errors start at 4.6881:1 and public adoption passes. New Owner direction
+  `2026-09-01-10` now requires a dedicated full-height every-route pass against
+  `mockups/06-sitewide-blue-glass-owner-direction.png`; rounds 21–22 are
+  foundations, not closure of that authoritative theme.
+
 - **Round 22 sticky-header and continuation reconciliation:** fixed the shared
   CSS cascade that overrode the authored sticky/z50 header, carried the
   Owner-approved blue-glass language through five Home and three Services

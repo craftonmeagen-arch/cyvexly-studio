@@ -2,6 +2,24 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 23 — Contact and Planner error contrast
+
+- `round-23-error-contrast-visual-plan.md` — measured baseline, single-token
+  visual target, protected hierarchy, responsive states, and falsifiers written
+  before source implementation.
+- `round-23-baseline-{contact-errors-1440,contact-errors-390,
+  planner-errors-390}.png` and baseline runtime/composited-contrast JSON —
+  opened failing states and measured final-pixel baseline.
+- `round-23-optimized-{contact-errors-1440,contact-errors-390,
+  planner-errors-390}.png`, runtime JSON, and composited-contrast JSON — opened
+  optimized-runtime proof; minimum observed normal-text contrast is 4.6881:1.
+- `round-23-public-{contact-errors-1440,contact-errors-390,
+  planner-errors-390}.png` and runtime JSON — opened Render adoption proof
+  after product commit `2227961` deployed.
+- `round-23-error-contrast-verification.md` — root cause, visual comparison,
+  semantics/focus/containment, build, public CSS identity, Council R37
+  disposition, diff accountability, and honest limits.
+
 ## Global round 22 — Sticky header and blue-glass continuation
 
 - `round-22-continuation-glass-visual-plan.md` — measured baseline,

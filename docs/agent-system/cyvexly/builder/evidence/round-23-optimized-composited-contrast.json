@@ -1,0 +1,32 @@
+{
+  "source": "Round 23 optimized Next.js runtime on localhost:5173 from the Builder working tree on main",
+  "foreground": "rgb(189, 45, 73)",
+  "method": "Pillow samples from empty background pixels inside the same rendered error and summary rectangles; WCAG 2 relative-luminance contrast against the opaque authored foreground",
+  "states": [
+    {
+      "route": "/contact",
+      "viewport": "1440x1000",
+      "field_background_range": "rgb(247, 251, 255) to rgb(248, 252, 255)",
+      "field_error_contrast_range": "5.5560:1 to 5.6004:1",
+      "summary_background_range": "rgb(238, 229, 235) to rgb(240, 230, 236)",
+      "summary_error_contrast_range": "4.6881:1 to 4.7410:1"
+    },
+    {
+      "route": "/contact",
+      "viewport": "390x844",
+      "field_background_range": "rgb(244, 249, 254) to rgb(247, 251, 255)",
+      "field_error_contrast_range": "5.4543:1 to 5.5560:1",
+      "summary_background_range": "rgb(240, 229, 233) to rgb(243, 231, 236)",
+      "summary_error_contrast_range": "4.7009:1 to 4.8008:1"
+    },
+    {
+      "route": "/start",
+      "viewport": "390x844",
+      "field_background_range": "rgb(246, 251, 254) to rgb(248, 252, 255)",
+      "field_error_contrast_range": "5.5424:1 to 5.6004:1"
+    }
+  ],
+  "minimum_observed_ratio": "4.6881:1",
+  "threshold": "4.5:1",
+  "result": "PASS"
+}
