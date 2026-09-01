@@ -230,3 +230,88 @@ the authored playback rate to `0.75×` (a 30-second source cycle takes about 40
 seconds). The complete reel surface remains a named click/keyboard pause target
 so the playback chrome disappears without discarding the site's motion and
 keyboard accessibility commitments.
+
+## Site-wide blue-glass atmosphere and contrast direction 2026-08-31-09
+
+**Status:** ACTIVE — OWNER-APPROVED MOCKUP; IMPLEMENTATION PENDING
+**Source:** Owner via Codex active conversation
+**Recorded:** 2026-08-31 America/New_York
+
+> “the actual and the last mockup don't match there needs to b that bluish glass background that is int he mockup. on every page. if you want translucent wires and numbers like futuristic tech as well. give me a mockup first so I know we are on the same page”
+
+After reviewing the new mockup, the Owner approved it with this additional
+requirement:
+
+> “yes just like that but make sure the words don't lose contrast or there are no contrast issues. make this owners direction and explain clearly the goal.”
+
+### Goal
+
+Bring the entire production website—not only the Home hero or its video—into
+the visual world shown in the approved reference below. Every public page
+should feel like part of one pale ice-blue, translucent-glass environment. The
+effect must be visibly dimensional and futuristic while all words, controls,
+forms, and essential information remain immediately legible. Visual atmosphere
+never outranks contrast or usability.
+
+![Owner-approved site-wide blue-glass direction](../../../mockups/06-sitewide-blue-glass-owner-direction.png)
+
+Durable visual reference:
+`mockups/06-sitewide-blue-glass-owner-direction.png`.
+
+### Authoritative visual direction
+
+- Treat the page background itself as part of the glass system. It should be a
+  clearly blue-tinted, luminous environment with layered translucent planes,
+  restrained refraction and blur, thin illuminated edges, soft spectral
+  shadows, and believable depth. Do not limit the effect to isolated cards over
+  a flat or nearly white background.
+- Carry this visual language across every route and major section: navigation,
+  page introductions, content surfaces, cards, proof sections, forms, calls to
+  action, and footers. Adapt its intensity to the content instead of copying the
+  Home composition literally onto every page.
+- Translucent signal wires, circuit-like traces, coordinate ticks, and sparse
+  futuristic numerals may appear as a low-opacity atmospheric layer. They are
+  decorative only: they must not imply real metrics, system readings, customer
+  results, or other factual claims.
+- Keep the atmosphere refined and architectural. Avoid a gaming, hacker, crypto,
+  science-fiction HUD, or generic dashboard appearance; avoid dense pseudo-code,
+  excessive bloom, visual noise, and saturated blue covering large reading
+  areas.
+- Preserve canonical product copy, truthful claims, existing information
+  hierarchy, and route purpose. Generated lettering, screens, numbers, and
+  interface details in the reference are non-authoritative visual artifacts.
+- This direction does not restore the removed Home video muted label, progress
+  bar, or play/pause button. The newer playback-chrome direction remains in
+  force.
+
+### Non-negotiable contrast and readability requirements
+
+- Place headlines, paragraphs, labels, navigation, and controls on calm,
+  protected glass fields with sufficient opacity and blur. Decorative wires,
+  numerals, highlights, and refractions must fade, soften, or stop beneath text
+  rather than showing through strongly enough to compete with it.
+- Use near-black midnight slate for primary copy and dark graphite for body
+  copy. Reserve vivid cyber blue for controlled accents such as primary actions,
+  selected words, thin edges, focus indicators, and small signals.
+- Meet or exceed WCAG AA contrast in the implemented result: at least `4.5:1`
+  for normal text, `3:1` for large text, and `3:1` for meaningful component
+  boundaries, icons, and interaction states where applicable. Do not rely on a
+  mockup's apparent readability as proof.
+- Verify contrast against the final composited pixels, including translucent
+  surfaces over their brightest and darkest possible backgrounds, not only
+  against a nominal CSS color token.
+- Check representative desktop, laptop, tablet, and phone widths, browser zoom,
+  text enlargement, focus/hover states, reduced-motion behavior, and both the
+  brightest and busiest atmospheric regions. No breakpoint may trade away
+  legibility to preserve decoration.
+- If an atmospheric effect conflicts with readable content, reduce or remove
+  the effect in that location. The correct result is the approved blue-glass
+  feeling with protected information—not maximum visual density.
+
+### Completion standard
+
+This direction is fulfilled only when the shared visual system is visibly
+present across all public routes and rendered verification shows both the
+approved blue-glass atmosphere and dependable content contrast. A Home-only
+restyle, token-only color adjustment, or isolated set of glass cards does not
+satisfy the goal. Owner review remains required after implementation.
