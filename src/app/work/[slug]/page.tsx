@@ -70,7 +70,7 @@ export default async function CaseStudyPage({
           </div>
         </section>
 
-        <section className="mx-auto max-w-4xl px-6 py-16">
+        <section className="glass-content-field mx-auto my-10 max-w-4xl rounded-3xl px-6 py-16 sm:px-10">
           <h2 className="font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
             The challenge
           </h2>
@@ -201,7 +201,7 @@ export default async function CaseStudyPage({
         </section>
 
         <section className="mx-auto max-w-6xl px-6 pb-20">
-          <div className="signal-grid-bg relative overflow-hidden rounded-3xl bg-midnight-slate px-8 py-16 text-center sm:px-16">
+          <div className="cyber-focal-panel rounded-3xl px-8 py-16 text-center sm:px-16">
             <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
               Want something like this for your business?
             </h2>

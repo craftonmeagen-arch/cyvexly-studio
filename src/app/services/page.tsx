@@ -238,18 +238,18 @@ export default function ServicesPage() {
         {/* CTA */}
         <section className="glass-continuation border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="signal-grid-bg relative overflow-hidden rounded-3xl bg-midnight-slate px-8 py-16 text-center sm:px-16">
-            <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
-              Ready to make your business unmistakable?
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-              Not sure which services you need? Describe your project and
-              we&apos;ll recommend the right scope — no jargon required.
-            </p>
-            <div className="mt-8 flex justify-center">
-              <ButtonLink href="/start">Describe your project</ButtonLink>
+            <div className="cyber-focal-panel rounded-3xl px-8 py-16 text-center sm:px-16">
+              <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
+                Ready to make your business unmistakable?
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
+                Not sure which services you need? Describe your project and
+                we&apos;ll recommend the right scope — no jargon required.
+              </p>
+              <div className="mt-8 flex justify-center">
+                <ButtonLink href="/start">Describe your project</ButtonLink>
+              </div>
             </div>
-          </div>
           </div>
         </section>
       </main>

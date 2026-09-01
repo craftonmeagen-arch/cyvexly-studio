@@ -369,7 +369,7 @@ export default function PricingPage() {
 
         {/* CTA */}
         <section className="mx-auto max-w-6xl px-6 pb-20">
-          <div className="signal-grid-bg relative overflow-hidden rounded-3xl bg-midnight-slate px-8 py-16 text-center sm:px-16">
+          <div className="cyber-focal-panel rounded-3xl px-8 py-16 text-center sm:px-16">
             <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
               Ready to make your business unmistakable?
             </h2>

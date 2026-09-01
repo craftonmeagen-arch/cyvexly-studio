@@ -37,7 +37,7 @@ export default function ContactPage() {
 
         <section className="mx-auto max-w-5xl px-6 py-20">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr]">
-            <div>
+            <div className="glass-content-field rounded-3xl p-6 sm:p-8">
               <h2 className="font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
                 Reach us directly
               </h2>
