@@ -1,39 +1,44 @@
 # Cyvexly Current State
 
-**Global round:** 27
+**Global round:** 28
 **Active chunks:** Chunk 3 — Project Planner; Chunk 4 — Utility/legal and launch
 readiness. Both remain in progress because real Planner delivery and final
 legal/domain work require Owner decisions. Marketing chunks remain closed but
 revisitable.
 
-**Round 27 outcome:** the Owner again found that Home did not match the exact
-approved mockup. The Builder opened the public Home in the visible in-app
-Browser at 1440×900, measured the correct-but-flat split baseline, and changed
-method from global opacity/token tuning to Home-specific structural glass.
-Home now contains discrete architectural planes, luminous columns and beams,
-circuit traces and nodes, coordinates, a reflected floor, a protected
-double-rim copy pane, an instrumented media chassis, and an inset credibility
-deck. The source video, `0.75×` playback, removed playback chrome, canonical
-copy, routes, pricing, and form behavior remain unchanged.
+**Round 28 outcome:** after reviewing Home below the first viewport, the Owner
+identified the remaining mismatch: middle and lower sections still became pale
+bands and ordinary card fields. Visible in-app Browser comparison confirmed the
+same failure on Services and Pricing. The shared environment now carries two
+portal planes, three luminous beams, and a perspective horizon through the
+complete route. Flat continuation slabs and direct content sections are now
+bounded glass bays with bright rims, inner cyan edges, protected translucent
+fields, local grids/sheens, and environmental space visible between them.
+Secondary graphite copy is darker for dependable contrast; phone density is
+reduced to one portal and simplified beams.
 
-Opened desktop/tablet/phone renders are exactly width-contained with one main,
-one H1, sticky/z50 navigation, and intentional decoration reduction on phone.
-Pointer pause and native Enter resume pass; browser diagnostics are clean.
-ESLint, TypeScript, and the optimized 23-page build pass. This is rendered
-implementation proof, not a claim of Owner acceptance.
+Visible in-app Browser inspection covered Home, Work, Contact, Pricing, FAQ,
+Planner, the media surface, FAQ expansion, and phone navigation. A 54-state
+matrix across all route families at desktop/tablet/phone widths passes exact
+containment, one main/H1, and sticky/z50 navigation. ESLint, TypeScript, and the
+optimized 23-page build pass. This is rendered implementation proof, not a
+claim of Owner acceptance.
 
 **Immediate next mission:** confirm public deployment adoption and obtain Owner
-visual review against mockup 06. Preserve the new architectural Home grammar,
-protected-copy contrast, responsive density reduction, and unchanged media
-behavior unless rendered public evidence shows a defect.
+visual review against mockup 06. Preserve the continuous architectural
+environment, protected section bays, responsive density reduction, and
+unchanged media behavior unless rendered public evidence shows a defect.
 
-**Accepted source position:** Round 27 is committed to local `main` and pushed
+**Accepted source position:** Round 28 is committed to local `main` and pushed
 to `origin/main`; use `git log` as the exact commit ledger. Public Render at
 `https://cyvexly-studio.onrender.com/` may lag the push until its deployment
 finishes. `origin/master` is historical and is not the deployment branch.
 
 ## Current product truth
 
+- Round 28 extends the approved architectural-glass grammar through middle and
+  lower sections across every route after the Owner rejected flat pale bands.
+  Owner public visual acceptance remains pending.
 - Round 27 materially restructures the Home hero around the authoritative
   glass-architecture composition after the Owner found Round 26 insufficient.
   Owner public visual acceptance remains pending.
@@ -76,6 +81,10 @@ Terms visible links remain known release blockers. The explicit interim
 
 ## Verification and orientation
 
+- Round 28: visible in-app Browser route-family inspection, interactions, and
+  54 desktop/tablet/phone states pass exact containment, one main/H1, sticky
+  navigation, responsive decoration reduction, lint, TypeScript, and optimized
+  23-page build.
 - Round 27: visible in-app Browser 1440/768/390 and complete-Home renders pass
   visual inspection and exact containment. Media pause/resume, removed native
   controls, sticky header, clean diagnostics, ESLint, TypeScript, and optimized

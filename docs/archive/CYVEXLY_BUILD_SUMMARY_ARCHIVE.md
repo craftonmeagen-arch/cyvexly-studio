@@ -306,3 +306,39 @@
   as a `concept visual placeholder`. Corrected that stale user-facing accessible
   label to `abstract concept visual` (`4bdab10`) and proved the final build has
   15 new-label matches across generated Work HTML/RSC and zero old matches.
+
+## Round 9 — 2026-08-30
+
+- Reproduced the Owner-observed 100%-zoom cross-computer scale discrepancy with
+  a custom 24px browser-default profile and traced it to the implicit rem design
+  root plus rem media-query breakpoints.
+- Commit `8ec27c1` pins the author root at 16px, defines Tailwind breakpoints in
+  CSS pixels, and upgrades the shared glass primitive, grid atmosphere, header,
+  primary CTA, and hero orbit toward the accepted mockup's luminous depth.
+- Normal and custom-24px browser profiles now produce exact matching geometry
+  at 1440px; DPR 1/1.5 and 720px/390px states retain correct reflow and zero
+  overflow. Lint, build, typecheck, real route sweep, and opened rendered
+  comparison passed.
+- Chrome and Edge then passed 132 route/profile/viewport checks and four native
+  mobile-menu interaction checks. A separate minimum-font-24 audit exposed two
+  phone overflows; commit `2d82b0b` fixed Pricing add-on and Process timing-row
+  wrapping, after which all 33 large-text cases passed.
+- Final CTA gradient-stop contrast math caught a sub-4.5:1 bright stop; commit
+  `95c365f` retains the luminous treatment with 4.86–5.25:1 normal and
+  5.44–7.61:1 hover contrast. Final lint/build/typecheck passed.
+- Actual second-computer confirmation and Owner visual-parity judgment remain;
+  no launch/domain/legal/email blockers changed.
+
+## Round 10 — 2026-08-30
+
+- The fifth-round method audit moved beyond opacity tuning to reusable
+  reference-driven structure. Commit `6b81922` added the inset shared glass
+  header/mobile sheet, five hand-authored credibility icons in a translucent
+  rail, and icon/signal treatment for the Home capability cards without
+  changing copy, claims, links, breakpoints, or root scale.
+- Opened 1440/768/390 renders, compact menu, card section, and 24px-root stress
+  state passed. Lint, clean build, TypeScript, route/overflow/header/semantics
+  matrices, native keyboard traversal, and a 300-link audit passed; only the
+  three documented Owner-blocked destinations failed.
+- Owner visual parity, four launch decisions, and second-computer confirmation
+  remained open.

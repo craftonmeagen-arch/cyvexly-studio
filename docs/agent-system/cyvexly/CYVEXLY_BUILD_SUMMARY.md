@@ -1,56 +1,7 @@
 # Cyvexly Build Summary
 
-Older setup and rounds 1-8 are preserved in
+Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
-
-## Round 9 — 2026-08-30
-
-- Reproduced the Owner-observed 100%-zoom cross-computer scale discrepancy with
-  a custom 24px browser-default profile and traced it to the implicit rem design
-  root plus rem media-query breakpoints.
-- Commit `8ec27c1` pins the author root at 16px, defines Tailwind breakpoints in
-  CSS pixels, and upgrades the shared glass primitive, grid atmosphere, header,
-  primary CTA, and hero orbit toward the accepted mockup's luminous depth.
-- Normal and custom-24px browser profiles now produce exact matching geometry
-  at 1440px; DPR 1/1.5 and 720px/390px states retain correct reflow and zero
-  overflow. Lint, build, typecheck, real route sweep, and opened rendered
-  comparison passed.
-- Chrome and Edge then passed 132 route/profile/viewport checks and four native
-  mobile-menu interaction checks. A separate minimum-font-24 audit exposed two
-  phone overflows; commit `2d82b0b` fixed Pricing add-on and Process timing-row
-  wrapping, after which all 33 large-text cases passed.
-- Final CTA gradient-stop contrast math caught a sub-4.5:1 bright stop; commit
-  `95c365f` retains the luminous treatment with 4.86–5.25:1 normal and
-  5.44–7.61:1 hover contrast. Final lint/build/typecheck passed.
-- Actual second-computer confirmation and Owner visual-parity judgment remain;
-  no launch/domain/legal/email blockers changed.
-
-## Round 10 — 2026-08-30
-
-- Ran the every-fifth-round wider methodology audit. Rounds 7–9 had improved
-  evidence quality, responsive scale, and glass tokens, but another opacity/
-  blur tweak would have repeated a diminishing method. Round 10 instead mapped
-  the accepted Home mockup to reusable structural primitives.
-- Commit `6b81922` ships an inset rounded shared glass header/mobile sheet,
-  five hand-authored credibility icons in a translucent signal rail, and the
-  established service icons plus restrained signal edges on all six Home
-  capability cards. Copy, claims, links, breakpoints, and root scale remain
-  unchanged.
-- Opened production renders at exact 1440, 768, and 390 widths plus the open
-  compact menu, card section, and explicit 24px-root stress state. The header
-  depth and icon-led rhythm are materially closer to `mockups/01-home.png`;
-  final Owner parity remains an active judgment, not a Builder claim.
-- Lint, clean production build, post-build TypeScript, a 13-route phone-width H1/overflow sweep,
-  a 65-case shared-header boundary matrix, exact geometry/icon counts, native
-  CDP Tab/Enter compact-menu traversal, a 26-case structural semantics/control
-  audit, and the 24px-root resilience stress check passed. Port 5173 was
-  occupied by an
-  unrelated pre-lock EduAILenz Vite process; it was preserved and proof ran on
-  Builder-owned 5183.
-- A final clean production runtime status sweep passed all 15 expected routes/
-  assets plus the intended 404. Across 300 internal-link instances, the only
-  failing targets are the three already-bounded Owner-blocked routes.
-- The four Owner decisions and second-computer confirmation remain unchanged.
 
 ## Round 11 — 2026-08-31
 
@@ -421,3 +372,22 @@ Older setup and rounds 1-8 are preserved in
   target visualization, baseline/final PNGs, runtime metrics, and verification
   are indexed under `builder/evidence/`. The Round 27 commit is pushed to
   `origin/main`; public Render adoption and Owner acceptance remain pending.
+
+## Round 28 — 2026-09-01
+
+- Confirmed the Owner's scrolled-Home diagnosis in the visible in-app Browser:
+  the architectural first viewport gave way to flat pale section bands and
+  ordinary cards; Services and Pricing repeated the same shared failure.
+- Extended the shared environment with portal planes, luminous cross-stage
+  beams, and a perspective horizon. Replaced flat continuation/direct-section
+  surfaces with bounded, rim-lit translucent bays so the architecture remains
+  visible between protected content fields through every route height.
+- Darkened secondary graphite copy to `#46576e`; the conservative protected-
+  field model measures `5.5986:1`. Phone hides secondary portal/rail/data
+  density while keeping one portal and simplified beams.
+- Visible IAB route-family renders, video/FAQ/menu interactions, and 54 measured
+  states at desktop/tablet/phone widths pass. Every state is width-contained
+  with one main/H1 and sticky/z50 navigation.
+- ESLint, optimized 23-page build, and TypeScript pass. The existing
+  Owner/domain-blocked `metadataBase` warning is unchanged. Round 28 is pushed
+  to `origin/main`; public Render adoption and Owner acceptance remain pending.

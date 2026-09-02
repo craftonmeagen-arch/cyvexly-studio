@@ -191,6 +191,14 @@ requires.
 
 ## Cross-chunk notes
 
+- **Round 28 continuous full-height correction:** after the Owner scrolled
+  below the rebuilt Home hero and found the old flat-band reading, the Builder
+  fixed the shared failure across all route families. Persistent portal planes,
+  beams, horizon, rails, wires, and nodes now remain visible between bounded
+  rim-lit section bays. Protected fields and darker graphite copy preserve
+  contrast; phone removes secondary density. Visible IAB route/interaction
+  proof, 54 responsive states, lint, TypeScript, and build pass; public adoption
+  and Owner acceptance remain pending.
 - **Round 27 Home architectural-glass correction:** after the Owner found the
   Round 26 Home still short of exact mockup 06, the Builder changed the Home
   component grammar rather than repeating a global token pass. Layered planes,

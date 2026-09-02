@@ -2,7 +2,7 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global rounds 15-27 repaired its public deployment
+pages — remains closed, but global rounds 15-28 repaired its public deployment
 path, implemented the later Owner-directed hero composition, and reconciled the
 Services combination and Pricing scope modules under the rule that closed
 chunks are not frozen.
@@ -26,7 +26,9 @@ hardens the shared navigation lifecycle/current semantics and closes one
 enlarged-root Services overflow without changing that appearance. Round 26
 strengthens the shared visible environment after Owner rejection. Round 27
 rebuilds Home's first viewport as a discrete architectural-glass scene after
-the Owner found Round 26 insufficient. Round 18 replaces
+the Owner found Round 26 insufficient. Round 28 carries that architecture
+through middle/lower sections and all matching route families with persistent
+scene structure and protected bounded glass bays. Round 18 replaces
 Pricing's sparse text-only entry with a split glass scope signal and coordinated
 package field while preserving every package fact. Round 17 replaces
 the Services combination table with five mockup-aligned, icon-led glass
@@ -122,64 +124,8 @@ Rounds 18 and 19 are archived at
 Round 24 is archived at
 `docs/archive/chunks/CYVEXLY_SHARED_THEME_ROUND24_REPORT.md`.
 
-## Round 25 report — global round 25
-
-### Wider audit, plan, and implementation
-
-**Session:** `cyvexly-builder-20260901T175628Z-r25`; lock claimed
-`2026-09-01T17:57:10.3295788Z`; nonce
-`649de4413dc448d0b2e1981460b8eb2a`; start HEAD `2cd9121`.
-
-The required fifth-round audit found fresh Auditor R20/Council R40 convergence
-on accepted Round 24 product truth and only Owner-bound launch work. Comparing
-recent token, structure, and route-family passes showed another visual pass
-would be churn. The preimplementation plan in commit `26a768a` therefore chose
-the shared header's missing Escape/focus lifecycle, breakpoint-state
-reconciliation, and current-location semantics, grounded in W3C disclosure
-navigation and Next route-aware client patterns. The exact Owner mockup 06
-appearance remained a pixel-stable constraint.
-
-Product commit `e38851f` closes that slice. Escape now closes the compact
-disclosure and returns focus to its trigger; entry to the 1024px desktop mode
-clears hidden compact state; Home, standard/nested Services/Work, Pricing,
-Process, and Planner links expose exact `aria-current="page"` semantics.
-The existing route-link close remained correct and was not duplicated.
-
-### Verification-discovered scale correction and proof
-
-The 114-case normal matrix passed, but its separate 19-route 390px/24px-root
-sweep found `/services` at 402px: “Find your starting point” was prevented from
-shrinking inside its padded row. The visual-plan addendum bounded the correction
-before source change. Removing only that constraint permits a centered
-two-line large-text wrap; the route now measures 390/390 while its normal CTA
-remains a compact 224×46. Copy, panels, theme, and breakpoints are unchanged.
-
-All 114 route/width cases and 19 enlarged-root cases pass status, one main/H1,
-sticky header, closed state, expected current semantics, and horizontal
-containment. Native CDP proves Tab/Enter, Escape/focus return, route/Back close,
-and 390→1024→390 reconciliation. Three opened header before/after pairs are
-byte-identical. Opened dynamic-service phone, clean Planner tablet, work-detail
-desktop, and normal/root24 CTA frames preserve the approved protected
-blue-glass hierarchy. Unexpected console errors are zero; only the known
-Privacy/Terms 404 network entries appear.
-
-### Build, reviewer disposition, deployment, and completion
-
-Full ESLint and optimized Next build/TypeScript/static generation pass, with
-only the known Owner-domain-blocked `metadataBase` warning. Council R41
-independently built/linted the immutable candidate and reproduced Escape/focus,
-history, breakpoint, current semantics, visual coherence, and clean diagnostics.
-It found no local product defect; its only finding is the public adoption gate.
-
-Product commit `e38851f` is pushed and local/origin/external refs match. Render
-changed from pre-R25 ETag `8pc78tpgnj2ry5` to `44zd3ca5e02ryz`. Fresh public
-Chrome/CDP passes Escape/focus return, current semantics, native Tab/Enter,
-route/Back close, 390→1024→390 reconciliation, exact containment, and clean
-diagnostics. Public header PNGs are byte-identical to optimized local truth.
-This closes Council `CYC-R41-F001`. Concurrent reviewer work remains excluded.
-Scheduler/automation state remains Owner-controlled and untouched.
-
-**DONE WITH PUBLIC ADOPTION PROOF; OWNER VISUAL REVIEW PENDING.**
+Round 25 is archived at
+`docs/archive/chunks/CYVEXLY_SHARED_FOUNDATIONS_ROUND25_REPORT.md`.
 
 ## Round 26 report — global round 26
 
@@ -280,5 +226,52 @@ The Round 27 commit is pushed to `origin/main`. Public Render adoption and
 Owner visual acceptance remain pending. Concurrent Council files and the Owner
 attachment were preserved and excluded. No scheduler or automation was read,
 modified, paused, deleted, renamed, or rescheduled.
+
+**IMPLEMENTED AND PUSHED; PUBLIC ADOPTION/OWNER REVIEW PENDING.**
+
+## Round 28 report — global round 28
+
+### Owner diagnosis and visual plan
+
+**Session:** `root-sitewide-cyber-glass-20260901-r28`; lock claimed
+`2026-09-01T23:59:29.5666265Z`; nonce
+`3a75dccc50b14969a689f42404e1e434`; start HEAD `8c2e777`.
+
+After reviewing the visible Home center, the Owner identified the remaining
+mockup mismatch: the rebuilt hero was architectural, but the middle and lower
+page returned to broad pale bands and ordinary cards. Visible in-app Browser
+inspection confirmed the same failure shape on Services and Pricing. The plan
+in `builder/evidence/round-28-sitewide-continuous-glass-plan.md` was recorded
+before source work and kept mockup 06 as exact authority.
+
+### Shared correction and visible result
+
+The shared fixed environment now includes two portal planes, three luminous
+cross-stage beams, and a perspective horizon in addition to the existing
+planes, rails, circuits, nodes, coordinates, and refraction. Full-width masks
+are more transparent so this architecture persists through the route.
+
+Flat continuation slabs and unclassified direct content sections are now
+bounded architectural-glass bays with bright white rims, cyan inner edges,
+protected translucent fields, local grids/sheens, deeper shadows, and visible
+environmental space between them. The darker `#46576e` secondary-copy token
+models at `5.5986:1` against the conservative protected-field composite. Phone
+keeps one portal and simplified beams while hiding secondary portal/rail/data
+density. Canonical content, forms, pricing, route behavior, accepted video,
+`0.75×` playback, and removed playback chrome remain unchanged.
+
+### Verification and completion
+
+Visible IAB inspection covered Home opening/center/full page, Work, Contact,
+Pricing, FAQ, Planner, media pause/resume, FAQ expansion, and phone navigation.
+The complete 18-route × three-width matrix passes 54/54 states with exact
+containment, one main/H1, and sticky/z50 navigation. ESLint, TypeScript, and the
+optimized 23-page build pass; only the known Owner/domain-blocked
+`metadataBase` warning remains.
+
+The Round 28 commit is pushed to `origin/main`. Public Render adoption and
+Owner visual acceptance remain pending. Concurrent Council files and the Owner
+attachment were preserved and excluded. Scheduler/automation state was not
+read or changed.
 
 **IMPLEMENTED AND PUSHED; PUBLIC ADOPTION/OWNER REVIEW PENDING.**

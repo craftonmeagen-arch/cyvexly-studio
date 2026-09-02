@@ -271,3 +271,16 @@ boundary on future reasoning. Rounds 1-7 are rotated to
   390px state is exactly width-contained, but it also intentionally keeps only
   one column and one plane while hiding secondary beams/coordinates. This
   retains the cyber-glass identity without making the mobile copy field noisy.
+
+## Round 28
+
+- **A convincing hero does not prove full-page visual continuity.** Scroll to
+  the page center and lower route before claiming mockup parity. Round 28 found
+  that opaque full-width masks erased the shared architecture immediately below
+  a successful Home hero and repeated the defect across Services and Pricing.
+- **Use protected bays over a persistent scene, not pale slabs over decoration.**
+  Bounded translucent section fields with bright rims and visible atmospheric
+  space between them preserve both architectural depth and copy protection.
+- **When protected glass gets brighter, strengthen secondary copy deliberately.**
+  The darker `#46576e` graphite token raises the conservative field contrast to
+  `5.5986:1`; visual atmosphere never justifies softened normal text.

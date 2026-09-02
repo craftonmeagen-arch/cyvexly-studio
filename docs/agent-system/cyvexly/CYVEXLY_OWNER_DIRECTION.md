@@ -1,22 +1,9 @@
 # Cyvexly Owner Direction
 
-## Active direction 2026-08-30-01
-
-**Status:** FULFILLED BY ENVIRONMENT SETUP  
-**Source:** Owner via Codex side conversation  
-**Recorded:** 2026-08-30 America/New_York
-
-> “bring these files into this folder so that we can set up the environment for the agents to perform each role in this folder (website folder) so we can run these roles in this folder and on this project. once these files are in place then set up the evironments of each role according to the rules inside those files”
-
-## Approval 2026-08-30-02
-
-**Status:** ACTIVE AUTHORIZATION  
-**Source:** Owner via Codex side conversation  
-**Recorded:** 2026-08-30 America/New_York
-
-> “yes but i looked over them and approve.”
-
-Agent interpretation: The Owner approved coordinated project-scoped activation of the four supplied packets. This interpretation is not Owner-authored wording.
+Fulfilled setup/approval direction `2026-08-30-01`/`02` and superseded visual
+history `2026-08-30-04`/`05` are preserved in
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`. The active scheduler boundary
+remains here deliberately.
 
 ## Scheduler boundary 2026-08-30-03
 
@@ -27,74 +14,6 @@ Agent interpretation: The Owner approved coordinated project-scoped activation o
 > “yes just set up teh environment not the schedulars”
 
 Do not create, configure, enable, or modify recurring role schedulers or automations unless later authenticated Owner direction explicitly authorizes them and provides the needed cadence/metadata.
-
-## Visual fidelity direction 2026-08-30-04
-
-**Status:** PARTIALLY FULFILLED — ROUND 18 PRICING SCOPE-SYSTEM PASS; OWNER REVIEW PENDING
-**Source:** Owner via Codex side conversation
-**Recorded:** 2026-08-30 America/New_York
-
-> “i've noticed the mockup and the actual are close but not. the glassy futuristic look is still not on par with the mockup. ptu that in owners direction.”
-
-The current implementation is not yet accepted as visually on par with the mockup. Continue refining the product's glassy, futuristic visual treatment toward the mockup's standard while preserving usability, accessibility, responsiveness, and truthful product representation.
-
-Round 9 upgraded the shared glass primitive, signal-grid atmosphere, sticky header, primary CTA, and hero orbit, with rendered desktop/mobile comparison against the accepted Home mockup. This is meaningful forward fidelity work, not a claim of Owner acceptance or final parity; keep the direction active until the Owner evaluates the result.
-
-Round 10 changed method from another token-only adjustment to a reference-driven
-component-structure pass. It shipped an inset rounded glass header shell, an
-icon-led five-claim credibility rail, and icon-bearing capability cards, all
-verified in opened 1440/768/390 production renders and a native keyboard/menu
-check. The result closes three visible structural gaps against
-`mockups/01-home.png`; it still does not claim Owner acceptance or final parity.
-
-Round 11 replaces the remaining static hero orbit with the Owner-supplied
-30-second systems showcase as a muted, looping, poster-backed glass media panel.
-Opened 1440/768/390 production renders confirm the new motion increases the
-hero's luminous technology/art-direction density while retaining the bright
-page, message hierarchy, responsive containment, reduced-motion behavior, and
-truthful claims. This is an implementation of the Owner's supplied media and
-active fidelity direction, not a claim of final visual acceptance.
-
-Round 12 closes two more visible structural gaps against `mockups/01-home.png`:
-the formerly text-only partner statement now has an original luminous
-wireframe system diagram, and the formerly text-only five-stage Home process
-now has a connected desktop signal route with distinct stage icons plus
-contained tablet/phone cards. Opened exact 1440/768/390 production renders and
-a 24px-root phone stress state remain width-contained. The work advances the
-active direction without copying the reference literally or claiming final
-Owner acceptance.
-
-Round 13 closes the next reachable reference-visible gap: the former flat,
-centered final CTA is now a compact split glass composition with an original
-luminous planetary/network horizon, brighter protected copy, and a responsive
-centered phone adaptation. Exact 1440/768/390 and full-Home renders plus 320px
-and 24px-root stress checks are contained. This is forward fidelity work, not a
-claim of final Owner acceptance; portfolio imagery remains bounded by truthful
-asset provenance.
-
-Round 18 applies the same reference-driven method to Pricing rather than
-repeating another Home/Services token adjustment. The former centered
-text-only entry is now a split pale-blue glass composition with an original
-five-package scope signal, and the unchanged package cards share a luminous
-constellation field. Opened local/public 1440/768/390 renders, a complete
-five-card composition, 1023/1024/320 boundaries, and a 24px-root phone stress
-state are contained. This materially advances the approved Pricing mockup's
-orbital/glass hierarchy without changing package facts or claiming Owner
-acceptance.
-
-## Cross-device view consistency direction 2026-08-30-05
-
-**Status:** IMPLEMENTED — OWNER DEVICE CONFIRMATION PENDING
-**Source:** Owner via Codex side conversation
-**Recorded:** 2026-08-30 America/New_York
-
-> “is there some issue with different views? i logged into the website on one view and it looked normal. i logged into another computer (there was no zoom) and it looked like it is a zoomed in view. put this in owners direction to fix as well.”
-
-Investigate and fix the observed cross-computer scale inconsistency. The site must remain visually proportionate and intentional across supported desktop and laptop environments when browser zoom is 100%, rather than appearing unexpectedly zoomed in on one machine. Verify the same routes across representative effective viewport sizes, device-pixel ratios, and operating-system display-scaling settings; treat those factors as hypotheses to test rather than an assumed cause. Preserve responsive behavior and accessibility, including legitimate user zoom.
-
-Owner-provided visual evidence: `Screenshot 2026-08-30 200831.png` and `Screenshot 2026-08-30 200855.png`.
-
-Round 9 reproduced a concrete 100%-page-zoom cause: the design system inherited a browser profile's non-default 24px base font size through rem-based tokens and responsive breakpoints, enlarging the entire interface and changing its desktop/mobile mode. Commit `8ec27c1` pins the author design root at 16px and defines responsive breakpoints in CSS pixels. In controlled Chrome and Edge profiles, the normal-default and 24px-default profiles now produce matching geometry and responsive states across desktop, high-DPR laptop, and phone viewports. A separate minimum-font-24 audit found and commit `2d82b0b` fixed two phone overflow cases. The actual second computer still needs Owner confirmation because its browser/OS configuration was not directly inspected.
 
 ## Live Home video direction 2026-08-31-06
 
@@ -422,3 +341,30 @@ deeper media chassis, and an inset credibility deck. The established copy,
 video source, `0.75×` playback, removed playback chrome, routes, and responsive
 content remain unchanged. The visible in-app Browser result is retained at
 desktop/tablet/phone widths; only the Owner can grant final acceptance.
+
+## Continuous middle/lower-page fidelity correction 2026-09-01-13
+
+**Status:** ROUND 28 IMPLEMENTED AND PUSHED — PUBLIC DEPLOYMENT/OWNER REVIEW PENDING
+**Source:** Owner via Codex active conversation
+**Recorded:** 2026-09-01 America/New_York
+
+> “ok...fix it and any others that you notice that have the same issue. then
+> commit and push”
+
+This follows the Owner's review of the Home center after scrolling below the
+Round 27 hero. The visible defect was not the first viewport: middle and lower
+sections fell back to broad pale bands and ordinary white-card fields, losing
+the continuous architectural depth in the approved mockup. The same failure
+shape appeared on Services and Pricing and therefore required a shared-route
+correction, not a Home-only patch.
+
+Round 28 keeps `mockups/06-sitewide-blue-glass-owner-direction.png` as exact
+authority. The required result is one continuous bright ice-blue architectural
+environment through the complete height of every route, with visible portal
+planes, rails, beams, wiring, nodes, coordinates, and controlled perspective.
+Every major reading section sits in a bounded translucent glass bay with bright
+rims, protected contrast, and environmental space visible between bays. On
+phones, secondary density is removed rather than compressing noise beneath
+copy. Product facts, routes, forms, navigation, media source, `0.75×` playback,
+and removed playback chrome remain unchanged. Local visible-browser proof does
+not constitute Owner acceptance or public-deployment proof.

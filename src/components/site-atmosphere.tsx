@@ -3,9 +3,15 @@ export function SiteAtmosphere() {
     <div className="site-atmosphere" aria-hidden="true">
       <span className="site-atmosphere-plane site-atmosphere-plane-left" />
       <span className="site-atmosphere-plane site-atmosphere-plane-right" />
+      <span className="site-atmosphere-portal site-atmosphere-portal-left" />
+      <span className="site-atmosphere-portal site-atmosphere-portal-right" />
       <span className="site-atmosphere-rail site-atmosphere-rail-a" />
       <span className="site-atmosphere-rail site-atmosphere-rail-b" />
       <span className="site-atmosphere-rail site-atmosphere-rail-c" />
+      <span className="site-atmosphere-beam site-atmosphere-beam-a" />
+      <span className="site-atmosphere-beam site-atmosphere-beam-b" />
+      <span className="site-atmosphere-beam site-atmosphere-beam-c" />
+      <span className="site-atmosphere-horizon" />
       <svg
         className="site-atmosphere-wiring"
         viewBox="0 0 1600 1000"

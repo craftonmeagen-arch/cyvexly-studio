@@ -2,6 +2,16 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 28 — continuous sitewide architectural glass
+
+- `round-28-sitewide-continuous-glass-plan.md` — visible baseline diagnosis,
+  exact mockup authority, shared structural target, responsive density rules,
+  contrast boundary, and falsifiers written before source work.
+- `round-28-sitewide-continuous-glass-verification.md` — plan-to-product
+  accounting, visible in-app Browser route/interaction proof, 54-state
+  desktop/tablet/phone matrix, contrast disposition, build checks, and honest
+  public/Owner-review boundary.
+
 ## Global round 27 — Home architectural-glass fidelity correction
 
 - `round-27-home-fidelity-plan.md` — public baseline measurements, exact
