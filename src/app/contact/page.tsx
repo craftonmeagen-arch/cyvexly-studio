@@ -50,6 +50,12 @@ export default function ContactPage() {
               >
                 {siteConfig.email}
               </a>
+              <a
+                href={siteConfig.phoneHref}
+                className="mt-2 inline-flex items-center gap-2 font-display text-lg font-semibold text-cyber-blue hover:text-[#0b4fb0]"
+              >
+                {siteConfig.phoneDisplay}
+              </a>
 
               <dl className="mt-10 space-y-6 text-sm">
                 <div>

@@ -1,13 +1,38 @@
 # Cyvexly Current State
 
-**Global round:** 28 product baseline; Owner launch direction updated
+**Global round:** 29 product baseline; Owner launch direction updated
 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
-and launch readiness retain incomplete closure items. The Owner has directed
-the next Builder to open **Chunk 5 — United States Launch Completion & Business
-Operations** as one integrated next major chunk. Chunk 5 will implement and
-verify the remaining operational work and close the overlapping Chunk 3/4
+and launch readiness retain incomplete closure items. **Chunk 5 — United
+States Launch Completion & Business Operations is now open**, started round
+29 (one bounded workstream: contact identity, metadata/sitemap, and a
+worldwide/payment truth audit — not chunk completion). Chunk 5 will implement
+and verify the remaining operational work and close the overlapping Chunk 3/4
 delivery, legal, domain, and discovery boundaries.
+
+**Round 29 outcome (scheduled/unattended, 50-minute limit):** replaced the
+stale `hello@cyvexly.com` with the Owner-confirmed `design@cyvexly.com`
+everywhere (Contact, Planner, and footer all read one shared config value),
+and added the confirmed phone `(317) 572-5780` / `tel:+13175725780` as a
+visible link on Contact and in the footer. Set `metadataBase` to
+`https://cyvexly.com` in the root layout now that the domain is confirmed,
+resolving the long-standing domain-blocked warning: production build output
+confirms `og:image`/`twitter:image` now resolve to the real domain instead of
+`http://localhost:3000`. Added `src/app/sitemap.ts`, verified in the real
+build to emit all 17 public routes as absolute `https://cyvexly.com/...`
+URLs. Audited the whole `src/` tree for stale "worldwide"/international-market
+language and unsupported payment-method claims (vision §8 explicitly forbids
+stating a payment method as active before a provider is authorized); rewrote
+six worldwide/market lines and three payment-claim lines to state United
+States-only availability and an honest "provider selection pending" payment
+line. `tsc --noEmit`, `lint`, and `build` all pass; zero `worldwide` or
+`hello@cyvexly` matches remain in generated HTML output (grep-verified against
+`.next/server/app/**`). This unattended session type could not open the
+visible in-app Browser (dev-server preview is blocked without an attended
+approver), so this is build-output proof, not a live screenshot — the next
+attended round should confirm visually on the public Render site. Full detail
+in `CYVEXLY_ACTIVE_CHUNK.md`'s round-29 report and `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 29" section.
 
 **Round 28 outcome:** after reviewing Home below the first viewport, the Owner
 identified the remaining mismatch: middle and lower sections still became pale

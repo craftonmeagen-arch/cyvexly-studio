@@ -2,10 +2,20 @@
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
-items. **Chunk 5 — United States Launch Completion & Business Operations is the
-Owner-directed NEXT major chunk** and must be opened by the next Builder. Its
-integrated verification will close the overlapping delivery and launch items in
-Chunks 3 and 4. Chunk 2 — Core marketing pages — remains closed but revisitable.
+items. **Chunk 5 — United States Launch Completion & Business Operations is
+now OPEN**, started round 29. Its integrated verification will close the
+overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
+marketing pages — remains closed but revisitable.
+
+**Round 29** (scheduled/unattended, 50-minute limit) opens Chunk 5 and closes
+one bounded workstream: public contact identity (`design@cyvexly.com`, `(317)
+572-5780`) sitewide, the code-only half of production metadata/discovery
+(`metadataBase`, `sitemap.xml`), and a United States-only truth audit removing
+stale "worldwide"/international-market and unsupported-payment-method claims.
+See the round-29 report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 29"
+section. Chunk 5's About page, Privacy/Terms, real inquiry delivery,
+domain/DNS connection, analytics, and full release QA remain open — this is
+one workstream, not chunk completion.
 
 **Current status:** The nine-step Planner UI/state/validation remains built and
 verified at `/start`; real server-side email still needs an authorized provider,
@@ -307,3 +317,76 @@ attachment were preserved and excluded. Scheduler/automation state was not
 read or changed.
 
 **IMPLEMENTED AND PUSHED; PUBLIC ADOPTION/OWNER REVIEW PENDING.**
+
+## Round 29 report — global round 29 (scheduled/unattended session)
+
+### Scope decision
+
+**Session:** scheduled `cyvexly-website-builder` task, 2026-09-04, 50-minute
+hard time limit. Opened Chunk 5 per `CYVEXLY_BUILDER_PM_PROMPT.md`, Owner
+direction `2026-09-04-14`, and vision §17. Given the hard time limit, this
+round picked one bounded, fully Owner-gate-free workstream instead of
+attempting the whole chunk: replacing stale public contact identity
+(`hello@cyvexly.com`, no phone) with the confirmed `design@cyvexly.com` and
+`(317) 572-5780`; completing the reachable code-only half of production
+metadata/discovery (`metadataBase`, `sitemap.xml`); and auditing the site for
+the stale "worldwide"/international-market and unsupported-payment-method
+claims vision §8 and Owner direction item 8 explicitly require removed.
+This is one workstream inside Chunk 5, not a claim that Chunk 5 is complete —
+About, Privacy/Terms, real server-side inquiry delivery, domain/DNS
+connection, analytics, and full release QA remain open.
+
+### Implementation
+
+- `src/lib/site-config.ts`: `siteConfig.email` → `design@cyvexly.com`; added
+  `phoneDisplay`/`phoneHref`. Since Contact, Planner, and the footer read this
+  config rather than hardcoding the address, the change propagated without
+  touching those files' logic.
+- Added the phone as a visible `tel:` link beside email on `/contact` and in
+  the footer's Contact column.
+- `src/app/layout.tsx`: added `metadataBase: new URL("https://cyvexly.com")`
+  — the domain is now Owner-confirmed, so this no longer needs to stay
+  blocked. New `src/app/sitemap.ts` enumerates all 17 built public routes
+  (static pages plus every service-detail and case-study slug) via the same
+  `Object.keys(...)` pattern the dynamic routes already use for
+  `generateStaticParams`.
+- Truth audit: grepped the whole `src/` tree for `worldwide`, `international`,
+  and named payment brands (Venmo, PayPal, Apple Pay, Google Pay, ACH, bank
+  wire, installment). Fixed six worldwide/international-market lines (Home
+  hero, `opengraph-image.tsx`, footer, and three `site-config.ts` FAQ
+  entries — one FAQ category renamed "International clients" →
+  "Service area & time zones" with its content corrected to United
+  States-only) and three payment-method-claim lines (`pricingFaq`,
+  `faqLibrary`'s "Pricing & payment" category, and an inline Pricing-page
+  paragraph) that stated specific payment methods as presently accepted,
+  which vision §8 explicitly forbids before a provider is authorized. All
+  were rewritten to state United States-only availability and an honest
+  "provider selection pending, methods will be confirmed with your invoice"
+  payment line.
+
+### Verification
+
+`pnpm exec tsc --noEmit`, `pnpm run lint`, and `pnpm run build` (24 routes,
+including the new `/sitemap.xml`) all pass clean. Read the real generated
+`.next/server/app/sitemap.xml.body` (17 absolute `https://cyvexly.com/...`
+URLs) and `.next/server/app/index.html` (`og:image`/`twitter:image` now
+resolve to `https://cyvexly.com/opengraph-image?...`, not the previous
+`http://localhost:3000` fallback — the long-standing domain-blocked warning is
+gone). Grepped every generated route's HTML for `worldwide` and
+`hello@cyvexly`: zero matches. Grepped `contact.html` and the shared footer
+markup for the new `design@cyvexly.com` / `tel:+13175725780` / `(317)
+572-5780`: present and correct everywhere expected.
+
+This scheduled/unattended session type cannot open the visible in-app
+Browser — `preview_start` refused the dev server with "Dev servers can't be
+started from unattended sessions ... nobody is present to approve the
+command." Verification therefore relies on real production build output
+(generated static HTML/XML, `tsc`/lint/build exit status) rather than a live
+screenshot. The next attended Builder round should open the public Render
+site and confirm the same result visually before treating this as fully
+proved.
+
+### Completion state
+
+Full commit details, exact push status, and the immediate next-workstream
+recommendation are recorded in `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.

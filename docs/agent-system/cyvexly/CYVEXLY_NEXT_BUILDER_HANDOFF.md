@@ -30,6 +30,52 @@ LLC name; DNS/Render access; business-inbox and transactional-email provider;
 secure secret entry; analytics/Search Console ownership or no-analytics choice;
 About/legal/public-visual review; and final approval to enable indexing.
 
+## Round 29 closeout
+
+**Session:** scheduled `cyvexly-website-builder` task, 2026-09-04, 50-minute
+hard time limit (unattended)
+**Start source:** `6747f06` on `main`
+**Scope:** opened Chunk 5 and closed one bounded, Owner-gate-free workstream:
+public contact identity, the code-only half of production metadata/discovery,
+and a United States-only truth audit. Full detail in
+`CYVEXLY_ACTIVE_CHUNK.md`'s round-29 report and `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 29" section.
+**Completion:** IMPLEMENTED; COMMIT/PUSH STATUS RECORDED BELOW ONCE COMMITTED
+
+### What changed
+
+- `siteConfig.email` → `design@cyvexly.com`; added `phoneDisplay`/`phoneHref`
+  for `(317) 572-5780` / `tel:+13175725780`; wired the phone onto `/contact`
+  and the footer.
+- `metadataBase` set to `https://cyvexly.com` in `src/app/layout.tsx`; added
+  `src/app/sitemap.ts` covering all 17 public routes.
+- Removed six stale "worldwide"/international-market lines and three
+  unsupported-payment-method-claim lines across `site-config.ts`, the Home
+  hero, the OG image, the footer, and the Pricing page, replacing them with
+  truthful United States-only and payment-pending language per vision §8 and
+  Owner direction `2026-09-04-14` item 8.
+
+### What did not change / still open
+
+About page, Privacy/Terms, real server-side inquiry delivery, the actual
+DNS/Render domain connection, analytics/search ownership, and full release QA
+are all still open — this round did not touch them. The recurring
+scheduler/automation was not read, modified, paused, deleted, renamed, or
+rescheduled. Concurrent Auditor evidence/report files present in the working
+tree at session start were left untouched and excluded from this round's
+commit.
+
+### Recommended next workstream
+
+Given the 50-minute budget forces one workstream per round, the next Builder
+round should pick up another reachable Chunk 5 piece — most likely the About
+page (fully authorized, no Owner gate: build `/about` from vision §6.8's
+reviewable draft, the logo/brand treatment, and the required content list in
+vision §6.8, then restore its now-safe navigation link) — while leaving the
+account-gated items (LLC legal name, DNS/Render access, email-provider
+authorization, analytics ownership, final visual/legal review, indexing
+approval) named precisely rather than treated as unknowns.
+
 ## Round 28 closeout
 
 **Session:** `root-sitewide-cyber-glass-20260901-r28`

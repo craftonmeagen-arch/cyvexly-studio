@@ -1,7 +1,9 @@
 export const siteConfig = {
   name: "Cyvexly Studio",
   tagline: "Websites built to make your business unmistakable.",
-  email: "hello@cyvexly.com",
+  email: "design@cyvexly.com",
+  phoneDisplay: "(317) 572-5780",
+  phoneHref: "tel:+13175725780",
 };
 
 export const primaryNav = [
@@ -711,7 +713,7 @@ export const pricingFaq = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "Major cards, Apple Pay and Google Pay where available, ACH bank payment for U.S. clients, PayPal (and Venmo in the U.S.), bank wire by arrangement, and eligible installment options through our payment provider. Availability varies by your country and the provider's approval.",
+      "We're finalizing our payment provider for United States clients. Once it's active, your proposal and invoice will state exactly which methods are accepted — no payment is ever requested before a signed agreement and invoice.",
   },
   {
     question: "What happens if my project grows beyond the package scope?",
@@ -762,7 +764,7 @@ export const faqPreview = [
   {
     question: "Do you work with businesses outside my industry?",
     answer:
-      "Yes. Cyvexly works remotely with service businesses, professionals, startups, creators, and online stores worldwide.",
+      "Yes. Cyvexly works remotely with service businesses, professionals, startups, creators, and online stores across the United States.",
   },
   {
     question: "How do payments work?",
@@ -808,7 +810,7 @@ export const faqLibrary = [
       {
         question: "What payment methods do you accept?",
         answer:
-          "Major cards, Apple Pay and Google Pay where available, ACH bank payment for U.S. clients, PayPal and U.S. Venmo, bank wire by arrangement, and eligible installment options through our payment provider.",
+          "We're finalizing our payment provider for United States clients. Once it's active, your proposal and invoice will state exactly which methods are accepted — no payment is ever requested before a signed agreement and invoice.",
       },
       {
         question: "Is anything billed separately from your fee?",
@@ -948,12 +950,12 @@ export const faqLibrary = [
     ],
   },
   {
-    category: "International clients",
+    category: "Service area & time zones",
     items: [
       {
-        question: "Do you work with clients outside the U.S.?",
+        question: "Do you work with clients outside Indiana?",
         answer:
-          "Yes — Cyvexly works remotely with businesses worldwide. Proposals are priced in a clearly stated base currency, with international cards and supported local payment methods available.",
+          "Yes — Cyvexly works remotely with businesses across the United States. At launch, Cyvexly serves United States clients only.",
       },
       {
         question: "How do you handle different time zones?",

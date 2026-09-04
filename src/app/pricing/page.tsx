@@ -347,11 +347,10 @@ export default function PricingPage() {
                 </div>
               </dl>
               <p className="mt-5 text-xs leading-relaxed text-cool-graphite">
-                We accept major cards, Apple Pay and Google Pay where
-                available, ACH bank payment for U.S. clients, PayPal and U.S.
-                Venmo, bank wire by arrangement, and eligible installment
-                options through our payment provider. We never store raw card
-                or bank details on our own website.
+                We&apos;re finalizing our payment provider for United States
+                clients. Your proposal and invoice will state exactly which
+                methods are accepted before any payment is requested. We never
+                store raw card or bank details on our own website.
               </p>
             </div>
           </div>

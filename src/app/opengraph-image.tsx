@@ -77,7 +77,7 @@ export default function OpengraphImage() {
             color: "#B9C6DA",
           }}
         >
-          Independent web studio · Available worldwide
+          Independent web studio · Serving the United States
         </div>
       </div>
     ),

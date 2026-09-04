@@ -32,7 +32,7 @@ export default function Home() {
             <div className="home-hero-copy relative overflow-hidden rounded-[1.75rem] px-5 py-6 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
               <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-[#315a8d]">
                 <span className="h-1.5 w-1.5 rounded-full bg-signal-emerald" aria-hidden="true" />
-                Independent web studio · Available worldwide
+                Independent web studio · Serving the United States
               </p>
               <h1 className="mt-5 font-display text-[2.15rem] font-semibold leading-[1.06] tracking-tight text-midnight-slate sm:text-5xl xl:text-[3.45rem]">
                 Websites built to make your business{" "}
