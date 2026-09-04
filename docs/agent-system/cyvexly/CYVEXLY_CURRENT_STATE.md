@@ -52,17 +52,25 @@ containment, one main/H1, and sticky/z50 navigation. ESLint, TypeScript, and the
 optimized 23-page build pass. This is rendered implementation proof, not a
 claim of Owner acceptance.
 
-**Immediate next mission:** open Chunk 5 from Owner direction `2026-09-04-14`
-and `CYVEXLY_VISION_PLAN.md` §17. Preserve the continuous architectural
-environment and verify its public adoption while completing the domain,
-production metadata/discovery, public contact, About, legal, real inquiry
-delivery, analytics/search ownership, truth audit, and release-QA work.
-Payment integration and real portfolio replacement remain explicitly deferred.
+**Immediate next mission:** continue Chunk 5 from Owner direction
+`2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Round 29 closed the contact-
+identity/metadata/truth-audit workstream; the recommended next reachable
+workstream is the About page (fully authorized, no Owner gate — see
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`). Preserve the continuous architectural
+environment and verify its public adoption while completing the remaining
+domain-connection, legal, real inquiry delivery, analytics/search ownership,
+and release-QA work. Payment integration and real portfolio replacement
+remain explicitly deferred.
 
-**Accepted product position:** Round 28 product source is commit `c960f72` on
-`main` and is live at `https://cyvexly-studio.onrender.com/`. The production
-domain is confirmed as `cyvexly.com`, but DNS still needs to be connected and
-verified. `origin/master` is historical and is not the deployment branch.
+**Accepted product position:** Round 29 product source is commit `f35a2a6` on
+`main`, pushed to `origin/main`; Round 28's visual system (commit `c960f72`)
+is unchanged by round 29's contact/metadata/copy-only edits. Public Render
+adoption of round 29 is unconfirmed (this scheduled/unattended session could
+not open the visible in-app Browser to verify the live site) — the next
+attended round should check `https://cyvexly-studio.onrender.com/` reflects
+it. The production domain is confirmed as `cyvexly.com`, but DNS still needs
+to be connected and verified. `origin/master` is historical and is not the
+deployment branch.
 
 ## Current product truth
 
