@@ -1,5 +1,17 @@
 # Cyvexly Build Summary
 
+## Owner launch direction — 2026-09-04
+
+The next Builder opens Chunk 5 — United States Launch Completion & Business
+Operations — under Owner direction `2026-09-04-14` and vision §17. Confirmed
+facts are `cyvexly.com`, Indiana/United States LLC operations, United States-only
+launch market, `design@cyvexly.com`, `(317) 572-5780`, and a logo-led About with
+no public personal founder identity. The chunk integrates domain/discovery,
+contact, About, legal, real Contact/Planner delivery, privacy-aware measurement,
+truth audit, and production QA. Payment integration and real portfolio
+replacement are deferred. Historical summaries below describe the source
+baseline, not current decision gaps.
+
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 

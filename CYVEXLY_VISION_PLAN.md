@@ -2,13 +2,14 @@
 
 **Status:** Creative and business vision for the first public website  
 **Prepared:** August 30, 2026  
+**Owner launch direction updated:** September 4, 2026
 **Scope of this document:** What the website must contain, communicate, and enable. This is intentionally not a technical build guide.
 
 ---
 
 ## 1. The vision in one page
 
-Cyvexly Studio will be an independent, remote web design and development studio serving businesses anywhere. It will not be a self-service website workshop, template marketplace, or drag-and-drop builder. Prospective clients will describe their business, goals, preferred style, pages, features, content readiness, budget, and timing. Cyvexly will review that brief, recommend the right scope, and send a clear proposal.
+Cyvexly Studio will be an independent, remote web design and development studio serving businesses across the United States at launch. It will not be a self-service website workshop, template marketplace, or drag-and-drop builder. Prospective clients will describe their business, goals, preferred style, pages, features, content readiness, budget, and timing. Cyvexly will review that brief, recommend the right scope, and send a clear proposal.
 
 The site must make five things obvious within the first minute:
 
@@ -20,7 +21,7 @@ The site must make five things obvious within the first minute:
 
 ### Recommended launch message
 
-**Eyebrow:** Independent web studio · Available worldwide  
+**Eyebrow:** Independent web studio · Serving businesses across the United States
 **Headline:** **Websites built to make your business unmistakable.**  
 **Supporting copy:** Cyvexly Studio plans, designs, builds, and supports custom websites for businesses ready to look credible, work smarter, and turn more visits into action.  
 **Primary action:** Describe your project  
@@ -444,18 +445,35 @@ Do not invent client quotes, traffic increases, revenue results, awards, or bran
 
 **Purpose:** Humanize the studio and explain its principles.
 
+**Owner-approved launch treatment:** Cyvexly is presented as a studio-led brand.
+No personal founder name or portrait will be published at this stage. Use the
+Cyvexly logo as the principal identity image and do not invent a founder name,
+biography, pronouns, team, or personal history.
+
 **Required content:**
 
-- founder portrait or distinctive studio image;
-- honest first-person story: why Cyvexly exists and what kind of work it wants to do;
+- the Cyvexly logo or a distinctive brand composition rather than a founder portrait;
+- an honest studio-origin story explaining why Cyvexly exists and what kind of work it wants to do;
 - short values: Clarity, Originality, Practicality, Ownership, Continued care;
-- working style and remote availability;
+- working style and remote availability across the United States;
 - capabilities and collaborator model stated honestly;
 - tool/technology mentions only if they help a prospective client understand compatibility;
 - current availability and response-time expectation;
 - CTA to work together.
 
-Avoid generic copy such as “a passionate team of creatives” if Cyvexly is currently one person. “Independent studio” is a strength.
+**Owner-review draft:**
+
+> Cyvexly Studio was founded to make building a strong digital presence clearer
+> and more useful for business owners. A website should do more than look
+> polished—it should give a business the tools to explain its value, support
+> its marketing, reach the right people, and turn interest into action. Cyvexly
+> brings strategy, design, development, and practical guidance into one clear
+> process so owners can stay focused on their business while their website
+> works with them.
+
+Avoid generic copy such as “a passionate team of creatives.” “Independent
+studio” is a strength. The draft above is approved for implementation as a
+reviewable starting point, not frozen final copy.
 
 ---
 
@@ -491,7 +509,10 @@ A complete field plan appears in Section 9.
 
 **Purpose:** Provide a low-friction route for questions that are not project briefs.
 
-Keep it short: name, email, topic, message, consent, and send. Show a direct business email, normal response expectation, and links for Project Planner, support, partnerships, and privacy questions.
+Keep it short: name, email, topic, message, consent, and send. Show the public
+business email `design@cyvexly.com`, the public phone number
+`(317) 572-5780` (`tel:+13175725780`), the normal response expectation, and
+links for Project Planner, support, partnerships, and privacy questions.
 
 ---
 
@@ -512,7 +533,7 @@ Topics:
 - integrations and payment processing;
 - accessibility, search basics, and analytics;
 - launch support and care plans;
-- international clients, currencies, and time zones;
+- United States availability, base currency, and remote working expectations;
 - cancellations, pauses, and scope changes;
 - how to start.
 
@@ -621,28 +642,38 @@ For the first three to five qualified projects, use a private founding-client ad
 
 ## 8. Payments, proposals, and commercial expectations
 
+**Owner decision, September 4, 2026:** payment-provider selection and payment
+integration are tabled for separate research. The options below remain research
+and planning guidance, not an authorization to activate Stripe, PayPal, Venmo,
+ACH, installments, or any other provider. Until a provider and accounts are
+approved, the public site must not state or imply that a specific payment method
+is presently operational. The Project Planner remains inquiry-only and requests
+no payment. Professional proposals, agreements, invoices, and milestone
+payments remain the intended commercial model after the provider decision.
+
 ### Recommended payment experience
 
 Use professional invoices after scope approval. The website may explain payment methods, but it should not ask a new prospect to buy a full custom website before Cyvexly has reviewed the project.
 
-**Primary payment provider:** Stripe invoices or hosted payment pages.  
-**Secondary option:** PayPal invoicing for clients who prefer PayPal or Venmo.  
-**Manual option:** bank wire/transfer for approved large or international invoices.
+**Research candidate:** Stripe invoices or hosted payment pages.
+**Research candidate:** PayPal invoicing for clients who prefer PayPal or Venmo.
+**Research candidate:** bank transfer for approved invoices.
 
 Stripe currently supports cards, bank debits/transfers, wallets, local methods, and eligible buy-now-pay-later options through its payment system. Its U.S. standard pricing page lists 2.9% + $0.30 for domestic cards and 0.8% capped at $5 for ACH Direct Debit; fees can change, so the live provider page remains authoritative. See [Stripe payment methods](https://docs.stripe.com/payments/payment-methods/overview), [Stripe pricing](https://stripe.com/pricing), and [ACH invoicing guidance](https://docs.stripe.com/invoicing/ach-direct-debit). [PayPal Invoicing](https://www.paypal.com/us/business/accept-payments/invoice) supports PayPal, Venmo in the U.S., cards, Apple Pay, Pay Later, and bank payment options, including for customers without PayPal accounts.
 
-### Methods Cyvexly should advertise
+### Methods to evaluate after the Owner resumes payment research
 
 - Visa, Mastercard, American Express, Discover, and other processor-supported cards;
 - Apple Pay and Google Pay where available;
 - ACH bank payment for U.S. clients;
 - PayPal and U.S. Venmo through PayPal invoicing;
-- international cards and supported local methods;
-- bank wire/transfer by arrangement;
+- bank transfer by arrangement;
 - eligible installment options through the payment provider;
-- multi-currency display/payment where supported, while proposals are priced in a clearly stated currency.
+- U.S.-dollar invoicing with availability determined by the approved provider.
 
-Do not promise “every payment method.” Promise **major card, wallet, bank, PayPal, and eligible installment options**. Availability, fees, currencies, customer country, and provider approval vary.
+Do not advertise any item in this research list until the matching account and
+method are active. Never promise “every payment method.” After selection, state
+only the methods actually enabled for Cyvexly's United States clients.
 
 ### Recommended milestone schedule
 
@@ -850,13 +881,13 @@ Every interactive component needs normal, hover, focus, active, disabled, loadin
 
 - clear package starting points;
 - visible deliverables and exclusions;
-- a real founder identity and direct business email;
+- a truthful logo-led studio identity and direct business email;
 - clear revision and payment milestones;
 - defined response time;
 - clearly labeled concept work;
 - accessibility and quality standards;
 - privacy, terms, and project policies;
-- secure third-party payment pages;
+- a truthful explanation that payment arrangements follow an approved proposal; add secure third-party payment pages only after the deferred provider decision;
 - no fake urgency.
 
 ### Trust to add after real projects
@@ -882,8 +913,8 @@ Every number, quote, logo, badge, certification, and result must be verifiable. 
 Before the public launch, Cyvexly needs:
 
 - final wordmark and favicon;
-- founder name, portrait, bio, and working philosophy;
-- real business email and social profiles;
+- a logo-led About page, studio-origin story, and working philosophy; no personal founder identity is required at launch;
+- the real business email `design@cyvexly.com` and public phone `(317) 572-5780`;
 - availability statement;
 - service descriptions and package rules;
 - at least three strong work samples or concepts;
@@ -905,7 +936,7 @@ Before the public launch, Cyvexly needs:
 - remote web designer / web design studio;
 - website maintenance and support.
 
-Do not create thin city pages for places Cyvexly does not actually serve locally. The global/remote positioning should be honest.
+Do not create thin city pages for places Cyvexly does not actually serve locally. The remote United States positioning should be honest.
 
 Google recommends unique, clear page titles and useful page-specific summaries; its [SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) should inform the content standard. Search claims must stay modest: Cyvexly can make a site search-ready, but cannot guarantee a ranking.
 
@@ -999,8 +1030,8 @@ The first Cyvexly Studio website is ready to advertise the business when all of 
 - the required sitemap pages and utility states exist;
 - the package scope, add-ons, care plans, and exclusions agree everywhere;
 - the Project Planner captures enough information to prepare a real recommendation;
-- a proposal, agreement, invoice, and payment workflow exist outside the initial inquiry;
-- payment options include major cards/wallets, bank payment, PayPal, and international support where approved;
+- a proposal and project-agreement workflow exists outside the initial inquiry;
+- public payment claims remain withheld or carefully qualified until the Owner completes provider research; an invoice/payment workflow is required before the first paid engagement, but provider integration is not part of the inquiry-site launch chunk;
 - at least three portfolio pieces are present and truthfully labeled;
 - every claim and testimonial is verifiable;
 - legal and privacy content reflects the actual tools and business location;
@@ -1008,7 +1039,7 @@ The first Cyvexly Studio website is ready to advertise the business when all of 
 - desktop and mobile visual QA is complete;
 - the accessibility and performance expectations have been reviewed;
 - the temporary preview has no accidental search indexing;
-- the final domain, business email, analytics ownership, and social-sharing preview are ready.
+- `cyvexly.com`, `design@cyvexly.com`, analytics ownership, and the social-sharing preview are ready.
 
 ### Temporary preview direction
 
@@ -1023,8 +1054,113 @@ The temporary website system you were remembering may have been Render's automat
 3. The primary conversion is a structured project brief, not an immediate checkout.
 4. Public prices are starting points, with a clear package comparison and honest custom quoting.
 5. The brand is cyber/new-age through art direction and interaction, while the writing stays human and practical.
-6. Cyvexly is remote and worldwide, with prices presented in a clearly stated base currency.
-7. Mainstream payment choice is broad, but provider eligibility and geography are never misrepresented.
+6. Cyvexly is remote and serves the United States at launch, with prices presented in U.S. dollars.
+7. Payment-provider selection is deferred; no payment method is represented as active until it is actually available through an approved account.
 8. Concept projects, real client work, testimonials, and results are labeled truthfully.
 9. Accessibility, speed, privacy, and ownership are part of the offer—not afterthoughts.
 10. The preview can live on a temporary Render URL before the owned domain is connected.
+
+---
+
+## 17. Owner-approved Chunk 5 launch completion vision — September 4, 2026
+
+This section supersedes earlier unresolved assumptions about founder identity,
+market geography, public contact details, and the production-domain decision.
+Together with Owner direction `2026-09-04-14`, it is the product vision for
+**Chunk 5 — United States Launch Completion & Business Operations**, the next
+major chunk of work.
+
+### Confirmed business facts
+
+| Decision | Owner direction |
+|---|---|
+| Public brand | Cyvexly Studio |
+| Business structure | LLC; verify the exact registered legal entity name before publishing legal text |
+| Principal location | Indiana, United States |
+| Initial customer market | United States only |
+| Production domain | `cyvexly.com` |
+| Public business email | `design@cyvexly.com` |
+| Public business phone | `(317) 572-5780`; machine-readable value `+13175725780` |
+| Public founder identity | No personal founder name at launch |
+| About image | Existing Cyvexly logo/brand composition; no founder portrait |
+| About narrative | Use the reviewable studio-origin draft in §6.8 |
+| Payment provider | Deferred for Owner research; do not activate or promise one |
+| Portfolio replacement | Deferred; retain only clearly labeled concept work until real work is supplied |
+
+### Next-chunk outcome
+
+Turn the existing Render preview into a truthful, contactable, searchable,
+legally coherent United States launch site at `https://cyvexly.com`. Preserve
+the approved cyber-blue architectural glass system and the non-DIY service
+model while completing the operational paths that let a real prospect discover
+Cyvexly, understand it, contact it, submit a project brief, and receive a
+dependable response.
+
+### Required launch work
+
+1. Connect and verify `cyvexly.com` and `www.cyvexly.com` on Render, preserve
+   HTTPS, and establish one canonical host with redirects.
+2. Replace preview metadata with production `metadataBase`, canonical URLs,
+   correct Open Graph/Twitter URLs, a complete `sitemap.xml`, and launch-ready
+   robots directives. Keep the site no-indexed until legal, contact, and domain
+   verification pass; then make indexing an explicit release action.
+3. Replace `hello@cyvexly.com` everywhere with `design@cyvexly.com`; add the
+   formatted public phone with accessible `tel:` behavior where appropriate.
+4. Build the logo-led About page using the §6.8 draft, values, process,
+   United States availability, and clear Project Planner/contact actions.
+5. Draft and publish a Privacy Policy and Website Terms grounded in Indiana,
+   United States operations and the technologies actually used. Confirm the
+   exact registered LLC name before final publication. Keep the public Website
+   Terms separate from the client project agreement.
+6. Replace the `mailto:`-only Contact and Planner bridge with secure server-side
+   delivery: send Cyvexly the submitted information, show an honest success or
+   failure state, and send the prospect a confirmation/summary. Select and
+   authorize a transactional-email provider, verify the sending domain, keep
+   secrets outside source control, collect only necessary data, and add
+   accessible spam/rate protection.
+7. Add launch analytics and search ownership only under Owner-controlled
+   accounts. Prefer the least invasive useful configuration; document actual
+   collection in Privacy, and show cookie controls only if the selected tools
+   require them.
+8. Review every public statement for United States-only availability and remove
+   stale “worldwide,” international-payment, unsupported payment-method, or
+   unverified operational claims.
+9. Keep all existing sample work unmistakably labeled as concept work. Do not
+   fabricate clients, testimonials, results, logos, or screenshots while real
+   portfolio replacement remains deferred.
+10. Complete production QA across desktop, tablet, and phone: navigation,
+    contact links, all form states, confirmation email, 404s, legal links,
+    metadata, sitemap, robots, social preview, accessibility, performance,
+    security headers, and clean browser/server diagnostics.
+
+### Explicitly deferred from this chunk
+
+- Payment-provider selection, account connection, checkout, and invoice-payment
+  integration. Before the first paid client engagement, the Owner must approve
+  a provider and the public payment copy must match the methods actually active.
+- Replacement of the current concept portfolio with real client work. Existing
+  concept disclosures remain mandatory until the Owner supplies publishable
+  work and permissions.
+- A personal founder name, portrait, or biography. The launch identity is the
+  Cyvexly Studio brand and logo.
+
+### Remaining Owner inputs and access gates
+
+- exact registered legal name of the LLC as it should appear in legal text;
+- access to the Namecheap DNS and Render custom-domain screens during domain
+  connection (credentials must not be stored in the repository);
+- selection/authorization of a business-inbox and transactional-email provider,
+  plus provider secrets entered securely in Render rather than documentation;
+- analytics/Search Console account ownership or an explicit decision to launch
+  without analytics;
+- review and approval of the About draft, legal drafts, latest public visuals,
+  and the final action that changes the site from no-index to indexable.
+
+### Completion definition
+
+The chunk is complete when the canonical HTTPS domain works, all advertised
+routes and contact details are real, About/Privacy/Terms exist, Contact and
+Planner submissions deliver and confirm reliably, metadata and discovery files
+reference the production domain, unsupported market/payment claims are gone,
+and production QA passes. Payment integration and real portfolio replacement
+remain separately tracked, truthful deferrals and must not be reported as done.

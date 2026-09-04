@@ -1,8 +1,23 @@
 # Cyvexly Auditor Debt
 
-- `CYV-IFA-005` — **Owner Decision / Priority Before Deployment:** confirm public domain, set `metadataBase`, rebuild, and verify static OG/Twitter URLs no longer point to localhost; retain preview no-index until launch.
-- `CYV-IFA-006` — **Owner Decision / Priority Before Deployment:** choose an approved server-side email/storage path and implement automatic Planner receipt/confirmation with consent, error, retry, and retention behavior.
-- `/about`, `/privacy`, `/terms` — project debt requiring Owner founder/jurisdiction facts; current 404s are intentional and not new findings.
+- **Owner update 2026-09-04:** Chunk 5 is the next major chunk. Auditor must
+  evaluate it against Owner direction `2026-09-04-14` and vision §17. Domain,
+  Indiana/United States jurisdiction, public contact details, United States-only
+  market, and logo-led/no-personal-founder About direction are now confirmed.
+- `CYV-IFA-005` — **Priority in Chunk 5:** `cyvexly.com` is confirmed. Verify
+  DNS/HTTPS/canonical redirects, `metadataBase`, canonicals, sitemap, production
+  OG/Twitter URLs, staged robots, and final Owner-approved indexability.
+- `CYV-IFA-006` — **Priority in Chunk 5 / account gate remains:** select an
+  approved business-inbox/transactional-email path and verify real Contact and
+  Planner internal receipt plus prospect confirmation, consent, error, retry,
+  necessary-data/retention language, spam protection, and secret isolation.
+- `/about`, `/privacy`, `/terms` — **Priority in Chunk 5:** no longer blocked on
+  founder/jurisdiction direction. Verify logo-led About with no invented person,
+  and Indiana/United States legal pages grounded in actual behavior. Exact
+  registered LLC name and final Owner legal review remain gates.
+- Payment integration and real portfolio replacement are explicitly deferred;
+  audit the public site for unsupported payment claims and unmistakable concept
+  labels rather than expecting those deferred systems in Chunk 5.
 - `CYV-IFA-007` — provisional closure: scratch route absent in current `src`; recheck after the next immutable snapshot/build.
 - `CYV-IFA-008` — **Verified closed in IFA-2026-08-31-R9:** invalid dynamic `/services/<slug>` and `/work/<slug>` routes return HTTP 404 and hydrate with the custom `Page not found — Cyvexly Studio` title/body; valid dynamic routes remain 200. R10 did not repeat this pass. Reopen only if a later accepted source regresses this behavior.
 - `CYV-IFA-009` — **P2 / Launch Quality, mitigated:** the Planner form is gated behind restore readiness and saved-draft values restore without the R8 jump/input-loss path. Closure still requires a true no-draft first-use proof on a clean Browser origin/context; this round could not isolate it without prohibited storage clearing or policy-blocked alternate origins.

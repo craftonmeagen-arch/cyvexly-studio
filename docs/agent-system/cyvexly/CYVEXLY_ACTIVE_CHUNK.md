@@ -1,17 +1,21 @@
 # Cyvexly Active Chunk
 
 **Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
-Utility/legal pages (opened round 2, in progress). Chunk 2 — Core marketing
-pages — remains closed, but global rounds 15-28 repaired its public deployment
-path, implemented the later Owner-directed hero composition, and reconciled the
-Services combination and Pricing scope modules under the rule that closed
-chunks are not frozen.
+Utility/legal pages (opened round 2, in progress) retain incomplete closure
+items. **Chunk 5 — United States Launch Completion & Business Operations is the
+Owner-directed NEXT major chunk** and must be opened by the next Builder. Its
+integrated verification will close the overlapping delivery and launch items in
+Chunks 3 and 4. Chunk 2 — Core marketing pages — remains closed but revisitable.
 
 **Current status:** The nine-step Planner UI/state/validation remains built and
-verified at `/start`; real server-side email remains Owner-blocked on the
-production-domain and transactional-email-provider decisions. `/not-found`,
-`/faq`, and `/accessibility` are complete; `/privacy` and `/terms` remain
-Owner-blocked on jurisdiction facts; the favicon is fixed. Round 19 prevents
+verified at `/start`; real server-side email still needs an authorized provider,
+credentials, and verified sending domain. `/not-found`, `/faq`, and
+`/accessibility` are complete; `/privacy` and `/terms` can now be drafted for
+Indiana/United States operations once the exact registered LLC name is
+confirmed; the favicon is fixed. The Owner has confirmed `cyvexly.com`,
+`design@cyvexly.com`, `(317) 572-5780`, United States-only availability, and a
+logo-led/no-personal-founder About direction. Payment and real portfolio
+replacement are tabled. Round 19 prevents
 invalid dynamic-route metadata from replacing the correct hydrated 404 title
 and gates the Planner until saved-draft restoration completes. Round 20 removes
 the Home reel's visible muted/duration, progress, and circular playback chrome,
@@ -48,10 +52,14 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   confirmation email from Cyvexly.
 - **Built:** UI, state, validation, conditional fields, review/edit, draft save,
   responsive progress rail, and DOM/accessibility-tree audit.
-- **Remaining:** the real server-side delivery path, which requires the Owner to
-  choose a production domain and authorize a transactional-email provider.
+- **Remaining:** the real server-side delivery path. The production domain is
+  now confirmed; a business-inbox/transactional-email provider, credentials,
+  sending-domain verification, internal receipt, visitor confirmation, and
+  production delivery proof remain.
 - **Closure boundary:** the UI remains fully proved and the delivery gap is
-  either implemented after authorization or explicitly bounded as Owner-blocked.
+  implemented and publicly proved after provider/account authorization; if an
+  account gate remains, it must be named precisely rather than treated as an
+  unknown domain decision.
 
 ### Chunk 4 — Utility, legal & launch readiness
 
@@ -59,8 +67,32 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   conditions from vision §15.
 - **Built:** custom 404, FAQ, Accessibility statement, favicon/ICO, OG image,
   robots/no-index preview default.
-- **Remaining:** Privacy/Terms jurisdiction facts and production-domain metadata
-  wiring; both are Owner-blocked.
+- **Remaining:** logo-led About, Indiana/United States Privacy/Terms, exact LLC
+  legal-name confirmation, `cyvexly.com` DNS/HTTPS/canonical setup,
+  production-domain metadata, sitemap, indexing release, analytics/search
+  ownership, and full production QA. Chunk 5 owns this integrated completion.
+
+### Chunk 5 — United States Launch Completion & Business Operations (NEXT)
+
+- **Authority:** Owner direction `2026-09-04-14`, vision §17, and the Chunk 5
+  entry in `CYVEXLY_PROJECT_CHUNK_MAP.md`.
+- **Outcome:** launch a truthful, contactable, searchable, legally coherent
+  United States business site on canonical `https://cyvexly.com`.
+- **Required scope:** domain/HTTPS/canonical redirects; metadata/canonicals/
+  social URLs/sitemap/staged robots; `design@cyvexly.com` and public phone;
+  logo-led About; Indiana/United States Privacy and Website Terms; secure real
+  Contact/Planner delivery and visitor confirmation; privacy-aware analytics
+  and search ownership; United States/payment/portfolio truth audit; complete
+  public release QA.
+- **Deferred:** payment-provider integration and real-client portfolio
+  replacement. Do not invent, activate, or claim either.
+- **Owner gates:** exact registered LLC name; account-bound DNS/Render access;
+  inbox/transactional-email provider authorization and securely entered
+  secrets; analytics/Search Console ownership or no-analytics decision; About/
+  legal/public-visual review; final indexability approval.
+- **Closure boundary:** all Chunk 5 requirements pass on the production domain,
+  and the carried Chunk 3/4 operational items are closed. A partial domain-only,
+  legal-only, or UI-only release does not close this chunk.
 
 ## Prior round summaries
 

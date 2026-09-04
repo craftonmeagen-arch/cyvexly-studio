@@ -2,23 +2,19 @@
 
 ## Open
 
-1. **About page needs Owner-supplied founder identity.** Vision §6.8 requires
-   an honest first-person founder story, a real name, and a portrait/
-   distinctive studio image. No Builder round has this information and must
-   not invent a founder name, backstory, or photo to fill it — that would be
-   fabricated identity content, not a reversible implementation detail. Route
-   to the Owner: what name/pronoun should the site use, is there a real
-   portrait or should a non-portrait studio image stand in for now, and what
-   should the first-person story actually say about why Cyvexly exists.
-   **Round 22 containment:** fresh Council review found the still-visible
-   global About link routed visitors to a known 404. Primary/footer navigation
-   now defers that link until this Owner input exists. The route itself remains
-   open and must not be represented as complete.
-2. **Public domain is undecided.** Vision §15 allows a temporary Render
-   preview URL before the owned domain is connected. No Builder round should
-   hardcode a production domain into metadata, sitemap, or canonical URLs
-   until the Owner confirms one; when that happens, add `metadataBase`
-   (currently omitted rather than guessed). Round 3 built the actual
+1. **About page is authorized but not built.** Owner direction `2026-09-04-14`
+   supersedes the prior founder-identity blocker. The launch About page is
+   studio-led: publish no personal founder name or portrait, use the existing
+   Cyvexly logo/brand treatment, and implement the reviewable studio-origin
+   draft in vision §6.8. Do not invent a person, biography, pronouns, team, or
+   photo. Reintroduce About navigation only when the route is complete and
+   verified.
+2. **Production domain is confirmed; connection and metadata remain open.**
+   The Owner confirmed `cyvexly.com`. The domain still needs Render custom-
+   domain setup, DNS replacement of the Namecheap parking destination, HTTPS
+   verification, root/`www` canonical behavior, and public route proof. Add
+   `metadataBase`, canonical URLs, `sitemap.xml`, and staged robots/indexing.
+   Round 3 built the actual
    `opengraph-image.tsx` asset (verified real, on-brand, pixel-correct —
    see `CYVEXLY_CHUNK_DEBT.md` item 3) since that specific file does not
    need the domain to exist or render correctly, but confirmed via a real
@@ -29,21 +25,15 @@
    first** — this file still blocks the domain from a different, more
    specific angle than round 2 assumed (it's the metadata wiring, not the
    image asset, that's domain-dependent), plus `sitemap.xml` and canonical
-   URLs, which were not attempted this round for the same reason.
-3. **Privacy Policy and Website Terms need Owner-supplied jurisdiction
-   facts before they can be honestly drafted.** Round 2 built
-   `/accessibility` (jurisdiction-agnostic: a WCAG target and a contact
-   route) but deliberately did not attempt `/privacy` or `/terms`. Vision
-   §6.12 and §12 both note legal text "should be reviewed for the business
-   location and customer markets before launch" — that implies the business
-   location and primary customer markets need to be known facts, not
-   Builder-guessed ones, before drafting text that references applicable
-   consumer-protection or data-privacy regimes (e.g., which state/country
-   law governs, whether GDPR/CCPA-style disclosures apply). Route to the
-   Owner: what is Cyvexly's business location/registration, and which
-   customer markets should the policies explicitly address? Do not invent a
-   jurisdiction to unblock this — draft only once that's known, the same
-   principle as the About page's founder-identity gap (item 1).
+   URLs. Search indexing remains a final Owner-approved release action after
+   domain, legal, forms, and metadata pass.
+3. **Privacy Policy and Website Terms are authorized but need the exact legal
+   entity name.** The Owner confirmed an LLC based in Indiana, United States,
+   serving the United States only at launch. Draft `/privacy` and `/terms`
+   around those facts and the technologies actually used. The Owner has not
+   supplied the exact registered LLC name; verify it before final publication,
+   invoices, or agreements. Keep Website Terms separate from the client project
+   agreement and route legal copy to the Owner for review.
 4. **§4.12 Outcome Reachability Check — Project Planner (Chunk 3)
    email-delivery mechanism.** Performed round 3, before opening Chunk 3,
    per the round-2 handoff's explicit recommendation. **Round 4 update:**
@@ -73,23 +63,18 @@
      pattern is technically compatible. No credential capability is
      recorded for any email-delivery provider (`CYVEXLY_TOOLS_AND_
      CAPABILITIES.md`).
-   - **Verified reachability:** unreachable end-to-end right now. Sending
-     mail *as* Cyvexly needs (1) a chosen transactional email provider and
-     an authorized API key/credential, and (2) for reliable inbox delivery
-     (not spam-folder placement), a verified sending domain (SPF/DKIM),
-     which itself depends on the domain decision this file's item 2
-     already has open. These two gaps compound: even choosing a provider
-     now would leave sending unverified/undeliverable until the domain is
-     decided.
+   - **Verified reachability:** the domain is now confirmed as `cyvexly.com`,
+     but end-to-end delivery still requires a chosen business-inbox and
+     transactional-email provider, authorized credentials, DNS-based sender
+     verification (SPF/DKIM), and real receipt/confirmation proof.
    - **What would falsify this:** discovering the deploy platform includes
      a zero-credential outbound-email primitive that needs no third-party
      account or domain verification — not found; every mainstream
      transactional-email path requires a provider account at minimum, and
      reliable delivery additionally requires domain verification.
-   - **Classification:** reachable after two named authorizations/
-     decisions (email provider + credential; production domain), not
-     reachable now, and not something a Builder round may substitute with
-     a fabricated or silently-scoped-down mechanism.
+   - **Classification:** reachable after provider/account authorization,
+     credential configuration, and sending-domain verification; not something
+     a Builder may substitute with a fabricated or silently-scoped-down path.
    - **Separable authorized work that remains reachable now (not
      blocked):** the Planner's UI — nine-step form, progress indicator,
      per-step validation, conditional questions, review/summary step —
@@ -99,9 +84,8 @@
      `/start` too, but must be documented as not fulfilling the "automatic
      confirmation email from Cyvexly" requirement — it only lets the
      *visitor's own* mail client send a notification to Cyvexly, exactly
-     like Contact. Route to the Owner: which transactional email provider
-     to authorize (and its API key), once the domain decision (item 2) is
-     also made.
+     like Contact. Route to the Owner: which business-inbox and transactional
+     email provider to authorize, and enter its credential securely in Render.
    - **Recommendation:** the next Builder opening Chunk 3 should build the
      full Planner UI/state/validation now as the coherent authorized
      slice, wire submission to the same `mailto:` interim pattern as

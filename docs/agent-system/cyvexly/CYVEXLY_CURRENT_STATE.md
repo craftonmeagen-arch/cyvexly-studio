@@ -1,10 +1,13 @@
 # Cyvexly Current State
 
-**Global round:** 28
-**Active chunks:** Chunk 3 — Project Planner; Chunk 4 — Utility/legal and launch
-readiness. Both remain in progress because real Planner delivery and final
-legal/domain work require Owner decisions. Marketing chunks remain closed but
-revisitable.
+**Global round:** 28 product baseline; Owner launch direction updated
+2026-09-04.
+**Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
+and launch readiness retain incomplete closure items. The Owner has directed
+the next Builder to open **Chunk 5 — United States Launch Completion & Business
+Operations** as one integrated next major chunk. Chunk 5 will implement and
+verify the remaining operational work and close the overlapping Chunk 3/4
+delivery, legal, domain, and discovery boundaries.
 
 **Round 28 outcome:** after reviewing Home below the first viewport, the Owner
 identified the remaining mismatch: middle and lower sections still became pale
@@ -24,15 +27,17 @@ containment, one main/H1, and sticky/z50 navigation. ESLint, TypeScript, and the
 optimized 23-page build pass. This is rendered implementation proof, not a
 claim of Owner acceptance.
 
-**Immediate next mission:** confirm public deployment adoption and obtain Owner
-visual review against mockup 06. Preserve the continuous architectural
-environment, protected section bays, responsive density reduction, and
-unchanged media behavior unless rendered public evidence shows a defect.
+**Immediate next mission:** open Chunk 5 from Owner direction `2026-09-04-14`
+and `CYVEXLY_VISION_PLAN.md` §17. Preserve the continuous architectural
+environment and verify its public adoption while completing the domain,
+production metadata/discovery, public contact, About, legal, real inquiry
+delivery, analytics/search ownership, truth audit, and release-QA work.
+Payment integration and real portfolio replacement remain explicitly deferred.
 
-**Accepted source position:** Round 28 is committed to local `main` and pushed
-to `origin/main`; use `git log` as the exact commit ledger. Public Render at
-`https://cyvexly-studio.onrender.com/` may lag the push until its deployment
-finishes. `origin/master` is historical and is not the deployment branch.
+**Accepted product position:** Round 28 product source is commit `c960f72` on
+`main` and is live at `https://cyvexly-studio.onrender.com/`. The production
+domain is confirmed as `cyvexly.com`, but DNS still needs to be connected and
+verified. `origin/master` is historical and is not the deployment branch.
 
 ## Current product truth
 
@@ -62,22 +67,28 @@ finishes. `origin/master` is historical and is not the deployment branch.
 - Round 18 Pricing, Round 17 Services, Round 16 Home, Round 15 deployment, and
   Round 14 service-detail/Planner-preselection work remain accepted source.
 
-## Owner-blocked launch facts
+## Owner launch decisions and remaining gates
 
-Do not invent these:
+The Owner has now confirmed: Cyvexly Studio; LLC structure; Indiana, United
+States; United States-only launch market; `cyvexly.com`;
+`design@cyvexly.com`; `(317) 572-5780`; logo-led About; no public personal
+founder name or portrait; and a studio-origin narrative authorized for review.
 
-1. founder identity/story/portrait for `/about`;
-2. business jurisdiction and approved Privacy/Terms content;
-3. production domain and launch indexability, needed for `metadataBase`,
-   canonical/sitemap/OG/Twitter URLs and robots;
-4. transactional-email provider, credentials, and verified sending domain for
-   real Planner/Contact delivery;
-5. whether truthful abstract concept artwork is release-sufficient or a
-   commissioned higher-fidelity concept set is required.
+The following still require Owner account access, confirmation, or final
+approval and must not be invented:
 
-Council `CYC-R37-F001` through `F003` map directly to items 2–4. Privacy and
-Terms visible links remain known release blockers. The explicit interim
-`mailto:` disclosures remain truthful and unchanged.
+1. exact registered LLC legal name for legal text and later agreements;
+2. Namecheap/Render account-bound DNS work and canonical-domain verification;
+3. business-inbox and transactional-email provider selection/authorization,
+   secure provider secrets, and sending-domain verification;
+4. analytics/Search Console ownership or a no-analytics launch decision;
+5. review of About/Privacy/Terms drafts, public visual acceptance, and final
+   permission to enable search indexing.
+
+Payment-provider selection and real portfolio replacement are deliberately
+tabled. Existing payment claims must be removed or qualified until supported;
+existing concepts must remain unmistakably labeled. The interim `mailto:`
+disclosures remain truthful but are a Chunk 5 replacement target.
 
 ## Verification and orientation
 

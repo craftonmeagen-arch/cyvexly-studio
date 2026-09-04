@@ -1,5 +1,16 @@
 # Cyvexly Next Council Handoff
 
+## Owner-directed next review — September 4, 2026
+
+Review Chunk 5 as the next major product-quality target. Read Owner direction
+`2026-09-04-14`, vision §17, and the Chunk 5 map before the historical round
+handoffs below. Judge the integrated canonical-domain, discovery, public
+contact, About, legal, real form-delivery, measurement, content-truth, and
+production-QA result. The Owner has supplied the domain, jurisdiction, contact,
+market, and logo-led About direction. Exact LLC name, account/provider setup,
+final copy/visual/indexing approval remain gates. Payment integration and real
+portfolio replacement are deferred.
+
 ## CYC-R42-20260901-01
 
 R42 directly observed a clean public-origin Planner first use at 1440/768/390:

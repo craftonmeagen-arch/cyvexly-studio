@@ -1,5 +1,19 @@
 # Cyvexly Council Debt
 
+- **Owner update 2026-09-04 — next Council focus:** Chunk 5 is the next major
+  chunk under Owner direction `2026-09-04-14` and vision §17. Review the
+  integrated United States launch outcome: canonical `cyvexly.com`, production
+  discovery/indexing gate, `design@cyvexly.com`, `(317) 572-5780`, logo-led
+  About without a personal founder identity, Indiana/United States Privacy and
+  Website Terms, real Contact/Planner delivery and confirmation, privacy-aware
+  measurement, truthful United States/payment/portfolio claims, and public QA.
+  Earlier entries saying domain, jurisdiction, founder-image choice, public
+  contact details, or initial market are wholly undecided are historical and
+  superseded. Exact LLC legal name, account/provider access, final copy/visual/
+  indexing approval remain Owner gates. Payment integration and real portfolio
+  replacement are deferred and must not be treated as Chunk 5 failures when
+  public copy accurately reflects that boundary.
+
 - CYC-R42 finds no new Priority Now defect. Clean public Planner first use and
   blank validation/focus now have direct 1440/768/390 proof; provider-backed
   email, metadata/indexability, legal/founder facts, alternate-device and

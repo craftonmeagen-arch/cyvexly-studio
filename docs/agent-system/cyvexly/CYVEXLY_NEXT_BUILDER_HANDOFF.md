@@ -1,5 +1,35 @@
 # Cyvexly Next Builder Handoff
 
+## Owner-directed next mission — September 4, 2026
+
+Open **Chunk 5 — United States Launch Completion & Business Operations** as the
+next major chunk. Read Owner direction `2026-09-04-14`,
+`CYVEXLY_VISION_PLAN.md` §17, and the Chunk 5 map before planning. This newer
+direction supersedes the Round 28 handoff's statement that domain, Indiana
+jurisdiction, public contact details, founder-image choice, and initial market
+are wholly undecided.
+
+Confirmed inputs:
+
+- Cyvexly Studio; LLC; Indiana, United States; United States-only launch market.
+- Production domain `cyvexly.com`.
+- Public email `design@cyvexly.com`.
+- Public phone `(317) 572-5780` / `+13175725780`.
+- Logo-led studio About; no public personal founder name or portrait.
+- Implement the reviewable studio-origin copy from vision §6.8.
+- Payment selection/integration and real portfolio replacement are tabled.
+
+The integrated scope is domain/HTTPS/canonical routing, production metadata and
+discovery, truthful public contact data, About, Indiana/United States Privacy
+and Website Terms, secure Contact/Planner server delivery and visitor
+confirmation, privacy-aware analytics/search ownership, content-truth audit,
+and complete public release QA. Do not report completion from one workstream.
+
+Still route to the Owner at the real account/decision boundary: exact registered
+LLC name; DNS/Render access; business-inbox and transactional-email provider;
+secure secret entry; analytics/Search Console ownership or no-analytics choice;
+About/legal/public-visual review; and final approval to enable indexing.
+
 ## Round 28 closeout
 
 **Session:** `root-sitewide-cyber-glass-20260901-r28`
@@ -41,16 +71,15 @@ use `git log` for the exact immutable hash
 
 ## Immediate next mission
 
-Confirm that Render adopts the pushed Round 28 source, then obtain Owner visual
-review against `mockups/06-sitewide-blue-glass-owner-direction.png`. Do not
-represent local proof as public adoption or Owner acceptance. Preserve the
-continuous architecture and protected section-bay grammar unless public
-rendered evidence shows a defect.
+Preserve the Round 28 continuous architecture and protected section-bay grammar
+while executing the newer Chunk 5 mission above. Confirm the live Render visual
+state as part of production QA, but do not let another cosmetic-only round
+displace the Owner's integrated launch-completion priority.
 
-The known launch work remains blocked on Owner decisions: founder About
-content, jurisdiction-approved Privacy/Terms, production domain/indexability,
-transactional-email provider/credentials/domain, and final concept-art release
-sufficiency. Do not invent substitutes.
+The domain, jurisdiction, contact information, initial market, and logo-led
+About direction are no longer unknown. Provider credentials, exact registered
+LLC name, final copy/visual/indexing approval, payment selection, and real
+portfolio replacement remain bounded exactly as stated above.
 
 The recurring scheduler/automation was not read, modified, paused, deleted,
 renamed, or rescheduled and remains Owner-controlled. Concurrent Council files

@@ -29,21 +29,23 @@ requires.
   `/work` (+ filterable grid), `/work/[slug]` case-study template with three
   concept case studies (Aurora Spaces, Nexora Systems, Vellora Care) all
   built and verified round 2. Five of six pages done.
-- **Remaining/bounded:** `/about` is the only page not built — it needs a
-  real founder name, first-person story, and portrait from the Owner (vision
-  §6.8), which no Builder round may invent. This is an honestly bounded gap
-  per the chunk's own closure boundary ("resolved or explicitly and honestly
-  bounded"), not a reachable defect. See `CYVEXLY_APP_DEBT.md` item 1.
+- **Original remaining/bounded state:** `/about` was the only page not built
+  because the first vision expected a founder name/story/portrait that no
+  Builder could invent. **Superseded September 4, 2026:** Owner direction
+  `2026-09-04-14` authorizes a logo-led studio About, no public personal founder
+  name or portrait, and the reviewable origin draft in vision §6.8. Chunk 5 now
+  owns implementation and verification. See `CYVEXLY_APP_DEBT.md` item 1.
   **Closed round 3:** independently re-verified via a live route sweep
   (`curl` against all six pages plus `/about`) that `/`, `/process`,
   `/services`, `/pricing`, `/contact`, `/work` (+3 case studies) all return
   200 and `/about` still 404s. The founder-identity gap is unchanged and
-  still not a Builder-reachable decision (no new Owner input arrived this
-  round). Per the chunk's own closure boundary ("resolved or explicitly and
+  still not a Builder-reachable decision at that historical round. Per the
+  chunk's own closure boundary ("resolved or explicitly and
   honestly bounded"), this satisfies closure — closed with the About page
   carried forward as `CYVEXLY_APP_DEBT.md` item 1, not as open chunk debt.
   Closed does not mean frozen: reopens automatically once Owner-supplied
-  founder identity arrives.
+  approved identity direction arrives. That direction has now arrived and is
+  assigned to Chunk 5.
 - **Known visual gaps vs. mockups** (found via round-2 mockup comparison,
   see `CYVEXLY_CHUNK_DEBT.md`): Services/Pricing pages are content-complete
   and match vision text closely, but use denser cards than
@@ -106,8 +108,9 @@ requires.
 
 - **Outcome:** the nine-step conversational Planner (vision §6.9 and §9) at
   `/start`, with a working real transactional-email-based confirmation once
-  authorized (§4.12 Outcome Reachability Check, run round 3: needs a
-  foundational domain + email-provider decision, not just Builder judgment).
+  authorized (§4.12 Outcome Reachability Check, run round 3: the domain is now
+  confirmed; inbox/transactional-email provider authorization, secure
+  credentials, and sending-domain verification still require Owner action).
 - **Progress (round 4):** the full UI/state/validation is built and verified
   — all nine steps, per-step required-field validation with "not sure —
   recommend it" escape hatches (vision §6.9), conditional questions (an
@@ -117,9 +120,10 @@ requires.
   client-side "save & continue later" draft via `localStorage`. Submission
   reuses Contact's `mailto:` interim bridge, explicitly labeled as not
   satisfying the "confirmation email sent from Cyvexly" requirement.
-- **Remaining:** the real server-side email-delivery route, blocked on the
-  domain + transactional-email-provider decision (`CYVEXLY_APP_DEBT.md`
-  item 4, unchanged). Physical cross-browser/device confirmation remains
+- **Remaining:** the real server-side email-delivery route. `cyvexly.com` is
+  confirmed; the business-inbox/transactional-email provider, secure
+  credentials, sender verification, and real delivery proof remain
+  (`CYVEXLY_APP_DEBT.md` item 4). Physical cross-browser/device confirmation remains
   useful complementary proof, not a source blocker.
 - **Round 6:** fixed a real Council-flagged defect (`CYC-R2-F001`) — the
   progress rail didn't keep the active step visible at 390px/768px,
@@ -161,9 +165,10 @@ requires.
   all built.
 - **Progress (round 3):** `robots.txt` and a site-wide no-index default
   (vision §15's "no accidental preview indexing"), a real on-brand
-  social-sharing (Open Graph) image asset (`opengraph-image.tsx`, its
-  metadata wiring correctly still blocked on the domain decision — see
-  `CYVEXLY_APP_DEBT.md` item 2), and a first full launch-readiness pass
+  social-sharing (Open Graph) image asset (`opengraph-image.tsx`; its metadata
+  wiring was blocked at that time). The Owner has since confirmed
+  `cyvexly.com`, and Chunk 5 now owns that production wiring — see
+  `CYVEXLY_APP_DEBT.md` item 2 — plus a first full launch-readiness pass
   against all 14 items in vision §15 (see `CYVEXLY_ACTIVE_CHUNK.md`'s
   round-3 report for the item-by-item result).
 - **Progress (round 19):** invalid dynamic service/work paths now preserve the
@@ -173,21 +178,94 @@ requires.
 - **Progress (round 22):** the unavailable About route is no longer advertised
   in primary or footer navigation. This is a truthful deferral, not route
   completion; the Owner identity-fact blocker remains unchanged.
-- **Deliberately not attempted:** `/privacy` and `/terms`. Unlike
+- **Historical deliberately-not-attempted state:** `/privacy` and `/terms`. Unlike
   Accessibility (jurisdiction-agnostic — a WCAG target + contact route),
-  Privacy and Terms need jurisdiction-specific legal language (business
-  location, applicable consumer-protection/data-privacy regime) that no
-  Builder round has and must not invent — this is the same class of gap as
-  the About page's founder identity: Owner-supplied fact, not a reversible
-  implementation detail. See `CYVEXLY_APP_DEBT.md` item 3.
-- **Remaining:** `/privacy`/`/terms` (Owner-blocked, above), `metadataBase`/
-  `sitemap.xml`/canonical URLs (domain-blocked, `CYVEXLY_APP_DEBT.md` item
-  2). **The favicon's 16px legibility defect (found round 3) is fixed as
+  Privacy and Terms need jurisdiction-specific legal language. **Superseded
+  September 4, 2026:** the Owner supplied Indiana/United States jurisdiction
+  and a United States-only market. Chunk 5 may draft the pages but must confirm
+  the exact registered LLC name and obtain Owner review before publication.
+  See `CYVEXLY_APP_DEBT.md` item 3.
+- **Remaining:** `/privacy`/`/terms` (Indiana/United States direction supplied;
+  exact LLC name and Owner copy review remain), plus `metadataBase`/
+  `sitemap.xml`/canonical URLs and DNS/HTTPS wiring for confirmed
+  `cyvexly.com` (`CYVEXLY_APP_DEBT.md` items 2–3). **The favicon's 16px
+  legibility defect (found round 3) is fixed as
   of round 7** — redesigned and pixel-verified via the established proxy
   technique rather than waiting further on an attended session that never
   materialized in this session type; see `CYVEXLY_CHUNK_DEBT.md` item 3.
   A real live-tab screenshot would still strengthen the proof, but is not
   blocking the fix any longer.
+
+## Chunk 5 — United States Launch Completion & Business Operations (NEXT)
+
+- **Authority:** Owner direction `2026-09-04-14` and
+  `CYVEXLY_VISION_PLAN.md` §17. The next Builder must open this as the next
+  major chunk. Builder, Auditor, and Council must use the same scope and
+  completion definition.
+- **Outcome:** convert the working Render preview into a truthful, contactable,
+  searchable, legally coherent United States business site at canonical
+  `https://cyvexly.com`, while preserving the approved cyber-blue glass system
+  and qualified-project-brief conversion model.
+- **Confirmed facts:** Cyvexly Studio; LLC structure; Indiana, United States;
+  United States-only launch market; `cyvexly.com`; `design@cyvexly.com`;
+  `(317) 572-5780` / `+13175725780`; logo-led About; no personal founder name
+  or portrait.
+
+### Required scope
+
+1. Connect root/`www` DNS to Render, verify HTTPS, and establish canonical-host
+   redirects.
+2. Add production `metadataBase`, page canonicals, production Open Graph and
+   Twitter URLs, `sitemap.xml`, and staged robots/indexing behavior.
+3. Replace every stale email/market reference; add accessible public phone
+   links and verify contact information across header/footer/pages/metadata.
+4. Build a complete logo-led About page using the Owner-review origin draft,
+   studio values, working style, United States availability, and inquiry CTA.
+5. Draft Indiana/United States Privacy Policy and Website Terms that describe
+   only actual forms, analytics, email, hosting, and third-party processors.
+   Confirm the exact registered LLC name before final publication and keep the
+   client project agreement separate.
+6. Replace Contact and Planner `mailto:` submission with a secure server-side
+   delivery path that provides internal receipt, prospect confirmation/summary,
+   honest success/failure/retry states, necessary-data minimization, secret
+   isolation, and proportionate accessible spam/rate protection.
+7. Add Owner-controlled search ownership and the least invasive useful
+   analytics configuration, with matching Privacy/cookie behavior.
+8. Audit all content for United States-only availability, concept-work truth,
+   unsupported payment claims, accurate response times, and consistent contact
+   details.
+9. Run full production release QA over routes, forms and real delivery, legal
+   links, responsiveness, accessibility, performance, security, metadata,
+   social preview, sitemap, robots, redirects, diagnostics, and Render adoption.
+
+### Explicit deferrals
+
+- Payment-provider selection, payment accounts, checkout, invoice-payment
+  integration, and operational payment-method claims are deferred for Owner
+  research. They are not part of Chunk 5. Public copy must not claim methods
+  that are not active.
+- Real-client portfolio replacement remains deferred. Existing concepts stay
+  only with unmistakable concept labeling; no fabricated clients/results.
+- No personal founder name, portrait, or biography is required or authorized.
+
+### Owner gates that do not prevent safe preparatory work
+
+- Confirm the exact registered LLC name.
+- Provide account-bound DNS/Render access and approve the canonical domain.
+- Select/authorize the business-inbox and transactional-email provider and
+  enter its secrets securely outside source control.
+- Provide analytics/Search Console ownership or choose no analytics.
+- Review About/legal copy, approve the public visual result, and authorize the
+  final switch from no-index preview to public indexing.
+
+### Completion boundary
+
+Chunk 5 closes only when canonical HTTPS, real contact details, About/Privacy/
+Terms, dependable Contact/Planner delivery and confirmation, production
+metadata/discovery, truthful United States/payment/portfolio claims, and full
+public QA all pass. Its integrated verification also closes the remaining
+delivery work in Chunk 3 and launch/legal work in Chunk 4. Payment integration
+and real portfolio replacement remain separately tracked deferrals.
 
 ## Cross-chunk notes
 

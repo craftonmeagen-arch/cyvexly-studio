@@ -1,54 +1,60 @@
-# Cyvexly Studio Agent Guidance
+# Cyvexly Studio Current Agent Guidance
 
-## Project identity
+The previous contents of this file are superseded by direct Owner instruction
+dated 2026-09-04. Do not use older setup-state claims such as “Git is not
+initialized,” “no product round has started,” or “the first Builder must create
+the chunk map.” The project is established, versioned, and deployed.
 
-This sandbox is the Cyvexly Studio website project. The Owner approved the four governing role packets in the repository root on 2026-08-30 for project-scoped activation. Recurring schedulers are not configured or authorized by this setup.
+## Current authority and next mission
 
-## Governing packets
+The next major product chunk is **Chunk 5 — United States Launch Completion &
+Business Operations**.
 
-- `Autonomous_Build_Reasoning_Guidelines_v23_2_DRAFT_Universal_Sandbox_Orientation.md` governs the Builder.
-- `EDUAILENZ_BUILDER_SUPERVISOR_PROMPT.md` governs the Supervisor role; its product-specific EduAILenz examples map to this lane's Cyvexly files and routes without changing the frozen source packet.
-- `Independent_Forensic_Auditor_Guidelines_v5_0_DRAFT_Universal_Sandbox_Orientation.md` governs the Auditor.
-- `Product_Quality_Assurance_and_Methods_Council_Guidelines_v5_0_DRAFT_Universal_Sandbox_Orientation.md` governs the Council.
+Before working, read:
 
-These Owner-authored packets are frozen. Do not rewrite, rename, weaken, expand, or replace them unless the Owner explicitly authorizes packet maintenance.
+1. `docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md`, especially Owner
+   direction `2026-09-04-14`;
+2. `CYVEXLY_VISION_PLAN.md`, especially §17;
+3. `docs/agent-system/cyvexly/CYVEXLY_PROJECT_CHUNK_MAP.md`, Chunk 5;
+4. the matching current-state, debt, handoff, and PM-prompt files for the role.
 
-## Custom roles
+All roles use the same Chunk 5 scope, explicit deferrals, Owner gates, and
+completion definition. The Builder implements; the Auditor and Council review
+independently after an accepted source is available. Do not report the
+integrated chunk complete because one workstream passed.
 
-Project-scoped custom agents live in `.codex/agents/`:
+## Confirmed Owner facts
 
-- `cyvexly_builder` — owns forward implementation under `.engine-lock`.
-- `cyvexly_supervisor` — helper that follows behind an active Builder and may fix verified defects under that same Builder ownership window.
-- `cyvexly_auditor` — independent source/runtime reviewer; never edits product source or tests.
-- `cyvexly_council` — independent product-quality and methods reviewer; never edits product source or tests.
+- Brand: Cyvexly Studio.
+- Structure/location: LLC in Indiana, United States; exact registered legal
+  entity name still requires confirmation.
+- Launch market: United States only.
+- Production domain: `cyvexly.com`.
+- Public email: `design@cyvexly.com`.
+- Public phone: `(317) 572-5780` / `+13175725780`.
+- About: logo-led studio story; no personal founder name or portrait.
+- Payment provider/integration: deferred for Owner research.
+- Real portfolio replacement: deferred; concept work must stay clearly labeled.
 
-Use these roles when the Owner explicitly requests the autonomous role workflow or names a role. Do not invent a recurring schedule or cadence. At most three spawned role threads may be open in addition to the primary thread.
+## Working boundaries
 
-## Orientation and ownership
+- Preserve the approved cyber-blue architectural glass design unless new
+  rendered evidence or direct Owner direction requires a change.
+- Preserve the service model: prospects describe needs and Cyvexly recommends
+  scope; this is not a self-service website builder or instant checkout flow.
+- Never invent legal identity, client work, testimonials, results, credentials,
+  provider approval, payment availability, or business facts.
+- Never store passwords, API keys, tokens, or provider secrets in source,
+  documentation, screenshots, reports, or chat. Use approved secret controls.
+- Treat historical reports as evidence of their recorded rounds, not as newer
+  authority over Owner direction `2026-09-04-14`.
+- Do not create or change a recurring scheduler unless the Owner explicitly
+  requests that scheduler action.
 
-Each role begins from exactly one matching root orientation document. Builder lock and reviewer lifecycle helpers live in `.codex/roles/scripts/`.
-
-- The Builder must atomically claim `.engine-lock` before reading project state or changing the repository and must release it as its literal final repository action.
-- The Supervisor operates only when an active Builder has explicitly dispatched it and a matching live Builder lock is verified. It shares the Builder working tree but owns only its own temporary artifacts and process identities.
-- Auditor and Council never touch `.engine-lock`, Builder processes, Builder ports, Builder browser state, or product source. They use role-owned snapshots, runtimes, evidence, reports, and process manifests.
-- Stop or delete only resources whose exact ownership is proven. Preserve user files, permanent deliverables, cited evidence, reports, archives, and another role's resources.
-
-## Project state
-
-Canonical lane files are under `docs/agent-system/cyvexly/`. `CYVEXLY_VISION.md` routes to the existing project vision plan. No product round or review has been started by environment setup. The first invoked Builder creates the provisional chunk map, opens the first chunk, and establishes round 1 from current source and Owner direction.
-
-## Verification and cleanup
-
-Observable changes require real product use and proof proportionate to the claim. User-facing visual work requires a visual plan before implementation and rendered comparison afterward. Auditor and Council must use their isolated runtime through the in-app browser when a runnable product exists.
-
-Inspect temporary screenshots, renders, traces, recordings, runtime copies, build output, and caches promptly. Delete uncited or exhausted role-owned artifacts before round close. Never retain duplicate source/runtime copies after their verification purpose ends.
-
-## Current environment facts
+## Current environment
 
 - Workspace: `C:/app projects/website`
-- Git: not initialized at setup time; agents must recheck current truth.
-- Builder development port reservation: `5173`
-- Auditor isolated port reservation: `5273`
-- Council isolated port reservation: `5373`
-- Available local tools at setup: Git 2.55, Node.js 24.19, npm 11.17, pnpm 10.34, Python 3.13, ripgrep 15.2.
-- Browser, connector, and credential capabilities are session-specific and must be verified before use. Never store secret values in project files.
+- Deployment branch: `main`
+- GitHub: `https://github.com/craftonmeagen-arch/cyvexly-studio`
+- Render preview: `https://cyvexly-studio.onrender.com/`
+- Production-domain connection: pending Chunk 5 DNS/Render verification.

@@ -1,5 +1,16 @@
 # Cyvexly Next Auditor Handoff
 
+## Owner-directed next audit — September 4, 2026
+
+Audit Chunk 5 as the next major review target. Read Owner direction
+`2026-09-04-14`, vision §17, the Chunk 5 map, and the updated debt record before
+using the historical handoffs below. Domain, Indiana/United States jurisdiction,
+public email/phone, United States-only market, and logo-led/no-personal-founder
+About direction are now confirmed. Audit the integrated production result, not
+one isolated workstream. Exact LLC name, provider/account access, final copy/
+visual/indexing approval remain Owner gates. Payment integration and real
+portfolio replacement are explicitly deferred.
+
 - **Latest completed audit:** `IFA-2026-09-01-R21` / `auditor-20260901T1837Z-021` reviewed accepted product `06fbadd` (`src/` tree `d9f3e4a...`) in an exact port-5273 runtime. The standard guard remained managed-permission blocked; manual routing and the exact runtime deviation are recorded in the current report/evidence.
 - **R21 evidence:** `auditor/evidence/auditor-20260901T1837Z-021-navigation-filter-probe.md`; `auditor/evidence/auditor-20260901T1837Z-021-runtime-metrics.json`; opened phone Work/Services captures.
 - **R21 disposition:** Work filter matrix, explicit empty states, phone containment, filtered Work → Planner → browser Back recovery, and mobile menu routes to Work/Pricing/Process/Services passed with one-main/one-H1 and no overflow. No new defect assigned. IAB `press("Tab")` did not advance focus, so physical keyboard remains unconfirmed as a tooling limit. Existing `CYV-IFA-005`, `CYV-IFA-006`, and `CYV-IFA-009` remain open; `CYV-IFA-010`/`CYV-IFA-011` remain closed.

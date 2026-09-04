@@ -1,5 +1,16 @@
 # Cyvexly Council Current State
 
+## Owner-directed next review — September 4, 2026
+
+Chunk 5 is the next major product-quality review under Owner direction
+`2026-09-04-14` and vision §17. Evaluate the integrated United States launch:
+canonical `cyvexly.com`, production discovery/indexing gate, public email/phone,
+logo-led About without an invented founder, Indiana/United States legal pages,
+real Contact/Planner delivery and confirmation, privacy-aware measurement,
+truthful market/payment/portfolio language, and public QA. Earlier round notes
+remain historical evidence; they do not override the newly supplied facts.
+Payment integration and real portfolio replacement are deferred.
+
 ## CYC-R42-20260901-01
 
 - Scheduler minute zero `2026-09-01T19:22:31.445Z`; round
