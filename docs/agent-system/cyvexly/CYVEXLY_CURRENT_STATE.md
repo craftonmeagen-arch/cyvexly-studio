@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 46. Owner launch direction updated 2026-09-04.
+**Global round:** 47. Owner launch direction updated 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -11,47 +11,51 @@ skip-to-main-content link (round 39), the Planner's step-advance
 focus/scroll/live-region defect (round 40), the Contact form's missing
 spam/rate protection (round 42), sitewide Organization JSON-LD structured
 data (round 43), FAQPage JSON-LD for `/faq` (round 44), BreadcrumbList
-JSON-LD for service-detail/case-study routes (round 45), and a Web App
-Manifest plus dead-asset cleanup (round 46) are done.
+JSON-LD for service-detail/case-study routes (round 45), a Web App
+Manifest plus dead-asset cleanup (round 46), and an Apple touch icon
+(round 47) are done.
 Remaining Chunk 5 scope (real Contact/Planner email delivery, DNS/domain
 connection, analytics/search ownership, final indexability approval) is
 Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates".
 Full round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 46 outcome (scheduled/unattended, 50-minute limit):** dispositioned
-the one new Auditor inbox item, `IFA-2026-09-05-R37` — a thirteenth
+**Round 47 outcome (scheduled/unattended, 50-minute limit):** dispositioned
+the one new Auditor inbox item, `IFA-2026-09-05-R38` — a fourteenth
 consecutive independent confirmation, 0 active code defects, not a new
-finding. Shipped two new reachable angles: (1) removed 5 dead
-`create-next-app` scaffold SVGs from `public/` (unreferenced third-party
-branding publicly served on the live domain, e.g. `cyvexly.com/vercel.svg`)
-and (2) added `src/app/manifest.ts`, a Web App Manifest the site never had,
-reusing only already-confirmed facts (name/tagline/brand colors) and the
-existing `icon.svg`. Verified via real production build output (manifest
-content, HTML `<link>` tag, all 5 dead assets 404 while `icon.svg` stays
-200) and a real `next start` server plus in-app-Browser screenshot showing
-zero regression. Also rotated hot memory: archived round 43's full
-`CYVEXLY_ACTIVE_CHUNK.md` report to restore the §7.14 latest-three rule.
-Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 46" section and
+finding. Shipped one new reachable angle: added `src/app/apple-icon.tsx`,
+an Apple touch icon (180×180 PNG via the same `next/og` `ImageResponse`
+technique as `opengraph-image.tsx`) closing the gap round 46's Web App
+Manifest doesn't cover — iOS Safari ignores the manifest's icon list and
+needs its own `<link rel="apple-touch-icon">`. Reuses only the existing
+C/Y mark and brand-blue token, no invented facts. Verified via real
+production build output (`<link rel="apple-touch-icon">` tag, correct
+180x180/PNG), the generated PNG opened directly (proxy-image technique),
+and a real `next start` server plus in-app-Browser screenshot showing zero
+regression. Also rotated hot memory: archived round 44's full
+`CYVEXLY_ACTIVE_CHUNK.md` report and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`
+closeout to restore the §7.14 latest-three rule.
+Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 47" section and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 46. Untried angles remaining: a
+first for anything published after round 47. Untried angles remaining: a
 print-stylesheet check (low priority, not in vision §17 item 10's explicit
 list); a true rate-limiting check beyond the honeypot (architecturally tied
 to the same server-side email delivery this chunk already defers); real
-raster (PNG) manifest icons at 192/512px if a stronger "Add to Home Screen"
-presentation is later judged worthwhile (current SVG-only icon is spec-valid,
-not a defect). Organization, FAQPage, BreadcrumbList JSON-LD, and the Web App
-Manifest are all now shipped — keep looking for genuinely new QA/build
-angles rather than assuming the surface is empty. What remains genuinely
+raster (PNG) manifest icons at 192/512px if a stronger Android "Add to Home
+Screen" presentation is later judged worthwhile (current SVG-only icon is
+spec-valid, not a defect). Organization, FAQPage, BreadcrumbList JSON-LD,
+the Web App Manifest, and the Apple touch icon are all now shipped — keep
+looking for genuinely new QA/build angles rather than assuming the surface
+is empty. What remains genuinely
 Owner-gated (real Contact/Planner email delivery, DNS/domain connection,
 analytics/search ownership, exact LLC name, final indexability approval,
 About/legal/visual review) is unchanged; see "Owner launch decisions and
 remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 46's source
+**Accepted product position:** `main` is pushed through round 47's source
 feature commit on `origin/main` — see `git log` for exact SHAs (docs commit
 to follow this same round). The production domain is confirmed as
 `cyvexly.com`, but DNS still needs to be connected and verified.

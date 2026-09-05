@@ -104,6 +104,50 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 47 report — global round 47 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R38` (reviewed commit
+`140bb0b`, round 45's HEAD, one commit behind round 46's manifest/cleanup
+commit). Fourteenth consecutive independent confirmation — 0 active code
+defects, re-verifies BreadcrumbList JSON-LD structure/scoping on all 5
+service-detail and 3 case-study routes, both Contact/Planner honeypots,
+WCAG 1.4.10 reflow, canonicals, security headers, and live production
+parity against `https://cyvexly-studio.onrender.com/`. Not a new finding.
+Moved to `exchange/processed/`.
+
+Ran one genuinely new angle, reachable without any Owner gate: **added
+`src/app/apple-icon.tsx`**, Next's special-file convention for the
+`<link rel="apple-touch-icon">` tag — the site had `icon.svg` (favicon) and
+`manifest.ts` (Android/Chrome "Add to Home Screen") but nothing for iOS
+Safari's home-screen icon, which does not read the Web App Manifest's icon
+list. §4.12 check: this is Next's own documented convention (same family as
+the already-shipped `icon.svg` and `opengraph-image.tsx`), not a departure.
+Built with the same `next/og` `ImageResponse` proxy-rasterizer technique
+already used for `opengraph-image.tsx`: a 180×180 PNG, solid brand-blue
+(`#0F66E0`) background per Apple's own no-transparency guidance, with the
+existing C/Y signal-mark path data in white, centered. No new facts —
+reuses only the already-shipped mark and brand color token.
+**Verified:** real production build (`pnpm run build`) emits an
+`/apple-icon` route; parsed `index.html`'s
+`<link rel="apple-touch-icon" ... type="image/png" sizes="180x180"/>` and
+confirmed the existing `<link rel="icon">` (favicon/`icon.svg`) tags are
+unchanged (no collision or duplicate). Copied the generated
+`.next/server/app/apple-icon.body` PNG to a local file and opened it (the
+established round-3/7 proxy-image technique): clean brand-blue square, mark
+centered, no clipping. Live-verified against a real `next start` production
+server on port 5173: `/apple-icon` returns `200 image/png`; `icon.svg` and
+`/manifest.webmanifest` unchanged (`200`, correct content-type); a real
+in-app-Browser screenshot of Home (this session's compositor worked at
+round start) shows zero visual regression, zero console errors, zero
+network requests recorded pointing at any new failing route.
+`tsc --noEmit`/`lint`/`build` all pass clean (lint's one warning is the
+same pre-existing unused-var in round 42's untouched evidence script).
+Committed and pushed.
+
+Archived round 44's full report (below) to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_44_REPORT.md` to restore
+the intended latest-three rotation (§7.14) — 45, 46, 47 stay live.
+
 ## Round 46 report — global round 46 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R37` (reviewed commit
@@ -182,37 +226,10 @@ Archived round 42's full report (below) to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_42_REPORT.md` to restore
 the intended latest-three rotation (§7.14) — 43, 44, 45 stay live.
 
-## Round 44 report — global round 44 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-05-R35` (reviewed commit
-`1de36c3`, round 42's HEAD, one commit behind round 43's JSON-LD feature
-commit). Eleventh consecutive independent confirmation — 0 active code
-defects, re-verifies round 42's Contact/Planner honeypots, the Planner
-RTL/long-name review step, `CYV-IFA-012` contact-layout maintenance, all 20
-routes, canonicals, security headers, and live production parity. Not a new
-finding. Moved to `exchange/processed/`.
-
-Implemented the FAQPage JSON-LD enhancement round 43 named as the next
-natural discoverability angle: added `faqPageJsonLd` to
-`src/lib/structured-data.ts`, flattening the existing published `faqLibrary`
-copy (11 categories, 30 Q&As — no new facts) into schema.org
-`FAQPage`/`Question`/`Answer` entities, embedded only on `/faq`
-(`src/app/faq/page.tsx`) alongside the existing sitewide `Organization`
-schema. §4.12 check: FAQPage JSON-LD placed on the page containing the
-visible FAQ content is Google's own documented rich-results pattern — not a
-departure. Verified in real production build output (parsed
-`.next/server/app/faq.html`: both scripts present, `FAQPage` has exactly 30
-`mainEntity` entries with correct first/last question text; confirmed
-`index.html`/`contact.html`/`about.html` still carry only `Organization`,
-i.e. no leak) and live via real CDP navigation against a production `next
-start` server on `/faq` and `/`: zero console messages, zero network
-failures, JSON-LD parses correctly with the expected 30-entry count. Script
-preserved at `builder/evidence/round-44-faq-jsonld-check.mjs`. `tsc`/`lint`/
-`build` all pass clean; committed and pushed.
-
-Archived rounds 40-41's full reports (below) to
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUNDS_40_41_REPORT.md` to restore
-the intended latest-three rotation (§7.14) — 42, 43, 44 stay live.
+Round 44's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_44_REPORT.md` (moved there
+round 47 to restore latest-three rotation) — 45, 46, 47 stay live. Round 44
+implemented FAQPage JSON-LD for `/faq`.
 
 Round 43's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_43_REPORT.md` (moved there

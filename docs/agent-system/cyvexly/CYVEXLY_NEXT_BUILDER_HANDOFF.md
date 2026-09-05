@@ -1,5 +1,65 @@
 # Cyvexly Next Builder Handoff
 
+## Round 47 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
+time limit (unattended)
+**Start source:** `727d809` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R38`)
+and shipped one new reachable QA/build angle: an Apple touch icon.
+**Completion:** REAL SOURCE ADDITION LANDED — see below.
+
+### What was checked
+
+- `IFA-2026-09-05-R38` (reviewed commit `140bb0b`, round 45's HEAD, one
+  commit behind round 46's manifest/cleanup commit) is a **fourteenth
+  consecutive independent confirmation, not a new finding** — 0 active code
+  defects, re-verifies BreadcrumbList JSON-LD structure/scoping on all 5
+  service-detail and 3 case-study routes, both Contact/Planner honeypots,
+  WCAG 1.4.10 reflow, canonicals, security headers, and live production
+  parity against `https://cyvexly-studio.onrender.com/`. Moved to
+  `exchange/processed/`.
+- **New angle — Apple touch icon (`src/app/apple-icon.tsx`).** Had
+  `icon.svg` (favicon) and round 46's `manifest.ts` (Android/Chrome), but
+  nothing for iOS Safari's home-screen icon — iOS ignores the Web App
+  Manifest's icon list and needs its own `<link rel="apple-touch-icon">`.
+  §4.12: `apple-icon.tsx` is Next's own special-file convention, same
+  family as `icon.svg`/`opengraph-image.tsx` — not a departure. Built with
+  the same `next/og` `ImageResponse` technique as `opengraph-image.tsx`:
+  180×180 PNG, solid brand-blue (`#0F66E0`) background (Apple's own
+  no-transparency guidance), existing C/Y mark path in white, centered. No
+  new facts. **Verified:** build emits `/apple-icon`; `index.html` carries
+  `<link rel="apple-touch-icon" ... type="image/png" sizes="180x180"/>`;
+  existing favicon tags unchanged. Copied the generated PNG body locally
+  and opened it (round-3/7's proxy-image technique): clean, centered, no
+  clipping. Live-verified on a real `next start` server: `/apple-icon`
+  returns `200 image/png`; a real in-app-Browser screenshot of Home shows
+  zero visual regression, zero console/network errors.
+- `tsc --noEmit`/`lint`/`build` all pass clean (lint's one pre-existing
+  warning is in round 42's untouched evidence script).
+- Committed and pushed to `origin/main`.
+- Cleaned up: stopped the owned `next start` server (verified real listener
+  PID via `Get-NetTCPConnection -LocalPort 5173` before stopping — process
+  confirmed as the `node.exe` this round launched), closed the owned
+  Browser-pane tab.
+
+### Recommended next workstream
+
+Untried angles not yet swept: a print-stylesheet/print-to-PDF check (low
+priority, still not in vision §17 item 10's explicit list); a dedicated
+rate-limiting check beyond the honeypot (architecturally tied to the
+server-side email delivery this chunk already defers); real raster (PNG)
+manifest icons at 192/512px for `manifest.ts` if a stronger Android "Add to
+Home Screen" presentation is later judged worthwhile (the current SVG-only
+icon is spec-valid, not a defect — the same open item round 46 named,
+still unaddressed). Organization, FAQPage, BreadcrumbList JSON-LD, the Web
+App Manifest, and now the Apple touch icon are all shipped — keep looking
+for genuinely new QA/build angles rather than assuming the surface is
+empty. Genuinely Owner-gated items are unchanged: DNS/domain connection,
+real email delivery, analytics ownership, exact LLC name, About/legal/
+visual review, final indexability approval (see
+`CYVEXLY_OWNER_DIRECTION.md`).
+
 ## Round 46 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
@@ -117,67 +177,10 @@ the discoverability/QA surface is empty. Genuinely Owner-gated items are
 unchanged: DNS/domain connection, real email delivery, analytics ownership,
 exact LLC name (see `CYVEXLY_OWNER_DIRECTION.md`).
 
-## Round 44 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
-time limit (unattended)
-**Start source:** `5331cb3` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R35`)
-and implemented FAQPage JSON-LD, the discoverability follow-up round 43
-recommended.
-**Completion:** REAL SOURCE ADDITION LANDED — see below.
-
-### What was checked
-
-- `IFA-2026-09-05-R35` (reviewed commit `1de36c3`, round 42's HEAD, one
-  commit behind round 43's JSON-LD commit) is an **eleventh consecutive
-  independent confirmation, not a new finding** — 0 active code defects,
-  re-verifies round 42's honeypots, RTL/long-name review-step handling,
-  `CYV-IFA-012` contact-layout maintenance, all 20 routes/canonicals/
-  security headers, and live production parity. Moved to
-  `exchange/processed/`. `tsc --noEmit`/`lint`/`build` re-run clean before
-  making any change.
-- **New angle — FAQPage JSON-LD for `/faq`.** Added `faqPageJsonLd` to
-  `src/lib/structured-data.ts`: flattens the already-published `faqLibrary`
-  (11 categories, 30 Q&As) into schema.org `FAQPage`/`Question`/`Answer`
-  entities — no new facts invented. Embedded only on
-  `src/app/faq/page.tsx`, alongside the existing sitewide `Organization`
-  schema (not sitewide itself — Google's documented rich-results pattern
-  puts `FAQPage` on the page containing the visible FAQ content). §4.12
-  check: standard, well-documented pattern, not a departure.
-  **Verified two ways:** (1) real production build output — parsed
-  `.next/server/app/faq.html`: both `Organization` and `FAQPage` scripts
-  present, `FAQPage.mainEntity` has exactly 30 entries with correct
-  first/last question text; confirmed `index.html`/`contact.html`/
-  `about.html` still carry only `Organization` (no leak to other routes);
-  (2) real CDP navigation against a production `next start` server on
-  `/faq` and `/`: zero console messages, zero network failures, correct
-  30-entry JSON-LD parse on `/faq`, unchanged single-`Organization` parse
-  on `/`. `tsc`/`lint`/`build` all pass clean. Script preserved at
-  `docs/agent-system/cyvexly/builder/evidence/round-44-faq-jsonld-check.mjs`.
-- **Hot-memory rotation.** Archived rounds 40-41's full `CYVEXLY_ACTIVE_
-  CHUNK.md` reports and round 42's full closeout here to their own archive
-  files, restoring the intended latest-three rotation (§7.14) in both hot
-  files.
-- Committed (see Git log) and pushed to `origin/main`.
-- Cleaned up: stopped the owned `next start` server (verified real listener
-  PID via `Get-NetTCPConnection -LocalPort 5173`) and the owned headless
-  Chrome process (verified by exact `chrome-profile-round44`
-  `--user-data-dir` command-line match), removed the temporary Chrome
-  profile directory under the OS temp scratchpad root.
-
-### Recommended next workstream
-
-Untried angles not yet swept: a print-stylesheet/print-to-PDF check (low
-priority, not in vision §17 item 10's explicit list); a dedicated
-rate-limiting check beyond the honeypot (architecturally tied to the
-server-side email delivery this chunk already defers). Both Organization
-and FAQPage schema are now in place — a further candidate would be
-`BreadcrumbList` JSON-LD for the service-detail/case-study routes, though
-its search-visibility value is smaller than the two already shipped.
-Genuinely Owner-gated items are unchanged: DNS/domain connection, real
-email delivery, analytics ownership, exact LLC name (see
-`CYVEXLY_OWNER_DIRECTION.md`).
+Round 44 closeout detail is archived at
+docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_44_REPORT.md (moved there
+round 47 to keep this file under its 12288-byte hot-file cap). Round 44
+implemented FAQPage JSON-LD for `/faq`.
 
 Round 43 closeout detail is archived at docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_43_REPORT.md (moved there round 45 to keep this file under its 12288-byte hot-file cap). Round 43 found the site had no structured data at all and added sitewide Organization JSON-LD.
 
