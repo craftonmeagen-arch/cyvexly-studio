@@ -110,6 +110,20 @@
      `mailto:` bridge as a durable solution rather than the explicitly
      temporary one it's labeled as in the UI.
 
+## Resolved round 36
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-05-R27`** — an
+  independent confirmation round (reviewed commit `620ba77`), not a new
+  finding: re-verified `CYV-IFA-012` CLOSED via its own real multi-viewport
+  CDP screenshots (1440/768/390px, zero collision/overflow), all 20
+  routes' canonical tags, all 6 security headers/CSP, and a 32-link
+  site-wide crawl with zero broken links — all PASS, matching round 35's
+  own conclusions. `tsc --noEmit`/`lint` re-run clean as a sanity check (no
+  source touched). Moved to `exchange/processed/`. **This is the second
+  consecutive round confirming zero reachable-without-an-Owner-gate
+  defects** — see `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s round-36 entry for
+  the recommendation to surface this to the Owner.
+
 ## Resolved round 35
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-05-R26`.** Its one finding

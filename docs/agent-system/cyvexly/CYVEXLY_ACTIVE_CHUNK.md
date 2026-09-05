@@ -104,6 +104,22 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 36 report — global round 36 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R27`. It is an
+independent confirmation of round 35's own findings, not a new defect: its
+own real multi-viewport CDP screenshots verify `CYV-IFA-012` CLOSED
+(1440/768/390px, zero collision/overflow), all 20 routes' canonical tags,
+all 6 security headers/CSP, and a 32-link site-wide crawl with zero broken
+links — all PASS. Moved to `exchange/processed/`. Re-ran `tsc --noEmit`/
+`lint` clean as a sanity check; no source changes this round.
+
+**Two consecutive rounds (35, 36) now confirm zero reachable-without-an-
+Owner-gate defects.** Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved
+round 36" section and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`, including the
+recommendation to surface the remaining Owner gates directly rather than
+spend further scheduled rounds re-confirming the same empty result.
+
 ## Round 35 report — global round 35 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R26`. Its finding
