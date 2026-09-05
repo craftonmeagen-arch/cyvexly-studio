@@ -6,8 +6,8 @@
 time limit (unattended)
 **Start source:** `1c64d81` on `main` (pushed, matched `origin/main`)
 **Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R39`)
-and shipped one new reachable QA/build angle: raster 192/512 PNG manifest
-icons.
+and shipped two new reachable QA/build angles: raster 192/512 PNG manifest
+icons, and a print-legibility fix.
 **Completion:** REAL SOURCE ADDITION LANDED — see below.
 
 ### What was checked
@@ -17,23 +17,25 @@ icons.
   consecutive independent confirmation, not a new finding** — 0 active
   code defects across the full existing surface. Moved to
   `exchange/processed/`.
-- **New angle — raster 192×512 PNG manifest icons (`src/app/icons/[size]/
-  route.tsx`).** Closes the item round 46/47 named as open: the manifest
-  was SVG-only, and Android's install-prompt flow has historically
-  preferred PNG at these two standard sizes. §4.12: matches the documented
-  mainstream PWA manifest pattern, not a departure. Same `next/og`
-  `ImageResponse` technique as `apple-icon.tsx`; `generateStaticParams`
-  restricts build-time generation to exactly these two sizes (others 404).
-  No new facts. **Verified:** build statically generates real, correctly
-  sized PNGs at both sizes (opened locally, clean/centered/unclipped);
-  live `next start` server serves both `200 image/png` with exact built
-  byte lengths, `/icons/999` 404s, manifest JSON carries all three icons,
-  `apple-icon`/`icon.svg` unchanged. In-app-Browser screenshot of Home:
-  zero regression, zero console errors. Full detail in
-  `CYVEXLY_ACTIVE_CHUNK.md`'s round-48 report.
+- **New angle — raster 192×512 PNG manifest icons** (`src/app/icons/[size]/
+  route.tsx`, same `next/og` technique as `apple-icon.tsx`). Closes the
+  item round 46/47 named as open. Verified: correctly-sized real PNGs
+  generated at build time, served live `200 image/png` with no regression
+  on `apple-icon`/`icon.svg`. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`'s
+  round-48 report.
+- **New angle — fixed a real print-legibility defect.** No route had any
+  `@media print` CSS, so this site's light-text-on-dark-background sections
+  (hero panel, CTAs, footer) would print invisible under browsers' default
+  no-background-printing behavior. Added `print-color-adjust: exact` in
+  `globals.css` (MDN's documented fix). **Verified via CDP
+  `Page.printToPDF`:** `printBackground:false`/`:true` produced
+  identically-sized PDFs (~41.7MB each), proving the override forces
+  background embedding regardless of the toggle; no screen-mode
+  regression. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`'s round-48 report;
+  script at `builder/evidence/round-48-print-color-adjust-check.mjs`.
 - `tsc --noEmit`/`lint`/`build` all pass clean (lint's one pre-existing
   warning is in round 42's untouched evidence script).
-- Committed (`8d959f0`) and pushed to `origin/main`.
+- Committed (`8d959f0`, `90ea41e`) and pushed to `origin/main`.
 - **Hot-memory rotation.** Archived round 45's full `CYVEXLY_ACTIVE_
   CHUNK.md` report and `CYVEXLY_NEXT_BUILDER_HANDOFF.md` closeout to
   restore the intended latest-three rotation (§7.14) in both files — 46,
@@ -48,17 +50,16 @@ icons.
 
 ### Recommended next workstream
 
-Untried angles not yet swept: a print-stylesheet/print-to-PDF check (low
-priority, still not in vision §17 item 10's explicit list); a dedicated
-rate-limiting check beyond the honeypot (architecturally tied to the
-server-side email delivery this chunk already defers). Organization,
-FAQPage, BreadcrumbList JSON-LD, the Web App Manifest, the Apple touch
-icon, and now raster 192/512 manifest icons are all shipped — the round
-46/47 "possible future enhancement" item is now closed. Keep looking for
-genuinely new QA/build angles rather than assuming the surface is empty.
-Genuinely Owner-gated items are unchanged: DNS/domain connection, real
-email delivery, analytics ownership, exact LLC name, About/legal/visual
-review, final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+Untried angles not yet swept: a dedicated rate-limiting check beyond the
+honeypot (architecturally tied to the server-side email delivery this
+chunk already defers). Organization, FAQPage, BreadcrumbList JSON-LD, the
+Web App Manifest, the Apple touch icon, raster 192/512 manifest icons, and
+now the print-legibility fix are all shipped — the long-standing
+print-stylesheet item is closed. Keep looking for genuinely new QA/build
+angles rather than assuming the surface is empty. Genuinely Owner-gated
+items are unchanged: DNS/domain connection, real email delivery, analytics
+ownership, exact LLC name, About/legal/visual review, final indexability
+approval (see `CYVEXLY_OWNER_DIRECTION.md`).
 
 ## Round 47 closeout
 

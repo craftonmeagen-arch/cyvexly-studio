@@ -20,11 +20,26 @@
   size correctly 404s; the live manifest JSON lists all three icons;
   `apple-icon`/`icon.svg` unchanged; a real in-app-Browser screenshot of
   Home shows zero visual regression, zero console errors.
-- `tsc`/`lint`/`build` all pass clean. Committed (`8d959f0`) and pushed.
-- Cleaned up: stopped the owned `next start` server (verified real
-  listener PID via the port's actual listener, not `Start-Process`'s
-  returned PID — see the new caveat in
-  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`), closed the owned Browser-pane tab.
+- **New angle — fixed a real print-legibility defect.** No route had any
+  `@media print` CSS; this site's light-text-on-dark-background sections
+  print invisible under browsers' default no-background-printing behavior.
+  Added `print-color-adjust: exact` (`globals.css`, MDN's documented fix).
+  Verified via CDP `Page.printToPDF`: `printBackground:false`/`:true`
+  produced identically-sized PDFs (~41.7MB each), proving backgrounds
+  embed regardless of the toggle; no screen-mode regression.
+- `tsc`/`lint`/`build` all pass clean. Committed (`8d959f0`, `90ea41e`) and
+  pushed.
+- Cleaned up: stopped the owned `next start` server and headless Chrome
+  process tree (verified real listener PID via the port's actual listener,
+  not `Start-Process`'s returned PID — see the new caveat in
+  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`; Chrome verified by exact
+  `chrome-profile-round48` `--user-data-dir` match), closed the owned
+  Browser-pane tab. The temporary Chrome profile directory under the OS
+  temp root could not be removed this round (Windows reported the path
+  locked after process exit despite no matching process remaining) — left
+  in place as a disposable OS-temp artifact; the next round should retry
+  `Remove-Item` on `%TEMP%\chrome-profile-round48` and report if it
+  persists.
 
 ## Resolved round 47
 
@@ -150,46 +165,11 @@
   `--user-data-dir` command-line match), removed the temporary Chrome
   profile directory under the OS temp scratchpad root.
 
-## Resolved round 43
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-05-R34`** — a tenth
-  consecutive independent confirmation (reviewed commit `3bbb879`, round
-  41's HEAD, one commit behind round 42's honeypot fix), not a new finding.
-  Moved to `exchange/processed/`. `tsc --noEmit`/`lint`/`build` re-run clean
-  before making any change.
-- **New angle — sitewide structured data (JSON-LD), previously entirely
-  absent.** Vision §17 names "searchable" as a launch requirement; a grep
-  of `src/` for `application/ld+json`/`schema.org` found zero matches.
-  Added a schema.org `Organization` JSON-LD block
-  (`src/lib/structured-data.ts`, embedded once in `src/app/layout.tsx`)
-  using only Owner-confirmed facts already in `site-config.ts`: name, URL,
-  logo (`/icon.svg`), phone, email, and `addressRegion: "IN"` /
-  `addressCountry: "US"` — no street address or social profiles invented.
-  Verified in real production build output (parsed generated
-  `<script type="application/ld+json">` from `index.html`, `contact.html`,
-  and `services/business-websites.html` — valid JSON, correct fields on
-  all three) and live via real CDP navigation against a production
-  `next start` server across `/`, `/contact`, `/about`, and
-  `/services/business-websites`: zero console errors, zero network
-  failures, JSON-LD parses correctly in the real DOM every time. `tsc`/
-  `lint`/`build` all pass clean. Script at
-  `docs/agent-system/cyvexly/builder/evidence/round-43-jsonld-check.mjs`.
-- **Hot-memory drift fix.** `CYVEXLY_ACTIVE_CHUNK.md` had grown to 29313
-  bytes (near its cap) because rounds 31-39's full reports were never
-  archived once later rounds landed, breaking the intended §7.14
-  latest-three rotation for roughly a dozen rounds. Archived verbatim to
-  `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUNDS_31_39_REPORT.md`; live
-  file is now 18288 bytes with only rounds 40-43 live. Also archived round
-  41's full handoff detail to
-  `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_41_REPORT.md` to keep
-  `CYVEXLY_NEXT_BUILDER_HANDOFF.md` under its own 12288-byte cap after
-  adding round 43's entry (now 10271 bytes).
-- Cleaned up: stopped the owned `next start` server (verified real
-  listener PID via `Get-NetTCPConnection -LocalPort 5173`) and the owned
-  headless Chrome process tree (verified by exact `chrome-profile-round43`
-  `--user-data-dir` command-line match across all child processes),
-  removed the temporary Chrome profile directory under the OS temp
-  scratchpad root.
+Round 43 detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_43_ARCHIVE.md` (moved there
+round 48 to keep this file under its 30720-byte hot-file cap). Round 43
+found the site had no structured data at all and added sitewide
+Organization JSON-LD.
 
 ## Open
 

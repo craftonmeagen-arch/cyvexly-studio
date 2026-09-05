@@ -153,6 +153,31 @@ Archived round 45's full report to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_45_REPORT.md` to restore
 the intended latest-three rotation (§7.14) — 46, 47, 48 stay live.
 
+Ran a second genuinely new angle this round, also reachable without any
+Owner gate: **fixed a real print-legibility defect.** No route had any
+`@media print` rule (confirmed via grep) despite this site relying on
+dark/colored backgrounds to make white/light text legible (the Home hero
+media panel, CTA buttons, footer). Browsers omit background-color/
+background-image by default when printing unless the user opts into
+"print backgrounds" — so on a real Ctrl+P, that light text would print
+invisible (white-on-white). §4.12 check: `print-color-adjust: exact` (+
+`-webkit-` prefix) is the CSS spec's own documented mechanism for exactly
+this problem (MDN), not a departure — added a small `@media print` block
+in `globals.css` forcing it on `html`. **Verified via Chrome DevTools
+Protocol `Page.printToPDF`** against a production server: generated one
+PDF with `printBackground:false` (the common default a user has not
+opted into) and one with `printBackground:true`. Both came back the same
+size (~41.7 MB) — if the override were not working, the `false` variant
+would be dramatically smaller (mostly text/fonts, no embedded gradient/
+SVG background art); identical size confirms the CSS property is forcing
+background graphics to embed regardless of the toggle, so the fix is
+functioning. Also confirmed via live `getComputedStyle` that the rule
+does *not* leak into normal screen rendering (`economy`, the default,
+outside print emulation) — no regression. `tsc`/`lint`/`build` all pass
+clean. Script preserved at
+`docs/agent-system/cyvexly/builder/evidence/round-48-print-color-adjust-check.mjs`.
+Committed (`90ea41e`) and pushed.
+
 ## Round 47 report — global round 47 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R38` (reviewed commit

@@ -23,37 +23,35 @@ Full round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 **Round 48 outcome (scheduled/unattended, 50-minute limit):** dispositioned
 the one new Auditor inbox item, `IFA-2026-09-05-R39` — a fifteenth
 consecutive independent confirmation, 0 active code defects, not a new
-finding. Shipped one new reachable angle: added
-`src/app/icons/[size]/route.tsx`, raster 192×512 PNG manifest icons via the
-same `next/og` `ImageResponse` technique as `apple-icon.tsx`, closing the
-open item round 46/47 named — the manifest was SVG-only and Android's
-install-prompt flow has historically preferred PNG at these standard
-sizes. `generateStaticParams` restricts generation to exactly these two
-sizes; other sizes 404. No invented facts. Verified via real production
-build output (correctly-sized real PNGs, opened directly via the
-proxy-image technique), a real `next start` server (both icons `200`,
-unregistered size `404`, manifest JSON correct, no regression on
-`apple-icon`/`icon.svg`), and an in-app-Browser screenshot showing zero
-regression. Also rotated hot memory: archived round 45's full
-`CYVEXLY_ACTIVE_CHUNK.md` report and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`
-closeout to restore the §7.14 latest-three rule, and recorded a
-`Start-Process`-PID tooling caveat in `CYVEXLY_TOOLS_AND_CAPABILITIES.md`.
-Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 48" section and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+finding. Shipped two new reachable angles: (1) `src/app/icons/[size]/
+route.tsx`, raster 192×512 PNG manifest icons via the same `next/og`
+`ImageResponse` technique as `apple-icon.tsx`, closing the open item
+round 46/47 named; (2) a real print-legibility fix — no route had any
+`@media print` CSS, so this site's light-text-on-dark-background sections
+(hero panel, CTAs, footer) would print invisible under browsers' default
+no-background-printing behavior; added `print-color-adjust: exact` in
+`globals.css` (MDN's documented fix), verified via CDP `Page.printToPDF`
+(`printBackground:false`/`:true` produced identically-sized ~41.7MB PDFs,
+proving the override works) with no screen-mode regression. Also rotated
+hot memory (archived round 45's `CYVEXLY_ACTIVE_CHUNK.md` report/
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md` closeout and round 43's `CYVEXLY_APP_
+DEBT.md` entry) and recorded a `Start-Process`-PID tooling caveat in
+`CYVEXLY_TOOLS_AND_CAPABILITIES.md`. Full detail in `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 48" section and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
 first for anything published after round 48. Untried angles remaining: a
-print-stylesheet check (low priority, not in vision §17 item 10's explicit
-list); a true rate-limiting check beyond the honeypot (architecturally tied
-to the same server-side email delivery this chunk already defers).
-Organization, FAQPage, BreadcrumbList JSON-LD, the Web App Manifest, the
-Apple touch icon, and now raster 192/512 manifest icons are all shipped —
-keep looking for genuinely new QA/build angles rather than assuming the
-surface is empty. What remains genuinely Owner-gated (real Contact/Planner
-email delivery, DNS/domain connection, analytics/search ownership, exact
-LLC name, final indexability approval, About/legal/visual review) is
-unchanged; see "Owner launch decisions and remaining gates" below.
+true rate-limiting check beyond the honeypot (architecturally tied to the
+same server-side email delivery this chunk already defers). Organization,
+FAQPage, BreadcrumbList JSON-LD, the Web App Manifest, the Apple touch
+icon, raster 192/512 manifest icons, and the print-legibility fix are all
+shipped — keep looking for genuinely new QA/build angles rather than
+assuming the surface is empty. What remains genuinely Owner-gated (real
+Contact/Planner email delivery, DNS/domain connection, analytics/search
+ownership, exact LLC name, final indexability approval, About/legal/visual
+review) is unchanged; see "Owner launch decisions and remaining gates"
+below.
 
 **Accepted product position:** `main` is pushed through round 48's source
 feature commit on `origin/main` — see `git log` for exact SHAs (docs commit
