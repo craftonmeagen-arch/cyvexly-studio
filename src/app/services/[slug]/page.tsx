@@ -8,6 +8,7 @@ import { ServiceDetailSignal } from "@/components/service-detail-signal";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { isServiceSlug, serviceDetails } from "@/lib/service-details";
+import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
 
 export function generateStaticParams() {
   return Object.keys(serviceDetails).map((slug) => ({ slug }));
@@ -43,9 +44,18 @@ export default async function ServiceDetailPage({
 
   const service = serviceDetails[slug];
   const plannerHref = `/start?service=${service.slug}`;
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: service.name, path: `/services/${service.slug}` },
+  ]);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <SiteHeader />
 
       <main id="main-content" className="flex-1">

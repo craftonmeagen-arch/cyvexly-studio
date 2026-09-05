@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { ConceptPreview } from "@/components/concept-preview";
 import { caseStudies } from "@/lib/site-config";
+import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
 
 type CaseStudySlug = keyof typeof caseStudies;
 
@@ -37,9 +38,18 @@ export default async function CaseStudyPage({
   const { slug } = await params;
   const study = caseStudies[slug as CaseStudySlug];
   if (!study) notFound();
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Work", path: "/work" },
+    { name: study.name, path: `/work/${slug}` },
+  ]);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <SiteHeader />
 
       <main id="main-content" className="flex-1">

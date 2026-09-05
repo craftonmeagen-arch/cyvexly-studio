@@ -49,3 +49,22 @@ export const faqPageJsonLd = {
     })),
   ),
 } as const;
+
+// BreadcrumbList structured data for service-detail and case-study routes —
+// both sit one level under a listing page (/services, /work). Google's
+// documented pattern for hierarchical pages; reuses only the route's own
+// existing name/URL, no new facts.
+export function buildBreadcrumbJsonLd(
+  trail: { name: string; path: string }[],
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `https://cyvexly.com${item.path}`,
+    })),
+  } as const;
+}
