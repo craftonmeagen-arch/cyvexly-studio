@@ -1,0 +1,51 @@
+Round 42 evidence: Contact-form honeypot fix, Planner honeypot live-verification,
+and Planner review-step long/RTL text overflow check.
+
+METHOD: local headless Chrome (chrome.exe --headless=new, unique --user-data-dir
+under the OS temp root, --remote-debugging-port=9342), driven via raw CDP
+WebSocket (Runtime.evaluate, Input.dispatchMouseEvent) against a real production
+`next start` server on port 5173 -- the round-8/38/39/40/41-established technique
+for genuine native interaction proof in this unattended session type.
+
+(A) DEFECT FOUND AND FIXED: Contact form (src/components/contact-form.tsx) had
+NO spam/rate protection at all -- no honeypot, no rate limit -- while the
+Planner (src/components/planner/planner-form.tsx) already has a hidden
+honeypot field. Vision Sec17 item 6 groups "Contact and Planner" together under
+"proportionate accessible spam/rate controls." This is reachable without any
+Owner gate (pure client-side addition, no backend/credentials needed, matches
+the Planner's already-accepted pattern exactly). Fixed by adding an identical
+hidden honeypot field (id="contact-company-website", tabIndex=-1,
+autoComplete="off", aria-hidden wrapper) and a matching validation check
+(`if (honeypot) nextErrors.honeypot = "Submission blocked.";`) before the
+existing name/email/message/consent checks.
+
+LIVE VERIFICATION (real CDP mouse click on "Send message", not just source read):
+  - Honeypot filled (simulating a bot): afterHoneypot=false (mailto bridge did
+    NOT fire, page stayed in error state), errorBannerShown=true.
+  - Honeypot cleared, resubmitted (simulating a real visitor): afterClean=true
+    (mailto bridge fired normally) -- confirms the fix does not regress the
+    legitimate submission path.
+
+(B) NO DEFECT FOUND -- Planner honeypot, live-tested for the first time (round
+41's handoff flagged this as untested). Advanced through all 9 real steps with
+genuine CDP clicks/radio/checkbox interactions (not just static snapshots),
+filled the honeypot at step 9, clicked "Submit":
+  - Honeypot filled: afterHoneypot=false (submission blocked, matches source's
+    `if (data.honeypot.trim()) next.honeypot = "Submission blocked.";`).
+  - Honeypot cleared, resubmitted: afterClean=true (legitimate submission
+    works). Confirms the Planner's existing honeypot genuinely blocks
+    submission end-to-end, not just in source review.
+
+(C) NO DEFECT FOUND -- Planner review step (step 9) dt/dd rows at 375px width,
+with a ~130-character unbroken string (no spaces) in "Full name" and an
+Arabic RTL name concatenated directly (no separator) with the same unbroken
+string in "Company name" (worst-case: zero break opportunities at the
+RTL/Latin boundary). Measured `document.documentElement.scrollWidth` (375) vs
+`window.innerWidth` (375): zero horizontal overflow. Genuinely measured, not
+assumed -- this was the direct proof the Sec2.7/Sec2.2 floors require.
+
+CLEANUP: stopped the owned `next start` server (PID verified via
+Get-NetTCPConnection -LocalPort 5173) and the owned headless Chrome process
+(verified by exact --user-data-dir=...chrome-profile-round42 command-line
+match), removed the temporary Chrome profile directory under the OS temp
+scratchpad root.

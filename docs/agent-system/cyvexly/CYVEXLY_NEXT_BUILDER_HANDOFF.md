@@ -1,5 +1,80 @@
 # Cyvexly Next Builder Handoff
 
+## Round 42 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
+time limit (unattended)
+**Start source:** `3bbb879` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R33`)
+and swept the two QA angles round 41 named as untried: Contact/Planner
+spam-protection live behavior, and RTL/long-name overflow in the Planner
+review step.
+**Completion:** REAL SOURCE FIX LANDED — see below.
+
+### What was checked
+
+- `IFA-2026-09-05-R33` (reviewed commit `46eae51`, round 40's HEAD) is a
+  **ninth consecutive independent confirmation, not a new finding.** Moved
+  to `exchange/processed/`. `tsc --noEmit`/`lint`/`build` re-run clean
+  before making any change.
+- **New QA angle — spam/rate-limit and honeypot live behavior on
+  Contact/Planner (vision §17 item 6).** Source read found the Planner has
+  a hidden honeypot field (`planner-company-website`) but **the Contact
+  form had none at all** — no honeypot, no rate limiting. Vision §17 item 6
+  groups "Contact and Planner" together under "proportionate accessible
+  spam/rate controls." This is reachable now: a client-side honeypot needs
+  no backend, credentials, or Owner authorization, and the Planner's
+  existing pattern is already the accepted precedent.
+  **Fixed** in `src/components/contact-form.tsx`: added an identical hidden
+  honeypot field (`contact-company-website`, `tabIndex={-1}`,
+  `autoComplete="off"`, `aria-hidden` wrapper, visible label for the rare
+  assistive-tech edge case, matching the Planner's exact markup) and a
+  validation check before the existing name/email/message/consent checks.
+  **Live-verified with real CDP mouse clicks** (not just source read)
+  against a production `next start` server: filling the honeypot and
+  clicking "Send message" leaves the form in its error state (mailto
+  bridge never fires); clearing the honeypot and resubmitting fires the
+  mailto bridge normally (no regression to the legitimate path). Same
+  method also live-tested the **Planner's existing honeypot for the first
+  time** (round 41 flagged this as untested): advanced through all 9 real
+  steps with genuine clicks, filled the honeypot at step 9, confirmed
+  Submit is blocked; cleared it and confirmed Submit works. `tsc`/`lint`/
+  `build` all pass clean. Script and full result log at
+  `docs/agent-system/cyvexly/builder/evidence/round-42-honeypot-overflow-*`.
+- **New QA angle — RTL/very-long-name overflow in the Planner review step**
+  (round 41's other named candidate). Filled a ~130-character unbroken
+  string (no spaces) into "Full name," and an Arabic RTL name concatenated
+  directly (no separator) with the same unbroken string into "Company
+  name" — worst case: zero break opportunities at the RTL/Latin boundary.
+  Advanced to the review step (step 9) at a real 375px emulated width and
+  measured `document.documentElement.scrollWidth` (375) against
+  `window.innerWidth` (375): **zero horizontal overflow. No defect found**
+  — genuinely measured, not assumed.
+- Committed (see Git log) and pushed to `origin/main`.
+- Cleaned up: stopped the owned `next start` server (verified real
+  listener PID via `Get-NetTCPConnection -LocalPort 5173`) and the owned
+  headless Chrome process (verified by exact
+  `chrome-profile-round42` `--user-data-dir` command-line match), removed
+  the temporary Chrome profile directory under the OS temp scratchpad
+  root.
+
+### Recommended next workstream
+
+Both QA candidates round 41 named are now closed — one found and fixed a
+real, reachable gap (missing Contact honeypot), the other two live-tested
+previously-unverified/unproven behavior with no defect. Untried angles not
+yet swept: a print-stylesheet/print-to-PDF check (not part of vision §17
+item 10's explicit list, low priority); a dedicated rate-limiting check
+beyond the honeypot (e.g. rapid repeated submissions) — the honeypot
+handles the bot-form-fill case but there is still no throttling if a bot
+skips the honeypot and submits repeatedly; since the current bridge is
+client-side `mailto:` with no server endpoint, true rate-limiting is
+architecturally tied to the same server-side email delivery this chunk
+already defers (vision §17 item 6's Owner-gated half). Genuinely
+Owner-gated items are unchanged: DNS/domain connection, real email
+delivery, analytics ownership, exact LLC name (see
+`CYVEXLY_OWNER_DIRECTION.md`).
+
 ## Round 41 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
@@ -66,110 +141,17 @@ edge cases in the Planner's dynamic list fields. Genuinely Owner-gated items
 are unchanged: DNS/domain connection, real email delivery, analytics
 ownership, exact LLC name (see `CYVEXLY_OWNER_DIRECTION.md`).
 
-## Round 40 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
-time limit (unattended)
-**Start source:** `a8c5769` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R31`)
-and ran a screen-reader-semantics QA pass on the Planner's step-advance flow —
-one of round 39's named uncovered candidates.
-**Completion:** SOURCE FIX LANDED (`71d233f`) — see below.
-
-### What was checked
-
-- `IFA-2026-09-05-R31` (reviewed commit `f1a264f`, round 38's HEAD, one commit
-  behind this round's start) is a **seventh consecutive independent
-  confirmation, not a new finding**. Moved to `exchange/processed/`.
-- Ran `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` — all clean
-  before making any change.
-- **New QA angle — screen-reader semantics on Contact/Planner**, one of round
-  39's named candidates. Source review found per-field validation
-  (`aria-invalid`/`aria-describedby`/`role="alert"`) already solid on both
-  forms — no defect there. Live-tested the *successful* step-advance path
-  instead (not validation failure, already known-good).
-- **Tooling note, investigate-before-trust:** the in-app Browser pane's
-  `computer`/screenshot path was intermittent this round (screenshot timeouts
-  matching the documented "pane hidden" pattern partway through), and a
-  plain-JS `.click()` test gave a false-positive "focus lost to `<body>`"
-  reading — `document.hasFocus()` is `false` in that pane, so script-driven
-  focus doesn't behave like a real interaction there. Switched to the
-  round-8/39-established method instead: local headless Chrome
-  (`--headless=new`, unique `--user-data-dir` under the OS temp root,
-  `--remote-debugging-port`) driven via raw CDP (`Input.dispatchMouseEvent`,
-  `Runtime.evaluate`) against a **production** `next start` server — a real
-  tab with genuine `document.hasFocus() === true`, the trustworthy instrument
-  for this claim.
-- **Found and fixed a real defect:** `goToStep()` (shared by Continue, Back,
-  edit links, and the progress rail) called `window.scrollTo({top:0})`
-  synchronously before React committed the new step's DOM. Chrome's
-  scroll-anchoring silently kept the old scroll position once the new content
-  mounted, and focus never left the Continue/Back button. Confirmed before
-  fix: after a real click advancing step 1→2, `scrollY` settled at `721`
-  (not `0`), focus stayed on the button, and no `aria-live` region announced
-  the change — sighted users weren't returned to the top of the new step,
-  and keyboard/screen-reader users got zero signal anything had changed.
-- **Fixed** in `src/components/planner/planner-form.tsx`: moved the
-  scroll+focus into a `useEffect` keyed on `currentStep`, deferred one
-  `requestAnimationFrame` past commit, guarded by a `previousStepRef`
-  comparison (not a one-shot flag — verified this matters, since a one-shot
-  boolean flag gave a false positive under React Strict Mode's dev-only
-  double-invoke of mount effects); focuses the step `<h2>` with
-  `preventScroll: true` (focusing without it re-fights the scrollTo); adds a
-  `role="status" aria-live="polite"` sr-only announcer ("Step 2 of 9: The
-  business"). Verified after fix against the same production server:
-  `scrollY` reaches `0` and holds, focus lands on the new heading, live
-  region fires with correct text. `tsc`/`lint`/`build` all pass clean.
-  Full before/after evidence and the reusable CDP script are at
-  `docs/agent-system/cyvexly/builder/evidence/round-40-planner-step-focus-*`.
-- Committed (`71d233f`) and pushed to `origin/main`.
-- Cleaned up: stopped the owned `next start` server and the owned headless
-  Chrome process tree (verified by exact `--user-data-dir` command-line
-  match), removed the temporary Chrome profile directory under the OS temp
-  scratchpad root.
-- Archived stale-cap detail: `CYVEXLY_APP_DEBT.md` rounds 32-34 to
-  `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUNDS_32_34_ARCHIVE.md`; this file's
-  round 37 to `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_37_REPORT.md`
-  (latest-three rule: 38, 39, 40 stay live).
-
-### Recommended next workstream
-
-**Rounds 39 and 40 both found real, reachable defects from QA angles rounds
-31-38 hadn't tried** — the "reduce/pause scheduled cadence, queue is empty"
-recommendation those earlier rounds escalated has now been contradicted
-twice in a row. Keep looking for uncovered vision §17 item-10 QA angles with
-real-interaction evidence before concluding the queue is empty again.
-Candidates not yet swept: 200% browser zoom / text-resize (WCAG 1.4.4/1.4.10)
-across the Planner's 9 steps and the denser marketing pages; reduced-motion
-coverage beyond the hero video (e.g. the Planner's own `scrollIntoView`/
-smooth-scroll calls, now three call sites after this round's fix, all
-already reduced-motion-aware — but not independently re-verified this
-round); a Back-button and progress-rail-click pass through the same
-scroll/focus/live-region fix (same shared `goToStep`, so very likely already
-correct, but not explicitly re-tested this round — Continue was). Genuinely
-Owner-gated items are unchanged: DNS/domain connection, real email delivery,
-analytics ownership, exact LLC name (see `CYVEXLY_OWNER_DIRECTION.md`).
+Round 40 closeout detail is archived at `docs/archive/chunks/
+CYVEXLY_BUILDER_HANDOFF_ROUND_40_REPORT.md` (moved there in round 42 to keep
+this file under its 12288-byte hot-file cap; latest-three rule: 40, 41, 42
+were live, now 41 and 42 stay live plus this round's own entry). Round 40
+found and fixed the Planner step-advance scroll/focus/live-region defect
+(`71d233f`).
 
 Round 39 closeout detail is archived at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUND_39_REPORT.md` (moved there in round 41 to keep
-this file under its 12288-byte hot-file cap; 40 and 41 stay live). Round 39
-found and fixed the sitewide skip-to-main-content link defect (WCAG 2.4.1).
-
-Round 38 closeout detail is archived at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUND_38_REPORT.md`, and round 37 at
-`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_37_REPORT.md`. Rounds 39
-and 40 each found a real, reachable defect from a QA angle rounds 31-38
-hadn't tried; round 41 closed both candidates round 40 named with no new
-defect — see the current round-41 entry above.
-
-Round 36 closeout detail is archived at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUND_36_REPORT.md` (moved there in round 39 to keep
-this file under its 12288-byte hot-file cap — latest-three rule: 37, 38, 39
-stay live). Round 35 is archived at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUND_35_REPORT.md`; rounds 33-34 at
-`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUNDS_33_34_REPORT.md`; rounds
-31-32 at `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUNDS_31_32_REPORT.md`;
-rounds 28-30 at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUNDS_28_30_REPORT.md`. The current Chunk 5 scope and
-Owner gates are summarized in `CYVEXLY_ACTIVE_CHUNK.md` and
+CYVEXLY_BUILDER_HANDOFF_ROUND_39_REPORT.md`. Round 39 found and fixed the
+sitewide skip-to-main-content link defect (WCAG 2.4.1). Rounds 38, 37, 36,
+35, 33-34, 31-32, and 28-30 are archived at their correspondingly named
+files under `docs/archive/chunks/`. The current Chunk 5 scope and Owner
+gates are summarized in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_OWNER_DIRECTION.md`.
