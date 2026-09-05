@@ -104,6 +104,40 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 45 report — global round 45 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R36` (reviewed commit
+`5331cb3`, round 43's HEAD, one commit behind round 44's FAQPage JSON-LD
+commit). Twelfth consecutive independent confirmation — 0 active code
+defects, re-verifies the sitewide Organization JSON-LD, both honeypots,
+WCAG 1.4.10 reflow, canonicals, security headers, and live production
+parity. Not a new finding. Moved to `exchange/processed/`.
+
+Implemented the natural next discoverability angle both round 43 and 44's
+handoffs named: **BreadcrumbList JSON-LD** for the service-detail
+(`/services/[slug]`) and case-study (`/work/[slug]`) routes, the two route
+families that sit one level under a listing page. Added
+`buildBreadcrumbJsonLd()` to `src/lib/structured-data.ts` (a small
+trail-to-`ListItem[]` builder) and embedded a 3-item Home → listing →
+detail trail on both templates, reusing only each route's own existing
+name/URL — no new facts. §4.12 check: `BreadcrumbList` JSON-LD is Google's
+own documented rich-results pattern for hierarchical pages — not a
+departure. Verified in real production build output (parsed
+`.next/server/app/services/business-websites.html` and
+`work/aurora-spaces.html`: both carry `Organization` + a correct 3-entry
+`BreadcrumbList`; confirmed `index.html`/`services.html`/`work.html` carry
+only `Organization` — no leak to listing/home routes) and live via real CDP
+navigation against a production `next start` server across both detail
+routes plus their listing pages and home: zero console messages, zero
+network failures, correct trail parsed from the live DOM every time. `tsc`/
+`lint`/`build` all pass clean. Script preserved at
+`builder/evidence/round-45-breadcrumb-jsonld-check.mjs`. Committed and
+pushed.
+
+Archived round 42's full report (below) to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_42_REPORT.md` to restore
+the intended latest-three rotation (§7.14) — 43, 44, 45 stay live.
+
 ## Round 44 report — global round 44 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R35` (reviewed commit
@@ -169,35 +203,12 @@ archived when later rounds landed, violating the intended latest-three
 rotation (§7.14). Archived them to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUNDS_31_39_REPORT.md`.
 
-## Round 42 report — global round 42 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-05-R33` (reviewed commit
-`46eae51`, round 40's HEAD). Ninth consecutive independent confirmation,
-not a new finding. Moved to `exchange/processed/`. Re-ran `tsc`/`lint`/
-`build` clean before making any change.
-
-Swept round 41's two named untried QA candidates:
-
-1. **Spam/rate-limit and honeypot live behavior (vision §17 item 6).**
-   Source read found the Contact form had **no spam/rate protection at
-   all**, while the Planner already has a hidden honeypot. **Fixed**:
-   added an identical hidden honeypot field to
-   `src/components/contact-form.tsx`. Live-verified with real CDP mouse
-   clicks against a production server: filled honeypot blocks submission
-   (no regression on a clean resubmit); same method also live-verified the
-   Planner's own honeypot end-to-end for the first time (previously
-   untested).
-2. **RTL/very-long-name overflow in the Planner review step.** A
-   ~130-character unbroken string plus a concatenated Arabic RTL name
-   (zero break opportunities) in Full name/Company name, advanced to the
-   review step at 375px. Measured `scrollWidth` (375) equals `innerWidth`
-   (375): zero horizontal overflow, no defect.
-
-Full detail and scripts in `CYVEXLY_APP_DEBT.md`'s "Resolved round 42"
-section and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`. This closes both candidates
-round 41 named; the next round should keep looking for genuinely new QA
-angles (a print-stylesheet check and a true rate-limit check beyond the
-honeypot are named as untried in the handoff).
+Round 42's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_42_REPORT.md` (moved there
+round 45 to restore latest-three rotation). Round 42 found and fixed the
+Contact form's missing spam-protection honeypot and live-verified the
+Planner's honeypot for the first time; also swept the Planner review step
+for RTL/very-long-name overflow with no defect found.
 
 Rounds 40-41 full reports are archived at docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUNDS_40_41_REPORT.md (moved there round 44 to restore latest-three rotation). Round 41 closed both of round 40's named QA candidates (WCAG 1.4.10 reflow/zoom, a Back-button re-check) with no defect found. Round 40 found and fixed the Planner step-advance scroll/focus/live-region defect (`71d233f`).
 
