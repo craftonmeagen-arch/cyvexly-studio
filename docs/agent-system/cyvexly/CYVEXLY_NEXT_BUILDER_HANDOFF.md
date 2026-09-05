@@ -1,5 +1,80 @@
 # Cyvexly Next Builder Handoff
 
+## Round 32 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
+time limit (unattended)
+**Start source:** `be60862` on `main`
+**Scope:** the CSP addition recommended by round 31's `CYVEXLY_APP_DEBT.md`
+item 3, plus the pre-existing two-round-old uncommitted role-system migration
+diff (see below) and the hot-file-cap violation its own validation tooling
+surfaced.
+**Completion:** IMPLEMENTED AND VERIFIED VIA REAL BUILD OUTPUT, A REAL RUNNING
+PRODUCTION SERVER'S RESPONSE HEADERS, AND REAL IN-APP-BROWSER INTERACTION;
+COMMITTED (not yet pushed to `origin/main` in this round — see below).
+
+### What changed
+
+- **CSP, with a real reachability correction.** Tried the Next.js-documented
+  nonce + `'strict-dynamic'` recipe first (`src/proxy.ts` — Next.js 16
+  renamed `middleware.ts` to `proxy.ts`; caught and fixed the deprecation
+  warning rather than shipping it). A real running `next start` server
+  proved this would have **silently broken hydration**: most routes here
+  prerender statically at build time, so there's no per-request value to
+  nonce Next's own inline hydration scripts — the generated
+  `self.__next_f.push(...)` scripts ship with no `nonce` attribute at all
+  (one serialized prop literally reads `"nonce":"$undefined"`), and
+  `'strict-dynamic'` would make a real browser refuse them. Exactly the
+  failure `CYVEXLY_APP_DEBT.md` item 3 warned about — caught before
+  shipping. Corrected to a static policy in `next.config.ts`'s existing
+  `securityHeaders`: `default-src 'self'`, every directive locked to
+  `'self'` except `script-src`/`style-src` (`'unsafe-inline'`, required by
+  the static architecture — see the code comment) and `img-src` (`blob:
+  data:` for `next/image`/`ImageResponse`). No third-party origins anywhere.
+- **Verified for real:** `tsc`/`lint`/`build` (27 routes) clean. Ran the
+  actual production server and `curl`ed `/`, `/about` (static), and
+  `/start` (the one dynamic route) — identical CSP header on all three.
+  Drove the real in-app Browser against that server: Home loads with zero
+  console errors; on `/start` (the most JS-interactive route) typed into a
+  field and clicked "Continue →" — the form advanced to step 2 with new
+  fields, zero console errors, proving hydration/event handlers actually
+  work under the policy, not just that pages load.
+
+### Migration diff: committed this round after verifying it
+
+Rounds 30-31 both left the pre-existing "six-role rule-system migration"
+diff uncommitted and flagged a third round shouldn't do the same silently.
+This round ran the diff's own self-check, `.codex/roles/scripts/
+Test-RoleSetup.ps1`, rather than assuming or further deferring. First run
+failed on `Test-HotFileCaps.ps1` — not a migration defect, but this very
+file being over its 12288-byte cap from three rounds of accumulated
+history. Archived rounds 28-30's detail to `docs/archive/chunks/
+CYVEXLY_BUILDER_HANDOFF_ROUNDS_28_30_REPORT.md`; re-ran the self-check:
+`PASS` (8 packets, 6 orientations, 6 retired files absent, all helpers
+parse). Grepped for the two files the migration deletes
+(`Claim-BuilderLock.ps1`/`Release-BuilderLock.ps1`) — the only hits are
+historical archives and the self-check itself asserting they're gone, no
+dangling references. Committed the migration as its own commit, separate
+from the CSP change; did not author or redesign its content, only verified
+it.
+
+### Not pushed to `origin/main` this round
+
+Both commits landed on local `main` only. Given the migration commit's size
+(dozens of files, first round to actually commit it) this round stopped
+short of pushing so an attended reviewer can check `git log`/`git diff
+origin/main..main` first, rather than an unattended round pushing an
+unreviewed multi-role restructuring on its own judgment. **The next Builder
+or the Owner should review and push if it looks right.**
+
+### Recommended next workstream
+
+(1) push the two commits above once reviewed; (2) Planner/Contact real
+server-side email delivery (`CYVEXLY_APP_DEBT.md` item 2) — Owner-gated but
+the largest remaining reachable-once-authorized Chunk 5 piece; (3)
+domain/DNS, email-provider authorization, and analytics ownership remain
+Owner-account-gated.
+
 ## Round 31 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
@@ -32,254 +107,15 @@ unsafe, so this round staged and committed only its own file.
   375/768/1440px, `noindex` consistent) found no defects in the existing
   About/Privacy/Terms pages from round 30.
 
-### Important: the pre-existing uncommitted migration diff is still present
+### Migration diff note (superseded — resolved round 32)
 
-Same situation round 30 already flagged: at this round's start, `git status`
-still showed the same large modified/deleted/untracked set under `.codex/`,
-root orientation `.md` files, and several `docs/agent-system/cyvexly/
-CYVEXLY_*.md` files (the "six-role rule-system migration" from
-`AGENTS.md`/`CYVEXLY_OWNER_DIRECTION.md`'s 2026-09-05 entries) — two rounds
-old now, still uncommitted. This round again did not author, review, or
-verify that diff, so it again committed only its own file
-(`next.config.ts`) plus this handoff and `CYVEXLY_APP_DEBT.md` (both were
-clean at this round's start, confirmed via `git status --short` before
-editing). **This is now two consecutive Builder rounds leaving the same
-migration diff uncommitted** — if a Builder round keeps not being the right
-owner for it, a PM or the Owner should explicitly decide who reconciles it,
-rather than it silently aging further. `CYVEXLY_CURRENT_STATE.md`,
-`CYVEXLY_PROJECT_CHUNK_MAP.md`, `CYVEXLY_CHUNK_DEBT.md`,
-`CYVEXLY_TOOLS_AND_CAPABILITIES.md`, `CYVEXLY_OWNER_DIRECTION.md`, and
-`CYVEXLY_REVIEW_INDEX.md` are the ones still dirty from it — read this
-handoff and `CYVEXLY_APP_DEBT.md` for current truth in the meantime, since
-`CYVEXLY_CURRENT_STATE.md` remains stale (still round-29-era) exactly as
-round 30 already noted.
+This round found the same pre-existing migration diff rounds 29-30 flagged
+and again left it uncommitted. **Round 32 committed it** after verifying it
+with its own self-check tooling — see this file's round-32 entry above.
 
-### Recommended next workstream
-
-The Planner/Contact real server-side email delivery
-(`CYVEXLY_APP_DEBT.md` item 2) remains the largest piece of Chunk 5, but
-stays genuinely Owner-gated (provider authorization + credentials). Purely
-reachable next pieces, in rough priority order: (1) the CSP addition
-documented in the new debt item 3 above, done carefully with its own
-verification pass; (2) reconciling or explicitly routing the two-round-old
-migration diff described above; (3) domain/DNS, email-provider
-authorization, and analytics ownership remain Owner-account-gated as before.
-
-## Owner-directed next mission — September 4, 2026
-
-Open **Chunk 5 — United States Launch Completion & Business Operations** as the
-next major chunk. Read Owner direction `2026-09-04-14`,
-`CYVEXLY_VISION_PLAN.md` §17, and the Chunk 5 map before planning. This newer
-direction supersedes the Round 28 handoff's statement that domain, Indiana
-jurisdiction, public contact details, founder-image choice, and initial market
-are wholly undecided.
-
-Confirmed inputs:
-
-- Cyvexly Studio; LLC; Indiana, United States; United States-only launch market.
-- Production domain `cyvexly.com`.
-- Public email `design@cyvexly.com`.
-- Public phone `(317) 572-5780` / `+13175725780`.
-- Logo-led studio About; no public personal founder name or portrait.
-- Implement the reviewable studio-origin copy from vision §6.8.
-- Payment selection/integration and real portfolio replacement are tabled.
-
-The integrated scope is domain/HTTPS/canonical routing, production metadata and
-discovery, truthful public contact data, About, Indiana/United States Privacy
-and Website Terms, secure Contact/Planner server delivery and visitor
-confirmation, privacy-aware analytics/search ownership, content-truth audit,
-and complete public release QA. Do not report completion from one workstream.
-
-Still route to the Owner at the real account/decision boundary: exact registered
-LLC name; DNS/Render access; business-inbox and transactional-email provider;
-secure secret entry; analytics/Search Console ownership or no-analytics choice;
-About/legal/public-visual review; and final approval to enable indexing.
-
-## Round 30 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
-time limit (unattended)
-**Start source:** `bebcdc5` on `main`
-**Scope:** two reachable, Owner-gate-free Chunk 5 workstreams — the About
-page, then Privacy/Terms drafts — built and verified. Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Resolved round 30" section.
-**Completion:** IMPLEMENTED, VERIFIED VIA REAL RENDERED SCREENSHOTS LOCALLY,
-COMMITTED AND PUSHED TO `origin/main` — see below. Privacy/Terms remain
-explicitly marked "Draft under review" pending Owner LLC-name confirmation
-and copy review; not final-publication-ready.
-
-### What changed
-
-- New `src/app/about/page.tsx`: complete `/about` route fulfilling every
-  vision §6.8 requirement (logo-led identity image, approved studio-origin
-  copy, five values, working style/availability, honest collaborator model,
-  brief tech mention, response-time expectation, CTA to `/start`).
-- New `src/app/privacy/page.tsx` and `src/app/terms/page.tsx`: drafted from
-  the site's actual current behavior (no analytics/cookies, self-hosted
-  fonts, `mailto:`-based Contact/Planner submission, Planner
-  `localStorage` draft + honeypot, no payment collection), Indiana/United
-  States jurisdiction, and vision §6.12's separation of public Website Terms
-  from the future client project agreement. Both carry a visible "Draft
-  under review" notice — the exact registered LLC name is still pending
-  Owner confirmation.
-- `src/lib/site-config.ts`: added `aboutValues`; restored `About` to
-  `primaryNav` and `footerNav.studio` now that the route is real. (The
-  Privacy/Terms footer links already existed since round 1 and now resolve
-  instead of 404ing — no `site-config.ts` change needed for those two.)
-- `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` (27 routes) all
-  pass. Real in-app-Browser screenshots at 375px/785px/1440px confirm layout,
-  contrast, and full desktop/mobile nav across all three new pages — see
-  `CYVEXLY_APP_DEBT.md` for the full method and one non-blocking
-  compositing-quirk note from the About-page pass.
-
-### Important: working tree had a large pre-existing uncommitted diff at
-### session start, unrelated to this round
-
-At session start (before this round touched anything), `git status` already
-showed many modified/deleted/untracked files under `.codex/`, root
-orientation `.md` files, and several `docs/agent-system/cyvexly/CYVEXLY_*.md`
-files — apparently an in-progress "six-role rule-system migration"
-(referenced in `AGENTS.md`'s "Rule-system migration — 2026-09-05" section and
-`CYVEXLY_OWNER_DIRECTION.md`'s matching entry). This round did **not** author,
-review, or verify that diff, so it did not stage or commit any of it — same
-precedent as round 29 excluding concurrent Auditor files. Specifically,
-**`CYVEXLY_CURRENT_STATE.md`, `CYVEXLY_PROJECT_CHUNK_MAP.md`,
-`CYVEXLY_CHUNK_DEBT.md`, `CYVEXLY_TOOLS_AND_CAPABILITIES.md`, and
-`CYVEXLY_OWNER_DIRECTION.md` were already dirty (modified, uncommitted)
-before this round started** and were deliberately left untouched by this
-round rather than layering round-30 edits into an already-mixed diff. This
-round's own continuity notes went only into this file and
-`CYVEXLY_APP_DEBT.md`, both of which were clean at session start.
-**Consequence for the next agent:** `CYVEXLY_CURRENT_STATE.md` and
-`CYVEXLY_PROJECT_CHUNK_MAP.md` still read as of round 29 (About page listed
-as "authorized but not built") even though it is now built — read this
-handoff and `CYVEXLY_APP_DEBT.md` first, and reconcile/commit the pre-existing
-migration diff and the current-state dashboard together deliberately, not by
-accident. This round did not read, modify, or attempt to resolve that
-migration diff's substance — only recorded that it exists and was excluded.
-
-### Git status of this round's own change
-
-Two commits on top of `bebcdc5`, on `main`, pushed to `origin/main`:
-`src/app/about/page.tsx` + `site-config.ts`'s About-nav additions (commit 1),
-then `src/app/privacy/page.tsx` + `src/app/terms/page.tsx` (commit 2), plus
-this file and `CYVEXLY_APP_DEBT.md`. Use `git log` for the exact hashes;
-this round did not include any file from the pre-existing migration diff
-described above in either commit.
-
-### Recommended next workstream
-
-With About and Privacy/Terms drafted, the next largely-reachable Chunk 5
-piece is the §4.12-documented Planner/Contact server-side email delivery
-(`CYVEXLY_APP_DEBT.md` item 2) — but that one genuinely needs the Owner to
-authorize a transactional-email provider and enter credentials first, so it
-is Owner-gated, not silently reachable. Absent that authorization, the next
-purely reachable work is a fuller release-QA pass over what already exists:
-re-verify all 27 routes, legal footer links, and responsive/contrast
-states together now that About/Privacy/Terms all exist, since no round has
-looked at the *whole* site together since before this round's three new
-pages landed. Domain/DNS, email-provider authorization, and analytics
-ownership remain genuinely Owner-account-gated as before.
-
-## Round 29 closeout
-
-**Session:** scheduled `cyvexly-website-builder` task, 2026-09-04, 50-minute
-hard time limit (unattended)
-**Start source:** `6747f06` on `main`
-**Accepted product source:** `f35a2a6` on `main`, pushed to `origin/main`
-**Scope:** opened Chunk 5 and closed one bounded, Owner-gate-free workstream:
-public contact identity, the code-only half of production metadata/discovery,
-and a United States-only truth audit. Full detail in
-`CYVEXLY_ACTIVE_CHUNK.md`'s round-29 report and `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 29" section.
-**Completion:** IMPLEMENTED AND PUSHED; PUBLIC RENDER ADOPTION/OWNER VISUAL
-CONFIRMATION PENDING (this session could not open the visible in-app Browser)
-
-### What changed
-
-- `siteConfig.email` → `design@cyvexly.com`; added `phoneDisplay`/`phoneHref`
-  for `(317) 572-5780` / `tel:+13175725780`; wired the phone onto `/contact`
-  and the footer.
-- `metadataBase` set to `https://cyvexly.com` in `src/app/layout.tsx`; added
-  `src/app/sitemap.ts` covering all 17 public routes.
-- Removed six stale "worldwide"/international-market lines and three
-  unsupported-payment-method-claim lines across `site-config.ts`, the Home
-  hero, the OG image, the footer, and the Pricing page, replacing them with
-  truthful United States-only and payment-pending language per vision §8 and
-  Owner direction `2026-09-04-14` item 8.
-
-### What did not change / still open
-
-About page, Privacy/Terms, real server-side inquiry delivery, the actual
-DNS/Render domain connection, analytics/search ownership, and full release QA
-are all still open — this round did not touch them. The recurring
-scheduler/automation was not read, modified, paused, deleted, renamed, or
-rescheduled. Concurrent Auditor evidence/report files present in the working
-tree at session start were left untouched and excluded from this round's
-commit.
-
-### Recommended next workstream
-
-Given the 50-minute budget forces one workstream per round, the next Builder
-round should pick up another reachable Chunk 5 piece — most likely the About
-page (fully authorized, no Owner gate: build `/about` from vision §6.8's
-reviewable draft, the logo/brand treatment, and the required content list in
-vision §6.8, then restore its now-safe navigation link) — while leaving the
-account-gated items (LLC legal name, DNS/Render access, email-provider
-authorization, analytics ownership, final visual/legal review, indexing
-approval) named precisely rather than treated as unknowns.
-
-## Round 28 closeout
-
-**Session:** `root-sitewide-cyber-glass-20260901-r28`
-**Start source:** `8c2e777` on `main`
-**Accepted product source:** Round 28 commit on `main`, pushed to `origin/main`;
-use `git log` for the exact immutable hash
-**Completion:** IMPLEMENTED AND PUSHED; PUBLIC ADOPTION/OWNER REVIEW PENDING
-
-## Completed work
-
-- Reproduced the Owner's center-page concern in the visible in-app Browser:
-  Home's strong hero gave way to flat pale bands and ordinary cards, with the
-  same failure visible on Services and Pricing.
-- Strengthened the shared full-height scene with two portal planes, three
-  cross-stage beams, and a perspective horizon while retaining existing rails,
-  planes, circuits, nodes, coordinates, and controlled blue refraction.
-- Replaced flat continuation/direct-section masks with bounded architectural
-  glass bays: white outer rims, cyan inner edges, protected translucent fields,
-  local grids/sheens, deeper shadows, and scene visibility between sections.
-- Darkened secondary copy to `#46576e`; conservative protected-field contrast
-  is `5.5986:1`. Phone retains one portal and simplified beams while hiding
-  secondary atmospheric density.
-- Preserved canonical copy, pricing, facts, routes, forms, navigation semantics,
-  real Home media, `0.75×` playback, and the absence of visible/native playback
-  chrome.
-
-## Verification
-
-- Used only the visible Codex in-app Browser for rendered product QA. Opened
-  Home opening/center/full page, Work, Contact, Pricing, FAQ, and Planner across
-  representative desktop/tablet/phone states, then reopened Home and Pricing
-  centers from the optimized production artifact.
-- The 18-route × 3-width matrix passes 54/54 states with exact containment, one
-  main, one H1, sticky navigation, and z-index 50.
-- Home media pause/resume, FAQ expansion, and phone navigation open/close pass.
-- ESLint, TypeScript, and optimized 23-page build pass. The known Owner/domain-
-  blocked `metadataBase` warning remains unchanged.
-- Plan and verification are indexed under `builder/evidence/INDEX.md`.
-
-## Immediate next mission
-
-Preserve the Round 28 continuous architecture and protected section-bay grammar
-while executing the newer Chunk 5 mission above. Confirm the live Render visual
-state as part of production QA, but do not let another cosmetic-only round
-displace the Owner's integrated launch-completion priority.
-
-The domain, jurisdiction, contact information, initial market, and logo-led
-About direction are no longer unknown. Provider credentials, exact registered
-LLC name, final copy/visual/indexing approval, payment selection, and real
-portfolio replacement remain bounded exactly as stated above.
-
-The recurring scheduler/automation was not read, modified, paused, deleted,
-renamed, or rescheduled and remains Owner-controlled. Concurrent Council files
-and the Owner attachment were preserved and excluded from the Builder commit.
+Rounds 28-30 closeout detail, and the September 4 Owner-directed Chunk-5
+mission brief, are archived at `docs/archive/chunks/
+CYVEXLY_BUILDER_HANDOFF_ROUNDS_28_30_REPORT.md` (moved there in round 32 to
+keep this file under its 12288-byte hot-file cap). The current Chunk 5 scope
+and Owner gates are also summarized in `CYVEXLY_ACTIVE_CHUNK.md` and
+`CYVEXLY_OWNER_DIRECTION.md`.

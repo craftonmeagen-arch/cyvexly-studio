@@ -104,6 +104,29 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 32 report — global round 32 (scheduled/unattended session)
+
+Added the Content-Security-Policy header `CYVEXLY_APP_DEBT.md` item 3 called
+for, but caught mid-round that the textbook nonce + `'strict-dynamic'`
+recipe would have silently broken hydration on this site's mostly-static
+route architecture (real generated HTML has no `nonce` on Next's own inline
+hydration scripts) — corrected to a static `default-src 'self'` policy with
+`'unsafe-inline'` limited to `script-src`/`style-src`, verified against a
+real running production server (headers via `curl`, interactivity via the
+in-app Browser driving the Planner form through a step). Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 32" section.
+
+Also committed the two-round-old "six-role rule-system migration" diff that
+rounds 30-31 had each found pre-existing and left uncommitted, after running
+its own self-validation harness (`Test-RoleSetup.ps1`) and fixing the one
+real defect it surfaced — `CYVEXLY_NEXT_BUILDER_HANDOFF.md` had grown past
+its 12288-byte hot-file cap from accumulated round history, fixed by
+archiving rounds 28-30's detail to `docs/archive/chunks/
+CYVEXLY_BUILDER_HANDOFF_ROUNDS_28_30_REPORT.md`. Both the migration and the
+CSP change are committed to local `main` but deliberately not pushed to
+`origin/main` this round — see `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s round-32
+entry for why and what the next round/Owner should do.
+
 ## Round 31 report — global round 31 (scheduled/unattended session)
 
 Full-site release-QA sweep (all 27 routes, first since About/Privacy/Terms

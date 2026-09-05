@@ -108,21 +108,46 @@
      `mailto:` bridge as a durable solution rather than the explicitly
      temporary one it's labeled as in the UI.
 
-3. **Content-Security-Policy header not yet set.** Round 31 added the five
-   always-safe response headers (`X-Content-Type-Options`, `X-Frame-Options`,
-   `Referrer-Policy`, `Permissions-Policy`, `Strict-Transport-Security`) to
-   `next.config.ts`, but deliberately left CSP out of the same change. A
-   correct CSP needs to account for Next.js App Router's inline hydration/
-   streaming `<script>` tags (would need a nonce or nonce-based middleware to
-   avoid `'unsafe-inline'` for `script-src`) and next/font's self-hosted font
-   requests — getting this wrong silently breaks hydration or fonts in
-   production, which a rushed same-round addition risked not catching. The
-   site otherwise has no third-party scripts/images/fonts (verified round 31:
-   grepped `src/` for external URLs — only the local `/media/*.mp4` video and
-   self-hosted `next/font/google` files), so a strict `default-src 'self'`
-   policy is achievable; it just deserves its own focused round with a real
-   production-build CSP-violation-report test pass rather than being folded
-   into a QA sweep.
+## Resolved round 32
+
+- **Content-Security-Policy header added — with a real reachability
+  correction, not the nonce recipe originally planned.** The open item this
+  resolves (as it read entering this round) suggested a nonce-based
+  `script-src` via middleware, the standard Next.js docs recipe. Built it
+  first
+  (`src/proxy.ts` — Next.js 16 renamed the `middleware.ts` convention to
+  `proxy.ts`; the build's own deprecation warning caught this before it
+  shipped under the old name), then verified against a real running
+  `next start` production server rather than assuming the recipe would just
+  work. It would have **silently broken hydration**: most routes here
+  prerender statically at build time, so there is no per-request value
+  available to nonce Next's own inline hydration scripts. The real generated
+  HTML's `self.__next_f.push(...)` scripts ship with no `nonce` attribute at
+  all, and one serialized script prop literally reads
+  `"nonce":"$undefined"` — under `'strict-dynamic'`, a spec-compliant browser
+  refuses every un-nonced inline script, which is nearly all of them on a
+  static page. This is exactly the failure mode this item already warned
+  about ("getting this wrong silently breaks hydration"); caught by testing
+  before shipping, not discovered after.
+  Corrected to a static CSP with no middleware/proxy file: added a
+  `Content-Security-Policy` entry to `next.config.ts`'s existing
+  `securityHeaders` array — `default-src 'self'`, every directive locked to
+  `'self'` except `script-src`/`style-src` (`'unsafe-inline'`, required by
+  the static-rendering architecture — a real, documented trade-off, not an
+  oversight) and `img-src` (adds `blob: data:` for `next/image`/
+  `ImageResponse`). No third-party origins are permitted anywhere in the
+  policy, consistent with round 31's grep finding that the site has none.
+- **Verification:** `tsc --noEmit`, `lint`, and `build` (27 routes, zero
+  warnings) all pass. Started the actual production server (`next start`)
+  and `curl`ed `/` (static), `/about` (static), and `/start` (the one
+  dynamic route) — identical CSP header present on all three via real HTTP
+  responses. Opened the real in-app Browser against that running server:
+  Home renders with zero console errors; on `/start` (the most
+  JS-interactive route — a nine-step client-state form) actually typed into
+  a field and clicked "Continue →" — the form advanced to step 2 with new
+  fields rendered and zero console errors, proving hydration and
+  client-side event handlers work under the policy rather than just that
+  pages load.
 
 ## Resolved round 31
 
