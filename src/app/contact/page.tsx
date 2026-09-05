@@ -47,18 +47,20 @@ export default function ContactPage() {
               <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
                 We typically respond within two business days.
               </p>
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="mt-5 inline-flex items-center gap-2 font-display text-lg font-semibold text-cyber-blue hover:text-[#0b4fb0]"
-              >
-                {siteConfig.email}
-              </a>
-              <a
-                href={siteConfig.phoneHref}
-                className="mt-2 inline-flex items-center gap-2 font-display text-lg font-semibold text-cyber-blue hover:text-[#0b4fb0]"
-              >
-                {siteConfig.phoneDisplay}
-              </a>
+              <div className="mt-5 flex flex-col gap-2">
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="inline-flex items-center gap-2 font-display text-lg font-semibold text-cyber-blue hover:text-[#0b4fb0]"
+                >
+                  {siteConfig.email}
+                </a>
+                <a
+                  href={siteConfig.phoneHref}
+                  className="inline-flex items-center gap-2 font-display text-lg font-semibold text-cyber-blue hover:text-[#0b4fb0]"
+                >
+                  {siteConfig.phoneDisplay}
+                </a>
+              </div>
 
               <dl className="mt-10 space-y-6 text-sm">
                 <div>
