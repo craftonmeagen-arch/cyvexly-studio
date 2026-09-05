@@ -110,6 +110,40 @@
      `mailto:` bridge as a durable solution rather than the explicitly
      temporary one it's labeled as in the UI.
 
+## Resolved round 37
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-05-R28`** — a third
+  consecutive independent confirmation round (reviewed commit `92acb98`), not
+  a new finding: its own isolated review-port build re-verified hot-file
+  byte caps (47 files), `CYV-IFA-012` CLOSED, all 20 routes' canonical tags,
+  all 6 security headers/CSP, and a 32-link site-wide crawl with zero broken
+  links — all PASS, matching rounds 35-36. `tsc --noEmit`/`lint`/`build`
+  re-run clean as a sanity check (no source touched). Moved to
+  `exchange/processed/`.
+- **Performance spot-check — vision §17 item 10's "performance" QA category,
+  not explicitly measured by any prior round.** Read real build output:
+  `.next/static/chunks` totals 764KB across the whole app (largest chunk
+  228KB, the React/Next framework runtime). `public/media/
+  cyvexly-services-loop.mp4` is 3.8MB; verified `src/components/
+  hero-showcase-video.tsx` handles it responsibly — `preload="metadata"`
+  (not `"auto"`) with a poster image shown first, and existing logic already
+  pauses/skips autoplay under `prefers-reduced-motion`,
+  `navigator.connection.saveData`, and `document.hidden`. **No defect
+  found** — already the correct pattern for an autoplay background video.
+- **Archived stale-cap detail out of two hot files.** `CYVEXLY_ACTIVE_CHUNK.md`
+  had drifted to 32460 bytes (over its 30720-byte cap) because rounds 26-29's
+  full reports were never archived when later rounds landed; moved to
+  `docs/archive/chunks/CYVEXLY_SHARED_THEME_ROUNDS_26_29_REPORT.md`, now
+  20713 bytes. `CYVEXLY_NEXT_BUILDER_HANDOFF.md` would have exceeded its
+  12288-byte cap with this round's entry added; archived rounds 33-34 to
+  `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUNDS_33_34_REPORT.md`
+  (latest-three rule: 35, 36, 37 stay live), now 10633 bytes.
+- **Three consecutive rounds (35, 36, 37) now confirm zero
+  reachable-without-an-Owner-gate defects**, and this round's new QA angle
+  (performance) corroborates rather than contradicts that. See
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s round-37 entry for the recommendation
+  to reduce/pause scheduled Builder cadence until an Owner gate clears.
+
 ## Resolved round 36
 
 - **Confirmed public Render adoption directly against the live production

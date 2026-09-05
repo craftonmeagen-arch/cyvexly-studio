@@ -1,5 +1,67 @@
 # Cyvexly Next Builder Handoff
 
+## Round 37 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
+time limit (unattended)
+**Start source:** `52178f7` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R28`)
+and ran a bounded performance spot-check (the one vision §17 item-10 QA
+category not yet explicitly measured by any prior round).
+**Completion:** VERIFICATION-ONLY ROUND — NO SOURCE DEFECTS FOUND, NO SOURCE
+CHANGES.
+
+### What was checked
+
+- `IFA-2026-09-05-R28` (reviewed commit `92acb98`, round 35's HEAD) is a
+  **third consecutive independent confirmation, not a new finding**: its own
+  isolated review-port build (port 5273) re-verified hot-file byte caps (47
+  files), `CYV-IFA-012` CLOSED, all 20 routes' canonical tags, all 6 security
+  headers/CSP, and a 32-link site-wide crawl with zero broken links — all
+  PASS. Moved to `exchange/processed/`.
+- Ran `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` — all clean,
+  no source touched.
+- **New this round:** a performance spot-check, since rounds 31/35/36 already
+  covered functional/security/link/metadata QA and a fourth repeat of that
+  same sweep would not have found new ground. Read real build output:
+  `.next/static/chunks` totals 764KB across the whole app (largest chunk
+  228KB, the React/Next framework runtime — small for a Next.js site).
+  `public/media/cyvexly-services-loop.mp4` is 3.8MB, so read
+  `src/components/hero-showcase-video.tsx` to check it's handled
+  responsibly: `preload="metadata"` (not `"auto"`) plus a poster image, and
+  it already pauses/skips autoplay under `prefers-reduced-motion`,
+  `navigator.connection.saveData`, and `document.hidden`. No defect found —
+  this is already the correct pattern, not a gap that needed fixing.
+- Also archived rounds 26-29's long-form detail out of
+  `CYVEXLY_ACTIVE_CHUNK.md` (to
+  `docs/archive/chunks/CYVEXLY_SHARED_THEME_ROUNDS_26_29_REPORT.md`) — that
+  file had drifted to 32460 bytes, over its 30720-byte cap, because those
+  four rounds' reports were never archived when rounds 30+ landed. Re-checked
+  with `wc -c` after: 20713 bytes, back under cap.
+
+### Recommended next workstream — same recommendation, now stronger
+
+**Three consecutive rounds (35, 36, 37) confirm zero reachable-without-an-
+Owner-gate defects**, and this round's fresh look at a previously-unchecked
+category (performance) corroborates rather than contradicts that — it did
+not surface anything new either. The marginal value of each further
+verification-only round has been shrinking (round 31: first full sweep,
+found real gaps like missing security headers; round 35: full sweep, found
+2 stale debt entries; round 36: live-production-only sweep, found nothing
+new; round 37: inbox disposition + a new QA angle, found nothing new).
+Everything left needs Owner account access, a provider decision, or Owner
+content review — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates"
+(exact LLC name; DNS/Render account access; email-provider authorization +
+secrets; analytics/Search Console ownership or no-analytics decision;
+About/legal/visual review; final indexability approval). **Recommend the
+Owner either clears one of these gates or reduces/pauses the scheduled
+Builder cadence until one does** — continuing to run hourly scheduled
+rounds against an empty reachable-work queue does not produce new value,
+and each round still consumes real time/tokens re-confirming the same
+result. The next Builder should still check the Auditor inbox first (cheap,
+and it may have new evidence), but should not feel obligated to invent a
+fourth full QA sweep if it is empty or already-known.
+
 ## Round 36 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
@@ -107,83 +169,12 @@ enough has changed to justify flagging any of these directly to the Owner
 for unblocking, since several rounds now have found zero new reachable
 code-only work.
 
-## Round 34 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
-time limit (unattended)
-**Start source:** `bdf0263` on `main` (pushed, matched `origin/main`)
-**Scope:** read four unread Auditor inbox items (`IFA-2026-09-05-R22`
-through `R25`) and fixed their one persistent reachable finding.
-**Completion:** IMPLEMENTED, VERIFIED VIA REAL BUILD OUTPUT AND REAL
-IN-APP-BROWSER SCREENSHOTS AT THREE WIDTHS, COMMITTED AND PUSHED.
-
-### What changed
-
-- Fixed `CYV-IFA-012`: `/contact`'s email/phone links collided into
-  `design@cyvexly.com(317) 572-5780` on any width ≥ ~370px. Wrapped both
-  `<a>` tags in `src/app/contact/page.tsx` in a `flex flex-col gap-2` div.
-  Verified in real generated HTML, `tsc`/`lint`/`build` (27 routes) clean,
-  and real screenshots at 1440px/785px/390px (stacked, zero overflow, zero
-  console errors). Checked `site-footer.tsx` for the same shape — already
-  correctly block-separated. Commit `0afb789`, pushed to `origin/main`.
-- Moved all four consumed inbox items to
-  `website-independent-review/exchange/processed/`.
-- Not touched: everything else — remaining Chunk 5 scope is still the same
-  Owner-gated set (real Contact/Planner email delivery, DNS/domain,
-  analytics/search ownership, final indexability approval).
-
-### Recommended next workstream
-
-Re-check the Auditor inbox for anything published after this round first —
-`CYV-IFA-006` (server-side Planner receipt) will likely keep reappearing
-until the email-provider Owner gate clears. If the inbox is empty/all
-already-known, re-scan `CYVEXLY_APP_DEBT.md`/`CYVEXLY_CHUNK_DEBT.md` for a
-newly-reachable item, or run a fresh release-QA sweep if enough rounds have
-passed since round 31's.
-
-## Round 33 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
-time limit (unattended)
-**Start source:** `8c07262` on `main` (local; two commits ahead of
-`origin/main`)
-**Scope:** (1) reviewed and pushed round 32's two local-only commits after
-independent re-verification; (2) added per-route canonical tags, the last
-reachable code-only item from `CYVEXLY_APP_DEBT.md` item 1.
-**Completion:** IMPLEMENTED AND VERIFIED VIA REAL BUILD OUTPUT AND PUSHED.
-
-### What changed
-
-- Pushed `be60862..8c07262` to `origin/main` (round 32's CSP fix + six-role
-  migration) after re-running `tsc --noEmit`/`lint`/`build` clean myself —
-  round 32 deliberately left this for review rather than self-certifying.
-- Added `alternates: { canonical: "/<path>" }` to `src/app/layout.tsx` and
-  every route's metadata (`about`, `accessibility`, `contact`, `faq`,
-  `pricing`, `privacy`, `process`, `services`, `start`, `terms`, `work`,
-  `services/[slug]`, `work/[slug]`). Verified real generated HTML across a
-  sample spanning every metadata shape (root, static, dynamic slug) shows
-  the correct absolute canonical URL; `tsc`/`lint`/`build` (27 routes) clean.
-  Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 33" section.
-- Not touched: About/Privacy/Terms content, email delivery, DNS/domain,
-  analytics — all remain Owner-gated or already closed, per
-  `CYVEXLY_ACTIVE_CHUNK.md`.
-
-### Recommended next workstream
-
-Chunk 5's remaining reachable-without-an-Owner-gate scope is now thin —
-most of what's left (real Contact/Planner email delivery, DNS/domain
-connection, analytics/Search Console ownership, final indexability
-approval) needs Owner-supplied account access or provider selection named
-in `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". The next Builder
-should re-scan `CYVEXLY_APP_DEBT.md`/`CYVEXLY_CHUNK_DEBT.md` for any
-newly-reachable item, or re-run a release-QA sweep if enough rounds have
-passed since round 31's, before assuming nothing reachable remains.
-
-Rounds 31–32 closeout detail (release-QA sweep + security headers; CSP +
-role-system migration commit) is archived at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUNDS_31_32_REPORT.md` (moved there in round 35 to
-keep this file under its 12288-byte hot-file cap — latest-three rule: 33,
-34, 35 stay live). Rounds 28-30 are archived at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUNDS_28_30_REPORT.md`. The current Chunk 5 scope
-and Owner gates are summarized in `CYVEXLY_ACTIVE_CHUNK.md` and
-`CYVEXLY_OWNER_DIRECTION.md`.
+Rounds 33-34 closeout detail (canonical tags + round-32 push; `CYV-IFA-012`
+contact-link fix) is archived at `docs/archive/chunks/
+CYVEXLY_BUILDER_HANDOFF_ROUNDS_33_34_REPORT.md` (moved there in round 37 to
+keep this file under its 12288-byte hot-file cap — latest-three rule: 35,
+36, 37 stay live). Rounds 31-32 are archived at `docs/archive/chunks/
+CYVEXLY_BUILDER_HANDOFF_ROUNDS_31_32_REPORT.md`; rounds 28-30 at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUNDS_28_30_REPORT.md`. The
+current Chunk 5 scope and Owner gates are summarized in
+`CYVEXLY_ACTIVE_CHUNK.md` and `CYVEXLY_OWNER_DIRECTION.md`.
