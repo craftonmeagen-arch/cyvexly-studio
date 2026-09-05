@@ -104,6 +104,38 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 44 report — global round 44 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R35` (reviewed commit
+`1de36c3`, round 42's HEAD, one commit behind round 43's JSON-LD feature
+commit). Eleventh consecutive independent confirmation — 0 active code
+defects, re-verifies round 42's Contact/Planner honeypots, the Planner
+RTL/long-name review step, `CYV-IFA-012` contact-layout maintenance, all 20
+routes, canonicals, security headers, and live production parity. Not a new
+finding. Moved to `exchange/processed/`.
+
+Implemented the FAQPage JSON-LD enhancement round 43 named as the next
+natural discoverability angle: added `faqPageJsonLd` to
+`src/lib/structured-data.ts`, flattening the existing published `faqLibrary`
+copy (11 categories, 30 Q&As — no new facts) into schema.org
+`FAQPage`/`Question`/`Answer` entities, embedded only on `/faq`
+(`src/app/faq/page.tsx`) alongside the existing sitewide `Organization`
+schema. §4.12 check: FAQPage JSON-LD placed on the page containing the
+visible FAQ content is Google's own documented rich-results pattern — not a
+departure. Verified in real production build output (parsed
+`.next/server/app/faq.html`: both scripts present, `FAQPage` has exactly 30
+`mainEntity` entries with correct first/last question text; confirmed
+`index.html`/`contact.html`/`about.html` still carry only `Organization`,
+i.e. no leak) and live via real CDP navigation against a production `next
+start` server on `/faq` and `/`: zero console messages, zero network
+failures, JSON-LD parses correctly with the expected 30-entry count. Script
+preserved at `builder/evidence/round-44-faq-jsonld-check.mjs`. `tsc`/`lint`/
+`build` all pass clean; committed and pushed.
+
+Archived rounds 40-41's full reports (below) to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUNDS_40_41_REPORT.md` to restore
+the intended latest-three rotation (§7.14) — 42, 43, 44 stay live.
+
 ## Round 43 report — global round 43 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R34` (reviewed commit
@@ -167,66 +199,7 @@ round 41 named; the next round should keep looking for genuinely new QA
 angles (a print-stylesheet check and a true rate-limit check beyond the
 honeypot are named as untried in the handoff).
 
-## Round 41 report — global round 41 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-05-R32` (reviewed commit
-`a8c5769`, round 39's HEAD, one commit behind round 40's fix). Eighth
-consecutive independent confirmation, not a new finding. Moved to
-`exchange/processed/`. Re-ran `tsc`/`lint`/`build` clean before making any
-change.
-
-Closed both QA candidates round 40 named as untried, with no source change
-needed (no defect found):
-
-1. **WCAG 1.4.10 Reflow / 200%-zoom-equivalent.** Emulated 320 CSS px (the
-   exact 1.4.10 threshold) and 640 CSS px (a width-halving proxy for a
-   1280px viewport at 200% zoom) across 8 marketing routes and all 9 real
-   Planner steps, advancing the Planner with genuine CDP mouse clicks on
-   Continue against a production server. 34/34 checks: zero horizontal
-   overflow, and the Planner's real step-advancement kept working at both
-   narrow widths.
-2. **Back-button re-check of round 40's shared `goToStep()` fix.** Source
-   read confirmed one function serves `handleNext`, `handleBack`, `onEdit`,
-   and the progress rail, with the fix keyed only on `currentStep`. Live
-   CDP click on "← Back" confirmed: scroll reset to 0, focus moved to the
-   step heading, live region announced correctly.
-
-Full detail, method honesty notes, and scripts in `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 41" section and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`. Ninth
-consecutive round (35-41) with only rounds 39/40 finding real defects — the
-next round should look for genuinely new QA angles (candidates in the
-handoff) rather than assume the surface stays empty.
-
-## Round 40 report — global round 40 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-05-R31` (reviewed commit
-`f1a264f`, round 38's HEAD). Seventh consecutive independent confirmation,
-not a new finding. Moved to `exchange/processed/`. Re-ran `tsc`/`lint`/
-`build` clean before making any change.
-
-Ran a screen-reader-semantics QA pass on the Planner's step-advance flow, one
-of round 39's named uncovered candidates. Per-field validation ARIA wiring
-was already solid on Contact and the Planner. Live-testing the successful
-step-advance path via real CDP mouse events against a production server
-(the in-app Browser pane proved intermittent this round — screenshot
-timeouts and a `document.hasFocus()===false` false-positive) **found and
-fixed a real defect**: `goToStep()` called `window.scrollTo({top:0})`
-synchronously before React committed the new step's DOM, so Chrome's
-scroll-anchoring silently kept the old scroll position, and focus never left
-the Continue/Back button — no top-scroll for sighted users, no focus move or
-`aria-live` announcement for keyboard/screen-reader users. Fixed by moving
-scroll+focus into a `useEffect` keyed on `currentStep` (guarded by a
-`previousStepRef` comparison, verified safe under React Strict Mode's
-dev-only double-invoke), deferred one `requestAnimationFrame` past commit,
-plus a polite live-region announcer. Verified before/after against a real
-production server: `tsc`/`lint`/`build` clean, commit `71d233f` pushed.
-Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 40" section and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
-
-Rounds 39 and 40 both found real defects from previously-uncovered QA
-angles, contradicting rounds 35-38's "pause scheduled cadence, queue is
-empty" recommendation. See the handoff for untried candidates (200% zoom/
-text-resize, a Back/progress-rail re-check of this round's fix).
+Rounds 40-41 full reports are archived at docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUNDS_40_41_REPORT.md (moved there round 44 to restore latest-three rotation). Round 41 closed both of round 40's named QA candidates (WCAG 1.4.10 reflow/zoom, a Back-button re-check) with no defect found. Round 40 found and fixed the Planner step-advance scroll/focus/live-region defect (`71d233f`).
 
 Rounds 31-39 full reports are archived at docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUNDS_31_39_REPORT.md (moved there round 43 to restore latest-three rotation). Summarized outcomes remain in CYVEXLY_BUILD_SUMMARY.md and CYVEXLY_APP_DEBT.md.
 
