@@ -104,6 +104,22 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 31 report — global round 31 (scheduled/unattended session)
+
+Full-site release-QA sweep (all 27 routes, first since About/Privacy/Terms
+landed round 30): `tsc`/`lint`/`build` clean, zero broken internal links
+(Node script cross-checked every generated `href` against real routes),
+sitemap complete, footer legal links present sitewide, no stale worldwide/
+payment/founder claims, 375/768/1440px responsive with no overflow,
+`noindex` consistent. Found and closed one reachable gap: `next.config.ts`
+had no security headers at all. Added `X-Content-Type-Options`,
+`X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, and
+`Strict-Transport-Security`; verified present on real fetch responses and
+that the site still renders correctly. CSP intentionally deferred to its own
+round — see `CYVEXLY_APP_DEBT.md` open item 3. Full detail in
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md` and `CYVEXLY_APP_DEBT.md`'s "Resolved
+round 31" section.
+
 ## Prior round summaries
 
 - **Round 1:** established Next.js/TypeScript/Tailwind source truth, design

@@ -1,5 +1,70 @@
 # Cyvexly Next Builder Handoff
 
+## Round 31 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
+time limit (unattended)
+**Start source:** `30f29f7` on `main`
+**Scope:** a full release-QA sweep across all 27 routes (the first since
+About/Privacy/Terms landed in round 30), plus one reachable, Owner-gate-free
+gap it surfaced — missing baseline HTTP security headers, part of vision
+§17 item 10's QA requirement. Full detail in `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 31" section.
+**Completion:** IMPLEMENTED AND VERIFIED VIA REAL BUILD OUTPUT, LINK-INTEGRITY
+CROSS-CHECK, AND REAL IN-APP-BROWSER SCREENSHOTS; NOT YET COMMITTED (see
+below) — the pre-existing uncommitted migration diff made a plain `git add`
+unsafe, so this round staged and committed only its own file.
+
+### What changed
+
+- `next.config.ts`: added a `headers()` function applying five baseline
+  security headers (`X-Content-Type-Options`, `X-Frame-Options`,
+  `Referrer-Policy`, `Permissions-Policy`, `Strict-Transport-Security`) to
+  every route. Verified present on real `fetch()` responses from the running
+  dev server, and that the Home page still renders correctly afterward.
+  CSP was deliberately left for a dedicated future round — see
+  `CYVEXLY_APP_DEBT.md`'s new "Open" item 3 for why (Next.js inline
+  hydration scripts need a nonce strategy to avoid `'unsafe-inline'`, and
+  getting that wrong silently breaks the site rather than failing loudly).
+- No other source files changed. The QA sweep (all 27 routes build clean,
+  zero broken internal links, zero stale worldwide/payment/founder claims,
+  sitemap complete, footer legal links present everywhere, responsive at
+  375/768/1440px, `noindex` consistent) found no defects in the existing
+  About/Privacy/Terms pages from round 30.
+
+### Important: the pre-existing uncommitted migration diff is still present
+
+Same situation round 30 already flagged: at this round's start, `git status`
+still showed the same large modified/deleted/untracked set under `.codex/`,
+root orientation `.md` files, and several `docs/agent-system/cyvexly/
+CYVEXLY_*.md` files (the "six-role rule-system migration" from
+`AGENTS.md`/`CYVEXLY_OWNER_DIRECTION.md`'s 2026-09-05 entries) — two rounds
+old now, still uncommitted. This round again did not author, review, or
+verify that diff, so it again committed only its own file
+(`next.config.ts`) plus this handoff and `CYVEXLY_APP_DEBT.md` (both were
+clean at this round's start, confirmed via `git status --short` before
+editing). **This is now two consecutive Builder rounds leaving the same
+migration diff uncommitted** — if a Builder round keeps not being the right
+owner for it, a PM or the Owner should explicitly decide who reconciles it,
+rather than it silently aging further. `CYVEXLY_CURRENT_STATE.md`,
+`CYVEXLY_PROJECT_CHUNK_MAP.md`, `CYVEXLY_CHUNK_DEBT.md`,
+`CYVEXLY_TOOLS_AND_CAPABILITIES.md`, `CYVEXLY_OWNER_DIRECTION.md`, and
+`CYVEXLY_REVIEW_INDEX.md` are the ones still dirty from it — read this
+handoff and `CYVEXLY_APP_DEBT.md` for current truth in the meantime, since
+`CYVEXLY_CURRENT_STATE.md` remains stale (still round-29-era) exactly as
+round 30 already noted.
+
+### Recommended next workstream
+
+The Planner/Contact real server-side email delivery
+(`CYVEXLY_APP_DEBT.md` item 2) remains the largest piece of Chunk 5, but
+stays genuinely Owner-gated (provider authorization + credentials). Purely
+reachable next pieces, in rough priority order: (1) the CSP addition
+documented in the new debt item 3 above, done carefully with its own
+verification pass; (2) reconciling or explicitly routing the two-round-old
+migration diff described above; (3) domain/DNS, email-provider
+authorization, and analytics ownership remain Owner-account-gated as before.
+
 ## Owner-directed next mission — September 4, 2026
 
 Open **Chunk 5 — United States Launch Completion & Business Operations** as the
