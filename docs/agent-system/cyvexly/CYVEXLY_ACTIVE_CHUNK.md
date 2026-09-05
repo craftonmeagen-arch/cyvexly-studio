@@ -104,6 +104,37 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 40 report — global round 40 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R31` (reviewed commit
+`f1a264f`, round 38's HEAD). Seventh consecutive independent confirmation,
+not a new finding. Moved to `exchange/processed/`. Re-ran `tsc`/`lint`/
+`build` clean before making any change.
+
+Ran a screen-reader-semantics QA pass on the Planner's step-advance flow, one
+of round 39's named uncovered candidates. Per-field validation ARIA wiring
+was already solid on Contact and the Planner. Live-testing the successful
+step-advance path via real CDP mouse events against a production server
+(the in-app Browser pane proved intermittent this round — screenshot
+timeouts and a `document.hasFocus()===false` false-positive) **found and
+fixed a real defect**: `goToStep()` called `window.scrollTo({top:0})`
+synchronously before React committed the new step's DOM, so Chrome's
+scroll-anchoring silently kept the old scroll position, and focus never left
+the Continue/Back button — no top-scroll for sighted users, no focus move or
+`aria-live` announcement for keyboard/screen-reader users. Fixed by moving
+scroll+focus into a `useEffect` keyed on `currentStep` (guarded by a
+`previousStepRef` comparison, verified safe under React Strict Mode's
+dev-only double-invoke), deferred one `requestAnimationFrame` past commit,
+plus a polite live-region announcer. Verified before/after against a real
+production server: `tsc`/`lint`/`build` clean, commit `71d233f` pushed.
+Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 40" section and
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
+Rounds 39 and 40 both found real defects from previously-uncovered QA
+angles, contradicting rounds 35-38's "pause scheduled cadence, queue is
+empty" recommendation. See the handoff for untried candidates (200% zoom/
+text-resize, a Back/progress-rail re-check of this round's fix).
+
 ## Round 39 report — global round 39 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R30` (reviewed commit

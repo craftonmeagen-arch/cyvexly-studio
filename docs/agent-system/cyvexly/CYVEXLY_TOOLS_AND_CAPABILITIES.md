@@ -23,6 +23,23 @@ describe their original session types; discover and verify current capabilities.
 
 ## Product and browser capabilities
 
+**Round 40 note, Claude Code harness:** in this specific unattended/scheduled
+session type, `computer{action:"screenshot"}` and coordinate-based clicks on
+the in-app Browser pane *did* composite and work correctly at the start of
+the round, then became intermittent partway through (screenshot timeouts
+matching the "pane hidden" failure mode described below) — consistent with
+round 35's "changes state mid-session" finding, not the original rounds 1-7
+"never works at all" record. Also confirmed this round:
+`document.hasFocus()` is `false` on that pane even when
+`document.visibilityState` is `"visible"`, so a script-dispatched
+`element.click()`/`.focus()` there does not reliably reproduce genuine
+focus-transfer behavior — a real interaction claim (e.g. "does focus move
+after a click") needs either a real user-driven `computer` click while the
+pane is actually compositing, or the local-headless-Chrome/CDP method below,
+not a plain `javascript_tool` click. Re-verify per round; do not assume
+either the old "never works" record or this round's partial success is
+permanent for this harness.
+
 - In-app Browser control may be available in a role session. Verify tool availability and current signed-in context before relying on it.
 - **Unattended/scheduled sessions:** `preview_start({name})` refuses to launch
   a dev server ("nobody is present to approve the command"). Workaround

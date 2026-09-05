@@ -15,6 +15,16 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 40 — 2026-09-05
+
+Fixed a real Planner defect (`71d233f`): `goToStep()` scrolled to top
+synchronously before React committed the new step's DOM, so scroll-anchoring
+silently kept the old position and focus never left the Continue/Back
+button. Moved scroll+focus into a post-render `useEffect` and added a polite
+live-region step announcement for assistive tech. Verified before/after with
+real CDP mouse events against a production server. TypeScript, lint, and
+build passed; pushed to `origin/main`.
+
 ## Round 29 — 2026-09-04
 
 Contact identity, phone, production metadata/sitemap, and United States/payment truth copy
