@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 48. Owner launch direction updated 2026-09-04.
+**Global round:** 49. Owner launch direction updated 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -13,39 +13,42 @@ spam/rate protection (round 42), sitewide Organization JSON-LD structured
 data (round 43), FAQPage JSON-LD for `/faq` (round 44), BreadcrumbList
 JSON-LD for service-detail/case-study routes (round 45), a Web App
 Manifest plus dead-asset cleanup (round 46), an Apple touch icon
-(round 47), and raster 192/512 PNG manifest icons (round 48) are done.
-Remaining Chunk 5 scope (real Contact/Planner email delivery, DNS/domain
-connection, analytics/search ownership, final indexability approval) is
-Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates".
-Full round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+(round 47), raster 192/512 PNG manifest icons plus a print-legibility fix
+(round 48), and route-segment/root error boundaries plus theme-color/
+color-scheme metadata (round 49) are done. Remaining Chunk 5 scope (real
+Contact/Planner email delivery, DNS/domain connection, analytics/search
+ownership, final indexability approval) is Owner-gated — see
+`CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full round-by-round
+detail is in `CYVEXLY_ACTIVE_CHUNK.md` and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 48 outcome (scheduled/unattended, 50-minute limit):** dispositioned
-the one new Auditor inbox item, `IFA-2026-09-05-R39` — a fifteenth
+**Round 49 outcome (scheduled/unattended, 50-minute limit):** dispositioned
+the one new Auditor inbox item, `IFA-2026-09-05-R40` — a sixteenth
 consecutive independent confirmation, 0 active code defects, not a new
-finding. Shipped two new reachable angles: (1) `src/app/icons/[size]/
-route.tsx`, raster 192×512 PNG manifest icons via the same `next/og`
-`ImageResponse` technique as `apple-icon.tsx`, closing the open item
-round 46/47 named; (2) a real print-legibility fix — no route had any
-`@media print` CSS, so this site's light-text-on-dark-background sections
-(hero panel, CTAs, footer) would print invisible under browsers' default
-no-background-printing behavior; added `print-color-adjust: exact` in
-`globals.css` (MDN's documented fix), verified via CDP `Page.printToPDF`
-(`printBackground:false`/`:true` produced identically-sized ~41.7MB PDFs,
-proving the override works) with no screen-mode regression. Also rotated
-hot memory (archived round 45's `CYVEXLY_ACTIVE_CHUNK.md` report/
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md` closeout and round 43's `CYVEXLY_APP_
-DEBT.md` entry) and recorded a `Start-Process`-PID tooling caveat in
-`CYVEXLY_TOOLS_AND_CAPABILITIES.md`. Full detail in `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 48" section and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+finding. Shipped three new reachable angles: (1) `src/app/error.tsx`, a
+route-segment error boundary (no route had one; unhandled errors fell
+through to Next's default unstyled error screen); (2) `src/app/
+global-error.tsx` for the rarer root-layout-level error case; (3)
+`viewport.themeColor`/`colorScheme` on the root layout metadata
+(`#0f66e0`/`light`, reusing the existing brand token). Verified with a
+temporary `force-dynamic` throwaway route (deleted before commit, confirmed
+via a full re-typecheck/re-lint/re-build) against a real `next start`
+server: sanitized error digest in the SSR shell, real in-app-Browser
+navigation showed the actual rendered `error.tsx` UI, theme-color/
+color-scheme meta confirmed live, zero regressions on Home/faq/manifest/
+apple-icon/icons afterward. Also rotated hot memory (archived round 46's
+`CYVEXLY_ACTIVE_CHUNK.md` report, rounds 46-47's `CYVEXLY_NEXT_BUILDER_
+HANDOFF.md` closeouts, and rounds 44-45's `CYVEXLY_APP_DEBT.md` entries).
+Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 49" section and
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 48. Untried angles remaining: a
+first for anything published after round 49. Untried angles remaining: a
 true rate-limiting check beyond the honeypot (architecturally tied to the
-same server-side email delivery this chunk already defers). Organization,
-FAQPage, BreadcrumbList JSON-LD, the Web App Manifest, the Apple touch
-icon, raster 192/512 manifest icons, and the print-legibility fix are all
+same server-side email delivery this chunk already defers); a
+`/.well-known/security.txt` file (reachable, but needs a real contact/
+expiry — check for Owner direction before inventing one). Structured data,
+manifest/icons, print CSS, and now error boundaries/theme-color are all
 shipped — keep looking for genuinely new QA/build angles rather than
 assuming the surface is empty. What remains genuinely Owner-gated (real
 Contact/Planner email delivery, DNS/domain connection, analytics/search
@@ -53,7 +56,7 @@ ownership, exact LLC name, final indexability approval, About/legal/visual
 review) is unchanged; see "Owner launch decisions and remaining gates"
 below.
 
-**Accepted product position:** `main` is pushed through round 48's source
+**Accepted product position:** `main` is pushed through round 49's source
 feature commit on `origin/main` — see `git log` for exact SHAs (docs commit
 to follow this same round). The production domain is confirmed as
 `cyvexly.com`, but DNS still needs to be connected and verified.

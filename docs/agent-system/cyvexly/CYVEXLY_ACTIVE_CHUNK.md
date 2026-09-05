@@ -222,55 +222,144 @@ Archived round 44's full report (below) to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_44_REPORT.md` to restore
 the intended latest-three rotation (§7.14) — 45, 46, 47 stay live.
 
-## Round 46 report — global round 46 (scheduled/unattended session)
+## Round 49 report — global round 49 (scheduled/unattended session)
 
-Read the one new Auditor inbox item, `IFA-2026-09-05-R37` (reviewed commit
-`12e43a7`, round 44's HEAD, one commit behind round 45's BreadcrumbList
-JSON-LD commit). Thirteenth consecutive independent confirmation — 0 active
-code defects, re-verifies the FAQPage JSON-LD scoping, both honeypots, WCAG
-1.4.10 reflow on `/faq`, canonicals, security headers, and live production
-parity. Not a new finding. Moved to `exchange/processed/`.
+Read the one new Auditor inbox item, `IFA-2026-09-05-R40` (reviewed commit
+`1c64d81`, round 47's HEAD, one commit behind round 48's raster-icon
+commit). Sixteenth consecutive independent confirmation — 0 active code
+defects, re-verifies the Apple touch icon, Web App Manifest, scaffold-asset
+removal, all JSON-LD (Organization/FAQPage/BreadcrumbList), both Contact/
+Planner honeypots, WCAG 1.4.10 reflow, canonicals, security headers, and
+live production parity against `https://cyvexly-studio.onrender.com/`. Not
+a new finding. Moved to `exchange/processed/`.
 
-Ran two genuinely new angles, both reachable without any Owner gate:
+Ran three genuinely new angles, all reachable without any Owner gate:
 
-1. **Removed five dead `create-next-app` scaffold assets from `public/`**
-   (`next.svg`, `vercel.svg`, `window.svg`, `globe.svg`, `file.svg`) —
-   confirmed via a full source grep that nothing in `src/` referenced any of
-   them. These were publicly served at e.g. `cyvexly.com/vercel.svg` on the
-   live launched domain: unrelated third-party branding shipped by accident,
-   not a Cyvexly asset, and pure dead weight on a site vision §17 requires
-   to be "truthful" and fully QA'd. Verified post-build: all five now 404 on
-   the real production server while `icon.svg` (the actual brand mark)
-   still serves 200.
-2. **Added a Web App Manifest** (`src/app/manifest.ts`, Next's special-file
-   convention) — the site previously had none, a routine part of launch QA
-   (PWA/"Add to Home Screen" metadata) that was never covered by any prior
-   round. Uses only already-confirmed facts: `name`/`short_name` from
-   `site-config.ts`, the tagline as `description`, and the already-shipped
-   brand tokens for `theme_color` (`#0f66e0` cyber-blue) and
-   `background_color` (`#eef4fa` arctic-mist) — no invented facts. Icon
-   entry reuses the existing `icon.svg` (`sizes: "any"`, correct
-   `image/svg+xml` type per the Web App Manifest spec) rather than
-   generating new raster assets this round. §4.12 check: `manifest.ts` is
-   Next.js's own documented convention, auto-linked into every page's
-   `<head>` — not a departure.
-   **Verified:** real production build (`pnpm run build`) emits
-   `/manifest.webmanifest`; parsed its actual body (correct name, icon,
-   colors, `display: "standalone"`); confirmed `index.html` carries
-   `<link rel="manifest" href="/manifest.webmanifest"/>`. Live-verified
-   against a real `next start` production server on port 5173: manifest
-   returns `200 application/manifest+json`; a real in-app-Browser screenshot
-   of Home shows zero visual regression and zero console/network errors.
+1. **Added `src/app/error.tsx`**, Next's special-file convention for a
+   route-segment error boundary — same family as the already-shipped
+   `not-found.tsx` (§4.12 check: documented Next.js App Router convention,
+   not a departure). Before this round, any unhandled render error on any
+   route fell through to Next's default unstyled generic error screen
+   instead of a branded, accessible recovery UI — a real production-QA gap
+   on a site whose vision emphasizes a coherent, polished, trustworthy
+   presentation. Reuses `SiteHeader`/`SiteFooter`/`ButtonLink` exactly like
+   `not-found.tsx`, offers "Try again" (calls the framework's `reset()`),
+   "Back to home", and "Contact us".
+2. **Added `src/app/global-error.tsx`** for the rarer case of an error in
+   the root layout itself, which `error.tsx` cannot catch (Next's own
+   documented convention — must render its own `<html>`/`<body>` since it
+   replaces the root layout). Kept deliberately dependency-free (inline
+   styles, no Tailwind/header/footer imports) since this is the fallback of
+   last resort if the layout itself is what broke.
+3. **Added `viewport.themeColor`/`colorScheme`** to the root layout's
+   metadata (`src/app/layout.tsx`) — the site had no page-level
+   `<meta name="theme-color">`, so mobile browser chrome/status-bar tinting
+   and Safari's dark-mode UA styling of native form controls were
+   unspecified. Set to the existing brand-blue token (`#0f66e0`) and
+   `light` (the site has no dark theme) — no invented facts, reuses only an
+   already-shipped color.
+   **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (lint's one
+   warning is the same pre-existing unused-var in round 42's untouched
+   evidence script). A temporary `force-dynamic` throwaway route
+   (`src/app/round49-error-test/page.tsx`, deleted before commit — verified
+   the deletion with a full re-typecheck/re-lint/re-build afterward) proved
+   the error boundary against a real production `next start` server on
+   port 5173: the initial SSR shell correctly ships only a sanitized error
+   `digest` (no raw message leak, standard Next.js production behavior),
+   and a real in-app-Browser navigation to the route showed the actual
+   rendered `error.tsx` UI text ("Error / Something went wrong. / This page
+   hit an unexpected error..." plus all three action links) with the
+   console-logged digest as the only error, matching source. After
+   deleting the test route, `/round49-error-test` correctly 404s and Home/
+   `/faq`/`/manifest.webmanifest`/`/apple-icon`/`/icons/192` all still
+   return `200` with zero console/network regressions. `theme-color`/
+   `color-scheme` meta tags confirmed present and correct via live
+   `document.querySelector` on the running server.
 
-`tsc --noEmit`/`lint`/`build` all pass clean (lint's one warning is a
-pre-existing unused-var in round 42's evidence script, untouched this
-round). Committed and pushed.
+Committed and pushed.
+
+Archived round 46's full report to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_46_REPORT.md` to restore
+the intended latest-three rotation (§7.14) — 47, 48, 49 stay live.
+
+## Round 48 report — global round 48 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R39` (reviewed commit
+`727d809`, round 46's HEAD, one commit behind round 47's Apple touch icon
+commit). Fifteenth consecutive independent confirmation — 0 active code
+defects, re-verifies the Web App Manifest structure/content, scaffold-asset
+removal, BreadcrumbList/FAQPage/Organization JSON-LD, both Contact/Planner
+honeypots, WCAG 1.4.10 reflow, canonicals, security headers, and live
+production parity against `https://cyvexly-studio.onrender.com/`. Not a new
+finding. Moved to `exchange/processed/`.
+
+Ran one genuinely new angle, reachable without any Owner gate: **added
+raster 192×512 PNG manifest icons.** Round 46's Web App Manifest shipped
+with only an SVG icon entry (`sizes: "any"`); round 46/47's own handoffs
+named real 192/512px raster icons as the next open item, since Android's
+"Add to Home Screen" install-prompt flow has historically preferred PNG at
+these two standard PWA sizes over SVG-only. §4.12 check: providing PNG
+icons at 192×192 and 512×512 alongside an `any`-size SVG is the documented
+mainstream PWA manifest pattern (MDN/web.dev), not a departure. Built a
+dynamic `src/app/icons/[size]/route.tsx` Route Handler (Next's Route
+Handler convention, same `next/og` `ImageResponse` technique already used
+for `apple-icon.tsx`/`opengraph-image.tsx`) with `generateStaticParams`
+restricting build-time generation to exactly the two registered sizes and
+a runtime 404 for any other size value — reuses only the existing C/Y mark
+and brand-blue token, no invented facts. Referenced both as new `icons[]`
+entries in `manifest.ts` alongside the existing SVG entry (not replacing
+it).
+**Verified:** real production build (`pnpm run build`) statically
+generates `/icons/192` and `/icons/512`; parsed the generated
+`.next/server/app/icons/{192,512}.body` files — real PNGs, exactly
+192×192 and 512×512 (confirmed via `file`), correct byte sizes. Copied
+both locally and opened them (round-3/7's proxy-image technique): clean
+brand-blue square, mark centered and proportionally scaled at both sizes,
+no clipping. Live-verified against a real `next start` production server
+on port 5173: `/icons/192` and `/icons/512` both return `200 image/png`
+with the exact built byte lengths; `/icons/999` (an unregistered size)
+returns `404`, confirming the allowlist guard; `manifest.webmanifest`'s
+live JSON body carries all three icon entries in the correct order;
+`apple-icon` and `icon.svg` remain unchanged (`200`, correct content
+types) — no regression. A real in-app-Browser screenshot of Home shows
+zero visual regression and zero console errors.
+`tsc --noEmit`/`lint`/`build` all pass clean (lint's one warning is the
+same pre-existing unused-var in round 42's untouched evidence script).
+Committed (`8d959f0`) and pushed.
+
+Archived round 45's full report to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_45_REPORT.md` to restore
+the intended latest-three rotation (§7.14) — 46, 47, 48 stay live.
+
+Ran a second genuinely new angle this round, also reachable without any
+Owner gate: **fixed a real print-legibility defect.** No route had any
+`@media print` rule (confirmed via grep) despite this site relying on
+dark/colored backgrounds to make white/light text legible (the Home hero
+media panel, CTA buttons, footer). Browsers omit background-color/
+background-image by default when printing unless the user opts into
+"print backgrounds" — so on a real Ctrl+P, that light text would print
+invisible (white-on-white). §4.12 check: `print-color-adjust: exact` (+
+`-webkit-` prefix) is the CSS spec's own documented mechanism for exactly
+this problem (MDN), not a departure — added a small `@media print` block
+in `globals.css` forcing it on `html`. **Verified via Chrome DevTools
+Protocol `Page.printToPDF`** against a production server: generated one
+PDF with `printBackground:false` (the common default a user has not
+opted into) and one with `printBackground:true`. Both came back the same
+size (~41.7 MB) — if the override were not working, the `false` variant
+would be dramatically smaller (mostly text/fonts, no embedded gradient/
+SVG background art); identical size confirms the CSS property is forcing
+background graphics to embed regardless of the toggle, so the fix is
+functioning. Also confirmed via live `getComputedStyle` that the rule
+does *not* leak into normal screen rendering (`economy`, the default,
+outside print emulation) — no regression. `tsc`/`lint`/`build` all pass
+clean. Script preserved at
+`docs/agent-system/cyvexly/builder/evidence/round-48-print-color-adjust-check.mjs`.
+Committed (`90ea41e`) and pushed.
 
 Round 45's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_45_REPORT.md` (moved there
-round 48 to restore latest-three rotation) — 46, 47, 48 stay live. Round 45
-implemented BreadcrumbList JSON-LD for service-detail and case-study
-routes.
+round 48 to restore latest-three rotation). Round 45 implemented
+BreadcrumbList JSON-LD for service-detail and case-study routes.
 
 Round 44's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_44_REPORT.md` (moved there
