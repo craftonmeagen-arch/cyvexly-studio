@@ -10,9 +10,12 @@ const staticRoutes = [
   "/work",
   "/pricing",
   "/process",
+  "/about",
   "/contact",
   "/faq",
   "/accessibility",
+  "/privacy",
+  "/terms",
   "/start",
 ];
 
