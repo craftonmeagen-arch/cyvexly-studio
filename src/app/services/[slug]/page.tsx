@@ -27,6 +27,9 @@ export async function generateMetadata({
   return {
     title: `${service.name} — Cyvexly Studio`,
     description: service.summary,
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
   };
 }
 

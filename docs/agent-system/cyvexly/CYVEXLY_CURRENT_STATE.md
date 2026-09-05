@@ -1,58 +1,43 @@
 # Cyvexly Current State
 
-**Global round:** 29 product baseline; Owner launch direction updated
-2026-09-04.
+**Global round:** 33. Owner launch direction updated 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
-States Launch Completion & Business Operations is now open**, started round
-29 (one bounded workstream: contact identity, metadata/sitemap, and a
-worldwide/payment truth audit — not chunk completion). Chunk 5 will implement
-and verify the remaining operational work and close the overlapping Chunk 3/4
-delivery, legal, domain, and discovery boundaries.
+States Launch Completion & Business Operations is open** since round 29.
+About/Privacy/Terms (round 30), security headers/CSP (rounds 31-32), and
+per-route canonical tags (round 33) are done. Remaining Chunk 5 scope (real
+Contact/Planner email delivery, DNS/domain connection, analytics/search
+ownership, final indexability approval) is Owner-gated — see
+`CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full round-by-round
+detail is in `CYVEXLY_ACTIVE_CHUNK.md` and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 29 outcome (scheduled/unattended, 50-minute limit):** replaced the
-stale `hello@cyvexly.com` with the Owner-confirmed `design@cyvexly.com`
-everywhere (Contact, Planner, and footer all read one shared config value),
-and added the confirmed phone `(317) 572-5780` / `tel:+13175725780` as a
-visible link on Contact and in the footer. Set `metadataBase` to
-`https://cyvexly.com` in the root layout now that the domain is confirmed,
-resolving the long-standing domain-blocked warning: production build output
-confirms `og:image`/`twitter:image` now resolve to the real domain instead of
-`http://localhost:3000`. Added `src/app/sitemap.ts`, verified in the real
-build to emit all 17 public routes as absolute `https://cyvexly.com/...`
-URLs. Audited the whole `src/` tree for stale "worldwide"/international-market
-language and unsupported payment-method claims (vision §8 explicitly forbids
-stating a payment method as active before a provider is authorized); rewrote
-six worldwide/market lines and three payment-claim lines to state United
-States-only availability and an honest "provider selection pending" payment
-line. `tsc --noEmit`, `lint`, and `build` all pass; zero `worldwide` or
-`hello@cyvexly` matches remain in generated HTML output (grep-verified against
-`.next/server/app/**`). This unattended session type could not open the
-visible in-app Browser (dev-server preview is blocked without an attended
-approver), so this is build-output proof, not a live screenshot — the next
-attended round should confirm visually on the public Render site. Full detail
-in `CYVEXLY_ACTIVE_CHUNK.md`'s round-29 report and `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 29" section.
+**Round 33 outcome (scheduled/unattended, 50-minute limit):** pushed round
+32's two locally-committed commits to `origin/main` after independent
+re-verification, then added per-route `alternates: { canonical }` metadata
+across every route (root layout, 11 static pages, 2 dynamic
+`generateMetadata` functions) — the last reachable code-only follow-up from
+`CYVEXLY_APP_DEBT.md` item 1. `tsc --noEmit`, `lint`, and `build` (27
+routes) all pass; real generated HTML verified to carry correct absolute
+canonical URLs across a representative sample. Full detail in
+`CYVEXLY_ACTIVE_CHUNK.md`'s round-33 report and `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 33" section.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
-`2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Round 29 closed the contact-
-identity/metadata/truth-audit workstream; the recommended next reachable
-workstream is the About page (fully authorized, no Owner gate — see
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`). Preserve the continuous architectural
-environment and verify its public adoption while completing the remaining
-domain-connection, legal, real inquiry delivery, analytics/search ownership,
-and release-QA work. Payment integration and real portfolio replacement
-remain explicitly deferred.
+`2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Most remaining reachable
+code-only work is now closed; what's left (real Contact/Planner email
+delivery, DNS/domain connection, analytics/search ownership, final
+indexability approval) needs Owner account access or provider selection —
+see "Owner launch decisions and remaining gates" below. The next Builder
+should re-scan `CYVEXLY_APP_DEBT.md`/`CYVEXLY_CHUNK_DEBT.md` for any
+newly-reachable item before assuming none remains, or run a fresh
+release-QA sweep if enough rounds have passed since round 31's.
 
-**Accepted product position:** Round 29 product source is commit `f35a2a6` on
-`main`, pushed to `origin/main`; Round 28's visual system (commit `c960f72`)
-is unchanged by round 29's contact/metadata/copy-only edits. Public Render
-adoption of round 29 is unconfirmed (this scheduled/unattended session could
-not open the visible in-app Browser to verify the live site) — the next
-attended round should check `https://cyvexly-studio.onrender.com/` reflects
-it. The production domain is confirmed as `cyvexly.com`, but DNS still needs
-to be connected and verified. `origin/master` is historical and is not the
-deployment branch.
+**Accepted product position:** `main` is pushed through commit `8c07262` on
+`origin/main`; round 33's canonical-tag change is committed locally on top
+of it (not yet pushed — see `CYVEXLY_NEXT_BUILDER_HANDOFF.md` for exact
+status). The production domain is confirmed as `cyvexly.com`, but DNS still
+needs to be connected and verified. `origin/master` is historical and is not
+the deployment branch.
 
 ## Owner launch decisions and remaining gates
 

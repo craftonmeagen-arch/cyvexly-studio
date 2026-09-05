@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy — Cyvexly Studio",
   description:
     "How Cyvexly Studio handles information submitted through cyvexly.com's Contact and Project Planner forms, browser storage, hosting, and your choices.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {

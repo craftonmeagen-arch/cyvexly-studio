@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "FAQ — Cyvexly Studio",
   description:
     "Answers to common questions about fit, pricing, timing, content, ownership, integrations, accessibility, care plans, and how to start a Cyvexly Studio project.",
+  alternates: {
+    canonical: "/faq",
+  },
 };
 
 function toAnchorId(category: string) {

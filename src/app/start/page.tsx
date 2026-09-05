@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Project Planner — Cyvexly Studio",
   description:
     "Tell us what you need. A calm, nine-step brief that shapes the right scope for your website — no payment required.",
+  alternates: {
+    canonical: "/start",
+  },
 };
 
 const whatHappensNext = [

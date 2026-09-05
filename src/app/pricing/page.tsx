@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "Pricing — Cyvexly Studio",
   description:
     "Clear starting packages for Cyvexly Studio websites, plus add-ons, care plans, and how payment works. Final quotes are shaped around your goals, content, pages, and features.",
+  alternates: {
+    canonical: "/pricing",
+  },
 };
 
 export default function PricingPage() {

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Website Terms — Cyvexly Studio",
   description:
     "The terms that govern using cyvexly.com — this marketing website and Project Planner — separate from any signed client project agreement.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {

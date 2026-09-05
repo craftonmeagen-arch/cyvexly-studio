@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Work — Cyvexly Studio",
   description:
     "Selected Cyvexly Studio work: business sites, redesigns, landing pages, and commerce projects. Concept work is clearly labeled.",
+  alternates: {
+    canonical: "/work",
+  },
 };
 
 export default function WorkPage() {

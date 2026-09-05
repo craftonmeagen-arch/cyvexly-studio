@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Contact — Cyvexly Studio",
   description:
     "A short, low-friction way to reach Cyvexly Studio with a general question. For a full project brief, use the Project Planner instead.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

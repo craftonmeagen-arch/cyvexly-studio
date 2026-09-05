@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   title: "Cyvexly Studio — Websites built to make your business unmistakable",
   description:
     "Cyvexly Studio is an independent, remote web design and development studio. Describe your project and get a clear proposal, custom design, and a launch-ready website.",
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: isIndexable,
     follow: isIndexable,

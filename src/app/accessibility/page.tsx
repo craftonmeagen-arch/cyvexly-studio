@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Accessibility Statement — Cyvexly Studio",
   description:
     "Cyvexly Studio's accessibility commitment and target for cyvexly.com and for websites we build, plus how to report an accessibility problem.",
+  alternates: {
+    canonical: "/accessibility",
+  },
 };
 
 export default function AccessibilityPage() {

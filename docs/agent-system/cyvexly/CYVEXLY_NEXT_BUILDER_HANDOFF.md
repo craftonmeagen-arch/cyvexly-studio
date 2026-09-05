@@ -1,5 +1,43 @@
 # Cyvexly Next Builder Handoff
 
+## Round 33 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
+time limit (unattended)
+**Start source:** `8c07262` on `main` (local; two commits ahead of
+`origin/main`)
+**Scope:** (1) reviewed and pushed round 32's two local-only commits after
+independent re-verification; (2) added per-route canonical tags, the last
+reachable code-only item from `CYVEXLY_APP_DEBT.md` item 1.
+**Completion:** IMPLEMENTED AND VERIFIED VIA REAL BUILD OUTPUT AND PUSHED.
+
+### What changed
+
+- Pushed `be60862..8c07262` to `origin/main` (round 32's CSP fix + six-role
+  migration) after re-running `tsc --noEmit`/`lint`/`build` clean myself —
+  round 32 deliberately left this for review rather than self-certifying.
+- Added `alternates: { canonical: "/<path>" }` to `src/app/layout.tsx` and
+  every route's metadata (`about`, `accessibility`, `contact`, `faq`,
+  `pricing`, `privacy`, `process`, `services`, `start`, `terms`, `work`,
+  `services/[slug]`, `work/[slug]`). Verified real generated HTML across a
+  sample spanning every metadata shape (root, static, dynamic slug) shows
+  the correct absolute canonical URL; `tsc`/`lint`/`build` (27 routes) clean.
+  Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 33" section.
+- Not touched: About/Privacy/Terms content, email delivery, DNS/domain,
+  analytics — all remain Owner-gated or already closed, per
+  `CYVEXLY_ACTIVE_CHUNK.md`.
+
+### Recommended next workstream
+
+Chunk 5's remaining reachable-without-an-Owner-gate scope is now thin —
+most of what's left (real Contact/Planner email delivery, DNS/domain
+connection, analytics/Search Console ownership, final indexability
+approval) needs Owner-supplied account access or provider selection named
+in `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". The next Builder
+should re-scan `CYVEXLY_APP_DEBT.md`/`CYVEXLY_CHUNK_DEBT.md` for any
+newly-reachable item, or re-run a release-QA sweep if enough rounds have
+passed since round 31's, before assuming nothing reachable remains.
+
 ## Round 32 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard

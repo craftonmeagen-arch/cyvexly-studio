@@ -104,6 +104,27 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 33 report — global round 33 (scheduled/unattended session)
+
+Reviewed round 32's two locally-committed-but-unpushed commits (CSP fix +
+six-role migration): re-ran `tsc --noEmit`/`lint`/`build` clean independently,
+then pushed `be60862..8c07262` to `origin/main`.
+
+Closed the last reachable code-only follow-up from `CYVEXLY_APP_DEBT.md`
+item 1: added `alternates: { canonical: "/<path>" }` to the root layout and
+every route's metadata export (11 static pages, 2 dynamic `generateMetadata`
+functions). Verified in real production build output — grepped generated
+HTML across the home page, every static route, one service-detail route,
+and one case-study route for `<link rel="canonical"` — all resolve to the
+correct absolute `https://cyvexly.com/...` URL. `tsc --noEmit`, `lint`, and
+`build` (27 routes) pass clean. Full detail in `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 33" section and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
+Chunk 5's remaining scope (real Contact/Planner email delivery, DNS/domain
+connection, analytics/search ownership, final indexability approval) is now
+Owner-gated per `CYVEXLY_OWNER_DIRECTION.md` — see the handoff for the next
+recommended check before assuming no reachable work remains.
+
 ## Round 32 report — global round 32 (scheduled/unattended session)
 
 Added the Content-Security-Policy header `CYVEXLY_APP_DEBT.md` item 3 called

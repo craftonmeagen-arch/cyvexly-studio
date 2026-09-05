@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   title: "About — Cyvexly Studio",
   description:
     "Cyvexly Studio is an independent web design and development studio built to help United States business owners get a clearer, more useful website.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

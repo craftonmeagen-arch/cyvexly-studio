@@ -18,11 +18,13 @@
    `og:image`/`twitter:image` meta tags now resolve to
    `https://cyvexly.com/opengraph-image?...` instead of the previous
    `http://localhost:3000` fallback — the long-standing domain-blocked
-   `metadataBase` warning is gone from the build output. Canonical
-   `rel="canonical"` link tags per-route and staged indexing behavior
-   (`NEXT_PUBLIC_SITE_INDEXABLE`, unchanged and still defaulting to
-   no-index) remain open follow-ups; robots.txt already gates on the same
-   env var and needed no change. This closes the code-only portion of item 1;
+   `metadataBase` warning is gone from the build output. **Round 33:** added
+   `alternates: { canonical: ... }` to the root layout and all 13 static/
+   dynamic route metadata exports (every `export const metadata`/
+   `generateMetadata` in `src/app`), closing the last code-only follow-up
+   named above. Staged indexing behavior (`NEXT_PUBLIC_SITE_INDEXABLE`)
+   is unchanged and still defaults to no-index; robots.txt already gates on
+   the same env var. This closes the code-only portion of item 1 completely;
    the DNS/Render account connection is still the real remaining blocker.
 2. **§4.12 Outcome Reachability Check — Project Planner (Chunk 3)
    email-delivery mechanism.** Performed round 3, before opening Chunk 3,
@@ -107,6 +109,27 @@
      but worth the next Builder or Owner knowing before treating the
      `mailto:` bridge as a durable solution rather than the explicitly
      temporary one it's labeled as in the UI.
+
+## Resolved round 33
+
+- **Pushed round 32's two local-only commits to `origin/main`** after
+  independently re-verifying them this round (`tsc --noEmit`, `lint`,
+  `build` all clean) rather than pushing on round 32's own say-so alone —
+  `be60862..8c07262` now on `origin/main`.
+- **Per-route canonical tags added — closes the last code-only follow-up
+  from round 29's item 1.** Added `alternates: { canonical: "/<path>" }` to
+  the root layout (`"/"`) and to all 11 static-page metadata exports plus
+  both dynamic `generateMetadata` functions (`/services/[slug]`,
+  `/work/[slug]`), resolving against the existing `metadataBase`. Verified
+  in real production build output: grepped `.next/server/app/**/*.html` for
+  `<link rel="canonical"` across the home page, every static route, one
+  service-detail route, and one case-study route — all 13 resolve to the
+  correct absolute `https://cyvexly.com/...` URL with no duplicates or
+  mismatches. `tsc --noEmit`, `lint`, and `build` (27 routes) all pass clean.
+  `/start` (the one fully dynamic, non-prerendered route) uses the identical
+  code pattern as the verified static/SSG routes and was not independently
+  screenshotted this round — same code shape, not a separate unverified
+  claim.
 
 ## Resolved round 32
 

@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   title: "Process — Cyvexly Studio",
   description:
     "How a Cyvexly Studio project works: five stages from brief and fit to launch and care, with clear inputs, deliverables, and approval points at every step.",
+  alternates: {
+    canonical: "/process",
+  },
 };
 
 export default function ProcessPage() {
