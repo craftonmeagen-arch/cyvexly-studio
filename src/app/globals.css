@@ -1720,3 +1720,18 @@ body {
     opacity: 0.82;
   }
 }
+
+/*
+ * Most browsers omit background-color/background-image by default when
+ * printing unless the user opts in. This site relies on dark/colored
+ * backgrounds to make light or white text legible (hero media panel, CTA
+ * buttons, footer), so without this override that text becomes invisible
+ * white-on-white on a printed page. print-color-adjust forces the browser
+ * to print backgrounds exactly as rendered on screen.
+ */
+@media print {
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
