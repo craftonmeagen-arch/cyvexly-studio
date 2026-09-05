@@ -5,7 +5,7 @@ import { contactTopics, siteConfig } from "@/lib/site-config";
 
 type Status = "idle" | "sent" | "error";
 
-type Errors = Partial<Record<"name" | "email" | "message" | "consent", string>>;
+type Errors = Partial<Record<"name" | "email" | "message" | "consent" | "honeypot", string>>;
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -21,8 +21,10 @@ export function ContactForm() {
     const topic = String(data.get("topic") ?? contactTopics[0]);
     const message = String(data.get("message") ?? "").trim();
     const consent = data.get("consent") === "on";
+    const honeypot = String(data.get("contact-company-website") ?? "").trim();
 
     const nextErrors: Errors = {};
+    if (honeypot) nextErrors.honeypot = "Submission blocked.";
     if (!name) nextErrors.name = "Please enter your name.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       nextErrors.email = "Please enter a valid email address.";
@@ -82,6 +84,18 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="glass-panel rounded-2xl p-6 sm:p-8">
+      {/* Honeypot: spam protection without a visual puzzle. */}
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="contact-company-website">Leave this field blank</label>
+        <input
+          id="contact-company-website"
+          name="contact-company-website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       {status === "error" && (
         <p
           role="alert"
