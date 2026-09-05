@@ -2,14 +2,7 @@
 
 ## Open
 
-1. **About page is authorized but not built.** Owner direction `2026-09-04-14`
-   supersedes the prior founder-identity blocker. The launch About page is
-   studio-led: publish no personal founder name or portrait, use the existing
-   Cyvexly logo/brand treatment, and implement the reviewable studio-origin
-   draft in vision §6.8. Do not invent a person, biography, pronouns, team, or
-   photo. Reintroduce About navigation only when the route is complete and
-   verified.
-2. **Production domain is confirmed; the account-bound DNS/Render connection
+1. **Production domain is confirmed; the account-bound DNS/Render connection
    remains open. Round 29 closed the reachable code-side metadata gap.**
    The Owner confirmed `cyvexly.com`. The domain still needs Render custom-
    domain setup, DNS replacement of the Namecheap parking destination, HTTPS
@@ -29,16 +22,16 @@
    `rel="canonical"` link tags per-route and staged indexing behavior
    (`NEXT_PUBLIC_SITE_INDEXABLE`, unchanged and still defaulting to
    no-index) remain open follow-ups; robots.txt already gates on the same
-   env var and needed no change. This closes the code-only portion of item 2;
+   env var and needed no change. This closes the code-only portion of item 1;
    the DNS/Render account connection is still the real remaining blocker.
-3. **Privacy Policy and Website Terms are authorized but need the exact legal
+2. **Privacy Policy and Website Terms are authorized but need the exact legal
    entity name.** The Owner confirmed an LLC based in Indiana, United States,
    serving the United States only at launch. Draft `/privacy` and `/terms`
    around those facts and the technologies actually used. The Owner has not
    supplied the exact registered LLC name; verify it before final publication,
    invoices, or agreements. Keep Website Terms separate from the client project
    agreement and route legal copy to the Owner for review.
-4. **§4.12 Outcome Reachability Check — Project Planner (Chunk 3)
+3. **§4.12 Outcome Reachability Check — Project Planner (Chunk 3)
    email-delivery mechanism.** Performed round 3, before opening Chunk 3,
    per the round-2 handoff's explicit recommendation. **Round 4 update:**
    the separable, authorized part of this item (the Planner's UI/state/
@@ -122,6 +115,59 @@
      `mailto:` bridge as a durable solution rather than the explicitly
      temporary one it's labeled as in the UI.
 
+## Resolved round 30
+
+- **About page built and verified.** Owner direction `2026-09-04-14`
+  authorized the studio-led launch treatment (no personal founder name or
+  portrait). Built `/about` (`src/app/about/page.tsx`) with every element
+  vision §6.8 requires: the Cyvexly signal mark as the principal identity
+  image (no portrait), the approved studio-origin draft verbatim, five short
+  values (`aboutValues` in `src/lib/site-config.ts`: Clarity, Originality,
+  Practicality, Ownership, Continued care), working style/remote-availability
+  copy, an honestly-worded collaborator model (independent studio, no
+  in-house team invented, collaborators disclosed transparently when used),
+  a brief technology mention (React/Next.js, chosen for compatibility, not
+  marketing), current availability/response-time language, and a closing CTA
+  to `/start`. Restored the "About" link to `primaryNav` and
+  `footerNav.studio` now that the route is real and verified (was
+  deliberately removed from navigation in round 22 while unbuilt).
+- **Verification:** `pnpm exec tsc --noEmit`, `pnpm run lint`, and
+  `pnpm run build` (25 routes) all pass clean; grepped the generated
+  `.next/server/app/about.html` for every required content block (origin
+  story, all five value names, working-style list, capability list, CTA) —
+  all present. Heading hierarchy measured directly (`h1` → `h2` → `h3`, no
+  skipped level). **Stronger proof than prior rounds' documented limitation:**
+  this session's in-app Browser pane *can* composite and screenshot
+  (`computer{action:"screenshot"}` succeeded after one retry, repeatedly) —
+  unlike the hard limitation recorded in `CYVEXLY_TOOLS_AND_CAPABILITIES.md`
+  for the historical Codex-based session type. Started the dev server
+  manually (`preview_start` with a bare `{name}` still refuses in this
+  unattended scheduled session, same as before) and attached via
+  `preview_start({url})`, then took real screenshots at 375px (mobile),
+  ~785px (default pane width, hamburger nav confirmed below `lg`), and
+  1440px (full desktop nav with "About" present, two-column layout
+  confirmed) — no horizontal overflow, no clipping, correct contrast at any
+  width. One manually-emulated-1440px scroll position produced a blank
+  screenshot on retry despite a correct, fully-populated accessibility tree
+  (`read_page`) and zero console errors at that exact position — treated as
+  a transient compositing quirk of the emulated-viewport path (reproduced
+  once, did not reproduce at the pane's native width for the same content),
+  not a product defect; not worth further session time chasing per the
+  non-converging-loop guidance. Stopped the manually-started dev server
+  processes before exiting (role-owned port 5173 cleanup).
+- **Environment fix, documented for the next agent:** this Windows host's
+  Node.js 24.19.0 install
+  (`C:\Users\Tcraf\AppData\Local\Programs\NodeJS\node-v24.19.0-win-x64`) and
+  the global `pnpm` shim (`%APPDATA%\npm`) are registered in the **User**
+  PATH environment variable, but the shell processes this tool session
+  spawns do not inherit that PATH (`node`/`pnpm` were both "not recognized"
+  until fixed). Workaround used this round: prepend both directories to
+  `$env:Path` at the start of each PowerShell tool call that needs
+  node/pnpm/next (per-call, since shell state does not persist between
+  calls in this harness). This is a session/harness PATH inheritance gap,
+  not a missing install — do not reinstall Node or edit the real PATH
+  variable to "fix" it.
+
 ## Resolved round 29
 
 - **Public contact identity replaced sitewide.** `src/lib/site-config.ts`'s
@@ -174,8 +220,9 @@
   the real production build's generated static HTML/XML output rather than
   a live screenshot; the next attended Builder round should still open the
   public Render site to confirm the same result visually.
-- **Not touched this round:** the About page (item 1), Privacy/Terms (item
-  3), the real server-side email delivery path (item 4), and Chunk 5's
+- **Not touched this round:** the About page (built round 30, see above),
+  Privacy/Terms (item 2), the real server-side email delivery path (item 3),
+  and Chunk 5's
   domain/DNS, legal, analytics, and QA workstreams remain open. This round
   is one bounded workstream (contact-identity truth + metadata/sitemap), not
   a claim that Chunk 5 is complete.

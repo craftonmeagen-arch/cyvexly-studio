@@ -11,6 +11,7 @@ export const primaryNav = [
   { label: "Work", href: "/work" },
   { label: "Pricing", href: "/pricing" },
   { label: "Process", href: "/process" },
+  { label: "About", href: "/about" },
 ];
 
 export const footerNav = {
@@ -19,6 +20,7 @@ export const footerNav = {
     { label: "Work", href: "/work" },
     { label: "Pricing", href: "/pricing" },
     { label: "Process", href: "/process" },
+    { label: "About", href: "/about" },
   ],
   services: [
     { label: "Business websites", href: "/services/business-websites" },
@@ -287,6 +289,35 @@ export const collaborationPromise = [
   "A response within two business days, every time you reach out.",
   "Approval before the work expands to the next stage — no surprise scope.",
   "14 days of post-launch defect support included after every project.",
+];
+
+// Short values shown on the About page (vision §6.8).
+export const aboutValues = [
+  {
+    id: "clarity",
+    title: "Clarity",
+    description: "Plain language and a visible plan, not jargon or a black box.",
+  },
+  {
+    id: "originality",
+    title: "Originality",
+    description: "A structure and design built for your business, never a reused template.",
+  },
+  {
+    id: "practicality",
+    title: "Practicality",
+    description: "Every decision has to earn its place by helping the business, not just looking good.",
+  },
+  {
+    id: "ownership",
+    title: "Ownership",
+    description: "You own your content, design, and site after final payment — no lock-in.",
+  },
+  {
+    id: "continued-care",
+    title: "Continued care",
+    description: "The relationship doesn't end at launch; care and improvement stay available.",
+  },
 ];
 
 // Curated highlights for the Home preview, kept separate from

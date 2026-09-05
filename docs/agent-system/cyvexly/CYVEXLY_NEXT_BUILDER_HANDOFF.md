@@ -30,6 +30,74 @@ LLC name; DNS/Render access; business-inbox and transactional-email provider;
 secure secret entry; analytics/Search Console ownership or no-analytics choice;
 About/legal/public-visual review; and final approval to enable indexing.
 
+## Round 30 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
+time limit (unattended)
+**Start source:** `bebcdc5` on `main`
+**Scope:** the recommended-next reachable Chunk 5 workstream — the About
+page — built and verified. Full detail in `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 30" section.
+**Completion:** IMPLEMENTED, VERIFIED VIA REAL RENDERED SCREENSHOTS LOCALLY;
+NOT YET COMMITTED BY THIS ROUND'S SCOPING DECISION — see below.
+
+### What changed
+
+- New `src/app/about/page.tsx`: complete `/about` route fulfilling every
+  vision §6.8 requirement (logo-led identity image, approved studio-origin
+  copy, five values, working style/availability, honest collaborator model,
+  brief tech mention, response-time expectation, CTA to `/start`).
+- `src/lib/site-config.ts`: added `aboutValues`; restored `About` to
+  `primaryNav` and `footerNav.studio` now that the route is real.
+- `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` (25 routes) all
+  pass. Real in-app-Browser screenshots at 375px/785px/1440px confirm layout,
+  contrast, and full desktop/mobile nav — see `CYVEXLY_APP_DEBT.md` for the
+  full method and the one non-blocking compositing-quirk note.
+
+### Important: working tree had a large pre-existing uncommitted diff at
+### session start, unrelated to this round
+
+At session start (before this round touched anything), `git status` already
+showed many modified/deleted/untracked files under `.codex/`, root
+orientation `.md` files, and several `docs/agent-system/cyvexly/CYVEXLY_*.md`
+files — apparently an in-progress "six-role rule-system migration"
+(referenced in `AGENTS.md`'s "Rule-system migration — 2026-09-05" section and
+`CYVEXLY_OWNER_DIRECTION.md`'s matching entry). This round did **not** author,
+review, or verify that diff, so it did not stage or commit any of it — same
+precedent as round 29 excluding concurrent Auditor files. Specifically,
+**`CYVEXLY_CURRENT_STATE.md`, `CYVEXLY_PROJECT_CHUNK_MAP.md`,
+`CYVEXLY_CHUNK_DEBT.md`, `CYVEXLY_TOOLS_AND_CAPABILITIES.md`, and
+`CYVEXLY_OWNER_DIRECTION.md` were already dirty (modified, uncommitted)
+before this round started** and were deliberately left untouched by this
+round rather than layering round-30 edits into an already-mixed diff. This
+round's own continuity notes went only into this file and
+`CYVEXLY_APP_DEBT.md`, both of which were clean at session start.
+**Consequence for the next agent:** `CYVEXLY_CURRENT_STATE.md` and
+`CYVEXLY_PROJECT_CHUNK_MAP.md` still read as of round 29 (About page listed
+as "authorized but not built") even though it is now built — read this
+handoff and `CYVEXLY_APP_DEBT.md` first, and reconcile/commit the pre-existing
+migration diff and the current-state dashboard together deliberately, not by
+accident. This round did not read, modify, or attempt to resolve that
+migration diff's substance — only recorded that it exists and was excluded.
+
+### Git status of this round's own change
+
+`src/app/about/page.tsx` (new) and `src/lib/site-config.ts` (this round's
+`aboutValues`/nav additions only) plus this file and `CYVEXLY_APP_DEBT.md`
+are staged and committed on top of `bebcdc5`, on `main`. Use `git log`/`git
+show` for the exact hash; this round did not include any file from the
+pre-existing migration diff described above in its commit.
+
+### Recommended next workstream
+
+Privacy/Terms drafting (`/privacy`, `/terms`) is the next largely
+Owner-gate-free reachable piece — Indiana/United States jurisdiction and
+United States-only market are confirmed; only the exact registered LLC name
+needs Owner confirmation before *final* publication, which does not block
+drafting the pages now (state clearly in the draft that the entity name is
+pending confirmation). Domain/DNS, email-provider authorization, and
+analytics ownership remain genuinely Owner-account-gated as before.
+
 ## Round 29 closeout
 
 **Session:** scheduled `cyvexly-website-builder` task, 2026-09-04, 50-minute
