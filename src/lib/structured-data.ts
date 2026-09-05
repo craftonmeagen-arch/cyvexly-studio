@@ -1,4 +1,4 @@
-import { siteConfig } from "./site-config";
+import { siteConfig, faqLibrary } from "./site-config";
 
 // Organization structured data (schema.org / JSON-LD) so search engines can
 // identify Cyvexly Studio as a real business entity with correct contact
@@ -29,4 +29,23 @@ export const organizationJsonLd = {
       availableLanguage: "English",
     },
   ],
+} as const;
+
+// FAQPage structured data for the /faq route — flattens the already-published
+// faqLibrary copy into schema.org Question/Answer entities so search engines
+// can surface FAQ rich results. No new facts: reuses the exact copy shown on
+// the page.
+export const faqPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqLibrary.flatMap((group) =>
+    group.items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  ),
 } as const;

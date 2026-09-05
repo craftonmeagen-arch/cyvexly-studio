@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { faqLibrary } from "@/lib/site-config";
+import { faqPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "FAQ — Cyvexly Studio",
@@ -25,6 +26,10 @@ function toAnchorId(category: string) {
 export default function FaqPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
+      />
       <SiteHeader />
 
       <main id="main-content" className="flex-1">
