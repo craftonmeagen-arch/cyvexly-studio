@@ -11,6 +11,18 @@ CHANGES.
 
 ### What was checked
 
+- **Confirmed public Render adoption directly against the live site** —
+  something rounds 31-35 never did (they verified local/dev-server or the
+  Auditor's isolated review-port build only). Navigated the real in-app
+  Browser to `https://cyvexly-studio.onrender.com/contact`:
+  `getBoundingClientRect()` on the live email/phone links shows identical
+  x/width, `y:1240.5`/`1276.5` (36px gap, no overlap — `CYV-IFA-012` is
+  fixed in production, not just in the build). A same-origin `fetch()`
+  from that live page confirmed the canonical tag
+  (`https://cyvexly.com/contact`) and all 6 security headers/CSP present
+  on the real public response, with `x-nextjs-cache: HIT` proving it's the
+  actual deployed build. Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved
+  round 36" section.
 - `IFA-2026-09-05-R27` (reviewed commit `620ba77`, round 34's HEAD) is an
   **independent confirmation, not a new finding**: it verified
   `CYV-IFA-012` CLOSED via its own real multi-viewport CDP screenshots of

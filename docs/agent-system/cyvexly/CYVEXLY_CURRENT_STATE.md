@@ -1,52 +1,47 @@
 # Cyvexly Current State
 
-**Global round:** 35. Owner launch direction updated 2026-09-04.
+**Global round:** 36. Owner launch direction updated 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
 About/Privacy/Terms (round 30), security headers/CSP (rounds 31-32),
 per-route canonical tags (round 33), and the Auditor-tracked `/contact`
-link-collision defect `CYV-IFA-012` (round 34) are done. A round-35 full
-release-QA sweep confirmed no new reachable-without-an-Owner-gate defect
+link-collision defect `CYV-IFA-012` (round 34) are done. Rounds 35 and 36
+each independently confirmed no new reachable-without-an-Owner-gate defect
 exists. Remaining Chunk 5 scope (real Contact/Planner email delivery,
 DNS/domain connection, analytics/search ownership, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates". Full round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 35 outcome (scheduled/unattended, 50-minute limit, verification-only):**
-dispositioned the one new Auditor inbox item, `IFA-2026-09-05-R26` — its
-`CYV-IFA-012` "STILL OPEN" finding reviewed a pre-fix commit (`bdf0263`,
-before round 34's `0afb789`); re-verified via real DOM measurement that the
-fix is genuinely in current `main`. Ran a full release-QA sweep (first
-since round 31's): `tsc`/`lint`/`build` (27 routes) clean, zero stale
-worldwide/payment/founder claims, sitemap/robots/canonical/noindex correct
-sitewide, zero broken internal links, all 6 security headers + CSP verified
-on a real running server, `/about` confirmed rendering real content. No new
-reachable defect found. Corrected two stale `CYVEXLY_CHUNK_DEBT.md` entries
-(About/Privacy/Terms 404 claim; OG-image domain-block claim) left
-uncorrected since rounds 29-30 resolved the underlying issues. No product
-source changed this round — docs/handoff only. Full detail in
-`CYVEXLY_ACTIVE_CHUNK.md`'s round-35 report and `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 35" section.
+**Round 36 outcome (scheduled/unattended, 50-minute limit, verification-only):**
+dispositioned the one new Auditor inbox item, `IFA-2026-09-05-R27` — an
+independent confirmation of round 35's own findings, not a new defect: its
+own real multi-viewport CDP screenshots verified `CYV-IFA-012` CLOSED
+(1440/768/390px, zero collision/overflow), all 20 routes' canonical tags,
+all 6 security headers/CSP, and a 32-link site-wide crawl with zero broken
+links — all PASS. Re-ran `tsc --noEmit`/`lint` clean as a sanity check (no
+source changed). **Two consecutive rounds (35, 36) now confirm zero
+reachable-without-an-Owner-gate defects.** Full detail in
+`CYVEXLY_ACTIVE_CHUNK.md`'s round-36 report and `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 36" section.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 35. If it's empty or already-known,
+first for anything published after round 36. If it's empty or already-known,
 what's left (real Contact/Planner email delivery, DNS/domain connection,
 analytics/search ownership, exact LLC name, final indexability approval)
 needs Owner account access or provider selection — see "Owner launch
-decisions and remaining gates" below. Two consecutive QA-sweep rounds (31
-and 35) have now found the reachable-without-an-Owner-gate surface empty
-except for whatever a fresh Auditor finding surfaces; consider whether
-enough evidence exists to flag the Owner gates directly rather than
-re-running QA sweeps indefinitely.
+decisions and remaining gates" below. Three consecutive verification rounds
+(31, 35, 36) have now found the reachable-without-an-Owner-gate surface
+empty except for whatever a fresh Auditor finding surfaces; strongly
+consider flagging the Owner gates directly rather than re-running QA sweeps
+indefinitely.
 
-**Accepted product position:** `main` is pushed through commit `0afb789` on
-`origin/main` (round 34's `/contact` fix, on top of round 33's `8c07262`);
-round 35 made docs-only changes (not yet committed as of writing this
-entry — see handoff for the exact commit once made). The production domain
-is confirmed as `cyvexly.com`, but DNS still needs to be connected and
+**Accepted product position:** `main` is pushed through commit `aff49ab` on
+`origin/main` (round 36's docs-only handoff, on top of round 35's `92acb98`
+and round 34's `/contact` fix `0afb789`). The production domain is
+confirmed as `cyvexly.com`, but DNS still needs to be connected and
 verified. `origin/master` is historical and is not the deployment branch.
 
 ## Owner launch decisions and remaining gates
