@@ -104,6 +104,28 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 34 report — global round 34 (scheduled/unattended session)
+
+Read all four unread Auditor inbox items (`IFA-2026-09-05-R22` through
+`R25`) before planning, per orientation. Their one persistent, reachable,
+Owner-gate-free finding — `CYV-IFA-012`, a visual string collision on
+`/contact` (`design@cyvexly.com(317) 572-5780` with no separating
+whitespace) — had gone unfixed across all four rounds because rounds 30-33
+worked on unrelated files. Fixed it: wrapped the email/phone `<a>` tags in a
+`flex flex-col gap-2` container. `tsc`/`lint`/`build` (27 routes) clean;
+verified in real generated HTML and via real in-app-Browser screenshots at
+1440px, 785px, and 390px (zero collision, zero console errors, zero
+overflow). Checked the footer for the same pattern — already correctly
+block-separated, not affected. Committed (`0afb789`) and pushed to
+`origin/main`. Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 34"
+section and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`. Moved all four consumed
+inbox items to `exchange/processed/` in the external review root.
+
+No other reachable-without-an-Owner-gate defect surfaced in those four
+reports beyond `CYV-IFA-012` — confirmed by re-checking `CYV-IFA-005`
+(closed, unchanged) and `CYV-IFA-006`/DNS/analytics/LLC-name (genuinely
+Owner-blocked, unchanged).
+
 ## Round 33 report — global round 33 (scheduled/unattended session)
 
 Reviewed round 32's two locally-committed-but-unpushed commits (CSP fix +

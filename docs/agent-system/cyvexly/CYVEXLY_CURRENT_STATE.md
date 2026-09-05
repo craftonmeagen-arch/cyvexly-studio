@@ -1,43 +1,46 @@
 # Cyvexly Current State
 
-**Global round:** 33. Owner launch direction updated 2026-09-04.
+**Global round:** 34. Owner launch direction updated 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
-About/Privacy/Terms (round 30), security headers/CSP (rounds 31-32), and
-per-route canonical tags (round 33) are done. Remaining Chunk 5 scope (real
-Contact/Planner email delivery, DNS/domain connection, analytics/search
-ownership, final indexability approval) is Owner-gated — see
-`CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full round-by-round
+About/Privacy/Terms (round 30), security headers/CSP (rounds 31-32),
+per-route canonical tags (round 33), and the Auditor-tracked `/contact`
+link-collision defect `CYV-IFA-012` (round 34) are done. Remaining Chunk 5
+scope (real Contact/Planner email delivery, DNS/domain connection,
+analytics/search ownership, final indexability approval) is Owner-gated —
+see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full round-by-round
 detail is in `CYVEXLY_ACTIVE_CHUNK.md` and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 33 outcome (scheduled/unattended, 50-minute limit):** pushed round
-32's two locally-committed commits to `origin/main` after independent
-re-verification, then added per-route `alternates: { canonical }` metadata
-across every route (root layout, 11 static pages, 2 dynamic
-`generateMetadata` functions) — the last reachable code-only follow-up from
-`CYVEXLY_APP_DEBT.md` item 1. `tsc --noEmit`, `lint`, and `build` (27
-routes) all pass; real generated HTML verified to carry correct absolute
-canonical URLs across a representative sample. Full detail in
-`CYVEXLY_ACTIVE_CHUNK.md`'s round-33 report and `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 33" section.
+**Round 34 outcome (scheduled/unattended, 50-minute limit):** read four
+unread external Auditor inbox items (`IFA-2026-09-05-R22` through `R25`) and
+fixed the one persistent, reachable, Owner-gate-free finding they all
+flagged: `CYV-IFA-012`, `/contact`'s email/phone links colliding into
+`design@cyvexly.com(317) 572-5780` with no separating whitespace on widths
+≥ ~370px. Wrapped both links in a `flex flex-col gap-2` container.
+`tsc --noEmit`, `lint`, and `build` (27 routes) all pass; verified in real
+generated HTML and real in-app-Browser screenshots at 1440px/785px/390px
+(stacked cleanly, zero console errors, zero overflow). Committed (`0afb789`)
+and pushed to `origin/main`; moved all four consumed inbox items to
+`exchange/processed/`. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`'s round-34
+report and `CYVEXLY_APP_DEBT.md`'s "Resolved round 34" section.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
-`2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Most remaining reachable
-code-only work is now closed; what's left (real Contact/Planner email
-delivery, DNS/domain connection, analytics/search ownership, final
+`2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
+first for anything published after round 34 (e.g. `CYV-IFA-006` may keep
+recurring until the email-provider gate clears); if it's empty or
+already-known, re-scan `CYVEXLY_APP_DEBT.md`/`CYVEXLY_CHUNK_DEBT.md` for any
+newly-reachable item, or run a fresh release-QA sweep if enough rounds have
+passed since round 31's. What's left beyond that (real Contact/Planner
+email delivery, DNS/domain connection, analytics/search ownership, final
 indexability approval) needs Owner account access or provider selection —
-see "Owner launch decisions and remaining gates" below. The next Builder
-should re-scan `CYVEXLY_APP_DEBT.md`/`CYVEXLY_CHUNK_DEBT.md` for any
-newly-reachable item before assuming none remains, or run a fresh
-release-QA sweep if enough rounds have passed since round 31's.
+see "Owner launch decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through commit `8c07262` on
-`origin/main`; round 33's canonical-tag change is committed locally on top
-of it (not yet pushed — see `CYVEXLY_NEXT_BUILDER_HANDOFF.md` for exact
-status). The production domain is confirmed as `cyvexly.com`, but DNS still
-needs to be connected and verified. `origin/master` is historical and is not
-the deployment branch.
+**Accepted product position:** `main` is pushed through commit `0afb789` on
+`origin/main` (round 34's `/contact` fix, on top of round 33's `8c07262`).
+The production domain is confirmed as `cyvexly.com`, but DNS still needs to
+be connected and verified. `origin/master` is historical and is not the
+deployment branch.
 
 ## Owner launch decisions and remaining gates
 

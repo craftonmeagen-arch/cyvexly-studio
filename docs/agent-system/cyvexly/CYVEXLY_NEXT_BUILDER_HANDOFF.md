@@ -1,5 +1,39 @@
 # Cyvexly Next Builder Handoff
 
+## Round 34 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
+time limit (unattended)
+**Start source:** `bdf0263` on `main` (pushed, matched `origin/main`)
+**Scope:** read four unread Auditor inbox items (`IFA-2026-09-05-R22`
+through `R25`) and fixed their one persistent reachable finding.
+**Completion:** IMPLEMENTED, VERIFIED VIA REAL BUILD OUTPUT AND REAL
+IN-APP-BROWSER SCREENSHOTS AT THREE WIDTHS, COMMITTED AND PUSHED.
+
+### What changed
+
+- Fixed `CYV-IFA-012`: `/contact`'s email/phone links collided into
+  `design@cyvexly.com(317) 572-5780` on any width ≥ ~370px. Wrapped both
+  `<a>` tags in `src/app/contact/page.tsx` in a `flex flex-col gap-2` div.
+  Verified in real generated HTML, `tsc`/`lint`/`build` (27 routes) clean,
+  and real screenshots at 1440px/785px/390px (stacked, zero overflow, zero
+  console errors). Checked `site-footer.tsx` for the same shape — already
+  correctly block-separated. Commit `0afb789`, pushed to `origin/main`.
+- Moved all four consumed inbox items to
+  `website-independent-review/exchange/processed/`.
+- Not touched: everything else — remaining Chunk 5 scope is still the same
+  Owner-gated set (real Contact/Planner email delivery, DNS/domain,
+  analytics/search ownership, final indexability approval).
+
+### Recommended next workstream
+
+Re-check the Auditor inbox for anything published after this round first —
+`CYV-IFA-006` (server-side Planner receipt) will likely keep reappearing
+until the email-provider Owner gate clears. If the inbox is empty/all
+already-known, re-scan `CYVEXLY_APP_DEBT.md`/`CYVEXLY_CHUNK_DEBT.md` for a
+newly-reachable item, or run a fresh release-QA sweep if enough rounds have
+passed since round 31's.
+
 ## Round 33 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
