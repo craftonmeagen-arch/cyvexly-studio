@@ -104,6 +104,35 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 35 report — global round 35 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R26`. Its finding
+(`CYV-IFA-012` "STILL OPEN") reviewed commit `bdf0263` — round 33's HEAD,
+before round 34's fix (`0afb789`) landed. Re-verified against current
+`main` via real DOM measurement (`getBoundingClientRect()` on the Contact
+page's email/phone `<a>` tags: correctly stacked, no overlap) — the fix is
+genuinely present; this was stale evidence, not a new defect. Moved to
+`exchange/processed/`.
+
+Ran a full release-QA sweep (first since round 31's — 3 rounds of narrow
+changes since: CSP, canonical tags, contact-link fix). `tsc`/`lint`/`build`
+(27 routes) clean; zero worldwide/payment-brand/stale-claim matches in
+generated HTML; sitemap/robots/canonical/noindex correct on every route;
+a link-crawl script found zero broken internal links; a real running
+production server's HTTP headers (all 6 security headers incl. CSP), 404
+handling, and sitemap/robots content-types all verified via `curl`;
+`/about` verified rendering real content via the live in-app Browser.
+**No new reachable-without-an-Owner-gate defect found** — Chunk 5's
+remaining scope is unchanged (DNS/domain, email-provider delivery,
+analytics ownership, exact LLC name).
+
+Found and corrected two stale `CYVEXLY_CHUNK_DEBT.md` entries left
+uncorrected since rounds 29-30 actually resolved them (About/Privacy/Terms
+404 claim; OG-image metadata domain-block claim). Archived rounds 31-32's
+handoff detail and round 29's app-debt detail to keep both hot files under
+cap. Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 35" section and
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
 ## Round 34 report — global round 34 (scheduled/unattended session)
 
 Read all four unread Auditor inbox items (`IFA-2026-09-05-R22` through

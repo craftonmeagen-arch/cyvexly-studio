@@ -6,16 +6,28 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
 
 ## Open
 
-1. **Remaining sitemap routes that still 404: `/about`, `/privacy`,
-   `/terms`.** As of round 4, `/services`, `/work` (+ three case-study
-   pages), `/pricing`, `/process`, `/contact`, `/faq`, `/accessibility`,
-   and `/start` (Project Planner, built round 4) are all built and
-   verified — only `/about` and the two legal pages remain, all honestly
-   blocked on Owner-supplied facts (see `CYVEXLY_APP_DEBT.md` items 1 and
-   3). **Round 22:** `/about` is no longer linked in visible global navigation
-   until approved identity content exists. `/privacy` and `/terms` links remain
-   visible release blockers because they are expected policy destinations,
-   not optional studio-navigation copy.
+1. **RESOLVED round 30, correction recorded round 35.** This item's
+   original text (below, preserved for history) claimed `/about`,
+   `/privacy`, and `/terms` still 404'd. That was true through round 22 but
+   became stale once round 30 built and verified all three pages (see
+   `CYVEXLY_APP_DEBT.md`'s "Resolved round 30"). No round had corrected
+   this entry since. Round 35 re-verified directly: `src/app/{about,
+   privacy,terms}/page.tsx` all exist, all three routes render in the real
+   production build (`.next/server/app/{about,privacy,terms}.html`), and a
+   live in-app-Browser fetch of `/about` returned real page text ("ABOUT
+   CYVEXLY ... No agency layers, no founder mythology...") with zero
+   console errors — not a 404. `/about` is linked in navigation again (per
+   round 30); `/privacy`/`/terms` links have resolved since round 30.
+   **Original text, preserved:** "Remaining sitemap routes that still 404:
+   `/about`, `/privacy`, `/terms`. As of round 4, `/services`, `/work` (+
+   three case-study pages), `/pricing`, `/process`, `/contact`, `/faq`,
+   `/accessibility`, and `/start` (Project Planner, built round 4) are all
+   built and verified — only `/about` and the two legal pages remain, all
+   honestly blocked on Owner-supplied facts (see `CYVEXLY_APP_DEBT.md`
+   items 1 and 3). Round 22: `/about` is no longer linked in visible global
+   navigation until approved identity content exists. `/privacy` and
+   `/terms` links remain visible release blockers because they are
+   expected policy destinations, not optional studio-navigation copy."
 2. **Placeholder work-card imagery — partially resolved round 5, real
    photographic imagery still open.** `selectedWork` / `caseStudies` in
    `src/lib/site-config.ts` originally used flat two-tone CSS gradients
@@ -105,8 +117,15 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    round-7 report.
 
    **Social-sharing (Open Graph) image asset: built and pixel-verified
-   round 3; the metadata wiring remains correctly blocked on the domain
-   decision, confirmed by testing rather than assuming.** Added
+   round 3; metadata wiring RESOLVED round 29, correction recorded round
+   35.** The domain block this sub-item describes was real when written
+   (round 3) but round 29 set `metadataBase` to `https://cyvexly.com` once
+   the Owner confirmed the domain, closing it — see `CYVEXLY_APP_DEBT.md`'s
+   "Resolved round 29" ("`og:image`/`twitter:image` meta tags now resolve
+   to `https://cyvexly.com/opengraph-image?...`"). No round had corrected
+   this sub-item's "still open, domain-blocked" framing since. The
+   provenance/history below (round 3's build and verification) remains
+   accurate and is preserved as-is. Added
    `src/app/opengraph-image.tsx` using Next's `ImageResponse` special-file
    convention: reuses the exact `icon.svg` C/Y signal-mark path data, the
    real cyber-arctic palette tokens, the recommended launch headline, and
