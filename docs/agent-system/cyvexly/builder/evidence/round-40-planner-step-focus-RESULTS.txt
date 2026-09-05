@@ -1,0 +1,43 @@
+Round 40 evidence: Planner step-advance focus/scroll/live-region defect and fix.
+
+BEFORE FIX (production build, real headless Chrome via CDP, real mouse click on
+"Continue ->" advancing step 1 -> 2):
+  BEFORE: {"scrollY":0,"activeTag":"BODY","heading":"01 About you"}
+  AFTER:  {"scrollY":721,"activeTag":"BUTTON","activeId":"","activeText":"Continue ->",
+           "heading":"02 The business","liveRegionsWithText":[],"hasFocus":true,
+           "visibilityState":"visible"}
+  -> page did not return to top (scroll-anchoring raced the pre-render scrollTo(0)
+     call in goToStep()); focus stayed on the Continue button instead of moving to
+     the new step; no aria-live announcement of the step change for screen readers.
+
+AFTER FIX (same method, production build):
+  BEFORE: {"scrollY":0,"activeTag":"BODY","heading":"01 About you"}
+  AFTER:  {"scrollY":0,"activeTag":"H2","activeId":"","activeText":"02 The business",
+           "heading":"02 The business",
+           "liveRegionsWithText":[{"live":"polite","role":"status","text":"Step 2 of 9: The business"}],
+           "hasFocus":true,"visibilityState":"visible"}
+  -> scroll reaches top (0), focus moves to the new step's <h2> heading with
+     preventScroll to avoid re-fighting the scrollTo, and a polite live region
+     announces "Step 2 of 9: <label>".
+
+Method: local headless Chrome (chrome.exe --headless=new, unique --user-data-dir
+under the OS temp root, --remote-debugging-port=9333), driven via raw CDP
+WebSocket (Runtime.evaluate, Input.dispatchMouseEvent) from Node -- the
+round-8/round-39-established technique for genuine native interaction proof in
+this unattended session type. Chosen after the in-app Browser pane's
+`computer`/screenshot path proved intermittent mid-session (screenshot timeouts
+matching the documented "pane not displayed/hidden" pattern in
+CYVEXLY_TOOLS_AND_CAPABILITIES.md), and after an initial JS `.click()`-based
+test produced a false-positive "focus lost to body" reading because
+`document.hasFocus()` is false in the in-app Browser pane -- a real headless
+Chrome tab has real document focus, so this is the trustworthy method for this
+class of claim, not the in-app Browser pane's script-dispatched click.
+
+Root cause: `goToStep()` called `window.scrollTo({top:0})` synchronously in the
+same tick as `setCurrentStep`, before React committed the new step's DOM --
+Chrome's scroll-anchoring silently overrode the intended top-scroll once the new
+content mounted. Fix moves the scroll (and a new focus-move + live-region
+announcement) into a `useEffect` keyed on `currentStep`, deferred one
+`requestAnimationFrame` after the commit, guarded by a `previousStepRef`
+comparison (not a one-shot boolean) so it stays correct under React Strict
+Mode's development-only double-invoke of mount effects.

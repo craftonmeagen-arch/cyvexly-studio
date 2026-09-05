@@ -158,6 +158,8 @@ export function PlannerForm({
   initialSelection?: ServicePlannerSelection;
 }) {
   const initialSelectionRef = useRef(initialSelection);
+  const stepHeadingRef = useRef<HTMLHeadingElement>(null);
+  const previousStepRef = useRef(1);
   const [data, setData] = useState<PlannerData>(() =>
     initialSelection
       ? {
@@ -276,9 +278,30 @@ export function PlannerForm({
   function goToStep(step: number) {
     setCurrentStep(step);
     setMaxReachedStep((prev) => Math.max(prev, step));
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
   }
+
+  useEffect(() => {
+    // Only react to an actual step change, not the initial mount (or a
+    // restored draft's initial step) — comparing against a ref (rather than
+    // a one-shot "have I run yet" flag) stays correct under React Strict
+    // Mode's development-only double-invoke of mount effects, since neither
+    // duplicate pass ever sees currentStep differ from previousStepRef here.
+    if (previousStepRef.current === currentStep) return;
+    previousStepRef.current = currentStep;
+    // Deferred to a frame after this render commits: calling scrollTo/focus
+    // synchronously inside goToStep raced the new step's DOM/layout update,
+    // so the browser's scroll-anchoring silently kept the old scroll
+    // position and focus never left the Continue/Back button — sighted
+    // users weren't returned to the top of the new step, and keyboard/
+    // screen-reader users got no indication the step had changed at all.
+    window.requestAnimationFrame(() => {
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+      // preventScroll: focusing the heading would otherwise jump/scroll it
+      // into view on its own and fight the scrollTo(0) call above.
+      stepHeadingRef.current?.focus({ preventScroll: true });
+    });
+  }, [currentStep]);
 
   function handleNext() {
     const stepErrors = validateStep(currentStep);
@@ -429,7 +452,15 @@ export function PlannerForm({
           />
         </div>
 
-        <h2 className="font-display text-lg font-semibold text-midnight-slate sm:text-xl">
+        <p role="status" aria-live="polite" className="sr-only">
+          Step {plannerSteps[currentStep - 1].number} of {plannerSteps.length}:{" "}
+          {plannerSteps[currentStep - 1].label}
+        </p>
+        <h2
+          ref={stepHeadingRef}
+          tabIndex={-1}
+          className="font-display text-lg font-semibold text-midnight-slate sm:text-xl"
+        >
           {String(plannerSteps[currentStep - 1].number).padStart(2, "0")}{" "}
           {plannerSteps[currentStep - 1].label}
         </h2>
