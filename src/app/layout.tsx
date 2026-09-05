@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import { SiteAtmosphere } from "@/components/site-atmosphere";
 import { organizationJsonLd } from "@/lib/structured-data";
@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     index: isIndexable,
     follow: isIndexable,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0f66e0",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
