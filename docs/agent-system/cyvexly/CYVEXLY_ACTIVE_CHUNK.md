@@ -104,6 +104,55 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 48 report — global round 48 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R39` (reviewed commit
+`727d809`, round 46's HEAD, one commit behind round 47's Apple touch icon
+commit). Fifteenth consecutive independent confirmation — 0 active code
+defects, re-verifies the Web App Manifest structure/content, scaffold-asset
+removal, BreadcrumbList/FAQPage/Organization JSON-LD, both Contact/Planner
+honeypots, WCAG 1.4.10 reflow, canonicals, security headers, and live
+production parity against `https://cyvexly-studio.onrender.com/`. Not a new
+finding. Moved to `exchange/processed/`.
+
+Ran one genuinely new angle, reachable without any Owner gate: **added
+raster 192×512 PNG manifest icons.** Round 46's Web App Manifest shipped
+with only an SVG icon entry (`sizes: "any"`); round 46/47's own handoffs
+named real 192/512px raster icons as the next open item, since Android's
+"Add to Home Screen" install-prompt flow has historically preferred PNG at
+these two standard PWA sizes over SVG-only. §4.12 check: providing PNG
+icons at 192×192 and 512×512 alongside an `any`-size SVG is the documented
+mainstream PWA manifest pattern (MDN/web.dev), not a departure. Built a
+dynamic `src/app/icons/[size]/route.tsx` Route Handler (Next's Route
+Handler convention, same `next/og` `ImageResponse` technique already used
+for `apple-icon.tsx`/`opengraph-image.tsx`) with `generateStaticParams`
+restricting build-time generation to exactly the two registered sizes and
+a runtime 404 for any other size value — reuses only the existing C/Y mark
+and brand-blue token, no invented facts. Referenced both as new `icons[]`
+entries in `manifest.ts` alongside the existing SVG entry (not replacing
+it).
+**Verified:** real production build (`pnpm run build`) statically
+generates `/icons/192` and `/icons/512`; parsed the generated
+`.next/server/app/icons/{192,512}.body` files — real PNGs, exactly
+192×192 and 512×512 (confirmed via `file`), correct byte sizes. Copied
+both locally and opened them (round-3/7's proxy-image technique): clean
+brand-blue square, mark centered and proportionally scaled at both sizes,
+no clipping. Live-verified against a real `next start` production server
+on port 5173: `/icons/192` and `/icons/512` both return `200 image/png`
+with the exact built byte lengths; `/icons/999` (an unregistered size)
+returns `404`, confirming the allowlist guard; `manifest.webmanifest`'s
+live JSON body carries all three icon entries in the correct order;
+`apple-icon` and `icon.svg` remain unchanged (`200`, correct content
+types) — no regression. A real in-app-Browser screenshot of Home shows
+zero visual regression and zero console errors.
+`tsc --noEmit`/`lint`/`build` all pass clean (lint's one warning is the
+same pre-existing unused-var in round 42's untouched evidence script).
+Committed (`8d959f0`) and pushed.
+
+Archived round 45's full report to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_45_REPORT.md` to restore
+the intended latest-three rotation (§7.14) — 46, 47, 48 stay live.
+
 ## Round 47 report — global round 47 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R38` (reviewed commit
@@ -192,39 +241,11 @@ Ran two genuinely new angles, both reachable without any Owner gate:
 pre-existing unused-var in round 42's evidence script, untouched this
 round). Committed and pushed.
 
-## Round 45 report — global round 45 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-05-R36` (reviewed commit
-`5331cb3`, round 43's HEAD, one commit behind round 44's FAQPage JSON-LD
-commit). Twelfth consecutive independent confirmation — 0 active code
-defects, re-verifies the sitewide Organization JSON-LD, both honeypots,
-WCAG 1.4.10 reflow, canonicals, security headers, and live production
-parity. Not a new finding. Moved to `exchange/processed/`.
-
-Implemented the natural next discoverability angle both round 43 and 44's
-handoffs named: **BreadcrumbList JSON-LD** for the service-detail
-(`/services/[slug]`) and case-study (`/work/[slug]`) routes, the two route
-families that sit one level under a listing page. Added
-`buildBreadcrumbJsonLd()` to `src/lib/structured-data.ts` (a small
-trail-to-`ListItem[]` builder) and embedded a 3-item Home → listing →
-detail trail on both templates, reusing only each route's own existing
-name/URL — no new facts. §4.12 check: `BreadcrumbList` JSON-LD is Google's
-own documented rich-results pattern for hierarchical pages — not a
-departure. Verified in real production build output (parsed
-`.next/server/app/services/business-websites.html` and
-`work/aurora-spaces.html`: both carry `Organization` + a correct 3-entry
-`BreadcrumbList`; confirmed `index.html`/`services.html`/`work.html` carry
-only `Organization` — no leak to listing/home routes) and live via real CDP
-navigation against a production `next start` server across both detail
-routes plus their listing pages and home: zero console messages, zero
-network failures, correct trail parsed from the live DOM every time. `tsc`/
-`lint`/`build` all pass clean. Script preserved at
-`builder/evidence/round-45-breadcrumb-jsonld-check.mjs`. Committed and
-pushed.
-
-Archived round 42's full report (below) to
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_42_REPORT.md` to restore
-the intended latest-three rotation (§7.14) — 43, 44, 45 stay live.
+Round 45's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_45_REPORT.md` (moved there
+round 48 to restore latest-three rotation) — 46, 47, 48 stay live. Round 45
+implemented BreadcrumbList JSON-LD for service-detail and case-study
+routes.
 
 Round 44's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_44_REPORT.md` (moved there

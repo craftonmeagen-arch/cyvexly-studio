@@ -143,3 +143,17 @@ No credential capability is recorded. A role must verify authorization without e
 ## Recovery
 
 Role helpers are in `.codex/roles/scripts/`. Repair only the current role's owned runtime, manifest, cache, evidence, and browser resources. Never attach to or stop another role's runtime or process solely because a port or process name looks familiar.
+
+**Round 48 note — `Start-Process` PID and pre-existing stray processes.**
+This Windows host runs a large number of pre-existing `node.exe`/
+`node_repl.exe` processes unrelated to any current role's runtime (seen at
+round 48 start via a plain `Get-Process`). Never stop a process here
+without verifying its exact ownership (e.g. the real listener PID via
+`Get-NetTCPConnection -LocalPort <port> -State Listen`, not a guess from
+process name/count). Separately, `Start-Process -FilePath "pnpm" -ArgumentList "..."`
+did not reliably return the PID of the actually-launched server in this
+session (the returned PID pointed at an unrelated existing process, likely
+an npm-shim/App-Execution-Alias indirection); wrapping the launch as
+`Start-Process -FilePath "cmd.exe" -ArgumentList "/c pnpm exec <command>"`
+and then deriving the real server PID from its bound port worked reliably.
+Re-verify per round; do not assume this is a permanent host quirk.
