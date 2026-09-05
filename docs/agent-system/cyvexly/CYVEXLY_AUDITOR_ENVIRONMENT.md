@@ -1,5 +1,12 @@
 # Cyvexly Auditor Environment
 
+**Current setup (2026-09-05):** use the root Auditor orientation and
+CYVEXLY_ROLE_RULES_MAPPING.md. New snapshots/runtimes, process inventories,
+reports, evidence and memory belong under C:/app projects/website-independent-review.
+The guard-based setup and round records below are historical evidence only.
+The separately added recovery/launcher record is preserved; this rule migration
+does not itself create, modify, or verify a scheduler.
+
 - Disposable snapshot/runtime root: `.codex/runtime/auditor/<round-id>/`
 - Active identity guard: `.codex/role-state/auditor.active.json`
 - Reserved port: `5273`
@@ -35,3 +42,11 @@ R19 used `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T1633Z-019` 
 R20 used `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T1731Z-020` on port `5273` against docs-only HEAD `2cd9121` (unchanged product `src/` tree `d9f3e4a...`); no Builder lock was present at entry. The standard guard again failed with managed-permission `UnauthorizedAccessException`; the exact archive/dependency junction and real IAB were used. R20 covered Accessibility Statement/legal and invalid-route truth, custom-404 recovery, metadata/indexing/robots/OG/sitemap, responsive containment, and the policy-blocked clean Planner-origin boundary. Builder r25 claimed a new lock near closeout and was preserved; mutable HEAD later advanced to `26a768a`, which was not inspected. Exact R20 Browser/runtime/process resources are removed after publication; Council resources and scheduler remain untouched.
 
 R21 used `C:\Users\Tcraf\AppData\Local\Temp\cyvexly-auditor-20260901T1837Z-021` on port `5273` against accepted product `06fbadd` (`src/` tree `d9f3e4a...`); Builder lock `cyvexly-builder-20260901T175628Z-r25` was active and mutable HEAD `26a768a`/working-tree source changes were excluded. The standard guard remained write-denied; exact archive/dependency junction and real IAB tab `5` were used. R21 covered Work filters at desktop/phone, mobile primary navigation, Work → Planner → browser Back recovery, phone containment, diagnostics, and ESLint/TypeScript. After the floor, exact R21 Browser/runtime/process resources were removed, port `5273` verified clear, and the Builder lock cleared naturally; HEAD advanced to `4b08744`/source tree `3ea8774a` and was not inspected. Builder/Council resources and scheduler remain untouched.
+
+## 2026-09-04 Universal environment recovery & scheduler configuration
+
+1. Toolchain & PATH: Provisioned workstation shims (`node.bat`, `npm.bat`, `npx.bat`, `pnpm.bat`, `pwsh.bat`) under `C:\Users\Tcraf\.gemini\antigravity\bin` mapping to user toolchain (`NodeJS\recovered-20260904`, `pnpm@10.34.4`, `pwsh@7.6.5`). All subagent/terminal executions now execute node, pnpm, and pwsh natively without manual PATH surgery.
+2. Independent Review Root: Initialized `C:\app projects\website-independent-review` directory tree (`runs`, `memory/auditor`, `reports`, `evidence`, `exchange`). Seeded initial memory and report state.
+3. Review Scripts: Updated `.codex/roles/scripts/Start-ReviewRound.ps1`, `Complete-ReviewRound.ps1`, `Publish-RoleReport.ps1`, and `Register-RoleProcess.ps1` to accept `-SourceRef`, support the `functional` role, route round execution to `website-independent-review\runs`, and mirror published reports and intake JSON.
+4. Preflight & Runner: Added `scripts/start-cyvexly-auditor-round.ps1` supporting `-Action Check`, `-Action Start`, `-Action Stop`, and `-Action Publish`. Preflight verified clean with exit code 0.
+5. Scheduler: Registered standing daemon task on hourly cadence (`0 * * * *`) per Owner prompt.

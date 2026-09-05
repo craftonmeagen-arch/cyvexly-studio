@@ -196,11 +196,10 @@ requires.
   A real live-tab screenshot would still strengthen the proof, but is not
   blocking the fix any longer.
 
-## Chunk 5 — United States Launch Completion & Business Operations (NEXT)
+## Chunk 5 — United States Launch Completion & Business Operations (OPEN, round 29)
 
 - **Authority:** Owner direction `2026-09-04-14` and
-  `CYVEXLY_VISION_PLAN.md` §17. The next Builder must open this as the next
-  major chunk. Builder, Auditor, and Council must use the same scope and
+  `CYVEXLY_VISION_PLAN.md` §17. Round 29 opened this major chunk; continue the remaining integrated work. Builder, Auditor, and Council must use the same scope and
   completion definition.
 - **Outcome:** convert the working Render preview into a truthful, contactable,
   searchable, legally coherent United States business site at canonical
@@ -267,104 +266,8 @@ public QA all pass. Its integrated verification also closes the remaining
 delivery work in Chunk 3 and launch/legal work in Chunk 4. Payment integration
 and real portfolio replacement remain separately tracked deferrals.
 
-## Cross-chunk notes
+## Historical implementation context
 
-- **Round 28 continuous full-height correction:** after the Owner scrolled
-  below the rebuilt Home hero and found the old flat-band reading, the Builder
-  fixed the shared failure across all route families. Persistent portal planes,
-  beams, horizon, rails, wires, and nodes now remain visible between bounded
-  rim-lit section bays. Protected fields and darker graphite copy preserve
-  contrast; phone removes secondary density. Visible IAB route/interaction
-  proof, 54 responsive states, lint, TypeScript, and build pass; public adoption
-  and Owner acceptance remain pending.
-- **Round 27 Home architectural-glass correction:** after the Owner found the
-  Round 26 Home still short of exact mockup 06, the Builder changed the Home
-  component grammar rather than repeating a global token pass. Layered planes,
-  luminous columns/beams, traces/nodes, coordinates, floor reflection,
-  double-rim protected copy, deeper media chassis, and inset credibility deck
-  now define the first viewport. Visible 1440/768/390 in-app Browser proof,
-  media interaction, containment, lint, TypeScript, and build pass; public
-  adoption and Owner acceptance remain pending.
-- **Round 26 Owner-visible theme repair:** the Owner rejected the Round 24/25
-  live appearance as unchanged. Round 26 materially strengthens the shared
-  full-height blue environment, architectural signal layers, protected glass,
-  header, and footer without changing product facts or playback direction.
-  Opened desktop/tablet/phone route-family renders and build checks pass;
-  public adoption and Owner acceptance remain pending.
-- **Round 25 shared navigation resilience:** product commit `e38851f` adds
-  native Escape/focus return, desktop-breakpoint state reconciliation, and
-  exact standard/nested current-page semantics without changing the approved
-  header pixels. A verification-discovered Services CTA correction also closes
-  390px/24px-root overflow. All 114 normal and 19 enlarged-root cases pass;
-  Render ETag `44zd3ca5e02ryz` passes the same public interaction/semantic proof.
-- **Round 24 authoritative every-page theme:** plan/baseline commit `2983699`,
-  product commit `5656584`, and focus correction `06fbadd` implement Owner
-  direction `2026-09-01-10` over every full public page height. Shared
-  environment/surface primitives remove all measured transparent direct-section
-  fallbacks while preserving protected content and approved dark focal stages.
-  Both optimized and public 198-state matrices pass across 18 route states and
-  eleven widths; opened full-page 1440/768/390 proof and composited contrast
-  pass. Owner visual acceptance remains pending; blocked launch facts are
-  unchanged.
-- **Round 23 shared validation contrast:** product commit `2227961` closes
-  Auditor `CYV-IFA-011` at the semantic token. Final composited Contact/Planner
-  errors start at 4.6881:1 and public adoption passes. The later every-route
-  theme authority is implemented and proved by Round 24 above.
-
-- **Round 22 sticky-header and continuation reconciliation:** fixed the shared
-  CSS cascade that overrode the authored sticky/z50 header, carried the
-  Owner-approved blue-glass language through five Home and three Services
-  section fields, and deferred the visible dead About link. A hydrated
-  optimized-runtime matrix covers 154 states across 18 routes and eight widths
-  from 1280 through 320 with zero verified failures. Normal-text contrast is
-  at least 4.5:1 and Owner visual review remains pending.
-
-- **Round 21 site-wide blue-glass reconciliation:** Owner direction
-  2026-08-31-09 is implemented through one shared pale-blue architectural
-  atmosphere, protected glass introductions across standard/dynamic/utility
-  routes, and translucent continuation sections. Home and Pricing retain
-  their bespoke accepted compositions; Round 20's removed playback chrome
-  remains removed. Optimized desktop/phone renders, final composited-pixel
-  contrast (lowest normal-text pair 5.06:1), containment, interactions,
-  build, and route/media regression pass. Owner review remains pending.
-
-- **Round 20 Home reel playback-chrome cleanup:** Owner direction
-  2026-08-31-08 supersedes Round 16's visible-control treatment for the current
-  Home showcase. Commit `d6cd17c` removes the muted/duration pill, timeline,
-  and circular control, slows authored playback to `0.75×`, and makes the
-  unadorned media surface the named click/keyboard pause target. Opened
-  1440/768/390 renders, exact containment, media timing, interaction, lint,
-  optimized build, TypeScript, and range-delivery proof pass without changing
-  the source asset, hero size, copy, or reduced-motion/data-saving holds.
-
-- **Round 16 integrated Home hero reel:** Owner direction 2026-08-31-07 is
-  implemented in product commit `14e12d4` without formally reopening a closed
-  chunk. The Home-only stage expands to approximately 1440px, the measured
-  desktop reel grows from 528px to 726.56px, and coordinated light-ice-blue
-  glass layers protect the copy and integrate the player. Real progress,
-  Pause/Play, loop, reduced-motion, responsive, semantic, route, lint, build,
-  and type proof pass. The accepted media and product claims are unchanged;
-  Owner visual acceptance and original second-device confirmation remain.
-
-- **Round 15 live Home video deployment recovery:** the Owner's report that the
-  video still did not appear publicly exposed a source/deployment identity
-  defect, not another media-component defect. Render/GitHub served default
-  branch `main` at pre-video commit `c13ae7a`, while accepted source had moved
-  52 commits ahead on `master`. `main` had zero unique work, so a non-force
-  fast-forward published the accepted history; the local Builder branch now
-  tracks `origin/main` to prevent recurrence. The real public site changed
-  within about 51 seconds and passes opened desktop/phone render, playback,
-  loop, reduced-motion/data-saver, MIME/range, route, console, build, and type
-  proof. This corrects deployment truth without opening/closing a chunk or
-  changing the separate domain/metadata decision.
-
-- Payment/proposal workflow (vision §8) and any external service integration
-  are foundational/authorization-sensitive; route through §4.12 Outcome
-  Reachability Check before committing to a specific provider integration.
-- Full visual screenshot comparison against the mockups is not reliably
-  reachable from an unattended Builder session on its own (no working
-  `computer` screenshot in that mode — see `CYVEXLY_WATCH.md`), but round 1
-  found that a concurrently-running Auditor round may publish real rendered
-  screenshots to the shared durable evidence root that a Builder can read and
-  use. Do not assume that evidence will always be available; check for it,
-  and route to an attended session or Auditor/Council when it isn't.
+Cross-chunk round history is preserved in
+docs/archive/role-migration-2026-09-05/CYVEXLY_PROJECT_CHUNK_MAP.md.
+Current open outcomes and Owner gates above take precedence over past decision gaps.

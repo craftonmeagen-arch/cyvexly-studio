@@ -1,116 +1,43 @@
+#requires -Version 7.0
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true)]
-    [ValidateSet('auditor', 'council')]
-    [string]$Role,
-
-    [Parameter(Mandatory = $true)]
-    [ValidatePattern('^[A-Za-z0-9][A-Za-z0-9._-]{0,80}$')]
-    [string]$RoundId,
-
-    [Parameter(Mandatory = $true)]
-    [ValidateNotNullOrEmpty()]
-    [string]$ReviewId,
-
-    [Parameter(Mandatory = $true)]
-    [ValidateNotNullOrEmpty()]
-    [string]$ReportPath,
-
+    [Parameter(Mandatory)][ValidateSet('auditor','council','functional')][string]$Role,
+    [Parameter(Mandatory)][string]$RoundId,
+    [Parameter(Mandatory)][ValidatePattern('^[A-Za-z0-9][A-Za-z0-9._-]{0,100}$')][string]$ReviewId,
+    [Parameter(Mandatory)][string]$ReportPath,
     [switch]$ValidateOnly
 )
-
-Set-StrictMode -Version Latest
-$ErrorActionPreference = 'Stop'
-
-$roleName = $Role.ToLowerInvariant()
-$workspace = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..\..'))
-$guardPath = Join-Path $workspace ('.codex\role-state\' + $roleName + '.active.json')
-$publisherLock = Join-Path $workspace ('.codex\role-state\' + $roleName + '.publisher.lock')
-$guard = Get-Content -LiteralPath $guardPath -Raw | ConvertFrom-Json
-if ($guard.roundId -ne $RoundId -or $guard.role -ne $roleName) {
-    throw 'Active role identity does not match this publication request.'
+. "$PSScriptRoot/Role-Common.ps1"
+$layout=Get-ReviewLayout $Role $RoundId; $identity=Read-RoleIdentity $layout $Role $RoundId
+$report=[IO.Path]::GetFullPath($ReportPath)
+if (-not $report.StartsWith($layout.logs+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)) {
+    throw 'Candidate must be inside this exact run logs directory.'
 }
-
-$reportResolved = [System.IO.Path]::GetFullPath((Join-Path $workspace $ReportPath))
-$roundResolved = [System.IO.Path]::GetFullPath($guard.roundRoot).TrimEnd('\') + '\'
-if (-not $reportResolved.StartsWith($roundResolved, [System.StringComparison]::OrdinalIgnoreCase)) {
-    throw 'Candidate report must be inside the active role-owned round root.'
+Assert-NoReparse $report; $content=[IO.File]::ReadAllText($report)
+if ($content -notmatch "(?m)^REVIEW ID:\s*$([regex]::Escape($ReviewId))\s*$" -or -not $content.Contains($identity.sourceHead)) {
+    throw 'Report must contain exact REVIEW ID and reviewed commit SHA.'
 }
-if (-not (Test-Path -LiteralPath $reportResolved -PathType Leaf)) {
-    throw 'Candidate report does not exist.'
-}
-
-$reportsRoot = Join-Path $workspace 'docs\agent-system\cyvexly\reports'
-$inboxPath = Join-Path $workspace 'docs\agent-system\cyvexly\inbox\OPERATIONS.md'
-if ($roleName -eq 'auditor') {
-    $currentPath = Join-Path $reportsRoot 'AUDITOR_CURRENT.md'
-    $archivePath = Join-Path $reportsRoot 'AUDITOR_ARCHIVE.md'
-}
-else {
-    $currentPath = Join-Path $reportsRoot 'QUALITY_METHODS_CURRENT.md'
-    $archivePath = Join-Path $reportsRoot 'QUALITY_METHODS_ARCHIVE.md'
-}
-
-if ($ValidateOnly) {
-    [pscustomobject]@{
-        role = $roleName
-        roundId = $RoundId
-        candidateReport = [System.IO.Path]::GetRelativePath($workspace, $reportResolved).Replace('\', '/')
-        currentReport = [System.IO.Path]::GetRelativePath($workspace, $currentPath).Replace('\', '/')
-        archive = [System.IO.Path]::GetRelativePath($workspace, $archivePath).Replace('\', '/')
-        inbox = [System.IO.Path]::GetRelativePath($workspace, $inboxPath).Replace('\', '/')
-        status = 'VALIDATED WITHOUT PUBLICATION'
-    } | ConvertTo-Json -Depth 4
-    return
-}
-
-$lockStream = $null
+$publishedDir=Join-Path $layout.reviewRoot "reports/published/$Role"
+$published=Join-Path $publishedDir "$ReviewId.md"
+$inbox=Join-Path $layout.reviewRoot "exchange/operational-inbox/$Role-$ReviewId.json"
+foreach($path in @($layout.current,$layout.archive,$published,$inbox)) { Assert-NoReparse $path }
+# Short OS publication transaction, not a repository marker or role-dispatch lock.
+$name='CyvexlyPublish'+[Convert]::ToHexString([Security.Cryptography.SHA256]::HashData([Text.Encoding]::UTF8.GetBytes($layout.current)))
+$mutex=[Threading.Mutex]::new($false,$name); $held=$false
 try {
-    $lockStream = [System.IO.File]::Open($publisherLock, [System.IO.FileMode]::CreateNew, [System.IO.FileAccess]::Write, [System.IO.FileShare]::None)
-}
-catch [System.IO.IOException] {
-    throw "The $roleName publisher is busy; no report was changed."
-}
-
-try {
-    $content = Get-Content -LiteralPath $reportResolved -Raw
-    if ([string]::IsNullOrWhiteSpace($content)) {
-        throw 'Candidate report is blank.'
+    try { $held=$mutex.WaitOne(0) } catch [Threading.AbandonedMutexException] { $held=$true }
+    if (-not $held) { throw 'Report transaction busy. Candidate preserved; retry publication.' }
+    if ((Get-RoleHash $layout.current) -ne $identity.expectedCurrentHash) { throw 'Current report changed since this pass began. Preserve candidate and reconcile unread findings.' }
+    if (Test-Path -LiteralPath $published) { throw 'Review ID already used; publication refused.' }
+    if ($ValidateOnly) { return [pscustomobject]@{status='VALIDATED WITHOUT PUBLICATION';current=$layout.current;inbox=$inbox} }
+    New-Item -ItemType Directory -Force -Path $publishedDir | Out-Null
+    if (Test-Path -LiteralPath $layout.current) {
+        [IO.File]::AppendAllText($layout.archive,("$([char]10)$([char]10)---$([char]10)$([char]10)"+[IO.File]::ReadAllText($layout.current)),[Text.UTF8Encoding]::new($false))
     }
-
-    $stamp = [DateTime]::UtcNow.ToString('o')
-    $archiveBlock = "`r`n`r`n---`r`n`r`n<!-- $roleName review $ReviewId published $stamp -->`r`n`r`n$content"
-    $archiveBytes = [System.Text.UTF8Encoding]::new($false).GetBytes($archiveBlock)
-    $archiveStream = [System.IO.File]::Open($archivePath, [System.IO.FileMode]::Append, [System.IO.FileAccess]::Write, [System.IO.FileShare]::None)
-    try {
-        $archiveStream.Write($archiveBytes, 0, $archiveBytes.Length)
-        $archiveStream.Flush($true)
-    }
-    finally {
-        $archiveStream.Dispose()
-    }
-
-    $tempCurrent = $currentPath + '.' + [guid]::NewGuid().ToString('N') + '.tmp'
-    [System.IO.File]::WriteAllText($tempCurrent, $content, [System.Text.UTF8Encoding]::new($false))
-    [System.IO.File]::Move($tempCurrent, $currentPath, $true)
-
-    $relativeCurrent = [System.IO.Path]::GetRelativePath($workspace, $currentPath).Replace('\', '/')
-    $inboxLine = "`r`n- $stamp | $roleName | $ReviewId | $relativeCurrent"
-    [System.IO.File]::AppendAllText($inboxPath, $inboxLine, [System.Text.UTF8Encoding]::new($false))
-
-    [pscustomobject]@{
-        role = $roleName
-        reviewId = $ReviewId
-        currentReport = $relativeCurrent
-        archive = [System.IO.Path]::GetRelativePath($workspace, $archivePath).Replace('\', '/')
-        publishedAtUtc = $stamp
-    } | ConvertTo-Json -Depth 4
-}
-finally {
-    if ($null -ne $lockStream) {
-        $lockStream.Dispose()
-    }
-    if (Test-Path -LiteralPath $publisherLock -PathType Leaf) {
-        Remove-Item -LiteralPath $publisherLock -Force
-    }
-}
+    [IO.File]::WriteAllText($published,$content,[Text.UTF8Encoding]::new($false))
+    $temp=$layout.current+'.'+[guid]::NewGuid().ToString('N')+'.tmp'
+    [IO.File]::WriteAllText($temp,$content,[Text.UTF8Encoding]::new($false)); [IO.File]::Move($temp,$layout.current,$true)
+    Write-RoleJson $inbox ([ordered]@{role=$Role;reviewId=$ReviewId;sourceHead=$identity.sourceHead;report=$published;publishedAtUtc=[DateTime]::UtcNow.ToString('o')})
+    Write-RoleJson (Join-Path $layout.run 'published.json') ([ordered]@{reviewId=$ReviewId;report=$published;sha256=(Get-RoleHash $published)})
+    [pscustomobject]@{status='PUBLISHED';current=$layout.current;retainedReport=$published;inbox=$inbox} | ConvertTo-Json
+} finally { if ($held) { $mutex.ReleaseMutex() }; $mutex.Dispose() }

@@ -1,49 +1,25 @@
+#requires -Version 7.0
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true)]
-    [ValidateSet('auditor', 'council')]
-    [string]$Role,
-
-    [Parameter(Mandatory = $true)]
-    [ValidatePattern('^[A-Za-z0-9][A-Za-z0-9._-]{0,80}$')]
-    [string]$RoundId,
-
-    [Parameter(Mandatory = $true)]
-    [int]$ProcessId,
-
-    [string]$Purpose = 'role-owned runtime process'
+    [Parameter(Mandatory)][ValidateSet('auditor','council','functional')][string]$Role,
+    [Parameter(Mandatory)][string]$RoundId,
+    [Parameter(Mandatory)][int]$ProcessId,
+    [string]$Purpose='Process started by this role invocation'
 )
-
-Set-StrictMode -Version Latest
-$ErrorActionPreference = 'Stop'
-
-$workspace = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..\..'))
-$guardPath = Join-Path $workspace ('.codex\role-state\' + $Role.ToLowerInvariant() + '.active.json')
-$guard = Get-Content -LiteralPath $guardPath -Raw | ConvertFrom-Json
-if ($guard.roundId -ne $RoundId -or $guard.role -ne $Role.ToLowerInvariant()) {
-    throw 'Active role identity does not match this process registration.'
+. "$PSScriptRoot/Role-Common.ps1"
+$layout=Get-ReviewLayout $Role $RoundId; $identity=Read-RoleIdentity $layout $Role $RoundId
+Assert-NoReparse $layout.processes
+$process=Get-Process -Id $ProcessId -ErrorAction Stop
+$createdTicks = if ($identity.createdAtUtc -is [DateTime]) {
+    $identity.createdAtUtc.ToUniversalTime().Ticks
+} else {
+    ([DateTimeOffset]::Parse([string]$identity.createdAtUtc)).UtcDateTime.Ticks
 }
-
-$process = Get-Process -Id $ProcessId -ErrorAction Stop
-$entry = [ordered]@{
-    pid = $process.Id
-    startTimeUtc = $process.StartTime.ToUniversalTime().ToString('o')
-    startTimeUtcTicks = $process.StartTime.ToUniversalTime().Ticks
-    name = $process.ProcessName
-    purpose = $Purpose
-    registeredAtUtc = [DateTime]::UtcNow.ToString('o')
+if ($process.StartTime.ToUniversalTime().Ticks -lt $createdTicks) {
+    throw 'Process predates this run; it cannot be adopted as run-created.'
 }
-
-$items = @()
-if (Test-Path -LiteralPath $guard.manifestPath -PathType Leaf) {
-    $loaded = Get-Content -LiteralPath $guard.manifestPath -Raw | ConvertFrom-Json
-    if ($null -ne $loaded) {
-        $items = @($loaded)
-    }
-}
-$items += [pscustomobject]$entry
-
-$tempPath = $guard.manifestPath + '.' + [guid]::NewGuid().ToString('N') + '.tmp'
-[System.IO.File]::WriteAllText($tempPath, ($items | ConvertTo-Json -Depth 6), [System.Text.UTF8Encoding]::new($false))
-[System.IO.File]::Move($tempPath, $guard.manifestPath, $true)
-$entry | ConvertTo-Json -Depth 5
+$entry=[ordered]@{pid=$process.Id;startTimeUtcTicks=$process.StartTime.ToUniversalTime().Ticks;name=$process.ProcessName;purpose=$Purpose}
+$items=@(Get-Content -LiteralPath $layout.processes -Raw | ConvertFrom-Json)
+if (@($items | Where-Object { $_.pid -eq $ProcessId }).Count) { throw 'PID already registered.' }
+Write-RoleJson $layout.processes @($items + [pscustomobject]$entry)
+$entry | ConvertTo-Json

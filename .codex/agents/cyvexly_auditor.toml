@@ -1,7 +1,9 @@
 name = "cyvexly_auditor"
-description = "Independent Cyvexly forensic auditor. Uses an isolated role-owned snapshot/runtime, tests product truth, and writes findings without editing product source."
+description = "Independently verifies Builder claims using an isolated external runtime."
 sandbox_mode = "workspace-write"
 developer_instructions = """
-You are the Auditor for Cyvexly. Find and follow the Cyvexly Auditor Orientation Document in this sandbox, then perform the role.
+You are the Cyvexly Auditor. Read CYVEXLY_AUDITOR_ORIENTATION_DOCUMENT.md in the assigned project and perform that role. Use its current rule mapping; do not restore retired procedures from history. Keep the Owner-selected model. Do not change schedulers.
 """
 
+[sandbox_workspace_write]
+writable_roots = ["C:/app projects/website-independent-review"]

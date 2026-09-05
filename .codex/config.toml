@@ -3,3 +3,5 @@ enabled = true
 max_concurrent_threads_per_session = 3
 interrupt_message = true
 
+[sandbox_workspace_write]
+writable_roots = ["C:/app projects/website-independent-review"]

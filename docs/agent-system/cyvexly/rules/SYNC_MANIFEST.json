@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-09-05",
+  "folderUrl": "https://drive.google.com/drive/folders/1rUYNOIGGbXILTqQsRMH2P9_nm1mv_In5",
+  "comparison": "All eight local supplied files matched refreshed Drive text after BOM/line-ending normalization. Installed files are byte-identical to the supplied downloads.",
+  "files": [
+    {
+      "name": "00_AI_Autonomous_Building_Rules_Overview.md",
+      "bytes": 8685,
+      "sha256": "C6BFAAFEF652125AA9DCF3B142AA78E96D7D6BD3A607948898B636BA17D68A83",
+      "driveFileId": "1UC2y958xwUHHgxydqK2he0upQ1t8J8ab",
+      "driveUrl": "https://drive.google.com/file/d/1UC2y958xwUHHgxydqK2he0upQ1t8J8ab/view?usp=drivesdk",
+      "driveModifiedAt": "2026-09-05T02:24:13.005Z"
+    },
+    {
+      "name": "02_Builder_Supervisor_Rules.md",
+      "bytes": 4437,
+      "sha256": "8C85BDDA8978D3B92A0A172691F636FBE97A9DC189CA49B2E04F2E1A929C52D3",
+      "driveFileId": "1g9IC4tgOI7jZSTZimkxaUOAHR7pYcte9",
+      "driveUrl": "https://drive.google.com/file/d/1g9IC4tgOI7jZSTZimkxaUOAHR7pYcte9/view?usp=drivesdk",
+      "driveModifiedAt": "2026-09-05T02:24:05.289Z"
+    },
+    {
+      "name": "03_Independent_Forensic_Auditor_Rules.md",
+      "bytes": 3088,
+      "sha256": "3AFC935D19464847ED7955848730C35C5F2BC7DA107C718F0B637317E8A3B53E",
+      "driveFileId": "1zyDnjLPHkK0--n454NxGRWHM2w0ETGG4",
+      "driveUrl": "https://drive.google.com/file/d/1zyDnjLPHkK0--n454NxGRWHM2w0ETGG4/view?usp=drivesdk",
+      "driveModifiedAt": "2026-09-05T02:24:10.865Z"
+    },
+    {
+      "name": "04_Quality_and_Methods_Council_Rules.md",
+      "bytes": 3061,
+      "sha256": "FA2E87606B484FB3DA3673B2E5BB82192BDB2DED6552C9C1244B7A26010B8991",
+      "driveFileId": "1oA6MtqPVeVphbejzSg_azDLGX-FfZXrl",
+      "driveUrl": "https://drive.google.com/file/d/1oA6MtqPVeVphbejzSg_azDLGX-FfZXrl/view?usp=drivesdk",
+      "driveModifiedAt": "2026-09-05T02:24:15.812Z"
+    },
+    {
+      "name": "Autonomous_Build_Reasoning_Guidelines_v23_2_Scheduler_Non_Overlap_Revision.md",
+      "bytes": 91611,
+      "sha256": "95516992D811B95EB298EB1C5C8527A6F0DD13EE14697A11C56B4070AE462076",
+      "driveFileId": "1nvkCJuzrrOB4JBcZzyaMZQb1koLEFG-7",
+      "driveUrl": "https://drive.google.com/file/d/1nvkCJuzrrOB4JBcZzyaMZQb1koLEFG-7/view?usp=drivesdk",
+      "driveModifiedAt": "2026-09-05T01:54:25.951Z"
+    },
+    {
+      "name": "External_Review_Role_Protocol.md",
+      "bytes": 21978,
+      "sha256": "899D21E8B259E21D9760D0BDBB1F14DBE9280249161886052535EAF1E4A48D9E",
+      "driveFileId": "1BudncrBe6ur0bqRP1cyw1RSgQztdVEa1",
+      "driveUrl": "https://drive.google.com/file/d/1BudncrBe6ur0bqRP1cyw1RSgQztdVEa1/view?usp=drivesdk",
+      "driveModifiedAt": "2026-09-05T01:54:18.857Z"
+    },
+    {
+      "name": "Independent_Forensic_Auditor_Reasoning_Guidelines_v4_3.md",
+      "bytes": 67564,
+      "sha256": "9E28FD74751EEFFDAAABCA62292FF43D8D1B88429E6CFD6176A28229B4D9BED8",
+      "driveFileId": "1tsvaiL40ZcgukrKIsOQkotsGBEAwiEQ5",
+      "driveUrl": "https://drive.google.com/file/d/1tsvaiL40ZcgukrKIsOQkotsGBEAwiEQ5/view?usp=drivesdk",
+      "driveModifiedAt": "2026-09-05T01:54:14.354Z"
+    },
+    {
+      "name": "Product_Quality_Assurance_and_Methods_Council_Reasoning_Guidelines_v4_2.md",
+      "bytes": 78582,
+      "sha256": "5ACE6FF3B04B50A7D6B0D027184457DD584DF7CA6A29E669E12685E6E94D0BD1",
+      "driveFileId": "1-pnmW2DC5-VzaB_L4c2ZOt0sSEXdbGHY",
+      "driveUrl": "https://drive.google.com/file/d/1-pnmW2DC5-VzaB_L4c2ZOt0sSEXdbGHY/view?usp=drivesdk",
+      "driveModifiedAt": "2026-09-05T01:54:23.535Z"
+    }
+  ]
+}

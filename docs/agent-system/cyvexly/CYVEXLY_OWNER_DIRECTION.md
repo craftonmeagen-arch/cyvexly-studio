@@ -123,122 +123,13 @@ legal copy, or only form UI was finished.
 
 Do not create, configure, enable, or modify recurring role schedulers or automations unless later authenticated Owner direction explicitly authorizes them and provides the needed cadence/metadata.
 
-## Live Home video direction 2026-08-31-06
+## Earlier accepted media history
 
-**Status:** FULFILLED — ROUND 15 PUBLIC DEPLOYMENT PROOF
-**Source:** Owner via Codex active conversation
-**Recorded:** 2026-08-31 America/New_York
-
-> “it still didn't show up on the website... the video”
-
-Round 15 traced the discrepancy to source/deployment identity rather than the
-video component: GitHub/Render were still serving repository default branch
-`main` at pre-video commit `c13ae7a`, while the accepted Builder history had
-been pushed only to `master` at `57480e3`. Because `main` had zero independent
-commits and was a strict ancestor, the Builder fast-forwarded it without force,
-then renamed the local branch to track `origin/main` so ordinary future pushes
-reach the deployment branch. The public Render site changed within about 51
-seconds and now visibly serves the 30-second showcase at desktop and phone
-widths. Public MIME/range delivery, real playback, Pause/Play, loop boundary,
-reduced-motion/data-saver holds, explicit recovery, responsive containment,
-route smoke, console, lint, build, and TypeScript all pass. Durable proof is
-indexed in `builder/evidence/INDEX.md`. No scheduler or automation was touched.
-
-## Home hero video scale and placement direction 2026-08-31-07
-
-**Status:** IMPLEMENTED — ROUND 16 PUBLIC DEPLOYMENT/OWNER REVIEW PENDING
-**Source:** Owner via Codex side conversation
-**Recorded:** 2026-08-31 America/New_York
-
-> “I like your version better and the size . add the mockup and your ur description. the video in the actual looks like a thumbnail and not like what you have. add all this to owners direction”
-
-Follow-up material and contrast direction from the Owner:
-
-> “also there is a translucent background of some kind that you have. we need something like that to give a futuristic glassy blue look.”
-
-> “yes but it looks like that messes with the contrast a bit. so maybe lighter? grayish?”
-
-> “ok sorry maybe just ligher blue than the first”
-
-> “yeah that works. ok add that as the mockup and remove the other one you have in place. explain in words my wishes in owners direction”
-
-The live Home video currently reads too much like a thumbnail. Replace that
-small-media impression with the larger, integrated hero-reel treatment shown
-in the Owner reference below. This direction concerns the video composition,
-scale, hierarchy, and surrounding glass treatment; it does not authorize
-copying image-generation text artifacts, invented interfaces, brands, claims,
-scores, or metrics into production.
-
-![Owner reference for the larger integrated Home hero video](../../../mockups/05-home-hero-video-owner-direction.png)
-
-Durable visual reference:
-`mockups/05-home-hero-video-owner-direction.png`.
-
-This file now contains the Owner-approved lighter-blue version. It replaces the
-earlier reference at the same path; the earlier, more neutral mockup is not an
-alternative direction and must not be treated as co-equal guidance.
-
-Implementation direction:
-
-- Place the video in the Home hero's primary visual/media position beside the
-  headline and actions, rather than in a separate strip above the navigation or
-  as a small card that resembles a thumbnail.
-- On desktop, give the video approximately 46–50% of the hero width in a
-  substantial 16:9 smoke-glass player. Its height and presence should visually
-  balance the full message-and-actions column.
-- Preserve the headline, supporting message, and unmistakable primary CTA in
-  the left column. The video must demonstrate capability without competing
-  with or covering that first-minute information.
-- Integrate the player into the arctic cyber-blue hero atmosphere with a crisp
-  frosted edge, restrained depth, and spectral glow. It should feel like a
-  premium Cyvexly studio reel, not a banner advertisement or generic embedded
-  player.
-- Give the Home hero a clearly visible translucent futuristic-glass background,
-  not merely a flat blue gradient. Use overlapping frosted panes, believable
-  backdrop blur and refraction, soft depth, thin illuminated edges, fine grids,
-  and restrained signal traces so the page feels dimensional and technologically
-  advanced.
-- The accepted background color is light ice blue: visibly bluer than neutral
-  pearl gray, but appreciably lighter and less saturated than the first blue
-  exploration. Do not wash the full copy area in saturated royal blue or cyan,
-  and do not reduce the result to an almost colorless gray treatment.
-- Protect reading contrast with a quiet translucent blue-white glass field
-  behind the headline, supporting copy, and actions. Background lines and
-  refractions beneath that field should be faint and softly blurred; headline
-  text remains near-black midnight slate and body text remains dark graphite.
-- Concentrate the strongest cyber blue in the primary CTA, thin glass edges,
-  small signal accents, and the video rim/glow. Navigation and the credibility
-  rail may reveal the pale-blue atmosphere through frosted glass, but their text
-  and controls must remain immediately readable.
-- Retain an intentional poster frame plus a clear Pause/Play control. If the
-  reel autoplays, it must be muted, inline, and looping; never autoplay audible
-  media.
-- For reduced-motion or playback failure, hold the designed poster frame while
-  keeping the page message and actions complete without motion. If spoken or
-  meaning-carrying audio is later introduced, provide captions and a transcript.
-- On mobile, stack the video at full available content width immediately below
-  the hero actions and above the credibility strip. It should remain prominent
-  while avoiding horizontal overflow or excessive first-screen displacement.
-- Keep the credibility strip directly after the hero and let Selected Work
-  remain the next major proof section.
-
-The reference was created from the written Cyvexly vision rather than from the
-current website or earlier mockups. Its intended hierarchy is: compact glass
-navigation; outcome-led copy and CTAs on the left; a large playable studio reel
-on the right; then credibility and Selected Work. Small generated lettering in
-the image is non-authoritative; canonical product copy and truthful content
-requirements continue to govern implementation.
-
-Round 16 implements this direction in product commit `14e12d4`: the Home-only
-stage expands to approximately 1440px, the desktop reel grows from 528px to
-726.56px in the measured 1440 viewport, the copy receives its own quiet
-translucent field, and the player receives a light-ice-blue glass bezel plus
-real playback progress. Exact desktop/tablet/phone renders, breakpoint
-geometry, playback/loop/Pause/Play, reduced-motion, semantics, containment,
-console, route, lint, build, and TypeScript proof are indexed in
-`builder/evidence/INDEX.md`. The accepted real video remains unchanged; no
-invented mockup screens or generated claims were copied. The implementation is
-awaiting Owner review on the public site.
+The fulfilled live-video recovery and original hero-scale direction are preserved in
+docs/archive/role-migration-2026-09-05/CYVEXLY_OWNER_DIRECTION.md.
+Keep the accepted Home video asset, integrated large hero placement and reduced-motion/
+data-saving behavior. The later playback-chrome and full-height visual directions below
+remain active. Do not restore superseded controls from historical media instructions.
 
 ## Home showcase playback-chrome direction 2026-08-31-08
 
@@ -476,3 +367,11 @@ phones, secondary density is removed rather than compressing noise beneath
 copy. Product facts, routes, forms, navigation, media source, `0.75×` playback,
 and removed playback chrome remain unchanged. Local visible-browser proof does
 not constitute Owner acceptance or public-deployment proof.
+
+## Rule-system migration — 2026-09-05
+
+Owner request: “ok fix it. and we need to remove the older rules so there are no confusion”.
+This authorizes synchronizing the eight NEW AI BUILD RULES packets, replacing outdated
+role orientations/helpers, removing superseded rule files, and completing the six-role
+Cyvexly environment. It does not authorize scheduler changes or a product release.
+See CYVEXLY_TEAM_START_HERE.md and CYVEXLY_ROLE_RULES_MAPPING.md.

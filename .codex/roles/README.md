@@ -1,18 +1,17 @@
 # Cyvexly role environment
+Start with docs/agent-system/cyvexly/CYVEXLY_TEAM_START_HERE.md.
+Six project agent definitions and root orientations use one current imported rule set.
+Role prompts inherit the Owner-selected model. This environment does not create schedules.
 
-This directory contains project-scoped lifecycle helpers for the Owner-approved Builder, Supervisor, Auditor, and Council roles.
+PowerShell 7 helpers:
+- Initialize-ReviewEnvironment.ps1: create missing external directories/seed memory; preserve existing records.
+- Start-ReviewRound.ps1: archive committed product source into an external snapshot/runtime.
+- Register-RoleProcess.ps1: record run-created PID and start-time identity.
+- Publish-RoleReport.ps1: verify source/review identity, preserve prior reports and unread inbox items.
+- Complete-ReviewRound.ps1: validate publication, paths, unique work, junctions and processes before cleanup.
+- Test-HotFileCaps.ps1: check the bounded Cyvexly operating files.
+- Test-RoleSetup.ps1: check rules, orientations, agent definitions, helpers and retired-file removal.
+- tests/Test-ReviewLifecycle.ps1 (relative to this directory): isolated fixture tests; never starts a product role.
 
-The role definitions are active and runnable by name. No recurring scheduler or automation was created.
-
-## Helpers
-
-- `scripts/Claim-BuilderLock.ps1` atomically creates the Builder lock.
-- `scripts/Release-BuilderLock.ps1` validates and deletes that lock as the caller's final repository action.
-- `scripts/Start-ReviewRound.ps1` atomically guards an Auditor or Council round and creates its isolated snapshot/runtime.
-- `scripts/Register-RoleProcess.ps1` records a role-owned process with identity evidence.
-- `scripts/Publish-RoleReport.ps1` collision-safely publishes an Auditor or Council report.
-- `scripts/Complete-ReviewRound.ps1` stops only manifest-proven role processes and removes disposable reviewer resources.
-- `scripts/Test-HotFileCaps.ps1` validates current operating-file size ceilings.
-
-Read the matching root orientation document before using any helper. The orientation document and governing packet determine the required order.
-
+Run manifests are resource inventories, never role locks. Named report transaction mutexes
+only protect atomic publication; they do not schedule, start, or stop a role.

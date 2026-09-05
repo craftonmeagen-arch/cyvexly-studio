@@ -1,0 +1,2 @@
+# Preserve the verified Drive rule bytes on every checkout.
+docs/agent-system/cyvexly/rules/*.md -text

@@ -265,7 +265,7 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
 
 ## Resolved round 1
 
-- Fixed `.codex/roles/scripts/Claim-BuilderLock.ps1` failing to parse for
+- Fixed the former Builder-lock helper (retired in the 2026-09-05 migration) failing to parse for
   every invocation (not a lock-contention condition) because the file had no
   UTF-8 BOM and its embedded em-dash was misread; added a BOM. See
   `CYVEXLY_WATCH.md`.

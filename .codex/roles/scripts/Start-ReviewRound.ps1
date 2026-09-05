@@ -1,143 +1,44 @@
+#requires -Version 7.0
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true)]
-    [ValidateSet('auditor', 'council')]
-    [string]$Role,
-
-    [Parameter(Mandatory = $true)]
-    [ValidatePattern('^[A-Za-z0-9][A-Za-z0-9._-]{0,80}$')]
-    [string]$RoundId
+    [Parameter(Mandatory)][ValidateSet('auditor','council','functional')][string]$Role,
+    [Parameter(Mandatory)][string]$RoundId,
+    [Parameter(Mandatory)][ValidatePattern('^[A-Za-z0-9][A-Za-z0-9/._-]*$')][string]$SourceRef
 )
-
-Set-StrictMode -Version Latest
-$ErrorActionPreference = 'Stop'
-
-$roleName = $Role.ToLowerInvariant()
-$workspace = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..\..'))
-$stateRoot = Join-Path $workspace '.codex\role-state'
-$roleRuntimeRoot = Join-Path $workspace ('.codex\runtime\' + $roleName)
-$guardPath = Join-Path $stateRoot ($roleName + '.active.json')
-$roundRoot = Join-Path $roleRuntimeRoot $RoundId
-$snapshotRoot = Join-Path $roundRoot 'snapshot'
-$runtimeRoot = Join-Path $roundRoot 'runtime'
-$manifestPath = Join-Path $roundRoot 'processes.json'
-$identityPath = Join-Path $roundRoot 'identity.json'
-$nonce = [guid]::NewGuid().ToString('N')
-$port = if ($roleName -eq 'auditor') { 5273 } else { 5373 }
-
-New-Item -ItemType Directory -Force -Path $stateRoot | Out-Null
-New-Item -ItemType Directory -Force -Path $roleRuntimeRoot | Out-Null
-
-$guardPayload = [ordered]@{
-    schema = 1
-    role = $roleName
-    roundId = $RoundId
-    nonce = $nonce
-    startedAtUtc = [DateTime]::UtcNow.ToString('o')
-    dispatcherPid = $PID
-    roundRoot = $roundRoot
-    snapshotRoot = $snapshotRoot
-    runtimeRoot = $runtimeRoot
-    manifestPath = $manifestPath
-    port = $port
+. "$PSScriptRoot/Role-Common.ps1"
+$layout=Get-ReviewLayout $Role $RoundId; Assert-NoReparse $layout.reviewRoot
+if (Test-Path -LiteralPath $layout.run) { throw 'Run ID already has resources; use a fresh ID. No role lock was checked.' }
+$sha=(& git -C $layout.workspace rev-parse --verify "$SourceRef^{commit}" | Select-Object -First 1)
+if ($LASTEXITCODE -ne 0 -or $sha -notmatch '^[a-f0-9]{40}$') { throw 'Accepted source ref must resolve to a commit.' }
+$entries=@(& git -C $layout.workspace ls-tree -r $sha)
+if ($LASTEXITCODE -ne 0) { throw 'Cannot enumerate source commit.' }
+$allowed=@('src','public','package.json','pnpm-lock.yaml','next.config.ts','next.config.js','next.config.mjs',
+    'tsconfig.json','postcss.config.mjs','eslint.config.mjs','eslint.config.js')
+$selected=@($entries | Where-Object { ($_ -split "\t",2)[1].Split('/')[0] -in $allowed })
+if (@($selected | Where-Object { $_ -match '^(120000|160000) ' }).Count) { throw 'Source symlinks/submodules require explicit isolated provisioning.' }
+$paths=@($selected | ForEach-Object { ($_ -split "\t",2)[1] })
+if ('package.json' -notin $paths -or 'pnpm-lock.yaml' -notin $paths) { throw 'Snapshot requires tracked package.json and pnpm-lock.yaml.' }
+if (@($paths | Where-Object { $_ -match '(^|/)\.env($|\.)' }).Count) { throw 'Tracked environment file detected; do not copy credentials.' }
+& "$PSScriptRoot/Initialize-ReviewEnvironment.ps1" | Out-Null
+foreach ($dir in @($layout.run,$layout.snapshot,$layout.runtime,$layout.logs,$layout.browser,$layout.evidence)) {
+    Assert-NoReparse $dir; New-Item -ItemType Directory -Path $dir -Force | Out-Null
 }
-
-$guardBytes = [System.Text.UTF8Encoding]::new($false).GetBytes(($guardPayload | ConvertTo-Json -Depth 6))
-$guardStream = $null
-
-try {
-    $guardStream = [System.IO.File]::Open(
-        $guardPath,
-        [System.IO.FileMode]::CreateNew,
-        [System.IO.FileAccess]::Write,
-        [System.IO.FileShare]::None
-    )
-    $guardStream.Write($guardBytes, 0, $guardBytes.Length)
-    $guardStream.Flush($true)
+$identity=[ordered]@{
+    schema=2;role=$Role;roundId=$RoundId;runRoot=$layout.run;sourceWorkspace=$layout.workspace
+    sourceHead=$sha;createdAtUtc=[DateTime]::UtcNow.ToString('o');createdAtUtcTicks=[DateTime]::UtcNow.Ticks;port=$layout.port
+    snapshotRoot=$layout.snapshot;runtimeRoot=$layout.runtime;logRoot=$layout.logs;browserRoot=$layout.browser
+    evidenceRoot=$layout.evidence;expectedCurrentHash=(Get-RoleHash $layout.current)
+    sourcePaths=$paths;resourceRecordOnly=$true
 }
-catch [System.IO.IOException] {
-    [Console]::Error.WriteLine("A matching $roleName round is already active. Exit unchanged.")
-    exit 18
-}
-finally {
-    if ($null -ne $guardStream) {
-        $guardStream.Dispose()
-    }
-}
-
-try {
-    $verifiedGuard = Get-Content -LiteralPath $guardPath -Raw | ConvertFrom-Json
-    if ($verifiedGuard.nonce -ne $nonce -or $verifiedGuard.roundId -ne $RoundId) {
-        throw 'Role guard read-back verification failed.'
-    }
-
-    New-Item -ItemType Directory -Path $snapshotRoot -ErrorAction Stop | Out-Null
-    New-Item -ItemType Directory -Path $runtimeRoot -ErrorAction Stop | Out-Null
-
-    $excludedRootNames = @('.git', '.codex', '.engine-lock', 'node_modules', 'dist', 'build', 'coverage', 'test-results', 'playwright-report')
-    foreach ($item in Get-ChildItem -LiteralPath $workspace -Force) {
-        if ($excludedRootNames -contains $item.Name) {
-            continue
-        }
-        Copy-Item -LiteralPath $item.FullName -Destination $snapshotRoot -Recurse -Force
-        Copy-Item -LiteralPath $item.FullName -Destination $runtimeRoot -Recurse -Force
-    }
-
-    foreach ($file in Get-ChildItem -LiteralPath $snapshotRoot -Recurse -Force -File) {
-        $file.IsReadOnly = $true
-    }
-
-    [System.IO.File]::WriteAllText($manifestPath, '[]', [System.Text.UTF8Encoding]::new($false))
-
-    $gitState = 'NO_GIT_WORKTREE'
-    $head = $null
-    $dirtyFingerprint = $null
-    $gitCommand = Get-Command git -ErrorAction SilentlyContinue
-    if ($null -ne $gitCommand) {
-        $inside = (& $gitCommand.Source -C $workspace rev-parse --is-inside-work-tree 2>$null | Select-Object -First 1)
-        if ($inside -eq 'true') {
-            $gitState = 'GIT_WORKTREE'
-            $head = (& $gitCommand.Source -C $workspace rev-parse HEAD 2>$null | Select-Object -First 1)
-            $status = (& $gitCommand.Source -C $workspace status --porcelain=v1 2>$null) -join "`n"
-            $sha = [System.Security.Cryptography.SHA256]::Create()
-            try {
-                $dirtyFingerprint = [Convert]::ToHexString($sha.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($status)))
-            }
-            finally {
-                $sha.Dispose()
-            }
-        }
-    }
-
-    $identity = [ordered]@{
-        schema = 1
-        role = $roleName
-        roundId = $RoundId
-        nonce = $nonce
-        createdAtUtc = [DateTime]::UtcNow.ToString('o')
-        sourceWorkspace = $workspace
-        sourceGitState = $gitState
-        sourceHead = $head
-        sourceDirtyFingerprint = $dirtyFingerprint
-        snapshotRoot = $snapshotRoot
-        runtimeRoot = $runtimeRoot
-        port = $port
-    }
-    [System.IO.File]::WriteAllText($identityPath, ($identity | ConvertTo-Json -Depth 6), [System.Text.UTF8Encoding]::new($false))
-    $identity | ConvertTo-Json -Depth 6
-}
-catch {
-    $roleBaseResolved = [System.IO.Path]::GetFullPath($roleRuntimeRoot).TrimEnd('\') + '\'
-    $roundResolved = [System.IO.Path]::GetFullPath($roundRoot)
-    if ($roundResolved.StartsWith($roleBaseResolved, [System.StringComparison]::OrdinalIgnoreCase) -and (Test-Path -LiteralPath $roundResolved)) {
-        Get-ChildItem -LiteralPath $roundResolved -Recurse -Force -File -ErrorAction SilentlyContinue | ForEach-Object { $_.IsReadOnly = $false }
-        Remove-Item -LiteralPath $roundResolved -Recurse -Force -ErrorAction SilentlyContinue
-    }
-    if (Test-Path -LiteralPath $guardPath -PathType Leaf) {
-        $currentGuard = Get-Content -LiteralPath $guardPath -Raw | ConvertFrom-Json
-        if ($currentGuard.nonce -eq $nonce) {
-            Remove-Item -LiteralPath $guardPath -Force
-        }
-    }
-    throw
-}
+Write-RoleJson $layout.identity $identity; Write-RoleJson $layout.processes @()
+$tar=Join-Path $layout.run 'source.tar'
+$rootPaths=@($allowed | Where-Object { $_ -in @($paths | ForEach-Object { $_.Split('/')[0] }) })
+& git -C $layout.workspace archive --format=tar "--output=$tar" $sha -- @rootPaths
+if ($LASTEXITCODE -ne 0) { throw 'Source archive failed; preserve this run for diagnosis.' }
+& tar -xf $tar -C $layout.snapshot
+if ($LASTEXITCODE -ne 0) { throw 'Snapshot extraction failed.' }
+& tar -xf $tar -C $layout.runtime
+if ($LASTEXITCODE -ne 0) { throw 'Runtime extraction failed.' }
+Remove-Item -LiteralPath $tar -Force; Assert-NoReparse $layout.snapshot -Recurse
+foreach ($file in Get-ChildItem -LiteralPath $layout.snapshot -Recurse -File -Force) { $file.IsReadOnly=$true }
+$identity | ConvertTo-Json -Depth 8

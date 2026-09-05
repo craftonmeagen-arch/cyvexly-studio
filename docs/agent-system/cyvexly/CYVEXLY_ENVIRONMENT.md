@@ -1,58 +1,23 @@
 # Cyvexly Environment
+Current role setup: 2026-09-05. See CYVEXLY_ROLE_RULES_MAPPING.md for authority and paths.
 
-## Sandbox and roots
+- Product root C:/app projects/website; main tracks origin/main.
+- Builder/Supervisor port 5173.
+- Independent review root C:/app projects/website-independent-review.
+- Auditor 5273; Council 5373; Functional Smoke 5473.
+- Review snapshots, runtimes, browser profiles, memory, reports and inbox are external.
+- Source stack: Next.js 16, React 19, TypeScript, Tailwind 4; pinned pnpm in package.json.
+- Install pnpm install --frozen-lockfile. Dev pnpm exec next dev --port <owned-port>.
+- Checks pnpm exec tsc --noEmit, pnpm run lint, pnpm run build.
+- Use PowerShell 7 for lifecycle helpers. Start background processes hidden and register
+  each owned server/worker/browser process before cleanup.
+- Reviewers install dependencies in their disposable runtime; never use Builder caches,
+  credentials or browser state. Only run-created resources are cleanup candidates.
+- Render preview https://cyvexly-studio.onrender.com/; production cyvexly.com remains
+  subject to Chunk 5 DNS/HTTPS/canonical verification.
+- NEXT_PUBLIC_SITE_INDEXABLE stays false/unset until the Owner authorizes final indexing
+  after domain, legal, forms, metadata, and visual review. Domain connection alone is insufficient.
+- next.config.ts agentRules:false remains a product setting; see CYVEXLY_WATCH.md.
 
-- Sandbox root: `C:/app projects/website`
-- Builder root: sandbox root
-- Builder lock: `.engine-lock`
-- Builder evidence: `docs/agent-system/cyvexly/builder/evidence/`
-- Auditor disposable root: `.codex/runtime/auditor/`
-- Auditor durable evidence: `docs/agent-system/cyvexly/auditor/evidence/`
-- Council disposable root: `.codex/runtime/council/`
-- Council durable evidence: `docs/agent-system/cyvexly/council/evidence/`
-- Council research: `docs/agent-system/cyvexly/council/research/`
-- Role identity/guard state: `.codex/role-state/`
-
-## Ports
-
-- Builder/Supervisor: `5173`
-- Auditor: `5273`
-- Council: `5373`
-
-## Lifecycle
-
-- Builder claim: `.codex/roles/scripts/Claim-BuilderLock.ps1`
-- Builder release: `.codex/roles/scripts/Release-BuilderLock.ps1`
-- Reviewer start: `.codex/roles/scripts/Start-ReviewRound.ps1`
-- Reviewer process registration: `.codex/roles/scripts/Register-RoleProcess.ps1`
-- Reviewer publish: `.codex/roles/scripts/Publish-RoleReport.ps1`
-- Reviewer cleanup: `.codex/roles/scripts/Complete-ReviewRound.ps1`
-
-## Product runtime (established round 1)
-
-- Stack: Next.js 16 (App Router, Turbopack), React 19, TypeScript, Tailwind
-  CSS v4. Package manager: pnpm (`packageManager` pinned in `package.json`).
-- Source/deployment branch: local `main` tracks `origin/main`. The public Render
-  service at `https://cyvexly-studio.onrender.com/` deploys this branch. Round
-  15 proved that pushing only the historical `master` branch leaves the public
-  site stale even when GitHub contains the commits; use `main` for accepted
-  source and verify the public route after a deployment-relevant push. Remote
-  `master` is retained only as a same-source historical branch and is not the
-  Builder upstream.
-- Install: `pnpm install` (use `CI=true pnpm install` if it prompts to
-  recreate `node_modules` after the folder was moved/copied — pnpm's linked
-  store references can break across a move).
-- Dev server: `pnpm exec next dev --port 5173` (the Builder port
-  reservation). `.claude/launch.json` defines a `cyvexly-builder`
-  configuration for the same thing, for use in attended sessions where
-  `preview_start({name: "cyvexly-builder"})` is permitted.
-- Build/verify: `pnpm run build`, `pnpm exec tsc --noEmit`, `pnpm run lint`.
-- `next.config.ts` sets `agentRules: false` — do not remove this; see
-  `CYVEXLY_WATCH.md` for why.
-- `NEXT_PUBLIC_SITE_INDEXABLE` (round 3): unset/anything but the literal
-  string `"true"` = the whole site emits `noindex, nofollow` and
-  `robots.txt` disallows all crawlers (the safe default for a temporary
-  preview domain, per vision §15). Set this env var to `true` on the
-  production deploy once the real domain is connected, or the launched
-  site will never get indexed. See `src/app/layout.tsx` and
-  `src/app/robots.ts`.
+Current runtime tools must be verified each invocation. Historical unattended tool failures
+are diagnostic context, not permanent claims that attended visual proof is unavailable.

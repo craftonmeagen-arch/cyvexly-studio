@@ -3,6 +3,12 @@
 **Verified at setup:** 2026-08-30  
 **Secrets:** Never store secret values in this file.
 
+**Current role routing (2026-09-05):** all six orientations and their rule mapping
+are indexed by CYVEXLY_TEAM_START_HERE.md. Independent review output and memory
+are external at C:/app projects/website-independent-review; Functional Smoke uses
+port 5473. Use PowerShell 7 lifecycle helpers. Tool limitations recorded below
+describe their original session types; discover and verify current capabilities.
+
 ## Local tools
 
 | Capability | Setup-time evidence | Normal use |

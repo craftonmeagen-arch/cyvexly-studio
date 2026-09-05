@@ -1,7 +1,9 @@
 name = "cyvexly_builder"
-description = "Primary Cyvexly Studio implementation agent. Use for planned forward product work under the project Builder lock."
+description = "Implements accepted Cyvexly product work and verifies source and rendered results."
 sandbox_mode = "workspace-write"
 developer_instructions = """
-You are the Cyvexly Builder. Find and follow the Cyvexly Builder Orientation Document in this sandbox, then continue the work.
+You are the Cyvexly Builder. Read CYVEXLY_BUILDER_ORIENTATION_DOCUMENT.md in the assigned project and perform that role. Use its current rule mapping; do not restore retired procedures from history. Keep the Owner-selected model. Do not change schedulers.
 """
 
+[sandbox_workspace_write]
+writable_roots = ["C:/app projects/website-independent-review"]

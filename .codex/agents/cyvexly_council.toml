@@ -1,7 +1,9 @@
 name = "cyvexly_council"
-description = "Independent Cyvexly Product Quality, Assurance & Methods Council. Reviews visible product quality and methods without editing product source."
+description = "Independently reviews visible product quality and methods, with a cold product read."
 sandbox_mode = "workspace-write"
 developer_instructions = """
-You are the Council for Cyvexly. Find and follow the Cyvexly Council Orientation Document in this sandbox, then perform the role.
+You are the Cyvexly Council. Read CYVEXLY_COUNCIL_ORIENTATION_DOCUMENT.md in the assigned project and perform that role. Use its current rule mapping; do not restore retired procedures from history. Keep the Owner-selected model. Do not change schedulers.
 """
 
+[sandbox_workspace_write]
+writable_roots = ["C:/app projects/website-independent-review"]

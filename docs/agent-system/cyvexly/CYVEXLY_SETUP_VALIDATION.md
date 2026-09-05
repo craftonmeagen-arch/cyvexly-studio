@@ -1,38 +1,65 @@
-# Cyvexly Role-System Setup Validation
+# Cyvexly role setup validation
+**Validated:** 2026-09-05. **Scope:** Owner-authorized rule and environment migration.
+This is setup validation, not a Builder round, independent product review, deployment,
+or final launch approval. No scheduler was created or changed by this migration.
 
-**Validated:** 2026-08-30  
-**Scope:** Environment setup only; no role round, product work, review, publication, or scheduler was started.
+## Active rule source
+All eight supplied Markdown files matched refreshed content from the Google Drive
+NEW AI BUILD RULES folder after BOM/line-ending normalization. The installed copies
+are byte-identical to the supplied downloads. File IDs, timestamps, sizes and SHA-256
+checksums are in rules/SYNC_MANIFEST.json. Git attributes preserve those bytes.
 
-## Source packet integrity
+The four superseded root packets and two obsolete Builder claim/release helpers
+were removed from the working tree. No old packet was copied into an archive.
+Historical product records remain evidence; root orientations and the current mapping
+explicitly retire their old launch, timing and coordination procedures.
 
-The four files copied from `G:/My Drive/Finalized autonomous build 08 2026/` matched their sources by SHA-256:
+## Six role entrances
+Builder, Supervisor, Auditor, Council, PM and Functional Smoke each have a root
+orientation and project-scoped agent TOML. Seven TOML files (six agents plus project
+config) parsed successfully. Models/reasoning are not pinned. All six roles can be
+invoked directly by the Owner's natural-language prompt in this project.
 
-| File | SHA-256 |
-| --- | --- |
-| `Autonomous_Build_Reasoning_Guidelines_v23_2_DRAFT_Universal_Sandbox_Orientation.md` | `DAE0BF66875EB60F7B33E18CB6F7DB3EF91B7C1CD89F5AF270B9D2D01414C209` |
-| `EDUAILENZ_BUILDER_SUPERVISOR_PROMPT.md` | `465C49D2A07EBEE23AE15E11787D4EC2DF2E9DBD3C240096393B37BA8372F2CF` |
-| `Independent_Forensic_Auditor_Guidelines_v5_0_DRAFT_Universal_Sandbox_Orientation.md` | `B9027F899A8C332812A014B75993D81ED77BB351EED43BD1A6C0E5724A64B0AB` |
-| `Product_Quality_Assurance_and_Methods_Council_Guidelines_v5_0_DRAFT_Universal_Sandbox_Orientation.md` | `831E9CB2019301A5E2705769BC2D5E3AB6685C5D8579E6A9D2C20E69F9DE5564` |
+Supervisor targets recent Builder work, coordinates shared-file fixes and never leads
+features. Council uses its binding cold product read before the Builder narrative.
+PM has explicit bounded coordination authority; its overview supplies no separate PM
+packet. Functional Smoke has a Cyvexly-specific role definition derived from the shared
+review protocol and the Auditor evidence floors.
 
-## Configuration validation
+Independent review output is external at C:/app projects/website-independent-review.
+Existing records and active runs were preserved. The external Auditor entry redirects
+to the single project orientation rather than keeping a divergent copy.
 
-- Four project-scoped custom-agent TOML files parsed successfully.
-- Required custom-agent fields (`name`, `description`, and `developer_instructions`) are present.
-- All seven PowerShell lifecycle helpers parsed successfully.
-- Every configured Builder, Auditor, and Council hot-path file was within its packet's UTF-8 size ceiling.
-- The root Builder lock was atomically claimed, read back, identity-verified, overlap-denied, and released.
-- Auditor and Council same-role guards denied overlapping dispatches.
-- Fresh reviewer snapshots and paired writable runtimes were created under their exact role-owned roots.
-- Snapshot files were marked read-only; runtime copies remained disposable.
-- Auditor and Council report/current/archive/inbox routes validated without publishing a fake review.
-- A hidden test process was registered with PID and start-time identity, stopped only after that identity matched, and cleaned with its disposable round root.
-- No `.engine-lock`, active role guard, round runtime, test process, or uncited setup capture remained after validation.
+## Verification
+- Test-RoleSetup.ps1 passes: 8 packet hashes/sizes, 6 orientations/configurations,
+  6 retired files absent, 8 PowerShell helpers parse, current operating-file caps pass.
+- Test-ReviewLifecycle.ps1 passes 48 isolated fixture checks for all three reviewers:
+  exact committed-source capture, dirty Builder/source and environment exclusion,
+  immutable snapshot/writable runtime, traversal refusal, publication-before-cleanup,
+  unique-work preservation, mismatched PID protection, owned-process stop,
+  external junction refusal, safe internal package-junction cleanup, and stale report
+  refusal with candidate/unread findings preserved.
+- Synthetic test roots and their owned processes were removed. Tests never published
+  fixture results as actual Cyvexly product reviews.
+- Six oversized operating documents were compacted without losing evidence; their
+  complete former contents are under docs/archive/role-migration-2026-09-05/.
+- Product source/assets were not changed. No public visual, real email delivery, DNS,
+  payment, indexing, or complete Chunk 5 validation is claimed by this setup work.
 
-## Honest validation gap
+Commands:
+- pwsh -NoProfile -File .codex/roles/scripts/Test-RoleSetup.ps1
+- pwsh -NoProfile -File .codex/roles/tests/Test-ReviewLifecycle.ps1
 
-Visible browser use and product-runtime preparation could not be verified because no runnable application, package manifest, runtime command, or Git repository existed in the sandbox at setup time. This is not represented as a product failure. The first Builder must establish the application baseline. Auditor and Council must verify isolated runtime launch and real in-app Browser use before publishing their first product review.
+## Concurrent-work boundary
+A separate environment repair added scripts/start-cyvexly-auditor-round.ps1 and an
+Auditor environment recovery record during this task. Those changes were preserved.
+An independently started Auditor run was observed under the external runs directory;
+this migration did not stop or clean it. Its actual status and any scheduler claims
+belong to that invocation, not this setup validation.
 
-## Automation status
+Start instructions are in CYVEXLY_TEAM_START_HERE.md. Newly created tasks load the
+updated agent definitions; an already-running task must reread its current orientation.
 
-No scheduler, recurring automation, cadence, or background role job was created, in accordance with explicit Owner direction.
-
+Configuration fields were checked against official OpenAI documentation:
+https://learn.chatgpt.com/docs/agent-configuration/subagents and
+https://learn.chatgpt.com/docs/config-file/config-reference.

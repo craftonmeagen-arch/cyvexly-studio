@@ -5,7 +5,28 @@ dated 2026-09-04. Do not use older setup-state claims such as “Git is not
 initialized,” “no product round has started,” or “the first Builder must create
 the chunk map.” The project is established, versioned, and deployed.
 
-## Current authority and next mission
+## Role entry and current rule authority
+
+Owner setup direction 2026-09-04 replaces the older role packets and lock-based
+launch procedures with the eight unchanged files in
+`docs/agent-system/cyvexly/rules/`. Read
+`docs/agent-system/cyvexly/CYVEXLY_TEAM_START_HERE.md` and the matching root
+orientation: Builder, Supervisor, Auditor, Council, PM, or Functional Smoke Auditor.
+`docs/agent-system/cyvexly/CYVEXLY_ROLE_RULES_MAPPING.md` supplies exact Cyvexly
+paths and applicability for shared rules containing other-product examples.
+Older reports and Git history are evidence only, never active launch instructions.
+Do not claim/release repository locks or exit because an old marker exists.
+Scheduler-managed runs use scheduler non-overlap; manual starts must avoid an
+already-running copy of the same role using live task status. No scheduler
+change is authorized by this environment migration.
+
+Independent reviewers write new reports, memory, evidence, and runtime output
+only under `C:/app projects/website-independent-review`. Read the review index
+for current intake. Council must form its cold product view before reading the
+Builder narrative; the reading list below is a required set, not an override of
+that Council ordering. Role identity and authority do not depend on the model.
+
+## Current product mission
 
 The next major product chunk is **Chunk 5 — United States Launch Completion &
 Business Operations**.

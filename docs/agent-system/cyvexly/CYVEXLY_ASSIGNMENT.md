@@ -1,11 +1,9 @@
 # Cyvexly Assignment
+Active project: Cyvexly Studio website, C:/app projects/website.
+The product is established, versioned on main and deployed to Render.
+Current mission is integrated Chunk 5 under Owner direction 2026-09-04-14 and vision §17.
 
-**Lane:** Cyvexly  
-**Status:** ACTIVE PROJECT LANE
-
-This lane owns work for the Cyvexly Studio website inside this sandbox. Product scope is bounded by current authenticated Owner direction, the working vision index, current source truth, and future explicit assignments.
-
-Environment setup itself does not authorize product implementation, deployment, publishing, purchases, external account changes, scheduler creation, or scheduler activation. The first Builder round must establish the actual repository/source baseline before selecting product work.
-
-Cross-role boundaries are defined in `AGENTS.md` and the four root orientation documents.
-
+The Owner authorized this role-system repair and removal of superseded rules. It does not
+grant release approval, provider purchases, payment integration, secret access, or scheduler
+changes. Six roles and exact boundaries are listed in CYVEXLY_TEAM_START_HERE.md and
+CYVEXLY_ROLE_RULES_MAPPING.md. Independent review output is external to the product tree.

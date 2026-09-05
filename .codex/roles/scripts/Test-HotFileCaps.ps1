@@ -11,6 +11,14 @@ $caps = [ordered]@{
     'CYVEXLY_BUILDER_ORIENTATION_DOCUMENT.md' = 8192
     'CYVEXLY_AUDITOR_ORIENTATION_DOCUMENT.md' = 8192
     'CYVEXLY_COUNCIL_ORIENTATION_DOCUMENT.md' = 8192
+    'CYVEXLY_SUPERVISOR_ORIENTATION_DOCUMENT.md' = 8192
+    'CYVEXLY_PM_ORIENTATION_DOCUMENT.md' = 8192
+    'CYVEXLY_FUNCTIONAL_SMOKE_AUDITOR_ORIENTATION_DOCUMENT.md' = 8192
+    'docs/agent-system/cyvexly/CYVEXLY_TEAM_START_HERE.md' = 8192
+    'docs/agent-system/cyvexly/CYVEXLY_ROLE_RULES_MAPPING.md' = 12288
+    'docs/agent-system/cyvexly/CYVEXLY_PM_CURRENT_STATE.md' = 8192
+    'docs/agent-system/cyvexly/CYVEXLY_NEXT_PM_HANDOFF.md' = 12288
+    'docs/agent-system/cyvexly/CYVEXLY_FUNCTIONAL_PM_PROMPT.md' = 8192
     'AGENTS.md' = 24576
     'docs/agent-system/cyvexly/CYVEXLY_ASSIGNMENT.md' = 12288
     'docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md' = 24576
@@ -70,4 +78,3 @@ if ($violations.Count -gt 0) {
     $violations | ForEach-Object { Write-Error $_ }
     exit 1
 }
-

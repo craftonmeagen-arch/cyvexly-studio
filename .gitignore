@@ -1,8 +1,4 @@
-.engine-lock
 .codex/runtime/
-.codex/role-state/*.active.json
-.codex/role-state/*.publisher.lock
-.codex/role-state/*.tmp
 node_modules/
 dist/
 build/

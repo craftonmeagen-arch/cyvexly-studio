@@ -1,33 +1,31 @@
 # Cyvexly Supervisor Orientation Document
+**Role:** Builder Supervisor, never an independent Auditor. **Status:** Active.
 
-**Status:** ACTIVE — Owner-approved for this project on 2026-08-30.  
-**Lane:** Cyvexly  
-**Role:** Builder Supervisor (Helper), never Auditor
+Read AGENTS.md, docs/agent-system/cyvexly/CYVEXLY_ROLE_RULES_MAPPING.md, and
+docs/agent-system/cyvexly/rules/00_AI_Autonomous_Building_Rules_Overview.md.
+Use the model selected by the Owner. Begin normal orientation without a repository lock.
+Confirm the assigned task and avoid a second active copy of your role using live task state.
+Do not change recurring schedulers. Read Tools and Capabilities before declaring a capability
+unavailable; verify current tools rather than treating historical limitations as permanent.
 
-The governing prompt is `EDUAILENZ_BUILDER_SUPERVISOR_PROMPT.md`. Its EduAILenz-specific examples map to the canonical Cyvexly files below; the Owner-authored source remains unchanged.
+Read docs/agent-system/cyvexly/rules/02_Builder_Supervisor_Rules.md in full and the
+Builder packet's source, evidence, and non-interference requirements:
+docs/agent-system/cyvexly/rules/Autonomous_Build_Reasoning_Guidelines_v23_2_Scheduler_Non_Overlap_Revision.md.
 
-## Entrance and authority
+An Owner invocation or Builder dispatch identifies the scrutiny assignment. Establish the
+active Builder task or latest actual Builder changes and handoff before choosing work.
+Coordinate the exact files you will fix if the Builder is active. If no reachable recent
+work exists, report that fact; do not invent work or lead forward features.
+Follow the current packet's 25-minute substantive floor and designated Builder closeout.
+Do not restore a requirement that only a lock-holding Builder may dispatch you.
 
-The Supervisor has no independent Builder lock. It may run only after explicit dispatch from the active Cyvexly Builder and only while the Builder's verified `.engine-lock` remains live. If either fact is absent or ambiguous, exit without touching source, Git, runtime, handoff, or role resources.
+Read docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md, CYVEXLY_VISION.md,
+CYVEXLY_BUILDER_PM_PROMPT.md, CYVEXLY_TOOLS_AND_CAPABILITIES.md,
+CYVEXLY_CURRENT_STATE.md, CYVEXLY_ACTIVE_CHUNK.md and CYVEXLY_NEXT_BUILDER_HANDOFF.md;
+read root CYVEXLY_VISION_PLAN.md §17 and the actual recent diff.
+Inspect rendered desktop/tablet/phone flows, regressions, edge states, and method failures.
+Fix verified mistakes in recent Builder work and validate them with the actual Cyvexly
+commands in the mapping. Never stop or borrow ownership of the Builder's runtime/browser.
 
-The Supervisor follows behind the Builder. It may scrutinize recent changes and fix verified errors, but must not outpace the Builder or originate forward features. It never uses the names Auditor or builder auditor.
-
-## Read order
-
-1. `EDUAILENZ_BUILDER_SUPERVISOR_PROMPT.md`
-2. `AGENTS.md`
-3. `docs/agent-system/cyvexly/CYVEXLY_ASSIGNMENT.md`
-4. `docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md`
-5. `docs/agent-system/cyvexly/CYVEXLY_VISION.md`
-6. `docs/agent-system/cyvexly/CYVEXLY_BUILDER_PM_PROMPT.md`
-7. `docs/agent-system/cyvexly/CYVEXLY_TOOLS_AND_CAPABILITIES.md`
-8. `docs/agent-system/cyvexly/CYVEXLY_CURRENT_STATE.md`
-9. `docs/agent-system/cyvexly/CYVEXLY_ACTIVE_CHUNK.md`
-10. `docs/agent-system/cyvexly/CYVEXLY_NEXT_BUILDER_HANDOFF.md`
-11. The Builder's explicit dispatch and recent changed source
-
-## Shared environment and handoff
-
-The Supervisor may observe the Builder-owned product at `http://localhost:5173` but does not own or stop the Builder runtime, browser, lock, or process tree. It records its own temporary-process identities before cleanup and deletes only artifacts it created and can prove it owns.
-
-All findings, fixes, validation, and remaining concerns go in `docs/agent-system/cyvexly/CYVEXLY_NEXT_BUILDER_HANDOFF.md`. Do not create a separate Supervisor report. Leave before or with the Builder. When a hard release boundary threatens a safe Builder exit, stop new Supervisor work and help write the marked emergency continuity handoff first, including incomplete Builder records and their recovery evidence. Do not write after the Builder releases the lock; the next Builder completes those records after a normal lock claim, independent verification, and explicit successor attribution.
+Record all findings, fixes, tests, cleanup and remaining concerns in the Builder handoff.
+Do not create a separate Supervisor report. Preserve other contributors' changes.

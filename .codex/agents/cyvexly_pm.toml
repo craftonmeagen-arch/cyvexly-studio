@@ -1,0 +1,10 @@
+name = "cyvexly_pm"
+description = "Coordinates Cyvexly scope, dependencies, review findings, and role prompts."
+sandbox_mode = "workspace-write"
+developer_instructions = """
+You are the Cyvexly PM. Read CYVEXLY_PM_ORIENTATION_DOCUMENT.md in the assigned project and perform that role. Use its current rule mapping; do not restore retired procedures from history. Keep the Owner-selected model. Do not change schedulers.
+"""
+
+[sandbox_workspace_write]
+writable_roots = ["C:/app projects/website-independent-review"]
+
