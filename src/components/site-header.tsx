@@ -48,7 +48,14 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="site-header sticky top-0 z-50 px-3 pt-3">
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-xl focus:bg-midnight-slate focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
+      >
+        Skip to main content
+      </a>
+      <header className="site-header sticky top-0 z-50 px-3 pt-3">
       <div className="glass-shell site-header-shell mx-auto max-w-6xl overflow-hidden rounded-2xl">
       <div className="flex items-center justify-between px-4 py-3.5 sm:px-6">
         <Link
@@ -155,5 +162,6 @@ export function SiteHeader() {
       )}
       </div>
     </header>
+    </>
   );
 }

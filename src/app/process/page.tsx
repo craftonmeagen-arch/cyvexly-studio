@@ -35,7 +35,7 @@ export default function ProcessPage() {
     <>
       <SiteHeader />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16">
           <div className="page-intro-shell mx-auto max-w-3xl rounded-3xl px-6 py-10 text-center sm:px-10 sm:py-12">
             <p className="text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">

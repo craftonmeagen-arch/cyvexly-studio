@@ -104,6 +104,35 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 39 report — global round 39 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R30` (reviewed commit
+`af9fa82`, round 37's HEAD). It is a sixth consecutive independent
+confirmation, not a new finding. Moved to `exchange/processed/`. Re-ran
+`tsc`/`lint`/`build` clean before making any change.
+
+Ran a genuinely new QA angle — a keyboard/ARIA accessibility sweep, the one
+vision §17 item-10 category the prior five "nothing new" rounds (31, 35-38)
+had not covered — and **found and fixed a real defect**: no skip-to-main-
+content link existed on any of the 20 public routes, so keyboard-only users
+had to tab through the full primary nav every page load (WCAG 2.4.1 Bypass
+Blocks, Level A). Added `id="main-content"` to `<main>` in all 15 page files
+and a visually-hidden-until-focused skip link as `SiteHeader`'s first
+element. An initial test method (scripted `.focus()`) produced a false-
+positive "no focus indicator anywhere" reading; investigated before trusting
+it and found Chrome's `:focus-visible` only activates on real keyboard
+input — rewrote the check to dispatch genuine `Input.dispatchKeyEvent` Tab
+presses, which confirmed the site's existing focus styling already works
+correctly (zero missing indicators across 14 routes). Verified the fix the
+same way: real Tab+Enter key events on three routes correctly reveal and
+activate the new skip link. Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved
+round 39" section and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
+This shows the reachable-work queue was not actually exhausted — it had
+simply not been probed from this one angle yet. The next Builder should keep
+looking for uncovered vision §17 item-10 QA categories (see the handoff's
+candidates list) rather than assuming the same "nothing left" conclusion.
+
 ## Round 38 report — global round 38 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R29` (reviewed commit

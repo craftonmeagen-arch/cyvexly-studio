@@ -1,0 +1,1084 @@
+Checked /: h1=1 skip=false main=1 focusable=37 skipLink=false noFocusIndicator=27
+Checked /services: h1=1 skip=false main=1 focusable=40 skipLink=false noFocusIndicator=34
+Checked /work: h1=1 skip=false main=1 focusable=28 skipLink=false noFocusIndicator=18
+Checked /pricing: h1=1 skip=false main=1 focusable=30 skipLink=false noFocusIndicator=23
+Checked /process: h1=1 skip=false main=1 focusable=19 skipLink=false noFocusIndicator=17
+Checked /about: h1=1 skip=false main=1 focusable=19 skipLink=false noFocusIndicator=17
+Checked /contact: h1=1 skip=false main=1 focusable=29 skipLink=false noFocusIndicator=27
+Checked /faq: h1=1 skip=false main=1 focusable=62 skipLink=false noFocusIndicator=49
+Checked /accessibility: h1=1 skip=false main=1 focusable=21 skipLink=false noFocusIndicator=20
+Checked /privacy: h1=1 skip=false main=1 focusable=23 skipLink=false noFocusIndicator=22
+Checked /terms: h1=1 skip=false main=1 focusable=20 skipLink=false noFocusIndicator=19
+Checked /start: h1=1 skip=false main=1 focusable=28 skipLink=false noFocusIndicator=26
+Checked /services/business-websites: h1=1 skip=false main=1 focusable=28 skipLink=false noFocusIndicator=23
+Checked /services/website-redesigns: h1=1 skip=false main=1 focusable=28 skipLink=false noFocusIndicator=23
+Checked /services/landing-pages: h1=1 skip=false main=1 focusable=28 skipLink=false noFocusIndicator=23
+Checked /services/ecommerce-websites: h1=1 skip=false main=1 focusable=28 skipLink=false noFocusIndicator=23
+Checked /services/website-care: h1=1 skip=false main=1 focusable=28 skipLink=false noFocusIndicator=23
+Checked /work/aurora-spaces: h1=1 skip=false main=1 focusable=20 skipLink=false noFocusIndicator=18
+Checked /work/nexora-systems: h1=1 skip=false main=1 focusable=20 skipLink=false noFocusIndicator=18
+Checked /work/vellora-care: h1=1 skip=false main=1 focusable=20 skipLink=false noFocusIndicator=18
+
+=== FULL RESULTS ===
+[
+  {
+    "route": "/",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,3,3,3,2,3,3,3,3,3,3,2,2,3,3,3,3,3,2,3,3,3,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 37,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 27,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "DIV",
+        "text": "Cyvexly systemsStrategy · Design · Development · Reliability"
+      },
+      {
+        "tag": "A",
+        "text": "View all projects →"
+      },
+      {
+        "tag": "A",
+        "text": "Need something custom? Let's talk →"
+      },
+      {
+        "tag": "A",
+        "text": "View all questions →"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How long does a website project take?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What do you need from me to get started?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Will I be able to update my website myself?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Do you offer ongoing support?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Do you work with businesses outside my industry?+"
+      }
+    ]
+  },
+  {
+    "route": "/services",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,3,3,3,3,3,2,3,3,3,3,3,2,3,3,3,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 40,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 34,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "Start with the Project Planner →"
+      },
+      {
+        "tag": "A",
+        "text": "See package details →"
+      },
+      {
+        "tag": "A",
+        "text": "See package details →"
+      },
+      {
+        "tag": "A",
+        "text": "See add-on pricing →"
+      },
+      {
+        "tag": "A",
+        "text": "See Commerce package →"
+      },
+      {
+        "tag": "A",
+        "text": "Read our accessibility target →"
+      },
+      {
+        "tag": "A",
+        "text": "Compare care plans →"
+      },
+      {
+        "tag": "A",
+        "text": "Explore business websites →"
+      },
+      {
+        "tag": "A",
+        "text": "Explore website redesigns →"
+      }
+    ]
+  },
+  {
+    "route": "/work",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 28,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 18,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "All"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      },
+      {
+        "tag": "A",
+        "text": "Process"
+      },
+      {
+        "tag": "A",
+        "text": "About"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns"
+      },
+      {
+        "tag": "A",
+        "text": "Landing pages"
+      }
+    ]
+  },
+  {
+    "route": "/pricing",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 30,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 23,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Are these prices final?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How does payment work?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What payment methods do you accept?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What happens if my project grows beyond the package scope?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Do care plans require a contract?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Not sure which package fits?+"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      }
+    ]
+  },
+  {
+    "route": "/process",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 19,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 17,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      },
+      {
+        "tag": "A",
+        "text": "Process"
+      },
+      {
+        "tag": "A",
+        "text": "About"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns"
+      },
+      {
+        "tag": "A",
+        "text": "Landing pages"
+      },
+      {
+        "tag": "A",
+        "text": "E-commerce websites"
+      }
+    ]
+  },
+  {
+    "route": "/about",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,3,3,3,3,3,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 19,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 17,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      },
+      {
+        "tag": "A",
+        "text": "Process"
+      },
+      {
+        "tag": "A",
+        "text": "About"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns"
+      },
+      {
+        "tag": "A",
+        "text": "Landing pages"
+      },
+      {
+        "tag": "A",
+        "text": "E-commerce websites"
+      }
+    ]
+  },
+  {
+    "route": "/contact",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 29,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 27,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project →"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com"
+      },
+      {
+        "tag": "A",
+        "text": "(317) 572-5780"
+      },
+      {
+        "tag": "A",
+        "text": "Project Planner"
+      },
+      {
+        "tag": "A",
+        "text": "Privacy Policy"
+      },
+      {
+        "tag": "INPUT",
+        "text": ""
+      },
+      {
+        "tag": "INPUT",
+        "text": ""
+      },
+      {
+        "tag": "SELECT",
+        "text": "General questionPricing questionExisting project supportPart"
+      },
+      {
+        "tag": "TEXTAREA",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "route": "/faq",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 62,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 49,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "Send us a message →"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How do I know if Cyvexly is the right fit?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What types of websites do you build?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How do I start a project?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Are the published prices final?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Do you require a deposit?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What payment methods do you accept?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Is anything billed separately from your fee?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How long does a typical project take?+"
+      }
+    ]
+  },
+  {
+    "route": "/accessibility",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 21,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 20,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "Web Content Accessibility Guidelines (WCAG) 2.2, Level AA"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      },
+      {
+        "tag": "A",
+        "text": "Process"
+      },
+      {
+        "tag": "A",
+        "text": "About"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites"
+      }
+    ]
+  },
+  {
+    "route": "/privacy",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 23,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 22,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com"
+      },
+      {
+        "tag": "A",
+        "text": "(317) 572-5780"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com"
+      },
+      {
+        "tag": "A",
+        "text": "(317) 572-5780"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      },
+      {
+        "tag": "A",
+        "text": "Process"
+      }
+    ]
+  },
+  {
+    "route": "/terms",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 20,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 19,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com"
+      },
+      {
+        "tag": "A",
+        "text": "(317) 572-5780"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      },
+      {
+        "tag": "A",
+        "text": "Process"
+      },
+      {
+        "tag": "A",
+        "text": "About"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns"
+      }
+    ]
+  },
+  {
+    "route": "/start",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 28,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 26,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "1"
+      },
+      {
+        "tag": "INPUT",
+        "text": ""
+      },
+      {
+        "tag": "INPUT",
+        "text": ""
+      },
+      {
+        "tag": "INPUT",
+        "text": ""
+      },
+      {
+        "tag": "INPUT",
+        "text": ""
+      },
+      {
+        "tag": "INPUT",
+        "text": ""
+      },
+      {
+        "tag": "INPUT",
+        "text": ""
+      },
+      {
+        "tag": "INPUT",
+        "text": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save & continue later"
+      }
+    ]
+  },
+  {
+    "route": "/services/business-websites",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 28,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 23,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "← All services"
+      },
+      {
+        "tag": "A",
+        "text": "Explore the case study →"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How many pages does a business website include?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can you help organize our services and copy?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Will we be able to update the site ourselves?+"
+      },
+      {
+        "tag": "A",
+        "text": "Return to all services"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      }
+    ]
+  },
+  {
+    "route": "/services/website-redesigns",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 28,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 23,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "← All services"
+      },
+      {
+        "tag": "A",
+        "text": "Explore the case study →"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Do we have to replace every part of our current site?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can you migrate our existing content?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What happens to our current search rankings?+"
+      },
+      {
+        "tag": "A",
+        "text": "Return to all services"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      }
+    ]
+  },
+  {
+    "route": "/services/landing-pages",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 28,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 23,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "← All services"
+      },
+      {
+        "tag": "A",
+        "text": "Explore the case study →"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Is a landing page the same as a one-page website?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can the page connect to our CRM or email platform?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can you guarantee a conversion rate?+"
+      },
+      {
+        "tag": "A",
+        "text": "Return to all services"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      }
+    ]
+  },
+  {
+    "route": "/services/ecommerce-websites",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 28,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 23,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "← All services"
+      },
+      {
+        "tag": "A",
+        "text": "Explore the case study →"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Which commerce platform do you use?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Are platform and payment fees included?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can you enter all of our products?+"
+      },
+      {
+        "tag": "A",
+        "text": "Return to all services"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      }
+    ]
+  },
+  {
+    "route": "/services/website-care",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 28,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 23,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "← All services"
+      },
+      {
+        "tag": "A",
+        "text": "Explore the case study →"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Do I need a care plan for a site Cyvexly builds?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can you care for a website built by someone else?+"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What if a request is larger than my monthly allowance?+"
+      },
+      {
+        "tag": "A",
+        "text": "Return to all services"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      }
+    ]
+  },
+  {
+    "route": "/work/aurora-spaces",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 20,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 18,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "← All work"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      },
+      {
+        "tag": "A",
+        "text": "Process"
+      },
+      {
+        "tag": "A",
+        "text": "About"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns"
+      },
+      {
+        "tag": "A",
+        "text": "Landing pages"
+      }
+    ]
+  },
+  {
+    "route": "/work/nexora-systems",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 20,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 18,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "← All work"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      },
+      {
+        "tag": "A",
+        "text": "Process"
+      },
+      {
+        "tag": "A",
+        "text": "About"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns"
+      },
+      {
+        "tag": "A",
+        "text": "Landing pages"
+      }
+    ]
+  },
+  {
+    "route": "/work/vellora-care",
+    "h1Count": 1,
+    "headingSkip": false,
+    "headingSequence": "1,2,2,2,2,2,2,2,2,2,2,2,2",
+    "mainCount": 1,
+    "focusableCount": 20,
+    "firstFocusableTag": "A.site-brand-link flex items-center gap-2.",
+    "firstFocusableIsSkipLink": false,
+    "noFocusIndicatorCount": 18,
+    "noFocusIndicatorSample": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO"
+      },
+      {
+        "tag": "A",
+        "text": "← All work"
+      },
+      {
+        "tag": "A",
+        "text": "Services"
+      },
+      {
+        "tag": "A",
+        "text": "Work"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing"
+      },
+      {
+        "tag": "A",
+        "text": "Process"
+      },
+      {
+        "tag": "A",
+        "text": "About"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns"
+      },
+      {
+        "tag": "A",
+        "text": "Landing pages"
+      }
+    ]
+  }
+]

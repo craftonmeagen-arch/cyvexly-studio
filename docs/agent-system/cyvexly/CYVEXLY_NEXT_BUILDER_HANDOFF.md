@@ -1,5 +1,73 @@
 # Cyvexly Next Builder Handoff
 
+## Round 39 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
+time limit (unattended)
+**Start source:** `f1a264f` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R30`)
+and ran a new keyboard/ARIA accessibility QA angle (not previously done
+comprehensively). **Found and fixed one real, reachable defect.**
+**Completion:** SOURCE FIX LANDED — see below.
+
+### What was checked
+
+- `IFA-2026-09-05-R30` (reviewed commit `af9fa82`, round 37's HEAD) is a
+  **sixth consecutive independent confirmation, not a new finding**. Moved to
+  `exchange/processed/`.
+- Ran `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` — all
+  clean before making any change.
+- **New QA angle — keyboard/ARIA accessibility sweep across all 20 routes**,
+  the one vision §17 item-10 category not yet covered by rounds 31-38. Used
+  the round-8/38 local headless-Chrome/CDP technique. First attempt
+  (`el.focus()` + computed style) flagged near-universal "no focus
+  indicator" — **a false positive of the test method**: Chrome's
+  `:focus-visible` only activates on real keyboard input, not scripted
+  `.focus()`, and the site has a global `::focus-visible` rule
+  (`src/app/globals.css:605`). Rewrote to dispatch real
+  `Input.dispatchKeyEvent` Tab presses; re-ran on 14 routes × 12 tabs:
+  **zero missing focus indicators** — confirms correct styling, not a defect
+  (mirrors round 32's "verify real behavior" lesson).
+- Heading-order/`<main>`-landmark checks (unaffected by that pitfall) were
+  clean on all 20 routes — but **found a real gap: no skip-to-main-content
+  link on any route.** Every page's first focusable element was the header
+  logo, so keyboard users had to tab through the full nav every page load —
+  a WCAG 2.4.1 Bypass Blocks (Level A) failure, part of the Owner
+  direction's release-QA "keyboard/accessibility" line item, never
+  explicitly checked before.
+- **Fixed:** added `id="main-content"` to `<main className="flex-1">` in all
+  15 page files (scripted replace, verified unique-per-file first, grepped
+  after). Added a visually-hidden-until-focused "Skip to main content" link
+  (Tailwind's standard `sr-only focus:not-sr-only focus:fixed` idiom,
+  matching existing `sr-only` usage) as the first element `SiteHeader`
+  renders (mounts on all 16 pages), so it is first in tab order everywhere.
+- **Verified with real keyboard events:** rebuilt (`tsc`/`lint`/`build`
+  clean), restarted the server, and ran a dedicated script dispatching real
+  Tab then Enter via CDP on `/`, `/about`, `/services/business-websites`:
+  first Tab reveals a visible link at (12,12), 170×40px (not
+  `sr-only`-hidden), Enter moves `location.hash` to `#main-content`,
+  matching the real `<main id="main-content">`. All three routes passed.
+- Cleaned up: stopped the owned `next start` server (verified real listener
+  PID via `Get-NetTCPConnection -LocalPort 5173`, not just the shell-wrapper
+  PIDs) and the owned headless Chrome process (verified via CDP-port
+  command-line match before touching anything), then removed the temporary
+  Chrome profile directory under the OS temp root. Evidence scripts and raw
+  output preserved at `docs/agent-system/cyvexly/builder/evidence/
+  round-39-*` for reproducibility.
+
+### Recommended next workstream
+
+The reachable-work queue is **not** exhausted — five "nothing new" rounds
+(31, 35-38) had covered every QA category *except* keyboard/ARIA
+accessibility, and that category held a real defect. **Do not assume the
+queue is empty just because recent rounds found nothing** — look for QA
+angles vision §17 item 10 names with no real-interaction evidence yet.
+Candidates not yet swept post-theme-overhaul (rounds 21-28 changed a lot of
+markup): screen-reader semantics (aria-live/form-error announcements on
+Contact/Planner), 200% zoom/text-resize, reduced-motion beyond the hero
+video. `CYVEXLY_APP_DEBT.md`'s "Open" section remains genuinely Owner-gated
+(DNS/domain, real email delivery, analytics ownership, exact LLC name).
+
 ## Round 38 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
@@ -21,23 +89,17 @@ CHANGES (docs-only).
 - Ran `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` — all
   clean, no source touched.
 - **New this round — full-site console/network diagnostics, not a repeat of
-  prior sweeps.** Rounds 31-37 checked security headers, links, canonicals,
-  metadata, live-production parity, and performance, but console/network
-  error checking had only ever been spot-checked on a handful of routes
-  (Home, Contact, About, `/start`), never all 20 together. Started the real
-  production server (`next start --port 5173`) and drove it with the
-  round-8-established local headless-Chrome/CDP technique (unique
-  `--user-data-dir` under `$env:TEMP`, `--remote-debugging-port`), recording
-  `Console`/`Log`/`Network` domain events across all 20 public routes.
-  **Result: zero console errors/warnings and zero real network failures on
-  every route.** An initial pass flagged 5 `net::ERR_ABORTED` entries;
-  traced these to the sweep script itself (Next.js link-prefetch requests
-  canceled by navigating to the next route before they finished, not page
-  defects) by mapping request IDs to URLs and filtering cancellations — a
-  clean re-run confirmed zero. Script and raw JSON output preserved at
-  `docs/agent-system/cyvexly/builder/evidence/round-38-route-sweep*` for
-  reproducibility. Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round
-  38" section.
+  prior sweeps.** Console/network error checking had only ever been
+  spot-checked on a handful of routes, never all 20 together. Started the
+  real production server and drove it with the round-8-established local
+  headless-Chrome/CDP technique, recording `Console`/`Log`/`Network` domain
+  events across all 20 public routes. **Result: zero console errors/warnings
+  and zero real network failures on every route** (an initial 5
+  `net::ERR_ABORTED` entries traced to the sweep script's own
+  navigation-cancelled link-prefetches, not page defects). Script/output
+  preserved at `docs/agent-system/cyvexly/builder/evidence/
+  round-38-route-sweep*`. Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved
+  round 38" section.
 - Cleaned up: stopped the owned `next start` server process and the owned
   headless Chrome process by exact PID (verified via `Get-CimInstance
   Win32_Process` command-line filtering before touching anything — this
@@ -127,68 +189,14 @@ result. The next Builder should still check the Auditor inbox first (cheap,
 and it may have new evidence), but should not feel obligated to invent a
 fourth full QA sweep if it is empty or already-known.
 
-## Round 36 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
-time limit (unattended)
-**Start source:** `92acb98` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R27`).
-**Completion:** VERIFICATION-ONLY ROUND — NO SOURCE DEFECTS FOUND, NO SOURCE
-CHANGES.
-
-### What was checked
-
-- **Confirmed public Render adoption directly against the live site** —
-  something rounds 31-35 never did (they verified local/dev-server or the
-  Auditor's isolated review-port build only). Navigated the real in-app
-  Browser to `https://cyvexly-studio.onrender.com/contact`:
-  `getBoundingClientRect()` on the live email/phone links shows identical
-  x/width, `y:1240.5`/`1276.5` (36px gap, no overlap — `CYV-IFA-012` is
-  fixed in production, not just in the build). A same-origin `fetch()`
-  from that live page confirmed the canonical tag
-  (`https://cyvexly.com/contact`) and all 6 security headers/CSP present
-  on the real public response, with `x-nextjs-cache: HIT` proving it's the
-  actual deployed build. Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved
-  round 36" section.
-- `IFA-2026-09-05-R27` (reviewed commit `620ba77`, round 34's HEAD) is an
-  **independent confirmation, not a new finding**: it verified
-  `CYV-IFA-012` CLOSED via its own real multi-viewport CDP screenshots of
-  `/contact` (1440/768/390px, "zero text clipping, zero horizontal
-  overflow, zero CSS layout breaks"), re-verified all 20 routes' canonical
-  tags, all 6 security headers/CSP, and a 32-link site-wide crawl with zero
-  broken links — all PASS. This is the second consecutive independent
-  audit round (after round 35's own re-verification) confirming the same
-  result with no new defect. Moved to `exchange/processed/`.
-- Ran `pnpm exec tsc --noEmit` and `pnpm run lint` to confirm the tree is
-  still clean before dispositioning (no source touched this round, so this
-  was a sanity check, not a fix verification) — both pass clean.
-- Did not re-run the full release-QA sweep (round 35 ran one 1 round ago;
-  nothing has changed since — R27 itself independently re-covers most of
-  that ground and found nothing new).
-
-### Recommended next workstream
-
-**Two consecutive rounds (35, 36) now confirm zero reachable-without-an-
-Owner-gate defects.** Everything left in `CYVEXLY_APP_DEBT.md`'s "Open"
-section and `CYVEXLY_CHUNK_DEBT.md`'s remaining open item (real portfolio
-photography — an Owner framing question, not a code gap) needs Owner
-account access, a provider decision, or Owner content review — see
-`CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates" for the exact list
-(exact LLC name; DNS/Render account access; email-provider authorization +
-secrets; analytics/Search Console ownership or no-analytics decision;
-About/legal/visual review; final indexability approval). The next Builder
-should still re-check the Auditor inbox first (cheap, and inbox items keep
-arriving roughly hourly), but if it is empty or already-known, this
-project has genuinely run out of Builder-reachable code work until an
-Owner gate clears — worth surfacing to the Owner directly rather than
-spending further scheduled rounds re-confirming the same empty result.
-
-Round 35 closeout detail is archived at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUND_35_REPORT.md` (moved there in round 38 to keep
-this file under its 12288-byte hot-file cap — latest-three rule: 36, 37, 38
-stay live). Rounds 33-34 are archived at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUNDS_33_34_REPORT.md`; rounds 31-32 at
-`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUNDS_31_32_REPORT.md`; rounds
-28-30 at `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUNDS_28_30_REPORT.md`.
-The current Chunk 5 scope and Owner gates are summarized in
-`CYVEXLY_ACTIVE_CHUNK.md` and `CYVEXLY_OWNER_DIRECTION.md`.
+Round 36 closeout detail is archived at `docs/archive/chunks/
+CYVEXLY_BUILDER_HANDOFF_ROUND_36_REPORT.md` (moved there in round 39 to keep
+this file under its 12288-byte hot-file cap — latest-three rule: 37, 38, 39
+stay live). Round 35 is archived at `docs/archive/chunks/
+CYVEXLY_BUILDER_HANDOFF_ROUND_35_REPORT.md`; rounds 33-34 at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUNDS_33_34_REPORT.md`; rounds
+31-32 at `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUNDS_31_32_REPORT.md`;
+rounds 28-30 at `docs/archive/chunks/
+CYVEXLY_BUILDER_HANDOFF_ROUNDS_28_30_REPORT.md`. The current Chunk 5 scope and
+Owner gates are summarized in `CYVEXLY_ACTIVE_CHUNK.md` and
+`CYVEXLY_OWNER_DIRECTION.md`.

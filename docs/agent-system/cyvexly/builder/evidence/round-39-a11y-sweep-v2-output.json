@@ -1,0 +1,1474 @@
+Checked /: tabbed=12 missingFocusIndicator=0
+Checked /services: tabbed=12 missingFocusIndicator=0
+Checked /work: tabbed=12 missingFocusIndicator=0
+Checked /pricing: tabbed=12 missingFocusIndicator=0
+Checked /process: tabbed=12 missingFocusIndicator=0
+Checked /about: tabbed=12 missingFocusIndicator=0
+Checked /contact: tabbed=12 missingFocusIndicator=0
+Checked /faq: tabbed=12 missingFocusIndicator=0
+Checked /accessibility: tabbed=12 missingFocusIndicator=0
+Checked /privacy: tabbed=12 missingFocusIndicator=0
+Checked /terms: tabbed=12 missingFocusIndicator=0
+Checked /start: tabbed=12 missingFocusIndicator=0
+Checked /services/business-websites: tabbed=12 missingFocusIndicator=0
+Checked /work/aurora-spaces: tabbed=12 missingFocusIndicator=0
+
+=== FULL RESULTS ===
+[
+  {
+    "route": "/",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Explore services",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "DIV",
+        "text": "Cyvexly systemsStrategy · Design · Devel",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "View all projects →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Concept projectAurora SpacesImmersive we",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Concept projectNexora SystemsSaaS platfo",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Concept projectVellora CareE-commerce co",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Need something custom? Let's talk →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      }
+    ]
+  },
+  {
+    "route": "/services",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Start with the Project Planner →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "See package details →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "See package details →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "See add-on pricing →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "See Commerce package →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Read our accessibility target →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Compare care plans →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Explore business websites →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Explore website redesigns →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Explore landing pages →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  },
+  {
+    "route": "/work",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "All",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Business Site",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Redesign",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Landing Page",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Commerce",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Concept",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Concept projectAurora SpacesImmersive we",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Concept projectNexora SystemsSaaS platfo",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Concept projectVellora CareE-commerce co",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      }
+    ]
+  },
+  {
+    "route": "/pricing",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Are these prices final?+",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How does payment work?+",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What payment methods do you accept?+",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "What happens if my project grows beyond ",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Do care plans require a contract?+",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  },
+  {
+    "route": "/process",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Work",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Process",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Landing pages",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "E-commerce websites",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  },
+  {
+    "route": "/about",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Work",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Process",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Landing pages",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "E-commerce websites",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  },
+  {
+    "route": "/contact",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "(317) 572-5780",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Project Planner",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Privacy Policy",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "SELECT",
+        "text": "General questionPricing questionExisting",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "TEXTAREA",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  },
+  {
+    "route": "/faq",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Send us a message →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Fit & getting started",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing & payment",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Project timing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "What you need to provide",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Revisions & approvals",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Domain, hosting & ownership",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Integrations & payment processing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Accessibility, search & analytics",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Launch & care",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      }
+    ]
+  },
+  {
+    "route": "/accessibility",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Web Content Accessibility Guidelines (WC",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Work",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Process",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  },
+  {
+    "route": "/privacy",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "(317) 572-5780",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "(317) 572-5780",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Work",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Process",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  },
+  {
+    "route": "/terms",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "design@cyvexly.com",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "(317) 572-5780",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Work",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Process",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Landing pages",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  },
+  {
+    "route": "/start",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "INPUT",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save & continue later",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Continue →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Work",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  },
+  {
+    "route": "/services/business-websites",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "← All services",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Include this in my project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "See pricing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "A",
+        "text": "Explore the case study →",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Compare pricing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(54, 199, 255,"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "How many pages does a business website i",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Can you help organize our services and c",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Will we be able to update the site ourse",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Include this in my project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Return to all services",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  },
+  {
+    "route": "/work/aurora-spaces",
+    "tabbedCount": 12,
+    "missingFocusIndicatorCount": 0,
+    "missingSample": [],
+    "allSteps": [
+      {
+        "tag": "A",
+        "text": "CYVEXLY STUDIO",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Open menu",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "← All work",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Describe your project",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0"
+      },
+      {
+        "tag": "A",
+        "text": "Services",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Work",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Pricing",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Process",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Business websites",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Website redesigns",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Landing pages",
+        "hasVisibleFocus": true,
+        "outlineStyle": "solid",
+        "outlineWidth": 2,
+        "boxShadow": "none"
+      }
+    ]
+  }
+]

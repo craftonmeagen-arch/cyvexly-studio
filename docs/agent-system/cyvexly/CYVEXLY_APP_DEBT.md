@@ -110,6 +110,38 @@
      `mailto:` bridge as a durable solution rather than the explicitly
      temporary one it's labeled as in the UI.
 
+## Resolved round 39
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-05-R30`** — a sixth
+  consecutive independent confirmation round (reviewed commit `af9fa82`,
+  round 37's HEAD), not a new finding. Moved to `exchange/processed/`.
+  `tsc --noEmit`/`lint`/`build` re-run clean before making any change.
+- **New QA angle — keyboard/ARIA accessibility sweep, the one vision §17
+  item-10 category rounds 31-38 had not covered.** Found and fixed a real,
+  reachable defect: no skip-to-main-content link existed on any of the 20
+  public routes, so keyboard-only users had to tab through the full primary
+  nav on every page load before reaching content (WCAG 2.4.1 Bypass Blocks,
+  Level A). Fixed by adding `id="main-content"` to `<main className="flex-1">`
+  in all 15 page files and a visually-hidden-until-focused "Skip to main
+  content" link as the first element `SiteHeader` renders. Verified with
+  real `Input.dispatchKeyEvent` Tab/Enter presses (not scripted `.focus()`,
+  which produced a false-positive "no focus indicator" reading during
+  investigation before this fix — the site's existing global
+  `::focus-visible` rule in `src/app/globals.css:605` works correctly under
+  genuine keyboard input, confirmed across 14 routes × 12 tabs each with
+  zero missing indicators). Post-fix: first Tab on `/`, `/about`, and
+  `/services/business-websites` reveals the visible link, and Enter moves
+  focus/hash to the real `<main id="main-content">` on all three. `tsc`/
+  `lint`/`build` (27 routes) all pass clean after the change. Full method,
+  scripts, and raw output at `docs/agent-system/cyvexly/builder/evidence/
+  round-39-*`.
+- **Sixth consecutive round confirms the reachable-work queue was not
+  actually empty** — the prior five "nothing new" rounds (31, 35-38) had
+  simply not yet covered this one QA category. See
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s round-39 entry for the corrected
+  recommendation (keep looking for uncovered QA angles, don't assume
+  exhaustion).
+
 ## Resolved round 38
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-05-R29`** — a fourth

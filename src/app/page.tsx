@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <SiteHeader />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero */}
         <section className="home-hero-stage relative isolate overflow-hidden border-b border-smoke-glass/70">
           <HomeGlassArchitecture />

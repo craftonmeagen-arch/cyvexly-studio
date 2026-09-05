@@ -28,7 +28,7 @@ export default function PricingPage() {
     <>
       <SiteHeader />
 
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero */}
         <section className="pricing-hero-stage relative overflow-hidden border-b border-smoke-glass/70">
           <div className="pricing-hero-layout relative z-10 mx-auto grid max-w-6xl items-center gap-6 px-6 py-8 md:grid-cols-[0.9fr_1.1fr] md:gap-8 md:py-14 lg:gap-12 lg:pb-24 lg:pt-16">
