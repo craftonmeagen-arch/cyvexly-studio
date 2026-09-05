@@ -110,6 +110,52 @@
      `mailto:` bridge as a durable solution rather than the explicitly
      temporary one it's labeled as in the UI.
 
+## Resolved round 38
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-05-R29`** — a fourth
+  consecutive independent confirmation round (reviewed commit `52178f7`,
+  round 36's HEAD), not a new finding: its own isolated review-port build
+  re-verified hot-file byte caps (47 files), `CYV-IFA-012` CLOSED (verified
+  across its own R27/R28/R29 history), all 20 routes' canonical tags, all 6
+  security headers/CSP, live-production parity across all 20 routes, and a
+  32-link crawl with zero broken links — all PASS, matching rounds 35-37. Its
+  own summary states "100% clean... all reachable code-level implementation
+  work for Chunk 5 is complete." `tsc --noEmit`/`lint`/`build` re-run clean
+  (no source touched). Moved to `exchange/processed/`.
+- **New QA angle — full-site console/network diagnostics sweep, not
+  previously done comprehensively.** Vision §17 item 10 requires "clean
+  browser/server diagnostics"; prior rounds spot-checked console output on a
+  handful of routes (Home, Contact, About, `/start`) but never all 20 public
+  routes together. Started the real production server (`next start --port
+  5173`) and drove it with the round-8-established local headless-Chrome/CDP
+  technique (`chrome.exe --headless=new`, unique `--user-data-dir` under the
+  OS temp root, `--remote-debugging-port`), using CDP `Network`/`Console`/
+  `Log` domains to record every console error/warning and every network
+  response ≥400 or non-cancellation load failure across all 20 routes (`/`,
+  `/services`, `/work`, `/pricing`, `/process`, `/about`, `/contact`, `/faq`,
+  `/accessibility`, `/privacy`, `/terms`, `/start`, all 5
+  `/services/[slug]`, all 3 `/work/[slug]`). **Result: zero console
+  errors/warnings and zero real network failures on every route** (an
+  initial pass showed 5 `net::ERR_ABORTED` entries; investigation traced
+  these to the script itself — normal Next.js link-prefetch requests
+  canceled by navigating to the next route before they completed, not real
+  page defects — confirmed by mapping request IDs to URLs via
+  `Network.requestWillBeSent` and re-running with cancellation-aware
+  filtering, which returned exactly zero on a clean re-run). No defect
+  found — this corroborates rather than contradicts rounds 35-37's
+  conclusion, from a genuinely new angle instead of repeating the same
+  sweep. Full script preserved at
+  `docs/agent-system/cyvexly/builder/evidence/round-38-route-sweep.js` and
+  raw output at `round-38-route-sweep-output.json` for reproducibility.
+  Cleaned up: stopped the owned `next start` process and headless Chrome
+  process by exact PID, removed the temporary Chrome profile directory.
+- **Fourth consecutive independently-confirmed round (35, 36, 37, 38) with
+  zero reachable-without-an-Owner-gate defects**, now covering functional,
+  security, link, metadata, live-production, performance, and full
+  console/network diagnostics QA categories. See
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s round-38 entry for the escalation
+  recommendation.
+
 ## Resolved round 37
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-05-R28`** — a third
@@ -346,46 +392,9 @@
   client-side event handlers work under the policy rather than just that
   pages load.
 
-## Resolved round 31
-
-- **Release-QA sweep across all 27 routes now that About/Privacy/Terms
-  exist.** No round had looked at the whole site together since those three
-  pages landed (round 30). Verified: `tsc --noEmit`/`lint`/`build` all clean
-  (27 routes, zero warnings — the historical `metadataBase` warning is
-  confirmed gone); a Node script cross-checked every internal `href` in the
-  generated HTML against the actual generated route set — zero broken
-  internal links (the one non-route hit, `/start`, is the intentionally
-  dynamic Planner route, not a defect); `sitemap.xml` lists all 17 static/
-  SSG routes including `/about`, `/privacy`, `/terms`; grepped generated HTML
-  for `worldwide`, `hello@cyvexly`, `founder` (as a claim, not the honest
-  "no founder mythology" disclosure line), and named payment brands — none
-  found; footer `/privacy` and `/terms` links present on every generated page
-  except Next's generic `_global-error` fallback (expected, has no shared
-  layout). Used the real in-app Browser (this session type can composite/
-  screenshot, confirmed again after round 30) to visually check About/
-  Privacy/Terms at 375px/768px/1440px — no horizontal overflow at any width,
-  hamburger nav correct at 768px (below the `lg` breakpoint), mobile menu
-  opens via a real dispatched click and lists all expected links including
-  About/Privacy/Terms/design@cyvexly.com/tel:+13175725780. Confirmed
-  `noindex, nofollow` still present on the three new pages, consistent with
-  every other page's staged-release gate. No defects found in the existing
-  three pages.
-- **Added baseline HTTP security headers (vision §17 item 10's "security
-  headers" QA requirement) — reachable, no Owner gate.** `next.config.ts`
-  had no `headers()` function at all. Added `X-Content-Type-Options: nosniff`,
-  `X-Frame-Options: DENY`, `Referrer-Policy: strict-origin-when-cross-origin`,
-  `Permissions-Policy` (denies camera/microphone/geolocation/payment/usb and
-  disables `interest-cohort`, consistent with the Privacy Policy's "no
-  tracking" claims), and `Strict-Transport-Security` (`max-age=63072000;
-  includeSubDomains; preload`) applied to every route. CSP is deliberately
-  not included yet — see the new "Open" item 3 above. Verified via a real
-  `fetch()` against the running dev server that all five headers are present
-  on the actual response (not just declared in config), then reloaded the
-  Home page and confirmed it still renders correctly with zero new console
-  errors (the only console entries are dev-mode HMR WebSocket messages,
-  unrelated to the headers change and absent from a production build).
-  `tsc --noEmit`, `lint`, and a full production `build` (27 routes) all pass
-  after the change.
+Round 31 detail archived to
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_31_ARCHIVE.md` in round 38
+(security headers added; first full 27-route release-QA sweep).
 
 ## Resolved round 30
 

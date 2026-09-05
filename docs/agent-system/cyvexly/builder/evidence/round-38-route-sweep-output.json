@@ -1,0 +1,102 @@
+[
+  {
+    "route": "/",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/services",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/work",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/pricing",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/process",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/about",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/contact",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/faq",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/accessibility",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/privacy",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/terms",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/start",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/services/business-websites",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/services/website-redesigns",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/services/landing-pages",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/services/ecommerce-websites",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/services/website-care",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/work/aurora-spaces",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/work/nexora-systems",
+    "consoleMessages": [],
+    "networkFailures": []
+  },
+  {
+    "route": "/work/vellora-care",
+    "consoleMessages": [],
+    "networkFailures": []
+  }
+]

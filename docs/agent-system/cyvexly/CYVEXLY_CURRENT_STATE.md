@@ -1,63 +1,65 @@
 # Cyvexly Current State
 
-**Global round:** 37. Owner launch direction updated 2026-09-04.
+**Global round:** 38. Owner launch direction updated 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
 About/Privacy/Terms (round 30), security headers/CSP (rounds 31-32),
 per-route canonical tags (round 33), and the Auditor-tracked `/contact`
-link-collision defect `CYV-IFA-012` (round 34) are done. Rounds 35 and 36
-each independently confirmed no new reachable-without-an-Owner-gate defect
+link-collision defect `CYV-IFA-012` (round 34) are done. Rounds 35-38 each
+independently confirmed no new reachable-without-an-Owner-gate defect
 exists. Remaining Chunk 5 scope (real Contact/Planner email delivery,
 DNS/domain connection, analytics/search ownership, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates". Full round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 37 outcome (scheduled/unattended, 50-minute limit, verification-only):**
-dispositioned the one new Auditor inbox item, `IFA-2026-09-05-R28` — a third
-consecutive independent confirmation (after rounds 35 and 36) of the same
-result, not a new defect: its own isolated review-port build verified
-`CYV-IFA-012` CLOSED, all 20 routes' canonical tags, all 6 security
-headers/CSP, hot-file byte caps, and a 32-link site-wide crawl with zero
-broken links — all PASS. Moved to `exchange/processed/`. Re-ran
-`tsc --noEmit`/`lint`/`build` clean (no source changed) and additionally
-checked the one vision §17 item-10 QA category ("performance") no prior
-round had explicitly measured: total `.next/static/chunks` JS is 764KB
-across the whole app (largest single chunk 228KB, framework runtime — small
-for a Next.js site), and the Home hero video
-(`src/components/hero-showcase-video.tsx`) already uses `preload="metadata"`
-plus a poster image (not full video preload) and correctly pauses/skips
-autoplay on `prefers-reduced-motion`, `navigator.connection.saveData`, and
-`document.hidden` — no defect found. **Three consecutive rounds (35, 36, 37)
-now confirm zero reachable-without-an-Owner-gate defects**, and the fresh
-performance spot-check found nothing new to add to that list either.
+**Round 38 outcome (scheduled/unattended, 50-minute limit, verification-only):**
+dispositioned the one new Auditor inbox item, `IFA-2026-09-05-R29` — a
+fourth consecutive independent confirmation (after rounds 35-37) of the same
+result, not a new defect; its own report states "100% clean... all
+reachable code-level implementation work for Chunk 5 is complete." Moved to
+`exchange/processed/`. Re-ran `tsc --noEmit`/`lint`/`build` clean (no source
+changed). Ran a genuinely new QA angle instead of repeating prior sweeps: a
+full-site console/network diagnostics check across all 20 public routes
+using a real production server (`next start`) plus the round-8-established
+local headless-Chrome/CDP technique, recording every console error/warning
+and every real network failure (≥400 status or non-cancellation load
+failure). **Result: zero console errors/warnings and zero real network
+failures on any of the 20 routes** — the first comprehensive (not
+spot-check) diagnostics sweep of the full route set. Full detail, script,
+and raw output in `CYVEXLY_APP_DEBT.md`'s "Resolved round 38" section and
+`docs/agent-system/cyvexly/builder/evidence/round-38-route-sweep*`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 37. If it's empty or already-known,
+first for anything published after round 38. If it's empty or already-known,
 **this project has run out of Builder-reachable code work** — what remains
 (real Contact/Planner email delivery, DNS/domain connection, analytics/
 search ownership, exact LLC name, final indexability approval, About/legal/
 visual review) all need Owner account access, a provider decision, or Owner
 content review; see "Owner launch decisions and remaining gates" below.
-Four consecutive verification rounds (31, 35, 36, 37) have now found the
-reachable-without-an-Owner-gate surface empty. **Recommendation carried
-forward from rounds 35-36 and reinforced this round: surface the Owner
-gates directly (e.g. reduce or pause the scheduled Builder cadence until an
-Owner gate clears) rather than continuing to spend scheduled rounds
-re-confirming the same empty result** — each additional verification-only
-round finds materially less new ground than the last (round 31: first full
-sweep after About/Privacy/Terms; round 35: full sweep, found 2 stale debt
-entries; round 36: live-production-only sweep, found nothing new; round 37:
-inbox disposition + performance spot-check, found nothing new).
+**Five consecutive verification rounds (31, 35, 36, 37, 38) have now found
+the reachable-without-an-Owner-gate surface empty**, across every QA
+category in vision §17 item 10 (functional, security, links, metadata,
+live-production, performance, and now full console/network diagnostics).
+**Recommendation carried forward from rounds 35-37 and reinforced this
+round with the strongest evidence yet: surface the Owner gates directly
+(e.g. reduce or pause the scheduled Builder cadence until an Owner gate
+clears) rather than continuing to spend scheduled rounds searching for
+new-but-decreasingly-likely QA angles.** The reachable-work queue is not
+merely unchanged — it has now been probed from essentially every QA angle
+named in the governing vision document. A sixth round should check the
+inbox (cheap) but should not feel obligated to invent a fifth novel QA
+category if the inbox is empty; the honest state is `FULFILLED TO THE BEST
+OF CURRENT PRACTICAL ABILITY` for all Builder-reachable Chunk 5 work.
 
-**Accepted product position:** `main` is pushed through commit `52178f7` on
-`origin/main` (round 36's docs-only handoff, on top of round 35's `92acb98`
-and round 34's `/contact` fix `0afb789`; round 37 makes docs-only changes on
-top of this). The production domain is confirmed as `cyvexly.com`, but DNS
-still needs to be connected and verified. `origin/master` is historical and
-is not the deployment branch.
+**Accepted product position:** `main` is pushed through commit `af9fa82` on
+`origin/main` (round 37's docs-only handoff, on top of round 36's `52178f7`
+and round 35's `92acb98`; round 38 makes docs-only changes on top of this).
+The production domain is confirmed as `cyvexly.com`, but DNS still needs to
+be connected and verified. `origin/master` is historical and is not the
+deployment branch.
 
 ## Owner launch decisions and remaining gates
 
