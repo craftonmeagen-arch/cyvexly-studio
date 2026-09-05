@@ -130,6 +130,13 @@
   actual deployed build, not a cold miss). Zero console errors. This
   closes the "public adoption pending" caveat for rounds 31-34's header/
   CSP/canonical/contact-link work — it is confirmed live, not just built.
+  Extended the sweep to all 13 public routes plus `/sitemap.xml`,
+  `/robots.txt`, and a 404 probe against the same live production origin:
+  all return the expected status (200/404), content type, CSP, and HSTS.
+  Also confirmed the staged-release gate is genuinely intact in production
+  — live `/` carries `<meta name="robots" content="noindex, nofollow">`
+  and `/robots.txt` is `Disallow: /` — so the site is not accidentally
+  publicly indexable while Chunk 5 remains open.
 - **Dispositioned Auditor inbox item `IFA-2026-09-05-R27`** — an
   independent confirmation round (reviewed commit `620ba77`), not a new
   finding: re-verified `CYV-IFA-012` CLOSED via its own real multi-viewport
