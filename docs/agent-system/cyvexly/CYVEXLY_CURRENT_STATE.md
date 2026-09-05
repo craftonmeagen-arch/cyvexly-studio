@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 42. Owner launch direction updated 2026-09-04.
+**Global round:** 43. Owner launch direction updated 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -8,46 +8,51 @@ About/Privacy/Terms (round 30), security headers/CSP (rounds 31-32),
 per-route canonical tags (round 33), the Auditor-tracked `/contact`
 link-collision defect `CYV-IFA-012` (round 34), a sitewide
 skip-to-main-content link (round 39), the Planner's step-advance
-focus/scroll/live-region defect (round 40), and the Contact form's missing
-spam/rate protection (round 42) are done. Remaining Chunk 5 scope
-(real Contact/Planner email delivery, DNS/domain connection, analytics/search
-ownership, final indexability approval) is Owner-gated — see
-`CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full round-by-round
-detail is in `CYVEXLY_ACTIVE_CHUNK.md` and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
-
-**Round 42 outcome (scheduled/unattended, 50-minute limit):** dispositioned
-the one new Auditor inbox item, `IFA-2026-09-05-R33` — a ninth consecutive
-independent confirmation, not a new defect. Swept round 41's two named
-untried angles: (1) found and fixed a real, reachable defect — the Contact
-form had no spam/rate protection at all (no honeypot), unlike the Planner,
-which already has one; added an identical hidden honeypot to
-`src/components/contact-form.tsx` and live-verified with real CDP clicks
-that it blocks a filled-honeypot submission and does not regress a clean
-one, and the same method also live-verified the Planner's own honeypot for
-the first time (previously untested); (2) RTL/very-long-name overflow in
-the Planner review step — measured zero horizontal overflow at 375px with
-a worst-case unbroken string, no defect. Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Resolved round 42" section and
+focus/scroll/live-region defect (round 40), the Contact form's missing
+spam/rate protection (round 42), and sitewide Organization JSON-LD
+structured data for search discoverability (round 43) are done. Remaining
+Chunk 5 scope (real Contact/Planner email delivery, DNS/domain connection,
+analytics/search ownership, final indexability approval) is Owner-gated —
+see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full
+round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
+**Round 43 outcome (scheduled/unattended, 50-minute limit):** dispositioned
+the one new Auditor inbox item, `IFA-2026-09-05-R34` — a tenth consecutive
+independent confirmation, not a new defect. Found a genuinely new reachable
+gap: the site had no structured data anywhere, even though vision §17 names
+"searchable" as a launch requirement. Added schema.org `Organization`
+JSON-LD (`src/lib/structured-data.ts`) sitewide using only Owner-confirmed
+facts (name, domain, email, phone, Indiana/US region — no invented address
+or socials); live-verified with real CDP navigation across four routes:
+zero console errors, zero network failures, valid parsed JSON-LD every
+time. Also fixed real hot-memory drift: `CYVEXLY_ACTIVE_CHUNK.md` had grown
+to 29313 bytes because rounds 31-39's full reports were never archived on
+schedule (§7.14 latest-three rotation); archived them to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUNDS_31_39_REPORT.md`, now
+18288 bytes. Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 43"
+section and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 42. Both QA candidates round 41
-named are now closed. Untried angles remaining: a print-stylesheet check
-(low priority, not in vision §17 item 10's explicit list) and a true
-rate-limiting check beyond the honeypot (architecturally tied to the same
-server-side email delivery this chunk already defers). Keep looking for
-genuinely new QA angles rather than assuming the surface is empty. What
-remains genuinely Owner-gated (real Contact/Planner email delivery,
-DNS/domain connection, analytics/search ownership, exact LLC name, final
-indexability approval, About/legal/visual review) is unchanged; see "Owner
-launch decisions and remaining gates" below.
+first for anything published after round 43. Untried angles remaining: a
+print-stylesheet check (low priority, not in vision §17 item 10's explicit
+list), a true rate-limiting check beyond the honeypot (architecturally tied
+to the same server-side email delivery this chunk already defers), and
+FAQPage JSON-LD for the existing `/faq` content (a further discoverability
+enhancement in the same family as round 43's Organization schema, not yet
+attempted). Keep looking for genuinely new QA/build angles rather than
+assuming the surface is empty. What remains genuinely Owner-gated (real
+Contact/Planner email delivery, DNS/domain connection, analytics/search
+ownership, exact LLC name, final indexability approval, About/legal/visual
+review) is unchanged; see "Owner launch decisions and remaining gates"
+below.
 
-**Accepted product position:** `main` is pushed through round 42's source
-fix commit plus its docs commit on `origin/main` — see `git log` for exact
-SHAs. The production domain is confirmed as `cyvexly.com`, but DNS still
-needs to be connected and verified. `origin/master` is historical and is
-not the deployment branch.
+**Accepted product position:** `main` is pushed through round 43's source
+fix commit on `origin/main` — see `git log` for exact SHAs (docs commit to
+follow this same round). The production domain is confirmed as
+`cyvexly.com`, but DNS still needs to be connected and verified.
+`origin/master` is historical and is not the deployment branch.
 
 ## Owner launch decisions and remaining gates
 
