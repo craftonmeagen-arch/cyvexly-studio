@@ -110,6 +110,47 @@
      `mailto:` bridge as a durable solution rather than the explicitly
      temporary one it's labeled as in the UI.
 
+## Resolved round 41
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-05-R32`** — an eighth
+  consecutive independent confirmation (reviewed commit `a8c5769`, round 39's
+  HEAD, one commit behind round 40's step-focus fix already on `main`), not a
+  new finding. Moved to `exchange/processed/`. `tsc --noEmit`/`lint`/`build`
+  re-run clean before making any change (no source touched).
+- **New QA angle — WCAG 1.4.10 Reflow / 200%-zoom-equivalent, one of round
+  40's two named uncovered candidates.** Emulated 320 CSS px (the exact
+  1.4.10 threshold) and 640 CSS px (a proxy for a 1280px viewport at 200%
+  zoom, using the same width-halving equivalence WCAG 1.4.10's own guidance
+  relies on) across 8 marketing routes and all 9 real Planner steps,
+  advancing the Planner with genuine CDP mouse clicks on Continue (not just
+  static snapshots) at a production server. **Result: 34/34 checks, zero
+  horizontal overflow, and the Planner's real step-advancement kept working
+  at both narrow widths.** No defect found. Script and result summary at
+  `docs/agent-system/cyvexly/builder/evidence/round-41-zoom-reflow-*`.
+- **Bonus QA — re-checked round 40's other named candidate: does Back (and
+  by extension the progress-rail/edit-link callers) get round 40's
+  scroll/focus/live-region fix, since all four call the same shared
+  `goToStep()`?** Source read confirmed `goToStep()` is a single function
+  used identically by `handleNext`, `handleBack`, `onEdit`, and the progress
+  rail, and the fix is a `useEffect` keyed only on `currentStep` — not on
+  which caller changed it. Live-verified with a real CDP click on the "←
+  Back" button after advancing to step 2 and manually scrolling away from
+  the top: scroll reset to 0, focus moved to the step 1 heading, and the
+  live region announced "Step 1 of 9: About you". **No defect found** —
+  confirms the fix is caller-agnostic as the source structure implies.
+  Script at `docs/agent-system/cyvexly/builder/evidence/round-41-back-button-test.mjs`.
+- **Ninth consecutive round (35-41, with 39/40 as the only two that found
+  real defects) confirms zero reachable-without-an-Owner-gate defects**,
+  now also covering WCAG 1.4.10 reflow/zoom. Both candidates round 40 named
+  as untested are now closed. See `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s
+  round-41 entry for remaining untried QA angles.
+- Cleaned up: stopped the owned `next start` production server (verified
+  real listener PID via `Get-NetTCPConnection -LocalPort 5173`) and the
+  owned headless Chrome process tree (verified by exact
+  `chrome-profile-round41` command-line match before touching anything),
+  removed the temporary Chrome profile directory under the OS temp
+  scratchpad root.
+
 ## Resolved round 40
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-05-R31`** — a seventh

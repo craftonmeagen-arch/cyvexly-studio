@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 40. Owner launch direction updated 2026-09-04.
+**Global round:** 41. Owner launch direction updated 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -14,43 +14,39 @@ ownership, final indexability approval) is Owner-gated — see
 `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full round-by-round
 detail is in `CYVEXLY_ACTIVE_CHUNK.md` and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 40 outcome (scheduled/unattended, 50-minute limit):** dispositioned
-the one new Auditor inbox item, `IFA-2026-09-05-R31` — a seventh consecutive
-independent confirmation, not a new defect. Ran a screen-reader-semantics QA
-pass on the Planner's step-advance flow (one of round 39's named uncovered
-candidates) and **found and fixed a real, reachable defect**: `goToStep()`
-scrolled to top synchronously before React committed the new step's DOM, so
-browser scroll-anchoring silently kept the old scroll position and focus
-never left the Continue/Back button — no signal to sighted or
-keyboard/screen-reader users that a step change happened. The in-app Browser
-pane was intermittent this round (screenshot timeouts, a
-`document.hasFocus()===false` false-positive from a plain JS click);
-switched to the established local-headless-Chrome/CDP method for a
-trustworthy real-focus result. Fixed with a post-render `useEffect` plus a
-polite live-region announcer; verified before/after against a production
-server. `tsc`/`lint`/`build` clean, commit `71d233f` pushed. Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Resolved round 40" section and
+**Round 41 outcome (scheduled/unattended, 50-minute limit):** dispositioned
+the one new Auditor inbox item, `IFA-2026-09-05-R32` — an eighth consecutive
+independent confirmation, not a new defect. Closed both QA candidates round
+40 named as untried: (1) WCAG 1.4.10 reflow / 200%-zoom-equivalent, tested
+via a width-halving proxy (320px and 640px) across 8 marketing routes and
+all 9 real Planner steps (advanced with genuine CDP clicks) against a
+production server — 34/34 checks, zero horizontal overflow, no defect; (2) a
+real CDP click on the Planner's "← Back" button confirming round 40's shared
+`goToStep()` scroll/focus/live-region fix applies identically regardless of
+caller — no defect. No source changed this round. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 41" section and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 40. **Rounds 39 and 40 both found
-real defects from previously-uncovered QA angles** — the "queue is empty,
-pause cadence" conclusion rounds 35-38 escalated has now been contradicted
-twice. Keep looking for vision §17 item-10 QA categories not yet covered
-with real interactive evidence (candidates: 200% zoom/text-resize across the
-Planner and denser marketing pages; a Back-button/progress-rail re-check of
-round 40's shared `goToStep` fix) rather than assuming the surface is empty.
+first for anything published after round 41. Both QA candidates round 40
+named are now closed; round 41 named new untried angles instead: a
+spam/rate-limit and honeypot-field live-behavior check on Contact/Planner
+(vision §17 item 6), and RTL/very-long-name overflow edge cases in the
+Planner's dynamic list fields. Rounds 39 and 40 found real defects from
+previously-uncovered QA angles — keep looking for genuinely new angles
+rather than assuming the surface is empty just because 41 found nothing.
 What remains genuinely Owner-gated (real Contact/Planner email delivery,
 DNS/domain connection, analytics/search ownership, exact LLC name, final
 indexability approval, About/legal/visual review) is unchanged; see "Owner
 launch decisions and remaining gates" below.
 
 **Accepted product position:** `main` is pushed through round 40's commit
-(`71d233f`) on `origin/main` (on top of round 39's `a8c5769`, round 38's
-`f1a264f`, and round 37's `af9fa82`). The production domain is confirmed as
-`cyvexly.com`, but DNS still needs to be connected and verified.
-`origin/master` is historical and is not the deployment branch.
+(`71d233f`, plus its `46eae51` docs commit) on `origin/main`. Round 41 made
+no source change (no new defect found), so `origin/main` is still `46eae51`.
+The production domain is confirmed as `cyvexly.com`, but DNS still needs to
+be connected and verified. `origin/master` is historical and is not the
+deployment branch.
 
 ## Owner launch decisions and remaining gates
 

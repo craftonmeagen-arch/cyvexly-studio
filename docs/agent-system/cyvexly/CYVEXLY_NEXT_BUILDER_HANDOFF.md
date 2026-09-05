@@ -1,5 +1,71 @@
 # Cyvexly Next Builder Handoff
 
+## Round 41 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
+time limit (unattended)
+**Start source:** `46eae51` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R32`)
+and closed both QA candidates round 40 named as untried: WCAG 1.4.10
+reflow/200%-zoom-equivalent, and a Back-button re-check of round 40's shared
+`goToStep()` fix.
+**Completion:** NO SOURCE CHANGE — no reachable defect found this round.
+
+### What was checked
+
+- `IFA-2026-09-05-R32` (reviewed commit `a8c5769`, round 39's HEAD, one
+  commit behind round 40's already-landed fix) is an **eighth consecutive
+  independent confirmation, not a new finding**. Moved to
+  `exchange/processed/`. Ran `pnpm exec tsc --noEmit`, `pnpm run lint`,
+  `pnpm run build` — all clean before making any change.
+- **New QA angle — WCAG 1.4.10 Reflow (320 CSS px) and a 200%-zoom-equivalent
+  proxy (640 CSS px, half of a 1280px baseline).** Started a real production
+  `next start` server and drove it with the round-8/38/39/40-established
+  local headless-Chrome/CDP technique. Tested 8 marketing routes
+  (`/`, `/services`, `/pricing`, `/about`, `/contact`, `/faq`, `/process`,
+  `/work`) and all 9 Planner steps at both widths, advancing the Planner
+  with real CDP mouse clicks on Continue (filling required fields each
+  step) rather than just checking static snapshots. **Result: 34/34 checks,
+  zero horizontal overflow** (`document.documentElement.scrollWidth` never
+  exceeded `window.innerWidth`), and the Planner's real step-advancement
+  kept working at both narrow widths. No defect found. Method honestly
+  scoped: width-halving approximates the CSS-pixel budget a real zoom level
+  leaves available (the same equivalence WCAG 1.4.10's guidance uses); it
+  does not prove Chrome's literal zoom rendering or browser-native
+  text-only zoom. Script and result summary at
+  `docs/agent-system/cyvexly/builder/evidence/round-41-zoom-reflow-*`.
+- **Bonus QA — Back-button re-check, round 40's other named candidate.**
+  Source read confirmed `goToStep()` is one shared function called
+  identically by `handleNext`, `handleBack`, `onEdit` (review-step edit
+  links), and the progress rail, and round 40's fix is a `useEffect` keyed
+  only on `currentStep` — not on which caller triggered the change. Live-
+  verified anyway with a real CDP click on the "← Back" button (advanced to
+  step 2, scrolled away from the top, then clicked Back): scroll reset to
+  `0`, focus moved to the step 1 `<h2>`, live region announced "Step 1 of 9:
+  About you". No defect found. Script at
+  `docs/agent-system/cyvexly/builder/evidence/round-41-back-button-test.mjs`.
+- Cleaned up: stopped the owned `next start` server (verified real listener
+  PID via `Get-NetTCPConnection -LocalPort 5173`) and the owned headless
+  Chrome process tree (verified by exact `chrome-profile-round41`
+  command-line match), removed the temporary Chrome profile directory under
+  the OS temp scratchpad root.
+- Archived round 39's full detail out of this file (below) to stay under the
+  12288-byte hot-file cap; round 40 and 41 stay live.
+
+### Recommended next workstream
+
+Ninth consecutive round (35-41) with only rounds 39/40 finding real
+defects; both candidates round 40 named are now closed with real-interaction
+evidence. Untried QA angles not yet swept: a dedicated spam/rate-limit and
+honeypot-field behavior check on Contact/Planner (vision §17 item 6's
+"proportionate accessible spam/rate controls" — the honeypot field exists in
+source but its actual submit-blocking behavior has not been live-tested this
+round series); a print-stylesheet/print-to-PDF check (not part of vision §17
+item 10's explicit list, so lower priority); RTL/very-long-name overflow
+edge cases in the Planner's dynamic list fields. Genuinely Owner-gated items
+are unchanged: DNS/domain connection, real email delivery, analytics
+ownership, exact LLC name (see `CYVEXLY_OWNER_DIRECTION.md`).
+
 ## Round 40 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
@@ -84,81 +150,17 @@ correct, but not explicitly re-tested this round — Continue was). Genuinely
 Owner-gated items are unchanged: DNS/domain connection, real email delivery,
 analytics ownership, exact LLC name (see `CYVEXLY_OWNER_DIRECTION.md`).
 
-## Round 39 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
-time limit (unattended)
-**Start source:** `f1a264f` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R30`)
-and ran a new keyboard/ARIA accessibility QA angle (not previously done
-comprehensively). **Found and fixed one real, reachable defect.**
-**Completion:** SOURCE FIX LANDED — see below.
-
-### What was checked
-
-- `IFA-2026-09-05-R30` (reviewed commit `af9fa82`, round 37's HEAD) is a
-  **sixth consecutive independent confirmation, not a new finding**. Moved to
-  `exchange/processed/`.
-- Ran `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` — all
-  clean before making any change.
-- **New QA angle — keyboard/ARIA accessibility sweep across all 20 routes**,
-  the one vision §17 item-10 category not yet covered by rounds 31-38. Used
-  the round-8/38 local headless-Chrome/CDP technique. First attempt
-  (`el.focus()` + computed style) flagged near-universal "no focus
-  indicator" — **a false positive of the test method**: Chrome's
-  `:focus-visible` only activates on real keyboard input, not scripted
-  `.focus()`, and the site has a global `::focus-visible` rule
-  (`src/app/globals.css:605`). Rewrote to dispatch real
-  `Input.dispatchKeyEvent` Tab presses; re-ran on 14 routes × 12 tabs:
-  **zero missing focus indicators** — confirms correct styling, not a defect
-  (mirrors round 32's "verify real behavior" lesson).
-- Heading-order/`<main>`-landmark checks (unaffected by that pitfall) were
-  clean on all 20 routes — but **found a real gap: no skip-to-main-content
-  link on any route.** Every page's first focusable element was the header
-  logo, so keyboard users had to tab through the full nav every page load —
-  a WCAG 2.4.1 Bypass Blocks (Level A) failure, part of the Owner
-  direction's release-QA "keyboard/accessibility" line item, never
-  explicitly checked before.
-- **Fixed:** added `id="main-content"` to `<main className="flex-1">` in all
-  15 page files (scripted replace, verified unique-per-file first, grepped
-  after). Added a visually-hidden-until-focused "Skip to main content" link
-  (Tailwind's standard `sr-only focus:not-sr-only focus:fixed` idiom,
-  matching existing `sr-only` usage) as the first element `SiteHeader`
-  renders (mounts on all 16 pages), so it is first in tab order everywhere.
-- **Verified with real keyboard events:** rebuilt (`tsc`/`lint`/`build`
-  clean), restarted the server, and ran a dedicated script dispatching real
-  Tab then Enter via CDP on `/`, `/about`, `/services/business-websites`:
-  first Tab reveals a visible link at (12,12), 170×40px (not
-  `sr-only`-hidden), Enter moves `location.hash` to `#main-content`,
-  matching the real `<main id="main-content">`. All three routes passed.
-- Cleaned up: stopped the owned `next start` server (verified real listener
-  PID via `Get-NetTCPConnection -LocalPort 5173`, not just the shell-wrapper
-  PIDs) and the owned headless Chrome process (verified via CDP-port
-  command-line match before touching anything), then removed the temporary
-  Chrome profile directory under the OS temp root. Evidence scripts and raw
-  output preserved at `docs/agent-system/cyvexly/builder/evidence/
-  round-39-*` for reproducibility.
-
-### Recommended next workstream
-
-The reachable-work queue is **not** exhausted — five "nothing new" rounds
-(31, 35-38) had covered every QA category *except* keyboard/ARIA
-accessibility, and that category held a real defect. **Do not assume the
-queue is empty just because recent rounds found nothing** — look for QA
-angles vision §17 item 10 names with no real-interaction evidence yet.
-Candidates not yet swept post-theme-overhaul (rounds 21-28 changed a lot of
-markup): screen-reader semantics (aria-live/form-error announcements on
-Contact/Planner), 200% zoom/text-resize, reduced-motion beyond the hero
-video. `CYVEXLY_APP_DEBT.md`'s "Open" section remains genuinely Owner-gated
-(DNS/domain, real email delivery, analytics ownership, exact LLC name).
+Round 39 closeout detail is archived at `docs/archive/chunks/
+CYVEXLY_BUILDER_HANDOFF_ROUND_39_REPORT.md` (moved there in round 41 to keep
+this file under its 12288-byte hot-file cap; 40 and 41 stay live). Round 39
+found and fixed the sitewide skip-to-main-content link defect (WCAG 2.4.1).
 
 Round 38 closeout detail is archived at `docs/archive/chunks/
 CYVEXLY_BUILDER_HANDOFF_ROUND_38_REPORT.md`, and round 37 at
-`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_37_REPORT.md` (both moved
-in round 40 to keep this file under its 12288-byte hot-file cap; 39 and 40
-stay live). Both rounds' "recommend pausing scheduled cadence" conclusion was
-superseded by rounds 39 and 40 each finding a real, reachable defect from a
-QA angle rounds 31-38 hadn't tried — see the current round-40 entry.
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_37_REPORT.md`. Rounds 39
+and 40 each found a real, reachable defect from a QA angle rounds 31-38
+hadn't tried; round 41 closed both candidates round 40 named with no new
+defect — see the current round-41 entry above.
 
 Round 36 closeout detail is archived at `docs/archive/chunks/
 CYVEXLY_BUILDER_HANDOFF_ROUND_36_REPORT.md` (moved there in round 39 to keep

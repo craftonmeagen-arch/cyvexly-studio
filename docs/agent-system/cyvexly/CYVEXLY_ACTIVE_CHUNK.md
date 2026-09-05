@@ -104,6 +104,36 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 41 report — global round 41 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R32` (reviewed commit
+`a8c5769`, round 39's HEAD, one commit behind round 40's fix). Eighth
+consecutive independent confirmation, not a new finding. Moved to
+`exchange/processed/`. Re-ran `tsc`/`lint`/`build` clean before making any
+change.
+
+Closed both QA candidates round 40 named as untried, with no source change
+needed (no defect found):
+
+1. **WCAG 1.4.10 Reflow / 200%-zoom-equivalent.** Emulated 320 CSS px (the
+   exact 1.4.10 threshold) and 640 CSS px (a width-halving proxy for a
+   1280px viewport at 200% zoom) across 8 marketing routes and all 9 real
+   Planner steps, advancing the Planner with genuine CDP mouse clicks on
+   Continue against a production server. 34/34 checks: zero horizontal
+   overflow, and the Planner's real step-advancement kept working at both
+   narrow widths.
+2. **Back-button re-check of round 40's shared `goToStep()` fix.** Source
+   read confirmed one function serves `handleNext`, `handleBack`, `onEdit`,
+   and the progress rail, with the fix keyed only on `currentStep`. Live
+   CDP click on "← Back" confirmed: scroll reset to 0, focus moved to the
+   step heading, live region announced correctly.
+
+Full detail, method honesty notes, and scripts in `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 41" section and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`. Ninth
+consecutive round (35-41) with only rounds 39/40 finding real defects — the
+next round should look for genuinely new QA angles (candidates in the
+handoff) rather than assume the surface stays empty.
+
 ## Round 40 report — global round 40 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R31` (reviewed commit

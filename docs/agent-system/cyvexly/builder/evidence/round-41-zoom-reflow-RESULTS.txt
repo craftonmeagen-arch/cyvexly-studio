@@ -1,0 +1,42 @@
+Round 41 QA: WCAG 1.4.10 Reflow (320 CSS px) and 200%-zoom-equivalent (640 CSS px,
+proxy for a 1280px viewport at 200% browser zoom) across 8 marketing routes and all
+9 real Planner steps (advanced via genuine CDP mouse clicks on Continue, filling
+required fields each step, against a production `next start` server on port 5173).
+
+Method note (proof-scoping honesty): browser zoom shrinks the CSS layout viewport
+while scaling content proportionally. Halving/quartering viewport width at normal
+device-scale-factor approximates the CSS-pixel budget available at 200%/400% zoom
+(the same equivalence WCAG 1.4.10's own guidance uses: 320 CSS px ~= 400% zoom at a
+1280px baseline). This proves content-loss/overflow at the CSS-pixel-budget layer.
+It does NOT prove Chrome's own pixel-for-pixel zoom rendering, browser-native
+text-only zoom (Ctrl+Shift+= text scaling independent of layout), or every zoom
+level in between 100-400%.
+
+Routes tested @ 320px and 640px: /, /services, /pricing, /about, /contact, /faq,
+/process, /work, plus /start steps 1-9 (fresh draft, real field fills + real
+Continue clicks between checks).
+
+RESULT: 34/34 checks — zero horizontal overflow (document.documentElement.scrollWidth
+never exceeded window.innerWidth) at either width, on every marketing route and every
+Planner step. The Planner's real Continue-click step advancement succeeded at both
+narrow widths (forms remain usable while reflowed, not just visually non-overflowing).
+No defect found.
+
+(Raw per-check JSON was reviewed live during the round; only this summary and the
+reusable script are retained per the mandatory-cleanup rule, since the full JSON dump
+duplicates what this summary already states — all zero-overflow.)
+
+---
+
+Bonus QA — Back button / shared goToStep() re-check (round 40's named untested
+candidate): advanced Planner step 1->2 via a real Continue click, manually scrolled
+to a mid-page position, then clicked the real "<- Back" button via CDP mouse events.
+
+BEFORE BACK: scrollY 424, focus on H2 "02 The business", live region "Step 2 of 9:
+The business" (Continue's effect had already fired correctly).
+AFTER BACK:  scrollY 0, focus on H2 "01 About you", live region "Step 1 of 9: About
+you".
+
+RESULT: PASS. Confirms round 40's useEffect-based fix (keyed on currentStep, not on
+which caller changed it) applies identically to Back, Continue, edit links, and the
+progress-rail click, since all four call the same shared goToStep(). No defect found.
