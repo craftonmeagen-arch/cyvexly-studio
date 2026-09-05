@@ -24,14 +24,7 @@
    no-index) remain open follow-ups; robots.txt already gates on the same
    env var and needed no change. This closes the code-only portion of item 1;
    the DNS/Render account connection is still the real remaining blocker.
-2. **Privacy Policy and Website Terms are authorized but need the exact legal
-   entity name.** The Owner confirmed an LLC based in Indiana, United States,
-   serving the United States only at launch. Draft `/privacy` and `/terms`
-   around those facts and the technologies actually used. The Owner has not
-   supplied the exact registered LLC name; verify it before final publication,
-   invoices, or agreements. Keep Website Terms separate from the client project
-   agreement and route legal copy to the Owner for review.
-3. **§4.12 Outcome Reachability Check — Project Planner (Chunk 3)
+2. **§4.12 Outcome Reachability Check — Project Planner (Chunk 3)
    email-delivery mechanism.** Performed round 3, before opening Chunk 3,
    per the round-2 handoff's explicit recommendation. **Round 4 update:**
    the separable, authorized part of this item (the Planner's UI/state/
@@ -155,6 +148,30 @@
   not a product defect; not worth further session time chasing per the
   non-converging-loop guidance. Stopped the manually-started dev server
   processes before exiting (role-owned port 5173 cleanup).
+- **Privacy Policy and Website Terms drafted and verified.** Built
+  `/privacy` and `/terms` (`src/app/privacy/page.tsx`,
+  `src/app/terms/page.tsx`), grounded in Indiana/United States operations and
+  the site's *actual* current behavior rather than generic template
+  language: verified in source first that the site has no live analytics,
+  no cookies, no third-party tracking scripts, and self-hosts fonts (no
+  live Google Fonts request); that Contact and the Project Planner both
+  submit via a `mailto:` link (data goes device-to-inbox, no server-side
+  storage today) with the Planner's `localStorage` draft-save and honeypot
+  described accurately; and that no payment is collected anywhere on the
+  site. Terms sets Indiana governing law and explicitly separates these
+  public Website Terms from the future signed client project agreement, per
+  vision §6.12 and Owner direction `2026-09-04-14` item 5. Both pages carry
+  a visible "Draft under review" notice stating the exact registered LLC
+  legal name is still pending Owner confirmation and that final Owner
+  review has not happened yet — **do not remove that notice or treat either
+  page as final/publishable until the Owner supplies the exact registered
+  entity name and reviews the copy.** Footer legal links (already pointing
+  to `/privacy` and `/terms` since round 1) now resolve instead of 404ing.
+  Verified: `tsc`/`lint`/`build` clean (27 routes), `h1`→`h2`-only heading
+  hierarchy on both pages (measured, no skip), both pages carry `noindex`
+  consistent with every other page's staged-release gate, and real in-app
+  Browser screenshots at 375px/785px/1440px show no overflow and correct
+  contrast on both pages.
 - **Environment fix, documented for the next agent:** this Windows host's
   Node.js 24.19.0 install
   (`C:\Users\Tcraf\AppData\Local\Programs\NodeJS\node-v24.19.0-win-x64`) and
@@ -210,7 +227,7 @@
   time-zone-coordination question underneath it remains accurate and useful.
   Re-verified via the real production build: zero `worldwide` or
   `hello@cyvexly` matches remain in any generated route's HTML.
-- **`metadataBase` and `sitemap.xml` closed** — see item 2 above, Round 29
+- **`metadataBase` and `sitemap.xml` closed** — see item 1 above, Round 29
   update.
 - **Verification:** `pnpm exec tsc --noEmit`, `pnpm run lint`, and
   `pnpm run build` (24 routes including the new `/sitemap.xml`) all pass
@@ -220,9 +237,8 @@
   the real production build's generated static HTML/XML output rather than
   a live screenshot; the next attended Builder round should still open the
   public Render site to confirm the same result visually.
-- **Not touched this round:** the About page (built round 30, see above),
-  Privacy/Terms (item 2), the real server-side email delivery path (item 3),
-  and Chunk 5's
-  domain/DNS, legal, analytics, and QA workstreams remain open. This round
-  is one bounded workstream (contact-identity truth + metadata/sitemap), not
-  a claim that Chunk 5 is complete.
+- **Not touched this round:** the About page and Privacy/Terms drafts (both
+  built round 30, see above), the real server-side email delivery path
+  (item 2), and Chunk 5's domain/DNS, analytics, and QA workstreams remain
+  open. This round is one bounded workstream (contact-identity truth +
+  metadata/sitemap), not a claim that Chunk 5 is complete.

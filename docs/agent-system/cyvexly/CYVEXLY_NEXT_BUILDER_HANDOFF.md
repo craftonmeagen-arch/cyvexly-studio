@@ -35,11 +35,13 @@ About/legal/public-visual review; and final approval to enable indexing.
 **Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
 time limit (unattended)
 **Start source:** `bebcdc5` on `main`
-**Scope:** the recommended-next reachable Chunk 5 workstream — the About
-page — built and verified. Full detail in `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 30" section.
-**Completion:** IMPLEMENTED, VERIFIED VIA REAL RENDERED SCREENSHOTS LOCALLY;
-NOT YET COMMITTED BY THIS ROUND'S SCOPING DECISION — see below.
+**Scope:** two reachable, Owner-gate-free Chunk 5 workstreams — the About
+page, then Privacy/Terms drafts — built and verified. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 30" section.
+**Completion:** IMPLEMENTED, VERIFIED VIA REAL RENDERED SCREENSHOTS LOCALLY,
+COMMITTED AND PUSHED TO `origin/main` — see below. Privacy/Terms remain
+explicitly marked "Draft under review" pending Owner LLC-name confirmation
+and copy review; not final-publication-ready.
 
 ### What changed
 
@@ -47,12 +49,23 @@ NOT YET COMMITTED BY THIS ROUND'S SCOPING DECISION — see below.
   vision §6.8 requirement (logo-led identity image, approved studio-origin
   copy, five values, working style/availability, honest collaborator model,
   brief tech mention, response-time expectation, CTA to `/start`).
+- New `src/app/privacy/page.tsx` and `src/app/terms/page.tsx`: drafted from
+  the site's actual current behavior (no analytics/cookies, self-hosted
+  fonts, `mailto:`-based Contact/Planner submission, Planner
+  `localStorage` draft + honeypot, no payment collection), Indiana/United
+  States jurisdiction, and vision §6.12's separation of public Website Terms
+  from the future client project agreement. Both carry a visible "Draft
+  under review" notice — the exact registered LLC name is still pending
+  Owner confirmation.
 - `src/lib/site-config.ts`: added `aboutValues`; restored `About` to
-  `primaryNav` and `footerNav.studio` now that the route is real.
-- `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` (25 routes) all
+  `primaryNav` and `footerNav.studio` now that the route is real. (The
+  Privacy/Terms footer links already existed since round 1 and now resolve
+  instead of 404ing — no `site-config.ts` change needed for those two.)
+- `pnpm exec tsc --noEmit`, `pnpm run lint`, `pnpm run build` (27 routes) all
   pass. Real in-app-Browser screenshots at 375px/785px/1440px confirm layout,
-  contrast, and full desktop/mobile nav — see `CYVEXLY_APP_DEBT.md` for the
-  full method and the one non-blocking compositing-quirk note.
+  contrast, and full desktop/mobile nav across all three new pages — see
+  `CYVEXLY_APP_DEBT.md` for the full method and one non-blocking
+  compositing-quirk note from the About-page pass.
 
 ### Important: working tree had a large pre-existing uncommitted diff at
 ### session start, unrelated to this round
@@ -82,21 +95,26 @@ migration diff's substance — only recorded that it exists and was excluded.
 
 ### Git status of this round's own change
 
-`src/app/about/page.tsx` (new) and `src/lib/site-config.ts` (this round's
-`aboutValues`/nav additions only) plus this file and `CYVEXLY_APP_DEBT.md`
-are staged and committed on top of `bebcdc5`, on `main`. Use `git log`/`git
-show` for the exact hash; this round did not include any file from the
-pre-existing migration diff described above in its commit.
+Two commits on top of `bebcdc5`, on `main`, pushed to `origin/main`:
+`src/app/about/page.tsx` + `site-config.ts`'s About-nav additions (commit 1),
+then `src/app/privacy/page.tsx` + `src/app/terms/page.tsx` (commit 2), plus
+this file and `CYVEXLY_APP_DEBT.md`. Use `git log` for the exact hashes;
+this round did not include any file from the pre-existing migration diff
+described above in either commit.
 
 ### Recommended next workstream
 
-Privacy/Terms drafting (`/privacy`, `/terms`) is the next largely
-Owner-gate-free reachable piece — Indiana/United States jurisdiction and
-United States-only market are confirmed; only the exact registered LLC name
-needs Owner confirmation before *final* publication, which does not block
-drafting the pages now (state clearly in the draft that the entity name is
-pending confirmation). Domain/DNS, email-provider authorization, and
-analytics ownership remain genuinely Owner-account-gated as before.
+With About and Privacy/Terms drafted, the next largely-reachable Chunk 5
+piece is the §4.12-documented Planner/Contact server-side email delivery
+(`CYVEXLY_APP_DEBT.md` item 2) — but that one genuinely needs the Owner to
+authorize a transactional-email provider and enter credentials first, so it
+is Owner-gated, not silently reachable. Absent that authorization, the next
+purely reachable work is a fuller release-QA pass over what already exists:
+re-verify all 27 routes, legal footer links, and responsive/contrast
+states together now that About/Privacy/Terms all exist, since no round has
+looked at the *whole* site together since before this round's three new
+pages landed. Domain/DNS, email-provider authorization, and analytics
+ownership remain genuinely Owner-account-gated as before.
 
 ## Round 29 closeout
 
