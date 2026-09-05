@@ -172,6 +172,14 @@
   consistent with every other page's staged-release gate, and real in-app
   Browser screenshots at 375px/785px/1440px show no overflow and correct
   contrast on both pages.
+- **Found and fixed: `sitemap.ts` didn't list the three new routes.** After
+  committing About/Privacy/Terms, re-checked the actual generated
+  `sitemap.xml` (not just that the build succeeded) and found `/about`,
+  `/privacy`, and `/terms` were missing from `src/app/sitemap.ts`'s
+  `staticRoutes` array — they existed and were linked in navigation, but
+  would have been invisible to search engines relying on the sitemap. Fixed
+  by adding all three; re-verified `.next/server/app/sitemap.xml.body` lists
+  all 20 static+dynamic routes. Separate commit (`1ea04eb`).
 - **Environment fix, documented for the next agent:** this Windows host's
   Node.js 24.19.0 install
   (`C:\Users\Tcraf\AppData\Local\Programs\NodeJS\node-v24.19.0-win-x64`) and
