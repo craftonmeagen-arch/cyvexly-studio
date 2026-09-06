@@ -7,6 +7,14 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 71** (scheduled/unattended, 50-minute limit) dispositioned two
+new Auditor inbox items (34th/35th consecutive clean confirmations)
+and found/fixed a real dead-end defect: `/work`'s "Redesign"/"Landing
+Page" filter pills matched zero projects. Also found/fixed a real
+hot-file-cap violation in `CYVEXLY_APP_DEBT.md` itself. See the
+round-71 report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 71"
+section.
+
 **Round 70** (scheduled/unattended, 50-minute limit) dispositioned fresh
 Owner direction `2026-09-06-16` (text-cursor/editable-looking body
 copy). No new Auditor item existed. Reproduced live and confirmed it
@@ -258,65 +266,63 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
-## Round 70 report — global round 70 (scheduled/unattended session)
+## Round 71 report — global round 71 (scheduled/unattended session)
 
-Dispositioned fresh Owner direction `2026-09-06-16` (text-cursor/
-editable-looking body copy: "on cyvexly i can click on any of the
-wording and a toggle shows as if i can type"). No new Auditor inbox
-item existed (`exchange/operational-inbox/` empty).
+Checked the Auditor inbox first: two new items existed
+(`IFA-2026-09-06-R59`, `IFA-2026-09-06-R60`), the 34th and 35th
+consecutive clean confirmations (0 active code defects; R59's
+hot-file-cap note on `CYVEXLY_CURRENT_STATE.md` was already fixed by
+round 69, R60 re-verified it closed). Both moved to
+`exchange/processed/`.
 
-**Reproduced live.** `getComputedStyle` on `h1`/`p` returned
-`cursor: "auto"`, `isContentEditable: false`,
-`document.designMode: "off"`; `grep` across `src/` found zero existing
-`cursor`/`contentEditable`/`user-select` rules. This is the browser's
-own universal default I-beam cursor over selectable text (present on
-every website), not a Cyvexly-specific `contentEditable`/input-like
-styling bug.
+**Found and fixed a real, previously-unflagged defect on a fresh
+surface (`/work`'s filter UI)**, following round 69/70's
+recommendation to review surfaces not yet given a dedicated pass.
+`workFilters` (`src/lib/site-config.ts`) listed `"Redesign"` and
+`"Landing Page"` as filter pills, but no `selectedWork` item's
+`category` is ever either value — every concept project is
+`"Business Site"` (×2) or `"Commerce"` (×1) — so clicking either pill
+guaranteed the page's own empty state ("No projects match that filter
+yet.") for every visitor, permanently, on a core marketing route.
+Confirmed by direct source inspection (a pure, deterministic filter
+function) and live in the browser.
 
-**Fixed as a real, reachable polish defect without an accessibility
-regression.** Added `cursor: default` on non-interactive prose (`p`,
-`h1`-`h6`, `blockquote`, `figcaption`, `dt`, `dd`) inside `@layer base`
-in `src/app/globals.css`, plus explicit `cursor: pointer` restoration
-on `a`/`button`/`[role="button"]`/`summary` so every real interactive
-control — including inline links nested inside a paragraph
-(`/privacy`, `/terms`, `/accessibility`, `/services/[slug]`'s "Return
-to all services") — keeps its pointer affordance. `user-select` left
-untouched: text stays fully selectable/copyable, since disabling
-selection is a known usability/accessibility anti-pattern the Owner's
-report did not ask for.
+**Fixed:** trimmed `workFilters` to `["All", "Business Site",
+"Commerce", "Concept"]` — every remaining pill now matches at least one
+real project. Did not fabricate a new concept project to backfill the
+missing categories (disproportionate to the defect, and outside this
+round's scope).
 
-**Self-caught regression before committing.** The first version of the
-rule sat outside any `@layer`, so it unconditionally beat Tailwind
-utility classes like `disabled:cursor-not-allowed` on the Planner's
-not-yet-reached progress-rail buttons regardless of specificity — an
-unlayered rule always outranks a layered one in the CSS cascade.
-Live-tested `/start` before committing, found disabled buttons
-reporting `cursor: "pointer"` instead of `"not-allowed"`, moved the
-rule inside `@layer base`, and re-verified correct behavior across
-every case.
+**Verified:** `tsc --noEmit`/`lint`/`build` all clean (the same
+pre-existing, unrelated round-42 evidence-script lint warning,
+untouched). Real `next start` on port 5173: a scripted click of every
+filter pill confirmed zero empty states (`All`→3, `Business Site`→2,
+`Commerce`→1, `Concept`→3 cards); an 18-route sweep (every public
+static/dynamic route plus `robots.txt`/`sitemap.xml`) returned 200.
 
-**Verified:** `tsc`/`lint`/`build` clean (one pre-existing unrelated
-lint warning, untouched). Real `next start` on port 5173: computed-
-style checks on Home (`h1`/`p` → `default`), `/start` (all Planner
-button states, including `not-allowed`, correct), `/privacy` (18
-inline links all `pointer`), `/services/business-websites` ("Return to
-all services" `pointer`), `/contact` (submit button `pointer`), `/faq`
-(accordion buttons `pointer`). 12-route sitewide sweep all 200.
+**Independently found and fixed a second real defect: `CYVEXLY_APP_
+DEBT.md` was 2669 bytes over its own 30720-byte cap** at round start
+(`.codex/roles/scripts/Test-HotFileCaps.ps1`, the same check behind
+Auditor `CYV-DOC-*` findings) — rounds 48/50/51/55 had never rotated.
+Archived all four to `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_
+{48,50,51,55}_ARCHIVE.md`; re-ran the checker and confirmed 0
+violations across all 47 files, including this file (rotated too).
 
-**Environment fix, documented for the next round:** this session's
-PowerShell had no `node`/`npm`/`pnpm` on `PATH` despite them being
-installed — added the real install directories
-(`...\Programs\nodejs\node-v24.19.0-win-x64`, `...\Roaming\npm`) to
-`$env:Path` for the session; no system/user environment change made.
+Full detail, including the trimmed-filter live-verification steps, is
+in `CYVEXLY_APP_DEBT.md`'s "Resolved round 71".
 
-Cleaned up: stopped the owned `next dev`/`next start` listener
+Cleaned up: stopped the owned `next dev`/`next start` listeners
 (verified the real listener PID via `Get-NetTCPConnection -LocalPort
-5173 -State Listen`, not process name — this host runs many unrelated
-pre-existing `node.exe` processes); removed scratch log files from
-`$env:TEMP`. Also committed pre-existing uncommitted hot-file-cap
-archival edits to `CYVEXLY_OWNER_DIRECTION.md`/`ARCHIVE.md` found
-already made but uncommitted at round start (content verified correct
-and complete, not discarded).
+5173 -State Listen`, not process name). Two scratch log files under
+`$env:TEMP` could not be removed (Windows reported them locked after
+the owning process exited, same transient-lock pattern round 48 hit
+with a Chrome profile directory) — left as disposable OS-temp
+artifacts; next round should retry and report if it persists.
+
+Round 70's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_70_REPORT.md` (moved
+there round 71 to keep this file under its 30,720-byte hot-file cap).
+Round 70 fixed the text-cursor/editable-looking-copy defect.
 
 Round 69's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_69_REPORT.md` (moved

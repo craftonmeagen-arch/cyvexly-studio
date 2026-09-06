@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 70. Owner launch direction updated 2026-09-04, extended
+**Global round:** 71. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -36,7 +36,18 @@ round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
 `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
 
-**Round 70 outcome:** dispositioned fresh Owner direction `2026-09-06-16`
+**Round 71 outcome:** dispositioned two new Auditor inbox items
+(34th/35th consecutive clean confirmations, 0 active code defects).
+Found/fixed a real dead-end defect on `/work`: two filter pills
+("Redesign"/"Landing Page") matched zero projects, guaranteeing an
+empty-state for any visitor who clicked them — trimmed the filter list
+to only categories with real matches. Also found/fixed a real
+hot-file-cap violation in `CYVEXLY_APP_DEBT.md` (2669 bytes over),
+archiving rounds 48/50/51/55. `tsc`/lint/build clean, 18-route sweep
+all 200, hot-file checker 0 violations sitewide. Full detail in
+`CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
+
+Round 70 outcome: dispositioned fresh Owner direction `2026-09-06-16`
 (text-cursor/editable-looking body copy). Reproduced live — confirmed
 it is the browser's universal default I-beam cursor over selectable
 text (`cursor:auto`, not `contentEditable`), not a Cyvexly-specific
@@ -67,24 +78,23 @@ description.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 70 (empty as of round 70).
-Owner direction `2026-09-06-16` (text-cursor defect) is now FIXED —
-see `CYVEXLY_APP_DEBT.md`'s "Resolved round 70" for the fix and the
-regression it caught before commit; update that direction's status
-line in `CYVEXLY_OWNER_DIRECTION.md` if the Owner confirms it visually.
-About/Privacy/Terms copy, `service-details.ts`, and pricing-consistency
-checks are clean (round 69); genuinely fresh surfaces still not given a
-dedicated adversarial pass include the Planner's client-side
-`planner-form.tsx` UI logic and the case-study (`/work/[slug]`) content
-against `site-config.ts`'s `selectedWork`/`caseStudies`. The
+first for anything published after round 71 (empty as of round 71).
+Owner direction `2026-09-06-16` (text-cursor defect) is FIXED — see
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 70" (fix) and update that
+direction's status line in `CYVEXLY_OWNER_DIRECTION.md` if the Owner
+confirms it visually. About/Privacy/Terms copy, `service-details.ts`,
+pricing consistency, and the Planner server route/shared config are all
+checked clean (rounds 69/71); the one genuinely fresh surface not yet
+given a dedicated adversarial pass is `planner-form.tsx`'s client-side
+step logic. The
 Cloudflare-bypass gap has a dormant code-side gate (round 62, hardened
 round 63); it activates only once the Owner adds one Cloudflare
 Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more Builder
 code. What remains genuinely Owner-gated is otherwise unchanged; see
 "Owner launch decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 69's source
-commit (`7239d3b`) on `origin/main` and Render auto-deploys it.
+**Accepted product position:** `main` is pushed through round 71's source
+commit (`0e4d779`) on `origin/main` and Render auto-deploys it.
 `cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
 round 53). `origin/master` is historical, not the deployment branch.
 

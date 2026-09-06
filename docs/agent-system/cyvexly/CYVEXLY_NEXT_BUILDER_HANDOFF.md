@@ -1,5 +1,53 @@
 # Cyvexly Next Builder Handoff
 
+## Round 71 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
+time limit (unattended)
+**Start source:** `a8d2f6a` on `main` (pushed, matched `origin/main`)
+**Scope:** checked the Auditor inbox first (two new items, 34th/35th
+clean confirmations), then reviewed the fresh surfaces round 69/70
+recommended and found a real defect on `/work`'s filter UI, plus a
+hot-file-cap violation in `CYVEXLY_APP_DEBT.md` itself.
+**Completion:** REAL SOURCE FIX LANDED — see below.
+
+### What was checked and fixed
+
+- `IFA-2026-09-06-R59`/`R60`: 34th/35th consecutive confirmations, 0
+  active defects. R59's `CYV-DOC-001` was already fixed round 69; R60
+  re-verified closed. Both moved to `exchange/processed/`.
+- **Fixed:** `workFilters` (`src/lib/site-config.ts`) listed
+  `"Redesign"`/`"Landing Page"` pills matching zero `selectedWork`
+  items — a guaranteed dead-end empty state on `/work`. Trimmed to
+  `["All", "Business Site", "Commerce", "Concept"]`; no fabricated
+  project added.
+- **Fixed:** `CYVEXLY_APP_DEBT.md` was 2669 bytes over its own
+  30720-byte cap. Archived rounds 48/50/51/55; re-verified 0
+  violations across all 47 files. Detail in that file's "Resolved
+  round 71".
+
+**Verified:** `tsc --noEmit`/lint/build clean (pre-existing round-42
+warning untouched). Real `next start` on 5173: scripted click of every
+`/work` filter confirmed 0 empty states; 18-route sweep all 200.
+
+Cleaned up: stopped the owned listener (verified via
+`Get-NetTCPConnection -LocalPort 5173 -State Listen`); two scratch logs
+under `$env:TEMP` wouldn't delete (locked post-exit, same as round
+48's Chrome profile) — left, retry next round.
+
+### Recommended next workstream
+
+`planner-form.tsx`'s client-side step logic is the one genuinely fresh
+surface not yet given a dedicated pass (server route/shared config
+reviewed this round, fully wired). Owner gates unchanged: Resend
+account/DNS/API key, analytics/Search Console ownership, exact LLC
+name, About/legal/visual review, final indexability approval.
+
+Round 69 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_69_REPORT.md` (moved
+there round 71 to keep this file under its 12,288-byte hot-file cap).
+Round 69 fixed the Home FAQ preview's CMS-inclusion overclaim.
+
 ## Round 70 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
@@ -49,52 +97,6 @@ step logic, or the case-study (`/work/[slug]`) content against
 Resend account/DNS/API key, analytics/Search Console ownership, exact
 LLC name, About/legal/visual review (now including this round's cursor
 fix), final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
-
-## Round 69 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
-time limit (unattended)
-**Start source:** `6008a78` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item
-(`IFA-2026-09-06-R58`) and, per round 68's recommendation, reviewed
-About/Privacy/Terms copy and `service-details.ts` — found and fixed a
-real truth-claim defect in `site-config.ts`'s Home FAQ preview.
-**Completion:** REAL SOURCE FIX LANDED — see below.
-
-### What was checked
-
-- `IFA-2026-09-06-R58` (commit `0cc8f61`, round 67's HEAD): **thirty-
-  fourth consecutive confirmation**, 0 active code defects. Moved to
-  `exchange/processed/`.
-- Reviewed `/about`, `/privacy`, `/terms` page copy (clean — contact
-  details and cookie/analytics claims all match current reality) and
-  `service-details.ts` (clean — every package price/timing matches
-  `pricingPackages`/`pricingPreview`) — no defects on either recommended
-  surface.
-- **Found and fixed on an adjacent surface:** `site-config.ts`'s
-  `faqPreview` answer to "Will I be able to update my website myself?"
-  claimed "Yes. Every site includes an editable CMS" — but the Signal
-  package's own scope list has no CMS line item, and
-  `service-details.ts`'s own answer to the same question is explicitly
-  conditional ("When regular updates are part of the brief...").
-- **Fixed:** reworded the FAQ preview answer to match the qualified
-  reality already stated elsewhere on the site.
-- Verified: `tsc`/`lint`/`build` clean. Real `next start` on 5173:
-  confirmed the corrected sentence in the rendered Home page output;
-  12-route sitewide sweep all 200. Committed (`7239d3b`) and pushed.
-- Cleaned up: stopped the owned server (verified the real listener PID
-  via `netstat`/`taskkill` first); removed scratch response captures.
-
-### Recommended next workstream
-
-About/Privacy/Terms and `service-details.ts` are now checked clean.
-Genuinely fresh surfaces not yet given a dedicated adversarial pass:
-`planner-form.tsx`'s client-side step logic, or the case-study
-(`/work/[slug]`) content against `site-config.ts`'s
-`selectedWork`/`caseStudies` data. Owner gates unchanged: Resend
-account/DNS/API key, analytics/Search Console ownership, exact LLC
-name, About/legal/visual review, final indexability approval (see
-`CYVEXLY_OWNER_DIRECTION.md`).
 
 Round 67 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_67_REPORT.md` (moved

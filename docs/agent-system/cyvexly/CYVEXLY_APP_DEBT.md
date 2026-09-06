@@ -1,5 +1,49 @@
 # Cyvexly App Debt
 
+## Resolved round 71
+
+- **Checked the Auditor inbox first:** two new items existed
+  (`IFA-2026-09-06-R59`, `IFA-2026-09-06-R60`) — the 34th and 35th
+  consecutive clean confirmations (0 active code defects). R59 flagged
+  `CYVEXLY_CURRENT_STATE.md` over its byte cap; round 69 had already fixed
+  that before R60 re-verified it closed. Both moved to `exchange/processed/`.
+- **Found and fixed a real, previously-unflagged reachable defect on a
+  fresh surface (`/work`'s filter UI), per round 69/70's recommendation
+  to review surfaces not yet given a dedicated pass.** `workFilters` in
+  `src/lib/site-config.ts` listed `"Redesign"` and `"Landing Page"` as
+  filter pills, but no `selectedWork` item's `category` is ever
+  `"Redesign"` or `"Landing Page"` (all three concept projects are
+  `"Business Site"` ×2 or `"Commerce"` ×1) — clicking either pill
+  guaranteed the empty state ("No projects match that filter yet.") on a
+  core marketing page, for every visitor, permanently. Not a truth-claim
+  violation (no fabricated work), but a real dead-end interactive control.
+- **Fixed:** trimmed `workFilters` to `["All", "Business Site", "Commerce",
+  "Concept"]` — every remaining filter matches at least one real item. Did
+  not fabricate a new concept project to fill the missing categories
+  (out of proportion to the defect, and not requested).
+- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+  pre-existing, unrelated round-42 evidence-script lint warning,
+  untouched). Real `next start` server on port 5173: a scripted click of
+  every filter pill confirmed 0 empty states (`All`→3, `Business Site`→2,
+  `Commerce`→1, `Concept`→3 cards); an 18-route sweep (all public static
+  and dynamic routes plus `robots.txt`/`sitemap.xml`) returned 200.
+- **Independently found and fixed a second real reachable defect: this
+  file itself was already 2669 bytes over its 30720-byte hot-file cap**
+  at round start (33389 bytes, confirmed via
+  `.codex/roles/scripts/Test-HotFileCaps.ps1` — the same automated check
+  the Auditor uses for `CYV-DOC-*` findings), from rounds 48-55's detail
+  never having been rotated. Archived rounds 50, 51, and 55's full detail
+  to `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_{50,51,55}_ARCHIVE.md`;
+  re-verified 0 hot-file-cap violations after the edit.
+- Cleaned up: stopped the owned `next start`/`next dev` listeners
+  (verified the real listener PID via `Get-NetTCPConnection -LocalPort
+  5173 -State Listen`, not process name). Two scratch log files
+  (`next-dev-5173.log`, `next-start-5173.log`) under `$env:TEMP` could not
+  be removed this round (Windows reported them locked after the owning
+  process exited) — same transient lock behavior round 48 hit with a
+  Chrome profile directory; left in place as disposable OS-temp artifacts,
+  next round should retry `Remove-Item` and report if it persists.
+
 ## Resolved round 70
 
 - **Dispositioned fresh Owner direction `2026-09-06-16`** (text-cursor/
@@ -220,37 +264,10 @@ Round 56's full detail is archived at
 round 60 to keep this file under its 30720-byte hot-file cap): round 56
 added OfferCatalog JSON-LD to `/pricing`.
 
-## Resolved round 55
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R45`** — a twenty-first
-  consecutive independent confirmation (reviewed commit `26bc8b2`, predating
-  round 53's remaining commits and round 54's per-slug OG images), 0 active
-  code defects. Its listed "Production domain DNS" external gate was
-  already stale (round 53 verified the domain fully connected). Moved to
-  `exchange/processed/`.
-- **New angle — Service JSON-LD for the five `/services/[slug]` detail
-  pages.** `src/lib/structured-data.ts` already had Organization, FAQPage,
-  and BreadcrumbList JSON-LD; the five service-detail routes — the site's
-  core commercial pages — carried only BreadcrumbList. Added
-  `buildServiceJsonLd()`, reusing each service's own already-published
-  `name`/`summary`/`package.price` (no invented copy). The published price
-  copy is a starting figure ("From $X"), so it publishes via
-  `AggregateOffer.lowPrice` (schema.org's documented pattern for a
-  "starting from" price) rather than `Offer.price`, so the markup doesn't
-  claim a fixed rate the copy itself doesn't claim.
-- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (one
-  pre-existing, unrelated lint warning in a round-42 evidence script,
-  untouched this round). Real `next start` server on port 5173: curled and
-  JSON-parsed all 5 slugs' new `<script type="application/ld+json">`
-  output — valid JSON on every slug, correct `serviceType`/`name`/
-  `description`/`provider`/`areaServed`, and `lowPrice` exactly matches
-  each package's published price (3500/5800/1800/8500/99 for
-  business-websites/website-redesigns/landing-pages/ecommerce-websites/
-  website-care). A 12-route regression sweep shows zero regressions.
-  Committed (`441c6cd`) and pushed.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID via `netstat`/`Get-Process` before stopping). No temporary
-  files were created this round.
+Round 55's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_55_ARCHIVE.md` (moved there
+round 71 to keep this file under its 30720-byte hot-file cap): round 55
+added Service JSON-LD to the five `/services/[slug]` detail pages.
 
 Round 52's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_52_ARCHIVE.md` (moved there
@@ -263,63 +280,16 @@ Round 46's full detail is archived at
 round 52 to keep this file under its 30720-byte hot-file cap): round 46
 removed 5 dead scaffold SVG assets and added the Web App Manifest.
 
-## Resolved round 51
+Round 51's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_51_ARCHIVE.md` (moved there
+round 71 to keep this file under its 30720-byte hot-file cap): round 51
+added sitewide Open Graph and Twitter Card metadata.
 
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R42`** — an eighteenth
-  consecutive independent confirmation (reviewed commit `7f9357b`, round
-  49's HEAD, one commit behind round 50's COOP/CORP/security.txt commit), 0
-  active code defects. Moved to `exchange/processed/`.
-- **New angle — sitewide Open Graph and Twitter Card metadata.** Grep
-  confirmed zero `openGraph`/`twitter` fields anywhere in `src/`; named
-  verbatim in Owner direction `2026-09-04-14` workstream 2 ("production
-  Open Graph and Twitter URLs"). Without an explicit `twitter:card` tag,
-  Twitter/X does not infer one from a plain title/description, so shared
-  links had no large-image preview at all. Added `src/lib/seo.ts`'s
-  `buildPageMetadata()` (canonical + openGraph + twitter, `images` left
-  unset so the existing `opengraph-image.tsx` file-convention image keeps
-  applying) and wired it into the root layout and all 13 other metadata
-  exports, reusing only already-shipped titles/descriptions.
-- Verified: `tsc`/`lint`/`build` all pass clean. Real `next start` server on
-  port 5173: curl confirmed correct per-route `og:title`/`og:description`/
-  `og:url`, sitewide `og:site_name`/`og:type="website"`/`og:locale="en_US"`,
-  and `twitter:card="summary_large_image"` on Home/Services/Pricing/FAQ/a
-  service-detail route/a case-study route; Home's og:image/twitter:image
-  unchanged. Full 25-route sweep shows zero regressions. Committed
-  (`03bb077`) and pushed.
-- Cleaned up: stopped the owned `next start` server (verified real listener
-  PID via `Get-NetTCPConnection -LocalPort 5173` before stopping), removed
-  the round's own temporary log file. No browser pane was opened (curl was
-  the appropriate proof layer for an HTML-meta-tag claim).
-
-## Resolved round 50
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-05-R41`** — a seventeenth
-  consecutive independent confirmation (reviewed commit `ae0644b`, round
-  48's HEAD, one commit behind round 49's error-boundary commit), 0 active
-  code defects. Moved to `exchange/processed/`.
-- **Fixed a real hot-memory rotation defect (not a product feature).**
-  `CYVEXLY_ACTIVE_CHUNK.md`'s round-48 rotation had left round 47's report
-  live and duplicated round 48's report in its place instead of archiving
-  round 47. Archived round 47 to
-  `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_47_REPORT.md`, removed
-  the duplicate, restored latest-three (48, 49, 50 live).
-- **New angle — `Cross-Origin-Opener-Policy`/`Cross-Origin-Resource-Policy:
-  same-origin`** added to `next.config.ts`. Confirmed via grep that the app
-  has zero `window.open`/`postMessage`/`window.opener` usage, so same-origin
-  isolation costs nothing.
-- **New angle — `/.well-known/security.txt`** (RFC 9116), contact
-  `design@cyvexly.com` (Owner-confirmed), `Expires: 2027-09-05`. No invented
-  facts.
-- Verified: `tsc`/`lint`/`build` all pass clean. Real `next start` server on
-  port 5173: `curl -D -` confirmed both new headers on `/` alongside every
-  pre-existing header unchanged; `security.txt` returns `200 text/plain`
-  with exact content; `/`, `/faq`, `/manifest.webmanifest`, `/apple-icon`,
-  `/icons/192`, `/sitemap.xml` all still `200`, zero regressions. Committed
-  (`b5b7109`) and pushed.
-- Cleaned up: stopped the owned `next start` server (verified real listener
-  PID via `Get-NetTCPConnection -LocalPort 5173` before stopping). No
-  browser pane was opened this round (curl against the local server was the
-  appropriate proof layer for an HTTP-header/static-text-file claim).
+Round 50's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_50_ARCHIVE.md` (moved there
+round 71 to keep this file under its 30720-byte hot-file cap): round 50
+added COOP/CORP security headers and `/.well-known/security.txt`, and
+fixed a hot-memory rotation defect.
 
 Round 49's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_49_ARCHIVE.md` (moved there
@@ -327,46 +297,11 @@ round 55 to keep this file under its 30720-byte hot-file cap). Round 49
 added route-segment/root-layout error boundaries and viewport theme-color/
 color-scheme metadata.
 
-## Resolved round 48
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-05-R39`** — a fifteenth
-  consecutive independent confirmation (reviewed commit `727d809`, round
-  46's HEAD, one commit behind round 47's Apple touch icon commit), 0
-  active code defects. Moved to `exchange/processed/`.
-- **New angle — added raster 192×512 PNG manifest icons**
-  (`src/app/icons/[size]/route.tsx`), closing the item round 46/47 named as
-  open: the Web App Manifest was SVG-only, and Android's "Add to Home
-  Screen" install flow has historically preferred PNG at these standard
-  sizes. Same `next/og` `ImageResponse` technique as `apple-icon.tsx`,
-  statically generated at build time via `generateStaticParams` restricted
-  to exactly these two sizes (any other size 404s at runtime). No invented
-  facts — reuses the existing C/Y mark and brand-blue token. Verified:
-  production build emits correctly-sized real PNGs at both sizes (opened
-  locally, clean/centered/unclipped); a real `next start` server serves
-  both `200 image/png` with the exact built byte lengths; an unregistered
-  size correctly 404s; the live manifest JSON lists all three icons;
-  `apple-icon`/`icon.svg` unchanged; a real in-app-Browser screenshot of
-  Home shows zero visual regression, zero console errors.
-- **New angle — fixed a real print-legibility defect.** No route had any
-  `@media print` CSS; this site's light-text-on-dark-background sections
-  print invisible under browsers' default no-background-printing behavior.
-  Added `print-color-adjust: exact` (`globals.css`, MDN's documented fix).
-  Verified via CDP `Page.printToPDF`: `printBackground:false`/`:true`
-  produced identically-sized PDFs (~41.7MB each), proving backgrounds
-  embed regardless of the toggle; no screen-mode regression.
-- `tsc`/`lint`/`build` all pass clean. Committed (`8d959f0`, `90ea41e`) and
-  pushed.
-- Cleaned up: stopped the owned `next start` server and headless Chrome
-  process tree (verified real listener PID via the port's actual listener,
-  not `Start-Process`'s returned PID — see the new caveat in
-  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`; Chrome verified by exact
-  `chrome-profile-round48` `--user-data-dir` match), closed the owned
-  Browser-pane tab. The temporary Chrome profile directory under the OS
-  temp root could not be removed this round (Windows reported the path
-  locked after process exit despite no matching process remaining) — left
-  in place as a disposable OS-temp artifact; the next round should retry
-  `Remove-Item` on `%TEMP%\chrome-profile-round48` and report if it
-  persists.
+Round 48's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_48_ARCHIVE.md` (moved there
+round 71 to keep this file under its 30720-byte hot-file cap): round 48
+added raster 192/512 PNG manifest icons and fixed a print-legibility
+defect.
 
 Round 47's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_47_ARCHIVE.md` (moved there
