@@ -29,7 +29,7 @@ const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
 
 const title = "Cyvexly Studio — Websites built to make your business unmistakable";
 const description =
-  "Cyvexly Studio is an independent, remote web design and development studio. Describe your project and get a clear proposal, custom design, and a launch-ready website.";
+  "Cyvexly Studio is an independent, remote web design and development studio. Describe your project and get a proposal, custom design, and launch-ready website.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
