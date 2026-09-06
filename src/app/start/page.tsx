@@ -1,17 +1,15 @@
-import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PlannerForm } from "@/components/planner/planner-form";
 import { getServicePlannerSelection } from "@/lib/planner-config";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Project Planner — Cyvexly Studio",
   description:
     "Tell us what you need. A calm, nine-step brief that shapes the right scope for your website — no payment required.",
-  alternates: {
-    canonical: "/start",
-  },
-};
+  path: "/start",
+});
 
 const whatHappensNext = [
   {

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import { SiteAtmosphere } from "@/components/site-atmosphere";
 import { organizationJsonLd } from "@/lib/structured-data";
+import { SITE_NAME, SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -23,17 +24,33 @@ const jetBrainsMono = JetBrains_Mono({
 
 const isIndexable = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
 
+const title = "Cyvexly Studio — Websites built to make your business unmistakable";
+const description =
+  "Cyvexly Studio is an independent, remote web design and development studio. Describe your project and get a clear proposal, custom design, and a launch-ready website.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cyvexly.com"),
-  title: "Cyvexly Studio — Websites built to make your business unmistakable",
-  description:
-    "Cyvexly Studio is an independent, remote web design and development studio. Describe your project and get a clear proposal, custom design, and a launch-ready website.",
+  metadataBase: new URL(SITE_URL),
+  title,
+  description,
   alternates: {
     canonical: "/",
   },
   robots: {
     index: isIndexable,
     follow: isIndexable,
+  },
+  openGraph: {
+    title,
+    description,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
   },
 };
 

@@ -9,6 +9,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { isServiceSlug, serviceDetails } from "@/lib/service-details";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
+import { buildPageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return Object.keys(serviceDetails).map((slug) => ({ slug }));
@@ -25,13 +26,11 @@ export async function generateMetadata({
   }
 
   const service = serviceDetails[slug];
-  return {
+  return buildPageMetadata({
     title: `${service.name} — Cyvexly Studio`,
     description: service.summary,
-    alternates: {
-      canonical: `/services/${slug}`,
-    },
-  };
+    path: `/services/${slug}`,
+  });
 }
 
 export default async function ServiceDetailPage({

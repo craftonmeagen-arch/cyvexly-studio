@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
@@ -12,15 +11,14 @@ import {
   servicesGroups,
   websiteTypes,
 } from "@/lib/site-config";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Services — Cyvexly Studio",
   description:
     "Everything your business website needs, from the first page decision to the day it goes live: strategy, design, development, content, commerce, search, and ongoing care.",
-  alternates: {
-    canonical: "/services",
-  },
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

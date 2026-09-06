@@ -1,17 +1,15 @@
-import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { WorkGrid } from "@/components/work-grid";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Work — Cyvexly Studio",
   description:
     "Selected Cyvexly Studio work: business sites, redesigns, landing pages, and commerce projects. Concept work is clearly labeled.",
-  alternates: {
-    canonical: "/work",
-  },
-};
+  path: "/work",
+});
 
 export default function WorkPage() {
   return (

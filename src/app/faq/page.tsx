@@ -1,19 +1,17 @@
-import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { faqLibrary } from "@/lib/site-config";
 import { faqPageJsonLd } from "@/lib/structured-data";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "FAQ — Cyvexly Studio",
   description:
     "Answers to common questions about fit, pricing, timing, content, ownership, integrations, accessibility, care plans, and how to start a Cyvexly Studio project.",
-  alternates: {
-    canonical: "/faq",
-  },
-};
+  path: "/faq",
+});
 
 function toAnchorId(category: string) {
   return category

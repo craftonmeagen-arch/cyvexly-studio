@@ -6,6 +6,7 @@ import { ButtonLink } from "@/components/button";
 import { ConceptPreview } from "@/components/concept-preview";
 import { caseStudies } from "@/lib/site-config";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
+import { buildPageMetadata } from "@/lib/seo";
 
 type CaseStudySlug = keyof typeof caseStudies;
 
@@ -21,13 +22,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const study = caseStudies[slug as CaseStudySlug];
   if (!study) notFound();
-  return {
+  return buildPageMetadata({
     title: `${study.name} — Cyvexly Studio`,
     description: study.challenge,
-    alternates: {
-      canonical: `/work/${slug}`,
-    },
-  };
+    path: `/work/${slug}`,
+  });
 }
 
 export default async function CaseStudyPage({

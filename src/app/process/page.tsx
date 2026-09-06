@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { collaborationPromise, processSteps } from "@/lib/site-config";
+import { buildPageMetadata } from "@/lib/seo";
 
 function CheckIcon({ className }: { className?: string }) {
   return (
@@ -21,14 +21,12 @@ function CheckIcon({ className }: { className?: string }) {
   );
 }
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Process — Cyvexly Studio",
   description:
     "How a Cyvexly Studio project works: five stages from brief and fit to launch and care, with clear inputs, deliverables, and approval points at every step.",
-  alternates: {
-    canonical: "/process",
-  },
-};
+  path: "/process",
+});
 
 export default function ProcessPage() {
   return (

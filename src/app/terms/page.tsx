@@ -1,16 +1,14 @@
-import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { siteConfig } from "@/lib/site-config";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Website Terms — Cyvexly Studio",
   description:
     "The terms that govern using cyvexly.com — this marketing website and Project Planner — separate from any signed client project agreement.",
-  alternates: {
-    canonical: "/terms",
-  },
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

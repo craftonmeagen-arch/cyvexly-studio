@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { aboutValues, capabilities } from "@/lib/site-config";
+import { buildPageMetadata } from "@/lib/seo";
 
 function CheckIcon({ className }: { className?: string }) {
   return (
@@ -22,14 +22,12 @@ function CheckIcon({ className }: { className?: string }) {
   );
 }
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "About — Cyvexly Studio",
   description:
     "Cyvexly Studio is an independent web design and development studio built to help United States business owners get a clearer, more useful website.",
-  alternates: {
-    canonical: "/about",
-  },
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

@@ -1,16 +1,14 @@
-import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { siteConfig } from "@/lib/site-config";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Privacy Policy — Cyvexly Studio",
   description:
     "How Cyvexly Studio handles information submitted through cyvexly.com's Contact and Project Planner forms, browser storage, hosting, and your choices.",
-  alternates: {
-    canonical: "/privacy",
-  },
-};
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

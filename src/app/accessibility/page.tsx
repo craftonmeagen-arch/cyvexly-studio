@@ -1,16 +1,14 @@
-import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { siteConfig } from "@/lib/site-config";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Accessibility Statement — Cyvexly Studio",
   description:
     "Cyvexly Studio's accessibility commitment and target for cyvexly.com and for websites we build, plus how to report an accessibility problem.",
-  alternates: {
-    canonical: "/accessibility",
-  },
-};
+  path: "/accessibility",
+});
 
 export default function AccessibilityPage() {
   return (

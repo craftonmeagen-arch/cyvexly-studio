@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
@@ -13,15 +12,14 @@ import {
   pricingPackages,
   projectIncludes,
 } from "@/lib/site-config";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildPageMetadata({
   title: "Pricing — Cyvexly Studio",
   description:
     "Clear starting packages for Cyvexly Studio websites, plus add-ons, care plans, and how payment works. Final quotes are shaped around your goals, content, pages, and features.",
-  alternates: {
-    canonical: "/pricing",
-  },
-};
+  path: "/pricing",
+});
 
 export default function PricingPage() {
   return (
