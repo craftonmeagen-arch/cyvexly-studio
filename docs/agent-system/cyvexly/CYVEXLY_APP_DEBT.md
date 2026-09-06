@@ -1,5 +1,47 @@
 # Cyvexly App Debt
 
+## Resolved round 58
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R48`** — a
+  twenty-fourth consecutive independent confirmation (reviewed commit
+  `176b91d`, round 56's HEAD, predating round 57's meta-description fix),
+  0 active code defects. Its "Production Domain & DNS Connection" gate
+  note is stale (round 53 verified the domain fully connected). Moved to
+  `exchange/processed/`.
+- **Fixed the one real finding it raised — a hot-file cap violation.**
+  `Test-HotFileCaps.ps1` flagged `CYVEXLY_CURRENT_STATE.md` at 8,728 bytes
+  against the reviewed commit (grown to 9,653 by round 58 start), over its
+  own 8,192-byte cap. Archived rounds 52-56's detailed outcome paragraphs
+  (already duplicated in `CYVEXLY_ACTIVE_CHUNK.md`/
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`) to
+  `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md` and
+  rewrote it as a lean dashboard. Re-ran the cap script clean afterward.
+- **Found and fixed a real rotation-order defect in
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`** while archiving (same class as round
+  50's `CYVEXLY_ACTIVE_CHUNK.md` fix): round 54's full closeout had stayed
+  live while round 55's was already archived, skipping a round out of
+  order. Restored correct latest-three order (archived round 54's full
+  text; no content lost).
+- **New angle — `html lang="en"` → `en-US`**, named as untried in round
+  57's handoff. Owner direction `2026-09-04-14` confirms a United
+  States-only launch market and structured data already uses
+  `areaServed: "US"` throughout; `en-US` is the more precise BCP 47 tag.
+  Fixed in `src/app/layout.tsx` (root layout) and
+  `src/app/global-error.tsx` (replaces the root `<html>` when it fires).
+- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+  pre-existing, unrelated lint warning in the round-42 evidence script).
+  Real `next start` server on port 5173: fetched all 14 HTML routes plus
+  sitemap/robots/manifest/an invalid path (18 total) — every HTML route
+  renders `lang="en-US"`, zero regressions. `Test-HotFileCaps.ps1` re-run
+  clean (0 violations across all 57 tracked files). Committed (`9a6ff1e`,
+  `3b70fc0`) and pushed.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID via `Get-NetTCPConnection` before stopping). Two scratch
+  server logs under the OS temp root (rounds 57 and 58) remain
+  Windows-locked after process exit despite no matching process — same
+  recurring class as round 48's temp-profile lock; left in place, next
+  round should retry `Remove-Item` on them.
+
 ## Resolved round 57
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-06-R47`** — a
@@ -314,119 +356,12 @@ Organization JSON-LD.
    and preserves the visitor's entered data. Actual message delivery is
    the one thing that cannot be verified without step 1-3 above.
 
-## Resolved round 42
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-05-R33`** — a ninth
-  consecutive independent confirmation (reviewed commit `46eae51`, round
-  40's HEAD), not a new finding. Moved to `exchange/processed/`. `tsc
-  --noEmit`/`lint`/`build` re-run clean before making any change.
-- **Found and fixed a real defect: the Contact form had no spam/rate
-  protection at all**, while the Planner already has a hidden honeypot
-  field. Vision §17 item 6 groups "Contact and Planner" together under
-  "proportionate accessible spam/rate controls." Reachable now — a
-  client-side honeypot needs no backend/credentials/Owner authorization,
-  and the Planner's already-accepted pattern is the precedent. Fixed in
-  `src/components/contact-form.tsx`: added an identical hidden honeypot
-  field (`contact-company-website`) and validation check. Live-verified
-  with real CDP mouse clicks against a production server: honeypot filled
-  → submission blocked (mailto bridge never fires); honeypot cleared →
-  submission works normally (no regression). Same method live-tested the
-  **Planner's existing honeypot for the first time** (previously untested
-  per round 41): filled → blocked; cleared → works. `tsc`/`lint`/`build`
-  all pass clean. Script and results at
-  `docs/agent-system/cyvexly/builder/evidence/round-42-honeypot-overflow-*`.
-- **New QA angle — RTL/very-long-name overflow in the Planner review
-  step.** A ~130-character unbroken string (no spaces) in "Full name" and
-  an Arabic RTL name concatenated directly (no separator) with the same
-  string in "Company name" — worst case, zero break opportunities at the
-  RTL/Latin boundary. Measured at a real 375px width: `document.
-  documentElement.scrollWidth` (375) equals `window.innerWidth` (375) —
-  **zero horizontal overflow, no defect found.**
-- Cleaned up: stopped the owned `next start` server (verified real
-  listener PID via `Get-NetTCPConnection -LocalPort 5173`) and the owned
-  headless Chrome process (verified by exact `chrome-profile-round42`
-  `--user-data-dir` command-line match), removed the temporary Chrome
-  profile directory under the OS temp scratchpad root.
-
-## Resolved round 41
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-05-R32`** — an eighth
-  consecutive independent confirmation (reviewed commit `a8c5769`, round 39's
-  HEAD, one commit behind round 40's step-focus fix already on `main`), not a
-  new finding. Moved to `exchange/processed/`. `tsc --noEmit`/`lint`/`build`
-  re-run clean before making any change (no source touched).
-- **New QA angle — WCAG 1.4.10 Reflow / 200%-zoom-equivalent, one of round
-  40's two named uncovered candidates.** Emulated 320 CSS px (the exact
-  1.4.10 threshold) and 640 CSS px (a proxy for a 1280px viewport at 200%
-  zoom, using the same width-halving equivalence WCAG 1.4.10's own guidance
-  relies on) across 8 marketing routes and all 9 real Planner steps,
-  advancing the Planner with genuine CDP mouse clicks on Continue (not just
-  static snapshots) at a production server. **Result: 34/34 checks, zero
-  horizontal overflow, and the Planner's real step-advancement kept working
-  at both narrow widths.** No defect found. Script and result summary at
-  `docs/agent-system/cyvexly/builder/evidence/round-41-zoom-reflow-*`.
-- **Bonus QA — re-checked round 40's other named candidate: does Back (and
-  by extension the progress-rail/edit-link callers) get round 40's
-  scroll/focus/live-region fix, since all four call the same shared
-  `goToStep()`?** Source read confirmed `goToStep()` is a single function
-  used identically by `handleNext`, `handleBack`, `onEdit`, and the progress
-  rail, and the fix is a `useEffect` keyed only on `currentStep` — not on
-  which caller changed it. Live-verified with a real CDP click on the "←
-  Back" button after advancing to step 2 and manually scrolling away from
-  the top: scroll reset to 0, focus moved to the step 1 heading, and the
-  live region announced "Step 1 of 9: About you". **No defect found** —
-  confirms the fix is caller-agnostic as the source structure implies.
-  Script at `docs/agent-system/cyvexly/builder/evidence/round-41-back-button-test.mjs`.
-- **Ninth consecutive round (35-41, with 39/40 as the only two that found
-  real defects) confirms zero reachable-without-an-Owner-gate defects**,
-  now also covering WCAG 1.4.10 reflow/zoom. Both candidates round 40 named
-  as untested are now closed. See `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s
-  round-41 entry for remaining untried QA angles.
-- Cleaned up: stopped the owned `next start` production server (verified
-  real listener PID via `Get-NetTCPConnection -LocalPort 5173`) and the
-  owned headless Chrome process tree (verified by exact
-  `chrome-profile-round41` command-line match before touching anything),
-  removed the temporary Chrome profile directory under the OS temp
-  scratchpad root.
-
-## Resolved round 40
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-05-R31`** — a seventh
-  consecutive independent confirmation (reviewed commit `f1a264f`, round 38's
-  HEAD — one commit behind round 39's skip-link fix already on `main`), not a
-  new finding. Moved to `exchange/processed/`.
-- **New QA angle — screen-reader semantics on the Planner's step-advance
-  flow**, one of the candidates round 39 named as uncovered. Source review
-  found Contact's and the Planner's per-field validation (`aria-invalid`,
-  `aria-describedby`, `role="alert"`) already solidly correct — no defect
-  there. Live-tested the *successful* step-advance path (not validation
-  failure) with real synthetic mouse clicks via CDP against a **production**
-  build/server (the in-app Browser pane's `computer`/screenshot path proved
-  intermittent mid-round — screenshot timeouts matching the documented
-  "pane hidden" pattern — and an initial plain-JS `.click()` test gave a
-  false-positive "focus lost" reading because `document.hasFocus()` is false
-  in that pane; real headless Chrome has genuine document focus, so it is the
-  trustworthy instrument for this claim). **Found and fixed a real defect:**
-  `goToStep()` called `window.scrollTo({top:0})` synchronously before React
-  committed the new step's DOM, so Chrome's scroll-anchoring silently
-  overrode the intended top-scroll; focus also never left the Continue/Back
-  button. Confirmed before fix: `scrollY` settled at 721 (not 0), focus
-  stayed on the button, and no `aria-live` region announced the change.
-  Fixed in `src/components/planner/planner-form.tsx`: moved the scroll+focus
-  into a `useEffect` keyed on `currentStep` (guarded by a `previousStepRef`
-  comparison, not a one-shot flag, so it stays correct under React Strict
-  Mode's dev-only double-invoke of mount effects), deferred one
-  `requestAnimationFrame` past commit, focusing the step `<h2>` with
-  `preventScroll: true` so the focus call doesn't re-fight the scroll, and
-  added a `role="status" aria-live="polite"` sr-only announcer ("Step 2 of 9:
-  The business"). Verified after fix: `scrollY` reaches `0`, focus lands on
-  the new heading, live region fires. `tsc`/`lint`/`build` all pass clean.
-  Full before/after evidence and the reusable CDP test script are at
-  `docs/agent-system/cyvexly/builder/evidence/round-40-planner-step-focus-*`.
-- Cleaned up: stopped the owned `next start` production server and the owned
-  headless Chrome process tree (verified by exact `--user-data-dir` command-
-  line match before touching anything), removed the temporary Chrome profile
-  directory under the OS temp scratchpad root.
+Rounds 40-42 detail archived to
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUNDS_40_42_ARCHIVE.md` in round 58
+to keep this file under its 30720-byte hot-file cap: Contact-form honeypot
+fix plus first live Planner-honeypot verification (round 42), WCAG 1.4.10
+reflow/zoom sweep with no defect found (round 41), and the Planner
+step-advance scroll/focus/live-region fix (round 40).
 
 Rounds 36-39 detail archived to docs/archive/chunks/CYVEXLY_APP_DEBT_ROUNDS_36_39_ARCHIVE.md in round 43 to keep this file under its 30720-byte hot-file cap: skip-to-main-content fix (round 39), full-site console/network diagnostics sweep (round 38), performance spot-check (round 37), and live production-deployment parity confirmation (round 36).
 

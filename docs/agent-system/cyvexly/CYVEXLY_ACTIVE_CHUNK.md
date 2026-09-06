@@ -7,6 +7,18 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 58** (scheduled/unattended, 50-minute limit) dispositioned Auditor
+item `IFA-2026-09-06-R48` (24th consecutive confirmation, 0 active code
+defects; its "Production Domain & DNS Connection" gate note is stale,
+corrected by round 53) and fixed the one real finding it raised: a
+hot-file-cap violation in `CYVEXLY_CURRENT_STATE.md` (archived rounds
+52-56's duplicated detail, rewrote it as a lean dashboard). Also found and
+fixed a rotation-order defect in `CYVEXLY_NEXT_BUILDER_HANDOFF.md` (round
+54 had stayed live out of order ahead of round 55), and shipped an
+`html lang="en"` → `en-US` correction matching the US-only launch market
+(named as untried in round 57's handoff). See the round-58 report below
+and `CYVEXLY_APP_DEBT.md`'s "Resolved round 58" section.
+
 **Round 55** (scheduled/unattended, 50-minute limit) dispositioned Auditor
 item `IFA-2026-09-06-R45` (21st consecutive confirmation, 0 active code
 defects; reviewed commit `26bc8b2`, predating round 54's per-slug OG
@@ -153,100 +165,64 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
-## Round 53 report — global round 53 (interactive session)
+## Round 58 report — global round 58 (scheduled/unattended session)
 
-Owner direction `2026-09-05-15` ("take Cyvexly to production-ready and
-launch-ready... complete everything you can directly"). Worked through
-the numbered directive in order:
+Read the one new Auditor inbox item, `IFA-2026-09-06-R48` (reviewed commit
+`176b91d`, round 56's HEAD, predating round 57's meta-description fix).
+**Twenty-fourth consecutive independent confirmation, not a new finding**
+— 0 active code defects. Its "Production Domain & DNS Connection" gate
+note is stale (round 53 verified the domain fully connected). Moved to
+`exchange/processed/`.
 
-1. **Domain/Render — verified fully connected, not code work.** Checked
-   live DNS/HTTP/TLS directly (no account access needed): `cyvexly.com`
-   and `www.cyvexly.com` both correctly redirect to canonical
-   `https://cyvexly.com/`; a valid certificate is active; the site sits
-   behind Cloudflare in front of the Render origin
-   (`x-render-origin-server: Render` header confirms it); robots/sitemap/
-   canonical/OG tags all resolve correctly in production. This closes
-   `CYVEXLY_APP_DEBT.md` item 1 — the debt file's "still needs Owner DNS
-   work" claim was stale.
-2. **Email consistency** — grepped all source: `design@cyvexly.com` is the
-   single source of truth (`site-config.ts`) and the only address anywhere
-   on the live site. No stale addresses found.
-3. **Contact + Planner server-side delivery** — the largest piece. Added
-   `src/lib/mailer.ts` (Resend wrapper, HTML/text escaping, single-line
-   sanitization for header-injection defense, server-side email
-   validation, a per-IP in-memory rate limiter) and Node-runtime route
-   handlers `src/app/api/contact/route.ts` / `src/app/api/planner/route.ts`
-   that re-validate every required field server-side, re-check the
-   honeypot, send an internal notification to `design@cyvexly.com` with
-   Reply-To the visitor's address, and a best-effort visitor confirmation.
-   The Planner route resolves every id-based answer (goal, website type,
-   features, asset status) to its human label before building the summary
-   — previously-shipped `mailto:` bodies sent raw ids. Moved the
-   `PlannerData` type out of the "use client" form into
-   `src/lib/planner-config.ts` so the server route can share it; deleted
-   the now-dead client-side `buildSummaryText`. Contact form gained
-   optional Phone/Company fields (explicitly requested visible-in-email
-   fields). Both forms gained submitting/error states that preserve
-   entered data on failure.
-4. **Analytics + 5. Search Console** — added `src/components/google-
-   analytics.tsx` (loads only if `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set;
-   privacy-conscious config) and a `verification.google` metadata field
-   (only if `GOOGLE_SITE_VERIFICATION` is set); CSP widens for Google
-   domains only when GA is actually enabled. Verified both are completely
-   absent by default and activate correctly when the env vars are set.
-6. **Legal pages** — Privacy Policy's forms section still described the
-   retired `mailto:` bridge; corrected it to describe the real Resend-based
-   flow. Terms/Accessibility were already accurate. The "Draft under
-   review" banners stay until the Owner supplies the exact LLC name.
-7. **Content/truth audit** — crawled every internal link (21 total) plus
-   the one external link against live production: zero broken links, zero
-   404s. No `<img>` without `alt`; both `next/image` usages correct
-   (meaningful alt on About's logo, `alt="" aria-hidden` on the header's
-   decorative icon next to visible brand text). Grepped for testimonials/
-   guarantees/certifications/awards — only honest "no studio can guarantee
-   rankings" disclaimers, no fabricated claims. Pricing figures
-   cross-checked (package prices vs. Planner budget bucket ranges) —
-   consistent. JSON-LD validated (parses correctly, correct `@type`) on
-   four sampled routes. Console errors: zero on every route checked
-   (Home, Pricing, About, Contact, `/start`). One apparent video-autoplay
-   anomaly on Home turned out to be this browser tool's own `document.
-   hidden: true` state (a documented harness quirk) correctly pausing
-   background video per the component's own intentional behavior — not a
-   site defect; confirmed by manually calling `.play()`, which succeeded
-   immediately.
-8. **Indexing** — intentionally NOT flipped. Real email delivery, GA4/GSC,
-   and the LLC name remain outstanding, so "everything above is actually
-   ready" (this direction's own stated condition for indexing) isn't yet
-   true.
-9. **Final launch QA** — ran directly against `https://cyvexly.com`
-   throughout (not just local): confirmed the new Contact/Planner fields
-   and `/api/*` routes are already live (Render auto-deploys on push to
-   `main`); a real browser-driven Contact submission on production shows
-   the intended graceful error UI (since `RESEND_API_KEY` isn't set yet)
-   and preserves entered data.
+The report's one real finding: `Test-HotFileCaps.ps1` found
+`CYVEXLY_CURRENT_STATE.md` at 8,728 bytes at the reviewed commit (grown to
+9,653 bytes by round 58 start), over its 8,192-byte cap. Archived rounds
+52-56's detailed outcome paragraphs — already duplicated in this file and
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md` — to
+`docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md` and
+rewrote `CYVEXLY_CURRENT_STATE.md` as a lean dashboard per §7.12's own
+spec. Re-ran the cap script clean afterward (0 violations, 57 tracked
+files).
 
-**Verified:** `tsc --noEmit`/`lint`/`build` clean after every change.
-Local server tests: 503 not-configured, 400 validation (all fields), 400
-honeypot, 429 after 5 requests/15min, and a graceful 502 against a real
-(invalid) Resend API call — all confirmed via actual HTTP requests, not
-inference. Contact form's new 2x2/1-column responsive grid verified via
-real `getBoundingClientRect()` geometry at 1280px and 375px (zero
-overflow either way). Committed across five commits (`4824908`, `26bc8b2`,
-`9902503`, `33f6a87`, plus this handoff) and pushed; Render live within
-minutes of each push.
+While archiving, found the same rotation-order defect class round 50 fixed
+here: `CYVEXLY_NEXT_BUILDER_HANDOFF.md` had kept round 54's full closeout
+live while round 55's was already archived, so its "latest three" were
+actually 57/56/54, skipping 55 out of order. Restored correct order
+(archived round 54 in full, plus round 56 to make room for this round's
+own entry) — no content lost, only reordered.
 
-**Not done — genuinely needs the Owner, not more Builder work:** Resend
-account + sending-domain DNS verification + `RESEND_API_KEY` in Render;
-a GA4 property + Measurement ID or an explicit no-analytics choice; a
-Google Search Console verification value; the exact registered LLC legal
-name; final visual/copy review; the indexing switch. See
-`CYVEXLY_APP_DEBT.md` items 1-2 and `CYVEXLY_OWNER_DIRECTION.md`'s
-`2026-09-05-15` entry for exact instructions.
+Shipped one new reachable angle round 57's handoff named as untried:
+**`html lang="en"` → `en-US`.** Owner direction `2026-09-04-14` confirms a
+United States-only launch market, and structured data already uses
+`areaServed: "US"` throughout (Organization, Service, OfferCatalog
+JSON-LD) — `en-US` is the more precise BCP 47 language tag for assistive
+technology and search engines. Fixed in `src/app/layout.tsx` (root layout)
+and `src/app/global-error.tsx` (replaces the root `<html>` entirely when
+it fires — the only other hardcoded `lang="en"` in `src/`).
 
-Round 52's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_52_REPORT.md` (moved there
-round 55 to restore latest-three rotation) — 53, 54, 55 stay live. Round 52
-added per-route Open Graph images for 8 static marketing routes.
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+pre-existing, unrelated lint warning in the round-42 evidence script). Real
+`next start` server on port 5173: fetched all 14 HTML routes plus
+sitemap.xml/robots.txt/manifest.webmanifest/an invalid path (18 total) —
+every HTML route now renders `<html lang="en-US">`, non-HTML routes
+correctly show no `lang` attribute, the invalid path still 404s. Zero
+regressions. Committed (`9a6ff1e` source fix, `3b70fc0` docs) and pushed.
+
+Cleaned up: stopped the owned `next start` server (verified the real
+listener PID via `Get-NetTCPConnection` before stopping). Two scratch
+server logs under the OS temp root (`cyvexly-round57-server.log` from the
+prior round, `cyvexly-round58-server.log` from this one) remain
+Windows-locked after process exit despite no matching process — same
+recurring class as round 48's temp-profile lock; left in place, the next
+round should retry `Remove-Item` on them.
+
+Round 53's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_53_REPORT.md` (moved there
+round 58 to restore latest-three rotation) — 54, 55, 58 stay live. Round 53
+was the full launch-readiness pass: verified domain/HTTPS live, replaced
+Contact/Planner `mailto:` with real server-side Resend delivery, added
+dormant GA4/GSC scaffolding, fixed a stale Privacy Policy section, and ran
+a sitewide audit finding zero defects.
 
 ## Round 54 report — global round 54 (interactive session)
 

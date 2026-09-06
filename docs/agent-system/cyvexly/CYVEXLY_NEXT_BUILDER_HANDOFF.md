@@ -1,5 +1,71 @@
 # Cyvexly Next Builder Handoff
 
+## Round 58 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
+time limit (unattended)
+**Start source:** `111582f` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item
+(`IFA-2026-09-06-R48`), fixed the hot-file-cap violation it flagged, fixed
+a real handoff-rotation-order defect found while reading this file, and
+shipped an `html lang="en"` → `en-US` correction.
+**Completion:** REAL SOURCE FIX LANDED — see below.
+
+### What was checked
+
+- `IFA-2026-09-06-R48` (reviewed commit `176b91d`, round 56's HEAD,
+  predating round 57's meta-description fix) is a **twenty-fourth
+  consecutive independent confirmation, not a new finding** — 0 active
+  code defects. Its "Production Domain & DNS Connection" gate note is
+  stale (round 53 verified the domain fully connected). Moved to
+  `exchange/processed/`.
+- **Fixed the one real finding it raised:** `Test-HotFileCaps.ps1` flagged
+  `CYVEXLY_CURRENT_STATE.md` at 8,728 bytes against the reviewed commit
+  (9,653 by round 58 start), over its own 8,192-byte cap. Archived rounds
+  52-56's detailed outcome paragraphs (already duplicated in
+  `CYVEXLY_ACTIVE_CHUNK.md`/this file) to
+  `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md` and
+  rewrote it as a lean dashboard per §7.12. Re-ran `Test-HotFileCaps.ps1`
+  clean (0 violations, all 57 tracked files).
+- **Found and fixed a real rotation-order defect in this file while
+  archiving**, the same class round 50 fixed in `CYVEXLY_ACTIVE_CHUNK.md`:
+  round 54's full closeout had stayed live while round 55's was already
+  archived, so the file's "latest three" were actually 57/56/54, skipping
+  55. Restored correct order by archiving round 54 to
+  `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_54_REPORT.md`; no
+  content was lost, only reordered.
+- **New angle — `html lang="en"` → `en-US`**, named as untried in round
+  57's handoff. Owner direction `2026-09-04-14` confirms a United
+  States-only launch market and `areaServed: "US"` is already used
+  throughout structured data; `en-US` is the more precise BCP 47 tag for
+  assistive tech and search engines. Fixed in both `src/app/layout.tsx`
+  (root layout) and `src/app/global-error.tsx` (replaces the root `<html>`
+  entirely when it fires).
+- Verified: `tsc --noEmit`/`lint`/`build` all clean (same pre-existing,
+  unrelated lint warning in the round-42 evidence script). Real `next
+  start` server on port 5173: fetched all 14 HTML routes plus
+  sitemap/robots/manifest/an invalid path (18 total) — every HTML route
+  now renders `lang="en-US"`, zero regressions.
+- Committed (`9a6ff1e`, `3b70fc0`) and pushed to `origin/main`.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID via `Get-NetTCPConnection` before stopping). Two scratch
+  server logs under the OS temp root (rounds 57 and 58) remain
+  Windows-locked after process exit despite no matching process — same
+  recurring class as round 48's temp-profile lock; left in place, next
+  round should retry `Remove-Item` on them.
+
+### Recommended next workstream
+
+Untried angles not yet swept: a live cross-check of the Owner-facing
+Auditor gate notes against `CYVEXLY_APP_DEBT.md`'s "Open" section wording
+(the Auditor's own report keeps citing a stale "DNS connection" gate —
+consider whether the Auditor's brief needs a correction, not just each
+Builder round noting it's stale); re-sweep for any newly published Auditor
+findings first. Genuinely Owner-gated items are unchanged: Resend
+account/DNS/API key, analytics/Search Console ownership, exact LLC name,
+About/legal/visual review, final indexability approval (see
+`CYVEXLY_OWNER_DIRECTION.md`).
+
 ## Round 57 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
@@ -49,99 +115,22 @@ unchanged: Resend account/DNS/API key, analytics/Search Console
 ownership, exact LLC name, About/legal/visual review, final indexability
 approval (see `CYVEXLY_OWNER_DIRECTION.md`).
 
-## Round 56 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
-time limit (unattended)
-**Start source:** `63fc8fe` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item
-(`IFA-2026-09-06-R46`) and shipped OfferCatalog JSON-LD for `/pricing`.
-**Completion:** REAL SOURCE ADDITION LANDED — see below.
-
-### What was checked
-
-- `IFA-2026-09-06-R46` (reviewed commit `82b531b`, round 54's HEAD,
-  predating round 55's Service JSON-LD) is a **twenty-second consecutive
-  independent confirmation, not a new finding** — 0 active code defects.
-  Its "Production Domain & DNS Connection" gate note was already stale
-  (round 53 verified the domain fully connected). Moved to
-  `exchange/processed/`.
-- **New angle — OfferCatalog JSON-LD for `/pricing`**, the exact gap round
-  55's handoff named as untried: Services and each service-detail page now
-  carry Service/AggregateOffer JSON-LD, but Pricing — the site's other core
-  commercial page — had none. Added `pricingJsonLd` in
-  `src/lib/structured-data.ts` (`Service` + `hasOfferCatalog`, one `Offer`
-  per package), reusing each package's own already-published
-  name/bestFor/price. "Custom system" ("Quoted after discovery") is listed
-  without a `priceSpecification` rather than inventing one.
-- Verified: `tsc --noEmit`/`lint`/`build` all clean (same pre-existing,
-  unrelated lint warning in a round-42 evidence script). Real `next start`
-  server on port 5173: fetched `/pricing`, JSON-parsed both script tags —
-  valid JSON, all 5 packages listed in order, prices 1800/3500/5800/8500
-  match the published copy exactly, "Custom system" correctly price-less.
-  A 14-route regression sweep (static + dynamic + sitemap/robots + an
-  invalid path) shows zero regressions.
-- Committed (`8f5fc2b`) and pushed to `origin/main`.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID via `netstat`/`Get-Process` before stopping), removed the
-  round's own scratch HTML fetch.
-
-### Recommended next workstream
-
-Untried angles not yet swept: a dedicated rate-limiting check beyond the
-honeypot (architecturally tied to the server-side email delivery this
-chunk already defers); re-sweep for any newly published Auditor findings
-first. Genuinely Owner-gated items are unchanged: Resend account/DNS/API
-key, analytics/Search Console ownership, exact LLC name, About/legal/
-visual review, final indexability approval (see
-`CYVEXLY_OWNER_DIRECTION.md`).
+Round 56 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_56_REPORT.md` (moved
+there round 58 to keep this file under its 12288-byte hot-file cap). Round
+56 added OfferCatalog JSON-LD to `/pricing`.
 
 Round 55 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_55_REPORT.md` (moved
 there round 56 to keep this file under its 12288-byte hot-file cap). Round
 55 added Service JSON-LD to the five `/services/[slug]` detail pages.
 
-## Round 54 closeout
-
-**Session:** interactive Claude Code session, 2026-09-05/06
-**Start source:** `f1748ae` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item
-(`IFA-2026-09-06-R44`) and shipped per-slug Open Graph images for the
-`services/[slug]` and `work/[slug]` dynamic routes.
-**Completion:** REAL SOURCE ADDITION LANDED — see below.
-
-### What was checked
-
-- `IFA-2026-09-06-R44` (reviewed commit `08d6f95`, round 51's HEAD, two
-  commits behind round 53's HEAD) is a **twentieth consecutive
-  independent confirmation, not a new finding** — 0 active code defects.
-  Its listed "Owner Gate" for domain DNS was already stale (round 53
-  verified the domain fully connected). Moved to `exchange/processed/`.
-- **New angle — per-slug Open Graph images for the two dynamic route
-  families**, the exact gap round 52's handoff named as pre-existing.
-  Added `src/app/services/[slug]/opengraph-image.tsx` and
-  `src/app/work/[slug]/opengraph-image.tsx`, each with `generateStaticParams()`
-  mirroring the sibling `page.tsx`, reusing `renderRouteOgImage()` with
-  that slug's own name/summary or name/challenge — no invented copy.
-- Verified: `tsc --noEmit`/`lint`/`build` all clean; build confirms all
-  5/3 slugs statically generate. Real `next start` server on port 5173:
-  all 8 dynamic image endpoints 200, `og:image` meta resolves per-slug, an
-  invalid slug 404s on both page and image, two PNGs visually opened
-  (correct branding, no clipping), zero regressions on a static-route
-  sample.
-- Cleaned up: stopped the owned `next start` server (verified real
-  listener PID before stopping), removed the round's scratch PNGs/log.
-
-### Recommended next workstream
-
-Every static and dynamic route now has a real per-page Open Graph image;
-this closes the last known reachable OG/social-preview gap. Untried
-angles: a true rate-limiting check beyond the honeypot (tied to the
-server-side email delivery already deferred); re-sweep for any newly
-merged Auditor findings first. Genuinely Owner-gated items are unchanged:
-Resend account/DNS/API key, analytics/Search Console ownership, exact LLC
-name, About/legal/visual review, final indexability approval (see
-`CYVEXLY_OWNER_DIRECTION.md`).
+Round 54 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_54_REPORT.md` (moved
+there round 58 to restore correct latest-three rotation — this file had
+incorrectly kept round 54 live while round 55 was archived; see the
+archive file's note). Round 54 added per-slug Open Graph images for
+`services/[slug]` and `work/[slug]`.
 
 Round 53 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_53_REPORT.md` (moved
