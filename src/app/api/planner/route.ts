@@ -192,6 +192,17 @@ export async function POST(request: Request) {
   const goalLabel =
     primaryGoalId === "other" ? primaryGoalOther || "Other" : labelFor(primaryGoals, primaryGoalId);
   const websiteTypeLabel = labelFor(websiteTypes, websiteTypeId);
+  // secondaryGoals stores raw primaryGoals option ids joined by "|" (e.g.
+  // "sell|credibility") — every other option-based field in this email
+  // (primary goal, website type, features) maps its id(s) to a human label
+  // via labelFor before display, but this one never did, so the internal
+  // notification showed cryptic ids like "sell, credibility" instead of
+  // "Sell products, Explain services and build credibility."
+  const secondaryGoalsLabel = secondaryGoals
+    .split("|")
+    .filter(Boolean)
+    .map((id) => labelFor(primaryGoals, id))
+    .join(", ");
   const pagesLabel = notSureSitemap ? "Not sure — recommend the sitemap" : pages.join(", ");
   const featuresLabel = notSureFeatures
     ? "Not sure — recommend the right features"
@@ -232,7 +243,7 @@ export async function POST(request: Request) {
       title: "Goals",
       rows: section("Goals", [
         ["Primary goal", goalLabel],
-        ["Secondary goals", secondaryGoals.split("|").filter(Boolean).join(", ")],
+        ["Secondary goals", secondaryGoalsLabel],
         ["Most important action", importantAction],
         ["Current problems", currentProblems],
         ["Success measure", successMeasure],
