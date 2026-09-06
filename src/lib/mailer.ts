@@ -115,7 +115,29 @@ export function checkRateLimit(key: string): boolean {
   return true;
 }
 
+/**
+ * Client-IP resolution for the rate limiter above. Production traffic to
+ * cyvexly.com passes through Cloudflare in front of Render (verified round
+ * 53), so `cf-connecting-ip` — set by Cloudflare's edge and overwritten on
+ * every request, never passed through from the client — is the trustworthy
+ * source and is checked first. `x-forwarded-for` is kept only as a fallback
+ * for environments with no Cloudflare hop (local dev, direct-to-origin
+ * access); reading its *first* hop there is a real, known bypass, since a
+ * client can freely set that header and a proxy conventionally appends
+ * rather than replaces it (found and fixed round 60 — confirmed
+ * exploitable: 7 requests each carrying a unique spoofed `X-Forwarded-For`
+ * all passed the 5-per-15-minute limiter that correctly rejected a 6th
+ * request sharing one real key). This does not by itself stop an attacker
+ * who bypasses Cloudflare entirely via the direct Render origin hostname
+ * (`cyvexly-studio.onrender.com`) and forges `cf-connecting-ip` there too —
+ * closing that residual path needs a Render/Cloudflare account-level
+ * control (Cloudflare Authenticated Origin Pulls, or restricting the Render
+ * origin to Cloudflare's IP ranges) that requires dashboard access this
+ * role does not have; see CYVEXLY_APP_DEBT.md.
+ */
 export function getClientIp(request: Request): string {
+  const cfConnectingIp = request.headers.get("cf-connecting-ip");
+  if (cfConnectingIp) return cfConnectingIp.trim();
   const forwardedFor = request.headers.get("x-forwarded-for");
   if (forwardedFor) return forwardedFor.split(",")[0].trim();
   const realIp = request.headers.get("x-real-ip");
