@@ -8,7 +8,7 @@ import { ServiceDetailSignal } from "@/components/service-detail-signal";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { isServiceSlug, serviceDetails } from "@/lib/service-details";
-import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
+import { buildBreadcrumbJsonLd, buildServiceJsonLd } from "@/lib/structured-data";
 import { buildPageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -48,12 +48,17 @@ export default async function ServiceDetailPage({
     { name: "Services", path: "/services" },
     { name: service.name, path: `/services/${service.slug}` },
   ]);
+  const serviceJsonLd = buildServiceJsonLd(service);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <SiteHeader />
 
