@@ -18,7 +18,7 @@ import { pricingJsonLd } from "@/lib/structured-data";
 export const metadata = buildPageMetadata({
   title: "Pricing — Cyvexly Studio",
   description:
-    "Clear starting packages for Cyvexly Studio websites, plus add-ons, care plans, and how payment works. Final quotes are shaped around your goals, content, pages, and features.",
+    "Clear starting packages for Cyvexly Studio websites, plus add-ons and care plans. Final quotes are shaped around your goals, content, pages, and features.",
   path: "/pricing",
 });
 

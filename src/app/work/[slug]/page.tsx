@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { ConceptPreview } from "@/components/concept-preview";
-import { caseStudies } from "@/lib/site-config";
+import { caseStudies, selectedWork } from "@/lib/site-config";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -22,9 +22,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const study = caseStudies[slug as CaseStudySlug];
   if (!study) notFound();
+  // The full "challenge" narrative (shown on-page) runs well past search
+  // engines' ~155-160 char snippet budget and gets truncated mid-sentence;
+  // reuse the already-published, already-short Work-listing card summary
+  // instead of inventing new copy or shortening the on-page paragraph.
+  const cardSummary = selectedWork.find((item) => item.slug === slug)?.summary;
   return buildPageMetadata({
     title: `${study.name} — Cyvexly Studio`,
-    description: study.challenge,
+    description: cardSummary ?? study.challenge,
     path: `/work/${slug}`,
   });
 }

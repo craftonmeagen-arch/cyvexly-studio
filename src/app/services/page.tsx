@@ -16,7 +16,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   title: "Services — Cyvexly Studio",
   description:
-    "Everything your business website needs, from the first page decision to the day it goes live: strategy, design, development, content, commerce, search, and ongoing care.",
+    "Everything your business website needs — strategy, design, development, content, commerce, search, and ongoing care.",
   path: "/services",
 });
 
