@@ -1,5 +1,62 @@
 # Cyvexly Next Builder Handoff
 
+## Round 61 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
+time limit (unattended)
+**Start source:** `1854a3f` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item
+(`IFA-2026-09-06-R51`) and found/fixed a second real defect in the same
+rate-limiter code round 60 had just fixed.
+**Completion:** REAL SOURCE FIX LANDED — see below.
+
+### What was checked
+
+- `IFA-2026-09-06-R51` (reviewed commit `6f41600`, round 59's HEAD,
+  predating round 60's rate-limiter fix) is a **twenty-seventh
+  consecutive independent confirmation, not a new finding** — 0 active
+  code defects. Moved to `exchange/processed/`.
+- **Found and fixed an unbounded-memory-growth defect in
+  `checkRateLimit` (`src/lib/mailer.ts`).** The in-memory `Map` tracking
+  submission timestamps per key never deleted a key once created — a
+  stale key's timestamps filter down to an empty array but the key
+  itself stays in the map forever. Any caller varying its own key grows
+  the map without bound; the `x-forwarded-for` fallback in `getClientIp`
+  (still the only path for non-Cloudflare traffic, e.g. the direct
+  Render origin round 60 already named as a residual bypass) is exactly
+  such a caller, since the client fully controls that header. A pure
+  in-process memory-exhaustion DoS, independent of round 60's already-
+  named rate-limit-bypass gap.
+- **Fixed:** added periodic pruning — every 5 minutes, or immediately if
+  the map exceeds 5,000 tracked keys, delete any key whose timestamps
+  are all outside the 15-minute window. No change to external rate-limit
+  behavior.
+- Verified: `tsc --noEmit`/`lint`/`build` all clean (same pre-existing,
+  unrelated lint warning in the round-42 evidence script). Real `next
+  start` server on port 5173: same-IP 6-request regression still 429s on
+  the 6th, both before and after the change; a 5,200-request concurrent
+  burst with unique spoofed `x-forwarded-for` values completed with zero
+  fetch errors and no server-log errors (exercising the size-triggered
+  immediate prune); the same-IP regression re-checked immediately after
+  the burst still correctly 429'd on the 6th on both `/api/contact` and
+  `/api/planner`. A 14-route sweep found zero regressions.
+- Committed and pushed to `origin/main`.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID via `netstat`/`LISTENING` before stopping). Removed this
+  round's scratch server log, PID file, and burst-test script.
+
+### Recommended next workstream
+
+Re-sweep for any newly published Auditor findings first; keep hunting
+for genuinely new adversarial angles in the rate-limiter/mailer surface
+(two real defects found there in two consecutive rounds — 60 and 61 —
+after 25+ rounds of clean audits, so this area rewarded closer scrutiny).
+The residual Cloudflare-bypass gap named in round 60 is still an account-
+level gate, not Builder-reachable. Genuinely Owner-gated items are
+unchanged: Resend account/DNS/API key, analytics/Search Console
+ownership, exact LLC name, About/legal/visual review, final
+indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
 ## Round 60 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
@@ -59,52 +116,10 @@ Auditor findings first; genuinely Owner-gated items are unchanged (Resend
 account/DNS/API key, analytics/Search Console ownership, exact LLC name,
 About/legal/visual review, final indexability approval).
 
-## Round 59 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
-time limit (unattended)
-**Start source:** `32a0e10` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item
-(`IFA-2026-09-06-R49`) and fixed the one real finding it raised, a
-6-char meta-description overage on Home.
-**Completion:** REAL SOURCE FIX LANDED — see below.
-
-### What was checked
-
-- `IFA-2026-09-06-R49` (reviewed commit `111582f`, round 57's HEAD,
-  predating round 58's `html lang`/hot-file-cap fixes) is a
-  **twenty-fifth consecutive independent confirmation, not a new
-  finding** — 0 active code defects. Its hot-file-cap observation on
-  `CYVEXLY_CURRENT_STATE.md` was already fixed by round 58 (re-verified:
-  6,397 bytes vs. the 8,192-byte cap; `Test-HotFileCaps.ps1` shows 0
-  violations). Moved to `exchange/processed/`.
-- **Fixed the one real finding it raised — Home's meta description over
-  budget.** The report's own sitewide survey (the one route round 57
-  hadn't measured) found `/` at 166 chars, 6 over the ~155-160 char
-  budget round 57 established sitewide. Trimmed
-  `src/app/layout.tsx`'s shared `description` ("get a clear proposal" →
-  "get a proposal", one filler article dropped) without removing any
-  factual claim.
-- Verified: `tsc --noEmit`/`lint`/`build` all clean (same pre-existing,
-  unrelated lint warning in the round-42 evidence script). Real `next
-  start` server on port 5173: Home now renders a 158-char description,
-  identical across description/og:description/twitter:description; a
-  24-route sweep (20 HTML routes + sitemap/robots/manifest + an invalid
-  path) shows zero regressions.
-- Committed (`343444f`) and pushed to `origin/main`.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID via `Get-NetTCPConnection` before stopping). No new
-  temporary files this round; the two Windows-locked scratch server logs
-  named in round 58's handoff remain untouched (not owned by this
-  round's process).
-
-### Recommended next workstream
-
-Untried angles not yet swept: a dedicated rate-limiting check beyond the
-honeypot; re-sweep for any newly published Auditor findings first.
-Genuinely Owner-gated items are unchanged: Resend account/DNS/API key,
-analytics/Search Console ownership, exact LLC name, About/legal/visual
-review, final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+Round 59 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_59_REPORT.md` (moved
+there round 61 to keep this file under its 12,288-byte hot-file cap).
+Round 59 fixed a 6-char meta-description overage on Home.
 
 Round 58 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_58_REPORT.md` (moved
@@ -184,26 +199,12 @@ round 48 to keep this file under its 12288-byte hot-file cap). Round 45
 implemented BreadcrumbList JSON-LD for service-detail and case-study
 routes.
 
-Round 44 closeout detail is archived at
-docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_44_REPORT.md (moved there
-round 47 to keep this file under its 12288-byte hot-file cap). Round 44
-implemented FAQPage JSON-LD for `/faq`.
-
-Round 43 closeout detail is archived at docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_43_REPORT.md (moved there round 45 to keep this file under its 12288-byte hot-file cap). Round 43 found the site had no structured data at all and added sitewide Organization JSON-LD.
-
-Round 42 closeout detail is archived at docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_42_REPORT.md (moved there round 44). Round 42 found and fixed the Contact form's missing spam-protection honeypot and live-verified the Planner's honeypot for the first time.
-
-Round 41 closeout detail is archived at docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_41_REPORT.md (moved there round 43). Round 41 found no reachable defect (WCAG 1.4.10 reflow/zoom and a Back-button re-check both passed).
-
-Round 40 closeout detail is archived at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUND_40_REPORT.md` (moved there in round 42). Round
-40 found and fixed the Planner step-advance scroll/focus/live-region defect
-(`71d233f`).
-
-Round 39 closeout detail is archived at `docs/archive/chunks/
-CYVEXLY_BUILDER_HANDOFF_ROUND_39_REPORT.md`. Round 39 found and fixed the
-sitewide skip-to-main-content link defect (WCAG 2.4.1). Rounds 38, 37, 36,
-35, 33-34, 31-32, and 28-30 are archived at their correspondingly named
-files under `docs/archive/chunks/`. The current Chunk 5 scope and Owner
-gates are summarized in `CYVEXLY_ACTIVE_CHUNK.md` and
-`CYVEXLY_OWNER_DIRECTION.md`.
+Rounds 39-44 closeout detail is archived at their correspondingly named
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_<N>_REPORT.md` files
+(consolidated round 61 to keep this file under its 12,288-byte hot-file
+cap): FAQPage JSON-LD (44), sitewide Organization JSON-LD (43), Contact
+honeypot fix (42), no defect found (41), Planner scroll/focus fix (40,
+`71d233f`), skip-to-main-content fix (39). Rounds 38, 37, 36, 35, 33-34,
+31-32, and 28-30 are archived at their correspondingly named files under
+`docs/archive/chunks/`. The current Chunk 5 scope and Owner gates are
+summarized in `CYVEXLY_ACTIVE_CHUNK.md` and `CYVEXLY_OWNER_DIRECTION.md`.

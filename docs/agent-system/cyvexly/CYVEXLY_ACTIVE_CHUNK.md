@@ -7,6 +7,15 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 61** (scheduled/unattended, 50-minute limit) dispositioned Auditor
+item `IFA-2026-09-06-R51` (27th consecutive confirmation, 0 active code
+defects) and found/fixed a second real defect in round 60's own new
+rate-limiter code: the in-memory tracking `Map` never deleted a key, so
+an attacker varying its own key (the spoofable `x-forwarded-for`
+fallback) could grow it without bound — a memory-exhaustion DoS. See the
+round-61 report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 61"
+section.
+
 **Round 60** (scheduled/unattended, 50-minute limit) dispositioned Auditor
 item `IFA-2026-09-06-R50` (26th consecutive confirmation, 0 active code
 defects) and found/fixed a real security defect no prior Auditor round
@@ -181,6 +190,56 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 61 report — global round 61 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-06-R51` (reviewed
+commit `6f41600`, round 59's HEAD, predating round 60's rate-limiter
+IP-spoofing fix). **Twenty-seventh consecutive independent confirmation,
+not a new finding** — 0 active code defects. Moved to `exchange/processed/`.
+
+**Found a second real defect in the same rate-limiter code round 60 had
+just fixed, through adversarial review of that fix rather than a fresh
+feature sweep.** `checkRateLimit` (`src/lib/mailer.ts`) stores its sliding
+window in a plain `Map<string, number[]>` keyed by client IP, but never
+deleted a key once created — after a key's timestamps all age out of the
+15-minute window, the filtered-to-empty array is still written back with
+`.set()`, so the key lives in memory forever. Any caller that can vary its
+own key grows the map without bound. The `x-forwarded-for` fallback path
+in `getClientIp` (still active for non-Cloudflare traffic, e.g. the direct
+Render origin round 60 already named as a residual bypass) is exactly
+such a caller: an attacker can mint an unlimited number of distinct
+`x-forwarded-for` values, so this is a pure in-process memory-exhaustion
+DoS with no rate limit of its own to slow it down — independent of, and
+additive to, round 60's already-named Cloudflare-bypass gap.
+
+**Fixed:** added `pruneStaleEntries()`, called from `checkRateLimit`
+whenever 5 minutes have elapsed since the last prune or the map exceeds
+5,000 tracked keys (whichever comes first), deleting any key whose
+timestamps are now all outside the window and compacting the rest.
+Bounds worst-case memory to roughly one 5-minute burst plus the window's
+worth of genuinely active keys, without changing the limiter's external
+behavior.
+
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+pre-existing, unrelated lint warning in the round-42 evidence script).
+Real `next start` server on port 5173: (1) regression — 6 requests from
+one spoofed IP to `/api/contact` still correctly 429 on the 6th, both
+before and after the change; (2) new-defect proof — a 5,200-request
+concurrent burst, each with a unique spoofed `x-forwarded-for`, completed
+with zero fetch errors and no server-log errors/exceptions (exercising
+the size-triggered immediate prune, since 5,200 exceeds the 5,000-key
+threshold well before the 5-minute timer would fire); a same-IP 6-request
+regression check immediately afterward still correctly 429'd on the 6th,
+proving the prune did not corrupt live rate-limit state. Same check
+repeated on `/api/planner`. A 14-route sweep (12 HTML routes +
+sitemap.xml/robots.txt + an invalid path) found zero regressions.
+Committed and pushed.
+
+Cleaned up: stopped the owned `next start` server (verified the real
+listener PID via `netstat`/`LISTENING` before stopping). Removed this
+round's scratch server log, PID file, and burst-test script under the OS
+temp scratchpad.
+
 ## Round 60 report — global round 60 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-06-R50` (reviewed
@@ -267,56 +326,11 @@ regressions. Committed (`343444f`) and pushed to `origin/main`.
 Cleaned up: stopped the owned `next start` server (verified the real
 listener PID via `Get-NetTCPConnection` before stopping).
 
-## Round 58 report — global round 58 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-06-R48` (reviewed commit
-`176b91d`, round 56's HEAD, predating round 57's meta-description fix).
-**Twenty-fourth consecutive independent confirmation, not a new finding**
-— 0 active code defects. Its "Production Domain & DNS Connection" gate
-note is stale (round 53 verified the domain fully connected). Moved to
-`exchange/processed/`.
-
-The report's one real finding: `Test-HotFileCaps.ps1` found
-`CYVEXLY_CURRENT_STATE.md` at 8,728 bytes at the reviewed commit (grown to
-9,653 bytes by round 58 start), over its 8,192-byte cap. Archived rounds
-52-56's detailed outcome paragraphs — already duplicated in this file and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md` — to
-`docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md` and
-rewrote `CYVEXLY_CURRENT_STATE.md` as a lean dashboard per §7.12's own
-spec. Re-ran the cap script clean afterward (0 violations, 57 tracked
-files).
-
-While archiving, found the same rotation-order defect class round 50 fixed
-here: `CYVEXLY_NEXT_BUILDER_HANDOFF.md` had kept round 54's full closeout
-live while round 55's was already archived, so its "latest three" were
-actually 57/56/54, skipping 55 out of order. Restored correct order
-(archived round 54 in full, plus round 56 to make room for this round's
-own entry) — no content lost, only reordered.
-
-Shipped one new reachable angle round 57's handoff named as untried:
-**`html lang="en"` → `en-US`.** Owner direction `2026-09-04-14` confirms a
-United States-only launch market, and structured data already uses
-`areaServed: "US"` throughout (Organization, Service, OfferCatalog
-JSON-LD) — `en-US` is the more precise BCP 47 language tag for assistive
-technology and search engines. Fixed in `src/app/layout.tsx` (root layout)
-and `src/app/global-error.tsx` (replaces the root `<html>` entirely when
-it fires — the only other hardcoded `lang="en"` in `src/`).
-
-**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-pre-existing, unrelated lint warning in the round-42 evidence script). Real
-`next start` server on port 5173: fetched all 14 HTML routes plus
-sitemap.xml/robots.txt/manifest.webmanifest/an invalid path (18 total) —
-every HTML route now renders `<html lang="en-US">`, non-HTML routes
-correctly show no `lang` attribute, the invalid path still 404s. Zero
-regressions. Committed (`9a6ff1e` source fix, `3b70fc0` docs) and pushed.
-
-Cleaned up: stopped the owned `next start` server (verified the real
-listener PID via `Get-NetTCPConnection` before stopping). Two scratch
-server logs under the OS temp root (`cyvexly-round57-server.log` from the
-prior round, `cyvexly-round58-server.log` from this one) remain
-Windows-locked after process exit despite no matching process — same
-recurring class as round 48's temp-profile lock; left in place, the next
-round should retry `Remove-Item` on them.
+Round 58's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_58_REPORT.md` (moved
+there round 61 to restore latest-three rotation) — 59, 60, 61 stay live.
+Round 58 fixed a hot-file-cap violation, a handoff-rotation defect, and
+shipped `html lang="en-US"`.
 
 Round 53's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_53_REPORT.md` (moved there
