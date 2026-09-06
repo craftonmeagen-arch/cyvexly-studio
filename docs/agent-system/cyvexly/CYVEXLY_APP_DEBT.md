@@ -1,5 +1,45 @@
 # Cyvexly App Debt
 
+## Resolved round 57
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R47`** — a
+  twenty-third consecutive independent confirmation (reviewed commit
+  `63fc8fe`, round 55's HEAD, predating round 56's Pricing OfferCatalog
+  JSON-LD), 0 active code defects. Its "Production Domain & DNS
+  Connection" gate note was already stale (round 53 verified the domain
+  fully connected). Moved to `exchange/processed/`.
+- **New angle — trimmed meta descriptions past the search-snippet
+  budget.** Measured every route's rendered `<meta name="description">`
+  length (none had been checked before): `/services` (169 chars) and
+  `/pricing` (174) exceeded the ~155-160 char practical Google
+  search-snippet budget; the three `/work/[slug]` case-study pages
+  (189-211 chars) were worse, since `generateMetadata` reused the long
+  on-page "challenge" narrative as the description. Tightened the two
+  static descriptions without dropping any claim (`src/app/services/
+  page.tsx`, `src/app/pricing/page.tsx`), and switched `work/[slug]`
+  (`src/app/work/[slug]/page.tsx`) to reuse the already-published,
+  already-short `selectedWork` card summary instead of inventing new
+  copy or shortening the on-page paragraph.
+- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+  pre-existing, unrelated lint warning in the round-42 evidence script).
+  Real `next start` server on port 5173: fetched all 5 changed routes —
+  rendered descriptions now measure 48-154 chars; the on-page "challenge"
+  paragraph on `/work/aurora-spaces` is byte-identical to before;
+  `og:description` correctly inherits the shorter text. A 19-route
+  regression sweep (static + dynamic + sitemap/robots + an invalid path)
+  shows zero regressions. Committed (`befddda`) and pushed.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID via `Get-NetTCPConnection` before stopping). One scratch
+  server log under the OS temp root (`cyvexly-round57-server.log`)
+  remained Windows-locked after process exit despite no matching process
+  (same class of issue as round 48's temp-profile lock) — left in place;
+  the next round should retry `Remove-Item` on it.
+
+Round 54's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_54_ARCHIVE.md` (moved there
+round 57 to keep this file under its 30720-byte hot-file cap): round 54
+added per-slug Open Graph images for `services/[slug]` and `work/[slug]`.
+
 ## Resolved round 56
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-06-R46`** — a
@@ -62,37 +102,6 @@
 - Cleaned up: stopped the owned `next start` server (verified the real
   listener PID via `netstat`/`Get-Process` before stopping). No temporary
   files were created this round.
-
-## Resolved round 54
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R44`** — a twentieth
-  consecutive independent confirmation (reviewed commit `08d6f95`, round
-  51's HEAD, two commits behind round 53's HEAD), 0 active code defects.
-  Its listed "Owner Gate" naming domain DNS as still needed was already
-  stale (round 53 verified the domain fully connected). Moved to
-  `exchange/processed/`.
-- **New angle — per-slug Open Graph images for `services/[slug]` and
-  `work/[slug]`.** Round 52 confirmed via a real before/after test that
-  these two dynamic segments had no `opengraph-image` of their own (Next's
-  image-convention file doesn't cascade into a parameterized child segment
-  the way static metadata text fields do). Added
-  `src/app/services/[slug]/opengraph-image.tsx` and
-  `src/app/work/[slug]/opengraph-image.tsx`, each with its own
-  `generateStaticParams()` mirroring the sibling `page.tsx`, reusing
-  `renderRouteOgImage()` with that slug's own already-shipped name/summary
-  or name/challenge — no invented copy. Both call `notFound()` for an
-  unrecognized slug.
-- **Verified:** `tsc`/`lint`/`build` all pass clean; build output confirms
-  both routes statically generate all 5/3 slugs. Real `next start` server
-  on port 5173: all 8 dynamic `/opengraph-image` endpoints return 200, the
-  page's `og:image` meta resolves to the per-slug URL, an invalid slug
-  404s on both the page and its image endpoint, two generated PNGs
-  visually opened (correct brand mark/name/description, no clipping). A
-  static-route regression sample shows zero regressions. Committed and
-  pushed.
-- Cleaned up: stopped the owned `next start` server (verified real
-  listener PID via the port's actual listener before stopping), removed
-  the round's own scratch PNGs and log file.
 
 Round 52's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_52_ARCHIVE.md` (moved there
