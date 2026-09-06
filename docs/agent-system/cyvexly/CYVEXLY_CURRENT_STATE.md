@@ -1,102 +1,86 @@
 # Cyvexly Current State
 
-**Global round:** 71. Owner launch direction updated 2026-09-04, extended
+**Global round:** 72. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
-About/Privacy/Terms (round 30), security headers/CSP (rounds 31-32),
-per-route canonical tags (round 33), the Auditor-tracked `/contact`
-link-collision defect `CYV-IFA-012` (round 34), a sitewide
-skip-to-main-content link (round 39), the Planner's step-advance
-focus/scroll/live-region defect (round 40), the Contact form's missing
-spam/rate protection (round 42), sitewide Organization JSON-LD (round 43),
-FAQPage JSON-LD (round 44), BreadcrumbList JSON-LD (round 45), a Web App
-Manifest plus dead-asset cleanup (round 46), an Apple touch icon
-(round 47), raster manifest icons plus a print-legibility fix (round 48),
-error boundaries plus theme-color metadata (round 49), COOP/CORP headers
-plus security.txt (round 50), sitewide Open Graph/Twitter Card metadata
-(round 51), per-route OG images (round 52), real server-side Contact/
-Planner email delivery via Resend plus dormant GA4/GSC scaffolding
-(round 53), per-slug OG images for dynamic routes (round 54), Service
-JSON-LD (round 55), Pricing OfferCatalog JSON-LD (round 56), trimmed
-meta descriptions (round 57), `html lang="en-US"` (round 58), Home's
-meta-description trim (round 59), a rate-limiter IP-spoofing fix
-(round 60), an unbounded-memory-growth fix in the same rate limiter
-(round 61), a dormant Cloudflare-bypass gate (round 62), a
-timing-safe-comparison hardening of that same gate (round 63), a
-request-body-size cap on both API routes (round 65), and a Planner
-visual-direction data-loss fix (round 66) are done.
-Remaining Chunk 5 scope (real
-Resend account/API key, DNS/domain provider access, analytics/search
-ownership, exact LLC name, final indexability approval) is Owner-gated —
-see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full
-round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
-`docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
+About/Privacy/Terms, security headers/CSP, canonical tags, structured data
+(Organization/FAQPage/BreadcrumbList/Service/OfferCatalog), Web App Manifest,
+icons, error boundaries, OG/Twitter metadata (sitewide + per-route + per-slug),
+real server-side Contact/Planner email delivery via Resend, dormant GA4/GSC
+scaffolding, a rate-limiter IP-spoofing + memory-leak fix, a dormant
+Cloudflare-bypass gate (+ timing-safe hardening), a request-body-size cap,
+and multiple Planner data-loss/label fixes are done — full round-by-round
+detail is in `CYVEXLY_ACTIVE_CHUNK.md`, `CYVEXLY_NEXT_BUILDER_HANDOFF.md`, and
+`CYVEXLY_APP_DEBT.md`; older rounds are archived under `docs/archive/chunks/`.
+Remaining Chunk 5 scope (real Resend account/API key, DNS/domain provider
+access, analytics/search ownership, exact LLC name, final indexability
+approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
+Owner gates".
 
-**Round 71 outcome:** dispositioned two new Auditor inbox items
-(34th/35th consecutive clean confirmations, 0 active code defects).
-Found/fixed a real dead-end defect on `/work`: two filter pills
-("Redesign"/"Landing Page") matched zero projects, guaranteeing an
-empty-state for any visitor who clicked them — trimmed the filter list
-to only categories with real matches. Also found/fixed a real
-hot-file-cap violation in `CYVEXLY_APP_DEBT.md` (2669 bytes over),
-archiving rounds 48/50/51/55. `tsc`/lint/build clean, 18-route sweep
-all 200, hot-file checker 0 violations sitewide. Full detail in
+**Round 72 outcome:** no new Auditor inbox item. Adversarially reviewed
+`planner-form.tsx`'s client-side step logic (round 71's recommended fresh
+surface) and found/fixed a real, reachable validation-bypass defect:
+`handleSubmit` only ran `validateStep(9)`, but the progress rail lets a
+visitor jump straight back to Review after using a review-page "Edit" link
+to revisit (and invalidate) an earlier step — `maxReachedStep` never resets.
+Reproduced live: cleared the required `fullName` field after using Edit,
+jumped directly to Step 9 via the progress rail (no re-validation triggered),
+then submitted — the client sent the empty field to the server, which
+correctly 400'd, but the visitor was left on Review with zero visible error
+(no alert, no field message, button just re-enabled) — a silent dead end.
+**Fixed:** added `validateAllSteps()`, used by `handleSubmit` instead of
+`validateStep(9)`; on any error, the visitor is now routed to the first
+invalid step with the real field error visible, and no network request is
+sent for known-invalid data. Verified against both `next dev` (HMR) and a
+real `next start` production build: the exact repro now shows `fetch was
+called: false`, lands back on Step 1, and displays "Please enter your name."
+Regression-checked: an in-place Step 9-only error (missing consent) still
+blocks correctly without navigating away; a fully valid submission still
+reaches `/api/planner` (503 not-configured, expected — no `RESEND_API_KEY`
+in this environment). `tsc`/lint/build clean (same pre-existing round-42
+evidence-script lint warning), 20-route sweep all 200. Full detail in
 `CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
 
-Round 70 outcome: dispositioned fresh Owner direction `2026-09-06-16`
-(text-cursor/editable-looking body copy). Reproduced live — confirmed
-it is the browser's universal default I-beam cursor over selectable
-text (`cursor:auto`, not `contentEditable`), not a Cyvexly-specific
-bug. Fixed as a real polish defect without an accessibility regression:
-`cursor:default` on prose, explicit `cursor:pointer` restored on every
-interactive control (including inline links nested in paragraphs).
-Caught and corrected a self-introduced regression during verification
-(unlayered CSS beat Tailwind's `disabled:cursor-not-allowed` utility)
-before committing. `tsc`/lint/build clean, 12-route sweep all 200. Full
-detail in `CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
+Round 71 outcome: dispositioned two new Auditor inbox items (34th/35th
+consecutive clean confirmations). Found/fixed a real dead-end defect on
+`/work`: two filter pills matched zero projects, guaranteeing an empty
+state — trimmed the filter list. Also fixed a hot-file-cap violation in
+`CYVEXLY_APP_DEBT.md` itself. Full detail archived; see
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 71".
 
-Round 69 outcome: dispositioned Auditor item `IFA-2026-09-06-R58`
-(34th confirmation, commit `0cc8f61`, 0 active code defects). Reviewed
-About/Privacy/Terms and `service-details.ts` — clean. Found/fixed a
-real truth-claim defect: the Home FAQ preview overclaimed every site
-includes a CMS, contradicting the Signal package's own scope and
-`service-details.ts`'s own qualified answer. Verified live, 12-route
-sweep. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
+Round 70 outcome: dispositioned Owner direction `2026-09-06-16` (text-cursor/
+editable-looking body copy) — confirmed it was the browser's default I-beam
+cursor over selectable text, not a Cyvexly bug, and fixed it without an
+accessibility regression. Full detail archived; see `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 70".
 
-Rounds 60-68 (IP-spoofing fix, rate-limiter memory leak, dormant
-Cloudflare-bypass gate, its timing-safe hardening, an adversarial
-re-review finding 0 new defects, the request-body-size cap, a Planner
-visual-spectrum data-loss fix, a Planner secondary-goals-label fix, and
-a `robots.ts` sitemap-directive fix) are summarized in
-`CYVEXLY_APP_DEBT.md`'s resolved-round history; rounds 58-59 fixed a
-hot-file-cap violation, `html lang="en-US"`, and trimmed Home's meta
-description.
+Rounds 53-69 (domain/HTTPS verification, real Resend email delivery, GA4/GSC
+scaffolding, per-slug/sitewide OG images, JSON-LD rollout, meta-description
+trims, `html lang="en-US"`, rate-limiter security fixes, the Cloudflare-bypass
+gate, request-body caps, and Planner data-loss/label fixes) are summarized in
+`CYVEXLY_APP_DEBT.md`'s resolved-round history and `CYVEXLY_ACTIVE_CHUNK.md`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 71 (empty as of round 71).
-Owner direction `2026-09-06-16` (text-cursor defect) is FIXED — see
-`CYVEXLY_APP_DEBT.md`'s "Resolved round 70" (fix) and update that
-direction's status line in `CYVEXLY_OWNER_DIRECTION.md` if the Owner
-confirms it visually. About/Privacy/Terms copy, `service-details.ts`,
-pricing consistency, and the Planner server route/shared config are all
-checked clean (rounds 69/71); the one genuinely fresh surface not yet
-given a dedicated adversarial pass is `planner-form.tsx`'s client-side
-step logic. The
-Cloudflare-bypass gap has a dormant code-side gate (round 62, hardened
-round 63); it activates only once the Owner adds one Cloudflare
-Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more Builder
-code. What remains genuinely Owner-gated is otherwise unchanged; see
-"Owner launch decisions and remaining gates" below.
+first for anything published after round 72 (empty as of round 72). The
+Planner's server route/shared config, About/Privacy/Terms copy, and
+`service-details.ts` are all checked clean (rounds 66-69/71); the client-side
+step-logic gap found this round is fixed. Case-study (`/work/[slug]`) content
+against `site-config.ts`'s `selectedWork`/`caseStudies` remains a genuinely
+fresh surface not yet given a dedicated adversarial pass. The Cloudflare-
+bypass gap has a dormant code-side gate (round 62, hardened round 63); it
+activates only once the Owner adds one Cloudflare Transform Rule (see
+`CYVEXLY_APP_DEBT.md` item 3) — not more Builder code. What remains is
+otherwise Owner-gated; see "Owner launch decisions and remaining gates"
+below.
 
-**Accepted product position:** `main` is pushed through round 71's source
-commit (`0e4d779`) on `origin/main` and Render auto-deploys it.
-`cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
-round 53). `origin/master` is historical, not the deployment branch.
+**Accepted product position:** `main` is pushed through round 72's source
+commit on `origin/main` and Render auto-deploys it. `cyvexly.com` is fully
+connected/HTTPS/canonicalized (verified live, round 53). `origin/master` is
+historical, not the deployment branch.
 
 ## Owner launch decisions and remaining gates
 

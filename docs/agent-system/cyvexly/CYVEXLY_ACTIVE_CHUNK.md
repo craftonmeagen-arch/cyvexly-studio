@@ -7,13 +7,26 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 72** (scheduled/unattended, 50-minute limit) found no new
+Auditor inbox item and, reviewing `planner-form.tsx`'s client-side
+step logic per round 71's recommendation, found/fixed a real
+validation-bypass defect: `handleSubmit` only validated step 9, so a
+visitor who used a review-page "Edit" link to revisit and invalidate
+an earlier step, then jumped directly back to Review via the progress
+rail (never re-triggering that step's validation), could submit
+stale/invalid data — the server correctly 400'd it, but the visitor
+was left on Review with zero visible error. See the round-72 report
+below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 72" section.
+
 **Round 71** (scheduled/unattended, 50-minute limit) dispositioned two
 new Auditor inbox items (34th/35th consecutive clean confirmations)
 and found/fixed a real dead-end defect: `/work`'s "Redesign"/"Landing
 Page" filter pills matched zero projects. Also found/fixed a real
-hot-file-cap violation in `CYVEXLY_APP_DEBT.md` itself. See the
-round-71 report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 71"
-section.
+hot-file-cap violation in `CYVEXLY_APP_DEBT.md` itself. Full report
+archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_71_REPORT.md` (moved
+there round 72 to keep this file under its 30,720-byte hot-file cap).
+See also `CYVEXLY_APP_DEBT.md`'s "Resolved round 71" section.
 
 **Round 70** (scheduled/unattended, 50-minute limit) dispositioned fresh
 Owner direction `2026-09-06-16` (text-cursor/editable-looking body
@@ -266,58 +279,81 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
-## Round 71 report — global round 71 (scheduled/unattended session)
+## Round 72 report — global round 72 (scheduled/unattended session)
 
-Checked the Auditor inbox first: two new items existed
-(`IFA-2026-09-06-R59`, `IFA-2026-09-06-R60`), the 34th and 35th
-consecutive clean confirmations (0 active code defects; R59's
-hot-file-cap note on `CYVEXLY_CURRENT_STATE.md` was already fixed by
-round 69, R60 re-verified it closed). Both moved to
-`exchange/processed/`.
+Checked the Auditor inbox first: no new items (`exchange/operational-
+inbox/` empty in the external independent-review root, most recent
+processed item is `IFA-2026-09-06-R60`).
 
-**Found and fixed a real, previously-unflagged defect on a fresh
-surface (`/work`'s filter UI)**, following round 69/70's
-recommendation to review surfaces not yet given a dedicated pass.
-`workFilters` (`src/lib/site-config.ts`) listed `"Redesign"` and
-`"Landing Page"` as filter pills, but no `selectedWork` item's
-`category` is ever either value — every concept project is
-`"Business Site"` (×2) or `"Commerce"` (×1) — so clicking either pill
-guaranteed the page's own empty state ("No projects match that filter
-yet.") for every visitor, permanently, on a core marketing route.
-Confirmed by direct source inspection (a pure, deterministic filter
-function) and live in the browser.
+**Adversarially reviewed `planner-form.tsx`'s client-side step logic**
+(round 71's recommended fresh surface — server route/shared config
+already reviewed rounds 66-69) and found a real, reachable validation-
+bypass defect. `handleSubmit` only called `validateStep(9)` before
+submitting, but `maxReachedStep` (which gates which progress-rail
+steps are clickable) never resets once reached. A visitor who uses a
+review-page "Edit" link to jump back to an earlier step, changes it to
+an invalid state (e.g. clears the required name field), then clicks
+directly on the Step 9 circle in the progress rail instead of walking
+forward via Continue, returns to Review with the invalid state never
+re-validated. Submitting sends the stale/invalid data to the server,
+which correctly rejects it (400), but the visitor is left on Review
+with **no visible indication anything went wrong** — no alert, no
+field-level error (the invalid field isn't rendered on the review
+step), the Submit button just silently re-enables. A real dead end.
 
-**Fixed:** trimmed `workFilters` to `["All", "Business Site",
-"Commerce", "Concept"]` — every remaining pill now matches at least one
-real project. Did not fabricate a new concept project to backfill the
-missing categories (disproportionate to the defect, and outside this
-round's scope).
+**Reproduced live** (both `next dev`/HMR and a real `next start`
+production build) via scripted DOM interaction through the in-app
+Browser pane (unattended session — `computer` screenshots/clicks are
+non-functional per `CYVEXLY_TOOLS_AND_CAPABILITIES.md`; used
+`javascript_tool` to dispatch real React-recognized `input`/`click`
+events and intercept `window.fetch`): filled all 9 steps validly,
+used Edit to return to Step 1, cleared `fullName`, jumped to Step 9 via
+the progress rail (confirmed `isReachable`, no validation fired),
+checked the two consent boxes, clicked Submit. Confirmed the exact
+predicted failure: request sent with `fullName: ""`, server responded
+`400 {"error":"validation","fields":{"fullName":"..."}}`, page stayed
+on "09 Review & submit" with zero `[role="alert"]` elements and no
+visible error text anywhere.
 
-**Verified:** `tsc --noEmit`/`lint`/`build` all clean (the same
-pre-existing, unrelated round-42 evidence-script lint warning,
-untouched). Real `next start` on port 5173: a scripted click of every
-filter pill confirmed zero empty states (`All`→3, `Business Site`→2,
-`Commerce`→1, `Concept`→3 cards); an 18-route sweep (every public
-static/dynamic route plus `robots.txt`/`sitemap.xml`) returned 200.
+**Fixed:** added `validateAllSteps()` (loops `validateStep` across all
+9 steps, merging errors and tracking the first step with a problem).
+`handleSubmit` now uses it instead of `validateStep(9)`: on any error,
+sets the merged errors and navigates to the first invalid step (so the
+existing step-change effect's scroll/focus/live-region announcement
+fires and the real inline field error becomes visible); if the only
+error is on the current step (the normal Step 9 case, e.g. missing
+consent), keeps the existing `focusFirstError` behavior with no
+navigation.
 
-**Independently found and fixed a second real defect: `CYVEXLY_APP_
-DEBT.md` was 2669 bytes over its own 30720-byte cap** at round start
-(`.codex/roles/scripts/Test-HotFileCaps.ps1`, the same check behind
-Auditor `CYV-DOC-*` findings) — rounds 48/50/51/55 had never rotated.
-Archived all four to `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_
-{48,50,51,55}_ARCHIVE.md`; re-ran the checker and confirmed 0
-violations across all 47 files, including this file (rotated too).
+**Verified:** `tsc --noEmit`/lint/build all clean (same pre-existing
+round-42 evidence-script lint warning, untouched). Re-ran the exact
+repro against both `next dev` and a real `next start` build after the
+fix: `fetch was called: false`, page lands on "01 About you", and
+`fullName-error` shows "Please enter your name." — confirmed on both
+runtimes. Regression-checked: (1) an in-place Step 9-only error
+(unchecked consent, no earlier-step tampering) still blocks
+submission and stays on Step 9 without navigating away, matching prior
+behavior exactly; (2) a fully valid, non-tampered submission still
+reaches `/api/planner` (`fetch` called, real `503 not-configured`
+response — expected, no `RESEND_API_KEY` in this environment, same as
+every prior round's finding). A 20-route production sweep (every
+public static/dynamic route plus `robots.txt`/`sitemap.xml`) returned
+200 (`/not-found` correctly 404s, per Next.js convention).
 
-Full detail, including the trimmed-filter live-verification steps, is
-in `CYVEXLY_APP_DEBT.md`'s "Resolved round 71".
+Cleaned up: stopped both the owned `next dev` and `next start`
+listeners on port 5173 (verified the real listener PID via
+`Get-NetTCPConnection -LocalPort 5173 -State Listen` before each
+`Stop-Process`, not by process name — this host runs many unrelated
+pre-existing `node.exe` processes); removed the scratch
+`next-dev-5173.log`/`next-start-5173.log` files from `$env:TEMP`
+(round 71's same two files were retained this round with no lock
+issue this time).
 
-Cleaned up: stopped the owned `next dev`/`next start` listeners
-(verified the real listener PID via `Get-NetTCPConnection -LocalPort
-5173 -State Listen`, not process name). Two scratch log files under
-`$env:TEMP` could not be removed (Windows reported them locked after
-the owning process exited, same transient-lock pattern round 48 hit
-with a Chrome profile directory) — left as disposable OS-temp
-artifacts; next round should retry and report if it persists.
+Round 71's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_71_REPORT.md` (moved
+there round 72 to keep this file under its 30,720-byte hot-file cap).
+Round 71 fixed the `/work` dead-end filter-pill defect and an
+`APP_DEBT.md` hot-file-cap violation.
 
 Round 70's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_70_REPORT.md` (moved
@@ -461,69 +497,12 @@ Rounds 31-39 full reports are archived at docs/archive/chunks/CYVEXLY_ACTIVE_CHU
 
 ## Prior round summaries
 
-- **Round 1:** established Next.js/TypeScript/Tailwind source truth, design
-  system, Home, and Process; closed Chunk 1. Full report:
-  `docs/archive/chunks/CYVEXLY_CHUNK2_ROUND1_REPORT.md`.
-- **Round 2:** built Services, Pricing, Contact, Work/case studies, FAQ,
-  Accessibility, and 404; fixed a Next.js 16 dynamic-params runtime bug. Full
-  report: `docs/archive/chunks/CYVEXLY_CHUNK2_ROUND2_REPORT.md`.
-- **Round 3:** closed Chunk 2 with About honestly bounded, ran the Planner email
-  reachability check, added no-index/robots and OG asset, and refreshed launch
-  readiness. Full report: `docs/archive/chunks/CYVEXLY_CHUNK4_ROUND3_REPORT.md`.
-- **Round 4:** opened Chunk 3 and built/verified the full Planner, including
-  mobile-overflow, missing-field, reduced-motion, and accessible-name fixes.
-  Full report: `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND4_REPORT.md`.
-- **Round 5:** rebuilt Process as a connected timeline and replaced Work/case-
-  study gradients with truthful project-specific `ConceptPreview` SVGs. Full
-  report: `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND5_REPORT.md`.
-- **Round 6:** fixed three Council findings plus two same-shape Pricing table
-  issues; root-caused the unattended-browser compositor limitation. Full
-  report: `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND6_REPORT.md`.
-- **Round 7:** redesigned/fixed the favicon and real ICO, and audited Planner
-  keyboard-accessibility properties through DOM/accessibility-tree evidence.
-  Full hot-path snapshot/report:
-  `docs/archive/chunks/CYVEXLY_CHUNK3_ROUND7_REPORT.md`.
-
-- **Round 8:** unified truthful concept artwork across Home, Services, and Work;
-  established exact CDP rendering and fixed Planner first-error focus. Full
-  report: `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND8_REPORT.md`.
-- **Round 9:** fixed cross-computer scale drift from browser font defaults/rem
-  breakpoints and strengthened shared glass/large-text resilience. Full report:
-  `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND9_REPORT.md`.
-- **Round 10:** ran the wider method audit and added the inset glass header,
-  credibility icon rail, and capability-card grammar. Full report:
-  `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND10_REPORT.md`.
-- **Round 11:** integrated the Owner-supplied Home showcase video with honest
-  provenance, motion/data-saver controls, and responsive media proof. Full
-  report: `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND11_REPORT.md`.
-- **Round 12:** added the Home partnership diagram and five-stage process-route
-  visual system. Full report:
-  `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND12_REPORT.md`.
-- **Round 13:** replaced the flat Home final CTA with a split luminous
-  planetary/network composition. Full report:
-  `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND13_REPORT.md`.
-- **Round 14:** added five focused service-detail journeys and safe Planner
-  preselection. Full report:
-  `docs/archive/chunks/CYVEXLY_SHARED_SERVICES_ROUND14_REPORT.md`.
-- **Round 15:** repaired the deployment/source branch mismatch so the accepted
-  Home video appeared on the real Render site. Full report:
-  `docs/archive/chunks/CYVEXLY_SHARED_DEPLOYMENT_ROUND15_REPORT.md`.
-- **Round 16:** implemented the larger integrated Owner-directed Home reel.
-  Full report: `docs/archive/chunks/CYVEXLY_SHARED_HOME_ROUND16_REPORT.md`.
-- **Round 17:** replaced the Services combination table with five icon-led
-  audience pathways. Full report:
-  `docs/archive/chunks/CYVEXLY_SHARED_SERVICES_ROUND17_REPORT.md`.
-
-Rounds 18 and 19 are archived at
-`docs/archive/chunks/CYVEXLY_SHARED_PRICING_ROUND18_REPORT.md` and
-`docs/archive/chunks/CYVEXLY_SHARED_FOUNDATIONS_ROUND19_REPORT.md`.
-
-Round 24 is archived at
-`docs/archive/chunks/CYVEXLY_SHARED_THEME_ROUND24_REPORT.md`.
-
-Round 25 is archived at
-`docs/archive/chunks/CYVEXLY_SHARED_FOUNDATIONS_ROUND25_REPORT.md`.
-
-Rounds 26-29 (Owner-rejection visual-fidelity corrections and the Chunk 5
-opening workstream) are archived at
-`docs/archive/chunks/CYVEXLY_SHARED_THEME_ROUNDS_26_29_REPORT.md`.
+Rounds 1-29's full reports (Chunk 1/2 foundation, Chunk 3 Planner build,
+Chunk 4 utility/legal pages, the shared Home/Services/Pricing visual systems,
+the favicon/CDP-rendering/compositor-limitation methodology work, the
+architectural-glass theme rollout and Owner-rejection corrections, and the
+Chunk 5 opening workstream) are each individually archived at their
+correspondingly named `docs/archive/chunks/CYVEXLY_CHUNK*`/
+`CYVEXLY_SHARED_*` files (unchanged — this section previously duplicated
+each pointer inline; consolidated round 72 to keep this file under its
+30,720-byte hot-file cap, no history lost).

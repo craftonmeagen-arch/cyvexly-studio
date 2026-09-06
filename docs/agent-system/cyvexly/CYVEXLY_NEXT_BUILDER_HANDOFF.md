@@ -1,102 +1,69 @@
 # Cyvexly Next Builder Handoff
 
-## Round 71 closeout
+## Round 72 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
 time limit (unattended)
-**Start source:** `a8d2f6a` on `main` (pushed, matched `origin/main`)
-**Scope:** checked the Auditor inbox first (two new items, 34th/35th
-clean confirmations), then reviewed the fresh surfaces round 69/70
-recommended and found a real defect on `/work`'s filter UI, plus a
-hot-file-cap violation in `CYVEXLY_APP_DEBT.md` itself.
+**Start source:** `4141a6b` on `main` (pushed, matched `origin/main`)
+**Scope:** no new Auditor inbox item; adversarially reviewed
+`planner-form.tsx`'s client-side step logic per round 71's
+recommendation.
 **Completion:** REAL SOURCE FIX LANDED — see below.
 
 ### What was checked and fixed
 
-- `IFA-2026-09-06-R59`/`R60`: 34th/35th consecutive confirmations, 0
-  active defects. R59's `CYV-DOC-001` was already fixed round 69; R60
-  re-verified closed. Both moved to `exchange/processed/`.
-- **Fixed:** `workFilters` (`src/lib/site-config.ts`) listed
-  `"Redesign"`/`"Landing Page"` pills matching zero `selectedWork`
-  items — a guaranteed dead-end empty state on `/work`. Trimmed to
-  `["All", "Business Site", "Commerce", "Concept"]`; no fabricated
-  project added.
-- **Fixed:** `CYVEXLY_APP_DEBT.md` was 2669 bytes over its own
-  30720-byte cap. Archived rounds 48/50/51/55; re-verified 0
-  violations across all 47 files. Detail in that file's "Resolved
-  round 71".
+Found a real, reachable validation-bypass defect: `handleSubmit` only
+ran `validateStep(9)`, but `maxReachedStep` never resets, so a visitor
+who uses a review-page Edit link to revisit and invalidate an earlier
+step, then jumps straight back to Review via the progress rail
+(skipping that step's Continue-button validation), can submit
+stale/invalid data with zero visible client-side error — the server
+correctly 400s it, but the visitor is stranded on Review with no
+alert and no field message. Reproduced live via scripted DOM
+interaction (real React events, `fetch` interception) against both
+`next dev` and a real `next start` build; confirmed the empty `fetch
+was called: false`/blank-error symptom before the fix.
 
-**Verified:** `tsc --noEmit`/lint/build clean (pre-existing round-42
-warning untouched). Real `next start` on 5173: scripted click of every
-`/work` filter confirmed 0 empty states; 18-route sweep all 200.
+**Fixed:** added `validateAllSteps()`; `handleSubmit` now uses it and
+routes the visitor to the first invalid step (or stays put with
+`focusFirstError` if the only error is already on the current step).
+Re-ran the exact repro post-fix on both runtimes: no network call,
+lands on Step 1, "Please enter your name." visible. Regression-checked
+an in-place Step-9-only error (still blocks, doesn't navigate) and a
+fully valid submission (still reaches the API, real 503
+not-configured, expected with no `RESEND_API_KEY`).
 
-Cleaned up: stopped the owned listener (verified via
-`Get-NetTCPConnection -LocalPort 5173 -State Listen`); two scratch logs
-under `$env:TEMP` wouldn't delete (locked post-exit, same as round
-48's Chrome profile) — left, retry next round.
+**Verified:** `tsc`/lint/build clean (same pre-existing round-42
+lint warning); 20-route production sweep all 200.
+
+Cleaned up: stopped both owned `next dev`/`next start` listeners
+(verified the real PID via `Get-NetTCPConnection -LocalPort 5173
+-State Listen` before each `Stop-Process`); removed scratch logs.
 
 ### Recommended next workstream
 
-`planner-form.tsx`'s client-side step logic is the one genuinely fresh
-surface not yet given a dedicated pass (server route/shared config
-reviewed this round, fully wired). Owner gates unchanged: Resend
-account/DNS/API key, analytics/Search Console ownership, exact LLC
-name, About/legal/visual review, final indexability approval.
+Re-check the Auditor inbox first. The one genuinely fresh surface not
+yet given a dedicated adversarial pass: case-study (`/work/[slug]`)
+content against `site-config.ts`'s `selectedWork`/`caseStudies`. Owner
+gates unchanged: Resend account/DNS/API key, analytics/Search Console
+ownership, exact LLC name, About/legal/visual review, final
+indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
+Round 71 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_71_REPORT.md` (moved
+there round 72 to keep this file under its 12,288-byte hot-file cap).
+Round 71 fixed the `/work` dead-end filter-pill defect and an
+`APP_DEBT.md` hot-file-cap violation.
+
+Round 70 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_70_REPORT.md` (moved
+there round 72 to keep this file under its 12,288-byte hot-file cap).
+Round 70 fixed the text-cursor/editable-looking-copy defect.
 
 Round 69 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_69_REPORT.md` (moved
 there round 71 to keep this file under its 12,288-byte hot-file cap).
 Round 69 fixed the Home FAQ preview's CMS-inclusion overclaim.
-
-## Round 70 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
-time limit (unattended)
-**Start source:** `44724bd` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned fresh Owner direction `2026-09-06-16` (text-
-cursor/editable-looking body copy). No new Auditor inbox item existed.
-**Completion:** REAL SOURCE FIX LANDED — see below.
-
-### What was checked and fixed
-
-No new Auditor inbox item existed. Reproduced the Owner-reported issue
-live: `getComputedStyle` on `h1`/`p` returned `cursor: "auto"`,
-`isContentEditable: false` — the browser's universal default I-beam
-cursor over selectable text, not a Cyvexly-specific bug. **Fixed:**
-`src/app/globals.css` now sets `cursor: default` on non-interactive
-prose (inside `@layer base`) while explicitly restoring
-`cursor: pointer` on every real interactive control, including inline
-links nested inside a paragraph; `user-select` untouched (text stays
-selectable/copyable). **Self-caught regression before committing:** the
-first version sat outside any `@layer` and so unconditionally beat
-Tailwind's `disabled:cursor-not-allowed` utility on the Planner's
-progress-rail buttons (an unlayered rule always outranks a layered one)
-— moved inside `@layer base` and re-verified. Full detail, including
-every route/state checked, is in `CYVEXLY_APP_DEBT.md`'s "Resolved
-round 70".
-
-**Verified:** `tsc`/lint/build clean; 12-route sitewide sweep all 200.
-
-**Environment fix:** this session's PowerShell had no `node`/`npm`/
-`pnpm` on `PATH` despite them being installed — added their real
-install directories to `$env:Path` for the session (exact paths in
-`CYVEXLY_APP_DEBT.md`'s "Resolved round 70" if this recurs).
-
-Cleaned up: stopped the owned listener (verified the real PID via
-`Get-NetTCPConnection -LocalPort 5173 -State Listen`); removed scratch
-logs. Also committed pre-existing uncommitted hot-file-cap archival
-edits to `CYVEXLY_OWNER_DIRECTION.md`/`ARCHIVE.md` found already made
-but uncommitted at round start (content verified correct/complete).
-
-### Recommended next workstream
-
-Re-check the Auditor inbox first. Genuinely fresh surfaces not yet
-given a dedicated adversarial pass: `planner-form.tsx`'s client-side
-step logic, or the case-study (`/work/[slug]`) content against
-`site-config.ts`'s `selectedWork`/`caseStudies`. Owner gates unchanged:
-Resend account/DNS/API key, analytics/Search Console ownership, exact
-LLC name, About/legal/visual review (now including this round's cursor
-fix), final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
 
 Round 67 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_67_REPORT.md` (moved

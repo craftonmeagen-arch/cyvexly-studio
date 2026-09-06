@@ -210,6 +210,19 @@ export function PlannerForm({
     return next;
   }
 
+  function validateAllSteps(): { errors: Errors; firstErrorStep: number | null } {
+    let combined: Errors = {};
+    let firstErrorStep: number | null = null;
+    for (let step = 1; step <= plannerSteps.length; step += 1) {
+      const stepErrors = validateStep(step);
+      if (Object.keys(stepErrors).length > 0) {
+        combined = { ...combined, ...stepErrors };
+        if (firstErrorStep === null) firstErrorStep = step;
+      }
+    }
+    return { errors: combined, firstErrorStep };
+  }
+
   function focusFirstError(stepErrors: Errors) {
     const firstKey = Object.keys(stepErrors)[0];
     if (!firstKey) return;
@@ -277,10 +290,22 @@ export function PlannerForm({
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const stepErrors = validateStep(9);
-    if (Object.keys(stepErrors).length > 0) {
-      setErrors(stepErrors);
-      focusFirstError(stepErrors);
+    // Validate every step, not just the review step: the progress rail lets a
+    // visitor jump directly back to Review after using an Edit link to revisit
+    // (and potentially invalidate) an earlier step, bypassing that step's own
+    // Continue-button validation entirely. Submitting that stale data used to
+    // fail silently — the server correctly rejected it, but the visitor stayed
+    // on Review with no visible error, since the invalid field isn't rendered
+    // there. Re-check every step here and route the visitor to the first one
+    // that still has a problem.
+    const { errors: allErrors, firstErrorStep } = validateAllSteps();
+    if (Object.keys(allErrors).length > 0) {
+      setErrors(allErrors);
+      if (firstErrorStep !== null && firstErrorStep !== currentStep) {
+        goToStep(firstErrorStep);
+      } else {
+        focusFirstError(allErrors);
+      }
       return;
     }
 

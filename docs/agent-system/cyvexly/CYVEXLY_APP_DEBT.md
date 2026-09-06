@@ -1,5 +1,94 @@
 # Cyvexly App Debt
 
+## Resolved round 72
+
+- **No new Auditor inbox item** (`exchange/operational-inbox/` empty in
+  the external independent-review root; most recent processed item is
+  `IFA-2026-09-06-R60`).
+- **Adversarially reviewed `planner-form.tsx`'s client-side step
+  logic, per round 71's recommendation** (the last genuinely fresh
+  Planner surface — server route/shared config already reviewed
+  rounds 66-69). **Found and fixed a real, reachable validation-bypass
+  defect.** `handleSubmit` called only `validateStep(9)` before
+  submitting. `maxReachedStep` (which gates which progress-rail step
+  buttons are clickable) only ever grows, never resets — so once a
+  visitor reaches Review normally, every step, including 9, stays
+  reachable via the progress rail for the rest of the session. The
+  review page's own "Edit" links intentionally let a visitor jump back
+  to any earlier step to change an answer — but if they then invalidate
+  that step (e.g. clear a required field) and, instead of clicking
+  Continue again, click the Step 9 circle directly in the progress
+  rail, `goToStep` fires with no validation at all. Submitting from
+  Review then sends the stale/invalid payload to the server, which
+  correctly rejects it (400 with field errors) — but the visitor is
+  left on Review, where the invalid field isn't even rendered, so
+  nothing on screen explains the failure: no `[role="alert"]`, no
+  inline field error, the Submit button simply re-enables. A genuine
+  silent dead end reachable through the form's own intended Edit flow,
+  not a contrived edge case.
+- **Reproduced live before fixing, on both runtimes** (`next dev`/
+  Turbopack HMR and a real `next start` production build), via the
+  in-app Browser pane. `computer` screenshot/click actions are
+  non-functional in this unattended session type (per
+  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`); used `javascript_tool` to
+  dispatch real React-recognized events (`Object.getOwnPropertyDescriptor`
+  native-setter trick for controlled `<input>`/`<textarea>` values, so
+  React's own `onChange` fires — not just setting `.value` directly)
+  and real `MouseEvent('click')` dispatches on radio/checkbox/button
+  elements, plus a temporary `window.fetch` wrapper to capture the
+  actual outgoing request/response. Filled all 9 steps with valid data
+  end to end (confirmed each step's heading advanced correctly),
+  clicked "Edit" on the "About you" group, cleared `fullName` (verified
+  the DOM value actually changed), then clicked the Step 9 progress-rail
+  button directly (confirmed `disabled: false`, i.e. reachable) instead
+  of Continue. On the real (pre-fix) code: `fetch` fired with
+  `fullName: ""`, server responded `400
+  {"error":"validation","fields":{"fullName":"Please enter your
+  name."}}`, and the page's `<h2>` still read "09 Review & submit" —
+  zero `[role="alert"]` elements anywhere and the Name row still showed
+  only "—" with no error text.
+- **Fixed:** `src/components/planner/planner-form.tsx` — added
+  `validateAllSteps()`, which runs the existing `validateStep()` across
+  all 9 steps and merges every error found, tracking the first step
+  number that has one. `handleSubmit` now calls this instead of
+  `validateStep(9)`: if any step has an error, it sets the full merged
+  error set and, when the first error isn't on the step currently
+  shown, calls `goToStep()` to navigate there (letting the existing
+  step-change effect's scroll/heading-focus/live-region announcement
+  do its normal job, so the visitor lands on the actual problem with
+  the real inline field error visible below it); if the only error is
+  already on the current step (the ordinary Step 9 case — e.g. a
+  missing consent checkbox with no earlier-step tampering), it keeps
+  the prior `focusFirstError` behavior unchanged, with no navigation.
+- **Verified the fix, same live method, both runtimes, after the
+  edit:** re-ran the identical repro — `fetch was called: false`, the
+  page landed on "01 About you", and `fullName-error` showed "Please
+  enter your name." on both `next dev` and a real `next start` build.
+  **Regression A (in-place Step 9-only error, no earlier-step
+  tampering):** filled all 9 steps validly, checked only
+  `acknowledgeNotQuote` (left `consent` unchecked), submitted — `fetch`
+  was NOT called, stayed on "09 Review & submit", `consent-error`
+  showed the correct message. Matches pre-fix single-step-error
+  behavior exactly (no new navigation for an error already on the
+  visible step). **Regression B (fully valid, non-tampered
+  submission):** checked `consent` too, submitted again — `fetch` WAS
+  called, real response `503` (`not-configured` — expected, no
+  `RESEND_API_KEY` in this environment, the same documented gap every
+  prior round has verified, not a new defect).
+- **Verified:** `tsc --noEmit`/`lint`/`pnpm run build` all clean (same
+  single pre-existing, unrelated round-42 evidence-script lint
+  warning, untouched). A real `next start` production-build 20-route
+  sweep (every public static/dynamic route, `/not-found`,
+  `robots.txt`, `sitemap.xml`) returned 200 except `/not-found` itself
+  (404, correct Next.js convention for that special route).
+- Cleaned up: stopped both the owned `next dev` and `next start`
+  listeners on port 5173 across the round (verified the real listener
+  PID via `Get-NetTCPConnection -LocalPort 5173 -State Listen` before
+  each `Stop-Process -Force`, not by process name or count — this host
+  runs many unrelated pre-existing `node.exe` processes); removed the
+  scratch `next-dev-5173.log`/`next-start-5173.log` files from
+  `$env:TEMP` (no lock issue this round, unlike round 71's).
+
 ## Resolved round 71
 
 - **Checked the Auditor inbox first:** two new items existed
@@ -113,105 +202,25 @@
   verified correct/complete) to be committed together with this round's
   work rather than discarded.
 
-## Resolved round 69
+Round 69's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_69_ARCHIVE.md` (moved there
+round 72 to keep this file under its 30,720-byte hot-file cap): the
+Home FAQ preview's CMS-inclusion overclaim fix.
 
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R58`** — a
-  thirty-fourth consecutive independent confirmation (reviewed commit
-  `0cc8f61`, round 67's HEAD, predating round 68's robots.ts fix), 0
-  active code defects. Moved to `exchange/processed/`.
-- **Reviewed round 68's recommended surfaces** — `/about`/`/privacy`/
-  `/terms` copy and `service-details.ts` — no defects found on either.
-- **Found and fixed a real, previously-unflagged truth-claim defect on
-  an adjacent surface (`site-config.ts`'s `faqPreview`).** The Home FAQ
-  preview's answer to "Will I be able to update my website myself?"
-  claimed "Yes. Every site includes an editable CMS or content
-  workflow" — but the Signal package's own `pricingPackages` scope list
-  has no CMS line item, and `service-details.ts`'s own answer to the
-  same question is explicitly conditional ("When regular updates are
-  part of the brief, we can include an appropriate CMS..."). The
-  Services page also lists "Content & CMS" as its own separately-scoped
-  service group, confirming CMS was never a universal inclusion —
-  exactly the "inconsistent service descriptions"/"unsupported claims"
-  category Owner direction `2026-09-04-14`'s truth audit names.
-- **Fixed:** reworded `faqPreview`'s answer to "Most projects include an
-  editable CMS or content workflow scoped to your plan and comfort
-  level, with training included at handoff — the exact editable areas
-  are agreed before build," matching `service-details.ts`'s existing
-  qualified wording.
-- **Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
-  5173: confirmed the corrected sentence in the rendered Home page's
-  RSC output; a 12-route sitewide sweep all 200. Committed (`7239d3b`)
-  and pushed.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID via `netstat`/`taskkill` first); removed scratch
-  response captures.
-
-## Resolved round 68
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R57`** — a
-  thirty-third consecutive independent confirmation (reviewed commit
-  `33e3f4c`, round 66's HEAD, predating round 67's secondary-goals-label
-  fix), 0 active code defects. Moved to `exchange/processed/`.
-- **Moved to a fresh surface per round 67's recommendation** (Contact
-  client JS, `site-config.ts`, JSON-LD generation) — reviewed all
-  three, no defects found. Contact's client JS matches the server
-  route field-for-field; `pricingPreview`/`pricingPackages` stay in
-  sync; US-only/payment-deferral copy is consistent; `structured-
-  data.ts`'s JSON-LD builders reuse only real published copy.
-- **Found and fixed a real, previously-unflagged gap on an adjacent
-  surface:** `src/app/robots.ts` never declared a `Sitemap:` directive,
-  even though `src/app/sitemap.ts` already builds a real 20-route
-  sitemap — a standard, zero-cost crawler-discovery convention serving
-  Owner direction `2026-09-04-14`/vision §17's sitemap/robots/
-  indexing-readiness workstream.
-- **Fixed:** `robots.ts` now returns `sitemap: \`${SITE_URL}/sitemap.xml\``
-  (reusing `layout.tsx`'s existing `SITE_URL` constant), in both index
-  and no-index modes.
-- **Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
-  5173: `curl /robots.txt` shows the new `Sitemap:` line alongside the
-  existing `Disallow: /`; `/sitemap.xml` unchanged; a 12-route sitewide
-  sweep all 200. Committed (`ce28c0e`) and pushed.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID via `netstat`/`taskkill` first); removed the scratch
-  server log.
+Round 68's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_68_ARCHIVE.md` (moved there
+round 72 to keep this file under its 30,720-byte hot-file cap): the
+`robots.ts` missing-`Sitemap:`-directive fix.
 
 Round 67's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_67_ARCHIVE.md` (moved there
 round 69 to keep this file under its 30,720-byte hot-file cap): the
 Planner secondary-goals-label mapping fix.
 
-## Resolved round 66
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R55`** — a
-  thirty-first consecutive independent confirmation (reviewed commit
-  `846975d`, round 64's HEAD, predating round 65's body-size-cap fix), 0
-  active code defects at the reviewed commit. Moved to
-  `exchange/processed/`.
-- **Found and fixed a real data-loss defect on a third surface**
-  (mailer/rate-limiter/origin-gate and the Planner sanitize/validate
-  pipeline had each gone a round clean): diffed every `PlannerData`
-  field (`src/lib/planner-config.ts`) against every `raw.<field>` read
-  in `src/app/api/planner/route.ts`. The Planner's "Visual direction"
-  step's four style sliders (`data.spectrum`) had no corresponding
-  server read at all — every other ~47 fields did — so that whole
-  step's answers were silently dropped before reaching
-  `design@cyvexly.com`, contrary to Owner direction `2026-09-04-14`'s
-  "All project-planner answers" requirement.
-- **Fixed:** `src/app/api/planner/route.ts` now reads `raw.spectrum`,
-  keeping only known `visualSpectrums` ids paired with an in-range
-  integer (0-4, matching the client's step slider) and adds a new
-  "Style spectrum" email row (e.g. `Minimal ↔ Expressive: 3/4`).
-- **Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
-  5173 with a temporary debug log (removed before commit): a mixed
-  payload (3 valid ids, 1 unknown id, 1 non-numeric value) produced
-  exactly the 3 valid labels with no crash; an absent `spectrum`
-  produced `[]`, no crash — both still reached the existing 503
-  not-configured response. Regression: valid payload still 503;
-  missing fields still 400 with the same field-error set; malformed
-  JSON still 400; 150KB body still 413s; Contact route unaffected; a
-  12-route sitewide sweep all 200. Committed (`4a7b26f`) and pushed.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID first); removed all scratch payload/log files.
+Round 66's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_66_ARCHIVE.md` (moved there
+round 72 to keep this file under its 30,720-byte hot-file cap): the
+Planner spectrum-slider data-loss fix.
 
 Round 65's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_65_ARCHIVE.md` (moved there
