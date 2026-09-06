@@ -13,6 +13,7 @@ import {
   projectIncludes,
 } from "@/lib/site-config";
 import { buildPageMetadata } from "@/lib/seo";
+import { pricingJsonLd } from "@/lib/structured-data";
 
 export const metadata = buildPageMetadata({
   title: "Pricing — Cyvexly Studio",
@@ -24,6 +25,10 @@ export const metadata = buildPageMetadata({
 export default function PricingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingJsonLd) }}
+      />
       <SiteHeader />
 
       <main id="main-content" className="flex-1">
