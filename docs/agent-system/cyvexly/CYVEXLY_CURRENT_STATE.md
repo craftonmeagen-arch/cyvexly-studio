@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 55. Owner launch direction updated 2026-09-04, extended
+**Global round:** 56. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -24,6 +24,20 @@ DNS/domain connection, analytics/search ownership, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates". Full round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md`
 and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
+**Round 56 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-06-R46` (22nd consecutive confirmation, reviewed commit
+`82b531b`, predating round 55's Service JSON-LD, 0 active code defects —
+its "Production Domain & DNS Connection" gate note was stale, corrected by
+round 53). Added OfferCatalog JSON-LD to `/pricing`
+(`pricingJsonLd` in `src/lib/structured-data.ts`), reusing each of the 5
+packages' own published name/bestFor/price via one `Offer` per package —
+"Custom system" (no fixed price) correctly lists without a
+`priceSpecification`. `tsc`/`lint`/`build` clean; verified via a real
+`next start` server (both JSON-LD scripts parse valid on `/pricing`, all 5
+package prices match the published copy exactly, zero regressions across a
+14-route sweep). Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 56"
+section.
 
 **Round 55 outcome (scheduled/unattended):** dispositioned Auditor item
 `IFA-2026-09-06-R45` (21st consecutive confirmation, reviewed commit
@@ -60,17 +74,17 @@ round 54" section.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 55. Open Graph/Twitter coverage
+first for anything published after round 56. Open Graph/Twitter coverage
 (static and dynamic routes), structured data (Organization, FAQPage,
-BreadcrumbList, and now per-service Service/AggregateOffer JSON-LD),
-manifest/icons, print CSS, error boundaries/theme-color, and COOP/CORP
-headers/security.txt are all shipped — keep looking for genuinely new
-QA/build angles (e.g. a true rate-limiting check beyond the honeypot, or
-Product/Service structured data on `/pricing`'s packages) rather than
-assuming the surface is empty. What remains genuinely Owner-gated (real
-Contact/Planner email delivery, analytics/search ownership, exact LLC
-name, final indexability approval, About/legal/visual review) is
-unchanged; see "Owner launch decisions and remaining gates" below.
+BreadcrumbList, per-service Service/AggregateOffer JSON-LD, and now
+Pricing's OfferCatalog JSON-LD), manifest/icons, print CSS, error
+boundaries/theme-color, and COOP/CORP headers/security.txt are all
+shipped — keep looking for genuinely new QA/build angles (e.g. a true
+rate-limiting check beyond the honeypot) rather than assuming the surface
+is empty. What remains genuinely Owner-gated (real Contact/Planner email
+delivery, analytics/search ownership, exact LLC name, final indexability
+approval, About/legal/visual review) is unchanged; see "Owner launch
+decisions and remaining gates" below.
 
 **Round 53 outcome (interactive session, Owner direction `2026-09-05-15`):**
 verified the production domain is already fully connected (DNS/HTTPS/

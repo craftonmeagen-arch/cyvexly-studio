@@ -1,5 +1,36 @@
 # Cyvexly App Debt
 
+## Resolved round 56
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R46`** — a
+  twenty-second consecutive independent confirmation (reviewed commit
+  `82b531b`, round 54's HEAD, predating round 55's Service JSON-LD), 0
+  active code defects. Its "Production Domain & DNS Connection" gate note
+  was already stale (round 53 verified the domain fully connected). Moved
+  to `exchange/processed/`.
+- **New angle — OfferCatalog JSON-LD for `/pricing`.** Round 55's handoff
+  named this directly: Services and each service-detail page now carry
+  Service/AggregateOffer JSON-LD, but Pricing — the site's other core
+  commercial page — had none. Added `pricingJsonLd` in
+  `src/lib/structured-data.ts` (`Service` + `hasOfferCatalog`/`OfferCatalog`
+  listing all 5 packages as `Offer`s), reusing each package's own
+  already-published `name`/`bestFor`/`price`. "Custom system" ("Quoted
+  after discovery") has no extractable figure and is listed without a
+  `priceSpecification` rather than inventing one — matching the page's own
+  "Price" vs. "Starting at" label distinction.
+- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+  pre-existing, unrelated lint warning in the round-42 evidence script).
+  Real `next start` server on port 5173: fetched `/pricing`, parsed both
+  JSON-LD script tags — valid JSON, `Organization` unchanged, new `Service`
+  block lists all 5 packages in order with prices 1800/3500/5800/8500
+  matching the published copy exactly and "Custom system" correctly
+  price-less. A 14-route regression sweep (static + dynamic + sitemap/
+  robots + an invalid path) shows zero regressions. Committed (`8f5fc2b`)
+  and pushed.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID via `netstat`/`Get-Process` before stopping), removed the
+  round's own scratch HTML fetch.
+
 ## Resolved round 55
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-06-R45`** — a twenty-first
@@ -63,41 +94,11 @@
   listener PID via the port's actual listener before stopping), removed
   the round's own scratch PNGs and log file.
 
-## Resolved round 52
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R43`** — a nineteenth
-  consecutive independent confirmation (reviewed commit `eb03a33`, round
-  50's HEAD, one commit behind round 51's OG/Twitter-metadata commit), 0
-  active code defects. Moved to `exchange/processed/`.
-- **New angle — per-route Open Graph images.** Round 51's handoff named
-  this directly: every route shared Home's single generated
-  `opengraph-image`, so shared links for About/Services/Pricing/Work/
-  Process/Contact/FAQ/Project Planner all showed the same generic Home
-  preview instead of one reflecting the actual page. Added
-  `src/lib/og-image.tsx`'s `renderRouteOgImage()` (reuses Home's brand
-  mark/palette/grammar) and a new `opengraph-image.tsx` per static route,
-  reusing only each route's own already-shipped title/description — no
-  invented copy.
-- **Verified:** `tsc`/`lint`/`build` all pass clean. Real `next start`
-  server on port 5173: each of the 9 routes' `og:image` meta now resolves
-  to its own distinct URL; downloaded and visually opened the actual
-  generated PNGs (About, Services, Pricing, Work, Process, Contact, FAQ,
-  Start, Home) — correct brand mark, page name, and description text, no
-  clipping/overflow. **Regression check on the dynamic routes:** before
-  shipping, moved the two new sibling files (`services/opengraph-image.tsx`,
-  `work/opengraph-image.tsx`) aside, rebuilt, and confirmed
-  `/services/business-websites` and `/work/aurora-spaces` already had no
-  `og:image` at all in that baseline — restored the files and confirmed the
-  same absence after. This is a real before/after A-B test proving the
-  dynamic-route image gap is pre-existing (Next's image-convention file
-  does not cascade into a parameterized child segment the way static
-  metadata text fields do), not something this round's sibling files broke.
-  Full 26-route/asset regression sweep (all pages, sitemap, robots,
-  manifest, icons, security.txt, an invalid path) shows zero regressions.
-  Committed (`57b8fb7`) and pushed.
-- Cleaned up: stopped the owned `next start` server (verified real listener
-  PID via `Get-NetTCPConnection -LocalPort 5173` before stopping), removed
-  the round's own temporary log files and scratch PNGs.
+Round 52's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_52_ARCHIVE.md` (moved there
+round 56 to keep this file under its 30720-byte hot-file cap): round 52
+added per-route Open Graph images for the 8 static marketing routes and
+proved the dynamic-route OG-image gap was pre-existing.
 
 Round 46's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_46_ARCHIVE.md` (moved there
