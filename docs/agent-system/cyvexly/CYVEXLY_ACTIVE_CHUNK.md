@@ -7,6 +7,15 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 51** (scheduled/unattended, 50-minute limit) dispositioned the
+eighteenth consecutive Auditor confirmation (`IFA-2026-09-06-R42`, 0 active
+code defects) and shipped sitewide Open Graph and Twitter Card metadata —
+every route had `title`/`description`/canonical but none defined
+`og:site_name`, `og:type`, `og:locale`, or `twitter:card`, so shared links
+carried no branded preview and Twitter/X never rendered the large-image
+card at all. See the round-51 report below and `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 51" section.
+
 **Round 50** (scheduled/unattended, 50-minute limit) dispositioned the
 seventeenth consecutive Auditor confirmation (`IFA-2026-09-05-R41`, 0 active
 code defects), fixed a real hot-memory rotation defect in this file (round
@@ -112,6 +121,50 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 51 report — global round 51 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-06-R42` (reviewed commit
+`7f9357b`, round 49's HEAD, one commit behind round 50's COOP/CORP/
+security.txt commit). Eighteenth consecutive independent confirmation — 0
+active code defects, re-verifies error boundaries, theme-color/color-scheme
+metadata, raster manifest icons, print-color-adjust, Apple touch icon,
+scaffold-asset removal, all JSON-LD, both Contact/Planner honeypots, WCAG
+1.4.10 reflow, canonicals, and security headers against a local isolated
+build and live production parity. Not a new finding. Moved to
+`exchange/processed/`.
+
+Ran one genuinely new reachable QA/build angle, no Owner gate required:
+**added sitewide Open Graph and Twitter Card metadata.** Source grep
+(`grep -rln "openGraph" src/`) found zero matches — every one of the 14
+route metadata exports (root layout plus 13 pages/dynamic routes) set
+`title`/`description`/`alternates.canonical` but never `openGraph` or
+`twitter`. §4.12 check: `og:site_name`/`og:type`/`og:locale` and
+`twitter:card` are the standard Next.js Metadata API fields for this
+(Next's own docs), and this exact gap is named verbatim in Owner direction
+`2026-09-04-14`'s required workstream 2 ("production Open Graph and
+Twitter URLs") — not a departure, a named but previously unaddressed
+requirement. Concretely: without an explicit `twitter:card` tag, Twitter/X
+does not infer a card type from a plain `<title>`/meta description, so
+every shared Cyvexly link would render with no large-image preview at all.
+Added `src/lib/seo.ts`'s `buildPageMetadata()` helper (canonical +
+`openGraph` + `twitter`, deliberately omitting `images` so the existing
+`opengraph-image.tsx` file-convention image keeps applying) and wired it
+into the root layout and all 13 other metadata exports, reusing only
+already-shipped titles/descriptions — no invented copy.
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (lint's one
+pre-existing warning is in round 42's untouched evidence script). Started a
+real `next start` production server on port 5173 and curled six
+representative routes (Home, Services, Pricing, FAQ, a service-detail
+route, a case-study route): each correctly renders its own
+`og:title`/`og:description`/`og:url`, sitewide `og:site_name="Cyvexly
+Studio"`/`og:type="website"`/`og:locale="en_US"`, and
+`twitter:card="summary_large_image"` with matching `twitter:title`/
+`twitter:description`; Home's `og:image`/`twitter:image` (from the
+existing `opengraph-image.tsx` special file) is unchanged. A full 25-route
+sweep (all static/dynamic pages, `/sitemap.xml`, `/robots.txt`, manifest,
+icons, `security.txt`, and an invalid path) shows zero regressions — every
+prior 200/404 status is unchanged. Committed (`03bb077`) and pushed.
+
 ## Round 50 report — global round 50 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R41` (reviewed commit
@@ -155,79 +208,11 @@ exact authored contact/expiry content; `/`, `/faq`,
 `/manifest.webmanifest`, `/apple-icon`, `/icons/192`, and `/sitemap.xml` all
 still `200` with zero regressions. Committed (`b5b7109`) and pushed.
 
-## Round 48 report — global round 48 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-05-R39` (reviewed commit
-`727d809`, round 46's HEAD, one commit behind round 47's Apple touch icon
-commit). Fifteenth consecutive independent confirmation — 0 active code
-defects, re-verifies the Web App Manifest structure/content, scaffold-asset
-removal, BreadcrumbList/FAQPage/Organization JSON-LD, both Contact/Planner
-honeypots, WCAG 1.4.10 reflow, canonicals, security headers, and live
-production parity against `https://cyvexly-studio.onrender.com/`. Not a new
-finding. Moved to `exchange/processed/`.
-
-Ran one genuinely new angle, reachable without any Owner gate: **added
-raster 192×512 PNG manifest icons.** Round 46's Web App Manifest shipped
-with only an SVG icon entry (`sizes: "any"`); round 46/47's own handoffs
-named real 192/512px raster icons as the next open item, since Android's
-"Add to Home Screen" install-prompt flow has historically preferred PNG at
-these two standard PWA sizes over SVG-only. §4.12 check: providing PNG
-icons at 192×192 and 512×512 alongside an `any`-size SVG is the documented
-mainstream PWA manifest pattern (MDN/web.dev), not a departure. Built a
-dynamic `src/app/icons/[size]/route.tsx` Route Handler (Next's Route
-Handler convention, same `next/og` `ImageResponse` technique already used
-for `apple-icon.tsx`/`opengraph-image.tsx`) with `generateStaticParams`
-restricting build-time generation to exactly the two registered sizes and
-a runtime 404 for any other size value — reuses only the existing C/Y mark
-and brand-blue token, no invented facts. Referenced both as new `icons[]`
-entries in `manifest.ts` alongside the existing SVG entry (not replacing
-it).
-**Verified:** real production build (`pnpm run build`) statically
-generates `/icons/192` and `/icons/512`; parsed the generated
-`.next/server/app/icons/{192,512}.body` files — real PNGs, exactly
-192×192 and 512×512 (confirmed via `file`), correct byte sizes. Copied
-both locally and opened them (round-3/7's proxy-image technique): clean
-brand-blue square, mark centered and proportionally scaled at both sizes,
-no clipping. Live-verified against a real `next start` production server
-on port 5173: `/icons/192` and `/icons/512` both return `200 image/png`
-with the exact built byte lengths; `/icons/999` (an unregistered size)
-returns `404`, confirming the allowlist guard; `manifest.webmanifest`'s
-live JSON body carries all three icon entries in the correct order;
-`apple-icon` and `icon.svg` remain unchanged (`200`, correct content
-types) — no regression. A real in-app-Browser screenshot of Home shows
-zero visual regression and zero console errors.
-`tsc --noEmit`/`lint`/`build` all pass clean (lint's one warning is the
-same pre-existing unused-var in round 42's untouched evidence script).
-Committed (`8d959f0`) and pushed.
-
-Archived round 45's full report to
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_45_REPORT.md` to restore
-the intended latest-three rotation (§7.14) — 46, 47, 48 stay live.
-
-Ran a second genuinely new angle this round, also reachable without any
-Owner gate: **fixed a real print-legibility defect.** No route had any
-`@media print` rule (confirmed via grep) despite this site relying on
-dark/colored backgrounds to make white/light text legible (the Home hero
-media panel, CTA buttons, footer). Browsers omit background-color/
-background-image by default when printing unless the user opts into
-"print backgrounds" — so on a real Ctrl+P, that light text would print
-invisible (white-on-white). §4.12 check: `print-color-adjust: exact` (+
-`-webkit-` prefix) is the CSS spec's own documented mechanism for exactly
-this problem (MDN), not a departure — added a small `@media print` block
-in `globals.css` forcing it on `html`. **Verified via Chrome DevTools
-Protocol `Page.printToPDF`** against a production server: generated one
-PDF with `printBackground:false` (the common default a user has not
-opted into) and one with `printBackground:true`. Both came back the same
-size (~41.7 MB) — if the override were not working, the `false` variant
-would be dramatically smaller (mostly text/fonts, no embedded gradient/
-SVG background art); identical size confirms the CSS property is forcing
-background graphics to embed regardless of the toggle, so the fix is
-functioning. Also confirmed via live `getComputedStyle` that the rule
-does *not* leak into normal screen rendering (`economy`, the default,
-outside print emulation) — no regression. `tsc`/`lint`/`build` all pass
-clean. Script preserved at
-`docs/agent-system/cyvexly/builder/evidence/round-48-print-color-adjust-check.mjs`.
-Committed (`90ea41e`) and pushed.
+Round 48's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_48_REPORT.md` (moved there
+round 51 to restore latest-three rotation) — 49, 50, 51 stay live. Round 48
+added raster 192/512 PNG manifest icons and fixed a print-legibility
+defect.
 
 ## Round 49 report — global round 49 (scheduled/unattended session)
 

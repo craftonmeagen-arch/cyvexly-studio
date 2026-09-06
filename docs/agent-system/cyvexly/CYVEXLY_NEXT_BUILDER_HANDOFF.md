@@ -1,5 +1,61 @@
 # Cyvexly Next Builder Handoff
 
+## Round 51 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
+time limit (unattended)
+**Start source:** `eb03a33` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item
+(`IFA-2026-09-06-R42`) and shipped sitewide Open Graph/Twitter Card
+metadata across the root layout and all 13 route metadata exports.
+**Completion:** REAL SOURCE ADDITION LANDED — see below.
+
+### What was checked
+
+- `IFA-2026-09-06-R42` (reviewed commit `7f9357b`, round 49's HEAD, one
+  commit behind round 50's COOP/CORP/security.txt commit) is an
+  **eighteenth consecutive independent confirmation, not a new finding** —
+  0 active code defects. Moved to `exchange/processed/`.
+- **New angle — sitewide Open Graph + Twitter Card metadata.** Grep
+  confirmed zero `openGraph`/`twitter` metadata fields anywhere in `src/`;
+  named verbatim in Owner direction `2026-09-04-14` workstream 2
+  ("production Open Graph and Twitter URLs"). Added
+  `src/lib/seo.ts`'s `buildPageMetadata()` and wired it into the root
+  layout plus all 13 other metadata exports (11 static routes, 2 dynamic
+  `generateMetadata` routes), reusing only already-shipped titles/
+  descriptions — `images` intentionally left unset so the existing
+  `opengraph-image.tsx` file-convention image keeps applying.
+- Verified: `tsc --noEmit`/`lint`/`build` all clean. Real `next start`
+  server on port 5173: curled Home/Services/Pricing/FAQ/a service-detail
+  route/a case-study route — each shows correct per-route `og:title`/
+  `og:description`/`og:url`, sitewide `og:site_name`/`og:type="website"`/
+  `og:locale="en_US"`, and `twitter:card="summary_large_image"` with
+  matching title/description; Home's og:image/twitter:image unchanged. A
+  full 25-route sweep (all pages, sitemap, robots, manifest, icons,
+  security.txt, an invalid path) shows zero regressions.
+- Committed (`03bb077`) and pushed to `origin/main`.
+- Archived round 48's full `CYVEXLY_ACTIVE_CHUNK.md` report to restore the
+  intended latest-three rotation (§7.14) — 49, 50, 51 stay live.
+- Cleaned up: stopped the owned `next start` server (verified real
+  listener PID via `Get-NetTCPConnection -LocalPort 5173` before
+  stopping); no browser pane was opened this round (curl against the
+  local server was the appropriate proof layer for an HTML-meta-tag
+  claim). Removed the round's own temporary log file
+  (`round51-next-start.log`).
+
+### Recommended next workstream
+
+Untried angles not yet swept: a dedicated rate-limiting check beyond the
+honeypot (architecturally tied to the server-side email delivery this
+chunk already defers); verify whether other routes should get their own
+`opengraph-image` (currently only the root `/` has a generated OG image —
+Services/Pricing/etc. now correctly advertise `twitter:card`/`og:*` text
+fields but inherit no image, which is pre-existing behavior this round did
+not change, not a regression — worth a deliberate look next round).
+Genuinely Owner-gated items are unchanged: DNS/domain connection, real
+email delivery, analytics ownership, exact LLC name, About/legal/visual
+review, final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
 ## Round 50 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-05/06, 50-minute hard
@@ -57,75 +113,11 @@ count. Genuinely Owner-gated items are unchanged: DNS/domain connection,
 real email delivery, analytics ownership, exact LLC name, About/legal/visual
 review, final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
 
-## Round 49 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-05, 50-minute hard
-time limit (unattended)
-**Start source:** `ae0644b` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item (`IFA-2026-09-05-R40`)
-and shipped three new reachable QA/build angles: a route-segment error
-boundary, a root-layout error boundary, and page-level theme-color/
+Round 49 closeout detail is archived at
+docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_49_REPORT.md (moved there
+round 51 to keep this file under its 12288-byte hot-file cap). Round 49
+added route-segment/root-layout error boundaries and viewport theme-color/
 color-scheme metadata.
-**Completion:** REAL SOURCE ADDITION LANDED — see below.
-
-### What was checked
-
-- `IFA-2026-09-05-R40` (reviewed commit `1c64d81`, round 47's HEAD, one
-  commit behind round 48's raster-icon commit) is a **sixteenth consecutive
-  independent confirmation, not a new finding** — 0 active code defects,
-  re-verifies the Apple touch icon, Web App Manifest, scaffold-asset
-  removal, Organization/FAQPage/BreadcrumbList JSON-LD, both Contact/
-  Planner honeypots, WCAG 1.4.10 reflow, canonicals, security headers, and
-  live production parity. Moved to `exchange/processed/`.
-- **New angle — `src/app/error.tsx` route-segment error boundary.** No
-  route had one; an unhandled render error anywhere previously fell
-  through to Next's default unstyled generic error screen instead of a
-  branded, accessible recovery UI. Same Next.js special-file family as the
-  already-shipped `not-found.tsx`; reuses `SiteHeader`/`SiteFooter`/
-  `ButtonLink` and offers Try again/Back to home/Contact us.
-- **New angle — `src/app/global-error.tsx`** for the rarer case of an
-  error in the root layout itself (which `error.tsx` cannot catch). Must
-  render its own `<html>`/`<body>` per Next's documented convention;
-  deliberately dependency-free (inline styles only) since it is the
-  fallback of last resort.
-- **New angle — `viewport.themeColor`/`colorScheme`** added to the root
-  layout's metadata. The site had no page-level `<meta name="theme-color">`
-  (mobile browser-chrome tinting was unspecified) and no declared
-  `color-scheme` (native form-control dark-mode styling was unspecified on
-  a site with no dark theme). Set to the existing brand-blue token
-  (`#0f66e0`) and `light` — no invented facts.
-- Verified with a temporary `force-dynamic` throwaway route (deleted before
-  commit, full re-typecheck/re-lint/re-build afterward confirmed clean
-  removal) against a real `next start` production server: the SSR shell
-  ships only a sanitized error digest (no raw message leak — standard
-  Next.js production behavior), and a real in-app-Browser navigation
-  showed the actual rendered `error.tsx` UI. `theme-color`/`color-scheme`
-  meta confirmed present and correct via live `document.querySelector`.
-  Home/`/faq`/`/manifest.webmanifest`/`/apple-icon`/`/icons/192` all still
-  `200` with zero console/network regressions after the test route was
-  removed.
-- `tsc --noEmit`/`lint`/`build` all pass clean (lint's one pre-existing
-  warning is in round 42's untouched evidence script).
-- Committed and pushed to `origin/main`.
-- Archived round 46's full closeout/report to keep both hot-memory files
-  under their byte caps (§7.14 latest-three rotation).
-- Cleaned up: stopped the owned `next start` server (verified real
-  listener PID via the port's actual listener before stopping), closed the
-  owned Browser-pane tab.
-
-### Recommended next workstream
-
-Untried angles not yet swept: a dedicated rate-limiting check beyond the
-honeypot (architecturally tied to the server-side email delivery this
-chunk already defers); a `/.well-known/security.txt` responsible-disclosure
-file (reachable now, no Owner gate, though it would need a real contact/
-expiry the Owner hasn't set — worth a quick Owner-direction check before
-inventing one). Structured data, manifest/icons, print CSS, and now error
-boundaries/theme-color are all shipped — keep looking for genuinely new QA/
-build angles rather than assuming the surface is empty. Genuinely
-Owner-gated items are unchanged: DNS/domain connection, real email
-delivery, analytics ownership, exact LLC name, About/legal/visual review,
-final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
 
 Round 48 closeout detail is archived at
 docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_48_REPORT.md (moved there

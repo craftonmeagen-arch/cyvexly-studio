@@ -266,6 +266,15 @@ public QA all pass. Its integrated verification also closes the remaining
 delivery work in Chunk 3 and launch/legal work in Chunk 4. Payment integration
 and real portfolio replacement remain separately tracked deferrals.
 
+### Round 51 progress
+
+Added sitewide Open Graph and Twitter Card metadata (`src/lib/seo.ts`'s
+`buildPageMetadata()`, wired into the root layout and all 13 other route
+metadata exports) — closes the reachable half of required-scope item 2's
+"production Open Graph and Twitter URLs" that earlier rounds' `metadataBase`/
+canonical/sitemap work (rounds 29, 33) had not covered. Verified via a real
+`next start` server; zero regressions across a full 25-route sweep.
+
 ## Historical implementation context
 
 Cross-chunk round history is preserved in
