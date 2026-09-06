@@ -171,6 +171,29 @@ export function getClientIp(request: Request): string {
   return "unknown";
 }
 
+/**
+ * Dormant scaffolding for the residual direct-Render-origin bypass named in
+ * round 60/61: an attacker hitting `cyvexly-studio.onrender.com` directly
+ * skips Cloudflare and can forge `cf-connecting-ip` themselves, since
+ * nothing between the attacker and Render's origin overwrites it. Fully
+ * closing that needs a Cloudflare-side control (a Transform Rule injecting
+ * a shared-secret header on every proxied request, or Authenticated Origin
+ * Pulls) that only Cloudflare-dashboard access can configure — this role
+ * does not have that access, so this check stays dormant (always passes)
+ * until `CF_ORIGIN_SECRET` is set. Once the Owner adds a Cloudflare
+ * Transform Rule that sets the `x-cf-origin-secret` request header to a
+ * chosen value for all requests, and sets that same value as
+ * `CF_ORIGIN_SECRET` in Render, this starts rejecting any request that
+ * skipped Cloudflare (direct-origin traffic won't carry the header at
+ * all, and an attacker hitting the origin directly has no way to learn
+ * the secret). See CYVEXLY_APP_DEBT.md for the exact steps.
+ */
+export function isTrustedOrigin(request: Request): boolean {
+  const secret = process.env.CF_ORIGIN_SECRET;
+  if (!secret) return true;
+  return request.headers.get("x-cf-origin-secret") === secret;
+}
+
 export function formatTimestamp(date: Date): string {
   return date.toLocaleString("en-US", {
     timeZone: "America/New_York",

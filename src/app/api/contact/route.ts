@@ -6,6 +6,7 @@ import {
   formatTimestamp,
   getClientIp,
   isMailerConfigured,
+  isTrustedOrigin,
   isValidEmail,
   NOTIFICATION_RECIPIENT,
   sanitizeLine,
@@ -17,6 +18,10 @@ import {
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
+  if (!isTrustedOrigin(request)) {
+    return NextResponse.json({ ok: false, error: "rejected" }, { status: 403 });
+  }
+
   let body: unknown;
   try {
     body = await request.json();

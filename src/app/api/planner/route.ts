@@ -19,6 +19,7 @@ import {
   formatTimestamp,
   getClientIp,
   isMailerConfigured,
+  isTrustedOrigin,
   isValidEmail,
   NOTIFICATION_RECIPIENT,
   sanitizeLine,
@@ -43,6 +44,10 @@ function allowedValue(value: unknown, allowed: readonly string[]): string {
 }
 
 export async function POST(request: Request) {
+  if (!isTrustedOrigin(request)) {
+    return NextResponse.json({ ok: false, error: "rejected" }, { status: 403 });
+  }
+
   let body: unknown;
   try {
     body = await request.json();
