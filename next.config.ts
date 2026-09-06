@@ -36,6 +36,12 @@ const securityHeaders = [
     value: "max-age=63072000; includeSubDomains; preload",
   },
   { key: "Content-Security-Policy", value: contentSecurityPolicy },
+  // The site has no cross-origin popups/postMessage flows and frame-ancestors
+  // is already 'none' above, so same-origin isolation costs nothing here and
+  // closes the two headers securityheaders.com/Mozilla Observatory flag by
+  // default (MDN's documented COOP/CORP hardening pair).
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+  { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
 ];
 
 const nextConfig: NextConfig = {
