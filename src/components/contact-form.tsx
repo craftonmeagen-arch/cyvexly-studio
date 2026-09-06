@@ -3,21 +3,24 @@
 import { useState, type FormEvent } from "react";
 import { contactTopics, siteConfig } from "@/lib/site-config";
 
-type Status = "idle" | "sent" | "error";
+type Status = "idle" | "submitting" | "sent" | "error";
 
 type Errors = Partial<Record<"name" | "email" | "message" | "consent" | "honeypot", string>>;
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Errors>({});
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const form = event.currentTarget;
     const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
+    const phone = String(data.get("phone") ?? "").trim();
+    const company = String(data.get("company") ?? "").trim();
     const topic = String(data.get("topic") ?? contactTopics[0]);
     const message = String(data.get("message") ?? "").trim();
     const consent = data.get("consent") === "on";
@@ -42,16 +45,49 @@ export function ContactForm() {
     }
 
     setErrors({});
+    setSubmitError(null);
+    setStatus("submitting");
 
-    const subject = `[${topic}] Message from ${name}`;
-    const body = `${message}\n\n— ${name} (${email})`;
-    const mailto = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          company,
+          topic,
+          message,
+          consent,
+          "contact-company-website": honeypot,
+        }),
+      });
 
-    window.location.href = mailto;
-    setStatus("sent");
-    form.reset();
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null);
+        if (payload?.error === "validation" && payload.fields) {
+          setErrors(payload.fields as Errors);
+          setStatus("error");
+          return;
+        }
+        setSubmitError(
+          response.status === 429
+            ? "Too many messages from this connection. Please try again in a few minutes."
+            : `Something went wrong sending your message. Please try again, or email us directly at ${siteConfig.email}.`,
+        );
+        setStatus("error");
+        return;
+      }
+
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setSubmitError(
+        `Something went wrong sending your message. Please check your connection and try again, or email us directly at ${siteConfig.email}.`,
+      );
+      setStatus("error");
+    }
   }
 
   if (status === "sent") {
@@ -61,15 +97,11 @@ export function ContactForm() {
         className="glass-panel rounded-2xl px-6 py-8 text-center"
       >
         <h2 className="font-display text-lg font-semibold text-midnight-slate">
-          Your email app should be open now.
+          Message sent.
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
-          We&apos;ve pre-filled a message to{" "}
-          <a href={`mailto:${siteConfig.email}`} className="text-cyber-blue">
-            {siteConfig.email}
-          </a>{" "}
-          — just press send from there. If nothing opened, email us directly
-          at that address.
+          Thanks for reaching out — we&apos;ve sent your message to Cyvexly Studio and emailed
+          you a confirmation. We respond within two business days.
         </p>
         <button
           type="button"
@@ -101,7 +133,7 @@ export function ContactForm() {
           role="alert"
           className="mb-6 rounded-xl border border-warning-coral/40 bg-warning-coral/10 px-4 py-3 text-sm text-warning-coral"
         >
-          Please fix the highlighted fields below.
+          {submitError ?? "Please fix the highlighted fields below."}
         </p>
       )}
 
@@ -144,6 +176,32 @@ export function ContactForm() {
               {errors.email}
             </p>
           )}
+        </div>
+
+        <div>
+          <label htmlFor="phone" className="text-sm font-medium text-midnight-slate">
+            Phone <span className="font-normal text-cool-graphite">(optional)</span>
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="company" className="text-sm font-medium text-midnight-slate">
+            Company <span className="font-normal text-cool-graphite">(optional)</span>
+          </label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            autoComplete="organization"
+            className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
+          />
         </div>
       </div>
 
@@ -205,9 +263,10 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-cyber-blue px-6 py-3 text-sm font-medium text-white shadow-[0_8px_24px_-8px_rgba(15,102,224,0.55)] transition-colors duration-200 hover:bg-[#0b4fb0] focus-visible:bg-[#0b4fb0] sm:w-auto"
+        disabled={status === "submitting"}
+        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-cyber-blue px-6 py-3 text-sm font-medium text-white shadow-[0_8px_24px_-8px_rgba(15,102,224,0.55)] transition-colors duration-200 hover:bg-[#0b4fb0] focus-visible:bg-[#0b4fb0] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
-        Send message
+        {status === "submitting" ? "Sending…" : "Send message"}
       </button>
     </form>
   );

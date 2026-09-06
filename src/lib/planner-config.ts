@@ -1,6 +1,65 @@
 // Data for the Project Planner (`/start`), sourced from
 // `CYVEXLY_VISION_PLAN.md` §6.9 (experience) and §9 (complete field plan).
 
+// Shared between the client form (src/components/planner/planner-form.tsx)
+// and the server-side submission route (src/app/api/planner/route.ts) —
+// kept here (not "use client") so the API route can import it directly.
+export type PlannerData = {
+  fullName: string;
+  workEmail: string;
+  contactMethod: string;
+  roleTitle: string;
+  companyName: string;
+  country: string;
+  otherApprovers: string;
+  businessDescription: string;
+  productsServices: string;
+  currentWebsite: string;
+  businessStage: string;
+  geographicMarket: string;
+  customerGroups: string;
+  competitors: string;
+  differentiation: string;
+  primaryGoal: string;
+  primaryGoalOther: string;
+  secondaryGoals: string;
+  importantAction: string;
+  currentProblems: string;
+  successMeasure: string;
+  trafficAnalytics: string;
+  websiteType: string;
+  pages: string[];
+  pagesOther: string;
+  pageCount: string;
+  essentialPages: string;
+  needsMigration: string;
+  multipleLanguages: string;
+  notSureSitemap: boolean;
+  features: string[];
+  notSureFeatures: boolean;
+  featureDetails: string;
+  assetStatus: Record<string, string>;
+  assetLink: string;
+  personalityAdjectives: string;
+  spectrum: Record<string, number>;
+  colorsToUse: string;
+  colorsToAvoid: string;
+  sitesAdmired: string;
+  competitorsToAvoid: string;
+  accessibilityNotes: string;
+  openNotes: string;
+  budgetRange: string;
+  launchDate: string;
+  launchDateReason: string;
+  timingFlexibility: string;
+  contentReadiness: string;
+  careInterest: string;
+  acknowledgeNotQuote: boolean;
+  consent: boolean;
+  followUpEmails: boolean;
+  honeypot: string;
+};
+
 export const plannerSteps = [
   { id: "about-you", number: 1, label: "About you" },
   { id: "business", number: 2, label: "The business" },

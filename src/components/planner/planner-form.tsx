@@ -11,6 +11,7 @@ import {
   contentReadinessOptions,
   featuresNeedingDetail,
   geographicMarkets,
+  type PlannerData,
   plannerFeatures,
   plannerSteps,
   possiblePages,
@@ -31,62 +32,6 @@ import {
   TextField,
 } from "./planner-fields";
 import { PlannerProgress } from "./planner-progress";
-
-type PlannerData = {
-  fullName: string;
-  workEmail: string;
-  contactMethod: string;
-  roleTitle: string;
-  companyName: string;
-  country: string;
-  otherApprovers: string;
-  businessDescription: string;
-  productsServices: string;
-  currentWebsite: string;
-  businessStage: string;
-  geographicMarket: string;
-  customerGroups: string;
-  competitors: string;
-  differentiation: string;
-  primaryGoal: string;
-  primaryGoalOther: string;
-  secondaryGoals: string;
-  importantAction: string;
-  currentProblems: string;
-  successMeasure: string;
-  trafficAnalytics: string;
-  websiteType: string;
-  pages: string[];
-  pagesOther: string;
-  pageCount: string;
-  essentialPages: string;
-  needsMigration: string;
-  multipleLanguages: string;
-  notSureSitemap: boolean;
-  features: string[];
-  notSureFeatures: boolean;
-  featureDetails: string;
-  assetStatus: Record<string, string>;
-  assetLink: string;
-  personalityAdjectives: string;
-  spectrum: Record<string, number>;
-  colorsToUse: string;
-  colorsToAvoid: string;
-  sitesAdmired: string;
-  competitorsToAvoid: string;
-  accessibilityNotes: string;
-  openNotes: string;
-  budgetRange: string;
-  launchDate: string;
-  launchDateReason: string;
-  timingFlexibility: string;
-  contentReadiness: string;
-  careInterest: string;
-  acknowledgeNotQuote: boolean;
-  consent: boolean;
-  followUpEmails: boolean;
-  honeypot: string;
-};
 
 const emptyData: PlannerData = {
   fullName: "",
@@ -174,7 +119,8 @@ export function PlannerForm({
   const [currentStep, setCurrentStep] = useState(1);
   const [maxReachedStep, setMaxReachedStep] = useState(1);
   const [errors, setErrors] = useState<Errors>({});
-  const [status, setStatus] = useState<"form" | "submitted">("form");
+  const [status, setStatus] = useState<"form" | "submitting" | "submitted">("form");
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [isStorageReady, setIsStorageReady] = useState(false);
   const [restored, setRestored] = useState(false);
   const [prefilledService, setPrefilledService] = useState<string | null>(null);
@@ -329,7 +275,7 @@ export function PlannerForm({
     }
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const stepErrors = validateStep(9);
     if (Object.keys(stepErrors).length > 0) {
@@ -338,18 +284,45 @@ export function PlannerForm({
       return;
     }
 
-    const subject = `Project Planner: ${data.companyName || data.fullName}`;
-    const body = buildSummaryText(data);
-    const mailto = `mailto:${siteConfig.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSubmitError(null);
+    setStatus("submitting");
 
     try {
-      window.localStorage.removeItem(STORAGE_KEY);
-    } catch {
-      // Nothing to clean up if storage was never available.
-    }
+      const response = await fetch("/api/planner", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    window.location.href = mailto;
-    setStatus("submitted");
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null);
+        if (payload?.error === "validation" && payload.fields) {
+          setErrors(payload.fields as Errors);
+          setStatus("form");
+          focusFirstError(payload.fields as Errors);
+          return;
+        }
+        setSubmitError(
+          response.status === 429
+            ? "Too many submissions from this connection. Please try again in a few minutes."
+            : `Something went wrong sending your answers. Please try again, or email us directly at ${siteConfig.email}.`,
+        );
+        setStatus("form");
+        return;
+      }
+
+      try {
+        window.localStorage.removeItem(STORAGE_KEY);
+      } catch {
+        // Nothing to clean up if storage was never available.
+      }
+      setStatus("submitted");
+    } catch {
+      setSubmitError(
+        `Something went wrong sending your answers. Please check your connection and try again, or email us directly at ${siteConfig.email}.`,
+      );
+      setStatus("form");
+    }
   }
 
   const goalLabel = useMemo(() => {
@@ -393,16 +366,12 @@ export function PlannerForm({
     return (
       <div role="status" className="glass-panel rounded-2xl px-6 py-10 text-center">
         <h2 className="font-display text-xl font-semibold text-midnight-slate">
-          Your email app should be open now.
+          Thanks — your project brief is in.
         </h2>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-cool-graphite">
-          We&apos;ve pre-filled a full summary of your answers to{" "}
-          <a href={`mailto:${siteConfig.email}`} className="text-cyber-blue">
-            {siteConfig.email}
-          </a>{" "}
-          — just press send from there. We respond within two business days. This interim step
-          sends from your own mail client; it does not yet send an automatic confirmation email
-          from Cyvexly.
+          We&apos;ve sent your full answers to Cyvexly Studio and emailed a confirmation to{" "}
+          <span className="font-medium text-midnight-slate">{data.workEmail}</span>. We respond
+          within two business days.
         </p>
         <ButtonLink href="/" variant="secondary" className="mt-6">
           Back to home
@@ -953,6 +922,7 @@ export function PlannerForm({
               errors={errors}
               onChange={set}
               clearError={clearError}
+              submitError={submitError}
             />
           )}
         </div>
@@ -987,9 +957,10 @@ export function PlannerForm({
             ) : (
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-cyber-blue px-6 py-3 text-sm font-medium text-white shadow-[0_8px_24px_-8px_rgba(15,102,224,0.55)] transition-colors duration-200 hover:bg-[#0b4fb0] focus-visible:bg-[#0b4fb0]"
+                disabled={status === "submitting"}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-cyber-blue px-6 py-3 text-sm font-medium text-white shadow-[0_8px_24px_-8px_rgba(15,102,224,0.55)] transition-colors duration-200 hover:bg-[#0b4fb0] focus-visible:bg-[#0b4fb0] disabled:cursor-not-allowed disabled:opacity-70"
               >
-                Submit
+                {status === "submitting" ? "Submitting…" : "Submit"}
               </button>
             )}
           </div>
@@ -1022,6 +993,7 @@ function PlannerReview({
   errors,
   onChange,
   clearError,
+  submitError,
 }: {
   data: PlannerData;
   goalLabel: string;
@@ -1030,6 +1002,7 @@ function PlannerReview({
   errors: Errors;
   onChange: <K extends keyof PlannerData>(key: K, value: PlannerData[K]) => void;
   clearError: (key: keyof PlannerData) => void;
+  submitError: string | null;
 }) {
   const groups: { title: string; step: number; rows: [string, string][] }[] = [
     {
@@ -1199,89 +1172,17 @@ function PlannerReview({
         </div>
       </div>
 
+      {submitError && (
+        <p role="alert" className="rounded-xl border border-warning-coral/40 bg-warning-coral/10 px-4 py-3 text-sm text-warning-coral">
+          {submitError}
+        </p>
+      )}
+
       <p className="text-xs leading-relaxed text-cool-graphite">
-        Submitting opens your own email app with a complete summary pre-filled to{" "}
-        {siteConfig.email} — this interim step does not yet send an automatic confirmation email
-        from Cyvexly.
+        Submitting sends your complete answers directly to Cyvexly Studio and emails you a
+        confirmation — no need to open your own email app.
       </p>
     </div>
   );
 }
 
-function buildSummaryText(data: PlannerData): string {
-  const lines: string[] = [];
-  const add = (label: string, value: string | number | boolean | string[] | undefined) => {
-    if (value === undefined || value === "" || (Array.isArray(value) && value.length === 0)) return;
-    const printable = Array.isArray(value) ? value.join(", ") : String(value);
-    lines.push(`${label}: ${printable}`);
-  };
-
-  lines.push("PROJECT PLANNER SUBMISSION", "");
-  lines.push("-- About you --");
-  add("Name", data.fullName);
-  add("Email", data.workEmail);
-  add("Contact method", data.contactMethod);
-  add("Role", data.roleTitle);
-  add("Company", data.companyName);
-  add("Country / time zone", data.country);
-  add("Other approvers", data.otherApprovers);
-
-  lines.push("", "-- The business --");
-  add("Description", data.businessDescription);
-  add("Products / services", data.productsServices);
-  add("Current website", data.currentWebsite);
-  add("Stage", data.businessStage);
-  add("Market", data.geographicMarket);
-  add("Customer groups", data.customerGroups);
-  add("Competitors", data.competitors);
-  add("Differentiation", data.differentiation);
-
-  lines.push("", "-- Goals --");
-  add("Primary goal", data.primaryGoal === "other" ? data.primaryGoalOther : data.primaryGoal);
-  add("Secondary goals", data.secondaryGoals?.split("|").filter(Boolean));
-  add("Most important action", data.importantAction);
-  add("Current problems", data.currentProblems);
-  add("Success measure", data.successMeasure);
-  add("Traffic / analytics", data.trafficAnalytics);
-
-  lines.push("", "-- Website & pages --");
-  add("Website type", data.websiteType);
-  add("Pages", data.notSureSitemap ? "Not sure — recommend the sitemap" : data.pages);
-  add("Other page(s)", data.pagesOther);
-  add("Essential for launch", data.essentialPages);
-  add("Approx. page count", data.pageCount);
-  add("Needs migration", data.needsMigration);
-  add("Multiple languages", data.multipleLanguages);
-
-  lines.push("", "-- Features --");
-  add("Features", data.notSureFeatures ? "Not sure — recommend the right features" : data.features);
-  add("Feature details", data.featureDetails);
-
-  lines.push("", "-- Brand & content --");
-  for (const category of Object.entries(data.assetStatus)) {
-    add(category[0], category[1]);
-  }
-  add("Asset link", data.assetLink);
-
-  lines.push("", "-- Visual direction --");
-  add("Personality adjectives", data.personalityAdjectives);
-  add("Colors to use", data.colorsToUse);
-  add("Colors to avoid", data.colorsToAvoid);
-  add("Sites admired", data.sitesAdmired);
-  add("Competitors to avoid resembling", data.competitorsToAvoid);
-  add("Accessibility notes", data.accessibilityNotes);
-  add("Open notes", data.openNotes);
-
-  lines.push("", "-- Budget & timing --");
-  add("Budget range", data.budgetRange);
-  add("Desired launch date", data.launchDate);
-  add("Why that date matters", data.launchDateReason);
-  add("Timing", data.timingFlexibility);
-  add("Content readiness", data.contentReadiness);
-  add("Care interest", data.careInterest);
-
-  lines.push("", "-- Consent --");
-  add("Follow-up emails okay", data.followUpEmails ? "Yes" : "No");
-
-  return lines.join("\n");
-}
