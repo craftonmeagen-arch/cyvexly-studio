@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@/components/google-analytics";
 import { SiteAtmosphere } from "@/components/site-atmosphere";
 import { organizationJsonLd } from "@/lib/structured-data";
 import { SITE_NAME, SITE_URL } from "@/lib/seo";
@@ -23,6 +24,8 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 const isIndexable = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
 
 const title = "Cyvexly Studio — Websites built to make your business unmistakable";
 const description =
@@ -52,6 +55,11 @@ export const metadata: Metadata = {
     title,
     description,
   },
+  // Only rendered once the Owner supplies a real Google Search Console
+  // verification value (GOOGLE_SITE_VERIFICATION) — no placeholder tag.
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
 };
 
 export const viewport: Viewport = {
@@ -73,6 +81,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <SiteAtmosphere />
         {children}
+        {gaMeasurementId && <GoogleAnalytics measurementId={gaMeasurementId} />}
       </body>
     </html>
   );

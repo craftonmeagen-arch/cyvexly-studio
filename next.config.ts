@@ -8,14 +8,26 @@ import type { NextConfig } from "next";
 // directive is locked to 'self' since the site has no third-party
 // scripts/frames/embeds (verified round 31 by grepping src/ for external
 // URLs: only the local /media/*.mp4 video and self-hosted next/font files).
+//
+// Google Analytics domains are appended only when NEXT_PUBLIC_GA_MEASUREMENT_ID
+// is actually set (src/app/layout.tsx gates the gtag.js tag the same way) —
+// the CSP never advertises a capability the site isn't using.
+const gaEnabled = Boolean(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim());
+const scriptSrc = gaEnabled
+  ? "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com"
+  : "script-src 'self' 'unsafe-inline'";
+const connectSrc = gaEnabled
+  ? "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com"
+  : "connect-src 'self'";
+
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  scriptSrc,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' blob: data:",
   "font-src 'self'",
   "media-src 'self'",
-  "connect-src 'self'",
+  connectSrc,
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
