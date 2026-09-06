@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 49. Owner launch direction updated 2026-09-04.
+**Global round:** 50. Owner launch direction updated 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -21,42 +21,36 @@ ownership, final indexability approval) is Owner-gated — see
 `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full round-by-round
 detail is in `CYVEXLY_ACTIVE_CHUNK.md` and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 49 outcome (scheduled/unattended, 50-minute limit):** dispositioned
-the one new Auditor inbox item, `IFA-2026-09-05-R40` — a sixteenth
+**Round 50 outcome (scheduled/unattended, 50-minute limit):** dispositioned
+the one new Auditor inbox item, `IFA-2026-09-05-R41` — a seventeenth
 consecutive independent confirmation, 0 active code defects, not a new
-finding. Shipped three new reachable angles: (1) `src/app/error.tsx`, a
-route-segment error boundary (no route had one; unhandled errors fell
-through to Next's default unstyled error screen); (2) `src/app/
-global-error.tsx` for the rarer root-layout-level error case; (3)
-`viewport.themeColor`/`colorScheme` on the root layout metadata
-(`#0f66e0`/`light`, reusing the existing brand token). Verified with a
-temporary `force-dynamic` throwaway route (deleted before commit, confirmed
-via a full re-typecheck/re-lint/re-build) against a real `next start`
-server: sanitized error digest in the SSR shell, real in-app-Browser
-navigation showed the actual rendered `error.tsx` UI, theme-color/
-color-scheme meta confirmed live, zero regressions on Home/faq/manifest/
-apple-icon/icons afterward. Also rotated hot memory (archived round 46's
-`CYVEXLY_ACTIVE_CHUNK.md` report, rounds 46-47's `CYVEXLY_NEXT_BUILDER_
-HANDOFF.md` closeouts, and rounds 44-45's `CYVEXLY_APP_DEBT.md` entries).
-Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 49" section and
+finding. Found and fixed a real hot-memory rotation defect: round 48's
+rotation step had left round 47's `CYVEXLY_ACTIVE_CHUNK.md` report live and
+duplicated round 48's report in its place instead of archiving round 47 —
+archived round 47 correctly and restored latest-three. Shipped one new
+reachable angle: `Cross-Origin-Opener-Policy`/`Cross-Origin-Resource-Policy:
+same-origin` security headers plus `/.well-known/security.txt` (RFC 9116,
+contact `design@cyvexly.com`). Verified `tsc`/`lint`/`build` clean and, via a
+real `next start` server on port 5173, both new headers live on `/` and
+`security.txt` returning correct content with zero regressions on
+Home/faq/manifest/apple-icon/icons/sitemap. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 50" section and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 49. Untried angles remaining: a
+first for anything published after round 50. Untried angles remaining: a
 true rate-limiting check beyond the honeypot (architecturally tied to the
-same server-side email delivery this chunk already defers); a
-`/.well-known/security.txt` file (reachable, but needs a real contact/
-expiry — check for Owner direction before inventing one). Structured data,
-manifest/icons, print CSS, and now error boundaries/theme-color are all
-shipped — keep looking for genuinely new QA/build angles rather than
-assuming the surface is empty. What remains genuinely Owner-gated (real
-Contact/Planner email delivery, DNS/domain connection, analytics/search
-ownership, exact LLC name, final indexability approval, About/legal/visual
-review) is unchanged; see "Owner launch decisions and remaining gates"
-below.
+same server-side email delivery this chunk already defers). Structured
+data, manifest/icons, print CSS, error boundaries/theme-color, and now
+COOP/CORP headers plus security.txt are all shipped — keep looking for
+genuinely new QA/build angles rather than assuming the surface is empty.
+What remains genuinely Owner-gated (real Contact/Planner email delivery,
+DNS/domain connection, analytics/search ownership, exact LLC name, final
+indexability approval, About/legal/visual review) is unchanged; see "Owner
+launch decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 49's source
+**Accepted product position:** `main` is pushed through round 50's source
 feature commit on `origin/main` — see `git log` for exact SHAs (docs commit
 to follow this same round). The production domain is confirmed as
 `cyvexly.com`, but DNS still needs to be connected and verified.

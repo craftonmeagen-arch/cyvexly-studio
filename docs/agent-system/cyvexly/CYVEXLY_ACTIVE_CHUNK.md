@@ -7,6 +7,14 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 50** (scheduled/unattended, 50-minute limit) dispositioned the
+seventeenth consecutive Auditor confirmation (`IFA-2026-09-05-R41`, 0 active
+code defects), fixed a real hot-memory rotation defect in this file (round
+47's report had gone un-archived and round 48's report was accidentally
+duplicated in its place), and shipped COOP/CORP security headers plus a
+`/.well-known/security.txt` file. See the round-50 report below and
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 50" section.
+
 **Round 29** (scheduled/unattended, 50-minute limit) opens Chunk 5 and closes
 one bounded workstream: public contact identity (`design@cyvexly.com`, `(317)
 572-5780`) sitewide, the code-only half of production metadata/discovery
@@ -104,6 +112,49 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 50 report — global round 50 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-05-R41` (reviewed commit
+`ae0644b`, round 48's HEAD, one commit behind round 49's error-boundary
+commit). Seventeenth consecutive independent confirmation — 0 active code
+defects, re-verifies the raster manifest icons, print-color-adjust override,
+Apple touch icon, scaffold-asset removal, all JSON-LD, both Contact/Planner
+honeypots, WCAG 1.4.10 reflow, canonicals, and security headers against a
+local isolated build and live production parity. Not a new finding. Moved to
+`exchange/processed/`.
+
+Also **found and fixed a real hot-memory rotation defect, not a new product
+feature.** This file's own round-48 rotation step had accidentally left
+round 47's full report live *and* duplicated round 48's report in its place,
+instead of archiving round 47 as the handoff note claimed — verified via
+`grep -n "^## Round"`, which showed two identical `## Round 48 report`
+headers and no round-47 archive file. Archived round 47's report to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_47_REPORT.md`, removed the
+duplicate block, and restored the intended latest-three rotation (48, 49,
+50 live) — see the archived file's own note for provenance.
+
+Ran one genuinely new reachable QA/build angle, no Owner gate required:
+**added `Cross-Origin-Opener-Policy: same-origin` and
+`Cross-Origin-Resource-Policy: same-origin`** to `next.config.ts`'s shared
+security-header set, and a `/.well-known/security.txt` (RFC 9116) using the
+Owner-confirmed `design@cyvexly.com` contact. §4.12 check: COOP/CORP same-
+origin is MDN's documented hardening pair and the two headers
+securityheaders.com/Mozilla Observatory-style scans flag as missing on an
+otherwise-strict CSP/HSTS/frame-ancestors site like this one — not a
+departure. Confirmed via `grep -rn "window.open|postMessage|window.opener"
+src/` that the app has zero cross-origin window/messaging usage, so
+same-origin isolation costs nothing. `security.txt`'s `Expires` field is set
+one year out (`2027-09-05`) per RFC 9116's own recommendation, reusing only
+the already-Owner-confirmed contact email — no invented facts.
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (lint's one
+pre-existing warning is in round 42's untouched evidence script). Started a
+real `next start` production server on port 5173 and confirmed via `curl -D
+-`: both new headers present on `/` alongside all pre-existing headers
+unchanged; `/.well-known/security.txt` returns `200 text/plain` with the
+exact authored contact/expiry content; `/`, `/faq`,
+`/manifest.webmanifest`, `/apple-icon`, `/icons/192`, and `/sitemap.xml` all
+still `200` with zero regressions. Committed (`b5b7109`) and pushed.
+
 ## Round 48 report — global round 48 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-05-R39` (reviewed commit
@@ -177,50 +228,6 @@ outside print emulation) — no regression. `tsc`/`lint`/`build` all pass
 clean. Script preserved at
 `docs/agent-system/cyvexly/builder/evidence/round-48-print-color-adjust-check.mjs`.
 Committed (`90ea41e`) and pushed.
-
-## Round 47 report — global round 47 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-05-R38` (reviewed commit
-`140bb0b`, round 45's HEAD, one commit behind round 46's manifest/cleanup
-commit). Fourteenth consecutive independent confirmation — 0 active code
-defects, re-verifies BreadcrumbList JSON-LD structure/scoping on all 5
-service-detail and 3 case-study routes, both Contact/Planner honeypots,
-WCAG 1.4.10 reflow, canonicals, security headers, and live production
-parity against `https://cyvexly-studio.onrender.com/`. Not a new finding.
-Moved to `exchange/processed/`.
-
-Ran one genuinely new angle, reachable without any Owner gate: **added
-`src/app/apple-icon.tsx`**, Next's special-file convention for the
-`<link rel="apple-touch-icon">` tag — the site had `icon.svg` (favicon) and
-`manifest.ts` (Android/Chrome "Add to Home Screen") but nothing for iOS
-Safari's home-screen icon, which does not read the Web App Manifest's icon
-list. §4.12 check: this is Next's own documented convention (same family as
-the already-shipped `icon.svg` and `opengraph-image.tsx`), not a departure.
-Built with the same `next/og` `ImageResponse` proxy-rasterizer technique
-already used for `opengraph-image.tsx`: a 180×180 PNG, solid brand-blue
-(`#0F66E0`) background per Apple's own no-transparency guidance, with the
-existing C/Y signal-mark path data in white, centered. No new facts —
-reuses only the already-shipped mark and brand color token.
-**Verified:** real production build (`pnpm run build`) emits an
-`/apple-icon` route; parsed `index.html`'s
-`<link rel="apple-touch-icon" ... type="image/png" sizes="180x180"/>` and
-confirmed the existing `<link rel="icon">` (favicon/`icon.svg`) tags are
-unchanged (no collision or duplicate). Copied the generated
-`.next/server/app/apple-icon.body` PNG to a local file and opened it (the
-established round-3/7 proxy-image technique): clean brand-blue square, mark
-centered, no clipping. Live-verified against a real `next start` production
-server on port 5173: `/apple-icon` returns `200 image/png`; `icon.svg` and
-`/manifest.webmanifest` unchanged (`200`, correct content-type); a real
-in-app-Browser screenshot of Home (this session's compositor worked at
-round start) shows zero visual regression, zero console errors, zero
-network requests recorded pointing at any new failing route.
-`tsc --noEmit`/`lint`/`build` all pass clean (lint's one warning is the
-same pre-existing unused-var in round 42's untouched evidence script).
-Committed and pushed.
-
-Archived round 44's full report (below) to
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_44_REPORT.md` to restore
-the intended latest-three rotation (§7.14) — 45, 46, 47 stay live.
 
 ## Round 49 report — global round 49 (scheduled/unattended session)
 
@@ -282,79 +289,11 @@ Archived round 46's full report to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_46_REPORT.md` to restore
 the intended latest-three rotation (§7.14) — 47, 48, 49 stay live.
 
-## Round 48 report — global round 48 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-05-R39` (reviewed commit
-`727d809`, round 46's HEAD, one commit behind round 47's Apple touch icon
-commit). Fifteenth consecutive independent confirmation — 0 active code
-defects, re-verifies the Web App Manifest structure/content, scaffold-asset
-removal, BreadcrumbList/FAQPage/Organization JSON-LD, both Contact/Planner
-honeypots, WCAG 1.4.10 reflow, canonicals, security headers, and live
-production parity against `https://cyvexly-studio.onrender.com/`. Not a new
-finding. Moved to `exchange/processed/`.
-
-Ran one genuinely new angle, reachable without any Owner gate: **added
-raster 192×512 PNG manifest icons.** Round 46's Web App Manifest shipped
-with only an SVG icon entry (`sizes: "any"`); round 46/47's own handoffs
-named real 192/512px raster icons as the next open item, since Android's
-"Add to Home Screen" install-prompt flow has historically preferred PNG at
-these two standard PWA sizes over SVG-only. §4.12 check: providing PNG
-icons at 192×192 and 512×512 alongside an `any`-size SVG is the documented
-mainstream PWA manifest pattern (MDN/web.dev), not a departure. Built a
-dynamic `src/app/icons/[size]/route.tsx` Route Handler (Next's Route
-Handler convention, same `next/og` `ImageResponse` technique already used
-for `apple-icon.tsx`/`opengraph-image.tsx`) with `generateStaticParams`
-restricting build-time generation to exactly the two registered sizes and
-a runtime 404 for any other size value — reuses only the existing C/Y mark
-and brand-blue token, no invented facts. Referenced both as new `icons[]`
-entries in `manifest.ts` alongside the existing SVG entry (not replacing
-it).
-**Verified:** real production build (`pnpm run build`) statically
-generates `/icons/192` and `/icons/512`; parsed the generated
-`.next/server/app/icons/{192,512}.body` files — real PNGs, exactly
-192×192 and 512×512 (confirmed via `file`), correct byte sizes. Copied
-both locally and opened them (round-3/7's proxy-image technique): clean
-brand-blue square, mark centered and proportionally scaled at both sizes,
-no clipping. Live-verified against a real `next start` production server
-on port 5173: `/icons/192` and `/icons/512` both return `200 image/png`
-with the exact built byte lengths; `/icons/999` (an unregistered size)
-returns `404`, confirming the allowlist guard; `manifest.webmanifest`'s
-live JSON body carries all three icon entries in the correct order;
-`apple-icon` and `icon.svg` remain unchanged (`200`, correct content
-types) — no regression. A real in-app-Browser screenshot of Home shows
-zero visual regression and zero console errors.
-`tsc --noEmit`/`lint`/`build` all pass clean (lint's one warning is the
-same pre-existing unused-var in round 42's untouched evidence script).
-Committed (`8d959f0`) and pushed.
-
-Archived round 45's full report to
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_45_REPORT.md` to restore
-the intended latest-three rotation (§7.14) — 46, 47, 48 stay live.
-
-Ran a second genuinely new angle this round, also reachable without any
-Owner gate: **fixed a real print-legibility defect.** No route had any
-`@media print` rule (confirmed via grep) despite this site relying on
-dark/colored backgrounds to make white/light text legible (the Home hero
-media panel, CTA buttons, footer). Browsers omit background-color/
-background-image by default when printing unless the user opts into
-"print backgrounds" — so on a real Ctrl+P, that light text would print
-invisible (white-on-white). §4.12 check: `print-color-adjust: exact` (+
-`-webkit-` prefix) is the CSS spec's own documented mechanism for exactly
-this problem (MDN), not a departure — added a small `@media print` block
-in `globals.css` forcing it on `html`. **Verified via Chrome DevTools
-Protocol `Page.printToPDF`** against a production server: generated one
-PDF with `printBackground:false` (the common default a user has not
-opted into) and one with `printBackground:true`. Both came back the same
-size (~41.7 MB) — if the override were not working, the `false` variant
-would be dramatically smaller (mostly text/fonts, no embedded gradient/
-SVG background art); identical size confirms the CSS property is forcing
-background graphics to embed regardless of the toggle, so the fix is
-functioning. Also confirmed via live `getComputedStyle` that the rule
-does *not* leak into normal screen rendering (`economy`, the default,
-outside print emulation) — no regression. `tsc`/`lint`/`build` all pass
-clean. Script preserved at
-`docs/agent-system/cyvexly/builder/evidence/round-48-print-color-adjust-check.mjs`.
-Committed (`90ea41e`) and pushed.
+Round 47's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_47_REPORT.md` (moved there
+round 50, correcting a prior round's accidental duplication of the round-48
+report in place of archiving round 47 — see that file's note). Round 47
+implemented the Apple touch icon.
 
 Round 45's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_45_REPORT.md` (moved there
