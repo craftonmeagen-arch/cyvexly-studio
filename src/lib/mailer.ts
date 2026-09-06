@@ -1,3 +1,4 @@
+import { timingSafeEqual } from "node:crypto";
 import { Resend } from "resend";
 import { siteConfig } from "@/lib/site-config";
 
@@ -187,11 +188,24 @@ export function getClientIp(request: Request): string {
  * skipped Cloudflare (direct-origin traffic won't carry the header at
  * all, and an attacker hitting the origin directly has no way to learn
  * the secret). See CYVEXLY_APP_DEBT.md for the exact steps.
+ *
+ * The comparison itself uses `timingSafeEqual` rather than `===` — a plain
+ * string comparison returns as soon as it finds the first differing byte,
+ * so an attacker measuring response latency across many attempts could in
+ * principle narrow down the secret one byte at a time (a classic timing
+ * side-channel on secret comparison). This only matters once the gate is
+ * activated; while dormant, every request already short-circuits on the
+ * `!secret` check above before reaching this comparison.
  */
 export function isTrustedOrigin(request: Request): boolean {
   const secret = process.env.CF_ORIGIN_SECRET;
   if (!secret) return true;
-  return request.headers.get("x-cf-origin-secret") === secret;
+  const provided = request.headers.get("x-cf-origin-secret");
+  if (!provided) return false;
+  const secretBuf = Buffer.from(secret);
+  const providedBuf = Buffer.from(provided);
+  if (secretBuf.length !== providedBuf.length) return false;
+  return timingSafeEqual(secretBuf, providedBuf);
 }
 
 export function formatTimestamp(date: Date): string {

@@ -1,25 +1,39 @@
 # Cyvexly App Debt
 
-## Resolved round 62
+## Resolved round 63
 
-- No new Auditor inbox item published yet this round.
-- **Prepared dormant scaffolding for the residual Cloudflare-bypass gap**
-  named in round 60/61 (see item 3 under "Open" below for the exact
-  activation steps and full rationale). Added `isTrustedOrigin()`
-  (`src/lib/mailer.ts`) and wired it into both `/api/contact` and
-  `/api/planner`; always passes today (dormant, `CF_ORIGIN_SECRET`
-  unset), starts rejecting (403) unmatched requests once set.
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R52`** — a
+  twenty-eighth consecutive independent confirmation (reviewed commit
+  `1854a3f`, round 60's HEAD, predating round 61's memory-pruning fix and
+  round 62's dormant Cloudflare-bypass gate), 0 active code defects.
+  Moved to `exchange/processed/`.
+- **Found a real timing-side-channel defect in round 62's own new
+  `isTrustedOrigin()` gate** (`src/lib/mailer.ts`), continuing the pattern
+  from rounds 60-61 of adversarial review of this file's newest code
+  surfacing real issues. The origin-secret comparison used plain `===`,
+  which short-circuits at the first differing byte — not exploitable
+  today since the gate is dormant (`CF_ORIGIN_SECRET` unset in
+  production), but present in the code regardless of activation state.
+- **Fixed:** switched to `node:crypto`'s `timingSafeEqual`, with an
+  explicit length check first (mismatched-length buffers throw in
+  `timingSafeEqual` rather than compare) and an early `false` for a
+  missing header.
 - **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
   pre-existing, unrelated lint warning in the round-42 evidence script).
   Real `next start` server on port 5173: dormant state confirmed
-  unaffected (no/wrong header still reaches the normal 503
-  not-configured path); activated state (env var set) confirmed
-  rejecting no-header and wrong-header requests with 403 on both routes
-  while a correct-header request still passes through; 14-route
-  regression sweep clean in both states.
+  unaffected; activated state (env var set) confirmed rejecting missing,
+  wrong-length, and wrong-but-same-length header requests with 403 on
+  both routes while the exact-matching header still passes through; a
+  15-route regression sweep was clean.
 - Cleaned up: stopped both owned `next start` servers (verified real
-  listener PIDs via `netstat`/`LISTENING`). Removed this round's scratch
-  server logs and PID files.
+  listener PIDs via `netstat`/`LISTENING`, stopped with `taskkill` since
+  this session's shell is Git Bash). Removed this round's scratch server
+  logs.
+
+Round 62's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_62_ARCHIVE.md` (moved there
+round 63 to keep this file under its 30,720-byte hot-file cap): prepared
+the dormant Cloudflare-bypass origin-secret gate.
 
 Round 61's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_61_ARCHIVE.md` (moved there
@@ -404,7 +418,10 @@ Organization JSON-LD.
    or forge the secret and are rejected at the origin. Verified round 62:
    dormant (unset) and activated (set, matching/mismatched/missing header)
    behavior both proved live on a real `next start` server; zero
-   regressions across a 14-route sweep.
+   regressions across a 14-route sweep. **Round 63:** hardened the secret
+   comparison itself from `===` to `timingSafeEqual` (a plain string
+   comparison is a timing side-channel once this gate is activated); same
+   dormant/activated behavior reverified, no functional change.
 
 Rounds 40-42 detail archived to
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUNDS_40_42_ARCHIVE.md` in round 58

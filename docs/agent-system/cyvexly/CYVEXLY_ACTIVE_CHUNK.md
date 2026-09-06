@@ -7,6 +7,12 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 63** (scheduled/unattended, 50-minute limit) dispositioned Auditor
+item `IFA-2026-09-06-R52` (28th consecutive confirmation, reviewed commit
+`1854a3f`, predating rounds 61-62) and found/fixed a timing-side-channel
+weakness in round 62's own new `isTrustedOrigin()` gate. See the round-63
+report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 63" section.
+
 **Round 62** (scheduled/unattended, 50-minute limit) found no new
 Auditor item and instead prepared dormant, Builder-reachable scaffolding
 for the round-60-named Cloudflare-bypass gap: an origin-secret header
@@ -197,6 +203,49 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 63 report — global round 63 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-06-R52` (reviewed
+commit `1854a3f`, round 60's HEAD, predating round 61's memory-pruning
+fix and round 62's dormant Cloudflare-bypass gate). **Twenty-eighth
+consecutive independent confirmation, not a new finding** — 0 active
+code defects (its adversarial rate-limiter re-verification and 20-route
+snippet-budget survey both reconfirm already-shipped work). Moved to
+`exchange/processed/`.
+
+**Found a real defect through adversarial review of round 62's own new
+code, continuing the pattern from rounds 60-61.** `isTrustedOrigin()`
+(`src/lib/mailer.ts`) compared the incoming `x-cf-origin-secret` header
+against `CF_ORIGIN_SECRET` with plain `===`. JavaScript string equality
+short-circuits at the first differing character, so once the gate is
+activated, an attacker able to measure response-time differences across
+many requests could in principle narrow down the secret one byte at a
+time — a classic timing side-channel on secret comparison. Not
+exploitable today (the gate is dormant, `CF_ORIGIN_SECRET` unset in
+production), but the defect is in the code now, not only once activated.
+
+**Fixed:** switched to Node's `crypto.timingSafeEqual`, comparing UTF-8
+byte buffers, with an explicit length check first (buffers of different
+lengths throw in `timingSafeEqual` rather than compare) and an early
+`false` when the header is missing entirely.
+
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+pre-existing, unrelated lint warning in the round-42 evidence script).
+Real `next start` server on port 5173: **dormant** (`CF_ORIGIN_SECRET`
+unset) — no header and a wrong header both still reach the normal 400
+validation response, unaffected. **Activated** (env var set) — a request
+with no header, a wrong header of the same length, and a wrong header of
+a different length all correctly 403 on both `/api/contact` and
+`/api/planner`; a request with the exact matching header passes through
+to normal validation on both routes. A 15-route regression sweep (13
+HTML routes + sitemap.xml/robots.txt + an invalid path) was clean.
+Committed and pushed.
+
+Cleaned up: stopped both owned `next start` server instances (verified
+the real listener PID via `netstat`/`LISTENING` before each stop, using
+`taskkill` since this session's shell is Git Bash rather than
+PowerShell). Removed this round's scratch server logs.
+
 ## Round 62 report — global round 62 (scheduled/unattended session)
 
 No new Auditor inbox item was published this round (the last consumed
@@ -290,58 +339,11 @@ listener PID via `netstat`/`LISTENING` before stopping). Removed this
 round's scratch server log, PID file, and burst-test script under the OS
 temp scratchpad.
 
-## Round 60 report — global round 60 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-06-R50` (reviewed
-commit `32a0e10`, round 58's HEAD, predating round 59's meta-description
-fix). **Twenty-sixth consecutive independent confirmation, not a new
-finding** — 0 active code defects. Moved to `exchange/processed/`.
-
-**Found a real security defect through adversarial testing that no prior
-Auditor round had named.** `getClientIp()` (`src/lib/mailer.ts`) keyed the
-Contact/Planner rate limiter off the first (leftmost) comma-separated
-value in the client-supplied `X-Forwarded-For` header — fully attacker
-controlled, since a proxy conventionally appends its own observed peer to
-the header rather than replacing it. Proved this live: 7 POST requests to
-`/api/contact`, each with a unique spoofed `X-Forwarded-For`, all sailed
-past the 5-per-15-minute limiter that correctly 429'd a 6th request
-sharing one real key — a one-line client change defeated the
-"proportionate accessible spam/rate protection" Owner direction
-`2026-09-04-14` requires.
-
-**Fixed:** production traffic to `cyvexly.com` is confirmed (round 53) to
-run through Cloudflare in front of Render, so `getClientIp` now checks
-`cf-connecting-ip` first — set by Cloudflare's edge and overwritten on
-every request, never passed through from the client — falling back to
-the old (still-spoofable) `X-Forwarded-For` logic only when that header
-is absent.
-
-**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-pre-existing, unrelated lint warning in the round-42 evidence script).
-Real `next start` server on port 5173: re-ran the exact spoofed-header
-attack with a fixed `CF-Connecting-IP` present — the 6th request now
-correctly 429s regardless of the (still-varying, still-spoofed)
-`X-Forwarded-For`, on both `/api/contact` and `/api/planner`. A fresh
-full-site crawl (20 HTML routes + sitemap/robots/manifest + an invalid
-path) found zero duplicate titles/descriptions, zero broken internal
-links (22 checked), correct trailing-slash redirects, correct 404s, and
-correct immutable/no-cache cache-header split between hashed
-`_next/static` assets and unhashed `public/` files. Committed (`4102764`)
-and pushed.
-
-**Named, not fixed — a genuine Owner/account gate:** an attacker can
-still bypass this by hitting the direct Render origin
-(`cyvexly-studio.onrender.com`) instead of `cyvexly.com`, skipping
-Cloudflare and forging `cf-connecting-ip` at the origin directly. Closing
-that needs a Render/Cloudflare account-level control (Authenticated
-Origin Pulls, or an IP allowlist on the Render origin) this role cannot
-configure.
-
-Cleaned up: stopped the owned `next start` server twice (before and after
-the rebuild; verified the real listener PID via `netstat`/`LISTENING`
-each time). Removed this round's own scratch server logs/crawl script,
-and successfully retried removing the two Windows-locked scratch logs
-named in round 58's handoff (now gone).
+Round 60's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_60_REPORT.md` (moved
+there round 63 to restore latest-three rotation) — 61, 62, 63 stay live.
+Round 60 fixed the Contact/Planner rate limiter's `X-Forwarded-For`
+IP-spoofing bypass.
 
 Round 59's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_59_REPORT.md` (moved
