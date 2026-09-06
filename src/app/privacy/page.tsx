@@ -76,15 +76,14 @@ export default function PrivacyPage() {
                 prepare a real recommendation.
               </p>
               <p className="mt-3">
-                Both forms currently submit through your own device&apos;s
-                email application (a &ldquo;mailto&rdquo; link), addressed
-                directly to our business inbox. We do not currently operate a
-                server-side form-processing backend or database for these
-                submissions — the information travels from your device to our
-                email inbox the same way any email you send us would, and we
-                see it as a normal email. We are working on replacing this
-                with a direct server-side delivery method; when that changes,
-                we will update this policy to describe it.
+                Both forms submit directly from your browser to our server,
+                which sends your submission to our business inbox using
+                Resend, a third-party transactional email service, and emails
+                you a confirmation of what you submitted. We reply to that
+                submission using the address you provided (a
+                &ldquo;Reply-To&rdquo; header pointed at your email). We do
+                not store your submission in a database — it exists only as
+                the two emails this process sends.
               </p>
             </div>
 
@@ -239,9 +238,8 @@ export default function PrivacyPage() {
               </h2>
               <p className="mt-3">
                 If how we collect or use information changes — for example,
-                adding analytics, a server-side form backend, or a payment
-                provider — we will update this page and its effective date
-                before that change goes live.
+                adding analytics or a payment provider — we will update this
+                page and its effective date before that change goes live.
               </p>
             </div>
 
