@@ -100,9 +100,35 @@ export function textToHtml(value: string): string {
 const submissionLog = new Map<string, number[]>();
 const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
 const RATE_LIMIT_MAX = 5;
+// Every key this limiter ever sees gets a permanent Map entry unless swept —
+// with no sweep, a caller that keys off a client-controlled value (the
+// x-forwarded-for fallback in getClientIp below is exactly this) can grow
+// the map without bound simply by varying that header on each request, a
+// pure in-process memory-exhaustion DoS with no rate limit of its own to
+// stop it (found round 61 alongside the round-60 IP-spoofing fix — same
+// spoofable input, a different consequence). Sweep periodically and after
+// any burst that pushes the map past a hard cap, whichever comes first.
+const CLEANUP_INTERVAL_MS = 5 * 60 * 1000;
+const MAX_TRACKED_KEYS = 5000;
+let lastCleanup = Date.now();
+
+function pruneStaleEntries(now: number): void {
+  for (const [key, timestamps] of submissionLog) {
+    const active = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+    if (active.length === 0) {
+      submissionLog.delete(key);
+    } else if (active.length !== timestamps.length) {
+      submissionLog.set(key, active);
+    }
+  }
+}
 
 export function checkRateLimit(key: string): boolean {
   const now = Date.now();
+  if (now - lastCleanup >= CLEANUP_INTERVAL_MS || submissionLog.size > MAX_TRACKED_KEYS) {
+    pruneStaleEntries(now);
+    lastCleanup = now;
+  }
   const timestamps = (submissionLog.get(key) ?? []).filter(
     (t) => now - t < RATE_LIMIT_WINDOW_MS,
   );
