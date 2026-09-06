@@ -71,7 +71,7 @@ export function ServiceDetailSignal({ slug }: { slug: ServiceSignalSlug }) {
               x={position.x}
               y={position.y + (index === 1 ? -18 : 26)}
               textAnchor="middle"
-              fill="#526176"
+              fill="#46576E"
               fontSize="10"
               fontFamily="var(--font-jetbrains-mono), monospace"
               letterSpacing="1.2"

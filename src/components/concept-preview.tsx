@@ -14,9 +14,9 @@ function AuroraSpacesPreview() {
   return (
     <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" className="h-full w-full">
       <rect width="400" height="240" fill="#10213D" />
-      <path d="M0 170 L120 90 L200 150 L260 70 L400 140 V240 H0 Z" fill="#1478FF" opacity="0.18" />
+      <path d="M0 170 L120 90 L200 150 L260 70 L400 140 V240 H0 Z" fill="#0F66E0" opacity="0.18" />
       <path d="M40 240 L150 120 L230 200 L320 60 L400 170 V240 Z" fill="#36C7FF" opacity="0.14" />
-      <rect x="28" y="176" width="150" height="6" rx="3" fill="#1478FF" />
+      <rect x="28" y="176" width="150" height="6" rx="3" fill="#0F66E0" />
       <rect x="28" y="192" width="90" height="4" rx="2" fill="#36C7FF" opacity="0.7" />
     </svg>
   );
@@ -33,10 +33,10 @@ function NexoraSystemsPreview() {
   return (
     <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" className="h-full w-full">
       <rect width="400" height="240" fill="#10213D" />
-      <rect x="0" y="39" width="400" height="1" fill="#526176" opacity="0.5" />
-      <circle cx="28" cy="20" r="6" fill="#1478FF" />
-      <rect x="300" y="15" width="30" height="10" rx="5" fill="#526176" opacity="0.6" />
-      <rect x="338" y="15" width="30" height="10" rx="5" fill="#526176" opacity="0.6" />
+      <rect x="0" y="39" width="400" height="1" fill="#46576E" opacity="0.5" />
+      <circle cx="28" cy="20" r="6" fill="#0F66E0" />
+      <rect x="300" y="15" width="30" height="10" rx="5" fill="#46576E" opacity="0.6" />
+      <rect x="338" y="15" width="30" height="10" rx="5" fill="#46576E" opacity="0.6" />
       {cards.map((c, i) => (
         <rect
           key={i}
@@ -45,7 +45,7 @@ function NexoraSystemsPreview() {
           width={c.w}
           height={c.h}
           rx="6"
-          fill="#1478FF"
+          fill="#0F66E0"
           opacity={i % 2 === 0 ? 0.16 : 0.1}
           stroke="#36C7FF"
           strokeOpacity="0.35"

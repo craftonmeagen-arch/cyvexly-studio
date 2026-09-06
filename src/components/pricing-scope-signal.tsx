@@ -133,7 +133,7 @@ export function PricingScopeSignal() {
               x={node.labelX}
               y={node.labelY}
               textAnchor={node.anchor}
-              fill="#526176"
+              fill="#46576E"
               fontSize="9"
               fontWeight="600"
               fontFamily="var(--font-jetbrains-mono), monospace"
@@ -154,7 +154,7 @@ export function PricingScopeSignal() {
                 x={x}
                 y="340"
                 textAnchor="middle"
-                fill="#526176"
+                fill="#46576E"
                 fontSize="8.5"
                 fontFamily="var(--font-jetbrains-mono), monospace"
                 letterSpacing="1.2"

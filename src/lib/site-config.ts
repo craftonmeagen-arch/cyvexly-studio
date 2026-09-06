@@ -114,7 +114,7 @@ export const caseStudies = {
     gradient: "from-[#1478FF] via-[#36C7FF] to-[#EEF4FA]",
     palette: [
       { hex: "#10213D", label: "Midnight slate" },
-      { hex: "#1478FF", label: "Cyber blue accent" },
+      { hex: "#0F66E0", label: "Cyber blue accent" },
       { hex: "#36C7FF", label: "Ion cyan highlight" },
       { hex: "#EEF4FA", label: "Arctic mist ground" },
     ],
@@ -152,9 +152,9 @@ export const caseStudies = {
     gradient: "from-[#10213D] via-[#1478FF] to-[#36C7FF]",
     palette: [
       { hex: "#10213D", label: "Midnight slate ground" },
-      { hex: "#1478FF", label: "Cyber blue accent" },
+      { hex: "#0F66E0", label: "Cyber blue accent" },
       { hex: "#36C7FF", label: "Ion cyan highlight" },
-      { hex: "#526176", label: "Cool graphite text" },
+      { hex: "#46576E", label: "Cool graphite text" },
     ],
     typographyNote:
       "The same Space Grotesk/Inter/JetBrains Mono system as the studio site, with JetBrains Mono used more heavily for metrics and technical labels to read as product-grade.",
