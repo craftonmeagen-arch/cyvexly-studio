@@ -1,68 +1,52 @@
 # Cyvexly Next Builder Handoff
 
-## Round 73 closeout
+## Round 74 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
 time limit (unattended)
-**Start source:** `bda8a13` on `main` (pushed, matched `origin/main`)
-**Scope:** two new Auditor inbox items dispositioned; adversarially
-reviewed the case-study surface (`/work/[slug]`) per round 72's
-recommendation.
-**Completion:** REAL SOURCE FIX LANDED — see below.
+**Start source:** `7db867c` on `main` (pushed, matched `origin/main`)
+**Scope:** one new Auditor inbox item dispositioned; extended round 73's
+color-token audit into a full historical/site-wide check; a truth/
+consistency pass on response-time and payment copy.
+**Completion:** NO SOURCE CHANGE — investigated, 0 new defects found (see
+`CYVEXLY_APP_DEBT.md`'s "Round 74" entry for detail).
 
-### What was checked and fixed
+### What was checked
 
-Checked the Auditor inbox first: `IFA-2026-09-06-R61`/`R62` (36th/37th
-consecutive clean confirmations). R61 flagged `CYVEXLY_APP_DEBT.md`
-over its byte cap (`CYV-DOC-002`); round 71 had already fixed that and
-R62 independently confirmed 47/47 hot files compliant — no new Builder
-action needed for either. Both moved to `exchange/processed/`.
+`IFA-2026-09-06-R63` (38th consecutive clean confirmation, reviewed
+`bda8a13`, predating round 73's fix) — moved to `exchange/processed/`,
+no new Builder action needed. Reconstructed every historical color-token
+value change in `globals.css` via `git log -G` (cyber-blue, cool-graphite,
+signal-emerald, warning-coral) and grepped all four stale hex values
+sitewide: no drift remains beyond round 73's fix. Verified all 16 "two
+business days" response-time copy instances are identical. Confirmed the
+Planner's "Worldwide" geographic-market option is a question about the
+prospect's own business (not a Cyvexly service-area claim) and the FAQ's
+payment-methods copy still correctly states the provider isn't finalized.
 
-Reviewed `caseStudies`/`selectedWork` in `src/lib/site-config.ts` (the
-one surface round 69-72 flagged as not yet given a dedicated
-adversarial pass) and found a real cross-surface color-token
-staleness defect: Aurora Spaces' and Nexora Systems' "Visual
-direction" palette swatches, and the matching `concept-preview.tsx`
-SVG artwork, hardcoded the pre-refresh cyber-blue (`#1478FF`)/
-cool-graphite (`#526176`) values — the exact original
-`--color-cyber-blue`/`--color-cool-graphite` tokens before rounds 1
-and 28 darkened them to `#0F66E0`/`#46576E` for contrast (confirmed
-via `git log -S` on `globals.css`). Vellora Care's own palette already
-used the corrected values, proving this was drift, not a deliberate
-per-project brand choice. A wider grep found the same stale
-`#526176` also hardcoded in `pricing-scope-signal.tsx` and
-`service-detail-signal.tsx`, right alongside already-corrected
-`#0F66E0` uses in those same files.
-
-**Fixed:** updated the stale hex literals to the current tokens across
-all 4 files (`src/lib/site-config.ts`, `src/components/concept-
-preview.tsx`, `src/components/pricing-scope-signal.tsx`,
-`src/components/service-detail-signal.tsx`). Left `site-config.ts`'s
-`gradient` fields alone — confirmed they're fully covered (invisible)
-by `ConceptPreview`'s own opaque SVG background in every render path.
-
-**Verified:** `tsc`/lint/build clean (same pre-existing round-42 lint
-warning); real `next start` build, fetched rendered HTML for both
-affected case-study pages and confirmed the palette swatch
-`background-color` + label text now read the corrected hex values;
-22-route production sweep all 200.
-
-Cleaned up: stopped the owned `next start` listener (verified the real
-PID via `Get-NetTCPConnection -LocalPort 5173 -State Listen` before
-`Stop-Process`); removed the scratch log.
+Archived an old rounds-14-28 inline status paragraph in
+`CYVEXLY_ACTIVE_CHUNK.md` to restore hot-file headroom (was 30,644/30,720
+bytes; now 29,726/30,720).
 
 ### Recommended next workstream
 
-Re-check the Auditor inbox first. `CYVEXLY_ACTIVE_CHUNK.md` is at
-30,644/30,720 bytes (76 bytes headroom) — archive another old inline
-round paragraph before adding new detail, or it will bust the cap next
-round. No other genuinely fresh, previously-unreviewed product surface
-is currently known; consider a broader sitewide grep for other
-hardcoded (non-token) hex literals that may have drifted the same way
-concept-preview/pricing-scope-signal/service-detail-signal did. Owner
+Re-check the Auditor inbox first. No genuinely fresh, previously-
+unreviewed product surface is currently known after four consecutive
+rounds (71-74) of adversarial sweeps across `/work`, Planner validation,
+color tokens, and truth-claim copy; consider either a deeper pass on
+`service-details.ts`'s per-service body copy (not yet field-by-field
+diffed against `site-config.ts`'s summary versions) or a fresh
+accessibility pass (real keyboard-only traversal via CDP, last done
+round 8) if this session type's Browser-pane limitations allow it. Owner
 gates unchanged: Resend account/DNS/API key, analytics/Search Console
 ownership, exact LLC name, About/legal/visual review, final
 indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
+Round 73 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_73_REPORT.md` (moved
+there round 74 to keep this file under its 12,288-byte hot-file cap).
+Round 73 fixed the case-study/decorative-artwork color-token staleness
+defect.
 
 Round 72 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_72_REPORT.md` (moved
