@@ -1,5 +1,43 @@
 # Cyvexly App Debt
 
+## Resolved round 67
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R56`** — a
+  thirty-second consecutive independent confirmation (reviewed commit
+  `fda8b48`, round 65's HEAD, predating round 66's spectrum-field fix),
+  0 active code defects at the reviewed commit. Moved to
+  `exchange/processed/`.
+- **Continued round 66's field-level adversarial diff of the Planner
+  pipeline, checking value fidelity instead of field presence this
+  time.** Found and fixed a second real, previously-unflagged defect on
+  the same route: the "Desired secondary goals" checkbox group stores
+  selected `primaryGoals` option ids joined by `"|"` (e.g.
+  `sell|credibility`), but the email row joined the raw ids directly
+  instead of mapping each through `labelFor()` — every other
+  option-based field (primary goal, website type, features) already did
+  this. The internal notification showed cryptic fragments like "sell,
+  credibility" instead of "Sell products, Explain services and build
+  credibility," contrary to Owner direction `2026-09-04-14`'s "clearly
+  see... All project-planner answers" requirement.
+- **Fixed:** `src/app/api/planner/route.ts` now computes
+  `secondaryGoalsLabel`, mapping each pipe-delimited id through the
+  existing `labelFor(primaryGoals, id)` helper (unmatched ids fall back
+  to the raw id, matching `labelFor`'s existing behavior elsewhere in
+  the file) before joining with `", "`.
+- **Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
+  5173 with a temporary debug log (removed before commit): a mixed
+  payload (`sell|credibility|unknown-id-xyz|book`) produced exactly
+  `Sell products`, `Explain services and build credibility`, the
+  unknown id passed through unchanged, and `Book appointments or
+  reservations` — no crash; an absent `secondaryGoals` field produced
+  `[]`, no crash. Full regression: missing-fields payload still 400
+  with the same 12-field error set; malformed JSON still 400; 150KB
+  body still 413s; Contact route unaffected; a 12-route sitewide sweep
+  all 200. Committed and pushed.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID via `netstat`/`taskkill` first); removed all scratch
+  payload/log files.
+
 ## Resolved round 66
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-06-R55`** — a
@@ -99,40 +137,10 @@ round 66 to keep this file under its 30,720-byte hot-file cap): shipped
 `html lang="en-US"` and fixed a hot-file-cap violation plus a handoff
 rotation-order defect.
 
-## Resolved round 57
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R47`** — a
-  twenty-third consecutive independent confirmation (reviewed commit
-  `63fc8fe`, round 55's HEAD, predating round 56's Pricing OfferCatalog
-  JSON-LD), 0 active code defects. Its "Production Domain & DNS
-  Connection" gate note was already stale (round 53 verified the domain
-  fully connected). Moved to `exchange/processed/`.
-- **New angle — trimmed meta descriptions past the search-snippet
-  budget.** Measured every route's rendered `<meta name="description">`
-  length (none had been checked before): `/services` (169 chars) and
-  `/pricing` (174) exceeded the ~155-160 char practical Google
-  search-snippet budget; the three `/work/[slug]` case-study pages
-  (189-211 chars) were worse, since `generateMetadata` reused the long
-  on-page "challenge" narrative as the description. Tightened the two
-  static descriptions without dropping any claim (`src/app/services/
-  page.tsx`, `src/app/pricing/page.tsx`), and switched `work/[slug]`
-  (`src/app/work/[slug]/page.tsx`) to reuse the already-published,
-  already-short `selectedWork` card summary instead of inventing new
-  copy or shortening the on-page paragraph.
-- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-  pre-existing, unrelated lint warning in the round-42 evidence script).
-  Real `next start` server on port 5173: fetched all 5 changed routes —
-  rendered descriptions now measure 48-154 chars; the on-page "challenge"
-  paragraph on `/work/aurora-spaces` is byte-identical to before;
-  `og:description` correctly inherits the shorter text. A 19-route
-  regression sweep (static + dynamic + sitemap/robots + an invalid path)
-  shows zero regressions. Committed (`befddda`) and pushed.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID via `Get-NetTCPConnection` before stopping). One scratch
-  server log under the OS temp root (`cyvexly-round57-server.log`)
-  remained Windows-locked after process exit despite no matching process
-  (same class of issue as round 48's temp-profile lock) — left in place;
-  the next round should retry `Remove-Item` on it.
+Round 57's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_57_ARCHIVE.md` (moved there
+round 67 to keep this file under its 30,720-byte hot-file cap): round 57
+trimmed 5 oversized meta descriptions past the search-snippet budget.
 
 Round 54's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_54_ARCHIVE.md` (moved there

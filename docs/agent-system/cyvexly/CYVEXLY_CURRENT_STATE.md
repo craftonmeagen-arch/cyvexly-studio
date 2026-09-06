@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 66. Owner launch direction updated 2026-09-04, extended
+**Global round:** 67. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -36,6 +36,24 @@ round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
 `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
 
+**Round 67 outcome:** dispositioned Auditor item `IFA-2026-09-06-R56`
+(32nd confirmation, commit `fda8b48`, round 65's HEAD, 0 active code
+defects — predates round 66's spectrum fix). Continued round 66's
+field-by-field adversarial diff of the Planner pipeline and found a
+second real, previously-unflagged defect on the same route: the
+"Secondary goals" checkbox group stores internal `primaryGoals` option
+ids joined by `|` (e.g. `sell|credibility`), but the email row joined
+the raw ids directly instead of mapping each through `labelFor()` —
+every other option-based field (primary goal, website type, features)
+already did this. The internal notification showed cryptic ids like
+"sell, credibility" instead of "Sell products, Explain services and
+build credibility." Fixed in `src/app/api/planner/route.ts` by adding
+`secondaryGoalsLabel`, mapping each id through the existing `labelFor`
+helper (unmatched ids fall back to the raw id, same as `labelFor`'s
+existing behavior). Verified live (mixed known/unknown ids, absent
+field, full regression). Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/
+`CYVEXLY_APP_DEBT.md`.
+
 **Round 66 outcome:** dispositioned Auditor item `IFA-2026-09-06-R55`
 (31st confirmation, commit `846975d`, round 64's HEAD, 0 active code
 defects). Redirected adversarial review to a third surface (diffed
@@ -49,41 +67,29 @@ email row. Verified live (mixed valid/invalid input, absent field, full
 regression). Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/
 `CYVEXLY_APP_DEBT.md`.
 
-**Round 65 outcome:** dispositioned Auditor item `IFA-2026-09-06-R54`
-(30th confirmation, commit `25118e3`, round 63's HEAD, 0 active
-defects). Found and fixed a real defect: neither API route bounded
-request body size. Fixed with a chunked-stream `readJsonWithLimit()`
-(100,000-byte cap) in `src/lib/mailer.ts`. Also fixed a session PATH gap
-(no `node`/`pnpm` by default) — see `CYVEXLY_ENVIRONMENT.md`.
-
-**Round 64 outcome:** dispositioned Auditor item `IFA-2026-09-06-R53`
-(29th confirmation, commit `47874b9`, 0 active defects). Adversarial
-source-level re-review of the mailer/rate-limiter/origin-gate surface
-plus a truth-claim sweep — 0 new defects, no code changed.
-
-Round 63 fixed a timing-side-channel weakness in `isTrustedOrigin()`;
-round 62 prepared the dormant Cloudflare-bypass origin-secret gate;
-round 61 fixed the rate limiter's unbounded-memory-growth defect; round
-60 fixed the Contact/Planner rate limiter's `X-Forwarded-For`
-IP-spoofing bypass; rounds 58-59 fixed a hot-file-cap violation plus
-`html lang="en-US"` and trimmed Home's meta description. Full detail
-for all remains in `CYVEXLY_APP_DEBT.md`'s resolved-round history.
+Rounds 60-65 (IP-spoofing fix, rate-limiter memory leak, dormant
+Cloudflare-bypass gate, its timing-safe hardening, an adversarial
+re-review finding 0 new defects, and the request-body-size cap) are
+summarized in `CYVEXLY_APP_DEBT.md`'s resolved-round history; rounds
+58-59 fixed a hot-file-cap violation, `html lang="en-US"`, and trimmed
+Home's meta description.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 66. The mailer/rate-limiter/
-origin-gate surface (60-63, 65) and the Planner pipeline (66) have each
-yielded real findings; consider a fresh surface next (Contact client JS,
-`site-config.ts` content, JSON-LD generation — all lightly checked round
-66, none exhaustively) rather than returning immediately. The
+first for anything published after round 67. The mailer/rate-limiter/
+origin-gate surface (60-63, 65) and the Planner pipeline (66-67) have
+each yielded real findings across two straight rounds; consider a fresh
+surface next (Contact client JS, `site-config.ts` content, JSON-LD
+generation — all lightly checked round 66, none exhaustively) rather
+than returning to the Planner a third consecutive time. The
 Cloudflare-bypass gap has a dormant code-side gate (round 62, hardened
 round 63); it activates only once the Owner adds one Cloudflare
 Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more Builder
 code. What remains genuinely Owner-gated is otherwise unchanged; see
 "Owner launch decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 66's source
-commit (`4a7b26f`) on `origin/main` and Render auto-deploys it.
+**Accepted product position:** `main` is pushed through round 67's source
+commit (`4d2220d`) on `origin/main` and Render auto-deploys it.
 `cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
 round 53). `origin/master` is historical, not the deployment branch.
 

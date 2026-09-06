@@ -7,6 +7,14 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 67** (scheduled/unattended, 50-minute limit) dispositioned Auditor
+item `IFA-2026-09-06-R56` (32nd consecutive confirmation, 0 active code
+defects) and, continuing round 66's field-by-field adversarial diff of
+the Planner pipeline, found/fixed a second real defect on the same
+route: the "Secondary goals" checkbox group's raw ids were never mapped
+to human labels in the email. See the round-67 report below and
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 67" section.
+
 **Round 66** (scheduled/unattended, 50-minute limit) dispositioned Auditor
 item `IFA-2026-09-06-R55` (31st consecutive confirmation, 0 active code
 defects) and found/fixed a real data-loss defect: the Planner's four
@@ -222,6 +230,60 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 67 report — global round 67 (scheduled/unattended session)
+
+Dispositioned the one new Auditor inbox item, `IFA-2026-09-06-R56`
+(reviewed commit `fda8b48`, round 65's HEAD, predating round 66's
+spectrum fix). **Thirty-second consecutive independent confirmation,
+not a new finding** — 0 active code defects at the reviewed commit.
+Moved to `exchange/processed/`.
+
+**Continued round 66's field-level adversarial diff of the Planner
+pipeline** (the mailer/rate-limiter/origin-gate surface had already
+gone six rounds clean; the Planner field-mapping surface had just
+yielded one real defect, so it was re-examined rather than abandoned
+after a single fix) — this time checking *value fidelity*, not just
+field presence: for every option-based field, does the emailed value
+match the client's own label, or does it leak an internal id?
+
+**Found and fixed a second real, previously-unflagged defect on the
+same route.** The Planner's step-3 "Desired secondary goals" checkbox
+group stores selected `primaryGoals` option ids joined by `"|"` (e.g.
+`sell|credibility`) in `PlannerData.secondaryGoals`. Every other
+option-based field in the same email — primary goal, website type,
+features — passes its id(s) through the existing `labelFor()` helper
+before display. `secondaryGoals` never did: the row was built as
+`secondaryGoals.split("|").filter(Boolean).join(", ")`, joining the raw
+ids directly. The internal notification to `design@cyvexly.com` showed
+cryptic fragments like "sell, credibility" instead of "Sell products,
+Explain services and build credibility" — readable to nobody without
+memorizing the internal id list, contrary to Owner direction
+`2026-09-04-14`'s "Configure the emails so I can clearly see... All
+project-planner answers" requirement (data reached the email, unlike
+round 66's bug, but not in a form a human can actually read).
+
+**Fixed:** added `secondaryGoalsLabel` (`src/app/api/planner/route.ts`),
+mapping each pipe-delimited id through `labelFor(primaryGoals, id)`
+before joining with `", "` — the same helper and fallback behavior
+(unmatched id renders as itself rather than being dropped or crashing)
+already used for the primary-goal and website-type rows.
+
+**Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
+5173: a temporary debug log (removed before commit) confirmed a mixed
+payload (`sell|credibility|unknown-id-xyz|book`) produced exactly
+`['Sell products', 'Explain services and build credibility',
+'unknown-id-xyz', 'Book appointments or reservations']` — three known
+ids correctly humanized, one unknown id safely passed through as
+itself, no crash; an absent `secondaryGoals` field produced `[]`, no
+crash. Full regression: missing-fields payload still 400 with the same
+12-field error set; malformed JSON still 400; 150KB body still 413s;
+Contact route unaffected; a 12-route sitewide sweep all 200, zero
+regressions. Committed and pushed.
+
+Cleaned up: stopped the owned `next start` server (verified the real
+listener PID via `netstat`/`taskkill` before stopping); removed all
+scratch payload/log files.
+
 ## Round 66 report — global round 66 (scheduled/unattended session)
 
 Dispositioned the one new Auditor inbox item, `IFA-2026-09-06-R55`
@@ -265,89 +327,16 @@ Committed (`4a7b26f`) and pushed.
 Cleaned up: stopped the owned `next start` server (verified the real
 listener PID first); removed all scratch payload/log files.
 
-## Round 65 report — global round 65 (scheduled/unattended session)
+Round 65's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_65_REPORT.md` (moved
+there round 67 to keep this file under its 30,720-byte hot-file cap) —
+66, 67 stay live. Round 65 fixed the request-body-size defect on both
+API routes.
 
-Dispositioned the one new Auditor inbox item, `IFA-2026-09-06-R54`
-(reviewed commit `25118e3`, round 63's HEAD). **Thirtieth consecutive
-independent confirmation, not a new finding** — 0 active code defects.
-Moved to `exchange/processed/`.
-
-**Redirected adversarial energy per round 64's recommendation** (the
-mailer surface had gone five rounds clean): read the Planner's ~30-field
-pipeline (`src/app/api/planner/route.ts`, `src/lib/mailer.ts`) and the
-Privacy/Terms legal copy adversarially. Client (`validateStep`) and
-server required-field checks match exactly; header-injection defense and
-HTML-escaping cover every field reaching an email; `isValidEmail`'s
-single-`@` structure rules out smuggling a second address via comma.
-Legal-page claims (no cookies/analytics/database/payments, draft/no-index
-status) still match shipped behavior.
-
-**Found and fixed: neither API route bounded request body size.** App
-Router Route Handlers impose no default body-size limit (unlike the
-Pages API's 1mb `bodyParser`), so `request.json()` buffered an
-arbitrarily large POST into memory — the same unbounded-per-request
-shape as round 61's rate-limiter leak on this file, on the body instead
-of a `Map`. Added `readJsonWithLimit()` (`src/lib/mailer.ts`): reads the
-body stream chunk-by-chunk, aborting once the running byte count exceeds
-a 100,000-byte cap (real max Planner submission ≈22KB) rather than
-trusting the spoofable `Content-Length` header. Wired into both routes,
-returning 413 `payload-too-large`.
-
-**Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port 5173:
-normal small submission still 503 not-configured; missing fields still
-400 validation; malformed JSON still 400; a 150KB body now 413s on both
-routes; a realistic ~15KB full-size Planner payload still parses to
-normal validation, not 413.
-
-**Environment note:** this session's shell had no `node`/`pnpm` on PATH
-by default — fixed per-call by prepending the real Node directory and
-`%APPDATA%\npm`; documented in `CYVEXLY_ENVIRONMENT.md` for next round.
-
-Committed and pushed. Cleaned up: stopped the owned server (verified the
-real listener PID first); removed scratch logs/PID file.
-
-## Round 64 report — global round 64 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-06-R53` (reviewed
-commit `47874b9`, round 62's HEAD, covering feature commits `584d44a`
-round 61 and `c767740` round 62, predating round 63's timing-safe
-`isTrustedOrigin()` fix). **Twenty-ninth consecutive independent
-confirmation, not a new finding** — 0 active code defects (its own
-verification matrix re-confirmed the dormant/activated origin-gate and
-rate-limiter-pruning behavior against the pre-round-63 `===` comparison
-without exercising a timing attack, so it could not have surfaced the
-defect round 63 already fixed). Moved to `exchange/processed/`.
-
-**Ran a fresh adversarial re-review of `src/lib/mailer.ts` and both API
-routes** (the surface that has now yielded four real defects across
-rounds 60-63), reading the current, already-hardened source directly
-rather than assuming past fixes still hold: `isTrustedOrigin()` correctly
-uses `timingSafeEqual` with a length check first; `checkRateLimit`/
-`pruneStaleEntries` correctly bound memory; `getClientIp`'s `cf-connecting-
-ip`-first ordering is unchanged; `/api/contact` and `/api/planner` both
-check honeypot → rate limit → sanitize → validate → mailer-configured in
-a safe order; all free-text fields reaching email subjects/headers use
-`sanitizeLine` (strips CR/LF) rather than `sanitizeText`; `escapeHtml`/
-`textToHtml` are applied to every user-supplied value placed into HTML
-email bodies. Also re-checked the noindex release gate
-(`src/app/robots.ts` and `src/app/layout.tsx`'s shared `robots: { index:
-isIndexable, follow: isIndexable }`): confirmed via grep that no other
-route's metadata export defines its own `robots` field, so every route
-correctly inherits the single fail-safe (`NEXT_PUBLIC_SITE_INDEXABLE`
-unset ⇒ `false`) gate rather than one route being able to silently
-override it. Also re-swept `src/` for stale worldwide/guarantee/award/
-testimonial claims (per the Owner direction 2026-09-04-14 truth audit) —
-every match is either an explicit denial ("no honest studio can
-guarantee rankings") or a Planner-form option describing the *visitor's*
-own business (e.g. `geographicMarkets` including "Worldwide" asks where
-the prospect's business operates, not a Cyvexly service-area claim).
-**No new defect found.** This is a source-level adversarial review, not
-a fresh runtime pass — no code changed this round, so no server was
-started; the last live-server verification of this exact surface remains
-round 63's.
-
-Cleaned up: no temporary files, processes, or servers were created this
-round (source-only re-review; no source changed).
+Round 64's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_64_REPORT.md` (moved
+there round 67 to restore latest-three rotation). Round 64 found 0 new
+defects (source-only adversarial re-review, no source changed).
 
 Round 63's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_63_REPORT.md` (moved
