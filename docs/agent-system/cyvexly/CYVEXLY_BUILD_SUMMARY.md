@@ -15,6 +15,19 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 75 — 2026-09-06
+
+Dispositioned Auditor item `IFA-2026-09-06-R64` (39th consecutive clean
+confirmation) and actioned its one recommendation: replaced the last 4
+pre-refresh `#1478FF` literals (inert `gradient` Tailwind class strings
+in `site-config.ts`) with `#0F66E0` for full sitewide token
+consistency — zero visual effect. Adversarially diffed
+`service-details.ts` pricing copy against `site-config.ts`'s
+`pricingPackages`/`carePlans` and the JSON-LD price extractor; found no
+defect (both surfaces independently label the same starting price).
+TypeScript, lint, and build passed; verified via a real `next start`
+21-route sweep. Pushed to `origin/main`.
+
 ## Round 40 — 2026-09-05
 
 Fixed a real Planner defect (`71d233f`): `goToStep()` scrolled to top

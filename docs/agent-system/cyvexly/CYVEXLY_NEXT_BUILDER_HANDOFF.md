@@ -1,46 +1,60 @@
 # Cyvexly Next Builder Handoff
 
-## Round 74 closeout
+## Round 75 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
 time limit (unattended)
-**Start source:** `7db867c` on `main` (pushed, matched `origin/main`)
-**Scope:** one new Auditor inbox item dispositioned; extended round 73's
-color-token audit into a full historical/site-wide check; a truth/
-consistency pass on response-time and payment copy.
-**Completion:** NO SOURCE CHANGE — investigated, 0 new defects found (see
-`CYVEXLY_APP_DEBT.md`'s "Round 74" entry for detail).
+**Start source:** `3d5e7bc` on `main` (pushed, matched `origin/main`)
+**Scope:** one new Auditor inbox item dispositioned and actioned; an
+adversarial diff of `service-details.ts` pricing copy vs `site-config.ts`
+(the round-74 handoff's recommended fresh surface).
+**Completion:** DONE WITH PROOF — one real (if low-severity) fix shipped,
+one surface investigated with a genuine negative result. See
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 75" entry for full detail.
 
-### What was checked
+### What was checked and fixed
 
-`IFA-2026-09-06-R63` (38th consecutive clean confirmation, reviewed
-`bda8a13`, predating round 73's fix) — moved to `exchange/processed/`,
-no new Builder action needed. Reconstructed every historical color-token
-value change in `globals.css` via `git log -G` (cyber-blue, cool-graphite,
-signal-emerald, warning-coral) and grepped all four stale hex values
-sitewide: no drift remains beyond round 73's fix. Verified all 16 "two
-business days" response-time copy instances are identical. Confirmed the
-Planner's "Worldwide" geographic-market option is a question about the
-prospect's own business (not a Cyvexly service-area claim) and the FAQ's
-payment-methods copy still correctly states the provider isn't finalized.
+`IFA-2026-09-06-R64` (39th consecutive clean confirmation, reviewed
+`7db867c`, round 73's head) — moved to `exchange/processed/`. Actioned
+its one recommendation: replaced the last 4 pre-refresh `#1478FF`
+literals (inert `gradient` Tailwind class strings in `site-config.ts`,
+confirmed covered by `ConceptPreview`'s opaque SVG background since
+round 73) with the current `#0F66E0` token, for full sitewide
+consistency — zero visual effect. `grep -rn "#1478FF" src/` now returns
+zero matches anywhere.
 
-Archived an old rounds-14-28 inline status paragraph in
-`CYVEXLY_ACTIVE_CHUNK.md` to restore hot-file headroom (was 30,644/30,720
-bytes; now 29,726/30,720).
+Adversarially diffed `service-details.ts`'s "From $X" package prices
+against `pricingPackages`/`carePlans`' bare "$X" and the JSON-LD price
+extractor. Both `/pricing` and `/services/[slug]` independently label
+the same figure as a starting price via different copy ("Starting at"
+vs "Related starting point"/"From"); the extractor's regex is prefix-
+agnostic. No defect — a genuine negative result.
+
+`tsc --noEmit`/lint/`pnpm run build` clean; real `next start` 21-route
+sweep all 200 (`/not-found` 404s); port 5173 cleanly stopped, no scratch
+files left.
 
 ### Recommended next workstream
 
-Re-check the Auditor inbox first. No genuinely fresh, previously-
-unreviewed product surface is currently known after four consecutive
-rounds (71-74) of adversarial sweeps across `/work`, Planner validation,
-color tokens, and truth-claim copy; consider either a deeper pass on
-`service-details.ts`'s per-service body copy (not yet field-by-field
-diffed against `site-config.ts`'s summary versions) or a fresh
-accessibility pass (real keyboard-only traversal via CDP, last done
-round 8) if this session type's Browser-pane limitations allow it. Owner
-gates unchanged: Resend account/DNS/API key, analytics/Search Console
-ownership, exact LLC name, About/legal/visual review, final
+Re-check the Auditor inbox first. `service-details.ts` pricing/copy is
+now checked clean against `site-config.ts`. No genuinely fresh,
+previously-unreviewed surface is currently known after five consecutive
+rounds (71-75) of adversarial sweeps across `/work`, Planner validation,
+color tokens, truth-claim copy, and pricing consistency; consider a
+fresh accessibility pass (real keyboard-only traversal via CDP, last
+done round 8) if this session type's Browser-pane limitations allow it,
+or a field-by-field diff of each `serviceDetails[slug].included`/
+`clientInputs`/`scopeFactors` list against its matching
+`servicesGroups`/`pricingPackages.scope` entries (not yet attempted).
+Owner gates unchanged: Resend account/DNS/API key, analytics/Search
+Console ownership, exact LLC name, About/legal/visual review, final
 indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
+Round 74 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_74_REPORT.md` (moved
+there round 75 to keep this file under its 12,288-byte hot-file cap).
+Round 74 found 0 new defects (extended color-token audit, no source
+change).
 
 Round 73 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_73_REPORT.md` (moved

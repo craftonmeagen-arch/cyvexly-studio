@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 74. Owner launch direction updated 2026-09-04, extended
+**Global round:** 75. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -20,14 +20,21 @@ access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
 
-**Round 74 outcome:** dispositioned Auditor item `IFA-2026-09-06-R63`
+**Round 75 outcome:** dispositioned Auditor item `IFA-2026-09-06-R64`
+(39th consecutive clean confirmation) and actioned its one
+recommendation — replaced the last 4 pre-refresh `#1478FF` literals
+(inert `gradient` class strings in `site-config.ts`) with `#0F66E0`
+for full sitewide token consistency. Adversarially diffed
+`service-details.ts` pricing copy against `site-config.ts` — both
+render paths independently label the same starting price through
+different copy; **no defect found** (genuine negative result).
+Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
+
+Round 74 outcome: dispositioned Auditor item `IFA-2026-09-06-R63`
 (38th consecutive clean confirmation). Extended round 73's color-token
 fix into a full `git log -G`-based historical audit of every token
 value ever changed in `globals.css` — no further drift found sitewide.
-Also verified response-time copy consistency (16 instances) and
-payment/geographic-market truth-claims. **0 new defects found** this
-round (a genuine negative result, not skipped work); no source change.
-Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
+**0 new defects found** this round; no source change.
 
 Round 73 outcome: found/fixed a real cross-surface color-token
 staleness defect (case-study palette swatches, `concept-preview.tsx`,
@@ -58,19 +65,20 @@ fixes) are summarized in `CYVEXLY_APP_DEBT.md`'s resolved-round history and
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 74 (empty as of round 74). The
-Planner (server + client), About/Privacy/Terms copy, `service-details.ts`,
-`/work` filters, color tokens, and case-study content/artwork/palette are
-all checked clean through round 74; response-time and payment-claim
-copy is verified consistent. `CYVEXLY_ACTIVE_CHUNK.md` has healthy
-headroom again (29,726/30,720) after round 74's archive. The
-Cloudflare-bypass gap has a dormant code-side gate (round 62, hardened
-round 63); it activates only once the Owner adds one Cloudflare
-Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more Builder
-code. What remains is otherwise Owner-gated; see "Owner launch decisions
-and remaining gates" below.
+first for anything published after round 75 (empty as of round 75). The
+Planner (server + client), About/Privacy/Terms copy, `service-details.ts`
+(including its pricing copy vs `site-config.ts`), `/work` filters, color
+tokens (now fully consistent sitewide, zero `#1478FF` remaining), and
+case-study content/artwork/palette are all checked clean through round
+75; response-time and payment-claim copy is verified consistent.
+`CYVEXLY_ACTIVE_CHUNK.md` has headroom (29,938/30,720) after round 75's
+archive. The Cloudflare-bypass gap has a dormant code-side gate (round
+62, hardened round 63); it activates only once the Owner adds one
+Cloudflare Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more
+Builder code. What remains is otherwise Owner-gated; see "Owner launch
+decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 73's source
+**Accepted product position:** `main` is pushed through round 75's source
 commit on `origin/main` and
 Render auto-deploys it. `cyvexly.com` is fully connected/HTTPS/canonicalized
 (verified live, round 53). `origin/master` is historical, not the
