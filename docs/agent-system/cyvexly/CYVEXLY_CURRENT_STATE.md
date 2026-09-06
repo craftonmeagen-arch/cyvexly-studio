@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 67. Owner launch direction updated 2026-09-04, extended
+**Global round:** 68. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -35,6 +35,19 @@ see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full
 round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
 `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
+
+**Round 68 outcome:** dispositioned Auditor item `IFA-2026-09-06-R57`
+(33rd confirmation, commit `33e3f4c`, round 66's HEAD, 0 active code
+defects — predates round 67's secondary-goals fix). Per round 67's
+recommendation, reviewed Contact client JS, `site-config.ts` content,
+and `structured-data.ts`'s JSON-LD generation — all clean. Found and
+fixed a real, previously-unflagged gap on an adjacent surface:
+`src/app/robots.ts` never emitted a `Sitemap:` directive pointing at
+the real `sitemap.xml` `src/app/sitemap.ts` already builds. Fixed by
+returning `sitemap: \`${SITE_URL}/sitemap.xml\`` (reusing `layout.tsx`'s
+existing `SITE_URL` constant) in both index/no-index modes. Verified
+live (curl of `/robots.txt`/`/sitemap.xml`, 12-route regression sweep).
+Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
 
 **Round 67 outcome:** dispositioned Auditor item `IFA-2026-09-06-R56`
 (32nd confirmation, commit `fda8b48`, round 65's HEAD, 0 active code
@@ -76,20 +89,18 @@ Home's meta description.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 67. The mailer/rate-limiter/
-origin-gate surface (60-63, 65) and the Planner pipeline (66-67) have
-each yielded real findings across two straight rounds; consider a fresh
-surface next (Contact client JS, `site-config.ts` content, JSON-LD
-generation — all lightly checked round 66, none exhaustively) rather
-than returning to the Planner a third consecutive time. The
-Cloudflare-bypass gap has a dormant code-side gate (round 62, hardened
-round 63); it activates only once the Owner adds one Cloudflare
-Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more Builder
-code. What remains genuinely Owner-gated is otherwise unchanged; see
-"Owner launch decisions and remaining gates" below.
+first for anything published after round 68. Contact client JS,
+`site-config.ts` content, and JSON-LD generation are now checked clean
+(round 68); consider About/Privacy/Terms copy consistency or
+`service-details.ts` next, neither yet given a dedicated adversarial
+pass. The Cloudflare-bypass gap has a dormant code-side gate (round 62,
+hardened round 63); it activates only once the Owner adds one
+Cloudflare Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more
+Builder code. What remains genuinely Owner-gated is otherwise
+unchanged; see "Owner launch decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 67's source
-commit (`4d2220d`) on `origin/main` and Render auto-deploys it.
+**Accepted product position:** `main` is pushed through round 68's source
+commit (`ce28c0e`) on `origin/main` and Render auto-deploys it.
 `cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
 round 53). `origin/master` is historical, not the deployment branch.
 

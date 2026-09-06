@@ -1,5 +1,52 @@
 # Cyvexly Next Builder Handoff
 
+## Round 68 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
+time limit (unattended)
+**Start source:** `0cc8f61` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item
+(`IFA-2026-09-06-R57`) and, per round 67's recommendation, moved to a
+fresh surface — found and fixed a real gap in `robots.ts`.
+**Completion:** REAL SOURCE FIX LANDED — see below.
+
+### What was checked
+
+- `IFA-2026-09-06-R57` (commit `33e3f4c`, round 66's HEAD): **thirty-
+  third consecutive confirmation**, 0 active code defects. Moved to
+  `exchange/processed/`.
+- Reviewed Contact form client JS (matches server field-for-field),
+  `site-config.ts` (pricing/US-only/payment-deferral copy consistent),
+  and `structured-data.ts`'s JSON-LD builders (real copy only, safely
+  serialized) — no defects found on any of the three recommended
+  surfaces.
+- **Found and fixed on an adjacent surface:** `src/app/robots.ts` never
+  emitted a `Sitemap:` directive, even though `src/app/sitemap.ts`
+  already builds a real 20-route sitemap — a standard, zero-cost
+  crawler-discovery convention directly serving Owner direction
+  `2026-09-04-14`/vision §17's sitemap/robots/indexing-readiness
+  workstream.
+- **Fixed:** `robots.ts` now returns `sitemap: \`${SITE_URL}/sitemap.xml\``
+  (reusing the same `SITE_URL` constant `layout.tsx` uses for
+  `metadataBase`), in both index and no-index modes.
+- Verified: `tsc`/`lint`/`build` clean. Real `next start` on 5173:
+  `curl /robots.txt` shows the new `Sitemap:` line alongside the
+  existing `Disallow: /`; `/sitemap.xml` unchanged; 12-route sitewide
+  sweep all 200. Committed (`ce28c0e`) and pushed.
+- Cleaned up: stopped the owned server (verified the real listener PID
+  via `netstat`/`taskkill` first); removed the scratch server log.
+
+### Recommended next workstream
+
+Re-sweep for new Auditor findings first. Contact client JS,
+`site-config.ts`, and JSON-LD generation are now checked clean this
+round — consider the About/Privacy/Terms page content for internal
+consistency, or `service-details.ts`, next (neither has had a
+dedicated adversarial pass). Owner gates unchanged: Resend account/
+DNS/API key, analytics/Search Console ownership, exact LLC name,
+About/legal/visual review, final indexability approval (see
+`CYVEXLY_OWNER_DIRECTION.md`).
+
 ## Round 67 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
@@ -52,53 +99,10 @@ DNS/API key, analytics/Search Console ownership, exact LLC name,
 About/legal/visual review, final indexability approval (see
 `CYVEXLY_OWNER_DIRECTION.md`).
 
-## Round 66 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
-time limit (unattended)
-**Start source:** `fda8b48` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item
-(`IFA-2026-09-06-R55`) and, per round 65's recommendation, redirected
-adversarial review to a third surface — found and fixed a real
-data-loss defect in the Planner API route.
-**Completion:** REAL SOURCE FIX LANDED — see below.
-
-### What was checked
-
-- `IFA-2026-09-06-R55` (commit `846975d`, round 64's HEAD): **thirty-
-  first consecutive confirmation**, 0 active code defects. Moved to
-  `exchange/processed/`.
-- Diffed every field in `PlannerData` (`src/lib/planner-config.ts`)
-  against every `raw.<field>` read in `src/app/api/planner/route.ts`.
-- **Found and fixed:** the Planner's "Visual direction" step's four
-  style sliders (`data.spectrum`) had no corresponding server-side read
-  at all — every other ~47 fields did — so that step's answers were
-  silently dropped before reaching `design@cyvexly.com`, contrary to
-  Owner direction `2026-09-04-14`'s "All project-planner answers"
-  requirement.
-- **Fixed:** the route now reads `raw.spectrum`, keeping only known
-  `visualSpectrums` ids paired with an in-range integer (0-4), and adds
-  a "Style spectrum" email row.
-- Verified: `tsc`/`lint`/`build` clean. Real `next start` on 5173, via a
-  temporary debug log (removed before commit): mixed valid/invalid
-  spectrum input produced exactly the valid labels, no crash; absent
-  `spectrum` produced `[]`, no crash. Full regression: valid payload
-  still 503; missing fields still 400 (same field-error set); malformed
-  JSON still 400; 150KB body still 413s; Contact route unaffected;
-  12-route sitewide sweep all 200. Committed (`4a7b26f`) and pushed.
-- Cleaned up: stopped the owned server (verified PID first); removed
-  scratch payload/log files.
-
-### Recommended next workstream
-
-Re-sweep for new Auditor findings first. Two surfaces now have real
-findings behind them (mailer/rate-limiter/origin-gate: rounds 60-63/65;
-Planner field-mapping: round 66). Consider Contact form client JS,
-`site-config.ts` content, or JSON-LD generation next — each was only
-lightly checked round 66, not exhaustively diffed. Owner gates
-unchanged: Resend account/DNS/API key, analytics/Search Console
-ownership, exact LLC name, About/legal/visual review, final
-indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+Round 66 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_66_REPORT.md` (moved
+there round 68 to keep this file under its 12,288-byte hot-file cap).
+Round 66 fixed the Planner spectrum-slider data-loss defect.
 
 Round 65 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_65_REPORT.md` (moved

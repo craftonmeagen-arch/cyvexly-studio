@@ -1,5 +1,34 @@
 # Cyvexly App Debt
 
+## Resolved round 68
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R57`** — a
+  thirty-third consecutive independent confirmation (reviewed commit
+  `33e3f4c`, round 66's HEAD, predating round 67's secondary-goals-label
+  fix), 0 active code defects. Moved to `exchange/processed/`.
+- **Moved to a fresh surface per round 67's recommendation** (Contact
+  client JS, `site-config.ts`, JSON-LD generation) — reviewed all
+  three, no defects found. Contact's client JS matches the server
+  route field-for-field; `pricingPreview`/`pricingPackages` stay in
+  sync; US-only/payment-deferral copy is consistent; `structured-
+  data.ts`'s JSON-LD builders reuse only real published copy.
+- **Found and fixed a real, previously-unflagged gap on an adjacent
+  surface:** `src/app/robots.ts` never declared a `Sitemap:` directive,
+  even though `src/app/sitemap.ts` already builds a real 20-route
+  sitemap — a standard, zero-cost crawler-discovery convention serving
+  Owner direction `2026-09-04-14`/vision §17's sitemap/robots/
+  indexing-readiness workstream.
+- **Fixed:** `robots.ts` now returns `sitemap: \`${SITE_URL}/sitemap.xml\``
+  (reusing `layout.tsx`'s existing `SITE_URL` constant), in both index
+  and no-index modes.
+- **Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
+  5173: `curl /robots.txt` shows the new `Sitemap:` line alongside the
+  existing `Disallow: /`; `/sitemap.xml` unchanged; a 12-route sitewide
+  sweep all 200. Committed (`ce28c0e`) and pushed.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID via `netstat`/`taskkill` first); removed the scratch
+  server log.
+
 ## Resolved round 67
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-06-R56`** — a
@@ -71,40 +100,10 @@
 - Cleaned up: stopped the owned `next start` server (verified the real
   listener PID first); removed all scratch payload/log files.
 
-## Resolved round 65
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R54`** — a
-  thirtieth consecutive independent confirmation (reviewed commit
-  `25118e3`, round 63's HEAD), 0 active code defects. Moved to
-  `exchange/processed/`.
-- **Adversarially reviewed a new surface** (mailer/rate-limiter/origin-
-  gate had gone five rounds clean): the Planner's ~30-field pipeline and
-  the Privacy/Terms legal copy. Client/server required-field validation
-  matches exactly; header-injection defense and HTML-escaping cover
-  every emailed field; `isValidEmail`'s single-`@` regex rules out
-  comma-smuggling a second address. Legal-page claims (no cookies/
-  analytics/database/payments, draft/no-index) still match shipped
-  behavior.
-- **Found and fixed: neither API route bounded request body size.** App
-  Router Route Handlers impose no default body-size limit, so
-  `request.json()` buffered an arbitrarily large POST into memory — the
-  same unbounded-per-request shape as round 61's rate-limiter leak on
-  this file. Added `readJsonWithLimit()` (`src/lib/mailer.ts`): reads the
-  body stream chunk-by-chunk, rejecting once the byte count exceeds a
-  100,000-byte cap (real max Planner submission ≈22KB) rather than
-  trusting the spoofable `Content-Length` header. Wired into both
-  `/api/contact` and `/api/planner`, returning 413 `payload-too-large`.
-- **Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
-  5173: normal submission still 503; missing fields still 400
-  validation; malformed JSON still 400; 150KB body now 413s on both
-  routes; a realistic ~15KB full-size Planner payload still parses to
-  normal validation, not 413. Committed and pushed.
-- **Environment fix, documented in `CYVEXLY_ENVIRONMENT.md`:** this
-  session's shell had no `node`/`pnpm` on PATH by default — fixed
-  per-PowerShell-call by prepending the real Node install directory and
-  `%APPDATA%\npm`.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID first); removed scratch logs/PID file.
+Round 65's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_65_ARCHIVE.md` (moved there
+round 68 to keep this file under its 30,720-byte hot-file cap): the
+request-body-size-cap fix on both API routes.
 
 Round 64's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_64_ARCHIVE.md` (moved there
