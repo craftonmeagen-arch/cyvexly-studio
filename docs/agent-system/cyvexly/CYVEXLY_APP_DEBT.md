@@ -1,5 +1,38 @@
 # Cyvexly App Debt
 
+## Resolved round 69
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R58`** — a
+  thirty-fourth consecutive independent confirmation (reviewed commit
+  `0cc8f61`, round 67's HEAD, predating round 68's robots.ts fix), 0
+  active code defects. Moved to `exchange/processed/`.
+- **Reviewed round 68's recommended surfaces** — `/about`/`/privacy`/
+  `/terms` copy and `service-details.ts` — no defects found on either.
+- **Found and fixed a real, previously-unflagged truth-claim defect on
+  an adjacent surface (`site-config.ts`'s `faqPreview`).** The Home FAQ
+  preview's answer to "Will I be able to update my website myself?"
+  claimed "Yes. Every site includes an editable CMS or content
+  workflow" — but the Signal package's own `pricingPackages` scope list
+  has no CMS line item, and `service-details.ts`'s own answer to the
+  same question is explicitly conditional ("When regular updates are
+  part of the brief, we can include an appropriate CMS..."). The
+  Services page also lists "Content & CMS" as its own separately-scoped
+  service group, confirming CMS was never a universal inclusion —
+  exactly the "inconsistent service descriptions"/"unsupported claims"
+  category Owner direction `2026-09-04-14`'s truth audit names.
+- **Fixed:** reworded `faqPreview`'s answer to "Most projects include an
+  editable CMS or content workflow scoped to your plan and comfort
+  level, with training included at handoff — the exact editable areas
+  are agreed before build," matching `service-details.ts`'s existing
+  qualified wording.
+- **Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
+  5173: confirmed the corrected sentence in the rendered Home page's
+  RSC output; a 12-route sitewide sweep all 200. Committed (`7239d3b`)
+  and pushed.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID via `netstat`/`taskkill` first); removed scratch
+  response captures.
+
 ## Resolved round 68
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-06-R57`** — a
@@ -29,43 +62,10 @@
   listener PID via `netstat`/`taskkill` first); removed the scratch
   server log.
 
-## Resolved round 67
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R56`** — a
-  thirty-second consecutive independent confirmation (reviewed commit
-  `fda8b48`, round 65's HEAD, predating round 66's spectrum-field fix),
-  0 active code defects at the reviewed commit. Moved to
-  `exchange/processed/`.
-- **Continued round 66's field-level adversarial diff of the Planner
-  pipeline, checking value fidelity instead of field presence this
-  time.** Found and fixed a second real, previously-unflagged defect on
-  the same route: the "Desired secondary goals" checkbox group stores
-  selected `primaryGoals` option ids joined by `"|"` (e.g.
-  `sell|credibility`), but the email row joined the raw ids directly
-  instead of mapping each through `labelFor()` — every other
-  option-based field (primary goal, website type, features) already did
-  this. The internal notification showed cryptic fragments like "sell,
-  credibility" instead of "Sell products, Explain services and build
-  credibility," contrary to Owner direction `2026-09-04-14`'s "clearly
-  see... All project-planner answers" requirement.
-- **Fixed:** `src/app/api/planner/route.ts` now computes
-  `secondaryGoalsLabel`, mapping each pipe-delimited id through the
-  existing `labelFor(primaryGoals, id)` helper (unmatched ids fall back
-  to the raw id, matching `labelFor`'s existing behavior elsewhere in
-  the file) before joining with `", "`.
-- **Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
-  5173 with a temporary debug log (removed before commit): a mixed
-  payload (`sell|credibility|unknown-id-xyz|book`) produced exactly
-  `Sell products`, `Explain services and build credibility`, the
-  unknown id passed through unchanged, and `Book appointments or
-  reservations` — no crash; an absent `secondaryGoals` field produced
-  `[]`, no crash. Full regression: missing-fields payload still 400
-  with the same 12-field error set; malformed JSON still 400; 150KB
-  body still 413s; Contact route unaffected; a 12-route sitewide sweep
-  all 200. Committed and pushed.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID via `netstat`/`taskkill` first); removed all scratch
-  payload/log files.
+Round 67's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_67_ARCHIVE.md` (moved there
+round 69 to keep this file under its 30,720-byte hot-file cap): the
+Planner secondary-goals-label mapping fix.
 
 ## Resolved round 66
 
