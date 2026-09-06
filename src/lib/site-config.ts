@@ -53,7 +53,7 @@ export const selectedWork = [
     summary: "Immersive website concept for a luxury architecture studio.",
     tags: ["Business site", "Design-led"],
     href: "/work/aurora-spaces",
-    gradient: "from-[#1478FF] via-[#36C7FF] to-[#EEF4FA]",
+    gradient: "from-[#0F66E0] via-[#36C7FF] to-[#EEF4FA]",
   },
   {
     slug: "nexora-systems",
@@ -63,7 +63,7 @@ export const selectedWork = [
     summary: "SaaS platform concept for an AI analytics company.",
     tags: ["Product site", "Complex UI"],
     href: "/work/nexora-systems",
-    gradient: "from-[#10213D] via-[#1478FF] to-[#36C7FF]",
+    gradient: "from-[#10213D] via-[#0F66E0] to-[#36C7FF]",
   },
   {
     slug: "vellora-care",
@@ -111,7 +111,7 @@ export const caseStudies = {
     ],
     intendedOutcome:
       "A studio site that reads as confidently as the firm's built work, with a consultation form as the single clear next step.",
-    gradient: "from-[#1478FF] via-[#36C7FF] to-[#EEF4FA]",
+    gradient: "from-[#0F66E0] via-[#36C7FF] to-[#EEF4FA]",
     palette: [
       { hex: "#10213D", label: "Midnight slate" },
       { hex: "#0F66E0", label: "Cyber blue accent" },
@@ -149,7 +149,7 @@ export const caseStudies = {
     ],
     intendedOutcome:
       "A technical buyer can understand what Nexora Systems does and why it matters within two scrolls, and reach a demo request without friction.",
-    gradient: "from-[#10213D] via-[#1478FF] to-[#36C7FF]",
+    gradient: "from-[#10213D] via-[#0F66E0] to-[#36C7FF]",
     palette: [
       { hex: "#10213D", label: "Midnight slate ground" },
       { hex: "#0F66E0", label: "Cyber blue accent" },
