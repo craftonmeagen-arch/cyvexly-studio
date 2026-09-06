@@ -785,7 +785,7 @@ export const faqPreview = [
   {
     question: "Will I be able to update my website myself?",
     answer:
-      "Yes. Every site includes an editable CMS or content workflow suited to your comfort level, with training included at handoff.",
+      "Most projects include an editable CMS or content workflow scoped to your plan and comfort level, with training included at handoff — the exact editable areas are agreed before build.",
   },
   {
     question: "Do you offer ongoing support?",
