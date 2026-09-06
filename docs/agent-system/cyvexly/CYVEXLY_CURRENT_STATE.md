@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 54. Owner launch direction updated 2026-09-04, extended
+**Global round:** 55. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -25,6 +25,19 @@ approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates". Full round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md`
 and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
+**Round 55 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-06-R45` (21st consecutive confirmation, reviewed commit
+`26bc8b2`, predating round 54's per-slug OG images, 0 active code
+defects — its "domain DNS still needed" gate note was stale, corrected by
+round 53). Added Service JSON-LD to all five `/services/[slug]` detail
+pages (`buildServiceJsonLd()` in `src/lib/structured-data.ts`), reusing
+each service's own published name/summary/starting price via
+`AggregateOffer.lowPrice` — no invented copy. `tsc`/`lint`/`build` clean;
+verified via a real `next start` server (all 5 slugs' JSON-LD parses
+valid with correct fields and prices matching the published copy exactly,
+zero regressions across a 12-route sweep). Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 55" section.
+
 **Round 52 outcome (scheduled/unattended):** dispositioned Auditor item
 `IFA-2026-09-06-R43` (19th consecutive confirmation, not new) and shipped
 per-route Open Graph images for the 8 static marketing routes. Confirmed
@@ -47,15 +60,17 @@ round 54" section.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 54. Open Graph/Twitter coverage
-(static and dynamic routes), structured data, manifest/icons, print CSS,
-error boundaries/theme-color, and COOP/CORP headers/security.txt are all
-shipped — keep looking for genuinely new QA/build angles (e.g. a true
-rate-limiting check beyond the honeypot) rather than assuming the surface
-is empty. What remains genuinely Owner-gated (real Contact/Planner email
-delivery, analytics/search ownership, exact LLC name, final indexability
-approval, About/legal/visual review) is unchanged; see "Owner launch
-decisions and remaining gates" below.
+first for anything published after round 55. Open Graph/Twitter coverage
+(static and dynamic routes), structured data (Organization, FAQPage,
+BreadcrumbList, and now per-service Service/AggregateOffer JSON-LD),
+manifest/icons, print CSS, error boundaries/theme-color, and COOP/CORP
+headers/security.txt are all shipped — keep looking for genuinely new
+QA/build angles (e.g. a true rate-limiting check beyond the honeypot, or
+Product/Service structured data on `/pricing`'s packages) rather than
+assuming the surface is empty. What remains genuinely Owner-gated (real
+Contact/Planner email delivery, analytics/search ownership, exact LLC
+name, final indexability approval, About/legal/visual review) is
+unchanged; see "Owner launch decisions and remaining gates" below.
 
 **Round 53 outcome (interactive session, Owner direction `2026-09-05-15`):**
 verified the production domain is already fully connected (DNS/HTTPS/

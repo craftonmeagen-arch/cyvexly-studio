@@ -1,5 +1,37 @@
 # Cyvexly App Debt
 
+## Resolved round 55
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R45`** — a twenty-first
+  consecutive independent confirmation (reviewed commit `26bc8b2`, predating
+  round 53's remaining commits and round 54's per-slug OG images), 0 active
+  code defects. Its listed "Production domain DNS" external gate was
+  already stale (round 53 verified the domain fully connected). Moved to
+  `exchange/processed/`.
+- **New angle — Service JSON-LD for the five `/services/[slug]` detail
+  pages.** `src/lib/structured-data.ts` already had Organization, FAQPage,
+  and BreadcrumbList JSON-LD; the five service-detail routes — the site's
+  core commercial pages — carried only BreadcrumbList. Added
+  `buildServiceJsonLd()`, reusing each service's own already-published
+  `name`/`summary`/`package.price` (no invented copy). The published price
+  copy is a starting figure ("From $X"), so it publishes via
+  `AggregateOffer.lowPrice` (schema.org's documented pattern for a
+  "starting from" price) rather than `Offer.price`, so the markup doesn't
+  claim a fixed rate the copy itself doesn't claim.
+- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (one
+  pre-existing, unrelated lint warning in a round-42 evidence script,
+  untouched this round). Real `next start` server on port 5173: curled and
+  JSON-parsed all 5 slugs' new `<script type="application/ld+json">`
+  output — valid JSON on every slug, correct `serviceType`/`name`/
+  `description`/`provider`/`areaServed`, and `lowPrice` exactly matches
+  each package's published price (3500/5800/1800/8500/99 for
+  business-websites/website-redesigns/landing-pages/ecommerce-websites/
+  website-care). A 12-route regression sweep shows zero regressions.
+  Committed (`441c6cd`) and pushed.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID via `netstat`/`Get-Process` before stopping). No temporary
+  files were created this round.
+
 ## Resolved round 54
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-06-R44`** — a twentieth
@@ -130,36 +162,11 @@ removed 5 dead scaffold SVG assets and added the Web App Manifest.
   browser pane was opened this round (curl against the local server was the
   appropriate proof layer for an HTTP-header/static-text-file claim).
 
-## Resolved round 49
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-05-R40`** — a sixteenth
-  consecutive independent confirmation (reviewed commit `1c64d81`, round
-  47's HEAD, one commit behind round 48's raster-icon commit), 0 active
-  code defects. Moved to `exchange/processed/`.
-- **New angle — `src/app/error.tsx` route-segment error boundary.** No
-  route had one; an unhandled render error previously fell through to
-  Next's default unstyled generic error screen. Same special-file family
-  as `not-found.tsx`; reuses `SiteHeader`/`SiteFooter`/`ButtonLink`.
-- **New angle — `src/app/global-error.tsx`** for a root-layout-level error
-  (which `error.tsx` cannot catch). Renders its own `<html>`/`<body>` per
-  Next's documented convention; dependency-free (inline styles only).
-- **New angle — `viewport.themeColor`/`colorScheme`** added to the root
-  layout metadata (`#0f66e0`, `light`) — no invented facts, reuses the
-  existing brand-blue token.
-- Verified with a temporary `force-dynamic` throwaway route (deleted before
-  commit, confirmed clean via a full re-typecheck/re-lint/re-build) against
-  a real `next start` server: sanitized error digest in the SSR shell, real
-  in-app-Browser navigation showed the actual `error.tsx` UI text with the
-  digest as the only console error; `theme-color`/`color-scheme` meta
-  confirmed live via `document.querySelector`; Home/`/faq`/manifest/
-  apple-icon/icons all still `200` with zero regressions afterward.
-- `tsc`/`lint`/`build` all pass clean. Committed and pushed.
-- Archived round 46's full `CYVEXLY_ACTIVE_CHUNK.md` report and rounds 46
-  and 47's full `CYVEXLY_NEXT_BUILDER_HANDOFF.md` closeouts to restore the
-  intended latest-three rotation (§7.14) in both files.
-- Cleaned up: stopped the owned `next start` server (verified real listener
-  PID via the port's actual listener before stopping), closed the owned
-  Browser-pane tab.
+Round 49's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_49_ARCHIVE.md` (moved there
+round 55 to keep this file under its 30720-byte hot-file cap). Round 49
+added route-segment/root-layout error boundaries and viewport theme-color/
+color-scheme metadata.
 
 ## Resolved round 48
 

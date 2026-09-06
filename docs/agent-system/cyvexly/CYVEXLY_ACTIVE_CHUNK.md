@@ -7,6 +7,14 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 55** (scheduled/unattended, 50-minute limit) dispositioned Auditor
+item `IFA-2026-09-06-R45` (21st consecutive confirmation, 0 active code
+defects; reviewed commit `26bc8b2`, predating round 54's per-slug OG
+images) and shipped Service JSON-LD for the five `/services/[slug]`
+detail pages — previously the only structured-data type missing from the
+site's core commercial routes. See the round-55 report below and
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 55" section.
+
 **Round 54** (interactive session) dispositioned Auditor item
 `IFA-2026-09-06-R44` (20th consecutive confirmation, 0 active code
 defects; its "domain DNS still needed" gate note was stale, already
@@ -235,52 +243,10 @@ name; final visual/copy review; the indexing switch. See
 `CYVEXLY_APP_DEBT.md` items 1-2 and `CYVEXLY_OWNER_DIRECTION.md`'s
 `2026-09-05-15` entry for exact instructions.
 
-## Round 52 report — global round 52 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-06-R43` (reviewed commit
-`eb03a33`, round 50's HEAD, one commit behind round 51's OG/Twitter-
-metadata commit). Nineteenth consecutive independent confirmation — 0
-active code defects, re-verifies COOP/CORP headers, security.txt, error
-boundaries, theme-color/color-scheme metadata, raster manifest icons,
-print-color-adjust, Apple touch icon, scaffold-asset removal, all JSON-LD,
-both Contact/Planner honeypots, WCAG 1.4.10 reflow, canonicals, and full
-security-header suite against a local isolated build and live production
-parity. Not a new finding. Moved to `exchange/processed/`.
-
-Shipped the exact reachable angle round 51's own handoff named: **per-route
-Open Graph images.** Round 51 gave every route correct `og:*`/`twitter:*`
-text fields, but every route still shared Home's single generated
-`opengraph-image` (`grep`-confirmed only `/` had one), so shared links for
-About/Services/Pricing/Work/Process/Contact/FAQ/Project Planner all showed
-the same generic Home preview instead of one reflecting the actual page.
-Added `src/lib/og-image.tsx`'s `renderRouteOgImage()` helper (reuses Home's
-exact brand mark/palette/grammar — logo, "CYVEXLY STUDIO" eyebrow, large
-page name, description line) and a new `opengraph-image.tsx` per static
-route (About, Services, Pricing, Work, Process, Contact, FAQ, Start),
-reusing only each route's own already-shipped `buildPageMetadata()`
-title/description — no invented copy.
-
-**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean. Started a real
-`next start` production server on port 5173: each of the 9 routes' `og:image`
-meta now resolves to its own distinct URL; downloaded and visually opened
-the actual generated PNGs for Services and Project Planner (representative
-sample) — correct brand mark, page name, description text, palette, and no
-clipping/overflow at the full 1200×630 canvas.
-
-**Regression discipline on the known pre-existing gap:** before shipping,
-moved the two new sibling files (`services/opengraph-image.tsx`,
-`work/opengraph-image.tsx`) aside, rebuilt, and curled
-`/services/business-websites` and `/work/aurora-spaces` — confirmed they
-already had **no** `og:image` at all in that baseline (Next's image-
-convention file does not cascade into a parameterized `[slug]` child
-segment the way static metadata text fields do). Restored the files,
-rebuilt, and confirmed the same absence afterward — a real before/after A-B
-test proving this round's sibling files did not cause or worsen the
-dynamic-route gap, which remains pre-existing and is named as a next-round
-candidate below. A full 26-route/asset regression sweep (all static/dynamic
-pages, sitemap, robots, manifest, icons, security.txt, an invalid path)
-shows zero regressions — every prior 200/404 status is unchanged. Committed
-(`57b8fb7`) and pushed.
+Round 52's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_52_REPORT.md` (moved there
+round 55 to restore latest-three rotation) — 53, 54, 55 stay live. Round 52
+added per-route Open Graph images for 8 static marketing routes.
 
 ## Round 54 report — global round 54 (interactive session)
 
@@ -318,6 +284,45 @@ mark, correct per-route name/description, no clipping. A static-route
 regression sample (`/`, `/about`, `/services`, `/pricing`, `/work`,
 `/process`, `/contact`, `/faq`, `/start`, `/sitemap.xml`, `/robots.txt`)
 shows zero regressions. Committed and pushed.
+
+## Round 55 report — global round 55 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-06-R45` (reviewed commit
+`26bc8b2`, predating round 53's remaining commits and round 54's per-slug
+OG images). **Twenty-first consecutive independent confirmation, not a new
+finding** — 0 active code defects. Its listed "Production domain DNS"
+external gate was already stale (round 53 verified the domain fully
+connected). Moved to `exchange/processed/`.
+
+Shipped a new reachable angle: **Service JSON-LD for the five
+`/services/[slug]` detail pages.** `src/lib/structured-data.ts` already had
+Organization, FAQPage, and BreadcrumbList JSON-LD, but the site's five core
+commercial routes (the service-detail pages) carried only BreadcrumbList —
+schema.org's `Service` type (Google's documented type for a professional
+service listing) was the one structured-data gap left on the pages most
+directly tied to conversion. Added `buildServiceJsonLd()` reusing each
+service's own already-published `name`/`summary`/`package.price` — no
+invented copy. The published price copy ("From $X") is a starting figure,
+not a fixed price, so it publishes as `AggregateOffer.lowPrice` (schema.org's
+documented pattern for a "starting from" figure) rather than a plain
+`Offer.price`, avoiding a claim the copy itself doesn't make.
+
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (one pre-existing,
+unrelated lint warning in a round-42 evidence script, untouched this round).
+Real `next start` server on port 5173: curled and JSON-parsed all 5 slugs'
+`<script type="application/ld+json">` output — valid JSON, correct
+`serviceType`/`name`/`description`/`provider`/`areaServed` on every slug,
+and `lowPrice` exactly matches each package's published price (3500, 5800,
+1800, 8500, 99 for business-websites/website-redesigns/landing-pages/
+ecommerce-websites/website-care respectively — the last is the $99/mo Care
+plan). A 12-route regression sweep (`/`, `/about`, `/services`, `/pricing`,
+`/work`, `/process`, `/contact`, `/faq`, `/start`, `/work/aurora-spaces`,
+`/sitemap.xml`, `/robots.txt`, plus an invalid path) shows zero regressions.
+Committed (`441c6cd`) and pushed.
+
+Cleaned up: stopped the owned `next start` server (verified the real
+listener PID via `netstat`/`Get-Process` before stopping), no temporary
+files were created this round.
 
 Round 51's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_51_REPORT.md` (moved there
