@@ -1,5 +1,46 @@
 # Cyvexly App Debt
 
+## Resolved round 52
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R43`** — a nineteenth
+  consecutive independent confirmation (reviewed commit `eb03a33`, round
+  50's HEAD, one commit behind round 51's OG/Twitter-metadata commit), 0
+  active code defects. Moved to `exchange/processed/`.
+- **New angle — per-route Open Graph images.** Round 51's handoff named
+  this directly: every route shared Home's single generated
+  `opengraph-image`, so shared links for About/Services/Pricing/Work/
+  Process/Contact/FAQ/Project Planner all showed the same generic Home
+  preview instead of one reflecting the actual page. Added
+  `src/lib/og-image.tsx`'s `renderRouteOgImage()` (reuses Home's brand
+  mark/palette/grammar) and a new `opengraph-image.tsx` per static route,
+  reusing only each route's own already-shipped title/description — no
+  invented copy.
+- **Verified:** `tsc`/`lint`/`build` all pass clean. Real `next start`
+  server on port 5173: each of the 9 routes' `og:image` meta now resolves
+  to its own distinct URL; downloaded and visually opened the actual
+  generated PNGs (About, Services, Pricing, Work, Process, Contact, FAQ,
+  Start, Home) — correct brand mark, page name, and description text, no
+  clipping/overflow. **Regression check on the dynamic routes:** before
+  shipping, moved the two new sibling files (`services/opengraph-image.tsx`,
+  `work/opengraph-image.tsx`) aside, rebuilt, and confirmed
+  `/services/business-websites` and `/work/aurora-spaces` already had no
+  `og:image` at all in that baseline — restored the files and confirmed the
+  same absence after. This is a real before/after A-B test proving the
+  dynamic-route image gap is pre-existing (Next's image-convention file
+  does not cascade into a parameterized child segment the way static
+  metadata text fields do), not something this round's sibling files broke.
+  Full 26-route/asset regression sweep (all pages, sitemap, robots,
+  manifest, icons, security.txt, an invalid path) shows zero regressions.
+  Committed (`57b8fb7`) and pushed.
+- Cleaned up: stopped the owned `next start` server (verified real listener
+  PID via `Get-NetTCPConnection -LocalPort 5173` before stopping), removed
+  the round's own temporary log files and scratch PNGs.
+
+Round 46's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_46_ARCHIVE.md` (moved there
+round 52 to keep this file under its 30720-byte hot-file cap): round 46
+removed 5 dead scaffold SVG assets and added the Web App Manifest.
+
 ## Resolved round 51
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-06-R42`** — an eighteenth
@@ -130,58 +171,10 @@
   `Remove-Item` on `%TEMP%\chrome-profile-round48` and report if it
   persists.
 
-## Resolved round 47
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-05-R38`** — a fourteenth
-  consecutive independent confirmation (reviewed commit `140bb0b`, round
-  45's HEAD, one commit behind round 46's manifest/cleanup commit), 0
-  active code defects. Re-verifies BreadcrumbList JSON-LD structure/scoping
-  on all 5 service-detail and 3 case-study routes, both Contact/Planner
-  honeypots, WCAG 1.4.10 reflow, canonicals, security headers, and live
-  production parity. Moved to `exchange/processed/`.
-- **New angle — added an Apple touch icon** (`src/app/apple-icon.tsx`),
-  closing a gap the Web App Manifest (round 46) doesn't cover: iOS Safari's
-  "Add to Home Screen" icon, which ignores the manifest's icon list and
-  needs its own `<link rel="apple-touch-icon">`. Built with the same
-  `next/og` `ImageResponse` technique as `opengraph-image.tsx` — 180×180
-  PNG, brand-blue background, existing C/Y mark in white. No invented
-  facts. Verified: production build emits `/apple-icon` and the correct
-  `<link rel="apple-touch-icon">` tag; the generated PNG opened cleanly
-  (round-3/7's proxy-image technique); a real `next start` server serves
-  it `200 image/png`; a real in-app-Browser screenshot of Home confirms
-  zero visual regression, zero console/network errors.
-- `tsc`/`lint`/`build` all pass clean. Committed and pushed.
-- Cleaned up: stopped the owned `next start` server (verified real
-  listener PID via `Get-NetTCPConnection -LocalPort 5173` before
-  stopping), closed the owned Browser-pane tab.
-
-## Resolved round 46
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-05-R37`** — a thirteenth
-  consecutive independent confirmation (reviewed commit `12e43a7`, round
-  44's HEAD, one commit behind round 45's BreadcrumbList commit), 0 active
-  code defects. Re-verifies FAQPage JSON-LD scoping, both Contact/Planner
-  honeypots, WCAG 1.4.10 reflow on `/faq`, canonicals, security headers, and
-  live production parity. Moved to `exchange/processed/`.
-- **New angle — removed 5 dead `create-next-app` scaffold assets**
-  (`public/{next,vercel,window,globe,file}.svg`), confirmed unreferenced via
-  a full source grep. These were publicly served at e.g.
-  `cyvexly.com/vercel.svg` on the live launched domain — unrelated
-  third-party branding, not a Cyvexly asset. Verified post-build: all five
-  404 on a real production server; `icon.svg` still 200.
-- **New angle — added a Web App Manifest** (`src/app/manifest.ts`), a
-  routine launch-QA item the site had never covered. Uses only
-  already-confirmed facts (`site-config.ts` name/tagline, shipped brand
-  color tokens) and the existing `icon.svg` — no invented facts, no new
-  raster assets generated this round. Verified: production build emits
-  `/manifest.webmanifest` with correct content; `index.html` links it; a
-  real `next start` server serves it `200 application/manifest+json`; a
-  real in-app-Browser screenshot of Home confirms zero visual regression,
-  zero console/network errors.
-- `tsc`/`lint`/`build` all pass clean. Committed and pushed.
-- Cleaned up: stopped the owned `next start` server (verified real listener
-  PID via `Get-NetTCPConnection -LocalPort 5173` before stopping), closed
-  the owned Browser-pane tab.
+Round 47's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_47_ARCHIVE.md` (moved there
+round 52 to keep this file under its 30720-byte hot-file cap). Round 47
+implemented the Apple touch icon.
 
 Rounds 44-45 full detail are archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUNDS_44_45_ARCHIVE.md` (moved there

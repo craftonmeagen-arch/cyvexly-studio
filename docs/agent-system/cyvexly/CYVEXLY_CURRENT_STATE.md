@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 51. Owner launch direction updated 2026-09-04.
+**Global round:** 52. Owner launch direction updated 2026-09-04.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -23,44 +23,50 @@ approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates". Full round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md`
 and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 51 outcome (scheduled/unattended, 50-minute limit):** dispositioned
-the one new Auditor inbox item, `IFA-2026-09-06-R42` — an eighteenth
+**Round 52 outcome (scheduled/unattended, 50-minute limit):** dispositioned
+the one new Auditor inbox item, `IFA-2026-09-06-R43` — a nineteenth
 consecutive independent confirmation, 0 active code defects, not a new
-finding. Shipped one new reachable angle, named verbatim in Owner direction
-`2026-09-04-14` workstream 2 ("production Open Graph and Twitter URLs"):
-every route had `title`/`description`/canonical but zero `openGraph`/
-`twitter` metadata fields (confirmed via grep), so shared links carried no
-`og:site_name`/`og:locale` and Twitter/X never rendered a large-image card
-at all. Added `src/lib/seo.ts`'s `buildPageMetadata()` helper and wired it
-into the root layout and all 13 other metadata exports. Verified
-`tsc`/`lint`/`build` clean and, via a real `next start` server on port
-5173, correct per-route `og:*`/`twitter:*` tags on six representative
-routes plus a full 25-route regression sweep with zero regressions. Full
-detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 51" section and
+finding. Shipped the exact reachable angle round 51's handoff named:
+**per-route Open Graph images.** Every route shared Home's single
+generated `opengraph-image`, so shared links for About/Services/Pricing/
+Work/Process/Contact/FAQ/Project Planner all showed the same generic Home
+preview instead of one reflecting the actual page. Added
+`src/lib/og-image.tsx`'s `renderRouteOgImage()` helper (reuses Home's
+brand mark/palette) and a new `opengraph-image.tsx` per static route,
+reusing only each route's own already-shipped title/description. Verified
+via a real `next start` server: each route's `og:image` now resolves to
+its own distinct, correctly rendered PNG (visually opened two); confirmed
+the dynamic `services/[slug]`/`work/[slug]` routes have no `og:image` both
+before and after this change (pre-existing gap, not a regression — real
+before/after A-B test, not assumed). Full 26-route/asset regression sweep,
+zero regressions. `tsc`/`lint`/`build` all clean. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 52" section and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 51. Untried angles remaining: a
+first for anything published after round 52. Untried angles remaining: a
 true rate-limiting check beyond the honeypot (architecturally tied to the
-same server-side email delivery this chunk already defers); consider
-whether non-Home routes should get their own generated `opengraph-image`
-(currently only `/` has one — round 51 gave every route correct og/twitter
-text fields but left this pre-existing image-scope gap unchanged, not a
-regression). Structured data, manifest/icons, print CSS, error boundaries/
-theme-color, COOP/CORP headers/security.txt, and now Open Graph/Twitter
-Card metadata are all shipped — keep looking for genuinely new QA/build
-angles rather than assuming the surface is empty. What remains genuinely
-Owner-gated (real Contact/Planner email delivery, DNS/domain connection,
-analytics/search ownership, exact LLC name, final indexability approval,
-About/legal/visual review) is unchanged; see "Owner launch decisions and
-remaining gates" below.
+same server-side email delivery this chunk already defers); the dynamic
+`services/[slug]`/`work/[slug]` routes still have no per-route
+`opengraph-image` at all (confirmed pre-existing round 52, not a
+regression — worth a deliberate look, since Next's image-convention file
+does not automatically cascade into a parameterized child segment the way
+static metadata text fields do). Structured data, manifest/icons, print
+CSS, error boundaries/theme-color, COOP/CORP headers/security.txt, sitewide
+Open Graph/Twitter Card metadata, and now per-route OG images are all
+shipped — keep looking for genuinely new QA/build angles rather than
+assuming the surface is empty. What remains genuinely Owner-gated (real
+Contact/Planner email delivery, DNS/domain connection, analytics/search
+ownership, exact LLC name, final indexability approval, About/legal/visual
+review) is unchanged; see "Owner launch decisions and remaining gates"
+below.
 
-**Accepted product position:** `main` is pushed through round 51's source
-feature commit on `origin/main` — see `git log` for exact SHAs (docs commit
-to follow this same round). The production domain is confirmed as
-`cyvexly.com`, but DNS still needs to be connected and verified.
-`origin/master` is historical and is not the deployment branch.
+**Accepted product position:** `main` is pushed through round 52's source
+feature commit (`57b8fb7`) on `origin/main` (docs commit to follow this
+same round). The production domain is confirmed as `cyvexly.com`, but DNS
+still needs to be connected and verified. `origin/master` is historical
+and is not the deployment branch.
 
 ## Owner launch decisions and remaining gates
 

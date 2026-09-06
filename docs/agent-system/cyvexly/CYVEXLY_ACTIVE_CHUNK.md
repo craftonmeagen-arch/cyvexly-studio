@@ -7,6 +7,14 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 52** (scheduled/unattended, 50-minute limit) dispositioned the
+nineteenth consecutive Auditor confirmation (`IFA-2026-09-06-R43`, 0 active
+code defects) and shipped per-route Open Graph images — every route shared
+Home's single generated `opengraph-image`, so shared links for About/
+Services/Pricing/Work/Process/Contact/FAQ/Project Planner all showed the
+same generic Home preview. See the round-52 report below and
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 52" section.
+
 **Round 51** (scheduled/unattended, 50-minute limit) dispositioned the
 eighteenth consecutive Auditor confirmation (`IFA-2026-09-06-R42`, 0 active
 code defects) and shipped sitewide Open Graph and Twitter Card metadata —
@@ -121,6 +129,53 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 52 report — global round 52 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-06-R43` (reviewed commit
+`eb03a33`, round 50's HEAD, one commit behind round 51's OG/Twitter-
+metadata commit). Nineteenth consecutive independent confirmation — 0
+active code defects, re-verifies COOP/CORP headers, security.txt, error
+boundaries, theme-color/color-scheme metadata, raster manifest icons,
+print-color-adjust, Apple touch icon, scaffold-asset removal, all JSON-LD,
+both Contact/Planner honeypots, WCAG 1.4.10 reflow, canonicals, and full
+security-header suite against a local isolated build and live production
+parity. Not a new finding. Moved to `exchange/processed/`.
+
+Shipped the exact reachable angle round 51's own handoff named: **per-route
+Open Graph images.** Round 51 gave every route correct `og:*`/`twitter:*`
+text fields, but every route still shared Home's single generated
+`opengraph-image` (`grep`-confirmed only `/` had one), so shared links for
+About/Services/Pricing/Work/Process/Contact/FAQ/Project Planner all showed
+the same generic Home preview instead of one reflecting the actual page.
+Added `src/lib/og-image.tsx`'s `renderRouteOgImage()` helper (reuses Home's
+exact brand mark/palette/grammar — logo, "CYVEXLY STUDIO" eyebrow, large
+page name, description line) and a new `opengraph-image.tsx` per static
+route (About, Services, Pricing, Work, Process, Contact, FAQ, Start),
+reusing only each route's own already-shipped `buildPageMetadata()`
+title/description — no invented copy.
+
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean. Started a real
+`next start` production server on port 5173: each of the 9 routes' `og:image`
+meta now resolves to its own distinct URL; downloaded and visually opened
+the actual generated PNGs for Services and Project Planner (representative
+sample) — correct brand mark, page name, description text, palette, and no
+clipping/overflow at the full 1200×630 canvas.
+
+**Regression discipline on the known pre-existing gap:** before shipping,
+moved the two new sibling files (`services/opengraph-image.tsx`,
+`work/opengraph-image.tsx`) aside, rebuilt, and curled
+`/services/business-websites` and `/work/aurora-spaces` — confirmed they
+already had **no** `og:image` at all in that baseline (Next's image-
+convention file does not cascade into a parameterized `[slug]` child
+segment the way static metadata text fields do). Restored the files,
+rebuilt, and confirmed the same absence afterward — a real before/after A-B
+test proving this round's sibling files did not cause or worsen the
+dynamic-route gap, which remains pre-existing and is named as a next-round
+candidate below. A full 26-route/asset regression sweep (all static/dynamic
+pages, sitemap, robots, manifest, icons, security.txt, an invalid path)
+shows zero regressions — every prior 200/404 status is unchanged. Committed
+(`57b8fb7`) and pushed.
+
 ## Round 51 report — global round 51 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-06-R42` (reviewed commit
@@ -214,71 +269,11 @@ round 51 to restore latest-three rotation) — 49, 50, 51 stay live. Round 48
 added raster 192/512 PNG manifest icons and fixed a print-legibility
 defect.
 
-## Round 49 report — global round 49 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-05-R40` (reviewed commit
-`1c64d81`, round 47's HEAD, one commit behind round 48's raster-icon
-commit). Sixteenth consecutive independent confirmation — 0 active code
-defects, re-verifies the Apple touch icon, Web App Manifest, scaffold-asset
-removal, all JSON-LD (Organization/FAQPage/BreadcrumbList), both Contact/
-Planner honeypots, WCAG 1.4.10 reflow, canonicals, security headers, and
-live production parity against `https://cyvexly-studio.onrender.com/`. Not
-a new finding. Moved to `exchange/processed/`.
-
-Ran three genuinely new angles, all reachable without any Owner gate:
-
-1. **Added `src/app/error.tsx`**, Next's special-file convention for a
-   route-segment error boundary — same family as the already-shipped
-   `not-found.tsx` (§4.12 check: documented Next.js App Router convention,
-   not a departure). Before this round, any unhandled render error on any
-   route fell through to Next's default unstyled generic error screen
-   instead of a branded, accessible recovery UI — a real production-QA gap
-   on a site whose vision emphasizes a coherent, polished, trustworthy
-   presentation. Reuses `SiteHeader`/`SiteFooter`/`ButtonLink` exactly like
-   `not-found.tsx`, offers "Try again" (calls the framework's `reset()`),
-   "Back to home", and "Contact us".
-2. **Added `src/app/global-error.tsx`** for the rarer case of an error in
-   the root layout itself, which `error.tsx` cannot catch (Next's own
-   documented convention — must render its own `<html>`/`<body>` since it
-   replaces the root layout). Kept deliberately dependency-free (inline
-   styles, no Tailwind/header/footer imports) since this is the fallback of
-   last resort if the layout itself is what broke.
-3. **Added `viewport.themeColor`/`colorScheme`** to the root layout's
-   metadata (`src/app/layout.tsx`) — the site had no page-level
-   `<meta name="theme-color">`, so mobile browser chrome/status-bar tinting
-   and Safari's dark-mode UA styling of native form controls were
-   unspecified. Set to the existing brand-blue token (`#0f66e0`) and
-   `light` (the site has no dark theme) — no invented facts, reuses only an
-   already-shipped color.
-   **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (lint's one
-   warning is the same pre-existing unused-var in round 42's untouched
-   evidence script). A temporary `force-dynamic` throwaway route
-   (`src/app/round49-error-test/page.tsx`, deleted before commit — verified
-   the deletion with a full re-typecheck/re-lint/re-build afterward) proved
-   the error boundary against a real production `next start` server on
-   port 5173: the initial SSR shell correctly ships only a sanitized error
-   `digest` (no raw message leak, standard Next.js production behavior),
-   and a real in-app-Browser navigation to the route showed the actual
-   rendered `error.tsx` UI text ("Error / Something went wrong. / This page
-   hit an unexpected error..." plus all three action links) with the
-   console-logged digest as the only error, matching source. After
-   deleting the test route, `/round49-error-test` correctly 404s and Home/
-   `/faq`/`/manifest.webmanifest`/`/apple-icon`/`/icons/192` all still
-   return `200` with zero console/network regressions. `theme-color`/
-   `color-scheme` meta tags confirmed present and correct via live
-   `document.querySelector` on the running server.
-
-Committed and pushed.
-
-Archived round 46's full report to
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_46_REPORT.md` to restore
-the intended latest-three rotation (§7.14) — 47, 48, 49 stay live.
-
-Round 47's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_47_REPORT.md` (moved there
-round 50, correcting a prior round's accidental duplication of the round-48
-report in place of archiving round 47 — see that file's note). Round 47
-implemented the Apple touch icon.
+Round 49's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_49_REPORT.md` (moved there
+round 52 to restore latest-three rotation) — 50, 51, 52 stay live. Round 49
+added route-segment/root-layout error boundaries and viewport theme-color/
+color-scheme metadata.
 
 Round 45's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_45_REPORT.md` (moved there
