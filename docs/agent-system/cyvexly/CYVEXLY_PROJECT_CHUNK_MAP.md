@@ -275,6 +275,16 @@ metadata exports) — closes the reachable half of required-scope item 2's
 canonical/sitemap work (rounds 29, 33) had not covered. Verified via a real
 `next start` server; zero regressions across a full 25-route sweep.
 
+### Round 53-54 progress
+
+Round 53 replaced Contact/Planner `mailto:` with real server-side email
+delivery (Resend), added dormant GA4/GSC scaffolding, and verified the
+production domain is fully live. Round 54 closed the last known reachable
+Open Graph gap: `services/[slug]` and `work/[slug]` now each generate
+their own per-slug social-preview image (previously only static routes
+had one). Required-scope item 2 ("production Open Graph and Twitter
+URLs") is now fully closed across every route, static and dynamic.
+
 ## Historical implementation context
 
 Cross-chunk round history is preserved in

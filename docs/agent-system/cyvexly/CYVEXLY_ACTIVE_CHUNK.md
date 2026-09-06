@@ -7,6 +7,14 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 54** (interactive session) dispositioned Auditor item
+`IFA-2026-09-06-R44` (20th consecutive confirmation, 0 active code
+defects; its "domain DNS still needed" gate note was stale, already
+corrected by round 53) and shipped per-slug Open Graph images for the
+`services/[slug]` and `work/[slug]` dynamic routes — the exact gap round
+52's handoff named as pre-existing and untried. See the round-54 report
+below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 54" section.
+
 **Round 53** (interactive session, Owner direction `2026-09-05-15` — "take
 Cyvexly to production-ready and launch-ready") verified the domain/HTTPS/
 canonicalization is already fully live (correcting a stale debt entry),
@@ -274,53 +282,51 @@ pages, sitemap, robots, manifest, icons, security.txt, an invalid path)
 shows zero regressions — every prior 200/404 status is unchanged. Committed
 (`57b8fb7`) and pushed.
 
-## Round 51 report — global round 51 (scheduled/unattended session)
+## Round 54 report — global round 54 (interactive session)
 
-Read the one new Auditor inbox item, `IFA-2026-09-06-R42` (reviewed commit
-`7f9357b`, round 49's HEAD, one commit behind round 50's COOP/CORP/
-security.txt commit). Eighteenth consecutive independent confirmation — 0
-active code defects, re-verifies error boundaries, theme-color/color-scheme
-metadata, raster manifest icons, print-color-adjust, Apple touch icon,
-scaffold-asset removal, all JSON-LD, both Contact/Planner honeypots, WCAG
-1.4.10 reflow, canonicals, and security headers against a local isolated
-build and live production parity. Not a new finding. Moved to
+Read the one new Auditor inbox item, `IFA-2026-09-06-R44` (reviewed commit
+`08d6f95`, round 51's HEAD, two commits behind round 53's HEAD).
+**Twentieth consecutive independent confirmation, not a new finding** — 0
+active code defects; its listed "Owner Gate" for domain DNS was already
+stale (round 53 verified the domain fully connected). Moved to
 `exchange/processed/`.
 
-Ran one genuinely new reachable QA/build angle, no Owner gate required:
-**added sitewide Open Graph and Twitter Card metadata.** Source grep
-(`grep -rln "openGraph" src/`) found zero matches — every one of the 14
-route metadata exports (root layout plus 13 pages/dynamic routes) set
-`title`/`description`/`alternates.canonical` but never `openGraph` or
-`twitter`. §4.12 check: `og:site_name`/`og:type`/`og:locale` and
-`twitter:card` are the standard Next.js Metadata API fields for this
-(Next's own docs), and this exact gap is named verbatim in Owner direction
-`2026-09-04-14`'s required workstream 2 ("production Open Graph and
-Twitter URLs") — not a departure, a named but previously unaddressed
-requirement. Concretely: without an explicit `twitter:card` tag, Twitter/X
-does not infer a card type from a plain `<title>`/meta description, so
-every shared Cyvexly link would render with no large-image preview at all.
-Added `src/lib/seo.ts`'s `buildPageMetadata()` helper (canonical +
-`openGraph` + `twitter`, deliberately omitting `images` so the existing
-`opengraph-image.tsx` file-convention image keeps applying) and wired it
-into the root layout and all 13 other metadata exports, reusing only
-already-shipped titles/descriptions — no invented copy.
-**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (lint's one
-pre-existing warning is in round 42's untouched evidence script). Started a
-real `next start` production server on port 5173 and curled six
-representative routes (Home, Services, Pricing, FAQ, a service-detail
-route, a case-study route): each correctly renders its own
-`og:title`/`og:description`/`og:url`, sitewide `og:site_name="Cyvexly
-Studio"`/`og:type="website"`/`og:locale="en_US"`, and
-`twitter:card="summary_large_image"` with matching `twitter:title`/
-`twitter:description`; Home's `og:image`/`twitter:image` (from the
-existing `opengraph-image.tsx` special file) is unchanged. A full 25-route
-sweep (all static/dynamic pages, `/sitemap.xml`, `/robots.txt`, manifest,
-icons, `security.txt`, and an invalid path) shows zero regressions — every
-prior 200/404 status is unchanged. Committed (`03bb077`) and pushed.
+Shipped the exact reachable angle round 52's handoff named: **per-slug
+Open Graph images for the dynamic `services/[slug]` and `work/[slug]`
+routes.** Round 52 gave every static marketing route its own generated
+`opengraph-image`, but confirmed via a real before/after A-B test that the
+two dynamic segments still had none — Next's image-convention file does
+not automatically cascade into a parameterized child segment the way
+static metadata text fields do. Added
+`src/app/services/[slug]/opengraph-image.tsx` and
+`src/app/work/[slug]/opengraph-image.tsx`, each with its own
+`generateStaticParams()` (mirroring the sibling `page.tsx`), reusing
+`renderRouteOgImage()` with that slug's own already-shipped name/summary
+(service) or name/challenge (case study) — no invented copy. Both call
+`notFound()` for an unrecognized slug, matching the page's own behavior.
+
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (build output
+confirms `/services/[slug]/opengraph-image` and `/work/[slug]/
+opengraph-image` each statically generate all 5/3 slugs). Real `next
+start` server on port 5173: all 5 service-detail and all 3 case-study
+`/opengraph-image` endpoints return 200 and the page's `og:image` meta now
+resolves to the per-slug URL (confirmed via curl on
+`/services/business-websites`); an invalid slug 404s on both the page and
+its `opengraph-image` endpoint; downloaded and visually opened two
+generated PNGs (`business-websites`, `aurora-spaces`) — correct brand
+mark, correct per-route name/description, no clipping. A static-route
+regression sample (`/`, `/about`, `/services`, `/pricing`, `/work`,
+`/process`, `/contact`, `/faq`, `/start`, `/sitemap.xml`, `/robots.txt`)
+shows zero regressions. Committed and pushed.
+
+Round 51's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_51_REPORT.md` (moved there
+round 54 to restore latest-three rotation) — 52, 53, 54 stay live. Round 51
+added sitewide Open Graph and Twitter Card metadata.
 
 Round 50's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_50_REPORT.md` (moved there
-round 53 to restore latest-three rotation) — 51, 52, 53 stay live. Round 50
+round 53 to restore latest-three rotation). Round 50
 added COOP/CORP security headers and `/.well-known/security.txt`, and
 fixed a hot-memory rotation defect.
 
