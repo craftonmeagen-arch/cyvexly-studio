@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 64. Owner launch direction updated 2026-09-04, extended
+**Global round:** 65. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -25,7 +25,8 @@ meta descriptions (round 57), `html lang="en-US"` (round 58), Home's
 meta-description trim (round 59), a rate-limiter IP-spoofing fix
 (round 60), an unbounded-memory-growth fix in the same rate limiter
 (round 61), a dormant Cloudflare-bypass gate (round 62), and a
-timing-safe-comparison hardening of that same gate (round 63) are done.
+timing-safe-comparison hardening of that same gate (round 63), and a
+request-body-size cap on both API routes (round 65) are done.
 Remaining Chunk 5 scope (real
 Resend account/API key, DNS/domain provider access, analytics/search
 ownership, exact LLC name, final indexability approval) is Owner-gated —
@@ -34,13 +35,23 @@ round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
 `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
 
-**Round 64 outcome:** dispositioned Auditor item `IFA-2026-09-06-R53`
-(29th consecutive confirmation, reviewed commit `47874b9` predating
-round 63's timing-safe fix, 0 active code defects). Ran a fresh
-adversarial source-level re-review of the mailer/rate-limiter/origin-gate
-surface plus a sitewide truth-claim sweep — 0 new defects found; no code
-changed this round. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/
+**Round 65 outcome:** dispositioned Auditor item `IFA-2026-09-06-R54`
+(30th consecutive confirmation, commit `25118e3`, round 63's HEAD, 0
+active code defects). Redirected adversarial review to the Planner's
+30-field pipeline and Privacy/Terms copy (clean) and found a real,
+previously-unflagged defect: neither API route bounded request body
+size, so `request.json()` buffered an arbitrarily large POST unbounded.
+Fixed with a chunked-stream `readJsonWithLimit()` (100,000-byte cap) in
+`src/lib/mailer.ts`, wired into both routes with a 413 response. Verified
+live. Also fixed a session PATH gap (no `node`/`pnpm` by default) — see
+`CYVEXLY_ENVIRONMENT.md`. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/
 `CYVEXLY_APP_DEBT.md`.
+
+**Round 64 outcome:** dispositioned Auditor item `IFA-2026-09-06-R53`
+(29th confirmation, commit `47874b9` predating round 63's timing-safe
+fix, 0 active defects). Adversarial source-level re-review of the
+mailer/rate-limiter/origin-gate surface plus a truth-claim sweep — 0 new
+defects, no code changed.
 
 **Round 63 outcome:** dispositioned Auditor item `IFA-2026-09-06-R52`
 (28th consecutive confirmation, reviewed commit `1854a3f` predating
@@ -72,21 +83,20 @@ US"` and trimmed Home's meta description. Full detail for all remains in
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 64. The rate limiter/origin-gate
-surface in `mailer.ts` has now yielded four real rounds of findings (60,
-61, 62, 63), plus a clean round-64 source-level re-review — keep looking
-there and elsewhere via adversarial testing, not just feature checklists.
-The Cloudflare-bypass gap has a dormant code-side gate (round 62, hardened
-round 63); it activates only once the Owner adds one Cloudflare Transform
-Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more Builder code. What
-remains genuinely Owner-gated is otherwise unchanged; see "Owner launch
-decisions and remaining gates" below.
+first for anything published after round 65. The mailer/rate-limiter/
+origin-gate surface has yielded five real rounds of findings (60-63, 65's
+body-size cap is `mailer.ts` too); consider a third surface next (Contact
+client JS, `site-config.ts` content, JSON-LD generation) rather than
+returning immediately. The Cloudflare-bypass gap has a dormant code-side
+gate (round 62, hardened round 63); it activates only once the Owner adds
+one Cloudflare Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not
+more Builder code. What remains genuinely Owner-gated is otherwise
+unchanged; see "Owner launch decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 63's source
-commits on `origin/main` and Render has auto-deployed them; round 64 made
-no source changes (source-level re-review only), only this docs commit.
-`cyvexly.com` is fully connected/HTTPS/canonicalized (verified live, round
-53). `origin/master` is historical, not the deployment branch.
+**Accepted product position:** `main` is pushed through round 65's source
+commit on `origin/main` and Render auto-deploys it. `cyvexly.com` is fully
+connected/HTTPS/canonicalized (verified live, round 53). `origin/master`
+is historical, not the deployment branch.
 
 ## Owner launch decisions and remaining gates
 

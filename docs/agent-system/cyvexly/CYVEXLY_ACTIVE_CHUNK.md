@@ -211,6 +211,47 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 65 report — global round 65 (scheduled/unattended session)
+
+Dispositioned the one new Auditor inbox item, `IFA-2026-09-06-R54`
+(reviewed commit `25118e3`, round 63's HEAD). **Thirtieth consecutive
+independent confirmation, not a new finding** — 0 active code defects.
+Moved to `exchange/processed/`.
+
+**Redirected adversarial energy per round 64's recommendation** (the
+mailer surface had gone five rounds clean): read the Planner's ~30-field
+pipeline (`src/app/api/planner/route.ts`, `src/lib/mailer.ts`) and the
+Privacy/Terms legal copy adversarially. Client (`validateStep`) and
+server required-field checks match exactly; header-injection defense and
+HTML-escaping cover every field reaching an email; `isValidEmail`'s
+single-`@` structure rules out smuggling a second address via comma.
+Legal-page claims (no cookies/analytics/database/payments, draft/no-index
+status) still match shipped behavior.
+
+**Found and fixed: neither API route bounded request body size.** App
+Router Route Handlers impose no default body-size limit (unlike the
+Pages API's 1mb `bodyParser`), so `request.json()` buffered an
+arbitrarily large POST into memory — the same unbounded-per-request
+shape as round 61's rate-limiter leak on this file, on the body instead
+of a `Map`. Added `readJsonWithLimit()` (`src/lib/mailer.ts`): reads the
+body stream chunk-by-chunk, aborting once the running byte count exceeds
+a 100,000-byte cap (real max Planner submission ≈22KB) rather than
+trusting the spoofable `Content-Length` header. Wired into both routes,
+returning 413 `payload-too-large`.
+
+**Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port 5173:
+normal small submission still 503 not-configured; missing fields still
+400 validation; malformed JSON still 400; a 150KB body now 413s on both
+routes; a realistic ~15KB full-size Planner payload still parses to
+normal validation, not 413.
+
+**Environment note:** this session's shell had no `node`/`pnpm` on PATH
+by default — fixed per-call by prepending the real Node directory and
+`%APPDATA%\npm`; documented in `CYVEXLY_ENVIRONMENT.md` for next round.
+
+Committed and pushed. Cleaned up: stopped the owned server (verified the
+real listener PID first); removed scratch logs/PID file.
+
 ## Round 64 report — global round 64 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-06-R53` (reviewed
@@ -297,48 +338,10 @@ the real listener PID via `netstat`/`LISTENING` before each stop, using
 `taskkill` since this session's shell is Git Bash rather than
 PowerShell). Removed this round's scratch server logs.
 
-## Round 62 report — global round 62 (scheduled/unattended session)
-
-No new Auditor inbox item was published this round (the last consumed
-item was `IFA-2026-09-06-R51`, dispositioned round 61).
-
-**Prepared dormant scaffolding for the residual Cloudflare-bypass gap**
-round 60 named and round 61's finding shared a root cause with: an
-attacker hitting the direct Render origin (`cyvexly-studio.onrender.com`)
-skips Cloudflare and can forge `cf-connecting-ip` themselves, since
-nothing between the attacker and Render overwrites it on that path.
-Fully closing this needs a Cloudflare-dashboard control (a Transform
-Rule, or Authenticated Origin Pulls) this role cannot configure — but the
-origin-side half of a shared-secret-header mitigation is pure code and
-is Builder-reachable now, dormant until the Owner does the one-time
-Cloudflare/Render setup.
-
-Added `isTrustedOrigin()` (`src/lib/mailer.ts`): returns `true`
-unconditionally while `CF_ORIGIN_SECRET` is unset (today's state, so
-zero behavior change), and once set, requires an exact-matching
-`x-cf-origin-secret` request header, rejecting anything else with 403.
-Wired into both `/api/contact` and `/api/planner` as the first check in
-each `POST` handler. Exact Owner activation steps recorded in
-`CYVEXLY_APP_DEBT.md` item 3.
-
-**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-pre-existing, unrelated lint warning in the round-42 evidence script).
-Real `next start` server on port 5173, tested in both states:
-- **Dormant** (`CF_ORIGIN_SECRET` unset): a request with no secret header
-  and one with a wrong secret header both still reach the normal 503
-  not-configured response on `/api/contact` — unaffected.
-- **Activated** (`CF_ORIGIN_SECRET` set): a request with no header and
-  one with a wrong header both correctly 403 on `/api/contact` and
-  `/api/planner`; a request with the exact matching header passes
-  through to the normal validation/mailer path on both routes.
-A 14-route regression sweep (12 HTML routes + sitemap.xml/robots.txt + an
-invalid path) was clean in the activated state. Safe to commit and push
-immediately since the gate stays inert for real production traffic until
-the Owner completes the Cloudflare/Render step.
-
-Cleaned up: stopped both owned `next start` server instances (verified
-the real listener PID via `netstat`/`LISTENING` before each stop).
-Removed this round's scratch server logs and PID files.
+Round 62's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_62_REPORT.md` (moved
+there round 65 to restore latest-three rotation) — 63, 64, 65 stay live.
+Round 62 added the dormant Cloudflare-bypass `isTrustedOrigin()` gate.
 
 Round 61's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_61_REPORT.md` (moved

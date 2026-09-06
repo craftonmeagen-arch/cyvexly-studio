@@ -22,6 +22,7 @@ import {
   isTrustedOrigin,
   isValidEmail,
   NOTIFICATION_RECIPIENT,
+  readJsonWithLimit,
   sanitizeLine,
   sanitizeText,
   sendMail,
@@ -48,16 +49,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "rejected" }, { status: 403 });
   }
 
-  let body: unknown;
-  try {
-    body = await request.json();
-  } catch {
+  const parsed = await readJsonWithLimit(request);
+  if (!parsed.ok) {
+    return parsed.reason === "too-large"
+      ? NextResponse.json({ ok: false, error: "payload-too-large" }, { status: 413 })
+      : NextResponse.json({ ok: false, error: "invalid-request" }, { status: 400 });
+  }
+  if (typeof parsed.data !== "object" || parsed.data === null) {
     return NextResponse.json({ ok: false, error: "invalid-request" }, { status: 400 });
   }
-  if (typeof body !== "object" || body === null) {
-    return NextResponse.json({ ok: false, error: "invalid-request" }, { status: 400 });
-  }
-  const raw = body as Record<string, unknown>;
+  const raw = parsed.data as Record<string, unknown>;
 
   // Honeypot backstop for direct POSTs that bypass the client's own check.
   if (sanitizeText(raw.honeypot, 200)) {

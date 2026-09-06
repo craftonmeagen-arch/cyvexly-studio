@@ -208,6 +208,67 @@ export function isTrustedOrigin(request: Request): boolean {
   return timingSafeEqual(secretBuf, providedBuf);
 }
 
+// Both API routes call this to read and parse the JSON body instead of
+// `request.json()` directly. App Router Route Handlers impose no body-size
+// limit of their own (unlike the Pages API's 1mb `bodyParser` default) —
+// `request.json()` buffers the entire body into memory regardless of size,
+// so a single POST with a many-megabyte body inflates memory per request
+// with no cap, the same unbounded-resource-per-request shape as the
+// rate-limiter memory leak fixed round 61, just on the request body instead
+// of a tracking Map. `Content-Length` alone is not a safe gate (chunked
+// transfer-encoding can omit it, and it is caller-supplied), so this reads
+// the stream directly and aborts as soon as the running byte count exceeds
+// the limit rather than trusting a header.
+const MAX_JSON_BODY_BYTES = 100_000;
+
+export type BodyReadResult = { ok: true; data: unknown } | { ok: false; reason: "too-large" | "invalid-json" };
+
+export async function readJsonWithLimit(request: Request, maxBytes: number = MAX_JSON_BODY_BYTES): Promise<BodyReadResult> {
+  const reader = request.body?.getReader();
+  if (!reader) {
+    // No streamable body on this runtime — fall back to a single read, still
+    // bounded by checking the decoded length before parsing.
+    let text: string;
+    try {
+      text = await request.text();
+    } catch {
+      return { ok: false, reason: "invalid-json" };
+    }
+    if (Buffer.byteLength(text, "utf8") > maxBytes) return { ok: false, reason: "too-large" };
+    try {
+      return { ok: true, data: JSON.parse(text) };
+    } catch {
+      return { ok: false, reason: "invalid-json" };
+    }
+  }
+
+  const chunks: Uint8Array[] = [];
+  let total = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    if (!value) continue;
+    total += value.byteLength;
+    if (total > maxBytes) {
+      await reader.cancel().catch(() => {});
+      return { ok: false, reason: "too-large" };
+    }
+    chunks.push(value);
+  }
+
+  const merged = new Uint8Array(total);
+  let offset = 0;
+  for (const chunk of chunks) {
+    merged.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  try {
+    return { ok: true, data: JSON.parse(Buffer.from(merged).toString("utf8")) };
+  } catch {
+    return { ok: false, reason: "invalid-json" };
+  }
+}
+
 export function formatTimestamp(date: Date): string {
   return date.toLocaleString("en-US", {
     timeZone: "America/New_York",

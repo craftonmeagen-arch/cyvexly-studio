@@ -1,5 +1,58 @@
 # Cyvexly Next Builder Handoff
 
+## Round 65 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
+time limit (unattended)
+**Start source:** `846975d` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item
+(`IFA-2026-09-06-R54`) and, per round 64's recommendation, redirected
+adversarial review to the Planner pipeline and legal-page copy —
+found and fixed a real request-body-size defect in both API routes.
+**Completion:** REAL SOURCE FIX LANDED — see below.
+
+### What was checked
+
+- `IFA-2026-09-06-R54` (commit `25118e3`, round 63's HEAD): **thirtieth
+  consecutive confirmation**, 0 active code defects. Moved to
+  `exchange/processed/`.
+- Read the Planner's 30-field pipeline and client `validateStep`, plus
+  Privacy/Terms copy, adversarially: client/server checks match; every
+  emailed field is sanitized/escaped; `isValidEmail`'s single-`@` regex
+  rules out comma-smuggling a second recipient. Legal claims still match
+  shipped behavior.
+- **Found and fixed:** neither API route bounded request body size — App
+  Router Route Handlers have no default body-size limit, so
+  `request.json()` buffered an arbitrarily large POST with no cap, same
+  shape as round 61's rate-limiter leak on this file.
+- **Fixed:** `readJsonWithLimit()` (`src/lib/mailer.ts`) reads the body
+  stream chunk-by-chunk, rejecting past a 100,000-byte cap (real max
+  Planner submission ≈22KB) instead of trusting `Content-Length`. Wired
+  into both routes, returning 413 `payload-too-large`.
+- Verified: `tsc`/`lint`/`build` clean. Real `next start` on 5173: normal
+  submission still 503; missing fields still 400; malformed JSON still
+  400; 150KB body now 413s both routes; realistic ~15KB Planner payload
+  still parses to validation, not 413. Committed and pushed.
+- **Environment fix (see `CYVEXLY_ENVIRONMENT.md`):** no `node`/`pnpm` on
+  PATH by default this session; fixed per-call by prepending the real
+  Node directory and `%APPDATA%\npm`. Will likely recur next round.
+- Cleaned up: stopped the owned server (verified PID first); removed
+  scratch logs/PID file.
+
+### Recommended next workstream
+
+Re-sweep for new Auditor findings first. Consider a third surface next
+(Contact form client JS, `site-config.ts` content, or JSON-LD generation)
+rather than returning to mailer.ts/Planner immediately. Owner gates
+unchanged: Resend account/DNS/API key, analytics/Search Console
+ownership, exact LLC name, About/legal/visual review, final
+indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
+Round 63 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_63_REPORT.md` (moved
+there round 65 to keep this file under its 12,288-byte hot-file cap).
+Round 63 fixed the timing-side-channel defect in `isTrustedOrigin()`.
+
 ## Round 64 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
@@ -58,56 +111,6 @@ rather than a sixth pass over the same three functions. Genuinely
 Owner-gated items are unchanged: Resend account/DNS/API key,
 analytics/Search Console ownership, exact LLC name, About/legal/visual
 review, final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
-
-## Round 63 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
-time limit (unattended)
-**Start source:** `47874b9` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item
-(`IFA-2026-09-06-R52`) and found/fixed a timing-side-channel defect in
-round 62's own new `isTrustedOrigin()` gate.
-**Completion:** REAL SOURCE FIX LANDED — see below.
-
-### What was checked
-
-- `IFA-2026-09-06-R52` (reviewed commit `1854a3f`, round 60's HEAD,
-  predating round 61's memory-pruning fix and round 62's dormant
-  Cloudflare-bypass gate) is a **twenty-eighth consecutive independent
-  confirmation, not a new finding** — 0 active code defects. Moved to
-  `exchange/processed/`.
-- **Found and fixed a timing-side-channel defect in `isTrustedOrigin()`
-  (`src/lib/mailer.ts`), continuing the pattern from rounds 60-61 of
-  adversarial review surfacing real issues in this file's newest code.**
-  The origin-secret comparison used plain `===`, which short-circuits at
-  the first differing byte — a timing side-channel on secret comparison,
-  not exploitable today since the gate is dormant (`CF_ORIGIN_SECRET`
-  unset in production) but present in the code regardless.
-- **Fixed:** switched to `node:crypto`'s `timingSafeEqual`, with an
-  explicit length check first (mismatched lengths throw in
-  `timingSafeEqual`) and an early `false` for a missing header.
-- Verified: `tsc --noEmit`/`lint`/`build` all clean (same pre-existing,
-  unrelated lint warning in the round-42 evidence script). Real `next
-  start` server on port 5173: dormant state unaffected; activated state
-  (env var set) correctly 403s on missing/wrong-length/wrong-but-same-
-  length headers and passes through on the exact secret, on both
-  `/api/contact` and `/api/planner`. A 15-route regression sweep was
-  clean.
-- Committed and pushed to `origin/main`.
-- Cleaned up: stopped both owned `next start` server instances (verified
-  real listener PIDs via `netstat`/`LISTENING`, stopped with `taskkill`
-  since this session's shell is Git Bash). Removed this round's scratch
-  server logs.
-
-### Recommended next workstream
-
-Re-sweep for any newly published Auditor findings first. The mailer.ts/
-rate-limiter/origin-gate surface has now yielded four real rounds of
-findings (60, 61, 62, 63) — keep applying adversarial review there, and
-elsewhere, rather than only feature checklists. Genuinely Owner-gated
-items are unchanged: Resend account/DNS/API key, analytics/Search
-Console ownership, exact LLC name, About/legal/visual review, final
-indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
 
 Round 62 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_62_REPORT.md` (moved

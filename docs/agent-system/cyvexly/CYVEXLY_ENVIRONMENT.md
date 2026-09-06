@@ -21,3 +21,16 @@ Current role setup: 2026-09-05. See CYVEXLY_ROLE_RULES_MAPPING.md for authority 
 
 Current runtime tools must be verified each invocation. Historical unattended tool failures
 are diagnostic context, not permanent claims that attended visual proof is unavailable.
+
+- **Round 65 environment fix, may recur each fresh shell:** this machine has no `node`/`pnpm`
+  on the default PATH for a new shell session (neither Bash nor a fresh PowerShell tab), even
+  though a real Node.js install and pnpm's global shim exist on disk. The npm-installed
+  `pnpm.ps1`/`pnpm.cmd` shims under `%APPDATA%\npm` themselves shell out to `node.exe`, so
+  calling them still fails with "node is not recognized" until a real Node install directory
+  is also on PATH. Fix per PowerShell session (does not persist across tool calls or new
+  shells — must be repeated each time): prepend both directories, e.g.
+  `$env:PATH = "C:\Users\Tcraf\AppData\Local\Programs\NodeJS\node-v24.19.0-win-x64;$env:APPDATA\npm;" + $env:PATH`
+  then use `pnpm` normally. Confirm the exact Node directory still exists before reusing this
+  (folder name embeds a version and could change on a future Node upgrade) — list
+  `C:\Users\Tcraf\AppData\Local\Programs\NodeJS\` if the hardcoded path stops working. This is
+  a session/PATH configuration gap, not evidence that Node/pnpm are absent from the machine.

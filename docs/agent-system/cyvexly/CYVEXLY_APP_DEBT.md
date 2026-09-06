@@ -1,32 +1,44 @@
 # Cyvexly App Debt
 
-## Resolved round 64
+## Resolved round 65
 
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R53`** — a
-  twenty-ninth consecutive independent confirmation (reviewed commit
-  `47874b9`, round 62's HEAD, predating round 63's timing-safe-comparison
-  fix), 0 active code defects. Its own origin-gate verification matrix
-  exercised the pre-round-63 `===` comparison without a timing attack, so
-  it could not have surfaced the defect round 63 had already fixed by the
-  time this review published. Moved to `exchange/processed/`.
-- **Adversarial source-level re-review of `src/lib/mailer.ts` and both
-  API routes** (the surface with four real findings across rounds 60-63):
-  confirmed `isTrustedOrigin()` still uses `timingSafeEqual` with a length
-  check first; `checkRateLimit`/`pruneStaleEntries` still bound memory;
-  `getClientIp` ordering unchanged; both routes check honeypot → rate
-  limit → sanitize → validate → mailer-configured in a safe order; every
-  field reaching an email subject/header uses `sanitizeLine` (strips
-  CR/LF); every user value placed into an HTML email body is escaped.
-  Also re-verified the noindex release gate: grepped all metadata
-  exports and confirmed only the root layout defines `robots`, so no
-  route can silently override the `NEXT_PUBLIC_SITE_INDEXABLE` fail-safe.
-  Re-swept `src/` for stale worldwide/guarantee/award/testimonial claims
-  — all matches are explicit denials or Planner-form options describing
-  the visitor's own business, not Cyvexly service claims.
-- **No new defect found.** Source-level review only; no code changed, so
-  no server was started this round — the last live-server verification
-  of this surface remains round 63's.
-- Cleaned up: no temporary files, processes, or servers were created.
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R54`** — a
+  thirtieth consecutive independent confirmation (reviewed commit
+  `25118e3`, round 63's HEAD), 0 active code defects. Moved to
+  `exchange/processed/`.
+- **Adversarially reviewed a new surface** (mailer/rate-limiter/origin-
+  gate had gone five rounds clean): the Planner's ~30-field pipeline and
+  the Privacy/Terms legal copy. Client/server required-field validation
+  matches exactly; header-injection defense and HTML-escaping cover
+  every emailed field; `isValidEmail`'s single-`@` regex rules out
+  comma-smuggling a second address. Legal-page claims (no cookies/
+  analytics/database/payments, draft/no-index) still match shipped
+  behavior.
+- **Found and fixed: neither API route bounded request body size.** App
+  Router Route Handlers impose no default body-size limit, so
+  `request.json()` buffered an arbitrarily large POST into memory — the
+  same unbounded-per-request shape as round 61's rate-limiter leak on
+  this file. Added `readJsonWithLimit()` (`src/lib/mailer.ts`): reads the
+  body stream chunk-by-chunk, rejecting once the byte count exceeds a
+  100,000-byte cap (real max Planner submission ≈22KB) rather than
+  trusting the spoofable `Content-Length` header. Wired into both
+  `/api/contact` and `/api/planner`, returning 413 `payload-too-large`.
+- **Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
+  5173: normal submission still 503; missing fields still 400
+  validation; malformed JSON still 400; 150KB body now 413s on both
+  routes; a realistic ~15KB full-size Planner payload still parses to
+  normal validation, not 413. Committed and pushed.
+- **Environment fix, documented in `CYVEXLY_ENVIRONMENT.md`:** this
+  session's shell had no `node`/`pnpm` on PATH by default — fixed
+  per-PowerShell-call by prepending the real Node install directory and
+  `%APPDATA%\npm`.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID first); removed scratch logs/PID file.
+
+Round 64's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_64_ARCHIVE.md` (moved there
+round 65 to keep this file under its 30,720-byte hot-file cap): the
+30th consecutive audit confirmation plus a clean adversarial re-review.
 
 Round 63's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_63_ARCHIVE.md` (moved there
