@@ -7,6 +7,14 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 59** (scheduled/unattended, 50-minute limit) dispositioned Auditor
+item `IFA-2026-09-06-R49` (25th consecutive confirmation, 0 active code
+defects; its hot-file-cap observation on `CYVEXLY_CURRENT_STATE.md` was
+already stale, fixed round 58) and fixed the one real finding it raised:
+the Home route's meta description at 166 chars, 6 over the ~155-160 char
+budget round 57 established sitewide. See the round-59 report below and
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 59" section.
+
 **Round 58** (scheduled/unattended, 50-minute limit) dispositioned Auditor
 item `IFA-2026-09-06-R48` (24th consecutive confirmation, 0 active code
 defects; its "Production Domain & DNS Connection" gate note is stale,
@@ -165,6 +173,39 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 59 report — global round 59 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-06-R49` (reviewed
+commit `111582f`, round 57's HEAD, predating round 58's `html lang`/
+hot-file-cap fixes). **Twenty-fifth consecutive independent
+confirmation, not a new finding** — 0 active code defects. Its
+hot-file-cap observation on `CYVEXLY_CURRENT_STATE.md` (9,653 bytes at
+the reviewed commit) was already fixed by round 58 (verified: the file
+is now 6,397 bytes, well under its 8,192-byte cap; a fresh
+`Test-HotFileCaps.ps1` run shows 0 violations). Moved to
+`exchange/processed/`.
+
+**Fixed the one real finding it raised:** the report's own sitewide
+description-length survey (extending round 57's work to the one route
+round 57 hadn't measured) found Home (`/`) rendering a 166-char meta
+description, 6 over the ~155-160 char search-snippet budget round 57
+established for every other route. Trimmed
+`src/app/layout.tsx`'s shared `description` string — "get a clear
+proposal" to "get a proposal" and one filler article dropped — without
+removing any factual claim (independent, remote, design-and-development
+studio, proposal, custom design, launch-ready website).
+
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+pre-existing, unrelated lint warning in the round-42 evidence script).
+Real `next start` server on port 5173: measured all 24 routes'
+(20 HTML + sitemap/robots/manifest + one invalid path) rendered output —
+Home now 158 chars, description/og:description/twitter:description
+identical, all 20 HTML routes remain under the 160-char budget, zero
+regressions. Committed (`343444f`) and pushed to `origin/main`.
+
+Cleaned up: stopped the owned `next start` server (verified the real
+listener PID via `Get-NetTCPConnection` before stopping).
+
 ## Round 58 report — global round 58 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-06-R48` (reviewed commit
@@ -224,42 +265,11 @@ Contact/Planner `mailto:` with real server-side Resend delivery, added
 dormant GA4/GSC scaffolding, fixed a stale Privacy Policy section, and ran
 a sitewide audit finding zero defects.
 
-## Round 54 report — global round 54 (interactive session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-06-R44` (reviewed commit
-`08d6f95`, round 51's HEAD, two commits behind round 53's HEAD).
-**Twentieth consecutive independent confirmation, not a new finding** — 0
-active code defects; its listed "Owner Gate" for domain DNS was already
-stale (round 53 verified the domain fully connected). Moved to
-`exchange/processed/`.
-
-Shipped the exact reachable angle round 52's handoff named: **per-slug
-Open Graph images for the dynamic `services/[slug]` and `work/[slug]`
-routes.** Round 52 gave every static marketing route its own generated
-`opengraph-image`, but confirmed via a real before/after A-B test that the
-two dynamic segments still had none — Next's image-convention file does
-not automatically cascade into a parameterized child segment the way
-static metadata text fields do. Added
-`src/app/services/[slug]/opengraph-image.tsx` and
-`src/app/work/[slug]/opengraph-image.tsx`, each with its own
-`generateStaticParams()` (mirroring the sibling `page.tsx`), reusing
-`renderRouteOgImage()` with that slug's own already-shipped name/summary
-(service) or name/challenge (case study) — no invented copy. Both call
-`notFound()` for an unrecognized slug, matching the page's own behavior.
-
-**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (build output
-confirms `/services/[slug]/opengraph-image` and `/work/[slug]/
-opengraph-image` each statically generate all 5/3 slugs). Real `next
-start` server on port 5173: all 5 service-detail and all 3 case-study
-`/opengraph-image` endpoints return 200 and the page's `og:image` meta now
-resolves to the per-slug URL (confirmed via curl on
-`/services/business-websites`); an invalid slug 404s on both the page and
-its `opengraph-image` endpoint; downloaded and visually opened two
-generated PNGs (`business-websites`, `aurora-spaces`) — correct brand
-mark, correct per-route name/description, no clipping. A static-route
-regression sample (`/`, `/about`, `/services`, `/pricing`, `/work`,
-`/process`, `/contact`, `/faq`, `/start`, `/sitemap.xml`, `/robots.txt`)
-shows zero regressions. Committed and pushed.
+Round 54's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_54_REPORT.md` (moved there
+round 59 to restore correct latest-three rotation — this file had kept 54
+live alongside 55 and 58, one round too many). Round 54 added per-slug
+Open Graph images for `services/[slug]` and `work/[slug]`.
 
 ## Round 55 report — global round 55 (scheduled/unattended session)
 

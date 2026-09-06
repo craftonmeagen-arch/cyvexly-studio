@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 58. Owner launch direction updated 2026-09-04, extended
+**Global round:** 59. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -29,6 +29,18 @@ round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
 `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
 
+**Round 59 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-06-R49` (25th consecutive confirmation, reviewed commit
+`111582f`, predating round 58's `html lang`/hot-file-cap fixes, 0 active
+code defects — its hot-file-cap observation on this file was already
+fixed by round 58). Fixed the one real finding it raised: Home's
+rendered meta description measured 166 chars, 6 over the ~155-160 char
+budget round 57 established sitewide. Trimmed the shared description
+string in `src/app/layout.tsx` to 158 chars without dropping any claim.
+`tsc`/`lint`/`build` clean; verified via a real `next start` server
+across a 24-route sweep, zero regressions. Committed (`343444f`) and
+pushed.
+
 **Round 58 outcome (scheduled/unattended):** dispositioned Auditor item
 `IFA-2026-09-06-R48` (24th consecutive confirmation, reviewed commit
 `176b91d`, predating round 57's meta-description fix, 0 active code
@@ -52,17 +64,17 @@ detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 57" section.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 58. Open Graph/Twitter coverage,
+first for anything published after round 59. Open Graph/Twitter coverage,
 structured data (Organization/FAQPage/BreadcrumbList/Service/
 AggregateOffer/OfferCatalog), manifest/icons, print CSS, error boundaries/
-theme-color, COOP/CORP headers/security.txt, and meta-description length
-are all shipped — keep looking for genuinely new QA/build angles (e.g. a
-true rate-limiting check beyond the honeypot, `html lang="en"` →
-`en-US`) rather than assuming the surface is empty. What remains genuinely
-Owner-gated is unchanged; see "Owner launch decisions and remaining gates"
-below.
+theme-color, COOP/CORP headers/security.txt, meta-description length
+(sitewide, including Home), and `html lang="en-US"` are all shipped —
+keep looking for genuinely new QA/build angles (e.g. a true
+rate-limiting check beyond the honeypot) rather than assuming the
+surface is empty. What remains genuinely Owner-gated is unchanged; see
+"Owner launch decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 57's commits
+**Accepted product position:** `main` is pushed through round 59's commits
 on `origin/main` (see `git log`) and Render has auto-deployed them. The
 production domain `cyvexly.com` is fully connected, HTTPS-verified, and
 canonicalized (verified live, round 53). `origin/master` is historical and
