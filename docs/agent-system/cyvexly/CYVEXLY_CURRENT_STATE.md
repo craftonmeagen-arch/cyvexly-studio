@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 57. Owner launch direction updated 2026-09-04, extended
+**Global round:** 58. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -11,116 +11,62 @@ per-route canonical tags (round 33), the Auditor-tracked `/contact`
 link-collision defect `CYV-IFA-012` (round 34), a sitewide
 skip-to-main-content link (round 39), the Planner's step-advance
 focus/scroll/live-region defect (round 40), the Contact form's missing
-spam/rate protection (round 42), sitewide Organization JSON-LD structured
-data (round 43), FAQPage JSON-LD for `/faq` (round 44), BreadcrumbList
-JSON-LD for service-detail/case-study routes (round 45), a Web App
+spam/rate protection (round 42), sitewide Organization JSON-LD (round 43),
+FAQPage JSON-LD (round 44), BreadcrumbList JSON-LD (round 45), a Web App
 Manifest plus dead-asset cleanup (round 46), an Apple touch icon
-(round 47), raster 192/512 PNG manifest icons plus a print-legibility fix
-(round 48), route-segment/root error boundaries plus theme-color/
-color-scheme metadata (round 49), COOP/CORP headers plus security.txt
-(round 50), and sitewide Open Graph/Twitter Card metadata (round 51) are
-done. Remaining Chunk 5 scope (real Contact/Planner email delivery,
-DNS/domain connection, analytics/search ownership, final indexability
-approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
-Owner gates". Full round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md`
-and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+(round 47), raster manifest icons plus a print-legibility fix (round 48),
+error boundaries plus theme-color metadata (round 49), COOP/CORP headers
+plus security.txt (round 50), sitewide Open Graph/Twitter Card metadata
+(round 51), per-route OG images (round 52), real server-side Contact/
+Planner email delivery via Resend plus dormant GA4/GSC scaffolding
+(round 53), per-slug OG images for dynamic routes (round 54), Service
+JSON-LD (round 55), Pricing OfferCatalog JSON-LD (round 56), and trimmed
+meta descriptions (round 57) are done. Remaining Chunk 5 scope (real
+Resend account/API key, DNS/domain provider access, analytics/search
+ownership, exact LLC name, final indexability approval) is Owner-gated —
+see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full
+round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
+`docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
+
+**Round 58 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-06-R48` (24th consecutive confirmation, reviewed commit
+`176b91d`, predating round 57's meta-description fix, 0 active code
+defects — its "Production Domain & DNS Connection" gate note is stale,
+corrected by round 53). Fixed the one real finding it raised: this file
+had grown to 8,728 bytes at the reviewed commit (9,653 by round 58 start),
+over its own 8,192-byte `Test-HotFileCaps.ps1` cap. Archived rounds 52-56's
+detailed outcome paragraphs (already duplicated in `CYVEXLY_ACTIVE_CHUNK.md`/
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`) and rewrote this file as a lean dashboard
+per §7.12's own spec. Re-ran `Test-HotFileCaps.ps1` clean (0 violations).
 
 **Round 57 outcome (scheduled/unattended):** dispositioned Auditor item
 `IFA-2026-09-06-R47` (23rd consecutive confirmation, reviewed commit
-`63fc8fe`, predating round 56's Pricing OfferCatalog JSON-LD, 0 active
-code defects — its "Production Domain & DNS Connection" gate note was
-stale, corrected by round 53). Measured every route's rendered meta
+`63fc8fe`, 0 active code defects). Measured every route's rendered meta
 description for the first time and found 5 exceeded the ~155-160 char
-search-snippet budget (`/services` 169, `/pricing` 174, the three
-`/work/[slug]` case studies 189-211); tightened the two static
-descriptions and switched `work/[slug]` to reuse the already-published
-`selectedWork` card summary instead of the long on-page narrative.
-`tsc`/`lint`/`build` clean; verified via a real `next start` server (all
-5 now render 48-154 chars, on-page copy unchanged, zero regressions
-across a 19-route sweep). Full detail in `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 57" section.
-
-**Round 56 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-06-R46` (22nd consecutive confirmation, reviewed commit
-`82b531b`, predating round 55's Service JSON-LD, 0 active code defects —
-its "Production Domain & DNS Connection" gate note was stale, corrected by
-round 53). Added OfferCatalog JSON-LD to `/pricing`
-(`pricingJsonLd` in `src/lib/structured-data.ts`), reusing each of the 5
-packages' own published name/bestFor/price via one `Offer` per package —
-"Custom system" (no fixed price) correctly lists without a
-`priceSpecification`. `tsc`/`lint`/`build` clean; verified via a real
-`next start` server (both JSON-LD scripts parse valid on `/pricing`, all 5
-package prices match the published copy exactly, zero regressions across a
-14-route sweep). Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 56"
-section.
-
-**Round 55 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-06-R45` (21st consecutive confirmation, reviewed commit
-`26bc8b2`, predating round 54's per-slug OG images, 0 active code
-defects — its "domain DNS still needed" gate note was stale, corrected by
-round 53). Added Service JSON-LD to all five `/services/[slug]` detail
-pages (`buildServiceJsonLd()` in `src/lib/structured-data.ts`), reusing
-each service's own published name/summary/starting price via
-`AggregateOffer.lowPrice` — no invented copy. `tsc`/`lint`/`build` clean;
-verified via a real `next start` server (all 5 slugs' JSON-LD parses
-valid with correct fields and prices matching the published copy exactly,
-zero regressions across a 12-route sweep). Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Resolved round 55" section.
-
-**Round 52 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-06-R43` (19th consecutive confirmation, not new) and shipped
-per-route Open Graph images for the 8 static marketing routes. Confirmed
-the dynamic `services/[slug]`/`work/[slug]` routes still had no
-`opengraph-image` of their own (pre-existing gap, not a regression). Full
-detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 52" section.
-
-**Round 54 outcome (interactive session):** dispositioned Auditor item
-`IFA-2026-09-06-R44` (20th consecutive confirmation, reviewed round-51
-commit, 0 active code defects — its "domain DNS still needed" gate note
-was stale, corrected by round 53). Closed the exact gap round 52 named:
-added `services/[slug]/opengraph-image.tsx` and
-`work/[slug]/opengraph-image.tsx` so all 5 service-detail and all 3
-case-study routes now generate their own per-slug social-preview image
-instead of having none. `tsc`/`lint`/`build` clean; verified via a real
-`next start` server (all 8 dynamic routes 200, invalid slugs 404 on both
-page and image, two images visually opened, zero regressions across a
-static-route sample). Full detail in `CYVEXLY_APP_DEBT.md`'s "Resolved
-round 54" section.
+search-snippet budget; tightened `/services`/`/pricing` and switched
+`work/[slug]` to reuse the already-published `selectedWork` card summary.
+`tsc`/`lint`/`build` clean; verified via a real `next start` server (all 5
+now render 48-154 chars, zero regressions across a 19-route sweep). Full
+detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 57" section.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 56. Open Graph/Twitter coverage
-(static and dynamic routes), structured data (Organization, FAQPage,
-BreadcrumbList, per-service Service/AggregateOffer JSON-LD, and now
-Pricing's OfferCatalog JSON-LD), manifest/icons, print CSS, error
-boundaries/theme-color, and COOP/CORP headers/security.txt are all
-shipped — keep looking for genuinely new QA/build angles (e.g. a true
-rate-limiting check beyond the honeypot) rather than assuming the surface
-is empty. What remains genuinely Owner-gated (real Contact/Planner email
-delivery, analytics/search ownership, exact LLC name, final indexability
-approval, About/legal/visual review) is unchanged; see "Owner launch
-decisions and remaining gates" below.
+first for anything published after round 58. Open Graph/Twitter coverage,
+structured data (Organization/FAQPage/BreadcrumbList/Service/
+AggregateOffer/OfferCatalog), manifest/icons, print CSS, error boundaries/
+theme-color, COOP/CORP headers/security.txt, and meta-description length
+are all shipped — keep looking for genuinely new QA/build angles (e.g. a
+true rate-limiting check beyond the honeypot, `html lang="en"` →
+`en-US`) rather than assuming the surface is empty. What remains genuinely
+Owner-gated is unchanged; see "Owner launch decisions and remaining gates"
+below.
 
-**Round 53 outcome (interactive session, Owner direction `2026-09-05-15`):**
-verified the production domain is already fully connected (DNS/HTTPS/
-canonicalization all correct — the debt file's "DNS still needed" claim was
-stale, not current); replaced Contact/Planner `mailto:` submission with
-real server-side delivery via Resend (`src/lib/mailer.ts`,
-`src/app/api/{contact,planner}/route.ts`) including server-side
-validation, sanitization, honeypot re-check, and per-IP rate limiting;
-added dormant GA4 + Google Search Console verification scaffolding
-(zero footprint until the Owner supplies real values); corrected the
-Privacy Policy's stale mailto-era description of form handling; ran a
-sitewide link/alt-text/JSON-LD/console-error audit on live production
-with zero defects found. Full detail in `CYVEXLY_APP_DEBT.md` and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
-
-**Accepted product position:** `main` is pushed through round 53's commits
-on `origin/main` (see `git log`) and Render has auto-deployed them — the
-new Contact/Planner fields and `/api/*` routes are confirmed live on
-`https://cyvexly.com`. The production domain `cyvexly.com` is fully
-connected, HTTPS-verified, and canonicalized. `origin/master` is
-historical and is not the deployment branch.
+**Accepted product position:** `main` is pushed through round 57's commits
+on `origin/main` (see `git log`) and Render has auto-deployed them. The
+production domain `cyvexly.com` is fully connected, HTTPS-verified, and
+canonicalized (verified live, round 53). `origin/master` is historical and
+is not the deployment branch.
 
 ## Owner launch decisions and remaining gates
 
@@ -144,13 +90,12 @@ approval and must not be invented:
 4. review of About/Privacy/Terms drafts, public visual acceptance, and
    final permission to enable search indexing.
 
-Domain/DNS/HTTPS/canonicalization (formerly gate 2 here) is **done** —
-verified live round 53, not merely code-complete. Payment-provider
-selection and real portfolio replacement are deliberately tabled. Existing
-payment claims must be removed or qualified until supported; existing
-concepts must remain unmistakably labeled. Contact/Planner now use real
-server-side delivery (not `mailto:`) — see `CYVEXLY_APP_DEBT.md` item 2.
-
+Domain/DNS/HTTPS/canonicalization is **done** — verified live round 53, not
+merely code-complete. Payment-provider selection and real portfolio
+replacement are deliberately tabled. Existing payment claims must be
+removed or qualified until supported; existing concepts must remain
+unmistakably labeled. Contact/Planner now use real server-side delivery
+(not `mailto:`) — see `CYVEXLY_APP_DEBT.md` item 2.
 
 ## Working orientation
 
