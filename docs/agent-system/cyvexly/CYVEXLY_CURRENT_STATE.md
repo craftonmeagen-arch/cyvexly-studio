@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 63. Owner launch direction updated 2026-09-04, extended
+**Global round:** 64. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -34,6 +34,14 @@ round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
 `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
 
+**Round 64 outcome:** dispositioned Auditor item `IFA-2026-09-06-R53`
+(29th consecutive confirmation, reviewed commit `47874b9` predating
+round 63's timing-safe fix, 0 active code defects). Ran a fresh
+adversarial source-level re-review of the mailer/rate-limiter/origin-gate
+surface plus a sitewide truth-claim sweep — 0 new defects found; no code
+changed this round. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/
+`CYVEXLY_APP_DEBT.md`.
+
 **Round 63 outcome:** dispositioned Auditor item `IFA-2026-09-06-R52`
 (28th consecutive confirmation, reviewed commit `1854a3f` predating
 rounds 61-62, 0 active code defects). Found and fixed a real (if
@@ -56,34 +64,29 @@ unset (current state). Activates once the Owner adds one Cloudflare
 Transform Rule injecting that header on all proxied requests; see
 `CYVEXLY_APP_DEBT.md` item 3 for the exact steps.
 
-**Round 61 outcome:** dispositioned Auditor item `IFA-2026-09-06-R51`
-(27th consecutive confirmation, 0 active code defects) and fixed a
-second real defect in round 60's own new code: the rate limiter's
-`Map` never deleted a key, letting a spoofable key grow it without
-bound (memory-exhaustion DoS). Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/
-`CYVEXLY_APP_DEBT.md`.
-
-Round 60 fixed the Contact/Planner rate limiter's `X-Forwarded-For`
-IP-spoofing bypass; rounds 58-59 fixed a hot-file-cap violation plus
-`html lang="en-US"` and trimmed Home's meta description. Full detail for
-all three remains in `CYVEXLY_APP_DEBT.md`'s resolved-round history.
+Round 61 fixed the rate limiter's unbounded-memory-growth defect; round 60
+fixed the Contact/Planner rate limiter's `X-Forwarded-For` IP-spoofing
+bypass; rounds 58-59 fixed a hot-file-cap violation plus `html lang="en-
+US"` and trimmed Home's meta description. Full detail for all remains in
+`CYVEXLY_APP_DEBT.md`'s resolved-round history.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 63. The rate limiter/origin-gate
+first for anything published after round 64. The rate limiter/origin-gate
 surface in `mailer.ts` has now yielded four real rounds of findings (60,
-61, 62, 63) — keep looking there and elsewhere via adversarial testing,
-not just feature checklists. The Cloudflare-bypass gap has a dormant
-code-side gate (round 62, hardened round 63); it activates only once the
-Owner adds one Cloudflare Transform Rule (see `CYVEXLY_APP_DEBT.md` item
-3) — not more Builder code. What remains genuinely Owner-gated is
-otherwise unchanged; see "Owner launch decisions and remaining gates"
-below.
+61, 62, 63), plus a clean round-64 source-level re-review — keep looking
+there and elsewhere via adversarial testing, not just feature checklists.
+The Cloudflare-bypass gap has a dormant code-side gate (round 62, hardened
+round 63); it activates only once the Owner adds one Cloudflare Transform
+Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more Builder code. What
+remains genuinely Owner-gated is otherwise unchanged; see "Owner launch
+decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 63's commits
-on `origin/main` and Render has auto-deployed them. `cyvexly.com` is fully
-connected/HTTPS/canonicalized (verified live, round 53). `origin/master`
-is historical, not the deployment branch.
+**Accepted product position:** `main` is pushed through round 63's source
+commits on `origin/main` and Render has auto-deployed them; round 64 made
+no source changes (source-level re-review only), only this docs commit.
+`cyvexly.com` is fully connected/HTTPS/canonicalized (verified live, round
+53). `origin/master` is historical, not the deployment branch.
 
 ## Owner launch decisions and remaining gates
 

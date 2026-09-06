@@ -1,5 +1,64 @@
 # Cyvexly Next Builder Handoff
 
+## Round 64 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
+time limit (unattended)
+**Start source:** `25118e3` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item
+(`IFA-2026-09-06-R53`) and ran a fresh adversarial source-level re-review
+of the mailer/rate-limiter/origin-gate surface plus a sitewide truth-claim
+sweep.
+**Completion:** NO NEW DEFECT FOUND — docs-only round, no source changed.
+
+### What was checked
+
+- `IFA-2026-09-06-R53` (reviewed commit `47874b9`, round 62's HEAD,
+  predating round 63's timing-safe-comparison fix) is a **twenty-ninth
+  consecutive independent confirmation, not a new finding** — 0 active
+  code defects. Its own verification matrix exercised the pre-round-63
+  `===` comparison without a timing attack, so it could not have
+  surfaced the defect round 63 had already fixed. Moved to
+  `exchange/processed/`.
+- Re-read `src/lib/mailer.ts` and both `src/app/api/{contact,planner}/
+  route.ts` end to end with an adversarial eye (the surface with four
+  real findings across rounds 60-63): confirmed `isTrustedOrigin()` still
+  uses `timingSafeEqual` with a length check first; the rate limiter's
+  pruning still bounds memory; `getClientIp` ordering unchanged; both
+  routes check honeypot → rate limit → sanitize → validate →
+  mailer-configured in a safe order; every field reaching an email
+  subject/header uses the CR/LF-stripping `sanitizeLine`; every
+  user-supplied value placed into HTML email bodies is escaped.
+- Re-verified the noindex release gate: grepped every `generateMetadata`/
+  `export const metadata` in `src/` for a `robots` field — only the root
+  layout defines one, so no route can silently override the
+  `NEXT_PUBLIC_SITE_INDEXABLE` fail-safe default.
+- Re-swept `src/` for stale worldwide/guarantee/award/testimonial claims
+  per the Owner's truth-audit direction — every match is an explicit
+  denial or a Planner-form option describing the visitor's own business,
+  not a Cyvexly claim.
+- No defect found. No source changed, so no server was started this
+  round — the last live-server verification of this surface remains
+  round 63's. Updated `CYVEXLY_CURRENT_STATE.md`/`CYVEXLY_ACTIVE_CHUNK.md`/
+  `CYVEXLY_APP_DEBT.md`/this file, archiving round 61's `ACTIVE_CHUNK`
+  report, round 63's `APP_DEBT` detail, and round 62's full closeout here
+  to stay under each file's hot-file-cap. Committed and pushed (docs
+  only).
+- Cleaned up: no temporary files, processes, or servers were created.
+
+### Recommended next workstream
+
+Re-sweep for any newly published Auditor findings first. The
+mailer.ts/rate-limiter/origin-gate surface has now had five consecutive
+rounds of adversarial attention (60-64) with the last confirmed-clean —
+it may be reaching convergence; consider directing the next round's
+adversarial energy at a different surface (e.g. the Planner's ~30-field
+sanitize/validate pipeline, or the legal-page/truth-audit content itself)
+rather than a sixth pass over the same three functions. Genuinely
+Owner-gated items are unchanged: Resend account/DNS/API key,
+analytics/Search Console ownership, exact LLC name, About/legal/visual
+review, final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
 ## Round 63 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
@@ -50,52 +109,10 @@ items are unchanged: Resend account/DNS/API key, analytics/Search
 Console ownership, exact LLC name, About/legal/visual review, final
 indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
 
-## Round 62 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
-time limit (unattended)
-**Start source:** `32361b2` on `main` (pushed, matched `origin/main`)
-**Scope:** no new Auditor inbox item; prepared dormant scaffolding for
-the round-60-named Cloudflare-bypass gap.
-**Completion:** REAL SOURCE ADDED, DORMANT BY DESIGN — see below.
-
-### What was checked
-
-- No new Auditor inbox item was published since round 61 consumed
-  `IFA-2026-09-06-R51`.
-- **Added `isTrustedOrigin()` (`src/lib/mailer.ts`)**, wired into both
-  `/api/contact` and `/api/planner` as the first check in each `POST`
-  handler. Closing round 60's named Cloudflare-bypass gap fully needs a
-  Cloudflare-dashboard control this role cannot configure, but the
-  origin-side half of a shared-secret-header mitigation is pure code:
-  the function returns `true` unconditionally while `CF_ORIGIN_SECRET`
-  is unset (today's production state — zero behavior change), and once
-  set, requires a matching `x-cf-origin-secret` header, rejecting
-  anything else with 403. Exact Owner activation steps (one Cloudflare
-  Transform Rule + one Render env var) recorded in
-  `CYVEXLY_APP_DEBT.md` item 3.
-- Verified: `tsc --noEmit`/`lint`/`build` all clean (same pre-existing,
-  unrelated lint warning in the round-42 evidence script). Real `next
-  start` server tested in both states: dormant (unset — no/wrong header
-  still reaches the normal 503 response), and activated (set — no/wrong
-  header 403s, matching header passes through) on both routes. A
-  14-route regression sweep was clean in the activated state.
-- Committed and pushed to `origin/main` (safe immediately since the
-  gate stays inert for real traffic until the Owner's Cloudflare/Render
-  step).
-- Cleaned up: stopped both owned `next start` server instances (verified
-  real listener PIDs via `netstat`/`LISTENING`). Removed this round's
-  scratch server logs and PID files.
-
-### Recommended next workstream
-
-Re-sweep for any newly published Auditor findings first. The
-Cloudflare-bypass gap now has a dormant code-side half done; the
-remaining half is the Owner's one-time Cloudflare Transform Rule +
-Render env var (see `CYVEXLY_APP_DEBT.md` item 3) — not more Builder
-code. Genuinely Owner-gated items are otherwise unchanged: Resend
-account/DNS/API key, analytics/Search Console ownership, exact LLC name,
-About/legal/visual review, final indexability approval.
+Round 62 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_62_REPORT.md` (moved
+there round 64 to keep this file under its 12,288-byte hot-file cap).
+Round 62 prepared the dormant Cloudflare-bypass origin-secret gate.
 
 Round 61 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_61_REPORT.md` (moved

@@ -1,34 +1,37 @@
 # Cyvexly App Debt
 
-## Resolved round 63
+## Resolved round 64
 
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R52`** — a
-  twenty-eighth consecutive independent confirmation (reviewed commit
-  `1854a3f`, round 60's HEAD, predating round 61's memory-pruning fix and
-  round 62's dormant Cloudflare-bypass gate), 0 active code defects.
-  Moved to `exchange/processed/`.
-- **Found a real timing-side-channel defect in round 62's own new
-  `isTrustedOrigin()` gate** (`src/lib/mailer.ts`), continuing the pattern
-  from rounds 60-61 of adversarial review of this file's newest code
-  surfacing real issues. The origin-secret comparison used plain `===`,
-  which short-circuits at the first differing byte — not exploitable
-  today since the gate is dormant (`CF_ORIGIN_SECRET` unset in
-  production), but present in the code regardless of activation state.
-- **Fixed:** switched to `node:crypto`'s `timingSafeEqual`, with an
-  explicit length check first (mismatched-length buffers throw in
-  `timingSafeEqual` rather than compare) and an early `false` for a
-  missing header.
-- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-  pre-existing, unrelated lint warning in the round-42 evidence script).
-  Real `next start` server on port 5173: dormant state confirmed
-  unaffected; activated state (env var set) confirmed rejecting missing,
-  wrong-length, and wrong-but-same-length header requests with 403 on
-  both routes while the exact-matching header still passes through; a
-  15-route regression sweep was clean.
-- Cleaned up: stopped both owned `next start` servers (verified real
-  listener PIDs via `netstat`/`LISTENING`, stopped with `taskkill` since
-  this session's shell is Git Bash). Removed this round's scratch server
-  logs.
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R53`** — a
+  twenty-ninth consecutive independent confirmation (reviewed commit
+  `47874b9`, round 62's HEAD, predating round 63's timing-safe-comparison
+  fix), 0 active code defects. Its own origin-gate verification matrix
+  exercised the pre-round-63 `===` comparison without a timing attack, so
+  it could not have surfaced the defect round 63 had already fixed by the
+  time this review published. Moved to `exchange/processed/`.
+- **Adversarial source-level re-review of `src/lib/mailer.ts` and both
+  API routes** (the surface with four real findings across rounds 60-63):
+  confirmed `isTrustedOrigin()` still uses `timingSafeEqual` with a length
+  check first; `checkRateLimit`/`pruneStaleEntries` still bound memory;
+  `getClientIp` ordering unchanged; both routes check honeypot → rate
+  limit → sanitize → validate → mailer-configured in a safe order; every
+  field reaching an email subject/header uses `sanitizeLine` (strips
+  CR/LF); every user value placed into an HTML email body is escaped.
+  Also re-verified the noindex release gate: grepped all metadata
+  exports and confirmed only the root layout defines `robots`, so no
+  route can silently override the `NEXT_PUBLIC_SITE_INDEXABLE` fail-safe.
+  Re-swept `src/` for stale worldwide/guarantee/award/testimonial claims
+  — all matches are explicit denials or Planner-form options describing
+  the visitor's own business, not Cyvexly service claims.
+- **No new defect found.** Source-level review only; no code changed, so
+  no server was started this round — the last live-server verification
+  of this surface remains round 63's.
+- Cleaned up: no temporary files, processes, or servers were created.
+
+Round 63's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_63_ARCHIVE.md` (moved there
+round 64 to keep this file under its 30,720-byte hot-file cap): the
+timing-safe-comparison fix for `isTrustedOrigin()`.
 
 Round 62's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_62_ARCHIVE.md` (moved there
