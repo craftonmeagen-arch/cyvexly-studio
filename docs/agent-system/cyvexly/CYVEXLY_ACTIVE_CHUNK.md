@@ -7,6 +7,13 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 62** (scheduled/unattended, 50-minute limit) found no new
+Auditor item and instead prepared dormant, Builder-reachable scaffolding
+for the round-60-named Cloudflare-bypass gap: an origin-secret header
+check that stays inert until the Owner adds a matching Cloudflare
+Transform Rule and Render env var. See the round-62 report below and
+`CYVEXLY_APP_DEBT.md` item 3.
+
 **Round 61** (scheduled/unattended, 50-minute limit) dispositioned Auditor
 item `IFA-2026-09-06-R51` (27th consecutive confirmation, 0 active code
 defects) and found/fixed a second real defect in round 60's own new
@@ -190,6 +197,49 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 62 report — global round 62 (scheduled/unattended session)
+
+No new Auditor inbox item was published this round (the last consumed
+item was `IFA-2026-09-06-R51`, dispositioned round 61).
+
+**Prepared dormant scaffolding for the residual Cloudflare-bypass gap**
+round 60 named and round 61's finding shared a root cause with: an
+attacker hitting the direct Render origin (`cyvexly-studio.onrender.com`)
+skips Cloudflare and can forge `cf-connecting-ip` themselves, since
+nothing between the attacker and Render overwrites it on that path.
+Fully closing this needs a Cloudflare-dashboard control (a Transform
+Rule, or Authenticated Origin Pulls) this role cannot configure — but the
+origin-side half of a shared-secret-header mitigation is pure code and
+is Builder-reachable now, dormant until the Owner does the one-time
+Cloudflare/Render setup.
+
+Added `isTrustedOrigin()` (`src/lib/mailer.ts`): returns `true`
+unconditionally while `CF_ORIGIN_SECRET` is unset (today's state, so
+zero behavior change), and once set, requires an exact-matching
+`x-cf-origin-secret` request header, rejecting anything else with 403.
+Wired into both `/api/contact` and `/api/planner` as the first check in
+each `POST` handler. Exact Owner activation steps recorded in
+`CYVEXLY_APP_DEBT.md` item 3.
+
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+pre-existing, unrelated lint warning in the round-42 evidence script).
+Real `next start` server on port 5173, tested in both states:
+- **Dormant** (`CF_ORIGIN_SECRET` unset): a request with no secret header
+  and one with a wrong secret header both still reach the normal 503
+  not-configured response on `/api/contact` — unaffected.
+- **Activated** (`CF_ORIGIN_SECRET` set): a request with no header and
+  one with a wrong header both correctly 403 on `/api/contact` and
+  `/api/planner`; a request with the exact matching header passes
+  through to the normal validation/mailer path on both routes.
+A 14-route regression sweep (12 HTML routes + sitemap.xml/robots.txt + an
+invalid path) was clean in the activated state. Safe to commit and push
+immediately since the gate stays inert for real production traffic until
+the Owner completes the Cloudflare/Render step.
+
+Cleaned up: stopped both owned `next start` server instances (verified
+the real listener PID via `netstat`/`LISTENING` before each stop).
+Removed this round's scratch server logs and PID files.
+
 ## Round 61 report — global round 61 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-06-R51` (reviewed
@@ -293,38 +343,10 @@ each time). Removed this round's own scratch server logs/crawl script,
 and successfully retried removing the two Windows-locked scratch logs
 named in round 58's handoff (now gone).
 
-## Round 59 report — global round 59 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-06-R49` (reviewed
-commit `111582f`, round 57's HEAD, predating round 58's `html lang`/
-hot-file-cap fixes). **Twenty-fifth consecutive independent
-confirmation, not a new finding** — 0 active code defects. Its
-hot-file-cap observation on `CYVEXLY_CURRENT_STATE.md` (9,653 bytes at
-the reviewed commit) was already fixed by round 58 (verified: the file
-is now 6,397 bytes, well under its 8,192-byte cap; a fresh
-`Test-HotFileCaps.ps1` run shows 0 violations). Moved to
-`exchange/processed/`.
-
-**Fixed the one real finding it raised:** the report's own sitewide
-description-length survey (extending round 57's work to the one route
-round 57 hadn't measured) found Home (`/`) rendering a 166-char meta
-description, 6 over the ~155-160 char search-snippet budget round 57
-established for every other route. Trimmed
-`src/app/layout.tsx`'s shared `description` string — "get a clear
-proposal" to "get a proposal" and one filler article dropped — without
-removing any factual claim (independent, remote, design-and-development
-studio, proposal, custom design, launch-ready website).
-
-**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-pre-existing, unrelated lint warning in the round-42 evidence script).
-Real `next start` server on port 5173: measured all 24 routes'
-(20 HTML + sitemap/robots/manifest + one invalid path) rendered output —
-Home now 158 chars, description/og:description/twitter:description
-identical, all 20 HTML routes remain under the 160-char budget, zero
-regressions. Committed (`343444f`) and pushed to `origin/main`.
-
-Cleaned up: stopped the owned `next start` server (verified the real
-listener PID via `Get-NetTCPConnection` before stopping).
+Round 59's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_59_REPORT.md` (moved
+there round 62 to restore latest-three rotation) — 60, 61, 62 stay live.
+Round 59 trimmed Home's meta description to fit the sitewide budget.
 
 Round 58's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_58_REPORT.md` (moved
