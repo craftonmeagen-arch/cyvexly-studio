@@ -1,5 +1,38 @@
 # Cyvexly App Debt
 
+## Resolved round 66
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R55`** — a
+  thirty-first consecutive independent confirmation (reviewed commit
+  `846975d`, round 64's HEAD, predating round 65's body-size-cap fix), 0
+  active code defects at the reviewed commit. Moved to
+  `exchange/processed/`.
+- **Found and fixed a real data-loss defect on a third surface**
+  (mailer/rate-limiter/origin-gate and the Planner sanitize/validate
+  pipeline had each gone a round clean): diffed every `PlannerData`
+  field (`src/lib/planner-config.ts`) against every `raw.<field>` read
+  in `src/app/api/planner/route.ts`. The Planner's "Visual direction"
+  step's four style sliders (`data.spectrum`) had no corresponding
+  server read at all — every other ~47 fields did — so that whole
+  step's answers were silently dropped before reaching
+  `design@cyvexly.com`, contrary to Owner direction `2026-09-04-14`'s
+  "All project-planner answers" requirement.
+- **Fixed:** `src/app/api/planner/route.ts` now reads `raw.spectrum`,
+  keeping only known `visualSpectrums` ids paired with an in-range
+  integer (0-4, matching the client's step slider) and adds a new
+  "Style spectrum" email row (e.g. `Minimal ↔ Expressive: 3/4`).
+- **Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
+  5173 with a temporary debug log (removed before commit): a mixed
+  payload (3 valid ids, 1 unknown id, 1 non-numeric value) produced
+  exactly the 3 valid labels with no crash; an absent `spectrum`
+  produced `[]`, no crash — both still reached the existing 503
+  not-configured response. Regression: valid payload still 503;
+  missing fields still 400 with the same field-error set; malformed
+  JSON still 400; 150KB body still 413s; Contact route unaffected; a
+  12-route sitewide sweep all 200. Committed (`4a7b26f`) and pushed.
+- Cleaned up: stopped the owned `next start` server (verified the real
+  listener PID first); removed all scratch payload/log files.
+
 ## Resolved round 65
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-06-R54`** — a
@@ -55,75 +88,16 @@ Round 61's full detail is archived at
 round 62 to keep this file under its 30,720-byte hot-file cap): the
 rate-limiter memory-pruning fix.
 
-## Resolved round 59
+Round 59's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_59_ARCHIVE.md` (moved there
+round 66 to keep this file under its 30,720-byte hot-file cap): fixed
+Home's meta description overage.
 
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R49`** — a
-  twenty-fifth consecutive independent confirmation (reviewed commit
-  `111582f`, round 57's HEAD, predating round 58's `html lang`/hot-file-cap
-  fixes), 0 active code defects. Its hot-file-cap observation on
-  `CYVEXLY_CURRENT_STATE.md` was already fixed by round 58 (re-verified:
-  6,397 bytes, well under the 8,192-byte cap; a fresh
-  `Test-HotFileCaps.ps1` run shows 0 violations). Moved to
-  `exchange/processed/`.
-- **Fixed the one real finding it raised — Home's meta description over
-  budget.** The report's own sitewide description-length survey (the one
-  route round 57 hadn't measured) found `/` rendering 166 chars, 6 over
-  the ~155-160 char budget round 57 established sitewide. Trimmed
-  `src/app/layout.tsx`'s shared `description` ("get a clear proposal" →
-  "get a proposal", one filler article dropped) without removing any
-  factual claim.
-- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-  pre-existing, unrelated lint warning in the round-42 evidence script).
-  Real `next start` server on port 5173: Home now renders a 158-char
-  description, identical across description/og:description/
-  twitter:description; a 24-route sweep (20 HTML routes + sitemap/robots/
-  manifest + an invalid path) shows zero regressions. Committed
-  (`343444f`) and pushed.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID via `Get-NetTCPConnection` before stopping). No temporary
-  files were created this round.
-
-## Resolved round 58
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R48`** — a
-  twenty-fourth consecutive independent confirmation (reviewed commit
-  `176b91d`, round 56's HEAD, predating round 57's meta-description fix),
-  0 active code defects. Its "Production Domain & DNS Connection" gate
-  note is stale (round 53 verified the domain fully connected). Moved to
-  `exchange/processed/`.
-- **Fixed the one real finding it raised — a hot-file cap violation.**
-  `Test-HotFileCaps.ps1` flagged `CYVEXLY_CURRENT_STATE.md` at 8,728 bytes
-  against the reviewed commit (grown to 9,653 by round 58 start), over its
-  own 8,192-byte cap. Archived rounds 52-56's detailed outcome paragraphs
-  (already duplicated in `CYVEXLY_ACTIVE_CHUNK.md`/
-  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`) to
-  `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md` and
-  rewrote it as a lean dashboard. Re-ran the cap script clean afterward.
-- **Found and fixed a real rotation-order defect in
-  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`** while archiving (same class as round
-  50's `CYVEXLY_ACTIVE_CHUNK.md` fix): round 54's full closeout had stayed
-  live while round 55's was already archived, skipping a round out of
-  order. Restored correct latest-three order (archived round 54's full
-  text; no content lost).
-- **New angle — `html lang="en"` → `en-US`**, named as untried in round
-  57's handoff. Owner direction `2026-09-04-14` confirms a United
-  States-only launch market and structured data already uses
-  `areaServed: "US"` throughout; `en-US` is the more precise BCP 47 tag.
-  Fixed in `src/app/layout.tsx` (root layout) and
-  `src/app/global-error.tsx` (replaces the root `<html>` when it fires).
-- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-  pre-existing, unrelated lint warning in the round-42 evidence script).
-  Real `next start` server on port 5173: fetched all 14 HTML routes plus
-  sitemap/robots/manifest/an invalid path (18 total) — every HTML route
-  renders `lang="en-US"`, zero regressions. `Test-HotFileCaps.ps1` re-run
-  clean (0 violations across all 57 tracked files). Committed (`9a6ff1e`,
-  `3b70fc0`) and pushed.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID via `Get-NetTCPConnection` before stopping). Two scratch
-  server logs under the OS temp root (rounds 57 and 58) remain
-  Windows-locked after process exit despite no matching process — same
-  recurring class as round 48's temp-profile lock; left in place, next
-  round should retry `Remove-Item` on them.
+Round 58's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_58_ARCHIVE.md` (moved there
+round 66 to keep this file under its 30,720-byte hot-file cap): shipped
+`html lang="en-US"` and fixed a hot-file-cap violation plus a handoff
+rotation-order defect.
 
 ## Resolved round 57
 

@@ -7,6 +7,19 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 66** (scheduled/unattended, 50-minute limit) dispositioned Auditor
+item `IFA-2026-09-06-R55` (31st consecutive confirmation, 0 active code
+defects) and found/fixed a real data-loss defect: the Planner's four
+visual-direction style sliders (`data.spectrum`) were never read
+server-side, so that step's answers never reached the notification
+email. See the round-66 report below and `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 66" section.
+
+**Round 65** (scheduled/unattended, 50-minute limit) dispositioned
+Auditor item `IFA-2026-09-06-R54` (30th consecutive confirmation) and
+found/fixed an unbounded request-body-size defect on both API routes.
+See the round-65 report below.
+
 **Round 64** (scheduled/unattended, 50-minute limit) dispositioned Auditor
 item `IFA-2026-09-06-R53` (29th consecutive confirmation, reviewed commit
 `47874b9`, round 62's HEAD, predating round 63's timing-safe-comparison
@@ -15,11 +28,9 @@ origin-gate surface plus a sitewide truth-claim sweep — 0 new defects
 found. See the round-64 report below and `CYVEXLY_APP_DEBT.md`'s
 "Resolved round 64" section.
 
-**Round 63** (scheduled/unattended, 50-minute limit) dispositioned Auditor
-item `IFA-2026-09-06-R52` (28th consecutive confirmation, reviewed commit
-`1854a3f`, predating rounds 61-62) and found/fixed a timing-side-channel
-weakness in round 62's own new `isTrustedOrigin()` gate. See the round-63
-report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 63" section.
+Round 63 fixed a timing-side-channel weakness in round 62's own new
+`isTrustedOrigin()` gate (archived report; see `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 63" section).
 
 **Round 62** (scheduled/unattended, 50-minute limit) found no new
 Auditor item and instead prepared dormant, Builder-reachable scaffolding
@@ -211,6 +222,49 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 66 report — global round 66 (scheduled/unattended session)
+
+Dispositioned the one new Auditor inbox item, `IFA-2026-09-06-R55`
+(reviewed commit `846975d`, round 64's HEAD, predating round 65's
+body-size-cap fix). **Thirty-first consecutive independent
+confirmation, not a new finding** — 0 active code defects at the
+reviewed commit. Moved to `exchange/processed/`.
+
+**Redirected adversarial energy to a third surface per round 65's
+recommendation**: diffed every field in `PlannerData`
+(`src/lib/planner-config.ts`) against every `raw.<field>` read in
+`src/app/api/planner/route.ts`.
+
+**Found and fixed a real, previously-unflagged data-loss defect.** The
+Planner's "Visual direction" step collects four left/right style
+sliders (`data.spectrum`, e.g. "Minimal ↔ Expressive", 0-4 range) in
+`PlannerData.spectrum`. Of ~48 `PlannerData` fields, every one except
+`spectrum` had a matching `raw.<field>` read — `spectrum` was never
+read, sanitized, or emailed, so this whole step silently never reached
+`design@cyvexly.com`, contrary to Owner direction `2026-09-04-14`'s
+"All project-planner answers" requirement.
+
+**Fixed:** validated read of `raw.spectrum` against the four known
+`visualSpectrums` ids, accepting only an in-range integer (0-4) per id
+and dropping anything else rather than guessing. Added a new "Style
+spectrum" row to the email, e.g. `Minimal ↔ Expressive: 3/4`.
+
+**Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
+5173: a temporary debug log (removed before commit) confirmed a mixed
+payload (`minimal-expressive:3, classic-futuristic:0, quiet-
+energetic:4, unknown-id:2, editorial-product:"not-a-number"`) produces
+exactly the 3 valid labels — unknown id and non-numeric value correctly
+dropped, no crash; an absent `spectrum` produces `[]`, no crash. Both
+still reach the existing 503 not-configured response, the same proof
+pattern every prior round used for this gate. Full regression: valid
+payload still 503; missing fields still 400 with the same field-error
+set; malformed JSON still 400; 150KB body still 413s; Contact route
+unaffected; a 12-route sitewide sweep all 200, zero regressions.
+Committed (`4a7b26f`) and pushed.
+
+Cleaned up: stopped the owned `next start` server (verified the real
+listener PID first); removed all scratch payload/log files.
+
 ## Round 65 report — global round 65 (scheduled/unattended session)
 
 Dispositioned the one new Auditor inbox item, `IFA-2026-09-06-R54`
@@ -295,48 +349,10 @@ round 63's.
 Cleaned up: no temporary files, processes, or servers were created this
 round (source-only re-review; no source changed).
 
-## Round 63 report — global round 63 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-06-R52` (reviewed
-commit `1854a3f`, round 60's HEAD, predating round 61's memory-pruning
-fix and round 62's dormant Cloudflare-bypass gate). **Twenty-eighth
-consecutive independent confirmation, not a new finding** — 0 active
-code defects (its adversarial rate-limiter re-verification and 20-route
-snippet-budget survey both reconfirm already-shipped work). Moved to
-`exchange/processed/`.
-
-**Found a real defect through adversarial review of round 62's own new
-code, continuing the pattern from rounds 60-61.** `isTrustedOrigin()`
-(`src/lib/mailer.ts`) compared the incoming `x-cf-origin-secret` header
-against `CF_ORIGIN_SECRET` with plain `===`. JavaScript string equality
-short-circuits at the first differing character, so once the gate is
-activated, an attacker able to measure response-time differences across
-many requests could in principle narrow down the secret one byte at a
-time — a classic timing side-channel on secret comparison. Not
-exploitable today (the gate is dormant, `CF_ORIGIN_SECRET` unset in
-production), but the defect is in the code now, not only once activated.
-
-**Fixed:** switched to Node's `crypto.timingSafeEqual`, comparing UTF-8
-byte buffers, with an explicit length check first (buffers of different
-lengths throw in `timingSafeEqual` rather than compare) and an early
-`false` when the header is missing entirely.
-
-**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-pre-existing, unrelated lint warning in the round-42 evidence script).
-Real `next start` server on port 5173: **dormant** (`CF_ORIGIN_SECRET`
-unset) — no header and a wrong header both still reach the normal 400
-validation response, unaffected. **Activated** (env var set) — a request
-with no header, a wrong header of the same length, and a wrong header of
-a different length all correctly 403 on both `/api/contact` and
-`/api/planner`; a request with the exact matching header passes through
-to normal validation on both routes. A 15-route regression sweep (13
-HTML routes + sitemap.xml/robots.txt + an invalid path) was clean.
-Committed and pushed.
-
-Cleaned up: stopped both owned `next start` server instances (verified
-the real listener PID via `netstat`/`LISTENING` before each stop, using
-`taskkill` since this session's shell is Git Bash rather than
-PowerShell). Removed this round's scratch server logs.
+Round 63's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_63_REPORT.md` (moved
+there round 66 to keep this file under its 30,720-byte hot-file cap).
+Round 63 fixed a timing-side-channel weakness in `isTrustedOrigin()`.
 
 Round 62's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_62_REPORT.md` (moved

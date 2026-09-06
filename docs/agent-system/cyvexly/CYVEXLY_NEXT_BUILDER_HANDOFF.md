@@ -1,5 +1,53 @@
 # Cyvexly Next Builder Handoff
 
+## Round 66 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
+time limit (unattended)
+**Start source:** `fda8b48` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned the one new Auditor inbox item
+(`IFA-2026-09-06-R55`) and, per round 65's recommendation, redirected
+adversarial review to a third surface — found and fixed a real
+data-loss defect in the Planner API route.
+**Completion:** REAL SOURCE FIX LANDED — see below.
+
+### What was checked
+
+- `IFA-2026-09-06-R55` (commit `846975d`, round 64's HEAD): **thirty-
+  first consecutive confirmation**, 0 active code defects. Moved to
+  `exchange/processed/`.
+- Diffed every field in `PlannerData` (`src/lib/planner-config.ts`)
+  against every `raw.<field>` read in `src/app/api/planner/route.ts`.
+- **Found and fixed:** the Planner's "Visual direction" step's four
+  style sliders (`data.spectrum`) had no corresponding server-side read
+  at all — every other ~47 fields did — so that step's answers were
+  silently dropped before reaching `design@cyvexly.com`, contrary to
+  Owner direction `2026-09-04-14`'s "All project-planner answers"
+  requirement.
+- **Fixed:** the route now reads `raw.spectrum`, keeping only known
+  `visualSpectrums` ids paired with an in-range integer (0-4), and adds
+  a "Style spectrum" email row.
+- Verified: `tsc`/`lint`/`build` clean. Real `next start` on 5173, via a
+  temporary debug log (removed before commit): mixed valid/invalid
+  spectrum input produced exactly the valid labels, no crash; absent
+  `spectrum` produced `[]`, no crash. Full regression: valid payload
+  still 503; missing fields still 400 (same field-error set); malformed
+  JSON still 400; 150KB body still 413s; Contact route unaffected;
+  12-route sitewide sweep all 200. Committed (`4a7b26f`) and pushed.
+- Cleaned up: stopped the owned server (verified PID first); removed
+  scratch payload/log files.
+
+### Recommended next workstream
+
+Re-sweep for new Auditor findings first. Two surfaces now have real
+findings behind them (mailer/rate-limiter/origin-gate: rounds 60-63/65;
+Planner field-mapping: round 66). Consider Contact form client JS,
+`site-config.ts` content, or JSON-LD generation next — each was only
+lightly checked round 66, not exhaustively diffed. Owner gates
+unchanged: Resend account/DNS/API key, analytics/Search Console
+ownership, exact LLC name, About/legal/visual review, final
+indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
 ## Round 65 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
@@ -53,64 +101,10 @@ Round 63 closeout detail is archived at
 there round 65 to keep this file under its 12,288-byte hot-file cap).
 Round 63 fixed the timing-side-channel defect in `isTrustedOrigin()`.
 
-## Round 64 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
-time limit (unattended)
-**Start source:** `25118e3` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item
-(`IFA-2026-09-06-R53`) and ran a fresh adversarial source-level re-review
-of the mailer/rate-limiter/origin-gate surface plus a sitewide truth-claim
-sweep.
-**Completion:** NO NEW DEFECT FOUND — docs-only round, no source changed.
-
-### What was checked
-
-- `IFA-2026-09-06-R53` (reviewed commit `47874b9`, round 62's HEAD,
-  predating round 63's timing-safe-comparison fix) is a **twenty-ninth
-  consecutive independent confirmation, not a new finding** — 0 active
-  code defects. Its own verification matrix exercised the pre-round-63
-  `===` comparison without a timing attack, so it could not have
-  surfaced the defect round 63 had already fixed. Moved to
-  `exchange/processed/`.
-- Re-read `src/lib/mailer.ts` and both `src/app/api/{contact,planner}/
-  route.ts` end to end with an adversarial eye (the surface with four
-  real findings across rounds 60-63): confirmed `isTrustedOrigin()` still
-  uses `timingSafeEqual` with a length check first; the rate limiter's
-  pruning still bounds memory; `getClientIp` ordering unchanged; both
-  routes check honeypot → rate limit → sanitize → validate →
-  mailer-configured in a safe order; every field reaching an email
-  subject/header uses the CR/LF-stripping `sanitizeLine`; every
-  user-supplied value placed into HTML email bodies is escaped.
-- Re-verified the noindex release gate: grepped every `generateMetadata`/
-  `export const metadata` in `src/` for a `robots` field — only the root
-  layout defines one, so no route can silently override the
-  `NEXT_PUBLIC_SITE_INDEXABLE` fail-safe default.
-- Re-swept `src/` for stale worldwide/guarantee/award/testimonial claims
-  per the Owner's truth-audit direction — every match is an explicit
-  denial or a Planner-form option describing the visitor's own business,
-  not a Cyvexly claim.
-- No defect found. No source changed, so no server was started this
-  round — the last live-server verification of this surface remains
-  round 63's. Updated `CYVEXLY_CURRENT_STATE.md`/`CYVEXLY_ACTIVE_CHUNK.md`/
-  `CYVEXLY_APP_DEBT.md`/this file, archiving round 61's `ACTIVE_CHUNK`
-  report, round 63's `APP_DEBT` detail, and round 62's full closeout here
-  to stay under each file's hot-file-cap. Committed and pushed (docs
-  only).
-- Cleaned up: no temporary files, processes, or servers were created.
-
-### Recommended next workstream
-
-Re-sweep for any newly published Auditor findings first. The
-mailer.ts/rate-limiter/origin-gate surface has now had five consecutive
-rounds of adversarial attention (60-64) with the last confirmed-clean —
-it may be reaching convergence; consider directing the next round's
-adversarial energy at a different surface (e.g. the Planner's ~30-field
-sanitize/validate pipeline, or the legal-page/truth-audit content itself)
-rather than a sixth pass over the same three functions. Genuinely
-Owner-gated items are unchanged: Resend account/DNS/API key,
-analytics/Search Console ownership, exact LLC name, About/legal/visual
-review, final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+Round 64 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_64_REPORT.md` (moved
+there round 66 to keep this file under its 12,288-byte hot-file cap).
+Round 64 found 0 new defects (docs-only round, no source changed).
 
 Round 62 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_62_REPORT.md` (moved

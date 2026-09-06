@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 65. Owner launch direction updated 2026-09-04, extended
+**Global round:** 66. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -24,9 +24,10 @@ JSON-LD (round 55), Pricing OfferCatalog JSON-LD (round 56), trimmed
 meta descriptions (round 57), `html lang="en-US"` (round 58), Home's
 meta-description trim (round 59), a rate-limiter IP-spoofing fix
 (round 60), an unbounded-memory-growth fix in the same rate limiter
-(round 61), a dormant Cloudflare-bypass gate (round 62), and a
-timing-safe-comparison hardening of that same gate (round 63), and a
-request-body-size cap on both API routes (round 65) are done.
+(round 61), a dormant Cloudflare-bypass gate (round 62), a
+timing-safe-comparison hardening of that same gate (round 63), a
+request-body-size cap on both API routes (round 65), and a Planner
+visual-direction data-loss fix (round 66) are done.
 Remaining Chunk 5 scope (real
 Resend account/API key, DNS/domain provider access, analytics/search
 ownership, exact LLC name, final indexability approval) is Owner-gated —
@@ -35,68 +36,56 @@ round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
 `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
 
-**Round 65 outcome:** dispositioned Auditor item `IFA-2026-09-06-R54`
-(30th consecutive confirmation, commit `25118e3`, round 63's HEAD, 0
-active code defects). Redirected adversarial review to the Planner's
-30-field pipeline and Privacy/Terms copy (clean) and found a real,
-previously-unflagged defect: neither API route bounded request body
-size, so `request.json()` buffered an arbitrarily large POST unbounded.
-Fixed with a chunked-stream `readJsonWithLimit()` (100,000-byte cap) in
-`src/lib/mailer.ts`, wired into both routes with a 413 response. Verified
-live. Also fixed a session PATH gap (no `node`/`pnpm` by default) — see
-`CYVEXLY_ENVIRONMENT.md`. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/
+**Round 66 outcome:** dispositioned Auditor item `IFA-2026-09-06-R55`
+(31st confirmation, commit `846975d`, round 64's HEAD, 0 active code
+defects). Redirected adversarial review to a third surface (diffed
+every `PlannerData` field against the API route's reads) and found a
+real, previously-unflagged data-loss defect: the Planner's four
+visual-direction style sliders (`data.spectrum`) had no server-side
+read at all, so that step's answers never reached the notification
+email. Fixed in `src/app/api/planner/route.ts` — reads and validates
+`raw.spectrum` against the known ids/range, adds a "Style spectrum"
+email row. Verified live (mixed valid/invalid input, absent field, full
+regression). Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/
 `CYVEXLY_APP_DEBT.md`.
 
+**Round 65 outcome:** dispositioned Auditor item `IFA-2026-09-06-R54`
+(30th confirmation, commit `25118e3`, round 63's HEAD, 0 active
+defects). Found and fixed a real defect: neither API route bounded
+request body size. Fixed with a chunked-stream `readJsonWithLimit()`
+(100,000-byte cap) in `src/lib/mailer.ts`. Also fixed a session PATH gap
+(no `node`/`pnpm` by default) — see `CYVEXLY_ENVIRONMENT.md`.
+
 **Round 64 outcome:** dispositioned Auditor item `IFA-2026-09-06-R53`
-(29th confirmation, commit `47874b9` predating round 63's timing-safe
-fix, 0 active defects). Adversarial source-level re-review of the
-mailer/rate-limiter/origin-gate surface plus a truth-claim sweep — 0 new
-defects, no code changed.
+(29th confirmation, commit `47874b9`, 0 active defects). Adversarial
+source-level re-review of the mailer/rate-limiter/origin-gate surface
+plus a truth-claim sweep — 0 new defects, no code changed.
 
-**Round 63 outcome:** dispositioned Auditor item `IFA-2026-09-06-R52`
-(28th consecutive confirmation, reviewed commit `1854a3f` predating
-rounds 61-62, 0 active code defects). Found and fixed a real (if
-low-severity) defect in round 62's own new `isTrustedOrigin()` gate:
-it compared the origin secret with plain `===`, a non-constant-time
-comparison vulnerable in principle to a timing side-channel once the
-gate is activated. Switched to `node:crypto`'s `timingSafeEqual` with a
-length check first (`src/lib/mailer.ts`). Verified live: dormant state
-unaffected; activated state correctly 403s on missing/wrong-length/
-wrong-but-same-length headers and passes through on the exact secret,
-on both `/api/contact` and `/api/planner`; 15-route regression sweep
-clean. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
-
-**Round 62 outcome:** no new Auditor item published yet. Prepared dormant
-scaffolding for the round-60/61-named Cloudflare-bypass gap: added
-`isTrustedOrigin()` (`src/lib/mailer.ts`), wired into both API routes,
-rejecting (403) any request missing a matching `x-cf-origin-secret`
-header once `CF_ORIGIN_SECRET` is set in Render — always passes when
-unset (current state). Activates once the Owner adds one Cloudflare
-Transform Rule injecting that header on all proxied requests; see
-`CYVEXLY_APP_DEBT.md` item 3 for the exact steps.
-
-Round 61 fixed the rate limiter's unbounded-memory-growth defect; round 60
-fixed the Contact/Planner rate limiter's `X-Forwarded-For` IP-spoofing
-bypass; rounds 58-59 fixed a hot-file-cap violation plus `html lang="en-
-US"` and trimmed Home's meta description. Full detail for all remains in
-`CYVEXLY_APP_DEBT.md`'s resolved-round history.
+Round 63 fixed a timing-side-channel weakness in `isTrustedOrigin()`;
+round 62 prepared the dormant Cloudflare-bypass origin-secret gate;
+round 61 fixed the rate limiter's unbounded-memory-growth defect; round
+60 fixed the Contact/Planner rate limiter's `X-Forwarded-For`
+IP-spoofing bypass; rounds 58-59 fixed a hot-file-cap violation plus
+`html lang="en-US"` and trimmed Home's meta description. Full detail
+for all remains in `CYVEXLY_APP_DEBT.md`'s resolved-round history.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 65. The mailer/rate-limiter/
-origin-gate surface has yielded five real rounds of findings (60-63, 65's
-body-size cap is `mailer.ts` too); consider a third surface next (Contact
-client JS, `site-config.ts` content, JSON-LD generation) rather than
-returning immediately. The Cloudflare-bypass gap has a dormant code-side
-gate (round 62, hardened round 63); it activates only once the Owner adds
-one Cloudflare Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not
-more Builder code. What remains genuinely Owner-gated is otherwise
-unchanged; see "Owner launch decisions and remaining gates" below.
+first for anything published after round 66. The mailer/rate-limiter/
+origin-gate surface (60-63, 65) and the Planner pipeline (66) have each
+yielded real findings; consider a fresh surface next (Contact client JS,
+`site-config.ts` content, JSON-LD generation — all lightly checked round
+66, none exhaustively) rather than returning immediately. The
+Cloudflare-bypass gap has a dormant code-side gate (round 62, hardened
+round 63); it activates only once the Owner adds one Cloudflare
+Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more Builder
+code. What remains genuinely Owner-gated is otherwise unchanged; see
+"Owner launch decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 65's source
-commit on `origin/main` and Render auto-deploys it. `cyvexly.com` is fully
-connected/HTTPS/canonicalized (verified live, round 53). `origin/master`
-is historical, not the deployment branch.
+**Accepted product position:** `main` is pushed through round 66's source
+commit (`4a7b26f`) on `origin/main` and Render auto-deploys it.
+`cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
+round 53). `origin/master` is historical, not the deployment branch.
 
 ## Owner launch decisions and remaining gates
 
