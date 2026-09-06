@@ -10,6 +10,7 @@ import {
   possiblePages,
   primaryGoals,
   timingOptions,
+  visualSpectrums,
   websiteTypes,
 } from "@/lib/planner-config";
 import { siteConfig } from "@/lib/site-config";
@@ -122,6 +123,25 @@ export async function POST(request: Request) {
     }
   }
   const assetLink = sanitizeLine(raw.assetLink, 500);
+  // The client's "Visual direction" step includes four left/right sliders
+  // (data.spectrum, e.g. "Minimal <-> Expressive") that were never read here
+  // at all: every other ~47 PlannerData fields had a corresponding raw.<x>
+  // read below, but raw.spectrum had none, so this entire slider step was
+  // silently dropped before reaching the internal notification email —
+  // contrary to Owner direction 2026-09-04-14's explicit requirement to see
+  // "All project-planner answers." Only accept known spectrum ids with an
+  // in-range integer value (matches the client's 0-4 step slider); anything
+  // else is dropped rather than guessed.
+  const spectrumLabels: string[] = [];
+  if (raw.spectrum && typeof raw.spectrum === "object") {
+    const spectrumRaw = raw.spectrum as Record<string, unknown>;
+    for (const spectrum of visualSpectrums) {
+      const value = spectrumRaw[spectrum.id];
+      if (typeof value === "number" && Number.isInteger(value) && value >= 0 && value <= 4) {
+        spectrumLabels.push(`${spectrum.left} ↔ ${spectrum.right}: ${value}/4`);
+      }
+    }
+  }
   const personalityAdjectives = sanitizeText(raw.personalityAdjectives, 500);
   const colorsToUse = sanitizeText(raw.colorsToUse, 500);
   const colorsToAvoid = sanitizeText(raw.colorsToAvoid, 500);
@@ -247,6 +267,7 @@ export async function POST(request: Request) {
     {
       title: "Visual direction",
       rows: section("Visual direction", [
+        ["Style spectrum", spectrumLabels.join("; ")],
         ["Personality adjectives", personalityAdjectives],
         ["Colors to use", colorsToUse],
         ["Colors to avoid", colorsToAvoid],
