@@ -221,14 +221,9 @@ approved blue-glass atmosphere and dependable content contrast. A Home-only
 restyle, token-only color adjustment, or isolated set of glass cards does not
 satisfy the goal. Owner review remains required after implementation.
 
-### Rounds 22-23 continuity/contrast corrections
-
-Agent-authored implementation notes (not Owner words), fully superseded by
-rounds 24-28 below and already recorded in `CYVEXLY_BUILD_SUMMARY.md`/
-`CYVEXLY_PROJECT_CHUNK_MAP.md` history: round 22 restored sticky navigation
-and added protected translucent fields to close flat Home/Services gaps;
-round 23 darkened the shared warning-coral token for AA contrast on form
-glass (`#d9435f` → `#bd2d49`).
+Rounds 22-23's superseded implementation notes are archived at
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md` (moved round 63/live
+session to free hot-file headroom for new direction).
 
 ## Every-page full-height theme authority 2026-09-01-10
 
@@ -306,224 +301,47 @@ CYVEXLY_TEAM_START_HERE.md and CYVEXLY_ROLE_RULES_MAPPING.md.
 (domain verified live, real Contact/Planner email delivery shipped,
 dormant GA4/GSC scaffolding, Privacy Policy corrected, clean sitewide
 audit). Remainder is Owner-side gates the directive itself names — see
-`CYVEXLY_APP_DEBT.md` items 1-2.
+`CYVEXLY_APP_DEBT.md` items 1-2. Full verbatim Owner text and agent
+interpretation are archived at
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md` (moved round 63/live
+session to free hot-file headroom for new direction — every remaining
+gate it names is still tracked live in `CYVEXLY_APP_DEBT.md`/
+`CYVEXLY_CURRENT_STATE.md`, not lost by the move).
 **Source:** Owner via interactive Claude Code chat
 **Recorded:** 2026-09-05
 
-> "Please take Cyvexly from its current state all the way to production-ready
-> and launch-ready. Do not stop at identifying remaining tasks—complete
-> everything you can directly, test it, and only come back to me for
-> something that genuinely requires my account access, credentials, or a
-> legal fact you cannot determine.
->
-> Here is what I want handled:
->
-> 1. Domain / Render
->
-> - Verify that "cyvexly.com" and the appropriate "www" version are
->   correctly connected to Render.
-> - Confirm HTTPS/SSL is active.
-> - Confirm the preferred domain redirects/canonicalizes correctly.
-> - Check for any DNS, certificate, redirect, or deployment issues.
-> - If anything still requires me to change a Namecheap or Render setting,
->   tell me exactly what value to add/change and where.
->
-> 2. Business email
->
-> - "design@cyvexly.com" already exists and is the correct public business
->   email.
-> - Keep using "design@cyvexly.com" throughout the site unless there is a
->   strong technical reason not to.
-> - Verify there are no outdated or inconsistent email addresses anywhere
->   on the site.
->
-> 3. Contact Form + Project Planner
->    Replace the current "mailto:" behavior with proper server-side form
->    submission.
->
-> I want:
->
-> - Contact form submissions delivered to "design@cyvexly.com"
-> - Project Planner submissions delivered to "design@cyvexly.com"
-> - A professional confirmation shown to the visitor after successful
->   submission
-> - Clear error handling if submission fails
-> - No requirement for the visitor to open their own email app
-> - Spam protection retained/improved
-> - Server-side validation and sanitization
-> - No API keys or secrets exposed in client-side code
->
-> Use a reliable transactional email provider. Resend is preferred unless
-> there is a specific technical reason another provider is better for this
-> stack.
->
-> If domain verification/DNS records are needed for the email provider,
-> prepare everything possible and give me the exact records I need to add.
->
-> Configure the emails so I can clearly see:
->
-> - Which form was submitted
-> - Visitor name
-> - Email
-> - Phone if provided
-> - Company/business name if provided
-> - All project-planner answers
-> - Timestamp
-> - Any other useful submission details
->
-> Set Reply-To to the visitor's email when appropriate so I can simply hit
-> Reply.
->
-> Then perform actual end-to-end test submissions on both forms and verify
-> successful delivery.
->
-> 4. Analytics
->    Set up a sensible privacy-conscious analytics implementation if
->    possible.
->
-> Prefer Google Analytics 4 unless there is a good reason to use something
-> else.
->
-> Make sure:
->
-> - It does not break the site's privacy/accessibility behavior
-> - The Privacy Policy accurately reflects what is actually installed
-> - No analytics claims or cookie language exist for tools we are not
->   actually using
->
-> If my Google account authorization is required, tell me the exact action
-> I need to take.
->
-> 5. Google Search Console
->    Prepare the site for Google Search Console and verify ownership if you
->    have the access needed.
->
-> Submit/verify:
->
-> - "sitemap.xml"
-> - canonical domain
-> - robots.txt behavior
-> - indexing readiness
->
-> If ownership verification requires a DNS record or my Google login, give
-> me the exact minimal step needed.
->
-> 6. Legal pages
->    Review Privacy Policy, Terms, Accessibility, and any other legal/
->    business-identification copy for internal consistency.
->
-> Do not invent legal facts.
->
-> If the exact registered legal entity name is the only missing legal fact,
-> identify every place it needs to appear and tell me once, clearly, what
-> exact legal name you need from me.
->
-> Make sure the policies accurately describe:
->
-> - Contact forms
-> - Data collection
-> - Analytics actually in use
-> - Email handling
-> - Cookies actually in use
-> - Third-party providers actually in use
-> - Current services offered
-> - No payment processing if checkout/payment is not yet implemented
->
-> Remove any temporary "under review," placeholder, TODO, draft, or
-> developer-facing language before launch once the required fact is
-> supplied.
->
-> 7. Final content/truth audit
->    Perform one final sitewide audit for:
->
-> - Placeholder text
-> - Broken links
-> - Dead buttons
-> - Incorrect contact information
-> - Fake testimonials or clients
-> - Unsupported claims
-> - Inconsistent pricing
-> - Inconsistent service descriptions
-> - Typos
-> - Mobile layout issues
-> - Desktop layout issues
-> - Form problems
-> - Missing alt text
-> - Keyboard accessibility
-> - Contrast problems
-> - SEO metadata inconsistencies
-> - Canonical URL problems
-> - Structured-data errors
-> - Console errors
-> - 404s
-> - Mixed-content/security issues
->
-> Keep concept portfolio work clearly labeled as concept work.
->
-> Do not add fake clients, testimonials, revenue numbers, performance
-> claims, guarantees, awards, partnerships, certifications, or unsupported
-> statistics.
->
-> 8. Production indexing
->    Once everything above is actually ready, remove the temporary
->    "noindex" protection and make the production site indexable.
->
-> Before doing that, verify:
->
-> - robots.txt permits intended indexing
-> - sitemap is correct
-> - canonical URLs use the live production domain
-> - no staging URLs remain
-> - no development metadata remains
-> - all production pages that should be indexed are indexable
-> - pages that should not be indexed remain excluded
->
-> 9. Final launch QA
->    After deployment, test the LIVE production site—not just local/dev.
->
-> Check major mobile and desktop sizes and verify:
->
-> - Navigation
-> - Dropdowns
-> - All CTAs
-> - Contact form
-> - Project Planner
-> - Email delivery
-> - Every major route
-> - Case studies
-> - Pricing
-> - External links
-> - 404 behavior
-> - SSL
-> - redirects
-> - sitemap
-> - robots.txt
-> - structured data
-> - accessibility basics
-> - page titles/descriptions
-> - social sharing metadata
->
-> When finished, give me one final concise report with only:
->
-> 1. What you completed
-> 2. Any remaining item that absolutely requires me
-> 3. Exact instructions for that item
-> 4. Whether the site is safe to publicly launch and index
->
-> Please do not give me another long list of things that "could" be done.
-> Complete everything within your access first."
+## Text-cursor/editable-looking body copy defect 2026-09-06-16
+
+**Status:** FIXED ROUND 70 — OWNER VISUAL CONFIRMATION PENDING
+**Source:** Owner via interactive Claude Code chat
+**Recorded:** 2026-09-06
+
+> "on cyvexly i can click on any of the wording and a toggle shows as if i
+> can type. It doesn't affect anything bc i can't type but if it is
+> unclickable then it shouldn't be showing as if you can write something in
+> the words. Its a small bug and doesn't hurt anything but should be
+> fixed."
 
 AGENT INTERPRETATION
 
-This authorizes completing all reachable Chunk 5 work directly (server-side
-email delivery, analytics/GSC scaffolding, legal/content audit, live QA)
-without further check-ins, subject to the hard fences already in force:
-no account creation, no entering/handling secrets on the Owner's behalf, no
-inventing the LLC legal name or other unverifiable business facts, and no
-Namecheap/Render/Google account changes this role cannot perform. Flipping
-the site from `noindex` to publicly indexable is treated as still requiring
-a final explicit Owner go-ahead per the existing Chunk 5 "final indexability
-approval" gate (`CYVEXLY_VISION_PLAN.md` §17, `CYVEXLY_PROJECT_CHUNK_MAP.md`
-Chunk 5) — this direction's own item 8 is conditioned on "once everything
-above is actually ready," and indexing is effectively irreversible once
-crawled. This interpretation is not Owner-authored wording.
+Clicking ordinary body/heading copy shows an editable-text appearance (most
+likely a text-insertion (I-beam) cursor, or similar visual affordance
+suggesting the text is a typable field) even though nothing is actually
+editable and no functionality is broken. This reads as unintended styling
+or an accidental `contenteditable`/input-like treatment on plain text
+elements rather than a real interactive control. Next Builder round should
+reproduce this live (desktop and mobile, across representative routes),
+identify the exact element/CSS rule/cursor value responsible, and correct
+it so plain text no longer visually implies it is editable. Low severity,
+no functional impact — does not block launch — but is a real, reachable
+polish defect. This interpretation is not Owner-authored wording.
+
+ROUND 70 FINDING: reproduced live — no `contentEditable`/JS cause exists;
+this was the browser's own default I-beam cursor over selectable text
+(present on every website), triggered by `cursor: auto`. Fixed by setting
+`cursor: default` on non-interactive prose while explicitly restoring
+`cursor: pointer` on every real interactive control (links, including
+ones nested inside a paragraph, buttons, `[role="button"]`, `summary`);
+text selection/copy itself is unchanged. See `CYVEXLY_APP_DEBT.md`'s
+"Resolved round 70" for verification detail, including a regression this
+round caught and fixed before committing.

@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 69. Owner launch direction updated 2026-09-04, extended
+**Global round:** 70. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -36,7 +36,19 @@ round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
 `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
 
-**Round 69 outcome:** dispositioned Auditor item `IFA-2026-09-06-R58`
+**Round 70 outcome:** dispositioned fresh Owner direction `2026-09-06-16`
+(text-cursor/editable-looking body copy). Reproduced live — confirmed
+it is the browser's universal default I-beam cursor over selectable
+text (`cursor:auto`, not `contentEditable`), not a Cyvexly-specific
+bug. Fixed as a real polish defect without an accessibility regression:
+`cursor:default` on prose, explicit `cursor:pointer` restored on every
+interactive control (including inline links nested in paragraphs).
+Caught and corrected a self-introduced regression during verification
+(unlayered CSS beat Tailwind's `disabled:cursor-not-allowed` utility)
+before committing. `tsc`/lint/build clean, 12-route sweep all 200. Full
+detail in `CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
+
+Round 69 outcome: dispositioned Auditor item `IFA-2026-09-06-R58`
 (34th confirmation, commit `0cc8f61`, 0 active code defects). Reviewed
 About/Privacy/Terms and `service-details.ts` — clean. Found/fixed a
 real truth-claim defect: the Home FAQ preview overclaimed every site
@@ -55,10 +67,14 @@ description.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 69. About/Privacy/Terms copy,
-`service-details.ts`, and pricing-consistency checks are now clean
-(round 69, one real fix landed); genuinely fresh surfaces still not
-given a dedicated adversarial pass include the Planner's client-side
+first for anything published after round 70 (empty as of round 70).
+Owner direction `2026-09-06-16` (text-cursor defect) is now FIXED —
+see `CYVEXLY_APP_DEBT.md`'s "Resolved round 70" for the fix and the
+regression it caught before commit; update that direction's status
+line in `CYVEXLY_OWNER_DIRECTION.md` if the Owner confirms it visually.
+About/Privacy/Terms copy, `service-details.ts`, and pricing-consistency
+checks are clean (round 69); genuinely fresh surfaces still not given a
+dedicated adversarial pass include the Planner's client-side
 `planner-form.tsx` UI logic and the case-study (`/work/[slug]`) content
 against `site-config.ts`'s `selectedWork`/`caseStudies`. The
 Cloudflare-bypass gap has a dormant code-side gate (round 62, hardened

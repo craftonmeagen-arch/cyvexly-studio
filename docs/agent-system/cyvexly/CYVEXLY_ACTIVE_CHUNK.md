@@ -7,6 +7,18 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 70** (scheduled/unattended, 50-minute limit) dispositioned fresh
+Owner direction `2026-09-06-16` (text-cursor/editable-looking body
+copy). No new Auditor item existed. Reproduced live and confirmed it
+is the browser's default I-beam cursor over selectable text (not a
+Cyvexly-specific bug), then fixed it as a real polish defect: added
+`cursor: default` on non-interactive prose while explicitly restoring
+`cursor: pointer` on every real interactive control (`@layer base`, so
+Tailwind's own `cursor-*` utilities still win). Caught and corrected a
+self-introduced regression (unlayered CSS beating
+`disabled:cursor-not-allowed`) before committing. See the round-70
+report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 70" section.
+
 **Round 69** (scheduled/unattended, 50-minute limit) dispositioned
 Auditor item `IFA-2026-09-06-R58` (34th consecutive confirmation, 0
 active code defects) and, adversarially reviewing About/Privacy/Terms
@@ -246,56 +258,70 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
-## Round 69 report — global round 69 (scheduled/unattended session)
+## Round 70 report — global round 70 (scheduled/unattended session)
 
-Dispositioned the one new Auditor inbox item, `IFA-2026-09-06-R58`
-(reviewed commit `0cc8f61`, round 67's HEAD, predating round 68's
-robots.ts sitemap fix). **Thirty-fourth consecutive independent
-confirmation, not a new finding** — 0 active code defects at the
-reviewed commit. Moved to `exchange/processed/`.
+Dispositioned fresh Owner direction `2026-09-06-16` (text-cursor/
+editable-looking body copy: "on cyvexly i can click on any of the
+wording and a toggle shows as if i can type"). No new Auditor inbox
+item existed (`exchange/operational-inbox/` empty).
 
-**Continued round 68's recommended surfaces.** Reviewed `/about`,
-`/privacy`, and `/terms` copy for internal consistency (clean — Privacy's
-"no cookies/analytics" claim matches GA4/GSC still being dormant
-scaffolding; About/Privacy/Terms contact details all match
-`site-config.ts`), `src/lib/service-details.ts` (clean — every
-package's price/timing matches `pricingPackages`/`pricingPreview` and
-the structured-data `lowPrice` values verified round 55), and
-`site-config.ts`'s pricing/FAQ content for cross-field consistency.
+**Reproduced live.** `getComputedStyle` on `h1`/`p` returned
+`cursor: "auto"`, `isContentEditable: false`,
+`document.designMode: "off"`; `grep` across `src/` found zero existing
+`cursor`/`contentEditable`/`user-select` rules. This is the browser's
+own universal default I-beam cursor over selectable text (present on
+every website), not a Cyvexly-specific `contentEditable`/input-like
+styling bug.
 
-**Found and fixed a real, previously-unflagged truth-claim defect.**
-`faqPreview`'s "Will I be able to update my website myself?" answer
-(shown in Home's FAQ preview) said "Yes. Every site includes an
-editable CMS or content workflow suited to your comfort level" — but
-the Signal package's own `scope` list (the entry-level package
-prospects are shown right below/near this same claim) has **no CMS
-line item at all**, and `service-details.ts`'s own answer to the
-near-identical question ("Will we be able to update the site
-ourselves?") is explicitly conditional: "When regular updates are part
-of the brief, we can include an appropriate CMS... The exact editable
-areas are agreed before build." The Services page even lists "Content
-& CMS" as its own separate, variably-scoped service group — confirming
-CMS was never meant to be a universal inclusion. This is exactly the
-"inconsistent service descriptions" / "unsupported claims" category
-Owner direction `2026-09-04-14`'s truth-audit workstream names.
+**Fixed as a real, reachable polish defect without an accessibility
+regression.** Added `cursor: default` on non-interactive prose (`p`,
+`h1`-`h6`, `blockquote`, `figcaption`, `dt`, `dd`) inside `@layer base`
+in `src/app/globals.css`, plus explicit `cursor: pointer` restoration
+on `a`/`button`/`[role="button"]`/`summary` so every real interactive
+control — including inline links nested inside a paragraph
+(`/privacy`, `/terms`, `/accessibility`, `/services/[slug]`'s "Return
+to all services") — keeps its pointer affordance. `user-select` left
+untouched: text stays fully selectable/copyable, since disabling
+selection is a known usability/accessibility anti-pattern the Owner's
+report did not ask for.
 
-**Fixed:** `src/lib/site-config.ts`'s `faqPreview` entry now reads
-"Most projects include an editable CMS or content workflow scoped to
-your plan and comfort level, with training included at handoff — the
-exact editable areas are agreed before build," matching
-`service-details.ts`'s own qualified wording instead of contradicting
-it.
+**Self-caught regression before committing.** The first version of the
+rule sat outside any `@layer`, so it unconditionally beat Tailwind
+utility classes like `disabled:cursor-not-allowed` on the Planner's
+not-yet-reached progress-rail buttons regardless of specificity — an
+unlayered rule always outranks a layered one in the CSS cascade.
+Live-tested `/start` before committing, found disabled buttons
+reporting `cursor: "pointer"` instead of `"not-allowed"`, moved the
+rule inside `@layer base`, and re-verified correct behavior across
+every case.
 
-**Verified:** `tsc`/`lint`/`build` clean. Real `next start` on port
-5173: fetched the rendered Home page and confirmed the corrected
-sentence appears verbatim in the server-rendered output. A 12-route
-regression sweep (`/`, `/services`, `/work`, `/pricing`, `/process`,
-`/about`, `/contact`, `/faq`, `/accessibility`, `/privacy`, `/terms`,
-`/start`) all 200, zero regressions. Committed (`7239d3b`) and pushed.
+**Verified:** `tsc`/`lint`/`build` clean (one pre-existing unrelated
+lint warning, untouched). Real `next start` on port 5173: computed-
+style checks on Home (`h1`/`p` → `default`), `/start` (all Planner
+button states, including `not-allowed`, correct), `/privacy` (18
+inline links all `pointer`), `/services/business-websites` ("Return to
+all services" `pointer`), `/contact` (submit button `pointer`), `/faq`
+(accordion buttons `pointer`). 12-route sitewide sweep all 200.
 
-Cleaned up: stopped the owned `next start` server (verified the real
-listener PID via `netstat`/`taskkill` first); removed the scratch
-server-response captures.
+**Environment fix, documented for the next round:** this session's
+PowerShell had no `node`/`npm`/`pnpm` on `PATH` despite them being
+installed — added the real install directories
+(`...\Programs\nodejs\node-v24.19.0-win-x64`, `...\Roaming\npm`) to
+`$env:Path` for the session; no system/user environment change made.
+
+Cleaned up: stopped the owned `next dev`/`next start` listener
+(verified the real listener PID via `Get-NetTCPConnection -LocalPort
+5173 -State Listen`, not process name — this host runs many unrelated
+pre-existing `node.exe` processes); removed scratch log files from
+`$env:TEMP`. Also committed pre-existing uncommitted hot-file-cap
+archival edits to `CYVEXLY_OWNER_DIRECTION.md`/`ARCHIVE.md` found
+already made but uncommitted at round start (content verified correct
+and complete, not discarded).
+
+Round 69's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_69_REPORT.md` (moved
+there round 70 to keep this file under its 30,720-byte hot-file cap).
+Round 69 fixed the Home FAQ preview's CMS-inclusion overclaim.
 
 Round 68's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_68_REPORT.md` (moved

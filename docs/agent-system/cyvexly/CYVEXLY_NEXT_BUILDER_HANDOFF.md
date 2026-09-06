@@ -1,5 +1,55 @@
 # Cyvexly Next Builder Handoff
 
+## Round 70 closeout
+
+**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
+time limit (unattended)
+**Start source:** `44724bd` on `main` (pushed, matched `origin/main`)
+**Scope:** dispositioned fresh Owner direction `2026-09-06-16` (text-
+cursor/editable-looking body copy). No new Auditor inbox item existed.
+**Completion:** REAL SOURCE FIX LANDED — see below.
+
+### What was checked and fixed
+
+No new Auditor inbox item existed. Reproduced the Owner-reported issue
+live: `getComputedStyle` on `h1`/`p` returned `cursor: "auto"`,
+`isContentEditable: false` — the browser's universal default I-beam
+cursor over selectable text, not a Cyvexly-specific bug. **Fixed:**
+`src/app/globals.css` now sets `cursor: default` on non-interactive
+prose (inside `@layer base`) while explicitly restoring
+`cursor: pointer` on every real interactive control, including inline
+links nested inside a paragraph; `user-select` untouched (text stays
+selectable/copyable). **Self-caught regression before committing:** the
+first version sat outside any `@layer` and so unconditionally beat
+Tailwind's `disabled:cursor-not-allowed` utility on the Planner's
+progress-rail buttons (an unlayered rule always outranks a layered one)
+— moved inside `@layer base` and re-verified. Full detail, including
+every route/state checked, is in `CYVEXLY_APP_DEBT.md`'s "Resolved
+round 70".
+
+**Verified:** `tsc`/lint/build clean; 12-route sitewide sweep all 200.
+
+**Environment fix:** this session's PowerShell had no `node`/`npm`/
+`pnpm` on `PATH` despite them being installed — added their real
+install directories to `$env:Path` for the session (exact paths in
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 70" if this recurs).
+
+Cleaned up: stopped the owned listener (verified the real PID via
+`Get-NetTCPConnection -LocalPort 5173 -State Listen`); removed scratch
+logs. Also committed pre-existing uncommitted hot-file-cap archival
+edits to `CYVEXLY_OWNER_DIRECTION.md`/`ARCHIVE.md` found already made
+but uncommitted at round start (content verified correct/complete).
+
+### Recommended next workstream
+
+Re-check the Auditor inbox first. Genuinely fresh surfaces not yet
+given a dedicated adversarial pass: `planner-form.tsx`'s client-side
+step logic, or the case-study (`/work/[slug]`) content against
+`site-config.ts`'s `selectedWork`/`caseStudies`. Owner gates unchanged:
+Resend account/DNS/API key, analytics/Search Console ownership, exact
+LLC name, About/legal/visual review (now including this round's cursor
+fix), final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
 ## Round 69 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
@@ -51,52 +101,10 @@ Round 67 closeout detail is archived at
 there round 69 to keep this file under its 12,288-byte hot-file cap).
 Round 67 fixed the Planner secondary-goals-label mapping defect.
 
-## Round 68 closeout
-
-**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
-time limit (unattended)
-**Start source:** `0cc8f61` on `main` (pushed, matched `origin/main`)
-**Scope:** dispositioned the one new Auditor inbox item
-(`IFA-2026-09-06-R57`) and, per round 67's recommendation, moved to a
-fresh surface — found and fixed a real gap in `robots.ts`.
-**Completion:** REAL SOURCE FIX LANDED — see below.
-
-### What was checked
-
-- `IFA-2026-09-06-R57` (commit `33e3f4c`, round 66's HEAD): **thirty-
-  third consecutive confirmation**, 0 active code defects. Moved to
-  `exchange/processed/`.
-- Reviewed Contact form client JS (matches server field-for-field),
-  `site-config.ts` (pricing/US-only/payment-deferral copy consistent),
-  and `structured-data.ts`'s JSON-LD builders (real copy only, safely
-  serialized) — no defects found on any of the three recommended
-  surfaces.
-- **Found and fixed on an adjacent surface:** `src/app/robots.ts` never
-  emitted a `Sitemap:` directive, even though `src/app/sitemap.ts`
-  already builds a real 20-route sitemap — a standard, zero-cost
-  crawler-discovery convention directly serving Owner direction
-  `2026-09-04-14`/vision §17's sitemap/robots/indexing-readiness
-  workstream.
-- **Fixed:** `robots.ts` now returns `sitemap: \`${SITE_URL}/sitemap.xml\``
-  (reusing the same `SITE_URL` constant `layout.tsx` uses for
-  `metadataBase`), in both index and no-index modes.
-- Verified: `tsc`/`lint`/`build` clean. Real `next start` on 5173:
-  `curl /robots.txt` shows the new `Sitemap:` line alongside the
-  existing `Disallow: /`; `/sitemap.xml` unchanged; 12-route sitewide
-  sweep all 200. Committed (`ce28c0e`) and pushed.
-- Cleaned up: stopped the owned server (verified the real listener PID
-  via `netstat`/`taskkill` first); removed the scratch server log.
-
-### Recommended next workstream
-
-Re-sweep for new Auditor findings first. Contact client JS,
-`site-config.ts`, and JSON-LD generation are now checked clean this
-round — consider the About/Privacy/Terms page content for internal
-consistency, or `service-details.ts`, next (neither has had a
-dedicated adversarial pass). Owner gates unchanged: Resend account/
-DNS/API key, analytics/Search Console ownership, exact LLC name,
-About/legal/visual review, final indexability approval (see
-`CYVEXLY_OWNER_DIRECTION.md`).
+Round 68 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_68_REPORT.md` (moved
+there round 70 to keep this file under its 12,288-byte hot-file cap).
+Round 68 fixed a missing `Sitemap:` directive in `robots.ts`.
 
 Round 66 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_66_REPORT.md` (moved
