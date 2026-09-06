@@ -7,6 +7,14 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 60** (scheduled/unattended, 50-minute limit) dispositioned Auditor
+item `IFA-2026-09-06-R50` (26th consecutive confirmation, 0 active code
+defects) and found/fixed a real security defect no prior Auditor round
+had named: the Contact/Planner rate limiter's client-IP detection was
+trivially bypassable via a spoofed `X-Forwarded-For` header. See the
+round-60 report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 60"
+section.
+
 **Round 59** (scheduled/unattended, 50-minute limit) dispositioned Auditor
 item `IFA-2026-09-06-R49` (25th consecutive confirmation, 0 active code
 defects; its hot-file-cap observation on `CYVEXLY_CURRENT_STATE.md` was
@@ -173,6 +181,59 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 60 report — global round 60 (scheduled/unattended session)
+
+Read the one new Auditor inbox item, `IFA-2026-09-06-R50` (reviewed
+commit `32a0e10`, round 58's HEAD, predating round 59's meta-description
+fix). **Twenty-sixth consecutive independent confirmation, not a new
+finding** — 0 active code defects. Moved to `exchange/processed/`.
+
+**Found a real security defect through adversarial testing that no prior
+Auditor round had named.** `getClientIp()` (`src/lib/mailer.ts`) keyed the
+Contact/Planner rate limiter off the first (leftmost) comma-separated
+value in the client-supplied `X-Forwarded-For` header — fully attacker
+controlled, since a proxy conventionally appends its own observed peer to
+the header rather than replacing it. Proved this live: 7 POST requests to
+`/api/contact`, each with a unique spoofed `X-Forwarded-For`, all sailed
+past the 5-per-15-minute limiter that correctly 429'd a 6th request
+sharing one real key — a one-line client change defeated the
+"proportionate accessible spam/rate protection" Owner direction
+`2026-09-04-14` requires.
+
+**Fixed:** production traffic to `cyvexly.com` is confirmed (round 53) to
+run through Cloudflare in front of Render, so `getClientIp` now checks
+`cf-connecting-ip` first — set by Cloudflare's edge and overwritten on
+every request, never passed through from the client — falling back to
+the old (still-spoofable) `X-Forwarded-For` logic only when that header
+is absent.
+
+**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+pre-existing, unrelated lint warning in the round-42 evidence script).
+Real `next start` server on port 5173: re-ran the exact spoofed-header
+attack with a fixed `CF-Connecting-IP` present — the 6th request now
+correctly 429s regardless of the (still-varying, still-spoofed)
+`X-Forwarded-For`, on both `/api/contact` and `/api/planner`. A fresh
+full-site crawl (20 HTML routes + sitemap/robots/manifest + an invalid
+path) found zero duplicate titles/descriptions, zero broken internal
+links (22 checked), correct trailing-slash redirects, correct 404s, and
+correct immutable/no-cache cache-header split between hashed
+`_next/static` assets and unhashed `public/` files. Committed (`4102764`)
+and pushed.
+
+**Named, not fixed — a genuine Owner/account gate:** an attacker can
+still bypass this by hitting the direct Render origin
+(`cyvexly-studio.onrender.com`) instead of `cyvexly.com`, skipping
+Cloudflare and forging `cf-connecting-ip` at the origin directly. Closing
+that needs a Render/Cloudflare account-level control (Authenticated
+Origin Pulls, or an IP allowlist on the Render origin) this role cannot
+configure.
+
+Cleaned up: stopped the owned `next start` server twice (before and after
+the rebuild; verified the real listener PID via `netstat`/`LISTENING`
+each time). Removed this round's own scratch server logs/crawl script,
+and successfully retried removing the two Windows-locked scratch logs
+named in round 58's handoff (now gone).
+
 ## Round 59 report — global round 59 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-06-R49` (reviewed
@@ -271,44 +332,10 @@ round 59 to restore correct latest-three rotation — this file had kept 54
 live alongside 55 and 58, one round too many). Round 54 added per-slug
 Open Graph images for `services/[slug]` and `work/[slug]`.
 
-## Round 55 report — global round 55 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-06-R45` (reviewed commit
-`26bc8b2`, predating round 53's remaining commits and round 54's per-slug
-OG images). **Twenty-first consecutive independent confirmation, not a new
-finding** — 0 active code defects. Its listed "Production domain DNS"
-external gate was already stale (round 53 verified the domain fully
-connected). Moved to `exchange/processed/`.
-
-Shipped a new reachable angle: **Service JSON-LD for the five
-`/services/[slug]` detail pages.** `src/lib/structured-data.ts` already had
-Organization, FAQPage, and BreadcrumbList JSON-LD, but the site's five core
-commercial routes (the service-detail pages) carried only BreadcrumbList —
-schema.org's `Service` type (Google's documented type for a professional
-service listing) was the one structured-data gap left on the pages most
-directly tied to conversion. Added `buildServiceJsonLd()` reusing each
-service's own already-published `name`/`summary`/`package.price` — no
-invented copy. The published price copy ("From $X") is a starting figure,
-not a fixed price, so it publishes as `AggregateOffer.lowPrice` (schema.org's
-documented pattern for a "starting from" figure) rather than a plain
-`Offer.price`, avoiding a claim the copy itself doesn't make.
-
-**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (one pre-existing,
-unrelated lint warning in a round-42 evidence script, untouched this round).
-Real `next start` server on port 5173: curled and JSON-parsed all 5 slugs'
-`<script type="application/ld+json">` output — valid JSON, correct
-`serviceType`/`name`/`description`/`provider`/`areaServed` on every slug,
-and `lowPrice` exactly matches each package's published price (3500, 5800,
-1800, 8500, 99 for business-websites/website-redesigns/landing-pages/
-ecommerce-websites/website-care respectively — the last is the $99/mo Care
-plan). A 12-route regression sweep (`/`, `/about`, `/services`, `/pricing`,
-`/work`, `/process`, `/contact`, `/faq`, `/start`, `/work/aurora-spaces`,
-`/sitemap.xml`, `/robots.txt`, plus an invalid path) shows zero regressions.
-Committed (`441c6cd`) and pushed.
-
-Cleaned up: stopped the owned `next start` server (verified the real
-listener PID via `netstat`/`Get-Process` before stopping), no temporary
-files were created this round.
+Round 55's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_55_REPORT.md` (moved there
+round 60 to restore latest-three rotation) — 58, 59, 60 stay live. Round 55
+added Service JSON-LD to the five `/services/[slug]` detail pages.
 
 Round 51's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_51_REPORT.md` (moved there

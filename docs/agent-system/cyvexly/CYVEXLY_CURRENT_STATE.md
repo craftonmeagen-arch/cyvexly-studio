@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 59. Owner launch direction updated 2026-09-04, extended
+**Global round:** 60. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -20,14 +20,32 @@ plus security.txt (round 50), sitewide Open Graph/Twitter Card metadata
 (round 51), per-route OG images (round 52), real server-side Contact/
 Planner email delivery via Resend plus dormant GA4/GSC scaffolding
 (round 53), per-slug OG images for dynamic routes (round 54), Service
-JSON-LD (round 55), Pricing OfferCatalog JSON-LD (round 56), and trimmed
-meta descriptions (round 57) are done. Remaining Chunk 5 scope (real
+JSON-LD (round 55), Pricing OfferCatalog JSON-LD (round 56), trimmed
+meta descriptions (round 57), `html lang="en-US"` (round 58), Home's
+meta-description trim (round 59), and a rate-limiter IP-spoofing fix
+(round 60) are done. Remaining Chunk 5 scope (real
 Resend account/API key, DNS/domain provider access, analytics/search
 ownership, exact LLC name, final indexability approval) is Owner-gated —
 see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining Owner gates". Full
 round-by-round detail is in `CYVEXLY_ACTIVE_CHUNK.md` and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`; rounds 52-56 are archived at
 `docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`.
+
+**Round 60 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-06-R50` (26th consecutive confirmation, reviewed commit
+`32a0e10`, predating round 59's meta-description fix, 0 active code
+defects). Adversarial testing (not named by any prior Auditor round)
+found and fixed a real security defect: the Contact/Planner rate
+limiter's `getClientIp()` trusted the client-controlled leftmost
+`X-Forwarded-For` hop, letting 7 requests with unique spoofed headers
+all bypass the 5-per-15-minute limit. Fixed to check Cloudflare's
+`cf-connecting-ip` (unforgeable, verified live in front of Render since
+round 53) first. Verified live: a fixed `cf-connecting-ip` now
+correctly 429s a 6th request despite varying spoofed `X-Forwarded-For`,
+on both routes; zero regressions across a full crawl/link-check.
+Committed (`4102764`) and pushed. Named, not fixed: bypassing Cloudflare
+via the direct Render origin still defeats this — needs Render/
+Cloudflare account-level origin restriction (see `CYVEXLY_APP_DEBT.md`).
 
 **Round 59 outcome (scheduled/unattended):** dispositioned Auditor item
 `IFA-2026-09-06-R49` (25th consecutive confirmation, reviewed commit
@@ -52,29 +70,25 @@ detailed outcome paragraphs (already duplicated in `CYVEXLY_ACTIVE_CHUNK.md`/
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`) and rewrote this file as a lean dashboard
 per §7.12's own spec. Re-ran `Test-HotFileCaps.ps1` clean (0 violations).
 
-**Round 57 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-06-R47` (23rd consecutive confirmation, reviewed commit
-`63fc8fe`, 0 active code defects). Measured every route's rendered meta
-description for the first time and found 5 exceeded the ~155-160 char
-search-snippet budget; tightened `/services`/`/pricing` and switched
-`work/[slug]` to reuse the already-published `selectedWork` card summary.
-`tsc`/`lint`/`build` clean; verified via a real `next start` server (all 5
-now render 48-154 chars, zero regressions across a 19-route sweep). Full
-detail in `CYVEXLY_APP_DEBT.md`'s "Resolved round 57" section.
+Round 57's full outcome is archived at
+`docs/archive/chunks/CYVEXLY_CURRENT_STATE_ROUNDS_52_56_ARCHIVE.md`
+(moved there round 60 to keep this file under its byte cap): trimmed 5
+oversized meta descriptions.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 59. Open Graph/Twitter coverage,
-structured data (Organization/FAQPage/BreadcrumbList/Service/
-AggregateOffer/OfferCatalog), manifest/icons, print CSS, error boundaries/
-theme-color, COOP/CORP headers/security.txt, meta-description length
-(sitewide, including Home), and `html lang="en-US"` are all shipped —
-keep looking for genuinely new QA/build angles (e.g. a true
-rate-limiting check beyond the honeypot) rather than assuming the
-surface is empty. What remains genuinely Owner-gated is unchanged; see
-"Owner launch decisions and remaining gates" below.
+first for anything published after round 60. Open Graph/Twitter coverage,
+structured data, manifest/icons, print CSS, error boundaries/theme-color,
+security headers/security.txt, meta-description length, `html
+lang="en-US"`, and the rate-limiter IP-spoofing fix are all shipped —
+keep looking for genuinely new QA/build angles (adversarial testing, not
+just feature checklists, found round 60's finding) rather than assuming
+the surface is empty. The residual Cloudflare-bypass gap named in round
+60 needs Render/Cloudflare account-level config, not more Builder code.
+What remains genuinely Owner-gated is unchanged; see "Owner launch
+decisions and remaining gates" below.
 
-**Accepted product position:** `main` is pushed through round 59's commits
+**Accepted product position:** `main` is pushed through round 60's commits
 on `origin/main` (see `git log`) and Render has auto-deployed them. The
 production domain `cyvexly.com` is fully connected, HTTPS-verified, and
 canonicalized (verified live, round 53). `origin/master` is historical and

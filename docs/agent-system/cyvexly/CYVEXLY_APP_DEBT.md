@@ -1,5 +1,60 @@
 # Cyvexly App Debt
 
+## Resolved round 60
+
+- **Dispositioned Auditor inbox item `IFA-2026-09-06-R50`** — a
+  twenty-sixth consecutive independent confirmation (reviewed commit
+  `32a0e10`, round 58's HEAD, predating round 59's meta-description
+  fix), 0 active code defects. Moved to `exchange/processed/`.
+- **Found and fixed a real security defect via adversarial testing, not
+  named by any prior Auditor round: the Contact/Planner rate limiter's
+  client-IP detection was trivially bypassable.** `getClientIp()` (in
+  `src/lib/mailer.ts`) took the *first* comma-separated hop of the
+  client-supplied `X-Forwarded-For` header — a value the client fully
+  controls, since a proxy conventionally appends its own observed peer
+  to the header rather than replacing it. Proved this live: 7 POST
+  requests to `/api/contact`, each carrying a unique spoofed
+  `X-Forwarded-For` value, all passed the 5-per-15-minute limiter that
+  correctly 429'd a 6th request sharing one real key — a one-line
+  client-side header change defeated the entire "proportionate
+  accessible spam/rate protection" Owner direction `2026-09-04-14`
+  requires. Production traffic to `cyvexly.com` is confirmed (round 53)
+  to pass through Cloudflare in front of Render, so fixed `getClientIp`
+  to check `cf-connecting-ip` first — set by Cloudflare's edge and
+  overwritten on every request, never passed through from the client —
+  falling back to the old (still-spoofable) `X-Forwarded-For` logic only
+  for non-Cloudflare paths.
+- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
+  pre-existing, unrelated lint warning in the round-42 evidence script).
+  Real `next start` server on port 5173: re-ran the exact spoofed-header
+  attack with a fixed `CF-Connecting-IP` present — the 6th request now
+  correctly 429s regardless of the (still-varying, still-spoofed)
+  `X-Forwarded-For` value, on both `/api/contact` and `/api/planner`
+  (separate rate-limit keys, same shared helper). A fresh full crawl (20
+  HTML routes + sitemap/robots/manifest + an invalid path) found zero
+  duplicate titles/descriptions, zero broken internal links (22 checked),
+  correct trailing-slash redirects, correct 404s on invalid static/
+  dynamic paths, and correct immutable/no-cache header split between
+  hashed `_next/static` assets and unhashed `public/` files — zero
+  regressions. Committed (`4102764`) and pushed.
+- **Named, not fixed — a genuine authorization gate, not a Builder-reachable
+  gap:** an attacker can still bypass this fix entirely by hitting the
+  direct Render origin (`cyvexly-studio.onrender.com`, listed live in
+  `AGENTS.md`) instead of `cyvexly.com`, skipping Cloudflare and forging
+  `cf-connecting-ip` directly at the origin. Closing that residual path
+  needs a Render/Cloudflare account-level control (Cloudflare
+  Authenticated Origin Pulls, or restricting the Render origin to
+  Cloudflare's IP ranges) that requires dashboard access this role does
+  not have.
+- Cleaned up: stopped the owned `next start` server twice (before and
+  after the rebuild; verified the real listener PID via `netstat` +
+  `LISTENING` before each stop). Removed this round's own scratch server
+  logs and crawl script under the OS temp scratchpad. Retried removing
+  the two Windows-locked scratch logs named in round 58's handoff
+  (`cyvexly-round57-server.log`, `cyvexly-round58-server.log`) — both
+  removed cleanly this round; that recurring lock class is resolved for
+  now.
+
 ## Resolved round 59
 
 - **Dispositioned Auditor inbox item `IFA-2026-09-06-R49`** — a
@@ -110,36 +165,10 @@ Round 54's full detail is archived at
 round 57 to keep this file under its 30720-byte hot-file cap): round 54
 added per-slug Open Graph images for `services/[slug]` and `work/[slug]`.
 
-## Resolved round 56
-
-- **Dispositioned Auditor inbox item `IFA-2026-09-06-R46`** — a
-  twenty-second consecutive independent confirmation (reviewed commit
-  `82b531b`, round 54's HEAD, predating round 55's Service JSON-LD), 0
-  active code defects. Its "Production Domain & DNS Connection" gate note
-  was already stale (round 53 verified the domain fully connected). Moved
-  to `exchange/processed/`.
-- **New angle — OfferCatalog JSON-LD for `/pricing`.** Round 55's handoff
-  named this directly: Services and each service-detail page now carry
-  Service/AggregateOffer JSON-LD, but Pricing — the site's other core
-  commercial page — had none. Added `pricingJsonLd` in
-  `src/lib/structured-data.ts` (`Service` + `hasOfferCatalog`/`OfferCatalog`
-  listing all 5 packages as `Offer`s), reusing each package's own
-  already-published `name`/`bestFor`/`price`. "Custom system" ("Quoted
-  after discovery") has no extractable figure and is listed without a
-  `priceSpecification` rather than inventing one — matching the page's own
-  "Price" vs. "Starting at" label distinction.
-- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-  pre-existing, unrelated lint warning in the round-42 evidence script).
-  Real `next start` server on port 5173: fetched `/pricing`, parsed both
-  JSON-LD script tags — valid JSON, `Organization` unchanged, new `Service`
-  block lists all 5 packages in order with prices 1800/3500/5800/8500
-  matching the published copy exactly and "Custom system" correctly
-  price-less. A 14-route regression sweep (static + dynamic + sitemap/
-  robots + an invalid path) shows zero regressions. Committed (`8f5fc2b`)
-  and pushed.
-- Cleaned up: stopped the owned `next start` server (verified the real
-  listener PID via `netstat`/`Get-Process` before stopping), removed the
-  round's own scratch HTML fetch.
+Round 56's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_56_ARCHIVE.md` (moved there
+round 60 to keep this file under its 30720-byte hot-file cap): round 56
+added OfferCatalog JSON-LD to `/pricing`.
 
 ## Resolved round 55
 
