@@ -77,7 +77,10 @@ export const selectedWork = [
   },
 ];
 
-export const workFilters = ["All", "Business Site", "Redesign", "Landing Page", "Commerce", "Concept"];
+// Every filter here must match at least one selectedWork item's `category`
+// (or "Concept", matched against `kind`) — an unmatched filter is a
+// guaranteed dead end ("No projects match that filter yet.").
+export const workFilters = ["All", "Business Site", "Commerce", "Concept"];
 
 export const caseStudies = {
   "aurora-spaces": {
