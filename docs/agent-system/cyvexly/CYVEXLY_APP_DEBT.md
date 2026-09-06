@@ -190,12 +190,27 @@ Organization JSON-LD.
 
 ## Open
 
-1. **Production domain is confirmed; the account-bound DNS/Render connection
-   remains open. Round 29 closed the reachable code-side metadata gap.**
-   The Owner confirmed `cyvexly.com`. The domain still needs Render custom-
-   domain setup, DNS replacement of the Namecheap parking destination, HTTPS
-   verification, root/`www` canonical behavior, and public route proof —
-   these require account access this Builder does not have.
+1. **RESOLVED round 53 (verified live, not a code change).** This item's
+   text below claimed the DNS/Render connection was still open and required
+   Owner account access. Round 53 (interactive session, Owner direction
+   `2026-09-05-15`) checked the actual production domain directly — no
+   account access needed to observe live DNS/HTTP/TLS behavior — and found
+   it fully connected: `http://cyvexly.com` and `http://www.cyvexly.com`
+   both 301 to `https://cyvexly.com/`; `https://www.cyvexly.com` 301s to
+   the apex; a valid Google Trust Services certificate is active (the
+   domain sits behind Cloudflare in front of the Render origin, confirmed
+   via `Server: cloudflare` plus `x-render-origin-server: Render` response
+   headers); `robots.txt`, `sitemap.xml`, and per-route canonical/og tags
+   all resolve correctly on the live production domain; round 52's per-
+   route Open Graph images are already deployed and live. No reachable
+   Builder work remains on domain/HTTPS/canonicalization. **Original text,
+   preserved for history:** "Production domain is confirmed; the account-
+   bound DNS/Render connection remains open. Round 29 closed the reachable
+   code-side metadata gap. The Owner confirmed `cyvexly.com`. The domain
+   still needs Render custom-domain setup, DNS replacement of the
+   Namecheap parking destination, HTTPS verification, root/`www` canonical
+   behavior, and public route proof — these require account access this
+   Builder does not have."
    **Round 29 update:** `metadataBase` is now set to `https://cyvexly.com` in
    `src/app/layout.tsx`, and a real `src/app/sitemap.ts` (App Router
    `MetadataRoute.Sitemap` special file) now enumerates all 17 built public
@@ -214,89 +229,42 @@ Organization JSON-LD.
    is unchanged and still defaults to no-index; robots.txt already gates on
    the same env var. This closes the code-only portion of item 1 completely;
    the DNS/Render account connection is still the real remaining blocker.
-2. **§4.12 Outcome Reachability Check — Project Planner (Chunk 3)
-   email-delivery mechanism.** Performed round 3, before opening Chunk 3,
-   per the round-2 handoff's explicit recommendation. **Round 4 update:**
-   the separable, authorized part of this item (the Planner's UI/state/
-   validation) is now built and verified at `/start` — see
-   `CYVEXLY_ACTIVE_CHUNK.md`'s round-4 report. The blocked part described
-   below (a real automatic confirmation email sent *from* Cyvexly) is
-   unchanged and still needs both authorizations named here. The Planner
-   currently submits via the same `mailto:` interim bridge as Contact,
-   explicitly labeled in the UI as not satisfying this requirement.
-   - **Required outcome (vision §6.9):** on Planner submit, (a) Cyvexly
-     receives the complete structured answers, and (b) the prospect
-     automatically receives a confirmation email summarizing their own
-     answers, sent *from* Cyvexly — not something the prospect must send
-     themselves.
-   - **Normal handling for this class of problem:** a Next.js Route
-     Handler (server-side `app/api/.../route.ts`) that calls a
-     transactional email API (e.g., Resend, Postmark, SendGrid, AWS SES)
-     to send both the internal notification and the prospect
-     confirmation. This is the standard pattern for a dynamic Next.js app
-     (not a static site) needing server-sent email, and is the strongest
-     departure-justified alternative to a client-only mechanism precisely
-     because the outcome requires mail sent *by* the server, not the
-     visitor's own mail client.
-   - **Actual platform/constraints:** the app is Next.js on (per vision
-     §15) a Render web service — capable of running server routes, so the
-     pattern is technically compatible. No credential capability is
-     recorded for any email-delivery provider (`CYVEXLY_TOOLS_AND_
-     CAPABILITIES.md`).
-   - **Verified reachability:** the domain is now confirmed as `cyvexly.com`,
-     but end-to-end delivery still requires a chosen business-inbox and
-     transactional-email provider, authorized credentials, DNS-based sender
-     verification (SPF/DKIM), and real receipt/confirmation proof.
-   - **What would falsify this:** discovering the deploy platform includes
-     a zero-credential outbound-email primitive that needs no third-party
-     account or domain verification — not found; every mainstream
-     transactional-email path requires a provider account at minimum, and
-     reliable delivery additionally requires domain verification.
-   - **Classification:** reachable after provider/account authorization,
-     credential configuration, and sending-domain verification; not something
-     a Builder may substitute with a fabricated or silently-scoped-down path.
-   - **Separable authorized work that remains reachable now (not
-     blocked):** the Planner's UI — nine-step form, progress indicator,
-     per-step validation, conditional questions, review/summary step —
-     needs no email backend to build and verify (content/state/interaction
-     only). The interim zero-authorization submit mechanism already
-     proven on the Contact page (round 2's `mailto:` bridge) can serve
-     `/start` too, but must be documented as not fulfilling the "automatic
-     confirmation email from Cyvexly" requirement — it only lets the
-     *visitor's own* mail client send a notification to Cyvexly, exactly
-     like Contact. Route to the Owner: which business-inbox and transactional
-     email provider to authorize, and enter its credential securely in Render.
-   - **Recommendation:** the next Builder opening Chunk 3 should build the
-     full Planner UI/state/validation now as the coherent authorized
-     slice, wire submission to the same `mailto:` interim pattern as
-     Contact with the limitation stated in this entry, and leave the real
-     transactional-email wiring as an explicitly routed follow-up once
-     both the domain and an email-provider authorization exist — not
-     invent or silently downgrade the "sent from Cyvexly" requirement.
-   - **Round 4 update — a real, honest limitation of the interim bridge
-     for a form this size, not a new blocker.** Built round 4: the
-     Planner's `mailto:` submission (`/start`) encodes the entire
-     nine-step answer summary into the `mailto:` URL itself, unlike
-     Contact's single short message field. A thoroughly answered
-     submission (long text in several open-ended fields: business
-     description, current problems, sites admired, open notes, etc.)
-     could plausibly produce a `mailto:` URL long enough to hit a
-     mail-client or OS protocol-handler length limit on some platforms —
-     not measured precisely this round (no clean way to intercept
-     `window.location.href` assignment for measurement without
-     triggering a real OS-level mail-client handoff, which this round
-     deliberately avoided — see `CYVEXLY_ACTIVE_CHUNK.md`'s round-4
-     report). This has no clean fix within the current no-backend
-     constraint: truncating the body risks silently dropping real
-     prospect answers, which is worse than the rare failure case it
-     would prevent. The real fix is the same one already tracked above —
-     a server-side email route once authorized, which sends the full
-     structured data directly rather than round-tripping it through a
-     URL. Not a new blocker on opening Chunk 3 or building the Planner
-     (Contact already accepted this class of interim-bridge limitation),
-     but worth the next Builder or Owner knowing before treating the
-     `mailto:` bridge as a durable solution rather than the explicitly
-     temporary one it's labeled as in the UI.
+2. **RESOLVED round 53 (code-complete; delivery untested pending Owner
+   account).** Contact and Planner now both submit server-side (Next.js
+   Route Handlers, `src/app/api/contact/route.ts` and
+   `src/app/api/planner/route.ts`) through Resend, per Owner direction
+   `2026-09-05-15`. Internal notification goes to `design@cyvexly.com`
+   with Reply-To set to the visitor's email; a best-effort visitor
+   confirmation is sent with Reply-To `design@cyvexly.com`. Server-side
+   validation mirrors every client-side required-field rule; the honeypot
+   is re-checked server-side; a per-IP in-memory rate limiter (5/15min) is
+   new defense-in-depth; all text is sanitized (control-character/length
+   caps, single-line header-injection defense) before use in email
+   subjects/headers/bodies. `src/lib/mailer.ts` centralizes this. No secret
+   is readable from client code — `RESEND_API_KEY` is read only inside the
+   two Node-runtime route handlers.
+   **What remains — a real Owner account, not a Builder-reachable gap:**
+   1. Create a Resend account (resend.com).
+   2. Add `cyvexly.com` (or a subdomain) as a sending domain in Resend and
+      add the DNS records Resend generates (SPF/DKIM, account-specific —
+      only available after adding the domain) in Namecheap; verify in
+      Resend.
+   3. Create an API key in Resend and add it to Render's environment
+      variables as `RESEND_API_KEY` (a secret — never place it in source,
+      docs, or chat). Optionally set `RESEND_FROM_EMAIL` to override the
+      default `Cyvexly Studio <notifications@cyvexly.com>`.
+   4. Redeploy (Render redeploys automatically on push; setting an env var
+      alone also triggers a redeploy).
+   **Verified without a real account:** `tsc`/`lint`/`build` clean; a real
+   running server with no `RESEND_API_KEY` returns 503 `not-configured`
+   (confirmed live on production, not just locally); every required-field
+   validation and the honeypot rejection verified via real HTTP requests on
+   both routes; the rate limiter verified by exhausting it live; a
+   deliberately invalid API key produced a real Resend API auth failure,
+   caught as a graceful 502 rather than a crash; a real browser-driven
+   (not synthetic) submission on production shows the intended error UI
+   and preserves the visitor's entered data. Actual message delivery is
+   the one thing that cannot be verified without step 1-3 above.
 
 ## Resolved round 42
 

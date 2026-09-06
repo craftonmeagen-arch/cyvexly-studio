@@ -193,9 +193,9 @@ Durable visual reference:
 ### Non-negotiable contrast and readability requirements
 
 - Place headlines, paragraphs, labels, navigation, and controls on calm,
-  protected glass fields with sufficient opacity and blur. Decorative wires,
-  numerals, highlights, and refractions must fade, soften, or stop beneath text
-  rather than showing through strongly enough to compete with it.
+  protected glass fields with sufficient opacity/blur. Decorative wires,
+  numerals, highlights, and refractions must fade or stop beneath text
+  rather than competing with it.
 - Use near-black midnight slate for primary copy and dark graphite for body
   copy. Reserve vivid cyber blue for controlled accents such as primary actions,
   selected words, thin edges, focus indicators, and small signals.
@@ -206,10 +206,9 @@ Durable visual reference:
 - Verify contrast against the final composited pixels, including translucent
   surfaces over their brightest and darkest possible backgrounds, not only
   against a nominal CSS color token.
-- Check representative desktop, laptop, tablet, and phone widths, browser zoom,
-  text enlargement, focus/hover states, reduced-motion behavior, and both the
-  brightest and busiest atmospheric regions. No breakpoint may trade away
-  legibility to preserve decoration.
+- Check representative desktop/laptop/tablet/phone widths, browser zoom, text
+  enlargement, focus/hover states, reduced motion, and the brightest/busiest
+  atmospheric regions. No breakpoint may trade legibility for decoration.
 - If an atmospheric effect conflicts with readable content, reduce or remove
   the effect in that location. The correct result is the approved blue-glass
   feeling with protected information—not maximum visual density.
@@ -296,14 +295,18 @@ not constitute Owner acceptance or public-deployment proof.
 ## Rule-system migration — 2026-09-05
 
 Owner request: “ok fix it. and we need to remove the older rules so there are no confusion”.
-This authorizes synchronizing the eight NEW AI BUILD RULES packets, replacing outdated
-role orientations/helpers, removing superseded rule files, and completing the six-role
-Cyvexly environment. It does not authorize scheduler changes or a product release.
-See CYVEXLY_TEAM_START_HERE.md and CYVEXLY_ROLE_RULES_MAPPING.md.
+Authorizes syncing the eight NEW AI BUILD RULES packets, replacing outdated role
+orientations/helpers, removing superseded rule files, and completing the six-role
+Cyvexly environment — not scheduler changes or a product release. See
+CYVEXLY_TEAM_START_HERE.md and CYVEXLY_ROLE_RULES_MAPPING.md.
 
 ## Full launch-readiness execution direction 2026-09-05-15
 
-**Status:** ACTIVE
+**Status:** PARTIALLY FULFILLED — round 53 closed every reachable item
+(domain verified live, real Contact/Planner email delivery shipped,
+dormant GA4/GSC scaffolding, Privacy Policy corrected, clean sitewide
+audit). Remainder is Owner-side gates the directive itself names — see
+`CYVEXLY_APP_DEBT.md` items 1-2.
 **Source:** Owner via interactive Claude Code chat
 **Recorded:** 2026-09-05
 

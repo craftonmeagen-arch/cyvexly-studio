@@ -7,6 +7,14 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 53** (interactive session, Owner direction `2026-09-05-15` — "take
+Cyvexly to production-ready and launch-ready") verified the domain/HTTPS/
+canonicalization is already fully live (correcting a stale debt entry),
+replaced Contact/Planner `mailto:` submission with real server-side email
+delivery via Resend, added dormant GA4/GSC scaffolding, fixed a stale
+Privacy Policy section, and ran a sitewide audit finding zero defects. See
+the round-53 report below and `CYVEXLY_APP_DEBT.md` items 1-2.
+
 **Round 52** (scheduled/unattended, 50-minute limit) dispositioned the
 nineteenth consecutive Auditor confirmation (`IFA-2026-09-06-R43`, 0 active
 code defects) and shipped per-route Open Graph images — every route shared
@@ -129,6 +137,96 @@ Planner preselection remain intact alongside rounds 11-13's Home systems.
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
+## Round 53 report — global round 53 (interactive session)
+
+Owner direction `2026-09-05-15` ("take Cyvexly to production-ready and
+launch-ready... complete everything you can directly"). Worked through
+the numbered directive in order:
+
+1. **Domain/Render — verified fully connected, not code work.** Checked
+   live DNS/HTTP/TLS directly (no account access needed): `cyvexly.com`
+   and `www.cyvexly.com` both correctly redirect to canonical
+   `https://cyvexly.com/`; a valid certificate is active; the site sits
+   behind Cloudflare in front of the Render origin
+   (`x-render-origin-server: Render` header confirms it); robots/sitemap/
+   canonical/OG tags all resolve correctly in production. This closes
+   `CYVEXLY_APP_DEBT.md` item 1 — the debt file's "still needs Owner DNS
+   work" claim was stale.
+2. **Email consistency** — grepped all source: `design@cyvexly.com` is the
+   single source of truth (`site-config.ts`) and the only address anywhere
+   on the live site. No stale addresses found.
+3. **Contact + Planner server-side delivery** — the largest piece. Added
+   `src/lib/mailer.ts` (Resend wrapper, HTML/text escaping, single-line
+   sanitization for header-injection defense, server-side email
+   validation, a per-IP in-memory rate limiter) and Node-runtime route
+   handlers `src/app/api/contact/route.ts` / `src/app/api/planner/route.ts`
+   that re-validate every required field server-side, re-check the
+   honeypot, send an internal notification to `design@cyvexly.com` with
+   Reply-To the visitor's address, and a best-effort visitor confirmation.
+   The Planner route resolves every id-based answer (goal, website type,
+   features, asset status) to its human label before building the summary
+   — previously-shipped `mailto:` bodies sent raw ids. Moved the
+   `PlannerData` type out of the "use client" form into
+   `src/lib/planner-config.ts` so the server route can share it; deleted
+   the now-dead client-side `buildSummaryText`. Contact form gained
+   optional Phone/Company fields (explicitly requested visible-in-email
+   fields). Both forms gained submitting/error states that preserve
+   entered data on failure.
+4. **Analytics + 5. Search Console** — added `src/components/google-
+   analytics.tsx` (loads only if `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set;
+   privacy-conscious config) and a `verification.google` metadata field
+   (only if `GOOGLE_SITE_VERIFICATION` is set); CSP widens for Google
+   domains only when GA is actually enabled. Verified both are completely
+   absent by default and activate correctly when the env vars are set.
+6. **Legal pages** — Privacy Policy's forms section still described the
+   retired `mailto:` bridge; corrected it to describe the real Resend-based
+   flow. Terms/Accessibility were already accurate. The "Draft under
+   review" banners stay until the Owner supplies the exact LLC name.
+7. **Content/truth audit** — crawled every internal link (21 total) plus
+   the one external link against live production: zero broken links, zero
+   404s. No `<img>` without `alt`; both `next/image` usages correct
+   (meaningful alt on About's logo, `alt="" aria-hidden` on the header's
+   decorative icon next to visible brand text). Grepped for testimonials/
+   guarantees/certifications/awards — only honest "no studio can guarantee
+   rankings" disclaimers, no fabricated claims. Pricing figures
+   cross-checked (package prices vs. Planner budget bucket ranges) —
+   consistent. JSON-LD validated (parses correctly, correct `@type`) on
+   four sampled routes. Console errors: zero on every route checked
+   (Home, Pricing, About, Contact, `/start`). One apparent video-autoplay
+   anomaly on Home turned out to be this browser tool's own `document.
+   hidden: true` state (a documented harness quirk) correctly pausing
+   background video per the component's own intentional behavior — not a
+   site defect; confirmed by manually calling `.play()`, which succeeded
+   immediately.
+8. **Indexing** — intentionally NOT flipped. Real email delivery, GA4/GSC,
+   and the LLC name remain outstanding, so "everything above is actually
+   ready" (this direction's own stated condition for indexing) isn't yet
+   true.
+9. **Final launch QA** — ran directly against `https://cyvexly.com`
+   throughout (not just local): confirmed the new Contact/Planner fields
+   and `/api/*` routes are already live (Render auto-deploys on push to
+   `main`); a real browser-driven Contact submission on production shows
+   the intended graceful error UI (since `RESEND_API_KEY` isn't set yet)
+   and preserves entered data.
+
+**Verified:** `tsc --noEmit`/`lint`/`build` clean after every change.
+Local server tests: 503 not-configured, 400 validation (all fields), 400
+honeypot, 429 after 5 requests/15min, and a graceful 502 against a real
+(invalid) Resend API call — all confirmed via actual HTTP requests, not
+inference. Contact form's new 2x2/1-column responsive grid verified via
+real `getBoundingClientRect()` geometry at 1280px and 375px (zero
+overflow either way). Committed across five commits (`4824908`, `26bc8b2`,
+`9902503`, `33f6a87`, plus this handoff) and pushed; Render live within
+minutes of each push.
+
+**Not done — genuinely needs the Owner, not more Builder work:** Resend
+account + sending-domain DNS verification + `RESEND_API_KEY` in Render;
+a GA4 property + Measurement ID or an explicit no-analytics choice; a
+Google Search Console verification value; the exact registered LLC legal
+name; final visual/copy review; the indexing switch. See
+`CYVEXLY_APP_DEBT.md` items 1-2 and `CYVEXLY_OWNER_DIRECTION.md`'s
+`2026-09-05-15` entry for exact instructions.
+
 ## Round 52 report — global round 52 (scheduled/unattended session)
 
 Read the one new Auditor inbox item, `IFA-2026-09-06-R43` (reviewed commit
@@ -220,48 +318,11 @@ sweep (all static/dynamic pages, `/sitemap.xml`, `/robots.txt`, manifest,
 icons, `security.txt`, and an invalid path) shows zero regressions — every
 prior 200/404 status is unchanged. Committed (`03bb077`) and pushed.
 
-## Round 50 report — global round 50 (scheduled/unattended session)
-
-Read the one new Auditor inbox item, `IFA-2026-09-05-R41` (reviewed commit
-`ae0644b`, round 48's HEAD, one commit behind round 49's error-boundary
-commit). Seventeenth consecutive independent confirmation — 0 active code
-defects, re-verifies the raster manifest icons, print-color-adjust override,
-Apple touch icon, scaffold-asset removal, all JSON-LD, both Contact/Planner
-honeypots, WCAG 1.4.10 reflow, canonicals, and security headers against a
-local isolated build and live production parity. Not a new finding. Moved to
-`exchange/processed/`.
-
-Also **found and fixed a real hot-memory rotation defect, not a new product
-feature.** This file's own round-48 rotation step had accidentally left
-round 47's full report live *and* duplicated round 48's report in its place,
-instead of archiving round 47 as the handoff note claimed — verified via
-`grep -n "^## Round"`, which showed two identical `## Round 48 report`
-headers and no round-47 archive file. Archived round 47's report to
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_47_REPORT.md`, removed the
-duplicate block, and restored the intended latest-three rotation (48, 49,
-50 live) — see the archived file's own note for provenance.
-
-Ran one genuinely new reachable QA/build angle, no Owner gate required:
-**added `Cross-Origin-Opener-Policy: same-origin` and
-`Cross-Origin-Resource-Policy: same-origin`** to `next.config.ts`'s shared
-security-header set, and a `/.well-known/security.txt` (RFC 9116) using the
-Owner-confirmed `design@cyvexly.com` contact. §4.12 check: COOP/CORP same-
-origin is MDN's documented hardening pair and the two headers
-securityheaders.com/Mozilla Observatory-style scans flag as missing on an
-otherwise-strict CSP/HSTS/frame-ancestors site like this one — not a
-departure. Confirmed via `grep -rn "window.open|postMessage|window.opener"
-src/` that the app has zero cross-origin window/messaging usage, so
-same-origin isolation costs nothing. `security.txt`'s `Expires` field is set
-one year out (`2027-09-05`) per RFC 9116's own recommendation, reusing only
-the already-Owner-confirmed contact email — no invented facts.
-**Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (lint's one
-pre-existing warning is in round 42's untouched evidence script). Started a
-real `next start` production server on port 5173 and confirmed via `curl -D
--`: both new headers present on `/` alongside all pre-existing headers
-unchanged; `/.well-known/security.txt` returns `200 text/plain` with the
-exact authored contact/expiry content; `/`, `/faq`,
-`/manifest.webmanifest`, `/apple-icon`, `/icons/192`, and `/sitemap.xml` all
-still `200` with zero regressions. Committed (`b5b7109`) and pushed.
+Round 50's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_50_REPORT.md` (moved there
+round 53 to restore latest-three rotation) — 51, 52, 53 stay live. Round 50
+added COOP/CORP security headers and `/.well-known/security.txt`, and
+fixed a hot-memory rotation defect.
 
 Round 48's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_48_REPORT.md` (moved there

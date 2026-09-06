@@ -1,6 +1,8 @@
 # Cyvexly Current State
 
-**Global round:** 52. Owner launch direction updated 2026-09-04.
+**Global round:** 53. Owner launch direction updated 2026-09-04, extended
+2026-09-05-15 (full launch-readiness execution direction, interactive
+session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -62,11 +64,26 @@ ownership, exact LLC name, final indexability approval, About/legal/visual
 review) is unchanged; see "Owner launch decisions and remaining gates"
 below.
 
-**Accepted product position:** `main` is pushed through round 52's source
-feature commit (`57b8fb7`) on `origin/main` (docs commit to follow this
-same round). The production domain is confirmed as `cyvexly.com`, but DNS
-still needs to be connected and verified. `origin/master` is historical
-and is not the deployment branch.
+**Round 53 outcome (interactive session, Owner direction `2026-09-05-15`):**
+verified the production domain is already fully connected (DNS/HTTPS/
+canonicalization all correct — the debt file's "DNS still needed" claim was
+stale, not current); replaced Contact/Planner `mailto:` submission with
+real server-side delivery via Resend (`src/lib/mailer.ts`,
+`src/app/api/{contact,planner}/route.ts`) including server-side
+validation, sanitization, honeypot re-check, and per-IP rate limiting;
+added dormant GA4 + Google Search Console verification scaffolding
+(zero footprint until the Owner supplies real values); corrected the
+Privacy Policy's stale mailto-era description of form handling; ran a
+sitewide link/alt-text/JSON-LD/console-error audit on live production
+with zero defects found. Full detail in `CYVEXLY_APP_DEBT.md` and
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
+**Accepted product position:** `main` is pushed through round 53's commits
+on `origin/main` (see `git log`) and Render has auto-deployed them — the
+new Contact/Planner fields and `/api/*` routes are confirmed live on
+`https://cyvexly.com`. The production domain `cyvexly.com` is fully
+connected, HTTPS-verified, and canonicalized. `origin/master` is
+historical and is not the deployment branch.
 
 ## Owner launch decisions and remaining gates
 
@@ -79,17 +96,23 @@ The following still require Owner account access, confirmation, or final
 approval and must not be invented:
 
 1. exact registered LLC legal name for legal text and later agreements;
-2. Namecheap/Render account-bound DNS work and canonical-domain verification;
-3. business-inbox and transactional-email provider selection/authorization,
-   secure provider secrets, and sending-domain verification;
-4. analytics/Search Console ownership or a no-analytics launch decision;
-5. review of About/Privacy/Terms drafts, public visual acceptance, and final
-   permission to enable search indexing.
+2. Resend account creation, sending-domain DNS verification (account-
+   specific records Resend generates after the domain is added — see
+   `CYVEXLY_APP_DEBT.md` item 2), and `RESEND_API_KEY` entered securely in
+   Render — the code path is built, deployed, and tested short of an
+   actual send;
+3. a GA4 property + Measurement ID (or an explicit no-analytics decision),
+   and/or a Google Search Console verification value — both are wired in
+   code (dormant) and activate the moment a real value is supplied;
+4. review of About/Privacy/Terms drafts, public visual acceptance, and
+   final permission to enable search indexing.
 
-Payment-provider selection and real portfolio replacement are deliberately
-tabled. Existing payment claims must be removed or qualified until supported;
-existing concepts must remain unmistakably labeled. The interim `mailto:`
-disclosures remain truthful but are a Chunk 5 replacement target.
+Domain/DNS/HTTPS/canonicalization (formerly gate 2 here) is **done** —
+verified live round 53, not merely code-complete. Payment-provider
+selection and real portfolio replacement are deliberately tabled. Existing
+payment claims must be removed or qualified until supported; existing
+concepts must remain unmistakably labeled. Contact/Planner now use real
+server-side delivery (not `mailto:`) — see `CYVEXLY_APP_DEBT.md` item 2.
 
 
 ## Working orientation
