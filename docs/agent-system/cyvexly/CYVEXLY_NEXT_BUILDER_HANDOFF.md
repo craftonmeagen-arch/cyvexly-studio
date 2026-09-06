@@ -1,53 +1,73 @@
 # Cyvexly Next Builder Handoff
 
-## Round 72 closeout
+## Round 73 closeout
 
 **Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
 time limit (unattended)
-**Start source:** `4141a6b` on `main` (pushed, matched `origin/main`)
-**Scope:** no new Auditor inbox item; adversarially reviewed
-`planner-form.tsx`'s client-side step logic per round 71's
+**Start source:** `bda8a13` on `main` (pushed, matched `origin/main`)
+**Scope:** two new Auditor inbox items dispositioned; adversarially
+reviewed the case-study surface (`/work/[slug]`) per round 72's
 recommendation.
 **Completion:** REAL SOURCE FIX LANDED — see below.
 
 ### What was checked and fixed
 
-Found a real, reachable validation-bypass defect: `handleSubmit` only
-ran `validateStep(9)`, but `maxReachedStep` never resets, so a visitor
-who uses a review-page Edit link to revisit and invalidate an earlier
-step, then jumps straight back to Review via the progress rail
-(skipping that step's Continue-button validation), can submit
-stale/invalid data with zero visible client-side error — the server
-correctly 400s it, but the visitor is stranded on Review with no
-alert and no field message. Reproduced live via scripted DOM
-interaction (real React events, `fetch` interception) against both
-`next dev` and a real `next start` build; confirmed the empty `fetch
-was called: false`/blank-error symptom before the fix.
+Checked the Auditor inbox first: `IFA-2026-09-06-R61`/`R62` (36th/37th
+consecutive clean confirmations). R61 flagged `CYVEXLY_APP_DEBT.md`
+over its byte cap (`CYV-DOC-002`); round 71 had already fixed that and
+R62 independently confirmed 47/47 hot files compliant — no new Builder
+action needed for either. Both moved to `exchange/processed/`.
 
-**Fixed:** added `validateAllSteps()`; `handleSubmit` now uses it and
-routes the visitor to the first invalid step (or stays put with
-`focusFirstError` if the only error is already on the current step).
-Re-ran the exact repro post-fix on both runtimes: no network call,
-lands on Step 1, "Please enter your name." visible. Regression-checked
-an in-place Step-9-only error (still blocks, doesn't navigate) and a
-fully valid submission (still reaches the API, real 503
-not-configured, expected with no `RESEND_API_KEY`).
+Reviewed `caseStudies`/`selectedWork` in `src/lib/site-config.ts` (the
+one surface round 69-72 flagged as not yet given a dedicated
+adversarial pass) and found a real cross-surface color-token
+staleness defect: Aurora Spaces' and Nexora Systems' "Visual
+direction" palette swatches, and the matching `concept-preview.tsx`
+SVG artwork, hardcoded the pre-refresh cyber-blue (`#1478FF`)/
+cool-graphite (`#526176`) values — the exact original
+`--color-cyber-blue`/`--color-cool-graphite` tokens before rounds 1
+and 28 darkened them to `#0F66E0`/`#46576E` for contrast (confirmed
+via `git log -S` on `globals.css`). Vellora Care's own palette already
+used the corrected values, proving this was drift, not a deliberate
+per-project brand choice. A wider grep found the same stale
+`#526176` also hardcoded in `pricing-scope-signal.tsx` and
+`service-detail-signal.tsx`, right alongside already-corrected
+`#0F66E0` uses in those same files.
 
-**Verified:** `tsc`/lint/build clean (same pre-existing round-42
-lint warning); 20-route production sweep all 200.
+**Fixed:** updated the stale hex literals to the current tokens across
+all 4 files (`src/lib/site-config.ts`, `src/components/concept-
+preview.tsx`, `src/components/pricing-scope-signal.tsx`,
+`src/components/service-detail-signal.tsx`). Left `site-config.ts`'s
+`gradient` fields alone — confirmed they're fully covered (invisible)
+by `ConceptPreview`'s own opaque SVG background in every render path.
 
-Cleaned up: stopped both owned `next dev`/`next start` listeners
-(verified the real PID via `Get-NetTCPConnection -LocalPort 5173
--State Listen` before each `Stop-Process`); removed scratch logs.
+**Verified:** `tsc`/lint/build clean (same pre-existing round-42 lint
+warning); real `next start` build, fetched rendered HTML for both
+affected case-study pages and confirmed the palette swatch
+`background-color` + label text now read the corrected hex values;
+22-route production sweep all 200.
+
+Cleaned up: stopped the owned `next start` listener (verified the real
+PID via `Get-NetTCPConnection -LocalPort 5173 -State Listen` before
+`Stop-Process`); removed the scratch log.
 
 ### Recommended next workstream
 
-Re-check the Auditor inbox first. The one genuinely fresh surface not
-yet given a dedicated adversarial pass: case-study (`/work/[slug]`)
-content against `site-config.ts`'s `selectedWork`/`caseStudies`. Owner
+Re-check the Auditor inbox first. `CYVEXLY_ACTIVE_CHUNK.md` is at
+30,644/30,720 bytes (76 bytes headroom) — archive another old inline
+round paragraph before adding new detail, or it will bust the cap next
+round. No other genuinely fresh, previously-unreviewed product surface
+is currently known; consider a broader sitewide grep for other
+hardcoded (non-token) hex literals that may have drifted the same way
+concept-preview/pricing-scope-signal/service-detail-signal did. Owner
 gates unchanged: Resend account/DNS/API key, analytics/Search Console
 ownership, exact LLC name, About/legal/visual review, final
 indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
+Round 72 closeout detail is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_72_REPORT.md` (moved
+there round 73 to keep this file under its 12,288-byte hot-file cap).
+Round 72 fixed the Planner Review-page validation-bypass defect.
 
 Round 71 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_71_REPORT.md` (moved

@@ -1,93 +1,93 @@
 # Cyvexly App Debt
 
-## Resolved round 72
+## Resolved round 73
 
-- **No new Auditor inbox item** (`exchange/operational-inbox/` empty in
-  the external independent-review root; most recent processed item is
-  `IFA-2026-09-06-R60`).
-- **Adversarially reviewed `planner-form.tsx`'s client-side step
-  logic, per round 71's recommendation** (the last genuinely fresh
-  Planner surface — server route/shared config already reviewed
-  rounds 66-69). **Found and fixed a real, reachable validation-bypass
-  defect.** `handleSubmit` called only `validateStep(9)` before
-  submitting. `maxReachedStep` (which gates which progress-rail step
-  buttons are clickable) only ever grows, never resets — so once a
-  visitor reaches Review normally, every step, including 9, stays
-  reachable via the progress rail for the rest of the session. The
-  review page's own "Edit" links intentionally let a visitor jump back
-  to any earlier step to change an answer — but if they then invalidate
-  that step (e.g. clear a required field) and, instead of clicking
-  Continue again, click the Step 9 circle directly in the progress
-  rail, `goToStep` fires with no validation at all. Submitting from
-  Review then sends the stale/invalid payload to the server, which
-  correctly rejects it (400 with field errors) — but the visitor is
-  left on Review, where the invalid field isn't even rendered, so
-  nothing on screen explains the failure: no `[role="alert"]`, no
-  inline field error, the Submit button simply re-enables. A genuine
-  silent dead end reachable through the form's own intended Edit flow,
-  not a contrived edge case.
-- **Reproduced live before fixing, on both runtimes** (`next dev`/
-  Turbopack HMR and a real `next start` production build), via the
-  in-app Browser pane. `computer` screenshot/click actions are
-  non-functional in this unattended session type (per
-  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`); used `javascript_tool` to
-  dispatch real React-recognized events (`Object.getOwnPropertyDescriptor`
-  native-setter trick for controlled `<input>`/`<textarea>` values, so
-  React's own `onChange` fires — not just setting `.value` directly)
-  and real `MouseEvent('click')` dispatches on radio/checkbox/button
-  elements, plus a temporary `window.fetch` wrapper to capture the
-  actual outgoing request/response. Filled all 9 steps with valid data
-  end to end (confirmed each step's heading advanced correctly),
-  clicked "Edit" on the "About you" group, cleared `fullName` (verified
-  the DOM value actually changed), then clicked the Step 9 progress-rail
-  button directly (confirmed `disabled: false`, i.e. reachable) instead
-  of Continue. On the real (pre-fix) code: `fetch` fired with
-  `fullName: ""`, server responded `400
-  {"error":"validation","fields":{"fullName":"Please enter your
-  name."}}`, and the page's `<h2>` still read "09 Review & submit" —
-  zero `[role="alert"]` elements anywhere and the Name row still showed
-  only "—" with no error text.
-- **Fixed:** `src/components/planner/planner-form.tsx` — added
-  `validateAllSteps()`, which runs the existing `validateStep()` across
-  all 9 steps and merges every error found, tracking the first step
-  number that has one. `handleSubmit` now calls this instead of
-  `validateStep(9)`: if any step has an error, it sets the full merged
-  error set and, when the first error isn't on the step currently
-  shown, calls `goToStep()` to navigate there (letting the existing
-  step-change effect's scroll/heading-focus/live-region announcement
-  do its normal job, so the visitor lands on the actual problem with
-  the real inline field error visible below it); if the only error is
-  already on the current step (the ordinary Step 9 case — e.g. a
-  missing consent checkbox with no earlier-step tampering), it keeps
-  the prior `focusFirstError` behavior unchanged, with no navigation.
-- **Verified the fix, same live method, both runtimes, after the
-  edit:** re-ran the identical repro — `fetch was called: false`, the
-  page landed on "01 About you", and `fullName-error` showed "Please
-  enter your name." on both `next dev` and a real `next start` build.
-  **Regression A (in-place Step 9-only error, no earlier-step
-  tampering):** filled all 9 steps validly, checked only
-  `acknowledgeNotQuote` (left `consent` unchecked), submitted — `fetch`
-  was NOT called, stayed on "09 Review & submit", `consent-error`
-  showed the correct message. Matches pre-fix single-step-error
-  behavior exactly (no new navigation for an error already on the
-  visible step). **Regression B (fully valid, non-tampered
-  submission):** checked `consent` too, submitted again — `fetch` WAS
-  called, real response `503` (`not-configured` — expected, no
-  `RESEND_API_KEY` in this environment, the same documented gap every
-  prior round has verified, not a new defect).
+- **Checked the Auditor inbox first:** two new items existed
+  (`IFA-2026-09-06-R61`, `IFA-2026-09-06-R62`) — the 36th and 37th
+  consecutive clean confirmations (0 active code defects). R61 flagged
+  `CYVEXLY_APP_DEBT.md` over its byte cap (`CYV-DOC-002`, 33,389 bytes);
+  round 71 had already archived rounds 50/51/55 and brought it to
+  29,158 bytes before R62 independently re-verified 47/47 hot files
+  compliant and closed the finding. No new Builder action was needed
+  for either item. Both moved to `exchange/processed/`.
+- **Adversarially reviewed the case-study surface
+  (`/work/[slug]` content in `src/lib/site-config.ts`'s `caseStudies`
+  against `selectedWork`), per round 69-72's recommendation — the one
+  genuinely fresh surface not yet given a dedicated pass.** Diffed
+  every case study's `palette` array (hex + label, rendered as a
+  colored swatch chip plus the literal hex text on the page) against
+  the live `--color-*` custom properties in `src/app/globals.css`.
+  Found a real, reachable staleness defect: Aurora Spaces' and Nexora
+  Systems' palettes both still listed `#1478FF` for "Cyber blue
+  accent"; Nexora also listed `#526176` for "Cool graphite text" — not
+  arbitrary numbers, but the *exact original* `--color-cyber-blue`/
+  `--color-cool-graphite` values (confirmed via `git log -S` on
+  `globals.css`) from before round 1 darkened cyber-blue to `#0F66E0`
+  for WCAG contrast and round 28's sitewide glass pass darkened
+  cool-graphite to `#46576E`. Vellora Care's own palette (ion cyan,
+  arctic mist, smoke glass, signal emerald) already used every
+  corrected value with none of the stale ones — proof this was
+  accumulated drift across the three case studies' different write
+  times, not a deliberate distinct brand palette per fictional client.
+- **Root-caused into the matching artwork, not just the documentation
+  swatches.** `src/components/concept-preview.tsx`'s own top comment
+  states it "reuses each project's own exact palette hex values" —
+  its Aurora/Nexora SVG illustrations were indeed hardcoded with the
+  identical stale `#1478FF`/`#526176` pixels, so the artwork and the
+  swatch text were self-consistent with *each other* but both wrong
+  against the live site. Fixing only the swatch numbers without the
+  artwork would have created a new, more visible mismatch (a labeled
+  "#0F66E0" swatch sitting two sections above artwork still rendering
+  in the old blue) — so both were corrected together. A further grep
+  across `src/` for the same two stale hex strings found them also
+  hardcoded in two unrelated decorative SVGs — `src/components/
+  pricing-scope-signal.tsx` and `src/components/service-detail-
+  signal.tsx` — each already using the corrected `#0F66E0` for
+  cyber-blue elsewhere in the very same file, confirming the
+  cool-graphite darkening from round 28 was simply never propagated to
+  these components' hardcoded label-text fills.
+- **Fixed:** replaced the stale hex literals with the current tokens
+  in all 4 files: `src/lib/site-config.ts` (2 `palette` entries: Aurora
+  and Nexora's "Cyber blue accent"; Nexora's "Cool graphite text"),
+  `src/components/concept-preview.tsx` (5 SVG `fill` values across the
+  Aurora/Nexora compositions), `src/components/pricing-scope-signal.tsx`
+  (2 `<text fill>` values), `src/components/service-detail-signal.tsx`
+  (1 `<text fill>` value). Deliberately left `site-config.ts`'s
+  `gradient` fields (the Tailwind `from-[#1478FF]...` background-div
+  classes) untouched after checking `work-grid.tsx` and `[slug]/
+  page.tsx`: `ConceptPreview`'s own SVG always renders an opaque
+  full-viewBox background `<rect>` on top, so that gradient div is
+  fully covered and invisible in every render path — the surviving
+  `#1478FF` string is inert class-name text, not a rendering gap.
 - **Verified:** `tsc --noEmit`/`lint`/`pnpm run build` all clean (same
   single pre-existing, unrelated round-42 evidence-script lint
-  warning, untouched). A real `next start` production-build 20-route
-  sweep (every public static/dynamic route, `/not-found`,
-  `robots.txt`, `sitemap.xml`) returned 200 except `/not-found` itself
-  (404, correct Next.js convention for that special route).
-- Cleaned up: stopped both the owned `next dev` and `next start`
-  listeners on port 5173 across the round (verified the real listener
-  PID via `Get-NetTCPConnection -LocalPort 5173 -State Listen` before
-  each `Stop-Process -Force`, not by process name or count — this host
-  runs many unrelated pre-existing `node.exe` processes); removed the
-  scratch `next-dev-5173.log`/`next-start-5173.log` files from
-  `$env:TEMP` (no lock issue this round, unlike round 71's).
+  warning, untouched). Ran a real `next start` production build and
+  fetched the rendered HTML for `/work/aurora-spaces` and `/work/
+  nexora-systems`: the palette swatch `style={{backgroundColor}}`
+  values and their adjacent `<span>` label text both now read
+  `#0F66E0`/`#46576E`, matching `getComputedStyle`-verified live
+  tokens exactly (no live browser session needed for this check — the
+  claim is about static/SSG HTML output, which a direct fetch proves
+  directly). A 22-route production sweep (every public static/dynamic
+  route, `/not-found`, `robots.txt`, `sitemap.xml`) returned 200
+  (`/not-found` correctly 404s).
+- Cleaned up: stopped the owned `next start` listener on port 5173
+  (verified the real listener PID via `Get-NetTCPConnection -LocalPort
+  5173 -State Listen` before `Stop-Process -Force`, not by process
+  name — this host runs many unrelated pre-existing `node.exe`
+  processes); removed the scratch `next-start-5173.log` file from
+  `$env:TEMP`.
+- **Housekeeping:** archived round 72's full "Resolved round 72"
+  detail and round 70's full "Resolved round 70" detail (see pointers
+  below) to keep this file under its 30,720-byte cap after adding this
+  round's entry; `CYVEXLY_ACTIVE_CHUNK.md` is left at 30,644/30,720
+  bytes (76 bytes headroom) — flagged in the handoff for the next round
+  to archive further before adding new detail there.
+
+Round 72's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_72_ARCHIVE.md` (moved there
+round 73 to keep this file under its 30,720-byte hot-file cap): the
+Planner Review-page validation-bypass fix (`validateAllSteps()`).
 
 ## Resolved round 71
 
@@ -133,74 +133,10 @@
   Chrome profile directory; left in place as disposable OS-temp artifacts,
   next round should retry `Remove-Item` and report if it persists.
 
-## Resolved round 70
-
-- **Dispositioned fresh Owner direction `2026-09-06-16`** (text-cursor/
-  editable-looking body copy defect, "on cyvexly i can click on any of
-  the wording and a toggle shows as if i can type"). No new Auditor
-  inbox item existed this round (`exchange/operational-inbox/` empty).
-- **Reproduced live** on the real `next dev`/`next start` runtime:
-  `getComputedStyle` on `h1`/`p` returned `cursor: "auto"`,
-  `isContentEditable: false`, `document.designMode: "off"` — confirmed
-  this is the browser's own default I-beam cursor over selectable text
-  (universal on every website), not a Cyvexly-specific `contentEditable`/
-  input-like styling bug. `grep` across `src/` found zero existing
-  `cursor`/`contentEditable`/`user-select` rules.
-- **Fixed as a real, reachable polish defect per the Owner's request**,
-  without an accessibility regression: added a `cursor: default` rule
-  (in `@layer base`) on non-interactive prose elements (`p`, `h1`-`h6`,
-  `blockquote`, `figcaption`, `dt`, `dd`) plus an explicit
-  `cursor: pointer` restoration on `a`/`button`/`[role="button"]`/
-  `summary` so every real interactive control — including inline links
-  nested inside a paragraph (`/privacy`, `/terms`, `/accessibility`,
-  `/services/[slug]`'s "Return to all services") — keeps its pointer
-  affordance. Left `user-select` untouched: text stays fully selectable/
-  copyable, since disabling selection is a known usability/accessibility
-  anti-pattern the Owner did not ask for ("doesn't hurt anything...
-  should be fixed" targeted the visual affordance, not selectability).
-- **Caught and fixed a real regression during verification, before
-  committing:** the first version of this rule sat outside any
-  `@layer`, so it unconditionally beat Tailwind utility classes like
-  `disabled:cursor-not-allowed` regardless of specificity (Tailwind v4's
-  own utilities live inside `@layer utilities`, and any unlayered rule
-  outranks a layered one per the CSS cascade-layers spec) — live-tested
-  on `/start`'s Planner progress rail, every not-yet-reached step button
-  (`disabled`, class `cursor-not-allowed`) showed computed `cursor:
-  "pointer"` instead of `"not-allowed"`. Moved the new rule inside
-  `@layer base` (below Tailwind's own `utilities` layer in cascade
-  order) and re-verified: disabled Planner buttons now correctly report
-  `cursor: "not-allowed"` again, enabled buttons/links stay `"pointer"`,
-  and prose stays `"default"`.
-- **Verified:** `tsc`/`lint`/`build` clean (one pre-existing unrelated
-  lint warning in a round-42 evidence script, not touched). Real
-  `next start` on port 5173: computed-style checks on Home (`h1`/`p`
-  → `default`), `/start` (all button states correct including
-  `not-allowed`), `/privacy` (18 inline links all `pointer`),
-  `/services/business-websites` ("Return to all services" `pointer`),
-  `/contact` (submit button `pointer`), `/faq` (accordion buttons
-  `pointer`). 12-route sitewide sweep all 200.
-- **Environment fix, documented for the next round:** this scheduled
-  session's PowerShell had no `node`/`npm`/`pnpm` on `PATH` at all
-  (`Get-Command` failed for all three) even though `CYVEXLY_TOOLS_AND_
-  CAPABILITIES.md` records them as installed — a stale/incomplete
-  session PATH, not a missing install. Found real binaries at
-  `C:\Users\Tcraf\AppData\Local\Programs\nodejs\node-v24.19.0-win-x64\
-  node.exe` and `C:\Users\Tcraf\AppData\Roaming\npm\pnpm.cmd`/`.exe`
-  and added both directories to `$env:Path` for this session only (no
-  system/user environment-variable change made). If a future round hits
-  "'pnpm'/'node' is not recognized" again, apply the same two-directory
-  `$env:Path` addition before concluding the tool is unavailable.
-- Cleaned up: stopped the owned `next start`/`next dev` listeners
-  (verified the real listener PID via `Get-NetTCPConnection -LocalPort
-  5173 -State Listen`, not by process name — this host runs many
-  unrelated pre-existing `node.exe` processes); removed the scratch
-  `next-dev-5173.log`/`next-start-5173*.log`/`rebuild.log` files from
-  `$env:TEMP`; closed the owned Browser pane tab implicitly by not
-  reusing it further. Left the pre-existing uncommitted
-  `CYVEXLY_OWNER_DIRECTION.md`/`ARCHIVE.md` hot-file-cap archival edits
-  (found already staged-but-uncommitted at round start, content
-  verified correct/complete) to be committed together with this round's
-  work rather than discarded.
+Round 70's full detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_70_ARCHIVE.md` (moved there
+round 73 to restore latest-three rotation): the text-cursor/
+editable-looking-copy fix and a session-PATH environment note.
 
 Round 69's full detail is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_69_ARCHIVE.md` (moved there

@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 72. Owner launch direction updated 2026-09-04, extended
+**Global round:** 73. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
@@ -20,29 +20,33 @@ access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
 
-**Round 72 outcome:** no new Auditor inbox item. Adversarially reviewed
-`planner-form.tsx`'s client-side step logic (round 71's recommended fresh
-surface) and found/fixed a real, reachable validation-bypass defect:
-`handleSubmit` only ran `validateStep(9)`, but the progress rail lets a
-visitor jump straight back to Review after using a review-page "Edit" link
-to revisit (and invalidate) an earlier step — `maxReachedStep` never resets.
-Reproduced live: cleared the required `fullName` field after using Edit,
-jumped directly to Step 9 via the progress rail (no re-validation triggered),
-then submitted — the client sent the empty field to the server, which
-correctly 400'd, but the visitor was left on Review with zero visible error
-(no alert, no field message, button just re-enabled) — a silent dead end.
-**Fixed:** added `validateAllSteps()`, used by `handleSubmit` instead of
-`validateStep(9)`; on any error, the visitor is now routed to the first
-invalid step with the real field error visible, and no network request is
-sent for known-invalid data. Verified against both `next dev` (HMR) and a
-real `next start` production build: the exact repro now shows `fetch was
-called: false`, lands back on Step 1, and displays "Please enter your name."
-Regression-checked: an in-place Step 9-only error (missing consent) still
-blocks correctly without navigating away; a fully valid submission still
-reaches `/api/planner` (503 not-configured, expected — no `RESEND_API_KEY`
-in this environment). `tsc`/lint/build clean (same pre-existing round-42
-evidence-script lint warning), 20-route sweep all 200. Full detail in
-`CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
+**Round 73 outcome:** dispositioned two new Auditor inbox items
+(`IFA-2026-09-06-R61`/`R62`, 36th/37th consecutive clean confirmations;
+R61's `CYV-DOC-002` hot-file-cap finding was already resolved by R62).
+Gave the case-study surface (round 72's recommended fresh surface) its
+first dedicated adversarial pass and found/fixed a real cross-surface
+color-token staleness defect: Aurora/Nexora's case-study "Visual
+direction" palette swatches, their matching `concept-preview.tsx`
+artwork, and two unrelated decorative SVGs (`pricing-scope-signal.tsx`,
+`service-detail-signal.tsx`) all still hardcoded the pre-refresh
+cyber-blue (`#1478FF`)/cool-graphite (`#526176`) values that rounds
+1/28 darkened site-wide to `#0F66E0`/`#46576E` for contrast — confirmed
+via `git log -S` that these were the exact original token values, and
+via Vellora Care's already-correct palette that this was drift, not a
+deliberate per-project choice. **Fixed** all 4 files' hardcoded hex
+literals to match the live tokens; left `site-config.ts`'s `gradient`
+fields alone after confirming they're fully covered (thus invisible)
+by `ConceptPreview`'s own opaque SVG background. `tsc`/lint/build
+clean, 22-route sweep all 200, live HTML fetch confirmed the corrected
+swatch colors render. Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/
+`CYVEXLY_APP_DEBT.md`.
+
+Round 72 outcome: found/fixed a real Planner validation-bypass defect —
+`handleSubmit` only validated step 9, so a visitor could use a
+review-page Edit link to invalidate an earlier step, jump straight back
+to Review via the progress rail, and submit with zero visible error.
+Added `validateAllSteps()`. Full detail archived; see
+`CYVEXLY_APP_DEBT.md`'s "Resolved round 72".
 
 Round 71 outcome: dispositioned two new Auditor inbox items (34th/35th
 consecutive clean confirmations). Found/fixed a real dead-end defect on
@@ -51,36 +55,32 @@ state — trimmed the filter list. Also fixed a hot-file-cap violation in
 `CYVEXLY_APP_DEBT.md` itself. Full detail archived; see
 `CYVEXLY_APP_DEBT.md`'s "Resolved round 71".
 
-Round 70 outcome: dispositioned Owner direction `2026-09-06-16` (text-cursor/
-editable-looking body copy) — confirmed it was the browser's default I-beam
-cursor over selectable text, not a Cyvexly bug, and fixed it without an
-accessibility regression. Full detail archived; see `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 70".
-
-Rounds 53-69 (domain/HTTPS verification, real Resend email delivery, GA4/GSC
+Rounds 53-70 (domain/HTTPS verification, real Resend email delivery, GA4/GSC
 scaffolding, per-slug/sitewide OG images, JSON-LD rollout, meta-description
 trims, `html lang="en-US"`, rate-limiter security fixes, the Cloudflare-bypass
-gate, request-body caps, and Planner data-loss/label fixes) are summarized in
-`CYVEXLY_APP_DEBT.md`'s resolved-round history and `CYVEXLY_ACTIVE_CHUNK.md`.
+gate, request-body caps, the text-cursor fix, and Planner data-loss/label
+fixes) are summarized in `CYVEXLY_APP_DEBT.md`'s resolved-round history and
+`CYVEXLY_ACTIVE_CHUNK.md`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 72 (empty as of round 72). The
-Planner's server route/shared config, About/Privacy/Terms copy, and
-`service-details.ts` are all checked clean (rounds 66-69/71); the client-side
-step-logic gap found this round is fixed. Case-study (`/work/[slug]`) content
-against `site-config.ts`'s `selectedWork`/`caseStudies` remains a genuinely
-fresh surface not yet given a dedicated adversarial pass. The Cloudflare-
-bypass gap has a dormant code-side gate (round 62, hardened round 63); it
-activates only once the Owner adds one Cloudflare Transform Rule (see
+first for anything published after round 73 (empty as of round 73). The
+Planner (server + client), About/Privacy/Terms copy, `service-details.ts`,
+`/work` filters, and case-study content/artwork/palette are all checked
+clean through round 73. `CYVEXLY_ACTIVE_CHUNK.md` is at 30,644/30,720
+bytes (76 bytes headroom) — next round should archive another old inline
+round paragraph before adding new detail. The Cloudflare-bypass gap has a
+dormant code-side gate (round 62, hardened round 63); it activates only
+once the Owner adds one Cloudflare Transform Rule (see
 `CYVEXLY_APP_DEBT.md` item 3) — not more Builder code. What remains is
 otherwise Owner-gated; see "Owner launch decisions and remaining gates"
 below.
 
 **Accepted product position:** `main` is pushed through round 72's source
-commit on `origin/main` and Render auto-deploys it. `cyvexly.com` is fully
-connected/HTTPS/canonicalized (verified live, round 53). `origin/master` is
-historical, not the deployment branch.
+commit on `origin/main` (round 73's commit pending push at round close) and
+Render auto-deploys it. `cyvexly.com` is fully connected/HTTPS/canonicalized
+(verified live, round 53). `origin/master` is historical, not the
+deployment branch.
 
 ## Owner launch decisions and remaining gates
 
