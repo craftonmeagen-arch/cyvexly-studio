@@ -32,9 +32,10 @@ behavior convergence check (contrast, focus order, skip-link,
 reduced-motion) — full detail in `CYVEXLY_APP_DEBT.md`'s "Round 91"/
 "Round 92". Round 93 (scheduled/unattended) fixed a real build-
 infrastructure defect (eslint newly failing on the untracked nested
-`velora/` sub-repo) and found 0 new product defects on a Terms-page-vs-
-real-Planner/Contact/Pricing convergence check — see `CYVEXLY_APP_DEBT.md`'s
-"Round 93".
+`velora/` sub-repo) and found 0 new product defects across two
+convergence checks (Terms page vs. Planner/Contact/Pricing;
+Privacy Policy vs. real form/analytics code) — see
+`CYVEXLY_APP_DEBT.md`'s "Round 93".
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.

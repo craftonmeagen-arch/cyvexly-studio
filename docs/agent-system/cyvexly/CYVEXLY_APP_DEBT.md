@@ -53,8 +53,32 @@ found:**
   (`src/lib/site-config.ts`): `design@cyvexly.com` / `tel:+13175725780` /
   `(317) 572-5780` — matches Owner direction `2026-09-04-14` exactly.
 
+**Second convergence-check, fresh surface (named in this same round's
+handoff planning):** diffed the Privacy Policy's
+(`src/app/privacy/page.tsx`) specific data-handling claims against the
+real Contact/Planner/analytics source. **0 defects found:**
+- "We do not store your submission in a database — it exists only as
+  the two emails this process sends" — `api/contact/route.ts` and
+  `api/planner/route.ts` contain no database/file-write call; the only
+  persistence is the two `sendMail()` calls (internal notification +
+  visitor confirmation).
+- "[IP] include it in the internal notification email... It is not
+  included in the confirmation email sent back to you" — `getClientIp()`
+  appears in `internalHtml`/`internalText` only
+  (`<p>...IP ${escapeHtml(ip)}</p>`); the separate visitor-confirmation
+  `sendMail()` call's `text`/`html` contain no `ip` reference — verified
+  by reading both call sites directly, not inferred.
+- "We do not currently use cookies, advertising pixels, or third-party
+  analytics" — `src/app/layout.tsx` only renders `<GoogleAnalytics
+  measurementId={gaMeasurementId} />` when
+  `process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID` is set; that env var is
+  one of the still-open Owner gates (unset today per
+  `CYVEXLY_CURRENT_STATE.md`), so the component never renders in the
+  current deployment — the claim matches actual shipped behavior, not
+  just a code comment's intent.
+
 **Completion:** DONE WITH PROOF (1 real build-infrastructure defect found
-and fixed; 0 product defects found on the named convergence check).
+and fixed; 0 product defects found across both named convergence checks).
 Source change: `eslint.config.mjs` only (no product-facing/runtime
 change). Cleaned up: no dev server or browser instance was started this
 round (verification suite is CLI-only for this scope).
