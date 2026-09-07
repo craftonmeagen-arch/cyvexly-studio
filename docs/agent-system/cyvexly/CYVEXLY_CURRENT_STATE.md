@@ -1,19 +1,12 @@
 # Cyvexly Current State
 
-**Global round:** 81. Owner launch direction updated 2026-09-04, extended
+**Global round:** 82. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive) added a
 supplied Home process video under Owner direction `2026-09-06-17`. Rounds
-77-81 (scheduled/unattended) found 0 new defects; round 78 reopened live/CDP
-verification for this session type and closed round 76's autoplay proof gap;
-round 79 completed live keyboard-traversal verification and refined the
-`requestAnimationFrame`-suppression environment note; round 80 extended live
-keyboard/data-integrity verification across Planner Steps 2-9 and found a new
-Enter/Space key-synthesis instrument limitation; round 81 closed that gap via
-CDP with genuine positive evidence — real Chromium Return/Space key dispatch
-correctly activates a focused native `<button>`, confirming the limitation
-was specific to this Browser pane's own key-synthesis tool, not a product
-defect (see `CYVEXLY_TOOLS_AND_CAPABILITIES.md`).
+77-81 (scheduled/unattended) found 0 new defects (proof-gap-closure and
+verification rounds); round 82 (scheduled/unattended) found and fixed a
+real Privacy Policy truth-accuracy defect (see below).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -31,22 +24,22 @@ access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
 
-**Round 81 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-07-R72` (47th consecutive clean confirmation, 0 action needed).
-Completed round 80's routed first task — reproduced its Return/Space
-key-synthesis test via local headless-Chrome/CDP (round 8/79's method):
-real native key dispatch correctly activated both a Planner Step 6
-`StatusRow` toggle button and the progress-rail's step-jump button,
-closing round 80's proof gap with genuine positive evidence. Confirms the
-limitation is specific to this Browser pane's own key-synthesis tool, not
-a product defect. No defects found; no source change. Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Round 81" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+**Round 82 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-07-R73` (48th consecutive clean confirmation, 0 action
+needed). Verified `tsc`/lint/build clean on unchanged round-81 source,
+then adversarially diffed `src/app/privacy/page.tsx` against actual
+API-route behavior (a fresh, not-yet-reviewed surface) and found the
+"Hosting and technical logs" section's "not separately combined" claim
+was contradicted by `mailer.ts` embedding the client IP directly in the
+internal notification email. Fixed the copy, verified via a real
+`next start` server (new text renders, 12/12-route sweep 200), committed
+`19ae224`, and pushed to `origin/main`. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Round 82" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Accepted product position:** `main` is pushed through round 76's source
-commit on `origin/main` (rounds 77-81 made no source change) and Render
-auto-deploys it. `cyvexly.com` is fully connected/HTTPS/canonicalized
-(verified live, round 53). `origin/master` is historical, not the
-deployment branch.
+**Accepted product position:** `main` is pushed through round 82's source
+commit (`19ae224`) on `origin/main` and Render auto-deploys it.
+`cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
+round 53). `origin/master` is historical, not the deployment branch.
 
 ## Owner launch decisions and remaining gates
 

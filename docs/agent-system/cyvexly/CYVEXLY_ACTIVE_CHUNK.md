@@ -7,6 +7,19 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 82** (scheduled/unattended) dispositioned Auditor item
+`IFA-2026-09-07-R73` (48th consecutive clean confirmation, 0 action
+needed) and, after confirming `tsc`/lint/build were still clean on
+unchanged round-81 source, found and fixed a real truth-accuracy defect
+on a fresh surface: `src/app/privacy/page.tsx` claimed form-submission
+technical logs are "not separately combined" with submitted information,
+but `mailer.ts`'s `getClientIp()` result is embedded directly in the
+same internal notification email as the name/email/message and used as
+the rate-limiter key — code and policy copy contradicted each other.
+Fixed the copy (commit `19ae224`, pushed to `origin/main`). Verified via
+a real `next start` server: new copy renders in actual page HTML, 12/12
+route sweep 200. See `CYVEXLY_APP_DEBT.md`'s "Round 82".
+
 **Round 81** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R72` (47th consecutive clean confirmation, 0 action
 needed) and completed round 80's routed first task: reproduced its exact
@@ -84,20 +97,10 @@ and environment-capability round. Full detail in
 `CYVEXLY_APP_DEBT.md`'s "Round 78" and `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s
 round-78 note.
 
-**Round 77** (scheduled/unattended — dev-server preview disabled for
-unattended sessions, so proof was source-level only) dispositioned
-Auditor item `IFA-2026-09-07-R68` (43rd consecutive clean confirmation,
-0 active code defects; its "Production Domain Connection" gate note is
-stale, corrected by round 53). Completed the round-76-recommended
-field-by-field diff of `service-details.ts` against `site-config.ts`'s
-`pricingPackages`/`carePlans`/`servicesGroups` for all 5 services (round
-75 checked only one), plus a source-level accessibility scan (zero
-`<img>`/`<Image>` anywhere in `src/`; every form input in
-`contact-form.tsx` and the shared Planner `FieldShell` has a real
-`<label htmlFor>` and wired `aria-invalid`/`aria-describedby`). **No
-defect found** in either — genuine negative results, no source change.
-See `CYVEXLY_APP_DEBT.md`'s "Round 77" and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+Round 77's full report (service-details/site-config diff + accessibility
+scan, 0 defects found) is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_77_REPORT.md` (moved
+there round 82 to make room for the round-82 entry below).
 
 **Round 76** (interactive session, Owner direction `2026-09-06-17`)
 added a Home "So how does it work?" section: a supplied process video
