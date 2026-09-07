@@ -63,8 +63,8 @@ sections and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s matching closeouts
 headroom; no history lost).
 
 **Accepted product position:** `main` is pushed through round 93's source
-commit on `origin/main` and Render auto-deploys it (rounds 83-86 and
-88-92 made no product-source change; round 87 fixed the Home
+commit (`2881ae1`) on `origin/main` and Render auto-deploys it (rounds
+83-86 and 88-92 made no product-source change; round 87 fixed the Home
 pricing-preview integrations wording; round 93 fixed a build-tooling
 defect — `eslint.config.mjs` — no product-facing change).
 `cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
