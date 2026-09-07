@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 91. Owner launch direction updated 2026-09-04, extended
+**Global round:** 92. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive) added a
 supplied Home process video under Owner direction `2026-09-06-17`. Rounds
@@ -23,7 +23,14 @@ defect: this session type's PowerShell process starts with only the
 Machine `PATH` (Node.js/pnpm live in the User `PATH`, unset in this
 process) — see `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-84 note for
 the exact one-line fix future rounds need (reused successfully rounds
-85-88).
+85-88). Round 91 (scheduled/unattended) found 0 new defects (About-page-
+vs-vision §6.8 convergence-check + genuine in-pane Tab traversal of
+Planner Step 6). Round 92 (scheduled/unattended) fixed a real
+documentation-debt item (this file over its byte cap, `CYV-DOC-003`) and
+found 0 new defects on a fresh Accessibility-statement-vs-actual-rendered-
+behavior convergence check (contrast, focus order, skip-link,
+reduced-motion) — full detail in `CYVEXLY_APP_DEBT.md`'s "Round 91"/
+"Round 92".
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -41,78 +48,27 @@ access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
 
-**Round 91 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-07-R82` (57th consecutive clean confirmation, "PASS WITH
-COMMENDATION", 0 action needed; also confirmed the untracked `velora/`
-directory is an unrelated, self-contained sub-project, not product-source
-contamination). Verified `tsc`/lint/build clean on unchanged round-87
-source. Two fresh convergence checks — the About page vs. vision §6.8's
-authorized draft/no-founder-identity requirement, and a genuine
-in-Browser-pane `Tab`/`Return`/`Space` pass on the Planner Step 6
-`StatusRow` toggle group (untried in-pane since round 7) — both found **0
-defects** (the Return/Space non-activation re-confirms round 80/81's
-already-closed tool artifact, not a regression). Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Round 91" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+**Round 92 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-07-R83` (58th consecutive clean confirmation, "PASS WITH
+COMMENDATION", 1 documentation-debt item `CYV-DOC-003` — this file over
+its byte cap). Fixed `CYV-DOC-003`. Verified `tsc`/lint/build clean on
+unchanged round-87 source. Fresh convergence check via real headless-
+Chrome/CDP: Accessibility statement page's claims vs. actual rendered
+behavior (contrast 6.27:1, genuine skip-link keyboard bypass proof,
+reduced-motion CSS confirmed active) — **0 defects**. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Round 92" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 90 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-07-R81` (56th consecutive clean confirmation, "PASS WITH
-COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
-unchanged round-87 source. Followed round 89's handoff-named surface —
-the Process page's `processSteps` copy vs. the Planner's real fields,
-Pricing's real deposit schedule, and the matching FAQ answers. **0
-defects found** — every specific claim matches source exactly; the page
-explicitly frames itself as "five stages" distinct from the Planner's
-9-step form. Verified live on a rebuilt `next start` server (`/process`/
-`/faq`/`/pricing`, 20/20 routes 200). Also deduplicated ~14KB of
-`CYVEXLY_ACTIVE_CHUNK.md` content that repeated the file's own "Rounds
-42-73" one-line list, restoring real hot-file headroom. Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Round 90" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
-
-**Round 89 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-07-R80` (55th consecutive clean confirmation, "PASS WITH
-COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
-unchanged round-87 source. Followed round 88's handoff-named surface —
-`faqLibrary`'s payment/billing answers vs. `pricingPackages`/
-`billedSeparately`/`addOns`/`carePlans` — then extended it to the
-Pricing page's `pricingFaq`/payment-schedule markup and Home's
-`faqPreview`. **0 defects found** — every numeric claim matches exactly
-across all sources. Verified live on a rebuilt `next start` server
-(`/faq`/`/pricing`, 20/20 routes 200). Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Round 89" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
-
-**Round 88 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-07-R79` (54th consecutive clean confirmation, "PASS WITH
-COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
-unchanged round-87 source. Found the round-87 handoff's suggested
-convergence-check target (Service JSON-LD vs. each service page's own
-scope list) doesn't exist — `buildServiceJsonLd()` emits no scope list —
-so redirected to `service-details.ts` prose vs. `pricingPackages`/
-`carePlans` scope/price data across all 5 services. **0 defects found**
-— every specific numeric claim matches exactly. Verified live on a
-rebuilt `next start` server. Full detail in `CYVEXLY_APP_DEBT.md`'s
-"Round 88" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
-
-**Round 87 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-07-R78` (53rd consecutive clean confirmation, "PASS WITH
-COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
-unchanged round-82 source via the round-84 `PATH` fix. Diffed Home's
-other CTAs/claims against `site-config.ts` and found/fixed a real
-truth-precision defect: the Home pricing-preview card overstated a
-capped Nexus-tier inclusion ("Up to two standard integrations") as a
-guaranteed "Two standard integrations". Fixed and verified live on a
-rebuilt `next start` server. **1 real defect found and fixed.** Full
-detail in `CYVEXLY_APP_DEBT.md`'s "Round 87" and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
-
-Rounds 83-86's outcome summaries are archived in
-`CYVEXLY_APP_DEBT.md`'s "Round 83" (pointer)/"Round 84"/"Round 85"
-(pointer)/"Round 86" (pointer) sections and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s matching closeouts (all 0-defect
-convergence-check rounds; round 84 also fixed the PATH environment gap).
+Rounds 87-91's outcome summaries (round 87 fixed a real Home pricing-
+preview truth-precision defect, commit `c85419f`; rounds 88-91 found 0
+new defects across service-details/faqLibrary/Pricing/Home payment-copy,
+Process-page, and About-page/Planner-keyboard convergence-checks) are
+archived in `CYVEXLY_APP_DEBT.md`'s "Round 87"-"Round 91" sections and
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s matching closeouts (moved round 92 to
+restore this file's 8,192-byte hot-file cap headroom; no history lost).
 
 **Accepted product position:** `main` is pushed through round 87's source
 commit (`c85419f`) on `origin/main` and Render auto-deploys it (rounds
-83-86 and 88-91 made no source change; round 87 fixed the Home
+83-86 and 88-92 made no source change; round 87 fixed the Home
 pricing-preview integrations wording).
 `cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
 round 53). `origin/master` is historical, not the deployment branch.
