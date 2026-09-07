@@ -1,5 +1,50 @@
 # Cyvexly Next Builder Handoff
 
+## Round 86 closeout
+
+**Session:** scheduled/unattended Claude Code run, 2026-09-07
+**Start source:** `55f7300` on `main` (pushed, matched `origin/main`)
+**Scope:** Checked the Auditor inbox: one new item, `IFA-2026-09-07-R77`
+(52nd consecutive clean confirmation, "PASS WITH COMMENDATION", 0 action
+needed — same stale "Production Domain Connection" gate wording rounds
+77-85 already noted); moved to `exchange/processed/`. Applied the
+round-84 `PATH` fix and verified `tsc`/lint/build clean (zero warnings,
+same pre-existing round-42 evidence-script lint warning) on unchanged
+round-82 source. Continued the convergence-check practice on the
+round-85 handoff's named fresh surface: field-by-field compared the
+Planner's per-step UI copy (`planner-form.tsx`, all 9 steps) against the
+internal-notification field labels `api/planner/route.ts`/`mailer.ts`
+produce — every `PlannerData` field is read server-side and rendered
+under a matching label, client/server required-field lists match
+exactly. Extended the same check to Contact
+(`contact-form.tsx`/`api/contact/route.ts`) — same clean result. Noted
+one low-value, no-fix-warranted observation (a secondary "Other" goal
+has no elaboration field, unlike the primary goal's `primaryGoalOther`)
+— reasoned as out of proportion for a convergence-check round per
+§0.3/§3.5, not implemented. **No defects found — a genuine negative
+result** after real cross-file investigation. Rotated
+`CYVEXLY_APP_DEBT.md` (archived round 83's inline detail to
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_83_ARCHIVE.md`, kept a
+one-line pointer) to restore hot-file headroom ahead of adding this
+round's entry.
+**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
+
+**No urgent item routed to the next round.** Chunk 5's remaining scope
+is entirely Owner-side gates (exact LLC name, Resend account/DNS,
+analytics/Search Console ownership or a no-analytics decision, Owner
+visual/copy acceptance, final indexability approval) — see
+`CYVEXLY_CURRENT_STATE.md` and `CYVEXLY_OWNER_DIRECTION.md`. Next Builder
+round: check the Auditor inbox first, apply the round-84 `PATH` fix
+before any `pnpm`/`node` command, then pick a fresh surface not yet
+covered by rounds 74-86's convergence checks (Terms, Accessibility,
+About, sitemap/robots, CSP, Privacy, FAQ, Pricing/response-time,
+structured-data.ts, Planner/Contact-vs-email labels already done) — a
+good candidate: the Home page's other CTAs/claims not yet diffed against
+`site-config.ts` (e.g. `processSteps`/`collaborationPromise` copy vs the
+actual Planner/Contact flow's real steps), or a fresh accessibility pass
+on the Planner's step-6 asset-status `StatusRow` custom toggle-group
+pattern (last audited round 7, well before later Planner edits).
+
 ## Round 85 closeout
 
 **Session:** scheduled/unattended Claude Code run, 2026-09-07
@@ -83,46 +128,10 @@ OfferCatalog JSON-LD fields against the actual rendered page facts they
 describe, or the Planner's per-step copy (`start/page.tsx` and its step
 components) against the email-notification field labels it produces.
 
-## Round 83 closeout
-
-**Session:** scheduled/unattended Claude Code run, 2026-09-07
-**Start source:** `99ea12c` on `main` (pushed, matched `origin/main`)
-**Scope:** Dispositioned Auditor item `IFA-2026-09-07-R74` (49th
-consecutive clean confirmation, reviewed commit `7c4e3ae` — round 81's
-head, predating round 82's Privacy Policy fix), same stale "Production
-Domain Connection" gate wording rounds 77-82 already noted. No Builder
-action required; moved to `exchange/processed/`. Ran the standard
-verification suite first (`tsc --noEmit`, `pnpm run lint`, `pnpm run
-build` — all clean, same pre-existing round-42 evidence-script lint
-warning, zero build warnings). Continued the convergence-check practice
-on fresh, not-yet-re-verified surfaces: adversarially diffed
-`src/app/terms/page.tsx` against actual behavior (no contradiction
-found — payment/scraping/IP claims all consistent with current code);
-diffed `src/app/accessibility/page.tsx`'s "see Pricing" claim against
-`projectIncludes`/`addOns` in `site-config.ts` (confirmed true —
-"Accessible interaction and content standards target" is listed as
-standard scope in every package, and a deeper accessibility audit is a
-real add-on); confirmed `sitemap.ts`'s 11 static routes exactly match
-`src/app`'s actual top-level `page.tsx` files (no drift); confirmed
-`robots.ts` still correctly defaults to `disallow` when
-`NEXT_PUBLIC_SITE_INDEXABLE` is unset; reviewed `next.config.ts`'s CSP
-against the round-76 video/lightbox feature (native `<video>`, no
-iframe/third-party origin — `media-src 'self'` still sufficient, no gap
-introduced since round 31's grep). **No defects found — a genuine
-negative result, not skipped work.**
-**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
-
-**No urgent item routed to the next round.** Chunk 5's remaining scope
-is entirely Owner-side gates (exact LLC name, Resend account/DNS,
-analytics/Search Console ownership or a no-analytics decision, Owner
-visual/copy acceptance, final indexability approval) — see
-`CYVEXLY_CURRENT_STATE.md` and `CYVEXLY_OWNER_DIRECTION.md`. Next
-Builder round: check the Auditor inbox first, then pick a fresh surface
-not yet covered by rounds 74-83's convergence checks (Terms,
-Accessibility, About, sitemap/robots, CSP, Privacy already done) — good
-candidates: the FAQ library's 30 Q&As against current site behavior, or
-`structured-data.ts`'s JSON-LD output against the actual rendered page
-facts it describes.
+Round 83's full closeout (Terms/Accessibility/sitemap/CSP convergence-
+check, 0 defects found) is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_83_REPORT.md` (moved
+there round 86 to keep this file under its 12,288-byte hot-file cap).
 
 Round 82's full report (real Privacy Policy IP-disclosure truth-accuracy
 fix, commit `19ae224`) is archived at
