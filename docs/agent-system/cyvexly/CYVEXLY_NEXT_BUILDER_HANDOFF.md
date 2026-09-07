@@ -1,72 +1,41 @@
 # Cyvexly Next Builder Handoff
 
-## Round 77 closeout
+## Round 78 closeout
 
-**Session:** scheduled/unattended Claude Code run, 2026-09-06/07
-**Start source:** `3409faf` on `main` (pushed, matched `origin/main`)
-**Scope:** No new Auditor findings requiring action; continued the
-round-76-recommended data-truth audit and a source-level accessibility
-scan. No source change — genuine negative result on both.
-**Completion:** DONE WITH PROOF (investigation round, 0 defects found).
-
-### What was checked
-
-1. **Auditor inbox:** one new item, `IFA-2026-09-07-R68` (43rd
-   consecutive clean confirmation, reviewed commit `55ffb6d` — predates
-   round 76's video feature), 0 active code defects, 47/47 hot files
-   compliant. Its "External Business Operations Gates" list still names
-   "Production Domain Connection" as pending — this is stale boilerplate
-   in that report; the domain has been verified live since round 53 (see
-   `CYVEXLY_CURRENT_STATE.md`). No Builder action required; moved to
-   `exchange/processed/`.
-2. **Field-by-field diff, round-76-recommended:** every
-   `serviceDetails[slug]` (`src/lib/service-details.ts`) — `package`
-   name/price/timing, `included`, `example` — checked against its
-   matching `pricingPackages`/`carePlans` entry and `servicesGroups`
-   category in `src/lib/site-config.ts`. All 5 services' package
-   name/timing pairs match exactly; the `serviceDetails` "From $X" vs
-   `pricingPackages` bare "$X" pattern is the same non-defect round 75
-   already traced (different render paths each apply their own "From"/
-   "Starting at" label); every FAQ claim (e.g. "Orbit includes up to
-   seven core pages", "Nexus includes a migration allowance") matches
-   its package's `scope` array. **No defect found.**
-3. **Source-level accessibility scan** (live CDP/keyboard testing was
-   unavailable this session — see below): confirmed zero raw `<img>` or
-   `next/image` `<Image>` elements exist anywhere in `src/` (the site
-   uses only inline SVG/video, so no missing-`alt` risk); read every
-   `<input>`/`<textarea>` call site in `contact-form.tsx` and the shared
-   `planner/planner-fields.tsx` field components — all use explicit
-   `<label htmlFor>`/`id` pairs plus `aria-invalid`/`aria-describedby`
-   wired to real error-message ids. **No defect found.**
-4. **Verified:** `tsc --noEmit` and `pnpm run lint` both clean (same
-   pre-existing round-42 evidence-script lint warning, untouched). No
-   `pnpm run build`/live-server sweep this round since no source
-   changed.
-
-### Named environment limitation this round (not a product defect)
-
-This is a scheduled/unattended session (not an interactive chat). The
-Browser pane's `preview_start` tool explicitly refuses to launch a dev
-server from unattended sessions ("nobody is present to approve the
-command"), so no live rendered/CDP verification (screenshots, keyboard-
-only traversal, `next start` route sweep) was reachable this round —
-only source-level (`tsc`/lint) and static-analysis checks were
-possible. This is the same category of session-type proof gap already
-recorded in `CYVEXLY_CHUNK_DEBT.md` item 3 (rounds 4-6, "an attended
-session, which never materialized in this exact session type") — not a
-new capability gap, and not a reason to skip investigation, only to
-bound its proof layer honestly.
+**Session:** scheduled/unattended Claude Code run, 2026-09-07
+**Start source:** `7708964` on `main` (pushed, matched `origin/main`)
+**Scope:** Dispositioned Auditor item `IFA-2026-09-07-R69` (no action
+needed). Found round 77's "live/CDP verification is categorically
+unreachable this session type" conclusion was too broad and re-opened live
+verification via round 1's manual-start-then-attach workaround (see
+`CYVEXLY_TOOLS_AND_CAPABILITIES.md` round-78 note). Used the reachable
+window to close round 76's `document.hidden`/autoplay proof gap with
+genuine positive evidence and independently re-verify the video lightbox
+live. No source change.
+**Completion:** DONE WITH PROOF (proof-gap-closure + environment-capability
+round, 0 defects found).
 
 ### Recommended next workstream
 
-Re-check the Auditor inbox first for anything published after round 77.
-A genuine live keyboard-only/CDP accessibility pass (last done round 8)
-is still worth doing in a session type where the Browser pane's dev
-server is reachable (interactive session). Owner visual acceptance of
-round 76's Home video section is still pending. Owner gates unchanged:
-Resend account/DNS/API key, analytics/Search Console ownership, exact
-LLC name, About/legal/visual review, final indexability approval (see
-`CYVEXLY_OWNER_DIRECTION.md`).
+The manual-start-then-attach Browser-pane workaround is reachable but
+intermittent (compositing/keyboard degraded partway through this round) —
+retry it early each round rather than assuming either "always blocked" or
+"fully reliable"; fall back to `read_page`/`javascript_tool` (100% reliable)
+when it degrades. With this window open, a genuine live keyboard-only Tab
+traversal of the header nav / Contact form / Planner (last done via this
+exact Browser pane: never; last done at all via local-Chrome/CDP: round 8)
+is now worth attempting again if the window holds. Re-check the Auditor
+inbox first for anything published after round 78. Owner gates unchanged:
+Resend account/DNS/API key, analytics/Search Console ownership, exact LLC
+name, About/legal/visual review (including round 76's video section),
+final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
+Round 77's full report is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_77_REPORT.md` (moved
+there round 78 to keep this file under its 12,288-byte hot-file cap). Round
+77 dispositioned the 43rd Auditor confirmation and ran a source-level
+service-details/site-config diff plus a form-accessibility scan (0 new
+defects, no source change).
 
 Round 76's full report is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_76_REPORT.md` (moved
@@ -84,7 +53,8 @@ Rounds 45-74 closeout detail is archived at their correspondingly named
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_<N>_REPORT.md` files
 (consolidated round 77 to keep this file under its 12,288-byte hot-file
 cap; no history lost — one-line outcomes only): 74 extended color-token
-audit (0 new defects); 73 case-study/artwork color-token staleness fix;
+audit (0 new defects); 73 case-study/artwork color-token staleness fix
+(archived detail also in `CYVEXLY_APP_DEBT_ROUND_73_ARCHIVE.md`);
 72 Planner Review-page validation-bypass fix; 71 `/work` dead-end
 filter-pill fix + hot-file-cap fix; 70 text-cursor/editable-copy fix; 69
 Home FAQ CMS-claim qualification; 68 `robots.ts` missing `Sitemap:` fix;

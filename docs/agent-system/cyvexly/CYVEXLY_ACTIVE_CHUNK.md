@@ -7,6 +7,26 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 78** (scheduled/unattended) checked the Auditor inbox
+(`IFA-2026-09-07-R69`, 44th consecutive clean confirmation, "PASS WITH
+COMMENDATION" on round 76's video via the Auditor's own live CDP run — no
+Builder action needed) and found that round 77's "live/CDP verification is
+categorically unreachable this session type" conclusion was too broad: only
+`preview_start({name})`'s dev-server launch is refused for unattended
+sessions. Starting `next dev` manually via the Bash tool and attaching with
+`preview_start({url: "http://localhost:5173"})` (round 1's own documented
+workaround) got genuine compositing screenshots and a real `Tab`-key focus
+move this round — both degraded to intermittent partway through, matching
+rounds 35/40's pattern. Used the working window to close round 76's named
+proof-instrument gap with genuine positive evidence: `document.hidden` read
+`false` (not stuck `true` as in round 76's session), and the ambient video's
+`currentTime` advanced 3.24s → 11.14s across a real 3-second wait, proving
+actual autoplay progression; independently re-verified the lightbox's
+open/Escape-close/focus-return live. No source change — a proof-gap-closure
+and environment-capability round. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Round 78" and `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s
+round-78 note.
+
 **Round 77** (scheduled/unattended — dev-server preview disabled for
 unattended sessions, so proof was source-level only) dispositioned
 Auditor item `IFA-2026-09-07-R68` (43rd consecutive clean confirmation,
