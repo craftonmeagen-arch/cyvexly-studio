@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 87. Owner launch direction updated 2026-09-04, extended
+**Global round:** 88. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive) added a
 supplied Home process video under Owner direction `2026-09-06-17`. Rounds
@@ -13,12 +13,16 @@ Planner-email/About surfaces, then structured-data.ts JSON-LD vs.
 rendered-page-facts, then round 86's Planner/Contact per-step-copy vs.
 email-notification field-label check); round 87 (scheduled/unattended)
 found and fixed a real Home pricing-preview truth-precision defect
-(overstated a capped inclusion as guaranteed). Round 84 also fixed a
-Builder-owned environment defect: this session type's PowerShell process
-starts with only the Machine `PATH` (Node.js/pnpm live in the User
-`PATH`, unset in this process) — see
-`CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-84 note for the exact
-one-line fix future rounds need (reused successfully rounds 85-87).
+(overstated a capped inclusion as guaranteed); round 88 (scheduled/
+unattended) found 0 new defects (service-details.ts prose vs.
+pricingPackages/carePlans scope convergence-check, after finding the
+handoff's originally-suggested Service-JSON-LD-scope-list target does
+not exist by design). Round 84 also fixed a Builder-owned environment
+defect: this session type's PowerShell process starts with only the
+Machine `PATH` (Node.js/pnpm live in the User `PATH`, unset in this
+process) — see `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-84 note for
+the exact one-line fix future rounds need (reused successfully rounds
+85-88).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -36,6 +40,18 @@ access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
 
+**Round 88 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-07-R79` (54th consecutive clean confirmation, "PASS WITH
+COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
+unchanged round-87 source. Found the round-87 handoff's suggested
+convergence-check target (Service JSON-LD vs. each service page's own
+scope list) doesn't exist — `buildServiceJsonLd()` emits no scope list —
+so redirected to `service-details.ts` prose vs. `pricingPackages`/
+`carePlans` scope/price data across all 5 services. **0 defects found**
+— every specific numeric claim matches exactly. Verified live on a
+rebuilt `next start` server. Full detail in `CYVEXLY_APP_DEBT.md`'s
+"Round 88" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
 **Round 87 outcome (scheduled/unattended):** dispositioned Auditor item
 `IFA-2026-09-07-R78` (53rd consecutive clean confirmation, "PASS WITH
 COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
@@ -48,28 +64,16 @@ rebuilt `next start` server. **1 real defect found and fixed.** Full
 detail in `CYVEXLY_APP_DEBT.md`'s "Round 87" and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
-**Round 86 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-07-R77` (52nd consecutive clean confirmation, "PASS WITH
-COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean (zero
-warnings) on unchanged round-82 source via the round-84 `PATH` fix.
-Field-by-field compared the Planner's per-step UI copy against the
-internal-notification field labels it produces (`planner-form.tsx` vs
-`api/planner/route.ts`/`mailer.ts`) and did the same for Contact — every
-field is read server-side and rendered under a matching label, no drift.
-**0 defects found** — a genuine negative result, no source change. Full
-detail in `CYVEXLY_APP_DEBT.md`'s "Round 86" and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
-
-Rounds 83-85's outcome summaries are archived in
+Rounds 83-86's outcome summaries are archived in
 `CYVEXLY_APP_DEBT.md`'s "Round 83" (pointer)/"Round 84"/"Round 85"
-sections and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s matching closeouts (all
-0-defect convergence-check rounds; round 84 also fixed the PATH
-environment gap).
+(pointer)/"Round 86" (pointer) sections and
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s matching closeouts (all 0-defect
+convergence-check rounds; round 84 also fixed the PATH environment gap).
 
 **Accepted product position:** `main` is pushed through round 87's source
 commit (`c85419f`) on `origin/main` and Render auto-deploys it (rounds
-83-86 made no source change; round 87 fixed the Home pricing-preview
-integrations wording).
+83-86 and 88 made no source change; round 87 fixed the Home
+pricing-preview integrations wording).
 `cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
 round 53). `origin/master` is historical, not the deployment branch.
 

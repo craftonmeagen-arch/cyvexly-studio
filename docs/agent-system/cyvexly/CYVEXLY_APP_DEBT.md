@@ -1,5 +1,61 @@
 # Cyvexly App Debt
 
+## Round 88 — no new defect; Service JSON-LD scope-field and service-details.ts/pricingPackages content convergence-check
+
+Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R79` (54th
+consecutive clean confirmation per the Auditor's own count, "PASS WITH
+COMMENDATION", reviewed commit `f331746` predating round 87's fix, 0
+Builder action needed — its one advisory note, proactively rotating
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md` in round 87, was already satisfied by
+round 87's own rotation before this report published). Moved to
+`exchange/processed/`.
+
+Ran the standard verification suite first: `pnpm exec tsc --noEmit`
+clean, `pnpm run lint` clean (same pre-existing round-42 evidence-script
+warning), `pnpm run build` clean, on unchanged round-87 source
+(`74367fa`).
+
+**Convergence-check, fresh surface (the round-87 handoff's named
+candidate):** the round-87 handoff suggested diffing `structured-data.ts`'s
+`Service` JSON-LD against each `/services/[slug]` page's own rendered
+scope list. Reading `buildServiceJsonLd()` (`src/lib/structured-data.ts`)
+found it emits only `serviceType`/`name`/`description`/`url`/`provider`/
+`areaServed`/`offers.lowPrice` — by design it carries no scope/feature
+list at all (no `hasOfferCatalog`/`itemOffered`), so there is no
+scope-list field capable of drifting from the page's rendered content;
+confirmed live via a real `next start` server that no service-detail
+route's rendered JSON-LD contains `hasOfferCatalog` or `itemOffered`.
+Since the originally-suggested comparison has no target, extended the
+check to the next most relevant surface instead: `service-details.ts`'s
+`included`/`package.note`/`faqs` prose for all 5 services against
+`site-config.ts`'s `pricingPackages`/`carePlans` `scope` arrays and
+prices. Found the `included` lists are deliberately generic per-category
+descriptions (not restated package-specific counts), so no numeric claim
+exists to contradict; every specific cross-reference that does exist
+matches exactly (Orbit FAQ "up to seven core pages" = Orbit `scope`'s
+"Up to 7 core pages"; Nexus FAQ "includes a migration allowance" = Nexus
+`scope`'s "Content migration allowance"; Commerce FAQ "initial catalog
+allowance" = Commerce `scope`'s "Initial catalog allowance"); all 5
+`package.price`/`lowPrice` pairs match their `pricingPackages`/
+`carePlans` source figures exactly (3500/5800/1800/8500/99). **0 defects
+found** — a genuine negative result after real source-and-live
+cross-file investigation, not skipped work.
+**Verified live:** rebuilt production build clean; started a real `next
+start` server on port 5173; fetched all 5 `/services/[slug]` routes and
+confirmed each rendered `Service` JSON-LD's `description` matches its
+source `summary` exactly and `offers.lowPrice` matches
+(3500/5800/1800/8500/99); full 20-route sweep (all static + all 5
+service-detail + all 3 case-study routes), 20/20 return 200.
+**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
+Cleaned up: stopped the manually-started `next start` listener on port
+5173 by its verified real listener PID (`Get-NetTCPConnection -LocalPort
+5173 -State Listen`), confirmed port clear afterward; removed the one
+scratch server log from the OS temp root.
+Rotated this file (archived round 85's inline detail to
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_85_ARCHIVE.md`, kept a
+one-line pointer) to restore hot-file headroom ahead of adding this
+round's entry.
+
 ## Round 87 — real defect fixed; Home pricing-preview overstated a capped inclusion as guaranteed
 
 Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R78` (53rd
@@ -48,91 +104,21 @@ Rotated this file (archived round 84's inline detail to
 one-line pointer) to restore hot-file headroom ahead of adding this
 round's entry.
 
-## Round 86 — no new defect; Planner/Contact per-step copy vs. email-notification field-label convergence-check
-
-Checked the Auditor inbox first: no new item present (last processed was
-`IFA-2026-09-07-R77`, 52nd consecutive clean confirmation, "PASS WITH
-COMMENDATION", 0 action needed — same stale "Production Domain
-Connection" gate wording rounds 77-85 already noted; moved to
-`exchange/processed/`).
-
-Ran the standard verification suite first: `tsc --noEmit`/`pnpm run
-lint`/`pnpm run build` all clean (zero warnings; same pre-existing
-round-42 evidence-script lint warning) on unchanged round-82 source
-(`55f7300`).
-
-**Convergence-check, fresh surface (the round-85 handoff's named
-candidate):** field-by-field compared the Planner's per-step UI copy
-(`src/components/planner/planner-form.tsx`, all 9 steps' visible field
-labels) against the internal-notification field labels
-`src/app/api/planner/route.ts` produces via `src/lib/mailer.ts` — every
-one of the ~47 `PlannerData` fields defined in `src/lib/planner-config.ts`
-is both read server-side (no round-66-style silently-dropped field) and
-rendered under a semantically matching (though independently worded,
-which is normal copy variation between a form label, a review-summary
-label, and an email column header) row label in the notification email;
-the required-field lists in the client's `validateStep()` and the
-server's `errors` block match exactly field-for-field. Extended the same
-check to the Contact form (`src/components/contact-form.tsx` vs.
-`src/app/api/contact/route.ts`) — same result, full 1:1 field mapping,
-no drift. **One low-value observation, not a defect, no fix warranted:**
-a visitor who selects "Other" as a *secondary* goal (not primary) gets no
-elaboration field — unlike `primaryGoalOther`, which only exists for the
-*primary* goal — so the internal notification would show a bare "Other"
-in the secondary-goals list. Vision §6.9/§9's field plan does not call
-for secondary-goal elaboration, this is an edge case (a visitor must
-pick "Other" as a non-primary goal), and Cyvexly's own qualified-brief
-process (a human follow-up, not an automated quote) already covers
-under-specified answers — proportionate judgment per §0.3/§3.5 is that
-this does not justify new UI scope during a convergence-check round.
-**0 code defects found** — a genuine negative result after real
-cross-file investigation, not skipped work.
-**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
-Cleaned up: no scratch files/processes created this round beyond the
-local build/lint/typecheck commands, which leave no residue.
+Round 86's full detail (Planner/Contact per-step copy vs. email-
+notification field-label convergence-check, 0 defects found) is
+archived at `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_86_ARCHIVE.md`
+(moved there round 88 to keep this file under its 30,720-byte hot-file
+cap).
 
 Round 83's full detail (Terms/Accessibility/sitemap/CSP convergence-check,
 0 defects found) is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_83_ARCHIVE.md` (moved there
 round 86 to keep this file under its 30,720-byte hot-file cap).
 
-## Round 85 — no new defect; structured-data.ts JSON-LD convergence-check
-
-Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R76` (51st
-consecutive clean confirmation, "PASS WITH COMMENDATION", 0 action
-needed — its "Production Domain Connection" gate line is the same stale
-wording rounds 77-84 already noted). Moved to `exchange/processed/`.
-
-Ran the standard verification suite first: `tsc --noEmit`/`pnpm run
-lint`/`pnpm run build` all clean (zero warnings; same pre-existing
-round-42 evidence-script lint warning) on unchanged round-82 source
-(`61e0027`).
-
-**Convergence-check, fresh surface (the round-84 handoff's named
-candidate):** field-by-field diffed every `structured-data.ts` JSON-LD
-builder against the source-of-truth data it describes —
-`organizationJsonLd`'s name/phone/email/description against
-`siteConfig` and the About page's own "independent"/"fully remote"
-copy; `buildServiceJsonLd()`'s `extractStartingPrice()` regex against
-all 5 `serviceDetails[slug].package.price` strings ("From $X"/"From
-$X/mo" forms); `pricingJsonLd`'s `OfferCatalog` against `pricingPackages`
-(including the price-less "Custom system"/"Quoted after discovery" entry
-correctly omitting `priceSpecification`); `faqPageJsonLd` against
-`faqLibrary`'s 30 Q&As (direct reuse, not a copy — no drift possible).
-Then verified live on a real `next start` server (not just source
-reading): `/` and `/pricing`'s `Organization` JSON-LD render identical
-byte-for-byte; `/pricing`'s rendered `OfferCatalog` shows the exact 5
-prices (1800/3500/5800/8500, Custom system correctly price-less);
-`/services/business-websites`'s rendered `Service` JSON-LD shows
-`lowPrice: 3500` matching Orbit's "From $3,500"; `/faq` renders exactly
-30 `Question` entities; `/work/aurora-spaces`'s `BreadcrumbList` matches
-the real route trail. **0 defects found** — a genuine negative result
-after real source-and-live cross-file investigation, not skipped work.
-**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
-Cleaned up: stopped the manually-started `next start` listener on port
-5173 (verified the real listener PID via `Get-NetTCPConnection
--LocalPort 5173 -State Listen` before killing it, confirmed port clear
-afterward); no scratch files created this round.
+Round 85's full detail (structured-data.ts JSON-LD convergence-check, 0
+defects found) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_85_ARCHIVE.md` (moved there
+round 88 to keep this file under its 30,720-byte hot-file cap).
 
 Round 84's full detail (FAQ/pricing/response-time/About convergence-check
 + PATH environment fix, 0 defects found) is archived at
