@@ -1,54 +1,55 @@
 # Cyvexly Next Builder Handoff
 
-## Round 75 closeout
+## Round 76 closeout
 
-**Session:** scheduled `cyvexly-builder` task, 2026-09-06, 50-minute hard
-time limit (unattended)
-**Start source:** `3d5e7bc` on `main` (pushed, matched `origin/main`)
-**Scope:** one new Auditor inbox item dispositioned and actioned; an
-adversarial diff of `service-details.ts` pricing copy vs `site-config.ts`
-(the round-74 handoff's recommended fresh surface).
-**Completion:** DONE WITH PROOF — one real (if low-severity) fix shipped,
-one surface investigated with a genuine negative result. See
-`CYVEXLY_APP_DEBT.md`'s "Resolved round 75" entry for full detail.
+**Session:** interactive Claude Code chat, 2026-09-06, Owner direction
+`2026-09-06-17`
+**Start source:** `55ffb6d` on `main` (pushed, matched `origin/main`)
+**Scope:** Owner-requested feature — a supplied process video added to
+Home under a new "So how does it work?" heading.
+**Completion:** DONE WITH PROOF — feature shipped; a real bug found and
+fixed during verification. See `CYVEXLY_APP_DEBT.md`'s "Resolved round
+76" and `CYVEXLY_OWNER_DIRECTION.md`'s "Home 'how does it work?' process
+video 2026-09-06-17" for full detail.
 
-### What was checked and fixed
+### What was built and fixed
 
-`IFA-2026-09-06-R64` (39th consecutive clean confirmation, reviewed
-`7db867c`, round 73's head) — moved to `exchange/processed/`. Actioned
-its one recommendation: replaced the last 4 pre-refresh `#1478FF`
-literals (inert `gradient` Tailwind class strings in `site-config.ts`,
-confirmed covered by `ConceptPreview`'s opaque SVG background since
-round 73) with the current `#0F66E0` token, for full sitewide
-consistency — zero visual effect. `grep -rn "#1478FF" src/` now returns
-zero matches anywhere.
+Added `src/components/how-it-works-video.tsx` (ambient muted looping
+inline video, no play/pause affordance, click/Enter opens a lightbox
+with real controls) and wired it into `src/app/page.tsx` under the
+existing "We're not a DIY builder" panel. Copied
+`public/media/cyvexly-how-it-works.mp4` and generated a poster WebP.
 
-Adversarially diffed `service-details.ts`'s "From $X" package prices
-against `pricingPackages`/`carePlans`' bare "$X" and the JSON-LD price
-extractor. Both `/pricing` and `/services/[slug]` independently label
-the same figure as a starting price via different copy ("Starting at"
-vs "Related starting point"/"From"); the extractor's regex is prefix-
-agnostic. No defect — a genuine negative result.
+Found and fixed a real bug: the lightbox's `fixed inset-0` overlay
+wasn't actually viewport-fixed, because a `backdrop-filter` ancestor
+(the sitewide glass treatment) creates a new CSS containing block for
+`position: fixed` — same category as `transform`/`filter`/
+`perspective`. Fixed via `createPortal(..., document.body)`; re-verified
+correct full-viewport coverage and backdrop-click-to-close via CDP.
 
 `tsc --noEmit`/lint/`pnpm run build` clean; real `next start` 21-route
-sweep all 200 (`/not-found` 404s); port 5173 cleanly stopped, no scratch
-files left.
+sweep all 200; port 5173 cleanly stopped, no scratch files left. One
+named proof-instrument limitation (this session's `document.hidden`
+always reads `true`) — see `CYVEXLY_APP_DEBT.md` for detail; not a
+product defect.
 
 ### Recommended next workstream
 
-Re-check the Auditor inbox first. `service-details.ts` pricing/copy is
-now checked clean against `site-config.ts`. No genuinely fresh,
-previously-unreviewed surface is currently known after five consecutive
-rounds (71-75) of adversarial sweeps across `/work`, Planner validation,
-color tokens, truth-claim copy, and pricing consistency; consider a
-fresh accessibility pass (real keyboard-only traversal via CDP, last
-done round 8) if this session type's Browser-pane limitations allow it,
-or a field-by-field diff of each `serviceDetails[slug].included`/
-`clientInputs`/`scopeFactors` list against its matching
-`servicesGroups`/`pricingPackages.scope` entries (not yet attempted).
-Owner gates unchanged: Resend account/DNS/API key, analytics/Search
-Console ownership, exact LLC name, About/legal/visual review, final
-indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+Owner visual acceptance of the new video section is pending. Re-check
+the Auditor inbox first for anything published since round 75. Beyond
+that, consider a fresh accessibility pass (real keyboard-only traversal
+via CDP, last done round 8) or a field-by-field diff of each
+`serviceDetails[slug].included`/`clientInputs`/`scopeFactors` list
+against its matching `servicesGroups`/`pricingPackages.scope` entries
+(not yet attempted). Owner gates unchanged: Resend account/DNS/API key,
+analytics/Search Console ownership, exact LLC name, About/legal/visual
+review, final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+
+Round 75's full report is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_75_REPORT.md` (moved
+there round 76 to keep this file under its 12,288-byte hot-file cap).
+Round 75 completed brand-color token consistency in decorative gradient
+strings.
 
 Round 74 closeout detail is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_74_REPORT.md` (moved

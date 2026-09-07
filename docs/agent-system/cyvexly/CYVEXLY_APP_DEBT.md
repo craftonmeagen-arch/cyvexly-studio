@@ -1,5 +1,57 @@
 # Cyvexly App Debt
 
+## Resolved round 76 (interactive, Owner direction 2026-09-06-17)
+
+- **Owner-requested feature, not an audit finding.** Added a Home "So
+  how does it work?" section under the "We're not a DIY builder" panel:
+  a supplied process video (`cyvexley video.mp4`, a Project Planner
+  intake-flow screen recording) embedded as a silent, looping,
+  chrome-less ambient clip with a subtle "expand" affordance that opens
+  a larger, controllable lightbox on click/Enter. Full Owner transcript
+  in `CYVEXLY_OWNER_DIRECTION.md`'s "Home 'how does it work?' process
+  video 2026-09-06-17".
+- **Built:** `src/components/how-it-works-video.tsx`, wired into
+  `src/app/page.tsx` inside the existing DIY-builder panel's
+  `max-w-6xl` container (not a separate full-width section, so it reads
+  as one continuous tile). Media copied to
+  `public/media/cyvexly-how-it-works.mp4`; a poster frame
+  (`cyvexly-how-it-works-poster.webp`) was generated via an in-browser
+  canvas capture (no ffmpeg/ffprobe on this host).
+- **Found and fixed a real bug during verification:** the lightbox's
+  `fixed inset-0` overlay was not actually pinned to the viewport.
+  Several glass-panel ancestors on this page set `backdrop-filter` (the
+  sitewide frosted-glass treatment), which — like `transform`/`filter`/
+  `perspective`/`will-change: transform` — creates a new CSS containing
+  block for `position: fixed` descendants. Live CDP inspection showed
+  the overlay's bounding rect at a negative, scroll-dependent Y instead
+  of `(0,0)`, so a real backdrop-corner click missed it. Fixed by
+  rendering the modal through `createPortal(..., document.body)`.
+  Re-verified: dialog is now a direct child of `<body>`, its rect
+  matches the window exactly regardless of scroll, and backdrop-click
+  now closes it correctly.
+- **Verified via CDP:** click and Enter/Space both open the modal;
+  clicking the video panel itself does not close it (`stopPropagation`
+  confirmed); Escape and the close button both close it and correctly
+  restore focus/body scroll; zero horizontal overflow at 375px;
+  `tsc --noEmit`/lint/`pnpm run build` all clean (same pre-existing
+  round-42 evidence-script lint warning, untouched); a real
+  `next start` 21-route sweep (including both new media files) all
+  returned 200.
+- **Named proof-instrument limitation, not a product defect:** this
+  session's Browser pane consistently reports `document.hidden = true`
+  even when the tab is the sole/fronted one, so the ambient loop's
+  existing `document.hidden`-driven auto-pause (matching the Home hero
+  video's established pattern) could not be positively distinguished
+  from a real background-tab pause via the Page Visibility API in this
+  session. Real screenshots taken earlier in the same session (before
+  this check was added) showed the frame content visibly advancing over
+  real elapsed time, and manual `.play()` calls succeed with no error —
+  the playback path itself is sound; a genuinely attended browser
+  session would close this proof gap.
+- Cleaned up: stopped the owned `next start`/`next dev` listeners on
+  port 5173 by verified PID; removed scratch log/base64 files from
+  `$env:TEMP` and the session scratchpad.
+
 ## Resolved round 75
 
 - **Checked the Auditor inbox first:** one new item,
@@ -152,181 +204,27 @@ Round 72's full detail is archived at
 round 73 to keep this file under its 30,720-byte hot-file cap): the
 Planner Review-page validation-bypass fix (`validateAllSteps()`).
 
-## Resolved round 71
+Round 71's full detail (the `/work` dead-end filter-pill fix and a
+hot-file-cap violation fix) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_71_ARCHIVE.md` (moved there
+round 76 to keep this file under its 30,720-byte hot-file cap).
 
-- **Checked the Auditor inbox first:** two new items existed
-  (`IFA-2026-09-06-R59`, `IFA-2026-09-06-R60`) — the 34th and 35th
-  consecutive clean confirmations (0 active code defects). R59 flagged
-  `CYVEXLY_CURRENT_STATE.md` over its byte cap; round 69 had already fixed
-  that before R60 re-verified it closed. Both moved to `exchange/processed/`.
-- **Found and fixed a real, previously-unflagged reachable defect on a
-  fresh surface (`/work`'s filter UI), per round 69/70's recommendation
-  to review surfaces not yet given a dedicated pass.** `workFilters` in
-  `src/lib/site-config.ts` listed `"Redesign"` and `"Landing Page"` as
-  filter pills, but no `selectedWork` item's `category` is ever
-  `"Redesign"` or `"Landing Page"` (all three concept projects are
-  `"Business Site"` ×2 or `"Commerce"` ×1) — clicking either pill
-  guaranteed the empty state ("No projects match that filter yet.") on a
-  core marketing page, for every visitor, permanently. Not a truth-claim
-  violation (no fabricated work), but a real dead-end interactive control.
-- **Fixed:** trimmed `workFilters` to `["All", "Business Site", "Commerce",
-  "Concept"]` — every remaining filter matches at least one real item. Did
-  not fabricate a new concept project to fill the missing categories
-  (out of proportion to the defect, and not requested).
-- **Verified:** `tsc --noEmit`/`lint`/`build` all pass clean (same
-  pre-existing, unrelated round-42 evidence-script lint warning,
-  untouched). Real `next start` server on port 5173: a scripted click of
-  every filter pill confirmed 0 empty states (`All`→3, `Business Site`→2,
-  `Commerce`→1, `Concept`→3 cards); an 18-route sweep (all public static
-  and dynamic routes plus `robots.txt`/`sitemap.xml`) returned 200.
-- **Independently found and fixed a second real reachable defect: this
-  file itself was already 2669 bytes over its 30720-byte hot-file cap**
-  at round start (33389 bytes, confirmed via
-  `.codex/roles/scripts/Test-HotFileCaps.ps1` — the same automated check
-  the Auditor uses for `CYV-DOC-*` findings), from rounds 48-55's detail
-  never having been rotated. Archived rounds 50, 51, and 55's full detail
-  to `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_{50,51,55}_ARCHIVE.md`;
-  re-verified 0 hot-file-cap violations after the edit.
-- Cleaned up: stopped the owned `next start`/`next dev` listeners
-  (verified the real listener PID via `Get-NetTCPConnection -LocalPort
-  5173 -State Listen`, not process name). Two scratch log files
-  (`next-dev-5173.log`, `next-start-5173.log`) under `$env:TEMP` could not
-  be removed this round (Windows reported them locked after the owning
-  process exited) — same transient lock behavior round 48 hit with a
-  Chrome profile directory; left in place as disposable OS-temp artifacts,
-  next round should retry `Remove-Item` and report if it persists.
-
-Round 70's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_70_ARCHIVE.md` (moved there
-round 73 to restore latest-three rotation): the text-cursor/
-editable-looking-copy fix and a session-PATH environment note.
-
-Round 69's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_69_ARCHIVE.md` (moved there
-round 72 to keep this file under its 30,720-byte hot-file cap): the
-Home FAQ preview's CMS-inclusion overclaim fix.
-
-Round 68's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_68_ARCHIVE.md` (moved there
-round 72 to keep this file under its 30,720-byte hot-file cap): the
-`robots.ts` missing-`Sitemap:`-directive fix.
-
-Round 67's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_67_ARCHIVE.md` (moved there
-round 69 to keep this file under its 30,720-byte hot-file cap): the
-Planner secondary-goals-label mapping fix.
-
-Round 66's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_66_ARCHIVE.md` (moved there
-round 72 to keep this file under its 30,720-byte hot-file cap): the
-Planner spectrum-slider data-loss fix.
-
-Round 65's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_65_ARCHIVE.md` (moved there
-round 68 to keep this file under its 30,720-byte hot-file cap): the
-request-body-size-cap fix on both API routes.
-
-Round 64's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_64_ARCHIVE.md` (moved there
-round 65 to keep this file under its 30,720-byte hot-file cap): the
-30th consecutive audit confirmation plus a clean adversarial re-review.
-
-Round 63's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_63_ARCHIVE.md` (moved there
-round 64 to keep this file under its 30,720-byte hot-file cap): the
-timing-safe-comparison fix for `isTrustedOrigin()`.
-
-Round 62's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_62_ARCHIVE.md` (moved there
-round 63 to keep this file under its 30,720-byte hot-file cap): prepared
-the dormant Cloudflare-bypass origin-secret gate.
-
-Round 61's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_61_ARCHIVE.md` (moved there
-round 62 to keep this file under its 30,720-byte hot-file cap): the
-rate-limiter memory-pruning fix.
-
-Round 59's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_59_ARCHIVE.md` (moved there
-round 66 to keep this file under its 30,720-byte hot-file cap): fixed
-Home's meta description overage.
-
-Round 58's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_58_ARCHIVE.md` (moved there
-round 66 to keep this file under its 30,720-byte hot-file cap): shipped
-`html lang="en-US"` and fixed a hot-file-cap violation plus a handoff
-rotation-order defect.
-
-Round 57's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_57_ARCHIVE.md` (moved there
-round 67 to keep this file under its 30,720-byte hot-file cap): round 57
-trimmed 5 oversized meta descriptions past the search-snippet budget.
-
-Round 54's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_54_ARCHIVE.md` (moved there
-round 57 to keep this file under its 30720-byte hot-file cap): round 54
-added per-slug Open Graph images for `services/[slug]` and `work/[slug]`.
-
-Round 56's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_56_ARCHIVE.md` (moved there
-round 60 to keep this file under its 30720-byte hot-file cap): round 56
-added OfferCatalog JSON-LD to `/pricing`.
-
-Round 55's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_55_ARCHIVE.md` (moved there
-round 71 to keep this file under its 30720-byte hot-file cap): round 55
-added Service JSON-LD to the five `/services/[slug]` detail pages.
-
-Round 52's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_52_ARCHIVE.md` (moved there
-round 56 to keep this file under its 30720-byte hot-file cap): round 52
-added per-route Open Graph images for the 8 static marketing routes and
-proved the dynamic-route OG-image gap was pre-existing.
-
-Round 46's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_46_ARCHIVE.md` (moved there
-round 52 to keep this file under its 30720-byte hot-file cap): round 46
-removed 5 dead scaffold SVG assets and added the Web App Manifest.
-
-Round 51's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_51_ARCHIVE.md` (moved there
-round 71 to keep this file under its 30720-byte hot-file cap): round 51
-added sitewide Open Graph and Twitter Card metadata.
-
-Round 50's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_50_ARCHIVE.md` (moved there
-round 71 to keep this file under its 30720-byte hot-file cap): round 50
-added COOP/CORP security headers and `/.well-known/security.txt`, and
-fixed a hot-memory rotation defect.
-
-Round 49's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_49_ARCHIVE.md` (moved there
-round 55 to keep this file under its 30720-byte hot-file cap). Round 49
-added route-segment/root-layout error boundaries and viewport theme-color/
-color-scheme metadata.
-
-Round 48's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_48_ARCHIVE.md` (moved there
-round 71 to keep this file under its 30720-byte hot-file cap): round 48
-added raster 192/512 PNG manifest icons and fixed a print-legibility
-defect.
-
-Round 47's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_47_ARCHIVE.md` (moved there
-round 52 to keep this file under its 30720-byte hot-file cap). Round 47
-implemented the Apple touch icon.
-
-Rounds 44-45 full detail are archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUNDS_44_45_ARCHIVE.md` (moved there
-round 49 to keep this file under its 30720-byte hot-file cap): round 45
-added BreadcrumbList JSON-LD for service-detail/case-study routes; round 44
-added FAQPage JSON-LD for `/faq`.
-
-Round 43 detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_43_ARCHIVE.md` (moved there
-round 48 to keep this file under its 30720-byte hot-file cap). Round 43
-found the site had no structured data at all and added sitewide
-Organization JSON-LD.
+Rounds 43-70's full detail are each archived at their correspondingly
+named `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND(S)_<N>_ARCHIVE.md`
+files (consolidated round 76 to keep this file under its 30,720-byte
+hot-file cap; no history lost — one-line outcomes only): 43 sitewide
+Organization JSON-LD; 44-45 FAQPage/BreadcrumbList JSON-LD; 46 removed
+dead scaffold SVGs + Web App Manifest; 47 Apple touch icon; 48 raster
+manifest icons + print-legibility fix; 49 error boundaries + viewport
+theme-color; 50 COOP/CORP headers + security.txt; 51 sitewide OG/Twitter
+metadata; 52 per-route OG images; 54 per-slug OG images; 55 Service
+JSON-LD; 56 OfferCatalog JSON-LD; 57 meta-description trims; 58
+`lang="en-US"` + hot-file-cap fix; 59 Home meta-description fix; 61
+rate-limiter memory-pruning fix; 62 dormant Cloudflare-bypass gate; 63
+timing-safe-comparison fix; 64 30th audit confirmation, clean re-review;
+65 request-body-size cap; 66 Planner spectrum data-loss fix; 67 Planner
+secondary-goals-label fix; 68 `robots.ts` missing `Sitemap:` fix; 69
+Home FAQ CMS-claim qualification; 70 text-cursor/editable-copy fix.
 
 ## Open
 

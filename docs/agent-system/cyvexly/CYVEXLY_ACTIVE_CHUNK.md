@@ -7,6 +7,16 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 76** (interactive session, Owner direction `2026-09-06-17`)
+added a Home "So how does it work?" section: a supplied process video
+embedded under the "We're not a DIY builder" panel as a silent,
+looping, chrome-less ambient clip that expands to a controllable
+lightbox on click. Found and fixed a real bug during verification — the
+lightbox's `fixed` overlay wasn't actually viewport-fixed because a
+`backdrop-filter` ancestor (the sitewide glass treatment) created a new
+CSS containing block — by portaling the modal to `document.body`. See
+the round-76 report below and `CYVEXLY_OWNER_DIRECTION.md`.
+
 **Round 75** (scheduled/unattended, 50-minute limit) dispositioned Auditor
 item `IFA-2026-09-06-R64` (39th consecutive clean confirmation, 0 active
 code defects, reviewed commit `7db867c`, round 73's head). Actioned its
@@ -43,64 +53,18 @@ found** — a genuine negative result after real investigation, not
 skipped work. Archived an old inline rounds-14–28 status paragraph (see
 below) to restore hot-file headroom.
 
-**Round 73** (scheduled/unattended, 50-minute limit) dispositioned two
-new Auditor inbox items (`IFA-2026-09-06-R61`/`R62`, 36th/37th
-consecutive clean confirmations; R61's `CYV-DOC-002` hot-file-cap
-finding was already resolved by R62, no new Builder action needed) and,
-continuing round 72's recommendation to give the case-study surface a
-dedicated adversarial pass, found/fixed a real cross-surface
-color-token staleness defect: Aurora/Nexora's case-study "Visual
-direction" palette swatches and their matching `concept-preview.tsx`
-artwork still hardcoded the pre-refresh cyber-blue (`#1478FF`) and
-cool-graphite (`#526176`) values, which rounds 1/28 darkened to
-`#0F66E0`/`#46576E` site-wide for contrast; the same stale
-`#526176` was also still mixed into `pricing-scope-signal.tsx` and
-`service-detail-signal.tsx` right alongside already-corrected
-`#0F66E0` uses in those same files. See the round-73 report below and
-`CYVEXLY_APP_DEBT.md`'s "Resolved round 73" section.
+Rounds 71-73's inline summaries are archived (moved round 76 to restore
+hot-file headroom; each round's full report and `CYVEXLY_APP_DEBT.md`
+"Resolved round N" entry already preserve the detail):
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_71_REPORT.md` (dead-end
+`/work` filter fix), `..._ROUND_72_REPORT.md` (Planner validation-bypass
+fix), `..._ROUND_73_REPORT.md` (case-study color-token staleness fix).
 
-**Round 72** (scheduled/unattended, 50-minute limit) found no new
-Auditor inbox item and, reviewing `planner-form.tsx`'s client-side
-step logic per round 71's recommendation, found/fixed a real
-validation-bypass defect: `handleSubmit` only validated step 9, so a
-visitor who used a review-page "Edit" link to revisit and invalidate
-an earlier step, then jumped directly back to Review via the progress
-rail (never re-triggering that step's validation), could submit
-stale/invalid data — the server correctly 400'd it, but the visitor
-was left on Review with zero visible error. Full report archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_72_REPORT.md` (moved
-there round 73 to keep this file under its 30,720-byte hot-file cap).
-See also `CYVEXLY_APP_DEBT.md`'s "Resolved round 72" section.
-
-**Round 71** (scheduled/unattended, 50-minute limit) dispositioned two
-new Auditor inbox items (34th/35th consecutive clean confirmations)
-and found/fixed a real dead-end defect: `/work`'s "Redesign"/"Landing
-Page" filter pills matched zero projects. Also found/fixed a real
-hot-file-cap violation in `CYVEXLY_APP_DEBT.md` itself. Full report
-archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_71_REPORT.md` (moved
-there round 72 to keep this file under its 30,720-byte hot-file cap).
-See also `CYVEXLY_APP_DEBT.md`'s "Resolved round 71" section.
-
-**Round 70** (scheduled/unattended, 50-minute limit) dispositioned fresh
-Owner direction `2026-09-06-16` (text-cursor/editable-looking body
-copy). No new Auditor item existed. Reproduced live and confirmed it
-is the browser's default I-beam cursor over selectable text (not a
-Cyvexly-specific bug), then fixed it as a real polish defect: added
-`cursor: default` on non-interactive prose while explicitly restoring
-`cursor: pointer` on every real interactive control (`@layer base`, so
-Tailwind's own `cursor-*` utilities still win). Caught and corrected a
-self-introduced regression (unlayered CSS beating
-`disabled:cursor-not-allowed`) before committing. See the round-70
-report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 70" section.
-
-**Round 69** (scheduled/unattended, 50-minute limit) dispositioned
-Auditor item `IFA-2026-09-06-R58` (34th consecutive confirmation, 0
-active code defects) and, adversarially reviewing About/Privacy/Terms
-copy and `service-details.ts`/`site-config.ts` pricing per round 68's
-recommendation, found/fixed a real truth-claim defect: the Home FAQ
-preview overclaimed that every site includes a CMS. See the round-69
-report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 69" section.
+Round 69-70's inline summaries are archived (moved round 76 to restore
+hot-file headroom): `CYVEXLY_APP_DEBT.md`'s "Resolved round 69"/
+"Resolved round 70" and their full reports below preserve the detail
+(text-cursor/editable-looking-copy fix, Home FAQ CMS-claim
+qualification).
 
 **Round 68** (scheduled/unattended, 50-minute limit) dispositioned
 Auditor item `IFA-2026-09-06-R57` (33rd consecutive confirmation, 0
@@ -303,54 +267,84 @@ round 74 to restore hot-file headroom).
   and the carried Chunk 3/4 operational items are closed. A partial domain-only,
   legal-only, or UI-only release does not close this chunk.
 
-## Round 75 report — global round 75 (scheduled/unattended session)
+## Round 76 report — global round 76 (interactive session, Owner direction 2026-09-06-17)
 
-Checked the Auditor inbox first: one new item, `IFA-2026-09-06-R64`
-(39th consecutive clean confirmation, reviewed commit `7db867c`, round
-73's head; 0 active code defects, 47/47 hot files compliant). Moved to
-`exchange/processed/`. Its one recommendation: the `gradient` Tailwind
-class strings in `site-config.ts` (both `selectedWork` and
-`caseStudies`, 4 occurrences) still hardcoded the pre-refresh
-`#1478FF` — round 73 had deliberately left these alone after
-confirming they're inert (each `ConceptPreview` SVG's own opaque
-full-viewBox background `<rect>` fully covers the gradient div in
-every render path), but the Auditor flagged them for full token
-consistency across the codebase.
+Owner (via interactive Claude Code chat) asked for a supplied local
+video (`cyvexley video.mp4`, a Project Planner intake-flow screen
+recording, 640×368, ~28.3s) to be added to Home under the "We're not a
+DIY builder" panel, sized like the existing tiles (not full-bleed), in
+a seamless look, under a new "So how does it work?" heading; a
+follow-up message specified a silent looping ambient embed that never
+looks pausable, with click/Enter opening a larger controllable view.
+Explicitly confirmed as Owner-direction work. Full transcript recorded
+in `CYVEXLY_OWNER_DIRECTION.md`'s "Home 'how does it work?' process
+video 2026-09-06-17".
 
-**Fixed:** replaced all 4 `#1478FF` occurrences with `#0F66E0` in
-`src/lib/site-config.ts` (`selectedWork` aurora-spaces/nexora-systems,
-`caseStudies` aurora-spaces/nexora-systems). Zero visual effect (the
-div stays fully covered), purely a token-hygiene cleanup so the
-codebase carries no remaining pre-refresh hex literal anywhere.
+**Built:** `src/components/how-it-works-video.tsx` — an ambient inline
+loop (autoplay, muted, `loop`, no visible controls, no click-to-pause,
+respects reduced-motion/data-saver/tab-visibility like the existing
+Home hero video) with a subtle corner "expand" icon (never a play/pause
+icon) that opens a `createPortal`-rendered lightbox with real native
+`<video controls>`, closable via close button/Escape/backdrop click,
+with focus moved to the close control on open and returned to the
+trigger on close. Copied the source video to
+`public/media/cyvexly-how-it-works.mp4` and generated a poster frame
+(`cyvexly-how-it-works-poster.webp`) via an in-browser canvas capture
+(no ffmpeg/ffprobe available on this host — used the Browser pane's
+`javascript_tool` to draw a video frame to canvas and encode WebP,
+avoiding a raw/unposterized video element). Wired into
+`src/app/page.tsx`'s "The difference" section, inside the same
+`max-w-6xl` container as the existing DIY-builder panel (not a separate
+full-width section) so it reads as one continuous tile stack.
 
-**Adversarially reviewed `service-details.ts` vs `site-config.ts`
-pricing** (the handoff's recommended fresh surface) field-by-field:
-each service's `package.price` (all "From $X") vs the matching
-`pricingPackages`/`carePlans` entry (bare "$X", e.g. Orbit "$3,500").
-Traced both render paths — `/pricing` prefixes its bare price with a
-"Starting at" label (`pricing/page.tsx`); `/services/[slug]` prefixes
-its own "From $X" string under a "Related starting point" label
-(`services/[slug]/page.tsx`) — and the JSON-LD price extractor
-(`structured-data.ts`'s `extractStartingPrice()`) regex-matches the
-leading `\$([\d,]+)` figure regardless of a "From " prefix, so
-structured data is unaffected either way. Both surfaces communicate
-the same "starting price" fact through different but non-contradictory
-copy; this is redundant styling, not a truth-claim inconsistency.
-**No defect found** on this surface — a genuine negative result.
+**Found and fixed a real bug during verification, not just a proof
+gap.** The first implementation rendered the lightbox in place with
+`fixed inset-0`. Live CDP inspection showed the overlay's
+`getBoundingClientRect()` at a negative, scroll-dependent Y offset
+instead of `(0,0)` — several glass-panel ancestors on this page set
+`backdrop-filter` (the sitewide frosted-glass treatment), which — like
+`transform`/`filter`/`perspective`/`will-change: transform` — creates a
+new containing block for `position: fixed` descendants per the CSS
+spec. The overlay was fixed to that ancestor, not the viewport, so a
+backdrop click at a real viewport corner missed it entirely. Fixed by
+rendering the modal through `createPortal(..., document.body)`; since
+`isOpen` is `false` on both server and first client render, no separate
+mount-detection effect was needed (avoided a `react-hooks/set-state-in-
+effect` lint error this way too). Re-verified: dialog is now a direct
+child of `<body>`, `getBoundingClientRect()` matches the window exactly
+regardless of scroll position, and a backdrop-corner click now closes
+it.
 
-**Verified:** `tsc --noEmit`/lint/`pnpm run build` all clean (same
-pre-existing round-42 evidence-script lint warning, untouched). Real
-`next start` server on port 5173: a 21-route sweep (every public
-static/dynamic route plus `/not-found`) returned 200 (`/not-found`
-correctly 404s); `grep -rn "#1478FF" src/` returns zero matches
-sitewide; confirmed the `ConceptPreview` SVGs' opaque background
-`<rect>` elements (`concept-preview.tsx` lines 16/35/63) still cover
-the corrected gradient divs, so no visual regression.
+**Verified live via CDP:** inline video decodes correctly (`readyState
+4`, plays with no error when forced); click and Enter/Space both open
+the modal; clicking the video panel itself does not close it
+(`stopPropagation` confirmed); Escape and the close button both close
+it and restore focus/body scroll; zero horizontal overflow at 375px.
+One honest proof-instrument limitation: this session's Browser pane
+consistently reports `document.hidden = true` even when the tab is the
+sole/fronted one (a`document.hidden`-driven pause is part of the
+established sitewide video pattern, matching the Home hero video), so
+autoplay-on-load could not be positively confirmed via the Page
+Visibility API in this session — real screenshots taken earlier in the
+same session (before this check was added) did show the frame content
+visibly advancing over time, and manual `.play()` calls succeed with no
+error, so the underlying playback path is sound; this is a session
+proof-instrument limitation, the same class already recorded in
+`CYVEXLY_WATCH.md` for this session type, not an unresolved product
+defect. `tsc --noEmit`/lint/`pnpm run build` all clean (same
+pre-existing round-42 evidence-script lint warning, untouched); a real
+`next start` 21-route sweep (including both new media files) all
+returned 200.
 
-Cleaned up: stopped the owned `next start` listener on port 5173
-(verified the real listener PID via `Get-NetTCPConnection -LocalPort
-5173 -State Listen` before `Stop-Process`, not by process name); no
-scratch files were created this round.
+Cleaned up: stopped the owned `next start`/`next dev` listeners on port
+5173 by verified PID; removed scratch log/base64 files from `$env:TEMP`
+and the session scratchpad.
+
+Round 75's full report is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_75_REPORT.md` (moved
+there round 76 to keep this file under its 30,720-byte hot-file cap).
+Round 75 completed brand-color token consistency in decorative gradient
+strings.
 
 Round 73's full report is archived at
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_73_REPORT.md` (moved

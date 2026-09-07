@@ -345,3 +345,67 @@ ones nested inside a paragraph, buttons, `[role="button"]`, `summary`);
 text selection/copy itself is unchanged. See `CYVEXLY_APP_DEBT.md`'s
 "Resolved round 70" for verification detail, including a regression this
 round caught and fixed before committing.
+
+## Home "how does it work?" process video 2026-09-06-17
+
+**Status:** IMPLEMENTED — OWNER VISUAL CONFIRMATION PENDING
+**Source:** Owner via interactive Claude Code chat (explicitly confirmed
+"this is for owners direction work")
+**Recorded:** 2026-09-06
+
+> "add this video here. consider the best design and how it should look
+> with this vdeow included. it should be a full screen the same size as
+> the tile in the picture. or atleast left to right of the screen. don't
+> make it massive i mean compared to the tile in the pic. It should go
+> under the tile in a seamless look. i guess pic wont load for lme to
+> show you. 'we are not a diy builder' you could essentially replace
+> that whole tile with this video and above it is says. 'So how does it
+> work?'"
+
+> "it is to play in a loop. obviously ensure that it is not obvious that
+> it is a video that a user can pause or play. if a user clicks on it
+> then it can be viewd in a large screen. otherwise it should be playing
+> on silent."
+
+The Owner supplied the source file at a local path
+(`cyvexley video.mp4`, a screen-recording-style clip of the Project
+Planner intake flow, 640×368, ~28.3s) outside the repository; no
+referenced mockup image loaded during the chat.
+
+AGENT INTERPRETATION
+
+The Owner's first message named two options (add the video under the
+existing "We're not a DIY builder" tile vs. replace that tile outright)
+and one clear constraint that resolves the ambiguity: "It should go
+under the tile in a seamless look." Implemented as an addition, not a
+replacement, preserving the existing DIY-builder positioning copy. The
+follow-up message set the exact interaction model: a silent, looping,
+chrome-less ambient loop that never signals it is pausable, with a
+click/Enter opening a larger, controllable view — implemented as an
+inline autoplaying muted loop (no play/pause affordance, only a subtle
+corner "expand" icon) plus a portaled full-viewport lightbox with real
+native video controls on click. This interpretation is not
+Owner-authored wording.
+
+IMPLEMENTED: added `src/components/how-it-works-video.tsx` and wired it
+into `src/app/page.tsx` directly below the "We're not a DIY builder"
+panel, under a new "So how does it work?" heading, inside the same
+`max-w-6xl` section container (not full-bleed/"massive" — matches every
+other Home tile's width). Video assets copied to
+`public/media/cyvexly-how-it-works.mp4` and a generated
+`cyvexly-how-it-works-poster.webp` poster frame. Ambient loop: autoplay,
+muted, `loop`, no visible controls, no click-to-pause (unlike the
+existing hero showcase video), respects reduced-motion/data-saver/tab-
+visibility like the established Home hero pattern. Click or Enter/Space
+opens a `createPortal`-rendered lightbox (portaled to `document.body`,
+not rendered in place — several glass-panel ancestors on this page use
+`backdrop-filter`, which like `transform`/`filter` creates a new
+containing block for `position: fixed` descendants, so an in-place fixed
+overlay would not have covered the real viewport; found and fixed live
+during verification, see `CYVEXLY_APP_DEBT.md`'s "Resolved round 76" for
+detail) with native `controls`, closable via the close button, Escape,
+or a backdrop click; focus moves to the close control on open and
+returns to the trigger on close. `tsc`/lint/build all clean; verified
+live via a real `next start` server (21-route sweep, 0 overflow at
+320px/375px, portal/backdrop-click/Escape/focus-return all confirmed via
+CDP). Owner visual acceptance of the final look/copy is still pending.

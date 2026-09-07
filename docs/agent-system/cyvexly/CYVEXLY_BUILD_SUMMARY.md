@@ -15,6 +15,19 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 76 — 2026-09-06 (interactive, Owner direction 2026-09-06-17)
+
+Added a Home "So how does it work?" section: an Owner-supplied process
+video embedded under the "We're not a DIY builder" panel as a silent,
+looping, chrome-less ambient clip (`how-it-works-video.tsx`) that opens
+a controllable lightbox on click/Enter. Found and fixed a real bug
+during verification — the lightbox's `fixed` overlay wasn't actually
+viewport-fixed because a `backdrop-filter` ancestor (the sitewide glass
+treatment) creates a new CSS containing block for `position: fixed` —
+fixed via `createPortal(..., document.body)`. TypeScript, lint, and
+build passed; verified via CDP (portal/backdrop-click/Escape/focus-
+return, 0 overflow at 375px). Pushed to `origin/main`.
+
 ## Round 75 — 2026-09-06
 
 Dispositioned Auditor item `IFA-2026-09-06-R64` (39th consecutive clean

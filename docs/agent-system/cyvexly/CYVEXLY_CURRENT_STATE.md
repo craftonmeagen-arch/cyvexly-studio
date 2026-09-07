@@ -1,8 +1,10 @@
 # Cyvexly Current State
 
-**Global round:** 75. Owner launch direction updated 2026-09-04, extended
+**Global round:** 76. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
-session — see `CYVEXLY_OWNER_DIRECTION.md`).
+session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive)
+added a supplied Home process video under Owner direction
+`2026-09-06-17`.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -20,7 +22,18 @@ access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
 
-**Round 75 outcome:** dispositioned Auditor item `IFA-2026-09-06-R64`
+**Round 76 outcome (interactive, Owner direction `2026-09-06-17`):**
+added a Home "So how does it work?" section embedding an Owner-supplied
+process video as a silent, looping, chrome-less ambient clip that opens
+a controllable lightbox on click. Found and fixed a real bug during
+verification: the lightbox's `fixed` overlay wasn't viewport-fixed
+because a `backdrop-filter` ancestor (sitewide glass treatment) creates
+a new CSS containing block for `position: fixed` — fixed via
+`createPortal(..., document.body)`. `tsc`/lint/build clean; verified via
+CDP. Owner visual acceptance pending. Full detail in
+`CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`/`CYVEXLY_OWNER_DIRECTION.md`.
+
+Round 75 outcome: dispositioned Auditor item `IFA-2026-09-06-R64`
 (39th consecutive clean confirmation) and actioned its one
 recommendation — replaced the last 4 pre-refresh `#1478FF` literals
 (inert `gradient` class strings in `site-config.ts`) with `#0F66E0`
@@ -65,20 +78,23 @@ fixes) are summarized in `CYVEXLY_APP_DEBT.md`'s resolved-round history and
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 75 (empty as of round 75). The
+first for anything published after round 76 (empty as of round 76). The
 Planner (server + client), About/Privacy/Terms copy, `service-details.ts`
 (including its pricing copy vs `site-config.ts`), `/work` filters, color
-tokens (now fully consistent sitewide, zero `#1478FF` remaining), and
+tokens (fully consistent sitewide, zero `#1478FF` remaining), and
 case-study content/artwork/palette are all checked clean through round
-75; response-time and payment-claim copy is verified consistent.
-`CYVEXLY_ACTIVE_CHUNK.md` has headroom (29,938/30,720) after round 75's
-archive. The Cloudflare-bypass gap has a dormant code-side gate (round
-62, hardened round 63); it activates only once the Owner adds one
-Cloudflare Transform Rule (see `CYVEXLY_APP_DEBT.md` item 3) — not more
-Builder code. What remains is otherwise Owner-gated; see "Owner launch
-decisions and remaining gates" below.
+75; response-time and payment-claim copy is verified consistent. Round
+76 added the Home "how does it work?" video per Owner direction
+`2026-09-06-17` — visual acceptance of the final look is still pending.
+`CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md` have healthy headroom
+after round 76's archive/consolidation pass. The Cloudflare-bypass gap
+has a dormant code-side gate (round 62, hardened round 63); it activates
+only once the Owner adds one Cloudflare Transform Rule (see
+`CYVEXLY_APP_DEBT.md` item 3) — not more Builder code. What remains is
+otherwise Owner-gated; see "Owner launch decisions and remaining gates"
+below.
 
-**Accepted product position:** `main` is pushed through round 75's source
+**Accepted product position:** `main` is pushed through round 76's source
 commit on `origin/main` and
 Render auto-deploys it. `cyvexly.com` is fully connected/HTTPS/canonicalized
 (verified live, round 53). `origin/master` is historical, not the
