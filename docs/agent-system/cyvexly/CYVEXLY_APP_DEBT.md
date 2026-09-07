@@ -1,5 +1,70 @@
 # Cyvexly App Debt
 
+## Round 80 — no new defect; Planner steps 2-9 keyboard/data-integrity verification + Enter/Space key-synthesis instrument finding
+
+- **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R71`
+  (46th consecutive clean confirmation, reviewed commit `94048c4` — round
+  78's head), 0 active code defects, "PASS WITH COMMENDATION". Its "External
+  Business Operations Gates" list repeats the same stale "Production Domain
+  Connection" wording rounds 77-79 already noted (domain verified live since
+  round 53). No Builder action required; moved to `exchange/processed/`.
+- **Completed round 79's recommended fresh surface: a real live keyboard/
+  data-integrity pass over Planner steps 2-9** (only Step 1 had this exact
+  treatment since round 8). Via the manual-start-then-attach Browser-pane
+  workaround (compositing + native `Tab` confirmed working this round):
+  real native `Tab` traversal through Step 2's 7 fields landed in exact
+  source order (`businessDescription → productsServices → currentWebsite →
+  businessStage → geographicMarket → customerGroups → competitors →
+  differentiation`); Step 3's `primaryGoal` `RadioCardGroup` → `Tab` moved
+  directly to the first `secondaryGoals` checkbox (no stray
+  `primaryGoalOther` field, correctly conditional) → 8 real `Tab` presses
+  through all 8 secondary-goal checkboxes landed exactly on
+  `importantAction`. Filled required fields through every step to Step 9
+  and confirmed the Review page correctly reflects every entered/selected
+  value from Steps 1-8 (name, email, contact method, business description,
+  primary goal, website type, page selection, budget, timing) — a genuine
+  positive data-integrity result, not just a keyboard-order check. The
+  Step 9 acknowledgment/consent/marketing checkboxes are real
+  `<input type="checkbox">` with correct `<label for>` wiring; the
+  `planner-company-website` honeypot remains `tabIndex="-1"` and
+  `aria-hidden="true"` (unreachable by keyboard, no regression from round
+  42's original fix). Also spot-verified via direct DOM inspection (not
+  just the accessibility tree) that Step 2's two `SelectField`s
+  (`businessStage`, `geographicMarket`) both have a real `<label for>`
+  correctly pointing at the select's `id` — `read_page` displays both as
+  named "Select one" (the current placeholder option text), which looked
+  like a shared-accessible-name defect at first glance but is a
+  `read_page` rendering convention for `<select>`/combobox roles, not a
+  real label-association gap. **No defect found** in any of the above — a
+  genuine negative result after real investigation.
+- **New instrument finding, not a product defect (see
+  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-80 note for full detail):**
+  this session's `computer{action:"key"}` reliably moves focus via `Tab`
+  (reconfirmed many times this round) but a synthetic `Return`/`space` key
+  press does **not** trigger a click on a correctly-focused native
+  `<button type="button">` in this Browser-pane session — tested twice,
+  independently, on two different native-button components (Step 6's
+  `StatusRow` toggle button and the progress-rail's "Step 6" jump button):
+  focus was verified correct before and after each key press
+  (`document.activeElement` unchanged), `aria-pressed` never flipped, and
+  the progress-rail Enter press never navigated to Step 6. Both are plain
+  `<button>` elements with no custom keydown handling — native Enter/Space
+  activation requires zero product-side JS — and real mouse clicks on the
+  same `StatusRow` button correctly toggled `aria-pressed`, so this is
+  overwhelmingly an artifact of how this tool synthesizes `Return`/`space`
+  key events (distinct from `Tab`, a lower-level browser focus-traversal
+  mechanism that does not depend on the same event-dispatch path) rather
+  than a real keyboard-accessibility gap. Not independently reproduced via
+  local headless-Chrome/CDP this round (time-boxed); recommended as the
+  next round's first task since round 8/79's CDP method is the established
+  stronger instrument for exactly this class of gap.
+- **Verified:** no source file changed this round (verification-only), so
+  `tsc`/lint/build were not re-run (round 79's clean results stand
+  unchanged).
+- Cleaned up: stopped the manually-started `next dev` listener on port
+  5173 by its verified real listener PID; closed the Browser pane tab; no
+  other scratch files/processes were created.
+
 ## Round 79 — no new defect; live keyboard/validation verification + rAF proof-instrument refinement
 
 - **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R70` (45th
@@ -99,63 +164,11 @@
   listener PID (`Get-NetTCPConnection -LocalPort 5173 -State Listen`), not by
   process name; removed the scratch dev-server log from `$env:TEMP`.
 
-## Round 77 — no new defect (investigated, documented)
-
-**Session type:** scheduled/unattended run (not interactive) — the
-Browser pane's dev-server launch is disabled for unattended sessions,
-so this round's proof is source-level (`tsc`/lint/static analysis) only;
-no live/CDP rendering was reachable. Not a product defect — see
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s "Named environment limitation" for
-detail and `CYVEXLY_CHUNK_DEBT.md` item 3 for the prior instance of the
-same session-type proof-gap category.
-
-- **Checked the Auditor inbox first:** one new item,
-  `IFA-2026-09-07-R68` (43rd consecutive clean confirmation, reviewed
-  commit `55ffb6d` — round 75's head, predating round 76's video
-  feature), 0 active code defects, 47/47 hot files compliant. Its
-  "External Business Operations Gates" section still lists "Production
-  Domain Connection" as an open Owner gate — that is stale wording
-  carried in the report template; the domain has been verified live on
-  the real production host since round 53 (`http://cyvexly.com` →
-  `https://cyvexly.com`, valid certificate — see "Resolved round 53"
-  below), unaffected by this round's finding. No Builder action
-  required beyond noting the discrepancy; moved to `exchange/processed/`.
-- **Field-by-field diff (round-76-recommended, not previously
-  attempted):** every `serviceDetails[slug]` object in
-  `src/lib/service-details.ts` (`package.name`/`price`/`timing`,
-  `included`, `example`, `faqs`) checked against its matching
-  `pricingPackages`/`carePlans` entry and `servicesGroups` category in
-  `src/lib/site-config.ts`. All 5 package name/timing pairs match
-  exactly (e.g. `business-websites` → "Orbit" / "Typically 4–6 weeks"
-  matches `pricingPackages[1]` "Orbit" / "4–6 weeks"). The
-  `serviceDetails` "From $X" vs `pricingPackages`'s bare "$X" price
-  strings are the same non-contradiction round 75 already traced (each
-  render path applies its own "From"/"Starting at" label — see
-  "Resolved round 75" below); confirmed the pattern holds identically
-  for all 5 services, not just the one round 75 checked. Every FAQ
-  numeric/scope claim (Orbit's "seven core pages", Nexus's "migration
-  allowance", Commerce's "initial catalog allowance", Signal's "one to
-  three core pages"/"one primary form", Care's "basic peace of mind" vs
-  Care+/Evolve) matches its package's `scope`/`capacity` text exactly.
-  **No defect found** — a genuine negative result.
-- **Source-level accessibility scan** (chosen because live keyboard/CDP
-  testing was unreachable this session; static source inspection was
-  still a real, reachable check): grepped all of `src/` for `<img` and
-  `<Image` — zero matches (the site uses only inline SVG and the two
-  video components, so there is no missing-`alt` surface at all). Read
-  every `<input>`/`<textarea>` in `src/components/contact-form.tsx` and
-  the shared `src/components/planner/planner-fields.tsx` field
-  components (used by every Planner step) — all route through
-  `FieldShell`, which renders a real `<label htmlFor={id}>` for every
-  field, plus `aria-invalid`/`aria-describedby` wired to a matching
-  `id="${id}-error"` element when a validation error exists. **No
-  defect found.**
-- **Verified:** `tsc --noEmit` and `pnpm run lint` both clean (same
-  single pre-existing, unrelated round-42 evidence-script lint warning,
-  untouched). No source changed this round, so no `pnpm run build`/
-  `next start` sweep was run.
-- Cleaned up: no scratch files, processes, or runtime environments were
-  created this round (no dev/build server was started).
+Round 77's full detail (Auditor `IFA-2026-09-07-R68` disposition, a
+`service-details.ts`/`site-config.ts` field-by-field diff, and a
+source-level accessibility scan — 0 defects found) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_77_ARCHIVE.md` (moved there
+round 80 to keep this file under its 30,720-byte hot-file cap).
 
 Round 76's full detail (Home "how does it work?" video build + the
 `backdrop-filter`/`position:fixed` containing-block bug fix; its named

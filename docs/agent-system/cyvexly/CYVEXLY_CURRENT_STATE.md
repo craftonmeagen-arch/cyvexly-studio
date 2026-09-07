@@ -1,13 +1,15 @@
 # Cyvexly Current State
 
-**Global round:** 79. Owner launch direction updated 2026-09-04, extended
+**Global round:** 80. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive) added a
 supplied Home process video under Owner direction `2026-09-06-17`. Rounds
-77-79 (scheduled/unattended) found 0 new defects; round 78 reopened live/CDP
+77-80 (scheduled/unattended) found 0 new defects; round 78 reopened live/CDP
 verification for this session type and closed round 76's autoplay proof gap;
-round 79 completed that live keyboard-traversal verification and refined the
-`requestAnimationFrame`-suppression environment note (see
+round 79 completed live keyboard-traversal verification and refined the
+`requestAnimationFrame`-suppression environment note; round 80 extended live
+keyboard/data-integrity verification across Planner Steps 2-9 and found a new
+Enter/Space key-synthesis instrument limitation (see
 `CYVEXLY_TOOLS_AND_CAPABILITIES.md`).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
@@ -26,20 +28,21 @@ access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
 
-**Round 79 outcome (scheduled/unattended):** dispositioned Auditor item
-`IFA-2026-09-07-R70` (45th consecutive clean confirmation, 0 action needed).
-Completed round 78's recommended live keyboard-only Tab traversal of the
-header nav/Contact/Planner via the manual-start-then-attach Browser-pane
-workaround, and — where the Browser pane's `requestAnimationFrame`
-suppression made a result ambiguous (Contact's focus-move-to-first-invalid-
-field) — used local headless-Chrome/CDP (round 8's method, where rAF genuinely
-fires) to get a real positive confirmation instead of a false "looks broken"
-read. No defects found in Home/Contact/Planner keyboard order, labeling, or
-validation-error wiring; no source change. Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Round 79" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+**Round 80 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-07-R71` (46th consecutive clean confirmation, 0 action needed).
+Completed round 79's recommended fresh surface — a real live keyboard/
+data-integrity pass over Planner Steps 2-9 (only Step 1 had this exact
+treatment since round 8) via the manual-start-then-attach Browser-pane
+workaround. Confirmed correct real-`Tab` field order, correct conditional
+fields, correct label wiring, and correct end-to-end data integrity into the
+Review page. Found a new proof-instrument limitation (synthetic `Return`/
+`space` does not activate a focused native `<button>` in this session, while
+`Tab` does) — not a product defect; recommended CDP confirmation is next
+round's first task. No defects found; no source change. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Round 80" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Accepted product position:** `main` is pushed through round 76's source
-commit on `origin/main` (rounds 77-79 made no source change) and Render
+commit on `origin/main` (rounds 77-80 made no source change) and Render
 auto-deploys it. `cyvexly.com` is fully connected/HTTPS/canonicalized
 (verified live, round 53). `origin/master` is historical, not the
 deployment branch.

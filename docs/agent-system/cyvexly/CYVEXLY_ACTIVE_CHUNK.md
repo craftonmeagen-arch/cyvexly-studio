@@ -7,6 +7,25 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 80** (scheduled/unattended) dispositioned Auditor item
+`IFA-2026-09-07-R71` (46th consecutive clean confirmation, 0 action
+needed) and completed round 79's recommended fresh surface: a real live
+keyboard/data-integrity pass over Planner Steps 2-9 (only Step 1 had this
+exact treatment since round 8). Real native `Tab` traversal through
+Steps 2-3's fields landed in exact source order with correct conditional
+behavior (no stray `primaryGoalOther`); filled every step through to
+Step 9 and confirmed the Review page correctly reflects every entered/
+selected value from Steps 1-8 — a genuine data-integrity result, not
+just keyboard order. Also correctly diagnosed a `read_page`-only "Select
+one" combobox-naming quirk as a tool-rendering convention, not a label
+defect, via direct DOM inspection. **New instrument finding:** this
+session's synthetic `Return`/`space` key press does not activate a
+correctly-focused native `<button>` (tested on two independent
+components), while `Tab` reliably moves focus — see
+`CYVEXLY_APP_DEBT.md`'s "Round 80" and
+`CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-80 note. **No product defect
+found; no source change** — a proof-coverage-expansion round.
+
 **Round 79** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R70` (45th consecutive clean confirmation, 0 action needed)
 and completed round 78's recommended live keyboard-only Tab traversal of the

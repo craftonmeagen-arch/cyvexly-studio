@@ -23,6 +23,33 @@ describe their original session types; discover and verify current capabilities.
 
 ## Product and browser capabilities
 
+**Round 80 note — synthetic `Return`/`space` key presses do not activate a
+focused native `<button>` in this Browser-pane session, independent of
+`Tab`-driven focus movement (which works).** Round 78/79 already showed
+`computer{action:"key", text:"Tab"}` can genuinely move
+`document.activeElement` in this scheduled/unattended session type. Round
+80 found this does not extend to activation keys: with a native
+`<button type="button">` correctly focused (verified via
+`document.activeElement` before and after), a `computer{action:"key",
+text:"Return"}` or `"space"` press left `aria-pressed`/navigation state
+unchanged on two independent components (Step 6's `StatusRow` toggle
+button and the Planner progress-rail's step-jump button). Both components
+are plain `<button>` elements relying entirely on the browser's native
+Enter/Space-to-click behavior — no product-side keydown handler exists to
+fail — and a real mouse `left_click` on the same `StatusRow` button
+correctly toggled `aria-pressed` in the same session, so the state-change
+mechanism itself works. This points to the tool's `Return`/`space` key
+synthesis not reaching Chromium's native button-activation pipeline the
+way a real `Tab` keypress reaches its focus-traversal pipeline — a
+narrower, more precise version of round 6's original "key presses report
+success but nothing happens" finding, now shown to coexist with genuinely
+working `Tab` focus movement rather than contradicting it. **Not yet
+independently confirmed via local headless-Chrome/CDP** (round 8/79's
+`Input.dispatchKeyEvent` method, where round 79 confirmed rAF genuinely
+fires) — that is the routed next-round task, matching how round 79 closed
+the rAF gap and round 78 closed the autoplay gap with a stronger
+instrument rather than concluding a defect from the weaker one.
+
 **Round 79 note — `requestAnimationFrame` suppression is independent of
 compositing/keyboard, and degrades separately.** Round 78 showed screenshots
 and native `Tab` focus movement can genuinely work in this scheduled/

@@ -1,30 +1,39 @@
 # Cyvexly Next Builder Handoff
 
-## Round 79 closeout
+## Round 80 closeout
 
 **Session:** scheduled/unattended Claude Code run, 2026-09-07
-**Start source:** `94048c4` on `main` (pushed, matched `origin/main`)
-**Scope:** Dispositioned Auditor item `IFA-2026-09-07-R70` (45th confirmation,
-no action needed). Completed round 78's recommended live keyboard-only Tab
-traversal of header nav/Contact/Planner; correctly diagnosed an apparent
-Contact focus-on-error gap as a Browser-pane `requestAnimationFrame`
-suppression (proof-instrument limitation, refined `CYVEXLY_TOOLS_AND_CAPABILITIES.md`),
-not a product bug, using local headless-Chrome/CDP as the stronger instrument
-where rAF genuinely fires. No source change.
+**Start source:** `71617d0` on `main` (pushed, matched `origin/main`)
+**Scope:** Dispositioned Auditor item `IFA-2026-09-07-R71` (46th
+confirmation, no action needed). Completed round 79's recommended fresh
+surface: real live keyboard/data-integrity verification of Planner Steps
+2-9 (only Step 1 had this exact treatment since round 8) via the
+manual-start-then-attach Browser-pane workaround. Confirmed correct
+`Tab` order, conditional-field logic, label wiring, and full Review-page
+data integrity across all 8 prior steps. No source change.
 **Completion:** DONE WITH PROOF (0 defects found; genuine positive
-verification of Contact/Planner error-focus behavior on real source).
+keyboard/data-integrity verification on real source).
 
-### Recommended next workstream
+### New instrument finding, routed to next round
 
-45 consecutive clean Auditor confirmations plus this round's own independent
-keyboard/validation verification indicate the current source is solid;
-remaining Chunk 5 scope is Owner-gated (Resend account/DNS/API key,
-analytics/Search Console ownership, exact LLC name, Cloudflare Transform
-Rule, About/legal/visual review including the round-76 video). A fresh,
-not-yet-diffed surface worth a future round's adversarial pass: the Planner's
-later steps (2-9) haven't had this exact real-native-Tab treatment since
-round 8 — only Step 1 was reconfirmed this round. Re-check the Auditor inbox
-first for anything published after round 79.
+This session's synthetic `Return`/`space` key press does **not** activate
+a correctly-focused native `<button>` (tested independently on Step 6's
+`StatusRow` toggle and the progress-rail's step-jump button), while `Tab`
+reliably moves focus. Both are plain `<button>` elements needing zero
+custom JS for Enter/Space, and real mouse clicks correctly toggle them —
+this is almost certainly a Browser-pane key-synthesis gap, not a product
+defect, but was not independently confirmed via local headless-Chrome/CDP
+this round (time-boxed). **Recommended next-round first task:** reproduce
+this exact test (focus a native `<button>`, press Return/space, check
+`aria-pressed`/navigation) via round 8/79's local-headless-Chrome/CDP
+method to close this proof gap with genuine positive evidence, the same
+way round 79 closed the rAF gap and round 78 closed the autoplay gap. See
+`CYVEXLY_APP_DEBT.md`'s "Round 80" and
+`CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-80 note for full detail.
+
+Round 79's full report is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_79_REPORT.md` (moved
+there round 80 to keep this file under its 12,288-byte hot-file cap).
 
 Round 78's full report is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_78_REPORT.md` (moved there
