@@ -1,6 +1,13 @@
 # Cyvexly Current State
 
-**Global round:** 93. Owner launch direction updated 2026-09-04, extended
+**Global round:** 94. Round 94 (scheduled/unattended) dispositioned a
+stale Auditor item (60th clean confirmation, evaluated a superseded
+head) and found 0 new defects across two fresh convergence checks
+(Accessibility statement's "see Pricing" claim vs. current Pricing
+content; Contact's topic `<select>`/consent checkbox reviewed at the
+source level as native controls with no custom keyboard logic) — see
+`CYVEXLY_APP_DEBT.md`'s "Round 94". Owner launch direction updated
+2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive) added a
 supplied Home process video under Owner direction `2026-09-06-17`. Rounds
