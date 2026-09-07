@@ -15,6 +15,17 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 87 — 2026-09-07
+
+Dispositioned Auditor item `IFA-2026-09-07-R78` (53rd consecutive clean
+confirmation, "PASS WITH COMMENDATION"). Convergence-checked Home's other
+CTAs/claims against `site-config.ts` and found/fixed a real
+truth-precision defect: the Home pricing-preview card overstated a
+capped Nexus-tier inclusion ("Up to two standard integrations") as a
+guaranteed "Two standard integrations" — every other page-count feature
+in the same array correctly kept "Up to". Fixed and verified live on a
+rebuilt `next start` server (corrected text renders, 17/17 routes 200).
+
 ## Round 84 — 2026-09-07
 
 Dispositioned Auditor item `IFA-2026-09-07-R75` (50th consecutive clean

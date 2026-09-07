@@ -10,6 +10,21 @@ is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean.
 
+**Round 87** (scheduled/unattended) dispositioned Auditor item
+`IFA-2026-09-07-R78` (53rd consecutive clean confirmation, "PASS WITH
+COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
+unchanged round-82 source. Continued the convergence-check practice on
+the round-86 handoff's named fresh surface (Home's other CTAs/claims vs
+`site-config.ts`) and found/fixed a real truth-precision defect: Home's
+`pricingPreview` Nexus card said "Two standard integrations" while the
+single source of truth (`pricingPackages`) caps it at "Up to two
+standard integrations" — every other page-count feature in the same
+array correctly kept "Up to", confirming an inconsistent-editing
+oversight. Fixed to match exactly; verified live on a rebuilt `next
+start` server (corrected text renders, old text absent, 17/17 routes
+200). **1 real defect found and fixed.** See `CYVEXLY_APP_DEBT.md`'s
+"Round 87".
+
 **Round 86** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R77` (52nd consecutive clean confirmation, "PASS WITH
 COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on

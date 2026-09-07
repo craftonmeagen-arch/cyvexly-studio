@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 86. Owner launch direction updated 2026-09-04, extended
+**Global round:** 87. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive) added a
 supplied Home process video under Owner direction `2026-09-06-17`. Rounds
@@ -11,12 +11,14 @@ unattended) found 0 new defects (convergence-checks across Terms/
 Accessibility/sitemap/CSP, then FAQ/structured-data/Pricing/Contact/
 Planner-email/About surfaces, then structured-data.ts JSON-LD vs.
 rendered-page-facts, then round 86's Planner/Contact per-step-copy vs.
-email-notification field-label check). Round 84 also fixed a Builder-owned
-environment defect: this session type's PowerShell process starts with
-only the Machine `PATH` (Node.js/pnpm live in the User `PATH`, unset in
-this process) — see `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-84 note
-for the exact one-line fix future rounds need (reused successfully rounds
-85-86).
+email-notification field-label check); round 87 (scheduled/unattended)
+found and fixed a real Home pricing-preview truth-precision defect
+(overstated a capped inclusion as guaranteed). Round 84 also fixed a
+Builder-owned environment defect: this session type's PowerShell process
+starts with only the Machine `PATH` (Node.js/pnpm live in the User
+`PATH`, unset in this process) — see
+`CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-84 note for the exact
+one-line fix future rounds need (reused successfully rounds 85-87).
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -33,6 +35,18 @@ Remaining Chunk 5 scope (real Resend account/API key, DNS/domain provider
 access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
+
+**Round 87 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-07-R78` (53rd consecutive clean confirmation, "PASS WITH
+COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
+unchanged round-82 source via the round-84 `PATH` fix. Diffed Home's
+other CTAs/claims against `site-config.ts` and found/fixed a real
+truth-precision defect: the Home pricing-preview card overstated a
+capped Nexus-tier inclusion ("Up to two standard integrations") as a
+guaranteed "Two standard integrations". Fixed and verified live on a
+rebuilt `next start` server. **1 real defect found and fixed.** Full
+detail in `CYVEXLY_APP_DEBT.md`'s "Round 87" and
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Round 86 outcome (scheduled/unattended):** dispositioned Auditor item
 `IFA-2026-09-07-R77` (52nd consecutive clean confirmation, "PASS WITH

@@ -345,7 +345,7 @@ export const pricingPreview = [
     name: "Nexus",
     price: "$5,800",
     description: "A growing business, content-led site, or strategic redesign.",
-    features: ["Up to 12 core pages", "CMS collections", "Two standard integrations", "Three review rounds"],
+    features: ["Up to 12 core pages", "CMS collections", "Up to two standard integrations", "Three review rounds"],
     featured: false,
   },
 ];
