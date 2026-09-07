@@ -85,6 +85,15 @@ export default function PrivacyPage() {
                 not store your submission in a database — it exists only as
                 the two emails this process sends.
               </p>
+              <p className="mt-3">
+                When you submit either form, our server also reads the IP
+                address your submission came from. We use it to limit
+                automated and spam submissions (a short-lived, per-IP rate
+                limit) and include it in the internal notification email
+                alongside your submitted answers, so we have that context if
+                we ever need to investigate abuse. It is not included in the
+                confirmation email sent back to you.
+              </p>
             </div>
 
             <div>
@@ -142,8 +151,10 @@ export default function PrivacyPage() {
                 Like most hosting providers, ours may generate standard
                 technical logs (such as IP address, request time, and
                 requested page) for security, reliability, and abuse
-                prevention. We do not separately combine these logs with
-                information you submit through our forms.
+                prevention, separate from anything you submit through our
+                forms. The one exception is the form-submission IP address
+                described above, which our own server (not the hosting
+                platform) reads directly and includes with that submission.
               </p>
             </div>
 
