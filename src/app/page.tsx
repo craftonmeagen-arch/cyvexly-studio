@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { HeroShowcaseVideo } from "@/components/hero-showcase-video";
+import { HowItWorksVideo } from "@/components/how-it-works-video";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { ConceptPreview } from "@/components/concept-preview";
 import { CredibilityIcon } from "@/components/credibility-icon";
@@ -159,6 +160,15 @@ export default function Home() {
                 needs, and we shape a custom website around your brand, your users, and your
                 goals — strategy, design, and code working together.
               </p>
+            </div>
+          </div>
+
+          <div className="mt-10 sm:mt-12">
+            <h3 className="font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
+              So how does it work?
+            </h3>
+            <div className="mt-5">
+              <HowItWorksVideo />
             </div>
           </div>
           </div>
