@@ -66,9 +66,10 @@ sections and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`'s matching closeouts (all
 0-defect convergence-check rounds; round 84 also fixed the PATH
 environment gap).
 
-**Accepted product position:** `main` is pushed through round 82's source
-commit (`19ae224`) on `origin/main` and Render auto-deploys it (rounds
-83-86 made no source change).
+**Accepted product position:** `main` is pushed through round 87's source
+commit (`c85419f`) on `origin/main` and Render auto-deploys it (rounds
+83-86 made no source change; round 87 fixed the Home pricing-preview
+integrations wording).
 `cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
 round 53). `origin/master` is historical, not the deployment branch.
 
