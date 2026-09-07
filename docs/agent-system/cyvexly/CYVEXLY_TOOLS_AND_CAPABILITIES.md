@@ -23,6 +23,27 @@ describe their original session types; discover and verify current capabilities.
 
 ## Product and browser capabilities
 
+**Round 79 note — `requestAnimationFrame` suppression is independent of
+compositing/keyboard, and degrades separately.** Round 78 showed screenshots
+and native `Tab` focus movement can genuinely work in this scheduled/
+unattended session type (previously assumed impossible). Round 79 found this
+does NOT mean the whole rendering pipeline is healthy: in the same working
+session (`document.hidden: false`, real screenshots succeeding), a direct
+`requestAnimationFrame` counter probe stayed at `0` after a real 3-second
+wait — the exact round-6 root cause, but now proven to persist independently
+even when compositing/keyboard are working, not only when they are blocked.
+Any behavior gated on `requestAnimationFrame` (e.g. a post-render focus-move
+via `window.requestAnimationFrame(() => el.focus())`) cannot be verified as
+firing through this Browser pane and must not be concluded broken from that
+alone. **Working alternative, reused from round 8:** local headless Chrome
+via CDP (`chrome.exe --headless=new --remote-debugging-port=<port>
+--user-data-dir=<unique OS-temp path>`) has a fully healthy rendering
+pipeline — a real rAF counter reaches 3+ ticks in under a second there — so
+route any rAF-dependent verification through that path instead of the
+Browser pane. Round 79 used this to positively confirm Contact's and
+Planner's focus-move-to-first-invalid-field behavior actually fires for real
+users; the Browser-pane-only result would have wrongly looked like a defect.
+
 **Round 78 note — scheduled/unattended sessions ARE NOT fully blocked from
 live Browser-pane verification; only the named-launch path is.**
 `preview_start({name: "cyvexly-builder"})` still refuses in this scheduled/

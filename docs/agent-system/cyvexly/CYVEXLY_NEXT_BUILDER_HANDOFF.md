@@ -1,53 +1,36 @@
 # Cyvexly Next Builder Handoff
 
-## Round 78 closeout
+## Round 79 closeout
 
 **Session:** scheduled/unattended Claude Code run, 2026-09-07
-**Start source:** `7708964` on `main` (pushed, matched `origin/main`)
-**Scope:** Dispositioned Auditor item `IFA-2026-09-07-R69` (no action
-needed). Found round 77's "live/CDP verification is categorically
-unreachable this session type" conclusion was too broad and re-opened live
-verification via round 1's manual-start-then-attach workaround (see
-`CYVEXLY_TOOLS_AND_CAPABILITIES.md` round-78 note). Used the reachable
-window to close round 76's `document.hidden`/autoplay proof gap with
-genuine positive evidence and independently re-verify the video lightbox
-live. No source change.
-**Completion:** DONE WITH PROOF (proof-gap-closure + environment-capability
-round, 0 defects found).
+**Start source:** `94048c4` on `main` (pushed, matched `origin/main`)
+**Scope:** Dispositioned Auditor item `IFA-2026-09-07-R70` (45th confirmation,
+no action needed). Completed round 78's recommended live keyboard-only Tab
+traversal of header nav/Contact/Planner; correctly diagnosed an apparent
+Contact focus-on-error gap as a Browser-pane `requestAnimationFrame`
+suppression (proof-instrument limitation, refined `CYVEXLY_TOOLS_AND_CAPABILITIES.md`),
+not a product bug, using local headless-Chrome/CDP as the stronger instrument
+where rAF genuinely fires. No source change.
+**Completion:** DONE WITH PROOF (0 defects found; genuine positive
+verification of Contact/Planner error-focus behavior on real source).
 
 ### Recommended next workstream
 
-The manual-start-then-attach Browser-pane workaround is reachable but
-intermittent (compositing/keyboard degraded partway through this round) —
-retry it early each round rather than assuming either "always blocked" or
-"fully reliable"; fall back to `read_page`/`javascript_tool` (100% reliable)
-when it degrades. With this window open, a genuine live keyboard-only Tab
-traversal of the header nav / Contact form / Planner (last done via this
-exact Browser pane: never; last done at all via local-Chrome/CDP: round 8)
-is now worth attempting again if the window holds. Re-check the Auditor
-inbox first for anything published after round 78. Owner gates unchanged:
-Resend account/DNS/API key, analytics/Search Console ownership, exact LLC
-name, About/legal/visual review (including round 76's video section),
-final indexability approval (see `CYVEXLY_OWNER_DIRECTION.md`).
+45 consecutive clean Auditor confirmations plus this round's own independent
+keyboard/validation verification indicate the current source is solid;
+remaining Chunk 5 scope is Owner-gated (Resend account/DNS/API key,
+analytics/Search Console ownership, exact LLC name, Cloudflare Transform
+Rule, About/legal/visual review including the round-76 video). A fresh,
+not-yet-diffed surface worth a future round's adversarial pass: the Planner's
+later steps (2-9) haven't had this exact real-native-Tab treatment since
+round 8 — only Step 1 was reconfirmed this round. Re-check the Auditor inbox
+first for anything published after round 79.
 
-Round 77's full report is archived at
-`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_77_REPORT.md` (moved
-there round 78 to keep this file under its 12,288-byte hot-file cap). Round
-77 dispositioned the 43rd Auditor confirmation and ran a source-level
-service-details/site-config diff plus a form-accessibility scan (0 new
-defects, no source change).
-
-Round 76's full report is archived at
-`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_76_REPORT.md` (moved
-there round 77 to keep this file under its 12,288-byte hot-file cap).
-Round 76 added the Home "how does it work?" process video and fixed a
-real `backdrop-filter`/`position: fixed` containing-block bug.
-
-Round 75's full report is archived at
-`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_75_REPORT.md` (moved
-there round 76 to keep this file under its 12,288-byte hot-file cap).
-Round 75 completed brand-color token consistency in decorative gradient
-strings.
+Round 78's full report is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_78_REPORT.md` (moved there
+round 79 to keep this file under its 12,288-byte hot-file cap). Round 78
+reopened the manual-start-then-attach Browser-pane path and closed round 76's
+`document.hidden`/autoplay proof gap with genuine positive evidence.
 
 Rounds 45-74 closeout detail is archived at their correspondingly named
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_<N>_REPORT.md` files

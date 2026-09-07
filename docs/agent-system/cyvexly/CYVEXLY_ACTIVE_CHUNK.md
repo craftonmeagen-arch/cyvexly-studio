@@ -7,6 +7,26 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 79** (scheduled/unattended) dispositioned Auditor item
+`IFA-2026-09-07-R70` (45th consecutive clean confirmation, 0 action needed)
+and completed round 78's recommended live keyboard-only Tab traversal of the
+header nav / Contact form / Planner via the manual-start-then-attach
+Browser-pane workaround plus, where the Browser pane's known
+`requestAnimationFrame` suppression made a result ambiguous, local
+headless-Chrome/CDP (round 8's method). Confirmed correct real-Tab order and
+labeling across Home hero → the round-76 video trigger (has a real
+`aria-label`, not a defect) → Work cards, and across every Contact field
+(honeypot correctly `tabIndex="-1"`, unreachable). Diagnosed one apparent gap
+correctly as a proof-instrument limitation, not a bug: Contact's rAF-wrapped
+focus-move-to-first-invalid-field didn't visibly fire in the Browser pane
+(rAF genuinely never ticks there, independent of compositing/keyboard
+working), but the same action via headless-Chrome/CDP (where rAF fires)
+proved it works correctly, and reconfirmed the Planner Step 1 equivalent
+still holds on current source. **No source change** — a proof-gap-closure
+and environment-capability-refinement round, 0 defects found. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Round 79" and
+`CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-79 note.
+
 **Round 78** (scheduled/unattended) checked the Auditor inbox
 (`IFA-2026-09-07-R69`, 44th consecutive clean confirmation, "PASS WITH
 COMMENDATION" on round 76's video via the Auditor's own live CDP run — no

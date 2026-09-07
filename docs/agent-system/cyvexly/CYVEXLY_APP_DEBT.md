@@ -1,5 +1,63 @@
 # Cyvexly App Debt
 
+## Round 79 — no new defect; live keyboard/validation verification + rAF proof-instrument refinement
+
+- **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R70` (45th
+  consecutive clean confirmation, reviewed commit `7708964` — round 77's head),
+  0 active code defects, "PASS WITH COMMENDATION" including its own live CDP
+  re-verification of the round-76 video. Same stale "Production Domain
+  Connection" gate wording rounds 77-78 already noted (domain verified live
+  since round 53). No Builder action required; moved to `exchange/processed/`.
+- **Completed round 78's recommended live keyboard-only Tab traversal of the
+  header nav / Contact form / Planner** via the manual-start-then-attach
+  Browser-pane workaround (real compositing screenshot + real native `Tab`
+  confirmed working again this round). Real click + `Tab` sequence through
+  the Home hero traversed hero CTA → Explore services → the round-76 "how it
+  works" video trigger (a focusable `role="button"` `<div>` — confirmed it
+  carries `aria-label="Open the Cyvexly process video in a larger view"`, not
+  a defect) → Work cards, in correct visual/DOM order. On `/contact`, a real
+  native `Tab` sequence from a real click on Name traversed Name → Email →
+  Phone → Company → Topic → Message → Consent → Send message, each with
+  correct `<label for>` association; the honeypot field
+  (`contact-company-website`) is confirmed `tabIndex="-1"` and correctly
+  unreachable by keyboard.
+- **Found and correctly diagnosed a proof-instrument gap, not a product
+  defect.** A real click on Contact's "Send message" with an empty form set
+  `aria-invalid`/`aria-describedby`/the `role="alert"` summary correctly, but
+  focus stayed on the button instead of moving to the first invalid field as
+  `contact-form.tsx` intends (`form.querySelector('[aria-invalid="true"]')
+  ?.focus()`, wrapped in `requestAnimationFrame`). Root-caused before
+  concluding it was a bug: a direct rAF probe in the same Browser-pane session
+  (`requestAnimationFrame` counter after a real 3s wait) stayed at `0` even
+  though `document.hidden` read `false` and compositing/Tab-focus worked —
+  this is the same rAF-suppression limitation `CYVEXLY_TOOLS_AND_CAPABILITIES.md`
+  documented at round 6, now shown to be an *independent* degradation from
+  compositing/keyboard (one can work while the other stays suppressed; they
+  are not one unified capability). Verified the real product behavior instead
+  via round 8's local-headless-Chrome/CDP method, where `requestAnimationFrame`
+  genuinely fires: a real DOM click on Contact's submit button with an empty
+  form correctly moved focus to the Name input (`aria-invalid="true"`,
+  `aria-describedby="name-error"` → "Please enter your name."). **No product
+  defect** — confirmed working as designed via a stronger instrument.
+- **Planner Step 1, same method:** a real native click (headless-Chrome CDP)
+  on "Continue →" with every field empty correctly moved focus to `fullName`
+  (`aria-invalid="true"`, `aria-describedby="fullName-error"`, 3 real
+  `role="alert"` messages), then real native `Input.dispatchKeyEvent` `Tab`
+  presses traversed workEmail → contactMethod → roleTitle → companyName →
+  country → otherApprovers in correct order with correct labels — reconfirms
+  round 8's original finding still holds on current source (commit
+  `94048c4`), no regression.
+- **Verified:** no source file changed this round (verification/proof-gap
+  closure only), so `tsc`/lint/build were not re-run (round 78's clean
+  results stand unchanged).
+- Cleaned up: stopped the manually-started `next dev` listener on port 5173
+  by verified real listener PID; stopped the round-owned headless-Chrome
+  instance by matching its unique `--user-data-dir` command-line substring
+  (not by process name — several unrelated `chrome.exe` processes were
+  running); removed the unique Chrome profile directory, dev-server log, and
+  both scratch CDP helper scripts from the OS temp root and session
+  scratchpad; closed the Browser pane tab.
+
 ## Round 78 — no new defect; environment finding + proof-gap closure
 
 - **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R69`
@@ -99,57 +157,12 @@ same session-type proof-gap category.
 - Cleaned up: no scratch files, processes, or runtime environments were
   created this round (no dev/build server was started).
 
-## Resolved round 76 (interactive, Owner direction 2026-09-06-17)
-
-- **Owner-requested feature, not an audit finding.** Added a Home "So
-  how does it work?" section under the "We're not a DIY builder" panel:
-  a supplied process video (`cyvexley video.mp4`, a Project Planner
-  intake-flow screen recording) embedded as a silent, looping,
-  chrome-less ambient clip with a subtle "expand" affordance that opens
-  a larger, controllable lightbox on click/Enter. Full Owner transcript
-  in `CYVEXLY_OWNER_DIRECTION.md`'s "Home 'how does it work?' process
-  video 2026-09-06-17".
-- **Built:** `src/components/how-it-works-video.tsx`, wired into
-  `src/app/page.tsx` inside the existing DIY-builder panel's
-  `max-w-6xl` container (not a separate full-width section, so it reads
-  as one continuous tile). Media copied to
-  `public/media/cyvexly-how-it-works.mp4`; a poster frame
-  (`cyvexly-how-it-works-poster.webp`) was generated via an in-browser
-  canvas capture (no ffmpeg/ffprobe on this host).
-- **Found and fixed a real bug during verification:** the lightbox's
-  `fixed inset-0` overlay was not actually pinned to the viewport.
-  Several glass-panel ancestors on this page set `backdrop-filter` (the
-  sitewide frosted-glass treatment), which — like `transform`/`filter`/
-  `perspective`/`will-change: transform` — creates a new CSS containing
-  block for `position: fixed` descendants. Live CDP inspection showed
-  the overlay's bounding rect at a negative, scroll-dependent Y instead
-  of `(0,0)`, so a real backdrop-corner click missed it. Fixed by
-  rendering the modal through `createPortal(..., document.body)`.
-  Re-verified: dialog is now a direct child of `<body>`, its rect
-  matches the window exactly regardless of scroll, and backdrop-click
-  now closes it correctly.
-- **Verified via CDP:** click and Enter/Space both open the modal;
-  clicking the video panel itself does not close it (`stopPropagation`
-  confirmed); Escape and the close button both close it and correctly
-  restore focus/body scroll; zero horizontal overflow at 375px;
-  `tsc --noEmit`/lint/`pnpm run build` all clean (same pre-existing
-  round-42 evidence-script lint warning, untouched); a real
-  `next start` 21-route sweep (including both new media files) all
-  returned 200.
-- **Named proof-instrument limitation, not a product defect:** this
-  session's Browser pane consistently reports `document.hidden = true`
-  even when the tab is the sole/fronted one, so the ambient loop's
-  existing `document.hidden`-driven auto-pause (matching the Home hero
-  video's established pattern) could not be positively distinguished
-  from a real background-tab pause via the Page Visibility API in this
-  session. Real screenshots taken earlier in the same session (before
-  this check was added) showed the frame content visibly advancing over
-  real elapsed time, and manual `.play()` calls succeed with no error —
-  the playback path itself is sound; a genuinely attended browser
-  session would close this proof gap.
-- Cleaned up: stopped the owned `next start`/`next dev` listeners on
-  port 5173 by verified PID; removed scratch log/base64 files from
-  `$env:TEMP` and the session scratchpad.
+Round 76's full detail (Home "how does it work?" video build + the
+`backdrop-filter`/`position:fixed` containing-block bug fix; its named
+`document.hidden` proof gap was independently closed round 78) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_76_ARCHIVE.md` (moved there round
+79 to keep this file under its 30,720-byte hot-file cap; also preserved in
+`CYVEXLY_ACTIVE_CHUNK.md`'s "Round 76 report" and `CYVEXLY_BUILD_SUMMARY.md`).
 
 ## Resolved round 75
 
