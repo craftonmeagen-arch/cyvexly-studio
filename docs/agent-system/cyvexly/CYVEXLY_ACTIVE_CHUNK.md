@@ -10,6 +10,25 @@ is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean.
 
+**Round 89** (scheduled/unattended) dispositioned Auditor item
+`IFA-2026-09-07-R80` (55th consecutive clean confirmation, reviewed
+commit `74367fa` predating round 88's docs-only commit, "PASS WITH
+COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
+unchanged round-87 source. Continued the convergence-check practice on
+round 88's handoff-named fresh surface: diffed `faqLibrary`'s "Pricing &
+payment"/"Launch & care" answers against `pricingPackages`,
+`billedSeparately`, `addOns`, and `carePlans`, then extended the check to
+two more payment-copy surfaces never before cross-checked — the Pricing
+page's own `pricingFaq` array and payment-schedule `<dl>` markup, and
+Home's `faqPreview` array. **0 defects found** — every deposit
+percentage, timeline, revision-round count, rush-fee percentage, and
+Care-plan price/capacity matches exactly across all sources; the one
+wording variance found (Signal's deposit timing phrased differently
+between `faqLibrary` and the Pricing page) states the same 50/50 split
+and milestone, not a factual contradiction. Verified live on a rebuilt
+`next start` server (`/faq` and `/pricing` both render the exact source
+strings; 20/20 routes 200). See `CYVEXLY_APP_DEBT.md`'s "Round 89".
+
 **Round 88** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R79` (54th consecutive clean confirmation per the
 Auditor's own count, reviewed round 86's commit predating round 87's
@@ -128,69 +147,18 @@ not a product defect.** See `CYVEXLY_APP_DEBT.md`'s "Round 81" and
 `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-81 note. **No product defect
 found; no source change** — a proof-gap-closure round.
 
-**Round 80** (scheduled/unattended) dispositioned Auditor item
-`IFA-2026-09-07-R71` (46th consecutive clean confirmation, 0 action
-needed) and completed round 79's recommended fresh surface: a real live
-keyboard/data-integrity pass over Planner Steps 2-9 (only Step 1 had this
-exact treatment since round 8). Real native `Tab` traversal through
-Steps 2-3's fields landed in exact source order with correct conditional
-behavior (no stray `primaryGoalOther`); filled every step through to
-Step 9 and confirmed the Review page correctly reflects every entered/
-selected value from Steps 1-8 — a genuine data-integrity result, not
-just keyboard order. Also correctly diagnosed a `read_page`-only "Select
-one" combobox-naming quirk as a tool-rendering convention, not a label
-defect, via direct DOM inspection. **New instrument finding:** this
-session's synthetic `Return`/`space` key press does not activate a
-correctly-focused native `<button>` (tested on two independent
-components), while `Tab` reliably moves focus — see
-`CYVEXLY_APP_DEBT.md`'s "Round 80" and
-`CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-80 note. **No product defect
-found; no source change** — a proof-coverage-expansion round.
-
-**Round 79** (scheduled/unattended) dispositioned Auditor item
-`IFA-2026-09-07-R70` (45th consecutive clean confirmation, 0 action needed)
-and completed round 78's recommended live keyboard-only Tab traversal of the
-header nav / Contact form / Planner via the manual-start-then-attach
-Browser-pane workaround plus, where the Browser pane's known
-`requestAnimationFrame` suppression made a result ambiguous, local
-headless-Chrome/CDP (round 8's method). Confirmed correct real-Tab order and
-labeling across Home hero → the round-76 video trigger (has a real
-`aria-label`, not a defect) → Work cards, and across every Contact field
-(honeypot correctly `tabIndex="-1"`, unreachable). Diagnosed one apparent gap
-correctly as a proof-instrument limitation, not a bug: Contact's rAF-wrapped
-focus-move-to-first-invalid-field didn't visibly fire in the Browser pane
-(rAF genuinely never ticks there, independent of compositing/keyboard
-working), but the same action via headless-Chrome/CDP (where rAF fires)
-proved it works correctly, and reconfirmed the Planner Step 1 equivalent
-still holds on current source. **No source change** — a proof-gap-closure
-and environment-capability-refinement round, 0 defects found. Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Round 79" and
-`CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-79 note.
-
-**Round 78** (scheduled/unattended) checked the Auditor inbox
-(`IFA-2026-09-07-R69`, 44th consecutive clean confirmation, "PASS WITH
-COMMENDATION" on round 76's video via the Auditor's own live CDP run — no
-Builder action needed) and found that round 77's "live/CDP verification is
-categorically unreachable this session type" conclusion was too broad: only
-`preview_start({name})`'s dev-server launch is refused for unattended
-sessions. Starting `next dev` manually via the Bash tool and attaching with
-`preview_start({url: "http://localhost:5173"})` (round 1's own documented
-workaround) got genuine compositing screenshots and a real `Tab`-key focus
-move this round — both degraded to intermittent partway through, matching
-rounds 35/40's pattern. Used the working window to close round 76's named
-proof-instrument gap with genuine positive evidence: `document.hidden` read
-`false` (not stuck `true` as in round 76's session), and the ambient video's
-`currentTime` advanced 3.24s → 11.14s across a real 3-second wait, proving
-actual autoplay progression; independently re-verified the lightbox's
-open/Escape-close/focus-return live. No source change — a proof-gap-closure
-and environment-capability round. Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Round 78" and `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s
-round-78 note.
-
-Round 77's full report (service-details/site-config diff + accessibility
-scan, 0 defects found) is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_77_REPORT.md` (moved
-there round 82 to make room for the round-82 entry below).
+Rounds 77-80's full reports (each archived at their correspondingly
+named `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_<N>_REPORT.md`
+files; consolidated round 89 to keep this file under its 30,720-byte
+hot-file cap; no history lost — full detail also in each round's
+`CYVEXLY_APP_DEBT.md`/`CYVEXLY_TOOLS_AND_CAPABILITIES.md` entries): 80
+0 product defect — Planner Steps 2-9 live keyboard/data-integrity pass
+clean + new instrument finding (synthetic Return/Space doesn't activate
+a focused native button, Tab does); 79 0 defects — header/Contact/
+Planner live Tab-traversal proof-gap closure via CDP; 78 0 defects —
+reopened the manual-start-then-attach Browser-pane workaround, closed
+round 76's `document.hidden`/autoplay proof gap; 77 0 defects —
+service-details/site-config diff + accessibility scan.
 
 **Round 76** (interactive session, Owner direction `2026-09-06-17`)
 added a Home "So how does it work?" section: a supplied process video

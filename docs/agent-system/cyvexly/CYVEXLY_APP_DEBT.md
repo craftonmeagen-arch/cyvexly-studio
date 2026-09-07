@@ -1,5 +1,62 @@
 # Cyvexly App Debt
 
+## Round 89 — no new defect; FAQ/Pricing/Home payment-copy convergence-check across three independent surfaces
+
+Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R80` (55th
+consecutive clean confirmation, "PASS WITH COMMENDATION", reviewed commit
+`74367fa` predating round 88's docs-only commit, 0 Builder action needed
+— its one advisory note about `CYVEXLY_APP_DEBT.md` headroom was already
+satisfied by round 88's own rotation before this report published). Moved
+to `exchange/processed/`.
+
+Ran the standard verification suite first: `pnpm exec tsc --noEmit`
+clean, `pnpm run lint` clean (same pre-existing round-42 evidence-script
+warning), `pnpm run build` clean, on unchanged round-87 source
+(`c85419f`).
+
+**Convergence-check, fresh surface (round 88's handoff-named candidate):**
+diffed `faqLibrary`'s "Pricing & payment" and "Launch & care" categories
+(`src/lib/site-config.ts`) — deposit percentages, accepted payment
+methods, billed-separately items, revision-round counts, rush-fee
+percentage, Care-plan starting price/contract terms — against their
+source-of-truth arrays: `pricingPackages` (timeline/scope/review-round
+counts), `billedSeparately`, `addOns` (rush-fee range), and `carePlans`
+(price/capacity per tier). Extended the check to two more payment-copy
+surfaces that had never been cross-checked against `faqLibrary` or each
+other: the Pricing page's own separate `pricingFaq` array plus its
+hand-written payment-schedule `<dl>` markup (`src/app/pricing/page.tsx`),
+and Home's `faqPreview` array. **0 defects found** — every specific
+numeric claim matches exactly: Signal/Orbit/Nexus/Commerce timelines
+(2–3/4–6/6–9/8–14+ weeks) match `pricingPackages.timeline` on both
+`faqLibrary` and `faqPreview`; revision-round counts (two/two/three for
+Signal/Orbit/Nexus) match each package's `scope` entry; the 20–30%
+rush-fee figure matches `addOns`' "Rush scheduling" range exactly; Care
+plan prices ($99/$229/$449) and the "more capacity on Care+ and Evolve"
+claim match `carePlans` exactly; the Orbit-and-Nexus deposit split
+(40%/30%/30%) is worded identically in `faqLibrary` and the Pricing
+page's `<dl>`. The Signal deposit description differs only in phrasing
+— `faqLibrary` says "50% to begin and 50% at final approval" while the
+Pricing page says "50% to reserve and begin; 50% after final approval
+and before launch" — both describe the same 50/50 split and the same
+milestone (final approval, which precedes launch); this is a paraphrase,
+not a numeric or factual contradiction, so per §0.3/§3.5 it does not
+warrant a fix. **Verified live:** rebuilt production build clean;
+started a real `next start` server on port 5173; fetched `/faq` and
+confirmed the rendered/JSON-LD text matches source exactly for the
+deposit, payment-methods, billed-separately, timeline, and Care-plan
+answers; fetched `/pricing` and confirmed its independent payment-
+schedule `<dl>` text (Signal/Orbit-Nexus/Commerce-Custom/Care-plans rows)
+matches source exactly; full 20-route sweep, 20/20 return 200.
+**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
+Cleaned up: stopped the manually-started `next start` listener on port
+5173 by its verified real listener PID (`Get-NetTCPConnection -LocalPort
+5173 -State Listen`), confirmed port clear afterward; removed the one
+scratch server log from the OS temp scratchpad.
+Rotated this file (archived round 87's inline detail to
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_87_ARCHIVE.md`, kept a
+one-line pointer) to restore hot-file headroom ahead of adding this
+round's entry.
+
 ## Round 88 — no new defect; Service JSON-LD scope-field and service-details.ts/pricingPackages content convergence-check
 
 Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R79` (54th
@@ -56,53 +113,10 @@ Rotated this file (archived round 85's inline detail to
 one-line pointer) to restore hot-file headroom ahead of adding this
 round's entry.
 
-## Round 87 — real defect fixed; Home pricing-preview overstated a capped inclusion as guaranteed
-
-Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R78` (53rd
-consecutive clean confirmation, "PASS WITH COMMENDATION", 0 action
-needed — same stale "Production Domain Connection" gate wording rounds
-77-86 already noted). Moved to `exchange/processed/`.
-
-Ran the standard verification suite first: `tsc --noEmit`/`pnpm run
-lint`/`pnpm run build` all clean (zero warnings; same pre-existing
-round-42 evidence-script lint warning) on unchanged round-82 source
-(`f331746`).
-
-**Convergence-check, fresh surface (the round-86 handoff's named
-candidate):** diffed Home's other CTAs/claims (`src/app/page.tsx`) against
-their `site-config.ts` source-of-truth arrays. `processSteps`/
-`collaborationPromise` are directly reused (same array, no copy — no
-drift possible). `credibilityPoints`/`capabilities`/`selectedWork` are
-generic or already-labeled-concept claims with no measurable-fact
-mismatch. **Found and fixed one real, reachable truth-precision defect:**
-`pricingPreview`'s Nexus tier (rendered on Home, `src/lib/site-config.ts`
-line 348) listed a feature as `"Two standard integrations"`, but the
-single source of truth for that fact — `pricingPackages`'s Nexus `scope`
-entry (line 621) — defines it as `"Up to two standard integrations"`, a
-cap, not a guaranteed count. Every other page-count feature in the same
-`pricingPreview` array correctly preserves "Up to" (e.g. Orbit's "Up to 7
-core pages"), confirming this was an inconsistent-editing oversight, not
-a deliberate simplification. A prospect reading only the Home preview
-card would reasonably expect exactly two integrations included, an
-overstatement of actual package scope. Fixed by changing the Home
-feature string to `"Up to two standard integrations"`, matching the
-Pricing page exactly (grep-verified: `"standard integration"` now has
-exactly 2 occurrences sitewide, both saying "Up to two").
-**Verified:** `tsc`/lint/production build clean after the fix; started a
-real `next start` production server and confirmed the corrected string
-renders in the actual page HTML (`curl` against `http://localhost:5173/`
-showed `"Up to two standard integrations"` in three expected DOM/RSC
-payload locations, none showing the old "Two standard integrations"
-text); swept all 17 public routes, all 200. Cleaned up: stopped the
-manually-started `next start` listener on port 5173 by its verified real
-listener PID (`Get-NetTCPConnection -LocalPort 5173 -State Listen`),
-confirmed port clear afterward; removed the two scratch server logs from
-the OS temp root.
-**Completion:** DONE WITH PROOF (1 real defect found and fixed).
-Rotated this file (archived round 84's inline detail to
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_84_ARCHIVE.md`, kept a
-one-line pointer) to restore hot-file headroom ahead of adding this
-round's entry.
+Round 87's full detail (Home pricing-preview Nexus-integrations
+truth-precision fix, commit `c85419f`) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_87_ARCHIVE.md` (moved there
+round 89 to keep this file under its 30,720-byte hot-file cap).
 
 Round 86's full detail (Planner/Contact per-step copy vs. email-
 notification field-label convergence-check, 0 defects found) is

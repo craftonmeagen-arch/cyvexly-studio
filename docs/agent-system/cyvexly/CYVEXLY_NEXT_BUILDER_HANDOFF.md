@@ -1,5 +1,55 @@
 # Cyvexly Next Builder Handoff
 
+## Round 89 closeout
+
+**Session:** scheduled/unattended Claude Code run, 2026-09-07
+**Start source:** `269ed69` on `main` (pushed, matched `origin/main`)
+**Scope:** Checked the Auditor inbox: one new item, `IFA-2026-09-07-R80`
+(55th consecutive clean confirmation, "PASS WITH COMMENDATION", reviewed
+commit `74367fa` predating round 88's docs-only commit, 0 action
+needed — its one advisory note, rotating `CYVEXLY_APP_DEBT.md` for tight
+headroom, was already satisfied by round 88's own rotation before this
+report published); moved to `exchange/processed/`. Verified
+`tsc`/lint/build clean on unchanged round-87 source (`c85419f`).
+Followed round 88's handoff-named fresh surface: diffed `faqLibrary`'s
+"Pricing & payment"/"Launch & care" Q&As (deposit percentages, payment
+methods, billed-separately items, Care-plan pricing/contract terms)
+against `pricingPackages`, `billedSeparately`, `addOns`, and `carePlans`
+(the source-of-truth arrays), plus the Pricing page's own separate
+`pricingFaq`/payment-schedule `<dl>` markup and Home's `faqPreview`
+array — three independent payment-copy surfaces that had not been
+cross-checked against each other before. **0 defects found**: every
+deposit percentage, timeline, revision-round count, rush-fee percentage,
+and Care-plan price/capacity matches exactly across all four sources;
+the only wording variance (FAQ's "50% at final approval" for Signal vs.
+the Pricing page's more specific "50% after final approval and before
+launch") states the same 50/50 split and milestone, not a numeric or
+factual contradiction — reasoned as non-material per §0.3/§3.5, not
+implemented. **Verified live** on a rebuilt `next start` production
+server: fetched `/faq` and `/pricing`, confirmed the exact deposit,
+Care-plan, and Custom/Commerce milestone strings render byte-for-byte
+matching source on both routes; full 20-route sweep, 20/20 return 200.
+**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
+Cleaned up: stopped the manually-started `next start` listener on port
+5173 by its verified real listener PID; removed the one scratch server
+log from the OS temp scratchpad.
+
+**No urgent item routed to the next round.** Chunk 5's remaining scope
+is entirely Owner-side gates (exact LLC name, Resend account/DNS,
+analytics/Search Console ownership or a no-analytics decision, Owner
+visual/copy acceptance, final indexability approval) — see
+`CYVEXLY_CURRENT_STATE.md` and `CYVEXLY_OWNER_DIRECTION.md`. Next Builder
+round: check the Auditor inbox first, apply the round-84 `PATH` fix
+before any `pnpm`/`node` command, then pick a fresh surface not yet
+covered by rounds 74-89's convergence checks — good candidates: a fresh
+live keyboard-only (in-Browser-pane, real `Tab` traversal, not CDP) pass
+on the Planner's Step 6 asset-status `StatusRow` custom toggle-group
+(round 81 confirmed real Return/Space activation via CDP, but a genuine
+in-pane Tab-driven pass hasn't been run on this exact component since
+round 7's original audit), or diffing the Process page's step copy
+against `processSteps`/`collaborationPromise` and the actual Planner/
+Contact flow's real steps (named as untried by round 86's handoff).
+
 ## Round 88 closeout
 
 **Session:** scheduled/unattended Claude Code run, 2026-09-07
@@ -45,90 +95,15 @@ or diffing the FAQ library's payment/billing-schedule answers against
 a different angle — response-time claims, not the payment schedule
 itself).
 
-## Round 87 closeout
+Round 87's full closeout (Home pricing-preview Nexus-integrations
+truth-precision fix, commit `c85419f`) is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_87_REPORT.md` (moved
+there round 89 to keep this file under its 12,288-byte hot-file cap).
 
-**Session:** scheduled/unattended Claude Code run, 2026-09-07
-**Start source:** `f331746` on `main` (pushed, matched `origin/main`)
-**Scope:** Checked the Auditor inbox: one new item, `IFA-2026-09-07-R78`
-(53rd consecutive clean confirmation, "PASS WITH COMMENDATION", 0 action
-needed); moved to `exchange/processed/`. Applied the round-84 `PATH`
-fix and verified `tsc`/lint/build clean on unchanged round-82 source.
-Continued the convergence-check practice on the round-86 handoff's named
-fresh surface: diffed Home's other CTAs/claims (`src/app/page.tsx`)
-against `site-config.ts`. **Found and fixed one real truth-precision
-defect:** Home's pricing-preview card for the Nexus tier said "Two
-standard integrations", overstating the actual package scope, which caps
-it at "Up to two standard integrations" (`pricingPackages`, the single
-source of truth) — a prospect reading only the Home card would
-reasonably expect a guaranteed count rather than a maximum. Fixed
-`src/lib/site-config.ts`'s `pricingPreview` entry to match exactly.
-Verified via a real rebuilt `next start` production server: the
-corrected string renders live in the actual page HTML (old text
-confirmed absent), full 17-route sweep 200. See `CYVEXLY_APP_DEBT.md`'s
-"Round 87" for full detail.
-**Completion:** DONE WITH PROOF (1 real defect found and fixed).
-
-**No urgent item routed to the next round.** Chunk 5's remaining scope
-is entirely Owner-side gates (exact LLC name, Resend account/DNS,
-analytics/Search Console ownership or a no-analytics decision, Owner
-visual/copy acceptance, final indexability approval) — see
-`CYVEXLY_CURRENT_STATE.md` and `CYVEXLY_OWNER_DIRECTION.md`. Next Builder
-round: check the Auditor inbox first, apply the round-84 `PATH` fix
-before any `pnpm`/`node` command, then pick a fresh surface not yet
-covered by rounds 74-87's convergence checks (Terms, Accessibility,
-About, sitemap/robots, CSP, Privacy, FAQ, Pricing/response-time,
-structured-data.ts, Planner/Contact-vs-email labels, Home CTAs already
-done) — good candidates: `structured-data.ts`'s `Service` JSON-LD against
-each `/services/[slug]` page's *own* rendered scope list (not just the
-starting price, already checked round 85), or a fresh live keyboard-only
-pass on the Planner's Step 6 asset-status `StatusRow` custom toggle-group
-(source last touched well after its round-7 accessibility audit, though
-round 81 did confirm live Return/Space activation on it via CDP).
-
-## Round 86 closeout
-
-**Session:** scheduled/unattended Claude Code run, 2026-09-07
-**Start source:** `55f7300` on `main` (pushed, matched `origin/main`)
-**Scope:** Checked the Auditor inbox: one new item, `IFA-2026-09-07-R77`
-(52nd consecutive clean confirmation, "PASS WITH COMMENDATION", 0 action
-needed — same stale "Production Domain Connection" gate wording rounds
-77-85 already noted); moved to `exchange/processed/`. Applied the
-round-84 `PATH` fix and verified `tsc`/lint/build clean (zero warnings,
-same pre-existing round-42 evidence-script lint warning) on unchanged
-round-82 source. Continued the convergence-check practice on the
-round-85 handoff's named fresh surface: field-by-field compared the
-Planner's per-step UI copy (`planner-form.tsx`, all 9 steps) against the
-internal-notification field labels `api/planner/route.ts`/`mailer.ts`
-produce — every `PlannerData` field is read server-side and rendered
-under a matching label, client/server required-field lists match
-exactly. Extended the same check to Contact
-(`contact-form.tsx`/`api/contact/route.ts`) — same clean result. Noted
-one low-value, no-fix-warranted observation (a secondary "Other" goal
-has no elaboration field, unlike the primary goal's `primaryGoalOther`)
-— reasoned as out of proportion for a convergence-check round per
-§0.3/§3.5, not implemented. **No defects found — a genuine negative
-result** after real cross-file investigation. Rotated
-`CYVEXLY_APP_DEBT.md` (archived round 83's inline detail to
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_83_ARCHIVE.md`, kept a
-one-line pointer) to restore hot-file headroom ahead of adding this
-round's entry.
-**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
-
-**No urgent item routed to the next round.** Chunk 5's remaining scope
-is entirely Owner-side gates (exact LLC name, Resend account/DNS,
-analytics/Search Console ownership or a no-analytics decision, Owner
-visual/copy acceptance, final indexability approval) — see
-`CYVEXLY_CURRENT_STATE.md` and `CYVEXLY_OWNER_DIRECTION.md`. Next Builder
-round: check the Auditor inbox first, apply the round-84 `PATH` fix
-before any `pnpm`/`node` command, then pick a fresh surface not yet
-covered by rounds 74-86's convergence checks (Terms, Accessibility,
-About, sitemap/robots, CSP, Privacy, FAQ, Pricing/response-time,
-structured-data.ts, Planner/Contact-vs-email labels already done) — a
-good candidate: the Home page's other CTAs/claims not yet diffed against
-`site-config.ts` (e.g. `processSteps`/`collaborationPromise` copy vs the
-actual Planner/Contact flow's real steps), or a fresh accessibility pass
-on the Planner's step-6 asset-status `StatusRow` custom toggle-group
-pattern (last audited round 7, well before later Planner edits).
+Round 86's full closeout (Planner/Contact-vs-email-label convergence-
+check, 0 defects found) is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_86_REPORT.md` (moved
+there round 89 to keep this file under its 12,288-byte hot-file cap).
 
 Round 85's full closeout (structured-data.ts JSON-LD convergence-check,
 0 defects found) is archived at
