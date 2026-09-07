@@ -7,6 +7,21 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 77** (scheduled/unattended — dev-server preview disabled for
+unattended sessions, so proof was source-level only) dispositioned
+Auditor item `IFA-2026-09-07-R68` (43rd consecutive clean confirmation,
+0 active code defects; its "Production Domain Connection" gate note is
+stale, corrected by round 53). Completed the round-76-recommended
+field-by-field diff of `service-details.ts` against `site-config.ts`'s
+`pricingPackages`/`carePlans`/`servicesGroups` for all 5 services (round
+75 checked only one), plus a source-level accessibility scan (zero
+`<img>`/`<Image>` anywhere in `src/`; every form input in
+`contact-form.tsx` and the shared Planner `FieldShell` has a real
+`<label htmlFor>` and wired `aria-invalid`/`aria-describedby`). **No
+defect found** in either — genuine negative results, no source change.
+See `CYVEXLY_APP_DEBT.md`'s "Round 77" and
+`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
 **Round 76** (interactive session, Owner direction `2026-09-06-17`)
 added a Home "So how does it work?" section: a supplied process video
 embedded under the "We're not a DIY builder" panel as a silent,
@@ -32,26 +47,12 @@ structured data extracts the numeric value regardless of a "From "
 prefix — a genuine negative result, not a defect. See the round-75
 report below and `CYVEXLY_APP_DEBT.md`'s "Resolved round 75" section.
 
-**Round 74** (scheduled/unattended, 50-minute limit) dispositioned Auditor
-item `IFA-2026-09-06-R63` (38th consecutive clean confirmation, 0 active
-code defects, reviewed commit `bda8a13`, predating round 73's color-token
-fix). Ran an extended truth/consistency adversarial pass: reconstructed
-the complete pre-refresh color-token history via `git log -G` on
-`globals.css` (cyber-blue `#1478FF`→`#0F66E0`, cool-graphite
-`#526176`→`#46576E`, signal-emerald `#16B777`→`#0A6B45`, warning-coral
-`#D9435F`→`#BD2D49`) and grepped all four stale values sitewide — found
-no further drift beyond round 73's fix (the only remaining `#1478FF`
-hits are the already-confirmed-invisible `gradient` class strings in
-`site-config.ts`). Also verified "two business days" response-time
-copy is identical across all 16 occurrences (contact/Planner UI, email
-templates, About/Privacy/Accessibility copy), confirmed the Planner's
-"Worldwide" geographic-market option describes the prospect's own
-business market (not a Cyvexly service-area claim, so not a US-only
-violation), and confirmed the FAQ's payment-methods/deposit copy still
-correctly states the provider is not yet finalized. **0 new defects
-found** — a genuine negative result after real investigation, not
-skipped work. Archived an old inline rounds-14–28 status paragraph (see
-below) to restore hot-file headroom.
+Round 74's inline summary is archived at
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_74_REPORT.md` (moved
+round 77 to restore hot-file headroom; `CYVEXLY_APP_DEBT.md`'s round-74
+entry and the round-74 full report below already preserve the detail).
+Round 74 found 0 new defects (extended color-token/truth audit, no
+source change).
 
 Rounds 71-73's inline summaries are archived (moved round 76 to restore
 hot-file headroom; each round's full report and `CYVEXLY_APP_DEBT.md`
@@ -346,158 +347,27 @@ there round 76 to keep this file under its 30,720-byte hot-file cap).
 Round 75 completed brand-color token consistency in decorative gradient
 strings.
 
-Round 73's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_73_REPORT.md` (moved
-there round 75 to keep this file under its 30,720-byte hot-file cap).
-Round 73 fixed the case-study/decorative-artwork color-token staleness
-defect.
-
-Round 72's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_72_REPORT.md` (moved
-there round 73 to keep this file under its 30,720-byte hot-file cap).
-Round 72 fixed the Planner Review-page validation-bypass defect.
-
-Round 71's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_71_REPORT.md` (moved
-there round 72 to keep this file under its 30,720-byte hot-file cap).
-Round 71 fixed the `/work` dead-end filter-pill defect and an
-`APP_DEBT.md` hot-file-cap violation.
-
-Round 70's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_70_REPORT.md` (moved
-there round 71 to keep this file under its 30,720-byte hot-file cap).
-Round 70 fixed the text-cursor/editable-looking-copy defect.
-
-Round 69's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_69_REPORT.md` (moved
-there round 70 to keep this file under its 30,720-byte hot-file cap).
-Round 69 fixed the Home FAQ preview's CMS-inclusion overclaim.
-
-Round 68's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_68_REPORT.md` (moved
-there round 69 to keep this file under its 30,720-byte hot-file cap) —
-69 stays live. Round 68 fixed a missing `Sitemap:` directive in
-`robots.ts`.
-
-Round 67's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_67_REPORT.md` (moved
-there round 69 to keep this file under its 30,720-byte hot-file cap) —
-68, 69 stay live. Round 67 fixed the Planner secondary-goals-label
-mapping defect.
-
-Round 66's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_66_REPORT.md` (moved
-there round 68 to keep this file under its 30,720-byte hot-file cap) —
-67, 68 stay live. Round 66 fixed the Planner spectrum-slider data-loss
-defect.
-
-Round 65's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_65_REPORT.md` (moved
-there round 67 to keep this file under its 30,720-byte hot-file cap) —
-66, 67 stay live. Round 65 fixed the request-body-size defect on both
-API routes.
-
-Round 64's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_64_REPORT.md` (moved
-there round 67 to restore latest-three rotation). Round 64 found 0 new
-defects (source-only adversarial re-review, no source changed).
-
-Round 63's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_63_REPORT.md` (moved
-there round 66 to keep this file under its 30,720-byte hot-file cap).
-Round 63 fixed a timing-side-channel weakness in `isTrustedOrigin()`.
-
-Round 62's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_62_REPORT.md` (moved
-there round 65 to restore latest-three rotation) — 63, 64, 65 stay live.
-Round 62 added the dormant Cloudflare-bypass `isTrustedOrigin()` gate.
-
-Round 61's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_61_REPORT.md` (moved
-there round 64 to restore latest-three rotation) — 62, 63, 64 stay live.
-Round 61 fixed the rate limiter's unbounded-memory-growth defect.
-
-Round 60's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_60_REPORT.md` (moved
-there round 63 to restore latest-three rotation).
-Round 60 fixed the Contact/Planner rate limiter's `X-Forwarded-For`
-IP-spoofing bypass.
-
-Round 59's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_59_REPORT.md` (moved
-there round 62 to restore latest-three rotation) — 60, 61, 62 stay live.
-Round 59 trimmed Home's meta description to fit the sitewide budget.
-
-Round 58's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_58_REPORT.md` (moved
-there round 61 to restore latest-three rotation) — 59, 60, 61 stay live.
-Round 58 fixed a hot-file-cap violation, a handoff-rotation defect, and
-shipped `html lang="en-US"`.
-
-Round 53's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_53_REPORT.md` (moved there
-round 58 to restore latest-three rotation) — 54, 55, 58 stay live. Round 53
-was the full launch-readiness pass: verified domain/HTTPS live, replaced
-Contact/Planner `mailto:` with real server-side Resend delivery, added
-dormant GA4/GSC scaffolding, fixed a stale Privacy Policy section, and ran
-a sitewide audit finding zero defects.
-
-Round 54's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_54_REPORT.md` (moved there
-round 59 to restore correct latest-three rotation — this file had kept 54
-live alongside 55 and 58, one round too many). Round 54 added per-slug
-Open Graph images for `services/[slug]` and `work/[slug]`.
-
-Round 55's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_55_REPORT.md` (moved there
-round 60 to restore latest-three rotation) — 58, 59, 60 stay live. Round 55
-added Service JSON-LD to the five `/services/[slug]` detail pages.
-
-Round 51's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_51_REPORT.md` (moved there
-round 54 to restore latest-three rotation) — 52, 53, 54 stay live. Round 51
-added sitewide Open Graph and Twitter Card metadata.
-
-Round 50's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_50_REPORT.md` (moved there
-round 53 to restore latest-three rotation). Round 50
-added COOP/CORP security headers and `/.well-known/security.txt`, and
-fixed a hot-memory rotation defect.
-
-Round 48's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_48_REPORT.md` (moved there
-round 51 to restore latest-three rotation) — 49, 50, 51 stay live. Round 48
-added raster 192/512 PNG manifest icons and fixed a print-legibility
-defect.
-
-Round 49's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_49_REPORT.md` (moved there
-round 52 to restore latest-three rotation) — 50, 51, 52 stay live. Round 49
-added route-segment/root-layout error boundaries and viewport theme-color/
-color-scheme metadata.
-
-Round 45's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_45_REPORT.md` (moved there
-round 48 to restore latest-three rotation). Round 45 implemented
-BreadcrumbList JSON-LD for service-detail and case-study routes.
-
-Round 44's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_44_REPORT.md` (moved there
-round 47 to restore latest-three rotation) — 45, 46, 47 stay live. Round 44
-implemented FAQPage JSON-LD for `/faq`.
-
-Round 43's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_43_REPORT.md` (moved there
-round 46 to restore latest-three rotation) — 44, 45, 46 stay live. Round 43
-found the site had no structured data at all and added sitewide
-`Organization` JSON-LD.
-
-Round 42's full report is archived at
-`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_42_REPORT.md` (moved there
-round 45 to restore latest-three rotation). Round 42 found and fixed the
-Contact form's missing spam-protection honeypot and live-verified the
-Planner's honeypot for the first time; also swept the Planner review step
-for RTL/very-long-name overflow with no defect found.
+Rounds 42-73's full reports are each archived at their correspondingly
+named `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND(S)_<N>_REPORT.md`
+files (consolidated round 77 to keep this file under its 30,720-byte
+hot-file cap; no history lost — one-line outcomes only, full detail in
+each archive file and `CYVEXLY_APP_DEBT.md`'s matching "Resolved round
+N" entry): 73 case-study/artwork color-token staleness fix; 72 Planner
+Review-page validation-bypass fix; 71 `/work` dead-end filter-pill fix +
+hot-file-cap fix; 70 text-cursor/editable-copy fix; 69 Home FAQ CMS-
+claim qualification; 68 `robots.ts` missing `Sitemap:` fix; 67 Planner
+secondary-goals-label fix; 66 Planner spectrum data-loss fix; 65
+request-body-size cap; 64 0 new defects (source-only re-review); 63
+timing-safe-comparison fix; 62 dormant Cloudflare-bypass gate; 61 rate-
+limiter memory-pruning fix; 60 rate-limiter IP-spoofing fix; 59 Home
+meta-description fix; 58 `lang="en-US"` + hot-file-cap + handoff-
+rotation fix; 55 Service JSON-LD; 54 per-slug OG images; 53 full launch-
+readiness pass (domain/HTTPS live, real Resend delivery, GA4/GSC
+scaffolding); 51 sitewide OG/Twitter metadata; 50 COOP/CORP headers +
+security.txt + rotation fix; 49 error boundaries + viewport theme-color;
+48 raster manifest icons + print-legibility fix; 45 BreadcrumbList
+JSON-LD; 44 FAQPage JSON-LD; 43 sitewide Organization JSON-LD; 42
+Contact honeypot fix + first live Planner-honeypot verification.
 
 Rounds 40-41 full reports are archived at docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUNDS_40_41_REPORT.md (moved there round 44 to restore latest-three rotation). Round 41 closed both of round 40's named QA candidates (WCAG 1.4.10 reflow/zoom, a Back-button re-check) with no defect found. Round 40 found and fixed the Planner step-advance scroll/focus/live-region defect (`71d233f`).
 

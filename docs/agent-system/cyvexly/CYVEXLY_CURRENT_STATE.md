@@ -1,10 +1,10 @@
 # Cyvexly Current State
 
-**Global round:** 76. Owner launch direction updated 2026-09-04, extended
+**Global round:** 77. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive)
 added a supplied Home process video under Owner direction
-`2026-09-06-17`.
+`2026-09-06-17`. Round 77 (scheduled/unattended) found 0 new defects.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -22,6 +22,20 @@ access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
 
+**Round 77 outcome (scheduled/unattended):** dev-server preview is
+disabled for unattended sessions, so proof this round was source-level
+only (`tsc`/lint/static analysis, no live/CDP rendering). Dispositioned
+Auditor item `IFA-2026-09-07-R68` (43rd consecutive clean confirmation,
+0 action needed). Completed the round-76-recommended field-by-field
+diff of `service-details.ts` against `site-config.ts`'s
+`pricingPackages`/`carePlans`/`servicesGroups` (all 5 services, not just
+one) and a source-level accessibility scan (zero `<img>`/`<Image>`
+anywhere in `src/`; every form input in `contact-form.tsx` and the
+shared Planner `FieldShell` component has a real `<label htmlFor>` plus
+wired `aria-invalid`/`aria-describedby`). **No defect found** in either
+— genuine negative results. No source change. Full detail in
+`CYVEXLY_APP_DEBT.md`/`CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
 **Round 76 outcome (interactive, Owner direction `2026-09-06-17`):**
 added a Home "So how does it work?" section embedding an Owner-supplied
 process video as a silent, looping, chrome-less ambient clip that opens
@@ -33,70 +47,39 @@ a new CSS containing block for `position: fixed` — fixed via
 CDP. Owner visual acceptance pending. Full detail in
 `CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`/`CYVEXLY_OWNER_DIRECTION.md`.
 
-Round 75 outcome: dispositioned Auditor item `IFA-2026-09-06-R64`
-(39th consecutive clean confirmation) and actioned its one
-recommendation — replaced the last 4 pre-refresh `#1478FF` literals
-(inert `gradient` class strings in `site-config.ts`) with `#0F66E0`
-for full sitewide token consistency. Adversarially diffed
-`service-details.ts` pricing copy against `site-config.ts` — both
-render paths independently label the same starting price through
-different copy; **no defect found** (genuine negative result).
-Full detail in `CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md`.
-
-Round 74 outcome: dispositioned Auditor item `IFA-2026-09-06-R63`
-(38th consecutive clean confirmation). Extended round 73's color-token
-fix into a full `git log -G`-based historical audit of every token
-value ever changed in `globals.css` — no further drift found sitewide.
-**0 new defects found** this round; no source change.
-
-Round 73 outcome: found/fixed a real cross-surface color-token
-staleness defect (case-study palette swatches, `concept-preview.tsx`,
-`pricing-scope-signal.tsx`, `service-detail-signal.tsx` all hardcoded
-pre-refresh hex values). Full detail archived; see `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 73".
-
-Round 72 outcome: found/fixed a real Planner validation-bypass defect —
-`handleSubmit` only validated step 9, so a visitor could use a
-review-page Edit link to invalidate an earlier step, jump straight back
-to Review via the progress rail, and submit with zero visible error.
-Added `validateAllSteps()`. Full detail archived; see
-`CYVEXLY_APP_DEBT.md`'s "Resolved round 72".
-
-Round 71 outcome: dispositioned two new Auditor inbox items (34th/35th
-consecutive clean confirmations). Found/fixed a real dead-end defect on
-`/work`: two filter pills matched zero projects, guaranteeing an empty
-state — trimmed the filter list. Also fixed a hot-file-cap violation in
-`CYVEXLY_APP_DEBT.md` itself. Full detail archived; see
-`CYVEXLY_APP_DEBT.md`'s "Resolved round 71".
-
-Rounds 53-70 (domain/HTTPS verification, real Resend email delivery, GA4/GSC
-scaffolding, per-slug/sitewide OG images, JSON-LD rollout, meta-description
-trims, `html lang="en-US"`, rate-limiter security fixes, the Cloudflare-bypass
-gate, request-body caps, the text-cursor fix, and Planner data-loss/label
-fixes) are summarized in `CYVEXLY_APP_DEBT.md`'s resolved-round history and
+Rounds 53-75 (domain/HTTPS verification, real Resend email delivery,
+GA4/GSC scaffolding, per-slug/sitewide OG images, JSON-LD rollout,
+meta-description trims, `html lang="en-US"`, rate-limiter security fixes,
+the Cloudflare-bypass gate, request-body caps, the text-cursor fix,
+Planner data-loss/label/validation-bypass fixes, a `/work` filter-pill
+fix, and a full sitewide color-token consistency pass) are summarized in
+`CYVEXLY_APP_DEBT.md`'s resolved-round history and
 `CYVEXLY_ACTIVE_CHUNK.md`.
 
 **Immediate next mission:** continue Chunk 5 from Owner direction
 `2026-09-04-14` and `CYVEXLY_VISION_PLAN.md` §17. Check the Auditor inbox
-first for anything published after round 76 (empty as of round 76). The
+first for anything published after round 77 (empty as of round 77). The
 Planner (server + client), About/Privacy/Terms copy, `service-details.ts`
-(including its pricing copy vs `site-config.ts`), `/work` filters, color
-tokens (fully consistent sitewide, zero `#1478FF` remaining), and
-case-study content/artwork/palette are all checked clean through round
-75; response-time and payment-claim copy is verified consistent. Round
-76 added the Home "how does it work?" video per Owner direction
-`2026-09-06-17` — visual acceptance of the final look is still pending.
-`CYVEXLY_ACTIVE_CHUNK.md`/`CYVEXLY_APP_DEBT.md` have healthy headroom
-after round 76's archive/consolidation pass. The Cloudflare-bypass gap
-has a dormant code-side gate (round 62, hardened round 63); it activates
-only once the Owner adds one Cloudflare Transform Rule (see
-`CYVEXLY_APP_DEBT.md` item 3) — not more Builder code. What remains is
-otherwise Owner-gated; see "Owner launch decisions and remaining gates"
-below.
+(fully diffed against `site-config.ts` for all 5 services, round 77),
+`/work` filters, color tokens (fully consistent sitewide), form
+accessibility (labels/aria wiring, round 77), and case-study
+content/artwork/palette are all checked clean. A genuine **live**
+keyboard-only/CDP accessibility pass (last done round 8) is still
+outstanding and needs an interactive session (unattended sessions can't
+launch the dev-server preview — see round 77). Round 76 added the Home
+"how does it work?" video per Owner direction `2026-09-06-17` — visual
+acceptance of the final look is still pending. `CYVEXLY_ACTIVE_CHUNK.md`/
+`CYVEXLY_APP_DEBT.md`/`CYVEXLY_NEXT_BUILDER_HANDOFF.md` have healthy
+headroom after round 77's archive/consolidation pass. The Cloudflare-
+bypass gap has a dormant code-side gate (round 62, hardened round 63);
+it activates only once the Owner adds one Cloudflare Transform Rule
+(see `CYVEXLY_APP_DEBT.md` item 3) — not more Builder code. What
+remains is otherwise Owner-gated; see "Owner launch decisions and
+remaining gates" below.
 
 **Accepted product position:** `main` is pushed through round 76's source
-commit on `origin/main` and
-Render auto-deploys it. `cyvexly.com` is fully connected/HTTPS/canonicalized
+commit on `origin/main` (round 77 made no source change) and Render
+auto-deploys it. `cyvexly.com` is fully connected/HTTPS/canonicalized
 (verified live, round 53). `origin/master` is historical, not the
 deployment branch.
 
