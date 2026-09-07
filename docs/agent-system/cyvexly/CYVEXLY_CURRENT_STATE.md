@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 90. Owner launch direction updated 2026-09-04, extended
+**Global round:** 91. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive) added a
 supplied Home process video under Owner direction `2026-09-06-17`. Rounds
@@ -40,6 +40,19 @@ Remaining Chunk 5 scope (real Resend account/API key, DNS/domain provider
 access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
+
+**Round 91 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-07-R82` (57th consecutive clean confirmation, "PASS WITH
+COMMENDATION", 0 action needed; also confirmed the untracked `velora/`
+directory is an unrelated, self-contained sub-project, not product-source
+contamination). Verified `tsc`/lint/build clean on unchanged round-87
+source. Two fresh convergence checks — the About page vs. vision §6.8's
+authorized draft/no-founder-identity requirement, and a genuine
+in-Browser-pane `Tab`/`Return`/`Space` pass on the Planner Step 6
+`StatusRow` toggle group (untried in-pane since round 7) — both found **0
+defects** (the Return/Space non-activation re-confirms round 80/81's
+already-closed tool artifact, not a regression). Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Round 91" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Round 90 outcome (scheduled/unattended):** dispositioned Auditor item
 `IFA-2026-09-07-R81` (56th consecutive clean confirmation, "PASS WITH
@@ -99,7 +112,7 @@ convergence-check rounds; round 84 also fixed the PATH environment gap).
 
 **Accepted product position:** `main` is pushed through round 87's source
 commit (`c85419f`) on `origin/main` and Render auto-deploys it (rounds
-83-86 and 88-90 made no source change; round 87 fixed the Home
+83-86 and 88-91 made no source change; round 87 fixed the Home
 pricing-preview integrations wording).
 `cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
 round 53). `origin/master` is historical, not the deployment branch.

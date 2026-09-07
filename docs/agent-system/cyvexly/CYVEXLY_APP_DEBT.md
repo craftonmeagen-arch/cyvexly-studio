@@ -51,62 +51,73 @@ Rotated this file (archived round 88's inline detail to
 one-line pointer) to restore hot-file headroom ahead of adding this
 round's entry.
 
-## Round 89 — no new defect; FAQ/Pricing/Home payment-copy convergence-check across three independent surfaces
+## Round 91 — no new defect; About-page-vs-vision §6.8 convergence-check + genuine in-pane Tab traversal of Planner Step 6
 
-Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R80` (55th
-consecutive clean confirmation, "PASS WITH COMMENDATION", reviewed commit
-`74367fa` predating round 88's docs-only commit, 0 Builder action needed
-— its one advisory note about `CYVEXLY_APP_DEBT.md` headroom was already
-satisfied by round 88's own rotation before this report published). Moved
-to `exchange/processed/`.
+Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R82` (57th
+consecutive clean confirmation, "PASS WITH COMMENDATION", evaluated head
+`768d84a` — round 89's docs-only HEAD — 0 Builder action needed beyond
+intake; its one advisory note, `CYVEXLY_APP_DEBT.md` headroom, was already
+satisfied by round 90's own rotation before this report published; it also
+independently confirmed the untracked `velora/` directory is a separate
+sub-project with its own `.git`/orientation, not Cyvexly product-source
+contamination). Moved to `exchange/processed/`.
 
-Ran the standard verification suite first: `pnpm exec tsc --noEmit`
-clean, `pnpm run lint` clean (same pre-existing round-42 evidence-script
-warning), `pnpm run build` clean, on unchanged round-87 source
-(`c85419f`).
+Ran the standard verification suite (round-84 `PATH` fix applied first):
+`pnpm exec tsc --noEmit` clean, `pnpm run lint` clean (same pre-existing
+round-42 evidence-script warning), `pnpm run build` clean, on unchanged
+round-87 source (`cf14cd1`, round 90's docs-only HEAD).
 
-**Convergence-check, fresh surface (round 88's handoff-named candidate):**
-diffed `faqLibrary`'s "Pricing & payment" and "Launch & care" categories
-(`src/lib/site-config.ts`) — deposit percentages, accepted payment
-methods, billed-separately items, revision-round counts, rush-fee
-percentage, Care-plan starting price/contract terms — against their
-source-of-truth arrays: `pricingPackages` (timeline/scope/review-round
-counts), `billedSeparately`, `addOns` (rush-fee range), and `carePlans`
-(price/capacity per tier). Extended the check to two more payment-copy
-surfaces that had never been cross-checked against `faqLibrary` or each
-other: the Pricing page's own separate `pricingFaq` array plus its
-hand-written payment-schedule `<dl>` markup (`src/app/pricing/page.tsx`),
-and Home's `faqPreview` array. **0 defects found** — every specific
-numeric claim matches exactly: Signal/Orbit/Nexus/Commerce timelines
-(2–3/4–6/6–9/8–14+ weeks) match `pricingPackages.timeline` on both
-`faqLibrary` and `faqPreview`; revision-round counts (two/two/three for
-Signal/Orbit/Nexus) match each package's `scope` entry; the 20–30%
-rush-fee figure matches `addOns`' "Rush scheduling" range exactly; Care
-plan prices ($99/$229/$449) and the "more capacity on Care+ and Evolve"
-claim match `carePlans` exactly; the Orbit-and-Nexus deposit split
-(40%/30%/30%) is worded identically in `faqLibrary` and the Pricing
-page's `<dl>`. The Signal deposit description differs only in phrasing
-— `faqLibrary` says "50% to begin and 50% at final approval" while the
-Pricing page says "50% to reserve and begin; 50% after final approval
-and before launch" — both describe the same 50/50 split and the same
-milestone (final approval, which precedes launch); this is a paraphrase,
-not a numeric or factual contradiction, so per §0.3/§3.5 it does not
-warrant a fix. **Verified live:** rebuilt production build clean;
-started a real `next start` server on port 5173; fetched `/faq` and
-confirmed the rendered/JSON-LD text matches source exactly for the
-deposit, payment-methods, billed-separately, timeline, and Care-plan
-answers; fetched `/pricing` and confirmed its independent payment-
-schedule `<dl>` text (Signal/Orbit-Nexus/Commerce-Custom/Care-plans rows)
-matches source exactly; full 20-route sweep, 20/20 return 200.
-**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
-Cleaned up: stopped the manually-started `next start` listener on port
-5173 by its verified real listener PID (`Get-NetTCPConnection -LocalPort
-5173 -State Listen`), confirmed port clear afterward; removed the one
-scratch server log from the OS temp scratchpad.
-Rotated this file (archived round 87's inline detail to
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_87_ARCHIVE.md`, kept a
+**Convergence-check #1, fresh surface (round 90's handoff-named
+candidate):** diffed the About page (`src/app/about/page.tsx`) against
+`CYVEXLY_VISION_PLAN.md` §6.8's authorized studio-origin draft and
+required-content list, and against Owner direction `2026-09-04-14`'s
+no-founder-identity requirement. **0 defects found** — the "Why Cyvexly
+exists" paragraph matches the §6.8 Owner-review draft word-for-word;
+`aboutValues` (Clarity/Originality/Practicality/Ownership/Continued care)
+matches §6.8's required five values exactly; every other required-content
+item (logo image not a founder portrait, origin story, working
+style/remote-US, capabilities/collaborator model, tool mentions framed
+for compatibility only, availability/response-time, CTA) is present; no
+founder name, biography, pronouns, team, or photo appears anywhere on the
+page.
+
+**Convergence-check #2, fresh surface (round 90's handoff-named
+candidate):** a genuine live in-Browser-pane (not CDP) keyboard pass on
+the Planner Step 6 `StatusRow` toggle-group component — untried via real
+in-pane `Tab`/`Return`/`Space` since round 7's original audit. Started a
+real `next dev` server, seeded a `localStorage` draft at `step: 6`,
+real-clicked the "Logo: Ready" button (`aria-pressed` → `true`), then used
+real `computer{action:"key"}` presses. **Real `Tab` correctly moved focus**
+across all four buttons in a row and into the next row in visual/DOM
+order (`Logo: Ready` → `In progress` → `Need help` → `Not sure` →
+`Brand colors / type / guidelines: Ready`), confirming correct focus order
+for this exact component in-pane for the first time. **Real `Return`
+and `Space` did not toggle the focused button's `aria-pressed` state** —
+re-confirms round 80/81's already-closed finding (this Browser pane's own
+`computer{action:"key"}` tool doesn't reach Chromium's native
+Return/Space button-activation pipeline, while `Tab`'s focus-traversal
+pipeline works) as a tool artifact, not a product defect or regression —
+consistent with round 81's independent CDP proof that real Chromium
+Return/Space does activate a focused native `<button>`. **No product
+defect found; no source change** — a genuine negative result plus a
+proof-gap re-confirmation, matching round 81's disposition of the same
+tool limitation.
+**Completion:** DONE WITH PROOF (0 defects found across both checks; 0
+source change). Cleaned up: cleared the seeded `localStorage` draft,
+closed the Browser pane tab, stopped the manually-started `next dev`
+listener on port 5173 by its verified real listener PID
+(`Get-NetTCPConnection -LocalPort 5173 -State Listen`), confirmed port
+clear afterward; removed the scratch server log from the OS temp
+scratchpad.
+Rotated this file (archived round 89's inline detail to
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_89_ARCHIVE.md`, kept a
 one-line pointer) to restore hot-file headroom ahead of adding this
 round's entry.
+
+Round 89's full detail (FAQ/Pricing/Home payment-copy convergence-check
+across three independent surfaces, 0 defects found) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_89_ARCHIVE.md` (moved there
+round 91 to keep this file under its 30,720-byte hot-file cap).
 
 Round 88's full detail (Service JSON-LD scope-field target check + 0-defect
 service-details.ts/pricingPackages convergence-check) is archived at
