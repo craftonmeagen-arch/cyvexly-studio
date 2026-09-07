@@ -1,6 +1,6 @@
 # Cyvexly Current State
 
-**Global round:** 89. Owner launch direction updated 2026-09-04, extended
+**Global round:** 90. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive) added a
 supplied Home process video under Owner direction `2026-09-06-17`. Rounds
@@ -13,11 +13,12 @@ Planner-email/About surfaces, then structured-data.ts JSON-LD vs.
 rendered-page-facts, then round 86's Planner/Contact per-step-copy vs.
 email-notification field-label check); round 87 (scheduled/unattended)
 found and fixed a real Home pricing-preview truth-precision defect
-(overstated a capped inclusion as guaranteed); rounds 88-89 (scheduled/
+(overstated a capped inclusion as guaranteed); rounds 88-90 (scheduled/
 unattended) found 0 new defects (service-details.ts prose vs.
 pricingPackages/carePlans scope convergence-check, then round 89's
 faqLibrary/pricingFaq/faqPreview payment-copy convergence-check across
-three independent surfaces). Round 84 also fixed a Builder-owned environment
+three independent surfaces, then round 90's Process-page step-copy vs.
+Planner/Pricing/FAQ real-flow convergence-check). Round 84 also fixed a Builder-owned environment
 defect: this session type's PowerShell process starts with only the
 Machine `PATH` (Node.js/pnpm live in the User `PATH`, unset in this
 process) — see `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-84 note for
@@ -39,6 +40,20 @@ Remaining Chunk 5 scope (real Resend account/API key, DNS/domain provider
 access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
+
+**Round 90 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-07-R81` (56th consecutive clean confirmation, "PASS WITH
+COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
+unchanged round-87 source. Followed round 89's handoff-named surface —
+the Process page's `processSteps` copy vs. the Planner's real fields,
+Pricing's real deposit schedule, and the matching FAQ answers. **0
+defects found** — every specific claim matches source exactly; the page
+explicitly frames itself as "five stages" distinct from the Planner's
+9-step form. Verified live on a rebuilt `next start` server (`/process`/
+`/faq`/`/pricing`, 20/20 routes 200). Also deduplicated ~14KB of
+`CYVEXLY_ACTIVE_CHUNK.md` content that repeated the file's own "Rounds
+42-73" one-line list, restoring real hot-file headroom. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Round 90" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Round 89 outcome (scheduled/unattended):** dispositioned Auditor item
 `IFA-2026-09-07-R80` (55th consecutive clean confirmation, "PASS WITH
@@ -84,7 +99,7 @@ convergence-check rounds; round 84 also fixed the PATH environment gap).
 
 **Accepted product position:** `main` is pushed through round 87's source
 commit (`c85419f`) on `origin/main` and Render auto-deploys it (rounds
-83-86 and 88-89 made no source change; round 87 fixed the Home
+83-86 and 88-90 made no source change; round 87 fixed the Home
 pricing-preview integrations wording).
 `cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
 round 53). `origin/master` is historical, not the deployment branch.

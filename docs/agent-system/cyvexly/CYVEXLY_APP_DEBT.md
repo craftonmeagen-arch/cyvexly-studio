@@ -1,5 +1,56 @@
 # Cyvexly App Debt
 
+## Round 90 — no new defect; Process page step-copy vs. Planner/Contact/Pricing/FAQ real-flow convergence-check
+
+Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R81` (56th
+consecutive clean confirmation, "PASS WITH COMMENDATION", evaluated head
+`269ed69` predating round 89's docs-only commit `768d84a`, 0 Builder
+action needed — its one advisory note about `CYVEXLY_NEXT_BUILDER_HANDOFF.md`/
+`CYVEXLY_ACTIVE_CHUNK.md` headroom was already satisfied by round 89's own
+rotation before this report published). Moved to `exchange/processed/`.
+
+Ran the standard verification suite first: `pnpm exec tsc --noEmit`
+clean, `pnpm run lint` clean (same pre-existing round-42 evidence-script
+warning), `pnpm run build` clean, on unchanged round-87 source (`768d84a`,
+round 89's docs-only HEAD).
+
+**Convergence-check, fresh surface (round 89's handoff-named candidate):**
+field-by-field diffed `processSteps`' five stages (`src/lib/site-config.ts`,
+rendered on `/process`) — each stage's `description`/`clientInput`/
+`deliverable`/`approval`/`timeframe` — against the actual Planner form's
+real fields (`planner-form.tsx`: About you/The business/Goals/Website &
+pages/Features/Brand & content/Visual direction/Budget & timing review
+steps), the Pricing page's real deposit-schedule `<dl>` (Signal 50%/50%;
+Orbit and Nexus 40%/30%/30%; Commerce and Custom "milestone schedule set
+in the proposal"), and the matching FAQ answers ("How do I start a
+project?", "Do you require a deposit?"). **0 defects found** — Step 01's
+"goals, pages, features, and budget" claim matches the Planner's actual
+review-step titles exactly; Step 01's "fit confirmation and any
+clarifying questions" deliverable is worded identically in the FAQ; Step
+02's "pay the first milestone" approval is consistent with both the
+2-milestone (Signal) and 3-milestone (Orbit/Nexus) schedules on Pricing,
+and with Commerce/Custom's proposal-set schedule; the "14 days of
+post-launch defect support" and "two business days" response claims match
+`service-details.ts`/FAQ/Contact/About/both API confirmation emails
+exactly (extends round 84's response-time check and round 87's care-plan
+check to this fifth surface); the page's own copy explicitly frames this
+as "five stages" separate from the Planner's 9-step form, so no
+step-count ambiguity exists. **Verified live:** rebuilt production build
+clean; started a real `next start` server on port 5173; fetched `/process`,
+`/faq`, and `/pricing` and confirmed the exact source strings render
+byte-for-byte (five-stages framing, first-milestone approval text, 14-day
+support line, two-business-days line, both deposit-schedule strings);
+full 20-route sweep, 20/20 return 200.
+**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
+Cleaned up: stopped the manually-started `next start` listener on port
+5173 by its verified real listener PID (`Get-NetTCPConnection -LocalPort
+5173 -State Listen`), confirmed port clear afterward; removed the two
+scratch server logs from the OS temp scratchpad.
+Rotated this file (archived round 88's inline detail to
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_88_ARCHIVE.md`, kept a
+one-line pointer) to restore hot-file headroom ahead of adding this
+round's entry.
+
 ## Round 89 — no new defect; FAQ/Pricing/Home payment-copy convergence-check across three independent surfaces
 
 Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R80` (55th
@@ -57,61 +108,10 @@ Rotated this file (archived round 87's inline detail to
 one-line pointer) to restore hot-file headroom ahead of adding this
 round's entry.
 
-## Round 88 — no new defect; Service JSON-LD scope-field and service-details.ts/pricingPackages content convergence-check
-
-Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R79` (54th
-consecutive clean confirmation per the Auditor's own count, "PASS WITH
-COMMENDATION", reviewed commit `f331746` predating round 87's fix, 0
-Builder action needed — its one advisory note, proactively rotating
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md` in round 87, was already satisfied by
-round 87's own rotation before this report published). Moved to
-`exchange/processed/`.
-
-Ran the standard verification suite first: `pnpm exec tsc --noEmit`
-clean, `pnpm run lint` clean (same pre-existing round-42 evidence-script
-warning), `pnpm run build` clean, on unchanged round-87 source
-(`74367fa`).
-
-**Convergence-check, fresh surface (the round-87 handoff's named
-candidate):** the round-87 handoff suggested diffing `structured-data.ts`'s
-`Service` JSON-LD against each `/services/[slug]` page's own rendered
-scope list. Reading `buildServiceJsonLd()` (`src/lib/structured-data.ts`)
-found it emits only `serviceType`/`name`/`description`/`url`/`provider`/
-`areaServed`/`offers.lowPrice` — by design it carries no scope/feature
-list at all (no `hasOfferCatalog`/`itemOffered`), so there is no
-scope-list field capable of drifting from the page's rendered content;
-confirmed live via a real `next start` server that no service-detail
-route's rendered JSON-LD contains `hasOfferCatalog` or `itemOffered`.
-Since the originally-suggested comparison has no target, extended the
-check to the next most relevant surface instead: `service-details.ts`'s
-`included`/`package.note`/`faqs` prose for all 5 services against
-`site-config.ts`'s `pricingPackages`/`carePlans` `scope` arrays and
-prices. Found the `included` lists are deliberately generic per-category
-descriptions (not restated package-specific counts), so no numeric claim
-exists to contradict; every specific cross-reference that does exist
-matches exactly (Orbit FAQ "up to seven core pages" = Orbit `scope`'s
-"Up to 7 core pages"; Nexus FAQ "includes a migration allowance" = Nexus
-`scope`'s "Content migration allowance"; Commerce FAQ "initial catalog
-allowance" = Commerce `scope`'s "Initial catalog allowance"); all 5
-`package.price`/`lowPrice` pairs match their `pricingPackages`/
-`carePlans` source figures exactly (3500/5800/1800/8500/99). **0 defects
-found** — a genuine negative result after real source-and-live
-cross-file investigation, not skipped work.
-**Verified live:** rebuilt production build clean; started a real `next
-start` server on port 5173; fetched all 5 `/services/[slug]` routes and
-confirmed each rendered `Service` JSON-LD's `description` matches its
-source `summary` exactly and `offers.lowPrice` matches
-(3500/5800/1800/8500/99); full 20-route sweep (all static + all 5
-service-detail + all 3 case-study routes), 20/20 return 200.
-**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
-Cleaned up: stopped the manually-started `next start` listener on port
-5173 by its verified real listener PID (`Get-NetTCPConnection -LocalPort
-5173 -State Listen`), confirmed port clear afterward; removed the one
-scratch server log from the OS temp root.
-Rotated this file (archived round 85's inline detail to
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_85_ARCHIVE.md`, kept a
-one-line pointer) to restore hot-file headroom ahead of adding this
-round's entry.
+Round 88's full detail (Service JSON-LD scope-field target check + 0-defect
+service-details.ts/pricingPackages convergence-check) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_88_ARCHIVE.md` (moved there
+round 90 to keep this file under its 30,720-byte hot-file cap).
 
 Round 87's full detail (Home pricing-preview Nexus-integrations
 truth-precision fix, commit `c85419f`) is archived at
@@ -144,60 +144,13 @@ fix, commit `19ae224`) is archived at
 `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_82_ARCHIVE.md` (moved there
 round 83 to keep this file under its 30,720-byte hot-file cap).
 
-## Round 81 — no new defect; Enter/Space key-synthesis proof gap closed via CDP
-
-- **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R72`
-  (47th consecutive clean confirmation, reviewed commit `71617d0` — round
-  79's head), 0 active code defects, "PASS WITH COMMENDATION". Its "External
-  Business Operations Gates" list repeats the same stale "Production Domain
-  Connection" wording rounds 77-80 already noted (domain verified live since
-  round 53). No Builder action required; moved to `exchange/processed/`.
-- **Completed round 80's routed first task: reproduced its exact
-  Return/Space-key-synthesis test via local headless-Chrome/CDP** (round
-  8/79's established stronger instrument for this class of proof gap), per
-  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-80 note. Seeded a
-  `localStorage` Planner draft (`step: 6`) to reach Step 6 with
-  `maxReachedStep: 6` — the same state round 80 tested live — then used
-  real `Input.dispatchKeyEvent` (native Chromium input, not the Browser
-  pane's `computer{action:"key"}` tool) against the two exact component
-  types round 80 named:
-  - **Step 6's `StatusRow` toggle button** (`aria-pressed`): a real
-    `Return` press on the focused, correctly-verified-focused button
-    flipped `aria-pressed` from `"false"` to `"true"` — genuine
-    activation, not a no-op. A follow-up `Space` press on the
-    already-selected option correctly left it `"true"` (idempotent
-    re-selection, matching a real mouse click on the same already-selected
-    option, which produced the identical `"true"` → `"true"` result —
-    confirmed as a same-value re-click, not a stuck key).
-  - **Progress-rail step-jump button** (`aria-label="Step 3: Goals
-    (complete)"`, reachable/enabled since `maxReachedStep: 6`): a real
-    `Return` press on the focused button navigated the Planner from
-    "Step 6 of 9" to "Step 3 of 9" — genuine `onClick`-driven navigation
-    triggered by a native Enter keypress.
-  **Conclusion: this closes round 80's proof gap with genuine positive
-  evidence — real native Chromium Return/Space key dispatch DOES activate
-  a focused native `<button>` correctly.** Round 80's finding is confirmed
-  as an artifact of the Browser pane's own `computer{action:"key"}` tool's
-  key-synthesis path specifically (it does not reach Chromium's native
-  button-activation pipeline for Return/Space, even though it does for
-  `Tab`), not a product accessibility defect. See
-  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-81 note for the full method
-  and `CYVEXLY_NEXT_BUILDER_HANDOFF.md` for the closed handoff item.
-- **Verified:** no source file changed this round (verification-only), so
-  `tsc`/lint/build were not re-run (round 80's clean results stand
-  unchanged).
-- Cleaned up: stopped the manually-started `next dev` listener on port
-  5173 by its verified real listener PID; stopped the round-owned headless
-  Chrome instance by matching its unique `--user-data-dir` command-line
-  substring (not by process name); removed the unique Chrome profile
-  directory and the CDP driver script from the OS temp root/session
-  scratchpad.
-
-Round 80's full detail (Planner steps 2-9 keyboard/data-integrity
-verification + the routed Enter/Space key-synthesis instrument finding,
-closed by round 81 above) is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_80_ARCHIVE.md` (moved there
-round 81 to keep this file under its 30,720-byte hot-file cap).
+Round 81's full detail (Enter/Space key-synthesis proof gap closed via
+CDP; confirms real Chromium Return/Space activates a focused native
+button — round 80's finding was a Browser-pane-tool artifact, not a
+product defect) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_81_ARCHIVE.md` (moved there
+round 90 to keep this file under its 30,720-byte hot-file cap; that
+archive file also carries the round-80 pointer forward).
 
 ## Round 79 — no new defect; live keyboard/validation verification + rAF proof-instrument refinement
 
