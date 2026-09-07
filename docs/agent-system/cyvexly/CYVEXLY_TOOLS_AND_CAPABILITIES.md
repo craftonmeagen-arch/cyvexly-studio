@@ -23,6 +23,29 @@ describe their original session types; discover and verify current capabilities.
 
 ## Product and browser capabilities
 
+**Round 84 note — Node.js/pnpm missing from this session's PowerShell
+`PATH`; one-line fix, not a real unavailability.** `pnpm`/`node` were "not
+recognized" in a fresh PowerShell tool call even though setup-time
+evidence (top of this file) shows Node 24.19.0/pnpm 10.34.4 installed.
+Cause: this session's PowerShell process starts with only the **Machine**
+`PATH` (`C:\Windows\system32;...;C:\Program Files\Git\cmd;...`) — the
+**User** `PATH`, which is where Node/npm/pnpm actually live
+(`C:\Users\<user>\AppData\Local\Programs\NodeJS\node-v24.19.0-win-x64` and
+`C:\Users\<user>\AppData\Roaming\npm`), is never merged in. Confirmed via
+`[System.Environment]::GetEnvironmentVariable('Path','User')` vs
+`$env:Path` inside the tool session. **Fix, verified working:** prepend
+those two directories to `$env:Path` at the start of every PowerShell tool
+call that needs `node`/`pnpm`/`npm` — session/shell state does not persist
+between separate PowerShell tool invocations in this harness, so the
+prefix must be repeated each call, e.g.:
+`$env:Path = "C:\Users\Tcraf\AppData\Local\Programs\NodeJS\node-v24.19.0-win-x64;C:\Users\Tcraf\AppData\Roaming\npm;" + $env:Path`
+before the real command. (The Bash tool's plain shell has the same gap —
+`pnpm`/`node` are not on its `PATH` either; use the PowerShell workaround
+above for anything needing the JS toolchain.) This is a reachable
+Builder-owned environment fix per §2.9/§7.11, not a tool limitation to
+route — do not conclude Node/pnpm are unavailable in a future round
+without first trying this prefix.
+
 **Round 81 note — round 80's Enter/Space key-synthesis gap is confirmed a
 Browser-pane-tool artifact, closed with genuine positive CDP evidence.**
 Reproduced round 80's exact test (a focused native `<button>`'s response to

@@ -1,5 +1,38 @@
 # Cyvexly App Debt
 
+## Round 84 — no new defect; FAQ/pricing/response-time/About convergence-check + PATH environment fix
+
+Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R75` (50th
+consecutive clean confirmation, "PASS WITH COMMENDATION", 0 action
+needed — its "Production Domain Connection" gate line is the same stale
+wording rounds 77-83 already noted). Moved to `exchange/processed/`.
+
+**Environment fix (see `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-84
+note for full detail):** `pnpm`/`node` were missing from this session's
+PowerShell `PATH` (only the Machine `PATH` loads; Node/pnpm live in the
+User `PATH`). Fixed by prepending the two real install directories to
+`$env:Path` before each toolchain command — a one-line, per-call
+workaround, not a real unavailability. Then verified `tsc --noEmit`/
+`pnpm run lint`/`pnpm run build` all clean (zero warnings; same
+pre-existing round-42 evidence-script lint warning) on unchanged
+round-82 source (`19ae224`).
+
+**Convergence-check, fresh surfaces:** field-by-field diffed all 30
+`faqLibrary` Q&As (`site-config.ts`) against their source-of-truth data —
+deposit splits (50/50 Signal; 40/30/30 Orbit & Nexus) against Pricing's
+own "Payment schedule" section (`pricing/page.tsx`); timelines and
+revision-round counts against `pricingPackages`; Care-plan pricing
+($99/$229/$449) against `carePlans`; the "Brand Starter Kit" add-on
+against `addOns`. Traced the "two business days" response-time claim
+across About, Contact, FAQ, `processSteps`/`collaborationPromise`, and
+both API routes' real confirmation-email copy (`contact/route.ts`,
+`planner/route.ts`) — all identical. Re-read the About page against
+Owner direction `2026-09-04-14`: logo-led, no founder name/portrait/
+biography, matches. **0 defects found** — a genuine negative result
+after real cross-file investigation, not skipped work.
+**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
+No scratch files/processes created this round.
+
 ## Round 83 — no new defect; convergence-check across Terms/Accessibility/sitemap/CSP
 
 - **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R74`
@@ -243,24 +276,9 @@ prospect's own business, not a Cyvexly service-area claim. No source
 change this round; see `CYVEXLY_NEXT_BUILDER_HANDOFF.md` for the next
 recommended surface.
 
-Round 73's full detail (case-study palette/artwork color-token staleness
-fix, Aurora Spaces + Nexora Systems) is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_73_ARCHIVE.md` (moved there
-round 78 to keep this file under its 30,720-byte hot-file cap).
-
-Round 72's full detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_72_ARCHIVE.md` (moved there
-round 73 to keep this file under its 30,720-byte hot-file cap): the
-Planner Review-page validation-bypass fix (`validateAllSteps()`).
-
-Round 71's full detail (the `/work` dead-end filter-pill fix and a
-hot-file-cap violation fix) is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_71_ARCHIVE.md` (moved there
-round 76 to keep this file under its 30,720-byte hot-file cap).
-
-Rounds 43-70's full detail are each archived at their correspondingly
+Rounds 43-73's full detail are each archived at their correspondingly
 named `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND(S)_<N>_ARCHIVE.md`
-files (consolidated round 76 to keep this file under its 30,720-byte
+files (consolidated round 84 to keep this file under its 30,720-byte
 hot-file cap; no history lost — one-line outcomes only): 43 sitewide
 Organization JSON-LD; 44-45 FAQPage/BreadcrumbList JSON-LD; 46 removed
 dead scaffold SVGs + Web App Manifest; 47 Apple touch icon; 48 raster
@@ -273,7 +291,10 @@ rate-limiter memory-pruning fix; 62 dormant Cloudflare-bypass gate; 63
 timing-safe-comparison fix; 64 30th audit confirmation, clean re-review;
 65 request-body-size cap; 66 Planner spectrum data-loss fix; 67 Planner
 secondary-goals-label fix; 68 `robots.ts` missing `Sitemap:` fix; 69
-Home FAQ CMS-claim qualification; 70 text-cursor/editable-copy fix.
+Home FAQ CMS-claim qualification; 70 text-cursor/editable-copy fix; 71
+`/work` dead-end filter-pill fix + hot-file-cap fix; 72 Planner Review-
+page validation-bypass fix; 73 case-study/artwork color-token staleness
+fix.
 
 ## Open
 

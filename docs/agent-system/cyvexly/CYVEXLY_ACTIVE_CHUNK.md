@@ -5,7 +5,25 @@ Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
 now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
-marketing pages — remains closed but revisitable.
+marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
+is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
+77-84 are convergence-check/proof-gap rounds finding the reachable
+product surface is clean.
+
+**Round 84** (scheduled/unattended) dispositioned Auditor item
+`IFA-2026-09-07-R75` (50th consecutive clean confirmation, "PASS WITH
+COMMENDATION", 0 action needed). Fixed a Builder-owned environment
+defect (Node/pnpm missing from this session's PowerShell `PATH` — see
+`CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-84 note), then verified
+`tsc`/lint/build clean on unchanged round-82 source. Continued the
+convergence-check practice on a fresh surface group: all 30 `faqLibrary`
+Q&As against their source-of-truth data (Pricing's payment schedule,
+`pricingPackages`, `carePlans`, `addOns`), the "two business days"
+response-time claim across About/Contact/FAQ/Process/both API routes'
+real confirmation emails, and the About page against Owner direction
+`2026-09-04-14`'s no-founder-identity requirement. **0 defects found —
+a genuine negative result.** No source change. See `CYVEXLY_APP_DEBT.md`'s
+"Round 84".
 
 **Round 83** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R74` (49th consecutive clean confirmation, 0 action

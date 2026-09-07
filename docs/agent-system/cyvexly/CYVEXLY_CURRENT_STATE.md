@@ -1,14 +1,19 @@
 # Cyvexly Current State
 
-**Global round:** 83. Owner launch direction updated 2026-09-04, extended
+**Global round:** 84. Owner launch direction updated 2026-09-04, extended
 2026-09-05-15 (full launch-readiness execution direction, interactive
 session — see `CYVEXLY_OWNER_DIRECTION.md`). Round 76 (interactive) added a
 supplied Home process video under Owner direction `2026-09-06-17`. Rounds
 77-81 (scheduled/unattended) found 0 new defects (proof-gap-closure and
 verification rounds); round 82 (scheduled/unattended) found and fixed a
-real Privacy Policy truth-accuracy defect; round 83 (scheduled/unattended)
-found 0 new defects (convergence-check across Terms/Accessibility/
-sitemap/CSP surfaces).
+real Privacy Policy truth-accuracy defect; rounds 83-84 (scheduled/
+unattended) found 0 new defects (convergence-checks across Terms/
+Accessibility/sitemap/CSP, then FAQ/structured-data/Pricing/Contact/
+Planner-email/About surfaces). Round 84 also fixed a Builder-owned
+environment defect: this session type's PowerShell process starts with
+only the Machine `PATH` (Node.js/pnpm live in the User `PATH`, unset in
+this process) — see `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-84 note
+for the exact one-line fix future rounds need.
 **Active/next chunks:** Chunk 3 — Project Planner and Chunk 4 — Utility/legal
 and launch readiness retain incomplete closure items. **Chunk 5 — United
 States Launch Completion & Business Operations is open** since round 29.
@@ -26,6 +31,21 @@ access, analytics/search ownership, exact LLC name, final indexability
 approval) is Owner-gated — see `CYVEXLY_OWNER_DIRECTION.md`'s "Remaining
 Owner gates".
 
+**Round 84 outcome (scheduled/unattended):** dispositioned Auditor item
+`IFA-2026-09-07-R75` (50th consecutive clean confirmation, "PASS WITH
+COMMENDATION", 0 action needed). Fixed a Builder-owned environment defect
+first (Node/pnpm missing from this session's `PATH`), then verified
+`tsc`/lint/build clean (zero warnings) on unchanged round-82 source.
+Continued the convergence-check practice across a fresh surface group:
+`faqLibrary`'s 30 Q&As (deposit/timeline/revision/Care-plan/add-on facts)
+against `pricingPackages`/`carePlans`/`addOns` and the live Pricing page's
+own "Payment schedule" section; the "two business days" response-time
+claim across About/Contact/FAQ/Process and both API routes' real
+confirmation-email copy; and the About page against Owner direction
+`2026-09-04-14`'s no-founder-identity/logo-led requirement. **0 defects
+found** — a genuine negative result, no source change. Full detail in
+`CYVEXLY_APP_DEBT.md`'s "Round 84" and `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
+
 **Round 83 outcome (scheduled/unattended):** dispositioned Auditor item
 `IFA-2026-09-07-R74` (49th consecutive clean confirmation, 0 action
 needed). Verified `tsc`/lint/build clean (zero warnings) on unchanged
@@ -39,8 +59,8 @@ detail in `CYVEXLY_APP_DEBT.md`'s "Round 83" and
 `CYVEXLY_NEXT_BUILDER_HANDOFF.md`.
 
 **Accepted product position:** `main` is pushed through round 82's source
-commit (`19ae224`) on `origin/main` and Render auto-deploys it (round 83
-made no source change).
+commit (`19ae224`) on `origin/main` and Render auto-deploys it (rounds
+83-84 made no source change).
 `cyvexly.com` is fully connected/HTTPS/canonicalized (verified live,
 round 53). `origin/master` is historical, not the deployment branch.
 

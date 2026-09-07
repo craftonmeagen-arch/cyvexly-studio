@@ -15,6 +15,16 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 84 — 2026-09-07
+
+Dispositioned Auditor item `IFA-2026-09-07-R75` (50th consecutive clean
+confirmation, "PASS WITH COMMENDATION"). Fixed a Builder-owned
+environment defect (Node/pnpm missing from this session's PowerShell
+`PATH`; documented the one-line fix for future rounds). Convergence-
+checked FAQ content, Pricing payment terms, sitewide response-time copy,
+and the About page against Owner direction and each other's
+source-of-truth data. No defects found; no source change.
+
 ## Round 81 — 2026-09-07
 
 Closed round 80's routed proof gap: reproduced its Return/Space
