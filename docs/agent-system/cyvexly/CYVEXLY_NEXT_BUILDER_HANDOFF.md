@@ -1,5 +1,43 @@
 # Cyvexly Next Builder Handoff
 
+## Round 85 closeout
+
+**Session:** scheduled/unattended Claude Code run, 2026-09-07
+**Start source:** `61e0027` on `main` (pushed, matched `origin/main`)
+**Scope:** Dispositioned Auditor item `IFA-2026-09-07-R76` (51st
+consecutive clean confirmation, "PASS WITH COMMENDATION", 0 action
+needed — same stale "Production Domain Connection" gate wording rounds
+77-84 already noted; moved to `exchange/processed/`). Applied the
+round-84 `PATH` fix and verified `tsc`/lint/build clean (zero warnings,
+same pre-existing round-42 evidence-script lint warning) on unchanged
+round-82 source. Continued the convergence-check practice on the
+round-84 handoff's named fresh surface: field-by-field diffed every
+`structured-data.ts` JSON-LD builder against its source-of-truth data —
+`organizationJsonLd` vs `siteConfig`/About-page copy; `extractStartingPrice()`
+vs all 5 `serviceDetails[slug].package.price` strings; `pricingJsonLd`'s
+`OfferCatalog` vs `pricingPackages` (correctly omitting a price for
+"Custom system"); `faqPageJsonLd` vs `faqLibrary`. Then started a real
+`next start` production server and confirmed the actual rendered JSON-LD
+matches source on Home, `/pricing` (5 correct `OfferCatalog` prices),
+`/services/business-websites` (`lowPrice: 3500`), `/faq` (exactly 30
+`Question` entities), and `/work/aurora-spaces` (breadcrumb trail) —
+not just a source-level read. **No defects found — a genuine negative
+result** after real source-and-live cross-file investigation.
+**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
+
+**No urgent item routed to the next round.** Chunk 5's remaining scope
+is entirely Owner-side gates (exact LLC name, Resend account/DNS,
+analytics/Search Console ownership or a no-analytics decision, Owner
+visual/copy acceptance, final indexability approval) — see
+`CYVEXLY_CURRENT_STATE.md` and `CYVEXLY_OWNER_DIRECTION.md`. Next Builder
+round: check the Auditor inbox first, apply the round-84 `PATH` fix
+before any `pnpm`/`node` command, then pick a fresh surface not yet
+covered by rounds 74-85's convergence checks (Terms, Accessibility,
+About, sitemap/robots, CSP, Privacy, FAQ, Pricing/response-time,
+structured-data.ts already done) — a good candidate: the Planner's
+per-step copy (`start/page.tsx` and its step components) against the
+email-notification field labels it produces in `mailer.ts`.
+
 ## Round 84 closeout
 
 **Session:** scheduled/unattended Claude Code run, 2026-09-07
@@ -86,37 +124,10 @@ candidates: the FAQ library's 30 Q&As against current site behavior, or
 `structured-data.ts`'s JSON-LD output against the actual rendered page
 facts it describes.
 
-## Round 82 closeout
-
-**Session:** scheduled/unattended Claude Code run, 2026-09-07
-**Start source:** `7c4e3ae` on `main` (pushed, matched `origin/main`)
-**Scope:** Dispositioned Auditor item `IFA-2026-09-07-R73` (48th
-confirmation, no action needed — same stale "Production Domain
-Connection" gate wording rounds 77-81 already noted). Verified
-`tsc`/lint/build clean on unchanged source, then found and fixed a real
-truth-accuracy defect: `src/app/privacy/page.tsx` claimed form-submission
-technical logs are never combined with submitted information, but
-`mailer.ts`'s `getClientIp()` is embedded directly in the internal
-notification email alongside the submission and used as the rate-limiter
-key. Fixed the copy, verified via a real `next start` server (12-route
-sweep 200, new copy confirmed in rendered HTML). Committed `19ae224` and
-pushed to `origin/main`.
-**Completion:** DONE WITH PROOF (1 real defect found and fixed, verified
-live).
-
-**No urgent item routed to the next round.** Chunk 5's remaining scope
-is entirely Owner-side gates (exact LLC name, Resend account/DNS,
-analytics/Search Console ownership or a no-analytics decision, Owner
-visual/copy acceptance, final indexability approval) — see
-`CYVEXLY_CURRENT_STATE.md` and `CYVEXLY_OWNER_DIRECTION.md`. Next
-Builder round: check the Auditor inbox first, then continue the
-convergence-check practice of finding a fresh, not-yet-adversarially-
-reviewed surface — this round's find (a policy-copy/code truth diff) came
-from applying that same practice to a surface (Privacy Policy vs. actual
-API behavior) no recent round had explicitly re-checked. Good candidates
-for a similar diff: the Terms page (`src/app/terms/page.tsx`) against
-actual site behavior, or the Accessibility statement against current
-component behavior.
+Round 82's full report (real Privacy Policy IP-disclosure truth-accuracy
+fix, commit `19ae224`) is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_82_REPORT.md` (moved
+there round 85 to keep this file under its 12,288-byte hot-file cap).
 
 Round 81's full report (47th audit confirmation; closed round 80's
 Return/Space key-synthesis proof gap via CDP, 0 product defect) is

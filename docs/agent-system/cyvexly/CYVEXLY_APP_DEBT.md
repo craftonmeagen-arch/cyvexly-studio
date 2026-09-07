@@ -1,5 +1,43 @@
 # Cyvexly App Debt
 
+## Round 85 — no new defect; structured-data.ts JSON-LD convergence-check
+
+Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R76` (51st
+consecutive clean confirmation, "PASS WITH COMMENDATION", 0 action
+needed — its "Production Domain Connection" gate line is the same stale
+wording rounds 77-84 already noted). Moved to `exchange/processed/`.
+
+Ran the standard verification suite first: `tsc --noEmit`/`pnpm run
+lint`/`pnpm run build` all clean (zero warnings; same pre-existing
+round-42 evidence-script lint warning) on unchanged round-82 source
+(`61e0027`).
+
+**Convergence-check, fresh surface (the round-84 handoff's named
+candidate):** field-by-field diffed every `structured-data.ts` JSON-LD
+builder against the source-of-truth data it describes —
+`organizationJsonLd`'s name/phone/email/description against
+`siteConfig` and the About page's own "independent"/"fully remote"
+copy; `buildServiceJsonLd()`'s `extractStartingPrice()` regex against
+all 5 `serviceDetails[slug].package.price` strings ("From $X"/"From
+$X/mo" forms); `pricingJsonLd`'s `OfferCatalog` against `pricingPackages`
+(including the price-less "Custom system"/"Quoted after discovery" entry
+correctly omitting `priceSpecification`); `faqPageJsonLd` against
+`faqLibrary`'s 30 Q&As (direct reuse, not a copy — no drift possible).
+Then verified live on a real `next start` server (not just source
+reading): `/` and `/pricing`'s `Organization` JSON-LD render identical
+byte-for-byte; `/pricing`'s rendered `OfferCatalog` shows the exact 5
+prices (1800/3500/5800/8500, Custom system correctly price-less);
+`/services/business-websites`'s rendered `Service` JSON-LD shows
+`lowPrice: 3500` matching Orbit's "From $3,500"; `/faq` renders exactly
+30 `Question` entities; `/work/aurora-spaces`'s `BreadcrumbList` matches
+the real route trail. **0 defects found** — a genuine negative result
+after real source-and-live cross-file investigation, not skipped work.
+**Completion:** DONE WITH PROOF (0 defects found; 0 source change).
+Cleaned up: stopped the manually-started `next start` listener on port
+5173 (verified the real listener PID via `Get-NetTCPConnection
+-LocalPort 5173 -State Listen` before killing it, confirmed port clear
+afterward); no scratch files created this round.
+
 ## Round 84 — no new defect; FAQ/pricing/response-time/About convergence-check + PATH environment fix
 
 Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R75` (50th
@@ -213,88 +251,37 @@ Round 76's full detail (Home "how does it work?" video build + the
 79 to keep this file under its 30,720-byte hot-file cap; also preserved in
 `CYVEXLY_ACTIVE_CHUNK.md`'s "Round 76 report" and `CYVEXLY_BUILD_SUMMARY.md`).
 
-## Resolved round 75
+Round 75's full detail (brand-color-token sitewide purity fix +
+service-details/site-config pricing adversarial diff, 0 defect found)
+is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_75_ARCHIVE.md` (moved there
+round 85 to keep this file under its 30,720-byte hot-file cap).
 
-- **Checked the Auditor inbox first:** one new item,
-  `IFA-2026-09-06-R64` (39th consecutive clean confirmation, 0 active
-  code defects, reviewed commit `7db867c` — round 73's head, predating
-  round 74's doc-only round). Moved to `exchange/processed/`.
-- **Actioned its one recommendation.** The Auditor noted `site-config.ts`
-  lines 56/66/114/152 (the `gradient` Tailwind class strings for
-  Aurora Spaces and Nexora Systems) still hardcoded the pre-refresh
-  `#1478FF` — round 73 had deliberately left these alone after
-  confirming each `ConceptPreview` SVG's own opaque full-viewBox
-  background `<rect>` fully covers the gradient div in every render
-  path (inert, not a rendering gap), but flagged them for full
-  sitewide token consistency. Replaced all 4 with `#0F66E0`. Verified
-  via a real `next start` server: `grep -rn "#1478FF" src/` now
-  returns zero matches anywhere in the codebase; the `ConceptPreview`
-  background rects (lines 16/35/63) still fully cover the divs, so
-  the fix is confirmed purely cosmetic-in-source with zero rendered
-  effect.
-- **Adversarially reviewed `service-details.ts` vs `site-config.ts`
-  pricing** (the round-74 handoff's recommended fresh, not-yet-diffed
-  surface), field-by-field. Every `serviceDetails[slug].package.price`
-  reads "From $X" (e.g. Orbit "From $3,500"), while the matching
-  `pricingPackages`/`carePlans` entry reads a bare "$X" (Orbit
-  "$3,500"). Traced both render paths before concluding this was a
-  defect: `/pricing` (`pricing/page.tsx` line 83) prefixes the bare
-  price with its own "Starting at" label; `/services/[slug]`
-  (`services/[slug]/page.tsx` line 224) prefixes its "From $X" string
-  with a "Related starting point" label. Both independently
-  communicate the same starting-price fact through different but
-  non-contradictory copy — not a truth-claim inconsistency, just
-  stylistic redundancy on the services-detail side ("starting point"
-  + "From"). Also checked `structured-data.ts`'s
-  `extractStartingPrice()`: its `\$([\d,]+)` regex matches the
-  leading numeric figure regardless of a "From " prefix, so
-  `AggregateOffer.lowPrice`/`OfferCatalog` JSON-LD values are
-  identical either way — no schema defect. **No defect found** — a
-  genuine negative result after real investigation, not skipped work.
-- **Verified:** `tsc --noEmit`/lint/`pnpm run build` all clean (same
-  pre-existing round-42 evidence-script lint warning, untouched). Real
-  `next start` production server on port 5173: a 21-route sweep
-  (every public static/dynamic route plus `/not-found`) returned 200
-  (`/not-found` correctly 404s).
-- Cleaned up: stopped the owned `next start` listener on port 5173
-  (verified the real listener PID via `Get-NetTCPConnection -LocalPort
-  5173 -State Listen` before `Stop-Process`, not by process name); no
-  scratch files were created this round.
+Round 74's full detail (extended color-token/response-time audit, 0 new
+defects) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_74_ARCHIVE.md` (moved there
+round 85 to keep this file under its 30,720-byte hot-file cap).
 
-## Round 74 — no new defect (investigated, documented)
-
-Dispositioned Auditor item `IFA-2026-09-06-R63` (38th consecutive clean
-confirmation, 0 active code defects). Extended round 73's color-token
-staleness fix into a full historical audit: used `git log -G` on
-`globals.css` to enumerate every token value ever changed (cyber-blue,
-cool-graphite, signal-emerald, warning-coral) and grepped all four
-pre-refresh hex values sitewide — no further drift exists beyond round
-73's fix. Also verified sitewide "two business days" response-time
-copy consistency (16 occurrences, all identical) and re-confirmed the
-Planner's "Worldwide" geographic-market option is a question about the
-prospect's own business, not a Cyvexly service-area claim. No source
-change this round; see `CYVEXLY_NEXT_BUILDER_HANDOFF.md` for the next
-recommended surface.
-
-Rounds 43-73's full detail are each archived at their correspondingly
+Rounds 43-74's full detail are each archived at their correspondingly
 named `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND(S)_<N>_ARCHIVE.md`
-files (consolidated round 84 to keep this file under its 30,720-byte
-hot-file cap; no history lost — one-line outcomes only): 43 sitewide
-Organization JSON-LD; 44-45 FAQPage/BreadcrumbList JSON-LD; 46 removed
-dead scaffold SVGs + Web App Manifest; 47 Apple touch icon; 48 raster
-manifest icons + print-legibility fix; 49 error boundaries + viewport
-theme-color; 50 COOP/CORP headers + security.txt; 51 sitewide OG/Twitter
-metadata; 52 per-route OG images; 54 per-slug OG images; 55 Service
-JSON-LD; 56 OfferCatalog JSON-LD; 57 meta-description trims; 58
-`lang="en-US"` + hot-file-cap fix; 59 Home meta-description fix; 61
-rate-limiter memory-pruning fix; 62 dormant Cloudflare-bypass gate; 63
-timing-safe-comparison fix; 64 30th audit confirmation, clean re-review;
-65 request-body-size cap; 66 Planner spectrum data-loss fix; 67 Planner
+files (consolidated round 84, then round 85 for round 74, to keep this
+file under its 30,720-byte hot-file cap; no history lost — one-line
+outcomes only): 43 sitewide Organization JSON-LD; 44-45 FAQPage/
+BreadcrumbList JSON-LD; 46 removed dead scaffold SVGs + Web App
+Manifest; 47 Apple touch icon; 48 raster manifest icons +
+print-legibility fix; 49 error boundaries + viewport theme-color; 50
+COOP/CORP headers + security.txt; 51 sitewide OG/Twitter metadata; 52
+per-route OG images; 54 per-slug OG images; 55 Service JSON-LD; 56
+OfferCatalog JSON-LD; 57 meta-description trims; 58 `lang="en-US"` +
+hot-file-cap fix; 59 Home meta-description fix; 61 rate-limiter
+memory-pruning fix; 62 dormant Cloudflare-bypass gate; 63 timing-safe-
+comparison fix; 64 30th audit confirmation, clean re-review; 65
+request-body-size cap; 66 Planner spectrum data-loss fix; 67 Planner
 secondary-goals-label fix; 68 `robots.ts` missing `Sitemap:` fix; 69
 Home FAQ CMS-claim qualification; 70 text-cursor/editable-copy fix; 71
 `/work` dead-end filter-pill fix + hot-file-cap fix; 72 Planner Review-
 page validation-bypass fix; 73 case-study/artwork color-token staleness
-fix.
+fix; 74 extended color-token/response-time audit (0 new defects).
 
 ## Open
 

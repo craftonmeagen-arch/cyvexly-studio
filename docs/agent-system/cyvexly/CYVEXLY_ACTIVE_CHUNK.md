@@ -7,8 +7,23 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
-77-84 are convergence-check/proof-gap rounds finding the reachable
+77-85 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean.
+
+**Round 85** (scheduled/unattended) dispositioned Auditor item
+`IFA-2026-09-07-R76` (51st consecutive clean confirmation, "PASS WITH
+COMMENDATION", 0 action needed). Verified `tsc`/lint/build clean on
+unchanged round-82 source via the round-84 `PATH` fix. Continued the
+convergence-check practice on the round-84 handoff's named fresh
+surface: field-by-field diffed every `structured-data.ts` JSON-LD
+builder (`organizationJsonLd`, `buildServiceJsonLd`, `pricingJsonLd`,
+`faqPageJsonLd`, `buildBreadcrumbJsonLd`) against the source-of-truth
+data it describes, then verified live on a real `next start` server
+that the rendered JSON-LD on Home/Pricing/a service-detail page/FAQ/a
+case-study route matches source exactly (5 OfferCatalog prices, a
+Service's `lowPrice`, all 30 FAQ questions, a breadcrumb trail). **0
+defects found — a genuine negative result.** No source change. See
+`CYVEXLY_APP_DEBT.md`'s "Round 85".
 
 **Round 84** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R75` (50th consecutive clean confirmation, "PASS WITH
