@@ -1,44 +1,52 @@
 # Cyvexly App Debt
 
-## Round 82 — real Privacy Policy truth-accuracy defect found and fixed
+## Round 83 — no new defect; convergence-check across Terms/Accessibility/sitemap/CSP
 
-- **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R73`
-  (48th consecutive clean confirmation, reviewed commit `18fc2bb` — round
-  80's head, predating round 81's docs-only round), 0 active code
-  defects, "PASS WITH COMMENDATION". Its §6.3 external gates list repeats
-  the same stale "Production Domain Connection" wording rounds 77-81
-  already noted (domain verified live since round 53). No Builder action
-  required; moved to `exchange/processed/`.
-- **Ran the standard local verification suite first** (`tsc --noEmit`,
-  `pnpm run lint`, `pnpm run build`) against the unchanged round-81 source
-  — all clean (same pre-existing round-42 evidence-script lint warning) —
-  confirming no regression before looking for new work.
-- **Fresh surface: adversarially diffed the Privacy Policy copy
-  (`src/app/privacy/page.tsx`) against actual API-route behavior**
-  (`src/lib/mailer.ts`, `src/app/api/{contact,planner}/route.ts`), a
-  surface no recent round had explicitly re-verified against current
-  code. **Found and fixed a real truth-claim defect:** the "Hosting and
-  technical logs" section stated "We do not separately combine these logs
-  with information you submit through our forms," but `getClientIp()`'s
-  result is embedded directly inside the same internal notification email
-  as the name/email/message (`` `IP: ${ip}` `` in both routes'
-  `internalTextLines`) and used as the rate-limiter key — the code and
-  the policy text contradicted each other. Added an accurate disclosure
-  paragraph to "Information you submit through our forms" (IP is captured
-  for anti-spam rate-limiting and included in the internal notification,
-  not the visitor confirmation) and corrected the "Hosting and technical
-  logs" section to stop claiming no combination occurs, naming the one
-  real exception. Commit `19ae224`.
-- **Verified:** `tsc`/lint/build clean after the edit; started a real
-  `next start` production server on port 5173 and confirmed via `curl`
-  that the new copy renders in the actual page HTML and a 12-route sweep
-  (`/`, `/about`, `/privacy`, `/terms`, `/contact`, `/faq`,
-  `/accessibility`, `/services`, `/pricing`, `/work`, `/process`,
-  `/start`) all returned 200.
-- Cleaned up: stopped the manually-started `next start` listener on port
-  5173 by its verified real listener PID (`netstat`-confirmed, not a
-  guess); removed the scratch server log from the OS temp root.
-- Pushed to `origin/main` for Render auto-deploy.
+- **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R74`
+  (49th consecutive clean confirmation, reviewed commit `7c4e3ae` — round
+  81's head, predating round 82's Privacy Policy fix), "PASS WITH
+  COMMENDATION". Its §6.3 external gates list repeats the same stale
+  "Production Domain Connection" wording rounds 77-82 already noted
+  (domain verified live since round 53). No Builder action required;
+  moved to `exchange/processed/`.
+- **Ran the standard local verification suite first:** `tsc --noEmit`,
+  `pnpm run lint`, `pnpm run build` all clean (same pre-existing
+  round-42 evidence-script lint warning; zero build warnings) — confirmed
+  no regression on unchanged round-82 source before looking for new work.
+- **Fresh-surface adversarial diffs (per the round-82 handoff's named
+  candidates), 0 defects found:**
+  - `src/app/terms/page.tsx` against actual API/payment/site behavior —
+    every claim (no payments processed, no scraping/overload tolerated,
+    Indiana governing law, concept-work labeling) matches current code
+    and Owner direction. No contradiction found.
+  - `src/app/accessibility/page.tsx`'s "Every Cyvexly Studio project
+    includes an accessibility target as standard scope — see Pricing"
+    claim against `site-config.ts`'s `projectIncludes` (line 673:
+    "Accessible interaction and content standards target," listed for
+    every package) and `addOns` (line 698: "Accessibility audit /
+    remediation beyond package scope") — confirmed true; the claim isn't
+    contradicted by `/pricing`'s own literal text because the page
+    renders these arrays rather than hardcoding the word "accessibility."
+  - `src/app/sitemap.ts`'s 11 `staticRoutes` against the actual
+    `src/app/*/page.tsx` top-level files — exact match, no drift.
+  - `src/app/robots.ts` — still correctly defaults to `disallow` when
+    `NEXT_PUBLIC_SITE_INDEXABLE` is unset (no-index preview default
+    intact).
+  - `next.config.ts`'s CSP against the round-76 video/lightbox feature —
+    native `<video>` element and a `document.body`-portaled modal, no
+    iframe or third-party origin introduced, so `media-src 'self'`
+    (round 31's grep-verified policy) remains sufficient.
+- **No defects found — a genuine negative result**, not skipped work;
+  round 82's Privacy Policy fix (below) remains the most recent real
+  defect this convergence-check line has surfaced.
+- **Verified:** no source file changed this round (verification-only).
+- Cleaned up: no scratch files/processes created this round beyond the
+  local build/lint/typecheck commands, which leave no residue.
+
+Round 82's full detail (real Privacy Policy IP-disclosure truth-accuracy
+fix, commit `19ae224`) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_82_ARCHIVE.md` (moved there
+round 83 to keep this file under its 30,720-byte hot-file cap).
 
 ## Round 81 — no new defect; Enter/Space key-synthesis proof gap closed via CDP
 
