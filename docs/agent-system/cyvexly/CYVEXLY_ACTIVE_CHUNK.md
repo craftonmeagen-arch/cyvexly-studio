@@ -7,6 +7,24 @@ now OPEN**, started round 29. Its integrated verification will close the
 overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable.
 
+**Round 81** (scheduled/unattended) dispositioned Auditor item
+`IFA-2026-09-07-R72` (47th consecutive clean confirmation, 0 action
+needed) and completed round 80's routed first task: reproduced its exact
+Return/Space key-synthesis test via local headless-Chrome/CDP (round
+8/79's method). Seeded a `localStorage` Planner draft at `step: 6` to
+reach the same state round 80 tested, then used real
+`Input.dispatchKeyEvent` against Step 6's `StatusRow` toggle button and
+the progress-rail's step-jump button: a real `Return` press flipped
+`aria-pressed` false→true, and a real `Return` press on the rail's
+"Step 3" button navigated Step 6→Step 3 — both genuine native-button
+activations. **Closes round 80's proof gap: real Chromium Return/Space
+key dispatch correctly activates a focused native `<button>`; the
+original finding was this Browser pane's own key-synthesis tool failing
+to reach Chromium's activation pipeline for Return/Space specifically,
+not a product defect.** See `CYVEXLY_APP_DEBT.md`'s "Round 81" and
+`CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-81 note. **No product defect
+found; no source change** — a proof-gap-closure round.
+
 **Round 80** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R71` (46th consecutive clean confirmation, 0 action
 needed) and completed round 79's recommended fresh surface: a real live

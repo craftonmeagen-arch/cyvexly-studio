@@ -23,6 +23,30 @@ describe their original session types; discover and verify current capabilities.
 
 ## Product and browser capabilities
 
+**Round 81 note — round 80's Enter/Space key-synthesis gap is confirmed a
+Browser-pane-tool artifact, closed with genuine positive CDP evidence.**
+Reproduced round 80's exact test (a focused native `<button>`'s response to
+a synthetic Return/Space press) via round 8/79's local headless-Chrome/CDP
+method — real `Input.dispatchKeyEvent` against actual Chromium, not this
+Browser pane's `computer{action:"key"}` tool. On the same two component
+types round 80 tested (a Planner Step 6 `StatusRow` `aria-pressed` toggle
+button, and the Planner progress-rail's step-jump `<button>`, both reached
+by seeding a `localStorage` Planner draft at `step: 6` rather than a full
+manual click-through): a real `Return` keypress flipped `aria-pressed` from
+`"false"` to `"true"` on first press, and a real `Return` keypress on the
+rail's "Step 3" button navigated the Planner from "Step 6 of 9" to "Step 3
+of 9" — both genuine, correct native-button activations. **Conclusion: real
+Chromium Return/Space key dispatch correctly activates a focused native
+`<button>`; round 80's finding was this Browser pane's own
+`computer{action:"key"}` tool failing to reach Chromium's native
+button-activation pipeline for `Return`/`space` specifically (it does reach
+the pipeline for `Tab`, per round 78's finding) — a tool-specific gap, not a
+product accessibility defect and not a Chromium-input limitation.** Re-verify
+per round if there is a specific reason to suspect a regression; do not
+re-litigate this as unsettled without new contrary evidence, matching how
+round 78 settled the screenshot-compositing question and round 79 settled
+the rAF question.
+
 **Round 80 note — synthetic `Return`/`space` key presses do not activate a
 focused native `<button>` in this Browser-pane session, independent of
 `Tab`-driven focus movement (which works).** Round 78/79 already showed

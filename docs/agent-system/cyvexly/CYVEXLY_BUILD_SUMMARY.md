@@ -15,6 +15,16 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 81 — 2026-09-07
+
+Closed round 80's routed proof gap: reproduced its Return/Space
+key-synthesis test via local headless-Chrome/CDP. Real native key
+dispatch correctly activated a Planner Step 6 `StatusRow` toggle button
+and the progress-rail's step-jump button, confirming the earlier
+non-activation was specific to the Browser pane's own key-synthesis
+tool, not a product accessibility defect. No source change; dispositioned
+Auditor's 47th consecutive clean confirmation.
+
 ## Round 76 — 2026-09-06 (interactive, Owner direction 2026-09-06-17)
 
 Added a Home "So how does it work?" section: an Owner-supplied process

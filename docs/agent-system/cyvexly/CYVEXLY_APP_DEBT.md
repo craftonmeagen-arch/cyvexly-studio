@@ -1,69 +1,59 @@
 # Cyvexly App Debt
 
-## Round 80 — no new defect; Planner steps 2-9 keyboard/data-integrity verification + Enter/Space key-synthesis instrument finding
+## Round 81 — no new defect; Enter/Space key-synthesis proof gap closed via CDP
 
-- **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R71`
-  (46th consecutive clean confirmation, reviewed commit `94048c4` — round
-  78's head), 0 active code defects, "PASS WITH COMMENDATION". Its "External
+- **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R72`
+  (47th consecutive clean confirmation, reviewed commit `71617d0` — round
+  79's head), 0 active code defects, "PASS WITH COMMENDATION". Its "External
   Business Operations Gates" list repeats the same stale "Production Domain
-  Connection" wording rounds 77-79 already noted (domain verified live since
+  Connection" wording rounds 77-80 already noted (domain verified live since
   round 53). No Builder action required; moved to `exchange/processed/`.
-- **Completed round 79's recommended fresh surface: a real live keyboard/
-  data-integrity pass over Planner steps 2-9** (only Step 1 had this exact
-  treatment since round 8). Via the manual-start-then-attach Browser-pane
-  workaround (compositing + native `Tab` confirmed working this round):
-  real native `Tab` traversal through Step 2's 7 fields landed in exact
-  source order (`businessDescription → productsServices → currentWebsite →
-  businessStage → geographicMarket → customerGroups → competitors →
-  differentiation`); Step 3's `primaryGoal` `RadioCardGroup` → `Tab` moved
-  directly to the first `secondaryGoals` checkbox (no stray
-  `primaryGoalOther` field, correctly conditional) → 8 real `Tab` presses
-  through all 8 secondary-goal checkboxes landed exactly on
-  `importantAction`. Filled required fields through every step to Step 9
-  and confirmed the Review page correctly reflects every entered/selected
-  value from Steps 1-8 (name, email, contact method, business description,
-  primary goal, website type, page selection, budget, timing) — a genuine
-  positive data-integrity result, not just a keyboard-order check. The
-  Step 9 acknowledgment/consent/marketing checkboxes are real
-  `<input type="checkbox">` with correct `<label for>` wiring; the
-  `planner-company-website` honeypot remains `tabIndex="-1"` and
-  `aria-hidden="true"` (unreachable by keyboard, no regression from round
-  42's original fix). Also spot-verified via direct DOM inspection (not
-  just the accessibility tree) that Step 2's two `SelectField`s
-  (`businessStage`, `geographicMarket`) both have a real `<label for>`
-  correctly pointing at the select's `id` — `read_page` displays both as
-  named "Select one" (the current placeholder option text), which looked
-  like a shared-accessible-name defect at first glance but is a
-  `read_page` rendering convention for `<select>`/combobox roles, not a
-  real label-association gap. **No defect found** in any of the above — a
-  genuine negative result after real investigation.
-- **New instrument finding, not a product defect (see
-  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-80 note for full detail):**
-  this session's `computer{action:"key"}` reliably moves focus via `Tab`
-  (reconfirmed many times this round) but a synthetic `Return`/`space` key
-  press does **not** trigger a click on a correctly-focused native
-  `<button type="button">` in this Browser-pane session — tested twice,
-  independently, on two different native-button components (Step 6's
-  `StatusRow` toggle button and the progress-rail's "Step 6" jump button):
-  focus was verified correct before and after each key press
-  (`document.activeElement` unchanged), `aria-pressed` never flipped, and
-  the progress-rail Enter press never navigated to Step 6. Both are plain
-  `<button>` elements with no custom keydown handling — native Enter/Space
-  activation requires zero product-side JS — and real mouse clicks on the
-  same `StatusRow` button correctly toggled `aria-pressed`, so this is
-  overwhelmingly an artifact of how this tool synthesizes `Return`/`space`
-  key events (distinct from `Tab`, a lower-level browser focus-traversal
-  mechanism that does not depend on the same event-dispatch path) rather
-  than a real keyboard-accessibility gap. Not independently reproduced via
-  local headless-Chrome/CDP this round (time-boxed); recommended as the
-  next round's first task since round 8/79's CDP method is the established
-  stronger instrument for exactly this class of gap.
+- **Completed round 80's routed first task: reproduced its exact
+  Return/Space-key-synthesis test via local headless-Chrome/CDP** (round
+  8/79's established stronger instrument for this class of proof gap), per
+  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-80 note. Seeded a
+  `localStorage` Planner draft (`step: 6`) to reach Step 6 with
+  `maxReachedStep: 6` — the same state round 80 tested live — then used
+  real `Input.dispatchKeyEvent` (native Chromium input, not the Browser
+  pane's `computer{action:"key"}` tool) against the two exact component
+  types round 80 named:
+  - **Step 6's `StatusRow` toggle button** (`aria-pressed`): a real
+    `Return` press on the focused, correctly-verified-focused button
+    flipped `aria-pressed` from `"false"` to `"true"` — genuine
+    activation, not a no-op. A follow-up `Space` press on the
+    already-selected option correctly left it `"true"` (idempotent
+    re-selection, matching a real mouse click on the same already-selected
+    option, which produced the identical `"true"` → `"true"` result —
+    confirmed as a same-value re-click, not a stuck key).
+  - **Progress-rail step-jump button** (`aria-label="Step 3: Goals
+    (complete)"`, reachable/enabled since `maxReachedStep: 6`): a real
+    `Return` press on the focused button navigated the Planner from
+    "Step 6 of 9" to "Step 3 of 9" — genuine `onClick`-driven navigation
+    triggered by a native Enter keypress.
+  **Conclusion: this closes round 80's proof gap with genuine positive
+  evidence — real native Chromium Return/Space key dispatch DOES activate
+  a focused native `<button>` correctly.** Round 80's finding is confirmed
+  as an artifact of the Browser pane's own `computer{action:"key"}` tool's
+  key-synthesis path specifically (it does not reach Chromium's native
+  button-activation pipeline for Return/Space, even though it does for
+  `Tab`), not a product accessibility defect. See
+  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-81 note for the full method
+  and `CYVEXLY_NEXT_BUILDER_HANDOFF.md` for the closed handoff item.
 - **Verified:** no source file changed this round (verification-only), so
-  `tsc`/lint/build were not re-run (round 79's clean results stand
+  `tsc`/lint/build were not re-run (round 80's clean results stand
   unchanged).
 - Cleaned up: stopped the manually-started `next dev` listener on port
-  5173 by its verified real listener PID; closed the Browser pane tab; no
-  other scratch files/processes were created.
+  5173 by its verified real listener PID; stopped the round-owned headless
+  Chrome instance by matching its unique `--user-data-dir` command-line
+  substring (not by process name); removed the unique Chrome profile
+  directory and the CDP driver script from the OS temp root/session
+  scratchpad.
+
+Round 80's full detail (Planner steps 2-9 keyboard/data-integrity
+verification + the routed Enter/Space key-synthesis instrument finding,
+closed by round 81 above) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_80_ARCHIVE.md` (moved there
+round 81 to keep this file under its 30,720-byte hot-file cap).
 
 ## Round 79 — no new defect; live keyboard/validation verification + rAF proof-instrument refinement
 
@@ -123,46 +113,11 @@
   both scratch CDP helper scripts from the OS temp root and session
   scratchpad; closed the Browser pane tab.
 
-## Round 78 — no new defect; environment finding + proof-gap closure
-
-- **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R69`
-  (44th consecutive clean confirmation, reviewed commit `3409faf` — round
-  76's head), 0 active code defects, "PASS WITH COMMENDATION" on the round-76
-  video feature via the Auditor's own live CDP verification. Its "External
-  Business Operations Gates" list still names "Production Domain Connection"
-  as pending — same stale template wording round 77 already noted (domain
-  verified live since round 53). No Builder action required; moved to
-  `exchange/processed/`.
-- **Environment capability finding (see `CYVEXLY_TOOLS_AND_CAPABILITIES.md`
-  round-78 note for full detail):** round 77 concluded live/CDP verification
-  was categorically unreachable this session type. That conclusion was too
-  broad — only `preview_start({name})`'s own dev-server launch is refused for
-  unattended sessions. Starting `next dev` manually via the Bash tool, then
-  attaching the Browser pane with `preview_start({url: "http://localhost:5173"})`
-  (round 1's documented workaround), produced genuine compositing screenshots
-  and at least one genuine real `Tab`-key focus move in this exact scheduled/
-  unattended session — both degraded to intermittent partway through the
-  round (blank screenshot, focus stopped moving), matching the pattern
-  rounds 35/40 already recorded for attended sessions. Reachable, not
-  reliable; worth retrying each round rather than assuming either extreme.
-- **Closed round 76's named proof-instrument limitation with genuine
-  positive evidence.** Round 76 could not confirm the ambient Home video
-  autoplays because `document.hidden` read `true` even for the sole/fronted
-  tab that session. This round, in a live attached tab, `document.hidden`
-  correctly read `false`/`visibilityState: "visible"`, and the video's
-  `currentTime` was read twice 3 real seconds apart (`3.24s` → `11.14s`),
-  proving genuine unattended real-time playback progression — not merely
-  `readyState`/`paused` flags. Independently re-verified the click-to-open
-  lightbox (portaled to `document.body`, `aria-modal="true"`, body scroll
-  locked, focus moved to the close control) and Escape-to-close (dialog
-  removed, scroll restored, focus returned to the trigger) live, matching
-  the Auditor's and round 76's own findings. **No defect found** — this
-  closes a proof gap, not a code change.
-- **Verified:** no source file changed this round, so `tsc`/lint/build were
-  not re-run (round 77's clean results stand unchanged). Cleaned up: stopped
-  the manually-started `next dev` listener on port 5173 by its verified real
-  listener PID (`Get-NetTCPConnection -LocalPort 5173 -State Listen`), not by
-  process name; removed the scratch dev-server log from `$env:TEMP`.
+Round 78's full detail (environment finding — the manual-start-then-attach
+Browser-pane workaround is reachable but intermittent; and the round-76
+autoplay proof-gap closure) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_78_ARCHIVE.md` (moved there
+round 81 to keep this file under its 30,720-byte hot-file cap).
 
 Round 77's full detail (Auditor `IFA-2026-09-07-R68` disposition, a
 `service-details.ts`/`site-config.ts` field-by-field diff, and a

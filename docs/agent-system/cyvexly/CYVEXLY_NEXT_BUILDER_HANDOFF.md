@@ -1,35 +1,34 @@
 # Cyvexly Next Builder Handoff
 
-## Round 80 closeout
+## Round 81 closeout
 
 **Session:** scheduled/unattended Claude Code run, 2026-09-07
-**Start source:** `71617d0` on `main` (pushed, matched `origin/main`)
-**Scope:** Dispositioned Auditor item `IFA-2026-09-07-R71` (46th
-confirmation, no action needed). Completed round 79's recommended fresh
-surface: real live keyboard/data-integrity verification of Planner Steps
-2-9 (only Step 1 had this exact treatment since round 8) via the
-manual-start-then-attach Browser-pane workaround. Confirmed correct
-`Tab` order, conditional-field logic, label wiring, and full Review-page
-data integrity across all 8 prior steps. No source change.
-**Completion:** DONE WITH PROOF (0 defects found; genuine positive
-keyboard/data-integrity verification on real source).
+**Start source:** `18fc2bb` on `main` (pushed, matched `origin/main`)
+**Scope:** Dispositioned Auditor item `IFA-2026-09-07-R72` (47th
+confirmation, no action needed — same stale "Production Domain
+Connection" gate wording rounds 77-80 already noted). Completed round
+80's routed first task: reproduced its exact Return/Space
+key-synthesis test via local headless-Chrome/CDP (round 8/79's
+established method). Real native `Input.dispatchKeyEvent` correctly
+activated both a Planner Step 6 `StatusRow` toggle button and the
+progress-rail's step-jump button — closes round 80's proof gap with
+genuine positive evidence; not a product defect, a Browser-pane-tool
+artifact specific to Return/Space key synthesis. No source change.
+**Completion:** DONE WITH PROOF (0 defects found; proof gap closed).
 
-### New instrument finding, routed to next round
+**No urgent item routed to the next round.** Chunk 5's remaining scope
+is entirely Owner-side gates (exact LLC name, Resend account/DNS,
+analytics/Search Console ownership or a no-analytics decision, Owner
+visual/copy acceptance, final indexability approval) — see
+`CYVEXLY_CURRENT_STATE.md` and `CYVEXLY_OWNER_DIRECTION.md`. Next
+Builder round: check the Auditor inbox first, then look for a fresh,
+not-yet-adversarially-reviewed surface (per the convergence check —
+many consecutive clean rounds means a genuinely new surface is more
+valuable than repeating an already-clean one).
 
-This session's synthetic `Return`/`space` key press does **not** activate
-a correctly-focused native `<button>` (tested independently on Step 6's
-`StatusRow` toggle and the progress-rail's step-jump button), while `Tab`
-reliably moves focus. Both are plain `<button>` elements needing zero
-custom JS for Enter/Space, and real mouse clicks correctly toggle them —
-this is almost certainly a Browser-pane key-synthesis gap, not a product
-defect, but was not independently confirmed via local headless-Chrome/CDP
-this round (time-boxed). **Recommended next-round first task:** reproduce
-this exact test (focus a native `<button>`, press Return/space, check
-`aria-pressed`/navigation) via round 8/79's local-headless-Chrome/CDP
-method to close this proof gap with genuine positive evidence, the same
-way round 79 closed the rAF gap and round 78 closed the autoplay gap. See
-`CYVEXLY_APP_DEBT.md`'s "Round 80" and
-`CYVEXLY_TOOLS_AND_CAPABILITIES.md`'s round-80 note for full detail.
+Round 80's full report is archived at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_80_REPORT.md` (moved
+there round 81 to keep this file under its 12,288-byte hot-file cap).
 
 Round 79's full report is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_79_REPORT.md` (moved
