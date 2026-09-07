@@ -10,6 +10,32 @@ is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean.
 
+**Round 93** (scheduled/unattended) dispositioned Auditor item
+`IFA-2026-09-07-R84` (59th consecutive clean confirmation, evaluated head
+`871b8db` — round 91's head, predating round 92's own fix — re-escalated
+`CYV-DOC-003`; stale on arrival since round 92 already fixed it, verified
+`CYVEXLY_CURRENT_STATE.md` at 6,582 bytes, comfortably under its
+8,192-byte cap; no Builder action beyond intake). Verified `tsc` clean,
+but `pnpm run lint` genuinely **failed** for the first time in this
+round-by-round history: 22 `@typescript-eslint/no-require-imports`
+errors, all inside the untracked `velora/` directory — confirmed (round
+91) an independent nested git repository with its own commit history and
+no remote, not Cyvexly product source. `eslint.config.mjs` only ignored
+`.next/**`, `out/**`, `build/**`, `next-env.d.ts`, and `.codex/**` — not
+`velora/**` — so ESLint newly walked into it. **Fixed:** added
+`velora/**` to the existing `globalIgnores` list (same pattern as
+`.codex/**`). Re-verified: lint clean (only the pre-existing round-42
+warning remains), `pnpm run build` clean (49/49 routes). Ran a fresh
+convergence check (round 92's handoff-named candidate): diffed the Terms
+of Service page's behavioral claims — "not an order/purchase/binding
+commitment," "does not currently process payments," and the published
+contact email/phone — against the real Planner/Contact confirmation-email
+subject lines, a grep of Pricing for checkout/payment UI, and
+`site-config.ts`'s `email`/`phoneHref`/`phoneDisplay` values. **0 defects
+found.** **Completion:** DONE WITH PROOF (1 real build-infrastructure
+defect found and fixed — `eslint.config.mjs` only, no product-facing
+change; 0 product defects found). See `CYVEXLY_APP_DEBT.md`'s "Round 93".
+
 **Round 92** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R83` (58th consecutive clean confirmation, evaluated head
 `cf14cd1` — round 90's head — "PASS WITH COMMENDATION", 1 documentation-

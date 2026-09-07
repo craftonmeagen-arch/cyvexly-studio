@@ -1,100 +1,74 @@
 # Cyvexly App Debt
 
-## Round 92 — no new defect; Accessibility-statement-claims vs. actual rendered behavior (contrast, focus order, skip-link, reduced-motion), doc-cap fix
+## Round 93 — lint-infrastructure fix (untracked `velora/` sub-repo) + Terms-page convergence check
 
-Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R83` (58th
+Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R84` (59th
 consecutive clean confirmation, "PASS WITH COMMENDATION", evaluated head
-`cf14cd1` — round 90's head — 1 documentation-debt item `CYV-DOC-003`:
-`CYVEXLY_CURRENT_STATE.md` measured at 8,644 bytes against its 8,192-byte
-cap). Moved to `exchange/processed/`. Fixed `CYV-DOC-003`: condensed
-rounds 87-90's four separate outcome paragraphs in
-`CYVEXLY_CURRENT_STATE.md` into a single one-line pointer (detail already
-preserved in this file's own "Round 87"-"Round 90" sections and
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`), bringing the file to 6,540 bytes — well
-under cap. The report's other advisory (rotate
-`CYVEXLY_NEXT_BUILDER_HANDOFF.md`, 352b headroom at the evaluated head) was
-already satisfied by round 91's own rotation before this report published
-(confirmed: that file measures 7,665 bytes now, comfortable headroom).
+`871b8db` — round 91's head, predating round 92's fix — re-escalated
+`CYV-DOC-003` at "9,490b over the 8,192 cap"). **Stale on arrival:** round
+92 (committed after this Auditor round started) already fixed
+`CYV-DOC-003` by condensing `CYVEXLY_CURRENT_STATE.md` to 6,540 bytes;
+verified the file measures 6,582 bytes now (post this round's own edit),
+comfortably under cap. No Builder action needed beyond intake. Moved to
+`exchange/processed/`.
 
 Ran the standard verification suite (round-84 `PATH` fix applied first):
-`pnpm exec tsc --noEmit` clean, `pnpm run lint` clean (same pre-existing
-round-42 evidence-script warning), `pnpm run build` clean, on unchanged
-round-87 source (`871b8db`, round 91's docs-only HEAD).
+`pnpm exec tsc --noEmit` clean. `pnpm run lint` **failed** — a real,
+newly-reachable build-infrastructure defect, not a stale/flaky result:
+22 errors (`@typescript-eslint/no-require-imports`) across
+`velora/evidence/run-005/*.cjs` and `velora/scripts/*.cjs`. Root-caused
+before fixing: `velora/` is an untracked directory (confirmed by round
+91's Auditor check as an independent nested git repository — its own
+commit history, no remote, no relationship to this repo's tracked
+history) that ESLint has no reason to skip, since `eslint.config.mjs`
+only excluded `.next/**`, `out/**`, `build/**`, `next-env.d.ts`, and
+`.codex/**`. Not Cyvexly product source, so not a product regression —
+but a real reachable tooling failure per §2.9 (lint no longer runs
+clean, which is required proof for every round). **Fixed:** added
+`velora/**` to `eslint.config.mjs`'s existing `globalIgnores` list, the
+same pattern already used for `.codex/**`. Re-ran lint: clean (only the
+pre-existing round-42 evidence-script warning remains). `pnpm run build`
+clean (49/49 pages, zero errors) on the same source plus this one-line
+config change.
 
-**Convergence-check, fresh surface (round 91's handoff-named candidate):**
-diffed the Accessibility statement page's (`src/app/accessibility/page.tsx`)
-specific claims — "all interactive functions reachable... by keyboard,"
-"visible focus indicators that aren't hidden by sticky interface elements,"
-"sufficient color contrast," and "animation that respects your
-reduced-motion preference" — against actual rendered behavior via a real
-local headless-Chrome/CDP session (round 8/79/81's method: genuine
-`Input.dispatchKeyEvent` keyboard input and `Emulation.setEmulatedMedia`,
-not `javascript_tool`-synthesized events). Four checks, all **0 defects**:
+**Convergence-check, fresh surface (round 92's handoff-named
+candidate):** diffed the Terms of Service page's
+(`src/app/terms/page.tsx`) specific behavioral claims against real
+Planner/Contact/Pricing source and rendered behavior. **0 defects
+found:**
+- "Submitting either form is the start of a conversation, not an order,
+  purchase, or binding commitment" — the real confirmation-email subject
+  lines are `"We received your project brief — Cyvexly Studio"`
+  (`api/planner/route.ts`) and `"We received your message — Cyvexly
+  Studio"` (`api/contact/route.ts`); neither route contains order/
+  purchase/confirmation-of-sale language.
+- "This site does not currently process payments. No payment method is
+  represented as active" — grepped `src/app/pricing/page.tsx` for
+  checkout/payment-processing UI (`checkout`, `pay now`, `buy`,
+  `purchase`, `stripe`, card-entry language): none found; the only match
+  is the existing "not a self-checkout menu" disclaimer, which reinforces
+  the same claim rather than contradicting it.
+- Contact email/phone in the "Contact us" section resolve through
+  `siteConfig.email`/`siteConfig.phoneHref`/`phoneDisplay`
+  (`src/lib/site-config.ts`): `design@cyvexly.com` / `tel:+13175725780` /
+  `(317) 572-5780` — matches Owner direction `2026-09-04-14` exactly.
 
-1. **Reduced motion:** with `prefers-reduced-motion: reduce` emulated via
-   real CDP `Emulation.setEmulatedMedia`, `window.matchMedia(...).matches`
-   read `true`, a probed element's computed `transition-duration` collapsed
-   to `1e-06s` (the `globals.css` reduced-motion block's `0.001ms
-   !important` rule firing correctly), and `scroll-behavior` read `auto`
-   (smooth-scroll disabled) — confirms the sitewide reduced-motion CSS is
-   genuinely active, not just present in source.
-2. **Contrast:** measured this page's own body-copy color (`rgb(70, 87,
-   110)`, the `cool-graphite` token) against its actual composited
-   `.glass-panel` background (`rgba(218, 240, 253, 0.55)`) via a real
-   WCAG relative-luminance calculation on the live computed styles —
-   **6.27:1**, comfortably clears the 4.5:1 AA floor.
-3. **Skip-link / focus order — a genuine finding worth recording, not
-   assumed:** a real first `Tab` press from page load correctly focuses
-   the "Skip to main content" link first (`href="#main-content"`), with a
-   real visible `solid 2px` cyber-blue `:focus-visible` outline. A real
-   `Enter` press activates it: `location.hash` becomes `#main-content` and
-   the page genuinely scrolls (`scrollY: 88`). Checking
-   `document.activeElement` immediately after shows `BODY`, not the
-   `<main>` element — because `<main id="main-content">` carries no
-   `tabindex` on any page (verified via `hasAttribute('tabindex')`),
-   confirming it is not a focusable target. **This looked like it might be
-   the classic "skip link doesn't actually move focus, so the next Tab
-   re-enters the header nav" anti-pattern** — investigated further instead
-   of concluding a defect from `activeElement` alone: a real second `Tab`
-   press was dispatched and it landed directly inside `<main>` (the "Web
-   Content Accessibility Guidelines (WCAG) 2.2" link, several DOM levels
-   past the entire header/nav/mobile-menu-button), not back on the skip
-   link or into the header. This is real Chromium's documented "sequential
-   focus navigation starting point" behavior — a fragment-navigation
-   target can become the effective next-Tab anchor point even without
-   being focusable/reporting as `document.activeElement` — so the skip
-   link **genuinely bypasses the repeated header for a real keyboard user
-   in this real browser**, confirmed by dispatched input, not inferred
-   from `mainHasTabindex: false` alone. **0 defect; a stronger positive
-   proof than any prior round recorded for this exact mechanism** (rounds
-   39/79 verified the skip link exists and is reachable; this round is the
-   first to verify what actually happens on the Tab press immediately
-   after activating it).
-4. **Focus indicator vs. sticky header:** the header is `sticky top-0
-   z-50`; `services/page.tsx` and `faq/page.tsx`'s in-page anchor targets
-   already carry `scroll-mt-24` (pre-existing, not added this round),
-   which was specifically checked because an un-compensated sticky header
-   is a common real cause of a focused/scrolled-to element's outline being
-   clipped under it — confirmed present, so no fix was needed here.
+**Completion:** DONE WITH PROOF (1 real build-infrastructure defect found
+and fixed; 0 product defects found on the named convergence check).
+Source change: `eslint.config.mjs` only (no product-facing/runtime
+change). Cleaned up: no dev server or browser instance was started this
+round (verification suite is CLI-only for this scope).
 
-**Completion:** DONE WITH PROOF (0 defects found across all four named
-surfaces; 0 source change — a genuine negative result plus one stronger
-proof-closure). Cleaned up: stopped the manually-started `next dev`
-listener on port 5173 by its verified real listener PID
-(`Get-NetTCPConnection -LocalPort 5173 -State Listen`), confirmed port
-clear afterward; killed the round-owned headless-Chrome instance by its
-unique `--user-data-dir` timestcamped path (not by process name — several
-unrelated `chrome.exe`/Playwright-owned processes were running on this
-host), removed its unique profile directory and the scratch CDP script/
-log files from the OS temp scratchpad (one dev-server log initially
-resisted PowerShell `Remove-Item` with "Access is denied" immediately
-after the owning process was stopped — resolved by retrying the same
-delete via the Bash tool's `rm`, which succeeded; not a real leftover).
+## Round 92 — no new defect; Accessibility-statement-claims vs. actual rendered behavior (contrast, focus order, skip-link, reduced-motion), doc-cap fix
 
-Round 90's full detail (Process-page step-copy vs. Planner/Pricing/FAQ
-real-flow convergence-check, 0 defects found) is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_90_ARCHIVE.md` (moved there
-round 92 to keep this file under its 30,720-byte hot-file cap).
+Round 92's full detail (Auditor `IFA-2026-09-07-R83` disposition,
+`CYV-DOC-003` doc-cap fix, and the Accessibility-statement four-check
+convergence check — contrast, skip-link/focus order, reduced-motion,
+sticky-header focus indicator, 0 defects) is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_92_ARCHIVE.md` (moved there
+round 93 to keep this file under its 30,720-byte hot-file cap; no
+history lost). Round 90's full detail is likewise archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_90_ARCHIVE.md`.
 
 ## Round 91 — no new defect; About-page-vs-vision §6.8 convergence-check + genuine in-pane Tab traversal of Planner Step 6
 
