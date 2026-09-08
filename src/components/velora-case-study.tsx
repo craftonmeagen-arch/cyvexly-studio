@@ -265,7 +265,7 @@ export function VeloraCaseStudy({ breadcrumbJsonLd }: { breadcrumbJsonLd: Record
                 Tell us about your restaurant, venue, or hospitality concept—and the reservations, inquiries, events, or customer journey it needs to support. Cyvexly will recommend the right scope.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <ButtonLink href="/start" className="!bg-[linear-gradient(135deg,#d6bd8f,#ead5ad)] !text-[#172019] hover:!bg-[linear-gradient(135deg,#ead5ad,#f3e2bf)]">Describe your hospitality project <ArrowMark /></ButtonLink>
+                <ButtonLink href="/contact?interest=hospitality-website" className="!bg-[linear-gradient(135deg,#d6bd8f,#ead5ad)] !text-[#172019] hover:!bg-[linear-gradient(135deg,#ead5ad,#f3e2bf)]">Ask about a hospitality website <ArrowMark /></ButtonLink>
                 <ButtonLink href="/velora" variant="text" className="!text-[#f6f3ec] hover:!text-[#d6bd8f]">Return to the live demo</ButtonLink>
               </div>
             </div>

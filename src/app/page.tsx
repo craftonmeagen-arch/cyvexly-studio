@@ -45,11 +45,17 @@ export default function Home() {
                 action.
               </p>
               <div className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
-                <ButtonLink href="/start" className="px-4 py-2.5 text-[0.8125rem] sm:px-6 sm:py-3 sm:text-sm">Describe your project</ButtonLink>
-                <ButtonLink href="/services" variant="secondary" className="px-4 py-2.5 text-[0.8125rem] sm:px-6 sm:py-3 sm:text-sm">
-                  Explore services
+                <ButtonLink href="/contact?interest=custom-project" className="px-4 py-2.5 text-[0.8125rem] sm:px-6 sm:py-3 sm:text-sm">Ask about a project</ButtonLink>
+                <ButtonLink href="/work" variant="secondary" className="px-4 py-2.5 text-[0.8125rem] sm:px-6 sm:py-3 sm:text-sm">
+                  View our work
                 </ButtonLink>
               </div>
+              <p className="mt-4 text-xs text-cool-graphite">
+                Already have the details?{" "}
+                <ButtonLink href="/start" variant="text" className="text-xs">
+                  Share a detailed brief →
+                </ButtonLink>
+              </p>
             </div>
             <HeroShowcaseVideo />
           </div>
@@ -204,7 +210,7 @@ export default function Home() {
               <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
                 Simple starting points
               </h2>
-              <ButtonLink href="/pricing" variant="text">
+              <ButtonLink href="/contact?interest=custom-project" variant="text">
                 Need something custom? Let&apos;s talk →
               </ButtonLink>
             </div>
@@ -220,7 +226,7 @@ export default function Home() {
                 >
                   {tier.featured && (
                     <span className="mb-3 w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
-                      Most popular
+                      Recommended
                     </span>
                   )}
                   <h3 className="font-display text-lg font-semibold text-midnight-slate">
@@ -242,11 +248,11 @@ export default function Home() {
                     ))}
                   </ul>
                   <ButtonLink
-                    href="/start"
+                    href={`/contact?interest=${tier.name.toLowerCase()}-package`}
                     variant={tier.featured ? "primary" : "secondary"}
                     className="mt-6 w-full"
                   >
-                    Describe your project
+                    Ask about {tier.name}
                   </ButtonLink>
                 </div>
               ))}
@@ -281,10 +287,11 @@ export default function Home() {
                 Ready to build something extraordinary?
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#D5DFED] sm:text-base md:mx-0">
-                Describe your project and we&apos;ll respond within two business days.
+                Send a short note and we&apos;ll respond within two business days.
               </p>
-              <div className="mt-8 flex justify-center md:justify-start">
-                <ButtonLink href="/start">Describe your project</ButtonLink>
+              <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
+                <ButtonLink href="/contact?interest=custom-project">Ask about a project</ButtonLink>
+                <ButtonLink href="/start" variant="secondary">Share a detailed brief</ButtonLink>
               </div>
               <p className="mt-4 text-xs text-[#B9C6DA]">
                 No payment required · response within two business days

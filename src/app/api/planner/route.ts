@@ -163,7 +163,6 @@ export async function POST(request: Request) {
   const errors: Record<string, string> = {};
   if (!fullName) errors.fullName = "Please enter your name.";
   if (!isValidEmail(workEmail)) errors.workEmail = "Please enter a valid email address.";
-  if (!contactMethod) errors.contactMethod = "Please share a phone or preferred contact method.";
   if (!businessDescription) errors.businessDescription = "Please describe your business in a sentence or two.";
   if (!primaryGoalId) errors.primaryGoal = "Please choose your primary goal.";
   if (primaryGoalId === "other" && !primaryGoalOther) {
@@ -219,7 +218,7 @@ export async function POST(request: Request) {
       rows: section("About you", [
         ["Name", fullName],
         ["Email", workEmail],
-        ["Phone / contact method", contactMethod],
+        ["Alternative contact", contactMethod],
         ["Role", roleTitle],
         ["Company", companyName],
         ["Country / time zone", country],

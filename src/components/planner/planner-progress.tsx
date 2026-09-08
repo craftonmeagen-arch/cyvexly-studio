@@ -15,11 +15,10 @@ export function PlannerProgress({
   const activeStepRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
-    // Keep the active step visible inside the rail's own horizontal scroll
-    // container at narrow viewports, where all nine circles don't fit —
-    // otherwise the rail can sit scrolled away from the current step with
-    // no visual cue a user would find without discovering the hidden
-    // scroll themselves (found by the Council, CYC-R2-F001).
+    // The numbered rail is a desktop/tablet enhancement. Phones use the
+    // compact named-step control below, so never let its hidden rail affect
+    // page scroll when a step changes.
+    if (!window.matchMedia("(min-width: 640px)").matches) return;
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     activeStepRef.current?.scrollIntoView({
       behavior: prefersReducedMotion ? "auto" : "smooth",
@@ -29,8 +28,47 @@ export function PlannerProgress({
   }, [currentStep]);
 
   return (
-    <nav aria-label="Project Planner progress" className="overflow-x-auto pb-2">
-      <ol className="flex min-w-max items-center gap-1">
+    <nav aria-label="Project Planner progress" className="pb-2">
+      <div className="sm:hidden">
+        <div className="flex items-end justify-between gap-4">
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.1em] text-cool-graphite">
+            Step {currentStep} of {plannerSteps.length}
+          </p>
+          <p className="text-right text-sm font-semibold text-midnight-slate">
+            {plannerSteps[currentStep - 1].label}
+          </p>
+        </div>
+        <div
+          role="progressbar"
+          aria-label={`Planner progress: step ${currentStep} of ${plannerSteps.length}`}
+          aria-valuemin={1}
+          aria-valuemax={plannerSteps.length}
+          aria-valuenow={currentStep}
+          className="mt-3 h-1.5 overflow-hidden rounded-full bg-smoke-glass"
+        >
+          <div
+            className="h-full rounded-full bg-cyber-blue transition-[width] duration-200"
+            style={{ width: `${(currentStep / plannerSteps.length) * 100}%` }}
+          />
+        </div>
+        <label htmlFor="planner-step-jump" className="sr-only">
+          Go to a reached Planner step
+        </label>
+        <select
+          id="planner-step-jump"
+          value={currentStep}
+          onChange={(event) => onStepClick(Number(event.target.value))}
+          className="mt-4 min-h-11 w-full rounded-xl border border-smoke-glass bg-white/60 px-3 py-2.5 text-sm font-medium text-midnight-slate focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyber-blue"
+        >
+          {plannerSteps.map((step) => (
+            <option key={step.id} value={step.number} disabled={step.number > maxReachedStep}>
+              Step {step.number}: {step.label}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <ol className="hidden items-center gap-1 sm:flex">
         {plannerSteps.map((step, index) => {
           const isComplete = step.number < currentStep;
           const isCurrent = step.number === currentStep;
@@ -80,7 +118,7 @@ export function PlannerProgress({
           );
         })}
       </ol>
-      <p className="mt-2 text-xs font-medium uppercase tracking-[0.1em] text-cool-graphite">
+      <p className="mt-2 hidden text-xs font-medium uppercase tracking-[0.1em] text-cool-graphite sm:block">
         Step {currentStep} of {plannerSteps.length}
       </p>
     </nav>

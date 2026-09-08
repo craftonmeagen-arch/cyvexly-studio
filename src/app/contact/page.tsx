@@ -8,11 +8,29 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   title: "Contact — Cyvexly Studio",
   description:
-    "A short, low-friction way to reach Cyvexly Studio with a general question. For a full project brief, use the Project Planner instead.",
+    "Ask Cyvexly Studio about a project with your name, email, and a short description. A detailed Project Planner remains available when you are ready.",
   path: "/contact",
 });
 
-export default function ContactPage() {
+const inquiryMessages: Record<string, string> = {
+  "custom-project": "I’d like to ask whether Cyvexly is a fit for my project.\n\nHere’s what I’m considering: ",
+  "signal-package": "I’m interested in the Signal package.\n\nHere’s what I’m considering: ",
+  "orbit-package": "I’m interested in the Orbit package.\n\nHere’s what I’m considering: ",
+  "nexus-package": "I’m interested in the Nexus package.\n\nHere’s what I’m considering: ",
+  "commerce-package": "I’m interested in the Commerce package.\n\nHere’s what I’m considering: ",
+  "custom-system": "I’d like to ask about a custom web application or unusual workflow.\n\nHere’s what I’m considering: ",
+  "hospitality-website": "I’d like to ask about a website for a restaurant or hospitality business.\n\nHere’s what I’m considering: ",
+};
+
+export default async function ContactPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ interest?: string | string[] }>;
+}) {
+  const query = await searchParams;
+  const interest = typeof query.interest === "string" ? query.interest : undefined;
+  const initialMessage = interest ? inquiryMessages[interest] ?? "" : "";
+
   return (
     <>
       <SiteHeader />
@@ -24,13 +42,14 @@ export default function ContactPage() {
               Contact
             </p>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
-              Have a quick question?
+              Tell us what you&apos;re considering.
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-cool-graphite sm:text-lg">
-              Use this for general questions — not a full project brief.
-              Ready to start a project?{" "}
+              Your name, email, and a short description are enough to ask if
+              Cyvexly is a fit. No technical language, finished content, or
+              complete sitemap required. Already know the details?{" "}
               <ButtonLink href="/start" variant="text">
-                Describe your project →
+                Share a detailed brief →
               </ButtonLink>
             </p>
           </div>
@@ -66,11 +85,11 @@ export default function ContactPage() {
                     Project inquiries
                   </dt>
                   <dd className="mt-1 text-midnight-slate">
-                    Use the{" "}
+                    Send a short note in this form. The{" "}
                     <ButtonLink href="/start" variant="text" className="text-sm">
                       Project Planner
                     </ButtonLink>{" "}
-                    for a full brief.
+                    is optional when you want to share a full brief.
                   </dd>
                 </div>
                 <div>
@@ -105,7 +124,10 @@ export default function ContactPage() {
               </dl>
             </div>
 
-            <ContactForm />
+            <ContactForm
+              initialMessage={initialMessage}
+              initialTopic={initialMessage ? "Project inquiry" : undefined}
+            />
           </div>
         </section>
       </main>

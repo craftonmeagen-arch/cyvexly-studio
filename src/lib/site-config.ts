@@ -420,6 +420,7 @@ export const servicesGroups = [
     ],
     scopeChange: "Number of audiences, competitors reviewed, and page count.",
     nextAction: "Start with the Project Planner",
+    nextHref: "/start",
   },
   {
     id: "website-design",
@@ -435,6 +436,7 @@ export const servicesGroups = [
     ],
     scopeChange: "Page count, component complexity, and revision rounds.",
     nextAction: "See package details",
+    nextHref: "/pricing#packages",
   },
   {
     id: "website-development",
@@ -451,6 +453,7 @@ export const servicesGroups = [
     ],
     scopeChange: "Functionality complexity and number of templates.",
     nextAction: "See package details",
+    nextHref: "/pricing#packages",
   },
   {
     id: "content-cms",
@@ -467,6 +470,7 @@ export const servicesGroups = [
     ],
     scopeChange: "Content volume and migration complexity.",
     nextAction: "See add-on pricing",
+    nextHref: "/pricing#add-ons",
   },
   {
     id: "commerce-integrations",
@@ -483,6 +487,7 @@ export const servicesGroups = [
     ],
     scopeChange: "Catalog size, number of integrations, and workflow complexity.",
     nextAction: "See Commerce package",
+    nextHref: "/pricing#commerce-package",
   },
   {
     id: "search-performance-accessibility",
@@ -499,6 +504,7 @@ export const servicesGroups = [
     ],
     scopeChange: "Depth of audit and remediation needed.",
     nextAction: "Read our accessibility target",
+    nextHref: "/accessibility",
   },
   {
     id: "care-improvement",
@@ -514,6 +520,7 @@ export const servicesGroups = [
     ],
     scopeChange: "Monthly capacity and response-time tier.",
     nextAction: "Compare care plans",
+    nextHref: "/pricing#care-plans",
   },
 ];
 
@@ -821,6 +828,7 @@ export const pricingFaq = [
 ];
 
 export const contactTopics = [
+  "Project inquiry",
   "General question",
   "Pricing question",
   "Existing project support",

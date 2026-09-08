@@ -172,7 +172,6 @@ export function PlannerForm({
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.workEmail)) {
         next.workEmail = "Please enter a valid email address.";
       }
-      if (!data.contactMethod.trim()) next.contactMethod = "Please share a phone or preferred contact method.";
     }
     if (step === 2) {
       if (!data.businessDescription.trim()) {
@@ -247,17 +246,16 @@ export function PlannerForm({
     // duplicate pass ever sees currentStep differ from previousStepRef here.
     if (previousStepRef.current === currentStep) return;
     previousStepRef.current = currentStep;
-    // Deferred to a frame after this render commits: calling scrollTo/focus
-    // synchronously inside goToStep raced the new step's DOM/layout update,
-    // so the browser's scroll-anchoring silently kept the old scroll
-    // position and focus never left the Continue/Back button — sighted
-    // users weren't returned to the top of the new step, and keyboard/
-    // screen-reader users got no indication the step had changed at all.
+    // Deferred to a frame after this render commits: the new heading does not
+    // exist until React renders the step. Scroll that heading below the sticky
+    // site header, rather than returning to the page introduction above the
+    // form, then move focus without triggering a second competing scroll.
     window.requestAnimationFrame(() => {
       const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
-      // preventScroll: focusing the heading would otherwise jump/scroll it
-      // into view on its own and fight the scrollTo(0) call above.
+      stepHeadingRef.current?.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+        block: "start",
+      });
       stepHeadingRef.current?.focus({ preventScroll: true });
     });
   }, [currentStep]);
@@ -453,7 +451,7 @@ export function PlannerForm({
         <h2
           ref={stepHeadingRef}
           tabIndex={-1}
-          className="font-display text-lg font-semibold text-midnight-slate sm:text-xl"
+          className="scroll-mt-24 font-display text-lg font-semibold text-midnight-slate sm:text-xl"
         >
           {String(plannerSteps[currentStep - 1].number).padStart(2, "0")}{" "}
           {plannerSteps[currentStep - 1].label}
@@ -492,13 +490,13 @@ export function PlannerForm({
               <div className="grid gap-5 sm:grid-cols-2">
                 <TextField
                   id="contactMethod"
-                  label="Phone or preferred contact method"
+                  label="Phone or another way to reach you"
+                  hint="Optional — leave blank if email works for you."
                   value={data.contactMethod}
                   onChange={(v) => {
                     set("contactMethod", v);
                     clearError("contactMethod");
                   }}
-                  required
                   error={errors.contactMethod}
                 />
                 <TextField
@@ -1036,7 +1034,7 @@ function PlannerReview({
       rows: [
         ["Name", data.fullName],
         ["Email", data.workEmail],
-        ["Contact method", data.contactMethod],
+        ["Alternative contact", data.contactMethod],
         ["Role", data.roleTitle],
         ["Company", data.companyName],
         ["Country / time zone", data.country],

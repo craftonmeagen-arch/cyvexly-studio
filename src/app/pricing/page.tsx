@@ -15,6 +15,14 @@ import {
 import { buildPageMetadata } from "@/lib/seo";
 import { pricingJsonLd } from "@/lib/structured-data";
 
+const packageInquiryKeys: Record<string, string> = {
+  Signal: "signal-package",
+  Orbit: "orbit-package",
+  Nexus: "nexus-package",
+  Commerce: "commerce-package",
+  "Custom system": "custom-system",
+};
+
 export const metadata = buildPageMetadata({
   title: "Pricing — Cyvexly Studio",
   description:
@@ -60,7 +68,7 @@ export default function PricingPage() {
         </section>
 
         {/* Package cards */}
-        <section className="pricing-package-stage relative border-b border-smoke-glass/70">
+        <section id="packages" className="pricing-package-stage scroll-mt-24 relative border-b border-smoke-glass/70">
           <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 lg:-mt-14 lg:pb-20 lg:pt-0">
             <div className="grid gap-6 lg:grid-cols-3">
               {pricingPackages.slice(0, 3).map((pkg) => (
@@ -72,7 +80,7 @@ export default function PricingPage() {
                 >
                 {pkg.featured && (
                   <span className="mb-3 w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
-                    Most popular
+                    Recommended
                   </span>
                 )}
                 <PackageIcon name={pkg.name} />
@@ -98,11 +106,11 @@ export default function PricingPage() {
                   {pkg.timeline}
                 </p>
                 <ButtonLink
-                  href="/start"
+                  href={`/contact?interest=${packageInquiryKeys[pkg.name]}`}
                   variant={pkg.featured ? "primary" : "secondary"}
                   className="mt-6 w-full"
                 >
-                  Describe your project
+                  Ask about {pkg.name}
                 </ButtonLink>
                 </div>
               ))}
@@ -110,7 +118,11 @@ export default function PricingPage() {
 
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               {pricingPackages.slice(3).map((pkg) => (
-                <div key={pkg.name} className="glass-panel pricing-package-card flex flex-col rounded-2xl p-7">
+                <div
+                  key={pkg.name}
+                  id={pkg.name === "Commerce" ? "commerce-package" : undefined}
+                  className="glass-panel pricing-package-card scroll-mt-24 flex flex-col rounded-2xl p-7"
+                >
                 <PackageIcon name={pkg.name} />
                 <h2 className="mt-3 font-display text-lg font-semibold text-midnight-slate">
                   {pkg.name}
@@ -133,8 +145,12 @@ export default function PricingPage() {
                 <p className="mt-4 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
                   {pkg.timeline}
                 </p>
-                <ButtonLink href="/start" variant="secondary" className="mt-6 w-full">
-                  Describe your project
+                <ButtonLink
+                  href={`/contact?interest=${packageInquiryKeys[pkg.name]}`}
+                  variant="secondary"
+                  className="mt-6 w-full"
+                >
+                  Ask about {pkg.name}
                 </ButtonLink>
                 </div>
               ))}
@@ -240,7 +256,7 @@ export default function PricingPage() {
         </section>
 
         {/* Add-ons */}
-        <section className="glass-section border-y border-smoke-glass/70">
+        <section id="add-ons" className="glass-section scroll-mt-24 border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
               Add-ons
@@ -276,7 +292,7 @@ export default function PricingPage() {
         </section>
 
         {/* Care plans */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
+        <section id="care-plans" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20">
           <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
             Care plans
           </h2>
@@ -379,12 +395,12 @@ export default function PricingPage() {
               Ready to make your business unmistakable?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-              Not sure which package fits? Complete the Project Planner and
-              we&apos;ll recommend the right
-              scope instead of guessing.
+              A short description is enough to ask whether Cyvexly is a fit.
+              Use the detailed Planner only when you&apos;re ready to share more.
             </p>
-            <div className="mt-8 flex justify-center">
-              <ButtonLink href="/start">Describe your project</ButtonLink>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <ButtonLink href="/contact?interest=custom-project">Ask about a project</ButtonLink>
+              <ButtonLink href="/start" variant="secondary">Share a detailed brief</ButtonLink>
             </div>
           </div>
         </section>

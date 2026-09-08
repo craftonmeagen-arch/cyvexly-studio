@@ -1,0 +1,147 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+
+const baseUrl = process.env.BASE_URL ?? "http://127.0.0.1:5173";
+
+async function read(path) {
+  const response = await fetch(new URL(path, baseUrl));
+  assert.equal(response.status, 200, `${path} returned ${response.status}`);
+  return response.text();
+}
+
+const inquiryContexts = {
+  "custom-project": "ask whether Cyvexly is a fit",
+  "signal-package": "Signal package",
+  "orbit-package": "Orbit package",
+  "nexus-package": "Nexus package",
+  "commerce-package": "Commerce package",
+  "custom-system": "custom web application or unusual workflow",
+  "hospitality-website": "restaurant or hospitality business",
+};
+
+const contextEntries = Object.entries(inquiryContexts);
+const [home, services, pricing, , plainContact, unknownContact, ...contextualContacts] =
+  await Promise.all([
+    read("/"),
+    read("/services"),
+    read("/pricing"),
+    read("/start"),
+    read("/contact"),
+    read("/contact?interest=not-a-real-context"),
+    ...contextEntries.map(([interest]) => read(`/contact?interest=${interest}`)),
+  ]);
+
+const serviceDestinations = [
+  ["See package details", "/pricing#packages"],
+  ["See add-on pricing", "/pricing#add-ons"],
+  ["See Commerce package", "/pricing#commerce-package"],
+  ["Read our accessibility target", "/accessibility"],
+  ["Compare care plans", "/pricing#care-plans"],
+];
+
+for (const [label, href] of serviceDestinations) {
+  assert.match(services, new RegExp(`href="${href}"[^>]*>${label}`));
+}
+
+for (const id of ["packages", "commerce-package", "add-ons", "care-plans"]) {
+  assert.match(pricing, new RegExp(`id="${id}"`), `missing pricing anchor ${id}`);
+}
+
+assert.match(home, /href="\/contact\?interest=custom-project"[^>]*>Ask about a project/);
+assert.match(home, /href="\/work"[^>]*>View our work/);
+assert.doesNotMatch(home, /href="\/pricing"[^>]*>Need something custom\? Let/);
+assert.doesNotMatch(home, />Most popular</);
+assert.match(home, />Recommended</);
+
+assert.match(pricing, /href="\/contact\?interest=orbit-package"/);
+assert.match(pricing, /Ask about [\s\S]{0,80}Orbit/);
+assert.match(pricing, /href="\/start"[^>]*>Share a detailed brief/);
+assert.doesNotMatch(pricing, />Most popular</);
+assert.match(pricing, />Recommended</);
+
+const readMessageValue = (html) =>
+  html.match(/<textarea[^>]*id="message"[^>]*>([\s\S]*?)<\/textarea>/)?.[1] ?? null;
+
+assert.equal(readMessageValue(plainContact), "");
+assert.equal(readMessageValue(unknownContact), "");
+
+for (const [[interest, expectedCopy], html] of contextEntries.map((entry, index) => [
+  entry,
+  contextualContacts[index],
+])) {
+  assert.match(
+    html,
+    /<option value="Project inquiry" selected="">Project inquiry<\/option>/,
+    `${interest} did not select the project-inquiry topic`,
+  );
+  assert.match(
+    readMessageValue(html) ?? "",
+    new RegExp(expectedCopy),
+    `${interest} did not preserve its inquiry context`,
+  );
+}
+
+assert.match(home, /href="\/contact\?interest=signal-package"/);
+assert.match(home, /href="\/contact\?interest=orbit-package"/);
+assert.match(home, /href="\/contact\?interest=nexus-package"/);
+assert.match(pricing, /href="\/contact\?interest=commerce-package"/);
+assert.match(pricing, /href="\/contact\?interest=custom-system"/);
+
+// PlannerForm waits for its device-local draft check before rendering fields,
+// so the first server response intentionally contains only its loading state.
+// Keep a source-contract assertion here; the visible-browser pass covers the
+// hydrated label, hint, and required-state in the integrated product.
+const plannerFormSource = await readFile(
+  new URL("../src/components/planner/planner-form.tsx", import.meta.url),
+  "utf8",
+);
+const alternativeContactField = plannerFormSource.match(
+  /<TextField\s+id="contactMethod"[\s\S]*?\/>/,
+)?.[0];
+assert.ok(alternativeContactField, "Planner alternative contact field source is missing");
+assert.match(alternativeContactField, /label="Phone or another way to reach you"/);
+assert.match(alternativeContactField, /hint="Optional — leave blank if email works for you\."/);
+assert.doesNotMatch(
+  alternativeContactField,
+  /\srequired(?:\s|\n)/,
+  "Planner alternative contact field is still marked required",
+);
+
+const plannerValidationResponse = await fetch(new URL("/api/planner", baseUrl), {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    fullName: "Smoke Test",
+    workEmail: "smoke@example.com",
+    contactMethod: "",
+    honeypot: "",
+  }),
+});
+assert.equal(plannerValidationResponse.status, 400);
+const plannerValidation = await plannerValidationResponse.json();
+assert.equal(plannerValidation.error, "validation");
+assert.ok(plannerValidation.fields.businessDescription);
+assert.equal(
+  plannerValidation.fields.contactMethod,
+  undefined,
+  "Server still rejects an empty alternative contact field",
+);
+
+const velora = await read("/work/velora-dining");
+assert.match(velora, /href="\/contact\?interest=hospitality-website"/);
+
+console.log(
+  JSON.stringify(
+    {
+      baseUrl,
+      routes: 7 + contextualContacts.length,
+      serviceDestinations: serviceDestinations.length,
+      pricingAnchors: 4,
+      contactContexts: contextualContacts.length,
+      plannerAlternativeContact: "optional-client-and-server",
+      status: "passed",
+    },
+    null,
+    2,
+  ),
+);

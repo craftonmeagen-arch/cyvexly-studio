@@ -74,7 +74,7 @@ export default function ServicesPage() {
                   <span className="font-medium">What may change the scope: </span>
                   {group.scopeChange}
                 </p>
-                <ButtonLink href="/start" variant="text" className="mt-4 text-sm">
+                <ButtonLink href={group.nextHref} variant="text" className="mt-4 text-sm">
                   {group.nextAction} →
                 </ButtonLink>
               </div>
@@ -251,8 +251,9 @@ export default function ServicesPage() {
                 Not sure which services you need? Describe your project and
                 we&apos;ll recommend the right scope — no jargon required.
               </p>
-              <div className="mt-8 flex justify-center">
-                <ButtonLink href="/start">Describe your project</ButtonLink>
+              <div className="mt-8 flex flex-wrap justify-center gap-3">
+                <ButtonLink href="/contact?interest=custom-project">Ask about your project</ButtonLink>
+                <ButtonLink href="/start" variant="secondary">Share a detailed brief</ButtonLink>
               </div>
             </div>
           </div>

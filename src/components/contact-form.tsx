@@ -7,7 +7,15 @@ type Status = "idle" | "submitting" | "sent" | "error";
 
 type Errors = Partial<Record<"name" | "email" | "message" | "consent" | "honeypot", string>>;
 
-export function ContactForm() {
+type ContactFormProps = {
+  initialMessage?: string;
+  initialTopic?: string;
+};
+
+export function ContactForm({
+  initialMessage = "",
+  initialTopic = contactTopics[0],
+}: ContactFormProps) {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Errors>({});
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -212,7 +220,11 @@ export function ContactForm() {
         <select
           id="topic"
           name="topic"
-          defaultValue={contactTopics[0]}
+          defaultValue={
+            (contactTopics as readonly string[]).includes(initialTopic)
+              ? initialTopic
+              : contactTopics[0]
+          }
           className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
         >
           {contactTopics.map((topic) => (
@@ -231,6 +243,7 @@ export function ContactForm() {
           id="message"
           name="message"
           rows={5}
+          defaultValue={initialMessage}
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? "message-error" : undefined}
           className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
