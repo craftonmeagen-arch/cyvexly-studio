@@ -492,6 +492,84 @@ async function main() {
     check(dialogButtonReturn.open && dialogButtonReturn.focused === "Close notice", "Notice dialog close control was not focusable.");
     check(!dialogButtonClosed.open && dialogButtonClosed.focused === "store-return", "Explicit dialog close did not return focus to its invoking control.");
 
+    await navigate(`${url}#resource/k2`, "#detail-view h1");
+    const illustrativeNotice = await evaluate(`
+      const trigger=document.querySelector('#gallery-stage');
+      trigger.id='illustrative-notice-return';
+      trigger.focus();
+      return {focused:document.activeElement===trigger,zoomKey:trigger.dataset.zoomKey};
+    `);
+    await key(" ");
+    await settle();
+    const illustrativeNoticeOpen = await evaluate(`
+      const dialog=document.querySelector('#notice-dialog');
+      return {
+        open:dialog.open,
+        title:document.querySelector('#notice-title')?.textContent.trim(),
+        focused:document.activeElement.textContent.trim(),
+      };
+    `);
+    await key("Escape");
+    await settle();
+    const illustrativeNoticeClosed = await evaluate(`
+      return {
+        open:document.querySelector('#notice-dialog').open,
+        focused:document.activeElement.id,
+      };
+    `);
+    check(illustrativeNotice.focused && illustrativeNotice.zoomKey === "concept" && illustrativeNoticeOpen.open && illustrativeNoticeOpen.title.includes("final preview"), "Illustrative cover activation did not open the truthful preview notice.");
+    check(!illustrativeNoticeClosed.open && illustrativeNoticeClosed.focused === "illustrative-notice-return", "Escape did not close the illustrative preview notice and return focus.");
+
+    const noticeLaunchBefore = await evaluate(`
+      const trigger=document.querySelector('#illustrative-notice-return');
+      if(!trigger)return {found:false,hash:location.hash,detail:document.querySelector('#detail-view').innerText.slice(0,80)};
+      trigger.focus();
+      trigger.click();
+      await new Promise(accept=>setTimeout(accept,50));
+      const launch=document.querySelector('#notice-dialog a[href="#launch"]');
+      if(!launch)return {found:true,launchFound:false,hash:location.hash};
+      launch.focus();
+      return {found:true,launchFound:true,open:document.querySelector('#notice-dialog').open,focused:document.activeElement===launch};
+    `);
+    await key("Enter");
+    await settle();
+    const noticeLaunchAfter = await evaluate(`
+      return {
+        hash:location.hash,
+        open:document.querySelector('#notice-dialog').open,
+        homeHidden:document.querySelector('#home-view').hidden,
+        headingFocused:document.activeElement===document.querySelector('#detail-view h1'),
+        activeText:(document.activeElement.getAttribute('aria-label')||document.activeElement.textContent||'').trim().slice(0,80),
+      };
+    `);
+    check(noticeLaunchBefore.open && noticeLaunchBefore.focused && noticeLaunchAfter.hash === "#launch" && !noticeLaunchAfter.open && noticeLaunchAfter.homeHidden && noticeLaunchAfter.headingFocused, `The notice-to-launch keyboard route did not close the dialog and focus the visible launch heading (before: ${JSON.stringify(noticeLaunchBefore)}, active: ${noticeLaunchAfter.activeText}).`);
+
+    const outboundAdapters = await evaluate(`
+      const originalAnchorClick=HTMLAnchorElement.prototype.click;
+      const opened=[];
+      const events=[];
+      const onOutbound=event=>events.push(event.detail);
+      window.addEventListener('hh:outbound',onOutbound);
+      HTMLAnchorElement.prototype.click=function(){opened.push({href:this.href,target:this.target,rel:this.rel});};
+      SITE_CONFIG.tptStoreUrl='https://www.teacherspayteachers.com/Store/HoneyHearted';
+      SITE_CONFIG.productLinks.planner='https://www.teacherspayteachers.com/Product/HoneyHearted-Planner-123';
+      SITE_CONFIG.facebookUrl='https://www.facebook.com/honeyhearted';
+      SITE_CONFIG.beachsideSampleUrl='https://example.test/honeyhearted/beachside-sample';
+      location.hash='home';await new Promise(accept=>setTimeout(accept,80));
+      document.querySelector('[data-store]').click();
+      document.querySelector('[data-social]').click();
+      location.hash='resource/planner';await new Promise(accept=>setTimeout(accept,80));
+      document.querySelector('[data-product-link="planner"]').click();
+      location.hash='sample/beachside';await new Promise(accept=>setTimeout(accept,80));
+      document.querySelector('[data-beachside]').click();
+      SITE_CONFIG.tptStoreUrl='';SITE_CONFIG.productLinks.planner='';SITE_CONFIG.facebookUrl='';SITE_CONFIG.beachsideSampleUrl='';
+      HTMLAnchorElement.prototype.click=originalAnchorClick;
+      window.removeEventListener('hh:outbound',onOutbound);
+      return {opened,events};
+    `);
+    check(outboundAdapters.opened.length === 4 && outboundAdapters.opened.every(item=>item.href.startsWith('https://') && item.target === '_blank' && item.rel === 'noopener noreferrer'), "A configured outbound destination did not open as a protected HTTPS new-tab link.");
+    check(JSON.stringify(outboundAdapters.events) === JSON.stringify([{kind:'tpt',id:'store'},{kind:'social',id:''},{kind:'tpt',id:'planner'},{kind:'sample',id:''}]), "Configured outbound actions did not emit the documented local analytics-hook details.");
+
     const activationSafety = await evaluate(`
       return {
         tptExact:Boolean(safeTPT('https://www.teacherspayteachers.com/Store/HoneyHearted')),
@@ -722,6 +800,14 @@ async function main() {
       dialogButtonReturn,
       dialogButtonClosed,
       connectionNotice,
+      illustrativeNotice: {
+        before: illustrativeNotice,
+        opened: illustrativeNoticeOpen,
+        closed: illustrativeNoticeClosed,
+        launchBefore: noticeLaunchBefore,
+        launchAfter: noticeLaunchAfter,
+      },
+      outboundAdapters,
       activationSafety,
       sample: { ...sample, download, downloadSize, print },
       contentRoutes,
