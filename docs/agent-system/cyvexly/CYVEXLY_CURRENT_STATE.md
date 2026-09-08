@@ -1,19 +1,33 @@
 # Cyvexly Current State
 
-**Last completed global round:** 114. **Current next product work:** reopened
-Chunk 6 — Velora buyer-facing portfolio presentation under Owner direction
-`2026-09-08-20`. The first Builder round under that direction must reconcile
-the round/chunk position and begin the accepted `/work/velora-dining` redesign.
-Chunk 7's accepted HoneyHearted source and two-review/Owner-input obligations
-remain active in parallel; Chunk 5 remains open only for Owner/account gates.
+**Last completed global round:** 116. **Builder scheduler:** PAUSED by Owner
+direction `2026-09-08-21`; preserve its saved :00/:30 cadence, GPT-5.6 Sol, and
+high reasoning settings. Do not resume or begin a competing HoneyHearted owner-
+dashboard implementation until the Owner explicitly says so. Claude owns that
+next implementation, including Clerk-backed owner authorization and durable
+content/storage architecture while TPT remains the commerce system.
+Owner direction `2026-09-08-22` queues separate EduAILenz and Mudoinkle Work
+cards/case studies as the next Builder portfolio expansion after an explicit
+resume. That direction grants read-only investigation authority in their
+repositories but does not unpause this scheduler.
 
-The Owner accepted a visible buyer-path finding: `/velora` is strong, but the
-case-study landing page is sparse, report-like, over-repeats the fictional
-qualification, and begins with an oversized cropped preview. Required work is
-a premium uncropped desktop/mobile showcase, direct prospect language,
-scannable functional proof, restrained disclosure, larger responsive evidence,
-and a more specific conversion invitation. Completion requires the real Home
-→ case study → demo path in a visible desktop/mobile browser.
+Round 116 completed the reopened Chunk 6 buyer-facing portfolio presentation.
+Accepted and deployed source `fce01e8` replaces the sparse report-like
+`/work/velora-dining` page with direct prospect language, six scannable working
+capabilities, complete uncropped desktop/mobile proof, restrained opening plus
+detailed concept disclosure, design/accessibility decisions, and a hospitality-
+specific CTA. The unchanged `/velora` demo and the Work → case study → demo path
+pass complete local visible/headless and public Chromium proof with no failures,
+runtime errors, network errors, unexpected origins, or responsive overflow.
+Chunk 6 remains open only for its two independent reviews.
+
+Round 115 hardened HoneyHearted's actual downloaded free-sample artifact. The
+generated HTML now preserves the 44px control floor, and the durable suite opens
+the downloaded local file at 390px, verifies zero external resources and native
+activation, captures it, and prints a tagged one-page Letter PDF. Accepted and
+deployed source `6af5e3c` passes locally and publicly. Chunk 7's existing review
+obligations and Owner-input boundaries remain, but its next architecture phase
+is assigned to Claude under direction `2026-09-08-21`.
 
 Round 114 changed method again to Windows High Contrast/forced-colors
 adaptability. Proof source `dacec6a` adds a real-Chromium contract at 320px for
