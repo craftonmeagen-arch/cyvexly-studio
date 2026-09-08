@@ -543,6 +543,13 @@ async function main() {
     check(contentRoutes["policy/privacy"].text.includes("not a finished privacy policy"), "Privacy preview boundary is missing.");
     check(contentRoutes["policy/terms"].text.includes("not the final legal terms"), "Terms preview boundary is missing.");
     check(contentRoutes.launch.text.toLowerCase().includes("not a live shop yet"), "Launch checklist lost its preview boundary.");
+    check(
+      contentRoutes.launch.text.includes("SITE_CONFIG block inside this standalone HTML file") &&
+        contentRoutes.launch.text.includes("self-contained preview") &&
+        !contentRoutes.launch.text.includes("app.js") &&
+        !contentRoutes.launch.text.includes("source folder includes separate CSS"),
+      "Launch checklist does not truthfully describe the self-contained source artifact.",
+    );
     check(contentRoutes["missing-page"].title === "A little lost?", "Unknown hash route did not render the recovery state.");
 
     await evaluate("location.hash='contact';return true;");
