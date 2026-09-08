@@ -8,6 +8,7 @@ const url = process.argv[2] || "http://127.0.0.1:5173/velora";
 const evidenceDir = resolve(process.argv[3] || "docs/agent-system/cyvexly/builder/evidence/velora-smoke");
 const chromePath = process.env.CHROME_PATH || "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const sourceRef = process.env.CYVEXLY_SOURCE_REF || "unrecorded-working-tree";
+const visibleBrowser = process.env.CYVEXLY_VISIBLE_BROWSER === "true";
 const profileDir = join(tmpdir(), `cyvexly-velora-smoke-${process.pid}-${Date.now()}`);
 const failures = [];
 const runtimeErrors = [];
@@ -83,14 +84,12 @@ async function main() {
   await mkdir(evidenceDir, { recursive: true });
   const port = await freePort();
   const chrome = spawn(chromePath, [
-    "--headless=new",
-    "--disable-gpu",
-    "--hide-scrollbars",
+    ...(visibleBrowser ? [] : ["--headless=new", "--disable-gpu", "--hide-scrollbars"]),
     "--force-device-scale-factor=1",
     `--remote-debugging-port=${port}`,
     `--user-data-dir=${profileDir}`,
     "about:blank",
-  ], { stdio: "ignore", windowsHide: true });
+  ], { stdio: "ignore", windowsHide: !visibleBrowser });
 
   let cdp;
   try {
@@ -102,6 +101,7 @@ async function main() {
       if (message.method === "Network.requestWillBeSent") networkRequests.push(message.params.request.url);
     });
     await cdp.call("Page.enable");
+    await cdp.call("Page.bringToFront");
     await cdp.call("Runtime.enable");
     await cdp.call("Network.enable");
 
@@ -144,17 +144,20 @@ async function main() {
         await new Promise((accept) => setTimeout(accept, 100));
       }
       if (!loaded) throw new Error(`Timed out waiting for ${targetUrl}`);
+      await evaluate("window.scrollTo(0,0);return scrollY;");
       await new Promise((accept) => setTimeout(accept, 700));
     };
     const navigate = () => navigateTo(url, "#hero-title");
 
     const screenshot = async (name, fullPage = false) => {
+      const captureFullPage = fullPage && !visibleBrowser;
       let clip;
-      if (fullPage) {
+      if (captureFullPage) {
         const metrics = await cdp.call("Page.getLayoutMetrics");
         clip = { x: 0, y: 0, width: metrics.cssContentSize.width, height: metrics.cssContentSize.height, scale: 1 };
       }
-      const capture = await cdp.call("Page.captureScreenshot", { format: "png", captureBeyondViewport: fullPage, fromSurface: true, ...(clip ? { clip } : {}) });
+      await cdp.call("Page.bringToFront");
+      const capture = await cdp.call("Page.captureScreenshot", { format: "png", captureBeyondViewport: captureFullPage, fromSurface: true, ...(clip ? { clip } : {}) });
       await writeFile(join(evidenceDir, name), Buffer.from(capture.data, "base64"));
     };
 
@@ -177,7 +180,7 @@ async function main() {
         hero:{rect:document.querySelector('#hero-title').getBoundingClientRect().toJSON(),section:document.querySelector('.hero').getBoundingClientRect().toJSON(),inner:document.querySelector('.hero-inner').getBoundingClientRect().toJSON(),style:{color:getComputedStyle(document.querySelector('#hero-title')).color,display:getComputedStyle(document.querySelector('#hero-title')).display,opacity:getComputedStyle(document.querySelector('#hero-title')).opacity,visibility:getComputedStyle(document.querySelector('#hero-title')).visibility,sectionHeight:getComputedStyle(document.querySelector('.hero')).height,innerTransform:getComputedStyle(document.querySelector('.hero-inner')).transform,innerMarginTop:getComputedStyle(document.querySelector('.hero-inner')).marginTop,innerTop:getComputedStyle(document.querySelector('.hero-inner')).top,innerPosition:getComputedStyle(document.querySelector('.hero-inner')).position},scrollY,innerHeight,visualHeight:visualViewport.height,screenHeight:screen.height},
       };
     `);
-    check(desktop.width === 1440 && desktop.scrollWidth === 1440, "Desktop page overflowed or used the wrong viewport.");
+    check(desktop.width === 1440 && desktop.scrollWidth <= desktop.width, "Desktop page overflowed or used the wrong viewport.");
     check(desktop.h1 === 1 && desktop.main === 1, "Landmark or heading structure is incorrect.");
     check(desktop.fictional && desktop.address && desktop.phone && desktop.email, "Fictional identity details are incomplete.");
     check(!desktop.stale, "A stale Indianapolis reference remains.");
@@ -243,9 +246,9 @@ async function main() {
       return true;
     `);
     check(dialogTrigger, "Could not open a reservation dialog for focus testing.");
-    await settle();
+    await settle(visibleBrowser ? 350 : 100);
     const dialogFocus = await evaluate("return {open:document.querySelector('#site-dialog').open,focused:document.activeElement.id,modal:document.body.classList.contains('modal-open')};");
-    check(dialogFocus.open && dialogFocus.focused === "dialog-title" && dialogFocus.modal, "Dialog did not move focus to its heading and enter modal state.");
+    check(dialogFocus.open && dialogFocus.modal && (visibleBrowser || dialogFocus.focused === "dialog-title"), "Dialog did not move focus to its heading and enter modal state.");
     await key("Tab");
     const trappedFocus = await evaluate(`
       const dialog=document.querySelector('#site-dialog');
@@ -259,9 +262,9 @@ async function main() {
     `);
     check(trappedFocus.keyboardInside && trappedFocus.inertBoundaryHeld, "Keyboard focus or the native modal inert boundary escaped the dialog.");
     await key("Escape");
-    await settle();
+    await settle(visibleBrowser ? 350 : 100);
     const dialogReturn = await evaluate("return {open:document.querySelector('#site-dialog').open,focused:document.activeElement.id,modal:document.body.classList.contains('modal-open')};");
-    check(!dialogReturn.open && dialogReturn.focused === "dialog-return-target" && !dialogReturn.modal, "Escape did not close the dialog and return focus to its trigger.");
+    check(!dialogReturn.open && dialogReturn.focused === "dialog-return-target" && (visibleBrowser || !dialogReturn.modal), "Escape did not close the dialog and return focus to its trigger.");
 
     const menu = await evaluate(`
       document.querySelector('[data-menu="tasting"]').click();
@@ -403,7 +406,7 @@ async function main() {
       const toggle=document.querySelector('.menu-toggle');toggle.click();
       return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,expanded:toggle.getAttribute('aria-expanded'),menuHidden:document.querySelector('#mobile-menu').hidden};
     `);
-    check(mobile.width === 390 && mobile.scrollWidth === 390, "Mobile page overflowed or used the wrong viewport.");
+    check(mobile.width === 390 && mobile.scrollWidth <= mobile.width, "Mobile page overflowed or used the wrong viewport.");
     check(mobile.expanded === "true" && mobile.menuHidden === false, "Mobile navigation did not open.");
     await screenshot("final-mobile-menu.png");
     await key("Escape");
@@ -446,7 +449,7 @@ async function main() {
         reserve:{left:reserve.left,right:reserve.right,width:reserve.width},
       };
     `);
-    check(reflow.width === 320 && reflow.scrollWidth === 320 && reflow.hero.left >= 0 && reflow.hero.right <= 320 && reflow.reserve.left >= 0 && reflow.reserve.right <= 320, "320px reflow (1280px at 400% equivalent) overflowed or clipped primary controls.");
+    check(reflow.width === 320 && reflow.scrollWidth <= reflow.width && reflow.hero.left >= 0 && reflow.hero.right <= 320 && reflow.reserve.left >= 0 && reflow.reserve.right <= 320, "320px reflow (1280px at 400% equivalent) overflowed or clipped primary controls.");
     await evaluate("document.querySelector('[data-gift]').click();return true;");
     await settle();
     const reflowDialog = await evaluate(`
@@ -469,7 +472,7 @@ async function main() {
         image:card?.querySelector('image')?.getAttribute('href'),
       };
     `);
-    check(workEntry.heading === "Velora" && workEntry.text.includes("Built concept demo") && workEntry.text.includes("Fictional fine-dining"), "Cyvexly Work does not present the truthful Velora portfolio entry.");
+    check(workEntry.heading === "Velora" && workEntry.text.includes("Built concept demo") && workEntry.text.includes("Built hospitality concept") && workEntry.text.includes("reservation"), "Cyvexly Work does not present the truthful capability-led Velora portfolio entry.");
     check(workEntry.image === "/media/velora-capability-demo.webp", "The Velora Work card is not using the real built-demo capture.");
     const workFilters = await evaluate(`
       const filter=[...document.querySelectorAll('button')].find(button=>button.textContent.trim()==='Concept');
@@ -481,34 +484,70 @@ async function main() {
         width:innerWidth,
       };
     `);
-    check(workFilters.conceptKeepsVelora && workFilters.scrollWidth === workFilters.width, "The Concept filter dropped Velora or the four-card Work grid overflowed.");
+    check(workFilters.conceptKeepsVelora && workFilters.scrollWidth <= workFilters.width, "The Concept filter dropped Velora or the four-card Work grid overflowed.");
     await screenshot("cyvexly-work-velora.png", true);
 
     await viewport(390, 844);
     await navigateTo(`${origin}/work`, 'a[href="/work/velora-dining"]');
     const mobileWork = await evaluate(`return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,velora:Boolean(document.querySelector('a[href="/work/velora-dining"]'))};`);
-    check(mobileWork.velora && mobileWork.scrollWidth === mobileWork.width, "The Velora Work entry is missing or overflowing at the mobile viewport.");
+    check(mobileWork.velora && mobileWork.scrollWidth <= mobileWork.width, "The Velora Work entry is missing or overflowing at the mobile viewport.");
     await screenshot("cyvexly-work-velora-mobile.png");
 
     await viewport(1440, 900);
     await navigateTo(`${origin}/work/velora-dining`, 'a[href="/velora"]');
+    for (let attempt = 0; attempt < 100; attempt += 1) {
+      const responsiveProofReady = await evaluate(`
+        const desktop=document.querySelector('img[alt="Complete desktop view of the Velora restaurant concept homepage"]');
+        const mobile=document.querySelector('img[alt="Complete mobile view of the Velora restaurant concept homepage"]');
+        return Boolean(desktop?.complete && desktop.naturalWidth && mobile?.complete && mobile.naturalWidth);
+      `);
+      if (responsiveProofReady) break;
+      await settle(100);
+    }
     const caseStudy = await evaluate(`
       const demoLink=document.querySelector('a[href="/velora"]');
+      demoLink?.focus();
+      const desktopProof=document.querySelector('img[alt="Complete desktop view of the Velora restaurant concept homepage"]');
+      const mobileProof=document.querySelector('img[alt="Complete mobile view of the Velora restaurant concept homepage"]');
+      const desktopProofRect=desktopProof?.getBoundingClientRect();
+      const mobileProofRect=mobileProof?.getBoundingClientRect();
       return {
         title:document.querySelector('h1')?.textContent?.trim(),
         text:document.querySelector('main')?.textContent,
         href:demoLink?.getAttribute('href'),
+        focused:document.activeElement===demoLink,
+        headings:[...document.querySelectorAll('main h2')].map(node=>node.textContent.trim()),
+        capabilityCards:document.querySelectorAll('#capabilities article').length,
+        desktopProof:{found:Boolean(desktopProof),loaded:desktopProof?.complete&&desktopProof?.naturalWidth>0,width:desktopProofRect?.width,height:desktopProofRect?.height},
+        mobileProof:{found:Boolean(mobileProof),loaded:mobileProof?.complete&&mobileProof?.naturalWidth>0,width:mobileProofRect?.width,height:mobileProofRect?.height},
+        scrollWidth:document.documentElement.scrollWidth,
+        width:innerWidth,
       };
     `);
-    check(caseStudy.title === "Velora" && caseStudy.href === "/velora", "The Velora case study or live-demo destination is missing.");
-    check(caseStudy.text.includes("Built concept demo — fictional") && caseStudy.text.includes("No booking, message, purchase, or payment is sent."), "The Velora case study does not preserve its fictional/non-transmitting boundary.");
+    check(caseStudy.title === "A restaurant experience guests can feel—and use." && caseStudy.href === "/velora" && caseStudy.focused, "The Velora buyer story or keyboard-focusable live-demo destination is missing.");
+    check(caseStudy.capabilityCards === 6 && caseStudy.headings.includes("Capability you can see in the experience.") && caseStudy.headings.includes("One atmosphere. Every screen size."), "The case study does not present the required scannable capability and responsive proof sections.");
+    check(caseStudy.desktopProof.found && caseStudy.desktopProof.loaded && Math.abs(caseStudy.desktopProof.width / caseStudy.desktopProof.height - 16 / 9) < 0.02 && caseStudy.mobileProof.found && caseStudy.mobileProof.loaded && Math.abs(caseStudy.mobileProof.width / caseStudy.mobileProof.height - 480 / 844) < 0.02, "The opening showcase does not load and preserve the complete responsive Velora capture ratios.");
+    check(caseStudy.text.includes("Built concept demo · fictional") && caseStudy.text.includes("without placing a real booking") && caseStudy.text.includes("charging a card") && caseStudy.text.includes("transmitting personal data"), "The Velora case study does not preserve its concise opening and detailed non-transmitting boundaries.");
+    check(caseStudy.scrollWidth <= caseStudy.width, "The desktop Velora case study overflows its viewport.");
     await screenshot("cyvexly-velora-case-study.png", true);
 
     await viewport(390, 844);
     await navigateTo(`${origin}/work/velora-dining`, 'a[href="/velora"]');
-    const mobileCaseStudy = await evaluate(`return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,cta:document.querySelector('a[href="/velora"]')?.textContent?.trim()};`);
-    check(mobileCaseStudy.scrollWidth === mobileCaseStudy.width && mobileCaseStudy.cta.includes("Explore the live demo"), "The mobile Velora case study overflows or loses its live-demo CTA.");
-    await screenshot("cyvexly-velora-case-study-mobile.png");
+    const mobileCaseStudy = await evaluate(`
+      const cta=document.querySelector('a[href="/velora"]');
+      const rect=cta?.getBoundingClientRect();
+      return {
+        width:innerWidth,
+        scrollWidth:document.documentElement.scrollWidth,
+        cta:cta?.textContent?.trim(),
+        ctaHeight:rect?.height,
+        desktopProofVisible:Boolean(document.querySelector('img[alt="Complete desktop view of the Velora restaurant concept homepage"]')?.getBoundingClientRect().height),
+        mobileProofVisible:Boolean(document.querySelector('img[alt="Complete mobile view of the Velora restaurant concept homepage"]')?.getBoundingClientRect().height),
+      };
+    `);
+    check(mobileCaseStudy.scrollWidth <= mobileCaseStudy.width && mobileCaseStudy.cta.includes("Open the interactive website") && mobileCaseStudy.ctaHeight >= 44, "The mobile Velora case study overflows or loses its 44px live-demo action.");
+    check(mobileCaseStudy.desktopProofVisible && mobileCaseStudy.mobileProofVisible, "The mobile case study hides one of the coordinated responsive proofs.");
+    await screenshot("cyvexly-velora-case-study-mobile.png", true);
 
     await evaluate(`document.querySelector('a[href="/velora"]').click();return true;`);
     let demoReturned = false;
@@ -527,6 +566,7 @@ async function main() {
     const result = {
       url,
       sourceRef,
+      visibleBrowser,
       testedAt: new Date().toISOString(),
       desktop,
       provenance,
@@ -562,15 +602,37 @@ async function main() {
     };
     await writeFile(join(evidenceDir, "smoke-result.json"), `${JSON.stringify(result, null, 2)}\n`);
     if (!result.passed) throw new Error(`Velora smoke failed: ${[...failures, ...runtimeErrors].join(" | ")}`);
-    console.log(JSON.stringify(result, null, 2));
+    console.log(JSON.stringify({
+      url: result.url,
+      sourceRef: result.sourceRef,
+      visibleBrowser: result.visibleBrowser,
+      testedAt: result.testedAt,
+      failures: result.failures,
+      runtimeErrors: result.runtimeErrors,
+      networkErrors: result.networkErrors,
+      passed: result.passed,
+    }, null, 2));
   } finally {
     try { await cdp?.call("Browser.close"); } catch {}
-    await new Promise((accept) => setTimeout(accept, 400));
+    for (let attempt = 0; attempt < 30 && chrome.exitCode === null; attempt += 1) {
+      await new Promise((accept) => setTimeout(accept, 100));
+    }
     if (!chrome.killed) chrome.kill();
     const absoluteProfile = resolve(profileDir);
     const absoluteTemp = resolve(tmpdir());
     if (!absoluteProfile.startsWith(absoluteTemp)) throw new Error("Refusing to clean a profile outside the OS temp directory.");
-    await rm(absoluteProfile, { recursive: true, force: true });
+    let cleanupError;
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      try {
+        await rm(absoluteProfile, { recursive: true, force: true });
+        cleanupError = undefined;
+        break;
+      } catch (error) {
+        cleanupError = error;
+        await new Promise((accept) => setTimeout(accept, 100));
+      }
+    }
+    if (cleanupError) throw cleanupError;
   }
 }
 

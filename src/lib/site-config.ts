@@ -51,7 +51,7 @@ export const selectedWork = [
     kind: "Built concept demo",
     category: "Business Site",
     summary:
-      "Fictional fine-dining site with responsive menus, reservation previews, private-event inquiry, gifting, and gallery flows.",
+      "Built hospitality concept pairing cinematic restaurant storytelling with responsive menu, reservation, private-event, gifting, and gallery journeys.",
     tags: ["Hospitality", "Interactive demo"],
     href: "/work/velora-dining",
     gradient: "from-[#20271F] via-[#49332E] to-[#D6BD8F]",

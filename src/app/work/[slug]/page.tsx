@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { ConceptPreview } from "@/components/concept-preview";
+import { VeloraCaseStudy } from "@/components/velora-case-study";
 import { caseStudies, selectedWork } from "@/lib/site-config";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
 import { buildPageMetadata } from "@/lib/seo";
@@ -47,6 +48,10 @@ export default async function CaseStudyPage({
     { name: "Work", path: "/work" },
     { name: study.name, path: `/work/${slug}` },
   ]);
+
+  if (slug === "velora-dining") {
+    return <VeloraCaseStudy breadcrumbJsonLd={breadcrumbJsonLd} />;
+  }
 
   return (
     <>
