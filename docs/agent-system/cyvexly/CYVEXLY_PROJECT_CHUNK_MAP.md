@@ -289,13 +289,13 @@ URLs") is now fully closed across every route, static and dynamic. Round
 commercial routes), further closing required-scope item 2's "searchable"
 intent.
 
-## Chunk 6 — Velora Capability Demonstration (OPEN, global round 95; chunk round 1)
+## Chunk 6 — Velora Capability Demonstration (OPEN, global round 97; chunk round 3)
 
 - **Authority:** Owner direction `2026-09-07-17`.
 - **Outcome:** turn the restored standalone Velora fine-dining concept into a
   polished, fully functional, clearly fictional Cyvexly capability demo that
   can later be represented honestly in the Cyvexly portfolio.
-- **Source truth:** `velora/index.html`; `velora/smoke.mjs` is the durable
+- **Source truth:** `public/velora/index.html`; `velora/smoke.mjs` is the durable
   dependency-free rendered workflow check.
 - **Boundaries:** never imply a real restaurant/client/result; use the Owner's
   fictional Evansville address, phone, and email consistently; do not place
@@ -309,6 +309,12 @@ intent.
   paths, keyboard tabs, dialog/mobile focus return, reduced motion, 320px
   reflow, image fallback/provenance, noindex/form safety, and network-origin
   auditing. Accepted source `2e79c45` passes clean; no product defect surfaced.
+- **Round 97 progress:** made Velora production-reachable at `/velora`,
+  self-hosted its images/fonts under the existing CSP, and added an honest
+  built-concept Work card/case study with real responsive captures. Accepted
+  source `0ca0504` passes the expanded Velora plus Cyvexly-integration smoke
+  locally and on `cyvexly.com`; two separate independent verification rounds
+  remain.
 - **Completion boundary:** all advertised navigation, responsive states,
   workflows, validation/correction/failure behavior, accessibility, content
   truth, and portfolio framing pass; then two separate independent

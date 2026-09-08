@@ -1,23 +1,25 @@
 # Cyvexly Current State
 
-**Global round:** 96. **Active product work:** Chunk 6 — Velora Capability
-Demonstration, chunk-local round 2, opened under Owner direction
+**Global round:** 97. **Active product work:** Chunk 6 — Velora Capability
+Demonstration, chunk-local round 3, opened under Owner direction
 `2026-09-07-17`. Chunk 5 remains open in parallel with only Owner/account
 gates left; its completed Cyvexly launch work and gates are summarized below.
 
-Round 96 extended `velora/smoke.mjs` from happy-path coverage into real
-invalid→corrected form paths, menu/room keyboard tabs, native-dialog focus and
-return behavior, mobile-menu Escape focus, reduced-motion emulation, 320px
-reflow (1280px at 400% equivalent), image-fallback recovery, noindex/form
-boundaries, and network-origin auditing. Accepted Velora source `2e79c45`
-passes with zero failures, runtime/network errors, unexpected destinations, or
-horizontal overflow. Desktop/mobile/320px captures were opened and inspected;
-the parent Cyvexly typecheck/lint/build remains clean (49/49 routes; only the
-pre-existing round-42 evidence-script lint warning). Round 95's identity,
-contact-safety, hero correction, and primary workflow work remains intact.
+Round 97 moved the accepted Velora page into the deployable public tree,
+self-hosted its illustrative images and fonts, added the production `/velora`
+route, and published a truthful built-concept entry plus case study in
+Cyvexly's Work system. The extended CDP suite now proves Work filters,
+desktop/mobile portfolio and case-study reflow, case-study-to-demo navigation,
+all prior Velora flows, and same-origin asset behavior. Accepted source
+`0ca0504` passes with zero failures, runtime/network errors, unexpected
+destinations, or horizontal overflow. Typecheck/lint/build remain clean (52/52
+routes; only the pre-existing round-42 evidence-script lint warning). The same
+full matrix passes on `https://cyvexly.com`, confirming Render adoption.
 
-**Accepted product position:** Round 96 Velora proof source is committed at
-`2e79c45` on `main`; the closeout documentation commit follows it.
+**Accepted product position:** Round 97 Velora integration source is committed
+and pushed at `0ca0504` on `main`; the closeout documentation commit follows it.
+`https://cyvexly.com/work/velora-dining` and `https://cyvexly.com/velora` are
+live; the raw demo returns the explicit no-index response header.
 `cyvexly.com` remains fully connected, HTTPS, and canonicalized (verified round
 53). `origin/master` is historical.
 

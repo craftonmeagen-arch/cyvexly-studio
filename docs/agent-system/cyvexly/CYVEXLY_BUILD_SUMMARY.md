@@ -15,6 +15,17 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 97 / Velora chunk round 3 — 2026-09-08
+
+Integrated Velora into the production-normal Cyvexly path: moved its source to
+`public/velora/index.html`, self-hosted its four illustrative images and two
+font families, added `/velora`, and published a built-concept Work card/case
+study using real desktop/mobile captures. Expanded the durable smoke through
+the Work filters, portfolio/case-study responsive layouts, and live-demo link.
+Accepted source `0ca0504` passes with zero browser/runtime/network failures;
+typecheck/lint/build pass at 52 routes. The full matrix also passes on
+`cyvexly.com`, proving Render adoption. Independent verification remains.
+
 ## Round 96 / Velora chunk round 2 — 2026-09-07
 
 Deepened `velora/smoke.mjs` beyond happy paths: real invalid→corrected

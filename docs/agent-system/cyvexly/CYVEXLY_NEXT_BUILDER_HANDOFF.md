@@ -1,5 +1,37 @@
 # Cyvexly Next Builder Handoff
 
+## Round 97 / Chunk 6 round 3 closeout
+
+**Session:** scheduled/unattended Codex Builder, 2026-09-07–08 EDT
+**Start source:** `297507d` on `main`, matched `origin/main`
+**Accepted product source:** `0ca0504` on `main`, pushed to `origin/main`
+**Authority:** Owner direction `2026-09-07-17`
+
+Velora is now reachable through Cyvexly's production architecture. Its source
+truth moved to `public/velora/index.html`; four illustrative images and the
+Cormorant/Manrope fonts are self-hosted; `/velora` serves the page with an
+explicit no-index response; and the Work grid plus `/work/velora-dining`
+truthfully label it as a fictional built concept. Real responsive captures are
+used in the portfolio instead of invented client imagery.
+
+Accepted source `0ca0504` passes `tsc`, lint (only the known round-42 evidence
+warning), and a 52-route production build. The expanded Chrome/CDP smoke passes
+every earlier demo path plus Work filters, 1440px/390px portfolio and case-study
+reflow, and case-study→demo navigation with zero failures, runtime/network
+errors, unexpected origins, or overflow. Opened captures match the accepted
+Work/case-study hierarchy; the four-column desktop grid is the deliberate
+adaptation needed for four honest projects. The identical suite passes on
+`https://cyvexly.com`, confirming Render adoption, same-origin assets, and the
+raw demo's `noindex, nofollow, noarchive` response. Evidence retained under
+`builder/evidence/round-97-velora/` until the two independent reviews consume
+it; then redundant captures may be deleted.
+
+**Next Builder round:** read and disposition every independent-review intake.
+Chunk 6 cannot close until two separate independent verification rounds
+challenge accepted source `0ca0504`; do not substitute another Builder
+self-check for them. If no review has arrived, use fresh product evidence to
+check for a material integration gap without reopening already-proved paths.
+
 ## Round 96 / Chunk 6 round 2 closeout
 
 **Session:** scheduled/unattended Codex Builder, 2026-09-07 EDT

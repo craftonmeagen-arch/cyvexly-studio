@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **6 — Velora Capability Demonstration is OPEN** at chunk-local
-round 2 under Owner direction `2026-09-07-17`. Chunks 3 — Project Planner and 4 —
+round 3 under Owner direction `2026-09-07-17`. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
 now OPEN**, started round 29. Its integrated verification will close the
@@ -10,6 +10,23 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 6 is the current reachable Builder priority.
+
+**Round 97 / Chunk 6 round 3** (scheduled/unattended) completed the honest
+Cyvexly portfolio and deployment integration. `public/velora/index.html` is now
+the deployable source truth; all illustrative images and fonts are self-hosted
+under the existing CSP; `/velora` serves the no-index demo; and the Work grid
+plus `/work/velora-dining` identify it as a fictional built concept with real
+desktop/mobile captures and a non-transmitting live-demo CTA. Accepted source
+`0ca0504` passes the expanded CDP suite across all prior workflows plus Work
+filters, responsive portfolio/case-study layouts, and case-study→demo
+navigation with zero failures, runtime/network errors, unexpected origins, or
+overflow. Typecheck/lint/build passed (52 routes; one known evidence warning).
+Rendered Work/case-study/demo captures were opened and compared with the Work
+reference: the later approved glass environment is preserved; the fourth card
+uses a deliberate balanced four-column desktop row rather than fabricating
+mockup filler. The full matrix also passes on `cyvexly.com`, including same-
+origin assets and the no-index demo response. Chunk stays open for two separate
+independent verification rounds.
 
 **Round 96 / Chunk 6 round 2** (scheduled/unattended) expanded the durable
 Chrome/CDP suite from happy paths into invalid→corrected reservation,
@@ -39,41 +56,9 @@ typecheck/lint/build passed (49/49 routes; only the known round-42 lint warning)
 Chunk remains open for correction/failure/accessibility-depth testing and the
 two independent verification rounds required by the governing packet.
 
-**Round 94** (latest-three context) dispositioned the stale Auditor intake and
-ran clean Accessibility/Pricing plus Contact-native-control convergence checks
-with no product defect or source change. Full detail remains in the Round 94
-handoff and `CYVEXLY_APP_DEBT.md`.
-
-**Round 93** (scheduled/unattended) dispositioned Auditor item
-`IFA-2026-09-07-R84` (59th consecutive clean confirmation, evaluated head
-`871b8db` — round 91's head, predating round 92's own fix — re-escalated
-`CYV-DOC-003`; stale on arrival since round 92 already fixed it, verified
-`CYVEXLY_CURRENT_STATE.md` at 6,582 bytes, comfortably under its
-8,192-byte cap; no Builder action beyond intake). Verified `tsc` clean,
-but `pnpm run lint` genuinely **failed** for the first time in this
-round-by-round history: 22 `@typescript-eslint/no-require-imports`
-errors, all inside the untracked `velora/` directory — confirmed (round
-91) an independent nested git repository with its own commit history and
-no remote, not Cyvexly product source. `eslint.config.mjs` only ignored
-`.next/**`, `out/**`, `build/**`, `next-env.d.ts`, and `.codex/**` — not
-`velora/**` — so ESLint newly walked into it. **Fixed:** added
-`velora/**` to the existing `globalIgnores` list (same pattern as
-`.codex/**`). Re-verified: lint clean (only the pre-existing round-42
-warning remains), `pnpm run build` clean (49/49 routes). Ran a fresh
-convergence check (round 92's handoff-named candidate): diffed the Terms
-of Service page's behavioral claims — "not an order/purchase/binding
-commitment," "does not currently process payments," and the published
-contact email/phone — against the real Planner/Contact confirmation-email
-subject lines, a grep of Pricing for checkout/payment UI, and
-`site-config.ts`'s `email`/`phoneHref`/`phoneDisplay` values. Ran a
-second convergence check on the Privacy Policy's data-handling claims
-(no database storage, IP only in the internal notification not the
-visitor confirmation, no analytics/cookies while `GA_MEASUREMENT_ID` is
-unset) against the real `api/contact`/`api/planner` route bodies and
-`layout.tsx`. **0 defects found across both checks.** **Completion:**
-DONE WITH PROOF (1 real build-infrastructure defect found and fixed —
-`eslint.config.mjs` only, no product-facing change; 0 product defects
-found). See `CYVEXLY_APP_DEBT.md`'s "Round 93".
+Rounds 93-94 are preserved in their Builder handoff archives and matching
+`CYVEXLY_APP_DEBT.md` entries; they rotated out when Round 97 established the
+current latest-three context.
 
 **Round 92** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R83` (58th consecutive clean confirmation, evaluated head

@@ -1,5 +1,16 @@
 # Cyvexly App Debt
 
+## Round 97 — Velora production-path and portfolio integration
+
+Moved Velora's deployable source to `public/velora/index.html`, self-hosted its
+illustrative images/fonts, added the no-index `/velora` route, and integrated a
+truthful built-concept Work card/case study using real responsive captures.
+Accepted source `0ca0504` is pushed and passes typecheck/lint/build plus the
+expanded CDP workflow/integration suite with zero browser, network, origin, or
+overflow failures locally and on `cyvexly.com`, proving Render adoption.
+Remaining Chunk 6 independent-review requirements stay in
+`CYVEXLY_CHUNK_DEBT.md` item 0; Chunk 5 gates are unchanged.
+
 ## Round 96 — Velora correction/accessibility/provenance proof
 
 Expanded `velora/smoke.mjs` through real invalid→corrected form paths,
