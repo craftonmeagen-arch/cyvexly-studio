@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **6 — Velora Capability Demonstration is OPEN** at chunk-local
-round 4 under Owner direction `2026-09-07-17`. Chunks 3 — Project Planner and 4 —
+round 5 under Owner direction `2026-09-07-17`. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
 now OPEN**, started round 29. Its integrated verification will close the
@@ -10,6 +10,19 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 6 is the current reachable Builder priority.
+
+**Round 99 / Chunk 6 round 5** (scheduled/unattended) checked the new portfolio
+entry's metadata and discovery surface rather than repeating the established
+Velora workflow matrix. On `cyvexly.com`, the case study's canonical, Open
+Graph/Twitter fields, BreadcrumbList JSON-LD, fictional/demo disclosures,
+staged no-index state, sitemap inclusion, and raw-demo exclusion/no-index
+boundary all match source. A local optimized runtime generated the case study's
+route-specific 1200x630 Open Graph PNG; it was opened at full resolution and
+the longer Velora challenge copy is unclipped, readable, and consistent with
+the approved Cyvexly social-image hierarchy. TypeScript, lint (only the known
+round-42 evidence warning), and the 52-route build pass. No product defect or
+product-source change. Chunk stays open only for two separate independent
+verification rounds.
 
 **Round 98 / Chunk 6 round 4** (scheduled/unattended) performed a fresh public
 deployment-integrity check against accepted source `0ca0504`. `/work`, the
@@ -40,21 +53,8 @@ mockup filler. The full matrix also passes on `cyvexly.com`, including same-
 origin assets and the no-index demo response. Chunk stays open for two separate
 independent verification rounds.
 
-**Round 96 / Chunk 6 round 2** (scheduled/unattended) expanded the durable
-Chrome/CDP suite from happy paths into invalid→corrected reservation,
-private-event, gift, and newsletter paths; menu/room keyboard tabs; native
-dialog focus/inert/return behavior; mobile Escape focus; reduced-motion
-emulation; 320px reflow; image fallback/provenance; noindex/form boundaries;
-and allowed network origins. Accepted source `2e79c45` passed with zero
-failures, runtime/network errors, unexpected destinations, or horizontal
-overflow. Opened desktop/mobile/320px captures remained visually strong.
-Parent typecheck/lint/build passed (49/49 routes; only the known round-42
-warning). No product defect surfaced, so `velora/index.html` stayed unchanged.
-Chunk remains open for honest Cyvexly portfolio/deployment integration and two
-separate independent verification rounds.
-
-Rounds 93-95 are preserved in Builder handoff/build-summary history and their
-matching debt entries; Round 95 rotated out when Round 98 established the
+Rounds 93-96 are preserved in Builder handoff/build-summary history and their
+matching debt entries; Round 96 rotated out when Round 99 established the
 current latest-three context.
 
 **Round 92** (scheduled/unattended) dispositioned Auditor item

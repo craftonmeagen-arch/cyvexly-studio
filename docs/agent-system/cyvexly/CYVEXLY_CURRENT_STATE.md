@@ -1,17 +1,18 @@
 # Cyvexly Current State
 
-**Global round:** 98. **Active product work:** Chunk 6 — Velora Capability
-Demonstration, chunk-local round 4, opened under Owner direction
+**Global round:** 99. **Active product work:** Chunk 6 — Velora Capability
+Demonstration, chunk-local round 5, opened under Owner direction
 `2026-09-07-17`. Chunk 5 remains open in parallel with only Owner/account
 gates left; its completed Cyvexly launch work and gates are summarized below.
 
-Round 98 revalidated the deployed Round 97 integration at the public boundary.
-The Work entry, case study, demo, images, and sitemap all return `200`; `www`
-redirects to the canonical root host; the case study is in the sitemap while
-the standalone demo is excluded; and `/velora` returns both meta and response-
-header no-index protection. The inherited production Chrome/CDP result and
-captures were opened and remain clean across all workflows and 1440/390/320
-states. No product defect surfaced, so accepted source remains `0ca0504`.
+Round 99 checked a fresh integration surface rather than repeating the prior
+workflow matrix. The live case study's canonical, Open Graph/Twitter metadata,
+BreadcrumbList JSON-LD, disclosure copy, staged no-index state, and sitemap
+boundary all match source. Its route-specific 1200x630 Open Graph image was
+rendered through a local production runtime and opened at full resolution;
+the Velora challenge copy fits cleanly with the approved Cyvexly hierarchy.
+TypeScript, lint (one known evidence-script warning), and the 52-route build
+pass. No product defect surfaced, so accepted source remains `0ca0504`.
 
 **Accepted product position:** Round 97 Velora integration source is committed
 and pushed at `0ca0504` on `main`; its closeout is `c2f8e8e`.

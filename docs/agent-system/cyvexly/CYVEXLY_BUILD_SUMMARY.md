@@ -15,6 +15,17 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 99 / Velora chunk round 5 — 2026-09-08
+
+Checked a fresh production-integration surface without repeating the prior
+workflow matrix. The live Velora case study's canonical, Open Graph/Twitter
+metadata, BreadcrumbList JSON-LD, disclosure copy, staged no-index state, and
+sitemap boundary all match source. Rendered and opened its route-specific
+1200x630 Open Graph image through a local production runtime; the longer Velora
+challenge copy fits cleanly. TypeScript, lint (one known evidence warning), and
+the 52-route build pass. No product defect or product-source change; two
+independent verification rounds remain.
+
 ## Round 98 / Velora chunk round 4 — 2026-09-08
 
 Revalidated accepted Velora source `0ca0504` at `cyvexly.com`: public entry,

@@ -15,6 +15,8 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    The identical suite passes on `cyvexly.com`, confirming Render adoption;
    Round 98 separately reconfirmed the canonical redirect, live route/assets,
    sitemap case-study inclusion/demo exclusion, CSP, and no-index layers.
+   Round 99 then checked the fresh portfolio metadata/structured-data surface
+   and opened the route-specific 1200x630 social image with no defect found.
    Still open before chunk closure: obtain the two separate independent
    verification rounds required by the governing rules. These are reachable
    follow-up tasks, not Owner gates.

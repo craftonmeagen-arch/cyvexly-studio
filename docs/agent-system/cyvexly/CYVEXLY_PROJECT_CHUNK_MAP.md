@@ -289,7 +289,7 @@ URLs") is now fully closed across every route, static and dynamic. Round
 commercial routes), further closing required-scope item 2's "searchable"
 intent.
 
-## Chunk 6 — Velora Capability Demonstration (OPEN, global round 98; chunk round 4)
+## Chunk 6 — Velora Capability Demonstration (OPEN, global round 99; chunk round 5)
 
 - **Authority:** Owner direction `2026-09-07-17`.
 - **Outcome:** turn the restored standalone Velora fine-dining concept into a
@@ -301,13 +301,15 @@ intent.
   fictional Evansville address, phone, and email consistently; do not place
   calls, send messages, create reservations, collect payment, or transmit
   personal data. Production-service moments use explicit local demo states.
-- **Rounds 95–98 progress:** corrected the fictional identity and clipped hero;
+- **Rounds 95–99 progress:** corrected the fictional identity and clipped hero;
   made all contact/transaction moments safe demonstrations; added durable CDP
   happy, correction, accessibility, responsive, resilience, and network proof;
   deployed `/velora` with self-hosted assets and no-index protection; and added
   an honest Work card/case study. Accepted source `0ca0504` passes locally and
-  on `cyvexly.com`; Round 98 reconfirmed routes, redirects, sitemap boundaries,
-  CSP, and opened production evidence. Two independent reviews remain.
+  on `cyvexly.com`; Round 98 reconfirmed deployment integrity, and Round 99
+  verified the new case study's metadata, structured data, disclosure, sitemap
+  boundary, and full-resolution social-preview render. Two independent reviews
+  remain.
 - **Completion boundary:** all advertised navigation, responsive states,
   workflows, validation/correction/failure behavior, accessibility, content
   truth, and portfolio framing pass; then two separate independent

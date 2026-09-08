@@ -1,5 +1,15 @@
 # Cyvexly App Debt
 
+## Round 99 — Velora portfolio metadata and social-preview integration
+
+Checked the new case study's live canonical/Open Graph/Twitter metadata,
+BreadcrumbList JSON-LD, fictional/demo disclosure, staged no-index behavior,
+and sitemap boundary against source. Rendered and opened the route-specific
+1200x630 Open Graph image from an optimized local runtime; its longer Velora
+challenge copy is readable and unclipped. TypeScript, lint (one known evidence
+warning), and the 52-route build pass. No product defect or product-source
+change; two independent reviews remain.
+
 ## Round 98 — Velora public deployment integrity
 
 Fresh public HTTP, discovery, security-header, and retained rendered-evidence
@@ -41,70 +51,14 @@ Cyvexly app passed typecheck/lint/build. Open Velora depth is tracked in
 exact-LLC-name, Resend-account, analytics/search-ownership, legal-approval, or
 final-indexability Owner gates.
 
-## Round 94 — Accessibility-statement-vs-Pricing convergence check (0 defects)
+## Round 94 — Accessibility/Pricing and Contact-control checks (0 defects)
 
-Checked the Auditor inbox first: one new item, `IFA-2026-09-07-R85` (60th
-consecutive clean confirmation, "PASS WITH COMMENDATION", milestone note
-"historic benchmark"). **Stale on arrival:** evaluated head `0afe6b3`
-(round 92's head, predating round 93's own lint fix and two convergence
-checks). No new finding to disposition beyond what round 93 already
-addressed; `activeDocumentationDebt` is empty. Moved to
-`exchange/processed/`.
-
-Ran the standard verification suite (round-84 `PATH` fix applied first):
-`pnpm exec tsc --noEmit` clean, `pnpm run lint` clean (only the
-pre-existing round-42 evidence-script warning), `pnpm run build` clean
-(49/49 routes) — unchanged round-93 source.
-
-**Convergence-check, fresh surface (round 93's handoff-named
-candidate):** diffed the Accessibility statement's
-(`src/app/accessibility/page.tsx`) "see Pricing" cross-reference — "Every
-Cyvexly Studio project includes an accessibility target as standard
-scope — see Pricing. Deeper accessibility audits and remediation beyond
-that baseline are available as a scoped add-on." — against the actual,
-current Pricing page content (last checked this specific way at round
-35, before several Pricing rebuilds). **0 defects found:**
-`site-config.ts`'s `projectIncludes` array (rendered on Pricing under
-"What's included in every project", confirmed via
-`grep`/`pricing/page.tsx` line 230) contains "Accessible interaction and
-content standards target" verbatim-equivalent to the standard-scope
-claim; `addOns` (rendered under Pricing's add-ons list, line 253/266)
-contains "Accessibility audit / remediation beyond package scope" —
-matches the add-on claim exactly. Cross-checked the FAQ's "Do you follow
-accessibility standards?" answer against the Accessibility page's own
-target list: consistent (WCAG 2.2 AA, keyboard operability, contrast,
-focus, error messages all named in both places).
-
-**Second check, source-level (native-control keyboard operability):**
-reviewed the handoff's other named candidate — Contact's topic `<select>`
-and consent checkbox, "never isolated from the rest of the form in prior
-Tab-traversal passes." Read `contact-form.tsx` directly: both are plain
-native HTML controls (`<select id="topic">` / `<input id="consent"
-type="checkbox">`) with correct `<label htmlFor>` wiring, no custom
-`role`, `tabIndex`, or keydown override on either — unlike the Planner's
-custom `StatusRow` toggle-group (the actual subject of rounds 80/81/91's
-real key-synthesis investigation), these two rely entirely on the
-browser's built-in native operability, which round 79's live CDP Tab
-traversal of this exact page already exercised in visual/DOM order
-(Name → Email → Phone → Company → **Topic** → Message → **Consent** →
-Send message, "each with correct `<label for>` association"). Attempted
-a fresh live check via the Browser pane first (`preview_start`/
-`navigate` to a manually-started `next dev` on port 5173 succeeded, but
-`document.hidden`/`document.hasFocus()` read `true`/`false` and
-`read_page` returned an empty 0×0 tree — the same non-compositing
-limitation `CYVEXLY_TOOLS_AND_CAPABILITIES.md` documents as intermittent
-for this session type); did not escalate to the local-headless-Chrome/CDP
-method given native controls have no product-side keyboard logic to
-verify beyond what round 79 already proved on this page. **0 defects
-found — a genuine negative result**, not a proof gap requiring
-escalation (no custom behavior exists here to test).
-
-**Completion:** DONE WITH PROOF (0 defects found across both checks; 0
-source change). Cleaned up: stopped the manually-started `next dev`
-listener on port 5173 by its verified real listener PID
-(`Get-NetTCPConnection -LocalPort 5173 -State Listen`), confirmed port
-cleared; closed the Browser pane tab; removed the scratch dev-server log
-from `/tmp`.
+Full detail rotated to
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_94_ARCHIVE.md` in round 99 to
+restore hot-file headroom. The accepted result remains: Auditor intake
+`IFA-2026-09-07-R85` was stale but clean, the Accessibility/Pricing truth
+comparison and Contact native-control source check found no defect, and the
+49-route validation suite passed on unchanged product source.
 
 ## Round 93 — lint-infrastructure fix (untracked `velora/` sub-repo) + Terms/Privacy convergence checks
 
