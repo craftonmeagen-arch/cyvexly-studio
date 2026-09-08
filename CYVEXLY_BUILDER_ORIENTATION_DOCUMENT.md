@@ -17,13 +17,12 @@ Then read, under docs/agent-system/cyvexly/:
 5. CYVEXLY_REVIEW_INDEX.md; all new external report/inbox items.
 6. CYVEXLY_CHUNK_DEBT.md, CYVEXLY_APP_DEBT.md, and triggered watch/environment evidence.
 
-Inspect actual Git/source/runtime truth. Owner direction `2026-09-08-20`
-reopens Chunk 6 and makes the buyer-facing `/work/velora-dining` presentation
-the current reachable priority. Preserve the strong `/velora` demonstration,
-reframe the case study as premium prospect evidence, and verify the real Home
-→ case study → demo path visually at desktop and mobile sizes. HoneyHearted's
-accepted product and remaining review/Owner-input obligations continue in
-parallel; do not erase or misstate them.
+Inspect actual Git/source/runtime truth. Owner direction `2026-09-08-22` makes
+separate EduAILenz and Mudoinkle portfolio entries the next Team Two Website
+Builder expansion and grants read-only investigation authority in the two
+named external project folders. Preserve accepted Velora and Claude's
+HoneyHearted work, follow every truth/privacy boundary in that direction, and
+do not resume the paused Builder scheduler without explicit Owner direction.
 Plan before changes. Investigate causes, use the rendered product, verify the actual diff
 against the plan, and dynamically replan when meaningful work remains.
 

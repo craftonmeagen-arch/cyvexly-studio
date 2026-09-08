@@ -104,54 +104,10 @@ the accepted result and remaining reviews stay live in the chunk map/state.
 
 ## HoneyHearted fully functional website direction 2026-09-08-19
 
-**Status:** ACTIVE — PARALLEL ACCEPTED PRODUCT/REVIEW OBLIGATION
-**Source:** Owner via active Codex conversation
-**Recorded:** 2026-09-08 America/New_York
+**Status:** SUPERSEDED IN IMPLEMENTATION DETAIL BY 2026-09-08-21
 
-### Owner direction — verbatim
-
-> “in google drive is another file called honey hearted. put this in owners
-> direct...I need this website to be fully functional. Although the products
-> are place holders currently i still want all the features to work on this
-> site as if it is a working website. put place holder things and make notes
-> for what you will need from me but don't let any of that stop you from
-> finishing the app. we will ciricle back to what you need from me later. make
-> sure the app is fully functional and all that should work...does. once you
-> bring the website in this folder from google drive...then write the owners
-> direction. then i want you to make a schedular that says \"you are the team
-> two website builder. look at the team two website builder orientation
-> document and begin that work.\" 5.6 sol set on high. and set according to the
-> rules.”
-
-### Imported source identity
-
-- Google Drive item: `HoneyHearted | Resources made with heart`
-- Drive file ID: `12vR0dcEJe7t1bJDwiZcqqVLdG3wISiOn`
-- Drive MIME type/size: `text/html`, 2,001,966 bytes
-- Local source: `honey-hearted/index.html`
-- Imported SHA-256: `204DCF7FB0E25928552B7BB3170F5DEB6A2488919B11E12A655F46F892E68AE9`
-
-### Agent interpretation — not Owner-authored wording
-
-- This opens **Chunk 7 — HoneyHearted Functional Storefront** as Team Two
-  Website's next priority; the next Builder reconciles the exact round position.
-- Placeholder products and facts are authorized where real inputs are not yet
-  available, but they must remain clearly identified and internally
-  consistent. The site may not invent real customers, sales, product rights,
-  payment success, message delivery, subscriptions, or external accounts.
-- “Fully functional” covers every advertised interaction, including catalog,
-  product, download/purchase boundary, contact/newsletter, responsive,
-  accessibility, validation, failure/retry, and recovery behavior.
-- Missing Owner accounts, final product files, URLs, business facts, or
-  provider credentials do not stop reachable implementation. Build complete,
-  safe local demonstration behavior or explicit placeholder adapters at those
-  boundaries, and record the exact later substitution/activation step in
-  `HONEY_HEARTED_OWNER_NEEDS.md`.
-- The imported HTML is source evidence, not completion proof. Inspect and
-  verify the integrated rendered experience round-for-round.
-- Update the existing Team Two Website Builder automation to the specified
-  prompt, GPT-5.6 Sol/high, and governing non-overlap cadence; do not duplicate
-  it or create other role schedulers.
+Full direction is preserved in `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`;
+live HoneyHearted boundaries remain in the chunk map/state.
 
 ## Team Two Website role identity direction 2026-09-08-18
 

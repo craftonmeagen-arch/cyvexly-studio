@@ -616,3 +616,129 @@ returns to the trigger on close. `tsc`/lint/build all clean; verified
 live via a real `next start` server (21-route sweep, 0 overflow at
 320px/375px, portal/backdrop-click/Escape/focus-return all confirmed via
 CDP). Owner visual acceptance of the final look/copy is still pending.
+
+## Velora buyer-facing portfolio presentation direction 2026-09-08-20
+
+**Status:** ACTIVE — CURRENT TEAM TWO WEBSITE BUILDER PRIORITY
+**Source:** Owner via active Codex conversation after visible buyer-path review
+**Recorded:** 2026-09-08 America/New_York
+
+### Owner direction — verbatim
+
+> “yes i agree. make that owners direction work. and then restart the
+> schedular if it isn't running”
+
+### Accepted review finding and required outcome
+
+The Owner accepts the visible-review conclusion that the working Velora
+restaurant demonstration is strong, but the Cyvexly page reached from the
+Home-page Velora card (`/work/velora-dining`) undersells it. The landing page
+currently reads like a sparse internal project brief, repeats the fictional
+qualification too heavily in the opening, and follows the introductory card
+with an oversized crop that hides the complete composition. Rebuild this page
+as a premium buyer-facing capability presentation. Preserve the approved
+Cyvexly architectural-glass system and the existing truthful fictional
+boundary; do not disguise Velora as a real restaurant or client.
+
+### Required presentation changes
+
+1. Replace the sparse opening with an intentional showcase composition: concise
+   buyer-facing story and actions paired with a complete, uncropped desktop
+   presentation and a coordinated mobile view. Use Velora's forest, warm-paper,
+   antique-gold, and muted-wine visual language as a controlled feature stage
+   within Cyvexly's own page, so the transition looks designed rather than
+   pasted together.
+2. Lead with what Cyvexly designed and built and what that capability can do for
+   a hospitality business. Replace the internal-sounding “Audience:” sentence
+   with direct prospect language. The primary action should plainly open the
+   working interactive website; a secondary action may explain what was built.
+3. Keep one unmistakable concept/fictional label and one concise opening
+   disclosure. Move the full non-transmission and no-real-client explanation to
+   an appropriate detail area. Honesty remains mandatory, but repetition must
+   not make the work feel apologetic or bury the capability.
+4. Reorder the story around buyer evidence: premium introduction; large live-
+   experience preview; clearly scannable capabilities; large desktop/mobile
+   proof; design/accessibility decisions; detailed concept disclosure; and a
+   specific conversion invitation.
+5. Present reservation, seasonal-menu, private-event, gifting, responsive-
+   navigation, validation, and accessible-interaction capability visually, not
+   only as report-like bullet lists. Make the responsive captures substantially
+   larger and useful; support direct exploration where appropriate.
+6. Replace the generic closing with language that connects the demonstrated
+   hospitality experience to a prospect's own reservations, inquiries, or
+   customer journey, while preserving Cyvexly's consultative “describe your
+   project” service model.
+7. Keep the core `/velora` experience unless fresh rendered evidence identifies
+   a real defect. The immediate defect is its portfolio framing, not a mandate
+   to redesign the successful restaurant concept.
+
+### Completion and verification boundary
+
+- Test the real path Home Velora card → `/work/velora-dining` → `/velora` in a
+  visible browser at desktop and mobile widths. The landing screen must be
+  immediately legible, visually intentional, uncropped, and clear about both
+  capability and fictional status.
+- Verify responsive layout, keyboard operation, focus, disclosure, internal
+  navigation, screenshot/preview fidelity, performance-sensitive media, and
+  all existing production gates. Do not accept source inspection or a headless-
+  only image as final visual proof.
+- This reopens reachable Chunk 6 portfolio-framing work as the current Builder
+  priority. HoneyHearted's accepted source and its independent-review/Owner-
+  input obligations remain valid in parallel and are not erased.
+- Continue Builder rounds until the accepted presentation is implemented,
+  deployed, and proved. Chunk 6 still requires its two separate independent
+  verification rounds after the new accepted source exists.
+- The existing Team Two Website Builder scheduler remains the authorized
+  scheduler: every 30 minutes at `:00`/`:30`, saved local project, GPT-5.6 Sol,
+  high reasoning, scheduler-managed non-overlap. Do not duplicate it.
+
+## HoneyHearted fully functional website direction 2026-09-08-19
+
+**Status:** ACTIVE — PARALLEL ACCEPTED PRODUCT/REVIEW OBLIGATION
+**Source:** Owner via active Codex conversation
+**Recorded:** 2026-09-08 America/New_York
+
+### Owner direction — verbatim
+
+> “in google drive is another file called honey hearted. put this in owners
+> direct...I need this website to be fully functional. Although the products
+> are place holders currently i still want all the features to work on this
+> site as if it is a working website. put place holder things and make notes
+> for what you will need from me but don't let any of that stop you from
+> finishing the app. we will ciricle back to what you need from me later. make
+> sure the app is fully functional and all that should work...does. once you
+> bring the website in this folder from google drive...then write the owners
+> direction. then i want you to make a schedular that says "you are the team
+> two website builder. look at the team two website builder orientation
+> document and begin that work." 5.6 sol set on high. and set according to the
+> rules.”
+
+### Imported source identity
+
+- Google Drive item: `HoneyHearted | Resources made with heart`
+- Drive file ID: `12vR0dcEJe7t1bJDwiZcqqVLdG3wISiOn`
+- Drive MIME type/size: `text/html`, 2,001,966 bytes
+- Local source: `honey-hearted/index.html`
+- Imported SHA-256: `204DCF7FB0E25928552B7BB3170F5DEB6A2488919B11E12A655F46F892E68AE9`
+
+### Agent interpretation — not Owner-authored wording
+
+- This opens **Chunk 7 — HoneyHearted Functional Storefront** as Team Two
+  Website's next priority; the next Builder reconciles the exact round position.
+- Placeholder products and facts are authorized where real inputs are not yet
+  available, but they must remain clearly identified and internally
+  consistent. The site may not invent real customers, sales, product rights,
+  payment success, message delivery, subscriptions, or external accounts.
+- “Fully functional” covers every advertised interaction, including catalog,
+  product, download/purchase boundary, contact/newsletter, responsive,
+  accessibility, validation, failure/retry, and recovery behavior.
+- Missing Owner accounts, final product files, URLs, business facts, or
+  provider credentials do not stop reachable implementation. Build complete,
+  safe local demonstration behavior or explicit placeholder adapters at those
+  boundaries, and record the exact later substitution/activation step in
+  `HONEY_HEARTED_OWNER_NEEDS.md`.
+- The imported HTML is source evidence, not completion proof. Inspect and
+  verify the integrated rendered experience round-for-round.
+- Update the existing Team Two Website Builder automation to the specified
+  prompt, GPT-5.6 Sol/high, and governing non-overlap cadence; do not duplicate
+  it or create other role schedulers.
