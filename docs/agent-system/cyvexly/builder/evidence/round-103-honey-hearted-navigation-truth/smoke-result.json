@@ -1,0 +1,1032 @@
+{
+  "url": "http://127.0.0.1:5186/honey-hearted",
+  "sourceRef": "b47c7cbeef4e5b3bd542a1ee92c0a3f0088feb5a",
+  "testedAt": "2026-09-08T07:13:45.022Z",
+  "route": {
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "robots": "noindex, nofollow, noarchive"
+  },
+  "desktop": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "HoneyHearted | Resources made with heart",
+    "h1": 1,
+    "main": 1,
+    "preview": true,
+    "noindex": true,
+    "actionForms": 0,
+    "options": [
+      "A resource question",
+      "A file or access issue",
+      "Report a resource error",
+      "A classroom idea or general hello"
+    ],
+    "initialProducts": 6,
+    "storage": {
+      "local": 0,
+      "session": 0,
+      "cookie": ""
+    },
+    "externalAnchors": 0,
+    "imageProtocols": [
+      "data:"
+    ]
+  },
+  "skipLink": {
+    "before": {
+      "text": "Skip to main content",
+      "href": "#main",
+      "top": 10,
+      "height": 52.25
+    },
+    "after": {
+      "hash": "#main",
+      "focused": "main"
+    }
+  },
+  "keyboard": {
+    "focusOrder": {
+      "total": 85,
+      "first": {
+        "index": 0,
+        "text": "Skip to main content"
+      },
+      "expected": [
+        {
+          "index": 0,
+          "tag": "A",
+          "id": "",
+          "text": "Skip to main content"
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "id": "",
+          "text": "Design preview · shop & email connections pending"
+        },
+        {
+          "index": 2,
+          "tag": "A",
+          "id": "",
+          "text": "HoneyHearted home"
+        },
+        {
+          "index": 3,
+          "tag": "A",
+          "id": "",
+          "text": "HoneyHearted home"
+        },
+        {
+          "index": 4,
+          "tag": "A",
+          "id": "",
+          "text": "Shop resources"
+        },
+        {
+          "index": 5,
+          "tag": "A",
+          "id": "",
+          "text": "Free resources"
+        },
+        {
+          "index": 6,
+          "tag": "A",
+          "id": "",
+          "text": "Meet Meagen"
+        },
+        {
+          "index": 7,
+          "tag": "A",
+          "id": "",
+          "text": "Teaching ideas"
+        },
+        {
+          "index": 8,
+          "tag": "A",
+          "id": "",
+          "text": "Help & contact"
+        },
+        {
+          "index": 9,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "My TPT shop"
+        },
+        {
+          "index": 10,
+          "tag": "A",
+          "id": "",
+          "text": "Find your next resource"
+        },
+        {
+          "index": 11,
+          "tag": "A",
+          "id": "",
+          "text": "A little something free"
+        },
+        {
+          "index": 12,
+          "tag": "A",
+          "id": "",
+          "text": "Explore the Dream Beachside Teacher Planner Bundle"
+        },
+        {
+          "index": 13,
+          "tag": "A",
+          "id": "",
+          "text": "Explore middle-school Would You Rather resources"
+        },
+        {
+          "index": 14,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "A thoughtful planTeacher planners & organization"
+        },
+        {
+          "index": 15,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "A good conversationWould You Rather? & discussion"
+        },
+        {
+          "index": 16,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "A closer lookNovel studies & reading"
+        },
+        {
+          "index": 17,
+          "tag": "INPUT",
+          "id": "resource-search",
+          "text": ""
+        },
+        {
+          "index": 18,
+          "tag": "SELECT",
+          "id": "grade-filter",
+          "text": "All grade bandsFor teachersGrades K–2Grades 3–6Grades 6–8Grades 9–12"
+        },
+        {
+          "index": 19,
+          "tag": "SELECT",
+          "id": "format-filter",
+          "text": "All formatsPrintable resourcesDigital resources"
+        },
+        {
+          "index": 20,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "All resources"
+        },
+        {
+          "index": 21,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Teacher planners"
+        },
+        {
+          "index": 22,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Would You Rather?"
+        },
+        {
+          "index": 23,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Novel studies"
+        },
+        {
+          "index": 24,
+          "tag": "A",
+          "id": "",
+          "text": "View details: Dream Beachside Teacher Planner Bundle"
+        },
+        {
+          "index": 25,
+          "tag": "A",
+          "id": "",
+          "text": "Dream Beachside Teacher Planner Bundle"
+        },
+        {
+          "index": 26,
+          "tag": "A",
+          "id": "",
+          "text": "See details"
+        },
+        {
+          "index": 27,
+          "tag": "A",
+          "id": "",
+          "text": "View details: Would You Rather? Grades K–2"
+        },
+        {
+          "index": 28,
+          "tag": "A",
+          "id": "",
+          "text": "Would You Rather? Grades K–2"
+        },
+        {
+          "index": 29,
+          "tag": "A",
+          "id": "",
+          "text": "See details"
+        },
+        {
+          "index": 30,
+          "tag": "A",
+          "id": "",
+          "text": "View details: Would You Rather? Grades 3–6"
+        },
+        {
+          "index": 31,
+          "tag": "A",
+          "id": "",
+          "text": "Would You Rather? Grades 3–6"
+        },
+        {
+          "index": 32,
+          "tag": "A",
+          "id": "",
+          "text": "See details"
+        },
+        {
+          "index": 33,
+          "tag": "A",
+          "id": "",
+          "text": "View details: Would You Rather? Grades 6–8"
+        },
+        {
+          "index": 34,
+          "tag": "A",
+          "id": "",
+          "text": "Would You Rather? Grades 6–8"
+        },
+        {
+          "index": 35,
+          "tag": "A",
+          "id": "",
+          "text": "See details"
+        },
+        {
+          "index": 36,
+          "tag": "A",
+          "id": "",
+          "text": "View details: Would You Rather? Grades 9–12"
+        },
+        {
+          "index": 37,
+          "tag": "A",
+          "id": "",
+          "text": "Would You Rather? Grades 9–12"
+        },
+        {
+          "index": 38,
+          "tag": "A",
+          "id": "",
+          "text": "See details"
+        },
+        {
+          "index": 39,
+          "tag": "A",
+          "id": "",
+          "text": "View details: Novel Studies & Reading"
+        },
+        {
+          "index": 40,
+          "tag": "A",
+          "id": "",
+          "text": "Novel Studies & Reading"
+        },
+        {
+          "index": 41,
+          "tag": "A",
+          "id": "",
+          "text": "See details"
+        },
+        {
+          "index": 42,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Visit the HoneyHearted TPT shop"
+        },
+        {
+          "index": 43,
+          "tag": "A",
+          "id": "",
+          "text": "Get the free planning page"
+        },
+        {
+          "index": 44,
+          "tag": "A",
+          "id": "",
+          "text": "Beachside sample"
+        },
+        {
+          "index": 45,
+          "tag": "A",
+          "id": "",
+          "text": "A little more about HoneyHearted"
+        },
+        {
+          "index": 46,
+          "tag": "A",
+          "id": "",
+          "text": "Read More than a brain break"
+        },
+        {
+          "index": 47,
+          "tag": "A",
+          "id": "",
+          "text": "Read the idea"
+        },
+        {
+          "index": 48,
+          "tag": "A",
+          "id": "",
+          "text": "Read A planner that fits your week"
+        },
+        {
+          "index": 49,
+          "tag": "A",
+          "id": "",
+          "text": "Read the idea"
+        },
+        {
+          "index": 50,
+          "tag": "A",
+          "id": "",
+          "text": "Read Let the story start the discussion"
+        },
+        {
+          "index": 51,
+          "tag": "A",
+          "id": "",
+          "text": "Read the idea"
+        },
+        {
+          "index": 52,
+          "tag": "INPUT",
+          "id": "newsletter-email",
+          "text": ""
+        },
+        {
+          "index": 53,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Count me in"
+        },
+        {
+          "index": 54,
+          "tag": "INPUT",
+          "id": "newsletter-consent",
+          "text": "on"
+        },
+        {
+          "index": 55,
+          "tag": "A",
+          "id": "",
+          "text": "Privacy details"
+        },
+        {
+          "index": 56,
+          "tag": "A",
+          "id": "",
+          "text": "Ask me a question"
+        },
+        {
+          "index": 57,
+          "tag": "SUMMARY",
+          "id": "",
+          "text": "Where do I buy HoneyHearted resources?"
+        },
+        {
+          "index": 58,
+          "tag": "SUMMARY",
+          "id": "",
+          "text": "Are the resources printable, digital, or both?"
+        },
+        {
+          "index": 59,
+          "tag": "SUMMARY",
+          "id": "",
+          "text": "Can I see what’s inside before choosing?"
+        },
+        {
+          "index": 60,
+          "tag": "SUMMARY",
+          "id": "",
+          "text": "Do I need to subscribe to get the free planning page?"
+        },
+        {
+          "index": 61,
+          "tag": "SUMMARY",
+          "id": "",
+          "text": "Can I share a purchased resource with my team?"
+        },
+        {
+          "index": 62,
+          "tag": "SUMMARY",
+          "id": "",
+          "text": "What should I do about an error or file issue?"
+        },
+        {
+          "index": 63,
+          "tag": "INPUT",
+          "id": "contact-name",
+          "text": ""
+        },
+        {
+          "index": 64,
+          "tag": "INPUT",
+          "id": "contact-email",
+          "text": ""
+        },
+        {
+          "index": 65,
+          "tag": "SELECT",
+          "id": "contact-subject",
+          "text": "A resource questionA file or access issueReport a resource errorA classroom idea"
+        },
+        {
+          "index": 66,
+          "tag": "TEXTAREA",
+          "id": "contact-message",
+          "text": ""
+        },
+        {
+          "index": 67,
+          "tag": "BUTTON",
+          "id": "contact-submit",
+          "text": "Prepare my message"
+        },
+        {
+          "index": 68,
+          "tag": "A",
+          "id": "",
+          "text": "Explore the resource shelf"
+        },
+        {
+          "index": 69,
+          "tag": "A",
+          "id": "",
+          "text": "HoneyHearted home"
+        },
+        {
+          "index": 70,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Teacher planners"
+        },
+        {
+          "index": 71,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Would You Rather?"
+        },
+        {
+          "index": 72,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "Novel studies & reading"
+        },
+        {
+          "index": 73,
+          "tag": "A",
+          "id": "",
+          "text": "A little something free"
+        },
+        {
+          "index": 74,
+          "tag": "A",
+          "id": "",
+          "text": "Meet Meagen"
+        },
+        {
+          "index": 75,
+          "tag": "A",
+          "id": "",
+          "text": "Teaching ideas"
+        },
+        {
+          "index": 76,
+          "tag": "A",
+          "id": "",
+          "text": "Questions & answers"
+        },
+        {
+          "index": 77,
+          "tag": "A",
+          "id": "",
+          "text": "Get in touch"
+        },
+        {
+          "index": 78,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "HoneyHearted on TPT ↗"
+        },
+        {
+          "index": 79,
+          "tag": "A",
+          "id": "",
+          "text": "The little newsletter"
+        },
+        {
+          "index": 80,
+          "tag": "BUTTON",
+          "id": "",
+          "text": "HoneyHearted on Facebook ↗"
+        },
+        {
+          "index": 81,
+          "tag": "A",
+          "id": "",
+          "text": "Website launch checklist"
+        },
+        {
+          "index": 82,
+          "tag": "A",
+          "id": "",
+          "text": "Privacy"
+        },
+        {
+          "index": 83,
+          "tag": "A",
+          "id": "",
+          "text": "Terms & resource use"
+        },
+        {
+          "index": 84,
+          "tag": "A",
+          "id": "",
+          "text": "Accessibility"
+        }
+      ],
+      "visitedIndexes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ]
+    },
+    "filter": {
+      "before": {
+        "before": "false",
+        "focused": true
+      },
+      "after": {
+        "pressed": "true",
+        "count": 4
+      }
+    },
+    "faq": {
+      "before": {
+        "before": false,
+        "focused": true
+      },
+      "opened": {
+        "open": true,
+        "focused": true
+      },
+      "closed": {
+        "open": false,
+        "focused": true
+      }
+    }
+  },
+  "catalog": {
+    "search": {
+      "count": 1,
+      "text": "1 resource or collection to explore"
+    },
+    "reading": {
+      "count": 1,
+      "pressed": "true"
+    },
+    "reset": {
+      "count": 6,
+      "query": ""
+    }
+  },
+  "catalogDepth": {
+    "combination": {
+      "count": 1,
+      "title": "Would You Rather? Grades 6–8",
+      "resetVisible": true
+    },
+    "empty": {
+      "count": 0,
+      "heading": "No matches on this shelf—yet.",
+      "status": "0 resources and collections to explore",
+      "reset": true
+    },
+    "recovered": {
+      "count": 6,
+      "query": "",
+      "grade": "all",
+      "format": "all",
+      "empty": false
+    }
+  },
+  "product": {
+    "route": {
+      "hash": "#resource/planner",
+      "title": "Dream Beachside Teacher Planner Bundle",
+      "tabs": 2,
+      "homeHidden": true
+    },
+    "selected": {
+      "pressed": "true",
+      "zoomKey": "freeSample"
+    },
+    "dialog": {
+      "open": true,
+      "locked": true,
+      "focused": "Close enlarged image"
+    }
+  },
+  "navigationHistory": {
+    "directDeepLink": {
+      "hash": "#resource/planner",
+      "title": "Dream Beachside Teacher Planner Bundle | HoneyHearted",
+      "heading": "Dream Beachside Teacher Planner Bundle",
+      "focused": false
+    },
+    "back": {
+      "hash": "#resource/planner",
+      "heading": "Dream Beachside Teacher Planner Bundle",
+      "focused": true
+    },
+    "forward": {
+      "hash": "#page/about",
+      "heading": "Hi, I’m Meagen.Welcome to HoneyHearted.",
+      "focused": true
+    },
+    "homeSectionReturn": {
+      "hash": "#contact",
+      "homeHidden": false,
+      "detailHidden": true,
+      "focused": true
+    },
+    "malformedHash": {
+      "hash": "#%E0%A4%A",
+      "homeHidden": false,
+      "detailHidden": true,
+      "heading": "A little less prep.A whole lotof heart.",
+      "focused": true
+    }
+  },
+  "copyLinkResult": {
+    "copied": "http://127.0.0.1:5186/honey-hearted#resource/planner",
+    "toast": "Page link copied.",
+    "protocol": "http:"
+  },
+  "productTruth": [
+    {
+      "id": "planner",
+      "title": "Dream Beachside Teacher Planner Bundle",
+      "conceptLabel": "Existing product preview",
+      "hasPurchase": true,
+      "hasQuestion": true,
+      "note": "This website does not have the final product listing yet. Verify current contents, file compatibility, page counts, and availability before publishing.",
+      "imageAlt": "Dream Beachside Teacher Planner Bundle preview, with beach-themed planner pages and Google Slides, PowerPoint, and PDF labels"
+    },
+    {
+      "id": "k2",
+      "title": "Would You Rather? Grades K–2",
+      "conceptLabel": "Illustrative cover",
+      "hasPurchase": true,
+      "hasQuestion": true,
+      "note": "This is an illustrative cover created for the website. Replace it with the approved resource cover and verify the listing details before launch.",
+      "imageAlt": ""
+    },
+    {
+      "id": "elementary",
+      "title": "Would You Rather? Grades 3–6",
+      "conceptLabel": "Illustrative cover",
+      "hasPurchase": true,
+      "hasQuestion": true,
+      "note": "This is an illustrative collection cover. Suggested classroom uses do not imply that additional worksheets or writing pages are included in the paid resource.",
+      "imageAlt": ""
+    },
+    {
+      "id": "middle",
+      "title": "Would You Rather? Grades 6–8",
+      "conceptLabel": "Existing product preview",
+      "hasPurchase": true,
+      "hasQuestion": true,
+      "note": "The images are existing HoneyHearted preview assets. Confirm that they match the current paid product and its listing before making this page live.",
+      "imageAlt": "Existing HoneyHearted middle-school Would You Rather preview showing four discussion-slide examples"
+    },
+    {
+      "id": "high",
+      "title": "Would You Rather? Grades 9–12",
+      "conceptLabel": "Illustrative cover",
+      "hasPurchase": true,
+      "hasQuestion": true,
+      "note": "This cover and description are proposed website presentation. Add approved product screenshots and confirm current contents and availability before launch.",
+      "imageAlt": ""
+    },
+    {
+      "id": "reading",
+      "title": "Novel Studies & Reading",
+      "conceptLabel": "Collection in progress",
+      "hasPurchase": false,
+      "hasQuestion": true,
+      "note": "Replace this collection preview with approved, fact-checked individual listings. Do not describe a product as available until its actual TPT link is ready.",
+      "imageAlt": ""
+    }
+  ],
+  "dialogReturn": {
+    "open": false,
+    "locked": false,
+    "focused": "gallery-return"
+  },
+  "dialogButtonReturn": {
+    "open": true,
+    "focused": "Close notice"
+  },
+  "dialogButtonClosed": {
+    "open": false,
+    "focused": "store-return"
+  },
+  "connectionNotice": {
+    "same": true,
+    "open": true,
+    "text": "One little connection to make.\n\nThe exact TPT store or product link has not been connected in this preview. Nothing has been purchased or downloaded. Add the real public destination in SITE_CONFIG before publishing.\n\nSee the launch checklist\nKeep exploring"
+  },
+  "activationSafety": {
+    "tptExact": true,
+    "tptBare": true,
+    "rejectsHttp": true,
+    "rejectsLookalike": true,
+    "rejectsCredentials": true,
+    "acceptsPublicHttps": true,
+    "acceptsEmail": true,
+    "rejectsEmailQuery": true
+  },
+  "sample": {
+    "title": "The littleweekly reset.",
+    "toast": "The printable HTML file is ready. Open it in your browser to print.",
+    "download": "HoneyHearted-The-Little-Weekly-Reset.html",
+    "downloadSize": 5083,
+    "print": {
+      "exists": true,
+      "title": "HoneyHearted | The Little Weekly Reset",
+      "hasSheet": true
+    }
+  },
+  "contentRoutes": {
+    "idea/conversations": {
+      "title": "More than a brain break.",
+      "text": "Home\n/\nTeaching ideas\n/\nMore than a brain break.\nCLASSROOM CONVERSATIONS · A HONEYHEARTED TEACHING NOTE\nMore than a brain break.\n\nA good “Would You Rather” question can be a starting point, not the whole activity. Try one of these simple routines with a question that fits your learners.\n\nWhat if…?\nTell me!\nStart with a choice. Leave room for a reason.\n\nOffer a question and a little quiet thinking time. Students can point to an option, jot down a thought, or prepare to tell a partner. Make passing an acceptable choice; not every student needs to speak in front of the group.\n\nBefore inviting answers, model a response: “I would choose this because…” Keep the example short so students have space to develop their own ideas.\n\n1. Turn and tell a partner.\n\nAsk each partner to share one reason. Give both students a turn, then invite them to notice what was similar or different about their thinking. A follow-up such as “What made that important to you?” gives the conversation somewhere to go.\n\n2. Change one part of the question.\n\nOnce students have made a choice, change a single condition. A choice might last for one day instead of one year, or happen at school instead of at home. Ask whether anyone would change their answer and why. Present changing your mind as an option, not a mistake.\n\n3. Save a thought in writing.\n\nOffer a short response frame: “I chose ___. My main reason was ___. A reason someone might choose differently is ___.” Students can respond in writing, orally, or with a supported drawing, depending on the activity and their needs.\n\nTry this question: Would you rather have a classroom garden or a classroom invention station? What would you make room for—and what would need a little extra care?\nKeep the routine yours.\n\nChoose prompts that suit your class, avoid requiring personal disclosures, and stop while the conversation still has energy. One thoughtful question is enough for a starting point.\n\nA thoughtful place to start.\n\nPair the idea with a resource that fits your learners and your teaching day.\n\nExplore the discussion collections\n\nOriginal draft teaching content for this website. Review and personalize it before publishing under your name.",
+      "focused": true
+    },
+    "idea/planning": {
+      "title": "A planner that fits your week.",
+      "text": "Home\n/\nTeaching ideas\n/\nA planner that fits your week.\nPLANNING WITH INTENTION · A HONEYHEARTED TEACHING NOTE\nA planner that fits your week.\n\nYour planner does not need to hold an imaginary, uninterrupted week. Give it room for the week you actually have.\n\nStart with the things you already know.\n\nWrite down the fixed points: teaching blocks, meetings, arrival routines, and deadlines. Include transitions and preparation that you know need space. This is not a test of how much you can fit onto a page.\n\nChoose three priorities.\n\nAsk yourself which three things would make this week feel more settled. Make each one small enough to recognize when it is finished: prepare Monday’s materials, send one family update, or organize a small-group activity.\n\nKeep the rest on a separate list. A useful task does not automatically need to become today’s task.\n\nLeave a little breathing room.\n\nInstead of filling every square, keep one small space for changes. A blank box can hold a follow-up question, a lesson that needs another day, or something you do not know about yet.\n\nA five-minute reset: look at tomorrow, choose the most important preparation task, and move anything unfinished to a place where you will see it again.\nMake next week a little easier.\n\nAt the end of the week, keep one thing that helped and change one thing that got in the way. You might want bigger daily boxes, fewer categories, or a place for a quick note. The page is there to support your routine, not dictate it.\n\nKeep confidential student and family information in your school’s approved secure systems rather than on an open planning page.\n\nA thoughtful place to start.\n\nPair the idea with a resource that fits your learners and your teaching day.\n\nExplore the planning collection\n\nOriginal draft teaching content for this website. Review and personalize it before publishing under your name.",
+      "focused": true
+    },
+    "idea/reading": {
+      "title": "Let the story start the discussion.",
+      "text": "Home\n/\nTeaching ideas\n/\nLet the story start the discussion.\nBETWEEN THE PAGES · A HONEYHEARTED TEACHING NOTE\nLet the story start the discussion.\n\nA reading conversation can begin with one detail students noticed. You do not need to answer every question before giving them space to think.\n\nBegin with a moment, not a summary.\n\nAsk students to choose a line, action, or small detail from the assigned passage. They can mark a place, write a short note, or prepare to describe the moment without copying a long excerpt.\n\nInvite an observation first: “I noticed…” Then offer a question: “I wonder…” Keeping these separate can help you see where the text ends and an interpretation begins.\n\nMake room for the text.\n\nAsk, “What in this chapter makes you think that?” Give students time to return to the passage. A page reference, a paraphrased detail, or a short quotation can give the group something specific to discuss.\n\nWelcome another possible reading.\n\nTry, “Could someone understand that moment differently?” Invite students to name a second interpretation and compare the support for each idea. They do not need to agree immediately or guess which opinion the teacher prefers.\n\nA three-part response: One thing I noticed. One detail that supports my thinking. One question I still have.\nUse the next question to choose your next step.\n\nClose by collecting one unresolved question. You might revisit a passage, clarify a character’s action, or carry the question into the next chapter. Keep any accompanying resource aligned with the chapters students have actually read.\n\nThese are suggested teaching routines, not a claim that a particular novel-study packet includes each activity. Check the finished resource’s description and preview before choosing it.\n\nA thoughtful place to start.\n\nPair the idea with a resource that fits your learners and your teaching day.\n\nExplore the reading collection\n\nOriginal draft teaching content for this website. Review and personalize it before publishing under your name.",
+      "focused": true
+    },
+    "page/about": {
+      "title": "Hi, I’m Meagen.Welcome to HoneyHearted.",
+      "text": "Home\n/\nResource shelf\n/\nThe heart behind HoneyHearted\nA HELLO FROM THE CREATOR\nHi, I’m Meagen.\nWelcome to HoneyHearted.\n\nA thoughtful resource shelf for teachers who bring their own ideas, experience, and heart to the classroom.\n\nA little organization. A little imagination.\n\nSome days call for a clear plan. Some call for a question that gets everyone thinking. And some need a fresh way into a story.\n\nHoneyHearted brings those possibilities together: teacher-planning resources, classroom discussion collections, and a home for reading activities. My hope is that you will find something useful, take a closer look, and make it your own.\n\nMade to leave room for you.\n\nI want this space to feel like a helpful shelf in a fellow teacher’s classroom—not another long list of things you have to do. Preview a resource, try a free page, or take a teaching idea with you.\n\nYour classroom does not have to look like anyone else’s. The best starting point is one you can shape around the people in it.\nOwner review: this is proposed About copy, not a verified biography. Add your own teaching background, qualifications, resource-development process, and a photo you approve before publishing. No credentials, classroom-testing claims, or customer testimonials have been invented.\nThere’s a place for your questions, too.\n\nTell me which resource you are exploring or what would be helpful to know.\n\nLet’s connect",
+      "focused": true
+    },
+    "policy/privacy": {
+      "title": "Privacy, with a little clarity.",
+      "text": "Home\n/\nResource shelf\n/\nPrivacy, with a little clarity.\nHONEYHEARTED · WEBSITE PREVIEW NOTES\nPrivacy, with a little clarity.\n\nThese notes describe this local HTML preview. They are not a finished privacy policy for a published business website.\n\nWhat happens in this preview?\n\nWith preview mode enabled, newsletter and contact submissions do not send or save the information you enter. The page uses no cookies, browser storage, analytics scripts, or externally hosted fonts. Images and product artwork are embedded in the standalone file.\n\nWhat about downloads and external links?\n\nThe free weekly-planning download is created in your browser. No email address is required. When real TPT or social links are connected, opening them takes you to another service, with that service’s own privacy practices. If this site is hosted, the hosting provider may process request logs even when this page has no analytics.\n\nBefore this website is published\n\nReplace these notes with an accurate policy covering the site owner, contact details, hosting and form providers, email list, any analytics, retention practices, and applicable privacy rights or consent choices. Do not describe data collection that the site does not actually perform, or omit services that it does use.\n\nPlease leave student information out.\n\nDo not enter student names, records, account passwords, or other sensitive information into the demonstration forms.\n\nBack to HoneyHearted",
+      "focused": true
+    },
+    "policy/terms": {
+      "title": "Resources, with a little care.",
+      "text": "Home\n/\nResource shelf\n/\nResources, with a little care.\nHONEYHEARTED · WEBSITE PREVIEW NOTES\nResources, with a little care.\n\nThese are preview notes, not the final legal terms for a live shop.\n\nPurchases through TPT\n\nThis website is designed as a promotional resource shelf. Paid checkout and paid-file delivery happen through the actual TPT listing after its link is connected. This HTML preview does not take payments, create orders, or promise product availability.\n\nProduct descriptions and artwork\n\nExisting product previews are identified. Some covers and descriptions are illustrative and need owner review before launch. Confirm the included files, compatibility, permissions, and requirements on each final listing.\n\nResource licenses\n\nFollow the terms included with each resource and its listing. Do not assume that a single purchase permits redistribution, resale, or team-wide use. Ask the creator about appropriate licensing when in doubt.\n\nThe new free weekly-reset page\n\nThe original weekly-reset page created with this website is available to print for your own classroom planning. The website’s draft terms do not change the licensing of any existing HoneyHearted product or third-party material. Final distribution terms require your approval before publication.\n\nBefore launch\n\nReplace these notes with reviewed, business-specific terms and a support process that matches how you actually sell and deliver products.\n\nBack to HoneyHearted",
+      "focused": true
+    },
+    "policy/accessibility": {
+      "title": "A welcoming place to browse.",
+      "text": "Home\n/\nResource shelf\n/\nA welcoming place to browse.\nHONEYHEARTED · WEBSITE PREVIEW NOTES\nA welcoming place to browse.\n\nThis preview includes accessibility-minded controls, but it is not a certification or a completed accessibility audit.\n\nIncluded in the HTML\n\nThe design includes a skip link, visible keyboard focus, labeled fields, meaningful image descriptions, native dialogs, a keyboard-operable mobile menu, and status messages for filters and forms. Decorative artwork is hidden from assistive technology. Motion is reduced when the browser requests it.\n\nBefore publication\n\nTest the final site with keyboard-only use, screen readers, mobile zoom, and contrast checks. Review the accessibility of the actual product files separately; a usable website does not by itself make a slide deck or PDF accessible.\n\nNeed another way to get information?\n\nA live contact route should be provided for accessibility questions. In this demonstration, contact delivery is not yet connected.\n\nOpen the contact section →\n\nBack to HoneyHearted",
+      "focused": true
+    },
+    "launch": {
+      "title": "Ready for thenext little step.",
+      "text": "Home\n/\nResource shelf\n/\nYour website launch checklist\nA BEAUTIFUL STARTING POINT · NOT A LIVE SHOP YET\nReady for the\nnext little step.\n\nThe design now follows your supplied HoneyHearted banner: honey gold, sage, daisies, warm paper, and your existing brand artwork.\n\nWorking now: responsive navigation, searchable and filterable catalog, resource-detail views, preview galleries and zoom, related resources, teaching articles, a free printable download, FAQs, and form validation. Nothing pretends to send a message, subscribe a visitor, or complete a purchase.\n\n1. Connect the real destinations.\n\nAt the top of app.js (or the script inside the standalone HTML), fill in SITE_CONFIG.tptStoreUrl, the exact productLinks, facebookUrl, and beachsideSampleUrl. Do not substitute a general search page for an individual product listing.\n\n2. Review your catalog.\n\nConfirm titles, grades, subject or skills, formats, page or slide counts, inclusions, editable parts, prep requirements, and anything not included. Replace each illustrative cover with approved product art. The reading collection is intentionally not presented as a finished, available product.\n\n3. Make the About page yours.\n\nApprove the draft copy, add your relevant experience and genuine development process, and use a photo you are comfortable sharing. Add testimonials only when you have real feedback and appropriate permission. No fabricated sales, reviews, or “bestseller” labels belong here.\n\n4. Connect contact and email delivery.\n\nSet a public contactEmail to prepare email-app drafts; this is not server-side sending. Connect a secure newsletterEndpoint with the documented response format in the source. Add unsubscribe handling, consent and privacy information, spam controls, and delivery testing. Do not put private service keys in client-side HTML. Set preview: false only after testing.\n\n5. Finish policies and search setup.\n\nReplace preview privacy, resource-use, and accessibility notes. This one-file version uses hash-based detail views for offline navigation; those are not separate search-indexable product pages. A production build should give key products and articles real URLs, unique titles and descriptions, a canonical URL strategy, internal links, a sitemap, and Search Console verification. Remove noindex only when ready.\n\n6. Launch, test, and maintain.\n\nPublish with HTTPS. Verify mobile layout, keyboard use, all forms, exact TPT destinations, downloads, policy wording, and backups. Track website-to-TPT clicks separately from confirmed sales. Outbound clicks expose an optional local hh:outbound event hook; this preview does not send analytics anywhere.\n\nProducts and their descriptions live in a clearly labeled data block. The source folder includes separate CSS, JavaScript, images, and the free sample so a developer can maintain them without redesigning the site.\n\nBack to the website",
+      "focused": true
+    },
+    "missing-page": {
+      "title": "A little lost?",
+      "text": "A little lost?\n\nThat page is not part of this preview. The resource shelf is a good place to start.\n\nExplore the resources →",
+      "focused": true
+    }
+  },
+  "forms": {
+    "contactInvalid": {
+      "valid": false,
+      "focused": "contact-name",
+      "invalid": [
+        "contact-name",
+        "contact-email",
+        "contact-message"
+      ]
+    },
+    "contactCorrection": {
+      "valid": false,
+      "focused": "contact-email",
+      "emailInvalid": true,
+      "messageInvalid": false
+    },
+    "contactResult": {
+      "status": "This preview is not connected to email. Your message has not been sent or saved.",
+      "name": "Alex",
+      "subject": "Report a resource error"
+    },
+    "newsletterInvalid": {
+      "valid": false,
+      "focused": "newsletter-email",
+      "invalid": [
+        "newsletter-email",
+        "newsletter-consent"
+      ]
+    },
+    "newsletterResult": {
+      "status": "This is a preview: you have not been subscribed, and your email has not been sent or saved. The free planning page is available without signing up.",
+      "email": "alex@example.com",
+      "consent": true
+    }
+  },
+  "adapterRecovery": {
+    "calls": [
+      "https://example.test/newsletter",
+      "https://example.test/newsletter"
+    ],
+    "failed": {
+      "status": "The signup could not be confirmed. Please try again later; this page is not claiming that you were subscribed.",
+      "error": true,
+      "disabled": false
+    },
+    "retried": {
+      "status": "Your signup request was accepted. Check your inbox for the next step and any confirmation email.",
+      "error": false,
+      "email": "",
+      "consent": false,
+      "disabled": false
+    },
+    "contactDraft": {
+      "status": "A draft was requested in your email app. Review it and press Send there; the website has not sent it.",
+      "mailto": "mailto:hello@example.test?subject=HoneyHearted%20%E2%80%94%20Report%20a%20resource%20error&body=Name%3A%20Alex%0AReply%20to%3A%20alex%40example.com%0A%0APlease%20help%20with%20the%20planner%20preview."
+    }
+  },
+  "zoomEquivalent": {
+    "width": 640,
+    "scrollWidth": 640,
+    "smallTargets": [
+      "Design preview · shop & email connection",
+      "newsletter-consent",
+      "Privacy",
+      "Terms & resource use",
+      "Accessibility"
+    ],
+    "hero": {
+      "x": 18,
+      "y": 400.875,
+      "width": 604,
+      "height": 159.84375,
+      "top": 400.875,
+      "right": 622,
+      "bottom": 560.71875,
+      "left": 18
+    }
+  },
+  "imageFallback": {
+    "complete": true,
+    "naturalWidth": 0,
+    "alt": "Existing HoneyHearted middle-school Would You Rather preview showing four discussion-slide examples",
+    "width": 169.70396423339844,
+    "scrollWidth": 640,
+    "viewport": 640
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "expanded": "true",
+    "hidden": false
+  },
+  "mobileEscape": {
+    "expanded": "false",
+    "hidden": true,
+    "focused": "menu-toggle"
+  },
+  "reducedMotion": {
+    "matches": true,
+    "scrollBehavior": "auto",
+    "transitionDuration": "0s",
+    "animationName": "none"
+  },
+  "reflow": {
+    "width": 320,
+    "scrollWidth": 320,
+    "hero": {
+      "left": 14,
+      "right": 306
+    },
+    "shop": {
+      "left": 14,
+      "right": 306
+    }
+  },
+  "networkRequests": [
+    "http://127.0.0.1:5186/honey-hearted"
+  ],
+  "unexpectedNetwork": [],
+  "runtimeErrors": [],
+  "networkErrors": [],
+  "failures": [],
+  "passed": true
+}

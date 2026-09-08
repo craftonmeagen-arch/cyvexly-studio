@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
-round 3 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
+round 4 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
 Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
@@ -11,6 +11,18 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 7 is the current reachable Builder priority.
+
+**Round 103 / Chunk 7 round 4** found and fixed two production-integration
+truth defects. The hosted “Copy this page link” action no longer applies a
+false local-file warning to shareable HTTP(S) URLs, while standalone file
+copies keep that boundary. Returning from a detail route to a Home section—or
+recovering from a malformed encoded hash—now moves focus to the visible
+destination heading instead of leaving it inside hidden detail content. A
+before-fix Chrome run reproduced all three assertions; accepted source
+`b47c7cb` passes the expanded optimized-runtime suite locally and on the
+adopted public route with zero workflow, runtime, network, or unexpected-origin
+failures. TypeScript, lint (one known evidence warning), and the 53-route build
+pass. Two independent reviews remain.
 
 **Round 102 / Chunk 7 round 3** (scheduled/unattended) found no independent-
 review intake and added a distinct navigation-history layer to the durable
@@ -38,19 +50,10 @@ browser/network failures. Accepted source is `4e3f06e`; independent review
 remains required. The identical expanded suite also passes on the adopted
 public route.
 
-**Round 100 / Chunk 7 round 1** (scheduled/unattended) integrated the imported
-`honey-hearted/index.html` at `/honey-hearted` with explicit no-index response
-protection and fixed its malformed contact-subject chooser. Added a durable
-Chrome/CDP suite covering the complete current storefront demonstration:
-catalog discovery; resource route/gallery/zoom; safe commerce boundary; real
-free download/print; content, About, policy, launch, and missing routes; truthful
-preview forms; mobile focus return; reduced motion; 320px reflow; storage and
-network boundaries. It passes with zero failures or runtime/network errors.
-TypeScript, lint (one known evidence warning), and the 53-route build pass; the
-build trace includes the imported HTML. Accepted product source is `8d84b96`;
-the identical suite passes on the adopted public route.
-Round 101 completed the named Builder-proof depth; the chunk remains open for
-the two required independent review rounds.
+Round 100's full active-chunk report rotated to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_100_REPORT.md` when Round 103
+established the latest-three context. Its integration and initial proof remain
+part of the current accepted history.
 
 Round 99's full active-chunk summary remains preserved in Builder handoff/build-
 summary history; it rotated when Round 102 established the latest-three window.

@@ -1,5 +1,15 @@
 # Cyvexly App Debt
 
+## Round 103 — HoneyHearted hosted-link and route-focus truth fixes
+
+Accepted source `b47c7cb` corrects the hosted copy-link confirmation and moves
+focus into the visible Home destination after detail-to-Home or malformed-hash
+recovery. The expanded Chrome suite reproduced all three failures before the
+fix and passes afterward locally and on the adopted public route with zero
+workflow, runtime, network, or unexpected-origin errors. Two opened targeted
+captures and the source-identified local/public result JSONs remain for
+independent review. No Owner substitution or external integration changed.
+
 ## Round 102 — HoneyHearted navigation-history proof
 
 No new external-review intake existed. Extended the durable Chrome suite with
@@ -67,24 +77,18 @@ Remaining Chunk 6 independent-review requirements stay in
 
 ## Round 96 — Velora correction/accessibility/provenance proof
 
-Expanded `velora/smoke.mjs` through real invalid→corrected form paths,
-keyboard tabs, dialog/mobile focus return, reduced motion, 320px reflow,
-illustrative-image fallback/provenance, noindex/form boundaries, and allowed
-network origins. Accepted source `2e79c45` passed with zero failures or
-unexpected requests; opened captures remained visually sound. Parent
-typecheck/lint/build passed. No product defect surfaced; remaining Chunk 6
-integration/review work stays in `CYVEXLY_CHUNK_DEBT.md` item 0.
+Full detail rotated to
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_96_ARCHIVE.md` in round 103 for
+hot-file headroom. The accepted result remains: correction, keyboard/focus,
+reduced-motion, reflow, provenance, and network proof passed with no defect.
 
 ## Round 95 — Velora authority reconciliation and first functional pass
 
-Opened Chunk 6 from Owner direction `2026-09-07-17`. Corrected Velora's
-fictional identity and contact safety, then found/fixed a real rendered hero
-layout defect. Added `velora/smoke.mjs`; its desktop/mobile run passed every
-primary demo workflow with no overflow or runtime/network errors. The parent
-Cyvexly app passed typecheck/lint/build. Open Velora depth is tracked in
-`CYVEXLY_CHUNK_DEBT.md` item 0. This work does not resolve or change Chunk 5's
-exact-LLC-name, Resend-account, analytics/search-ownership, legal-approval, or
-final-indexability Owner gates.
+Full detail rotated to
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_95_ARCHIVE.md` in round 103 to
+restore hot-file headroom. The accepted result remains: Chunk 6 opened under
+Owner direction `2026-09-07-17`, fictional identity/contact safety and the
+rendered hero defect were fixed, and the first durable workflow suite passed.
 
 ## Round 94 — Accessibility/Pricing and Contact-control checks (0 defects)
 

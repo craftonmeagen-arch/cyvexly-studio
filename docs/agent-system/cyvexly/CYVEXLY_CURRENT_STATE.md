@@ -1,9 +1,19 @@
 # Cyvexly Current State
 
-**Global round:** 102. **Active product work:** Chunk 7 — HoneyHearted
-Functional Storefront, chunk-local round 3, opened under Owner direction
+**Global round:** 103. **Active product work:** Chunk 7 — HoneyHearted
+Functional Storefront, chunk-local round 4, opened under Owner direction
 `2026-09-08-19`. Chunk 6 remains open in parallel only for its two required
 independent reviews; Chunk 5 remains open only for Owner/account gates.
+
+Round 103 found and fixed two adjacent navigation-truth defects at accepted
+source `b47c7cb`: hosted resource links now copy with an accurate shareable-
+link confirmation, while file-open copies retain the local-only warning; and
+detail-to-Home or malformed-hash recovery now restores focus to the visible
+destination heading instead of leaving it in hidden detail content. The
+source-identified optimized-runtime suite passes locally and on the adopted
+public route with zero failures or runtime/network errors; two targeted
+captures were opened. Two independent review rounds remain before Chunk 7
+closure.
 
 Round 102 found no new review intake and extended the durable HoneyHearted
 proof into a distinct navigation surface: direct resource deep links, browser

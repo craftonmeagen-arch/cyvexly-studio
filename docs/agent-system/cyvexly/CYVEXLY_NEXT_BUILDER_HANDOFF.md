@@ -1,5 +1,35 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 103 / Chunk 7 round 4 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `4abb272` on `main`, matched `origin/main`
+**Accepted product/test source:** `b47c7cb` on `main`, pushed and adopted
+**Authority:** Owner direction `2026-09-08-19`
+
+Found two adjacent defects outside the already-proved workflow matrix. Hosted
+resource-link copies falsely carried the standalone-file warning, and returning
+from detail content to a Home section (including malformed-hash recovery) left
+focus in hidden detail content. `honey-hearted/index.html` now distinguishes
+hosted from `file:` copy confirmation and restores focus to the visible Home
+destination heading only when crossing from detail content.
+
+The regression instrument reproduced all three failures before the fix.
+Accepted source `b47c7cb` passes TypeScript, lint (one known round-42 evidence
+warning), the 53-route build, and the expanded optimized-runtime Chrome/CDP
+suite locally and at `https://cyvexly.com/honey-hearted`, with zero workflow/
+runtime/network errors. Eight-packet/six-orientation role setup and all hot-file
+caps also pass. Retain only the local/public result JSONs and the two
+opened targeted captures under
+`builder/evidence/round-103-honey-hearted-navigation-truth/` until independent
+review consumes them. Stopped the owned port-5186 runtime, confirmed the port
+clear, and recycled 18,539,537 bytes of redundant captures/download/log output.
+
+**Next Builder round:** disposition all review intake first. Do not repeat the
+same Builder suite without new evidence. Chunk 7 still needs two independent
+reviews; Owner substitutions remain unchanged in
+`HONEY_HEARTED_OWNER_NEEDS.md`.
+
 ## Round 102 / Chunk 7 round 3 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -65,44 +95,9 @@ identity, messaging/newsletter accounts, policies, domain/release approval,
 analytics, and indexing remain Owner substitutions in
 `HONEY_HEARTED_OWNER_NEEDS.md` and must not be invented or activated.
 
-## Round 100 / Chunk 7 round 1 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `37ee2cb` on `main`, matched `origin/main`
-**Accepted product source:** `8d84b96` on `main`, pushed to `origin/main`
-**Authority:** Owner direction `2026-09-08-19`
-
-Opened HoneyHearted as the current priority without disturbing the parallel
-Cyvexly/Velora gates. The imported standalone source now has a same-origin
-`/honey-hearted` route with response-level no-index protection. Fixed the one
-source defect found: the contact-subject chooser had only one real option and
-three stray text nodes; it now exposes four valid choices.
-
-Added `honey-hearted/smoke.mjs` and proved the current whole storefront in a
-real local production runtime. Catalog search/filter/reset, product routing,
-gallery selection/zoom/focus return, safe unconnected commerce, the real free
-HTML download and print document, three teaching articles, About/policies,
-launch/missing routes, truthful preview forms, mobile menu Escape/focus return,
-reduced motion, 320px reflow, no-storage/no-external-request boundaries, route
-headers, and all rendered widths pass with zero failures or browser/network
-errors. TypeScript, lint (one known evidence-script warning), and the 53-route
-build pass; the Next output trace includes the imported HTML.
-
-Evidence is retained under `builder/evidence/round-100-honey-hearted/` until an
-independent reviewer consumes it; redundant PNGs and the downloaded sample can
-then be removed while keeping the source-identified result JSON.
-
-The Round 100 closeout is pushed at `84465bc`; its deployment-boundary note is
-`75ab134`. Render then adopted `/honey-hearted`, and the same full suite passed
-on `https://cyvexly.com` with the expected no-index response and no unexpected
-request, runtime error, overflow, or workflow failure.
-
-**Next Builder round:** first disposition every review intake. Then deepen
-HoneyHearted's negative/correction coverage across catalog combinations and
-native-invalid forms, verify full keyboard traversal/zoom, and reconcile each
-illustrative catalog claim and preview against approved source facts. Keep all
-missing Owner/account values in `HONEY_HEARTED_OWNER_NEEDS.md`; do not activate
-commerce, messaging, subscriptions, analytics, or indexing without real inputs.
+Round 100's full closeout rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_100_REPORT.md` when Round 103
+established the latest-three handoff window.
 
 Round 99's full closeout rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_99_REPORT.md` when Round 102

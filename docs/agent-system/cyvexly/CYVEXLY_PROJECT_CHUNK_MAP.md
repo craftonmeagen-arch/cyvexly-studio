@@ -248,7 +248,7 @@ requires.
   verification rounds confirm the accepted source. One clean Builder pass
   does not close this chunk.
 
-## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 102; chunk round 3)
+## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 103; chunk round 4)
 
 - **Authority:** Owner direction `2026-09-08-19`.
 - **Outcome:** turn the imported teacher-resource storefront into a polished,
@@ -256,7 +256,7 @@ requires.
   commerce/account actions are truthfully demonstrated.
 - **Source truth:** `honey-hearted/index.html`; `honey-hearted/smoke.mjs` is the
   durable rendered workflow check; `/honey-hearted` is the same-origin preview.
-- **Rounds 100–102 progress:** added the no-indexed app route, fixed the malformed
+- **Rounds 100–103 progress:** added the no-indexed app route, fixed the malformed
   contact-subject chooser, and proved catalog, resource/gallery/dialog,
   download/print, content/policy, preview-form, responsive, accessibility,
   storage, and network boundaries in real Chrome. Round 101 added per-dialog
@@ -264,9 +264,10 @@ requires.
   correction paths, adapter failure/retry, catalog claim/provenance checks,
   image resilience, zoom-equivalent reflow, and an 85-control real keyboard
   traversal. Round 102 added direct-deep-link, browser Back/Forward, route-focus,
-  and malformed-hash recovery proof. Product source `4e3f06e` and proof source
-  `94b7fdb` pass TypeScript, lint, the 53-route build, and the expanded rendered
-  suite with zero failures/errors.
+  and malformed-hash recovery proof. Round 103 then fixed accurate hosted-link
+  copy confirmation and detail-to-Home/malformed-recovery focus restoration.
+  Accepted source `b47c7cb` passes TypeScript, lint, the 53-route build, and the
+  expanded rendered suite with zero failures/errors.
 - **Boundaries:** do not invent products, rights, sales, reviews, identity,
   destinations, legal facts, transmission, subscriptions, or payments. Keep
   missing inputs and their safe replacement steps in

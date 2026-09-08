@@ -15,6 +15,17 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 103 / HoneyHearted chunk round 4 — 2026-09-08
+
+Fixed two production-integration truth defects at accepted source `b47c7cb`:
+hosted resource-link copies now receive an accurate shareable-link confirmation
+while `file:` copies retain their local-only warning, and detail-to-Home or
+malformed-hash recovery now focuses the visible destination heading instead of
+leaving focus in hidden content. The before-fix Chrome run reproduced all
+three assertions. TypeScript, lint (one known evidence warning), the 53-route
+build, and the expanded optimized-runtime suite pass locally and publicly with
+zero failures/errors. Two independent review rounds still gate Chunk 7 closure.
+
 ## Round 102 / HoneyHearted chunk round 3 — 2026-09-08
 
 Added durable Chrome/CDP proof for direct resource deep links, browser
