@@ -601,12 +601,21 @@ async function main() {
     const downloadSize = download ? (await stat(join(evidenceDir, download))).size : 0;
     check(sample.title.includes("weekly reset") && sample.toast.includes("printable HTML file is ready") && downloadSize > 3000, "Free sample did not produce the promised printable file.");
     const print = await evaluate(`
-      document.querySelector('[data-print-sample]').click();
-      await new Promise(accept=>setTimeout(accept,250));
+      const trigger=document.querySelector('[data-print-sample]');
+      trigger.focus();
+      trigger.click();
+      await new Promise(accept=>setTimeout(accept,350));
       const frame=document.querySelector('#sample-print-frame');
-      return {exists:Boolean(frame),title:frame?.contentDocument?.title,hasSheet:Boolean(frame?.contentDocument?.querySelector('.sheet'))};
+      return {
+        exists:Boolean(frame),
+        title:frame?.contentDocument?.title,
+        hasSheet:Boolean(frame?.contentDocument?.querySelector('.sheet')),
+        focusStayedOnTrigger:document.activeElement===trigger,
+        activeElement:document.activeElement?.tagName+'#'+(document.activeElement?.id||'')
+      };
     `);
     check(print.exists && print.title.includes("Little Weekly Reset") && print.hasSheet, "Print/save flow did not create the printable document.");
+    check(print.focusStayedOnTrigger, `Print flow moved keyboard focus into hidden content (${print.activeElement}).`);
 
     const contentRoutes = await evaluate(`
       const results={};
