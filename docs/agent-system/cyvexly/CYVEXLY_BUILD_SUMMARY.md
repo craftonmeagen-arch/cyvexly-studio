@@ -15,6 +15,16 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 106 / HoneyHearted chunk round 7 — 2026-09-08
+
+Added a durable 18-route accessibility contract covering every Home, product,
+article, sample, About, policy, launch, and recovery state. It verifies visible
+H1/heading order, named controls, labeled fields, valid ARIA references,
+embedded images, and client-route focus. The first run exposed and corrected an
+instrument false positive from decorative `aria-hidden` cover text; no product
+defect resulted. Proof source `f4adb32` passes locally and on production with
+zero failures or runtime/network errors. Two independent reviews remain.
+
 ## Round 105 / HoneyHearted chunk round 6 — 2026-09-08
 
 No new independent-review intake existed. Added a distinct activation-

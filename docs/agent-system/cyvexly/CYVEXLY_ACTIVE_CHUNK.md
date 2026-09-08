@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
-round 6 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
+round 7 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
 Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
@@ -11,6 +11,16 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 7 is the current reachable Builder priority.
+
+**Round 106 / Chunk 7 round 7** found no new review intake and added a fresh
+18-route accessibility contract. Proof source `f4adb32` verifies every Home,
+product, article, sample, About, policy, launch, and recovery view for visible
+H1/heading order, named controls, labeled fields, valid ARIA references,
+available embedded images, and client-route heading focus. The initial heading
+alert was correctly refuted as instrument noise from decorative `aria-hidden`
+cover text. The complete suite passes locally and on production with zero
+workflow/runtime/network errors; product source remains `165b246`. Two
+independent reviews remain.
 
 **Round 105 / Chunk 7 round 6** found no new review intake and challenged a
 fresh activation-integration surface. Proof source `cacc5af` adds real-Chromium
@@ -31,17 +41,9 @@ source `165b246` passes TypeScript, lint (one known evidence warning), the
 53-route build, and the complete local/public Chrome suites with zero failures
 or browser/network errors. Two independent reviews remain.
 
-**Round 103 / Chunk 7 round 4** found and fixed two production-integration
-truth defects. The hosted “Copy this page link” action no longer applies a
-false local-file warning to shareable HTTP(S) URLs, while standalone file
-copies keep that boundary. Returning from a detail route to a Home section—or
-recovering from a malformed encoded hash—now moves focus to the visible
-destination heading instead of leaving it inside hidden detail content. A
-before-fix Chrome run reproduced all three assertions; accepted source
-`b47c7cb` passes the expanded optimized-runtime suite locally and on the
-adopted public route with zero workflow, runtime, network, or unexpected-origin
-failures. TypeScript, lint (one known evidence warning), and the 53-route build
-pass. Two independent reviews remain.
+Round 103's full active-chunk report rotated to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_103_REPORT.md` when Round 106
+established the latest-three context.
 
 Round 102's full active-chunk report rotated to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_102_REPORT.md` when Round 105
