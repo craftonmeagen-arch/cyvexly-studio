@@ -76,12 +76,20 @@ export default async function CaseStudyPage({
                 <span className="font-medium text-midnight-slate">Audience: </span>
                 {study.audience}
               </p>
+              {study.demoHref ? (
+                <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+                  <ButtonLink href={study.demoHref}>Explore the live demo ↗</ButtonLink>
+                  <span className="max-w-sm text-xs leading-relaxed text-cool-graphite">
+                    Fictional sample content. No booking, message, purchase, or payment is sent.
+                  </span>
+                </div>
+              ) : null}
             </div>
           </div>
           <div
             className={`h-56 w-full overflow-hidden bg-gradient-to-br sm:h-72 ${study.gradient}`}
             role="img"
-            aria-label={`${study.name} abstract concept visual`}
+            aria-label={`${study.name} ${study.demoHref ? "built homepage preview" : "abstract concept visual"}`}
           >
             <ConceptPreview slug={slug} />
           </div>
@@ -152,12 +160,12 @@ export default async function CaseStudyPage({
           </p>
 
           <h2 className="mt-12 font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
-            Desktop &amp; mobile experience
+            {study.demoHref ? "Built responsive experience" : "Desktop & mobile experience"}
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
-            An illustrative preview of the visual direction across
-            breakpoints — not a pixel-accurate screenshot, since{" "}
-            {study.name} is a concept project with no built site behind it.
+            {study.demoHref
+              ? "Real captures of the built demonstration across desktop and mobile. The sample restaurant, details, availability, policies, and transactions are fictional."
+              : `An illustrative preview of the visual direction across breakpoints — not a pixel-accurate screenshot, since ${study.name} is a concept project with no built site behind it.`}
           </p>
           <div className="mt-6 grid gap-6 sm:grid-cols-[1fr_200px]">
             <div>
@@ -171,7 +179,7 @@ export default async function CaseStudyPage({
                   <span className="h-2.5 w-2.5 rounded-full bg-smoke-glass" aria-hidden="true" />
                 </div>
                 <div className="h-40 w-full sm:h-48" role="img" aria-label={`${study.name} illustrative desktop preview`}>
-                  <ConceptPreview slug={slug} />
+                  <ConceptPreview slug={slug} viewport="desktop" />
                 </div>
               </div>
             </div>
@@ -182,7 +190,7 @@ export default async function CaseStudyPage({
               <div className="mx-auto max-w-[200px] overflow-hidden rounded-2xl border-4 border-midnight-slate bg-frosted-glass">
                 <div className="h-3 bg-midnight-slate" aria-hidden="true" />
                 <div className="h-56 w-full sm:h-64" role="img" aria-label={`${study.name} illustrative mobile preview`}>
-                  <ConceptPreview slug={slug} />
+                  <ConceptPreview slug={slug} viewport="mobile" />
                 </div>
               </div>
             </div>

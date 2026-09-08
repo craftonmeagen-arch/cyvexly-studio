@@ -46,6 +46,17 @@ export const credibilityPoints = [
 
 export const selectedWork = [
   {
+    slug: "velora-dining",
+    name: "Velora",
+    kind: "Built concept demo",
+    category: "Business Site",
+    summary:
+      "Fictional fine-dining site with responsive menus, reservation previews, private-event inquiry, gifting, and gallery flows.",
+    tags: ["Hospitality", "Interactive demo"],
+    href: "/work/velora-dining",
+    gradient: "from-[#20271F] via-[#49332E] to-[#D6BD8F]",
+  },
+  {
     slug: "aurora-spaces",
     name: "Aurora Spaces",
     kind: "Concept project",
@@ -83,6 +94,46 @@ export const selectedWork = [
 export const workFilters = ["All", "Business Site", "Commerce", "Concept"];
 
 export const caseStudies = {
+  "velora-dining": {
+    name: "Velora",
+    status: "Built concept demo — fictional",
+    businessType: "Fictional fine-dining restaurant",
+    audience:
+      "Hospitality teams evaluating how a distinctive restaurant brand can combine editorial storytelling with practical guest journeys.",
+    challenge:
+      "Restaurant websites often separate atmosphere from utility: either the page feels beautiful but hides the menu and booking path, or it functions but loses the sense of occasion. This fictional brief called for both in one cohesive experience.",
+    goals: [
+      "Create an immediate sense of place without implying a real restaurant exists",
+      "Make seasonal menus, private dining, gifting, and visit details easy to explore",
+      "Demonstrate complete guest journeys without transmitting data or taking payment",
+    ],
+    scope: [
+      "Responsive single-page restaurant experience with desktop and mobile navigation",
+      "Interactive menus, dish details, room selection, gallery, and print styling",
+      "Reservation, private-event, newsletter, and gift-card demonstration flows",
+    ],
+    decisions: [
+      "Paired a warm editorial art direction with compact practical controls, so utility never breaks the evening-focused atmosphere",
+      "Used native dialogs, real validation, keyboard-operable tabs, and clear correction states to make the demonstration functional rather than a static mockup",
+      "Self-hosted the illustrative photography and typefaces so normal demo use stays inside Cyvexly's own origin and works with the site's production security policy",
+    ],
+    accessibilityHighlights: [
+      "Semantic landmarks, a skip link, native dialogs, visible focus, keyboard tabs, and Escape focus return are built into the experience",
+      "Reduced-motion support and a tested 320px reflow state preserve content and controls without horizontal scrolling",
+    ],
+    intendedOutcome:
+      "A prospect can experience how Cyvexly combines brand presence, responsive polish, and complete interaction design—while every fictional fact and non-transmitting workflow remains unmistakably disclosed.",
+    demoHref: "/velora",
+    gradient: "from-[#20271F] via-[#49332E] to-[#D6BD8F]",
+    palette: [
+      { hex: "#20271F", label: "Forest evening" },
+      { hex: "#F6F3EC", label: "Warm paper" },
+      { hex: "#D6BD8F", label: "Antique gold" },
+      { hex: "#49332E", label: "Muted wine" },
+    ],
+    typographyNote:
+      "Cormorant Garamond carries the editorial dining voice; Manrope keeps navigation, controls, forms, and disclosure copy crisp and practical.",
+  },
   "aurora-spaces": {
     name: "Aurora Spaces",
     status: "Concept project",
@@ -111,6 +162,7 @@ export const caseStudies = {
     ],
     intendedOutcome:
       "A studio site that reads as confidently as the firm's built work, with a consultation form as the single clear next step.",
+    demoHref: null,
     gradient: "from-[#0F66E0] via-[#36C7FF] to-[#EEF4FA]",
     palette: [
       { hex: "#10213D", label: "Midnight slate" },
@@ -149,6 +201,7 @@ export const caseStudies = {
     ],
     intendedOutcome:
       "A technical buyer can understand what Nexora Systems does and why it matters within two scrolls, and reach a demo request without friction.",
+    demoHref: null,
     gradient: "from-[#10213D] via-[#0F66E0] to-[#36C7FF]",
     palette: [
       { hex: "#10213D", label: "Midnight slate ground" },
@@ -187,6 +240,7 @@ export const caseStudies = {
     ],
     intendedOutcome:
       "A store that lets an ingredient-conscious shopper trust the brand and complete a purchase without leaving the product page to go research elsewhere.",
+    demoHref: null,
     gradient: "from-[#36C7FF] via-[#EEF4FA] to-[#D8E1EA]",
     palette: [
       { hex: "#36C7FF", label: "Ion cyan accent" },

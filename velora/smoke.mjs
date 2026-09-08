@@ -4,7 +4,7 @@ import { createServer } from "node:net";
 import { join, resolve } from "node:path";
 import { tmpdir } from "node:os";
 
-const url = process.argv[2] || "http://127.0.0.1:5183/";
+const url = process.argv[2] || "http://127.0.0.1:5173/velora";
 const evidenceDir = resolve(process.argv[3] || "docs/agent-system/cyvexly/builder/evidence/velora-smoke");
 const chromePath = process.env.CHROME_PATH || "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const sourceRef = process.env.CYVEXLY_SOURCE_REF || "unrecorded-working-tree";
@@ -128,14 +128,14 @@ async function main() {
 
     const settle = (milliseconds = 100) => new Promise((accept) => setTimeout(accept, milliseconds));
 
-    const navigate = async () => {
-      await cdp.call("Page.navigate", { url });
+    const navigateTo = async (targetUrl, readySelector) => {
+      await cdp.call("Page.navigate", { url: targetUrl });
       let loaded = false;
       for (let attempt = 0; attempt < 100; attempt += 1) {
         const ready = await evaluate(`
-          return location.href.startsWith(${JSON.stringify(url)}) &&
+          return location.href.startsWith(${JSON.stringify(targetUrl)}) &&
             document.readyState === 'complete' &&
-            Boolean(document.querySelector('#hero-title'));
+            Boolean(document.querySelector(${JSON.stringify(readySelector)}));
         `);
         if (ready) {
           loaded = true;
@@ -143,9 +143,10 @@ async function main() {
         }
         await new Promise((accept) => setTimeout(accept, 100));
       }
-      if (!loaded) throw new Error(`Timed out waiting for Velora at ${url}`);
+      if (!loaded) throw new Error(`Timed out waiting for ${targetUrl}`);
       await new Promise((accept) => setTimeout(accept, 700));
     };
+    const navigate = () => navigateTo(url, "#hero-title");
 
     const screenshot = async (name, fullPage = false) => {
       let clip;
@@ -196,7 +197,7 @@ async function main() {
         disclosed:document.body.innerText.toLowerCase().includes('illustrative photography'),
       };
     `);
-    check(provenance.imageOrigins.length === 1 && provenance.imageOrigins[0] === "https://images.unsplash.com", "Velora images do not come exclusively from the disclosed Unsplash origin.");
+    check(provenance.imageOrigins.length === 1 && provenance.imageOrigins[0] === new URL(url).origin, "Velora images are not exclusively self-hosted with the demo.");
     check(provenance.actionForms === 0 && provenance.noindex && provenance.disclosed, "Demo form, indexing, or illustrative-image disclosure boundaries are incomplete.");
 
     await evaluate("document.querySelector('#tab-dinner').focus();return true;");
@@ -397,6 +398,7 @@ async function main() {
 
     await viewport(390, 844);
     await navigate();
+    await screenshot("final-mobile-top.png");
     const mobile = await evaluate(`
       const toggle=document.querySelector('.menu-toggle');toggle.click();
       return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,expanded:toggle.getAttribute('aria-expanded'),menuHidden:document.querySelector('#mobile-menu').hidden};
@@ -456,7 +458,69 @@ async function main() {
     await screenshot("final-zoom-320-gift.png");
     await evaluate("document.querySelector('#site-dialog [data-close]').click();return true;");
 
-    const allowedOrigins = new Set([new URL(url).origin, "https://images.unsplash.com", "https://fonts.googleapis.com", "https://fonts.gstatic.com"]);
+    const origin = new URL(url).origin;
+    await viewport(1440, 900);
+    await navigateTo(`${origin}/work`, 'a[href="/work/velora-dining"]');
+    const workEntry = await evaluate(`
+      const card=document.querySelector('a[href="/work/velora-dining"]');
+      return {
+        heading:card?.querySelector('h2')?.textContent?.trim(),
+        text:card?.textContent,
+        image:card?.querySelector('image')?.getAttribute('href'),
+      };
+    `);
+    check(workEntry.heading === "Velora" && workEntry.text.includes("Built concept demo") && workEntry.text.includes("Fictional fine-dining"), "Cyvexly Work does not present the truthful Velora portfolio entry.");
+    check(workEntry.image === "/media/velora-capability-demo.webp", "The Velora Work card is not using the real built-demo capture.");
+    const workFilters = await evaluate(`
+      const filter=[...document.querySelectorAll('button')].find(button=>button.textContent.trim()==='Concept');
+      filter?.click();
+      await new Promise(accept=>setTimeout(accept,50));
+      return {
+        conceptKeepsVelora:Boolean(document.querySelector('a[href="/work/velora-dining"]')),
+        scrollWidth:document.documentElement.scrollWidth,
+        width:innerWidth,
+      };
+    `);
+    check(workFilters.conceptKeepsVelora && workFilters.scrollWidth === workFilters.width, "The Concept filter dropped Velora or the four-card Work grid overflowed.");
+    await screenshot("cyvexly-work-velora.png", true);
+
+    await viewport(390, 844);
+    await navigateTo(`${origin}/work`, 'a[href="/work/velora-dining"]');
+    const mobileWork = await evaluate(`return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,velora:Boolean(document.querySelector('a[href="/work/velora-dining"]'))};`);
+    check(mobileWork.velora && mobileWork.scrollWidth === mobileWork.width, "The Velora Work entry is missing or overflowing at the mobile viewport.");
+    await screenshot("cyvexly-work-velora-mobile.png");
+
+    await viewport(1440, 900);
+    await navigateTo(`${origin}/work/velora-dining`, 'a[href="/velora"]');
+    const caseStudy = await evaluate(`
+      const demoLink=document.querySelector('a[href="/velora"]');
+      return {
+        title:document.querySelector('h1')?.textContent?.trim(),
+        text:document.querySelector('main')?.textContent,
+        href:demoLink?.getAttribute('href'),
+      };
+    `);
+    check(caseStudy.title === "Velora" && caseStudy.href === "/velora", "The Velora case study or live-demo destination is missing.");
+    check(caseStudy.text.includes("Built concept demo — fictional") && caseStudy.text.includes("No booking, message, purchase, or payment is sent."), "The Velora case study does not preserve its fictional/non-transmitting boundary.");
+    await screenshot("cyvexly-velora-case-study.png", true);
+
+    await viewport(390, 844);
+    await navigateTo(`${origin}/work/velora-dining`, 'a[href="/velora"]');
+    const mobileCaseStudy = await evaluate(`return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,cta:document.querySelector('a[href="/velora"]')?.textContent?.trim()};`);
+    check(mobileCaseStudy.scrollWidth === mobileCaseStudy.width && mobileCaseStudy.cta.includes("Explore the live demo"), "The mobile Velora case study overflows or loses its live-demo CTA.");
+    await screenshot("cyvexly-velora-case-study-mobile.png");
+
+    await evaluate(`document.querySelector('a[href="/velora"]').click();return true;`);
+    let demoReturned = false;
+    for (let attempt = 0; attempt < 100; attempt += 1) {
+      demoReturned = await evaluate(`return location.pathname === '/velora' && Boolean(document.querySelector('#hero-title'));`);
+      if (demoReturned) break;
+      await settle();
+    }
+    check(demoReturned, "The case-study live-demo link did not reach the functioning Velora experience.");
+    const portfolioIntegration = { workEntry, workFilters, mobileWork, caseStudy, mobileCaseStudy, demoReturned };
+
+    const allowedOrigins = new Set([new URL(url).origin]);
     const unexpectedNetwork = [...new Set(networkRequests.filter((requestUrl) => requestUrl.startsWith("http") && !allowedOrigins.has(new URL(requestUrl).origin)))];
     check(unexpectedNetwork.length === 0, `Unexpected network destinations were contacted: ${unexpectedNetwork.join(", ")}`);
 
@@ -488,6 +552,7 @@ async function main() {
       reducedMotion,
       reflow,
       reflowDialog,
+      portfolioIntegration,
       networkRequests: [...new Set(networkRequests)],
       unexpectedNetwork,
       runtimeErrors,

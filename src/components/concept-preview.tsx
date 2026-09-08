@@ -1,14 +1,9 @@
 import type { ReactElement } from "react";
 
-// Abstract, hand-authored schematic compositions for the three concept
-// case studies — not real screenshots (none exist; these are illustrative
-// concept projects, not real client work), but a step up from a flat
-// gradient placeholder. Each layout is a direct visualization of that
-// project's own already-written "decisions" in site-config.ts (e.g.
-// Aurora Spaces' "full-bleed imagery, minimal chrome," Nexora Systems'
-// "darker, denser... product-UI preview panels," Vellora Care's "product
-// shot + ingredient callout, checkout summary"), and reuses each
-// project's own exact palette hex values rather than new colors.
+// Existing concept studies use hand-authored schematic compositions. Velora
+// is the one built capability demo, so its preview uses captures of the real
+// responsive experience instead of implying that another unbuilt concept is
+// a finished client site.
 
 function AuroraSpacesPreview() {
   return (
@@ -72,14 +67,44 @@ function VelloraCarePreview() {
   );
 }
 
-const previews: Record<string, () => ReactElement> = {
+type PreviewViewport = "desktop" | "mobile";
+
+function VeloraDiningPreview(viewport: PreviewViewport) {
+  const source =
+    viewport === "mobile"
+      ? "/media/velora-capability-demo-mobile.webp"
+      : "/media/velora-capability-demo.webp";
+  const width = viewport === "mobile" ? 200 : 400;
+  const height = viewport === "mobile" ? 320 : 240;
+
+  return (
+    <svg viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="xMidYMid slice" className="h-full w-full">
+      <rect width={width} height={height} fill="#20271F" />
+      <image
+        href={source}
+        width={width}
+        height={height}
+        preserveAspectRatio="xMidYMid slice"
+      />
+    </svg>
+  );
+}
+
+const previews: Record<string, (viewport: PreviewViewport) => ReactElement> = {
+  "velora-dining": VeloraDiningPreview,
   "aurora-spaces": AuroraSpacesPreview,
   "nexora-systems": NexoraSystemsPreview,
   "vellora-care": VelloraCarePreview,
 };
 
-export function ConceptPreview({ slug }: { slug: string }) {
+export function ConceptPreview({
+  slug,
+  viewport = "desktop",
+}: {
+  slug: string;
+  viewport?: PreviewViewport;
+}) {
   const Preview = previews[slug];
   if (!Preview) return null;
-  return <Preview />;
+  return Preview(viewport);
 }

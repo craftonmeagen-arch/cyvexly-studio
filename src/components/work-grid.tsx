@@ -10,7 +10,9 @@ export function WorkGrid() {
   const filtered = useMemo(() => {
     if (activeFilter === "All") return selectedWork;
     if (activeFilter === "Concept") {
-      return selectedWork.filter((project) => project.kind.includes("Concept"));
+      return selectedWork.filter((project) =>
+        project.kind.toLowerCase().includes("concept"),
+      );
     }
     return selectedWork.filter((project) => project.category === activeFilter);
   }, [activeFilter]);
@@ -43,7 +45,7 @@ export function WorkGrid() {
           No projects match that filter yet.
         </p>
       ) : (
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {filtered.map((project) => (
             <a
               key={project.name}
