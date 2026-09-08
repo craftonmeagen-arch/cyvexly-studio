@@ -1,8 +1,9 @@
 import { spawn } from "node:child_process";
-import { mkdir, readdir, rm, stat, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import { createServer } from "node:net";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 
 const url = process.argv[2] || "http://127.0.0.1:5173/honey-hearted";
 const evidenceDir = resolve(
@@ -38,12 +39,14 @@ async function freePort() {
   });
 }
 
-async function waitForDebugger(port) {
+async function waitForDebugger(port, targetId = null) {
   for (let attempt = 0; attempt < 120; attempt += 1) {
     try {
       const response = await fetch(`http://127.0.0.1:${port}/json/list`);
       const pages = await response.json();
-      const page = pages.find((entry) => entry.type === "page");
+      const page = pages.find(
+        (entry) => entry.type === "page" && (!targetId || entry.id === targetId),
+      );
       if (page?.webSocketDebuggerUrl) return page.webSocketDebuggerUrl;
     } catch {}
     await new Promise((accept) => setTimeout(accept, 100));
@@ -600,6 +603,138 @@ async function main() {
     }
     const downloadSize = download ? (await stat(join(evidenceDir, download))).size : 0;
     check(sample.title.includes("weekly reset") && sample.toast.includes("printable HTML file is ready") && downloadSize > 3000, "Free sample did not produce the promised printable file.");
+    const downloadPath = download ? join(evidenceDir, download) : "";
+    const downloadUrl = downloadPath ? pathToFileURL(downloadPath).href : "";
+    let downloadedArtifact = null;
+    if (downloadUrl) {
+      const artifactTarget = await cdp.call("Target.createTarget", {
+        url: downloadUrl,
+      });
+      let artifactCdp;
+      try {
+        artifactCdp = createCdp(
+          await waitForDebugger(port, artifactTarget.targetId),
+        );
+        await artifactCdp.ready;
+        await artifactCdp.call("Page.enable");
+        await artifactCdp.call("Runtime.enable");
+        await artifactCdp.call("Emulation.setDeviceMetricsOverride", {
+          width: 390,
+          height: 844,
+          screenWidth: 390,
+          screenHeight: 844,
+          deviceScaleFactor: 1,
+          mobile: true,
+        });
+        const artifactEvaluate = async (expression) => {
+          const result = await artifactCdp.call("Runtime.evaluate", {
+            expression: `(async()=>{${expression}})()`,
+            awaitPromise: true,
+            returnByValue: true,
+          });
+          if (result.exceptionDetails) {
+            throw new Error(result.exceptionDetails.text);
+          }
+          return result.result.value;
+        };
+        let artifactReady = false;
+        for (let attempt = 0; attempt < 120; attempt += 1) {
+          artifactReady = await artifactEvaluate(`
+            return document.readyState==='complete' && Boolean(document.querySelector('.sheet'));
+          `);
+          if (artifactReady) break;
+          await settle(100);
+        }
+        if (!artifactReady) throw new Error("Downloaded sample did not load.");
+        await cdp.call("Target.activateTarget", {
+          targetId: artifactTarget.targetId,
+        });
+        await artifactCdp.call("Page.bringToFront");
+        downloadedArtifact = await artifactEvaluate(`
+          const printButton=document.querySelector('button');
+          const rect=printButton?.getBoundingClientRect();
+          window.__honeyHeartedPrintRequested=false;
+          printButton.onclick=()=>{window.__honeyHeartedPrintRequested=true;};
+          printButton?.focus();
+          return {
+            protocol:location.protocol,
+            title:document.title,
+            language:document.documentElement.lang,
+            width:innerWidth,
+            scrollWidth:document.documentElement.scrollWidth,
+            h1:document.querySelectorAll('h1').length,
+            main:document.querySelectorAll('main').length,
+            buttonName:printButton?.textContent.trim(),
+            buttonHeight:rect?.height,
+            focused:document.activeElement===printButton,
+            labels:[...document.querySelectorAll('.label')].map(node=>node.textContent.trim()),
+            hasPrivacyNote:document.querySelector('.privacy')?.textContent.includes('approved secure systems'),
+            externalResources:[...document.querySelectorAll('img[src],script[src],link[href]')].map(node=>node.src||node.href).filter(value=>value.startsWith('http')),
+          };
+        `);
+        downloadedArtifact.printRequested = await artifactEvaluate(
+          "document.querySelector('button').click(); return window.__honeyHeartedPrintRequested===true;",
+        );
+        const metrics = await artifactCdp.call("Page.getLayoutMetrics");
+        const capture = await artifactCdp.call("Page.captureScreenshot", {
+          format: "png",
+          captureBeyondViewport: true,
+          fromSurface: true,
+          clip: {
+            x: 0,
+            y: 0,
+            width: metrics.cssContentSize.width,
+            height: metrics.cssContentSize.height,
+            scale: 1,
+          },
+        });
+        await writeFile(
+          join(evidenceDir, "honey-hearted-downloaded-sample-390.png"),
+          Buffer.from(capture.data, "base64"),
+        );
+        await artifactCdp.call("Emulation.setEmulatedMedia", { media: "print" });
+        const printed = await artifactCdp.call("Page.printToPDF", {
+          printBackground: true,
+          preferCSSPageSize: true,
+        });
+        const pdf = Buffer.from(printed.data, "base64");
+        const pdfName = "honey-hearted-weekly-reset-print.pdf";
+        await writeFile(join(evidenceDir, pdfName), pdf);
+        const pdfText = (await readFile(join(evidenceDir, pdfName))).toString("latin1");
+        downloadedArtifact.pdf = {
+          name: pdfName,
+          bytes: pdf.length,
+          pages: (pdfText.match(/\/Type\s*\/Page\b/g) || []).length,
+        };
+      } finally {
+        await cdp.call("Target.closeTarget", { targetId: artifactTarget.targetId });
+      }
+
+      check(
+        downloadedArtifact.protocol === "file:" &&
+          downloadedArtifact.title.includes("Little Weekly Reset") &&
+          downloadedArtifact.language === "en" &&
+          downloadedArtifact.width === 390 &&
+          downloadedArtifact.scrollWidth === 390 &&
+          downloadedArtifact.h1 === 1 &&
+          downloadedArtifact.main === 1 &&
+          downloadedArtifact.buttonName === "Print this page" &&
+          downloadedArtifact.focused &&
+          downloadedArtifact.printRequested &&
+          downloadedArtifact.labels.length === 5 &&
+          downloadedArtifact.hasPrivacyNote &&
+          downloadedArtifact.externalResources.length === 0,
+        `Downloaded sample did not open as a complete, contained, operable artifact: ${JSON.stringify(downloadedArtifact)}`,
+      );
+      check(
+        downloadedArtifact.buttonHeight >= 44,
+        `Downloaded sample Print control is below the 44 CSS-pixel design floor (${downloadedArtifact.buttonHeight}px).`,
+      );
+      check(
+        downloadedArtifact.pdf.pages === 1 && downloadedArtifact.pdf.bytes > 5000,
+        `Downloaded sample did not print as one non-empty Letter page: ${JSON.stringify(downloadedArtifact.pdf)}`,
+      );
+    }
     const print = await evaluate(`
       const trigger=document.querySelector('[data-print-sample]');
       trigger.focus();
@@ -1343,7 +1478,7 @@ async function main() {
       },
       outboundAdapters,
       activationSafety,
-      sample: { ...sample, download, downloadSize, print },
+      sample: { ...sample, download, downloadSize, downloadedArtifact, print },
       contentRoutes,
       routeAccessibility,
       textSpacing,
