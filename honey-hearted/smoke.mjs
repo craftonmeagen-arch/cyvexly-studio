@@ -1142,6 +1142,143 @@ async function main() {
     await cdp.call("Emulation.setEmulatedMedia", {
       features: [{ name: "prefers-reduced-motion", value: "no-preference" }],
     });
+
+    await cdp.call("Emulation.setEmulatedMedia", {
+      features: [
+        { name: "prefers-reduced-motion", value: "no-preference" },
+        { name: "forced-colors", value: "active" },
+      ],
+    });
+    await viewport(320, 800);
+    await navigate();
+    const forcedColors = await evaluate(`
+      const visible=node=>{
+        const style=getComputedStyle(node);
+        return !node.closest('[hidden]') && style.display!=='none' && style.visibility!=='hidden' && node.getClientRects().length>0;
+      };
+      const activeFilter=document.querySelector('.filter-tab[aria-pressed="true"]');
+      const inactiveFilter=document.querySelector('.filter-tab[aria-pressed="false"]');
+      const primary=[...document.querySelectorAll('.btn.primary')].find(visible);
+      primary.dataset.forcedColorsFocusTarget='true';
+      const activeStyle=getComputedStyle(activeFilter);
+      const inactiveStyle=getComputedStyle(inactiveFilter);
+      const controls=[...document.querySelectorAll('a[href],button,input,select,textarea')].filter(visible);
+      const unlabeledControls=controls.filter(node=>{
+        const labels=[...(node.labels||[])].map(label=>label.textContent).join(' ');
+        const labelledBy=(node.getAttribute('aria-labelledby')||'').split(/\s+/).filter(Boolean).map(id=>document.getElementById(id)?.textContent||'').join(' ');
+        return !(node.getAttribute('aria-label')||labelledBy||labels||node.textContent||node.value||node.getAttribute('title')||node.getAttribute('placeholder')||'').trim();
+      });
+      return {
+        matches:matchMedia('(forced-colors: active)').matches,
+        width:innerWidth,
+        scrollWidth:document.documentElement.scrollWidth,
+        activeFilter:{
+          pressed:activeFilter?.getAttribute('aria-pressed'),
+          borderStyle:activeStyle?.borderStyle,
+          borderWidth:activeStyle?.borderWidth,
+          borderColor:activeStyle?.borderColor,
+          color:activeStyle?.color,
+          backgroundColor:activeStyle?.backgroundColor,
+        },
+        inactiveFilter:{
+          pressed:inactiveFilter?.getAttribute('aria-pressed'),
+          borderStyle:inactiveStyle?.borderStyle,
+          borderWidth:inactiveStyle?.borderWidth,
+          borderColor:inactiveStyle?.borderColor,
+          color:inactiveStyle?.color,
+          backgroundColor:inactiveStyle?.backgroundColor,
+        },
+        controls:controls.length,
+        unlabeledControls:unlabeledControls.length,
+      };
+    `);
+    let forcedColorsFocus;
+    for (let index = 0; index < 20; index += 1) {
+      await key("Tab");
+      forcedColorsFocus = await evaluate(`
+        const active=document.activeElement;
+        const style=getComputedStyle(active);
+        return {
+          target:active.dataset.forcedColorsFocusTarget==='true',
+          text:(active.getAttribute('aria-label')||active.textContent||'').trim(),
+          outlineStyle:style.outlineStyle,
+          outlineWidth:style.outlineWidth,
+          outlineColor:style.outlineColor,
+        };
+      `);
+      if (forcedColorsFocus.target) break;
+    }
+    forcedColors.focus = forcedColorsFocus;
+    check(forcedColors.matches, "Chromium did not activate the forced-colors test mode.");
+    check(
+      forcedColors.width === 320 && forcedColors.scrollWidth === 320,
+      "Forced-colors mode introduced horizontal overflow at 320px.",
+    );
+    check(
+      forcedColors.activeFilter.pressed === "true" &&
+        forcedColors.inactiveFilter.pressed === "false" &&
+        forcedColors.activeFilter.borderStyle !== "none" &&
+        forcedColors.activeFilter.borderWidth !== "0px" &&
+        (forcedColors.activeFilter.borderColor !==
+          forcedColors.inactiveFilter.borderColor ||
+          forcedColors.activeFilter.backgroundColor !==
+            forcedColors.inactiveFilter.backgroundColor ||
+          forcedColors.activeFilter.color !== forcedColors.inactiveFilter.color),
+      "The selected catalog filter is not visually distinguishable in forced-colors mode.",
+    );
+    check(
+      forcedColors.focus.target &&
+        forcedColors.focus.outlineStyle !== "none" &&
+        Number.parseFloat(forcedColors.focus.outlineWidth) >= 2,
+      "Keyboard focus is not visibly indicated in forced-colors mode.",
+    );
+    check(
+      forcedColors.controls > 0 && forcedColors.unlabeledControls === 0,
+      "Forced-colors mode exposed an unnamed visible control.",
+    );
+    await screenshot("honey-hearted-forced-colors-home.png");
+
+    const forcedColorRoutes = [];
+    for (const routeName of ["resource/k2", "sample", "page/about", "launch"]) {
+      await navigate();
+      await evaluate(`location.hash=${JSON.stringify(`#${routeName}`)};return true;`);
+      let routeReady = false;
+      for (let attempt = 0; attempt < 40; attempt += 1) {
+        routeReady = await evaluate(
+          `return location.hash===${JSON.stringify(`#${routeName}`)}&&Boolean(document.querySelector('#detail-view h1'));`,
+        );
+        if (routeReady) break;
+        await settle(50);
+      }
+      if (!routeReady) throw new Error(`Timed out waiting for #${routeName}`);
+      const state = await evaluate(`
+        const heading=document.querySelector('#detail-view h1');
+        const rect=heading.getBoundingClientRect();
+        return {
+          route:location.hash,
+          matches:matchMedia('(forced-colors: active)').matches,
+          width:innerWidth,
+          scrollWidth:document.documentElement.scrollWidth,
+          heading:heading.textContent.trim(),
+          headingVisible:rect.width>0&&rect.height>0&&rect.left>=0&&rect.right<=innerWidth,
+        };
+      `);
+      forcedColorRoutes.push(state);
+    }
+    check(
+      forcedColorRoutes.every(
+        state=>state.matches&&state.width===320&&state.scrollWidth===320&&state.heading&&state.headingVisible,
+      ),
+      "A representative routed view lost its heading or width containment in forced-colors mode.",
+    );
+    await screenshot("honey-hearted-forced-colors-launch.png");
+
+    await cdp.call("Emulation.setEmulatedMedia", {
+      features: [
+        { name: "prefers-reduced-motion", value: "no-preference" },
+        { name: "forced-colors", value: "none" },
+      ],
+    });
     await viewport(320, 800);
     await navigate();
     const reflow = await evaluate(`
@@ -1235,6 +1372,7 @@ async function main() {
       },
       backToTop: { before: backTopBefore, after: backTopAfter },
       reducedMotion,
+      forcedColors: { home: forcedColors, routes: forcedColorRoutes },
       reflow,
       networkRequests: [...new Set(networkRequests)],
       unexpectedNetwork,
