@@ -1,5 +1,15 @@
 # Cyvexly App Debt
 
+## Round 112 — HoneyHearted mobile store-notice focus continuity
+
+Public source `d88bfc8` opened the mobile menu's truthful unconnected-store
+notice, but Escape returned focus to `BODY` because the invoking menu button
+had already become hidden. Accepted/deployed source `000dcd9` moves focus to
+the visible menu toggle before the notice opens. The real-Space-key regression
+fails before and passes locally/publicly afterward; the complete suites and
+repository gates pass. Two independent reviews remain the only reachable
+Chunk 7 debt.
+
 ## Round 111 — HoneyHearted mobile touch-target geometry
 
 The deployed baseline exposed 12 visible standalone controls below the 44px

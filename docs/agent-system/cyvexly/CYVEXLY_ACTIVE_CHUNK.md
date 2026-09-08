@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
-round 12 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
+round 13 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
 Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
@@ -11,6 +11,15 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 7 is the current reachable Builder priority.
+
+**Round 112 / Chunk 7 round 13** found a separate mobile storefront-action
+focus gap: the mobile store button hid with its menu, opened the truthful
+connection notice, then Escape returned focus to `BODY`. Accepted/deployed
+source `000dcd9` moves focus to the visible menu toggle before the notice
+opens. The new real-Space-key regression fails on public `d88bfc8` and passes
+locally/publicly afterward; complete suites, TypeScript, lint (one known
+evidence warning), the 53-route build, role setup, hot-file caps, and review
+lifecycle pass. Two independent reviews remain.
 
 **Round 111 / Chunk 7 round 12** challenged mobile touch-target geometry as a
 distinct product question. The deployed baseline had 12 visible standalone
@@ -31,13 +40,9 @@ local/public suites, TypeScript, lint (one known evidence warning), 53-route
 build, role setup, hot-file caps, and review lifecycle pass. Two independent
 reviews remain.
 
-**Round 109 / Chunk 7 round 10** found and fixed Back to top keyboard-focus
-loss. On the deployed baseline, real Space-key activation scrolled to the top,
-hid the trigger, and left focus on `BODY`. Accepted/deployed source `7b9813c`
-makes the hero heading programmatically focusable and focuses it before the
-reduced-motion-aware scroll. The complete local/public suites, TypeScript,
-lint (one known evidence warning), and the 53-route build pass. Two independent
-reviews remain.
+Round 109's full active-chunk report rotated to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_109_REPORT.md` when Round 112
+established the latest-three context.
 
 Round 108's full active-chunk report rotated to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_108_REPORT.md` when Round 111

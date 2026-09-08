@@ -1,5 +1,31 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 112 / Chunk 7 round 13 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `c24b3e8` on `main`, matched `origin/main`
+**Accepted product/test source:** `000dcd9` on `main`, pushed and adopted
+**Authority:** Owner direction `2026-09-08-19`
+
+Fresh source-path use found the mobile store action closed its menu before
+opening the truthful unconnected-store notice. Escape then returned focus to
+`BODY` because the invoking button was hidden. The menu listener now hands
+focus to the visible toggle first. A real-Space-key regression fails on public
+`d88bfc8` and passes locally and publicly at `000dcd9`.
+
+TypeScript, lint (one known round-42 evidence warning), the 53-route build,
+eight-packet role setup, hot-file caps, all 48 review-lifecycle checks, and the
+complete local/public suites pass with zero workflow/runtime/network errors.
+Retain only before/local/public JSON plus the opened focused-toggle capture
+under `builder/evidence/round-112-honey-hearted-mobile-store-focus/` until
+independent review consumes them. Port 5195 and owned browser profiles are
+clear; approximately 17.97 MB of redundant evidence/log output moved to the
+Recycle Bin.
+
+**Next Builder round:** disposition review intake first. Do not continue the
+same focus-hardening pattern without a fresh product-level question. Chunk 7
+still needs two independent reviews; Owner substitutions are unchanged.
+
 ## Round 111 / Chunk 7 round 12 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -55,31 +81,9 @@ same focus-hardening loop without a new product-level question or external
 finding. Chunk 7 still needs two independent reviews; Owner substitutions are
 unchanged.
 
-## Round 109 / Chunk 7 round 10 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `01a60fe` on `main`, matched `origin/main`
-**Accepted product/test source:** `7b9813c` on `main`, pushed and adopted
-**Authority:** Owner direction `2026-09-08-19`
-
-Found and fixed Back to top focus loss. On deployed `1c49c00`, a real Space-
-key activation scrolled to the top and hid the trigger but left focus on
-`BODY`. The handler now moves focus to the visible hero heading before the
-reduced-motion-aware scroll. The new regression fails on the previous public
-source and passes locally/publicly at `7b9813c`; the opened focus capture shows
-the heading outline.
-
-TypeScript, lint (one known round-42 evidence warning), the 53-route build, and
-the complete local/public Chrome suites pass with zero workflow/runtime/network/
-unexpected-origin errors. Retain only the before/local/public result JSONs and
-the local focus capture under
-`builder/evidence/round-109-honey-hearted-back-top/` until independent review
-consumes them. The owned port-5192 runtime is stopped; 27,264,120 bytes of
-redundant captures/download output were removed at closeout.
-
-**Next Builder round:** disposition review intake first. Do not repeat the same
-Builder matrix without fresh evidence. Chunk 7 still needs two independent
-reviews; Owner substitutions remain unchanged.
+Round 109's full handoff rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_109_REPORT.md` when Round 112
+established the latest-three handoff window.
 
 Round 108's full handoff rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_108_REPORT.md` when Round 111

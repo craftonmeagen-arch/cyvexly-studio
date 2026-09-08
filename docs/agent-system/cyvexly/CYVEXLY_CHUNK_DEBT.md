@@ -7,8 +7,8 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
 ## Open
 
 0. **Chunk 7 — HoneyHearted independent review (opened round 100).** Rounds
-   100–111 completed the integrated route and current Builder-reachable proof at
-   accepted product/test source `d88bfc8`: primary and
+   100–112 completed the integrated route and current Builder-reachable proof at
+   accepted product/test source `000dcd9`: primary and
    negative/correction workflows,
    320px/zoom-equivalent reflow, all 85 visible Home controls by real keyboard,
    dialog focus return, catalog claim/asset disclosures, image resilience,
@@ -29,7 +29,9 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    moving focus to their visible destination headings after the menu closes,
    including same-route reactivation. Round 111 fixed 12 undersized mobile
    controls and now proves all 32 visible standalone controls meet the 44px
-   design floor. Two separate independent
+   design floor. Round 112 fixes and proves focus return from the mobile-store
+   action's truthful connection notice to the visible menu toggle after the
+   originating menu control is hidden. Two separate independent
    verification rounds must challenge this
    accepted state. Owner/account substitutions stay in
    `HONEY_HEARTED_OWNER_NEEDS.md`, not here.

@@ -15,6 +15,17 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 112 / HoneyHearted chunk round 13 — 2026-09-08
+
+Fixed mobile store-notice focus continuity at accepted/deployed source
+`000dcd9`. A real-Space-key regression proved public `d88bfc8` opened the
+truthful unconnected-store notice but returned focus to `BODY` after Escape
+because its menu trigger had already become hidden. The menu listener now
+hands focus to the visible toggle before opening the notice. The complete
+local/public suites, TypeScript, lint (one known evidence warning), the
+53-route build, role setup, hot-file caps, and 48 lifecycle checks pass. Two
+independent reviews remain.
+
 ## Round 111 / HoneyHearted chunk round 12 — 2026-09-08
 
 Fixed mobile target sizing at accepted/deployed source `d88bfc8`. A new

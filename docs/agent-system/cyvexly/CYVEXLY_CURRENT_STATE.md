@@ -1,9 +1,16 @@
 # Cyvexly Current State
 
-**Global round:** 111. **Active product work:** Chunk 7 — HoneyHearted
-Functional Storefront, chunk-local round 12, opened under Owner direction
+**Global round:** 112. **Active product work:** Chunk 7 — HoneyHearted
+Functional Storefront, chunk-local round 13, opened under Owner direction
 `2026-09-08-19`. Chunk 6 remains open in parallel only for its two required
 independent reviews; Chunk 5 remains open only for Owner/account gates.
+
+Round 112 found the untested mobile-store notice lifecycle losing focus after
+its invoking menu button became hidden. Accepted/deployed source `000dcd9`
+moves focus to the visible menu toggle before the truthful notice opens; a
+real-Space-key regression fails on public `d88bfc8` and passes locally and
+publicly after deployment. The complete suites and repository gates pass with
+zero failures. Two independent reviews remain.
 
 Round 111 moved to a distinct mobile touch-target question after Round 110's
 focus methodology audit. The deployed baseline exposed 12 visible standalone
@@ -23,15 +30,7 @@ reactivation with real Enter-key input. The regression failed on deployed
 warning), the 53-route build, role setup, and review-lifecycle checks pass.
 Two independent reviews remain.
 
-Round 109 found and fixed a keyboard-continuity defect in the Back to top
-control. The deployed baseline scrolled to the top, hid the activated button,
-and left focus on `BODY`. Accepted/deployed source `7b9813c` moves focus to the
-visible hero heading before scrolling. The real-Space-key regression and the
-complete local/public suites pass with zero workflow/runtime/network errors;
-TypeScript, lint (one known evidence warning), and the 53-route build pass.
-Two independent reviews remain.
-
-Rounds 100–108 integrated the no-indexed storefront and established its
+Rounds 100–109 integrated the no-indexed storefront and established its
 catalog, content, form, activation, accessibility, navigation, download/print,
 and focus-lifecycle proof. Their source identities and complete outcomes are
 preserved in the build summary, app debt, and archived active-chunk/handoff
