@@ -5,6 +5,83 @@ history `2026-08-30-04`/`05` are preserved in
 `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`. The active scheduler boundary
 remains here deliberately.
 
+## HoneyHearted fully functional website direction 2026-09-08-19
+
+**Status:** ACTIVE — CURRENT TEAM TWO WEBSITE BUILDER PRIORITY
+**Source:** Owner via active Codex conversation
+**Recorded:** 2026-09-08 America/New_York
+
+### Owner direction — verbatim
+
+> “in google drive is another file called honey hearted. put this in owners
+> direct...I need this website to be fully functional. Although the products
+> are place holders currently i still want all the features to work on this
+> site as if it is a working website. put place holder things and make notes
+> for what you will need from me but don't let any of that stop you from
+> finishing the app. we will ciricle back to what you need from me later. make
+> sure the app is fully functional and all that should work...does. once you
+> bring the website in this folder from google drive...then write the owners
+> direction. then i want you to make a schedular that says \"you are the team
+> two website builder. look at the team two website builder orientation
+> document and begin that work.\" 5.6 sol set on high. and set according to the
+> rules.”
+
+### Imported source identity
+
+- Google Drive item: `HoneyHearted | Resources made with heart`
+- Drive file ID: `12vR0dcEJe7t1bJDwiZcqqVLdG3wISiOn`
+- Drive MIME type/size: `text/html`, 2,001,966 bytes
+- Local source: `honey-hearted/index.html`
+- Imported SHA-256: `204DCF7FB0E25928552B7BB3170F5DEB6A2488919B11E12A655F46F892E68AE9`
+
+### Agent interpretation — not Owner-authored wording
+
+- This opens **Chunk 7 — HoneyHearted Functional Storefront** as Team Two
+  Website's next priority; the next Builder reconciles the exact round position.
+- Placeholder products and facts are authorized where real inputs are not yet
+  available, but they must remain clearly identified and internally
+  consistent. The site may not invent real customers, sales, product rights,
+  payment success, message delivery, subscriptions, or external accounts.
+- “Fully functional” covers every advertised interaction, including catalog,
+  product, download/purchase boundary, contact/newsletter, responsive,
+  accessibility, validation, failure/retry, and recovery behavior.
+- Missing Owner accounts, final product files, URLs, business facts, or
+  provider credentials do not stop reachable implementation. Build complete,
+  safe local demonstration behavior or explicit placeholder adapters at those
+  boundaries, and record the exact later substitution/activation step in
+  `HONEY_HEARTED_OWNER_NEEDS.md`.
+- The imported HTML is source evidence, not completion proof. Inspect and
+  verify the integrated rendered experience round-for-round.
+- Update the existing Team Two Website Builder automation to the specified
+  prompt, GPT-5.6 Sol/high, and governing non-overlap cadence; do not duplicate
+  it or create other role schedulers.
+
+## Team Two Website role identity direction 2026-09-08-18
+
+**Status:** ACTIVE — ROLE-SYSTEM IDENTITY
+**Source:** Owner via active Codex conversation
+**Recorded:** 2026-09-08 America/New_York
+
+### Owner direction — verbatim
+
+> “ok look at the rules label it clearly as team two website builder.snd all
+> the other roles and files likewise to make the system work for them”
+
+### Agent interpretation — not Owner-authored wording
+
+- The canonical team/lane name for this repository is **Team Two Website**.
+- Its role labels are Team Two Website Builder, Supervisor, Independent
+  Forensic Auditor, Quality & Methods Council, Project Manager, and Functional
+  Smoke Auditor.
+- Cyvexly Studio remains the product/brand. Existing `CYVEXLY_*` filenames,
+  `cyvexly_*` configuration filenames, and lifecycle role keys remain stable
+  compatibility interfaces; visible identity metadata and active entry text
+  carry the Team Two Website name.
+- The eight imported rule packets remain unchanged and checksum-verifiable.
+  The project mapping and local rule README apply them to Team Two Website.
+- This identity direction does not create a second concurrent Builder, change
+  a scheduler, or convert the Supervisor/review roles into Builders.
+
 ## Launch completion and business operations direction 2026-09-04-14
 
 **Status:** ACTIVE — MAKE THIS THE NEXT MAJOR CHUNK

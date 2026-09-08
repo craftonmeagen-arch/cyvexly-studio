@@ -1,6 +1,6 @@
-# Cyvexly role environment
+# Team Two Website — Cyvexly role environment
 Start with docs/agent-system/cyvexly/CYVEXLY_TEAM_START_HERE.md.
-Six project agent definitions and root orientations use one current imported rule set.
+Six Team Two Website agent definitions and root orientations use one current imported rule set.
 Role prompts inherit the Owner-selected model. This environment does not create schedules.
 
 PowerShell 7 helpers:

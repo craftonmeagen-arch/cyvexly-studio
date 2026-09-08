@@ -6,6 +6,13 @@ $ErrorActionPreference='Stop'
 $workspace=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../../..'))
 $lane=Join-Path $workspace 'docs/agent-system/cyvexly'
 $rules=Join-Path $lane 'rules'
+$teamManifest=Get-Content (Join-Path $lane 'CYVEXLY_TEAM_SETUP_MANIFEST.json') -Raw | ConvertFrom-Json
+if($teamManifest.schema -ne 2 -or $teamManifest.team.id -ne 'team-two-website' -or
+    $teamManifest.team.displayName -ne 'Team Two Website' -or
+    $teamManifest.team.activeWebsite -ne 'HoneyHearted' -or
+    $teamManifest.team.activeSource -ne 'honey-hearted/index.html'){
+    throw 'Team Two Website manifest identity is missing or invalid.'
+}
 $manifest=Get-Content (Join-Path $rules 'SYNC_MANIFEST.json') -Raw | ConvertFrom-Json
 if(@($manifest.files).Count -ne 8){throw 'Expected eight imported packets.'}
 foreach($entry in $manifest.files){
@@ -17,10 +24,20 @@ $orientations=@{
     auditor='CYVEXLY_AUDITOR_ORIENTATION_DOCUMENT.md';council='CYVEXLY_COUNCIL_ORIENTATION_DOCUMENT.md'
     pm='CYVEXLY_PM_ORIENTATION_DOCUMENT.md';functional='CYVEXLY_FUNCTIONAL_SMOKE_AUDITOR_ORIENTATION_DOCUMENT.md'
 }
+$agentNames=@{
+    builder='team_two_website_builder';supervisor='team_two_website_supervisor'
+    auditor='team_two_website_auditor';council='team_two_website_council'
+    pm='team_two_website_pm';functional='team_two_website_functional'
+}
 foreach($role in $orientations.Keys){
     $orientation=Join-Path $workspace $orientations[$role]
     $config=Get-Content (Join-Path $workspace ".codex/agents/cyvexly_$role.toml") -Raw
     if(-not (Test-Path $orientation) -or -not $config.Contains($orientations[$role])){throw "Role orientation missing: $role"}
+    if((Get-Content $orientation -Raw) -notmatch 'Team Two Website'){throw "Role orientation lacks Team Two Website identity: $role"}
+    if($config -notmatch "(?m)^name\s*=\s*`"$([regex]::Escape($agentNames[$role]))`"\r?$"){
+        throw "Role agent name is not Team Two Website scoped: $role"
+    }
+    if($config -notmatch 'Team Two Website'){throw "Role config lacks Team Two Website identity: $role"}
     if($config -match '(?m)^(model|model_reasoning_effort)\s*='){throw "Role pins Owner model: $role"}
     foreach($field in @('name','description','developer_instructions')){if($config -notmatch "(?m)^$field\s*="){throw "Role missing field: $role $field"}}
 }
@@ -44,4 +61,4 @@ foreach($file in Get-ChildItem $PSScriptRoot -Filter '*.ps1'){
     if($errors.Count){throw "Helper syntax error: $($file.Name)"};$helperCount++
 }
 & (Join-Path $PSScriptRoot 'Test-HotFileCaps.ps1') | Out-Null
-[pscustomobject]@{status='PASS';verifiedPackets=8;orientations=6;retiredFilesAbsent=6;parsedHelpers=$helperCount;hotFiles='PASS'}|ConvertTo-Json
+[pscustomobject]@{status='PASS';team='Team Two Website';verifiedPackets=8;orientations=6;retiredFilesAbsent=6;parsedHelpers=$helperCount;hotFiles='PASS'}|ConvertTo-Json

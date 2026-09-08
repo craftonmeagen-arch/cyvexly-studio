@@ -1,9 +1,9 @@
-# Cyvexly PM current state
+# Team Two Website Project Manager — Cyvexly Current State
 Initialized 2026-09-04 for the Owner-authorized role setup; no PM product assessment performed.
-Current product baseline: Builder round 29, accepted product f35a2a6 on main (re-identify).
-Mission: integrated Chunk 5 under Owner direction 2026-09-04-14 and vision §17.
-Contact/metadata/truth work has source proof; public adoption remains to be verified.
-About, legal, real inquiry delivery, domain, measurement and complete QA remain open.
-Payment and real portfolio replacement are deferred. Preserve all recorded Owner gates.
-Next: read current source/state and independent reports; reconcile strongest reachable work.
+Current priority: Chunk 7 — HoneyHearted Functional Storefront under Owner
+direction `2026-09-08-19`, starting from `honey-hearted/index.html`.
+The Builder must implement every advertised feature with safe placeholder/demo
+behavior where Owner inputs are pending and maintain
+`HONEY_HEARTED_OWNER_NEEDS.md`. Re-identify accepted source and current round
+from Git/state before any PM assessment. Preserve earlier Cyvexly/Velora gates.
 

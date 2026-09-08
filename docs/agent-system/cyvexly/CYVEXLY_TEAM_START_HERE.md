@@ -1,22 +1,30 @@
-# Cyvexly team
-Updated 2026-09-04 by Owner request to align the environment with NEW AI BUILD RULES and remove older rules.
+# Team Two Website — Cyvexly Studio
+Updated 2026-09-08 by Owner direction to make the team assignment explicit.
+
+**Canonical team identity:** **Team Two Website**. This Cyvexly project
+environment carries the Owner-directed website work; HoneyHearted is the
+current assignment. `CYVEXLY_*` filenames, `cyvexly_*` configuration
+filenames, and the low-level script role keys are retained as stable product
+interfaces; they do not rename this team or create another team.
 
 Open a task in C:/app projects/website and use:
-> You are the Cyvexly Builder. Look for the Cyvexly Builder Orientation Document and then perform that role.
+> You are the Team Two Website Builder for Cyvexly Studio. Read CYVEXLY_BUILDER_ORIENTATION_DOCUMENT.md and perform that role.
 
-Replace Builder with Supervisor, Auditor, Council, PM, or Functional Smoke Auditor.
+Use the corresponding full Team Two Website role label and orientation for the
+other roles. Do not shorten the identity to a generic “second Builder” or treat
+the Supervisor as another Builder.
 Each role has one root orientation and a matching .codex/agents/cyvexly_*.toml definition.
 A plain-language role prompt works directly; it does not require spawning a subagent.
 The Owner chooses the model. No role pins a vendor, model, or reasoning effort.
 
-| Role | Orientation | Purpose |
+| Canonical role label | Orientation | Purpose |
 |---|---|---|
-| Builder | CYVEXLY_BUILDER_ORIENTATION_DOCUMENT.md | Implement the accepted vision and Chunk 5 |
-| Supervisor | CYVEXLY_SUPERVISOR_ORIENTATION_DOCUMENT.md | Scrutinize and fix recent Builder work; never lead features |
-| Auditor | CYVEXLY_AUDITOR_ORIENTATION_DOCUMENT.md | Independently verify Builder claims |
-| Council | CYVEXLY_COUNCIL_ORIENTATION_DOCUMENT.md | Independently judge visible quality and methods |
-| PM | CYVEXLY_PM_ORIENTATION_DOCUMENT.md | Reconcile scope, dependencies, findings, and role prompts |
-| Functional Smoke Auditor | CYVEXLY_FUNCTIONAL_SMOKE_AUDITOR_ORIENTATION_DOCUMENT.md | Roam real prospect workflows and trace failures |
+| Team Two Website Builder | CYVEXLY_BUILDER_ORIENTATION_DOCUMENT.md | Implement the accepted vision and active chunk |
+| Team Two Website Supervisor | CYVEXLY_SUPERVISOR_ORIENTATION_DOCUMENT.md | Scrutinize and fix recent Builder work; never lead features |
+| Team Two Website Independent Forensic Auditor | CYVEXLY_AUDITOR_ORIENTATION_DOCUMENT.md | Independently verify Builder claims |
+| Team Two Website Quality & Methods Council | CYVEXLY_COUNCIL_ORIENTATION_DOCUMENT.md | Independently judge visible quality and methods |
+| Team Two Website Project Manager | CYVEXLY_PM_ORIENTATION_DOCUMENT.md | Reconcile scope, dependencies, findings, and role prompts |
+| Team Two Website Functional Smoke Auditor | CYVEXLY_FUNCTIONAL_SMOKE_AUDITOR_ORIENTATION_DOCUMENT.md | Roam real prospect workflows and trace failures |
 
 The Supervisor needs an identifiable Builder round or recent Builder handoff as its target.
 Coordinate shared-file ownership with an active Builder before fixes; it has no independent

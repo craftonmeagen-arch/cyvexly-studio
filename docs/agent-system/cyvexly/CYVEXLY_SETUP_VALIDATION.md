@@ -1,4 +1,15 @@
-# Cyvexly role setup validation
+# Team Two Website — Cyvexly role setup validation
+
+## Team identity update — 2026-09-08
+
+Owner direction now assigns this repository's role lane the canonical display
+name **Team Two Website**. All six active entrances, agent definitions, local
+rule adapters, and PM prompts use the full Team Two Website role labels.
+Stable `CYVEXLY_*` filenames and low-level lifecycle role keys were retained so
+the existing scheduler and review helpers continue to resolve their inputs.
+The eight checksum-verified imported rule packets remain byte-identical; their
+Team Two Website interpretation belongs in the local mapping, not inside the
+frozen universal text.
 **Validated:** 2026-09-05. **Scope:** Owner-authorized rule and environment migration.
 This is setup validation, not a Builder round, independent product review, deployment,
 or final launch approval. No scheduler was created or changed by this migration.

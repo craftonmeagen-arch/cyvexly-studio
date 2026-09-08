@@ -1,5 +1,12 @@
 {
-  "schema": 1,
+  "schema": 2,
+  "team": {
+    "id": "team-two-website",
+    "displayName": "Team Two Website",
+    "product": "Cyvexly Studio website environment",
+    "activeWebsite": "HoneyHearted",
+    "activeSource": "honey-hearted/index.html"
+  },
   "reviewRoot": "C:/app projects/website-independent-review",
   "roles": [
     "builder",
@@ -9,6 +16,14 @@
     "pm",
     "functional"
   ],
+  "roleLabels": {
+    "builder": "Team Two Website Builder",
+    "supervisor": "Team Two Website Supervisor",
+    "auditor": "Team Two Website Independent Forensic Auditor",
+    "council": "Team Two Website Quality & Methods Council",
+    "pm": "Team Two Website Project Manager",
+    "functional": "Team Two Website Functional Smoke Auditor"
+  },
   "rolePorts": {
     "builder": 5173,
     "auditor": 5273,

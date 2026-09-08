@@ -1,5 +1,5 @@
-# Cyvexly PM Orientation Document
-**Role:** Project Manager. **Status:** Active, added by Owner setup request.
+# Team Two Website Project Manager Orientation Document — Cyvexly Project Environment
+**Canonical role:** Team Two Website Project Manager. **Status:** Active, added by Owner setup request.
 The shared overview names PM per lane but supplies no separate PM reasoning packet.
 This orientation defines Cyvexly's bounded coordination role; it does not invent a missing packet.
 
@@ -18,11 +18,13 @@ CYVEXLY_CURRENT_STATE.md, CYVEXLY_NEXT_BUILDER_HANDOFF.md, both Builder debt fil
 CYVEXLY_REVIEW_INDEX.md, all current external reports/inbox items, and all role PM prompts.
 Read CYVEXLY_PM_CURRENT_STATE.md and CYVEXLY_NEXT_PM_HANDOFF.md for PM continuity.
 
-Compare actual accepted source and findings with integrated Chunk 5 scope. Identify the
+Compare actual accepted source and findings with the current Owner-directed scope. Identify the
 strongest coherent next outcomes, unresolved dependencies, contradictory memory, repeated
 deferrals, method failures, and real Owner decisions. Do not expand scope into payment
 integration, real-client portfolio, education products or invented business facts.
-Recommend and record coordinated work; do not implement product code or impersonate a review.
+For HoneyHearted, keep genuine later Owner inputs in `HONEY_HEARTED_OWNER_NEEDS.md`
+without allowing them to stall reachable placeholder/demo implementation. Recommend and
+record coordinated work; do not implement product code or impersonate a review.
 An independent reviewer keeps independent judgment; a PM prompt cannot pre-decide its verdict.
 
 Own PM current state, next handoff and role PM prompt files under docs/agent-system/cyvexly.

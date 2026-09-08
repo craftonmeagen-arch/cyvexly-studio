@@ -1,10 +1,10 @@
-# Cyvexly Auditor PM Prompt
+# Team Two Website Independent Forensic Auditor — Cyvexly PM Prompt
 
-**Status:** NEXT REVIEW TARGET — CHUNK 5
+**Status:** NEXT REVIEW TARGET — ACTIVE ACCEPTED CHUNK
 
-When explicitly invoked after a Builder publishes an accepted Chunk 5 source,
-independently verify Owner direction `2026-09-04-14` and vision §17 across the
-canonical public domain and the complete integrated outcome. Respect the
-explicit payment/portfolio deferrals and distinguish real Owner account gates
-from implementation defects.
+When explicitly invoked, independently verify the current accepted source and
+active chunk identified by current state/handoff. Owner direction
+`2026-09-08-19` makes the fully functional HoneyHearted storefront the next
+review target once the Builder publishes accepted source. Challenge every
+advertised workflow and placeholder boundary without substituting stale source.
 

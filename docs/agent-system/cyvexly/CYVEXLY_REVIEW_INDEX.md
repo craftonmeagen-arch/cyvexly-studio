@@ -1,5 +1,7 @@
-# Cyvexly Review Index
-**Independent roles:** Auditor, Council, Functional Smoke; explicit invocation or existing Owner-managed schedule.
+# Team Two Website — Cyvexly Review Index
+**Independent roles:** Team Two Website Independent Forensic Auditor, Quality &
+Methods Council, and Functional Smoke Auditor; explicit invocation or existing
+Owner-managed schedule.
 
 Current authoritative root: C:/app projects/website-independent-review.
 | Role | Current report | Archive | Memory |

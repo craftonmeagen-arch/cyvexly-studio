@@ -1,4 +1,7 @@
-# Current imported rule set
+# Team Two Website — current imported rule set
+
+These shared packets govern the **Team Two Website** roles for the Cyvexly
+Studio product through the project mapping one directory above.
 
 These eight Markdown packets are preserved unchanged from the supplied files,
 verified against the NEW AI BUILD RULES Google Drive folder on 2026-09-05.

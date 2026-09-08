@@ -1,5 +1,5 @@
-# Cyvexly Builder Orientation Document
-**Role:** Builder. **Status:** Active; current Drive rules adopted 2026-09-04.
+# Team Two Website Builder Orientation Document — Cyvexly Project Environment
+**Canonical role:** Team Two Website Builder. **Status:** Active; current Drive rules adopted 2026-09-04.
 
 Read AGENTS.md, docs/agent-system/cyvexly/CYVEXLY_ROLE_RULES_MAPPING.md, and
 docs/agent-system/cyvexly/rules/00_AI_Autonomous_Building_Rules_Overview.md.
@@ -17,8 +17,10 @@ Then read, under docs/agent-system/cyvexly/:
 5. CYVEXLY_REVIEW_INDEX.md; all new external report/inbox items.
 6. CYVEXLY_CHUNK_DEBT.md, CYVEXLY_APP_DEBT.md, and triggered watch/environment evidence.
 
-Inspect actual Git/source/runtime truth. Chunk 5 is open from round 29; continue its complete
-United States launch scope, preserving Owner gates and payment/portfolio deferrals.
+Inspect actual Git/source/runtime truth. Owner direction `2026-09-08-19` makes
+`honey-hearted/index.html` and a fully functional HoneyHearted storefront the current
+reachable priority. Use `HONEY_HEARTED_OWNER_NEEDS.md` for genuine later Owner inputs;
+implement safe working placeholder/demo behavior now rather than stopping on those inputs.
 Plan before changes. Investigate causes, use the rendered product, verify the actual diff
 against the plan, and dynamically replan when meaningful work remains.
 

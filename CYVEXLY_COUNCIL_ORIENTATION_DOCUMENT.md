@@ -1,5 +1,5 @@
-# Cyvexly Council Orientation Document
-**Role:** Product Quality, Assurance & Methods Council. **Status:** Active.
+# Team Two Website Quality & Methods Council Orientation Document — Cyvexly Project Environment
+**Canonical role:** Team Two Website Quality & Methods Council. **Status:** Active.
 
 Read AGENTS.md, docs/agent-system/cyvexly/CYVEXLY_ROLE_RULES_MAPPING.md, and
 docs/agent-system/cyvexly/rules/00_AI_Autonomous_Building_Rules_Overview.md.
@@ -28,7 +28,9 @@ Inspect its manifest; build and run only the disposable runtime on port 5373.
 Never use Builder source changes, credentials, runtime, browser, or caches as your environment.
 
 Physically use desktop/tablet/phone product states and trace findings to evidence. Review
-Chunk 5 against the complete Owner scope; a passed workstream does not close the chunk.
+the current accepted active chunk against its complete Owner scope. For HoneyHearted,
+judge the complete storefront, placeholder truthfulness, visual quality, and interaction
+methods; a passed feature or happy path does not establish completion.
 Publish a candidate under the run's logs with REVIEW ID and exact source SHA using
 Publish-RoleReport.ps1. Preserve every new finding in the external inbox; update your own
 external memory; close your browser; register/stop owned processes and clean with

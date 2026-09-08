@@ -1,4 +1,11 @@
-# Cyvexly Studio Current Agent Guidance
+# Team Two Website — Cyvexly Studio Current Agent Guidance
+
+**Team identity:** This repository is assigned to **Team Two Website**. The six
+active roles are the **Team Two Website Builder**, **Team Two Website
+Supervisor**, **Team Two Website Independent Forensic Auditor**, **Team Two
+Website Quality & Methods Council**, **Team Two Website Project Manager**, and
+**Team Two Website Functional Smoke Auditor**. `Cyvexly` remains the product
+and stable path/file prefix; it is not the team name.
 
 The previous contents of this file are superseded by direct Owner instruction
 dated 2026-09-04. Do not use older setup-state claims such as “Git is not
@@ -11,7 +18,7 @@ Owner setup direction 2026-09-04 replaces the older role packets and lock-based
 launch procedures with the eight unchanged files in
 `docs/agent-system/cyvexly/rules/`. Read
 `docs/agent-system/cyvexly/CYVEXLY_TEAM_START_HERE.md` and the matching root
-orientation: Builder, Supervisor, Auditor, Council, PM, or Functional Smoke Auditor.
+orientation for the assigned Team Two Website role.
 `docs/agent-system/cyvexly/CYVEXLY_ROLE_RULES_MAPPING.md` supplies exact Cyvexly
 paths and applicability for shared rules containing other-product examples.
 Older reports and Git history are evidence only, never active launch instructions.
@@ -28,21 +35,36 @@ that Council ordering. Role identity and authority do not depend on the model.
 
 ## Current product mission
 
-The next major product chunk is **Chunk 5 — United States Launch Completion &
-Business Operations**.
+The current Team Two Website Builder priority is **Chunk 7 — HoneyHearted
+Functional Storefront** under Owner direction `2026-09-08-19`. The imported
+source is `honey-hearted/index.html`. Build every visible and advertised
+feature into a complete working or truthfully disclosed local-demonstration
+flow. Missing Owner inputs belong in
+`docs/agent-system/cyvexly/HONEY_HEARTED_OWNER_NEEDS.md` and must not stall
+reachable work. Existing Cyvexly/Velora state and Owner gates remain valid
+history and parallel obligations, not the current forward-build priority.
 
 Before working, read:
 
 1. `docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md`, especially Owner
-   direction `2026-09-04-14`;
-2. `CYVEXLY_VISION_PLAN.md`, especially §17;
-3. `docs/agent-system/cyvexly/CYVEXLY_PROJECT_CHUNK_MAP.md`, Chunk 5;
+   direction `2026-09-08-19`;
+2. `honey-hearted/index.html` and `HONEY_HEARTED_OWNER_NEEDS.md`;
+3. the current project chunk map and active chunk;
 4. the matching current-state, debt, handoff, and PM-prompt files for the role.
 
-All roles use the same Chunk 5 scope, explicit deferrals, Owner gates, and
-completion definition. The Builder implements; the Auditor and Council review
-independently after an accepted source is available. Do not report the
-integrated chunk complete because one workstream passed.
+All roles use the same current Owner scope and completion definition. The
+Builder implements; the Auditor and Council review independently after an
+accepted source is available. Do not report the integrated website complete
+because one feature or happy path passed.
+
+## HoneyHearted Owner facts
+
+- Brand/source title: HoneyHearted — “Resources made with heart.”
+- Placeholder products are authorized, but every feature must work.
+- Missing final content, accounts, URLs, or credentials must be documented and
+  represented by safe working placeholder/demo behavior, not treated as a stop.
+- Real payment, message delivery, subscription, ownership, or product-rights
+  claims must never be fabricated.
 
 ## Confirmed Owner facts
 

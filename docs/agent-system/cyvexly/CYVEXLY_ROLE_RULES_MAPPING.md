@@ -1,10 +1,21 @@
-# Cyvexly rule and path mapping
+# Team Two Website — Cyvexly rule and path mapping
 **Authority:** Owner request, 2026-09-04: "ok fix it. and we need to remove the older rules so there are no confusion".
 This file is a Cyvexly environment adapter, not a replacement general rule packet.
 The eight files in rules/ are the sole active imported rule set, preserved unchanged from
 the verified NEW AI BUILD RULES folder. SYNC_MANIFEST.json records source IDs and hashes.
 Older draft packets and their claim/release helpers are removed from the working tree.
 Do not restore their procedures from Git history, old reports, caches, or remembered prompts.
+
+## Team identity adapter
+
+Owner direction dated 2026-09-08 assigns this lane the canonical name
+**Team Two Website**. In this repository, every generic Builder, Supervisor,
+Auditor, Council, PM, or Functional Smoke reference in the imported packets
+maps respectively to the Team Two Website role listed in
+`CYVEXLY_TEAM_START_HERE.md`. Generic “Primary” and “Teams 1–5” examples in the
+shared packets do not create additional local teams or a second Builder here.
+The `CYVEXLY_*` paths and low-level `builder|supervisor|auditor|council|pm|functional`
+keys remain stable product/runtime interfaces.
 
 ## Precedence and applicability
 Current Owner direction and accepted Cyvexly vision govern product scope. Apply the shared
@@ -13,8 +24,10 @@ Read 00_AI_Autonomous_Building_Rules_Overview.md for every role. Then read the a
 packet(s) named in that role's orientation; do not substitute a summary for the full packet.
 
 EduAILenz, BloomED, teacher/student, IEP, Clerk, database, tunnel, and other-team examples
-in the unchanged packets are product-specific examples. Here the user is a business
-prospect; the product is Cyvexly's marketing site and qualified project brief workflow.
+in the unchanged packets are product-specific examples. Here the product environment
+contains Cyvexly Studio and the Owner-authorized website builds named in current direction,
+including Velora and HoneyHearted. Use the intended user for the active website rather than
+assuming every task is the Cyvexly marketing-site prospect workflow.
 They do not authorize an education product, student data, fictional authentication,
 a database, special-education compliance features, or another team's credentials.
 Evaluate accessibility and applicable legal requirements against actual Cyvexly behavior.

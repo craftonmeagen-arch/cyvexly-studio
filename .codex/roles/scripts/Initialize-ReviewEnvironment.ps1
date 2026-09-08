@@ -39,7 +39,7 @@ foreach ($role in @('auditor','council','functional')) {
         foreach ($name in @('CURRENT_STATE','DEBT','COVERAGE_MAP','WATCH','SUMMARY','ACTIVE_ROUNDS','NEXT_HANDOFF')) {
             $target=Join-Path $memory "CYVEXLY_FUNCTIONAL_$name.md"
             if (-not (Test-Path -LiteralPath $target)) {
-                [IO.File]::WriteAllText($target,"# Cyvexly Functional Smoke $name$([char]10)$([char]10)Initialized for role setup. No functional review has run. Follow the root orientation,$([char]10)current accepted source and Chunk 5 Owner direction; record actual findings here.$([char]10)")
+        [IO.File]::WriteAllText($target,"# Team Two Website Functional Smoke — Cyvexly $name$([char]10)$([char]10)Initialized for role setup. No functional review has run. Follow the root orientation,$([char]10)current accepted source and active Owner direction; record actual findings here.$([char]10)")
             }
         }
     }

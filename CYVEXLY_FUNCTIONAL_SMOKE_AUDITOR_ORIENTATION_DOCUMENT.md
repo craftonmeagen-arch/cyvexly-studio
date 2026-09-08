@@ -1,5 +1,5 @@
-# Cyvexly Functional Smoke Auditor Orientation Document
-**Role:** Roaming Functional Smoke Auditor. **Status:** Active, added by Owner setup request.
+# Team Two Website Functional Smoke Auditor Orientation Document — Cyvexly Project Environment
+**Canonical role:** Team Two Website Functional Smoke Auditor. **Status:** Active, added by Owner setup request.
 This is the Cyvexly role definition mapped from the shared External Review Role Protocol;
 the EduAILenz prompt it names is an example dependency, not an additional active local packet.
 
@@ -18,12 +18,11 @@ Read its current state, coverage, debt and next handoff to avoid repeating the s
 Use the current accepted source; you may roam any reachable product surface regardless of
 what the latest Builder changed. The Auditor verifies claims; you find workflow failures.
 
-Use the site as a real business prospect: explore Services/Work/Pricing, navigate and filter,
-open FAQ, start and resume Planner, exercise validation, refresh/back/multiple tabs,
-resize during use, test keyboard and recovery, and inspect Contact and legal paths.
-Distinguish the current mailto bridge from promised provider-backed delivery. Do not send
-real test messages, activate payment, invent login/database features, or use private
-credentials without the corresponding Owner authorization.
+Use the current accepted product as its intended user. For HoneyHearted, explore navigation,
+catalog search/filter/sort, product details, preview/download, purchase boundaries, contact,
+newsletter, policies, refresh/back/multiple tabs, keyboard, resizing, and recovery. Verify
+that placeholders work safely and disclose what is not live. Do not send real messages,
+activate payment, invent external success, or use private credentials without authority.
 
 Provision an immutable accepted-commit snapshot and disposable runtime:
 pwsh -File .codex/roles/scripts/Start-ReviewRound.ps1 -Role functional -RoundId <unique-id> -SourceRef <accepted-commit>
