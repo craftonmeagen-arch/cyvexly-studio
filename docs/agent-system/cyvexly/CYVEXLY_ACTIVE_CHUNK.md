@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
-round 11 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
+round 12 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
 Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
@@ -11,6 +11,15 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 7 is the current reachable Builder priority.
+
+**Round 111 / Chunk 7 round 12** challenged mobile touch-target geometry as a
+distinct product question. The deployed baseline had 12 visible standalone
+controls below the 44px design floor. Accepted/deployed source `d88bfc8`
+hardens menu, catalog, consent, footer, dialog, and back-to-top targets while
+preserving inline prose-link density. The new real-Chrome regression fails
+before and passes all 32 measured controls locally/publicly; complete suites,
+TypeScript, lint (one known evidence warning), the 53-route build, role setup,
+hot-file caps, and review lifecycle pass. Two independent reviews remain.
 
 **Round 110 / Chunk 7 round 11** used the required fifth-round methodology
 audit to challenge the repeated focus-patch pattern. Real Enter-key input on
@@ -30,14 +39,9 @@ reduced-motion-aware scroll. The complete local/public suites, TypeScript,
 lint (one known evidence warning), and the 53-route build pass. Two independent
 reviews remain.
 
-**Round 108 / Chunk 7 round 9** found and fixed a responsive keyboard-focus
-defect. When an open mobile menu crossed the desktop breakpoint, Chromium
-closed the menu but did not preserve the user's continuation point. The new
-real-Chromium regression failed on the deployed baseline. Accepted/deployed
-source `1c49c00` maps a focused mobile navigation link or store action to its
-visible desktop equivalent. The complete local/public suites, TypeScript, lint
-(one known evidence warning), and the 53-route build pass. Two independent
-reviews remain.
+Round 108's full active-chunk report rotated to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_108_REPORT.md` when Round 111
+established the latest-three context.
 
 Round 107's full active-chunk report rotated to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_107_REPORT.md` when Round 110

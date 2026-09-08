@@ -248,7 +248,7 @@ requires.
   verification rounds confirm the accepted source. One clean Builder pass
   does not close this chunk.
 
-## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 110; chunk round 11)
+## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 111; chunk round 12)
 
 - **Authority:** Owner direction `2026-09-08-19`.
 - **Outcome:** turn the imported teacher-resource storefront into a polished,
@@ -256,7 +256,7 @@ requires.
   commerce/account actions are truthfully demonstrated.
 - **Source truth:** `honey-hearted/index.html`; `honey-hearted/smoke.mjs` is the
   durable rendered workflow check; `/honey-hearted` is the same-origin preview.
-- **Rounds 100–110 progress:** integrated the no-indexed route and proved the
+- **Rounds 100–111 progress:** integrated the no-indexed route and proved the
   catalog, resource/gallery/dialog, download/print, content/policy, preview-
   form, adapter, activation, responsive, accessibility, storage, network, and
   navigation-history boundaries in real Chrome. Follow-up fixes preserve
@@ -264,9 +264,10 @@ requires.
   continuity; launch instructions and hosted-link confirmations match the real
   self-contained source. The durable suite covers 18 routed accessibility
   states, all 85 visible Home controls, all seven mobile destinations, and
-  same-route reactivation. Accepted/deployed source `49017a3` passes locally
-  and publicly; detailed round history remains in the build summary and
-  archived reports.
+  same-route reactivation. Round 111 also enforces the 44px design floor for
+  32 visible standalone mobile controls. Accepted/deployed source `d88bfc8`
+  passes locally and publicly; detailed round history remains in the build
+  summary and archived reports.
 - **Boundaries:** do not invent products, rights, sales, reviews, identity,
   destinations, legal facts, transmission, subscriptions, or payments. Keep
   missing inputs and their safe replacement steps in

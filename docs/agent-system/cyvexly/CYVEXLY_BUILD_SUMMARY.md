@@ -15,6 +15,16 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 111 / HoneyHearted chunk round 12 — 2026-09-08
+
+Fixed mobile target sizing at accepted/deployed source `d88bfc8`. A new
+real-Chrome regression measured 12 visible standalone controls below the 44px
+design floor on the prior production source and 0 of 32 after the source-level
+CSS hardening. Inline prose links retain their compact reading flow. The full
+local/public workflow suites, TypeScript, lint (one known evidence warning),
+the 53-route build, role setup, hot-file caps, and lifecycle checks pass. Two
+independent reviews remain.
+
 ## Round 110 / HoneyHearted chunk round 11 — 2026-09-08
 
 The wider methodology audit found a shared mobile-navigation focus defect:

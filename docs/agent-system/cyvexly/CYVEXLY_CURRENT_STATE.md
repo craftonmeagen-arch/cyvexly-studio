@@ -1,9 +1,17 @@
 # Cyvexly Current State
 
-**Global round:** 110. **Active product work:** Chunk 7 — HoneyHearted
-Functional Storefront, chunk-local round 11, opened under Owner direction
+**Global round:** 111. **Active product work:** Chunk 7 — HoneyHearted
+Functional Storefront, chunk-local round 12, opened under Owner direction
 `2026-09-08-19`. Chunk 6 remains open in parallel only for its two required
 independent reviews; Chunk 5 remains open only for Owner/account gates.
+
+Round 111 moved to a distinct mobile touch-target question after Round 110's
+focus methodology audit. The deployed baseline exposed 12 visible standalone
+controls below the product's 44px design floor. Accepted/deployed source
+`d88bfc8` gives menu, catalog, consent, footer, dialog, and back-to-top actions
+44px targets without inflating inline prose links. A real-Chrome regression
+fails before and passes all 32 measured controls locally/publicly afterward;
+the complete suites and repository gates pass. Two independent reviews remain.
 
 Round 110's wider methodology audit identified a shared focus-lifecycle gap
 behind recent one-off fixes: activating any mobile-menu link closed the menu
@@ -23,15 +31,7 @@ complete local/public suites pass with zero workflow/runtime/network errors;
 TypeScript, lint (one known evidence warning), and the 53-route build pass.
 Two independent reviews remain.
 
-Round 108 found and fixed a responsive keyboard-focus defect: when an open
-mobile menu crossed the desktop breakpoint, Chromium closed the menu but lost
-the user's continuation point. Accepted/deployed source `1c49c00` now maps a
-focused mobile navigation link or store action to its visible desktop
-equivalent. The new regression failed on the public baseline; the complete
-local/public suites, TypeScript, lint (one known evidence warning), and the
-53-route build pass. Two independent reviews remain.
-
-Rounds 100–107 integrated the no-indexed storefront and established its
+Rounds 100–108 integrated the no-indexed storefront and established its
 catalog, content, form, activation, accessibility, navigation, download/print,
 and focus-lifecycle proof. Their source identities and complete outcomes are
 preserved in the build summary, app debt, and archived active-chunk/handoff

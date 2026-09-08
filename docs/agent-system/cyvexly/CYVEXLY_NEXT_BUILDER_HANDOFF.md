@@ -1,5 +1,32 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 111 / Chunk 7 round 12 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `6403585` on `main`, matched `origin/main`
+**Accepted product/test source:** `d88bfc8` on `main`, pushed and adopted
+**Authority:** Owner direction `2026-09-08-19`
+
+Pursued a distinct product-level question after Round 110's focus audit:
+mobile touch-target geometry. The deployed baseline had 12 visible standalone
+controls below the 44px product floor. One source-level CSS layer now hardens
+menu, catalog, consent, footer, dialog, and back-to-top actions without
+inflating inline prose links. A real-Chrome regression fails before and passes
+all 32 measured controls locally and publicly afterward.
+
+TypeScript, lint (one known round-42 evidence warning), the 53-route build,
+eight-packet role setup, hot-file caps, review lifecycle, and complete local/
+public suites pass with zero workflow/runtime/network/unexpected-origin errors.
+Retain only before/local/public result JSONs plus the opened public mobile-menu
+capture under `builder/evidence/round-111-honey-hearted-touch-targets/` until
+independent review consumes them. Ports 5194 and the smoke browser/profile are
+stopped/removed; 17,523,904 redundant evidence bytes were recycled.
+
+**Next Builder round:** disposition review intake first. Do not repeat the
+Builder matrix or return to focus hardening without a new product-level
+question. Chunk 7 still needs two independent reviews; Owner substitutions are
+unchanged.
+
 ## Round 110 / Chunk 7 round 11 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -54,30 +81,9 @@ redundant captures/download output were removed at closeout.
 Builder matrix without fresh evidence. Chunk 7 still needs two independent
 reviews; Owner substitutions remain unchanged.
 
-## Round 108 / Chunk 7 round 9 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `17aa9bc` on `main`, matched `origin/main`
-**Accepted product/test source:** `1c49c00` on `main`, pushed and adopted
-**Authority:** Owner direction `2026-09-08-19`
-
-Found and fixed responsive navigation focus loss. On the deployed baseline,
-crossing from an open mobile menu to the desktop layout closed the menu but
-discarded the keyboard user's continuation point. The breakpoint handler now
-maps a focused mobile link to its visible desktop equivalent and the mobile
-store action to the desktop store action. The new real-Chromium regression
-failed before the fix and passes locally and publicly afterward.
-
-TypeScript, lint (one known round-42 evidence warning), the 53-route build, and
-the complete local/public Chrome suites pass with zero workflow/runtime/network/
-unexpected-origin errors. Retain only the source-identified before/local/public
-JSON under `builder/evidence/round-108-honey-hearted-responsive-focus/` until
-independent review consumes it. The owned port-5191 runtime and disposable
-output were removed at closeout (20,757,656 bytes recycled).
-
-**Next Builder round:** disposition review intake first. Do not repeat the same
-Builder matrix without fresh evidence. Chunk 7 still needs two independent
-reviews; Owner substitutions remain unchanged.
+Round 108's full handoff rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_108_REPORT.md` when Round 111
+established the latest-three handoff window.
 
 Round 107's full handoff rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_107_REPORT.md` when Round 110
