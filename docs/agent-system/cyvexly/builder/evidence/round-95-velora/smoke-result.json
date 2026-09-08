@@ -1,0 +1,109 @@
+{
+  "url": "http://127.0.0.1:5183/",
+  "testedAt": "2026-09-08T02:38:03.054Z",
+  "desktop": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "VELORA — An Evening, Beautifully Unhurried",
+    "h1": 1,
+    "main": 1,
+    "fictional": true,
+    "address": true,
+    "phone": true,
+    "email": true,
+    "stale": false,
+    "liveContactLinks": 0,
+    "hero": {
+      "rect": {
+        "x": 89.28125,
+        "y": 259.265625,
+        "width": 800,
+        "height": 317.25,
+        "top": 259.265625,
+        "right": 889.28125,
+        "bottom": 576.515625,
+        "left": 89.28125
+      },
+      "section": {
+        "x": 0,
+        "y": 115.390625,
+        "width": 1440,
+        "height": 786,
+        "top": 115.390625,
+        "right": 1440,
+        "bottom": 901.390625,
+        "left": 0
+      },
+      "inner": {
+        "x": 89.28125,
+        "y": 115.390625,
+        "width": 1261.4375,
+        "height": 786,
+        "top": 115.390625,
+        "right": 1350.71875,
+        "bottom": 901.390625,
+        "left": 89.28125
+      },
+      "style": {
+        "color": "rgb(246, 243, 236)",
+        "display": "block",
+        "opacity": "1",
+        "visibility": "visible",
+        "sectionHeight": "786px",
+        "innerTransform": "none",
+        "innerMarginTop": "0px",
+        "innerTop": "0px",
+        "innerPosition": "relative"
+      },
+      "scrollY": 0,
+      "innerHeight": 900,
+      "visualHeight": 900,
+      "screenHeight": 900
+    }
+  },
+  "menu": {
+    "selected": "true",
+    "tastingHasFinalCourse": true,
+    "vegetarianRemovedMeatCourse": true
+  },
+  "reservation": "passed",
+  "privateDining": "passed",
+  "gift": "passed",
+  "gallery": {
+    "before": "The room",
+    "after": "The details"
+  },
+  "newsletter": {
+    "toast": "Demo signup complete. No email was stored, sent, or subscribed.",
+    "value": ""
+  },
+  "contact": {
+    "toast": "Sample phone: 555-555-5555. Copy it manually; it is fictional.",
+    "detailDisclosure": true
+  },
+  "desktopContact": {
+    "scrollY": 7341,
+    "top": 100.40625,
+    "addressVisible": true
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "expanded": "true",
+    "menuHidden": false
+  },
+  "mobileEscape": {
+    "expanded": "false",
+    "hidden": true
+  },
+  "mobileContact": {
+    "scrollY": 8627,
+    "top": 89.65625,
+    "addressTop": 553.4375,
+    "height": 844
+  },
+  "runtimeErrors": [],
+  "networkErrors": [],
+  "failures": [],
+  "passed": true
+}

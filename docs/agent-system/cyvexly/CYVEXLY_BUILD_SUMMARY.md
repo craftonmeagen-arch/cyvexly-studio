@@ -15,6 +15,17 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 95 / Velora chunk round 1 — 2026-09-07
+
+Opened Chunk 6 under Owner direction `2026-09-07-17` and established
+`velora/index.html` as the standalone concept source truth. Corrected the
+fictional location/contact identity, prevented real phone/email transmission,
+and fixed a major rendered hero cascade defect discovered from baseline proof.
+Added a durable Chrome/CDP smoke suite and proved all primary demo workflows at
+desktop/mobile with zero overflow or runtime/network errors. The parent Cyvexly
+typecheck/lint/build remains clean. Chunk 6 stays open for deeper negative,
+keyboard/zoom, content/provenance, integration, and independent-review proof.
+
 ## Round 94 — 2026-09-07
 
 Dispositioned Auditor item `IFA-2026-09-07-R85` (60th consecutive clean

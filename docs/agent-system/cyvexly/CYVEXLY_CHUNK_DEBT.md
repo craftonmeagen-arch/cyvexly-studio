@@ -6,6 +6,16 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
 
 ## Open
 
+0. **Chunk 6 — Velora verification and integration depth (opened round 95).**
+   Primary desktop/mobile happy paths now pass, the hero cascade defect is
+   fixed, and all contact/transaction moments are safe local demonstrations.
+   Still open before chunk closure: exercise invalid/correction/failure paths
+   and full keyboard/focus/zoom/reduced-motion behavior; audit content and
+   external-image provenance/resilience; decide and implement the honest
+   Cyvexly portfolio framing and deployment route; then obtain the two separate
+   independent verification rounds required by the governing rules. These are
+   reachable next-round tasks, not Owner gates.
+
 1. **RESOLVED round 30, correction recorded round 35.** This item's
    original text (below, preserved for history) claimed `/about`,
    `/privacy`, and `/terms` still 404'd. That was true through round 22 but

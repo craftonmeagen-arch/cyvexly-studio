@@ -1,6 +1,7 @@
 # Cyvexly Active Chunk
 
-**Chunks:** 3 — Project Planner (opened round 4, in progress) and 4 —
+**Chunks:** **6 — Velora Capability Demonstration is OPEN** at chunk-local
+round 1 under Owner direction `2026-09-07-17`. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
 now OPEN**, started round 29. Its integrated verification will close the
@@ -8,7 +9,22 @@ overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
-product surface is clean.
+product surface is clean. Chunk 6 is the current reachable Builder priority.
+
+**Round 95 / Chunk 6 round 1** (scheduled/unattended) reconciled the Owner's
+Velora direction into the product plan and began implementation. Established
+the restored standalone `velora/index.html` as source truth; replaced stale
+Indianapolis copy with the authorized fictional Evansville address, phone, and
+email; and made phone/email non-transmitting copy controls. Rendered baseline
+inspection found and fixed a real CSS cascade defect that placed the 960px hero
+image in normal flow and clipped the entire hero message below the fold.
+Added `velora/smoke.mjs`, a dependency-free Chrome/CDP suite covering desktop
+and mobile nav/menu/filter/gallery plus reservation, private-event, gift,
+newsletter, contact-copy, and disclosure states. Final result: zero failures,
+runtime/network errors, or overflow at 1440×900 and 390×844. Parent app
+typecheck/lint/build passed (49/49 routes; only the known round-42 lint warning).
+Chunk remains open for correction/failure/accessibility-depth testing and the
+two independent verification rounds required by the governing packet.
 
 **Round 94** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R85` (60th consecutive clean confirmation, "historic

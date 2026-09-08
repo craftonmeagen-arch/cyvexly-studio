@@ -289,6 +289,28 @@ URLs") is now fully closed across every route, static and dynamic. Round
 commercial routes), further closing required-scope item 2's "searchable"
 intent.
 
+## Chunk 6 — Velora Capability Demonstration (OPEN, global round 95; chunk round 1)
+
+- **Authority:** Owner direction `2026-09-07-17`.
+- **Outcome:** turn the restored standalone Velora fine-dining concept into a
+  polished, fully functional, clearly fictional Cyvexly capability demo that
+  can later be represented honestly in the Cyvexly portfolio.
+- **Source truth:** `velora/index.html`; `velora/smoke.mjs` is the durable
+  dependency-free rendered workflow check.
+- **Boundaries:** never imply a real restaurant/client/result; use the Owner's
+  fictional Evansville address, phone, and email consistently; do not place
+  calls, send messages, create reservations, collect payment, or transmit
+  personal data. Production-service moments use explicit local demo states.
+- **Round 95 progress:** corrected the fictional identity, made phone/email
+  safe copy controls, fixed a rendered hero cascade defect, and proved the
+  complete happy-path control set at desktop/mobile with no overflow or
+  runtime/network error. Parent Cyvexly typecheck/lint/build also remain clean.
+- **Completion boundary:** all advertised navigation, responsive states,
+  workflows, validation/correction/failure behavior, accessibility, content
+  truth, and portfolio framing pass; then two separate independent
+  verification rounds confirm the accepted source. One clean Builder pass
+  does not close this chunk.
+
 ## Historical implementation context
 
 Cross-chunk round history is preserved in

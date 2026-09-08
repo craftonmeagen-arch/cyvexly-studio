@@ -1,5 +1,39 @@
 # Cyvexly Next Builder Handoff
 
+## Round 95 / Chunk 6 round 1 closeout
+
+**Session:** scheduled/unattended Codex Builder, 2026-09-07 EDT
+**Start source:** `85ce323` on `main`, matched `origin/main`
+**Authority:** Owner direction `2026-09-07-17`
+
+Reconciled the Velora capability demonstration into the project map, current
+state, active chunk, history, and debt. Established `velora/index.html` as the
+standalone source truth. Replaced stale Indianapolis copy with the Owner's
+fictional Evansville address/phone/email and made the phone/email controls copy
+sample data rather than contact a possibly real party. Baseline rendering found
+and fixed a real CSS cascade defect that clipped the complete hero message.
+
+Added `velora/smoke.mjs`, a dependency-free Chrome/CDP harness. Its 1440×900
+and 390×844 runs prove the visible hero, nav, menus/tabs/filter, reservation,
+private-event inquiry, gift configurator, gallery, newsletter, sample-contact
+copy/disclosure, responsive mobile menu, and no overflow. All data-entry and
+transaction moments remain explicit non-transmitting demos. Result: 0 failures,
+runtime errors, or network errors. Durable before/after and viewport evidence is
+under `builder/evidence/round-95-velora/`. Parent Cyvexly verification also
+passed: typecheck clean; lint clean except the pre-existing round-42 warning;
+production build clean, 49/49 routes.
+
+Auditor intake `IFA-2026-09-07-R87` was its 62nd consecutive clean confirmation
+of pre-Velora head `85ce323`; it contained no code/document finding and is stale
+for this new chunk. Disposition: accepted as historical confirmation, no source
+action; moved to `exchange/processed/`.
+
+**Next Builder round:** remain in Chunk 6. Extend the smoke matrix through real
+invalid/correction/failure states and focused keyboard/focus/zoom/reduced-motion
+checks; then audit external-image provenance/resilience and plan the honest
+Cyvexly portfolio/deployment integration. Do not claim chunk completion until
+the required two independent verification rounds confirm accepted source.
+
 ## Round 94 closeout
 
 **Session:** scheduled/unattended Claude Code run, 2026-09-07
@@ -55,56 +89,10 @@ is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_93_REPORT.md` (moved
 there round 94 to keep this file under its 12,288-byte hot-file cap).
 
-## Round 92 closeout
+Round 92's full closeout is preserved at
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_92_REPORT.md` (verified
+against this hot-file copy before rotation; no substantive content changed).
 
-**Session:** scheduled/unattended Claude Code run, 2026-09-07
-**Start source:** `871b8db` on `main` (pushed, matched `origin/main`)
-**Scope:** Checked the Auditor inbox: one new item, `IFA-2026-09-07-R83`
-(58th consecutive clean confirmation, "PASS WITH COMMENDATION", evaluated
-head `cf14cd1` — round 90's head — 1 documentation-debt item
-`CYV-DOC-003`: `CYVEXLY_CURRENT_STATE.md` measured 452 bytes over its
-8,192-byte cap). Moved to `exchange/processed/`. **Fixed `CYV-DOC-003`:**
-condensed rounds 87-90's four separate outcome paragraphs in
-`CYVEXLY_CURRENT_STATE.md` into one pointer line (full detail already
-preserved in `CYVEXLY_APP_DEBT.md`), bringing it to 6,540 bytes. The
-report's other advisory (rotate this handoff file) was already satisfied
-by round 91's own rotation before the report published. Verified
-`tsc`/lint/build clean on unchanged round-87 source. Ran the fresh
-convergence check round 91's handoff named: diffed the Accessibility
-statement page's specific claims (keyboard operability, focus indicators
-not hidden by sticky elements, color contrast, reduced-motion) against
-actual rendered behavior via a real local headless-Chrome/CDP session
-(genuine `Input.dispatchKeyEvent` and `Emulation.setEmulatedMedia`, not
-synthesized events). **0 defects found across all four checks** —
-notably, a real `Tab`→`Enter`→`Tab` sequence proved the skip link
-genuinely bypasses the header for a real keyboard user even though
-`<main>` carries no `tabindex` (Chromium's "sequential focus navigation
-starting point" behavior), a stronger proof-closure than any prior round
-recorded for this mechanism; reduced-motion CSS genuinely collapses
-transition duration under real media emulation; this page's own
-body-copy contrast measures 6.27:1; the sticky header's known
-anchor-target risk is already mitigated by existing `scroll-mt-24`
-classes. **Completion:** DONE WITH PROOF (0 defects found; 1 real
-documentation-debt item fixed; 0 source change). Full detail in
-`CYVEXLY_APP_DEBT.md`'s "Round 92". Cleaned up: stopped the manually-
-started `next dev` listener on port 5173 by its verified real listener
-PID, confirmed port clear; killed the round-owned headless-Chrome
-instance by its unique timestamped `--user-data-dir` (not by process
-name — unrelated Playwright-owned `chrome.exe` processes were running);
-removed its profile directory and the scratch CDP script/log files.
-
-**No urgent item routed to the next round.** Chunk 5's remaining scope is
-entirely Owner-side gates (exact LLC name, Resend account/DNS,
-analytics/Search Console ownership or a no-analytics decision, Owner
-visual/copy acceptance, final indexability approval) — see
-`CYVEXLY_CURRENT_STATE.md` and `CYVEXLY_OWNER_DIRECTION.md`. Next Builder
-round: check the Auditor inbox first, apply the round-84 `PATH` fix
-before any `pnpm`/`node` command, then pick a fresh surface not yet
-covered by rounds 74-92's convergence checks — a good candidate:
-diff the Terms of Service page's specific behavioral claims (e.g. any
-cancellation/refund/dispute process language) against the real Planner/
-Contact/Pricing flow, a surface last touched only as part of round 83's
-broader four-surface pass, not on its own.
 
 Round 91's full closeout is archived at
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_91_REPORT.md` (moved

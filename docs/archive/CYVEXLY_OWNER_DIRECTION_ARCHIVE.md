@@ -353,3 +353,160 @@ approval" gate (`CYVEXLY_VISION_PLAN.md` §17, `CYVEXLY_PROJECT_CHUNK_MAP.md`
 Chunk 5) — this direction's own item 8 is conditioned on "once everything
 above is actually ready," and indexing is effectively irreversible once
 crawled. This interpretation is not Owner-authored wording.
+
+## Active visual authority archived from the hot file on 2026-09-07
+
+These entries remain authoritative through the condensed standing summary in
+`docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md`. They were moved
+verbatim only to restore the enforced hot-file byte cap; archival did not
+supersede their Owner direction.
+
+## Site-wide blue-glass atmosphere and contrast direction 2026-08-31-09
+
+**Status:** PARTIALLY FULFILLED — ROUNDS 21–22 FOUNDATION; NEW FULL-HEIGHT EVERY-ROUTE PASS REQUIRED
+**Source:** Owner via Codex active conversation
+**Recorded:** 2026-08-31 America/New_York
+
+> “the actual and the last mockup don't match there needs to b that bluish glass background that is int he mockup. on every page. if you want translucent wires and numbers like futuristic tech as well. give me a mockup first so I know we are on the same page”
+
+After reviewing the new mockup, the Owner approved it with this additional
+requirement:
+
+> “yes just like that but make sure the words don't lose contrast or there are no contrast issues. make this owners direction and explain clearly the goal.”
+
+### Goal
+
+Bring the entire production website—not only the Home hero or its video—into
+the visual world shown in the approved reference below. Every public page
+should feel like part of one pale ice-blue, translucent-glass environment. The
+effect must be visibly dimensional and futuristic while all words, controls,
+forms, and essential information remain immediately legible. Visual atmosphere
+never outranks contrast or usability.
+
+![Owner-approved site-wide blue-glass direction](../../../mockups/06-sitewide-blue-glass-owner-direction.png)
+
+Durable visual reference:
+`mockups/06-sitewide-blue-glass-owner-direction.png`.
+
+### Authoritative visual direction
+
+- Treat the page background itself as part of the glass system. It should be a
+  clearly blue-tinted, luminous environment with layered translucent planes,
+  restrained refraction and blur, thin illuminated edges, soft spectral
+  shadows, and believable depth. Do not limit the effect to isolated cards over
+  a flat or nearly white background.
+- Carry this visual language across every route and major section: navigation,
+  page introductions, content surfaces, cards, proof sections, forms, calls to
+  action, and footers. Adapt its intensity to the content instead of copying the
+  Home composition literally onto every page.
+- Translucent signal wires, circuit-like traces, coordinate ticks, and sparse
+  futuristic numerals may appear as a low-opacity atmospheric layer. They are
+  decorative only: they must not imply real metrics, system readings, customer
+  results, or other factual claims.
+- Keep the atmosphere refined and architectural. Avoid a gaming, hacker, crypto,
+  science-fiction HUD, or generic dashboard appearance; avoid dense pseudo-code,
+  excessive bloom, visual noise, and saturated blue covering large reading
+  areas.
+- Preserve canonical product copy, truthful claims, existing information
+  hierarchy, and route purpose. Generated lettering, screens, numbers, and
+  interface details in the reference are non-authoritative visual artifacts.
+- This direction does not restore the removed Home video muted label, progress
+  bar, or play/pause button. The newer playback-chrome direction remains in
+  force.
+
+### Non-negotiable contrast and readability requirements
+
+- Place headlines, paragraphs, labels, navigation, and controls on calm,
+  protected glass fields with sufficient opacity/blur. Decorative wires,
+  numerals, highlights, and refractions must fade or stop beneath text
+  rather than competing with it.
+- Use near-black midnight slate for primary copy and dark graphite for body
+  copy. Reserve vivid cyber blue for controlled accents such as primary actions,
+  selected words, thin edges, focus indicators, and small signals.
+- Meet or exceed WCAG AA contrast in the implemented result: at least `4.5:1`
+  for normal text, `3:1` for large text, and `3:1` for meaningful component
+  boundaries, icons, and interaction states where applicable. Do not rely on a
+  mockup's apparent readability as proof.
+- Verify contrast against the final composited pixels, including translucent
+  surfaces over their brightest and darkest possible backgrounds, not only
+  against a nominal CSS color token.
+- Check representative desktop/laptop/tablet/phone widths, browser zoom, text
+  enlargement, focus/hover states, reduced motion, and the brightest/busiest
+  atmospheric regions. No breakpoint may trade legibility for decoration.
+- If an atmospheric effect conflicts with readable content, reduce or remove
+  the effect in that location. The correct result is the approved blue-glass
+  feeling with protected information—not maximum visual density.
+
+### Completion standard
+
+This direction is fulfilled only when the shared visual system is visibly
+present across all public routes and rendered verification shows both the
+approved blue-glass atmosphere and dependable content contrast. A Home-only
+restyle, token-only color adjustment, or isolated set of glass cards does not
+satisfy the goal. Owner review remains required after implementation.
+
+Rounds 22-23's superseded implementation notes are archived at
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md` (moved round 63/live
+session to free hot-file headroom for new direction).
+
+## Every-page full-height theme authority 2026-09-01-10
+
+**Status:** IMPLEMENTED WITH PUBLIC PROOF — OWNER VISUAL REVIEW PENDING
+**Source:** Owner via Project Manager continuation relay
+**Recorded:** 2026-09-01 America/New_York
+
+Faithful transcription of the relayed Owner direction:
+
+> “mockups/06-sitewide-blue-glass-owner-direction.png is the authoritative NEW
+> THEME for every page, full page height—not merely a Home reference. Define it
+> canonically and require bright ice-blue cyber-glass environment, luminous
+> architectural grid/wires/traces/coordinates and depth layers, protected
+> translucent panels for all copy/forms/nav/cards/CTAs, controlled dark
+> high-tech focal imagery/stages, consistent glow/refraction/blur/shadows, no
+> flat white gaps or fallback old-theme pages, WCAG/readability protected, and
+> no agent reinterpretation.”
+
+Agent interpretation: Rounds 21–22 establish reusable atmosphere and protected
+field foundations, but they do not close this newer full-height every-route
+standard. The next Builder must treat the exact mockup as authoritative,
+visually plan a coherent site-wide pass before source changes, inspect every
+public route family at desktop/tablet/phone, and correct remaining flat or
+fallback-old-theme surfaces without weakening contrast. This interpretation is
+not Owner-authored wording.
+
+Round 24 implemented this across all public pages; the Owner then rejected it
+as insufficient (see below) — round 24's implementation notes are agent
+evidence, not Owner words, and are preserved in `CYVEXLY_BUILD_SUMMARY.md`
+history rather than duplicated here.
+
+Owner rejection/fidelity corrections `2026-09-01-11` (round 26) and
+`2026-09-01-12` (round 27) are archived at
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md` — both are superseded by
+round 28 below, which is the current standing correction.
+
+## Continuous middle/lower-page fidelity correction 2026-09-01-13
+
+**Status:** ROUND 28 IMPLEMENTED AND PUSHED — PUBLIC DEPLOYMENT/OWNER REVIEW PENDING
+**Source:** Owner via Codex active conversation
+**Recorded:** 2026-09-01 America/New_York
+
+> “ok...fix it and any others that you notice that have the same issue. then
+> commit and push”
+
+This follows the Owner's review of the Home center after scrolling below the
+Round 27 hero. The visible defect was not the first viewport: middle and lower
+sections fell back to broad pale bands and ordinary white-card fields, losing
+the continuous architectural depth in the approved mockup. The same failure
+shape appeared on Services and Pricing and therefore required a shared-route
+correction, not a Home-only patch.
+
+Round 28 keeps `mockups/06-sitewide-blue-glass-owner-direction.png` as exact
+authority. The required result is one continuous bright ice-blue architectural
+environment through the complete height of every route, with visible portal
+planes, rails, beams, wiring, nodes, coordinates, and controlled perspective.
+Every major reading section sits in a bounded translucent glass bay with bright
+rims, protected contrast, and environmental space visible between bays. On
+phones, secondary density is removed rather than compressing noise beneath
+copy. Product facts, routes, forms, navigation, media source, `0.75×` playback,
+and removed playback chrome remain unchanged. Local visible-browser proof does
+not constitute Owner acceptance or public-deployment proof.
