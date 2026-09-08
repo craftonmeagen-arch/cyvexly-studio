@@ -1,5 +1,17 @@
 # Cyvexly App Debt
 
+## Round 104 — HoneyHearted launch-instruction source truth
+
+Accepted and deployed source `165b246` removes two false maintenance claims
+from the Owner-facing launch checklist: no nonexistent `app.js` is named, and
+the self-contained HTML is no longer described as separate CSS, JavaScript,
+image, and sample files. The durable Chrome regression verifies the rendered
+instructions. TypeScript, lint (one known evidence warning), the 53-route build,
+and the complete local/public suites pass with zero failures/errors. Retained
+production proof is under
+`builder/evidence/round-104-honey-hearted-source-truth/`; two independent
+reviews remain the only reachable Chunk 7 debt.
+
 ## Round 103 — HoneyHearted hosted-link and route-focus truth fixes
 
 Accepted source `b47c7cb` corrects the hosted copy-link confirmation and moves

@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
-round 4 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
+round 5 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
 Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
@@ -11,6 +11,16 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 7 is the current reachable Builder priority.
+
+**Round 104 / Chunk 7 round 5** corrected a user-facing source-truth defect in
+the Owner launch checklist. It now points directly to the real `SITE_CONFIG`
+block inside the standalone HTML and describes the actual self-contained
+artifact instead of naming nonexistent `app.js` and separate CSS, JavaScript,
+image, and sample files. The regression reproduced the prior false claim from
+source and verifies the corrected rendered instructions. Accepted/deployed
+source `165b246` passes TypeScript, lint (one known evidence warning), the
+53-route build, and the complete local/public Chrome suites with zero failures
+or browser/network errors. Two independent reviews remain.
 
 **Round 103 / Chunk 7 round 4** found and fixed two production-integration
 truth defects. The hosted “Copy this page link” action no longer applies a
@@ -35,20 +45,9 @@ errors. TypeScript, lint (one known evidence warning), and the 53-route build
 pass. Product source remains `4e3f06e`; proof source is `94b7fdb`. Only two
 independent review rounds remain before Chunk 7 closure.
 
-**Round 101 / Chunk 7 round 2** (scheduled/unattended) adopted and
-independently reran inherited commit `b61126b`. Native dialogs now keep their
-own trigger and restore it after Escape, backdrop, or explicit-button close;
-contact activation now requires a validated email destination. The expanded
-suite proves combined/empty/recovered catalog states, all six catalog
-disclosure/provenance boundaries, native-invalid form correction, newsletter
-failure/retry, encoded contact drafts, image failure, safe activation URLs, and
-200%-zoom-equivalent reflow. This invocation added a genuine Chromium Tab
-sweep through all 85 visible Home controls plus Enter/Space activation; no
-skip, repetition, or trap occurred. TypeScript, lint (one known evidence
-warning), the 53-route build, and the full rendered suite pass with zero
-browser/network failures. Accepted source is `4e3f06e`; independent review
-remains required. The identical expanded suite also passes on the adopted
-public route.
+Round 101's full active-chunk report rotated to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_101_REPORT.md` when Round 104
+established the latest-three context.
 
 Round 100's full active-chunk report rotated to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_100_REPORT.md` when Round 103

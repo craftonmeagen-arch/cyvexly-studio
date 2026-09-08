@@ -15,6 +15,17 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 104 / HoneyHearted chunk round 5 — 2026-09-08
+
+Corrected a user-facing source-truth defect in the launch checklist: the
+standalone site no longer points to nonexistent `app.js` or claims the folder
+contains separate CSS, JavaScript, image, and sample files. A new rendered
+regression verifies the real `SITE_CONFIG` location and self-contained artifact
+description. Accepted source `165b246` passes TypeScript, lint (one known
+evidence warning), the 53-route build, and the complete optimized-runtime suite
+locally and on production with zero failures/errors. Two independent review
+rounds still gate Chunk 7 closure.
+
 ## Round 103 / HoneyHearted chunk round 4 — 2026-09-08
 
 Fixed two production-integration truth defects at accepted source `b47c7cb`:

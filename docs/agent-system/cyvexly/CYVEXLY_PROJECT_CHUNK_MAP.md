@@ -248,7 +248,7 @@ requires.
   verification rounds confirm the accepted source. One clean Builder pass
   does not close this chunk.
 
-## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 103; chunk round 4)
+## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 104; chunk round 5)
 
 - **Authority:** Owner direction `2026-09-08-19`.
 - **Outcome:** turn the imported teacher-resource storefront into a polished,
@@ -256,7 +256,7 @@ requires.
   commerce/account actions are truthfully demonstrated.
 - **Source truth:** `honey-hearted/index.html`; `honey-hearted/smoke.mjs` is the
   durable rendered workflow check; `/honey-hearted` is the same-origin preview.
-- **Rounds 100–103 progress:** added the no-indexed app route, fixed the malformed
+- **Rounds 100–104 progress:** added the no-indexed app route, fixed the malformed
   contact-subject chooser, and proved catalog, resource/gallery/dialog,
   download/print, content/policy, preview-form, responsive, accessibility,
   storage, and network boundaries in real Chrome. Round 101 added per-dialog
@@ -266,7 +266,9 @@ requires.
   traversal. Round 102 added direct-deep-link, browser Back/Forward, route-focus,
   and malformed-hash recovery proof. Round 103 then fixed accurate hosted-link
   copy confirmation and detail-to-Home/malformed-recovery focus restoration.
-  Accepted source `b47c7cb` passes TypeScript, lint, the 53-route build, and the
+  Round 104 corrected the Owner-facing launch checklist so it points to the
+  real configuration block and truthfully describes the self-contained source.
+  Accepted source `165b246` passes TypeScript, lint, the 53-route build, and the
   expanded rendered suite with zero failures/errors.
 - **Boundaries:** do not invent products, rights, sales, reviews, identity,
   destinations, legal facts, transmission, subscriptions, or payments. Keep

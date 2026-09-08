@@ -1,9 +1,16 @@
 # Cyvexly Current State
 
-**Global round:** 103. **Active product work:** Chunk 7 — HoneyHearted
-Functional Storefront, chunk-local round 4, opened under Owner direction
+**Global round:** 104. **Active product work:** Chunk 7 — HoneyHearted
+Functional Storefront, chunk-local round 5, opened under Owner direction
 `2026-09-08-19`. Chunk 6 remains open in parallel only for its two required
 independent reviews; Chunk 5 remains open only for Owner/account gates.
+
+Round 104 corrected the Owner-facing launch checklist at accepted and deployed
+source `165b246`: it now points to the real `SITE_CONFIG` block and accurately
+describes the self-contained HTML artifact instead of claiming nonexistent
+`app.js`, CSS, JavaScript, image, and sample files. The new rendered regression
+passes locally and on production as part of the complete Chrome/CDP suite,
+with zero workflow/runtime/network errors. Two independent reviews remain.
 
 Round 103 found and fixed two adjacent navigation-truth defects at accepted
 source `b47c7cb`: hosted resource links now copy with an accurate shareable-
@@ -22,17 +29,6 @@ recovery. The first run correctly exposed two bad test expectations, which
 were corrected against captured browser state; the final source-identified
 Chrome suite passes with zero failures or runtime/network errors. Product
 source remains `4e3f06e`; navigation-proof source is `94b7fdb`.
-
-Round 101 adopted and independently reran the inherited interaction hardening:
-all native-dialog close paths now return focus to their own trigger, activation
-settings reject unsafe URLs/email destinations, and the durable suite now
-covers combined/empty/recovered catalog states, native form correction,
-newsletter failure/retry, contact-draft encoding, every catalog disclosure,
-image failure, a 200%-zoom-equivalent layout, and all 85 visible Home controls
-through real Chromium Tab/Enter/Space input. The full suite passes with zero
-failures or browser/network errors. Accepted HoneyHearted source is `4e3f06e`
-(product fix `b61126b`); the full expanded suite also passes on the adopted
-public `/honey-hearted` route.
 
 Round 100 integrated the imported `honey-hearted/index.html` at the same-origin
 `/honey-hearted` route with explicit response-level no-index protection, fixed

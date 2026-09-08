@@ -1,5 +1,35 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 104 / Chunk 7 round 5 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `9788819` on `main`, matched `origin/main`
+**Accepted product/test source:** `165b246` on `main`, pushed and adopted
+**Authority:** Owner direction `2026-09-08-19`
+
+Found a user-facing source-truth defect outside the already-proved workflow
+matrix: the Owner launch checklist pointed first to nonexistent `app.js` and
+claimed the source folder contained separate CSS, JavaScript, image, and free-
+sample files, although the real deliverable is self-contained HTML plus its
+smoke test. `honey-hearted/index.html` now points to the actual `SITE_CONFIG`
+block and accurately explains where its embedded source and generated sample
+live. `honey-hearted/smoke.mjs` carries the rendered regression.
+
+The prior source claim was reproduced from `9788819`. Accepted/deployed source
+`165b246` passes TypeScript, lint (one known round-42 evidence warning), the
+53-route build, and the complete optimized-runtime Chrome/CDP suite locally
+and at `https://cyvexly.com/honey-hearted`, with zero workflow/runtime/network
+errors. Retain only
+`builder/evidence/round-104-honey-hearted-source-truth/production-result.json`
+until independent review consumes it. Stopped the owned port-5187 runtime and
+confirmed the port clear; recycled 10,356,014 bytes of redundant captures,
+downloads, and temporary public-run output.
+
+**Next Builder round:** disposition all review intake first. Do not repeat the
+same Builder suite without new evidence. Chunk 7 still needs two independent
+reviews; Owner substitutions remain unchanged in
+`HONEY_HEARTED_OWNER_NEEDS.md`.
+
 ## Round 103 / Chunk 7 round 4 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -59,41 +89,9 @@ same matrix without new evidence. Chunk 7 still requires two separate
 independent reviews. Do not invent or activate the Owner substitutions in
 `HONEY_HEARTED_OWNER_NEEDS.md`.
 
-## Round 101 / Chunk 7 round 2 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** inherited `b61126b` on `main`, matched `origin/main`
-**Accepted source:** `4e3f06e` on `main`
-**Authority:** Owner direction `2026-09-08-19`
-
-Adopted and independently reran the inherited HoneyHearted hardening. Dialogs
-now preserve their own invoking control and return focus on Escape, backdrop,
-and explicit close; contact activation rejects malformed email destinations.
-The durable suite now covers combined/empty/recovered catalog states, every
-catalog disclosure, native-invalid form correction, newsletter adapter
-failure/retry, encoded email drafts, unsafe activation URLs, image failure,
-and 200%-zoom-equivalent reflow. This invocation added a real Chromium Tab
-sweep of all 85 visible Home controls plus Enter/Space activation; the first
-instrument draft incorrectly included `tabindex="-1"` honeypots, was corrected,
-and the final proof has no skip, repetition, or focus trap.
-
-TypeScript, lint (one known round-42 evidence warning), the 53-route production
-build, and the complete local Chrome/CDP suite pass with zero workflow,
-runtime, network, or unexpected-origin failures. Evidence under
-`builder/evidence/round-101-honey-hearted/` is retained until two independent
-review rounds consume its purpose. The same expanded suite passes on the
-adopted production route; `production-result.json` preserves that proof.
-Stopped the owned port-5184 server and moved 22,315,446 bytes of redundant
-local smoke/log output to the Recycle Bin; the retained review evidence is the
-only Round 101 runtime output left in the product tree.
-
-**Next Builder round:** first disposition every review intake. HoneyHearted's
-reachable functionality and Builder proof are complete at this source; do not
-repeat the same matrix without new evidence. Chunk 7 still requires two
-separate independent reviews. Real catalog/content rights, commerce links,
-identity, messaging/newsletter accounts, policies, domain/release approval,
-analytics, and indexing remain Owner substitutions in
-`HONEY_HEARTED_OWNER_NEEDS.md` and must not be invented or activated.
+Round 101's full closeout rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_101_REPORT.md` when Round 104
+established the latest-three handoff window.
 
 Round 100's full closeout rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_100_REPORT.md` when Round 103
