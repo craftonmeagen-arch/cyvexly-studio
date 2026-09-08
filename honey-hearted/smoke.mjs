@@ -820,6 +820,72 @@ async function main() {
     const mobileEscape = await evaluate("return {expanded:document.querySelector('#menu-toggle').getAttribute('aria-expanded'),hidden:document.querySelector('#mobile-menu').hidden,focused:document.activeElement.id};");
     check(mobileEscape.expanded === "false" && mobileEscape.hidden && mobileEscape.focused === "menu-toggle", "Escape did not close mobile navigation and return focus.");
 
+    const responsiveMenuBefore = await evaluate(`
+      const toggle=document.querySelector('#menu-toggle');
+      toggle.click();
+      const link=document.querySelector('#mobile-menu a[href="#shop"]');
+      link.focus();
+      return {
+        expanded:toggle.getAttribute('aria-expanded'),
+        hidden:document.querySelector('#mobile-menu').hidden,
+        focused:document.activeElement===link,
+      };
+    `);
+    await viewport(800, 900);
+    await settle();
+    const responsiveMenuAfter = await evaluate(`
+      const desktopLink=document.querySelector('.nav-links a[href="#shop"]');
+      return {
+        expanded:document.querySelector('#menu-toggle').getAttribute('aria-expanded'),
+        hidden:document.querySelector('#mobile-menu').hidden,
+        focused:document.activeElement===desktopLink,
+        activeHidden:Boolean(document.activeElement.closest('[hidden]')),
+      };
+    `);
+    await viewport(390, 844);
+    await settle();
+    const responsiveStoreBefore = await evaluate(`
+      const toggle=document.querySelector('#menu-toggle');
+      toggle.click();
+      const store=document.querySelector('#mobile-menu [data-store]');
+      store.focus();
+      return {
+        expanded:toggle.getAttribute('aria-expanded'),
+        hidden:document.querySelector('#mobile-menu').hidden,
+        focused:document.activeElement===store,
+      };
+    `);
+    await viewport(800, 900);
+    await settle();
+    const responsiveStoreAfter = await evaluate(`
+      return {
+        expanded:document.querySelector('#menu-toggle').getAttribute('aria-expanded'),
+        hidden:document.querySelector('#mobile-menu').hidden,
+        focused:document.activeElement===document.querySelector('.nav-shop'),
+        activeHidden:Boolean(document.activeElement.closest('[hidden]')),
+      };
+    `);
+    check(
+      responsiveMenuBefore.expanded === "true" &&
+        !responsiveMenuBefore.hidden &&
+        responsiveMenuBefore.focused &&
+        responsiveMenuAfter.expanded === "false" &&
+        responsiveMenuAfter.hidden &&
+        responsiveMenuAfter.focused &&
+        !responsiveMenuAfter.activeHidden,
+      "Crossing the desktop breakpoint hid the focused mobile-menu control without moving focus to its visible desktop equivalent.",
+    );
+    check(
+      responsiveStoreBefore.expanded === "true" &&
+        !responsiveStoreBefore.hidden &&
+        responsiveStoreBefore.focused &&
+        responsiveStoreAfter.expanded === "false" &&
+        responsiveStoreAfter.hidden &&
+        responsiveStoreAfter.focused &&
+        !responsiveStoreAfter.activeHidden,
+      "Crossing the desktop breakpoint did not move the focused mobile store action to the visible desktop store action.",
+    );
+
     await cdp.call("Emulation.setEmulatedMedia", {
       features: [{ name: "prefers-reduced-motion", value: "reduce" }],
     });
@@ -905,6 +971,10 @@ async function main() {
       imageFallback,
       mobile,
       mobileEscape,
+      responsiveMenu: {
+        link: { before: responsiveMenuBefore, after: responsiveMenuAfter },
+        store: { before: responsiveStoreBefore, after: responsiveStoreAfter },
+      },
       reducedMotion,
       reflow,
       networkRequests: [...new Set(networkRequests)],
