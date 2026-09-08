@@ -175,7 +175,7 @@ async function main() {
       const windowsVirtualKeyCode =
         keyCodes[value] || value.toUpperCase().charCodeAt(0);
       await cdp.call("Input.dispatchKeyEvent", {
-        type: "rawKeyDown",
+        type: "keyDown",
         key: value,
         code: keyCodesByValue[value] || value,
         windowsVirtualKeyCode,
@@ -270,6 +270,49 @@ async function main() {
     const skipAfter = await evaluate("return {hash:location.hash,focused:document.activeElement.id};");
     check(skipBefore.text === "Skip to main content" && skipBefore.href === "#main" && skipBefore.top >= 0, "A real first Tab did not reveal the skip link.");
     check(skipAfter.hash === "#main" && skipAfter.focused === "main", "Real Enter activation did not move the skip link to the main landmark.");
+
+    await navigate();
+    const focusOrder = await evaluate(`
+      const selector='a[href],button:not([disabled]),input:not([disabled]):not([type="hidden"]),select:not([disabled]),textarea:not([disabled]),summary,[tabindex]:not([tabindex^="-"])';
+      const nodes=[...document.querySelectorAll(selector)].filter(node=>{
+        const style=getComputedStyle(node);
+        return node.tabIndex>=0 && !node.closest('[hidden]') && style.display!=='none' && style.visibility!=='hidden' && node.getClientRects().length>0;
+      });
+      nodes.forEach((node,index)=>node.dataset.smokeFocusIndex=String(index));
+      nodes[0].focus();
+      return {
+        total:nodes.length,
+        first:{index:Number(document.activeElement.dataset.smokeFocusIndex),text:document.activeElement.textContent.trim()},
+        expected:nodes.map((node,index)=>({index,tag:node.tagName,id:node.id,text:(node.getAttribute('aria-label')||node.textContent||node.value||'').trim().slice(0,80)})),
+      };
+    `);
+    const visitedFocusIndexes = [focusOrder.first.index];
+    for (let index = 1; index < focusOrder.total; index += 1) {
+      await key("Tab");
+      await settle(20);
+      visitedFocusIndexes.push(await evaluate("return Number(document.activeElement.dataset.smokeFocusIndex);"));
+    }
+    const expectedFocusIndexes = Array.from({ length: focusOrder.total }, (_, index) => index);
+    check(focusOrder.total >= 35 && focusOrder.first.text === "Skip to main content", "Home did not expose the expected complete set of keyboard controls.");
+    check(JSON.stringify(visitedFocusIndexes) === JSON.stringify(expectedFocusIndexes), "Real Tab traversal skipped, repeated, or became trapped on a visible Home control.");
+
+    const keyboardActivation = await evaluate(`
+      const filter=document.querySelector('[data-filter="discussion"]');
+      filter.focus();
+      return {before:filter.getAttribute('aria-pressed'),focused:document.activeElement===filter};
+    `);
+    await key(" ");
+    await settle();
+    const filterActivated = await evaluate("return {pressed:document.querySelector('[data-filter=\"discussion\"]').getAttribute('aria-pressed'),count:document.querySelectorAll('#product-grid .product-card').length};");
+    const faqActivation = await evaluate("document.querySelector('#clear-filters').click();const summary=document.querySelector('.faq-list summary');summary.focus();return {before:summary.parentElement.open,focused:document.activeElement===summary};");
+    await key(" ");
+    await settle();
+    const faqOpened = await evaluate("const summary=document.querySelector('.faq-list summary');return {open:summary.parentElement.open,focused:document.activeElement===summary};");
+    await key(" ");
+    await settle();
+    const faqClosed = await evaluate("const summary=document.querySelector('.faq-list summary');return {open:summary.parentElement.open,focused:document.activeElement===summary};");
+    check(keyboardActivation.before === "false" && keyboardActivation.focused && filterActivated.pressed === "true" && filterActivated.count === 4, "Native Space activation did not operate the focused catalog filter.");
+    check(!faqActivation.before && faqActivation.focused && faqOpened.open && faqOpened.focused && !faqClosed.open && faqClosed.focused, "Native Space activation did not operate the focused FAQ disclosure.");
 
     const catalog = await evaluate(`
       const input=document.querySelector('#resource-search');
@@ -565,6 +608,16 @@ async function main() {
       route,
       desktop,
       skipLink: { before: skipBefore, after: skipAfter },
+      keyboard: {
+        focusOrder: {
+          total: focusOrder.total,
+          first: focusOrder.first,
+          expected: focusOrder.expected,
+          visitedIndexes: visitedFocusIndexes,
+        },
+        filter: { before: keyboardActivation, after: filterActivated },
+        faq: { before: faqActivation, opened: faqOpened, closed: faqClosed },
+      },
       catalog,
       catalogDepth,
       product,
