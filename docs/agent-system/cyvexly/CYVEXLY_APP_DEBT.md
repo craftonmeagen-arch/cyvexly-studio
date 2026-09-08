@@ -1,5 +1,16 @@
 # Cyvexly App Debt
 
+## Round 110 — HoneyHearted mobile-link focus continuity
+
+The wider methodology audit identified a shared focus-lifecycle gap behind
+recent one-off repairs. Real Enter activation on deployed `7b9813c` closed the
+mobile menu but left focus inside its hidden DOM for changed and current
+destinations. Accepted/deployed source `49017a3` centralizes Home-route focus
+transfer; all seven mobile links plus same-route reactivation pass locally and
+publicly. TypeScript, lint (one known evidence warning), the 53-route build,
+role setup, hot-file caps, review lifecycle, and complete suites pass. Two
+independent reviews remain the only reachable Chunk 7 debt.
+
 ## Round 109 — HoneyHearted Back to top focus continuity
 
 Accepted/deployed source `7b9813c` fixes the Back to top control hiding itself
@@ -85,30 +96,11 @@ browser truth, proof source `94b7fdb` passes the complete suite with zero
 failures or runtime/network errors. Product source remains `4e3f06e`; only the
 two independent review rounds remain as reachable Chunk 7 debt.
 
-## Round 101 — HoneyHearted interaction and adversarial proof hardening
+Round 101's interaction-hardening detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_101_ARCHIVE.md`.
 
-Accepted source `4e3f06e` adopts the inherited per-dialog focus restoration and
-strict contact-destination validation, then proves combined/empty catalog
-recovery, native form correction, adapter failure/retry, safe activation URLs,
-all catalog disclosure/provenance states, image failure, zoom-equivalent
-reflow, and a real 85-control Chromium keyboard traversal. TypeScript, lint
-(one known evidence warning), the 53-route build, and the full rendered suite
-pass with zero failures/errors. Only the two independent review rounds remain
-as reachable Chunk 7 debt; Owner substitutions remain in
-`HONEY_HEARTED_OWNER_NEEDS.md`. The identical suite also passes on the adopted
-production route.
-
-## Round 100 — HoneyHearted first integrated functional pass
-
-Accepted product source `8d84b96` makes the imported standalone storefront
-available through a no-indexed same-origin route; its malformed contact-subject
-chooser is fixed. A durable
-rendered suite passes all current catalog, resource/dialog, safe commerce,
-download/print, content/policy, preview-form, responsive, accessibility,
-storage, and network boundaries. Reachable depth remains in
-`CYVEXLY_CHUNK_DEBT.md` item 0. Missing catalog, commerce, identity, messaging,
-newsletter, public-destination, legal, and release inputs remain truthfully
-bounded in `HONEY_HEARTED_OWNER_NEEDS.md`.
+Round 100's first integrated-pass detail is archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_100_ARCHIVE.md`.
 
 ## Round 99 — Velora portfolio metadata and social-preview integration
 

@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
-round 10 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
+round 11 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
 Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
@@ -11,6 +11,16 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 7 is the current reachable Builder priority.
+
+**Round 110 / Chunk 7 round 11** used the required fifth-round methodology
+audit to challenge the repeated focus-patch pattern. Real Enter-key input on
+deployed `7b9813c` proved that mobile-menu link activation closed the menu but
+left focus inside its hidden DOM, both for changed and current destinations.
+Accepted/deployed source `49017a3` centralizes Home-route focus transfer and
+passes all seven mobile destinations plus same-route reactivation. The complete
+local/public suites, TypeScript, lint (one known evidence warning), 53-route
+build, role setup, hot-file caps, and review lifecycle pass. Two independent
+reviews remain.
 
 **Round 109 / Chunk 7 round 10** found and fixed Back to top keyboard-focus
 loss. On the deployed baseline, real Space-key activation scrolled to the top,
@@ -29,14 +39,9 @@ visible desktop equivalent. The complete local/public suites, TypeScript, lint
 (one known evidence warning), and the 53-route build pass. Two independent
 reviews remain.
 
-**Round 107 / Chunk 7 round 8** found and fixed a fresh user-path defect in the
-free-sample print action. The visible Print button had moved focus into the
-1×1 `aria-hidden` print iframe and never restored it. A new real-Chromium
-regression failed on the deployed baseline with
-`IFRAME#sample-print-frame`; accepted/deployed source `9465ae9` now invokes
-the frame's print method without focusing hidden content, so the trigger
-retains focus. The complete local/public suites, TypeScript, lint (one known
-evidence warning), and 53-route build pass. Two independent reviews remain.
+Round 107's full active-chunk report rotated to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_107_REPORT.md` when Round 110
+established the latest-three context.
 
 Round 106's full active-chunk report rotated to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_106_REPORT.md` when Round 109

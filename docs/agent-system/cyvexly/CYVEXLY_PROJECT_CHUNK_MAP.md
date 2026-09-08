@@ -248,7 +248,7 @@ requires.
   verification rounds confirm the accepted source. One clean Builder pass
   does not close this chunk.
 
-## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 109; chunk round 10)
+## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 110; chunk round 11)
 
 - **Authority:** Owner direction `2026-09-08-19`.
 - **Outcome:** turn the imported teacher-resource storefront into a polished,
@@ -256,33 +256,17 @@ requires.
   commerce/account actions are truthfully demonstrated.
 - **Source truth:** `honey-hearted/index.html`; `honey-hearted/smoke.mjs` is the
   durable rendered workflow check; `/honey-hearted` is the same-origin preview.
-- **Rounds 100–109 progress:** added the no-indexed app route, fixed the malformed
-  contact-subject chooser, and proved catalog, resource/gallery/dialog,
-  download/print, content/policy, preview-form, responsive, accessibility,
-  storage, and network boundaries in real Chrome. Round 101 added per-dialog
-  focus restoration, strict activation-destination validation, negative and
-  correction paths, adapter failure/retry, catalog claim/provenance checks,
-  image resilience, zoom-equivalent reflow, and an 85-control real keyboard
-  traversal. Round 102 added direct-deep-link, browser Back/Forward, route-focus,
-  and malformed-hash recovery proof. Round 103 then fixed accurate hosted-link
-  copy confirmation and detail-to-Home/malformed-recovery focus restoration.
-  Round 104 corrected the Owner-facing launch checklist so it points to the
-  real configuration block and truthfully describes the self-contained source.
-  Round 105 added real-Chromium proof for illustrative-cover notice/keyboard
-  focus, notice-to-launch routing, configured outbound links, protected new-
-  tab attributes, and the local outbound-event hook. Product source remains
-  `165b246`. Round 106 added an 18-route accessibility contract covering
-  visible H1/heading structure, control names, form labels, ARIA references,
-  embedded images, and client-route focus; proof source `f4adb32` passes locally
-  and on production with zero failures/errors. Round 107 then reproduced and
-  fixed the free-sample print flow moving keyboard focus into its hidden
-  `aria-hidden` iframe; accepted/deployed source `9465ae9` retains focus on the
-  visible Print trigger and passes the complete local/public suite. Round 108
-  then fixed responsive focus continuity when an open mobile menu crosses to
-  desktop: focused links and the store action now move to their visible desktop
-  equivalents. Round 109 fixed Back to top focus continuity by moving focus to
-  the visible hero heading before the activated trigger hides. Accepted and
-  deployed source `7b9813c` passes the complete suite.
+- **Rounds 100–110 progress:** integrated the no-indexed route and proved the
+  catalog, resource/gallery/dialog, download/print, content/policy, preview-
+  form, adapter, activation, responsive, accessibility, storage, network, and
+  navigation-history boundaries in real Chrome. Follow-up fixes preserve
+  dialog, route-return, print, breakpoint, Back-to-top, and mobile-menu focus
+  continuity; launch instructions and hosted-link confirmations match the real
+  self-contained source. The durable suite covers 18 routed accessibility
+  states, all 85 visible Home controls, all seven mobile destinations, and
+  same-route reactivation. Accepted/deployed source `49017a3` passes locally
+  and publicly; detailed round history remains in the build summary and
+  archived reports.
 - **Boundaries:** do not invent products, rights, sales, reviews, identity,
   destinations, legal facts, transmission, subscriptions, or payments. Keep
   missing inputs and their safe replacement steps in

@@ -15,6 +15,17 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 110 / HoneyHearted chunk round 11 — 2026-09-08
+
+The wider methodology audit found a shared mobile-navigation focus defect:
+activating a menu link hid the focused control without moving focus to the
+destination, including same-route reactivation. Accepted/deployed source
+`49017a3` centralizes Home-route focus transfer. All seven mobile destinations
+and same-route reactivation pass with real Enter-key input locally and
+publicly; TypeScript, lint (one known evidence warning), the 53-route build,
+role setup, hot-file caps, and 48 lifecycle checks pass. Two independent
+reviews remain.
+
 ## Round 109 / HoneyHearted chunk round 10 — 2026-09-08
 
 Fixed Back to top keyboard continuity. On deployed `1c49c00`, real Space-key

@@ -1,5 +1,33 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 110 / Chunk 7 round 11 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `2ee77f0` on `main`, matched `origin/main`
+**Accepted product/test source:** `49017a3` on `main`, pushed and adopted
+**Authority:** Owner direction `2026-09-08-19`
+
+The required fifth-round methodology audit challenged the recent series of
+focus-continuity fixes as a pattern and found the shared mobile-navigation
+gap. On deployed `7b9813c`, real Enter activation closed the menu but left
+focus inside its hidden DOM for both a changed destination and the current
+destination. The source now centralizes Home-route focus transfer. The durable
+regression covers all seven mobile destinations plus same-route reactivation.
+
+TypeScript, lint (one known round-42 evidence warning), the 53-route build,
+eight-packet role setup, hot-file caps, all 48 review-lifecycle checks, and the
+complete local/public Chrome suites pass with zero workflow/runtime/network/
+unexpected-origin errors. Retain only the before/local/public result JSONs and
+the opened public focus capture under
+`builder/evidence/round-110-honey-hearted-mobile-nav/` until independent
+review consumes them. Port 5193 is stopped and clear; 17,543,434 redundant
+evidence bytes and 619 runtime-log bytes were recycled.
+
+**Next Builder round:** disposition review intake first. Do not continue the
+same focus-hardening loop without a new product-level question or external
+finding. Chunk 7 still needs two independent reviews; Owner substitutions are
+unchanged.
+
 ## Round 109 / Chunk 7 round 10 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -51,30 +79,9 @@ output were removed at closeout (20,757,656 bytes recycled).
 Builder matrix without fresh evidence. Chunk 7 still needs two independent
 reviews; Owner substitutions remain unchanged.
 
-## Round 107 / Chunk 7 round 8 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `7303b25` on `main`, matched `origin/main`
-**Accepted product/test source:** `9465ae9` on `main`, pushed and adopted
-**Authority:** Owner direction `2026-09-08-19`
-
-Found and fixed a keyboard-continuity defect in the free-sample print flow.
-The public baseline moved focus from the visible Print button into the 1×1
-`aria-hidden` print iframe (`IFRAME#sample-print-frame`) and never restored it.
-The frame now prints its own document without taking focus; the invoking button
-remains the keyboard continuation point. The new regression failed before the
-fix and passes locally and on deployed source `9465ae9`.
-
-TypeScript, lint (one known round-42 evidence warning), the 53-route build, and
-the complete local/public Chrome suites pass with zero workflow/runtime/network
-errors. Retain only the source-identified before/local/public JSON under
-`builder/evidence/round-107-honey-hearted-print-focus/` until independent
-review consumes it. Stopped the owned port-5190 runtime and recycled 15,534,132
-bytes of redundant captures/download/runtime output.
-
-**Next Builder round:** disposition review intake first. Do not repeat the same
-Builder matrix without fresh evidence. Chunk 7 still needs two independent
-reviews; Owner substitutions remain unchanged.
+Round 107's full handoff rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_107_REPORT.md` when Round 110
+established the latest-three handoff window.
 
 Round 106's full handoff rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_106_REPORT.md` when Round 109
