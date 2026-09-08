@@ -15,6 +15,19 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 101 / HoneyHearted chunk round 2 — 2026-09-08
+
+Adopted and reverified inherited HoneyHearted interaction hardening: native
+dialogs restore focus on every close path and activation settings reject unsafe
+email/URL values. Expanded the durable Chrome suite through combined/empty
+catalog correction, native-invalid forms, newsletter failure/retry, contact
+draft encoding, every catalog disclosure, image failure, 200%-zoom-equivalent
+reflow, and a real sequential traversal of all 85 visible Home controls with
+Enter/Space activation. TypeScript, lint (one known evidence warning), the
+53-route build, and the full local rendered suite pass. Accepted source is
+`4e3f06e`; the same expanded suite passes on the adopted production route and
+review evidence is retained for two independent rounds.
+
 ## Round 100 / HoneyHearted chunk round 1 — 2026-09-08
 
 Opened Chunk 7 under Owner direction `2026-09-08-19`. Integrated the imported

@@ -6,14 +6,15 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
 
 ## Open
 
-0. **Chunk 7 — HoneyHearted functional depth (opened round 100).** Round 100
-   integrated `/honey-hearted` at accepted source `8d84b96`, fixed the malformed
-   subject chooser, and proved
-   all current primary workflows plus mobile/320px, reduced-motion, storage,
-   network, download/print, and preview/no-index boundaries. Still reachable:
-   expand negative/correction combinations, full keyboard/zoom traversal,
-   claim/asset provenance, resilience, activation-boundary, and independent
-   review proof. Owner/account substitutions stay in
+0. **Chunk 7 — HoneyHearted independent review (opened round 100).** Rounds
+   100–101 completed the integrated route and current Builder-reachable proof at
+   accepted source `4e3f06e`: primary and negative/correction workflows,
+   320px/zoom-equivalent reflow, all 85 visible Home controls by real keyboard,
+   dialog focus return, catalog claim/asset disclosures, image resilience,
+   safe activation boundaries, adapter failure/retry, download/print, storage,
+   network, preview, and no-index checks all pass. Still open before chunk
+   closure: two separate independent verification rounds must challenge this
+   source. Owner/account substitutions stay in
    `HONEY_HEARTED_OWNER_NEEDS.md`, not here.
 
 0a. **Chunk 6 — Velora verification and integration depth (opened round 95).**

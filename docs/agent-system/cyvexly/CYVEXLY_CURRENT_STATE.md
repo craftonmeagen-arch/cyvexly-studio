@@ -1,9 +1,20 @@
 # Cyvexly Current State
 
-**Global round:** 100. **Active product work:** Chunk 7 — HoneyHearted
-Functional Storefront, chunk-local round 1, opened under Owner direction
+**Global round:** 101. **Active product work:** Chunk 7 — HoneyHearted
+Functional Storefront, chunk-local round 2, opened under Owner direction
 `2026-09-08-19`. Chunk 6 remains open in parallel only for its two required
 independent reviews; Chunk 5 remains open only for Owner/account gates.
+
+Round 101 adopted and independently reran the inherited interaction hardening:
+all native-dialog close paths now return focus to their own trigger, activation
+settings reject unsafe URLs/email destinations, and the durable suite now
+covers combined/empty/recovered catalog states, native form correction,
+newsletter failure/retry, contact-draft encoding, every catalog disclosure,
+image failure, a 200%-zoom-equivalent layout, and all 85 visible Home controls
+through real Chromium Tab/Enter/Space input. The full suite passes with zero
+failures or browser/network errors. Accepted HoneyHearted source is `4e3f06e`
+(product fix `b61126b`); the full expanded suite also passes on the adopted
+public `/honey-hearted` route.
 
 Round 100 integrated the imported `honey-hearted/index.html` at the same-origin
 `/honey-hearted` route with explicit response-level no-index protection, fixed
@@ -14,8 +25,8 @@ unconnected commerce notice, real free-printable download and print document,
 teaching/policy/About/launch routes, truthful non-transmitting forms, mobile
 focus return, reduced motion, storage/network boundaries, and reflow. The
 53-route build, TypeScript, and lint pass; rendered evidence is retained for
-review. Accepted HoneyHearted product source is `8d84b96`; the identical suite
-passes on the adopted public `/honey-hearted` route.
+review. Its initial accepted source was `8d84b96`; the identical suite passed
+on the adopted public `/honey-hearted` route.
 
 **Parallel accepted product position:** Round 97 Velora integration source is committed
 and pushed at `0ca0504` on `main`; its closeout is `c2f8e8e`.
