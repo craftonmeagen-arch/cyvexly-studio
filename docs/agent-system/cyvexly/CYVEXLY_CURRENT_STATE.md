@@ -14,7 +14,8 @@ unconnected commerce notice, real free-printable download and print document,
 teaching/policy/About/launch routes, truthful non-transmitting forms, mobile
 focus return, reduced motion, storage/network boundaries, and reflow. The
 53-route build, TypeScript, and lint pass; rendered evidence is retained for
-review. Accepted HoneyHearted product source is `8d84b96`.
+review. Accepted HoneyHearted product source is `8d84b96`; the identical suite
+passes on the adopted public `/honey-hearted` route.
 
 **Parallel accepted product position:** Round 97 Velora integration source is committed
 and pushed at `0ca0504` on `main`; its closeout is `c2f8e8e`.

@@ -24,7 +24,8 @@ smoke covering the whole current demo at desktop/mobile/320px. Catalog,
 resource/dialog, download/print, content/policy, truthful form, accessibility,
 responsive, storage, and network boundaries all pass with zero browser or
 network errors. Accepted product source `8d84b96` passes TypeScript, lint, and
-the 53-route build; missing Owner inputs remain explicitly bounded in
+the 53-route build. The identical suite passes after Render adoption at
+`cyvexly.com`; missing Owner inputs remain explicitly bounded in
 `HONEY_HEARTED_OWNER_NEEDS.md`.
 
 ## Round 99 / Velora chunk round 5 — 2026-09-08

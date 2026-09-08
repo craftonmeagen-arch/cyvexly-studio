@@ -27,9 +27,10 @@ Evidence is retained under `builder/evidence/round-100-honey-hearted/` until an
 independent reviewer consumes it; redundant PNGs and the downloaded sample can
 then be removed while keeping the source-identified result JSON.
 
-The Round 100 closeout is pushed at `84465bc`. An immediate production check
-still returned the prior deployment's `404` for `/honey-hearted`; treat Render
-adoption as pending and verify the public route before claiming it live.
+The Round 100 closeout is pushed at `84465bc`; its deployment-boundary note is
+`75ab134`. Render then adopted `/honey-hearted`, and the same full suite passed
+on `https://cyvexly.com` with the expected no-index response and no unexpected
+request, runtime error, overflow, or workflow failure.
 
 **Next Builder round:** first disposition every review intake. Then deepen
 HoneyHearted's negative/correction coverage across catalog combinations and

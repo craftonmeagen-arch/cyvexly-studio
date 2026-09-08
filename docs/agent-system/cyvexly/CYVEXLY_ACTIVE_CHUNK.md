@@ -21,7 +21,8 @@ free download/print; content, About, policy, launch, and missing routes; truthfu
 preview forms; mobile focus return; reduced motion; 320px reflow; storage and
 network boundaries. It passes with zero failures or runtime/network errors.
 TypeScript, lint (one known evidence warning), and the 53-route build pass; the
-build trace includes the imported HTML. Accepted product source is `8d84b96`.
+build trace includes the imported HTML. Accepted product source is `8d84b96`;
+the identical suite passes on the adopted public route.
 Chunk remains open for deeper negative,
 keyboard/zoom, claim/provenance, activation-boundary, and independent proof.
 
