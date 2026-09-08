@@ -1,5 +1,30 @@
 # Cyvexly Next Builder Handoff
 
+## Round 98 / Chunk 6 round 4 closeout
+
+**Session:** scheduled/unattended Codex Builder, 2026-09-08 EDT
+**Start source:** `c2f8e8e` on `main`, matched `origin/main`
+**Accepted product source:** unchanged at `0ca0504`
+**Authority:** Owner direction `2026-09-07-17`
+
+Revalidated the real production boundary without repeating the already-complete
+local build suite. Public Work, case-study, demo, image, and sitemap requests
+all pass; `www` redirects canonically; the case study is discoverable through
+the sitemap while the standalone demo is excluded and explicitly no-indexed at
+both HTML and response-header layers. Opened the retained production Chrome/CDP
+result and captures; the full workflows and responsive visuals remain clean.
+No product defect or source change was warranted.
+
+Evidence retained at `builder/evidence/round-98-velora-production/` for the
+unread independent reviews; Round 97 now retains only its source-identified
+local result JSON. The prior interrupted cleanup reclaimed 9,287,804 bytes of
+redundant local captures plus 1,684,774 bytes of download scratch. This round
+created no browser/server process; port 5183 is clear.
+
+**Next Builder round:** read and disposition every independent-review intake.
+Chunk 6 cannot close until two separate independent verification rounds
+challenge accepted source `0ca0504`; do not substitute repeated Builder checks.
+
 ## Round 97 / Chunk 6 round 3 closeout
 
 **Session:** scheduled/unattended Codex Builder, 2026-09-07–08 EDT
@@ -61,40 +86,9 @@ Velora unmistakably fictional, implement it, and prove both Cyvexly entry and
 Velora destination. Then route accepted source to two separate independent
 verification rounds before any chunk-complete/readiness claim.
 
-## Round 95 / Chunk 6 round 1 closeout
-
-**Session:** scheduled/unattended Codex Builder, 2026-09-07 EDT
-**Start source:** `85ce323` on `main`, matched `origin/main`
-**Round 95 source:** `b4b4608` on `main`
-**Authority:** Owner direction `2026-09-07-17`
-
-Reconciled the Velora capability demonstration into the project map, current
-state, active chunk, history, and debt. Established `velora/index.html` as the
-standalone source truth. Replaced stale Indianapolis copy with the Owner's
-fictional Evansville address/phone/email and made the phone/email controls copy
-sample data rather than contact a possibly real party. Baseline rendering found
-and fixed a real CSS cascade defect that clipped the complete hero message.
-
-Added `velora/smoke.mjs`, a dependency-free Chrome/CDP harness. Its 1440×900
-and 390×844 runs prove the visible hero, nav, menus/tabs/filter, reservation,
-private-event inquiry, gift configurator, gallery, newsletter, sample-contact
-copy/disclosure, responsive mobile menu, and no overflow. All data-entry and
-transaction moments remain explicit non-transmitting demos. Result: 0 failures,
-runtime errors, or network errors. Durable before/after and viewport evidence is
-under `builder/evidence/round-95-velora/`. Parent Cyvexly verification also
-passed: typecheck clean; lint clean except the pre-existing round-42 warning;
-production build clean, 49/49 routes.
-
-Auditor intake `IFA-2026-09-07-R87` was its 62nd consecutive clean confirmation
-of pre-Velora head `85ce323`; it contained no code/document finding and is stale
-for this new chunk. Disposition: accepted as historical confirmation, no source
-action; moved to `exchange/processed/`.
-
-**Next Builder round:** remain in Chunk 6. Extend the smoke matrix through real
-invalid/correction/failure states and focused keyboard/focus/zoom/reduced-motion
-checks; then audit external-image provenance/resilience and plan the honest
-Cyvexly portfolio/deployment integration. Do not claim chunk completion until
-the required two independent verification rounds confirm accepted source.
+Round 95's full Chunk 6 opening closeout is preserved in
+`CYVEXLY_BUILD_SUMMARY.md` and its matching debt entry; it rotated out when
+Round 98 established the current latest-three handoff window.
 
 ## Round 94 closeout
 

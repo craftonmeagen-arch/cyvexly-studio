@@ -15,6 +15,14 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 98 / Velora chunk round 4 — 2026-09-08
+
+Revalidated accepted Velora source `0ca0504` at `cyvexly.com`: public entry,
+case-study, demo, media, canonical redirect, sitemap inclusion/exclusion,
+same-origin CSP, and layered no-index behavior all pass. Opened the retained
+production Chrome/CDP result and responsive captures; no product defect or
+source change was warranted. Two independent verification rounds remain.
+
 ## Round 97 / Velora chunk round 3 — 2026-09-08
 
 Integrated Velora into the production-normal Cyvexly path: moved its source to

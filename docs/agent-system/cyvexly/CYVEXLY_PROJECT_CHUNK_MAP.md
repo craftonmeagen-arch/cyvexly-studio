@@ -289,7 +289,7 @@ URLs") is now fully closed across every route, static and dynamic. Round
 commercial routes), further closing required-scope item 2's "searchable"
 intent.
 
-## Chunk 6 — Velora Capability Demonstration (OPEN, global round 97; chunk round 3)
+## Chunk 6 — Velora Capability Demonstration (OPEN, global round 98; chunk round 4)
 
 - **Authority:** Owner direction `2026-09-07-17`.
 - **Outcome:** turn the restored standalone Velora fine-dining concept into a
@@ -301,20 +301,13 @@ intent.
   fictional Evansville address, phone, and email consistently; do not place
   calls, send messages, create reservations, collect payment, or transmit
   personal data. Production-service moments use explicit local demo states.
-- **Round 95 progress:** corrected the fictional identity, made phone/email
-  safe copy controls, fixed a rendered hero cascade defect, and proved the
-  complete happy-path control set at desktop/mobile with no overflow or
-  runtime/network error. Parent Cyvexly typecheck/lint/build also remain clean.
-- **Round 96 progress:** expanded durable CDP proof through invalid/correction
-  paths, keyboard tabs, dialog/mobile focus return, reduced motion, 320px
-  reflow, image fallback/provenance, noindex/form safety, and network-origin
-  auditing. Accepted source `2e79c45` passes clean; no product defect surfaced.
-- **Round 97 progress:** made Velora production-reachable at `/velora`,
-  self-hosted its images/fonts under the existing CSP, and added an honest
-  built-concept Work card/case study with real responsive captures. Accepted
-  source `0ca0504` passes the expanded Velora plus Cyvexly-integration smoke
-  locally and on `cyvexly.com`; two separate independent verification rounds
-  remain.
+- **Rounds 95–98 progress:** corrected the fictional identity and clipped hero;
+  made all contact/transaction moments safe demonstrations; added durable CDP
+  happy, correction, accessibility, responsive, resilience, and network proof;
+  deployed `/velora` with self-hosted assets and no-index protection; and added
+  an honest Work card/case study. Accepted source `0ca0504` passes locally and
+  on `cyvexly.com`; Round 98 reconfirmed routes, redirects, sitemap boundaries,
+  CSP, and opened production evidence. Two independent reviews remain.
 - **Completion boundary:** all advertised navigation, responsive states,
   workflows, validation/correction/failure behavior, accessibility, content
   truth, and portfolio framing pass; then two separate independent

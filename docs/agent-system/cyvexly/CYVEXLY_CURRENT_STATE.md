@@ -1,23 +1,20 @@
 # Cyvexly Current State
 
-**Global round:** 97. **Active product work:** Chunk 6 — Velora Capability
-Demonstration, chunk-local round 3, opened under Owner direction
+**Global round:** 98. **Active product work:** Chunk 6 — Velora Capability
+Demonstration, chunk-local round 4, opened under Owner direction
 `2026-09-07-17`. Chunk 5 remains open in parallel with only Owner/account
 gates left; its completed Cyvexly launch work and gates are summarized below.
 
-Round 97 moved the accepted Velora page into the deployable public tree,
-self-hosted its illustrative images and fonts, added the production `/velora`
-route, and published a truthful built-concept entry plus case study in
-Cyvexly's Work system. The extended CDP suite now proves Work filters,
-desktop/mobile portfolio and case-study reflow, case-study-to-demo navigation,
-all prior Velora flows, and same-origin asset behavior. Accepted source
-`0ca0504` passes with zero failures, runtime/network errors, unexpected
-destinations, or horizontal overflow. Typecheck/lint/build remain clean (52/52
-routes; only the pre-existing round-42 evidence-script lint warning). The same
-full matrix passes on `https://cyvexly.com`, confirming Render adoption.
+Round 98 revalidated the deployed Round 97 integration at the public boundary.
+The Work entry, case study, demo, images, and sitemap all return `200`; `www`
+redirects to the canonical root host; the case study is in the sitemap while
+the standalone demo is excluded; and `/velora` returns both meta and response-
+header no-index protection. The inherited production Chrome/CDP result and
+captures were opened and remain clean across all workflows and 1440/390/320
+states. No product defect surfaced, so accepted source remains `0ca0504`.
 
 **Accepted product position:** Round 97 Velora integration source is committed
-and pushed at `0ca0504` on `main`; the closeout documentation commit follows it.
+and pushed at `0ca0504` on `main`; its closeout is `c2f8e8e`.
 `https://cyvexly.com/work/velora-dining` and `https://cyvexly.com/velora` are
 live; the raw demo returns the explicit no-index response header.
 `cyvexly.com` remains fully connected, HTTPS, and canonicalized (verified round

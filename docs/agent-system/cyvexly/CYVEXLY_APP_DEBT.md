@@ -1,5 +1,14 @@
 # Cyvexly App Debt
 
+## Round 98 — Velora public deployment integrity
+
+Fresh public HTTP, discovery, security-header, and retained rendered-evidence
+checks confirm the Round 97 integration is adopted at `cyvexly.com`: all entry
+routes/assets pass, `www` redirects canonically, the case study is in the
+sitemap while `/velora` is excluded, and the standalone demo is explicitly
+no-indexed. No product defect surfaced. Only Chunk 6's two independent reviews
+remain; Chunk 5 gates are unchanged.
+
 ## Round 97 — Velora production-path and portfolio integration
 
 Moved Velora's deployable source to `public/velora/index.html`, self-hosted its

@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **6 — Velora Capability Demonstration is OPEN** at chunk-local
-round 3 under Owner direction `2026-09-07-17`. Chunks 3 — Project Planner and 4 —
+round 4 under Owner direction `2026-09-07-17`. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
 now OPEN**, started round 29. Its integrated verification will close the
@@ -10,6 +10,18 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 6 is the current reachable Builder priority.
+
+**Round 98 / Chunk 6 round 4** (scheduled/unattended) performed a fresh public
+deployment-integrity check against accepted source `0ca0504`. `/work`, the
+Velora case study, `/velora`, representative self-hosted media, and the sitemap
+all return `200`; `www` redirects to the canonical root host; the case study is
+included in the sitemap while the demo is excluded; and the demo returns both
+meta and response-header no-index protection under the same-origin CSP. Opened
+the inherited production Chrome/CDP result and desktop/mobile captures: all
+workflows remain green with no runtime/network/origin/overflow failure, and the
+rendered Work, case-study, and demo entries remain readable and unclipped. No
+product defect surfaced. Chunk stays open only for two separate independent
+verification rounds.
 
 **Round 97 / Chunk 6 round 3** (scheduled/unattended) completed the honest
 Cyvexly portfolio and deployment integration. `public/velora/index.html` is now
@@ -41,23 +53,8 @@ warning). No product defect surfaced, so `velora/index.html` stayed unchanged.
 Chunk remains open for honest Cyvexly portfolio/deployment integration and two
 separate independent verification rounds.
 
-**Round 95 / Chunk 6 round 1** (scheduled/unattended) reconciled the Owner's
-Velora direction into the product plan and began implementation. Established
-the restored standalone `velora/index.html` as source truth; replaced stale
-Indianapolis copy with the authorized fictional Evansville address, phone, and
-email; and made phone/email non-transmitting copy controls. Rendered baseline
-inspection found and fixed a real CSS cascade defect that placed the 960px hero
-image in normal flow and clipped the entire hero message below the fold.
-Added `velora/smoke.mjs`, a dependency-free Chrome/CDP suite covering desktop
-and mobile nav/menu/filter/gallery plus reservation, private-event, gift,
-newsletter, contact-copy, and disclosure states. Final result: zero failures,
-runtime/network errors, or overflow at 1440×900 and 390×844. Parent app
-typecheck/lint/build passed (49/49 routes; only the known round-42 lint warning).
-Chunk remains open for correction/failure/accessibility-depth testing and the
-two independent verification rounds required by the governing packet.
-
-Rounds 93-94 are preserved in their Builder handoff archives and matching
-`CYVEXLY_APP_DEBT.md` entries; they rotated out when Round 97 established the
+Rounds 93-95 are preserved in Builder handoff/build-summary history and their
+matching debt entries; Round 95 rotated out when Round 98 established the
 current latest-three context.
 
 **Round 92** (scheduled/unattended) dispositioned Auditor item
