@@ -1,5 +1,15 @@
 # Cyvexly App Debt
 
+## Round 108 — HoneyHearted responsive-menu focus continuity
+
+Accepted/deployed source `1c49c00` fixes breakpoint-driven focus loss from the
+open mobile menu. When the layout crosses to desktop, a focused mobile link now
+moves to its matching visible desktop link, and the mobile store action moves
+to the desktop store action. The new real-Chromium regression failed on the
+public baseline and passes locally/publicly after the fix. TypeScript, lint
+(one known evidence warning), the 53-route build, and complete suites pass.
+Two independent reviews remain the only reachable Chunk 7 debt.
+
 ## Round 107 — HoneyHearted free-sample print focus
 
 Accepted/deployed source `9465ae9` fixes the free-sample Print action moving

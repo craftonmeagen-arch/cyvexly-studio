@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
-round 8 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
+round 9 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
 Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
@@ -11,6 +11,15 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 7 is the current reachable Builder priority.
+
+**Round 108 / Chunk 7 round 9** found and fixed a responsive keyboard-focus
+defect. When an open mobile menu crossed the desktop breakpoint, Chromium
+closed the menu but did not preserve the user's continuation point. The new
+real-Chromium regression failed on the deployed baseline. Accepted/deployed
+source `1c49c00` maps a focused mobile navigation link or store action to its
+visible desktop equivalent. The complete local/public suites, TypeScript, lint
+(one known evidence warning), and the 53-route build pass. Two independent
+reviews remain.
 
 **Round 107 / Chunk 7 round 8** found and fixed a fresh user-path defect in the
 free-sample print action. The visible Print button had moved focus into the
@@ -31,14 +40,9 @@ cover text. The complete suite passes locally and on production with zero
 workflow/runtime/network errors; product source remains `165b246`. Two
 independent reviews remain.
 
-**Round 105 / Chunk 7 round 6** found no new review intake and challenged a
-fresh activation-integration surface. Proof source `cacc5af` adds real-Chromium
-coverage for illustrative-cover notice open/Escape focus return, notice-to-
-launch keyboard routing with visible-heading focus, configured store/product/
-social/sample destinations, `noopener noreferrer` new-tab protection, and the
-local `hh:outbound` event contract. The complete suite passes locally and on
-production with zero workflow/runtime/network errors; product source remains
-`165b246`. Two independent reviews remain.
+Round 105's full active-chunk report rotated to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_105_REPORT.md` when Round 108
+established the latest-three context.
 
 Round 104's full active-chunk report rotated to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_104_REPORT.md` when Round 107

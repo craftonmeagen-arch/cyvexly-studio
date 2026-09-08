@@ -1,5 +1,30 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 108 / Chunk 7 round 9 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `17aa9bc` on `main`, matched `origin/main`
+**Accepted product/test source:** `1c49c00` on `main`, pushed and adopted
+**Authority:** Owner direction `2026-09-08-19`
+
+Found and fixed responsive navigation focus loss. On the deployed baseline,
+crossing from an open mobile menu to the desktop layout closed the menu but
+discarded the keyboard user's continuation point. The breakpoint handler now
+maps a focused mobile link to its visible desktop equivalent and the mobile
+store action to the desktop store action. The new real-Chromium regression
+failed before the fix and passes locally and publicly afterward.
+
+TypeScript, lint (one known round-42 evidence warning), the 53-route build, and
+the complete local/public Chrome suites pass with zero workflow/runtime/network/
+unexpected-origin errors. Retain only the source-identified before/local/public
+JSON under `builder/evidence/round-108-honey-hearted-responsive-focus/` until
+independent review consumes it. The owned port-5191 runtime and disposable
+output were removed at closeout (20,757,656 bytes recycled).
+
+**Next Builder round:** disposition review intake first. Do not repeat the same
+Builder matrix without fresh evidence. Chunk 7 still needs two independent
+reviews; Owner substitutions remain unchanged.
+
 ## Round 107 / Chunk 7 round 8 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -53,32 +78,9 @@ review consumes them. Stopped the owned port-5189 runtime and recycled
 Builder matrix without fresh evidence. Chunk 7 still needs two independent
 reviews; Owner substitutions remain unchanged.
 
-## Round 105 / Chunk 7 round 6 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `521e3f0` on `main`, matched `origin/main`
-**Accepted product source:** unchanged at `165b246`
-**Accepted proof source:** `cacc5af` on `main`
-**Authority:** Owner direction `2026-09-08-19`
-
-No new independent-review intake existed. Added a fresh activation-integration
-layer rather than repeating prior coverage: real Chromium now proves the
-illustrative-cover notice opens by keyboard and returns focus on Escape, its
-launch-checklist action closes the dialog and focuses the visible destination
-heading, and configured store/product/social/sample actions open only protected
-HTTPS new tabs while emitting the documented local `hh:outbound` details.
-
-TypeScript, lint (one known round-42 evidence warning), the 53-route build, and
-the complete local/public Chrome suites pass with zero workflow/runtime/network
-errors. Retain only the local/public result JSONs under
-`builder/evidence/round-105-honey-hearted-activation/` until independent review
-consumes them. Stopped the owned port-5188 runtime; redundant captures and
-downloads were removed (49,192,567 bytes); only the two source-identified
-result JSONs remain.
-
-**Next Builder round:** disposition review intake first. Do not repeat the same
-Builder matrix without fresh evidence. Chunk 7 still needs two independent
-reviews; Owner substitutions remain unchanged.
+Round 105's full handoff rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_105_REPORT.md` when Round 108
+established the latest-three handoff window.
 
 Round 104's full handoff rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_104_REPORT.md` when Round 107

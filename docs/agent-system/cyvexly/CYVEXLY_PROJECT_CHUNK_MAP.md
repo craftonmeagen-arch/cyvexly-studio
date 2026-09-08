@@ -248,7 +248,7 @@ requires.
   verification rounds confirm the accepted source. One clean Builder pass
   does not close this chunk.
 
-## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 107; chunk round 8)
+## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 108; chunk round 9)
 
 - **Authority:** Owner direction `2026-09-08-19`.
 - **Outcome:** turn the imported teacher-resource storefront into a polished,
@@ -256,7 +256,7 @@ requires.
   commerce/account actions are truthfully demonstrated.
 - **Source truth:** `honey-hearted/index.html`; `honey-hearted/smoke.mjs` is the
   durable rendered workflow check; `/honey-hearted` is the same-origin preview.
-- **Rounds 100–107 progress:** added the no-indexed app route, fixed the malformed
+- **Rounds 100–108 progress:** added the no-indexed app route, fixed the malformed
   contact-subject chooser, and proved catalog, resource/gallery/dialog,
   download/print, content/policy, preview-form, responsive, accessibility,
   storage, and network boundaries in real Chrome. Round 101 added per-dialog
@@ -277,7 +277,10 @@ requires.
   and on production with zero failures/errors. Round 107 then reproduced and
   fixed the free-sample print flow moving keyboard focus into its hidden
   `aria-hidden` iframe; accepted/deployed source `9465ae9` retains focus on the
-  visible Print trigger and passes the complete local/public suite.
+  visible Print trigger and passes the complete local/public suite. Round 108
+  then fixed responsive focus continuity when an open mobile menu crosses to
+  desktop: focused links and the store action now move to their visible desktop
+  equivalents. Accepted/deployed source `1c49c00` passes the complete suite.
 - **Boundaries:** do not invent products, rights, sales, reviews, identity,
   destinations, legal facts, transmission, subscriptions, or payments. Keep
   missing inputs and their safe replacement steps in

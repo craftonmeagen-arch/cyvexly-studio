@@ -15,6 +15,16 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 108 / HoneyHearted chunk round 9 — 2026-09-08
+
+Fixed responsive navigation focus continuity. The deployed baseline lost the
+keyboard continuation point when an open mobile menu crossed the desktop
+breakpoint. Accepted/deployed source `1c49c00` maps the focused mobile link or
+store action to its visible desktop equivalent. The real-Chromium regression
+failed before the fix and passes locally/publicly afterward; TypeScript, lint
+(one known evidence warning), the 53-route build, and the complete suites pass.
+Two independent reviews remain.
+
 ## Round 107 / HoneyHearted chunk round 8 — 2026-09-08
 
 Found and fixed a real keyboard-continuity defect in the free-sample print
