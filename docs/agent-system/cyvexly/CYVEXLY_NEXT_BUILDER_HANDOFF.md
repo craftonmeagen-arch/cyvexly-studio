@@ -1,5 +1,30 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 107 / Chunk 7 round 8 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `7303b25` on `main`, matched `origin/main`
+**Accepted product/test source:** `9465ae9` on `main`, pushed and adopted
+**Authority:** Owner direction `2026-09-08-19`
+
+Found and fixed a keyboard-continuity defect in the free-sample print flow.
+The public baseline moved focus from the visible Print button into the 1×1
+`aria-hidden` print iframe (`IFRAME#sample-print-frame`) and never restored it.
+The frame now prints its own document without taking focus; the invoking button
+remains the keyboard continuation point. The new regression failed before the
+fix and passes locally and on deployed source `9465ae9`.
+
+TypeScript, lint (one known round-42 evidence warning), the 53-route build, and
+the complete local/public Chrome suites pass with zero workflow/runtime/network
+errors. Retain only the source-identified before/local/public JSON under
+`builder/evidence/round-107-honey-hearted-print-focus/` until independent
+review consumes it. Stopped the owned port-5190 runtime and recycled 15,534,132
+bytes of redundant captures/download/runtime output.
+
+**Next Builder round:** disposition review intake first. Do not repeat the same
+Builder matrix without fresh evidence. Chunk 7 still needs two independent
+reviews; Owner substitutions remain unchanged.
+
 ## Round 106 / Chunk 7 round 7 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -55,35 +80,9 @@ result JSONs remain.
 Builder matrix without fresh evidence. Chunk 7 still needs two independent
 reviews; Owner substitutions remain unchanged.
 
-## Round 104 / Chunk 7 round 5 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `9788819` on `main`, matched `origin/main`
-**Accepted product/test source:** `165b246` on `main`, pushed and adopted
-**Authority:** Owner direction `2026-09-08-19`
-
-Found a user-facing source-truth defect outside the already-proved workflow
-matrix: the Owner launch checklist pointed first to nonexistent `app.js` and
-claimed the source folder contained separate CSS, JavaScript, image, and free-
-sample files, although the real deliverable is self-contained HTML plus its
-smoke test. `honey-hearted/index.html` now points to the actual `SITE_CONFIG`
-block and accurately explains where its embedded source and generated sample
-live. `honey-hearted/smoke.mjs` carries the rendered regression.
-
-The prior source claim was reproduced from `9788819`. Accepted/deployed source
-`165b246` passes TypeScript, lint (one known round-42 evidence warning), the
-53-route build, and the complete optimized-runtime Chrome/CDP suite locally
-and at `https://cyvexly.com/honey-hearted`, with zero workflow/runtime/network
-errors. Retain only
-`builder/evidence/round-104-honey-hearted-source-truth/production-result.json`
-until independent review consumes it. Stopped the owned port-5187 runtime and
-confirmed the port clear; recycled 10,356,014 bytes of redundant captures,
-downloads, and temporary public-run output.
-
-**Next Builder round:** disposition all review intake first. Do not repeat the
-same Builder suite without new evidence. Chunk 7 still needs two independent
-reviews; Owner substitutions remain unchanged in
-`HONEY_HEARTED_OWNER_NEEDS.md`.
+Round 104's full handoff rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_104_REPORT.md` when Round 107
+established the latest-three handoff window.
 
 Round 103's full handoff rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_103_REPORT.md` when Round 106

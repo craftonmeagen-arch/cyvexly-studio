@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
-round 7 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
+round 8 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
 Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
@@ -11,6 +11,15 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 7 is the current reachable Builder priority.
+
+**Round 107 / Chunk 7 round 8** found and fixed a fresh user-path defect in the
+free-sample print action. The visible Print button had moved focus into the
+1×1 `aria-hidden` print iframe and never restored it. A new real-Chromium
+regression failed on the deployed baseline with
+`IFRAME#sample-print-frame`; accepted/deployed source `9465ae9` now invokes
+the frame's print method without focusing hidden content, so the trigger
+retains focus. The complete local/public suites, TypeScript, lint (one known
+evidence warning), and 53-route build pass. Two independent reviews remain.
 
 **Round 106 / Chunk 7 round 7** found no new review intake and added a fresh
 18-route accessibility contract. Proof source `f4adb32` verifies every Home,
@@ -31,15 +40,9 @@ local `hh:outbound` event contract. The complete suite passes locally and on
 production with zero workflow/runtime/network errors; product source remains
 `165b246`. Two independent reviews remain.
 
-**Round 104 / Chunk 7 round 5** corrected a user-facing source-truth defect in
-the Owner launch checklist. It now points directly to the real `SITE_CONFIG`
-block inside the standalone HTML and describes the actual self-contained
-artifact instead of naming nonexistent `app.js` and separate CSS, JavaScript,
-image, and sample files. The regression reproduced the prior false claim from
-source and verifies the corrected rendered instructions. Accepted/deployed
-source `165b246` passes TypeScript, lint (one known evidence warning), the
-53-route build, and the complete local/public Chrome suites with zero failures
-or browser/network errors. Two independent reviews remain.
+Round 104's full active-chunk report rotated to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_104_REPORT.md` when Round 107
+established the latest-three context.
 
 Round 103's full active-chunk report rotated to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_103_REPORT.md` when Round 106

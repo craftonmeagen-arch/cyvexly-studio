@@ -1,9 +1,17 @@
 # Cyvexly Current State
 
-**Global round:** 106. **Active product work:** Chunk 7 — HoneyHearted
-Functional Storefront, chunk-local round 7, opened under Owner direction
+**Global round:** 107. **Active product work:** Chunk 7 — HoneyHearted
+Functional Storefront, chunk-local round 8, opened under Owner direction
 `2026-09-08-19`. Chunk 6 remains open in parallel only for its two required
 independent reviews; Chunk 5 remains open only for Owner/account gates.
+
+Round 107 found and fixed a keyboard-continuity defect in the free-sample
+print flow: the visible Print button moved focus into an `aria-hidden` iframe
+and never restored it. Real Chromium reproduced the public failure before the
+source fix and now confirms the trigger retains focus while the iframe-specific
+print document still opens. Accepted/deployed source `9465ae9` passes the
+complete local/public suite, TypeScript, lint (one known evidence warning), and
+the 53-route build. Two independent reviews remain.
 
 Round 106 found no new review intake and added a fresh 18-route accessibility
 contract to proof source `f4adb32`. Every Home, product, article, sample,

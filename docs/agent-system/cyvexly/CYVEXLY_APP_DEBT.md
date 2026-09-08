@@ -1,5 +1,15 @@
 # Cyvexly App Debt
 
+## Round 107 — HoneyHearted free-sample print focus
+
+Accepted/deployed source `9465ae9` fixes the free-sample Print action moving
+focus into its 1×1 `aria-hidden` iframe. A new real-Chromium regression failed
+on the public baseline (`IFRAME#sample-print-frame`) and passes locally and on
+production after removing the unnecessary frame-focus call; the iframe still
+contains and invokes the promised printable document. TypeScript, lint (one
+known evidence warning), the 53-route build, and complete local/public suites
+pass. Two independent reviews remain the only reachable Chunk 7 debt.
+
 ## Round 106 — HoneyHearted routed accessibility contract
 
 No new external-review intake existed. Proof source `f4adb32` adds an 18-route

@@ -15,6 +15,16 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 107 / HoneyHearted chunk round 8 — 2026-09-08
+
+Found and fixed a real keyboard-continuity defect in the free-sample print
+flow: it focused a 1×1 `aria-hidden` iframe and stranded keyboard users there.
+The public baseline reproduced `IFRAME#sample-print-frame`; accepted/deployed
+source `9465ae9` prints through that frame without focusing it and keeps the
+visible Print button active. The complete local/public Chromium suites,
+TypeScript, lint (one known evidence warning), and the 53-route build pass.
+Two independent reviews remain.
+
 ## Round 106 / HoneyHearted chunk round 7 — 2026-09-08
 
 Added a durable 18-route accessibility contract covering every Home, product,
