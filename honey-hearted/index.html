@@ -463,7 +463,7 @@ $('#resource-search').addEventListener('input',e=>{catalogState.query=e.target.v
 $('#grade-filter').addEventListener('change',e=>{catalogState.grade=e.target.value;renderProducts();});
 $('#format-filter').addEventListener('change',e=>{catalogState.format=e.target.value;renderProducts();});
 $('#clear-filters').addEventListener('click',resetFilters);
-$('#back-top').addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
+$('#back-top').addEventListener('click',()=>{const target=$('#hero-title');target.setAttribute('tabindex','-1');target.focus({preventScroll:true});window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});
 window.addEventListener('scroll',()=>{$('#back-top').hidden=scrollY<550;},{passive:true});
 window.addEventListener('hashchange',renderRoute);
 $('#year').textContent=new Date().getFullYear();

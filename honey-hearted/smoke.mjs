@@ -886,6 +886,41 @@ async function main() {
       "Crossing the desktop breakpoint did not move the focused mobile store action to the visible desktop store action.",
     );
 
+    await viewport(800, 900);
+    await navigate();
+    const backTopBefore = await evaluate(`
+      window.scrollTo({top:document.documentElement.scrollHeight,behavior:'instant'});
+      await new Promise(accept=>setTimeout(accept,100));
+      const button=document.querySelector('#back-top');
+      button.focus();
+      return {
+        scrollY,
+        hidden:button.hidden,
+        focused:document.activeElement===button,
+      };
+    `);
+    await settle();
+    await key(" ");
+    await settle(1200);
+    const backTopAfter = await evaluate(`
+      return {
+        scrollY,
+        hidden:document.querySelector('#back-top').hidden,
+        focused:document.activeElement===document.querySelector('#hero-title'),
+        active:(document.activeElement.id||document.activeElement.tagName),
+      };
+    `);
+    await screenshot("honey-hearted-back-top-focus.png");
+    check(
+      backTopBefore.scrollY > 550 &&
+        !backTopBefore.hidden &&
+        backTopBefore.focused &&
+        backTopAfter.scrollY < 10 &&
+        backTopAfter.hidden &&
+        backTopAfter.focused,
+      `Back-to-top activation did not preserve keyboard continuity at the visible page heading (active: ${backTopAfter.active}).`,
+    );
+
     await cdp.call("Emulation.setEmulatedMedia", {
       features: [{ name: "prefers-reduced-motion", value: "reduce" }],
     });
@@ -975,6 +1010,7 @@ async function main() {
         link: { before: responsiveMenuBefore, after: responsiveMenuAfter },
         store: { before: responsiveStoreBefore, after: responsiveStoreAfter },
       },
+      backToTop: { before: backTopBefore, after: backTopAfter },
       reducedMotion,
       reflow,
       networkRequests: [...new Set(networkRequests)],
