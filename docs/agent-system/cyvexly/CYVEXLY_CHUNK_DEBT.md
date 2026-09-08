@@ -7,16 +7,17 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
 ## Open
 
 0. **Chunk 7 — HoneyHearted independent review (opened round 100).** Rounds
-   100–104 completed the integrated route and current Builder-reachable proof at
-   accepted source `165b246`: primary and
+   100–105 completed the integrated route and current Builder-reachable proof at
+   accepted product source `165b246` and proof source `cacc5af`: primary and
    negative/correction workflows,
    320px/zoom-equivalent reflow, all 85 visible Home controls by real keyboard,
    dialog focus return, catalog claim/asset disclosures, image resilience,
    safe activation boundaries, adapter failure/retry, download/print, storage,
    network, preview, and no-index checks, plus direct deep-link, Back/Forward,
    route-focus, malformed-hash recovery, accurate hosted-link copy confirmation,
-   detail-to-Home focus restoration, and truthful self-contained launch
-   instructions all pass. Still open before chunk
+   detail-to-Home focus restoration, truthful self-contained launch
+   instructions, illustrative-notice keyboard/focus lifecycle, notice-to-
+   launch routing, and configured outbound adapters/event hooks all pass. Still open before chunk
    closure: two separate independent verification rounds must challenge this
    accepted state. Owner/account substitutions stay in
    `HONEY_HEARTED_OWNER_NEEDS.md`, not here.

@@ -15,6 +15,17 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 105 / HoneyHearted chunk round 6 — 2026-09-08
+
+No new independent-review intake existed. Added a distinct activation-
+integration layer to the durable Chrome suite: illustrative-cover notice open
+and Escape focus return, notice-to-launch keyboard routing with visible-heading
+focus, configured store/product/social/sample destinations, protected HTTPS
+new-tab attributes, and the documented local outbound-event contract. Proof
+source `cacc5af` passes locally and on production with zero failures or browser/
+network errors; product source remains `165b246`. Two independent reviews still
+gate Chunk 7 closure.
+
 ## Round 104 / HoneyHearted chunk round 5 — 2026-09-08
 
 Corrected a user-facing source-truth defect in the launch checklist: the

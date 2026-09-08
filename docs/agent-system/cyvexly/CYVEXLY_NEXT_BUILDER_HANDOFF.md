@@ -1,5 +1,32 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 105 / Chunk 7 round 6 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `521e3f0` on `main`, matched `origin/main`
+**Accepted product source:** unchanged at `165b246`
+**Accepted proof source:** `cacc5af` on `main`
+**Authority:** Owner direction `2026-09-08-19`
+
+No new independent-review intake existed. Added a fresh activation-integration
+layer rather than repeating prior coverage: real Chromium now proves the
+illustrative-cover notice opens by keyboard and returns focus on Escape, its
+launch-checklist action closes the dialog and focuses the visible destination
+heading, and configured store/product/social/sample actions open only protected
+HTTPS new tabs while emitting the documented local `hh:outbound` details.
+
+TypeScript, lint (one known round-42 evidence warning), the 53-route build, and
+the complete local/public Chrome suites pass with zero workflow/runtime/network
+errors. Retain only the local/public result JSONs under
+`builder/evidence/round-105-honey-hearted-activation/` until independent review
+consumes them. Stopped the owned port-5188 runtime; redundant captures and
+downloads were removed (49,192,567 bytes); only the two source-identified
+result JSONs remain.
+
+**Next Builder round:** disposition review intake first. Do not repeat the same
+Builder matrix without fresh evidence. Chunk 7 still needs two independent
+reviews; Owner substitutions remain unchanged.
+
 ## Round 104 / Chunk 7 round 5 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -60,34 +87,9 @@ same Builder suite without new evidence. Chunk 7 still needs two independent
 reviews; Owner substitutions remain unchanged in
 `HONEY_HEARTED_OWNER_NEEDS.md`.
 
-## Round 102 / Chunk 7 round 3 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `ad45636` on `main`, matched `origin/main`
-**Accepted product source:** unchanged at `4e3f06e`
-**Accepted proof source:** `94b7fdb` on `main`
-**Authority:** Owner direction `2026-09-08-19`
-
-No independent-review intake existed. Added a fresh browser-navigation layer
-to `honey-hearted/smoke.mjs`: direct resource deep links, browser Back/Forward
-restoration with route-heading focus, and malformed encoded-hash recovery. The
-first run exposed two test-expectation errors; captured state showed direct
-loads should preserve initial focus and the Home hero used different copy than
-the provisional assertion. Corrected the instrument rather than changing
-product behavior.
-
-TypeScript, lint (one known round-42 evidence warning), the 53-route production
-build, and the final source-identified Chrome/CDP suite pass with zero workflow,
-runtime, network, or unexpected-origin failures. Retained only
-`builder/evidence/round-102-honey-hearted-navigation/smoke-result.json` for
-review. Stopped the owned port-5185 runtime and moved 4,427,467 bytes of
-redundant captures/download output to the Recycle Bin; port 5185 is clear.
-
-**Next Builder round:** first disposition every review intake. HoneyHearted's
-reachable functionality and Builder proof remain complete; do not repeat the
-same matrix without new evidence. Chunk 7 still requires two separate
-independent reviews. Do not invent or activate the Owner substitutions in
-`HONEY_HEARTED_OWNER_NEEDS.md`.
+Round 102's full handoff rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_102_REPORT.md` when Round 105
+established the latest-three handoff window.
 
 Round 101's full closeout rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_101_REPORT.md` when Round 104
