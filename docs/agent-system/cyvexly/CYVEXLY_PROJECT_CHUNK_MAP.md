@@ -248,7 +248,7 @@ requires.
   verification rounds confirm the accepted source. One clean Builder pass
   does not close this chunk.
 
-## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 113; chunk round 14)
+## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 114; chunk round 15)
 
 - **Authority:** Owner direction `2026-09-08-19`.
 - **Outcome:** turn the imported teacher-resource storefront into a polished,
@@ -256,7 +256,7 @@ requires.
   commerce/account actions are truthfully demonstrated.
 - **Source truth:** `honey-hearted/index.html`; `honey-hearted/smoke.mjs` is the
   durable rendered workflow check; `/honey-hearted` is the same-origin preview.
-- **Rounds 100–113 progress:** integrated the no-indexed route and proved the
+- **Rounds 100–114 progress:** integrated the no-indexed route and proved the
   catalog, resource/gallery/dialog, download/print, content/policy, preview-
   form, adapter, activation, responsive, accessibility, storage, network, and
   navigation-history boundaries in real Chrome. Follow-up fixes preserve
@@ -269,7 +269,9 @@ requires.
   mobile-store action's truthful connection notice after its menu trigger is
   hidden. Round 113 adds a 320px WCAG-style text-spacing contract across eight
   representative route families with no overflow or clipped readable/control
-  text. Accepted/deployed product source `000dcd9` and proof source `bb327be`
+  text. Round 114 adds Windows High Contrast/forced-colors proof for selected
+  state, real-Tab focus visibility, named controls, containment, and four routed
+  views. Accepted/deployed product source `000dcd9` and proof source `dacec6a`
   pass locally and publicly; detailed round history remains in the build
   summary and archived reports.
 - **Boundaries:** do not invent products, rights, sales, reviews, identity,
