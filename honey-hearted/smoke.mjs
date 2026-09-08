@@ -717,7 +717,57 @@ async function main() {
     check(routeAccessibility.every(route=>route.brokenImages.length===0), "A route contains an unavailable embedded image.");
     check(routeAccessibility.every(route=>route.focusedHeading), "A client-side route change did not focus its visible heading.");
 
+    await viewport(320, 800);
+    const textSpacing = await evaluate(`
+      const style=document.createElement('style');
+      style.id='smoke-text-spacing';
+      style.textContent='*{letter-spacing:.12em!important;word-spacing:.16em!important}body,button,input,select,textarea{line-height:1.5!important}p{margin-block-end:2em!important}';
+      document.head.append(style);
+      const hashes=['home','resource/planner','idea/conversations','sample','page/about','policy/privacy','launch','missing-page'];
+      const results=[];
+      const isVisible=node=>{
+        const computed=getComputedStyle(node);
+        return !node.closest('[hidden]') && !node.closest('[aria-hidden="true"]') &&
+          computed.display!=='none' && computed.visibility!=='hidden' && node.getClientRects().length>0;
+      };
+      for(const hash of hashes){
+        location.hash=hash;
+        await new Promise(accept=>setTimeout(accept,80));
+        const root=document.querySelector('#home-view').hidden?
+          document.querySelector('#detail-view'):document.querySelector('#home-view');
+        const clipped=[...root.querySelectorAll('a,button,h1,h2,h3,h4,p,label,summary')]
+          .filter(isVisible)
+          .filter(node=>!node.matches('.sr-only')&&!node.closest('.trap'))
+          .filter(node=>{
+            const computed=getComputedStyle(node);
+            const box=node.getBoundingClientRect();
+            const range=document.createRange();
+            range.selectNodeContents(node);
+            const content=range.getBoundingClientRect();
+            const clipsX=['hidden','clip'].includes(computed.overflowX) &&
+              (content.left<box.left-1||content.right>box.right+1);
+            const clipsY=['hidden','clip'].includes(computed.overflowY) &&
+              (content.top<box.top-1||content.bottom>box.bottom+1);
+            return clipsX||clipsY;
+          })
+          .map(node=>(node.id||node.textContent||node.tagName).trim().replace(/\\s+/g,' ').slice(0,80));
+        results.push({hash,scrollWidth:document.documentElement.scrollWidth,width:innerWidth,clipped});
+      }
+      return results;
+    `);
+    check(textSpacing.every(route=>route.scrollWidth===route.width), `Text-spacing overrides caused horizontal overflow: ${JSON.stringify(textSpacing.filter(route=>route.scrollWidth!==route.width))}`);
+    check(textSpacing.every(route=>route.clipped.length===0), `Text-spacing overrides clipped readable or interactive text: ${JSON.stringify(textSpacing.filter(route=>route.clipped.length))}`);
+    await evaluate("document.querySelector('#toast').hidden=true;location.hash='home';window.scrollTo({top:0,behavior:'instant'});return true;");
+    await settle();
+    await screenshot("honey-hearted-text-spacing-home-320.png");
+    await evaluate("location.hash='shop';return true;");
+    await settle();
+    await screenshot("honey-hearted-text-spacing-catalog-320.png");
     await evaluate("location.hash='contact';return true;");
+    await settle();
+    await screenshot("honey-hearted-text-spacing-contact-320.png");
+    await evaluate("document.querySelector('#smoke-text-spacing')?.remove();location.hash='contact';return true;");
+
     await settle();
     const forms = await evaluate(`
       const contact=document.querySelector('#contact-form');
@@ -1159,6 +1209,7 @@ async function main() {
       sample: { ...sample, download, downloadSize, print },
       contentRoutes,
       routeAccessibility,
+      textSpacing,
       forms,
       adapterRecovery,
       zoomEquivalent,
