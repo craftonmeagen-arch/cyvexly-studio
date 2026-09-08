@@ -15,6 +15,16 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 113 / HoneyHearted chunk round 14 — 2026-09-08
+
+Added proof source `bb327be`, a real-Chromium text-spacing adaptability
+contract at 320px across eight representative route families. The first
+detector correctly exposed instrument noise from decorative card clipping and
+screen-reader-only labels; the refined text-range measurement passes locally
+and publicly with zero overflow, clipping, runtime, network, or workflow
+errors. Three opened public captures match local pixels exactly. Product source
+remains `000dcd9`; two independent reviews remain.
+
 ## Round 112 / HoneyHearted chunk round 13 — 2026-09-08
 
 Fixed mobile store-notice focus continuity at accepted/deployed source

@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
-round 13 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
+round 14 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
 Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
@@ -11,6 +11,15 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 7 is the current reachable Builder priority.
+
+**Round 113 / Chunk 7 round 14** changed method from the recent focus loop to
+storefront-wide text-spacing adaptability. Proof source `bb327be` applies
+WCAG-style line, paragraph, letter, and word-spacing overrides at 320px across
+eight representative route families. A refined text-range detector passes
+locally and publicly with zero horizontal overflow or clipped readable/control
+text; three opened public captures match local pixels exactly. Product source
+remains `000dcd9`; complete suites and repository gates pass. Two independent
+reviews remain.
 
 **Round 112 / Chunk 7 round 13** found a separate mobile storefront-action
 focus gap: the mobile store button hid with its menu, opened the truthful
@@ -30,15 +39,9 @@ before and passes all 32 measured controls locally/publicly; complete suites,
 TypeScript, lint (one known evidence warning), the 53-route build, role setup,
 hot-file caps, and review lifecycle pass. Two independent reviews remain.
 
-**Round 110 / Chunk 7 round 11** used the required fifth-round methodology
-audit to challenge the repeated focus-patch pattern. Real Enter-key input on
-deployed `7b9813c` proved that mobile-menu link activation closed the menu but
-left focus inside its hidden DOM, both for changed and current destinations.
-Accepted/deployed source `49017a3` centralizes Home-route focus transfer and
-passes all seven mobile destinations plus same-route reactivation. The complete
-local/public suites, TypeScript, lint (one known evidence warning), 53-route
-build, role setup, hot-file caps, and review lifecycle pass. Two independent
-reviews remain.
+Round 110's full active-chunk report rotated to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_110_REPORT.md` when Round 113
+established the latest-three context.
 
 Round 109's full active-chunk report rotated to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_109_REPORT.md` when Round 112

@@ -1,5 +1,34 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 113 / Chunk 7 round 14 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `fd6d960` on `main`, matched `origin/main`
+**Accepted product source:** `000dcd9` on `main`, deployed
+**Accepted proof source:** `bb327be` on `main`
+**Authority:** Owner direction `2026-09-08-19`
+
+Changed method from focus hardening to the distinct product question of text-
+spacing adaptability. The durable real-Chromium suite now applies WCAG-style
+line, paragraph, letter, and word-spacing overrides at 320px across eight
+representative Home, product, article, sample, About, policy, launch, and
+recovery states. The first detector produced false positives from decorative
+clipping and screen-reader-only labels; the corrected text-range detector
+passes locally and publicly with no horizontal overflow or clipped readable/
+interactive text. Three opened public captures match local pixels exactly.
+
+TypeScript, lint (one known round-42 evidence warning), the 53-route build,
+eight-packet role setup, hot-file caps, all 48 review-lifecycle checks, and the
+complete local/public suites pass with zero workflow/runtime/network errors.
+Retain the two result JSONs and three public text-spacing captures under
+`builder/evidence/round-113-honey-hearted-text-spacing/` until independent
+review consumes them. Port 5196 is clear; 75,231,219 redundant evidence bytes
+were moved to the Recycle Bin.
+
+**Next Builder round:** disposition review intake first. Do not repeat text-
+spacing or focus hardening without a fresh product-level question. Chunk 7
+still needs two independent reviews; Owner substitutions are unchanged.
+
 ## Round 112 / Chunk 7 round 13 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -53,33 +82,9 @@ Builder matrix or return to focus hardening without a new product-level
 question. Chunk 7 still needs two independent reviews; Owner substitutions are
 unchanged.
 
-## Round 110 / Chunk 7 round 11 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `2ee77f0` on `main`, matched `origin/main`
-**Accepted product/test source:** `49017a3` on `main`, pushed and adopted
-**Authority:** Owner direction `2026-09-08-19`
-
-The required fifth-round methodology audit challenged the recent series of
-focus-continuity fixes as a pattern and found the shared mobile-navigation
-gap. On deployed `7b9813c`, real Enter activation closed the menu but left
-focus inside its hidden DOM for both a changed destination and the current
-destination. The source now centralizes Home-route focus transfer. The durable
-regression covers all seven mobile destinations plus same-route reactivation.
-
-TypeScript, lint (one known round-42 evidence warning), the 53-route build,
-eight-packet role setup, hot-file caps, all 48 review-lifecycle checks, and the
-complete local/public Chrome suites pass with zero workflow/runtime/network/
-unexpected-origin errors. Retain only the before/local/public result JSONs and
-the opened public focus capture under
-`builder/evidence/round-110-honey-hearted-mobile-nav/` until independent
-review consumes them. Port 5193 is stopped and clear; 17,543,434 redundant
-evidence bytes and 619 runtime-log bytes were recycled.
-
-**Next Builder round:** disposition review intake first. Do not continue the
-same focus-hardening loop without a new product-level question or external
-finding. Chunk 7 still needs two independent reviews; Owner substitutions are
-unchanged.
+Round 110's full handoff rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_110_REPORT.md` when Round
+113 established the latest-three handoff window.
 
 Round 109's full handoff rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_109_REPORT.md` when Round 112

@@ -1,9 +1,17 @@
 # Cyvexly Current State
 
-**Global round:** 112. **Active product work:** Chunk 7 — HoneyHearted
-Functional Storefront, chunk-local round 13, opened under Owner direction
+**Global round:** 113. **Active product work:** Chunk 7 — HoneyHearted
+Functional Storefront, chunk-local round 14, opened under Owner direction
 `2026-09-08-19`. Chunk 6 remains open in parallel only for its two required
 independent reviews; Chunk 5 remains open only for Owner/account gates.
+
+Round 113 changed method from focus hardening to storefront-wide text-spacing
+adaptability. Proof source `bb327be` applies WCAG-style line, paragraph,
+letter, and word-spacing overrides at 320px across eight representative Home,
+product, article, sample, About, policy, launch, and recovery states. Local and
+public runs remain width-contained with no clipped readable/interactive text;
+three opened public captures match local pixels exactly. Product source remains
+`000dcd9`; two independent reviews remain.
 
 Round 112 found the untested mobile-store notice lifecycle losing focus after
 its invoking menu button became hidden. Accepted/deployed source `000dcd9`
