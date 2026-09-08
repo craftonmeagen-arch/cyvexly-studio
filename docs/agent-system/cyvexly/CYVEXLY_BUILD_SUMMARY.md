@@ -15,6 +15,16 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 102 / HoneyHearted chunk round 3 — 2026-09-08
+
+Added durable Chrome/CDP proof for direct resource deep links, browser
+Back/Forward route restoration and focus, and malformed encoded-hash recovery.
+The first run identified two incorrect assertions rather than product defects;
+the corrected suite passes with zero failures or runtime/network errors.
+TypeScript, lint (one known evidence warning), and the 53-route build pass.
+Product source remains `4e3f06e`; proof source is `94b7fdb`. No review intake
+arrived, so two independent rounds remain before Chunk 7 closure.
+
 ## Round 101 / HoneyHearted chunk round 2 — 2026-09-08
 
 Adopted and reverified inherited HoneyHearted interaction hardening: native

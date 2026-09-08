@@ -1,5 +1,34 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 102 / Chunk 7 round 3 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `ad45636` on `main`, matched `origin/main`
+**Accepted product source:** unchanged at `4e3f06e`
+**Accepted proof source:** `94b7fdb` on `main`
+**Authority:** Owner direction `2026-09-08-19`
+
+No independent-review intake existed. Added a fresh browser-navigation layer
+to `honey-hearted/smoke.mjs`: direct resource deep links, browser Back/Forward
+restoration with route-heading focus, and malformed encoded-hash recovery. The
+first run exposed two test-expectation errors; captured state showed direct
+loads should preserve initial focus and the Home hero used different copy than
+the provisional assertion. Corrected the instrument rather than changing
+product behavior.
+
+TypeScript, lint (one known round-42 evidence warning), the 53-route production
+build, and the final source-identified Chrome/CDP suite pass with zero workflow,
+runtime, network, or unexpected-origin failures. Retained only
+`builder/evidence/round-102-honey-hearted-navigation/smoke-result.json` for
+review. Stopped the owned port-5185 runtime and moved 4,427,467 bytes of
+redundant captures/download output to the Recycle Bin; port 5185 is clear.
+
+**Next Builder round:** first disposition every review intake. HoneyHearted's
+reachable functionality and Builder proof remain complete; do not repeat the
+same matrix without new evidence. Chunk 7 still requires two separate
+independent reviews. Do not invent or activate the Owner substitutions in
+`HONEY_HEARTED_OWNER_NEEDS.md`.
+
 ## Round 101 / Chunk 7 round 2 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -75,32 +104,9 @@ illustrative catalog claim and preview against approved source facts. Keep all
 missing Owner/account values in `HONEY_HEARTED_OWNER_NEEDS.md`; do not activate
 commerce, messaging, subscriptions, analytics, or indexing without real inputs.
 
-## Round 99 / Chunk 6 round 5 closeout
-
-**Session:** scheduled/unattended Codex Builder, 2026-09-08 EDT
-**Start source:** `d95c295` on `main`, matched `origin/main`
-**Accepted product source:** unchanged at `0ca0504`
-**Authority:** Owner direction `2026-09-07-17`
-
-No independent-review intake has arrived for accepted Velora source `0ca0504`.
-Checked a fresh integration surface without repeating the established workflow
-matrix: the live case study's canonical/Open Graph/Twitter metadata,
-BreadcrumbList JSON-LD, fictional/demo disclosures, staged no-index state, and
-sitemap inclusion/raw-demo exclusion all match source. Rendered the route-
-specific 1200x630 Open Graph image through an optimized local runtime and
-opened it at full resolution; the longer Velora challenge copy fits cleanly.
-TypeScript, lint (one known evidence-script warning), and the 52-route build
-pass. No product defect or product-source change was warranted.
-
-Retained only the source-identified social-preview PNG under
-`builder/evidence/round-99-velora-integration/` until independent review no
-longer needs it. The owned port-5183 production server was stopped, its 156-byte
-temporary log root was removed, and the unrelated pre-existing Vite listener
-on port 5173 was left untouched.
-
-**Next Builder round:** read and disposition every independent-review intake.
-Chunk 6 cannot close until two separate independent verification rounds
-challenge accepted source `0ca0504`; do not substitute repeated Builder checks.
+Round 99's full closeout rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_99_REPORT.md` when Round 102
+established the current latest-three handoff window.
 
 Round 98's full closeout rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_98_REPORT.md` when Round 101
