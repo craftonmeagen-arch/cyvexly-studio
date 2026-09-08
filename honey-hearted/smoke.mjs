@@ -402,6 +402,19 @@ async function main() {
         focused:document.activeElement===document.querySelector('#detail-view h1'),
       };
     `);
+    const homeSectionReturn = await evaluate(`
+      location.hash='contact';
+      await new Promise(accept=>setTimeout(accept,120));
+      return {
+        hash:location.hash,
+        homeHidden:document.querySelector('#home-view').hidden,
+        detailHidden:document.querySelector('#detail-view').hidden,
+        focused:document.activeElement===document.querySelector('#contact-title'),
+      };
+    `);
+    await screenshot("honey-hearted-home-section-focus.png");
+    await evaluate("location.hash='page/about';return true;");
+    await settle();
     const malformedHash = await evaluate(`
       location.hash='%E0%A4%A';
       await new Promise(accept=>setTimeout(accept,120));
@@ -410,12 +423,29 @@ async function main() {
         homeHidden:document.querySelector('#home-view').hidden,
         detailHidden:document.querySelector('#detail-view').hidden,
         heading:document.querySelector('#hero-title')?.textContent.trim(),
+        focused:document.activeElement===document.querySelector('#hero-title'),
       };
     `);
     check(directDeepLink.hash === "#resource/planner" && directDeepLink.title.includes("Dream Beachside") && directDeepLink.heading.includes("Dream Beachside") && !directDeepLink.focused, "A direct resource deep link did not render while preserving the browser's initial focus position.");
     check(Boolean(backEntry) && historyBack.hash === "#resource/planner" && historyBack.heading.includes("Dream Beachside") && historyBack.focused, "Browser Back did not restore the prior resource route and heading focus.");
     check(Boolean(forwardEntry) && historyForward.hash === "#page/about" && historyForward.heading.includes("Hi, I’m Meagen") && historyForward.focused, "Browser Forward did not restore the next content route and heading focus.");
-    check(malformedHash.hash === "#%E0%A4%A" && !malformedHash.homeHidden && malformedHash.detailHidden && malformedHash.heading.includes("A little less prep"), "A malformed encoded hash did not recover safely to the Home view.");
+    check(homeSectionReturn.hash === "#contact" && !homeSectionReturn.homeHidden && homeSectionReturn.detailHidden && homeSectionReturn.focused, "Returning from a detail route did not move focus into the restored Home section.");
+    check(malformedHash.hash === "#%E0%A4%A" && !malformedHash.homeHidden && malformedHash.detailHidden && malformedHash.heading.includes("A little less prep") && malformedHash.focused, "A malformed encoded hash did not recover safely to the Home view and heading focus.");
+
+    const copyLinkResult = await evaluate(`
+      location.hash='resource/planner';
+      await new Promise(accept=>setTimeout(accept,100));
+      Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async value=>{window.__copiedLink=value;}}});
+      document.querySelector('[data-copy-link]').click();
+      await new Promise(accept=>setTimeout(accept,50));
+      return {
+        copied:window.__copiedLink,
+        toast:document.querySelector('#toast').textContent,
+        protocol:location.protocol,
+      };
+    `);
+    await screenshot("honey-hearted-copy-link.png");
+    check(copyLinkResult.copied === `${url}#resource/planner` && copyLinkResult.toast === "Page link copied." && copyLinkResult.protocol !== "file:", "A hosted resource link did not copy with an accurate shareable-link confirmation.");
 
     const productTruth = await evaluate(`
       const details=[];
@@ -676,8 +706,10 @@ async function main() {
         directDeepLink,
         back: historyBack,
         forward: historyForward,
+        homeSectionReturn,
         malformedHash,
       },
+      copyLinkResult,
       productTruth,
       dialogReturn,
       dialogButtonReturn,
