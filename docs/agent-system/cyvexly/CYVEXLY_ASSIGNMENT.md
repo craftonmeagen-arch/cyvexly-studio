@@ -2,12 +2,13 @@
 Canonical team: **Team Two Website**. Active product: Cyvexly Studio website,
 C:/app projects/website.
 The product is established, versioned on main and deployed to Render.
-Current Team Two Website Builder mission is Chunk 7 — HoneyHearted Functional
-Storefront under Owner direction `2026-09-08-19`, starting from
-`honey-hearted/index.html`. Missing final products, accounts, URLs, or
-credentials go in `HONEY_HEARTED_OWNER_NEEDS.md`; they do not stall reachable
-working placeholder/demo behavior. Earlier Cyvexly/Velora obligations remain
-recorded and must not be misrepresented as erased.
+Current Team Two Website Builder mission is reopened Chunk 6 — Velora buyer-
+facing portfolio presentation under Owner direction `2026-09-08-20`.
+`/work/velora-dining` must become premium prospect-facing proof of the strong
+working `/velora` demonstration, with restrained truthful disclosure and real
+visible-browser desktop/mobile verification. HoneyHearted's accepted source,
+missing-input boundaries, and review obligations remain recorded in parallel
+and must not be misrepresented as erased.
 
 The Owner authorized this role-system repair and removal of superseded rules. It does not
 grant release approval, provider purchases, payment integration, secret access, or scheduler

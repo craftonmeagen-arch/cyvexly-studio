@@ -5,9 +5,84 @@ history `2026-08-30-04`/`05` are preserved in
 `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`. The active scheduler boundary
 remains here deliberately.
 
-## HoneyHearted fully functional website direction 2026-09-08-19
+## Velora buyer-facing portfolio presentation direction 2026-09-08-20
 
 **Status:** ACTIVE — CURRENT TEAM TWO WEBSITE BUILDER PRIORITY
+**Source:** Owner via active Codex conversation after visible buyer-path review
+**Recorded:** 2026-09-08 America/New_York
+
+### Owner direction — verbatim
+
+> “yes i agree. make that owners direction work. and then restart the
+> schedular if it isn't running”
+
+### Accepted review finding and required outcome
+
+The Owner accepts the visible-review conclusion that the working Velora
+restaurant demonstration is strong, but the Cyvexly page reached from the
+Home-page Velora card (`/work/velora-dining`) undersells it. The landing page
+currently reads like a sparse internal project brief, repeats the fictional
+qualification too heavily in the opening, and follows the introductory card
+with an oversized crop that hides the complete composition. Rebuild this page
+as a premium buyer-facing capability presentation. Preserve the approved
+Cyvexly architectural-glass system and the existing truthful fictional
+boundary; do not disguise Velora as a real restaurant or client.
+
+### Required presentation changes
+
+1. Replace the sparse opening with an intentional showcase composition: concise
+   buyer-facing story and actions paired with a complete, uncropped desktop
+   presentation and a coordinated mobile view. Use Velora's forest, warm-paper,
+   antique-gold, and muted-wine visual language as a controlled feature stage
+   within Cyvexly's own page, so the transition looks designed rather than
+   pasted together.
+2. Lead with what Cyvexly designed and built and what that capability can do for
+   a hospitality business. Replace the internal-sounding “Audience:” sentence
+   with direct prospect language. The primary action should plainly open the
+   working interactive website; a secondary action may explain what was built.
+3. Keep one unmistakable concept/fictional label and one concise opening
+   disclosure. Move the full non-transmission and no-real-client explanation to
+   an appropriate detail area. Honesty remains mandatory, but repetition must
+   not make the work feel apologetic or bury the capability.
+4. Reorder the story around buyer evidence: premium introduction; large live-
+   experience preview; clearly scannable capabilities; large desktop/mobile
+   proof; design/accessibility decisions; detailed concept disclosure; and a
+   specific conversion invitation.
+5. Present reservation, seasonal-menu, private-event, gifting, responsive-
+   navigation, validation, and accessible-interaction capability visually, not
+   only as report-like bullet lists. Make the responsive captures substantially
+   larger and useful; support direct exploration where appropriate.
+6. Replace the generic closing with language that connects the demonstrated
+   hospitality experience to a prospect's own reservations, inquiries, or
+   customer journey, while preserving Cyvexly's consultative “describe your
+   project” service model.
+7. Keep the core `/velora` experience unless fresh rendered evidence identifies
+   a real defect. The immediate defect is its portfolio framing, not a mandate
+   to redesign the successful restaurant concept.
+
+### Completion and verification boundary
+
+- Test the real path Home Velora card → `/work/velora-dining` → `/velora` in a
+  visible browser at desktop and mobile widths. The landing screen must be
+  immediately legible, visually intentional, uncropped, and clear about both
+  capability and fictional status.
+- Verify responsive layout, keyboard operation, focus, disclosure, internal
+  navigation, screenshot/preview fidelity, performance-sensitive media, and
+  all existing production gates. Do not accept source inspection or a headless-
+  only image as final visual proof.
+- This reopens reachable Chunk 6 portfolio-framing work as the current Builder
+  priority. HoneyHearted's accepted source and its independent-review/Owner-
+  input obligations remain valid in parallel and are not erased.
+- Continue Builder rounds until the accepted presentation is implemented,
+  deployed, and proved. Chunk 6 still requires its two separate independent
+  verification rounds after the new accepted source exists.
+- The existing Team Two Website Builder scheduler remains the authorized
+  scheduler: every 30 minutes at `:00`/`:30`, saved local project, GPT-5.6 Sol,
+  high reasoning, scheduler-managed non-overlap. Do not duplicate it.
+
+## HoneyHearted fully functional website direction 2026-09-08-19
+
+**Status:** ACTIVE — PARALLEL ACCEPTED PRODUCT/REVIEW OBLIGATION
 **Source:** Owner via active Codex conversation
 **Recorded:** 2026-09-08 America/New_York
 
@@ -321,102 +396,10 @@ gate it names is still tracked live in `CYVEXLY_APP_DEBT.md`/
 **Source:** Owner via interactive Claude Code chat
 **Recorded:** 2026-09-05
 
-## Text-cursor/editable-looking body copy defect 2026-09-06-16
+## Fulfilled visual directions archived 2026-09-08
 
-**Status:** FIXED ROUND 70 — OWNER VISUAL CONFIRMATION PENDING
-**Source:** Owner via interactive Claude Code chat
-**Recorded:** 2026-09-06
-
-> "on cyvexly i can click on any of the wording and a toggle shows as if i
-> can type. It doesn't affect anything bc i can't type but if it is
-> unclickable then it shouldn't be showing as if you can write something in
-> the words. Its a small bug and doesn't hurt anything but should be
-> fixed."
-
-AGENT INTERPRETATION
-
-Clicking ordinary body/heading copy shows an editable-text appearance (most
-likely a text-insertion (I-beam) cursor, or similar visual affordance
-suggesting the text is a typable field) even though nothing is actually
-editable and no functionality is broken. This reads as unintended styling
-or an accidental `contenteditable`/input-like treatment on plain text
-elements rather than a real interactive control. Next Builder round should
-reproduce this live (desktop and mobile, across representative routes),
-identify the exact element/CSS rule/cursor value responsible, and correct
-it so plain text no longer visually implies it is editable. Low severity,
-no functional impact — does not block launch — but is a real, reachable
-polish defect. This interpretation is not Owner-authored wording.
-
-ROUND 70 FINDING: reproduced live — no `contentEditable`/JS cause exists;
-this was the browser's own default I-beam cursor over selectable text
-(present on every website), triggered by `cursor: auto`. Fixed by setting
-`cursor: default` on non-interactive prose while explicitly restoring
-`cursor: pointer` on every real interactive control (links, including
-ones nested inside a paragraph, buttons, `[role="button"]`, `summary`);
-text selection/copy itself is unchanged. See `CYVEXLY_APP_DEBT.md`'s
-"Resolved round 70" for verification detail, including a regression this
-round caught and fixed before committing.
-
-## Home "how does it work?" process video 2026-09-06-17
-
-**Status:** IMPLEMENTED — OWNER VISUAL CONFIRMATION PENDING
-**Source:** Owner via interactive Claude Code chat (explicitly confirmed
-"this is for owners direction work")
-**Recorded:** 2026-09-06
-
-> "add this video here. consider the best design and how it should look
-> with this vdeow included. it should be a full screen the same size as
-> the tile in the picture. or atleast left to right of the screen. don't
-> make it massive i mean compared to the tile in the pic. It should go
-> under the tile in a seamless look. i guess pic wont load for lme to
-> show you. 'we are not a diy builder' you could essentially replace
-> that whole tile with this video and above it is says. 'So how does it
-> work?'"
-
-> "it is to play in a loop. obviously ensure that it is not obvious that
-> it is a video that a user can pause or play. if a user clicks on it
-> then it can be viewd in a large screen. otherwise it should be playing
-> on silent."
-
-The Owner supplied the source file at a local path
-(`cyvexley video.mp4`, a screen-recording-style clip of the Project
-Planner intake flow, 640×368, ~28.3s) outside the repository; no
-referenced mockup image loaded during the chat.
-
-AGENT INTERPRETATION
-
-The Owner's first message named two options (add the video under the
-existing "We're not a DIY builder" tile vs. replace that tile outright)
-and one clear constraint that resolves the ambiguity: "It should go
-under the tile in a seamless look." Implemented as an addition, not a
-replacement, preserving the existing DIY-builder positioning copy. The
-follow-up message set the exact interaction model: a silent, looping,
-chrome-less ambient loop that never signals it is pausable, with a
-click/Enter opening a larger, controllable view — implemented as an
-inline autoplaying muted loop (no play/pause affordance, only a subtle
-corner "expand" icon) plus a portaled full-viewport lightbox with real
-native video controls on click. This interpretation is not
-Owner-authored wording.
-
-IMPLEMENTED: added `src/components/how-it-works-video.tsx` and wired it
-into `src/app/page.tsx` directly below the "We're not a DIY builder"
-panel, under a new "So how does it work?" heading, inside the same
-`max-w-6xl` section container (not full-bleed/"massive" — matches every
-other Home tile's width). Video assets copied to
-`public/media/cyvexly-how-it-works.mp4` and a generated
-`cyvexly-how-it-works-poster.webp` poster frame. Ambient loop: autoplay,
-muted, `loop`, no visible controls, no click-to-pause (unlike the
-existing hero showcase video), respects reduced-motion/data-saver/tab-
-visibility like the established Home hero pattern. Click or Enter/Space
-opens a `createPortal`-rendered lightbox (portaled to `document.body`,
-not rendered in place — several glass-panel ancestors on this page use
-`backdrop-filter`, which like `transform`/`filter` creates a new
-containing block for `position: fixed` descendants, so an in-place fixed
-overlay would not have covered the real viewport; found and fixed live
-during verification, see `CYVEXLY_APP_DEBT.md`'s "Resolved round 76" for
-detail) with native `controls`, closable via the close button, Escape,
-or a backdrop click; focus moves to the close control on open and
-returns to the trigger on close. `tsc`/lint/build all clean; verified
-live via a real `next start` server (21-route sweep, 0 overflow at
-320px/375px, portal/backdrop-click/Escape/focus-return all confirmed via
-CDP). Owner visual acceptance of the final look/copy is still pending.
+The completed 2026-09-06 text-cursor correction (fixed round 70) and Home
+"how does it work?" process-video implementation (round 76) are preserved
+verbatim in `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`. Their Owner
+visual-confirmation status remains pending; archiving only keeps this hot
+authority file within its enforced size cap.

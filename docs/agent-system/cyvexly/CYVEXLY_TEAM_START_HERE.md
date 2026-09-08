@@ -3,7 +3,9 @@ Updated 2026-09-08 by Owner direction to make the team assignment explicit.
 
 **Canonical team identity:** **Team Two Website**. This Cyvexly project
 environment carries the Owner-directed website work; HoneyHearted is the
-current assignment. `CYVEXLY_*` filenames, `cyvexly_*` configuration
+parallel accepted storefront while the Velora buyer-facing portfolio
+presentation is the current assignment under Owner direction
+`2026-09-08-20`. `CYVEXLY_*` filenames, `cyvexly_*` configuration
 filenames, and the low-level script role keys are retained as stable product
 interfaces; they do not rename this team or create another team.
 

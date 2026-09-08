@@ -1,9 +1,19 @@
 # Cyvexly Current State
 
-**Global round:** 114. **Active product work:** Chunk 7 — HoneyHearted
-Functional Storefront, chunk-local round 15, opened under Owner direction
-`2026-09-08-19`. Chunk 6 remains open in parallel only for its two required
-independent reviews; Chunk 5 remains open only for Owner/account gates.
+**Last completed global round:** 114. **Current next product work:** reopened
+Chunk 6 — Velora buyer-facing portfolio presentation under Owner direction
+`2026-09-08-20`. The first Builder round under that direction must reconcile
+the round/chunk position and begin the accepted `/work/velora-dining` redesign.
+Chunk 7's accepted HoneyHearted source and two-review/Owner-input obligations
+remain active in parallel; Chunk 5 remains open only for Owner/account gates.
+
+The Owner accepted a visible buyer-path finding: `/velora` is strong, but the
+case-study landing page is sparse, report-like, over-repeats the fictional
+qualification, and begins with an oversized cropped preview. Required work is
+a premium uncropped desktop/mobile showcase, direct prospect language,
+scannable functional proof, restrained disclosure, larger responsive evidence,
+and a more specific conversion invitation. Completion requires the real Home
+→ case study → demo path in a visible desktop/mobile browser.
 
 Round 114 changed method again to Windows High Contrast/forced-colors
 adaptability. Proof source `dacec6a` adds a real-Chromium contract at 320px for

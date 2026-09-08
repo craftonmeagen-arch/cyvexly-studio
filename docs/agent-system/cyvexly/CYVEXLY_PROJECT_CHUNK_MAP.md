@@ -221,9 +221,9 @@ requires.
   That integrated verification also closes remaining delivery/launch items in
   Chunks 3 and 4. Full history is in the build summary and app debt.
 
-## Chunk 6 — Velora Capability Demonstration (OPEN, global round 99; chunk round 5)
+## Chunk 6 — Velora Capability Demonstration (REOPENED AS CURRENT PRIORITY after global round 114)
 
-- **Authority:** Owner direction `2026-09-07-17`.
+- **Authority:** Owner directions `2026-09-07-17` and `2026-09-08-20`.
 - **Outcome:** turn the restored standalone Velora fine-dining concept into a
   polished, fully functional, clearly fictional Cyvexly capability demo that
   can later be represented honestly in the Cyvexly portfolio.
@@ -242,11 +242,19 @@ requires.
   verified the new case study's metadata, structured data, disclosure, sitemap
   boundary, and full-resolution social-preview render. Two independent reviews
   remain.
+- **Reopened portfolio-framing scope:** the Owner accepted the visible buyer-
+  path finding that `/work/velora-dining` undersells the strong live demo.
+  Replace its sparse/report-like opening and oversized crop with a premium,
+  uncropped desktop/mobile showcase; use direct prospect language, scannable
+  functional proof, restrained truthful disclosure, larger responsive
+  evidence, and a specific conversion invitation. Preserve `/velora` unless
+  fresh rendered evidence identifies a real defect.
 - **Completion boundary:** all advertised navigation, responsive states,
   workflows, validation/correction/failure behavior, accessibility, content
-  truth, and portfolio framing pass; then two separate independent
-  verification rounds confirm the accepted source. One clean Builder pass
-  does not close this chunk.
+  truth, and the newly accepted buyer-facing portfolio framing pass in the real
+  Home → case study → demo path at desktop and mobile widths; then two separate
+  independent verification rounds confirm the new accepted source. One clean
+  Builder pass does not close this chunk.
 
 ## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 114; chunk round 15)
 

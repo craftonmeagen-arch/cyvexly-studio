@@ -2,16 +2,18 @@
 
 **Status:** ACTIVE OWNER-DIRECTED CHUNK
 
-Open and continue **Chunk 7 — HoneyHearted Functional Storefront** under Owner
-direction `2026-09-08-19`, starting from `honey-hearted/index.html`. Reconcile
-the chunk map/current state/active chunk/handoff at the first reachable round,
-then build in that same round. Every advertised feature must work across real
-success, correction, failure/retry, responsive, keyboard, and persistence
-states; do not infer completion from the imported preview or one happy path.
+Reopen and continue **Chunk 6 — Velora Capability Demonstration**, with the
+buyer-facing portfolio presentation as the current reachable priority under
+Owner direction `2026-09-08-20`. Rebuild `/work/velora-dining` around the
+accepted visible-review findings: premium uncropped desktop/mobile showcase,
+direct prospect language, scannable functional proof, restrained but clear
+fictional disclosure, larger responsive evidence, and a specific conversion
+invitation. Preserve the strong `/velora` experience unless fresh rendered
+evidence identifies a real defect.
 
-Placeholder products are authorized. Implement complete, safe local demo or
-adapter behavior wherever final products, URLs, accounts, providers, or secrets
-are unavailable, and maintain exact later substitutions in
-`HONEY_HEARTED_OWNER_NEEDS.md`. Never fake real payment, purchase, delivery,
-message, subscription, ownership, or product-rights success.
+Verify Home → case study → live demo in a visible browser at desktop and mobile
+widths, plus the normal source/runtime/accessibility/performance gates. Update
+state, debt, chunk, and handoff truth in the first round and begin useful product
+work in that same round. HoneyHearted's accepted source and its independent-
+review/Owner-input obligations remain active in parallel.
 

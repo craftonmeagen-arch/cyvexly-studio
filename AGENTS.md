@@ -35,20 +35,21 @@ that Council ordering. Role identity and authority do not depend on the model.
 
 ## Current product mission
 
-The current Team Two Website Builder priority is **Chunk 7 — HoneyHearted
-Functional Storefront** under Owner direction `2026-09-08-19`. The imported
-source is `honey-hearted/index.html`. Build every visible and advertised
-feature into a complete working or truthfully disclosed local-demonstration
-flow. Missing Owner inputs belong in
-`docs/agent-system/cyvexly/HONEY_HEARTED_OWNER_NEEDS.md` and must not stall
-reachable work. Existing Cyvexly/Velora state and Owner gates remain valid
-history and parallel obligations, not the current forward-build priority.
+The current Team Two Website Builder priority is reopened **Chunk 6 — Velora
+buyer-facing portfolio presentation** under Owner direction
+`2026-09-08-20`. Rebuild `/work/velora-dining` so the Home → case study → live
+demo path presents the strong working restaurant concept as premium buyer
+proof rather than a sparse internal brief. Preserve `/velora` unless fresh
+rendered evidence identifies a real defect. HoneyHearted's accepted source,
+Owner-needs boundaries, and independent-review obligations remain active in
+parallel; they are not erased by the new forward priority.
 
 Before working, read:
 
 1. `docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md`, especially Owner
-   direction `2026-09-08-19`;
-2. `honey-hearted/index.html` and `HONEY_HEARTED_OWNER_NEEDS.md`;
+   direction `2026-09-08-20`;
+2. `/work/velora-dining`, `/velora`, their source/configuration, and the prior
+   Velora production evidence;
 3. the current project chunk map and active chunk;
 4. the matching current-state, debt, handoff, and PM-prompt files for the role.
 
@@ -100,4 +101,5 @@ because one feature or happy path passed.
 - Deployment branch: `main`
 - GitHub: `https://github.com/craftonmeagen-arch/cyvexly-studio`
 - Render preview: `https://cyvexly-studio.onrender.com/`
-- Production-domain connection: pending Chunk 5 DNS/Render verification.
+- Production-domain connection: complete; canonical `cyvexly.com` and Render
+  routing were verified live in round 53 and reconfirmed for Velora round 98.

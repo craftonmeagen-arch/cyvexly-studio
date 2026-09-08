@@ -17,10 +17,13 @@ Then read, under docs/agent-system/cyvexly/:
 5. CYVEXLY_REVIEW_INDEX.md; all new external report/inbox items.
 6. CYVEXLY_CHUNK_DEBT.md, CYVEXLY_APP_DEBT.md, and triggered watch/environment evidence.
 
-Inspect actual Git/source/runtime truth. Owner direction `2026-09-08-19` makes
-`honey-hearted/index.html` and a fully functional HoneyHearted storefront the current
-reachable priority. Use `HONEY_HEARTED_OWNER_NEEDS.md` for genuine later Owner inputs;
-implement safe working placeholder/demo behavior now rather than stopping on those inputs.
+Inspect actual Git/source/runtime truth. Owner direction `2026-09-08-20`
+reopens Chunk 6 and makes the buyer-facing `/work/velora-dining` presentation
+the current reachable priority. Preserve the strong `/velora` demonstration,
+reframe the case study as premium prospect evidence, and verify the real Home
+→ case study → demo path visually at desktop and mobile sizes. HoneyHearted's
+accepted product and remaining review/Owner-input obligations continue in
+parallel; do not erase or misstate them.
 Plan before changes. Investigate causes, use the rendered product, verify the actual diff
 against the plan, and dynamically replan when meaningful work remains.
 

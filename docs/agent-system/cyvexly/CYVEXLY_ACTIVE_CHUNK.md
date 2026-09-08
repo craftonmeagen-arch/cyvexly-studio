@@ -1,8 +1,10 @@
 # Cyvexly Active Chunk
 
-**Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
-round 15 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
-Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
+**Chunks:** **6 — Velora Capability Demonstration is REOPENED AS THE CURRENT
+PRIORITY** under Owner direction `2026-09-08-20`, with buyer-facing portfolio
+framing as its reachable work. **Chunk 7 — HoneyHearted Functional Storefront
+remains OPEN** at chunk-local round 15 for its two independent reviews and
+Owner-input boundaries. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
 now OPEN**, started round 29. Its integrated verification will close the
@@ -10,7 +12,16 @@ overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
-product surface is clean. Chunk 7 is the current reachable Builder priority.
+product surface is clean. The next Builder round must reconcile the new Chunk
+6 round position and begin `/work/velora-dining` work in that same round.
+
+The accepted buyer-path finding is that `/velora` is strong while its Cyvexly
+case-study landing page is sparse, report-like, over-repeats the fictional
+qualification, and uses an oversized crop. Build the premium uncropped
+desktop/mobile showcase, prospect language, scannable capability proof,
+restrained truthful disclosure, larger responsive evidence, and specific
+conversion invitation defined in Owner direction `2026-09-08-20`. Final proof
+must use the real Home → case study → demo path in a visible browser.
 
 **Round 114 / Chunk 7 round 15** added a Windows High Contrast/forced-colors
 contract to proof source `dacec6a`. At 320px, real Chromium preserves selected-

@@ -1,5 +1,19 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## New Owner direction before the next Builder round
+
+Owner direction `2026-09-08-20` reopens Chunk 6 as the current reachable
+priority. `/velora` is visually strong; `/work/velora-dining` currently
+undersells it with a sparse internal-brief opening, repeated qualification, and
+an oversized cropped preview. Rebuild the case-study presentation as premium
+buyer proof: complete uncropped desktop/mobile showcase, direct prospect copy,
+scannable functional capability evidence, restrained truthful fictional
+disclosure, larger responsive views, and a specific conversion CTA. Verify the
+real Home → case study → live demo path in a visible browser at desktop and
+mobile widths. Reconcile round/chunk/state/debt continuity first, then perform
+useful product work in that same round. HoneyHearted's accepted source and
+remaining review/Owner-input obligations continue in parallel.
+
 ## Round 114 / Chunk 7 round 15 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
