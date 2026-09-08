@@ -15,6 +15,16 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 96 / Velora chunk round 2 — 2026-09-07
+
+Deepened `velora/smoke.mjs` beyond happy paths: real invalid→corrected
+reservation, private-event, gift, and newsletter flows; menu/room keyboard
+tabs; modal focus/inert/return behavior; mobile Escape focus; reduced motion;
+320px reflow; illustrative-image fallback/provenance; and allowed network
+origins. Accepted source `2e79c45` passed with zero failures or unexpected
+requests; desktop/mobile/320px captures were opened. Parent typecheck/lint/build
+also passed. No product defect surfaced, so `index.html` did not change.
+
 ## Round 95 / Velora chunk round 1 — 2026-09-07
 
 Opened Chunk 6 under Owner direction `2026-09-07-17` and established

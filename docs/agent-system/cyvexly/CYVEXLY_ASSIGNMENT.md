@@ -1,7 +1,9 @@
 # Cyvexly Assignment
 Active project: Cyvexly Studio website, C:/app projects/website.
 The product is established, versioned on main and deployed to Render.
-Current mission is integrated Chunk 5 under Owner direction 2026-09-04-14 and vision §17.
+Current Builder mission is Chunk 6 — Velora Capability Demonstration under
+Owner direction `2026-09-07-17`. Chunk 5 remains open with only its named
+Owner/account gates left; do not let those gates stall reachable Velora work.
 
 The Owner authorized this role-system repair and removal of superseded rules. It does not
 grant release approval, provider purchases, payment integration, secret access, or scheduler

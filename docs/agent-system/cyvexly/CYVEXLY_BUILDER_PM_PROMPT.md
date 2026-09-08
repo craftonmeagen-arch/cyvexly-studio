@@ -1,16 +1,15 @@
 # Cyvexly Builder PM Prompt
 
-**Status:** ACTIVE OWNER-DIRECTED NEXT CHUNK
+**Status:** ACTIVE OWNER-DIRECTED CHUNK
 
-Open and execute **Chunk 5 — United States Launch Completion & Business
-Operations** as the next major chunk. Read Owner direction `2026-09-04-14`,
-`CYVEXLY_VISION_PLAN.md` §17, the Chunk 5 map, current state, debt, and handoff
-before planning. Treat the integrated completion definition as binding; do not
-replace it with a cosmetic-only round or report completion from one workstream.
+Continue **Chunk 6 — Velora Capability Demonstration** under Owner direction
+`2026-09-07-17`. Read the current state, Chunk 6 map, active chunk, debt, and
+handoff before planning. Build and prove the complete fictional restaurant
+experience round-for-round; do not report readiness from one happy-path pass.
 
-Preserve the accepted cyber-blue architectural glass design and the qualified-
-brief service model. Payment integration and real portfolio replacement are
-deferred. Stop at the named Owner/account gates—exact LLC name, provider and DNS
-account access, secure secret entry, final copy/visual approval, and final
-indexability permission—without inventing values or storing credentials.
+Preserve the existing Velora visual concept while correcting rendered defects.
+Use the authorized fictional Evansville address, phone, and email consistently.
+All reservation, inquiry, newsletter, gifting, and contact moments remain safe,
+clearly disclosed demonstrations: no real transmission, calls, bookings, or
+payment. Chunk 5's existing Owner/account gates remain unchanged in parallel.
 

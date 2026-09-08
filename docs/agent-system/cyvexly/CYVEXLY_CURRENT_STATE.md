@@ -1,29 +1,23 @@
 # Cyvexly Current State
 
-**Global round:** 95. **Active product work:** Chunk 6 — Velora Capability
-Demonstration, chunk-local round 1, opened under Owner direction
+**Global round:** 96. **Active product work:** Chunk 6 — Velora Capability
+Demonstration, chunk-local round 2, opened under Owner direction
 `2026-09-07-17`. Chunk 5 remains open in parallel with only Owner/account
 gates left; its completed Cyvexly launch work and gates are summarized below.
 
-Round 95 reconciled the new authority and began useful implementation in the
-same round. The restored standalone `velora/index.html` is now established as
-source truth. It uses the Owner's explicitly fictional Evansville contact facts
-(`123 Not Real Drive`, `555-555-5555`, `notrealrestaurant@gmail.com`) and safe
-copy controls instead of live phone/email links. A rendered baseline exposed a
-real hero-layout cascade bug: the generic `.photo` rule overrode the hero's
-absolute positioning and pushed all hero content below its clipped viewport.
-The selector is now corrected. A dependency-free Chrome/CDP smoke harness at
-`velora/smoke.mjs` proves desktop and mobile layout, menu/filter/gallery/nav
-controls, reservation, private-event, gift-card, newsletter, disclosure, and
-copy-contact demo states without transmission, storage, booking, or payment.
-Round 95 evidence is under `builder/evidence/round-95-velora/`; smoke passed
-with zero runtime/network errors and zero horizontal overflow at 1440×900 and
-390×844. The parent Cyvexly app also remains clean: typecheck passed, lint has
-only the pre-existing round-42 evidence-script warning, and production build
-passed all 49 routes.
+Round 96 extended `velora/smoke.mjs` from happy-path coverage into real
+invalid→corrected form paths, menu/room keyboard tabs, native-dialog focus and
+return behavior, mobile-menu Escape focus, reduced-motion emulation, 320px
+reflow (1280px at 400% equivalent), image-fallback recovery, noindex/form
+boundaries, and network-origin auditing. Accepted Velora source `2e79c45`
+passes with zero failures, runtime/network errors, unexpected destinations, or
+horizontal overflow. Desktop/mobile/320px captures were opened and inspected;
+the parent Cyvexly typecheck/lint/build remains clean (49/49 routes; only the
+pre-existing round-42 evidence-script lint warning). Round 95's identity,
+contact-safety, hero correction, and primary workflow work remains intact.
 
-**Accepted product position:** Round 95 Velora source and reconciliation are
-committed at `b4b4608` on `main`; the closeout documentation commit follows it.
+**Accepted product position:** Round 96 Velora proof source is committed at
+`2e79c45` on `main`; the closeout documentation commit follows it.
 `cyvexly.com` remains fully connected, HTTPS, and canonicalized (verified round
 53). `origin/master` is historical.
 

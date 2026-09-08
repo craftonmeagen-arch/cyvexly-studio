@@ -1,5 +1,34 @@
 # Cyvexly Next Builder Handoff
 
+## Round 96 / Chunk 6 round 2 closeout
+
+**Session:** scheduled/unattended Codex Builder, 2026-09-07 EDT
+**Start source:** `7f97adb` on `main`, matched `origin/main`
+**Accepted proof source:** `2e79c45` on `main`
+**Authority:** Owner direction `2026-09-07-17`
+
+Expanded `velora/smoke.mjs` beyond its Round 95 happy paths. Real Chrome/CDP
+now proves invalid→corrected reservation, private-event, gift, and newsletter
+flows; menu/room keyboard tabs; modal focus/inert/Escape-return behavior;
+mobile-menu Escape focus; reduced motion; 320px reflow; image fallback and
+Unsplash provenance; noindex/no-form-action safety; and allowed network
+origins. Result: zero failures, runtime/network errors, unexpected network
+destinations, or horizontal overflow. Opened desktop, contact, mobile-menu,
+and 320px gift-dialog captures remain visually sound. Parent typecheck/lint/
+build passed (49/49 routes; only the pre-existing round-42 lint warning).
+No product defect surfaced, so `velora/index.html` stayed unchanged.
+Harness cleanup closed its owned Chrome process and removed its exact OS-temp
+profile; the tracked PTY HTTP server was stopped and port 5183 is clear.
+Retained proof is limited to the result JSON and five opened viewport captures
+under `builder/evidence/round-96-velora/` for independent review.
+
+**Next Builder round:** continue Chunk 6 with the honest Cyvexly portfolio and
+deployment integration. Inspect the current Work/case-study data architecture
+and hosting path, choose the smallest production-normal integration that keeps
+Velora unmistakably fictional, implement it, and prove both Cyvexly entry and
+Velora destination. Then route accepted source to two separate independent
+verification rounds before any chunk-complete/readiness claim.
+
 ## Round 95 / Chunk 6 round 1 closeout
 
 **Session:** scheduled/unattended Codex Builder, 2026-09-07 EDT
@@ -37,52 +66,11 @@ the required two independent verification rounds confirm accepted source.
 
 ## Round 94 closeout
 
-**Session:** scheduled/unattended Claude Code run, 2026-09-07
-**Start source:** `400ea0b` on `main` (pushed, matched `origin/main`)
-**Scope:** Checked the Auditor inbox: one new item, `IFA-2026-09-07-R85`
-(60th consecutive clean confirmation, "historic benchmark" milestone,
-evaluated head `0afe6b3` — round 92's head, predating round 93's lint
-fix and both its convergence checks). Stale on arrival; no new finding
-beyond what round 93 already fixed. Moved to `exchange/processed/`.
-
-Ran the standard verification suite (round-84 `PATH` fix applied first):
-`tsc`/lint/build all clean (49/49 routes), no source change needed.
-
-**Convergence check #1 (round 93's handoff-named fresh surface):** the
-Accessibility statement's "see Pricing" cross-reference vs. the actual
-current Pricing page content (`projectIncludes`/`addOns` arrays in
-`site-config.ts`) — last checked this specific way at round 35, before
-several Pricing rebuilds. **0 defects** — both the standard-scope and
-add-on claims still match exactly.
-
-**Convergence check #2 (the handoff's other named candidate, Contact's
-topic `<select>`/consent checkbox):** resolved at the source level —
-both are native HTML controls with correct label wiring and no custom
-keyboard logic, already exercised in real Tab order by round 79's CDP
-traversal of this exact page. A fresh Browser-pane attempt this round
-reconfirmed the pane is non-compositing in this session type (0×0
-`read_page` after a successful `navigate`); did not escalate to
-local-headless-Chrome/CDP since there is no custom behavior on these two
-controls left to verify. **0 defects — genuine negative result.**
-
-**Completion:** DONE WITH PROOF (0 defects found; 0 source change). Full
-detail in `CYVEXLY_APP_DEBT.md`'s "Round 94". Cleaned up: stopped the
-manually-started `next dev` listener on port 5173 by its verified real
-listener PID, confirmed port cleared; closed the Browser pane tab;
-removed the scratch dev-server log.
-
-**No urgent item routed to the next round.** Chunk 5's remaining scope is
-entirely Owner-side gates (unchanged — see `CYVEXLY_CURRENT_STATE.md` and
-`CYVEXLY_OWNER_DIRECTION.md`). Next Builder round: check the Auditor
-inbox first, apply the round-84 `PATH` fix before any `pnpm`/`node`
-command, then pick a fresh surface not yet covered by rounds 74-94's
-convergence checks — candidates not yet tried: the Planner's step-6
-"Other" secondary-goal text field vs. its email-notification rendering
-(round 86 checked required-field parity but not this specific optional
-field), or a fresh attempt at the Browser-pane/CDP live-keyboard method
-on a page not yet covered that way (e.g. `/faq`'s accordion disclosure
-widgets, which — unlike Contact's native controls — use custom
-expand/collapse behavior worth a real keyboard check).
+Round 94 dispositioned a stale Auditor intake and completed clean
+Accessibility/Pricing plus Contact native-control convergence checks with no
+product defect or source change. Full detail remains in
+`CYVEXLY_APP_DEBT.md`'s Round 94 entry; its next-step direction was superseded
+by Owner direction `2026-09-07-17` and Chunk 6.
 
 Round 93's full closeout (Auditor `IFA-2026-09-07-R84` disposition, the
 `velora/**` eslint-ignore fix, and the Terms/Privacy convergence checks)

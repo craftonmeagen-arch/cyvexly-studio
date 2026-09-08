@@ -1,7 +1,7 @@
 # Cyvexly Active Chunk
 
 **Chunks:** **6 — Velora Capability Demonstration is OPEN** at chunk-local
-round 1 under Owner direction `2026-09-07-17`. Chunks 3 — Project Planner and 4 —
+round 2 under Owner direction `2026-09-07-17`. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
 now OPEN**, started round 29. Its integrated verification will close the
@@ -10,6 +10,19 @@ marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
 product surface is clean. Chunk 6 is the current reachable Builder priority.
+
+**Round 96 / Chunk 6 round 2** (scheduled/unattended) expanded the durable
+Chrome/CDP suite from happy paths into invalid→corrected reservation,
+private-event, gift, and newsletter paths; menu/room keyboard tabs; native
+dialog focus/inert/return behavior; mobile Escape focus; reduced-motion
+emulation; 320px reflow; image fallback/provenance; noindex/form boundaries;
+and allowed network origins. Accepted source `2e79c45` passed with zero
+failures, runtime/network errors, unexpected destinations, or horizontal
+overflow. Opened desktop/mobile/320px captures remained visually strong.
+Parent typecheck/lint/build passed (49/49 routes; only the known round-42
+warning). No product defect surfaced, so `velora/index.html` stayed unchanged.
+Chunk remains open for honest Cyvexly portfolio/deployment integration and two
+separate independent verification rounds.
 
 **Round 95 / Chunk 6 round 1** (scheduled/unattended) reconciled the Owner's
 Velora direction into the product plan and began implementation. Established
@@ -26,23 +39,10 @@ typecheck/lint/build passed (49/49 routes; only the known round-42 lint warning)
 Chunk remains open for correction/failure/accessibility-depth testing and the
 two independent verification rounds required by the governing packet.
 
-**Round 94** (scheduled/unattended) dispositioned Auditor item
-`IFA-2026-09-07-R85` (60th consecutive clean confirmation, "historic
-benchmark" milestone; evaluated head `0afe6b3` — round 92's head,
-predating round 93's lint fix and convergence checks — stale on arrival,
-0 action needed beyond intake). Verified `tsc`/lint/build clean on
-unchanged round-93 source. Ran the round-93 handoff's named fresh
-surface: diffed the Accessibility statement's "see Pricing" cross-
-reference against the actual current Pricing page (`projectIncludes`/
-`addOns` arrays) — **0 defects**, both the standard-scope and add-on
-claims match verbatim. Reviewed the handoff's other candidate (Contact's
-topic `<select>`/consent checkbox) at the source level: both are native
-HTML controls with correct label wiring and no custom keyboard behavior,
-already exercised in real Tab order by round 79's CDP traversal — a
-fresh Browser-pane attempt this round reconfirmed the pane is
-non-compositing in this session (0×0 `read_page`), so no escalation was
-warranted for controls with nothing custom to verify. **0 defects found;
-0 source change.** See `CYVEXLY_APP_DEBT.md`'s "Round 94".
+**Round 94** (latest-three context) dispositioned the stale Auditor intake and
+ran clean Accessibility/Pricing plus Contact-native-control convergence checks
+with no product defect or source change. Full detail remains in the Round 94
+handoff and `CYVEXLY_APP_DEBT.md`.
 
 **Round 93** (scheduled/unattended) dispositioned Auditor item
 `IFA-2026-09-07-R84` (59th consecutive clean confirmation, evaluated head

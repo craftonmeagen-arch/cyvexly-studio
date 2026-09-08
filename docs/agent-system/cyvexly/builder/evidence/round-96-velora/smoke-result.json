@@ -1,0 +1,247 @@
+{
+  "url": "http://127.0.0.1:5183/",
+  "sourceRef": "2e79c45",
+  "testedAt": "2026-09-08T03:17:16.946Z",
+  "desktop": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "VELORA — An Evening, Beautifully Unhurried",
+    "h1": 1,
+    "main": 1,
+    "fictional": true,
+    "address": true,
+    "phone": true,
+    "email": true,
+    "stale": false,
+    "liveContactLinks": 0,
+    "hero": {
+      "rect": {
+        "x": 89.28125,
+        "y": 259.265625,
+        "width": 800,
+        "height": 317.25,
+        "top": 259.265625,
+        "right": 889.28125,
+        "bottom": 576.515625,
+        "left": 89.28125
+      },
+      "section": {
+        "x": 0,
+        "y": 115.390625,
+        "width": 1440,
+        "height": 786,
+        "top": 115.390625,
+        "right": 1440,
+        "bottom": 901.390625,
+        "left": 0
+      },
+      "inner": {
+        "x": 89.28125,
+        "y": 115.390625,
+        "width": 1261.4375,
+        "height": 786,
+        "top": 115.390625,
+        "right": 1350.71875,
+        "bottom": 901.390625,
+        "left": 89.28125
+      },
+      "style": {
+        "color": "rgb(246, 243, 236)",
+        "display": "block",
+        "opacity": "1",
+        "visibility": "visible",
+        "sectionHeight": "786px",
+        "innerTransform": "none",
+        "innerMarginTop": "0px",
+        "innerTop": "0px",
+        "innerPosition": "relative"
+      },
+      "scrollY": 0,
+      "innerHeight": 900,
+      "visualHeight": 900,
+      "screenHeight": 900
+    }
+  },
+  "provenance": {
+    "imageOrigins": [
+      "https://images.unsplash.com"
+    ],
+    "externalLinks": [
+      "https://www.google.com",
+      "https://cyvexly.com"
+    ],
+    "actionForms": 0,
+    "noindex": true,
+    "imageCount": 10,
+    "disclosed": true
+  },
+  "menuKeyboard": {
+    "focused": "tab-tasting",
+    "selected": "true",
+    "labelledBy": "tab-tasting"
+  },
+  "menuEnd": {
+    "focused": "tab-bar",
+    "selected": "true"
+  },
+  "roomKeyboard": {
+    "focused": "room-tab-salon",
+    "selected": "true",
+    "labelledBy": "room-tab-salon"
+  },
+  "imageFallback": {
+    "failed": {
+      "opacity": "0",
+      "fallback": true
+    },
+    "recovered": {
+      "opacity": "",
+      "fallback": false
+    }
+  },
+  "dialogFocus": {
+    "open": true,
+    "focused": "dialog-title",
+    "modal": true
+  },
+  "trappedFocus": {
+    "keyboardInside": true,
+    "inertBoundaryHeld": true,
+    "focused": "res-guests"
+  },
+  "dialogReturn": {
+    "open": false,
+    "focused": "dialog-return-target",
+    "modal": false
+  },
+  "menu": {
+    "selected": "true",
+    "tastingHasFinalCourse": true,
+    "vegetarianRemovedMeatCourse": true
+  },
+  "quickCorrection": {
+    "error": "Our sample dining room rests on Mondays. Please choose Tuesday through Sunday.",
+    "opened": true
+  },
+  "reservation": {
+    "result": "THE FINAL STEP, IMAGINED\nYour evening,\nbeautifully arranged.\n\nHere’s how a reservation confirmation could look for Alex Morgan.\n\nYOUR EVENING\nSep 8, 2026\nYOUR TIME\n5:00 PM\nYOUR COMPANY\n2 guests\nYOUR EXPERIENCE\nÀ la carte dining\nTHE OCCASION\nJust because\nCONFIRMATION REFERENCE\nDEMO · NOT BOOKED\n\nPreview only. No reservation has been made. No email was sent to alex@example.com. There is no operating restaurant or connected reservation provider.\n\nTry another evening\nBACK TO VELORA",
+    "timeCorrection": {
+      "stayed": true,
+      "invalid": "Please select one of these options.",
+      "focused": "time"
+    },
+    "nameCorrection": {
+      "stayed": true,
+      "invalid": "Please enter an example name with at least two characters.",
+      "focused": true
+    }
+  },
+  "privateDining": {
+    "result": "YOUR INQUIRY, PREVIEWED\nA gathering\nworth imagining.\n\nYour example inquiry is ready to review, Alex Morgan.\n\nTHE SPACE\nThe Salon\nTHE COMPANY\n28 guests\nTHE EVENING\nSep 8, 2026\nTHE OCCASION\nCelebration dinner\nBUDGET RANGE\nLet’s discuss\nSTATUS\nDEMO · NOT SENT\n\nNo event inquiry has been sent, and no room is held. A live version would connect this form to the restaurant’s events team or management system.\n\nBACK TO VELORA",
+    "correction": {
+      "stayed": true,
+      "invalid": "Value must be less than or equal to 28.",
+      "focused": true
+    }
+  },
+  "gift": {
+    "result": "YOUR GIFT, IMAGINED\nFor Jamie.\nWith a little anticipation.\nA GIFT PREVIEW · NO CASH VALUE\nVELORA\nFROM ALEX\n$50\n\nExample delivery: Sep 7, 2026\nExample recipient: jamie@example.com\n\nPreview only. No gift card has been issued or emailed. No payment has been taken, and this preview cannot be redeemed.\n\nCreate another preview\nBACK TO VELORA",
+    "correction": {
+      "stayed": true,
+      "invalid": "Value must be greater than or equal to 25.",
+      "focused": true
+    }
+  },
+  "gallery": {
+    "before": "The room",
+    "after": "The details"
+  },
+  "newsletter": {
+    "toast": "Demo signup complete. No email was stored, sent, or subscribed.",
+    "value": "",
+    "correction": {
+      "value": "not-an-email",
+      "invalid": "Please include an '@' in the email address. 'not-an-email' is missing an '@'.",
+      "focused": true
+    }
+  },
+  "contact": {
+    "toast": "Sample phone copied. It is fictional and will not contact anyone.",
+    "detailDisclosure": true
+  },
+  "desktopContact": {
+    "scrollY": 7341,
+    "top": 100.40625,
+    "addressVisible": true
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "expanded": "true",
+    "menuHidden": false
+  },
+  "mobileEscape": {
+    "expanded": "false",
+    "hidden": true,
+    "focused": true
+  },
+  "mobileContact": {
+    "scrollY": 8627,
+    "top": 89.65625,
+    "addressTop": 553.4375,
+    "height": 844
+  },
+  "reducedMotion": {
+    "matches": true,
+    "motionReady": false,
+    "pending": 0,
+    "scrollBehavior": "auto",
+    "transitionDuration": "0s",
+    "animationName": "none"
+  },
+  "reflow": {
+    "width": 320,
+    "scrollWidth": 320,
+    "hero": {
+      "left": 20,
+      "right": 300,
+      "width": 280
+    },
+    "reserve": {
+      "left": 20,
+      "right": 300,
+      "width": 280
+    }
+  },
+  "reflowDialog": {
+    "open": true,
+    "left": 20,
+    "right": 300,
+    "width": 280,
+    "scrollWidth": 280,
+    "clientWidth": 280
+  },
+  "networkRequests": [
+    "http://127.0.0.1:5183/",
+    "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap",
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=85",
+    "https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2",
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2",
+    "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3ZmX5slCNuHLi8bLeY9MK7whWMhyjYrEtImSo.woff2",
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=85",
+    "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=85",
+    "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=85",
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=85",
+    "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1000&q=85",
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=85",
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=85",
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85",
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85"
+  ],
+  "unexpectedNetwork": [],
+  "runtimeErrors": [],
+  "networkErrors": [],
+  "failures": [],
+  "passed": true
+}

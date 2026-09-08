@@ -305,6 +305,10 @@ intent.
   safe copy controls, fixed a rendered hero cascade defect, and proved the
   complete happy-path control set at desktop/mobile with no overflow or
   runtime/network error. Parent Cyvexly typecheck/lint/build also remain clean.
+- **Round 96 progress:** expanded durable CDP proof through invalid/correction
+  paths, keyboard tabs, dialog/mobile focus return, reduced motion, 320px
+  reflow, image fallback/provenance, noindex/form safety, and network-origin
+  auditing. Accepted source `2e79c45` passes clean; no product defect surfaced.
 - **Completion boundary:** all advertised navigation, responsive states,
   workflows, validation/correction/failure behavior, accessibility, content
   truth, and portfolio framing pass; then two separate independent
