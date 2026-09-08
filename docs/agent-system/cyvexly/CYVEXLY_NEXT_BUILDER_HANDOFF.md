@@ -1,5 +1,32 @@
 # Cyvexly Next Builder Handoff
 
+## Round 99 / Chunk 6 round 5 closeout
+
+**Session:** scheduled/unattended Codex Builder, 2026-09-08 EDT
+**Start source:** `d95c295` on `main`, matched `origin/main`
+**Accepted product source:** unchanged at `0ca0504`
+**Authority:** Owner direction `2026-09-07-17`
+
+No independent-review intake has arrived for accepted Velora source `0ca0504`.
+Checked a fresh integration surface without repeating the established workflow
+matrix: the live case study's canonical/Open Graph/Twitter metadata,
+BreadcrumbList JSON-LD, fictional/demo disclosures, staged no-index state, and
+sitemap inclusion/raw-demo exclusion all match source. Rendered the route-
+specific 1200x630 Open Graph image through an optimized local runtime and
+opened it at full resolution; the longer Velora challenge copy fits cleanly.
+TypeScript, lint (one known evidence-script warning), and the 52-route build
+pass. No product defect or product-source change was warranted.
+
+Retained only the source-identified social-preview PNG under
+`builder/evidence/round-99-velora-integration/` until independent review no
+longer needs it. The owned port-5183 production server was stopped, its 156-byte
+temporary log root was removed, and the unrelated pre-existing Vite listener
+on port 5173 was left untouched.
+
+**Next Builder round:** read and disposition every independent-review intake.
+Chunk 6 cannot close until two separate independent verification rounds
+challenge accepted source `0ca0504`; do not substitute repeated Builder checks.
+
 ## Round 98 / Chunk 6 round 4 closeout
 
 **Session:** scheduled/unattended Codex Builder, 2026-09-08 EDT
@@ -57,34 +84,11 @@ challenge accepted source `0ca0504`; do not substitute another Builder
 self-check for them. If no review has arrived, use fresh product evidence to
 check for a material integration gap without reopening already-proved paths.
 
-## Round 96 / Chunk 6 round 2 closeout
-
-**Session:** scheduled/unattended Codex Builder, 2026-09-07 EDT
-**Start source:** `7f97adb` on `main`, matched `origin/main`
-**Accepted proof source:** `2e79c45` on `main`
-**Authority:** Owner direction `2026-09-07-17`
-
-Expanded `velora/smoke.mjs` beyond its Round 95 happy paths. Real Chrome/CDP
-now proves invalid→corrected reservation, private-event, gift, and newsletter
-flows; menu/room keyboard tabs; modal focus/inert/Escape-return behavior;
-mobile-menu Escape focus; reduced motion; 320px reflow; image fallback and
-Unsplash provenance; noindex/no-form-action safety; and allowed network
-origins. Result: zero failures, runtime/network errors, unexpected network
-destinations, or horizontal overflow. Opened desktop, contact, mobile-menu,
-and 320px gift-dialog captures remain visually sound. Parent typecheck/lint/
-build passed (49/49 routes; only the pre-existing round-42 lint warning).
-No product defect surfaced, so `velora/index.html` stayed unchanged.
-Harness cleanup closed its owned Chrome process and removed its exact OS-temp
-profile; the tracked PTY HTTP server was stopped and port 5183 is clear.
-Retained proof is limited to the result JSON and five opened viewport captures
-under `builder/evidence/round-96-velora/` for independent review.
-
-**Next Builder round:** continue Chunk 6 with the honest Cyvexly portfolio and
-deployment integration. Inspect the current Work/case-study data architecture
-and hosting path, choose the smallest production-normal integration that keeps
-Velora unmistakably fictional, implement it, and prove both Cyvexly entry and
-Velora destination. Then route accepted source to two separate independent
-verification rounds before any chunk-complete/readiness claim.
+Round 96's full closeout rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_96_REPORT.md` when round 99
+established the latest-three handoff window. Its invalid/correction,
+keyboard/focus, reduced-motion, 320px, fallback/provenance, and network proof
+remains current for accepted Velora behavior.
 
 Round 95's full Chunk 6 opening closeout is preserved in
 `CYVEXLY_BUILD_SUMMARY.md` and its matching debt entry; it rotated out when
