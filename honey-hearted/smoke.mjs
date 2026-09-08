@@ -630,6 +630,84 @@ async function main() {
     );
     check(contentRoutes["missing-page"].title === "A little lost?", "Unknown hash route did not render the recovery state.");
 
+    const routeAccessibility = await evaluate(`
+      const hashes=[
+        'home',
+        ...PRODUCTS.map(product=>'resource/'+product.id),
+        ...Object.keys(ARTICLES).map(article=>'idea/'+article),
+        'sample','sample/beachside','page/about',
+        ...Object.keys(POLICY_CONTENT).map(policy=>'policy/'+policy),
+        'launch','missing-page',
+      ];
+      const results=[];
+      const isVisible=node=>{
+        const style=getComputedStyle(node);
+        return !node.closest('[hidden]') && !node.closest('[aria-hidden="true"]') &&
+          style.display!=='none' &&
+          style.visibility!=='hidden' && node.getClientRects().length>0;
+      };
+      const accessibleName=node=>{
+        const labelledBy=(node.getAttribute('aria-labelledby')||'')
+          .split(/\\s+/).filter(Boolean)
+          .map(id=>document.getElementById(id)?.textContent||'').join(' ');
+        const label=node.labels?.length?[...node.labels].map(item=>item.textContent||'').join(' '):'';
+        const childAlt=[...node.querySelectorAll('img[alt]')]
+          .map(image=>image.alt).join(' ');
+        return (node.getAttribute('aria-label')||labelledBy||label||
+          node.textContent||childAlt||node.getAttribute('title')||'').trim();
+      };
+      for(const hash of hashes){
+        location.hash=hash;
+        await new Promise(accept=>setTimeout(accept,70));
+        const visibleRoot=document.querySelector('#home-view').hidden?
+          document.querySelector('#detail-view'):document.querySelector('#home-view');
+        const headings=[...visibleRoot.querySelectorAll('h1,h2,h3,h4,h5,h6')]
+          .filter(isVisible);
+        const levels=headings.map(heading=>Number(heading.tagName.slice(1)));
+        const headingSkips=levels.flatMap((level,index)=>
+          index>0&&level>levels[index-1]+1?
+            [headings[index].textContent.trim().slice(0,80)]:[]);
+        const interactives=[...visibleRoot.querySelectorAll(
+          'a[href],button,input:not([type="hidden"]),select,textarea,summary,[tabindex]:not([tabindex="-1"])',
+        )].filter(node=>isVisible(node)&&node.getAttribute('aria-hidden')!=='true');
+        const unnamed=interactives.filter(node=>!accessibleName(node))
+          .map(node=>node.id||node.tagName);
+        const unlabeled=[...visibleRoot.querySelectorAll('input:not([type="hidden"]),select,textarea')]
+          .filter(node=>isVisible(node)&&node.getAttribute('aria-hidden')!=='true'&&
+            !node.labels?.length&&!node.getAttribute('aria-label')&&!node.getAttribute('aria-labelledby'))
+          .map(node=>node.id||node.tagName);
+        const brokenAria=[...document.querySelectorAll('[aria-controls],[aria-describedby],[aria-labelledby]')]
+          .flatMap(node=>['aria-controls','aria-describedby','aria-labelledby']
+            .flatMap(attribute=>(node.getAttribute(attribute)||'').split(/\\s+/).filter(Boolean)
+              .filter(id=>!document.getElementById(id))
+              .map(id=>attribute+':'+id)));
+        await Promise.all([...visibleRoot.querySelectorAll('img')]
+          .map(image=>image.decode().catch(()=>{})));
+        const brokenImages=[...visibleRoot.querySelectorAll('img')]
+          .filter(image=>isVisible(image)&&(!image.complete||image.naturalWidth===0))
+          .map(image=>image.alt||image.currentSrc.slice(0,60));
+        results.push({
+          hash,
+          h1:headings.filter(heading=>heading.tagName==='H1').length,
+          headingSkips,
+          unnamed,
+          unlabeled,
+          brokenAria:[...new Set(brokenAria)],
+          brokenImages,
+          focusedHeading:hash==='home'||document.activeElement===visibleRoot.querySelector('h1'),
+        });
+      }
+      return results;
+    `);
+    check(routeAccessibility.length === 18, "The route accessibility contract did not inspect every advertised and recovery view.");
+    check(routeAccessibility.every(route=>route.h1===1), "A route exposed an incorrect visible H1 count.");
+    check(routeAccessibility.every(route=>route.headingSkips.length===0), "A route contains a skipped heading level.");
+    check(routeAccessibility.every(route=>route.unnamed.length===0), "A route exposes an unnamed interactive control.");
+    check(routeAccessibility.every(route=>route.unlabeled.length===0), "A route exposes an unlabeled form control.");
+    check(routeAccessibility.every(route=>route.brokenAria.length===0), "A route contains a broken ARIA ID reference.");
+    check(routeAccessibility.every(route=>route.brokenImages.length===0), "A route contains an unavailable embedded image.");
+    check(routeAccessibility.every(route=>route.focusedHeading), "A client-side route change did not focus its visible heading.");
+
     await evaluate("location.hash='contact';return true;");
     await settle();
     const forms = await evaluate(`
@@ -811,6 +889,7 @@ async function main() {
       activationSafety,
       sample: { ...sample, download, downloadSize, print },
       contentRoutes,
+      routeAccessibility,
       forms,
       adapterRecovery,
       zoomEquivalent,
