@@ -7,8 +7,8 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
 ## Open
 
 0. **Chunk 7 — HoneyHearted independent review (opened round 100).** Rounds
-   100–113 completed the integrated route and current Builder-reachable proof at
-   accepted product source `000dcd9` and proof source `bb327be`: primary and
+   100–115 completed the integrated route and current Builder-reachable proof at
+   accepted product source `6af5e3c`: primary and
    negative/correction workflows,
    320px/zoom-equivalent reflow, all 85 visible Home controls by real keyboard,
    dialog focus return, catalog claim/asset disclosures, image resilience,
@@ -33,10 +33,15 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    action's truthful connection notice to the visible menu toggle after the
    originating menu control is hidden. Round 113 proves WCAG-style text spacing
    at 320px across eight representative route families without horizontal
-   overflow or clipped readable/interactive text. Two separate independent
+   overflow or clipped readable/interactive text. Round 114 adds forced-colors
+   coverage; Round 115 directly proves the downloaded weekly-reset HTML as a
+   contained, operable `file:` artifact with a 44px Print control and one-page
+   Letter PDF output. Two separate independent
    verification rounds must challenge this
    accepted state. Owner/account substitutions stay in
-   `HONEY_HEARTED_OWNER_NEEDS.md`, not here.
+   `HONEY_HEARTED_OWNER_NEEDS.md`, not here. Owner direction `2026-09-08-21`
+   assigns the next Clerk/TPT dashboard implementation to Claude and pauses the
+   Team Two Website Builder scheduler; do not start competing work.
 
 0a. **Chunk 6 — Velora verification and integration depth (opened round 95).**
    Rounds 95-96 closed the primary, invalid/correction, keyboard/focus, 320px
@@ -49,6 +54,11 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    sitemap case-study inclusion/demo exclusion, CSP, and no-index layers.
    Round 99 then checked the fresh portfolio metadata/structured-data surface
    and opened the route-specific 1200x630 social image with no defect found.
+   Round 116 completes the reopened buyer-facing case-study scope at accepted/
+   deployed source `fce01e8`: uncropped desktop/mobile presentation, six
+   capability proofs, direct prospect framing, later detailed disclosure, and
+   hospitality-specific conversion path pass in a visible local browser and
+   production suite. `/velora` stayed unchanged because no defect surfaced.
    Still open before chunk closure: obtain the two separate independent
    verification rounds required by the governing rules. These are reachable
    follow-up tasks, not Owner gates.

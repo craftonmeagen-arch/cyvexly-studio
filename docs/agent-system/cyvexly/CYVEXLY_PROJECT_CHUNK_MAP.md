@@ -221,7 +221,7 @@ requires.
   That integrated verification also closes remaining delivery/launch items in
   Chunks 3 and 4. Full history is in the build summary and app debt.
 
-## Chunk 6 — Velora Capability Demonstration (REOPENED AS CURRENT PRIORITY after global round 114)
+## Chunk 6 — Velora Capability Demonstration (OPEN FOR INDEPENDENT REVIEW after global round 116)
 
 - **Authority:** Owner directions `2026-09-07-17` and `2026-09-08-20`.
 - **Outcome:** turn the restored standalone Velora fine-dining concept into a
@@ -242,13 +242,12 @@ requires.
   verified the new case study's metadata, structured data, disclosure, sitemap
   boundary, and full-resolution social-preview render. Two independent reviews
   remain.
-- **Reopened portfolio-framing scope:** the Owner accepted the visible buyer-
-  path finding that `/work/velora-dining` undersells the strong live demo.
-  Replace its sparse/report-like opening and oversized crop with a premium,
-  uncropped desktop/mobile showcase; use direct prospect language, scannable
-  functional proof, restrained truthful disclosure, larger responsive
-  evidence, and a specific conversion invitation. Preserve `/velora` unless
-  fresh rendered evidence identifies a real defect.
+- **Round 116 reopened portfolio-framing result:** accepted/deployed source
+  `fce01e8` replaces the sparse/report-like case study with a premium uncropped
+  desktop/mobile showcase, direct prospect language, six scannable functional
+  capabilities, design/accessibility decisions, restrained opening plus
+  detailed disclosure, and a specific hospitality-project CTA. `/velora`
+  remains unchanged. Local visible/headless and adopted public proof pass.
 - **Completion boundary:** all advertised navigation, responsive states,
   workflows, validation/correction/failure behavior, accessibility, content
   truth, and the newly accepted buyer-facing portfolio framing pass in the real
@@ -256,9 +255,9 @@ requires.
   independent verification rounds confirm the new accepted source. One clean
   Builder pass does not close this chunk.
 
-## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 114; chunk round 15)
+## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 116; Builder scheduler paused)
 
-- **Authority:** Owner direction `2026-09-08-19`.
+- **Authority:** Owner directions `2026-09-08-19` and `2026-09-08-21`.
 - **Outcome:** turn the imported teacher-resource storefront into a polished,
   fully functional site whose available actions work and whose unavailable
   commerce/account actions are truthfully demonstrated.
@@ -279,9 +278,15 @@ requires.
   representative route families with no overflow or clipped readable/control
   text. Round 114 adds Windows High Contrast/forced-colors proof for selected
   state, real-Tab focus visibility, named controls, containment, and four routed
-  views. Accepted/deployed product source `000dcd9` and proof source `dacec6a`
-  pass locally and publicly; detailed round history remains in the build
-  summary and archived reports.
+  views. Round 115 hardens the actual downloaded sample and its printed output
+  at accepted/deployed source `6af5e3c`. Detailed round history remains in the
+  build summary and archived reports.
+- **Current assignment boundary:** the next complete owner-dashboard phase is
+  assigned to Claude. It will use Clerk for server-enforced owner authorization,
+  durable content/asset storage, and TPT-linked publishing while TPT remains the
+  checkout/order/delivery/payout system. The Team Two Website Builder scheduler
+  remains paused and must not create a competing implementation without new
+  Owner direction.
 - **Boundaries:** do not invent products, rights, sales, reviews, identity,
   destinations, legal facts, transmission, subscriptions, or payments. Keep
   missing inputs and their safe replacement steps in

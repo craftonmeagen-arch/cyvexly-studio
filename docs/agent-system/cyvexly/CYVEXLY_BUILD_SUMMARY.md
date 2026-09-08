@@ -15,6 +15,30 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 116 / Velora buyer-facing case study — 2026-09-08
+
+Accepted/deployed source `fce01e8` replaces `/work/velora-dining`'s sparse
+internal-report presentation with a premium buyer story: direct hospitality
+language, complete uncropped desktop/mobile captures, six working capability
+summaries, responsive and accessibility decisions, restrained opening plus
+detailed fictional/non-transmitting disclosure, and a specific project CTA.
+The Work card now uses capability-led copy. Optimized 53-route build,
+TypeScript, lint (one known round-42 evidence warning), complete local headless
+and visible-browser runs, and the adopted public run pass with zero failures,
+runtime/network errors, unexpected origins, or responsive overflow. `/velora`
+was unchanged. Two independent reviews remain. Owner direction `2026-09-08-21`
+then paused the Builder scheduler and assigned the next HoneyHearted dashboard
+phase to Claude.
+
+## Round 115 / HoneyHearted downloaded sample — 2026-09-08
+
+Accepted/deployed source `6af5e3c` corrects the generated free-sample Print
+button from 41.5px to the 44px product floor and adds durable proof against the
+actual downloaded local HTML at 390px. The artifact is self-contained, uses no
+external resources, activates through its native control, and prints as a
+tagged one-page Letter PDF. Complete local/public HoneyHearted suites,
+TypeScript, lint (one known evidence warning), and the 53-route build pass.
+
 ## Round 114 / HoneyHearted chunk round 15 — 2026-09-08
 
 Added proof source `dacec6a`, a real-Chromium Windows High Contrast/forced-

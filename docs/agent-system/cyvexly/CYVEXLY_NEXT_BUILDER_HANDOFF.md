@@ -1,18 +1,45 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
-## New Owner direction before the next Builder round
+## Owner pause before any next Builder round
 
-Owner direction `2026-09-08-20` reopens Chunk 6 as the current reachable
-priority. `/velora` is visually strong; `/work/velora-dining` currently
-undersells it with a sparse internal-brief opening, repeated qualification, and
-an oversized cropped preview. Rebuild the case-study presentation as premium
-buyer proof: complete uncropped desktop/mobile showcase, direct prospect copy,
-scannable functional capability evidence, restrained truthful fictional
-disclosure, larger responsive views, and a specific conversion CTA. Verify the
-real Home → case study → live demo path in a visible browser at desktop and
-mobile widths. Reconcile round/chunk/state/debt continuity first, then perform
-useful product work in that same round. HoneyHearted's accepted source and
-remaining review/Owner-input obligations continue in parallel.
+Owner direction `2026-09-08-21` assigns the next HoneyHearted owner-dashboard,
+Clerk authorization, durable content/storage, and TPT publishing integration to
+Claude. The Team Two Website Builder scheduler is PAUSED. Preserve its saved
+:00/:30 cadence, GPT-5.6 Sol model, and high reasoning settings; do not resume
+or begin a competing implementation until the Owner explicitly directs it.
+
+## Round 116 / reopened Chunk 6 buyer-presentation closeout
+
+**Session:** scheduled Team Two Website Builder, 2026-09-08 EDT
+**Accepted/deployed source:** `fce01e8` on `main`
+**Authority:** Owner direction `2026-09-08-20`, then pause direction `2026-09-08-21`
+
+Rebuilt `/work/velora-dining` as premium buyer-facing proof while leaving the
+strong `/velora` product source unchanged. The page now combines direct
+hospitality language, complete uncropped desktop/mobile captures, six working
+capability summaries, responsive and accessibility decisions, a concise
+opening concept label plus detailed non-transmission disclosure, and a specific
+hospitality-project CTA. The Work card uses capability-led copy.
+
+The 53-route optimized build, TypeScript, lint (one known round-42 evidence
+warning), local headless run, local visible-Chrome desktop/mobile run, and
+adopted public run pass with zero failures, runtime/network errors, unexpected
+origins, or overflow. Retain the source-identified public and visible results
+and case-study captures under `builder/evidence/round-116-velora-case-study*`
+until independent review consumes them. Chunk 6 remains open only for its two
+independent reviews.
+
+## Round 115 / Chunk 7 round 16 closeout
+
+**Accepted/deployed source:** `6af5e3c` on `main`
+**Authority:** Owner direction `2026-09-08-19`
+
+Corrected the generated HoneyHearted free-sample Print button from 41.5px to
+the 44px product floor. The durable suite now opens the actual downloaded local
+HTML at 390px, verifies self-containment and native activation, captures it,
+and prints a tagged one-page Letter PDF. Complete local/public suites and
+repository gates pass. Round 116's later Owner pause supersedes any further
+Builder-owned HoneyHearted implementation.
 
 ## Round 114 / Chunk 7 round 15 closeout
 
@@ -45,60 +72,9 @@ Windows High Contrast session and non-Chromium browsers were not checked.
 text-spacing, or forced-colors proof without a fresh product-level question.
 Chunk 7 still needs two independent reviews; Owner substitutions are unchanged.
 
-## Round 113 / Chunk 7 round 14 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `fd6d960` on `main`, matched `origin/main`
-**Accepted product source:** `000dcd9` on `main`, deployed
-**Accepted proof source:** `bb327be` on `main`
-**Authority:** Owner direction `2026-09-08-19`
-
-Changed method from focus hardening to the distinct product question of text-
-spacing adaptability. The durable real-Chromium suite now applies WCAG-style
-line, paragraph, letter, and word-spacing overrides at 320px across eight
-representative Home, product, article, sample, About, policy, launch, and
-recovery states. The first detector produced false positives from decorative
-clipping and screen-reader-only labels; the corrected text-range detector
-passes locally and publicly with no horizontal overflow or clipped readable/
-interactive text. Three opened public captures match local pixels exactly.
-
-TypeScript, lint (one known round-42 evidence warning), the 53-route build,
-eight-packet role setup, hot-file caps, all 48 review-lifecycle checks, and the
-complete local/public suites pass with zero workflow/runtime/network errors.
-Retain the two result JSONs and three public text-spacing captures under
-`builder/evidence/round-113-honey-hearted-text-spacing/` until independent
-review consumes them. Port 5196 is clear; 75,231,219 redundant evidence bytes
-were moved to the Recycle Bin.
-
-**Next Builder round:** disposition review intake first. Do not repeat text-
-spacing or focus hardening without a fresh product-level question. Chunk 7
-still needs two independent reviews; Owner substitutions are unchanged.
-
-## Round 112 / Chunk 7 round 13 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `c24b3e8` on `main`, matched `origin/main`
-**Accepted product/test source:** `000dcd9` on `main`, pushed and adopted
-**Authority:** Owner direction `2026-09-08-19`
-
-Fresh source-path use found the mobile store action closed its menu before
-opening the truthful unconnected-store notice. Escape then returned focus to
-`BODY` because the invoking button was hidden. The menu listener now hands
-focus to the visible toggle first. A real-Space-key regression fails on public
-`d88bfc8` and passes locally and publicly at `000dcd9`.
-
-TypeScript, lint (one known round-42 evidence warning), the 53-route build,
-eight-packet role setup, hot-file caps, all 48 review-lifecycle checks, and the
-complete local/public suites pass with zero workflow/runtime/network errors.
-Retain only before/local/public JSON plus the opened focused-toggle capture
-under `builder/evidence/round-112-honey-hearted-mobile-store-focus/` until
-independent review consumes them. Port 5195 and owned browser profiles are
-clear; approximately 17.97 MB of redundant evidence/log output moved to the
-Recycle Bin.
-
-**Next Builder round:** disposition review intake first. Do not continue the
-same focus-hardening pattern without a fresh product-level question. Chunk 7
-still needs two independent reviews; Owner substitutions are unchanged.
+Rounds 112–113 rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUNDS_112_113_ARCHIVE.md` when
+Round 116 established the latest-three handoff window.
 
 Round 111's full handoff rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_111_REPORT.md` when Round

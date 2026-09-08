@@ -1,19 +1,19 @@
 # Team Two Website Builder — Cyvexly PM Prompt
 
-**Status:** ACTIVE OWNER-DIRECTED CHUNK
+**Status:** PAUSED BY OWNER
 
-Reopen and continue **Chunk 6 — Velora Capability Demonstration**, with the
-buyer-facing portfolio presentation as the current reachable priority under
-Owner direction `2026-09-08-20`. Rebuild `/work/velora-dining` around the
-accepted visible-review findings: premium uncropped desktop/mobile showcase,
-direct prospect language, scannable functional proof, restrained but clear
-fictional disclosure, larger responsive evidence, and a specific conversion
-invitation. Preserve the strong `/velora` experience unless fresh rendered
-evidence identifies a real defect.
+Do not begin another Team Two Website Builder round. Owner direction
+`2026-09-08-21` assigns the next HoneyHearted owner-dashboard, Clerk
+authorization, durable content/storage, and TPT publishing architecture to
+Claude because Codex credits are low. Preserve Claude's work and do not create a
+competing implementation. The existing Builder scheduler must remain paused
+with its saved :00/:30 cadence, GPT-5.6 Sol model, and high reasoning settings
+until the Owner explicitly asks to resume it.
 
-Verify Home → case study → live demo in a visible browser at desktop and mobile
-widths, plus the normal source/runtime/accessibility/performance gates. Update
-state, debt, chunk, and handoff truth in the first round and begin useful product
-work in that same round. HoneyHearted's accepted source and its independent-
-review/Owner-input obligations remain active in parallel.
+Accepted product state before the pause: HoneyHearted source `6af5e3c` and
+Velora buyer-case-study source `fce01e8` are deployed. Chunk 6 still requires
+two independent reviews; Chunk 7 retains its independent-review and external
+Owner/account gates. A future explicitly resumed Builder must disposition fresh
+review intake and reconcile Claude's accepted source before changing product
+code.
 

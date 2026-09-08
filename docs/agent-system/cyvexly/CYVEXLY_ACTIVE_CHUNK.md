@@ -1,10 +1,13 @@
 # Cyvexly Active Chunk
 
-**Chunks:** **6 — Velora Capability Demonstration is REOPENED AS THE CURRENT
-PRIORITY** under Owner direction `2026-09-08-20`, with buyer-facing portfolio
-framing as its reachable work. **Chunk 7 — HoneyHearted Functional Storefront
-remains OPEN** at chunk-local round 15 for its two independent reviews and
-Owner-input boundaries. Chunks 3 — Project Planner and 4 —
+**Chunks:** **6 — Velora Capability Demonstration remains OPEN FOR TWO
+INDEPENDENT REVIEWS** after Round 116 completed its reopened buyer-facing
+portfolio scope. **Chunk 7 — HoneyHearted Functional Storefront remains OPEN**
+for its review/Owner-input boundaries, but Owner direction `2026-09-08-21`
+assigns the next Clerk-backed owner-dashboard/TPT publishing architecture to
+Claude and keeps the Team Two Website Builder scheduler PAUSED. Do not resume
+or build a competing implementation without new Owner direction. Chunks 3 —
+Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
 now OPEN**, started round 29. Its integrated verification will close the
@@ -12,16 +15,21 @@ overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
-product surface is clean. The next Builder round must reconcile the new Chunk
-6 round position and begin `/work/velora-dining` work in that same round.
+product surface is clean.
 
-The accepted buyer-path finding is that `/velora` is strong while its Cyvexly
-case-study landing page is sparse, report-like, over-repeats the fictional
-qualification, and uses an oversized crop. Build the premium uncropped
-desktop/mobile showcase, prospect language, scannable capability proof,
-restrained truthful disclosure, larger responsive evidence, and specific
-conversion invitation defined in Owner direction `2026-09-08-20`. Final proof
-must use the real Home → case study → demo path in a visible browser.
+**Round 116 / reopened Chunk 6 buyer presentation** accepted and deployed
+source `fce01e8`. `/work/velora-dining` now presents direct prospect language,
+six scannable working capabilities, complete uncropped desktop/mobile proof,
+design/accessibility decisions, layered truthful concept disclosure, and a
+hospitality-specific CTA. The Work → case study → unchanged live demo path
+passes complete local visible/headless and public Chromium proof with zero
+failures, runtime/network errors, unexpected origins, or overflow. Two
+independent reviews remain.
+
+**Round 115 / Chunk 7 round 16** accepted and deployed source `6af5e3c`. The
+actual downloaded free-sample HTML now keeps its Print control at 44px and is
+durably opened at 390px, checked for self-containment/native activation, and
+printed to a tagged one-page Letter PDF. Complete local/public suites pass.
 
 **Round 114 / Chunk 7 round 15** added a Windows High Contrast/forced-colors
 contract to proof source `dacec6a`. At 320px, real Chromium preserves selected-
@@ -32,23 +40,9 @@ instrument errors. Final local/public suites pass with zero workflow/runtime/
 network errors; two opened public captures match local pixels exactly. Product
 source remains `000dcd9`; two independent reviews remain.
 
-**Round 113 / Chunk 7 round 14** changed method from the recent focus loop to
-storefront-wide text-spacing adaptability. Proof source `bb327be` applies
-WCAG-style line, paragraph, letter, and word-spacing overrides at 320px across
-eight representative route families. A refined text-range detector passes
-locally and publicly with zero horizontal overflow or clipped readable/control
-text; three opened public captures match local pixels exactly. Product source
-remains `000dcd9`; complete suites and repository gates pass. Two independent
-reviews remain.
-
-**Round 112 / Chunk 7 round 13** found a separate mobile storefront-action
-focus gap: the mobile store button hid with its menu, opened the truthful
-connection notice, then Escape returned focus to `BODY`. Accepted/deployed
-source `000dcd9` moves focus to the visible menu toggle before the notice
-opens. The new real-Space-key regression fails on public `d88bfc8` and passes
-locally/publicly afterward; complete suites, TypeScript, lint (one known
-evidence warning), the 53-route build, role setup, hot-file caps, and review
-lifecycle pass. Two independent reviews remain.
+Rounds 112–113 rotated to
+`docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUNDS_112_113_ARCHIVE.md` when Round
+116 established the latest-three context.
 
 Round 111's full active-chunk report rotated to
 `docs/archive/chunks/CYVEXLY_ACTIVE_CHUNK_ROUND_111_REPORT.md` when Round 114

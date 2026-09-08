@@ -1,0 +1,394 @@
+{
+  "url": "http://127.0.0.1:5200/velora",
+  "sourceRef": "fce01e8",
+  "visibleBrowser": true,
+  "testedAt": "2026-09-08T14:14:37.567Z",
+  "desktop": {
+    "width": 1440,
+    "scrollWidth": 1425,
+    "title": "VELORA — An Evening, Beautifully Unhurried",
+    "h1": 1,
+    "main": 1,
+    "fictional": true,
+    "address": true,
+    "phone": true,
+    "email": true,
+    "stale": false,
+    "liveContactLinks": 0,
+    "hero": {
+      "rect": {
+        "x": 89.28125,
+        "y": 259.265625,
+        "width": 800,
+        "height": 317.25,
+        "top": 259.265625,
+        "right": 889.28125,
+        "bottom": 576.515625,
+        "left": 89.28125
+      },
+      "section": {
+        "x": 0,
+        "y": 115.390625,
+        "width": 1425,
+        "height": 786,
+        "top": 115.390625,
+        "right": 1425,
+        "bottom": 901.390625,
+        "left": 0
+      },
+      "inner": {
+        "x": 89.28125,
+        "y": 115.390625,
+        "width": 1246.4375,
+        "height": 786,
+        "top": 115.390625,
+        "right": 1335.71875,
+        "bottom": 901.390625,
+        "left": 89.28125
+      },
+      "style": {
+        "color": "rgb(246, 243, 236)",
+        "display": "block",
+        "opacity": "1",
+        "visibility": "visible",
+        "sectionHeight": "786px",
+        "innerTransform": "none",
+        "innerMarginTop": "0px",
+        "innerTop": "0px",
+        "innerPosition": "relative"
+      },
+      "scrollY": 0,
+      "innerHeight": 900,
+      "visualHeight": 900,
+      "screenHeight": 900
+    }
+  },
+  "provenance": {
+    "imageOrigins": [
+      "http://127.0.0.1:5200"
+    ],
+    "externalLinks": [
+      "https://www.google.com",
+      "https://cyvexly.com"
+    ],
+    "actionForms": 0,
+    "noindex": true,
+    "imageCount": 10,
+    "disclosed": true
+  },
+  "menuKeyboard": {
+    "focused": "tab-tasting",
+    "selected": "true",
+    "labelledBy": "tab-tasting"
+  },
+  "menuEnd": {
+    "focused": "tab-bar",
+    "selected": "true"
+  },
+  "roomKeyboard": {
+    "focused": "room-tab-salon",
+    "selected": "true",
+    "labelledBy": "room-tab-salon"
+  },
+  "imageFallback": {
+    "failed": {
+      "opacity": "0",
+      "fallback": true
+    },
+    "recovered": {
+      "opacity": "",
+      "fallback": false
+    }
+  },
+  "dialogFocus": {
+    "open": true,
+    "focused": "dialog-title",
+    "modal": true
+  },
+  "trappedFocus": {
+    "keyboardInside": true,
+    "inertBoundaryHeld": true,
+    "focused": "res-guests"
+  },
+  "dialogReturn": {
+    "open": false,
+    "focused": "dialog-return-target",
+    "modal": false
+  },
+  "menu": {
+    "selected": "true",
+    "tastingHasFinalCourse": true,
+    "vegetarianRemovedMeatCourse": true
+  },
+  "quickCorrection": {
+    "error": "Our sample dining room rests on Mondays. Please choose Tuesday through Sunday.",
+    "opened": true
+  },
+  "reservation": {
+    "result": "THE FINAL STEP, IMAGINED\nYour evening,\nbeautifully arranged.\n\nHere’s how a reservation confirmation could look for Alex Morgan.\n\nYOUR EVENING\nSep 9, 2026\nYOUR TIME\n5:30 PM\nYOUR COMPANY\n2 guests\nYOUR EXPERIENCE\nÀ la carte dining\nTHE OCCASION\nJust because\nCONFIRMATION REFERENCE\nDEMO · NOT BOOKED\n\nPreview only. No reservation has been made. No email was sent to alex@example.com. There is no operating restaurant or connected reservation provider.\n\nTry another evening\nBACK TO VELORA",
+    "timeCorrection": {
+      "stayed": true,
+      "invalid": "Please select one of these options.",
+      "focused": "time"
+    },
+    "nameCorrection": {
+      "stayed": true,
+      "invalid": "Please enter an example name with at least two characters.",
+      "focused": true
+    }
+  },
+  "privateDining": {
+    "result": "YOUR INQUIRY, PREVIEWED\nA gathering\nworth imagining.\n\nYour example inquiry is ready to review, Alex Morgan.\n\nTHE SPACE\nThe Salon\nTHE COMPANY\n28 guests\nTHE EVENING\nSep 9, 2026\nTHE OCCASION\nCelebration dinner\nBUDGET RANGE\nLet’s discuss\nSTATUS\nDEMO · NOT SENT\n\nNo event inquiry has been sent, and no room is held. A live version would connect this form to the restaurant’s events team or management system.\n\nBACK TO VELORA",
+    "correction": {
+      "stayed": true,
+      "invalid": "Value must be less than or equal to 28.",
+      "focused": true
+    }
+  },
+  "gift": {
+    "result": "YOUR GIFT, IMAGINED\nFor Jamie.\nWith a little anticipation.\nA GIFT PREVIEW · NO CASH VALUE\nVELORA\nFROM ALEX\n$50\n\nExample delivery: Sep 8, 2026\nExample recipient: jamie@example.com\n\nPreview only. No gift card has been issued or emailed. No payment has been taken, and this preview cannot be redeemed.\n\nCreate another preview\nBACK TO VELORA",
+    "correction": {
+      "stayed": true,
+      "invalid": "Value must be greater than or equal to 25.",
+      "focused": true
+    }
+  },
+  "gallery": {
+    "before": "The room",
+    "after": "The details"
+  },
+  "newsletter": {
+    "toast": "Demo signup complete. No email was stored, sent, or subscribed.",
+    "value": "",
+    "correction": {
+      "value": "not-an-email",
+      "invalid": "Please include an '@' in the email address. 'not-an-email' is missing an '@'.",
+      "focused": true
+    }
+  },
+  "contact": {
+    "toast": "Sample phone copied. It is fictional and will not contact anyone.",
+    "detailDisclosure": true
+  },
+  "desktopContact": {
+    "scrollY": 7341,
+    "top": 100.40625,
+    "addressVisible": true
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "expanded": "true",
+    "menuHidden": false
+  },
+  "mobileEscape": {
+    "expanded": "false",
+    "hidden": true,
+    "focused": true
+  },
+  "mobileContact": {
+    "scrollY": 8627,
+    "top": 89.65625,
+    "addressTop": 553.4375,
+    "height": 844
+  },
+  "reducedMotion": {
+    "matches": true,
+    "motionReady": false,
+    "pending": 0,
+    "scrollBehavior": "auto",
+    "transitionDuration": "0s",
+    "animationName": "none"
+  },
+  "reflow": {
+    "width": 320,
+    "scrollWidth": 320,
+    "hero": {
+      "left": 20,
+      "right": 300,
+      "width": 280
+    },
+    "reserve": {
+      "left": 20,
+      "right": 300,
+      "width": 280
+    }
+  },
+  "reflowDialog": {
+    "open": true,
+    "left": 20,
+    "right": 300,
+    "width": 280,
+    "scrollWidth": 280,
+    "clientWidth": 280
+  },
+  "portfolioIntegration": {
+    "workEntry": {
+      "heading": "Velora",
+      "text": "Built concept demoVeloraBuilt hospitality concept pairing cinematic restaurant storytelling with responsive menu, reservation, private-event, gifting, and gallery journeys.HospitalityInteractive demoView case study →",
+      "image": "/media/velora-capability-demo.webp"
+    },
+    "workFilters": {
+      "conceptKeepsVelora": true,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    "mobileWork": {
+      "width": 390,
+      "scrollWidth": 390,
+      "velora": true
+    },
+    "caseStudy": {
+      "title": "A restaurant experience guests can feel—and use.",
+      "text": "← All workBuilt concept demo · fictionalHospitality website · strategy, design & buildA restaurant experience guests can feel—and use.Cyvexly designed and built Velora to show how a hospitality brand can pair cinematic storytelling with clear paths to the menu, reservations, private events, and gifting.Velora is a fictional restaurant concept; the interactive experience is real, while its restaurant details and transactions are demonstrations.Open the interactive website See what was builtVelora · live conceptComplete responsive presentationGuest journeys, fully consideredCapability you can see in the experience.Velora is more than a polished landing page. The working demo connects the moments a restaurant guest expects, including the states that usually get left behind in a visual mockup.Explore every journey 01Seasonal menu discoveryEditorial dish stories become a menu guests can scan, filter, and explore without losing the sense of occasion.Menu tabs + dish details02Reservation journeyA complete date, time, party-size, and guest-details flow demonstrates validation, correction, and confirmation states.Guided form + confirmation03Private dining inquiryRoom selection and event details give special-occasion guests a focused path from inspiration to a prepared inquiry.Room choice + event brief04Gifting experienceGift-card choices, recipient details, and a clear demo checkout boundary show how commerce can feel native to the brand.Gift flow + safe demo state05Responsive navigationDesktop and mobile navigation preserve direct routes to the menu, story, private dining, visit details, and reservation action.Desktop + phone patterns06Accessible interactionNative dialogs, keyboard tabs, visible focus, reduced-motion support, and Escape return behavior are part of the experience.Keyboard + 320px reflowDesigned across the whole journeyOne atmosphere. Every screen size.The desktop composition gives the brand room to breathe. The mobile experience protects that same hierarchy while keeping the reservation and menu paths close at hand.Desktop experience · 1440pxOpen live Velora · live conceptMobile experience · 390pxBrand atmosphereEditorial, but never ornamentalCormorant Garamond carries the dining voice while Manrope keeps navigation, forms, and practical details crisp. Forest, warm paper, antique gold, and muted wine create a distinct evening mood without obscuring utility.Guest confidenceThe next action stays obviousMenu discovery, reservation, private dining, gifting, and visit details each have a clear path. Validation and correction states explain what guests need without breaking the visual rhythm.Inclusive craftPolish continues through the edge casesSemantic landmarks, a skip link, visible keyboard focus, native dialogs, reduced-motion support, and tested small-screen reflow make the demonstration usable beyond its strongest screenshot.Concept disclosureThe work is real. The restaurant is not.Velora is a Cyvexly-built fictional capability demonstration, not a client engagement or an operating restaurant. Its name, address, phone, email, menus, chef, rooms, availability, policies, and offers are sample content.Reservation, private-event, newsletter, gifting, message, purchase, and payment moments run as local demonstration flows. They validate and confirm the experience without placing a real booking, sending a message, charging a card, or transmitting personal data to a restaurant service.Your guest journey, made unmistakableWhat should your website help guests do next?Tell us about your restaurant, venue, or hospitality concept—and the reservations, inquiries, events, or customer journey it needs to support. Cyvexly will recommend the right scope.Describe your hospitality project Return to the live demo",
+      "href": "/velora",
+      "focused": true,
+      "headings": [
+        "Capability you can see in the experience.",
+        "One atmosphere. Every screen size.",
+        "Editorial, but never ornamental",
+        "The next action stays obvious",
+        "Polish continues through the edge cases",
+        "The work is real. The restaurant is not.",
+        "What should your website help guests do next?"
+      ],
+      "capabilityCards": 6,
+      "desktopProof": {
+        "found": true,
+        "loaded": true,
+        "width": 687.609375,
+        "height": 386.453125
+      },
+      "mobileProof": {
+        "found": true,
+        "loaded": true,
+        "width": 158,
+        "height": 277.734375
+      },
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    "mobileCaseStudy": {
+      "width": 390,
+      "scrollWidth": 390,
+      "cta": "Open the interactive website",
+      "ctaHeight": 46,
+      "desktopProofVisible": true,
+      "mobileProofVisible": true
+    },
+    "demoReturned": true
+  },
+  "networkRequests": [
+    "chrome://resources/js/assert.js",
+    "chrome://resources/cr_elements/cr_icon/cr_icon.css.js",
+    "chrome://resources/cr_elements/cr_icon/iconset_map.js",
+    "chrome://resources/js/focus_outline_manager.js",
+    "chrome://resources/js/platform.js",
+    "chrome://resources/cr_elements/cr_ripple/cr_ripple_mixin.js",
+    "chrome://resources/cr_elements/cr_button/cr_button.css.js",
+    "chrome://resources/cr_elements/cr_button/cr_button.html.js",
+    "chrome://resources/js/parse_html_subset.js",
+    "chrome://resources/cr_elements/cr_lottie/cr_lottie.css.js",
+    "chrome://resources/cr_elements/cr_lottie/cr_lottie.html.js",
+    "chrome://intro/intro.mojom-webui.js",
+    "chrome://resources/cr_elements/cr_hidden_style_lit.css.js",
+    "chrome://resources/cr_elements/cr_icons_lit.css.js",
+    "chrome://resources/cr_elements/cr_shared_vars.css.js",
+    "chrome://intro/sign_in_promo.mojom-webui.js",
+    "chrome://resources/cr_elements/cr_icon/cr_iconset.js",
+    "chrome://resources/js/static_types.js",
+    "chrome://resources/cr_elements/cr_ripple/cr_ripple.js",
+    "chrome://resources/mojo/mojo/public/js/bindings.js",
+    "chrome://resources/cr_elements/cr_icon/cr_iconset.css.js",
+    "chrome://resources/cr_elements/cr_icon/cr_iconset.html.js",
+    "chrome://resources/mojo/mojo_browser_proxy.js",
+    "chrome://resources/js/event_tracker.js",
+    "chrome://resources/cr_elements/cr_ripple/cr_ripple.css.js",
+    "http://127.0.0.1:5200/velora",
+    "blob:chrome://intro/76b8a6a6-1542-4079-a54d-6a6e2aa7f365",
+    "blob:chrome://intro/b6df02db-3677-4d56-b190-d1eff776d2b9",
+    "blob:chrome://intro/90832e84-268b-4f23-9114-4ed064ac84fb",
+    "chrome://intro/images/devices.svg",
+    "chrome://intro/images/gshield.svg",
+    "chrome://intro/images/cloud_upload.svg",
+    "chrome://intro/animations/signin_benefits_light_left_static.json",
+    "chrome://intro/animations/signin_benefits_light_right_static.json",
+    "chrome://intro/animations/signin_benefits_light_bottom_static.json",
+    "chrome://intro/images/product-logo-animation.svg",
+    "http://127.0.0.1:5200/velora/assets/restaurant.webp",
+    "http://127.0.0.1:5200/velora/assets/manrope-regular-400.ttf",
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "http://127.0.0.1:5200/velora/assets/cormorant-regular-400.ttf",
+    "http://127.0.0.1:5200/velora/assets/manrope-regular-700.ttf",
+    "http://127.0.0.1:5200/velora/assets/manrope-regular-600.ttf",
+    "http://127.0.0.1:5200/velora/assets/cormorant-italic-400.ttf",
+    "http://127.0.0.1:5200/velora/assets/table.webp",
+    "http://127.0.0.1:5200/velora/assets/chef.webp",
+    "http://127.0.0.1:5200/velora/assets/drinks.webp",
+    "http://127.0.0.1:5200/velora/assets/cormorant-regular-500.ttf",
+    "http://127.0.0.1:5200/work",
+    "http://127.0.0.1:5200/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2",
+    "http://127.0.0.1:5200/_next/static/media/0c89a48fa5027cee-s.p.2cyn07wtgehh0.woff2",
+    "http://127.0.0.1:5200/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+    "http://127.0.0.1:5200/_next/static/chunks/2vmnzz-ht1fxq.css",
+    "http://127.0.0.1:5200/_next/static/chunks/3rs_voefqnf04.css",
+    "http://127.0.0.1:5200/_next/static/chunks/1y5r31uwwu3_k.js",
+    "http://127.0.0.1:5200/_next/static/chunks/3g8khadyzhoo-.js",
+    "http://127.0.0.1:5200/_next/static/chunks/3gote7s6h4f0z.js",
+    "http://127.0.0.1:5200/_next/static/chunks/1x8n7qntskrpq.js",
+    "http://127.0.0.1:5200/_next/static/chunks/turbopack-0_lcvs9fq1guy.js",
+    "http://127.0.0.1:5200/_next/static/chunks/2e2rf6u229-gx.js",
+    "http://127.0.0.1:5200/_next/static/chunks/049h2mpmsa2u4.js",
+    "http://127.0.0.1:5200/_next/static/chunks/3jw568b-pdfkg.js",
+    "http://127.0.0.1:5200/_next/static/chunks/3-_19q-coxq22.js",
+    "http://127.0.0.1:5200/_next/static/chunks/37hudeqa-k2ya.js",
+    "http://127.0.0.1:5200/_next/static/chunks/2unrtvtuh2agc.js",
+    "http://127.0.0.1:5200/media/velora-capability-demo.webp",
+    "http://127.0.0.1:5200/icon.svg",
+    "http://127.0.0.1:5200/?_rsc=2w9-JQzBEdMnhII4",
+    "http://127.0.0.1:5200/services?_rsc=2w9-JQzBEdMnhII4",
+    "http://127.0.0.1:5200/work?_rsc=2w9-JQzBEdMnhII4",
+    "http://127.0.0.1:5200/pricing?_rsc=2w9-JQzBEdMnhII4",
+    "http://127.0.0.1:5200/process?_rsc=2w9-JQzBEdMnhII4",
+    "http://127.0.0.1:5200/about?_rsc=2w9-JQzBEdMnhII4",
+    "http://127.0.0.1:5200/start?_rsc=2w9-JQzBEdMnhII4",
+    "http://127.0.0.1:5200/?_rsc=VC5G5spAifuB2Pf5",
+    "http://127.0.0.1:5200/?_rsc=q1vWSaOy6B75S8Zt",
+    "http://127.0.0.1:5200/services?_rsc=liatfR614J3Xiopu",
+    "http://127.0.0.1:5200/_next/static/chunks/3ziqjxrr67a-q.js",
+    "http://127.0.0.1:5200/work?_rsc=U-hHzRjiHNQcJKEt",
+    "http://127.0.0.1:5200/pricing?_rsc=eVCMZLY8iYWLk6FS",
+    "http://127.0.0.1:5200/_next/static/chunks/0gwtr8k4b00i8.js",
+    "http://127.0.0.1:5200/process?_rsc=-Ndp437WP8FcHgsP",
+    "http://127.0.0.1:5200/about?_rsc=DWhRfLNBMUooaPKd",
+    "http://127.0.0.1:5200/start?_rsc=ebxhI9ek-oKkZVJy",
+    "http://127.0.0.1:5200/_next/static/chunks/3xhcf3nifkd02.js",
+    "http://127.0.0.1:5200/work/velora-dining",
+    "http://127.0.0.1:5200/_next/image?url=%2Fmedia%2Fvelora-capability-demo.webp&w=1080&q=75",
+    "http://127.0.0.1:5200/_next/image?url=%2Fmedia%2Fvelora-capability-demo-mobile.webp&w=256&q=75",
+    "http://127.0.0.1:5200/_next/image?url=%2Fmedia%2Fvelora-capability-demo-mobile.webp&w=384&q=75",
+    "http://127.0.0.1:5200/?_rsc=7pwVVd0Ti3WNn2Be",
+    "http://127.0.0.1:5200/services?_rsc=7pwVVd0Ti3WNn2Be",
+    "http://127.0.0.1:5200/work?_rsc=7pwVVd0Ti3WNn2Be",
+    "http://127.0.0.1:5200/pricing?_rsc=7pwVVd0Ti3WNn2Be",
+    "http://127.0.0.1:5200/process?_rsc=7pwVVd0Ti3WNn2Be",
+    "http://127.0.0.1:5200/about?_rsc=7pwVVd0Ti3WNn2Be",
+    "http://127.0.0.1:5200/start?_rsc=7pwVVd0Ti3WNn2Be",
+    "http://127.0.0.1:5200/velora?_rsc=7pwVVd0Ti3WNn2Be",
+    "http://127.0.0.1:5200/?_rsc=cRmG2SGEKppGWNfp",
+    "http://127.0.0.1:5200/?_rsc=ElMqYocDPF9REyO4",
+    "http://127.0.0.1:5200/services?_rsc=q8NI1vo5l2NLJZXI",
+    "http://127.0.0.1:5200/work?_rsc=FwzkGTcxGZkPq3o7",
+    "http://127.0.0.1:5200/pricing?_rsc=ko-4D_EjH8bjrf9s",
+    "http://127.0.0.1:5200/process?_rsc=hKGy3p7G7hF6rxNz",
+    "http://127.0.0.1:5200/about?_rsc=XGB_tfZUlfxdY2t0",
+    "http://127.0.0.1:5200/start?_rsc=xG1xD17Qv192vTyx",
+    "http://127.0.0.1:5200/_next/image?url=%2Fmedia%2Fvelora-capability-demo.webp&w=384&q=75",
+    "http://127.0.0.1:5200/velora?_rsc=wCGQvimCuFzVf0CJ"
+  ],
+  "unexpectedNetwork": [],
+  "runtimeErrors": [],
+  "networkErrors": [],
+  "failures": [],
+  "passed": true
+}

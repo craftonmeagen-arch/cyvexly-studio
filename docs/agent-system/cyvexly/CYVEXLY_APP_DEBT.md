@@ -1,5 +1,25 @@
 # Cyvexly App Debt
 
+## Round 116 — Velora buyer-facing portfolio presentation
+
+Accepted/deployed source `fce01e8` completes the reachable reopening scope for
+`/work/velora-dining`: premium buyer language, six functional capability cards,
+complete uncropped responsive proof, design/accessibility decisions, layered
+concept disclosure, and a hospitality-specific conversion CTA. The unchanged
+live demo and Work → case study → demo route pass local visible/headless and
+public Chromium runs with zero failures/errors/origin issues. Remaining Chunk 6
+debt is two independent reviews.
+
+## Round 115 — HoneyHearted downloaded free-sample artifact
+
+Accepted/deployed source `6af5e3c` gives the generated sample Print button the
+44px product floor and verifies the actual downloaded local HTML at 390px,
+including self-containment, native activation, screenshot, and tagged one-page
+Letter PDF output. The next HoneyHearted dashboard/TPT publishing architecture
+is not Builder debt: Owner direction `2026-09-08-21` assigns it to Claude and
+keeps this scheduler paused. Owner-controlled Clerk, durable storage, exact TPT
+listing URLs, final catalog/assets, and launch approvals remain external gates.
+
 ## Round 114 — HoneyHearted forced-colors adaptability
 
 Proof source `dacec6a` adds a real-Chromium Windows High Contrast/forced-colors

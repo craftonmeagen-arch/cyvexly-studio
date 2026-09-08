@@ -5,80 +5,122 @@ history `2026-08-30-04`/`05` are preserved in
 `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`. The active scheduler boundary
 remains here deliberately.
 
-## Velora buyer-facing portfolio presentation direction 2026-09-08-20
+## EduAILenz and Mudoinkle completed-work portfolio direction 2026-09-08-22
 
-**Status:** ACTIVE — CURRENT TEAM TWO WEBSITE BUILDER PRIORITY
-**Source:** Owner via active Codex conversation after visible buyer-path review
+**Status:** ACTIVE — NEXT TEAM TWO WEBSITE BUILDER PORTFOLIO EXPANSION
+**Source:** Owner via active Codex conversation
 **Recorded:** 2026-09-08 America/New_York
 
 ### Owner direction — verbatim
 
-> “yes i agree. make that owners direction work. and then restart the
-> schedular if it isn't running”
+> “add to owners direction for cyvexly builder that i want to add eduailenz
+> and mudoinkle to the portfolio of completed works. these are complicated
+> websites so they should be able to sell capabilities. full authroization to
+> look in those folders to investigate that work”
 
-### Accepted review finding and required outcome
+### Required outcome and authority
 
-The Owner accepts the visible-review conclusion that the working Velora
-restaurant demonstration is strong, but the Cyvexly page reached from the
-Home-page Velora card (`/work/velora-dining`) undersells it. The landing page
-currently reads like a sparse internal project brief, repeats the fictional
-qualification too heavily in the opening, and follows the introductory card
-with an oversized crop that hides the complete composition. Rebuild this page
-as a premium buyer-facing capability presentation. Preserve the approved
-Cyvexly architectural-glass system and the existing truthful fictional
-boundary; do not disguise Velora as a real restaurant or client.
+- Create separate EduAILenz and Mudoinkle Work cards and buyer-facing case-study
+  pages. The verified read-only source roots are `C:/app projects/Eduailenze`
+  and `C:/app projects/Mudoinkle`. The Builder may inspect all relevant source,
+  product direction, architecture, tests, deployment configuration, approved
+  assets, and runtime evidence there. Do not modify those repositories or read,
+  expose, or copy secrets, `.env` values, credentials, private user/student
+  data, or unrelated generated dependencies.
+- Investigate before choosing claims and visuals. Sell complexity through a
+  clear capability story: EduAILenz can evidence verified teacher-controlled AI,
+  lesson/reading/media, assessment/reteach, sharing, and classroom-game systems;
+  Mudoinkle can evidence verified multi-game, mobile, real-time room, QR/cross-
+  device, resilient-state, account, accessibility, and infrastructure systems.
+  Source and rendered runtime truth decide the final claims.
+- “Completed works” is the requested portfolio placement, not permission to
+  invent a client, paid engagement, result, public launch, or finished feature.
+  Distinguish completed demonstrable capabilities from ongoing development and
+  describe Cyvexly's relationship to each product truthfully.
+- Use safe synthetic/demo desktop and mobile states. Exclude personal data,
+  private dashboards, credential screens, and assets without portfolio rights.
+  Link externally only when the exact public destination is verified safe and
+  intended; otherwise use an honest bounded visual demonstration.
+- Match the premium Velora standard: immediate value, large legible proof,
+  scannable capabilities, responsive/accessibility evidence, restrained honest
+  disclosure, and a prospect-specific conversion invitation. Verify discovery,
+  routes, metadata, keyboard/focus, performance, disclosures, and every CTA in
+  a visible desktop/mobile browser.
+- This is the next Team Two Website Builder portfolio expansion. Preserve the
+  accepted Velora source and Claude's HoneyHearted work. Direction
+  `2026-09-08-21` keeps the Builder scheduler paused until the Owner explicitly
+  resumes it; this direction does not itself change that state.
 
-### Required presentation changes
+## HoneyHearted owner dashboard and TPT commerce direction 2026-09-08-21
 
-1. Replace the sparse opening with an intentional showcase composition: concise
-   buyer-facing story and actions paired with a complete, uncropped desktop
-   presentation and a coordinated mobile view. Use Velora's forest, warm-paper,
-   antique-gold, and muted-wine visual language as a controlled feature stage
-   within Cyvexly's own page, so the transition looks designed rather than
-   pasted together.
-2. Lead with what Cyvexly designed and built and what that capability can do for
-   a hospitality business. Replace the internal-sounding “Audience:” sentence
-   with direct prospect language. The primary action should plainly open the
-   working interactive website; a secondary action may explain what was built.
-3. Keep one unmistakable concept/fictional label and one concise opening
-   disclosure. Move the full non-transmission and no-real-client explanation to
-   an appropriate detail area. Honesty remains mandatory, but repetition must
-   not make the work feel apologetic or bury the capability.
-4. Reorder the story around buyer evidence: premium introduction; large live-
-   experience preview; clearly scannable capabilities; large desktop/mobile
-   proof; design/accessibility decisions; detailed concept disclosure; and a
-   specific conversion invitation.
-5. Present reservation, seasonal-menu, private-event, gifting, responsive-
-   navigation, validation, and accessible-interaction capability visually, not
-   only as report-like bullet lists. Make the responsive captures substantially
-   larger and useful; support direct exploration where appropriate.
-6. Replace the generic closing with language that connects the demonstrated
-   hospitality experience to a prospect's own reservations, inquiries, or
-   customer journey, while preserving Cyvexly's consultative “describe your
-   project” service model.
-7. Keep the core `/velora` experience unless fresh rendered evidence identifies
-   a real defect. The immediate defect is its portfolio framing, not a mandate
-   to redesign the successful restaurant concept.
+**Status:** ACTIVE — AUTHORIZED ARCHITECTURE; IMPLEMENTATION HANDED TO CLAUDE
+**Source:** Owner via active Codex conversation
+**Recorded:** 2026-09-08 America/New_York
 
-### Completion and verification boundary
+### Owner direction — verbatim
 
-- Test the real path Home Velora card → `/work/velora-dining` → `/velora` in a
-  visible browser at desktop and mobile widths. The landing screen must be
-  immediately legible, visually intentional, uncropped, and clear about both
-  capability and fictional status.
-- Verify responsive layout, keyboard operation, focus, disclosure, internal
-  navigation, screenshot/preview fidelity, performance-sensitive media, and
-  all existing production gates. Do not accept source inspection or a headless-
-  only image as final visual proof.
-- This reopens reachable Chunk 6 portfolio-framing work as the current Builder
-  priority. HoneyHearted's accepted source and its independent-review/Owner-
-  input obligations remain valid in parallel and are not erased.
-- Continue Builder rounds until the accepted presentation is implemented,
-  deployed, and proved. Chunk 6 still requires its two separate independent
-  verification rounds after the new accepted source exists.
-- The existing Team Two Website Builder scheduler remains the authorized
-  scheduler: every 30 minutes at `:00`/`:30`, saved local project, GPT-5.6 Sol,
-  high reasoning, scheduler-managed non-overlap. Do not duplicate it.
+> “ok lets do option 2. she will need that complete set up. whcih means we will
+> need to set up clerk as well. whcih i will do soon. but put this in owners
+> direction. i will and pause the schedular. i will have claude do this wror
+> since i am runningh ouyt of chat credits”
+
+### Agent interpretation — not Owner-authored wording
+
+- “Option 2” means a complete, secure HoneyHearted owner dashboard for managing
+  website content while **Teachers Pay Teachers (TPT) remains the commerce,
+  checkout, order, paid-file-delivery, sales-reporting, and payout system**.
+  HoneyHearted must not accept card details, claim an on-site payment, create a
+  local paid order, or imply that HoneyHearted itself transferred money.
+- Implement a private owner experience that lets the authorized owner create,
+  edit, preview, publish, unpublish/archive, and reorder products; manage final
+  titles, descriptions, grade bands, categories, formats, prices displayed for
+  reference, approved covers/previews, exact TPT listing URLs, articles, and
+  other agreed editable website content. Public purchase actions must open the
+  exact corresponding TPT listing and clearly disclose that checkout occurs on
+  TPT.
+- Use **Clerk** for authentication. The Owner will create and control the Clerk
+  account/project soon. Protect every owner route and every write operation on
+  the server, restrict administration to the explicitly approved owner
+  identity, provide safe sign-in/sign-out/session recovery and unauthorized
+  states, and use production-domain configuration before launch. A visible
+  login screen alone is not authorization. Clerk keys and all other secrets
+  must be entered through protected environment controls and must never be
+  committed, embedded in client-visible source, reports, screenshots, or chat.
+- Clerk supplies identity/session infrastructure; the implementation still
+  needs durable product/content data, approved asset storage, validation,
+  publication state, backups/recovery, and an auditable safe deployment path.
+  Choose and document a proportionate backend and storage solution without
+  fabricating an external account. Placeholder/local adapters may support
+  development until the Owner creates each required account, but they cannot be
+  represented as production persistence.
+- The owner dashboard does not replace the TPT Seller Dashboard. The Owner must
+  create/control the TPT Seller account, product listings, tax/payout identity,
+  Hyperwallet transfer method, product files, licenses, pricing, refund/support
+  practices, and exact public URLs. HoneyHearted may display and promote that
+  approved information but must not claim TPT accepted a listing or issued a
+  payout until it actually did.
+- The complete setup includes responsive and accessible dashboard workflows;
+  validation, error/retry/recovery states; safe upload restrictions; draft and
+  preview behavior; secure deployment configuration; contact/newsletter
+  integration where approved; truthful policies; logging without secrets or
+  unnecessary personal data; and end-to-end proof of owner edit → public
+  publication → exact TPT product navigation.
+- The Owner has assigned this implementation to **Claude** because current
+  Codex chat credits are running low. Preserve Claude's work and do not start a
+  competing Team Two Website Builder implementation. The existing Team Two
+  Website Builder scheduler must remain **PAUSED** until the Owner explicitly
+  asks to resume it. Pausing does not erase the saved prompt, cadence, model, or
+  reasoning settings.
+
+## Velora buyer-facing portfolio presentation direction 2026-09-08-20
+
+**Status:** IMPLEMENTED/DEPLOYED ROUND 116 — INDEPENDENT REVIEWS REMAIN
+
+The full Owner direction and interpretation are preserved verbatim in
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`. The accepted result and
+remaining review boundary stay live in `CYVEXLY_PROJECT_CHUNK_MAP.md` and
+`CYVEXLY_CURRENT_STATE.md`; archiving the fulfilled build brief does not erase
+them.
 
 ## HoneyHearted fully functional website direction 2026-09-08-19
 

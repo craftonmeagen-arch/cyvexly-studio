@@ -7,17 +7,34 @@ this file.
 
 ## Known later substitutions
 
+- Owner authentication: Owner-controlled Clerk project, approved owner email or
+  identity, production domain/redirect configuration, and Clerk environment
+  secrets entered through protected deployment controls. **Current safe
+  behavior:** the standalone site has no login or owner write access.
+  **Activation:** Claude will implement server-enforced owner-only dashboard
+  access using Clerk; never place Clerk secret keys in source, documentation,
+  screenshots, or chat.
+- Dashboard data and assets: selected durable database/content store, approved
+  image/file storage, upload limits, publication workflow, and backup/recovery
+  ownership. **Current safe behavior:** catalog/content and embedded assets live
+  in the standalone HTML source and are changed through code. **Activation:**
+  connect the authenticated dashboard to durable storage, migrate approved
+  records/assets, and prove owner edit, preview, publish, rollback, and public
+  rendering paths.
+
 - Final product catalog: approved titles, descriptions, grade bands, formats,
   prices, preview art, downloadable files, and publication rights. **Current
   safe behavior:** six clearly described resource/collection cards render from
   the `PRODUCTS` data block; illustrative concepts and draft claims are
   disclosed. **Activation:** replace those records and embedded previews only
   after checking each final listing and asset right.
-- Commerce destination: confirmed Teachers Pay Teachers store/product URLs or
-  the Owner's chosen storefront/payment approach. **Current safe behavior:**
+- Commerce destination: the Owner has chosen Teachers Pay Teachers for checkout,
+  orders, paid-file delivery, sales reporting, and payouts. The remaining inputs
+  are the confirmed TPT store URL and exact product-listing URLs. **Current safe behavior:**
   blank destinations open a notice saying no purchase or download occurred.
-  **Activation:** populate `SITE_CONFIG.tptStoreUrl` and exact
-  `productLinks`; do not substitute a search page for a product listing.
+  **Activation:** connect each published dashboard product to its exact approved
+  TPT listing; do not substitute a search page for a product listing and do not
+  collect card details or claim local payment/order completion.
 - Public identity: final HoneyHearted business/creator display name, public
   email, and approved About details. **Current safe behavior:** proposed Meagen
   copy is visibly marked for Owner review and makes no invented credential,
