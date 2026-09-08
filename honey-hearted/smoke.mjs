@@ -170,19 +170,20 @@ async function main() {
     };
 
     const key = async (value) => {
-      const keyCodes = { Enter: 13, Escape: 27, Tab: 9 };
+      const keyCodes = { Enter: 13, Escape: 27, Tab: 9, " ": 32 };
+      const keyCodesByValue = { " ": "Space" };
       const windowsVirtualKeyCode =
         keyCodes[value] || value.toUpperCase().charCodeAt(0);
       await cdp.call("Input.dispatchKeyEvent", {
-        type: "keyDown",
+        type: "rawKeyDown",
         key: value,
-        code: value,
+        code: keyCodesByValue[value] || value,
         windowsVirtualKeyCode,
       });
       await cdp.call("Input.dispatchKeyEvent", {
         type: "keyUp",
         key: value,
-        code: value,
+        code: keyCodesByValue[value] || value,
         windowsVirtualKeyCode,
       });
     };
@@ -260,6 +261,16 @@ async function main() {
     await screenshot("honey-hearted-desktop-top.png");
     await screenshot("honey-hearted-desktop-full.png", true);
 
+    await evaluate("document.body.focus();return true;");
+    await key("Tab");
+    await settle();
+    const skipBefore = await evaluate("const a=document.activeElement;const r=a.getBoundingClientRect();return {text:a.textContent.trim(),href:a.getAttribute('href'),top:r.top,height:r.height};");
+    await key("Enter");
+    await settle();
+    const skipAfter = await evaluate("return {hash:location.hash,focused:document.activeElement.id};");
+    check(skipBefore.text === "Skip to main content" && skipBefore.href === "#main" && skipBefore.top >= 0, "A real first Tab did not reveal the skip link.");
+    check(skipAfter.hash === "#main" && skipAfter.focused === "main", "Real Enter activation did not move the skip link to the main landmark.");
+
     const catalog = await evaluate(`
       const input=document.querySelector('#resource-search');
       input.value='middle school';input.dispatchEvent(new Event('input',{bubbles:true}));
@@ -274,6 +285,24 @@ async function main() {
     check(catalog.search.count === 1 && catalog.search.text.startsWith("1 resource"), "Catalog search did not narrow to the middle-school resource.");
     check(catalog.reading.count === 1 && catalog.reading.pressed === "true", "Category filtering did not expose the reading collection.");
     check(catalog.reset.count === 6 && catalog.reset.query === "", "Catalog reset did not restore all resources.");
+
+    const catalogDepth = await evaluate(`
+      const query=document.querySelector('#resource-search');
+      const grade=document.querySelector('#grade-filter');
+      const format=document.querySelector('#format-filter');
+      query.value='would rather';query.dispatchEvent(new Event('input',{bubbles:true}));
+      grade.value='68';grade.dispatchEvent(new Event('change',{bubbles:true}));
+      format.value='digital';format.dispatchEvent(new Event('change',{bubbles:true}));
+      const combination={count:document.querySelectorAll('#product-grid .product-card').length,title:document.querySelector('#product-grid h3')?.textContent.trim(),resetVisible:!document.querySelector('#clear-filters').hidden};
+      grade.value='teacher';grade.dispatchEvent(new Event('change',{bubbles:true}));
+      const empty={count:document.querySelectorAll('#product-grid .product-card').length,heading:document.querySelector('#product-grid .empty h3')?.textContent.trim(),status:document.querySelector('#result-count').textContent,reset:Boolean(document.querySelector('[data-reset]'))};
+      document.querySelector('[data-reset]').click();
+      const recovered={count:document.querySelectorAll('#product-grid .product-card').length,query:query.value,grade:grade.value,format:format.value,empty:Boolean(document.querySelector('.empty'))};
+      return {combination,empty,recovered};
+    `);
+    check(catalogDepth.combination.count === 1 && catalogDepth.combination.title.includes("Grades 6–8") && catalogDepth.combination.resetVisible, "Combined query/grade/format filters did not isolate the expected middle-school resource.");
+    check(catalogDepth.empty.count === 0 && catalogDepth.empty.reset && catalogDepth.empty.status.startsWith("0 resources"), "Incompatible filters did not expose the truthful empty/recovery state.");
+    check(catalogDepth.recovered.count === 6 && catalogDepth.recovered.query === "" && catalogDepth.recovered.grade === "all" && catalogDepth.recovered.format === "all" && !catalogDepth.recovered.empty, "Empty-state recovery did not restore the complete catalog and controls.");
 
     const product = await evaluate(`
       document.querySelector('a[href="#resource/planner"]').click();
@@ -294,6 +323,28 @@ async function main() {
     const dialogReturn = await evaluate("return {open:document.querySelector('#zoom-dialog').open,locked:document.body.classList.contains('locked'),focused:document.activeElement.id};");
     check(!dialogReturn.open && !dialogReturn.locked && dialogReturn.focused === "gallery-return", "Escape did not close the gallery and return focus to its trigger.");
 
+    const productTruth = await evaluate(`
+      const details=[];
+      for(const product of PRODUCTS){
+        location.hash='home';await new Promise(accept=>setTimeout(accept,40));
+        location.hash='resource/'+product.id;await new Promise(accept=>setTimeout(accept,70));
+        details.push({
+          id:product.id,
+          title:document.querySelector('#detail-view h1')?.textContent.trim(),
+          conceptLabel:document.querySelector('.gallery-stage .art-label')?.textContent.trim(),
+          hasPurchase:Boolean(document.querySelector('[data-product-link]')),
+          hasQuestion:Boolean(document.querySelector('.product-info a[href="#contact"]')),
+          note:document.querySelector('.subtle-warning')?.textContent.trim(),
+          imageAlt:document.querySelector('.gallery-stage img')?.getAttribute('alt')||'',
+        });
+      }
+      return details;
+    `);
+    check(productTruth.length === 6 && productTruth.every((item) => item.title), "One or more catalog records did not render a complete detail route.");
+    check(productTruth.filter((item) => item.conceptLabel === "Existing product preview").length === 2 && productTruth.filter((item) => item.conceptLabel === "Existing product preview").every((item) => item.imageAlt && (item.note.includes("Confirm") || item.note.includes("Verify"))), "Existing preview assets lost their alt text or verification disclosure.");
+    check(productTruth.filter((item) => item.conceptLabel === "Illustrative cover").every((item) => item.note.toLowerCase().includes("illustrative") || item.note.toLowerCase().includes("proposed")), "Illustrative catalog art is not consistently disclosed.");
+    check(productTruth.find((item) => item.id === "reading")?.hasQuestion && !productTruth.find((item) => item.id === "reading")?.hasPurchase, "The unfinished reading collection incorrectly exposes a purchase action.");
+
     const connectionNotice = await evaluate(`
       location.hash='home';await new Promise(accept=>setTimeout(accept,100));
       const before=location.href;document.querySelector('[data-store]').click();await new Promise(accept=>setTimeout(accept,50));
@@ -301,6 +352,35 @@ async function main() {
     `);
     check(connectionNotice.same && connectionNotice.open && connectionNotice.text.includes("Nothing has been purchased or downloaded"), "Unconnected store action was not safely disclosed.");
     await evaluate("document.querySelector('#notice-dialog [data-close]').click();return true;");
+
+    const dialogButtonReturn = await evaluate(`
+      location.hash='home';await new Promise(accept=>setTimeout(accept,100));
+      const trigger=document.querySelector('[data-store]');trigger.id='store-return';trigger.focus();trigger.click();
+      await new Promise(accept=>setTimeout(accept,50));
+      document.querySelector('#notice-dialog [data-close]').focus();
+      return {open:document.querySelector('#notice-dialog').open,focused:document.activeElement.getAttribute('aria-label')};
+    `);
+    const dialogButtonClosed = await evaluate(`
+      document.querySelector('#notice-dialog [data-close]').click();
+      await new Promise(accept=>setTimeout(accept,50));
+      return {open:document.querySelector('#notice-dialog').open,focused:document.activeElement.id};
+    `);
+    check(dialogButtonReturn.open && dialogButtonReturn.focused === "Close notice", "Notice dialog close control was not focusable.");
+    check(!dialogButtonClosed.open && dialogButtonClosed.focused === "store-return", "Explicit dialog close did not return focus to its invoking control.");
+
+    const activationSafety = await evaluate(`
+      return {
+        tptExact:Boolean(safeTPT('https://www.teacherspayteachers.com/Store/HoneyHearted')),
+        tptBare:Boolean(safeTPT('https://teacherspayteachers.com/Store/HoneyHearted')),
+        rejectsHttp:!safeTPT('http://www.teacherspayteachers.com/Store/HoneyHearted'),
+        rejectsLookalike:!safeTPT('https://teacherspayteachers.com.example.test/store'),
+        rejectsCredentials:!safeHTTPS('https://user:secret@example.test/path'),
+        acceptsPublicHttps:Boolean(safeHTTPS('https://example.test/path')),
+        acceptsEmail:safeEmail('hello+resources@example.test')==='hello+resources@example.test',
+        rejectsEmailQuery:!safeEmail('hello@example.test?subject=unexpected'),
+      };
+    `);
+    check(Object.values(activationSafety).every(Boolean), "External-destination validation accepted an unsafe URL or rejected an allowed public HTTPS/TPT URL.");
 
     await evaluate("location.hash='sample';return true;");
     await settle();
@@ -345,21 +425,90 @@ async function main() {
     await settle();
     const forms = await evaluate(`
       const contact=document.querySelector('#contact-form');
+      contact.reset();
+      contact.requestSubmit();
+      const contactInvalid={valid:contact.checkValidity(),focused:document.activeElement.id,invalid:[...contact.querySelectorAll(':invalid')].map(field=>field.id)};
       document.querySelector('#contact-name').value='Alex';
-      document.querySelector('#contact-email').value='alex@example.com';
+      document.querySelector('#contact-email').value='not-an-email';
       document.querySelector('#contact-subject').value='Report a resource error';
+      document.querySelector('#contact-message').value='short';
+      contact.requestSubmit();
+      const contactCorrection={valid:contact.checkValidity(),focused:document.activeElement.id,emailInvalid:document.querySelector('#contact-email').matches(':invalid'),messageInvalid:document.querySelector('#contact-message').matches(':invalid')};
+      document.querySelector('#contact-email').value='alex@example.com';
       document.querySelector('#contact-message').value='The planner preview needs a closer look.';
       contact.requestSubmit();
       const contactResult={status:document.querySelector('#contact-status').textContent,name:document.querySelector('#contact-name').value,subject:document.querySelector('#contact-subject').value};
       const newsletter=document.querySelector('#newsletter-form');
+      newsletter.reset();
+      newsletter.requestSubmit();
+      const newsletterInvalid={valid:newsletter.checkValidity(),focused:document.activeElement.id,invalid:[...newsletter.querySelectorAll(':invalid')].map(field=>field.id)};
       document.querySelector('#newsletter-email').value='alex@example.com';
       document.querySelector('#newsletter-consent').checked=true;
       newsletter.requestSubmit();
       const newsletterResult={status:document.querySelector('#newsletter-status').textContent,email:document.querySelector('#newsletter-email').value,consent:document.querySelector('#newsletter-consent').checked};
-      return {contactResult,newsletterResult};
+      return {contactInvalid,contactCorrection,contactResult,newsletterInvalid,newsletterResult};
     `);
+    check(!forms.contactInvalid.valid && forms.contactInvalid.focused === "contact-name" && forms.contactInvalid.invalid.includes("contact-email") && forms.contactInvalid.invalid.includes("contact-message"), "Empty contact submission did not use native validation and focus the first invalid field.");
+    check(!forms.contactCorrection.valid && forms.contactCorrection.focused === "contact-email" && forms.contactCorrection.emailInvalid && !forms.contactCorrection.messageInvalid, "Contact correction test did not focus the remaining invalid email before a successful resubmission.");
     check(forms.contactResult.status.includes("not been sent or saved") && forms.contactResult.name === "Alex" && forms.contactResult.subject === "Report a resource error", "Contact preview did not disclose non-delivery and preserve the visitor's entry.");
+    check(!forms.newsletterInvalid.valid && forms.newsletterInvalid.focused === "newsletter-email" && forms.newsletterInvalid.invalid.includes("newsletter-consent"), "Empty newsletter submission did not use native validation and expose the required consent state.");
     check(forms.newsletterResult.status.includes("not been subscribed") && forms.newsletterResult.email === "alex@example.com" && forms.newsletterResult.consent, "Newsletter preview did not disclose non-subscription and preserve the entry.");
+
+    const adapterRecovery = await evaluate(`
+      const originalFetch=window.fetch;
+      const originalAnchorClick=HTMLAnchorElement.prototype.click;
+      const calls=[];
+      SITE_CONFIG.preview=false;
+      SITE_CONFIG.newsletterEndpoint='https://example.test/newsletter';
+      window.fetch=async (...args)=>{calls.push(args[0]);return {ok:false,json:async()=>({accepted:false})};};
+      const newsletter=document.querySelector('#newsletter-form');
+      newsletter.reset();
+      document.querySelector('#newsletter-email').value='teacher@example.com';
+      document.querySelector('#newsletter-consent').checked=true;
+      newsletter.requestSubmit();
+      await new Promise(accept=>setTimeout(accept,30));
+      const failed={status:document.querySelector('#newsletter-status').textContent,error:document.querySelector('#newsletter-status').classList.contains('error'),disabled:newsletter.querySelector('button').disabled};
+      window.fetch=async (...args)=>{calls.push(args[0]);return {ok:true,json:async()=>({accepted:true})};};
+      newsletter.requestSubmit();
+      await new Promise(accept=>setTimeout(accept,30));
+      const retried={status:document.querySelector('#newsletter-status').textContent,error:document.querySelector('#newsletter-status').classList.contains('error'),email:document.querySelector('#newsletter-email').value,consent:document.querySelector('#newsletter-consent').checked,disabled:newsletter.querySelector('button').disabled};
+      let mailto='';
+      HTMLAnchorElement.prototype.click=function(){mailto=this.href;};
+      SITE_CONFIG.contactEmail='hello@example.test';
+      const contact=document.querySelector('#contact-form');
+      document.querySelector('#contact-name').value='Alex';
+      document.querySelector('#contact-email').value='alex@example.com';
+      document.querySelector('#contact-message').value='Please help with the planner preview.';
+      contact.requestSubmit();
+      const contactDraft={status:document.querySelector('#contact-status').textContent,mailto};
+      window.fetch=originalFetch;
+      HTMLAnchorElement.prototype.click=originalAnchorClick;
+      SITE_CONFIG.preview=true;
+      SITE_CONFIG.newsletterEndpoint='';
+      SITE_CONFIG.contactEmail='';
+      return {calls,failed,retried,contactDraft};
+    `);
+    check(adapterRecovery.calls.length === 2 && adapterRecovery.failed.error && !adapterRecovery.failed.disabled && adapterRecovery.failed.status.includes("could not be confirmed"), "Newsletter adapter failure did not expose a retryable, truthful error state.");
+    check(!adapterRecovery.retried.error && !adapterRecovery.retried.disabled && adapterRecovery.retried.email === "" && !adapterRecovery.retried.consent && adapterRecovery.retried.status.includes("accepted"), "Newsletter adapter retry did not recover to a confirmed success state.");
+    check(adapterRecovery.contactDraft.mailto.startsWith("mailto:hello@example.test") && adapterRecovery.contactDraft.mailto.includes("alex%40example.com") && adapterRecovery.contactDraft.status.includes("website has not sent it"), "Connected contact adapter did not prepare a truthful encoded email draft.");
+
+    await viewport(640, 900);
+    await navigate();
+    const zoomEquivalent = await evaluate(`
+      const controls=[...document.querySelectorAll('button,a,input,select,textarea')].filter(node=>node.offsetParent!==null);
+      return {width:innerWidth,scrollWidth:document.documentElement.scrollWidth,smallTargets:controls.filter(node=>{const r=node.getBoundingClientRect();return r.width<24||r.height<24;}).slice(0,10).map(node=>node.id||node.textContent.trim().slice(0,40)),hero:document.querySelector('#hero-title').getBoundingClientRect().toJSON()};
+    `);
+    check(zoomEquivalent.width === 640 && zoomEquivalent.scrollWidth === 640 && zoomEquivalent.hero.left >= 0 && zoomEquivalent.hero.right <= 640, "The 200%-zoom-equivalent 640px layout overflowed or clipped the primary heading.");
+
+    const imageFallback = await evaluate(`
+      location.hash='resource/middle';await new Promise(accept=>setTimeout(accept,100));
+      const image=document.querySelector('.gallery-stage img');
+      image.src='data:image/png;base64,';
+      await new Promise(accept=>setTimeout(accept,100));
+      const rect=image.getBoundingClientRect();
+      return {complete:image.complete,naturalWidth:image.naturalWidth,alt:image.alt,width:rect.width,scrollWidth:document.documentElement.scrollWidth,viewport:innerWidth};
+    `);
+    check(imageFallback.complete && imageFallback.naturalWidth === 0 && imageFallback.alt.includes("middle-school") && imageFallback.width > 0 && imageFallback.scrollWidth === imageFallback.viewport, "A failed catalog preview image lost its descriptive fallback or caused layout overflow.");
 
     await viewport(390, 844);
     await navigate();
@@ -415,13 +564,22 @@ async function main() {
       testedAt: new Date().toISOString(),
       route,
       desktop,
+      skipLink: { before: skipBefore, after: skipAfter },
       catalog,
+      catalogDepth,
       product,
+      productTruth,
       dialogReturn,
+      dialogButtonReturn,
+      dialogButtonClosed,
       connectionNotice,
+      activationSafety,
       sample: { ...sample, download, downloadSize, print },
       contentRoutes,
       forms,
+      adapterRecovery,
+      zoomEquivalent,
+      imageFallback,
       mobile,
       mobileEscape,
       reducedMotion,
