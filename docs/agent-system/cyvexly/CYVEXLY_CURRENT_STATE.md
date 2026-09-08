@@ -1,9 +1,17 @@
 # Cyvexly Current State
 
-**Global round:** 108. **Active product work:** Chunk 7 — HoneyHearted
-Functional Storefront, chunk-local round 9, opened under Owner direction
+**Global round:** 109. **Active product work:** Chunk 7 — HoneyHearted
+Functional Storefront, chunk-local round 10, opened under Owner direction
 `2026-09-08-19`. Chunk 6 remains open in parallel only for its two required
 independent reviews; Chunk 5 remains open only for Owner/account gates.
+
+Round 109 found and fixed a keyboard-continuity defect in the Back to top
+control. The deployed baseline scrolled to the top, hid the activated button,
+and left focus on `BODY`. Accepted/deployed source `7b9813c` moves focus to the
+visible hero heading before scrolling. The real-Space-key regression and the
+complete local/public suites pass with zero workflow/runtime/network errors;
+TypeScript, lint (one known evidence warning), and the 53-route build pass.
+Two independent reviews remain.
 
 Round 108 found and fixed a responsive keyboard-focus defect: when an open
 mobile menu crossed the desktop breakpoint, Chromium closed the menu but lost

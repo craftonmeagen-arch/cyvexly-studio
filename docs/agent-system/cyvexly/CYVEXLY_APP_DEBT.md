@@ -1,5 +1,16 @@
 # Cyvexly App Debt
 
+## Round 109 — HoneyHearted Back to top focus continuity
+
+Accepted/deployed source `7b9813c` fixes the Back to top control hiding itself
+after scroll completion while leaving keyboard focus on `BODY`. The handler
+now makes the visible hero heading programmatically focusable, focuses it
+without an extra scroll, and preserves reduced-motion-aware scrolling. The new
+real-Space-key regression fails on public `1c49c00` and passes locally and on
+production at `7b9813c`; the focus capture visibly shows the heading outline.
+TypeScript, lint (one known evidence warning), the 53-route build, and complete
+suites pass. Two independent reviews remain the only reachable Chunk 7 debt.
+
 ## Round 108 — HoneyHearted responsive-menu focus continuity
 
 Accepted/deployed source `1c49c00` fixes breakpoint-driven focus loss from the

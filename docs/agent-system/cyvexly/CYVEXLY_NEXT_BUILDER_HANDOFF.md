@@ -1,5 +1,31 @@
 # Team Two Website Builder — Cyvexly Next Handoff
 
+## Round 109 / Chunk 7 round 10 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `01a60fe` on `main`, matched `origin/main`
+**Accepted product/test source:** `7b9813c` on `main`, pushed and adopted
+**Authority:** Owner direction `2026-09-08-19`
+
+Found and fixed Back to top focus loss. On deployed `1c49c00`, a real Space-
+key activation scrolled to the top and hid the trigger but left focus on
+`BODY`. The handler now moves focus to the visible hero heading before the
+reduced-motion-aware scroll. The new regression fails on the previous public
+source and passes locally/publicly at `7b9813c`; the opened focus capture shows
+the heading outline.
+
+TypeScript, lint (one known round-42 evidence warning), the 53-route build, and
+the complete local/public Chrome suites pass with zero workflow/runtime/network/
+unexpected-origin errors. Retain only the before/local/public result JSONs and
+the local focus capture under
+`builder/evidence/round-109-honey-hearted-back-top/` until independent review
+consumes them. The owned port-5192 runtime is stopped; 27,264,120 bytes of
+redundant captures/download output were removed at closeout.
+
+**Next Builder round:** disposition review intake first. Do not repeat the same
+Builder matrix without fresh evidence. Chunk 7 still needs two independent
+reviews; Owner substitutions remain unchanged.
+
 ## Round 108 / Chunk 7 round 9 closeout
 
 **Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
@@ -50,33 +76,9 @@ bytes of redundant captures/download/runtime output.
 Builder matrix without fresh evidence. Chunk 7 still needs two independent
 reviews; Owner substitutions remain unchanged.
 
-## Round 106 / Chunk 7 round 7 closeout
-
-**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
-**Start source:** `2275b0d` on `main`, matched `origin/main`
-**Accepted product source:** unchanged at `165b246`
-**Accepted proof source:** `f4adb32` on `main`
-**Authority:** Owner direction `2026-09-08-19`
-
-No new independent-review intake existed. Added a distinct 18-route
-accessibility contract rather than repeating prior workflow coverage. Real
-Chromium now checks every Home, product, article, sample, About, policy,
-launch, and recovery state for visible H1/heading order, named controls,
-labeled fields, valid ARIA references, available embedded images, and
-client-route heading focus. The initial heading alert was correctly diagnosed
-as an instrument false positive from decorative `aria-hidden` cover text; no
-product defect or product-source change resulted.
-
-TypeScript, lint (one known round-42 evidence warning), the 53-route build, and
-the complete local/public Chrome suites pass with zero workflow/runtime/network
-errors. Retain only `local-result.json` and `production-result.json` under
-`builder/evidence/round-106-honey-hearted-route-contract/` until independent
-review consumes them. Stopped the owned port-5189 runtime and recycled
-5,177,992 bytes of redundant captures/download output.
-
-**Next Builder round:** disposition review intake first. Do not repeat the same
-Builder matrix without fresh evidence. Chunk 7 still needs two independent
-reviews; Owner substitutions remain unchanged.
+Round 106's full handoff rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_106_REPORT.md` when Round 109
+established the latest-three handoff window.
 
 Round 105's full handoff rotated to
 `docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_105_REPORT.md` when Round 108

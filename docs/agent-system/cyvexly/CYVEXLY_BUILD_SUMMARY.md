@@ -15,6 +15,15 @@ baseline, not current decision gaps.
 Older setup and rounds 1-10 are preserved in
 `docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
 
+## Round 109 / HoneyHearted chunk round 10 — 2026-09-08
+
+Fixed Back to top keyboard continuity. On deployed `1c49c00`, real Space-key
+activation scrolled to the top, hid the trigger, and left focus on `BODY`.
+Accepted/deployed source `7b9813c` moves focus to the visible hero heading
+before scrolling; the focus ring is visibly rendered there. The complete
+local/public Chromium suites, TypeScript, lint (one known evidence warning),
+and the 53-route build pass. Two independent reviews remain.
+
 ## Round 108 / HoneyHearted chunk round 9 — 2026-09-08
 
 Fixed responsive navigation focus continuity. The deployed baseline lost the
