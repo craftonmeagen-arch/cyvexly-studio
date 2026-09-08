@@ -7,10 +7,12 @@ import { tmpdir } from "node:os";
 const url = process.argv[2] || "http://127.0.0.1:5183/";
 const evidenceDir = resolve(process.argv[3] || "docs/agent-system/cyvexly/builder/evidence/velora-smoke");
 const chromePath = process.env.CHROME_PATH || "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const sourceRef = process.env.CYVEXLY_SOURCE_REF || "unrecorded-working-tree";
 const profileDir = join(tmpdir(), `cyvexly-velora-smoke-${process.pid}-${Date.now()}`);
 const failures = [];
 const runtimeErrors = [];
 const networkErrors = [];
+const networkRequests = [];
 
 function check(condition, message) {
   if (!condition) failures.push(message);
@@ -97,6 +99,7 @@ async function main() {
     cdp.onEvent((message) => {
       if (message.method === "Runtime.exceptionThrown") runtimeErrors.push(message.params.exceptionDetails.text);
       if (message.method === "Network.loadingFailed" && !message.params.canceled) networkErrors.push(message.params.errorText);
+      if (message.method === "Network.requestWillBeSent") networkRequests.push(message.params.request.url);
     });
     await cdp.call("Page.enable");
     await cdp.call("Runtime.enable");
@@ -115,6 +118,15 @@ async function main() {
     const viewport = async (width, height) => {
       await cdp.call("Emulation.setDeviceMetricsOverride", { width, height, screenWidth: width, screenHeight: height, deviceScaleFactor: 1, mobile: width < 600 });
     };
+
+    const key = async (value, modifiers = 0) => {
+      const keyCodes = { ArrowDown: 40, ArrowLeft: 37, ArrowRight: 39, ArrowUp: 38, End: 35, Enter: 13, Escape: 27, Home: 36, Tab: 9 };
+      const windowsVirtualKeyCode = keyCodes[value] || value.toUpperCase().charCodeAt(0);
+      await cdp.call("Input.dispatchKeyEvent", { type: "keyDown", key: value, code: value, modifiers, windowsVirtualKeyCode });
+      await cdp.call("Input.dispatchKeyEvent", { type: "keyUp", key: value, code: value, modifiers, windowsVirtualKeyCode });
+    };
+
+    const settle = (milliseconds = 100) => new Promise((accept) => setTimeout(accept, milliseconds));
 
     const navigate = async () => {
       await cdp.call("Page.navigate", { url });
@@ -172,6 +184,84 @@ async function main() {
     check(desktop.hero.rect.top >= 0 && desktop.hero.rect.bottom <= 900 && desktop.hero.style.opacity === "1" && desktop.hero.style.visibility === "visible", "Desktop hero heading is not visibly positioned.");
     await screenshot("final-desktop-top.png");
 
+    const provenance = await evaluate(`
+      const imageOrigins=[...new Set([...document.images].map(image=>new URL(image.src).origin))];
+      const externalLinks=[...document.querySelectorAll('a[href^="http"]')].map(link=>new URL(link.href).origin);
+      return {
+        imageOrigins,
+        externalLinks:[...new Set(externalLinks)],
+        actionForms:document.querySelectorAll('form[action]').length,
+        noindex:document.querySelector('meta[name="robots"]')?.content.includes('noindex')||false,
+        imageCount:document.images.length,
+        disclosed:document.body.innerText.toLowerCase().includes('illustrative photography'),
+      };
+    `);
+    check(provenance.imageOrigins.length === 1 && provenance.imageOrigins[0] === "https://images.unsplash.com", "Velora images do not come exclusively from the disclosed Unsplash origin.");
+    check(provenance.actionForms === 0 && provenance.noindex && provenance.disclosed, "Demo form, indexing, or illustrative-image disclosure boundaries are incomplete.");
+
+    await evaluate("document.querySelector('#tab-dinner').focus();return true;");
+    await key("ArrowRight");
+    const menuKeyboard = await evaluate(`
+      return {
+        focused:document.activeElement.id,
+        selected:document.querySelector('#tab-tasting').getAttribute('aria-selected'),
+        labelledBy:document.querySelector('#menu-panel').getAttribute('aria-labelledby'),
+      };
+    `);
+    check(menuKeyboard.focused === "tab-tasting" && menuKeyboard.selected === "true" && menuKeyboard.labelledBy === "tab-tasting", "ArrowRight did not move and select the next menu tab.");
+    await key("End");
+    const menuEnd = await evaluate("return {focused:document.activeElement.id,selected:document.querySelector('#tab-bar').getAttribute('aria-selected')};");
+    check(menuEnd.focused === "tab-bar" && menuEnd.selected === "true", "End did not move to the final menu tab.");
+
+    await evaluate("document.querySelector('#room-tab-wine').focus();return true;");
+    await key("ArrowDown");
+    const roomKeyboard = await evaluate(`
+      return {
+        focused:document.activeElement.id,
+        selected:document.querySelector('#room-tab-salon').getAttribute('aria-selected'),
+        labelledBy:document.querySelector('#room-panel').getAttribute('aria-labelledby'),
+      };
+    `);
+    check(roomKeyboard.focused === "room-tab-salon" && roomKeyboard.selected === "true" && roomKeyboard.labelledBy === "room-tab-salon", "ArrowDown did not move and select the next private-room tab.");
+
+    const imageFallback = await evaluate(`
+      const image=document.querySelector('.editorial-card .photo img');
+      const parent=image.closest('.photo');
+      image.dispatchEvent(new Event('error'));
+      const failed={opacity:image.style.opacity,fallback:parent.classList.contains('has-fallback')};
+      image.dispatchEvent(new Event('load'));
+      return {failed,recovered:{opacity:image.style.opacity,fallback:parent.classList.contains('has-fallback')}};
+    `);
+    check(imageFallback.failed.opacity === "0" && imageFallback.failed.fallback && imageFallback.recovered.opacity === "" && !imageFallback.recovered.fallback, "Illustrative-image fallback did not activate and recover correctly.");
+
+    const dialogTrigger = await evaluate(`
+      const trigger=document.querySelector('.nav-reserve');
+      trigger.id='dialog-return-target';
+      trigger.focus();
+      trigger.click();
+      return true;
+    `);
+    check(dialogTrigger, "Could not open a reservation dialog for focus testing.");
+    await settle();
+    const dialogFocus = await evaluate("return {open:document.querySelector('#site-dialog').open,focused:document.activeElement.id,modal:document.body.classList.contains('modal-open')};");
+    check(dialogFocus.open && dialogFocus.focused === "dialog-title" && dialogFocus.modal, "Dialog did not move focus to its heading and enter modal state.");
+    await key("Tab");
+    const trappedFocus = await evaluate(`
+      const dialog=document.querySelector('#site-dialog');
+      const keyboardInside=dialog.contains(document.activeElement);
+      document.querySelector('#dialog-return-target').focus();
+      return {
+        keyboardInside,
+        inertBoundaryHeld:dialog.contains(document.activeElement),
+        focused:document.activeElement.id||document.activeElement.name||document.activeElement.tagName,
+      };
+    `);
+    check(trappedFocus.keyboardInside && trappedFocus.inertBoundaryHeld, "Keyboard focus or the native modal inert boundary escaped the dialog.");
+    await key("Escape");
+    await settle();
+    const dialogReturn = await evaluate("return {open:document.querySelector('#site-dialog').open,focused:document.activeElement.id,modal:document.body.classList.contains('modal-open')};");
+    check(!dialogReturn.open && dialogReturn.focused === "dialog-return-target" && !dialogReturn.modal, "Escape did not close the dialog and return focus to its trigger.");
+
     const menu = await evaluate(`
       document.querySelector('[data-menu="tasting"]').click();
       const tasting=document.querySelector('#menu-panel').innerText;
@@ -182,42 +272,85 @@ async function main() {
     check(menu.selected === "true" && menu.tasting.includes("07 · The Last Word"), "Tasting-menu tab did not render all seven courses.");
     check(!menu.vegetarian.includes("05 · The Centerpiece") && menu.vegetarian.includes("04 · The Hearth"), "Vegetarian menu filter did not change results correctly.");
 
+    const quickCorrection = await evaluate(`
+      const localIso=date=>date.getFullYear()+'-'+String(date.getMonth()+1).padStart(2,'0')+'-'+String(date.getDate()).padStart(2,'0');
+      const monday=new Date();monday.setHours(12,0,0,0);while(monday.getDay()!==1)monday.setDate(monday.getDate()+1);
+      const corrected=new Date(monday);corrected.setDate(corrected.getDate()+1);
+      const field=document.querySelector('#quick-date');
+      field.value=localIso(monday);document.querySelector('#quick-booking').requestSubmit();
+      const error=document.querySelector('#quick-error').textContent;
+      field.value=localIso(corrected);document.querySelector('#quick-booking').requestSubmit();
+      const opened=document.querySelector('#site-dialog').open&&Boolean(document.querySelector('#reservation-form'));
+      document.querySelector('#site-dialog [data-close]').click();
+      return {error,opened};
+    `);
+    check(quickCorrection.error.includes("rests on Mondays") && quickCorrection.opened, "Quick reservation did not explain a closed Monday and recover with a valid date.");
+
     const reservation = await evaluate(`
       const trigger=document.querySelector('[data-reserve]');trigger.click();
       document.querySelector('#reservation-form').requestSubmit();
+      document.querySelector('#reservation-time-form').requestSubmit();
+      const timeCorrection={
+        stayed:Boolean(document.querySelector('#reservation-time-form')),
+        invalid:document.querySelector('#reservation-time-form input[name="time"]:invalid')?.validationMessage||'',
+        focused:document.activeElement?.name||document.activeElement?.id||'',
+      };
       const slot=document.querySelector('#reservation-time-form input[name="time"]:not(:disabled)');slot.checked=true;
       document.querySelector('#reservation-time-form').requestSubmit();
-      document.querySelector('#res-name').value='Alex Morgan';
+      const name=document.querySelector('#res-name');
+      name.value='A';
       document.querySelector('#res-email').value='alex@example.com';
+      document.querySelector('#reservation-details-form').requestSubmit();
+      const nameCorrection={
+        stayed:Boolean(document.querySelector('#reservation-details-form')),
+        invalid:name.validationMessage,
+        focused:document.activeElement===name,
+      };
+      name.value='Alex Morgan';name.dispatchEvent(new Event('input',{bubbles:true}));
       document.querySelector('#reservation-details-form').requestSubmit();
       const result=document.querySelector('#site-dialog').innerText;
       document.querySelector('#site-dialog [data-close]').click();
-      return result;
+      return {result,timeCorrection,nameCorrection};
     `);
-    check(reservation.includes("DEMO · NOT BOOKED") && reservation.includes("No reservation has been made"), "Reservation preview did not reach its safe success state.");
+    check(reservation.timeCorrection.stayed && reservation.timeCorrection.invalid, "Reservation time selection did not expose a native invalid state.");
+    check(reservation.nameCorrection.stayed && reservation.nameCorrection.invalid.includes("at least two") && reservation.nameCorrection.focused, "Reservation name validation did not explain and focus the invalid field.");
+    check(reservation.result.includes("DEMO · NOT BOOKED") && reservation.result.includes("No reservation has been made"), "Reservation preview did not recover to its safe success state.");
 
     const privateDining = await evaluate(`
       document.querySelector('#private-inquiry').click();
       document.querySelector('#event-name').value='Alex Morgan';
       document.querySelector('#event-email').value='alex@example.com';
+      const guests=document.querySelector('#event-guests');
+      guests.value=String(Number(guests.max)+1);
+      document.querySelector('#event-form').requestSubmit();
+      const correction={stayed:Boolean(document.querySelector('#event-form')),invalid:guests.validationMessage,focused:document.activeElement===guests};
+      guests.value=guests.max;guests.dispatchEvent(new Event('input',{bubbles:true}));
       document.querySelector('#event-form').requestSubmit();
       const result=document.querySelector('#site-dialog').innerText;
       document.querySelector('#site-dialog [data-close]').click();
-      return result;
+      return {result,correction};
     `);
-    check(privateDining.includes("DEMO · NOT SENT") && privateDining.includes("No event inquiry has been sent"), "Private-dining inquiry did not reach its safe preview state.");
+    check(privateDining.correction.stayed && privateDining.correction.invalid && privateDining.correction.focused, "Private-dining capacity validation did not block and focus the invalid guest count.");
+    check(privateDining.result.includes("DEMO · NOT SENT") && privateDining.result.includes("No event inquiry has been sent"), "Private-dining inquiry did not recover to its safe preview state.");
 
     const gift = await evaluate(`
       document.querySelector('[data-gift]').click();
+      document.querySelector('[data-amount="custom"]').click();
       document.querySelector('#gift-recipient').value='Jamie';
       document.querySelector('#gift-sender').value='Alex';
       document.querySelector('#gift-email').value='jamie@example.com';
+      const amount=document.querySelector('#gift-amount');
+      amount.value='20';amount.dispatchEvent(new Event('input',{bubbles:true}));
+      document.querySelector('#gift-form').requestSubmit();
+      const correction={stayed:Boolean(document.querySelector('#gift-form')),invalid:amount.validationMessage,focused:document.activeElement===amount};
+      amount.value='50';amount.dispatchEvent(new Event('input',{bubbles:true}));
       document.querySelector('#gift-form').requestSubmit();
       const result=document.querySelector('#site-dialog').innerText;
       document.querySelector('#site-dialog [data-close]').click();
-      return result;
+      return {result,correction};
     `);
-    check(gift.includes("A GIFT PREVIEW · NO CASH VALUE") && gift.includes("No payment has been taken"), "Gift-card configurator did not reach its safe preview state.");
+    check(gift.correction.stayed && gift.correction.invalid && gift.correction.focused, "Gift amount validation did not block and focus an out-of-range value.");
+    check(gift.result.includes("A GIFT PREVIEW · NO CASH VALUE") && gift.result.includes("No payment has been taken") && gift.result.includes("$50"), "Gift-card configurator did not recover to its safe preview state.");
 
     const gallery = await evaluate(`
       document.querySelector('[data-gallery="0"]').click();
@@ -230,10 +363,15 @@ async function main() {
     check(gallery.before === "The room" && gallery.after === "The details", "Gallery next control did not advance the image.");
 
     const newsletter = await evaluate(`
-      document.querySelector('#newsletter-email').value='sample@example.com';
+      const field=document.querySelector('#newsletter-email');
+      field.value='not-an-email';
       document.querySelector('#newsletter-form').requestSubmit();
-      return {toast:document.querySelector('#toast').textContent,value:document.querySelector('#newsletter-email').value};
+      const correction={value:field.value,invalid:field.validationMessage,focused:document.activeElement===field};
+      field.value='sample@example.com';
+      document.querySelector('#newsletter-form').requestSubmit();
+      return {toast:document.querySelector('#toast').textContent,value:field.value,correction};
     `);
+    check(newsletter.correction.value === "not-an-email" && newsletter.correction.invalid && newsletter.correction.focused, "Newsletter email validation did not block and focus an invalid address.");
     check(newsletter.toast.includes("No email was stored") && newsletter.value === "", "Newsletter demo did not reset and disclose its safe behavior.");
 
     const contact = await evaluate(`
@@ -266,10 +404,9 @@ async function main() {
     check(mobile.width === 390 && mobile.scrollWidth === 390, "Mobile page overflowed or used the wrong viewport.");
     check(mobile.expanded === "true" && mobile.menuHidden === false, "Mobile navigation did not open.");
     await screenshot("final-mobile-menu.png");
-    await cdp.call("Input.dispatchKeyEvent", { type: "keyDown", key: "Escape", code: "Escape", windowsVirtualKeyCode: 27 });
-    await cdp.call("Input.dispatchKeyEvent", { type: "keyUp", key: "Escape", code: "Escape", windowsVirtualKeyCode: 27 });
-    const closed = await evaluate("return {expanded:document.querySelector('.menu-toggle').getAttribute('aria-expanded'),hidden:document.querySelector('#mobile-menu').hidden};");
-    check(closed.expanded === "false" && closed.hidden === true, "Escape did not close mobile navigation.");
+    await key("Escape");
+    const closed = await evaluate("return {expanded:document.querySelector('.menu-toggle').getAttribute('aria-expanded'),hidden:document.querySelector('#mobile-menu').hidden,focused:document.activeElement===document.querySelector('.menu-toggle')};");
+    check(closed.expanded === "false" && closed.hidden === true && closed.focused, "Escape did not close mobile navigation and return focus to its toggle.");
     const mobileContact = await evaluate(`
       document.documentElement.style.scrollBehavior='auto';
       const target=document.querySelector('#visit');
@@ -277,17 +414,70 @@ async function main() {
       return {scrollY,top:target.getBoundingClientRect().top,addressTop:document.querySelector('.demo-address').getBoundingClientRect().top,height:innerHeight};
     `);
     check(mobileContact.scrollY > 1000 && mobileContact.addressTop < mobileContact.height, "Mobile contact section could not be brought into view.");
-    await new Promise((accept) => setTimeout(accept, 150));
-    await screenshot("final-mobile-contact.png");
+
+    await cdp.call("Emulation.setEmulatedMedia", { features: [{ name: "prefers-reduced-motion", value: "reduce" }] });
+    await viewport(390, 844);
+    await navigate();
+    const reducedMotion = await evaluate(`
+      const button=getComputedStyle(document.querySelector('.button'));
+      return {
+        matches:matchMedia('(prefers-reduced-motion: reduce)').matches,
+        motionReady:document.body.classList.contains('motion-ready'),
+        pending:document.querySelectorAll('.reveal.pending').length,
+        scrollBehavior:getComputedStyle(document.documentElement).scrollBehavior,
+        transitionDuration:button.transitionDuration,
+        animationName:button.animationName,
+      };
+    `);
+    check(reducedMotion.matches && !reducedMotion.motionReady && reducedMotion.pending === 0 && reducedMotion.scrollBehavior === "auto" && reducedMotion.transitionDuration === "0s", "Reduced-motion mode did not remove reveal/transition motion.");
+
+    await cdp.call("Emulation.setEmulatedMedia", { features: [{ name: "prefers-reduced-motion", value: "no-preference" }] });
+    await viewport(320, 800);
+    await navigate();
+    const reflow = await evaluate(`
+      const hero=document.querySelector('#hero-title').getBoundingClientRect();
+      const reserve=document.querySelector('.mobile-reserve .button').getBoundingClientRect();
+      return {
+        width:innerWidth,
+        scrollWidth:document.documentElement.scrollWidth,
+        hero:{left:hero.left,right:hero.right,width:hero.width},
+        reserve:{left:reserve.left,right:reserve.right,width:reserve.width},
+      };
+    `);
+    check(reflow.width === 320 && reflow.scrollWidth === 320 && reflow.hero.left >= 0 && reflow.hero.right <= 320 && reflow.reserve.left >= 0 && reflow.reserve.right <= 320, "320px reflow (1280px at 400% equivalent) overflowed or clipped primary controls.");
+    await evaluate("document.querySelector('[data-gift]').click();return true;");
+    await settle();
+    const reflowDialog = await evaluate(`
+      const dialog=document.querySelector('#site-dialog');
+      const rect=dialog.getBoundingClientRect();
+      return {open:dialog.open,left:rect.left,right:rect.right,width:rect.width,scrollWidth:dialog.scrollWidth,clientWidth:dialog.clientWidth};
+    `);
+    check(reflowDialog.open && reflowDialog.left >= 0 && reflowDialog.right <= 320 && reflowDialog.scrollWidth <= reflowDialog.clientWidth, "The gift dialog overflowed at the 320px reflow target.");
+    await screenshot("final-zoom-320-gift.png");
+    await evaluate("document.querySelector('#site-dialog [data-close]').click();return true;");
+
+    const allowedOrigins = new Set([new URL(url).origin, "https://images.unsplash.com", "https://fonts.googleapis.com", "https://fonts.gstatic.com"]);
+    const unexpectedNetwork = [...new Set(networkRequests.filter((requestUrl) => requestUrl.startsWith("http") && !allowedOrigins.has(new URL(requestUrl).origin)))];
+    check(unexpectedNetwork.length === 0, `Unexpected network destinations were contacted: ${unexpectedNetwork.join(", ")}`);
 
     const result = {
       url,
+      sourceRef,
       testedAt: new Date().toISOString(),
       desktop,
+      provenance,
+      menuKeyboard,
+      menuEnd,
+      roomKeyboard,
+      imageFallback,
+      dialogFocus,
+      trappedFocus,
+      dialogReturn,
       menu: { selected: menu.selected, tastingHasFinalCourse: menu.tasting.includes("07 · The Last Word"), vegetarianRemovedMeatCourse: !menu.vegetarian.includes("05 · The Centerpiece") },
-      reservation: "passed",
-      privateDining: "passed",
-      gift: "passed",
+      quickCorrection,
+      reservation,
+      privateDining,
+      gift,
       gallery,
       newsletter,
       contact: { toast: contact.toast, detailDisclosure: contact.info.includes("deliberately fake demonstration details") },
@@ -295,10 +485,15 @@ async function main() {
       mobile,
       mobileEscape: closed,
       mobileContact,
+      reducedMotion,
+      reflow,
+      reflowDialog,
+      networkRequests: [...new Set(networkRequests)],
+      unexpectedNetwork,
       runtimeErrors,
       networkErrors,
       failures,
-      passed: failures.length === 0 && runtimeErrors.length === 0,
+      passed: failures.length === 0 && runtimeErrors.length === 0 && networkErrors.length === 0,
     };
     await writeFile(join(evidenceDir, "smoke-result.json"), `${JSON.stringify(result, null, 2)}\n`);
     if (!result.passed) throw new Error(`Velora smoke failed: ${[...failures, ...runtimeErrors].join(" | ")}`);
