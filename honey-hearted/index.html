@@ -57,6 +57,12 @@ dialog{border:1px solid #d6ceb4;border-radius:10px;background:#fffdf5;color:var(
 /* Decorative rotated paper and leaf edges must not create sideways scrolling. */
 body{overflow-x:clip}
 @media(max-width:350px){.note-paper{right:5px}}
+/* Standalone actions meet the product's 44px touch-target floor without inflating inline prose links. */
+.menu-btn,.filter-tab,.clear-filters,.text-link,.footer-col a,.footer-col button,.close-dialog,.top-button{min-height:44px}
+.menu-btn,.close-dialog,.top-button{width:44px;height:44px;min-width:44px}
+.mobile-menu a{display:flex;align-items:center;min-height:44px}
+.footer-col a,.footer-col button{display:flex;align-items:center}
+#resource-search,select,.consent{min-height:44px}
 </style>
 </head>
 <body>

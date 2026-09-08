@@ -814,6 +814,25 @@ async function main() {
     `);
     check(mobile.width === 390 && mobile.scrollWidth === 390, "Mobile layout overflowed or used the wrong viewport.");
     check(mobile.expanded === "true" && !mobile.hidden, "Mobile navigation did not open.");
+    const mobileTouchTargets = await evaluate(`
+      const controls=[...document.querySelectorAll('button:not([disabled]),input:not([disabled]):not([type="hidden"]),select:not([disabled]),textarea:not([disabled]),summary')]
+        .filter(node=>node.offsetParent!==null&&node.tabIndex>=0)
+        .map(node=>{
+          const target=node.matches('input[type="checkbox"],input[type="radio"]')&&node.closest('label')||node;
+          const rect=target.getBoundingClientRect();
+          return {
+            name:(node.getAttribute('aria-label')||node.textContent||node.value||node.id).trim().slice(0,60),
+            tag:node.tagName,
+            width:Math.round(rect.width*10)/10,
+            height:Math.round(rect.height*10)/10,
+          };
+        });
+      return {
+        total:controls.length,
+        undersized:controls.filter(control=>control.width<44||control.height<44),
+      };
+    `);
+    check(mobileTouchTargets.total >= 20 && mobileTouchTargets.undersized.length === 0, `A standalone mobile control is smaller than the 44 CSS-pixel design floor: ${JSON.stringify(mobileTouchTargets.undersized)}`);
     await screenshot("honey-hearted-mobile-menu.png");
     await key("Escape");
     await settle();
@@ -988,7 +1007,14 @@ async function main() {
     `);
     await settle();
     await key(" ");
-    await settle(1200);
+    await evaluate(`
+      await new Promise(accept=>{
+        const deadline=performance.now()+3500;
+        const poll=()=>scrollY<10||performance.now()>=deadline?accept():setTimeout(poll,50);
+        poll();
+      });
+      return true;
+    `);
     const backTopAfter = await evaluate(`
       return {
         scrollY,
@@ -1092,6 +1118,7 @@ async function main() {
       zoomEquivalent,
       imageFallback,
       mobile,
+      mobileTouchTargets,
       mobileEscape,
       mobileRouteFocus: {
         changedRoutes: mobileRouteFocus,
