@@ -366,6 +366,57 @@ async function main() {
     const dialogReturn = await evaluate("return {open:document.querySelector('#zoom-dialog').open,locked:document.body.classList.contains('locked'),focused:document.activeElement.id};");
     check(!dialogReturn.open && !dialogReturn.locked && dialogReturn.focused === "gallery-return", "Escape did not close the gallery and return focus to its trigger.");
 
+    await navigate(`${url}#resource/planner`, "#detail-view h1");
+    const directDeepLink = await evaluate(`
+      return {
+        hash:location.hash,
+        title:document.title,
+        heading:document.querySelector('#detail-view h1')?.textContent.trim(),
+        focused:document.activeElement===document.querySelector('#detail-view h1'),
+      };
+    `);
+    await evaluate("location.hash='page/about';return true;");
+    await settle();
+    const historyBefore = await cdp.call("Page.getNavigationHistory");
+    const backEntry = historyBefore.entries[historyBefore.currentIndex - 1];
+    const forwardEntry = historyBefore.entries[historyBefore.currentIndex];
+    if (backEntry) {
+      await cdp.call("Page.navigateToHistoryEntry", { entryId: backEntry.id });
+      await settle();
+    }
+    const historyBack = await evaluate(`
+      return {
+        hash:location.hash,
+        heading:document.querySelector('#detail-view h1')?.textContent.trim(),
+        focused:document.activeElement===document.querySelector('#detail-view h1'),
+      };
+    `);
+    if (forwardEntry) {
+      await cdp.call("Page.navigateToHistoryEntry", { entryId: forwardEntry.id });
+      await settle();
+    }
+    const historyForward = await evaluate(`
+      return {
+        hash:location.hash,
+        heading:document.querySelector('#detail-view h1')?.textContent.trim(),
+        focused:document.activeElement===document.querySelector('#detail-view h1'),
+      };
+    `);
+    const malformedHash = await evaluate(`
+      location.hash='%E0%A4%A';
+      await new Promise(accept=>setTimeout(accept,120));
+      return {
+        hash:location.hash,
+        homeHidden:document.querySelector('#home-view').hidden,
+        detailHidden:document.querySelector('#detail-view').hidden,
+        heading:document.querySelector('#hero-title')?.textContent.trim(),
+      };
+    `);
+    check(directDeepLink.hash === "#resource/planner" && directDeepLink.title.includes("Dream Beachside") && directDeepLink.heading.includes("Dream Beachside") && !directDeepLink.focused, "A direct resource deep link did not render while preserving the browser's initial focus position.");
+    check(Boolean(backEntry) && historyBack.hash === "#resource/planner" && historyBack.heading.includes("Dream Beachside") && historyBack.focused, "Browser Back did not restore the prior resource route and heading focus.");
+    check(Boolean(forwardEntry) && historyForward.hash === "#page/about" && historyForward.heading.includes("Hi, I’m Meagen") && historyForward.focused, "Browser Forward did not restore the next content route and heading focus.");
+    check(malformedHash.hash === "#%E0%A4%A" && !malformedHash.homeHidden && malformedHash.detailHidden && malformedHash.heading.includes("A little less prep"), "A malformed encoded hash did not recover safely to the Home view.");
+
     const productTruth = await evaluate(`
       const details=[];
       for(const product of PRODUCTS){
@@ -621,6 +672,12 @@ async function main() {
       catalog,
       catalogDepth,
       product,
+      navigationHistory: {
+        directDeepLink,
+        back: historyBack,
+        forward: historyForward,
+        malformedHash,
+      },
       productTruth,
       dialogReturn,
       dialogButtonReturn,
