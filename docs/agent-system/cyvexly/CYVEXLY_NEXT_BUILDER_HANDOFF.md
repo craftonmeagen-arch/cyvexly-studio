@@ -4,6 +4,7 @@
 
 **Session:** scheduled/unattended Codex Builder, 2026-09-07 EDT
 **Start source:** `85ce323` on `main`, matched `origin/main`
+**Round 95 source:** `b4b4608` on `main`
 **Authority:** Owner direction `2026-09-07-17`
 
 Reconciled the Velora capability demonstration into the project map, current

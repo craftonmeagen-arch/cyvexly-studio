@@ -22,10 +22,10 @@ with zero runtime/network errors and zero horizontal overflow at 1440×900 and
 only the pre-existing round-42 evidence-script warning, and production build
 passed all 49 routes.
 
-**Accepted product position:** Round 95 source is ready for commit/push from
-the previously accepted `85ce323` on `main`; replace this sentence with the
-resulting source commit during closeout. `cyvexly.com` remains fully connected,
-HTTPS, and canonicalized (verified round 53). `origin/master` is historical.
+**Accepted product position:** Round 95 Velora source and reconciliation are
+committed at `b4b4608` on `main`; the closeout documentation commit follows it.
+`cyvexly.com` remains fully connected, HTTPS, and canonicalized (verified round
+53). `origin/master` is historical.
 
 ## Owner launch decisions and remaining gates
 
