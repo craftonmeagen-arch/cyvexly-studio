@@ -820,6 +820,93 @@ async function main() {
     const mobileEscape = await evaluate("return {expanded:document.querySelector('#menu-toggle').getAttribute('aria-expanded'),hidden:document.querySelector('#mobile-menu').hidden,focused:document.activeElement.id};");
     check(mobileEscape.expanded === "false" && mobileEscape.hidden && mobileEscape.focused === "menu-toggle", "Escape did not close mobile navigation and return focus.");
 
+    const mobileRouteFocus = [];
+    for (const routeName of [
+      "home",
+      "shop",
+      "freebies",
+      "about",
+      "ideas",
+      "help",
+      "contact",
+    ]) {
+      const before = await evaluate(`
+        const toggle=document.querySelector('#menu-toggle');
+        toggle.click();
+        const link=document.querySelector('#mobile-menu a[href="#${routeName}"]');
+        link.focus();
+        return {
+          expanded:toggle.getAttribute('aria-expanded'),
+          hidden:document.querySelector('#mobile-menu').hidden,
+          focused:document.activeElement===link,
+        };
+      `);
+      await key("Enter");
+      await settle();
+      const after = await evaluate(`
+        const route='${routeName}';
+        const section=document.getElementById(route);
+        const target=section?.querySelector('h1,h2')||document.querySelector('#hero-title');
+        return {
+          hash:location.hash,
+          expanded:document.querySelector('#menu-toggle').getAttribute('aria-expanded'),
+          hidden:document.querySelector('#mobile-menu').hidden,
+          focused:document.activeElement===target,
+          activeHidden:Boolean(document.activeElement.closest('[hidden]')),
+        };
+      `);
+      mobileRouteFocus.push({ route: routeName, before, after });
+    }
+    await screenshot("honey-hearted-mobile-route-focus.png");
+    const mobileSameRouteBefore = await evaluate(`
+      const toggle=document.querySelector('#menu-toggle');
+      toggle.click();
+      const link=document.querySelector('#mobile-menu a[href="#contact"]');
+      link.focus();
+      return {
+        expanded:toggle.getAttribute('aria-expanded'),
+        hidden:document.querySelector('#mobile-menu').hidden,
+        focused:document.activeElement===link,
+      };
+    `);
+    await key("Enter");
+    await settle();
+    const mobileSameRouteAfter = await evaluate(`
+      return {
+        hash:location.hash,
+        expanded:document.querySelector('#menu-toggle').getAttribute('aria-expanded'),
+        hidden:document.querySelector('#mobile-menu').hidden,
+        focused:document.activeElement===document.querySelector('#contact-title'),
+        activeHidden:Boolean(document.activeElement.closest('[hidden]')),
+      };
+    `);
+    check(
+      mobileRouteFocus.length === 7 &&
+        mobileRouteFocus.every(
+          ({ route: routeName, before, after }) =>
+            before.expanded === "true" &&
+            !before.hidden &&
+            before.focused &&
+            after.hash === `#${routeName}` &&
+            after.expanded === "false" &&
+            after.hidden &&
+            after.focused &&
+            !after.activeHidden,
+        ),
+      "A mobile navigation link hid its focused control without moving focus to the destination heading.",
+    );
+    check(
+      mobileSameRouteBefore.expanded === "true" &&
+        !mobileSameRouteBefore.hidden &&
+        mobileSameRouteBefore.focused &&
+        mobileSameRouteAfter.hash === "#contact" &&
+        mobileSameRouteAfter.expanded === "false" &&
+        mobileSameRouteAfter.hidden &&
+        mobileSameRouteAfter.focused &&
+        !mobileSameRouteAfter.activeHidden,
+      "Reactivating the current mobile navigation link hid the focused control without preserving a visible continuation point.",
+    );
+
     const responsiveMenuBefore = await evaluate(`
       const toggle=document.querySelector('#menu-toggle');
       toggle.click();
@@ -1006,6 +1093,13 @@ async function main() {
       imageFallback,
       mobile,
       mobileEscape,
+      mobileRouteFocus: {
+        changedRoutes: mobileRouteFocus,
+        sameRoute: {
+          before: mobileSameRouteBefore,
+          after: mobileSameRouteAfter,
+        },
+      },
       responsiveMenu: {
         link: { before: responsiveMenuBefore, after: responsiveMenuAfter },
         store: { before: responsiveStoreBefore, after: responsiveStoreAfter },
