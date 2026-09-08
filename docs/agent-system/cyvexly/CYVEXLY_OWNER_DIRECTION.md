@@ -22,8 +22,8 @@ remains here deliberately.
 
 - Build separate Work cards and buyer-facing case studies after investigating
   real source/runtime truth. The Builder has full read-only authority in
-  `C:/app projects/Eduailenze` and `C:/app projects/Mudoinkle`, including
-  relevant source, evidence, and approved assets. Do not modify those repos or
+  `C:/app projects/Eduailenze` and `C:/app projects/Mudoinkle` and their
+  relevant evidence. Do not modify those repos or
   inspect/copy secrets, `.env` values,
   credentials, private user/student data, or generated dependencies.
 - Sell verified complexity clearly. “Completed works” does not permit invented
@@ -32,8 +32,7 @@ remains here deliberately.
 - Match Velora's premium standard and visibly verify discovery, routes,
   metadata, responsive/keyboard behavior, performance, disclosures, and CTAs.
   This is the next Builder portfolio expansion; preserve Velora and Claude's
-  HoneyHearted work. Direction `2026-09-08-21` keeps the scheduler paused until
-  the Owner explicitly resumes it.
+  HoneyHearted work. The scheduler stays paused under direction `2026-09-08-21`.
 
 ## HoneyHearted owner dashboard and TPT commerce direction 2026-09-08-21
 
