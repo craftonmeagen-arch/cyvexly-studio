@@ -839,6 +839,52 @@ async function main() {
     const mobileEscape = await evaluate("return {expanded:document.querySelector('#menu-toggle').getAttribute('aria-expanded'),hidden:document.querySelector('#mobile-menu').hidden,focused:document.activeElement.id};");
     check(mobileEscape.expanded === "false" && mobileEscape.hidden && mobileEscape.focused === "menu-toggle", "Escape did not close mobile navigation and return focus.");
 
+    const mobileStoreNoticeBefore = await evaluate(`
+      const toggle=document.querySelector('#menu-toggle');
+      toggle.click();
+      const store=document.querySelector('#mobile-menu [data-store]');
+      store.focus();
+      return {
+        expanded:toggle.getAttribute('aria-expanded'),
+        hidden:document.querySelector('#mobile-menu').hidden,
+        focused:document.activeElement===store,
+      };
+    `);
+    await key(" ");
+    await settle();
+    const mobileStoreNoticeOpen = await evaluate(`
+      return {
+        expanded:document.querySelector('#menu-toggle').getAttribute('aria-expanded'),
+        menuHidden:document.querySelector('#mobile-menu').hidden,
+        dialogOpen:document.querySelector('#notice-dialog').open,
+        dialogFocused:document.querySelector('#notice-dialog').contains(document.activeElement),
+      };
+    `);
+    await key("Escape");
+    await settle();
+    const mobileStoreNoticeClosed = await evaluate(`
+      return {
+        dialogOpen:document.querySelector('#notice-dialog').open,
+        focused:document.activeElement===document.querySelector('#menu-toggle'),
+        activeHidden:Boolean(document.activeElement.closest('[hidden]')),
+        active:(document.activeElement.id||document.activeElement.textContent||document.activeElement.tagName).trim().slice(0,60),
+      };
+    `);
+    await screenshot("honey-hearted-mobile-store-return.png");
+    check(
+      mobileStoreNoticeBefore.expanded === "true" &&
+        !mobileStoreNoticeBefore.hidden &&
+        mobileStoreNoticeBefore.focused &&
+        mobileStoreNoticeOpen.expanded === "false" &&
+        mobileStoreNoticeOpen.menuHidden &&
+        mobileStoreNoticeOpen.dialogOpen &&
+        mobileStoreNoticeOpen.dialogFocused &&
+        !mobileStoreNoticeClosed.dialogOpen &&
+        mobileStoreNoticeClosed.focused &&
+        !mobileStoreNoticeClosed.activeHidden,
+      `Closing the mobile store notice did not return focus to a visible menu control (active: ${mobileStoreNoticeClosed.active}).`,
+    );
+
     const mobileRouteFocus = [];
     for (const routeName of [
       "home",
@@ -1120,6 +1166,11 @@ async function main() {
       mobile,
       mobileTouchTargets,
       mobileEscape,
+      mobileStoreNotice: {
+        before: mobileStoreNoticeBefore,
+        opened: mobileStoreNoticeOpen,
+        closed: mobileStoreNoticeClosed,
+      },
       mobileRouteFocus: {
         changedRoutes: mobileRouteFocus,
         sameRoute: {
