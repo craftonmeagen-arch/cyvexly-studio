@@ -2,6 +2,17 @@
 
 Retain only durable evidence cited by an active report, source decision, or required handoff. Temporary captures belong in role-owned disposable storage and are deleted after inspection.
 
+## Global round 100 — HoneyHearted storefront opening
+
+- `round-100-honey-hearted/smoke-result.json` — source-identified route,
+  workflow, correction, responsive, accessibility, storage, and network proof.
+- `round-100-honey-hearted/honey-hearted-{desktop-top,desktop-full,product-dialog,mobile-menu,320-top}.png`
+  — opened visual proof across the primary desktop, overlay, mobile-menu, and
+  narrow-reflow states.
+- `round-100-honey-hearted/HoneyHearted-The-Little-Weekly-Reset.html` — the
+  browser-produced free sample retained until independent review verifies the
+  download boundary.
+
 ## Global round 28 — continuous sitewide architectural glass
 
 - `round-28-sitewide-continuous-glass-plan.md` — visible baseline diagnosis,

@@ -1,4 +1,38 @@
-# Cyvexly Next Builder Handoff
+# Team Two Website Builder — Cyvexly Next Handoff
+
+## Round 100 / Chunk 7 round 1 closeout
+
+**Session:** scheduled/unattended Team Two Website Builder, 2026-09-08 EDT
+**Start source:** `37ee2cb` on `main`, matched `origin/main`
+**Accepted product source:** `8d84b96` on `main`
+**Authority:** Owner direction `2026-09-08-19`
+
+Opened HoneyHearted as the current priority without disturbing the parallel
+Cyvexly/Velora gates. The imported standalone source now has a same-origin
+`/honey-hearted` route with response-level no-index protection. Fixed the one
+source defect found: the contact-subject chooser had only one real option and
+three stray text nodes; it now exposes four valid choices.
+
+Added `honey-hearted/smoke.mjs` and proved the current whole storefront in a
+real local production runtime. Catalog search/filter/reset, product routing,
+gallery selection/zoom/focus return, safe unconnected commerce, the real free
+HTML download and print document, three teaching articles, About/policies,
+launch/missing routes, truthful preview forms, mobile menu Escape/focus return,
+reduced motion, 320px reflow, no-storage/no-external-request boundaries, route
+headers, and all rendered widths pass with zero failures or browser/network
+errors. TypeScript, lint (one known evidence-script warning), and the 53-route
+build pass; the Next output trace includes the imported HTML.
+
+Evidence is retained under `builder/evidence/round-100-honey-hearted/` until an
+independent reviewer consumes it; redundant PNGs and the downloaded sample can
+then be removed while keeping the source-identified result JSON.
+
+**Next Builder round:** first disposition every review intake. Then deepen
+HoneyHearted's negative/correction coverage across catalog combinations and
+native-invalid forms, verify full keyboard traversal/zoom, and reconcile each
+illustrative catalog claim and preview against approved source facts. Keep all
+missing Owner/account values in `HONEY_HEARTED_OWNER_NEEDS.md`; do not activate
+commerce, messaging, subscriptions, analytics, or indexing without real inputs.
 
 ## Round 99 / Chunk 6 round 5 closeout
 
@@ -52,47 +86,10 @@ created no browser/server process; port 5183 is clear.
 Chunk 6 cannot close until two separate independent verification rounds
 challenge accepted source `0ca0504`; do not substitute repeated Builder checks.
 
-## Round 97 / Chunk 6 round 3 closeout
-
-**Session:** scheduled/unattended Codex Builder, 2026-09-07–08 EDT
-**Start source:** `297507d` on `main`, matched `origin/main`
-**Accepted product source:** `0ca0504` on `main`, pushed to `origin/main`
-**Authority:** Owner direction `2026-09-07-17`
-
-Velora is now reachable through Cyvexly's production architecture. Its source
-truth moved to `public/velora/index.html`; four illustrative images and the
-Cormorant/Manrope fonts are self-hosted; `/velora` serves the page with an
-explicit no-index response; and the Work grid plus `/work/velora-dining`
-truthfully label it as a fictional built concept. Real responsive captures are
-used in the portfolio instead of invented client imagery.
-
-Accepted source `0ca0504` passes `tsc`, lint (only the known round-42 evidence
-warning), and a 52-route production build. The expanded Chrome/CDP smoke passes
-every earlier demo path plus Work filters, 1440px/390px portfolio and case-study
-reflow, and case-study→demo navigation with zero failures, runtime/network
-errors, unexpected origins, or overflow. Opened captures match the accepted
-Work/case-study hierarchy; the four-column desktop grid is the deliberate
-adaptation needed for four honest projects. The identical suite passes on
-`https://cyvexly.com`, confirming Render adoption, same-origin assets, and the
-raw demo's `noindex, nofollow, noarchive` response. Evidence retained under
-`builder/evidence/round-97-velora/` until the two independent reviews consume
-it; then redundant captures may be deleted.
-
-**Next Builder round:** read and disposition every independent-review intake.
-Chunk 6 cannot close until two separate independent verification rounds
-challenge accepted source `0ca0504`; do not substitute another Builder
-self-check for them. If no review has arrived, use fresh product evidence to
-check for a material integration gap without reopening already-proved paths.
-
-Round 96's full closeout rotated to
-`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_96_REPORT.md` when round 99
-established the latest-three handoff window. Its invalid/correction,
-keyboard/focus, reduced-motion, 320px, fallback/provenance, and network proof
-remains current for accepted Velora behavior.
-
-Round 95's full Chunk 6 opening closeout is preserved in
-`CYVEXLY_BUILD_SUMMARY.md` and its matching debt entry; it rotated out when
-Round 98 established the current latest-three handoff window.
+Round 97's full production-integration closeout rotated to
+`docs/archive/chunks/CYVEXLY_BUILDER_HANDOFF_ROUND_97_REPORT.md` when Round 100
+established the latest-three handoff window. Its accepted Velora behavior and
+independent-review requirement remain current.
 
 ## Round 94 closeout
 

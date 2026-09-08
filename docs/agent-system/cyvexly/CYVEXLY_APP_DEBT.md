@@ -1,5 +1,17 @@
 # Cyvexly App Debt
 
+## Round 100 — HoneyHearted first integrated functional pass
+
+Accepted product source `8d84b96` makes the imported standalone storefront
+available through a no-indexed same-origin route; its malformed contact-subject
+chooser is fixed. A durable
+rendered suite passes all current catalog, resource/dialog, safe commerce,
+download/print, content/policy, preview-form, responsive, accessibility,
+storage, and network boundaries. Reachable depth remains in
+`CYVEXLY_CHUNK_DEBT.md` item 0. Missing catalog, commerce, identity, messaging,
+newsletter, public-destination, legal, and release inputs remain truthfully
+bounded in `HONEY_HEARTED_OWNER_NEEDS.md`.
+
 ## Round 99 — Velora portfolio metadata and social-preview integration
 
 Checked the new case study's live canonical/Open Graph/Twitter metadata,

@@ -1,0 +1,184 @@
+{
+  "url": "http://127.0.0.1:5184/honey-hearted",
+  "sourceRef": "8d84b96",
+  "testedAt": "2026-09-08T05:28:44.952Z",
+  "route": {
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "robots": "noindex, nofollow, noarchive"
+  },
+  "desktop": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "HoneyHearted | Resources made with heart",
+    "h1": 1,
+    "main": 1,
+    "preview": true,
+    "noindex": true,
+    "actionForms": 0,
+    "options": [
+      "A resource question",
+      "A file or access issue",
+      "Report a resource error",
+      "A classroom idea or general hello"
+    ],
+    "initialProducts": 6,
+    "storage": {
+      "local": 0,
+      "session": 0,
+      "cookie": ""
+    },
+    "externalAnchors": 0,
+    "imageProtocols": [
+      "data:"
+    ]
+  },
+  "catalog": {
+    "search": {
+      "count": 1,
+      "text": "1 resource or collection to explore"
+    },
+    "reading": {
+      "count": 1,
+      "pressed": "true"
+    },
+    "reset": {
+      "count": 6,
+      "query": ""
+    }
+  },
+  "product": {
+    "route": {
+      "hash": "#resource/planner",
+      "title": "Dream Beachside Teacher Planner Bundle",
+      "tabs": 2,
+      "homeHidden": true
+    },
+    "selected": {
+      "pressed": "true",
+      "zoomKey": "freeSample"
+    },
+    "dialog": {
+      "open": true,
+      "locked": true,
+      "focused": "Close enlarged image"
+    }
+  },
+  "dialogReturn": {
+    "open": false,
+    "locked": false,
+    "focused": "gallery-return"
+  },
+  "connectionNotice": {
+    "same": true,
+    "open": true,
+    "text": "One little connection to make.\n\nThe exact TPT store or product link has not been connected in this preview. Nothing has been purchased or downloaded. Add the real public destination in SITE_CONFIG before publishing.\n\nSee the launch checklist\nKeep exploring"
+  },
+  "sample": {
+    "title": "The littleweekly reset.",
+    "toast": "The printable HTML file is ready. Open it in your browser to print.",
+    "download": "HoneyHearted-The-Little-Weekly-Reset.html",
+    "downloadSize": 5083,
+    "print": {
+      "exists": true,
+      "title": "HoneyHearted | The Little Weekly Reset",
+      "hasSheet": true
+    }
+  },
+  "contentRoutes": {
+    "idea/conversations": {
+      "title": "More than a brain break.",
+      "text": "Home\n/\nTeaching ideas\n/\nMore than a brain break.\nCLASSROOM CONVERSATIONS · A HONEYHEARTED TEACHING NOTE\nMore than a brain break.\n\nA good “Would You Rather” question can be a starting point, not the whole activity. Try one of these simple routines with a question that fits your learners.\n\nWhat if…?\nTell me!\nStart with a choice. Leave room for a reason.\n\nOffer a question and a little quiet thinking time. Students can point to an option, jot down a thought, or prepare to tell a partner. Make passing an acceptable choice; not every student needs to speak in front of the group.\n\nBefore inviting answers, model a response: “I would choose this because…” Keep the example short so students have space to develop their own ideas.\n\n1. Turn and tell a partner.\n\nAsk each partner to share one reason. Give both students a turn, then invite them to notice what was similar or different about their thinking. A follow-up such as “What made that important to you?” gives the conversation somewhere to go.\n\n2. Change one part of the question.\n\nOnce students have made a choice, change a single condition. A choice might last for one day instead of one year, or happen at school instead of at home. Ask whether anyone would change their answer and why. Present changing your mind as an option, not a mistake.\n\n3. Save a thought in writing.\n\nOffer a short response frame: “I chose ___. My main reason was ___. A reason someone might choose differently is ___.” Students can respond in writing, orally, or with a supported drawing, depending on the activity and their needs.\n\nTry this question: Would you rather have a classroom garden or a classroom invention station? What would you make room for—and what would need a little extra care?\nKeep the routine yours.\n\nChoose prompts that suit your class, avoid requiring personal disclosures, and stop while the conversation still has energy. One thoughtful question is enough for a starting point.\n\nA thoughtful place to start.\n\nPair the idea with a resource that fits your learners and your teaching day.\n\nExplore the discussion collections\n\nOriginal draft teaching content for this website. Review and personalize it before publishing under your name.",
+      "focused": true
+    },
+    "idea/planning": {
+      "title": "A planner that fits your week.",
+      "text": "Home\n/\nTeaching ideas\n/\nA planner that fits your week.\nPLANNING WITH INTENTION · A HONEYHEARTED TEACHING NOTE\nA planner that fits your week.\n\nYour planner does not need to hold an imaginary, uninterrupted week. Give it room for the week you actually have.\n\nStart with the things you already know.\n\nWrite down the fixed points: teaching blocks, meetings, arrival routines, and deadlines. Include transitions and preparation that you know need space. This is not a test of how much you can fit onto a page.\n\nChoose three priorities.\n\nAsk yourself which three things would make this week feel more settled. Make each one small enough to recognize when it is finished: prepare Monday’s materials, send one family update, or organize a small-group activity.\n\nKeep the rest on a separate list. A useful task does not automatically need to become today’s task.\n\nLeave a little breathing room.\n\nInstead of filling every square, keep one small space for changes. A blank box can hold a follow-up question, a lesson that needs another day, or something you do not know about yet.\n\nA five-minute reset: look at tomorrow, choose the most important preparation task, and move anything unfinished to a place where you will see it again.\nMake next week a little easier.\n\nAt the end of the week, keep one thing that helped and change one thing that got in the way. You might want bigger daily boxes, fewer categories, or a place for a quick note. The page is there to support your routine, not dictate it.\n\nKeep confidential student and family information in your school’s approved secure systems rather than on an open planning page.\n\nA thoughtful place to start.\n\nPair the idea with a resource that fits your learners and your teaching day.\n\nExplore the planning collection\n\nOriginal draft teaching content for this website. Review and personalize it before publishing under your name.",
+      "focused": true
+    },
+    "idea/reading": {
+      "title": "Let the story start the discussion.",
+      "text": "Home\n/\nTeaching ideas\n/\nLet the story start the discussion.\nBETWEEN THE PAGES · A HONEYHEARTED TEACHING NOTE\nLet the story start the discussion.\n\nA reading conversation can begin with one detail students noticed. You do not need to answer every question before giving them space to think.\n\nBegin with a moment, not a summary.\n\nAsk students to choose a line, action, or small detail from the assigned passage. They can mark a place, write a short note, or prepare to describe the moment without copying a long excerpt.\n\nInvite an observation first: “I noticed…” Then offer a question: “I wonder…” Keeping these separate can help you see where the text ends and an interpretation begins.\n\nMake room for the text.\n\nAsk, “What in this chapter makes you think that?” Give students time to return to the passage. A page reference, a paraphrased detail, or a short quotation can give the group something specific to discuss.\n\nWelcome another possible reading.\n\nTry, “Could someone understand that moment differently?” Invite students to name a second interpretation and compare the support for each idea. They do not need to agree immediately or guess which opinion the teacher prefers.\n\nA three-part response: One thing I noticed. One detail that supports my thinking. One question I still have.\nUse the next question to choose your next step.\n\nClose by collecting one unresolved question. You might revisit a passage, clarify a character’s action, or carry the question into the next chapter. Keep any accompanying resource aligned with the chapters students have actually read.\n\nThese are suggested teaching routines, not a claim that a particular novel-study packet includes each activity. Check the finished resource’s description and preview before choosing it.\n\nA thoughtful place to start.\n\nPair the idea with a resource that fits your learners and your teaching day.\n\nExplore the reading collection\n\nOriginal draft teaching content for this website. Review and personalize it before publishing under your name.",
+      "focused": true
+    },
+    "page/about": {
+      "title": "Hi, I’m Meagen.Welcome to HoneyHearted.",
+      "text": "Home\n/\nResource shelf\n/\nThe heart behind HoneyHearted\nA HELLO FROM THE CREATOR\nHi, I’m Meagen.\nWelcome to HoneyHearted.\n\nA thoughtful resource shelf for teachers who bring their own ideas, experience, and heart to the classroom.\n\nA little organization. A little imagination.\n\nSome days call for a clear plan. Some call for a question that gets everyone thinking. And some need a fresh way into a story.\n\nHoneyHearted brings those possibilities together: teacher-planning resources, classroom discussion collections, and a home for reading activities. My hope is that you will find something useful, take a closer look, and make it your own.\n\nMade to leave room for you.\n\nI want this space to feel like a helpful shelf in a fellow teacher’s classroom—not another long list of things you have to do. Preview a resource, try a free page, or take a teaching idea with you.\n\nYour classroom does not have to look like anyone else’s. The best starting point is one you can shape around the people in it.\nOwner review: this is proposed About copy, not a verified biography. Add your own teaching background, qualifications, resource-development process, and a photo you approve before publishing. No credentials, classroom-testing claims, or customer testimonials have been invented.\nThere’s a place for your questions, too.\n\nTell me which resource you are exploring or what would be helpful to know.\n\nLet’s connect",
+      "focused": true
+    },
+    "policy/privacy": {
+      "title": "Privacy, with a little clarity.",
+      "text": "Home\n/\nResource shelf\n/\nPrivacy, with a little clarity.\nHONEYHEARTED · WEBSITE PREVIEW NOTES\nPrivacy, with a little clarity.\n\nThese notes describe this local HTML preview. They are not a finished privacy policy for a published business website.\n\nWhat happens in this preview?\n\nWith preview mode enabled, newsletter and contact submissions do not send or save the information you enter. The page uses no cookies, browser storage, analytics scripts, or externally hosted fonts. Images and product artwork are embedded in the standalone file.\n\nWhat about downloads and external links?\n\nThe free weekly-planning download is created in your browser. No email address is required. When real TPT or social links are connected, opening them takes you to another service, with that service’s own privacy practices. If this site is hosted, the hosting provider may process request logs even when this page has no analytics.\n\nBefore this website is published\n\nReplace these notes with an accurate policy covering the site owner, contact details, hosting and form providers, email list, any analytics, retention practices, and applicable privacy rights or consent choices. Do not describe data collection that the site does not actually perform, or omit services that it does use.\n\nPlease leave student information out.\n\nDo not enter student names, records, account passwords, or other sensitive information into the demonstration forms.\n\nBack to HoneyHearted",
+      "focused": true
+    },
+    "policy/terms": {
+      "title": "Resources, with a little care.",
+      "text": "Home\n/\nResource shelf\n/\nResources, with a little care.\nHONEYHEARTED · WEBSITE PREVIEW NOTES\nResources, with a little care.\n\nThese are preview notes, not the final legal terms for a live shop.\n\nPurchases through TPT\n\nThis website is designed as a promotional resource shelf. Paid checkout and paid-file delivery happen through the actual TPT listing after its link is connected. This HTML preview does not take payments, create orders, or promise product availability.\n\nProduct descriptions and artwork\n\nExisting product previews are identified. Some covers and descriptions are illustrative and need owner review before launch. Confirm the included files, compatibility, permissions, and requirements on each final listing.\n\nResource licenses\n\nFollow the terms included with each resource and its listing. Do not assume that a single purchase permits redistribution, resale, or team-wide use. Ask the creator about appropriate licensing when in doubt.\n\nThe new free weekly-reset page\n\nThe original weekly-reset page created with this website is available to print for your own classroom planning. The website’s draft terms do not change the licensing of any existing HoneyHearted product or third-party material. Final distribution terms require your approval before publication.\n\nBefore launch\n\nReplace these notes with reviewed, business-specific terms and a support process that matches how you actually sell and deliver products.\n\nBack to HoneyHearted",
+      "focused": true
+    },
+    "policy/accessibility": {
+      "title": "A welcoming place to browse.",
+      "text": "Home\n/\nResource shelf\n/\nA welcoming place to browse.\nHONEYHEARTED · WEBSITE PREVIEW NOTES\nA welcoming place to browse.\n\nThis preview includes accessibility-minded controls, but it is not a certification or a completed accessibility audit.\n\nIncluded in the HTML\n\nThe design includes a skip link, visible keyboard focus, labeled fields, meaningful image descriptions, native dialogs, a keyboard-operable mobile menu, and status messages for filters and forms. Decorative artwork is hidden from assistive technology. Motion is reduced when the browser requests it.\n\nBefore publication\n\nTest the final site with keyboard-only use, screen readers, mobile zoom, and contrast checks. Review the accessibility of the actual product files separately; a usable website does not by itself make a slide deck or PDF accessible.\n\nNeed another way to get information?\n\nA live contact route should be provided for accessibility questions. In this demonstration, contact delivery is not yet connected.\n\nOpen the contact section →\n\nBack to HoneyHearted",
+      "focused": true
+    },
+    "launch": {
+      "title": "Ready for thenext little step.",
+      "text": "Home\n/\nResource shelf\n/\nYour website launch checklist\nA BEAUTIFUL STARTING POINT · NOT A LIVE SHOP YET\nReady for the\nnext little step.\n\nThe design now follows your supplied HoneyHearted banner: honey gold, sage, daisies, warm paper, and your existing brand artwork.\n\nWorking now: responsive navigation, searchable and filterable catalog, resource-detail views, preview galleries and zoom, related resources, teaching articles, a free printable download, FAQs, and form validation. Nothing pretends to send a message, subscribe a visitor, or complete a purchase.\n\n1. Connect the real destinations.\n\nAt the top of app.js (or the script inside the standalone HTML), fill in SITE_CONFIG.tptStoreUrl, the exact productLinks, facebookUrl, and beachsideSampleUrl. Do not substitute a general search page for an individual product listing.\n\n2. Review your catalog.\n\nConfirm titles, grades, subject or skills, formats, page or slide counts, inclusions, editable parts, prep requirements, and anything not included. Replace each illustrative cover with approved product art. The reading collection is intentionally not presented as a finished, available product.\n\n3. Make the About page yours.\n\nApprove the draft copy, add your relevant experience and genuine development process, and use a photo you are comfortable sharing. Add testimonials only when you have real feedback and appropriate permission. No fabricated sales, reviews, or “bestseller” labels belong here.\n\n4. Connect contact and email delivery.\n\nSet a public contactEmail to prepare email-app drafts; this is not server-side sending. Connect a secure newsletterEndpoint with the documented response format in the source. Add unsubscribe handling, consent and privacy information, spam controls, and delivery testing. Do not put private service keys in client-side HTML. Set preview: false only after testing.\n\n5. Finish policies and search setup.\n\nReplace preview privacy, resource-use, and accessibility notes. This one-file version uses hash-based detail views for offline navigation; those are not separate search-indexable product pages. A production build should give key products and articles real URLs, unique titles and descriptions, a canonical URL strategy, internal links, a sitemap, and Search Console verification. Remove noindex only when ready.\n\n6. Launch, test, and maintain.\n\nPublish with HTTPS. Verify mobile layout, keyboard use, all forms, exact TPT destinations, downloads, policy wording, and backups. Track website-to-TPT clicks separately from confirmed sales. Outbound clicks expose an optional local hh:outbound event hook; this preview does not send analytics anywhere.\n\nProducts and their descriptions live in a clearly labeled data block. The source folder includes separate CSS, JavaScript, images, and the free sample so a developer can maintain them without redesigning the site.\n\nBack to the website",
+      "focused": true
+    },
+    "missing-page": {
+      "title": "A little lost?",
+      "text": "A little lost?\n\nThat page is not part of this preview. The resource shelf is a good place to start.\n\nExplore the resources →",
+      "focused": true
+    }
+  },
+  "forms": {
+    "contactResult": {
+      "status": "This preview is not connected to email. Your message has not been sent or saved.",
+      "name": "Alex",
+      "subject": "Report a resource error"
+    },
+    "newsletterResult": {
+      "status": "This is a preview: you have not been subscribed, and your email has not been sent or saved. The free planning page is available without signing up.",
+      "email": "alex@example.com",
+      "consent": true
+    }
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "expanded": "true",
+    "hidden": false
+  },
+  "mobileEscape": {
+    "expanded": "false",
+    "hidden": true,
+    "focused": "menu-toggle"
+  },
+  "reducedMotion": {
+    "matches": true,
+    "scrollBehavior": "auto",
+    "transitionDuration": "0s",
+    "animationName": "none"
+  },
+  "reflow": {
+    "width": 320,
+    "scrollWidth": 320,
+    "hero": {
+      "left": 14,
+      "right": 306
+    },
+    "shop": {
+      "left": 14,
+      "right": 306
+    }
+  },
+  "networkRequests": [
+    "http://127.0.0.1:5184/honey-hearted"
+  ],
+  "unexpectedNetwork": [],
+  "runtimeErrors": [],
+  "networkErrors": [],
+  "failures": [],
+  "passed": true
+}

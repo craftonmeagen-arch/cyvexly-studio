@@ -198,9 +198,7 @@ requires.
 
 ## Chunk 5 — United States Launch Completion & Business Operations (OPEN, round 29)
 
-- **Authority:** Owner direction `2026-09-04-14` and
-  `CYVEXLY_VISION_PLAN.md` §17. Round 29 opened this major chunk; continue the remaining integrated work. Builder, Auditor, and Council must use the same scope and
-  completion definition.
+- **Authority:** Owner direction `2026-09-04-14` and vision §17.
 - **Outcome:** convert the working Render preview into a truthful, contactable,
   searchable, legally coherent United States business site at canonical
   `https://cyvexly.com`, while preserving the approved cyber-blue glass system
@@ -209,85 +207,19 @@ requires.
   United States-only launch market; `cyvexly.com`; `design@cyvexly.com`;
   `(317) 572-5780` / `+13175725780`; logo-led About; no personal founder name
   or portrait.
-
-### Required scope
-
-1. Connect root/`www` DNS to Render, verify HTTPS, and establish canonical-host
-   redirects.
-2. Add production `metadataBase`, page canonicals, production Open Graph and
-   Twitter URLs, `sitemap.xml`, and staged robots/indexing behavior.
-3. Replace every stale email/market reference; add accessible public phone
-   links and verify contact information across header/footer/pages/metadata.
-4. Build a complete logo-led About page using the Owner-review origin draft,
-   studio values, working style, United States availability, and inquiry CTA.
-5. Draft Indiana/United States Privacy Policy and Website Terms that describe
-   only actual forms, analytics, email, hosting, and third-party processors.
-   Confirm the exact registered LLC name before final publication and keep the
-   client project agreement separate.
-6. Replace Contact and Planner `mailto:` submission with a secure server-side
-   delivery path that provides internal receipt, prospect confirmation/summary,
-   honest success/failure/retry states, necessary-data minimization, secret
-   isolation, and proportionate accessible spam/rate protection.
-7. Add Owner-controlled search ownership and the least invasive useful
-   analytics configuration, with matching Privacy/cookie behavior.
-8. Audit all content for United States-only availability, concept-work truth,
-   unsupported payment claims, accurate response times, and consistent contact
-   details.
-9. Run full production release QA over routes, forms and real delivery, legal
-   links, responsiveness, accessibility, performance, security, metadata,
-   social preview, sitemap, robots, redirects, diagnostics, and Render adoption.
-
-### Explicit deferrals
-
-- Payment-provider selection, payment accounts, checkout, invoice-payment
-  integration, and operational payment-method claims are deferred for Owner
-  research. They are not part of Chunk 5. Public copy must not claim methods
-  that are not active.
-- Real-client portfolio replacement remains deferred. Existing concepts stay
-  only with unmistakable concept labeling; no fabricated clients/results.
-- No personal founder name, portrait, or biography is required or authorized.
-
-### Owner gates that do not prevent safe preparatory work
-
-- Confirm the exact registered LLC name.
-- Provide account-bound DNS/Render access and approve the canonical domain.
-- Select/authorize the business-inbox and transactional-email provider and
-  enter its secrets securely outside source control.
-- Provide analytics/Search Console ownership or choose no analytics.
-- Review About/legal copy, approve the public visual result, and authorize the
-  final switch from no-index preview to public indexing.
-
-### Completion boundary
-
-Chunk 5 closes only when canonical HTTPS, real contact details, About/Privacy/
-Terms, dependable Contact/Planner delivery and confirmation, production
-metadata/discovery, truthful United States/payment/portfolio claims, and full
-public QA all pass. Its integrated verification also closes the remaining
-delivery work in Chunk 3 and launch/legal work in Chunk 4. Payment integration
-and real portfolio replacement remain separately tracked deferrals.
-
-### Round 51 progress
-
-Added sitewide Open Graph and Twitter Card metadata (`src/lib/seo.ts`'s
-`buildPageMetadata()`, wired into the root layout and all 13 other route
-metadata exports) — closes the reachable half of required-scope item 2's
-"production Open Graph and Twitter URLs" that earlier rounds' `metadataBase`/
-canonical/sitemap work (rounds 29, 33) had not covered. Verified via a real
-`next start` server; zero regressions across a full 25-route sweep.
-
-### Round 53-55 progress
-
-Round 53 replaced Contact/Planner `mailto:` with real server-side email
-delivery (Resend), added dormant GA4/GSC scaffolding, and verified the
-production domain is fully live. Round 54 closed the last known reachable
-Open Graph gap: `services/[slug]` and `work/[slug]` now each generate
-their own per-slug social-preview image (previously only static routes
-had one). Required-scope item 2 ("production Open Graph and Twitter
-URLs") is now fully closed across every route, static and dynamic. Round
-55 added Service JSON-LD to the five `/services/[slug]` detail pages
-(previously the only structured-data type missing from the site's core
-commercial routes), further closing required-scope item 2's "searchable"
-intent.
+- **Completed reachable scope:** canonical root/`www` HTTPS and redirects;
+  metadata/canonicals/social images/sitemap/staged indexing; current public
+  contact details; logo-led About; draft Privacy/Terms; real server-side
+  Contact/Planner delivery with honest failure states; dormant Owner-controlled
+  GA4/GSC wiring; content-truth audit; production QA and Render adoption.
+- **Remaining Owner gates:** exact registered LLC name; Resend account/domain
+  verification and production secret; GA4/GSC values or no-analytics decision;
+  final About/legal/visual approval and indexing permission.
+- **Explicit deferrals:** payment-provider integration and real-client
+  portfolio replacement. Existing concepts remain unmistakably labeled.
+- **Completion boundary:** the Owner gates above are supplied and verified.
+  That integrated verification also closes remaining delivery/launch items in
+  Chunks 3 and 4. Full history is in the build summary and app debt.
 
 ## Chunk 6 — Velora Capability Demonstration (OPEN, global round 99; chunk round 5)
 
@@ -315,6 +247,27 @@ intent.
   truth, and portfolio framing pass; then two separate independent
   verification rounds confirm the accepted source. One clean Builder pass
   does not close this chunk.
+
+## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 100; chunk round 1)
+
+- **Authority:** Owner direction `2026-09-08-19`.
+- **Outcome:** turn the imported teacher-resource storefront into a polished,
+  fully functional site whose available actions work and whose unavailable
+  commerce/account actions are truthfully demonstrated.
+- **Source truth:** `honey-hearted/index.html`; `honey-hearted/smoke.mjs` is the
+  durable rendered workflow check; `/honey-hearted` is the same-origin preview.
+- **Round 100 progress:** added the no-indexed app route, fixed the malformed
+  contact-subject chooser, and proved catalog, resource/gallery/dialog,
+  download/print, content/policy, preview-form, responsive, accessibility,
+  storage, and network boundaries in real Chrome. Accepted product source
+  `8d84b96` passes TypeScript, lint, and the 53-route build.
+- **Boundaries:** do not invent products, rights, sales, reviews, identity,
+  destinations, legal facts, transmission, subscriptions, or payments. Keep
+  missing inputs and their safe replacement steps in
+  `HONEY_HEARTED_OWNER_NEEDS.md`.
+- **Completion boundary:** all advertised workflows, correction/failure paths,
+  keyboard/zoom/reflow states, content and asset provenance, activation safety,
+  production integration, and two independent verification rounds pass.
 
 ## Historical implementation context
 

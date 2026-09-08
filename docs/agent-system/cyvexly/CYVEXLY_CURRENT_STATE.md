@@ -1,20 +1,22 @@
 # Cyvexly Current State
 
-**Global round:** 99. **Active product work:** Chunk 6 — Velora Capability
-Demonstration, chunk-local round 5, opened under Owner direction
-`2026-09-07-17`. Chunk 5 remains open in parallel with only Owner/account
-gates left; its completed Cyvexly launch work and gates are summarized below.
+**Global round:** 100. **Active product work:** Chunk 7 — HoneyHearted
+Functional Storefront, chunk-local round 1, opened under Owner direction
+`2026-09-08-19`. Chunk 6 remains open in parallel only for its two required
+independent reviews; Chunk 5 remains open only for Owner/account gates.
 
-Round 99 checked a fresh integration surface rather than repeating the prior
-workflow matrix. The live case study's canonical, Open Graph/Twitter metadata,
-BreadcrumbList JSON-LD, disclosure copy, staged no-index state, and sitemap
-boundary all match source. Its route-specific 1200x630 Open Graph image was
-rendered through a local production runtime and opened at full resolution;
-the Velora challenge copy fits cleanly with the approved Cyvexly hierarchy.
-TypeScript, lint (one known evidence-script warning), and the 52-route build
-pass. No product defect surfaced, so accepted source remains `0ca0504`.
+Round 100 integrated the imported `honey-hearted/index.html` at the same-origin
+`/honey-hearted` route with explicit response-level no-index protection, fixed
+the malformed contact-subject chooser, and added a durable Chrome/CDP smoke
+suite. The suite passes the complete current storefront demonstration at
+1440/390/320 widths: catalog discovery, resource route/gallery/zoom, safe
+unconnected commerce notice, real free-printable download and print document,
+teaching/policy/About/launch routes, truthful non-transmitting forms, mobile
+focus return, reduced motion, storage/network boundaries, and reflow. The
+53-route build, TypeScript, and lint pass; rendered evidence is retained for
+review. Accepted HoneyHearted product source is `8d84b96`.
 
-**Accepted product position:** Round 97 Velora integration source is committed
+**Parallel accepted product position:** Round 97 Velora integration source is committed
 and pushed at `0ca0504` on `main`; its closeout is `c2f8e8e`.
 `https://cyvexly.com/work/velora-dining` and `https://cyvexly.com/velora` are
 live; the raw demo returns the explicit no-index response header.

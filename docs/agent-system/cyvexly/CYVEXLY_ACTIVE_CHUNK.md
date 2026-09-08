@@ -1,7 +1,8 @@
 # Cyvexly Active Chunk
 
-**Chunks:** **6 — Velora Capability Demonstration is OPEN** at chunk-local
-round 5 under Owner direction `2026-09-07-17`. Chunks 3 — Project Planner and 4 —
+**Chunks:** **7 — HoneyHearted Functional Storefront is OPEN** at chunk-local
+round 1 under Owner direction `2026-09-08-19`. **Chunk 6 — Velora Capability
+Demonstration remains OPEN** only for two independent reviews. Chunks 3 — Project Planner and 4 —
 Utility/legal pages (opened round 2, in progress) retain incomplete closure
 items. **Chunk 5 — United States Launch Completion & Business Operations is
 now OPEN**, started round 29. Its integrated verification will close the
@@ -9,7 +10,20 @@ overlapping delivery and launch items in Chunks 3 and 4. Chunk 2 — Core
 marketing pages — remains closed but revisitable. Remaining Chunk 5 scope
 is entirely Owner-side gates (see `CYVEXLY_CURRENT_STATE.md`); rounds
 77-86 are convergence-check/proof-gap rounds finding the reachable
-product surface is clean. Chunk 6 is the current reachable Builder priority.
+product surface is clean. Chunk 7 is the current reachable Builder priority.
+
+**Round 100 / Chunk 7 round 1** (scheduled/unattended) integrated the imported
+`honey-hearted/index.html` at `/honey-hearted` with explicit no-index response
+protection and fixed its malformed contact-subject chooser. Added a durable
+Chrome/CDP suite covering the complete current storefront demonstration:
+catalog discovery; resource route/gallery/zoom; safe commerce boundary; real
+free download/print; content, About, policy, launch, and missing routes; truthful
+preview forms; mobile focus return; reduced motion; 320px reflow; storage and
+network boundaries. It passes with zero failures or runtime/network errors.
+TypeScript, lint (one known evidence warning), and the 53-route build pass; the
+build trace includes the imported HTML. Accepted product source is `8d84b96`.
+Chunk remains open for deeper negative,
+keyboard/zoom, claim/provenance, activation-boundary, and independent proof.
 
 **Round 99 / Chunk 6 round 5** (scheduled/unattended) checked the new portfolio
 entry's metadata and discovery surface rather than repeating the established
@@ -54,7 +68,7 @@ origin assets and the no-index demo response. Chunk stays open for two separate
 independent verification rounds.
 
 Rounds 93-96 are preserved in Builder handoff/build-summary history and their
-matching debt entries; Round 96 rotated out when Round 99 established the
+matching debt entries; Round 97 rotated out when Round 100 established the
 current latest-three context.
 
 **Round 92** (scheduled/unattended) dispositioned Auditor item

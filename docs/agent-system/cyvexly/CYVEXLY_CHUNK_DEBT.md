@@ -6,7 +6,17 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
 
 ## Open
 
-0. **Chunk 6 — Velora verification and integration depth (opened round 95).**
+0. **Chunk 7 — HoneyHearted functional depth (opened round 100).** Round 100
+   integrated `/honey-hearted` at accepted source `8d84b96`, fixed the malformed
+   subject chooser, and proved
+   all current primary workflows plus mobile/320px, reduced-motion, storage,
+   network, download/print, and preview/no-index boundaries. Still reachable:
+   expand negative/correction combinations, full keyboard/zoom traversal,
+   claim/asset provenance, resilience, activation-boundary, and independent
+   review proof. Owner/account substitutions stay in
+   `HONEY_HEARTED_OWNER_NEEDS.md`, not here.
+
+0a. **Chunk 6 — Velora verification and integration depth (opened round 95).**
    Rounds 95-96 closed the primary, invalid/correction, keyboard/focus, 320px
    reflow, reduced-motion, image-fallback/provenance, noindex/form, and network-
    origin proof. Round 97 completed the production-normal Cyvexly portfolio and
