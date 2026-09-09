@@ -280,10 +280,10 @@ export function VeloraCaseStudy({ breadcrumbJsonLd }: { breadcrumbJsonLd: Record
           inquiryHref="/contact?interest=hospitality-website"
           inquiryLabel="Ask about a hospitality website"
           serviceHref="/services/ecommerce-websites"
-          serviceLabel="Explore commerce websites"
+          serviceLabel="Explore commerce & booking"
           pricingHref="/pricing#commerce-package"
           pricingLabel="Review Commerce pricing"
-          plannerHref="/start?service=ecommerce-websites"
+          plannerHref="/start?service=booking-websites"
         />
       </main>
 

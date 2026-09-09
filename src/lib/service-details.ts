@@ -217,40 +217,40 @@ export const serviceDetails = {
   },
   "ecommerce-websites": {
     slug: "ecommerce-websites",
-    name: "E-commerce websites",
-    eyebrow: "A store planned around trust and checkout",
-    headline: "Make products easier to understand, choose, and buy.",
+    name: "Commerce & booking websites",
+    eyebrow: "Selling and booking, planned around trust",
+    headline: "Sell products or take bookings online without losing clarity.",
     summary:
-      "A commerce site for a small-to-medium catalog, designed around product clarity, operational requirements, and a calm route to purchase.",
+      "A connected website for a small-to-medium store or booking-led business, designed around clear choices, operational requirements, and a calm path to completion.",
     problem:
-      "A store can look polished and still lose customers through weak product information, confusing collections, unexpected checkout requirements, or an operations plan that arrives too late.",
+      "A store or booking journey can look polished and still lose customers through unclear products or services, confusing availability, unexpected checkout requirements, or an operations plan that arrives too late.",
     outcome:
-      "A responsive storefront that connects product presentation to checkout while making shipping, tax, content, and owner workflows part of the plan from the start.",
+      "A responsive experience that connects products or services to checkout or scheduling while making availability, policies, content, and owner workflows part of the plan from the start.",
     included: [
-      "Store, collection, product, cart, and checkout structure",
-      "Custom responsive storefront design and development",
-      "Initial catalog allowance and product-data planning",
-      "Payment, shipping, and tax requirement review",
-      "Policy placement and transactional-experience review",
+      "Store, service, availability, cart, checkout, and booking structure",
+      "Custom responsive commerce and booking experience",
+      "Initial catalog or service setup allowance and data planning",
+      "Payment, scheduling, shipping, and tax requirement review",
+      "Policy placement, notifications, and transactional-experience review",
       "Analytics, training, launch checks, and launch support",
     ],
     clientInputs: [
-      "Product catalog, variants, pricing, inventory, and imagery",
-      "Shipping regions, rates, tax requirements, and return approach",
-      "Payment-provider and platform account access at the agreed stage",
-      "Final product, policy, and customer-service content",
+      "Product catalog, services, availability, pricing, and imagery",
+      "Booking rules, locations, staff or calendars, or shipping and return requirements",
+      "Payment, booking, and platform account access at the agreed stage",
+      "Final product or service, policy, cancellation or return, and customer-service content",
     ],
     scopeFactors: [
-      "Catalog size, variants, bundles, and migration condition",
-      "Subscriptions, memberships, accounts, or unusual checkout rules",
-      "Shipping, tax, fulfillment, and third-party integrations",
-      "Product-entry, photography, copy, and policy-support needs",
+      "Catalog or service volume, availability, variants, locations, and migration condition",
+      "Booking rules, checkout requirements, or both",
+      "Scheduling, calendar, payment, shipping, tax, fulfillment, and third-party integrations",
+      "Product or service entry, photography, copy, and policy-support needs",
     ],
     package: {
       name: "Commerce",
       price: "From $8,500",
       timing: "Typically 8–14+ weeks",
-      note: "A starting point for a small-to-medium online store. Platform fees, payment processing, and third-party subscriptions are separate.",
+      note: "A starting point for a small-to-medium online store or booking-led website. Platform fees, payment processing, booking services, and other third-party subscriptions are separate.",
       pricingHref: "/pricing#commerce-package",
     },
     example: {
@@ -262,19 +262,19 @@ export const serviceDetails = {
     },
     faqs: [
       {
-        question: "Which commerce platform do you use?",
+        question: "Which commerce or booking platform do you use?",
         answer:
-          "The recommendation follows your catalog, editing workflow, integrations, and operating requirements. We do not force every store into the same platform before discovery.",
+          "The recommendation follows your catalog or services, availability, editing workflow, integrations, and operating requirements. We do not force every store or booking journey into the same platform before discovery.",
       },
       {
-        question: "Are platform and payment fees included?",
+        question: "Are platform and transaction fees included?",
         answer:
-          "No. Hosting or platform subscriptions, payment-processing fees, premium apps, and other third-party services are billed separately.",
+          "No. Hosting, commerce or booking subscriptions, payment-processing fees, premium apps, and other third-party services are billed separately.",
       },
       {
-        question: "Can you enter all of our products?",
+        question: "Can you enter our products or services?",
         answer:
-          "Commerce includes an initial catalog allowance. Additional product entry or a larger migration is quoted by volume, variants, and source-data condition.",
+          "Commerce includes an initial product or service setup allowance. Additional entry or a larger catalog, availability, or content migration is quoted by volume and source-data condition.",
       },
     ],
   },

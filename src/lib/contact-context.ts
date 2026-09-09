@@ -27,7 +27,7 @@ export const inquiryPlannerServices = {
   "commerce-package": "ecommerce-websites",
   "custom-system": "custom-web-applications",
   "custom-web-applications": "custom-web-applications",
-  "hospitality-website": "ecommerce-websites",
+  "hospitality-website": "booking-websites",
   "business-websites": "business-websites",
   "website-redesigns": "website-redesigns",
   "landing-pages": "landing-pages",

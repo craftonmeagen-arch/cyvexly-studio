@@ -25,7 +25,7 @@ export const footerNav = {
   services: [
     { label: "Business websites", href: "/services/business-websites" },
     { label: "Website redesigns", href: "/services/website-redesigns" },
-    { label: "E-commerce websites", href: "/services/ecommerce-websites" },
+    { label: "Commerce & booking", href: "/services/ecommerce-websites" },
     { label: "Custom web applications", href: "/services/custom-web-applications" },
     { label: "Website care", href: "/services/website-care" },
   ],
@@ -455,9 +455,9 @@ export const websiteTypes = [
   },
   {
     id: "ecommerce-websites",
-    name: "E-commerce websites",
+    name: "Commerce & booking websites",
     description:
-      "A store built around product presentation, checkout, shipping and tax planning, and a smooth path from browsing to purchase.",
+      "A connected store or booking experience built around clear choices, checkout or scheduling, and the operating requirements behind it.",
   },
   {
     id: "website-care",
@@ -500,7 +500,7 @@ export const buyerNeeds = [
       "For stores, hospitality businesses, and service teams that need customers to move from interest to a real booking or purchase flow.",
     startingPoint: "Commerce from $8,500",
     detailHref: "/services/ecommerce-websites",
-    detailLabel: "Explore commerce websites",
+    detailLabel: "Explore commerce & booking",
     inquiryHref: "/contact?interest=commerce-package",
     proofHref: "/work/velora-dining",
     proofLabel: "See Velora's booking journey",
@@ -685,7 +685,7 @@ export const pricingPackages = [
     anchor: "commerce-package",
     plainName: "Online store or booking-led website",
     price: "From $8,500",
-    bestFor: "A small-to-medium online store or product business.",
+    bestFor: "A small-to-medium online store or booking-led business.",
     scope: [
       "Store structure",
       "Product and collection templates",

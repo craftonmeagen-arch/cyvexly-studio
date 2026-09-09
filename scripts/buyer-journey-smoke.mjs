@@ -38,7 +38,7 @@ const inquiryPlannerServices = {
   "commerce-package": "ecommerce-websites",
   "custom-system": "custom-web-applications",
   "custom-web-applications": "custom-web-applications",
-  "hospitality-website": "ecommerce-websites",
+  "hospitality-website": "booking-websites",
   "business-websites": "business-websites",
   "website-redesigns": "website-redesigns",
   "landing-pages": "landing-pages",
@@ -162,7 +162,7 @@ assert.match(home, /href="\/start"[^>]*>[\s\S]*?Detailed Project Planner/);
 const buyerServiceFooterLinks = [
   ["Business websites", "/services/business-websites"],
   ["Website redesigns", "/services/website-redesigns"],
-  ["E-commerce websites", "/services/ecommerce-websites"],
+  ["Commerce &amp; booking", "/services/ecommerce-websites"],
   ["Custom web applications", "/services/custom-web-applications"],
   ["Website care", "/services/website-care"],
 ];
@@ -462,6 +462,16 @@ const plannerConfigSource = await readFile(
   "utf8",
 );
 assert.match(plannerConfigSource, /"custom-web-applications": \{/);
+assert.match(
+  plannerConfigSource,
+  /"ecommerce-websites": \{[\s\S]*?serviceName: "Commerce or booking website"[\s\S]*?primaryGoal: ""/,
+  "the shared commerce/booking Planner entry still guesses that every buyer is selling products",
+);
+assert.match(
+  plannerConfigSource,
+  /"booking-websites": \{[\s\S]*?serviceName: "Booking-led website"[\s\S]*?primaryGoal: "book"/,
+  "the Planner is missing a booking-specific prefill for hospitality buyers",
+);
 assert.match(contactFormSource, /<SubmissionFallback message=\{submitError\}/);
 assert.match(plannerFormSource, /<SubmissionFallback message=\{submitError\}/);
 for (const source of [contactRouteSource, plannerRouteSource]) {
@@ -530,11 +540,11 @@ assert.match(velora, /href="\/contact\?interest=hospitality-website"/);
 assert.match(velora, /A connected hospitality site usually starts with the commerce path/);
 assert.match(velora, /Commerce begins at \$8,500/);
 assert.match(velora, /<summary[^>]*>\s*What shapes the scope/);
-assert.match(velora, /href="\/services\/ecommerce-websites"[^>]*>Explore commerce websites/);
+assert.match(velora, /href="\/services\/ecommerce-websites"[^>]*>Explore commerce &amp; booking/);
 assert.match(velora, /href="\/pricing#commerce-package"[^>]*>Review Commerce pricing/);
 assert.match(
   velora,
-  /href="\/start\?service=ecommerce-websites"[^>]*>Share a prefilled brief/,
+  /href="\/start\?service=booking-websites"[^>]*>Share a prefilled brief/,
 );
 assert.match(work, /href="\/work\/nexora-systems"/);
 assert.match(work, /href="\/nexora"[^>]*>Try demo/);
@@ -566,6 +576,11 @@ for (const detail of serviceDetails) {
   assert.match(detail, /href="\/(?:velora|nexora)"[^>]*>Try demo/);
   assert.doesNotMatch(detail, /aurora-spaces|vellora-care|Aurora Spaces|Vellora Care/);
 }
+assert.match(serviceDetails[3], /Commerce &amp; booking websites/);
+assert.match(serviceDetails[3], /Sell products or take bookings online/);
+assert.match(serviceDetails[3], /catalog, services, availability, pricing, and imagery/);
+assert.match(serviceDetails[3], /Booking rules, checkout requirements, or both/);
+assert.match(pricing, /A small-to-medium online store or booking-led business\./);
 
 const retiredStatuses = await Promise.all([
   readStatus("/work/aurora-spaces"),
