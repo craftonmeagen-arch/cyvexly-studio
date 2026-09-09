@@ -53,20 +53,14 @@ export const selectedWork = [
     summary:
       "Built hospitality concept pairing cinematic restaurant storytelling with responsive menu, reservation, private-event, gifting, and gallery journeys.",
     tags: ["Hospitality", "Interactive demo"],
+    capabilities: [
+      "Responsive menu, gallery, and visit planning",
+      "Reservation and private-event demo flows",
+      "Gift-card selection with safe local confirmation",
+    ],
     href: "/work/velora-dining",
     demoHref: "/velora",
     gradient: "from-[#20271F] via-[#49332E] to-[#D6BD8F]",
-  },
-  {
-    slug: "aurora-spaces",
-    name: "Aurora Spaces",
-    kind: "Concept project",
-    category: "Business Site",
-    summary: "Immersive website concept for a luxury architecture studio.",
-    tags: ["Business site", "Design-led"],
-    href: "/work/aurora-spaces",
-    demoHref: null,
-    gradient: "from-[#0F66E0] via-[#36C7FF] to-[#EEF4FA]",
   },
   {
     slug: "nexora-systems",
@@ -76,27 +70,16 @@ export const selectedWork = [
     summary:
       "Working release-intelligence demo with responsive analytics, service filters, issue investigation, and clear non-transmitting sample states.",
     tags: ["Web application", "Interactive demo"],
+    capabilities: [
+      "Selectable time ranges and comparison states",
+      "Service filtering and issue investigation",
+      "Plain-language summaries with accessible chart context",
+    ],
     href: "/work/nexora-systems",
     demoHref: "/nexora",
     gradient: "from-[#10213D] via-[#0F66E0] to-[#36C7FF]",
   },
-  {
-    slug: "vellora-care",
-    name: "Vellora Care",
-    kind: "Concept project",
-    category: "Commerce",
-    summary: "E-commerce concept for a premium skincare brand.",
-    tags: ["Commerce", "Brand-led"],
-    href: "/work/vellora-care",
-    demoHref: null,
-    gradient: "from-[#36C7FF] via-[#EEF4FA] to-[#D8E1EA]",
-  },
 ];
-
-// Every filter here must match at least one selectedWork item's `category`
-// (or "Concept", matched against `kind`) — an unmatched filter is a
-// guaranteed dead end ("No projects match that filter yet.").
-export const workFilters = ["All", "Built demo", "Design concepts", "Commerce"];
 
 export const caseStudies = {
   "velora-dining": {
@@ -139,45 +122,6 @@ export const caseStudies = {
     typographyNote:
       "Cormorant Garamond carries the editorial dining voice; Manrope keeps navigation, controls, forms, and disclosure copy crisp and practical.",
   },
-  "aurora-spaces": {
-    name: "Aurora Spaces",
-    status: "Concept project",
-    businessType: "Luxury architecture studio",
-    audience: "Prospective residential and commercial clients evaluating high-end architecture firms.",
-    challenge:
-      "Architecture studios often default to dense portfolio grids that undersell the experience of a space. Aurora Spaces needed a site that felt as considered and immersive as the buildings it designs.",
-    goals: [
-      "Communicate design authority within the first scroll",
-      "Let large-format project photography lead, with minimal competing chrome",
-      "Make it effortless to request a consultation",
-    ],
-    scope: [
-      "Home, Studio, Projects index, and project detail template",
-      "Custom visual system built around generous negative space",
-      "Consultation request form",
-    ],
-    decisions: [
-      "Full-bleed hero imagery with a single-line project caption, so the work speaks first",
-      "A restrained monochrome palette with one blue accent reserved for the main action",
-      "Slow, deliberate motion on scroll rather than snappy transitions, to match the pace of the work itself",
-    ],
-    accessibilityHighlights: [
-      "All imagery carries descriptive alt text for project context, not just file names",
-      "Motion respects reduced-motion preference with no information hidden behind it",
-    ],
-    intendedOutcome:
-      "A studio site that reads as confidently as the firm's built work, with a consultation form as the single clear next step.",
-    demoHref: null,
-    gradient: "from-[#0F66E0] via-[#36C7FF] to-[#EEF4FA]",
-    palette: [
-      { hex: "#10213D", label: "Midnight slate" },
-      { hex: "#0F66E0", label: "Cyber blue accent" },
-      { hex: "#36C7FF", label: "Ion cyan highlight" },
-      { hex: "#EEF4FA", label: "Arctic mist ground" },
-    ],
-    typographyNote:
-      "Large display type creates editorial confidence, while restrained supporting type keeps project details easy to scan.",
-  },
   "nexora-systems": {
     name: "Nexora Systems",
     status: "Built concept demo — fictional",
@@ -216,45 +160,6 @@ export const caseStudies = {
     ],
     typographyNote:
       "Technical labels use a compact monospace face, while plain supporting type keeps product explanations approachable.",
-  },
-  "vellora-care": {
-    name: "Vellora Care",
-    status: "Concept project",
-    businessType: "Premium skincare e-commerce brand",
-    audience: "Skincare shoppers comparing premium, ingredient-conscious brands online.",
-    challenge:
-      "Premium skincare buyers are ingredient-literate and skeptical of vague marketing claims. Vellora Care needed a store that felt clinical-grade credible while still feeling warm and giftable.",
-    goals: [
-      "Build trust through ingredient transparency, not just brand imagery",
-      "Make the path from product discovery to checkout short and calm",
-      "Support routine-based bundles alongside individual products",
-    ],
-    scope: [
-      "Home, collection and product templates, cart, and checkout flow",
-      "Ingredient-transparency component reused across every product page",
-      "Routine-builder bundle flow",
-    ],
-    decisions: [
-      "Paired every hero product shot with a compact ingredient/benefit callout, rather than separating marketing copy from technical detail",
-      "Used a cool, light palette to feel clinical and calm rather than loud or trend-driven",
-      "Kept checkout to a single page with order summary always visible, reducing abandonment risk",
-    ],
-    accessibilityHighlights: [
-      "Product imagery includes alt text describing product and context, not decorative-only description",
-      "Cart and checkout states (empty, error, success) are announced to assistive technology",
-    ],
-    intendedOutcome:
-      "A store that lets an ingredient-conscious shopper trust the brand and complete a purchase without leaving the product page to go research elsewhere.",
-    demoHref: null,
-    gradient: "from-[#36C7FF] via-[#EEF4FA] to-[#D8E1EA]",
-    palette: [
-      { hex: "#36C7FF", label: "Ion cyan accent" },
-      { hex: "#EEF4FA", label: "Arctic mist ground" },
-      { hex: "#D8E1EA", label: "Smoke glass surface" },
-      { hex: "#0A6B45", label: "Signal emerald (in-stock/trust cues)" },
-    ],
-    typographyNote:
-      "Open spacing and relaxed supporting type keep the concept calm without making it feel clinical or cold.",
   },
 };
 

@@ -16,9 +16,10 @@ export type ServiceDetail = {
     note: string;
   };
   example: {
-    slug: "aurora-spaces" | "nexora-systems" | "vellora-care";
+    slug: "velora-dining" | "nexora-systems";
     name: string;
     context: string;
+    demoHref: "/velora" | "/nexora";
   };
   faqs: { question: string; answer: string }[];
 };
@@ -62,10 +63,11 @@ export const serviceDetails = {
       note: "A common starting point for a complete small-business or professional-services website. Final scope is confirmed in writing.",
     },
     example: {
-      slug: "aurora-spaces",
-      name: "Aurora Spaces",
+      slug: "velora-dining",
+      name: "Velora",
       context:
-        "A labeled concept showing how a specialist studio can lead with authority, restrained navigation, and one clear consultation path.",
+        "A working fictional hospitality demo showing how a distinctive business can pair brand presence with practical menus, visit details, reservations, and private-event inquiries.",
+      demoHref: "/velora",
     },
     faqs: [
       {
@@ -127,6 +129,7 @@ export const serviceDetails = {
       name: "Nexora Systems",
       context:
         "A built fictional demo showing how a complex offer can be reorganized around plain-language outcomes and visible product proof.",
+      demoHref: "/nexora",
     },
     faqs: [
       {
@@ -188,6 +191,7 @@ export const serviceDetails = {
       name: "Nexora Systems",
       context:
         "A built fictional demo demonstrating outcome-first copy, interactive product proof, and a direct inquiry path for a focused technical audience.",
+      demoHref: "/nexora",
     },
     faqs: [
       {
@@ -245,10 +249,11 @@ export const serviceDetails = {
       note: "A starting point for a small-to-medium online store. Platform fees, payment processing, and third-party subscriptions are separate.",
     },
     example: {
-      slug: "vellora-care",
-      name: "Vellora Care",
+      slug: "velora-dining",
+      name: "Velora",
       context:
-        "A labeled commerce concept combining ingredient clarity, collection browsing, and a short route from product evaluation to checkout.",
+        "A working fictional hospitality demo with booking and gift-card selection journeys. The flows validate and confirm locally without taking payment or placing a real order.",
+      demoHref: "/velora",
     },
     faqs: [
       {
@@ -306,10 +311,11 @@ export const serviceDetails = {
       note: "Care starts with basic peace of mind. Care+ and Evolve add more support capacity, review depth, and priority.",
     },
     example: {
-      slug: "vellora-care",
-      name: "Vellora Care",
+      slug: "velora-dining",
+      name: "Velora",
       context:
-        "A labeled concept illustrating the kind of product and content system that benefits from deliberate ongoing updates; it is not presented as a client care engagement.",
+        "A working content-rich demo whose menus, events, policies, and seasonal campaigns illustrate why post-launch updates need a deliberate support plan. It is not presented as a care-plan engagement.",
+      demoHref: "/velora",
     },
     faqs: [
       {

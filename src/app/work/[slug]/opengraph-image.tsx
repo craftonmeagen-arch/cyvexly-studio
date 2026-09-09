@@ -6,7 +6,7 @@ type CaseStudySlug = keyof typeof caseStudies;
 
 export const size = ogImageSize;
 export const contentType = ogImageContentType;
-export const alt = "Cyvexly Studio concept case study";
+export const alt = "Cyvexly Studio working demonstration case study";
 
 export function generateStaticParams() {
   return Object.keys(caseStudies).map((slug) => ({ slug }));

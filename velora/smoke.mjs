@@ -465,7 +465,7 @@ async function main() {
     await viewport(1440, 900);
     await navigateTo(`${origin}/work`, 'a[href="/work/velora-dining"]');
     const workEntry = await evaluate(`
-      const card=document.querySelector('a[href="/work/velora-dining"]');
+      const card=document.querySelector('a[href="/work/velora-dining"]')?.closest('article');
       return {
         heading:card?.querySelector('h2')?.textContent?.trim(),
         text:card?.textContent,
@@ -474,17 +474,20 @@ async function main() {
     `);
     check(workEntry.heading === "Velora" && workEntry.text.includes("Built concept demo") && workEntry.text.includes("Built hospitality concept") && workEntry.text.includes("reservation"), "Cyvexly Work does not present the truthful capability-led Velora portfolio entry.");
     check(workEntry.image === "/media/velora-capability-demo.webp", "The Velora Work card is not using the real built-demo capture.");
-    const workFilters = await evaluate(`
-      const filter=[...document.querySelectorAll('button')].find(button=>button.textContent.trim()==='Concept');
-      filter?.click();
-      await new Promise(accept=>setTimeout(accept,50));
+    const workPortfolio = await evaluate(`
+      const projectLinks=[...document.querySelectorAll('a[href^="/work/"]')].map(link=>link.getAttribute('href'));
+      const projects=[...new Set(projectLinks)].sort();
+      const cards=[...document.querySelectorAll('main article')];
       return {
-        conceptKeepsVelora:Boolean(document.querySelector('a[href="/work/velora-dining"]')),
+        projects,
+        cardActionCounts:cards.map(card=>card.querySelectorAll('a').length),
+        hasFilters:Boolean(document.querySelector('[aria-label="Filter projects"]')),
         scrollWidth:document.documentElement.scrollWidth,
         width:innerWidth,
       };
     `);
-    check(workFilters.conceptKeepsVelora && workFilters.scrollWidth <= workFilters.width, "The Concept filter dropped Velora or the four-card Work grid overflowed.");
+    check(JSON.stringify(workPortfolio.projects) === JSON.stringify(["/work/nexora-systems","/work/velora-dining"]), "Cyvexly Work is not limited to the two inspectable demonstrations.");
+    check(!workPortfolio.hasFilters && workPortfolio.cardActionCounts.every(count=>count >= 2) && workPortfolio.scrollWidth <= workPortfolio.width, "The two-project Work presentation has a redundant filter, missing case/demo actions, or desktop overflow.");
     await screenshot("cyvexly-work-velora.png", true);
 
     await viewport(390, 844);
@@ -557,7 +560,7 @@ async function main() {
       await settle();
     }
     check(demoReturned, "The case-study live-demo link did not reach the functioning Velora experience.");
-    const portfolioIntegration = { workEntry, workFilters, mobileWork, caseStudy, mobileCaseStudy, demoReturned };
+    const portfolioIntegration = { workEntry, workPortfolio, mobileWork, caseStudy, mobileCaseStudy, demoReturned };
 
     const allowedOrigins = new Set([new URL(url).origin]);
     const unexpectedNetwork = [...new Set(networkRequests.filter((requestUrl) => requestUrl.startsWith("http") && !allowedOrigins.has(new URL(requestUrl).origin)))];

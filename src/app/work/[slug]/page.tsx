@@ -82,20 +82,18 @@ export default async function CaseStudyPage({
                 <span className="font-medium text-midnight-slate">Audience: </span>
                 {study.audience}
               </p>
-              {study.demoHref ? (
-                <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-                  <ButtonLink href={study.demoHref}>Explore the live demo ↗</ButtonLink>
-                  <span className="max-w-sm text-xs leading-relaxed text-cool-graphite">
-                    Fictional sample content. The demonstration does not operate a real business service or transmit a request.
-                  </span>
-                </div>
-              ) : null}
+              <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+                <ButtonLink href={study.demoHref}>Explore the live demo ↗</ButtonLink>
+                <span className="max-w-sm text-xs leading-relaxed text-cool-graphite">
+                  Fictional sample content. The demonstration does not operate a real business service or transmit a request.
+                </span>
+              </div>
             </div>
           </div>
           <div
             className={`h-56 w-full overflow-hidden bg-gradient-to-br sm:h-72 ${study.gradient}`}
             role="img"
-            aria-label={`${study.name} ${study.demoHref ? "built homepage preview" : "abstract concept visual"}`}
+            aria-label={`${study.name} built homepage preview`}
           >
             <ConceptPreview slug={slug} />
           </div>
@@ -166,12 +164,11 @@ export default async function CaseStudyPage({
           </p>
 
           <h2 className="mt-12 font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
-            {study.demoHref ? "Built responsive experience" : "Desktop & mobile experience"}
+            Built responsive experience
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
-            {study.demoHref
-              ? `A responsive preview of the working ${study.name} demonstration. All business details, interface data, and outcomes are fictional sample content.`
-              : `An illustrative preview of the visual direction across breakpoints — not a pixel-accurate screenshot, since ${study.name} is a concept project with no built site behind it.`}
+            A responsive preview of the working {study.name} demonstration. All business
+            details, interface data, and outcomes are fictional sample content.
           </p>
           <div className="mt-6 grid gap-6 sm:grid-cols-[1fr_200px]">
             <div>

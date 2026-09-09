@@ -103,20 +103,20 @@ export default function Home() {
                   Proof before promises
                 </p>
                 <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
-                  See the strongest work first.
+                  Two working demos. Two different problems.
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-cool-graphite sm:text-base">
-                  Velora and Nexora are working, interactive demonstrations. Aurora remains
-                  a clearly labeled design study.
+                  Explore a brand-led hospitality website and a dense custom web
+                  application. Both are fictional, interactive, and available to inspect.
                 </p>
               </div>
               <ButtonLink href="/work" variant="text">
-                View all projects →
+                Compare both projects →
               </ButtonLink>
             </div>
 
-            <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.65fr)] lg:grid-rows-2">
-              <article className="glass-panel glass-panel-interactive flex min-h-[34rem] flex-col overflow-hidden rounded-3xl lg:row-span-2">
+            <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.25fr)_minmax(20rem,0.75fr)]">
+              <article className="glass-panel glass-panel-interactive flex min-h-[34rem] flex-col overflow-hidden rounded-3xl">
                 <div
                   className={`min-h-64 flex-1 overflow-hidden bg-gradient-to-br ${selectedWork[0].gradient}`}
                   aria-hidden="true"
@@ -135,41 +135,37 @@ export default function Home() {
                   </p>
                   <div className="mt-6 flex flex-wrap gap-3">
                     <ButtonLink href={selectedWork[0].href}>View case study</ButtonLink>
-                    <ButtonLink href={selectedWork[0].demoHref ?? "/velora"} variant="secondary">
+                    <ButtonLink href={selectedWork[0].demoHref} variant="secondary">
                       Try interactive demo
                     </ButtonLink>
                   </div>
                 </div>
               </article>
 
-              {selectedWork.slice(1, 3).map((project) => (
+              {selectedWork.slice(1).map((project) => (
                 <article
                   key={project.name}
-                  className="glass-panel grid min-h-0 overflow-hidden rounded-2xl sm:grid-cols-[9rem_1fr] lg:grid-cols-[8rem_1fr]"
+                  className="glass-panel flex min-h-[34rem] flex-col overflow-hidden rounded-3xl"
                 >
                   <div
-                    className={`min-h-44 overflow-hidden bg-gradient-to-br ${project.gradient}`}
+                    className={`min-h-64 flex-1 overflow-hidden bg-gradient-to-br ${project.gradient}`}
                     aria-hidden="true"
                   >
                     <ConceptPreview slug={project.slug} />
                   </div>
-                  <div className="flex flex-col gap-2 p-5">
-                    <span className="w-fit rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
-                      {project.kind === "Built concept demo" ? "Working concept demonstration" : "Design concept"}
+                  <div className="flex flex-col gap-2 p-6 sm:p-8">
+                    <span className="w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
+                      Working concept demonstration
                     </span>
-                    <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                    <h3 className="mt-2 font-display text-2xl font-semibold text-midnight-slate">
                       {project.name}
                     </h3>
-                    <p className="text-sm text-cool-graphite">{project.summary}</p>
-                    <div className="mt-auto flex flex-wrap gap-2 pt-3">
-                      <ButtonLink href={project.href} variant="text" className="text-xs">
-                        {project.kind === "Built concept demo" ? "Case study →" : "View concept →"}
+                    <p className="text-sm leading-relaxed text-cool-graphite sm:text-base">{project.summary}</p>
+                    <div className="mt-auto flex flex-wrap gap-3 pt-4">
+                      <ButtonLink href={project.href} variant="secondary">
+                        View case study
                       </ButtonLink>
-                      {project.demoHref ? (
-                        <ButtonLink href={project.demoHref} variant="text" className="text-xs">
-                          Try demo →
-                        </ButtonLink>
-                      ) : null}
+                      <ButtonLink href={project.demoHref}>Try interactive demo</ButtonLink>
                     </div>
                   </div>
                 </article>

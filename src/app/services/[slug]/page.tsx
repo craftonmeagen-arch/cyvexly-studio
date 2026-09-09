@@ -155,13 +155,13 @@ export default async function ServiceDetailPage({
             <div className="overflow-hidden rounded-3xl border border-smoke-glass bg-frosted-glass">
               <div className="flex items-center justify-between border-b border-smoke-glass/70 px-5 py-3">
                 <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-cool-graphite">
-                  Relevant concept work
+                  Relevant working example
                 </span>
-                <span className="rounded-full bg-ice-field px-3 py-1 font-mono text-[9px] uppercase tracking-[0.12em] text-cool-graphite">
-                  Concept project
+                <span className="rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[9px] uppercase tracking-[0.12em] text-signal-emerald">
+                  Built fictional demo
                 </span>
               </div>
-              <div className="h-64 overflow-hidden bg-ice-field sm:h-80" role="img" aria-label={`${service.example.name} abstract concept preview`}>
+              <div className="h-64 overflow-hidden bg-ice-field sm:h-80" role="img" aria-label={`${service.example.name} built demonstration preview`}>
                 <ConceptPreview slug={service.example.slug} />
               </div>
             </div>
@@ -175,9 +175,12 @@ export default async function ServiceDetailPage({
               <p className="mt-4 text-base leading-relaxed text-cool-graphite">
                 {service.example.context}
               </p>
-              <ButtonLink href={`/work/${service.example.slug}`} variant="text" className="mt-5">
-                Explore the case study →
-              </ButtonLink>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <ButtonLink href={`/work/${service.example.slug}`} variant="secondary">
+                  View case study
+                </ButtonLink>
+                <ButtonLink href={service.example.demoHref}>Try demo</ButtonLink>
+              </div>
             </div>
           </div>
         </section>

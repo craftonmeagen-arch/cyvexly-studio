@@ -9,6 +9,10 @@ async function read(path) {
   return response.text();
 }
 
+async function readStatus(path) {
+  return fetch(new URL(path, baseUrl)).then((response) => response.status);
+}
+
 const inquiryContexts = {
   "custom-project": "ask whether Cyvexly is a fit",
   "signal-package": "Signal package",
@@ -35,10 +39,11 @@ const [home, services, pricing, , plainContact, unknownContact, ...contextualCon
     read("/contact?interest=not-a-real-context"),
     ...contextEntries.map(([interest]) => read(`/contact?interest=${interest}`)),
   ]);
-const [work, processHtml, about] = await Promise.all([
+const [work, processHtml, about, sitemap] = await Promise.all([
   read("/work"),
   read("/process"),
   read("/about"),
+  read("/sitemap.xml"),
 ]);
 const serviceSlugs = [
   "business-websites",
@@ -107,18 +112,20 @@ for (const [index, slug] of serviceSlugs.entries()) {
 assert.match(home, /href="\/contact\?interest=custom-project"[^>]*>Ask about a project/);
 assert.match(home, /href="\/work"[^>]*>View our work/);
 assert.match(home, /Try interactive demo/);
-assert.match(home, /See the strongest work first/);
+assert.match(home, /Two working demos\. Two different problems\./);
 assert.match(home, /Choose the business goal that sounds familiar/);
 assert.match(home, /From first conversation to a site you own/);
 assert.doesNotMatch(home, /We&apos;re not a DIY builder/);
 assert.doesNotMatch(home, /Give us the brief\. We&apos;ll shape the route/);
-assert.doesNotMatch(home, /href="\/work\/vellora-care"/);
+assert.doesNotMatch(home, /Aurora Spaces|Vellora Care|href="\/work\/(?:aurora-spaces|vellora-care)"/);
 assert.doesNotMatch(home, /href="\/pricing"[^>]*>Need something custom\? Let/);
 assert.doesNotMatch(home, />Most popular</);
 assert.match(home, />Recommended</);
 
-assert.match(work, />Built demo</);
-assert.match(work, />Design concepts</);
+assert.match(work, /Working experiences you can inspect/);
+assert.match(work, /Selectable time ranges and comparison states/);
+assert.match(work, /Reservation and private-event demo flows/);
+assert.doesNotMatch(work, /Filter projects|Design concepts|Aurora Spaces|Vellora Care/);
 assert.doesNotMatch(work, /not twelve thin ones/);
 assert.match(work, /href="\/contact\?interest=custom-project"/);
 assert.match(processHtml, /A short inquiry is enough to begin/);
@@ -224,13 +231,30 @@ const [velora, nexoraCase, nexoraDemo] = await Promise.all([
 assert.match(velora, /href="\/contact\?interest=hospitality-website"/);
 assert.match(work, /href="\/work\/nexora-systems"/);
 assert.match(work, /href="\/nexora"[^>]*>Try demo/);
-assert.match(home, /href="\/nexora"[^>]*>Try demo/);
+assert.match(home, /href="\/nexora"[^>]*>Try interactive demo/);
 assert.match(nexoraCase, /Built concept demo — fictional/);
 assert.match(nexoraCase, /href="\/nexora"[^>]*>Explore the live demo/);
 assert.match(nexoraCase, /Cyvexly-built fictional demonstration/);
 assert.match(nexoraDemo, /Fictional product demonstration by Cyvexly Studio/);
 assert.match(nexoraDemo, /Find the release behind the change/);
 assert.match(nexoraDemo, /href="\/contact\?interest=custom-system"/);
+
+for (const detail of serviceDetails) {
+  assert.match(detail, /Relevant working example/);
+  assert.match(detail, /Built fictional demo/);
+  assert.match(detail, /href="\/work\/(?:velora-dining|nexora-systems)"[^>]*>View case study/);
+  assert.match(detail, /href="\/(?:velora|nexora)"[^>]*>Try demo/);
+  assert.doesNotMatch(detail, /aurora-spaces|vellora-care|Aurora Spaces|Vellora Care/);
+}
+
+const retiredStatuses = await Promise.all([
+  readStatus("/work/aurora-spaces"),
+  readStatus("/work/vellora-care"),
+]);
+assert.deepEqual(retiredStatuses, [404, 404]);
+assert.doesNotMatch(sitemap, /aurora-spaces|vellora-care/);
+assert.match(sitemap, /work\/velora-dining/);
+assert.match(sitemap, /work\/nexora-systems/);
 
 console.log(
   JSON.stringify(
@@ -243,6 +267,8 @@ console.log(
       pricingDecisionFields: 3,
       contactContexts: contextualContacts.length,
       plannerAlternativeContact: "optional-client-and-server",
+      featuredPortfolioProjects: 2,
+      retiredConceptRoutes: "404-and-absent-from-sitemap",
       status: "passed",
     },
     null,
