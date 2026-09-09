@@ -350,6 +350,43 @@ for (const label of [
 ]) {
   assert.match(pricing, new RegExp(label), `missing plain-language package label: ${label}`);
 }
+for (const bookingInclusiveDetail of [
+  "Storefront or booking journey structure",
+  "Product, service, and collection templates",
+  "Initial catalog or service setup allowance",
+  "Checkout, payment, or scheduling configuration",
+  "Shipping, tax, or booking requirement review",
+  "Transactional and notification review",
+  "Catalog or service tools and training",
+  "Checkout, booking, and approved services",
+]) {
+  assert.match(
+    pricing,
+    new RegExp(bookingInclusiveDetail.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
+    `Commerce pricing is missing booking-inclusive scope: ${bookingInclusiveDetail}`,
+  );
+}
+for (const storeOnlyDetail of [
+  "Store structure",
+  "Product and collection templates",
+  "Initial catalog allowance",
+  "Checkout/payment configuration",
+  "Shipping/tax requirement review",
+  "Transactional experience review",
+  "Catalog tools and training",
+  "Checkout plus approved store services",
+]) {
+  assert.doesNotMatch(
+    pricing,
+    new RegExp(storeOnlyDetail.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
+    `Commerce pricing still narrows a booking-led package to store-only scope: ${storeOnlyDetail}`,
+  );
+}
+assert.doesNotMatch(
+  pricing,
+  /Starting at[\s\S]{0,500}From \$8,500/,
+  "Commerce pricing repeats the starting-price qualifier",
+);
 assert.match(pricing, /Content editing/);
 assert.match(pricing, /Forms \/ integrations/);
 assert.match(pricing, /Illustrative build fee: \$4,500–\$5,750/);
