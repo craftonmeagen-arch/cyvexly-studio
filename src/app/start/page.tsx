@@ -46,7 +46,7 @@ export default async function StartPage({
               Project Planner
             </p>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
-              Tell us what you need. We&apos;ll shape the right route.
+              Tell us what you need. We&apos;ll recommend the right scope.
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-cool-graphite sm:text-lg">
               A calm, conversational brief in nine short steps. Choose &ldquo;not sure —

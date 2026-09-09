@@ -111,6 +111,10 @@ function getHeader(html) {
   return html.match(/<header[\s\S]*?<\/header>/)?.[0] ?? "";
 }
 
+function getFooter(html) {
+  return html.match(/<footer[\s\S]*?<\/footer>/)?.[0] ?? "";
+}
+
 for (const html of [home, services, pricing, work, processHtml, about, faq, plainContact]) {
   const header = getHeader(html);
   assert.match(
@@ -125,6 +129,35 @@ for (const html of [home, services, pricing, work, processHtml, about, faq, plai
   );
 }
 assert.match(home, /href="\/start"[^>]*>[\s\S]*?Detailed Project Planner/);
+
+const buyerServiceFooterLinks = [
+  ["Business websites", "/services/business-websites"],
+  ["Website redesigns", "/services/website-redesigns"],
+  ["E-commerce websites", "/services/ecommerce-websites"],
+  ["Custom web applications", "/services/custom-web-applications"],
+  ["Website care", "/services/website-care"],
+];
+
+for (const html of [home, services, pricing, work, processHtml, about, faq, plainContact, planner]) {
+  const footer = getFooter(html);
+  for (const [label, href] of buyerServiceFooterLinks) {
+    assert.match(
+      footer,
+      new RegExp(`href="${href}"[^>]*>${label}`),
+      `sitewide footer is missing the buyer-led ${label} route`,
+    );
+  }
+  assert.doesNotMatch(
+    footer,
+    /href="\/services\/landing-pages"[^>]*>Landing pages/,
+    "sitewide footer restored the old service taxonomy",
+  );
+}
+
+assert.match(home, /Ready to make your business unmistakable\?/);
+assert.doesNotMatch(home, /Ready to build something extraordinary\?/);
+assert.match(planner, /Tell us what you need\. We(?:&#x27;|&apos;)ll recommend the right scope\./);
+assert.doesNotMatch(planner, /shape the right route/);
 
 const serviceDestinations = [
   ["See package details", "/pricing#packages"],

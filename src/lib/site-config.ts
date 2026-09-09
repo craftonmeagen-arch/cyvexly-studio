@@ -25,8 +25,8 @@ export const footerNav = {
   services: [
     { label: "Business websites", href: "/services/business-websites" },
     { label: "Website redesigns", href: "/services/website-redesigns" },
-    { label: "Landing pages", href: "/services/landing-pages" },
     { label: "E-commerce websites", href: "/services/ecommerce-websites" },
+    { label: "Custom web applications", href: "/services/custom-web-applications" },
     { label: "Website care", href: "/services/website-care" },
   ],
   legal: [
