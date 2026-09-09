@@ -186,53 +186,6 @@ export function ContactForm({
           )}
         </div>
 
-        <div>
-          <label htmlFor="phone" className="text-sm font-medium text-midnight-slate">
-            Phone <span className="font-normal text-cool-graphite">(optional)</span>
-          </label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            autoComplete="tel"
-            className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="company" className="text-sm font-medium text-midnight-slate">
-            Company <span className="font-normal text-cool-graphite">(optional)</span>
-          </label>
-          <input
-            id="company"
-            name="company"
-            type="text"
-            autoComplete="organization"
-            className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
-          />
-        </div>
-      </div>
-
-      <div className="mt-5">
-        <label htmlFor="topic" className="text-sm font-medium text-midnight-slate">
-          Topic
-        </label>
-        <select
-          id="topic"
-          name="topic"
-          defaultValue={
-            (contactTopics as readonly string[]).includes(initialTopic)
-              ? initialTopic
-              : contactTopics[0]
-          }
-          className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
-        >
-          {contactTopics.map((topic) => (
-            <option key={topic} value={topic}>
-              {topic}
-            </option>
-          ))}
-        </select>
       </div>
 
       <div className="mt-5">
@@ -254,6 +207,70 @@ export function ContactForm({
           </p>
         )}
       </div>
+
+      <details className="group mt-5 rounded-xl border border-smoke-glass/80 bg-white/25 px-4 py-3">
+        <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium text-midnight-slate outline-none marker:content-none focus-visible:rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyber-blue [&::-webkit-details-marker]:hidden">
+          <span>
+            Add optional details
+            <span className="ml-2 font-normal text-cool-graphite">
+              Phone, company, or a different topic
+            </span>
+          </span>
+          <span aria-hidden="true" className="text-cyber-blue transition-transform group-open:rotate-45">
+            +
+          </span>
+        </summary>
+
+        <div className="grid gap-5 border-t border-smoke-glass/70 pt-5 sm:grid-cols-2">
+          <div>
+            <label htmlFor="phone" className="text-sm font-medium text-midnight-slate">
+              Phone <span className="font-normal text-cool-graphite">(optional)</span>
+            </label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="company" className="text-sm font-medium text-midnight-slate">
+              Company <span className="font-normal text-cool-graphite">(optional)</span>
+            </label>
+            <input
+              id="company"
+              name="company"
+              type="text"
+              autoComplete="organization"
+              className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
+            />
+          </div>
+
+          <div className="sm:col-span-2">
+            <label htmlFor="topic" className="text-sm font-medium text-midnight-slate">
+              Topic <span className="font-normal text-cool-graphite">(optional)</span>
+            </label>
+            <select
+              id="topic"
+              name="topic"
+              defaultValue={
+                (contactTopics as readonly string[]).includes(initialTopic)
+                  ? initialTopic
+                  : contactTopics[0]
+              }
+              className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
+            >
+              {contactTopics.map((topic) => (
+                <option key={topic} value={topic}>
+                  {topic}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+      </details>
 
       <div className="mt-5 flex items-start gap-3">
         <input

@@ -183,6 +183,21 @@ const readMessageValue = (html) =>
 
 assert.equal(readMessageValue(plainContact), "");
 assert.equal(readMessageValue(unknownContact), "");
+const contactFormHtml = plainContact.match(/<form[\s\S]*?<\/form>/)?.[0] ?? "";
+assert.ok(contactFormHtml, "contact form HTML is missing");
+assert.match(contactFormHtml, /<details[^>]*>/, "optional contact details disclosure is missing");
+assert.doesNotMatch(
+  contactFormHtml,
+  /<details[^>]*\sopen(?:=|\s|>)/,
+  "optional contact details should be collapsed on first use",
+);
+assert.match(contactFormHtml, /Add optional details/);
+assert.match(contactFormHtml, /Phone, company, or a different topic/);
+assert.ok(
+  contactFormHtml.indexOf('id="message"') < contactFormHtml.indexOf("Add optional details"),
+  "the required message field should precede optional contact details",
+);
+assert.match(contactFormHtml, /Topic[\s\S]*?\(optional\)/);
 
 for (const [[interest, expectedCopy], html] of contextEntries.map((entry, index) => [
   entry,

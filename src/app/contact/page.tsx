@@ -102,8 +102,8 @@ export default async function ContactPage({
                     Support on an existing project
                   </dt>
                   <dd className="mt-1 text-midnight-slate">
-                    Choose &ldquo;Existing project support&rdquo; below and
-                    include your project name.
+                    Open &ldquo;Add optional details,&rdquo; choose &ldquo;Existing
+                    project support,&rdquo; and include your project name.
                   </dd>
                 </div>
                 <div>
@@ -111,7 +111,8 @@ export default async function ContactPage({
                     Partnerships &amp; press
                   </dt>
                   <dd className="mt-1 text-midnight-slate">
-                    Choose &ldquo;Partnership / press&rdquo; below.
+                    Open &ldquo;Add optional details&rdquo; and choose
+                    &ldquo;Partnership / press.&rdquo;
                   </dd>
                 </div>
                 <div>
