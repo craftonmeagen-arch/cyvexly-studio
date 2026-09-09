@@ -118,18 +118,23 @@ assert.ok(
 );
 assert.match(
   plainContact,
-  /page-intro-stage[^\"]*py-5[^\"]*sm:py-6/,
+  /page-intro-stage[^\"]*py-3[^\"]*sm:py-6/,
   "Contact restored the oversized opening stage",
 );
 assert.match(
   plainContact,
-  /page-intro-shell[^\"]*py-6[^\"]*sm:py-7/,
+  /page-intro-shell[^\"]*py-4[^\"]*sm:py-7/,
   "Contact restored the oversized opening panel",
 );
 assert.match(
   plainContact,
-  /max-w-5xl[^\"]*py-8[^\"]*sm:py-10[^\"]*lg:py-12/,
+  /max-w-5xl[^\"]*py-6[^\"]*sm:py-10[^\"]*lg:py-12/,
   "Contact restored the oversized gap before the short form",
+);
+assert.match(
+  plainContact,
+  /hidden sm:inline[^>]*>Already know the details\?/,
+  "Contact puts the detailed-Planner pitch ahead of the short form on phones",
 );
 const serviceSlugs = [
   "business-websites",

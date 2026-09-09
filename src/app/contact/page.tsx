@@ -30,26 +30,28 @@ export default async function ContactPage({
       <SiteHeader />
 
       <main id="main-content" className="flex-1">
-        <section className="page-intro-stage border-b border-smoke-glass/70 px-4 py-5 sm:px-6 sm:py-6">
-          <div className="page-intro-shell mx-auto max-w-3xl rounded-3xl px-6 py-6 text-center sm:px-9 sm:py-7">
+        <section className="page-intro-stage border-b border-smoke-glass/70 px-4 py-3 sm:px-6 sm:py-6">
+          <div className="page-intro-shell mx-auto max-w-3xl rounded-3xl px-6 py-4 text-center sm:px-9 sm:py-7">
             <p className="text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
               Contact
             </p>
             <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-[2.625rem]">
               Tell us what you&apos;re considering.
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-cool-graphite">
-              Your name, email, and a short description are enough to ask if
-              Cyvexly is a fit. No technical language, finished content, or
-              complete sitemap required. Already know the details?{" "}
-              <ButtonLink href={plannerHref} variant="text">
-                Share a detailed brief →
-              </ButtonLink>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-6 text-cool-graphite sm:leading-relaxed">
+              Your name, email, and a short description are enough. No technical
+              language, finished content, or complete sitemap required.{" "}
+              <span className="hidden sm:inline">
+                Already know the details?{" "}
+                <ButtonLink href={plannerHref} variant="text">
+                  Share a detailed brief →
+                </ButtonLink>
+              </span>
             </p>
           </div>
         </section>
 
-        <section className="mx-auto max-w-5xl px-6 py-8 sm:py-10 lg:py-12">
+        <section className="mx-auto max-w-5xl px-6 py-6 sm:py-10 lg:py-12">
           <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr]">
             <ContactForm
               inquiryInterest={inquiryContext?.id}

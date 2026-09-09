@@ -470,6 +470,36 @@ async function main() {
     assert.equal(contactPhone.contextVisible, true, "Orbit inquiry context is missing");
     await capture(client, "contact-phone.png");
 
+    await openRoute(client, "/contact?interest=orbit-package", 320, 568);
+    const contactMinimumPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const form = document.querySelector('form').getBoundingClientRect();
+      const required = [...document.querySelectorAll('form p')]
+        .find((item) => item.textContent.trim().endsWith('Required fields'))
+        ?.getBoundingClientRect();
+      const name = document.querySelector('label[for="name"]').getBoundingClientRect();
+      return {
+        formTop: form.top,
+        requiredTop: required?.top ?? Number.POSITIVE_INFINITY,
+        nameTop: name.top,
+        nameBottom: name.bottom,
+        scrollWidth: document.documentElement.scrollWidth,
+        clientWidth: document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.ok(
+      contactMinimumPhone.requiredTop < 568,
+      `the first inquiry decision is below the minimum phone viewport: ${JSON.stringify(contactMinimumPhone)}`,
+    );
+    assert.ok(
+      contactMinimumPhone.nameBottom < 568,
+      `the first inquiry field label is not fully visible in the minimum phone viewport: ${JSON.stringify(contactMinimumPhone)}`,
+    );
+    assert.ok(
+      contactMinimumPhone.scrollWidth <= contactMinimumPhone.clientWidth + 1,
+      `the compact phone inquiry overflows horizontally: ${JSON.stringify(contactMinimumPhone)}`,
+    );
+    await capture(client, "contact-minimum-phone.png");
+
     await openRoute(client, "/contact?interest=orbit-package", 1280, 720);
     const contactDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const form = document.querySelector('form').getBoundingClientRect();
@@ -588,13 +618,14 @@ async function main() {
       workDecisionDesktop,
       workDecisionPhone,
       contactPhone,
+      contactMinimumPhone,
       contactDesktop,
       plannerStorageDesktop,
       plannerSaveResult,
       plannerStoragePhone,
       nexoraPreviewDesktop,
       nexoraPreviewPhone,
-      viewports: ["1280x720", "390x844"],
+      viewports: ["1280x720", "390x844", "320x568"],
       runtimeErrors: 0,
       horizontalOverflow: 0,
       status: "passed",
