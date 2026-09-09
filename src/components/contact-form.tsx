@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import type { InquiryContextKey } from "@/lib/contact-context";
 import { contactTopics, siteConfig } from "@/lib/site-config";
 
 type Status = "idle" | "submitting" | "sent" | "error";
@@ -8,14 +9,11 @@ type Status = "idle" | "submitting" | "sent" | "error";
 type Errors = Partial<Record<"name" | "email" | "message" | "consent" | "honeypot", string>>;
 
 type ContactFormProps = {
-  initialMessage?: string;
-  initialTopic?: string;
+  inquiryInterest?: InquiryContextKey;
+  inquiryLabel?: string;
 };
 
-export function ContactForm({
-  initialMessage = "",
-  initialTopic = contactTopics[0],
-}: ContactFormProps) {
+export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps) {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Errors>({});
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -30,6 +28,7 @@ export function ContactForm({
     const phone = String(data.get("phone") ?? "").trim();
     const company = String(data.get("company") ?? "").trim();
     const topic = String(data.get("topic") ?? contactTopics[0]);
+    const interest = inquiryInterest ?? "";
     const message = String(data.get("message") ?? "").trim();
     const consent = data.get("consent") === "on";
     const honeypot = String(data.get("contact-company-website") ?? "").trim();
@@ -40,7 +39,7 @@ export function ContactForm({
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       nextErrors.email = "Please enter a valid email address.";
     }
-    if (!message) nextErrors.message = "Please enter a message.";
+    if (!message) nextErrors.message = "Please describe your project or question.";
     if (!consent) nextErrors.consent = "Please confirm you'd like us to reply.";
 
     if (Object.keys(nextErrors).length > 0) {
@@ -66,6 +65,7 @@ export function ContactForm({
           phone,
           company,
           topic,
+          interest,
           message,
           consent,
           "contact-company-website": honeypot,
@@ -188,15 +188,32 @@ export function ContactForm({
 
       </div>
 
+      {inquiryInterest && inquiryLabel && (
+        <div
+          data-inquiry-context={inquiryInterest}
+          className="mt-5 rounded-xl border border-cyber-blue/25 bg-cyber-blue/[0.06] px-4 py-3"
+        >
+          <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-cyber-blue">
+            Inquiry context
+          </p>
+          <p className="mt-1 text-sm font-medium text-midnight-slate">
+            {inquiryLabel}
+          </p>
+          <p className="mt-1 text-xs leading-relaxed text-cool-graphite">
+            We’ll include this with your message, so you only need to describe what you’re considering.
+          </p>
+        </div>
+      )}
+
       <div className="mt-5">
         <label htmlFor="message" className="text-sm font-medium text-midnight-slate">
-          Message
+          Project description
         </label>
         <textarea
           id="message"
           name="message"
           rows={5}
-          defaultValue={initialMessage}
+          placeholder="What would you like the website or application to help your business do?"
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? "message-error" : undefined}
           className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
@@ -255,11 +272,7 @@ export function ContactForm({
             <select
               id="topic"
               name="topic"
-              defaultValue={
-                (contactTopics as readonly string[]).includes(initialTopic)
-                  ? initialTopic
-                  : contactTopics[0]
-              }
+              defaultValue={contactTopics[0]}
               className="mt-2 w-full rounded-lg border border-smoke-glass bg-frosted-glass px-4 py-2.5 text-sm text-midnight-slate outline-none focus-visible:border-cyber-blue"
             >
               {contactTopics.map((topic) => (

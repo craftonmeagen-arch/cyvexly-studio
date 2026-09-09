@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { contactTopics, siteConfig } from "@/lib/site-config";
+import { getInquiryContext } from "@/lib/contact-context";
 import {
   checkRateLimit,
   escapeHtml,
@@ -52,13 +53,14 @@ export async function POST(request: Request) {
   const company = sanitizeLine(raw.company, 200);
   const topicRaw = sanitizeLine(raw.topic, 100);
   const topic = (contactTopics as readonly string[]).includes(topicRaw) ? topicRaw : contactTopics[0];
+  const inquiryContext = getInquiryContext(sanitizeLine(raw.interest, 100));
   const message = sanitizeText(raw.message, 8000);
   const consent = raw.consent === true;
 
   const errors: Record<string, string> = {};
   if (!name) errors.name = "Please enter your name.";
   if (!isValidEmail(email)) errors.email = "Please enter a valid email address.";
-  if (!message) errors.message = "Please enter a message.";
+  if (!message) errors.message = "Please describe your project or question.";
   if (!consent) errors.consent = "Please confirm you'd like us to reply.";
 
   if (Object.keys(errors).length > 0) {
@@ -79,6 +81,7 @@ export async function POST(request: Request) {
     phone ? `Phone: ${phone}` : undefined,
     company ? `Company: ${company}` : undefined,
     `Topic: ${topic}`,
+    inquiryContext ? `Inquiry context: ${inquiryContext.label}` : undefined,
     "",
     "Message:",
     message,
@@ -95,6 +98,7 @@ export async function POST(request: Request) {
     ${phone ? `<p><strong>Phone:</strong> ${escapeHtml(phone)}</p>` : ""}
     ${company ? `<p><strong>Company:</strong> ${escapeHtml(company)}</p>` : ""}
     <p><strong>Topic:</strong> ${escapeHtml(topic)}</p>
+    ${inquiryContext ? `<p><strong>Inquiry context:</strong> ${escapeHtml(inquiryContext.label)}</p>` : ""}
     <p><strong>Message:</strong></p>
     <p>${textToHtml(message)}</p>
     <hr />
@@ -127,6 +131,7 @@ export async function POST(request: Request) {
       "",
       "Your message:",
       message,
+      ...(inquiryContext ? ["", `Inquiry context: ${inquiryContext.label}`] : []),
       "",
       `— ${siteConfig.name}`,
     ].join("\n"),
@@ -135,6 +140,7 @@ export async function POST(request: Request) {
       <p>Thanks for reaching out to Cyvexly Studio. We received your message and will respond within two business days.</p>
       <p><strong>Your message:</strong></p>
       <p>${textToHtml(message)}</p>
+      ${inquiryContext ? `<p><strong>Inquiry context:</strong> ${escapeHtml(inquiryContext.label)}</p>` : ""}
       <p>— ${escapeHtml(siteConfig.name)}</p>
     `.trim(),
   });

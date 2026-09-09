@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { ContactForm } from "@/components/contact-form";
+import { getInquiryContext } from "@/lib/contact-context";
 import { siteConfig } from "@/lib/site-config";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -12,25 +13,6 @@ export const metadata = buildPageMetadata({
   path: "/contact",
 });
 
-const inquiryMessages: Record<string, string> = {
-  "custom-project": "I’d like to ask whether Cyvexly is a fit for my project.\n\nHere’s what I’m considering: ",
-  "signal-package": "I’m interested in the Signal package.\n\nHere’s what I’m considering: ",
-  "orbit-package": "I’m interested in the Orbit package.\n\nHere’s what I’m considering: ",
-  "nexus-package": "I’m interested in the Nexus package.\n\nHere’s what I’m considering: ",
-  "commerce-package": "I’m interested in the Commerce package.\n\nHere’s what I’m considering: ",
-  "custom-system": "I’d like to ask about a custom web application or unusual workflow.\n\nHere’s what I’m considering: ",
-  "custom-web-applications": "I’d like to ask about a custom web application or unusual workflow.\n\nHere’s what I’m considering: ",
-  "hospitality-website": "I’d like to ask about a website for a restaurant or hospitality business.\n\nHere’s what I’m considering: ",
-  "business-websites": "I’d like to ask about a new business website.\n\nHere’s what I’m considering: ",
-  "website-redesigns": "I’d like to ask about improving or redesigning an existing website.\n\nHere’s what I’m considering: ",
-  "landing-pages": "I’d like to ask about a focused landing page.\n\nHere’s what I’m considering: ",
-  "ecommerce-websites": "I’d like to ask about selling products or taking bookings online.\n\nHere’s what I’m considering: ",
-  "website-care": "I’d like to ask about ongoing website care and updates.\n\nHere’s what I’m considering: ",
-  "care-plan": "I’m interested in the Care plan for ongoing website support.\n\nHere’s what I’m considering: ",
-  "care-plus-plan": "I’m interested in the Care+ plan for ongoing website support.\n\nHere’s what I’m considering: ",
-  "evolve-plan": "I’m interested in the Evolve plan for ongoing website support.\n\nHere’s what I’m considering: ",
-};
-
 export default async function ContactPage({
   searchParams,
 }: {
@@ -38,7 +20,7 @@ export default async function ContactPage({
 }) {
   const query = await searchParams;
   const interest = typeof query.interest === "string" ? query.interest : undefined;
-  const initialMessage = interest ? inquiryMessages[interest] ?? "" : "";
+  const inquiryContext = getInquiryContext(interest);
 
   return (
     <>
@@ -135,8 +117,8 @@ export default async function ContactPage({
             </div>
 
             <ContactForm
-              initialMessage={initialMessage}
-              initialTopic={initialMessage ? "Project inquiry" : undefined}
+              inquiryInterest={inquiryContext?.id}
+              inquiryLabel={inquiryContext?.label}
             />
           </div>
         </section>

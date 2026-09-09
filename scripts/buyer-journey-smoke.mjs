@@ -14,26 +14,25 @@ async function readStatus(path) {
 }
 
 const inquiryContexts = {
-  "custom-project": "ask whether Cyvexly is a fit",
-  "signal-package": "Signal package",
-  "orbit-package": "Orbit package",
-  "nexus-package": "Nexus package",
-  "commerce-package": "Commerce package",
-  "custom-system": "custom web application or unusual workflow",
-  "custom-web-applications": "custom web application or unusual workflow",
-  "hospitality-website": "restaurant or hospitality business",
-  "business-websites": "new business website",
-  "website-redesigns": "improving or redesigning an existing website",
-  "landing-pages": "focused landing page",
-  "ecommerce-websites": "selling products or taking bookings online",
-  "website-care": "ongoing website care and updates",
-  "care-plan": "Care plan for ongoing website support",
-  "care-plus-plan": "Care+ plan for ongoing website support",
-  "evolve-plan": "Evolve plan for ongoing website support",
+  "signal-package": "Signal package — focused starter website",
+  "orbit-package": "Orbit package — small-business website",
+  "nexus-package": "Nexus package — larger content site or redesign",
+  "commerce-package": "Commerce package — online store or booking-led website",
+  "custom-system": "Custom web application or unusual workflow",
+  "custom-web-applications": "Custom web application or unusual workflow",
+  "hospitality-website": "Restaurant or hospitality website",
+  "business-websites": "New business website",
+  "website-redesigns": "Website improvement or redesign",
+  "landing-pages": "Focused landing page",
+  "ecommerce-websites": "Selling products or taking bookings online",
+  "website-care": "Ongoing website care and updates",
+  "care-plan": "Care plan — ongoing website support",
+  "care-plus-plan": "Care+ plan — ongoing website support",
+  "evolve-plan": "Evolve plan — ongoing website support",
 };
 
 const contextEntries = Object.entries(inquiryContexts);
-const [home, services, pricing, , plainContact, unknownContact, ...contextualContacts] =
+const [home, services, pricing, , plainContact, unknownContact, genericContact, ...contextualContacts] =
   await Promise.all([
     read("/"),
     read("/services"),
@@ -41,6 +40,7 @@ const [home, services, pricing, , plainContact, unknownContact, ...contextualCon
     read("/start"),
     read("/contact"),
     read("/contact?interest=not-a-real-context"),
+    read("/contact?interest=custom-project"),
     ...contextEntries.map(([interest]) => read(`/contact?interest=${interest}`)),
   ]);
 const [work, processHtml, about, faq, sitemap] = await Promise.all([
@@ -222,6 +222,8 @@ const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 assert.equal(readMessageValue(plainContact), "");
 assert.equal(readMessageValue(unknownContact), "");
+assert.equal(readMessageValue(genericContact), "");
+assert.doesNotMatch(genericContact, /Inquiry context/);
 const contactFormHtml = plainContact.match(/<form[\s\S]*?<\/form>/)?.[0] ?? "";
 assert.ok(contactFormHtml, "contact form HTML is missing");
 assert.match(contactFormHtml, /<details[^>]*>/, "optional contact details disclosure is missing");
@@ -238,7 +240,7 @@ assert.ok(
 );
 assert.match(contactFormHtml, /Topic[\s\S]*?\(optional\)/);
 
-for (const [[interest, expectedCopy], html] of contextEntries.map((entry, index) => [
+for (const [[interest, expectedLabel], html] of contextEntries.map((entry, index) => [
   entry,
   contextualContacts[index],
 ])) {
@@ -247,11 +249,10 @@ for (const [[interest, expectedCopy], html] of contextEntries.map((entry, index)
     /<option value="Project inquiry" selected="">Project inquiry<\/option>/,
     `${interest} did not select the project-inquiry topic`,
   );
-  assert.match(
-    readMessageValue(html) ?? "",
-    new RegExp(escapeRegExp(expectedCopy)),
-    `${interest} did not preserve its inquiry context`,
-  );
+  assert.equal(readMessageValue(html), "", `${interest} prefilled the buyer's required message`);
+  assert.match(html, /Inquiry context/);
+  assert.match(html, new RegExp(escapeRegExp(expectedLabel)));
+  assert.match(html, new RegExp(`data-inquiry-context="${escapeRegExp(interest)}"`));
 }
 
 assert.match(home, /href="\/contact\?interest=signal-package"/);
