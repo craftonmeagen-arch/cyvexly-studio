@@ -477,7 +477,7 @@ export const buyerNeeds = [
     startingPoint: "Signal from $1,800 · Orbit from $3,500",
     detailHref: "/services/business-websites",
     detailLabel: "Explore business websites",
-    inquiryHref: "/contact?interest=custom-project",
+    inquiryHref: "/contact?interest=business-websites",
     proofHref: "/work/velora-dining",
     proofLabel: "See the built Velora example",
   },
@@ -490,7 +490,7 @@ export const buyerNeeds = [
     startingPoint: "Often Orbit from $3,500 or Nexus from $5,800",
     detailHref: "/services/website-redesigns",
     detailLabel: "Explore website redesigns",
-    inquiryHref: "/contact?interest=custom-project",
+    inquiryHref: "/contact?interest=website-redesigns",
   },
   {
     id: "sell-or-book-online",
@@ -527,7 +527,7 @@ export const buyerNeeds = [
     startingPoint: "Care plans from $99/month",
     detailHref: "/services/website-care",
     detailLabel: "Explore website care",
-    inquiryHref: "/contact?interest=custom-project",
+    inquiryHref: "/contact?interest=website-care",
   },
 ];
 

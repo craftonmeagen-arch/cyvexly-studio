@@ -255,6 +255,24 @@ for (const label of [
 ]) {
   assert.match(services, new RegExp(label), `missing buyer-led service route: ${label}`);
 }
+const buyerNeedInquiryDestinations = {
+  "new-business-website": "business-websites",
+  "improve-existing-website": "website-redesigns",
+  "sell-or-book-online": "commerce-package",
+  "custom-web-application": "custom-system",
+  "ongoing-website-support": "website-care",
+};
+for (const [needId, interest] of Object.entries(buyerNeedInquiryDestinations)) {
+  const card = services.match(
+    new RegExp(`<article[^>]*id="${needId}"[\\s\\S]*?</article>`),
+  )?.[0];
+  assert.ok(card, `missing buyer-led service card: ${needId}`);
+  assert.match(
+    card,
+    new RegExp(`href="/contact\\?interest=${interest}"[^>]*>[\\s\\S]*?Ask about this`),
+    `${needId} discards the buyer's chosen need at the short inquiry`,
+  );
+}
 assert.doesNotMatch(services, /Service pathways/);
 assert.doesNotMatch(services, /Popular website types/);
 assert.match(services, /See the strongest working example/);
