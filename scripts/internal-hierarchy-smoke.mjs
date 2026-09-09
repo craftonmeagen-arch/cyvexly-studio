@@ -219,6 +219,49 @@ async function main() {
     assert.ok(servicesDesktop.heroHeight <= 400, "Services intro again dominates the first viewport");
     assert.ok(servicesDesktop.decisionHeadingTop < 620, "Services buyer decision does not enter the first viewport");
 
+    const nexoraPreviewResponse = await fetch(new URL("/media/nexora-release-demo.png", baseUrl));
+    assert.equal(nexoraPreviewResponse.status, 200, "Nexora's real portfolio capture is unavailable");
+
+    await openRoute(client, "/work", 1440, 900);
+    const nexoraPreviewDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const card = [...document.querySelectorAll('h2')]
+        .find((item) => item.textContent.trim() === 'Nexora Systems')
+        .closest('article');
+      card.scrollIntoView({ block: 'center' });
+      const preview = card.querySelector('image');
+      const box = preview?.getBoundingClientRect();
+      return {
+        asset: preview?.getAttribute('href') ?? null,
+        width: box?.width ?? 0,
+        height: box?.height ?? 0,
+      };
+    })())`));
+    assert.equal(nexoraPreviewDesktop.asset, "/media/nexora-release-demo.png");
+    assert.ok(nexoraPreviewDesktop.width >= 400, "Nexora's desktop proof is too small to inspect");
+    assert.ok(nexoraPreviewDesktop.height >= 240, "Nexora's desktop proof is too shallow to inspect");
+    await new Promise((resolve) => setTimeout(resolve, 250));
+    await capture(client, "work-nexora-desktop.png");
+
+    await openRoute(client, "/work", 390, 844);
+    const nexoraPreviewPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const card = [...document.querySelectorAll('h2')]
+        .find((item) => item.textContent.trim() === 'Nexora Systems')
+        .closest('article');
+      card.scrollIntoView({ block: 'center' });
+      const preview = card.querySelector('image');
+      const box = preview?.getBoundingClientRect();
+      return {
+        asset: preview?.getAttribute('href') ?? null,
+        width: box?.width ?? 0,
+        height: box?.height ?? 0,
+      };
+    })())`));
+    assert.equal(nexoraPreviewPhone.asset, "/media/nexora-release-demo.png");
+    assert.ok(nexoraPreviewPhone.width >= 300, "Nexora's phone proof is too small to inspect");
+    assert.ok(nexoraPreviewPhone.height >= 180, "Nexora's phone proof is too shallow to inspect");
+    await new Promise((resolve) => setTimeout(resolve, 250));
+    await capture(client, "work-nexora-phone.png");
+
     await openRoute(client, "/pricing", 390, 844);
     assert.equal(
       await evaluate(client, "getComputedStyle(document.querySelector('.pricing-scope-visual')).display"),
@@ -261,6 +304,8 @@ async function main() {
       pricingAnchorPhone,
       servicesDesktop,
       contactPhone,
+      nexoraPreviewDesktop,
+      nexoraPreviewPhone,
       viewports: ["1280x720", "390x844"],
       runtimeErrors: 0,
       horizontalOverflow: 0,

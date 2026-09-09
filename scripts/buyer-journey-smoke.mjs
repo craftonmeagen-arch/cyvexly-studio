@@ -292,6 +292,11 @@ assert.match(home, /href="\/contact\?interest=custom-project"[^>]*>Ask about a p
 assert.match(home, /href="\/work"[^>]*>View our work/);
 assert.match(home, /Try interactive demo/);
 assert.match(home, /Two working demos\. Two different problems\./);
+assert.match(
+  home,
+  /href="\/media\/nexora-release-demo\.png"/,
+  "Home still represents the built Nexora demo with a schematic preview",
+);
 assert.match(home, /Choose the business goal that sounds familiar/);
 assert.match(home, /From first conversation to a site you own/);
 assert.doesNotMatch(home, /We&apos;re not a DIY builder/);
@@ -304,6 +309,11 @@ assert.match(home, />Recommended</);
 assert.match(work, /Working experiences you can inspect/);
 assert.match(work, /Selectable time ranges and comparison states/);
 assert.match(work, /Reservation and private-event demo flows/);
+assert.match(
+  work,
+  /href="\/media\/nexora-release-demo\.png"/,
+  "Work still represents the built Nexora demo with a schematic preview",
+);
 assert.doesNotMatch(work, /Filter projects|Design concepts|Aurora Spaces|Vellora Care/);
 assert.doesNotMatch(work, /not twelve thin ones/);
 assert.match(work, /href="\/contact\?interest=custom-project"/);
