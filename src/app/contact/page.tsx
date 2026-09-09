@@ -66,13 +66,13 @@ export default async function ContactPage({
               <div className="mt-5 flex flex-col gap-2">
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="inline-flex items-center gap-2 font-display text-lg font-semibold text-cyber-blue hover:text-[#0b4fb0]"
+                  className="inline-flex min-h-11 items-center rounded-xl px-3 font-display text-lg font-semibold text-cyber-blue transition-colors hover:bg-cyber-blue/[0.06] hover:text-[#0b4fb0] focus-visible:bg-cyber-blue/[0.06]"
                 >
                   {siteConfig.email}
                 </a>
                 <a
                   href={siteConfig.phoneHref}
-                  className="inline-flex items-center gap-2 font-display text-lg font-semibold text-cyber-blue hover:text-[#0b4fb0]"
+                  className="inline-flex min-h-11 items-center rounded-xl px-3 font-display text-lg font-semibold text-cyber-blue transition-colors hover:bg-cyber-blue/[0.06] hover:text-[#0b4fb0] focus-visible:bg-cyber-blue/[0.06]"
                 >
                   {siteConfig.phoneDisplay}
                 </a>

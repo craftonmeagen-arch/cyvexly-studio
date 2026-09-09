@@ -290,10 +290,22 @@ async function main() {
     const contactPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const form = document.querySelector('form').getBoundingClientRect();
       const direct = [...document.querySelectorAll('h2')].find((item) => item.textContent.trim() === 'Reach us directly').closest('div').getBoundingClientRect();
-      return { formTop: form.top, directTop: direct.top, contextVisible: document.body.textContent.includes('Orbit package — small-business website') };
+      const directActionHeights = [...document.querySelectorAll('main a[href^="mailto:"], main a[href^="tel:"]')]
+        .map((item) => item.getBoundingClientRect().height);
+      return {
+        formTop: form.top,
+        directTop: direct.top,
+        directActionHeights,
+        contextVisible: document.body.textContent.includes('Orbit package — small-business website'),
+      };
     })())`));
     assert.ok(contactPhone.formTop < 660, "primary short inquiry starts below the first phone viewport");
     assert.ok(contactPhone.formTop < contactPhone.directTop, "direct alternatives still precede the primary short inquiry");
+    assert.equal(contactPhone.directActionHeights.length, 2, "direct email and phone alternatives are missing");
+    assert.ok(
+      contactPhone.directActionHeights.every((height) => height >= 44),
+      `direct contact alternatives fall below the 44px interaction floor: ${JSON.stringify(contactPhone.directActionHeights)}`,
+    );
     assert.equal(contactPhone.contextVisible, true, "Orbit inquiry context is missing");
     await capture(client, "contact-phone.png");
 
