@@ -172,7 +172,9 @@ export function NexoraDemo() {
               <div className="mt-6 overflow-hidden rounded-xl border border-[#24324a] bg-[#09111f] p-3 sm:p-5">
                 <svg viewBox="0 0 520 100" className="h-48 w-full" role="img" aria-labelledby="chart-title chart-desc">
                   <title id="chart-title">{`Signal health trend for ${range}`}</title>
-                  <desc id="chart-desc">The current signal rises overall with a visible release marker. {compare ? "A muted baseline is also shown." : "Baseline comparison is hidden."}</desc>
+                  <desc id="chart-desc">
+                    {`The current signal rises overall with a visible release marker. ${compare ? "A muted baseline is also shown." : "Baseline comparison is hidden."}`}
+                  </desc>
                   {[20, 40, 60, 80].map((y) => (
                     <line key={y} x1="0" y1={y} x2="520" y2={y} stroke="#1b2940" strokeWidth="1" />
                   ))}

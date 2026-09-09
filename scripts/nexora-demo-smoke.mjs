@@ -168,6 +168,25 @@ async function main() {
     );
     await capture(client, "nexora-release-demo.png");
 
+    assert.equal(
+      await evaluate(client, "document.querySelector('#chart-desc')?.textContent.trim()"),
+      "The current signal rises overall with a visible release marker. A muted baseline is also shown.",
+      "chart description does not expose the visible comparison state",
+    );
+
+    const comparisonDescription = await evaluate(client, `(() => {
+      const checkbox = document.querySelector('input[type="checkbox"]');
+      checkbox.click();
+      return new Promise((resolve) => requestAnimationFrame(() => resolve(
+        document.querySelector('#chart-desc')?.textContent.trim(),
+      )));
+    })()`);
+    assert.equal(
+      comparisonDescription,
+      "The current signal rises overall with a visible release marker. Baseline comparison is hidden.",
+      "chart description did not update after hiding the comparison line",
+    );
+
     const rangeState = await evaluate(client, `(() => {
       const button = [...document.querySelectorAll('button')].find((item) => item.textContent.trim() === '7d');
       button.click();
