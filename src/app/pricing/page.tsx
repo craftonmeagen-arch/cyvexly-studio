@@ -68,7 +68,7 @@ export default function PricingPage() {
         </section>
 
         <nav aria-label="Pricing sections" className="border-b border-smoke-glass/70 bg-white/35">
-          <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-6 py-3 text-sm">
+          <div className="pricing-section-links mx-auto flex max-w-6xl flex-wrap gap-2 px-6 py-3 text-sm lg:flex-nowrap">
             {[
               ["Packages", "#packages"],
               ["Compare", "#compare"],

@@ -329,7 +329,58 @@ async function main() {
       "none",
       "decorative Pricing diagram still delays package decisions on phone",
     );
+    const pricingNavPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const links = document.querySelector('.pricing-section-links');
+      const rows = new Set(
+        [...links.querySelectorAll('a')].map((item) => Math.round(item.getBoundingClientRect().top)),
+      );
+      return {
+        clientWidth: links.clientWidth,
+        scrollWidth: links.scrollWidth,
+        overflowX: getComputedStyle(links).overflowX,
+        rows: rows.size,
+      };
+    })())`));
+    assert.ok(
+      pricingNavPhone.scrollWidth <= pricingNavPhone.clientWidth + 1,
+      `Pricing section links still require horizontal scrolling on phone: ${JSON.stringify(pricingNavPhone)}`,
+    );
+    assert.notEqual(
+      pricingNavPhone.overflowX,
+      "auto",
+      `Pricing section links still expose a native horizontal scrollbar: ${JSON.stringify(pricingNavPhone)}`,
+    );
+    assert.ok(
+      pricingNavPhone.rows >= 2,
+      `Pricing section links did not reflow into readable phone rows: ${JSON.stringify(pricingNavPhone)}`,
+    );
     await capture(client, "pricing-phone.png");
+
+    await openRoute(client, "/pricing", 320, 568);
+    const pricingNavMinimumPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const links = document.querySelector('.pricing-section-links');
+      return {
+        clientWidth: links.clientWidth,
+        scrollWidth: links.scrollWidth,
+        overflowX: getComputedStyle(links).overflowX,
+      };
+    })())`));
+    assert.ok(
+      pricingNavMinimumPhone.scrollWidth <= pricingNavMinimumPhone.clientWidth + 1,
+      `Pricing section links overflow the minimum phone width: ${JSON.stringify(pricingNavMinimumPhone)}`,
+    );
+    assert.notEqual(
+      pricingNavMinimumPhone.overflowX,
+      "auto",
+      `Pricing section links retain a native scrollbar at the minimum phone width: ${JSON.stringify(pricingNavMinimumPhone)}`,
+    );
+    await evaluate(client, `(() => {
+      const nav = document.querySelector('[aria-label="Pricing sections"]');
+      const header = document.querySelector('header').getBoundingClientRect();
+      window.scrollTo(0, nav.offsetTop - header.height - 8);
+    })()`);
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    await capture(client, "pricing-minimum-phone.png");
 
     await openRoute(client, "/pricing#orbit-package", 390, 844);
     await waitForAnchorNearTop(client, "orbit-package", 220);
@@ -476,6 +527,8 @@ async function main() {
       pricingDesktop,
       pricingAnchorDesktop,
       pricingAnchorPhone,
+      pricingNavPhone,
+      pricingNavMinimumPhone,
       servicesDesktop,
       contactPhone,
       contactDesktop,
