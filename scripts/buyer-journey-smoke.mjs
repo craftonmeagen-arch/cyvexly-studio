@@ -75,7 +75,6 @@ for (const [name, html] of [
   ["Process", processHtml],
   ["About", about],
   ["FAQ", faq],
-  ["Contact", plainContact],
   ["Planner", planner],
 ]) {
   assert.match(
@@ -110,8 +109,18 @@ assert.ok(
 );
 assert.match(
   plainContact,
-  /max-w-5xl[^\"]*py-10[^\"]*sm:py-14[^\"]*lg:py-20/,
-  "Contact restored the oversized mobile gap before the short form",
+  /page-intro-stage[^\"]*py-5[^\"]*sm:py-6/,
+  "Contact restored the oversized opening stage",
+);
+assert.match(
+  plainContact,
+  /page-intro-shell[^\"]*py-6[^\"]*sm:py-7/,
+  "Contact restored the oversized opening panel",
+);
+assert.match(
+  plainContact,
+  /max-w-5xl[^\"]*py-8[^\"]*sm:py-10[^\"]*lg:py-12/,
+  "Contact restored the oversized gap before the short form",
 );
 const serviceSlugs = [
   "business-websites",

@@ -309,6 +309,33 @@ async function main() {
     assert.equal(contactPhone.contextVisible, true, "Orbit inquiry context is missing");
     await capture(client, "contact-phone.png");
 
+    await openRoute(client, "/contact?interest=orbit-package", 1280, 720);
+    const contactDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const form = document.querySelector('form').getBoundingClientRect();
+      const required = [...document.querySelectorAll('form p')]
+        .find((item) => item.textContent.trim().endsWith('Required fields'))
+        ?.getBoundingClientRect();
+      const direct = [...document.querySelectorAll('h2')]
+        .find((item) => item.textContent.trim() === 'Reach us directly')
+        .closest('div')
+        .getBoundingClientRect();
+      return {
+        formTop: form.top,
+        requiredTop: required?.top ?? Number.POSITIVE_INFINITY,
+        directTop: direct.top,
+      };
+    })())`));
+    assert.ok(
+      contactDesktop.formTop <= 520,
+      `primary short inquiry does not enter the first desktop viewport soon enough: ${JSON.stringify(contactDesktop)}`,
+    );
+    assert.ok(
+      contactDesktop.requiredTop < 620,
+      `the first inquiry decision is not visible in the first desktop viewport: ${JSON.stringify(contactDesktop)}`,
+    );
+    assert.ok(contactDesktop.formTop <= contactDesktop.directTop, "desktop direct alternatives precede the primary short inquiry");
+    await capture(client, "contact-desktop.png");
+
     assert.deepEqual(failures, []);
     console.log(JSON.stringify({
       pricingDesktop,
@@ -316,6 +343,7 @@ async function main() {
       pricingAnchorPhone,
       servicesDesktop,
       contactPhone,
+      contactDesktop,
       nexoraPreviewDesktop,
       nexoraPreviewPhone,
       viewports: ["1280x720", "390x844"],
