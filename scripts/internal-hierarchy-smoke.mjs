@@ -78,19 +78,71 @@ async function evaluate(client, expression) {
 }
 
 async function openRoute(client, route, width, height) {
+  const expectedUrl = new URL(route, baseUrl);
   await client.send("Emulation.setDeviceMetricsOverride", {
     width,
     height,
     deviceScaleFactor: 1,
     mobile: width <= 500,
   });
-  await client.send("Page.navigate", { url: new URL(route, baseUrl).href });
-  await new Promise((resolve) => setTimeout(resolve, 450));
+  await client.send("Page.navigate", { url: expectedUrl.href });
+  let locationState;
+  for (let attempt = 0; attempt < 40; attempt += 1) {
+    locationState = JSON.parse(
+      await evaluate(
+        client,
+        "JSON.stringify({ pathname: location.pathname, hash: location.hash, readyState: document.readyState })",
+      ),
+    );
+    if (
+      locationState.pathname === expectedUrl.pathname &&
+      locationState.hash === expectedUrl.hash &&
+      locationState.readyState !== "loading"
+    ) {
+      break;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 125));
+  }
+  assert.equal(
+    `${locationState?.pathname ?? ""}${locationState?.hash ?? ""}`,
+    `${expectedUrl.pathname}${expectedUrl.hash}`,
+    `${route} did not finish navigating before geometry checks`,
+  );
+  if (expectedUrl.hash) {
+    const targetId = decodeURIComponent(expectedUrl.hash.slice(1));
+    let previousTop;
+    let stableSamples = 0;
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      const targetTop = await evaluate(
+        client,
+        `document.getElementById(${JSON.stringify(targetId)})?.getBoundingClientRect().top ?? null`,
+      );
+      stableSamples = previousTop !== undefined && Math.abs(targetTop - previousTop) < 1 ? stableSamples + 1 : 0;
+      previousTop = targetTop;
+      if (attempt >= 4 && stableSamples >= 2) break;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+  } else {
+    await new Promise((resolve) => setTimeout(resolve, 250));
+  }
   assert.equal(
     await evaluate(client, "document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1"),
     true,
     `${route} overflows horizontally at ${width}px`,
   );
+}
+
+async function waitForAnchorNearTop(client, id, maximumTop) {
+  let targetTop = Number.POSITIVE_INFINITY;
+  for (let attempt = 0; attempt < 24; attempt += 1) {
+    targetTop = await evaluate(
+      client,
+      `document.getElementById(${JSON.stringify(id)})?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY`,
+    );
+    if (targetTop < maximumTop) return targetTop;
+    await new Promise((resolve) => setTimeout(resolve, 125));
+  }
+  return targetTop;
 }
 
 async function capture(client, name) {
@@ -144,6 +196,7 @@ async function main() {
     await capture(client, "pricing-desktop.png");
 
     await openRoute(client, "/pricing#commerce-package", 1440, 900);
+    await waitForAnchorNearTop(client, "commerce-package", 240);
     const pricingAnchorDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const header = document.querySelector('header').getBoundingClientRect();
       const target = document.getElementById('commerce-package').getBoundingClientRect();
@@ -175,6 +228,7 @@ async function main() {
     await capture(client, "pricing-phone.png");
 
     await openRoute(client, "/pricing#orbit-package", 390, 844);
+    await waitForAnchorNearTop(client, "orbit-package", 220);
     const pricingAnchorPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const header = document.querySelector('header').getBoundingClientRect();
       const target = document.getElementById('orbit-package').getBoundingClientRect();
