@@ -302,6 +302,22 @@ async function main() {
     const nexoraPreviewResponse = await fetch(new URL("/media/nexora-release-demo.png", baseUrl));
     assert.equal(nexoraPreviewResponse.status, 200, "Nexora's real portfolio capture is unavailable");
 
+    await openRoute(client, "/work", 1280, 720);
+    const workDecisionDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const hero = document.querySelector('.page-intro-stage').getBoundingClientRect();
+      const firstCard = document.querySelector('main article').getBoundingClientRect();
+      const firstArtwork = document.querySelector('main article > :first-child').getBoundingClientRect();
+      return {
+        heroHeight: hero.height,
+        firstCardTop: firstCard.top,
+        firstArtworkBottom: firstArtwork.bottom,
+      };
+    })())`));
+    assert.ok(workDecisionDesktop.heroHeight <= 360, "Work intro again dominates the first viewport");
+    assert.ok(workDecisionDesktop.firstCardTop <= 530, "Work proof does not enter the opening desktop viewport soon enough");
+    assert.ok(workDecisionDesktop.firstArtworkBottom <= 720, "Work's first project artwork is not fully visible in the opening desktop viewport");
+    await capture(client, "work-decision-desktop.png");
+
     await openRoute(client, "/work", 1440, 900);
     const nexoraPreviewDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const card = [...document.querySelectorAll('h2')]
@@ -323,6 +339,20 @@ async function main() {
     await capture(client, "work-nexora-desktop.png");
 
     await openRoute(client, "/work", 390, 844);
+    const workDecisionPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const firstCard = document.querySelector('main article').getBoundingClientRect();
+      const firstArtwork = document.querySelector('main article > :first-child').getBoundingClientRect();
+      return {
+        firstCardTop: firstCard.top,
+        firstArtworkBottom: firstArtwork.bottom,
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.ok(workDecisionPhone.firstCardTop <= 560, "Work proof does not enter the opening phone viewport soon enough");
+    assert.ok(workDecisionPhone.firstArtworkBottom < 844, "Work's first project artwork is not fully visible in the opening phone viewport");
+    assert.ok(workDecisionPhone.overflow <= 1, "Work's compact opening causes phone overflow");
+    await capture(client, "work-decision-phone.png");
+
     const nexoraPreviewPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const card = [...document.querySelectorAll('h2')]
         .find((item) => item.textContent.trim() === 'Nexora Systems')
@@ -468,8 +498,14 @@ async function main() {
     await capture(client, "contact-desktop.png");
 
     await openRoute(client, "/start?service=ecommerce-websites", 1280, 720);
+    let plannerStorageReady = false;
+    for (let attempt = 0; attempt < 40; attempt += 1) {
+      plannerStorageReady = await evaluate(client, "document.getElementById('planner-storage-note') !== null");
+      if (plannerStorageReady) break;
+      await new Promise((resolve) => setTimeout(resolve, 125));
+    }
     assert.equal(
-      await evaluate(client, "document.getElementById('planner-storage-note') !== null"),
+      plannerStorageReady,
       true,
       "Planner does not disclose device-local draft storage before the save action",
     );
@@ -549,6 +585,8 @@ async function main() {
       pricingNavPhone,
       pricingNavMinimumPhone,
       servicesDesktop,
+      workDecisionDesktop,
+      workDecisionPhone,
       contactPhone,
       contactDesktop,
       plannerStorageDesktop,

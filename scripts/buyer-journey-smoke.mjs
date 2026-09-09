@@ -71,7 +71,6 @@ const [work, processHtml, about, faq, sitemap] = await Promise.all([
 
 for (const [name, html] of [
   ["Services", services],
-  ["Work", work],
   ["Process", processHtml],
   ["About", about],
   ["FAQ", faq],
@@ -88,6 +87,16 @@ for (const [name, html] of [
     `${name} restored the oversized internal-page panel`,
   );
 }
+assert.match(
+  work,
+  /page-intro-stage[^\"]*py-5[^\"]*sm:py-6/,
+  "Work restored the oversized opening stage",
+);
+assert.match(
+  work,
+  /page-intro-shell[^\"]*py-6[^\"]*sm:py-7/,
+  "Work restored the oversized opening panel",
+);
 assert.match(
   pricing,
   /pricing-hero-layout[^\"]*py-7[^\"]*md:py-9[^\"]*lg:py-8/,
