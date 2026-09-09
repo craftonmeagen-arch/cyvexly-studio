@@ -185,6 +185,21 @@ for (const html of [home, services, pricing, work, processHtml, about, faq, plai
 
 assert.match(home, /Ready to make your business unmistakable\?/);
 assert.doesNotMatch(home, /Ready to build something extraordinary\?/);
+assert.match(
+  home,
+  /Website timelines: 2–14\+ weeks by scope/,
+  "Home timing reassurance does not cover the published website-package range",
+);
+assert.doesNotMatch(
+  home,
+  /Typical websites: 2–6 weeks/,
+  "Home restored the narrower timing claim that excludes Nexus and Commerce",
+);
+assert.match(
+  home,
+  /Commerce 8–14\+ weeks\. Custom applications are scoped individually\./,
+  "Home timing FAQ omits the longer Commerce and discovery-scoped application paths",
+);
 assert.match(planner, /Tell us what you need\. We(?:&#x27;|&apos;)ll recommend the right scope\./);
 assert.doesNotMatch(planner, /shape the right route/);
 

@@ -39,7 +39,7 @@ export const footerNav = {
 export const credibilityPoints = [
   { id: "owner-led", label: "Work directly with the studio" },
   { id: "custom-strategy", label: "Website projects from $1,800" },
-  { id: "clean-code", label: "Typical websites: 2–6 weeks" },
+  { id: "clean-code", label: "Website timelines: 2–14+ weeks by scope" },
   { id: "secure", label: "You own the finished site" },
   { id: "communication", label: "Replies within two business days" },
 ];
@@ -845,7 +845,7 @@ export const faqPreview = [
   {
     question: "How long does a website project take?",
     answer:
-      "Most projects run 2–9 weeks depending on scope. Signal projects typically finish in 2–3 weeks, Orbit in 4–6 weeks, and Nexus in 6–9 weeks.",
+      "Signal projects typically take 2–3 weeks, Orbit 4–6, Nexus 6–9, and Commerce 8–14+ weeks. Custom applications are scoped individually.",
   },
   {
     question: "What do you need from me to get started?",

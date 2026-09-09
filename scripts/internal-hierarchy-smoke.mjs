@@ -156,6 +156,27 @@ async function capture(client, name) {
   await writeFile(path.join(captureDir, name), Buffer.from(result.data, "base64"));
 }
 
+async function stopBrowserAndRemoveProfile(browser, profile) {
+  if (browser.exitCode === null) {
+    const exited = new Promise((resolve) => browser.once("exit", resolve));
+    browser.kill();
+    await Promise.race([
+      exited,
+      new Promise((resolve) => setTimeout(resolve, 3000)),
+    ]);
+  }
+
+  for (let attempt = 0; attempt < 20; attempt += 1) {
+    try {
+      await rm(profile, { recursive: true, force: true });
+      return;
+    } catch (error) {
+      if (!['EBUSY', 'EPERM'].includes(error?.code) || attempt === 19) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 250));
+    }
+  }
+}
+
 async function main() {
   const profile = await mkdtemp(path.join(os.tmpdir(), "cyvexly-hierarchy-smoke-"));
   const browser = spawn(await findBrowser(), [
@@ -182,6 +203,46 @@ async function main() {
       client.send("Log.enable"),
       client.send("Network.enable"),
     ]);
+
+    await openRoute(client, "/", 1280, 720);
+    const homeTimingDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const item = [...document.querySelectorAll('.home-signal-rail li')]
+        .find((element) => element.textContent.includes('Website timelines'));
+      const label = item?.querySelector('.leading-snug');
+      item?.scrollIntoView({ block: 'center' });
+      const itemBox = item?.getBoundingClientRect();
+      const labelBox = label?.getBoundingClientRect();
+      return {
+        text: label?.textContent.trim() ?? null,
+        itemHeight: itemBox?.height ?? 0,
+        labelHeight: labelBox?.height ?? 0,
+        contained: Boolean(itemBox && labelBox && labelBox.left >= itemBox.left && labelBox.right <= itemBox.right + 1 && labelBox.top >= itemBox.top && labelBox.bottom <= itemBox.bottom + 1),
+      };
+    })())`));
+    assert.equal(homeTimingDesktop.text, "Website timelines: 2–14+ weeks by scope");
+    assert.equal(homeTimingDesktop.contained, true, `Home timing reassurance clips at desktop: ${JSON.stringify(homeTimingDesktop)}`);
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    await capture(client, "home-timing-desktop.png");
+
+    await openRoute(client, "/", 390, 844);
+    const homeTimingPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const item = [...document.querySelectorAll('.home-signal-rail li')]
+        .find((element) => element.textContent.includes('Website timelines'));
+      const label = item?.querySelector('.leading-snug');
+      item?.scrollIntoView({ block: 'center' });
+      const itemBox = item?.getBoundingClientRect();
+      const labelBox = label?.getBoundingClientRect();
+      return {
+        text: label?.textContent.trim() ?? null,
+        itemHeight: itemBox?.height ?? 0,
+        labelHeight: labelBox?.height ?? 0,
+        contained: Boolean(itemBox && labelBox && labelBox.left >= itemBox.left && labelBox.right <= itemBox.right + 1 && labelBox.top >= itemBox.top && labelBox.bottom <= itemBox.bottom + 1),
+      };
+    })())`));
+    assert.equal(homeTimingPhone.text, "Website timelines: 2–14+ weeks by scope");
+    assert.equal(homeTimingPhone.contained, true, `Home timing reassurance clips on phone: ${JSON.stringify(homeTimingPhone)}`);
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    await capture(client, "home-timing-phone.png");
 
     await openRoute(client, "/pricing", 1280, 720);
     const pricingDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
@@ -410,6 +471,8 @@ async function main() {
 
     assert.deepEqual(failures, []);
     console.log(JSON.stringify({
+      homeTimingDesktop,
+      homeTimingPhone,
       pricingDesktop,
       pricingAnchorDesktop,
       pricingAnchorPhone,
@@ -428,9 +491,7 @@ async function main() {
     }, null, 2));
   } finally {
     client?.close();
-    if (browser.exitCode === null) browser.kill();
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    await rm(profile, { recursive: true, force: true });
+    await stopBrowserAndRemoveProfile(browser, profile);
   }
 }
 
