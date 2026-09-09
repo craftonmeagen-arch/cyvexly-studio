@@ -120,7 +120,7 @@ export async function POST(request: Request) {
   // Visitor confirmation is best-effort: the business-critical delivery
   // (the internal notification above) already succeeded, so a confirmation
   // failure does not fail the visitor's submission.
-  await sendMail({
+  const confirmationResult = await sendMail({
     to: email,
     subject: "We received your message — Cyvexly Studio",
     replyTo: siteConfig.email,
@@ -145,5 +145,8 @@ export async function POST(request: Request) {
     `.trim(),
   });
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({
+    ok: true,
+    confirmationSent: confirmationResult.ok,
+  });
 }

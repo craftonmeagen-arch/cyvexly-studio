@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { ButtonLink } from "@/components/button";
 import { SubmissionFallback } from "@/components/submission-fallback";
+import { SubmissionReceipt } from "@/components/submission-receipt";
 import {
   assetCategories,
   assetStatusOptions,
@@ -122,6 +123,7 @@ export function PlannerForm({
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"form" | "submitting" | "submitted">("form");
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [confirmationSent, setConfirmationSent] = useState<boolean | null>(null);
   const [isStorageReady, setIsStorageReady] = useState(false);
   const [restored, setRestored] = useState(false);
   const [prefilledService, setPrefilledService] = useState<string | null>(null);
@@ -317,9 +319,9 @@ export function PlannerForm({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
+      const payload = await response.json().catch(() => null);
 
       if (!response.ok) {
-        const payload = await response.json().catch(() => null);
         if (payload?.error === "validation" && payload.fields) {
           setErrors(payload.fields as Errors);
           setStatus("form");
@@ -337,6 +339,7 @@ export function PlannerForm({
         return;
       }
 
+      setConfirmationSent(payload?.confirmationSent === true);
       try {
         window.localStorage.removeItem(STORAGE_KEY);
       } catch {
@@ -390,19 +393,32 @@ export function PlannerForm({
 
   if (status === "submitted") {
     return (
-      <div role="status" className="glass-panel rounded-2xl px-6 py-10 text-center">
+      <SubmissionReceipt
+        confirmationSent={confirmationSent === true}
+        className="glass-panel rounded-2xl px-6 py-10 text-center"
+      >
         <h2 className="font-display text-xl font-semibold text-midnight-slate">
           Thanks — your project brief is in.
         </h2>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-cool-graphite">
-          We&apos;ve sent your full answers to Cyvexly Studio and emailed a confirmation to{" "}
-          <span className="font-medium text-midnight-slate">{data.workEmail}</span>. We respond
-          within two business days.
+          {confirmationSent ? (
+            <>
+              Your full answers reached Cyvexly Studio, and we emailed a confirmation to{" "}
+              <span className="font-medium text-midnight-slate">{data.workEmail}</span>. We
+              respond within two business days.
+            </>
+          ) : (
+            <>
+              Your full answers reached Cyvexly Studio. We couldn&apos;t email a confirmation to{" "}
+              <span className="font-medium text-midnight-slate">{data.workEmail}</span>, but you
+              don&apos;t need to resubmit. We respond within two business days.
+            </>
+          )}
         </p>
         <ButtonLink href="/" variant="secondary" className="mt-6">
           Back to home
         </ButtonLink>
-      </div>
+      </SubmissionReceipt>
     );
   }
 
@@ -1203,8 +1219,8 @@ function PlannerReview({
       )}
 
       <p className="text-xs leading-relaxed text-cool-graphite">
-        Submitting sends your complete answers directly to Cyvexly Studio and emails you a
-        confirmation — no need to open your own email app.
+        Submitting sends your complete answers directly to Cyvexly Studio. We&apos;ll also try to
+        email you a confirmation copy.
       </p>
     </div>
   );

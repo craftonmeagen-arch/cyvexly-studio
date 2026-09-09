@@ -349,7 +349,7 @@ export async function POST(request: Request) {
   }
 
   // Visitor confirmation is best-effort — see contact route for rationale.
-  await sendMail({
+  const confirmationResult = await sendMail({
     to: workEmail,
     subject: "We received your project brief — Cyvexly Studio",
     replyTo: siteConfig.email,
@@ -374,5 +374,8 @@ export async function POST(request: Request) {
     `.trim(),
   });
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({
+    ok: true,
+    confirmationSent: confirmationResult.ok,
+  });
 }

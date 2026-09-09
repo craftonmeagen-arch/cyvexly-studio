@@ -418,8 +418,24 @@ const contactFormSource = await readFile(
   new URL("../src/components/contact-form.tsx", import.meta.url),
   "utf8",
 );
+const contactRouteSource = await readFile(
+  new URL("../src/app/api/contact/route.ts", import.meta.url),
+  "utf8",
+);
+const plannerRouteSource = await readFile(
+  new URL("../src/app/api/planner/route.ts", import.meta.url),
+  "utf8",
+);
+const privacySource = await readFile(
+  new URL("../src/app/privacy/page.tsx", import.meta.url),
+  "utf8",
+);
 const submissionFallbackSource = await readFile(
   new URL("../src/components/submission-fallback.tsx", import.meta.url),
+  "utf8",
+);
+const submissionReceiptSource = await readFile(
+  new URL("../src/components/submission-receipt.tsx", import.meta.url),
   "utf8",
 );
 const plannerConfigSource = await readFile(
@@ -429,6 +445,20 @@ const plannerConfigSource = await readFile(
 assert.match(plannerConfigSource, /"custom-web-applications": \{/);
 assert.match(contactFormSource, /<SubmissionFallback message=\{submitError\}/);
 assert.match(plannerFormSource, /<SubmissionFallback message=\{submitError\}/);
+for (const source of [contactRouteSource, plannerRouteSource]) {
+  assert.match(source, /confirmationSent: confirmationResult\.ok/);
+}
+for (const source of [contactFormSource, plannerFormSource]) {
+  assert.match(source, /<SubmissionReceipt[\s\S]*confirmationSent=\{confirmationSent === true\}/);
+  assert.match(source, /don(?:&apos;|')t need to resubmit/);
+}
+assert.match(submissionReceiptSource, /data-confirmation-delivery=\{confirmationSent \? "sent" : "failed"\}/);
+assert.match(submissionReceiptSource, /receipt\.focus\(\{ preventScroll: true \}\)/);
+assert.match(submissionReceiptSource, /receipt\.scrollIntoView\(/);
+assert.match(submissionReceiptSource, /prefers-reduced-motion: reduce/);
+assert.match(plannerFormSource, /We(?:&apos;|')ll also try to[\s\S]*email you a confirmation copy/);
+assert.match(privacySource, /attempts to email you a confirmation/);
+assert.match(privacySource, /emails this process successfully sends/);
 assert.match(submissionFallbackSource, /data-submission-fallback/);
 assert.match(submissionFallbackSource, /fallback\.focus\(\{ preventScroll: true \}\)/);
 assert.match(submissionFallbackSource, /fallback\.scrollIntoView\(/);

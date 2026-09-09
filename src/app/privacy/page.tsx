@@ -78,12 +78,12 @@ export default function PrivacyPage() {
               <p className="mt-3">
                 Both forms submit directly from your browser to our server,
                 which sends your submission to our business inbox using
-                Resend, a third-party transactional email service, and emails
-                you a confirmation of what you submitted. We reply to that
-                submission using the address you provided (a
+                Resend, a third-party transactional email service, and then
+                attempts to email you a confirmation of what you submitted.
+                We reply to that submission using the address you provided (a
                 &ldquo;Reply-To&rdquo; header pointed at your email). We do
-                not store your submission in a database — it exists only as
-                the two emails this process sends.
+                not store your submission in a database — it exists only in
+                the emails this process successfully sends.
               </p>
               <p className="mt-3">
                 When you submit either form, our server also reads the IP
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
                 limit) and include it in the internal notification email
                 alongside your submitted answers, so we have that context if
                 we ever need to investigate abuse. It is not included in the
-                confirmation email sent back to you.
+                confirmation email we attempt to send you.
               </p>
             </div>
 

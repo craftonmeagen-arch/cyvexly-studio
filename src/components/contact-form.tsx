@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { SubmissionReceipt } from "@/components/submission-receipt";
 import { SubmissionFallback } from "@/components/submission-fallback";
 import type { InquiryContextKey } from "@/lib/contact-context";
 import { contactTopics } from "@/lib/site-config";
@@ -27,6 +28,7 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Errors>({});
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [confirmationSent, setConfirmationSent] = useState<boolean | null>(null);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -81,9 +83,9 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
           "contact-company-website": honeypot,
         }),
       });
+      const payload = await response.json().catch(() => null);
 
       if (!response.ok) {
-        const payload = await response.json().catch(() => null);
         if (payload?.error === "validation" && payload.fields) {
           setErrors(payload.fields as Errors);
           setStatus("error");
@@ -100,6 +102,7 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
         return;
       }
 
+      setConfirmationSent(payload?.confirmationSent === true);
       setStatus("sent");
       form.reset();
     } catch {
@@ -112,25 +115,37 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
 
   if (status === "sent") {
     return (
-      <div
-        role="status"
+      <SubmissionReceipt
+        confirmationSent={confirmationSent === true}
         className="glass-panel rounded-2xl px-6 py-8 text-center"
       >
         <h2 className="font-display text-lg font-semibold text-midnight-slate">
           Message sent.
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
-          Thanks for reaching out — we&apos;ve sent your message to Cyvexly Studio and emailed
-          you a confirmation. We respond within two business days.
+          {confirmationSent ? (
+            <>
+              Thanks for reaching out — your message reached Cyvexly Studio, and we emailed
+              you a confirmation. We respond within two business days.
+            </>
+          ) : (
+            <>
+              Your message reached Cyvexly Studio. We couldn&apos;t email a confirmation copy,
+              but you don&apos;t need to resubmit. We respond within two business days.
+            </>
+          )}
         </p>
         <button
           type="button"
-          onClick={() => setStatus("idle")}
+          onClick={() => {
+            setConfirmationSent(null);
+            setStatus("idle");
+          }}
           className="mt-5 text-sm font-medium text-cyber-blue hover:text-[#0b4fb0]"
         >
           Send another message
         </button>
-      </div>
+      </SubmissionReceipt>
     );
   }
 
