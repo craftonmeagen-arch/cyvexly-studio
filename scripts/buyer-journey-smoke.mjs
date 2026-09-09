@@ -27,6 +27,9 @@ const inquiryContexts = {
   "landing-pages": "focused landing page",
   "ecommerce-websites": "selling products or taking bookings online",
   "website-care": "ongoing website care and updates",
+  "care-plan": "Care plan for ongoing website support",
+  "care-plus-plan": "Care+ plan for ongoing website support",
+  "evolve-plan": "Evolve plan for ongoing website support",
 };
 
 const contextEntries = Object.entries(inquiryContexts);
@@ -138,6 +141,31 @@ for (const [index, slug] of serviceSlugs.entries()) {
     `${slug} does not keep the detailed Planner as a secondary action`,
   );
 }
+assert.match(
+  serviceDetails[serviceSlugs.indexOf("website-care")],
+  /href="\/pricing#care-plans"[^>]*>[\s\S]*?(?:See pricing|Compare pricing)/,
+  "website care does not deep-link to the care-plan comparison",
+);
+
+for (const [label, interest] of [
+  ["Care", "care-plan"],
+  ["Care+", "care-plus-plan"],
+  ["Evolve", "evolve-plan"],
+]) {
+  assert.match(
+    pricing,
+    new RegExp(`href="/contact\\?interest=${interest}"`),
+    `${label} does not carry its context into the short inquiry`,
+  );
+}
+for (const careDecision of [
+  "Monthly capacity",
+  "Response window",
+  "Review rhythm",
+  "whether unused monthly capacity carries forward",
+]) {
+  assert.match(pricing, new RegExp(careDecision), `missing care-plan decision: ${careDecision}`);
+}
 
 assert.match(home, /href="\/contact\?interest=custom-project"[^>]*>Ask about a project/);
 assert.match(home, /href="\/work"[^>]*>View our work/);
@@ -186,10 +214,11 @@ assert.match(pricing, /Content editing/);
 assert.match(pricing, /Forms \/ integrations/);
 assert.match(pricing, /Illustrative build fee: \$4,500–\$5,750/);
 assert.match(pricing, /A small content request is one update/);
-assert.match(pricing, /Priority requests receive a response within one business day/);
+assert.match(pricing, /Priority reply within one business day/);
 
 const readMessageValue = (html) =>
   html.match(/<textarea[^>]*id="message"[^>]*>([\s\S]*?)<\/textarea>/)?.[1] ?? null;
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 assert.equal(readMessageValue(plainContact), "");
 assert.equal(readMessageValue(unknownContact), "");
@@ -220,7 +249,7 @@ for (const [[interest, expectedCopy], html] of contextEntries.map((entry, index)
   );
   assert.match(
     readMessageValue(html) ?? "",
-    new RegExp(expectedCopy),
+    new RegExp(escapeRegExp(expectedCopy)),
     `${interest} did not preserve its inquiry context`,
   );
 }

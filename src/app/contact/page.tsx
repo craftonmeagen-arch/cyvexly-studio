@@ -26,6 +26,9 @@ const inquiryMessages: Record<string, string> = {
   "landing-pages": "I’d like to ask about a focused landing page.\n\nHere’s what I’m considering: ",
   "ecommerce-websites": "I’d like to ask about selling products or taking bookings online.\n\nHere’s what I’m considering: ",
   "website-care": "I’d like to ask about ongoing website care and updates.\n\nHere’s what I’m considering: ",
+  "care-plan": "I’m interested in the Care plan for ongoing website support.\n\nHere’s what I’m considering: ",
+  "care-plus-plan": "I’m interested in the Care+ plan for ongoing website support.\n\nHere’s what I’m considering: ",
+  "evolve-plan": "I’m interested in the Evolve plan for ongoing website support.\n\nHere’s what I’m considering: ",
 };
 
 export default async function ContactPage({

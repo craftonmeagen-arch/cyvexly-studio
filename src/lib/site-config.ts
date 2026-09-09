@@ -759,22 +759,28 @@ export const carePlans = [
     name: "Care",
     price: "$99/mo",
     use: "Basic peace of mind",
-    capacity:
-      "Monitoring and maintenance where applicable, one small content request, and a monthly check. We respond within two business days.",
+    capacity: "One small content request each month",
+    response: "Within two business days",
+    review: "Monthly maintenance check",
+    interest: "care-plan",
   },
   {
     name: "Care+",
     price: "$229/mo",
     use: "Businesses that update regularly",
-    capacity:
-      "Up to two hours of content or design support, a quarterly site review, and an analytics snapshot. Priority requests receive a response within one business day.",
+    capacity: "Up to two hours of content or design support",
+    response: "Priority reply within one business day",
+    review: "Quarterly site review and analytics snapshot",
+    interest: "care-plus-plan",
   },
   {
     name: "Evolve",
     price: "$449/mo",
     use: "Continuous improvement",
-    capacity:
-      "Up to five hours of prioritized updates, a monthly review, and conversion or content recommendations. Priority requests receive a response within one business day.",
+    capacity: "Up to five hours of prioritized updates",
+    response: "Priority reply within one business day",
+    review: "Monthly review and improvement recommendations",
+    interest: "evolve-plan",
   },
 ];
 

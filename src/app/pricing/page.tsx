@@ -411,9 +411,14 @@ export default function PricingPage() {
             to 30 minutes and does not add a new layout, page, feature, or integration. Response
             windows confirm when we reply and schedule the work; they are not emergency-resolution guarantees.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {carePlans.map((plan) => (
-              <div key={plan.name} className="glass-panel flex flex-col rounded-2xl p-7">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {carePlans.map((plan, index) => (
+              <div
+                key={plan.name}
+                className={`glass-panel flex flex-col rounded-2xl p-7 ${
+                  index === carePlans.length - 1 ? "md:col-span-2 lg:col-span-1" : ""
+                }`}
+              >
                 <h3 className="font-display text-lg font-semibold text-midnight-slate">
                   {plan.name}
                 </h3>
@@ -421,11 +426,50 @@ export default function PricingPage() {
                   {plan.price}
                 </p>
                 <p className="mt-3 text-sm font-medium text-midnight-slate">{plan.use}</p>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-cool-graphite">
-                  {plan.capacity}
-                </p>
+                <dl className="mt-6 flex-1 space-y-4 border-t border-smoke-glass/70 pt-5 text-sm">
+                  <div>
+                    <dt className="font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
+                      Monthly capacity
+                    </dt>
+                    <dd className="mt-1 leading-relaxed text-midnight-slate">{plan.capacity}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
+                      Response window
+                    </dt>
+                    <dd className="mt-1 leading-relaxed text-midnight-slate">{plan.response}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
+                      Review rhythm
+                    </dt>
+                    <dd className="mt-1 leading-relaxed text-midnight-slate">{plan.review}</dd>
+                  </div>
+                </dl>
+                <ButtonLink
+                  href={`/contact?interest=${plan.interest}`}
+                  variant="secondary"
+                  className="mt-6 w-full"
+                >
+                  Ask about {plan.name}
+                </ButtonLink>
               </div>
             ))}
+          </div>
+          <div className="glass-content-field mt-8 grid gap-4 rounded-2xl p-6 sm:grid-cols-[auto_1fr] sm:items-start sm:p-7">
+            <span className="signal-icon font-mono text-xs" aria-hidden="true">
+              i
+            </span>
+            <div>
+              <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                Terms are clear before monthly billing starts
+              </h3>
+              <p className="mt-2 max-w-4xl text-sm leading-relaxed text-cool-graphite">
+                There is no long-term contract. Your agreement states the notice for pausing
+                or cancelling and whether unused monthly capacity carries forward, so those
+                terms are settled before the first invoice.
+              </p>
+            </div>
           </div>
         </section>
 

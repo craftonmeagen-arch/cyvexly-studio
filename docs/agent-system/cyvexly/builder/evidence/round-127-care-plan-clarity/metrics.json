@@ -1,0 +1,81 @@
+{
+  "metrics": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "overflow": 0,
+      "actions": [
+        {
+          "label": "Ask about Care",
+          "width": 293,
+          "height": 46
+        },
+        {
+          "label": "Ask about Care+",
+          "width": 293,
+          "height": 46
+        },
+        {
+          "label": "Ask about Evolve",
+          "width": 293,
+          "height": 46
+        }
+      ],
+      "termsVisible": true
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "overflow": 0,
+      "actions": [
+        {
+          "label": "Ask about Care",
+          "width": 274,
+          "height": 46
+        },
+        {
+          "label": "Ask about Care+",
+          "width": 274,
+          "height": 46
+        },
+        {
+          "label": "Ask about Evolve",
+          "width": 629,
+          "height": 46
+        }
+      ],
+      "termsVisible": true
+    },
+    {
+      "name": "phone",
+      "width": 390,
+      "overflow": 0,
+      "actions": [
+        {
+          "label": "Ask about Care",
+          "width": 266,
+          "height": 46
+        },
+        {
+          "label": "Ask about Care+",
+          "width": 266,
+          "height": 46
+        },
+        {
+          "label": "Ask about Evolve",
+          "width": 266,
+          "height": 46
+        }
+      ],
+      "termsVisible": true
+    }
+  ],
+  "handoff": {
+    "href": "/contact?interest=care-plus-plan",
+    "message": "I’m interested in the Care+ plan for ongoing website support.\n\nHere’s what I’m considering: ",
+    "topic": "Project inquiry",
+    "overflow": 0
+  },
+  "runtimeErrors": 0,
+  "status": "passed"
+}
