@@ -336,6 +336,78 @@ async function main() {
     assert.ok(contactDesktop.formTop <= contactDesktop.directTop, "desktop direct alternatives precede the primary short inquiry");
     await capture(client, "contact-desktop.png");
 
+    await openRoute(client, "/start?service=ecommerce-websites", 1280, 720);
+    assert.equal(
+      await evaluate(client, "document.getElementById('planner-storage-note') !== null"),
+      true,
+      "Planner does not disclose device-local draft storage before the save action",
+    );
+    await evaluate(client, "document.getElementById('planner-storage-note').scrollIntoView({ block: 'center', behavior: 'instant' })");
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    const plannerStorageDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const note = document.getElementById('planner-storage-note');
+      const save = [...document.querySelectorAll('button')]
+        .find((item) => item.textContent.trim() === 'Save & continue later');
+      return {
+        noteText: note.textContent.replace(/\\s+/g, ' ').trim(),
+        saveDescription: save.getAttribute('aria-describedby'),
+        noteTop: note.getBoundingClientRect().top,
+        noteBottom: note.getBoundingClientRect().bottom,
+        saveTop: save.getBoundingClientRect().top,
+      };
+    })())`));
+    assert.equal(
+      plannerStorageDesktop.noteText,
+      "Save for later stores this draft only in this browser on this device. Cyvexly cannot see it until you submit.",
+    );
+    assert.equal(plannerStorageDesktop.saveDescription, "planner-storage-note");
+    assert.ok(plannerStorageDesktop.noteBottom < plannerStorageDesktop.saveTop, "Planner storage disclosure does not precede the save action");
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    await capture(client, "planner-storage-desktop.png");
+
+    const saveCenter = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const box = [...document.querySelectorAll('button')]
+        .find((item) => item.textContent.trim() === 'Save & continue later')
+        .getBoundingClientRect();
+      return { x: box.left + box.width / 2, y: box.top + box.height / 2 };
+    })())`));
+    await client.send("Input.dispatchMouseEvent", { type: "mousePressed", button: "left", clickCount: 1, ...saveCenter });
+    await client.send("Input.dispatchMouseEvent", { type: "mouseReleased", button: "left", clickCount: 1, ...saveCenter });
+    const plannerSaveResult = JSON.parse(await evaluate(client, `JSON.stringify({
+      statusVisible: document.body.textContent.includes('Saved on this device. Come back to this page any time to continue.'),
+      draftStored: localStorage.getItem('cyvexly-planner-draft-v1') !== null,
+    })`));
+    assert.deepEqual(plannerSaveResult, { statusVisible: true, draftStored: true });
+    await evaluate(client, "localStorage.removeItem('cyvexly-planner-draft-v1')");
+
+    await openRoute(client, "/start?service=ecommerce-websites", 390, 844);
+    await evaluate(client, "document.getElementById('planner-storage-note').scrollIntoView({ block: 'center', behavior: 'instant' })");
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    const plannerStoragePhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const note = document.getElementById('planner-storage-note');
+      const save = [...document.querySelectorAll('button')]
+        .find((item) => item.textContent.trim() === 'Save & continue later');
+      const next = [...document.querySelectorAll('button')]
+        .find((item) => item.textContent.trim() === 'Continue →');
+      const header = document.querySelector('header').getBoundingClientRect();
+      const noteBox = note.getBoundingClientRect();
+      return {
+        headerBottom: header.bottom,
+        noteTop: noteBox.top,
+        noteBottom: noteBox.bottom,
+        saveHeight: save.getBoundingClientRect().height,
+        continueHeight: next.getBoundingClientRect().height,
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.ok(plannerStoragePhone.noteTop >= plannerStoragePhone.headerBottom, `Planner storage disclosure is hidden behind the phone header: ${JSON.stringify(plannerStoragePhone)}`);
+    assert.ok(plannerStoragePhone.noteBottom < 844, `Planner storage disclosure does not fit in the phone viewport: ${JSON.stringify(plannerStoragePhone)}`);
+    assert.ok(plannerStoragePhone.saveHeight >= 44, "Planner save action falls below the 44px interaction floor");
+    assert.ok(plannerStoragePhone.continueHeight >= 44, "Planner continue action falls below the 44px interaction floor");
+    assert.ok(plannerStoragePhone.overflow <= 1, "Planner storage disclosure causes phone overflow");
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    await capture(client, "planner-storage-phone.png");
+
     assert.deepEqual(failures, []);
     console.log(JSON.stringify({
       pricingDesktop,
@@ -344,6 +416,9 @@ async function main() {
       servicesDesktop,
       contactPhone,
       contactDesktop,
+      plannerStorageDesktop,
+      plannerSaveResult,
+      plannerStoragePhone,
       nexoraPreviewDesktop,
       nexoraPreviewPhone,
       viewports: ["1280x720", "390x844"],

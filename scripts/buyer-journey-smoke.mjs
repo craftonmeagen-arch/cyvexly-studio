@@ -509,6 +509,10 @@ assert.match(
   /"booking-websites": \{[\s\S]*?serviceName: "Booking-led website"[\s\S]*?primaryGoal: "book"/,
   "the Planner is missing a booking-specific prefill for hospitality buyers",
 );
+assert.match(plannerFormSource, /id="planner-storage-note"/);
+assert.match(plannerFormSource, /only in this browser on this device/);
+assert.match(plannerFormSource, /cannot see it until you submit/);
+assert.match(plannerFormSource, /aria-describedby="planner-storage-note"/);
 assert.match(contactFormSource, /<SubmissionFallback message=\{submitError\}/);
 assert.match(plannerFormSource, /<SubmissionFallback message=\{submitError\}/);
 for (const source of [contactRouteSource, plannerRouteSource]) {

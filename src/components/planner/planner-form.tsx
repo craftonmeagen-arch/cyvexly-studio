@@ -969,42 +969,53 @@ export function PlannerForm({
           )}
         </div>
 
-        <div className="mt-8 flex flex-col-reverse items-stretch gap-3 border-t border-smoke-glass/70 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <button
-            type="button"
-            onClick={handleBack}
-            disabled={currentStep === 1}
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-smoke-glass px-6 py-3 text-sm font-medium text-midnight-slate transition-colors duration-200 hover:border-cyber-blue/60 hover:text-cyber-blue disabled:cursor-not-allowed disabled:opacity-40"
+        <div className="mt-8 border-t border-smoke-glass/70 pt-6">
+          <p
+            id="planner-storage-note"
+            className="text-xs leading-relaxed text-cool-graphite"
           >
-            ← Back
-          </button>
+            Save for later stores this draft only in this browser on this device. Cyvexly
+            cannot see it until you submit.
+          </p>
 
-          <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+          <div className="mt-4 flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
             <button
               type="button"
-              onClick={handleSaveForLater}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-smoke-glass px-6 py-3 text-sm font-medium text-midnight-slate transition-colors duration-200 hover:border-cyber-blue/60 hover:text-cyber-blue"
+              onClick={handleBack}
+              disabled={currentStep === 1}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-smoke-glass px-6 py-3 text-sm font-medium text-midnight-slate transition-colors duration-200 hover:border-cyber-blue/60 hover:text-cyber-blue disabled:cursor-not-allowed disabled:opacity-40"
             >
-              Save &amp; continue later
+              ← Back
             </button>
 
-            {currentStep < plannerSteps.length ? (
+            <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
               <button
                 type="button"
-                onClick={handleNext}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-cyber-blue px-6 py-3 text-sm font-medium text-white shadow-[0_8px_24px_-8px_rgba(15,102,224,0.55)] transition-colors duration-200 hover:bg-[#0b4fb0] focus-visible:bg-[#0b4fb0]"
+                onClick={handleSaveForLater}
+                aria-describedby="planner-storage-note"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-smoke-glass px-6 py-3 text-sm font-medium text-midnight-slate transition-colors duration-200 hover:border-cyber-blue/60 hover:text-cyber-blue"
               >
-                Continue →
+                Save &amp; continue later
               </button>
-            ) : (
-              <button
-                type="submit"
-                disabled={status === "submitting"}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-cyber-blue px-6 py-3 text-sm font-medium text-white shadow-[0_8px_24px_-8px_rgba(15,102,224,0.55)] transition-colors duration-200 hover:bg-[#0b4fb0] focus-visible:bg-[#0b4fb0] disabled:cursor-not-allowed disabled:opacity-70"
-              >
-                {status === "submitting" ? "Submitting…" : "Submit"}
-              </button>
-            )}
+
+              {currentStep < plannerSteps.length ? (
+                <button
+                  type="button"
+                  onClick={handleNext}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-cyber-blue px-6 py-3 text-sm font-medium text-white shadow-[0_8px_24px_-8px_rgba(15,102,224,0.55)] transition-colors duration-200 hover:bg-[#0b4fb0] focus-visible:bg-[#0b4fb0]"
+                >
+                  Continue →
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={status === "submitting"}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-cyber-blue px-6 py-3 text-sm font-medium text-white shadow-[0_8px_24px_-8px_rgba(15,102,224,0.55)] transition-colors duration-200 hover:bg-[#0b4fb0] focus-visible:bg-[#0b4fb0] disabled:cursor-not-allowed disabled:opacity-70"
+                >
+                  {status === "submitting" ? "Submitting…" : "Submit"}
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
