@@ -259,7 +259,7 @@ export default function PricingPage() {
                     <th scope="col" className="py-3 pr-4 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
                       Core pages
                     </th>
-                    <th scope="col" className="py-3 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                    <th scope="col" className="py-3 pr-4 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
                       Typical window
                     </th>
                     <th scope="col" className="py-3 pr-4 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
@@ -279,7 +279,7 @@ export default function PricingPage() {
                       <td className="py-3 pr-4 font-medium text-midnight-slate">{pkg.name}</td>
                       <td className="py-3 pr-4 text-cool-graphite">{pkg.price}</td>
                       <td className="py-3 pr-4 text-cool-graphite">{pkg.scope[0]}</td>
-                      <td className="py-3 text-cool-graphite">{pkg.timeline}</td>
+                      <td className="py-3 pr-4 text-cool-graphite">{pkg.timeline}</td>
                       <td className="py-3 pr-4 text-cool-graphite">{pkg.contentEditing}</td>
                       <td className="py-3 pr-4 text-cool-graphite">{pkg.integrations}</td>
                       <td className="py-3 text-cool-graphite">{pkg.revisions}</td>
