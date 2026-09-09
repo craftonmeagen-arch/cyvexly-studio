@@ -27,8 +27,8 @@ export default async function ContactPage({
       <SiteHeader />
 
       <main id="main-content" className="flex-1">
-        <section className="page-intro-stage border-b border-smoke-glass/70 px-4 py-12 sm:px-6 sm:py-16">
-          <div className="page-intro-shell mx-auto max-w-3xl rounded-3xl px-6 py-10 text-center sm:px-10 sm:py-12">
+        <section className="page-intro-stage border-b border-smoke-glass/70 px-4 py-7 sm:px-6 sm:py-10">
+          <div className="page-intro-shell mx-auto max-w-3xl rounded-3xl px-6 py-7 text-center sm:px-10 sm:py-9">
             <p className="text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
               Contact
             </p>
@@ -46,8 +46,13 @@ export default async function ContactPage({
           </div>
         </section>
 
-        <section className="mx-auto max-w-5xl px-6 py-20">
-          <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr]">
+        <section className="mx-auto max-w-5xl px-6 py-10 sm:py-14 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr]">
+            <ContactForm
+              inquiryInterest={inquiryContext?.id}
+              inquiryLabel={inquiryContext?.label}
+            />
+
             <div className="glass-content-field rounded-3xl p-6 sm:p-8">
               <h2 className="font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
                 Reach us directly
@@ -116,10 +121,6 @@ export default async function ContactPage({
               </dl>
             </div>
 
-            <ContactForm
-              inquiryInterest={inquiryContext?.id}
-              inquiryLabel={inquiryContext?.label}
-            />
           </div>
         </section>
       </main>

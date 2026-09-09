@@ -65,7 +65,7 @@ export default async function CaseStudyPage({
 
       <main id="main-content" className="flex-1">
         <section className="page-intro-stage border-b border-smoke-glass/70">
-          <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
+          <div className="mx-auto max-w-5xl px-4 py-7 sm:px-6 sm:py-10">
             <div className="page-intro-shell rounded-3xl px-6 py-8 sm:px-10 sm:py-10">
               <ButtonLink href="/work" variant="text" className="text-sm">
                 ← All work

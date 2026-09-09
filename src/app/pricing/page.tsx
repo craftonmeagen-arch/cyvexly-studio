@@ -42,33 +42,33 @@ export default function PricingPage() {
       <main id="main-content" className="flex-1">
         {/* Hero */}
         <section className="pricing-hero-stage relative overflow-hidden border-b border-smoke-glass/70">
-          <div className="pricing-hero-layout relative z-10 mx-auto grid max-w-6xl items-center gap-6 px-6 py-8 md:grid-cols-[0.9fr_1.1fr] md:gap-8 md:py-14 lg:gap-12 lg:pb-24 lg:pt-16">
-            <div className="pricing-hero-copy relative rounded-3xl px-6 py-7 sm:px-8 sm:py-9">
+          <div className="pricing-hero-layout relative z-10 mx-auto grid max-w-6xl items-center gap-6 px-6 py-7 md:grid-cols-[0.9fr_1.1fr] md:gap-8 md:py-9 lg:gap-12 lg:py-8">
+            <div className="pricing-hero-copy relative rounded-3xl px-6 py-6 sm:px-8 sm:py-7">
               <p className="font-mono text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
                 Pricing
               </p>
-              <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
+              <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate">
                 Clear starting points.
               </h1>
-              <p className="mt-5 text-base leading-relaxed text-cool-graphite sm:text-lg">
-                Final quotes are shaped around your goals, content, pages, and
-                features. No website project is identical, so every proposal is
-                written in plain language before work begins.
+              <p className="mt-5 text-base leading-relaxed text-cool-graphite">
+                Final quotes reflect your goals, content, pages, and features.
+                Before work starts, you receive a plain-language proposal with
+                the scope, timeline, and price.
               </p>
-              <p className="mt-6 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
+              <p className="mt-5 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
                 <span className="h-1.5 w-1.5 rounded-full bg-signal-emerald" />
                 Scope first · proposal before work
               </p>
             </div>
 
-            <div className="pricing-scope-visual relative overflow-hidden rounded-[1.75rem] p-3 sm:p-5">
+            <div className="pricing-scope-visual relative hidden overflow-hidden rounded-[1.75rem] p-3 sm:block md:max-w-[32rem] md:justify-self-end md:p-4">
               <PricingScopeSignal />
             </div>
           </div>
         </section>
 
         <nav aria-label="Pricing sections" className="border-b border-smoke-glass/70 bg-white/35">
-          <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-6 py-4 text-sm">
+          <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-6 py-3 text-sm">
             {[
               ["Packages", "#packages"],
               ["Compare", "#compare"],
@@ -91,7 +91,7 @@ export default function PricingPage() {
 
         {/* Package cards */}
         <section id="packages" className="pricing-package-stage scroll-mt-24 relative border-b border-smoke-glass/70">
-          <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 lg:-mt-14 lg:pb-20 lg:pt-0">
+          <div className="relative z-10 mx-auto max-w-6xl px-6 py-12 lg:pb-20 lg:pt-6">
             <div className="grid gap-6 lg:grid-cols-3">
               {pricingPackages.slice(0, 3).map((pkg) => (
                 <div

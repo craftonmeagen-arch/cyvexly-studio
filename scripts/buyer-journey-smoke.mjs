@@ -32,7 +32,7 @@ const inquiryContexts = {
 };
 
 const contextEntries = Object.entries(inquiryContexts);
-const [home, services, pricing, , plainContact, unknownContact, genericContact, ...contextualContacts] =
+const [home, services, pricing, planner, plainContact, unknownContact, genericContact, ...contextualContacts] =
   await Promise.all([
     read("/"),
     read("/services"),
@@ -50,6 +50,51 @@ const [work, processHtml, about, faq, sitemap] = await Promise.all([
   read("/faq"),
   read("/sitemap.xml"),
 ]);
+
+for (const [name, html] of [
+  ["Services", services],
+  ["Work", work],
+  ["Process", processHtml],
+  ["About", about],
+  ["FAQ", faq],
+  ["Contact", plainContact],
+  ["Planner", planner],
+]) {
+  assert.match(
+    html,
+    /page-intro-stage[^\"]*py-7[^\"]*sm:py-10/,
+    `${name} restored the oversized internal-page stage`,
+  );
+  assert.match(
+    html,
+    /page-intro-shell[^\"]*py-7[^\"]*sm:py-9/,
+    `${name} restored the oversized internal-page panel`,
+  );
+}
+assert.match(
+  pricing,
+  /pricing-hero-layout[^\"]*py-7[^\"]*md:py-9[^\"]*lg:py-8/,
+  "Pricing restored the oversized opening stage",
+);
+assert.match(
+  pricing,
+  /pricing-scope-visual[^\"]*hidden[^\"]*sm:block/,
+  "Pricing restored the decorative mobile scope graphic above package prices",
+);
+assert.doesNotMatch(
+  pricing,
+  /lg:-mt-14/,
+  "Pricing package cards still overlap the section navigation",
+);
+assert.ok(
+  plainContact.indexOf("<form") < plainContact.indexOf("Reach us directly"),
+  "Contact still places secondary direct-contact guidance before the primary short form",
+);
+assert.match(
+  plainContact,
+  /max-w-5xl[^\"]*py-10[^\"]*sm:py-14[^\"]*lg:py-20/,
+  "Contact restored the oversized mobile gap before the short form",
+);
 const serviceSlugs = [
   "business-websites",
   "website-redesigns",
