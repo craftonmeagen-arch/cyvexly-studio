@@ -315,6 +315,15 @@ const [velora, nexoraCase, nexoraDemo] = await Promise.all([
   read("/nexora"),
 ]);
 assert.match(velora, /href="\/contact\?interest=hospitality-website"/);
+assert.match(velora, /A connected hospitality site usually starts with the commerce path/);
+assert.match(velora, /Commerce begins at \$8,500/);
+assert.match(velora, /<summary[^>]*>\s*What shapes the scope/);
+assert.match(velora, /href="\/services\/ecommerce-websites"[^>]*>Explore commerce websites/);
+assert.match(velora, /href="\/pricing#packages"[^>]*>Compare packages &amp; costs/);
+assert.match(
+  velora,
+  /href="\/start\?service=ecommerce-websites"[^>]*>Share a prefilled brief/,
+);
 assert.match(work, /href="\/work\/nexora-systems"/);
 assert.match(work, /href="\/nexora"[^>]*>Try demo/);
 assert.match(home, /href="\/nexora"[^>]*>Try interactive demo/);
@@ -322,7 +331,18 @@ assert.match(nexoraCase, /Built concept demo — fictional/);
 assert.match(nexoraCase, /href="\/nexora"[^>]*>Explore the live demo/);
 assert.match(nexoraCase, /Cyvexly-built fictional demonstration/);
 assert.match(nexoraCase, /href="\/contact\?interest=custom-system"[^>]*>[\s\S]*?Ask about a project/);
-assert.match(nexoraCase, /href="\/start"[^>]*>[\s\S]*?Share a detailed brief/);
+assert.match(nexoraCase, /Custom applications are scoped before they are priced/);
+assert.match(nexoraCase, /Users, roles, data, integrations, security, and migration requirements/);
+assert.match(nexoraCase, /<summary[^>]*>\s*What shapes the scope/);
+assert.match(
+  nexoraCase,
+  /href="\/services\/custom-web-applications"[^>]*>Explore custom applications/,
+);
+assert.match(nexoraCase, /href="\/pricing#packages"[^>]*>Compare packages &amp; costs/);
+assert.match(
+  nexoraCase,
+  /href="\/start\?service=custom-web-applications"[^>]*>Share a prefilled brief/,
+);
 assert.match(nexoraDemo, /Fictional product demonstration by Cyvexly Studio/);
 assert.match(nexoraDemo, /Find the release behind the change/);
 assert.match(nexoraDemo, /href="\/contact\?interest=custom-system"/);

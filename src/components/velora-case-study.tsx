@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/button";
+import { CaseStudyScopeGuide } from "@/components/case-study-scope-guide";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -255,22 +256,33 @@ export function VeloraCaseStudy({ breadcrumbJsonLd }: { breadcrumbJsonLd: Record
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#d6bd8f]/35 bg-[#111713] px-6 py-14 text-center text-[#f6f3ec] shadow-[0_35px_90px_-48px_rgba(7,31,67,0.9)] sm:px-12 sm:py-20">
-            <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_18%_24%,rgba(214,189,143,0.34),transparent_24rem),radial-gradient(circle_at_86%_82%,rgba(73,51,46,0.8),transparent_26rem)]" />
-            <div className="relative mx-auto max-w-3xl">
-              <p className="font-mono text-[10px] uppercase tracking-[0.19em] text-[#d6bd8f]">Your guest journey, made unmistakable</p>
-              <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-white sm:text-5xl">What should your website help guests do next?</h2>
-              <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#f6f3ec]/72 sm:text-base">
-                Tell us about your restaurant, venue, or hospitality concept—and the reservations, inquiries, events, or customer journey it needs to support. Cyvexly will recommend the right scope.
-              </p>
-              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <ButtonLink href="/contact?interest=hospitality-website" className="!bg-[linear-gradient(135deg,#d6bd8f,#ead5ad)] !text-[#172019] hover:!bg-[linear-gradient(135deg,#ead5ad,#f3e2bf)]">Ask about a hospitality website <ArrowMark /></ButtonLink>
-                <ButtonLink href="/velora" variant="text" className="!text-[#f6f3ec] hover:!text-[#d6bd8f]">Return to the live demo</ButtonLink>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CaseStudyScopeGuide
+          eyebrow="From example to estimate"
+          heading="A connected hospitality site usually starts with the commerce path."
+          summary="Commerce begins at $8,500 when booking, checkout, gifting, or connected customer actions are part of the build. A simpler information-led restaurant site may fit a smaller package; the written recommendation confirms the right scope."
+          items={[
+            {
+              label: "What changes the quote",
+              value:
+                "Booking or payment providers, menu and content volume, event inquiry logic, and other integrations.",
+            },
+            {
+              label: "What to bring",
+              value:
+                "Your guest goals, current tools, and final copy and imagery—or a plan for creating them together.",
+            },
+            {
+              label: "What you receive first",
+              value:
+                "A written recommendation with deliverables, timing, price, and the decisions needed before work begins.",
+            },
+          ]}
+          inquiryHref="/contact?interest=hospitality-website"
+          inquiryLabel="Ask about a hospitality website"
+          serviceHref="/services/ecommerce-websites"
+          serviceLabel="Explore commerce websites"
+          plannerHref="/start?service=ecommerce-websites"
+        />
       </main>
 
       <SiteFooter />

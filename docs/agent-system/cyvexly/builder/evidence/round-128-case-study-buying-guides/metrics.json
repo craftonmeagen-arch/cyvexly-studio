@@ -1,0 +1,33 @@
+{
+  "source": "optimized local candidate before product commit",
+  "routes": [
+    "/work/velora-dining",
+    "/work/nexora-systems"
+  ],
+  "viewports": [
+    {
+      "width": 1440,
+      "documentScrollWidth": 1425,
+      "actionHeights": [46, 46, 44, 44]
+    },
+    {
+      "width": 768,
+      "documentScrollWidth": 753,
+      "actionHeights": [46, 46, 44, 44]
+    },
+    {
+      "width": 390,
+      "documentScrollWidth": 375,
+      "actionHeights": [46, 46, 44, 44],
+      "collapsedDisclosureHeight": 54
+    },
+    {
+      "width": 320,
+      "documentScrollWidth": 305,
+      "actionHeights": [66, 66, 64, 64],
+      "collapsedDisclosureHeight": 54
+    }
+  ],
+  "browserWarningsOrErrors": 0,
+  "submittedInquiry": false
+}

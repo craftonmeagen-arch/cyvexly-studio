@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
+import { CaseStudyScopeGuide } from "@/components/case-study-scope-guide";
 import { ConceptPreview } from "@/components/concept-preview";
 import { VeloraCaseStudy } from "@/components/velora-case-study";
 import { caseStudies, selectedWork } from "@/lib/site-config";
@@ -252,25 +253,33 @@ export default async function CaseStudyPage({
           </p>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 pb-20">
-          <div className="cyber-focal-panel rounded-3xl px-8 py-16 text-center sm:px-16">
-            <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
-              Want something like this for your business?
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-              A short description is enough to ask whether Cyvexly is a fit.
-              Share the full brief only when you&apos;re ready.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <ButtonLink href="/contact?interest=custom-system">
-                Ask about a project
-              </ButtonLink>
-              <ButtonLink href="/start" variant="secondary">
-                Share a detailed brief
-              </ButtonLink>
-            </div>
-          </div>
-        </section>
+        <CaseStudyScopeGuide
+          eyebrow="From working demo to real scope"
+          heading="Custom applications are scoped before they are priced."
+          summary="Nexora shows interaction depth, not a fixed package. Users, roles, data, integrations, security, and migration requirements define the scope; Cyvexly confirms price and timing in writing before build work begins."
+          items={[
+            {
+              label: "Best fit",
+              value:
+                "Memberships, dashboards, portals, and connected operations that need more than standard website pages.",
+            },
+            {
+              label: "What to bring",
+              value:
+                "The users, current workflow, pain points, sample data, and tools that may need to connect.",
+            },
+            {
+              label: "First decision",
+              value:
+                "Discovery maps permissions, states, integrations, and proof requirements before you receive a quote.",
+            },
+          ]}
+          inquiryHref="/contact?interest=custom-system"
+          inquiryLabel="Ask about a custom application"
+          serviceHref="/services/custom-web-applications"
+          serviceLabel="Explore custom applications"
+          plannerHref="/start?service=custom-web-applications"
+        />
       </main>
 
       <SiteFooter />
