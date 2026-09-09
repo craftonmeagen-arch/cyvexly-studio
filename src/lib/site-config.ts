@@ -512,9 +512,11 @@ export const buyerNeeds = [
     description:
       "For memberships, advanced booking, multilingual experiences, large migrations, integrations, and other operational workflows that need discovery before a quote.",
     startingPoint: "Quoted after discovery",
-    detailHref: "/pricing#custom-system-package",
-    detailLabel: "See the custom-system approach",
+    detailHref: "/services/custom-web-applications",
+    detailLabel: "Explore custom web applications",
     inquiryHref: "/contact?interest=custom-system",
+    proofHref: "/work/nexora-systems",
+    proofLabel: "See the built Nexora example",
   },
   {
     id: "ongoing-website-support",

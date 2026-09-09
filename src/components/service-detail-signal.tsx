@@ -19,6 +19,11 @@ const serviceSignals = {
     nodes: ["Discover", "Choose", "Checkout"],
     path: "M38 180 C108 180 128 58 219 58 C309 58 324 170 389 170",
   },
+  "custom-web-applications": {
+    label: "Workflow",
+    nodes: ["Discover", "Model", "Operate"],
+    path: "M34 170 C92 92 153 196 219 110 C283 27 337 80 389 145",
+  },
   "website-care": {
     label: "Continuity",
     nodes: ["Monitor", "Update", "Improve"],

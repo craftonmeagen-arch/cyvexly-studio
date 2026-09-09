@@ -273,6 +273,68 @@ export const serviceDetails = {
       },
     ],
   },
+  "custom-web-applications": {
+    slug: "custom-web-applications",
+    name: "Custom web applications",
+    eyebrow: "Purpose-built workflows beyond a standard website",
+    headline: "Turn a complex workflow into a clear, usable web application.",
+    summary:
+      "Discovery-led design and development for memberships, dashboards, operational tools, and connected workflows that need more than standard pages.",
+    problem:
+      "Important work may be spread across forms, spreadsheets, email, and disconnected tools. A generic website or off-the-shelf template cannot reliably explain the process, guide each user, and keep the right information together.",
+    outcome:
+      "A responsive application shaped around the real workflow, with clear roles, useful states, and an interface people can understand without learning the system behind it.",
+    included: [
+      "Discovery for users, roles, tasks, data, and success criteria",
+      "Workflow, screen, state, and permission planning",
+      "Custom responsive interface design and development",
+      "Loading, empty, error, correction, and success states",
+      "Agreed integrations, data flows, and security boundaries",
+      "Testing, owner handoff, and a defined launch-support window",
+    ],
+    clientInputs: [
+      "The people who use the workflow and what each needs to accomplish",
+      "Current tools, forms, spreadsheets, data, and known failure points",
+      "Required accounts or vendor access at the agreed project stage",
+      "A decision maker plus representative users for review and testing",
+    ],
+    scopeFactors: [
+      "Number of user roles, permissions, workflows, and distinct states",
+      "Authentication, stored data, integrations, and migration requirements",
+      "Reporting, notifications, payments, or other operational behavior",
+      "Security, privacy, compliance, scale, and launch-environment needs",
+    ],
+    package: {
+      name: "Custom system",
+      price: "Quoted after discovery",
+      timing: "Confirmed after discovery",
+      note: "Custom applications are scoped after the workflow, roles, data, integrations, and proof requirements are understood. The written recommendation defines the build before work begins.",
+    },
+    example: {
+      slug: "nexora-systems",
+      name: "Nexora Systems",
+      context:
+        "A built fictional release-intelligence application showing responsive analytics, service filters, issue investigation, plain-language status, and complete sample-data boundaries without a live account or monitoring service.",
+      demoHref: "/nexora",
+    },
+    faqs: [
+      {
+        question: "How is a custom web application priced?",
+        answer:
+          "We first map the users, workflow, data, integrations, and important states. You then receive a written scope, price, timing, and delivery plan before deciding whether to proceed.",
+      },
+      {
+        question: "Can you connect an application to tools we already use?",
+        answer:
+          "Often, yes. We verify each platform's supported connection, account requirements, data boundaries, and ongoing costs before including it in the scope.",
+      },
+      {
+        question: "Do we need a complete technical specification first?",
+        answer:
+          "No. Bring the current process, users, pain points, and required outcomes. Discovery turns that operating knowledge into a reviewable application plan.",
+      },
+    ],
+  },
   "website-care": {
     slug: "website-care",
     name: "Website care",

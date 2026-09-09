@@ -111,6 +111,7 @@ export function PlannerForm({
           ...emptyData,
           websiteType: initialSelection.websiteType,
           primaryGoal: initialSelection.primaryGoal,
+          primaryGoalOther: initialSelection.primaryGoalOther,
           careInterest: initialSelection.careInterest,
           openNotes: initialSelection.openNotes,
         }

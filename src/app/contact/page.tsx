@@ -19,6 +19,7 @@ const inquiryMessages: Record<string, string> = {
   "nexus-package": "I’m interested in the Nexus package.\n\nHere’s what I’m considering: ",
   "commerce-package": "I’m interested in the Commerce package.\n\nHere’s what I’m considering: ",
   "custom-system": "I’d like to ask about a custom web application or unusual workflow.\n\nHere’s what I’m considering: ",
+  "custom-web-applications": "I’d like to ask about a custom web application or unusual workflow.\n\nHere’s what I’m considering: ",
   "hospitality-website": "I’d like to ask about a website for a restaurant or hospitality business.\n\nHere’s what I’m considering: ",
   "business-websites": "I’d like to ask about a new business website.\n\nHere’s what I’m considering: ",
   "website-redesigns": "I’d like to ask about improving or redesigning an existing website.\n\nHere’s what I’m considering: ",

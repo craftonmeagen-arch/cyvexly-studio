@@ -68,7 +68,7 @@ function extractStartingPrice(price: string): number | null {
 
 // Service structured data for each /services/[slug] detail page — schema.org's
 // documented type for a professional service listing, matching vision §17's
-// "searchable" requirement now that these five routes are the site's core
+// "searchable" requirement now that these routes are the site's core
 // commercial pages and previously carried only BreadcrumbList. Reuses only
 // each service's own already-published name/summary/price; the price is
 // published as a real "starting from" figure via AggregateOffer.lowPrice

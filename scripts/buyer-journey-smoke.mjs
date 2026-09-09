@@ -20,6 +20,7 @@ const inquiryContexts = {
   "nexus-package": "Nexus package",
   "commerce-package": "Commerce package",
   "custom-system": "custom web application or unusual workflow",
+  "custom-web-applications": "custom web application or unusual workflow",
   "hospitality-website": "restaurant or hospitality business",
   "business-websites": "new business website",
   "website-redesigns": "improving or redesigning an existing website",
@@ -51,6 +52,7 @@ const serviceSlugs = [
   "website-redesigns",
   "landing-pages",
   "ecommerce-websites",
+  "custom-web-applications",
   "website-care",
 ];
 const serviceDetails = await Promise.all(
@@ -115,6 +117,14 @@ assert.doesNotMatch(services, /Service pathways/);
 assert.doesNotMatch(services, /Popular website types/);
 assert.match(services, /See the strongest working example/);
 assert.match(services, /href="\/work\/velora-dining"/);
+assert.match(
+  services,
+  /href="\/services\/custom-web-applications"[^>]*>Explore custom web applications/,
+);
+assert.match(
+  services,
+  /href="\/work\/nexora-systems"[^>]*>See the built Nexora example/,
+);
 
 for (const [index, slug] of serviceSlugs.entries()) {
   assert.match(
@@ -229,6 +239,15 @@ const plannerFormSource = await readFile(
   new URL("../src/components/planner/planner-form.tsx", import.meta.url),
   "utf8",
 );
+const plannerConfigSource = await readFile(
+  new URL("../src/lib/planner-config.ts", import.meta.url),
+  "utf8",
+);
+assert.match(plannerConfigSource, /"custom-web-applications": \{/);
+assert.match(
+  plannerConfigSource,
+  /primaryGoalOther: "Build a custom web application or operational workflow"/,
+);
 const alternativeContactField = plannerFormSource.match(
   /<TextField\s+id="contactMethod"[\s\S]*?\/>/,
 )?.[0];
@@ -295,6 +314,7 @@ assert.deepEqual(retiredStatuses, [404, 404]);
 assert.doesNotMatch(sitemap, /aurora-spaces|vellora-care/);
 assert.match(sitemap, /work\/velora-dining/);
 assert.match(sitemap, /work\/nexora-systems/);
+assert.match(sitemap, /services\/custom-web-applications/);
 
 console.log(
   JSON.stringify(
