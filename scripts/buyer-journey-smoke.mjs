@@ -31,6 +31,24 @@ const inquiryContexts = {
   "evolve-plan": "Evolve plan — ongoing website support",
 };
 
+const inquiryPlannerServices = {
+  "signal-package": "landing-pages",
+  "orbit-package": "business-websites",
+  "nexus-package": "website-redesigns",
+  "commerce-package": "ecommerce-websites",
+  "custom-system": "custom-web-applications",
+  "custom-web-applications": "custom-web-applications",
+  "hospitality-website": "ecommerce-websites",
+  "business-websites": "business-websites",
+  "website-redesigns": "website-redesigns",
+  "landing-pages": "landing-pages",
+  "ecommerce-websites": "ecommerce-websites",
+  "website-care": "website-care",
+  "care-plan": "website-care",
+  "care-plus-plan": "website-care",
+  "evolve-plan": "website-care",
+};
+
 const contextEntries = Object.entries(inquiryContexts);
 const [home, services, pricing, planner, plainContact, unknownContact, genericContact, ...contextualContacts] =
   await Promise.all([
@@ -368,6 +386,13 @@ for (const [[interest, expectedLabel], html] of contextEntries.map((entry, index
   assert.match(html, /Inquiry context/);
   assert.match(html, new RegExp(escapeRegExp(expectedLabel)));
   assert.match(html, new RegExp(`data-inquiry-context="${escapeRegExp(interest)}"`));
+  const plannerService = inquiryPlannerServices[interest];
+  assert.equal(
+    (html.match(new RegExp(`href="/start\\?service=${escapeRegExp(plannerService)}"`, "g")) ?? [])
+      .length,
+    2,
+    `${interest} did not carry its context through both detailed-Planner links`,
+  );
 }
 
 assert.match(home, /href="\/contact\?interest=signal-package"/);

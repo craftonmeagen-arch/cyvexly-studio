@@ -21,6 +21,9 @@ export default async function ContactPage({
   const query = await searchParams;
   const interest = typeof query.interest === "string" ? query.interest : undefined;
   const inquiryContext = getInquiryContext(interest);
+  const plannerHref = inquiryContext
+    ? `/start?service=${inquiryContext.plannerService}`
+    : "/start";
 
   return (
     <>
@@ -39,7 +42,7 @@ export default async function ContactPage({
               Your name, email, and a short description are enough to ask if
               Cyvexly is a fit. No technical language, finished content, or
               complete sitemap required. Already know the details?{" "}
-              <ButtonLink href="/start" variant="text">
+              <ButtonLink href={plannerHref} variant="text">
                 Share a detailed brief →
               </ButtonLink>
             </p>
@@ -82,7 +85,7 @@ export default async function ContactPage({
                   </dt>
                   <dd className="mt-1 text-midnight-slate">
                     Send a short note in this form. The{" "}
-                    <ButtonLink href="/start" variant="text" className="text-sm">
+                    <ButtonLink href={plannerHref} variant="text" className="text-sm">
                       Project Planner
                     </ButtonLink>{" "}
                     is optional when you want to share a full brief.

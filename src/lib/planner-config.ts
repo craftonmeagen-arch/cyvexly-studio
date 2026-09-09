@@ -266,8 +266,10 @@ export const servicePlannerSelections = {
   },
 } as const;
 
+export type ServicePlannerKey = keyof typeof servicePlannerSelections;
+
 export type ServicePlannerSelection =
-  (typeof servicePlannerSelections)[keyof typeof servicePlannerSelections];
+  (typeof servicePlannerSelections)[ServicePlannerKey];
 
 export function getServicePlannerSelection(value: string | undefined) {
   if (!value || !(value in servicePlannerSelections)) return undefined;
