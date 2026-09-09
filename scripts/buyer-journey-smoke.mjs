@@ -43,9 +43,33 @@ for (const [label, href] of serviceDestinations) {
   assert.match(services, new RegExp(`href="${href}"[^>]*>${label}`));
 }
 
-for (const id of ["packages", "commerce-package", "add-ons", "care-plans"]) {
+for (const id of [
+  "packages",
+  "commerce-package",
+  "custom-system-package",
+  "compare",
+  "example-scopes",
+  "add-ons",
+  "care-plans",
+  "ongoing-costs",
+  "pricing-questions",
+]) {
   assert.match(pricing, new RegExp(`id="${id}"`), `missing pricing anchor ${id}`);
 }
+
+for (const label of [
+  "A new business website",
+  "Improve an existing website",
+  "Sell or take bookings online",
+  "A custom web application",
+  "Ongoing website support",
+]) {
+  assert.match(services, new RegExp(label), `missing buyer-led service route: ${label}`);
+}
+assert.doesNotMatch(services, /Service pathways/);
+assert.doesNotMatch(services, /Popular website types/);
+assert.match(services, /See the strongest working example/);
+assert.match(services, /href="\/work\/velora-dining"/);
 
 assert.match(home, /href="\/contact\?interest=custom-project"[^>]*>Ask about a project/);
 assert.match(home, /href="\/work"[^>]*>View our work/);
@@ -58,6 +82,20 @@ assert.match(pricing, /Ask about [\s\S]{0,80}Orbit/);
 assert.match(pricing, /href="\/start"[^>]*>Share a detailed brief/);
 assert.doesNotMatch(pricing, />Most popular</);
 assert.match(pricing, />Recommended</);
+for (const label of [
+  "Focused starter website",
+  "Small-business website",
+  "Larger content site or redesign",
+  "Online store or booking-led website",
+  "Purpose-built web application",
+]) {
+  assert.match(pricing, new RegExp(label), `missing plain-language package label: ${label}`);
+}
+assert.match(pricing, /Content editing/);
+assert.match(pricing, /Forms \/ integrations/);
+assert.match(pricing, /Illustrative build fee: \$4,500–\$5,750/);
+assert.match(pricing, /A small content request is one update/);
+assert.match(pricing, /Priority requests receive a response within one business day/);
 
 const readMessageValue = (html) =>
   html.match(/<textarea[^>]*id="message"[^>]*>([\s\S]*?)<\/textarea>/)?.[1] ?? null;
@@ -136,7 +174,9 @@ console.log(
       baseUrl,
       routes: 7 + contextualContacts.length,
       serviceDestinations: serviceDestinations.length,
-      pricingAnchors: 4,
+      buyerServiceRoutes: 5,
+      pricingAnchors: 9,
+      pricingDecisionFields: 3,
       contactContexts: contextualContacts.length,
       plannerAlternativeContact: "optional-client-and-server",
       status: "passed",

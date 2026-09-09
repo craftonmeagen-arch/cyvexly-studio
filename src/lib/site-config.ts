@@ -557,6 +557,68 @@ export const websiteTypes = [
   },
 ];
 
+export const buyerNeeds = [
+  {
+    id: "new-business-website",
+    eyebrow: "A new business website",
+    title: "Launch a credible site that makes the next step obvious.",
+    description:
+      "For new businesses and established teams without a useful web presence. We shape the message, page plan, visual direction, build, and inquiry path together.",
+    startingPoint: "Signal from $1,800 · Orbit from $3,500",
+    detailHref: "/services/business-websites",
+    detailLabel: "Explore business websites",
+    inquiryHref: "/contact?interest=custom-project",
+    proofHref: "/work/velora-dining",
+    proofLabel: "See the built Velora example",
+  },
+  {
+    id: "improve-existing-website",
+    eyebrow: "Improve an existing website",
+    title: "Replace a dated or confusing site with a clearer customer journey.",
+    description:
+      "For businesses whose current site no longer reflects the quality of their work, performs poorly on phones, or makes services difficult to understand.",
+    startingPoint: "Often Orbit from $3,500 or Nexus from $5,800",
+    detailHref: "/services/website-redesigns",
+    detailLabel: "Explore website redesigns",
+    inquiryHref: "/contact?interest=custom-project",
+  },
+  {
+    id: "sell-or-book-online",
+    eyebrow: "Sell or take bookings online",
+    title: "Connect presentation, booking, checkout, and the tools behind them.",
+    description:
+      "For stores, hospitality businesses, and service teams that need customers to move from interest to a real booking or purchase flow.",
+    startingPoint: "Commerce from $8,500",
+    detailHref: "/services/ecommerce-websites",
+    detailLabel: "Explore commerce websites",
+    inquiryHref: "/contact?interest=commerce-package",
+    proofHref: "/work/velora-dining",
+    proofLabel: "See Velora's booking journey",
+  },
+  {
+    id: "custom-web-application",
+    eyebrow: "A custom web application",
+    title: "Plan a purpose-built workflow that a standard website cannot cover.",
+    description:
+      "For memberships, advanced booking, multilingual experiences, large migrations, integrations, and other operational workflows that need discovery before a quote.",
+    startingPoint: "Quoted after discovery",
+    detailHref: "/pricing#custom-system-package",
+    detailLabel: "See the custom-system approach",
+    inquiryHref: "/contact?interest=custom-system",
+  },
+  {
+    id: "ongoing-website-support",
+    eyebrow: "Ongoing website support",
+    title: "Keep the site current without making upkeep another job.",
+    description:
+      "For teams that want a defined monthly capacity for maintenance, content changes, design support, and measured improvement after launch.",
+    startingPoint: "Care plans from $99/month",
+    detailHref: "/services/website-care",
+    detailLabel: "Explore website care",
+    inquiryHref: "/contact?interest=custom-project",
+  },
+];
+
 export const serviceCombinations = [
   {
     audience: "New businesses needing a credible first site",
@@ -636,6 +698,7 @@ export const servicesFaq = [
 export const pricingPackages = [
   {
     name: "Signal",
+    plainName: "Focused starter website",
     price: "$1,800",
     bestFor: "A focused first presence, campaign, event, or single service.",
     scope: [
@@ -649,10 +712,14 @@ export const pricingPackages = [
       "Launch support",
     ],
     timeline: "2–3 weeks",
+    contentEditing: "Available as an add-on",
+    integrations: "One primary form",
+    revisions: "Two review rounds",
     featured: false,
   },
   {
     name: "Orbit",
+    plainName: "Small-business website",
     price: "$3,500",
     bestFor: "A complete small-business or professional-services website.",
     scope: [
@@ -668,10 +735,14 @@ export const pricingPackages = [
       "Launch support",
     ],
     timeline: "4–6 weeks",
+    contentEditing: "Basic CMS or blog",
+    integrations: "Two forms",
+    revisions: "Two review rounds",
     featured: true,
   },
   {
     name: "Nexus",
+    plainName: "Larger content site or redesign",
     price: "$5,800",
     bestFor: "A growing business, content-led site, or strategic redesign.",
     scope: [
@@ -689,10 +760,14 @@ export const pricingPackages = [
       "Launch support",
     ],
     timeline: "6–9 weeks",
+    contentEditing: "CMS collections and training",
+    integrations: "Up to two standard integrations",
+    revisions: "Three review rounds",
     featured: false,
   },
   {
     name: "Commerce",
+    plainName: "Online store or booking-led website",
     price: "From $8,500",
     bestFor: "A small-to-medium online store or product business.",
     scope: [
@@ -708,10 +783,14 @@ export const pricingPackages = [
       "Launch support",
     ],
     timeline: "8–14+ weeks",
+    contentEditing: "Catalog tools and training",
+    integrations: "Checkout plus approved store services",
+    revisions: "Defined in the proposal",
     featured: false,
   },
   {
     name: "Custom system",
+    plainName: "Purpose-built web application",
     price: "Quoted after discovery",
     bestFor:
       "Memberships, complex booking, multilingual, large migrations, advanced integrations, or unusual workflows.",
@@ -722,6 +801,9 @@ export const pricingPackages = [
       "Milestone billing",
     ],
     timeline: "Scope dependent",
+    contentEditing: "Defined during discovery",
+    integrations: "Defined during discovery",
+    revisions: "Defined in the proposal",
     featured: false,
   },
 ];
@@ -766,21 +848,21 @@ export const carePlans = [
     price: "$99/mo",
     use: "Basic peace of mind",
     capacity:
-      "Monitoring/maintenance where applicable, one small content request, monthly check, standard response window",
+      "Monitoring and maintenance where applicable, one small content request, and a monthly check. We respond within two business days.",
   },
   {
     name: "Care+",
     price: "$229/mo",
     use: "Businesses that update regularly",
     capacity:
-      "Up to two hours of content/design support, priority response, quarterly site review, analytics snapshot",
+      "Up to two hours of content or design support, a quarterly site review, and an analytics snapshot. Priority requests receive a response within one business day.",
   },
   {
     name: "Evolve",
     price: "$449/mo",
     use: "Continuous improvement",
     capacity:
-      "Up to five hours of prioritized updates, monthly review, conversion/content recommendations, priority queue",
+      "Up to five hours of prioritized updates, a monthly review, and conversion or content recommendations. Priority requests receive a response within one business day.",
   },
 ];
 

@@ -67,6 +67,28 @@ export default function PricingPage() {
           </div>
         </section>
 
+        <nav aria-label="Pricing sections" className="border-b border-smoke-glass/70 bg-white/35">
+          <div className="mx-auto flex max-w-6xl gap-2 overflow-x-auto px-6 py-4 text-sm">
+            {[
+              ["Packages", "#packages"],
+              ["Compare", "#compare"],
+              ["Example scopes", "#example-scopes"],
+              ["Add-ons", "#add-ons"],
+              ["Care", "#care-plans"],
+              ["Ongoing costs", "#ongoing-costs"],
+              ["Questions", "#pricing-questions"],
+            ].map(([label, href]) => (
+              <a
+                key={href}
+                href={href}
+                className="min-h-11 shrink-0 rounded-full border border-cyber-blue/15 bg-white/60 px-4 py-3 font-medium text-midnight-slate transition-colors hover:border-cyber-blue/40 hover:text-cyber-blue"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </nav>
+
         {/* Package cards */}
         <section id="packages" className="pricing-package-stage scroll-mt-24 relative border-b border-smoke-glass/70">
           <div className="relative z-10 mx-auto max-w-6xl px-6 py-16 lg:-mt-14 lg:pb-20 lg:pt-0">
@@ -87,6 +109,7 @@ export default function PricingPage() {
                 <h2 className="mt-3 font-display text-lg font-semibold text-midnight-slate">
                   {pkg.name}
                 </h2>
+                <p className="mt-1 text-sm font-medium text-midnight-slate">{pkg.plainName}</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.1em] text-cool-graphite">
                   Starting at
                 </p>
@@ -120,13 +143,20 @@ export default function PricingPage() {
               {pricingPackages.slice(3).map((pkg) => (
                 <div
                   key={pkg.name}
-                  id={pkg.name === "Commerce" ? "commerce-package" : undefined}
+                  id={
+                    pkg.name === "Commerce"
+                      ? "commerce-package"
+                      : pkg.name === "Custom system"
+                        ? "custom-system-package"
+                        : undefined
+                  }
                   className="glass-panel pricing-package-card scroll-mt-24 flex flex-col rounded-2xl p-7"
                 >
                 <PackageIcon name={pkg.name} />
                 <h2 className="mt-3 font-display text-lg font-semibold text-midnight-slate">
                   {pkg.name}
                 </h2>
+                <p className="mt-1 text-sm font-medium text-midnight-slate">{pkg.plainName}</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.1em] text-cool-graphite">
                   {pkg.name === "Custom system" ? "Price" : "Starting at"}
                 </p>
@@ -159,7 +189,7 @@ export default function PricingPage() {
         </section>
 
         {/* Comparison grid */}
-        <section className="glass-section border-y border-smoke-glass/70">
+        <section id="compare" className="glass-section scroll-mt-24 border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
               Compare packages
@@ -168,7 +198,7 @@ export default function PricingPage() {
                 container without clipping (the same silent overflow-x-auto
                 pattern the Council flagged on Services, CYC-R2-F004) —
                 reflow to stacked cards instead. */}
-            <div className="mt-8 space-y-4 sm:hidden">
+            <div className="mt-8 space-y-4 lg:hidden">
               {pricingPackages.map((pkg) => (
                 <div
                   key={pkg.name}
@@ -194,12 +224,30 @@ export default function PricingPage() {
                       </dt>
                       <dd className="text-cool-graphite">{pkg.timeline}</dd>
                     </div>
+                    <div className="border-t border-smoke-glass/70 pt-2">
+                      <dt className="font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                        Content editing
+                      </dt>
+                      <dd className="mt-1 text-cool-graphite">{pkg.contentEditing}</dd>
+                    </div>
+                    <div className="border-t border-smoke-glass/70 pt-2">
+                      <dt className="font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                        Forms / integrations
+                      </dt>
+                      <dd className="mt-1 text-cool-graphite">{pkg.integrations}</dd>
+                    </div>
+                    <div className="border-t border-smoke-glass/70 pt-2">
+                      <dt className="font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                        Revisions
+                      </dt>
+                      <dd className="mt-1 text-cool-graphite">{pkg.revisions}</dd>
+                    </div>
                   </dl>
                 </div>
               ))}
             </div>
-            <div className="mt-8 hidden overflow-x-auto sm:block">
-              <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+            <div className="mt-8 hidden overflow-x-auto lg:block">
+              <table className="w-full min-w-[1040px] border-collapse text-left text-[13px]">
                 <thead>
                   <tr className="border-b border-smoke-glass">
                     <th scope="col" className="py-3 pr-4 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
@@ -214,6 +262,15 @@ export default function PricingPage() {
                     <th scope="col" className="py-3 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
                       Typical window
                     </th>
+                    <th scope="col" className="py-3 pr-4 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                      Content editing
+                    </th>
+                    <th scope="col" className="py-3 pr-4 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                      Forms / integrations
+                    </th>
+                    <th scope="col" className="py-3 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
+                      Revisions
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -223,6 +280,9 @@ export default function PricingPage() {
                       <td className="py-3 pr-4 text-cool-graphite">{pkg.price}</td>
                       <td className="py-3 pr-4 text-cool-graphite">{pkg.scope[0]}</td>
                       <td className="py-3 text-cool-graphite">{pkg.timeline}</td>
+                      <td className="py-3 pr-4 text-cool-graphite">{pkg.contentEditing}</td>
+                      <td className="py-3 pr-4 text-cool-graphite">{pkg.integrations}</td>
+                      <td className="py-3 text-cool-graphite">{pkg.revisions}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -233,6 +293,52 @@ export default function PricingPage() {
               layouts, not every automatically generated CMS item or product
               record. Final proposals define the page/template count in plain
               language.
+            </p>
+          </div>
+        </section>
+
+        <section id="example-scopes" className="scroll-mt-24 border-y border-smoke-glass/70 bg-white/25">
+          <div className="mx-auto max-w-6xl px-6 py-20">
+            <p className="font-mono text-xs uppercase tracking-[0.14em] text-cyber-blue">
+              Put the numbers together
+            </p>
+            <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+              Two illustrative project scopes
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-cool-graphite">
+              These examples use the published starting prices and add-on ranges below. They are
+              planning examples, not fixed quotes; a written proposal confirms the actual scope.
+            </p>
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              <article className="glass-panel rounded-2xl p-7">
+                <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                  Focused three-page launch
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
+                  Signal covers 1–3 core pages, responsive design, one primary form, essential SEO
+                  setup, two review rounds, and launch support.
+                </p>
+                <p className="mt-5 font-display text-2xl font-semibold text-cyber-blue">
+                  Build fee starts at $1,800
+                </p>
+              </article>
+              <article className="glass-panel rounded-2xl p-7">
+                <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                  Five-page business site with copywriting
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
+                  Orbit starts at $3,500. Full copywriting for five pages adds $1,000–$2,250 at
+                  the published $200–$450 per-page range.
+                </p>
+                <p className="mt-5 font-display text-2xl font-semibold text-cyber-blue">
+                  Illustrative build fee: $4,500–$5,750
+                </p>
+              </article>
+            </div>
+            <p className="mt-5 max-w-3xl text-xs leading-relaxed text-cool-graphite">
+              Domain, hosting, premium assets, provider subscriptions, payment-processing fees,
+              taxes, and other third-party costs are separate. Current provider prices are
+              confirmed during scoping rather than estimated here.
             </p>
           </div>
         </section>
@@ -300,6 +406,11 @@ export default function PricingPage() {
             Launch is the start of the relationship, not the end of it. Care
             plans are optional and billed monthly in advance.
           </p>
+          <p className="mt-3 max-w-3xl text-xs leading-relaxed text-cool-graphite">
+            A small content request is one update to existing page text or imagery that takes up
+            to 30 minutes and does not add a new layout, page, feature, or integration. Response
+            windows confirm when we reply and schedule the work; they are not emergency-resolution guarantees.
+          </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {carePlans.map((plan) => (
               <div key={plan.name} className="glass-panel flex flex-col rounded-2xl p-7">
@@ -319,7 +430,7 @@ export default function PricingPage() {
         </section>
 
         {/* Billed separately + payment */}
-        <section className="glass-section border-y border-smoke-glass/70">
+        <section id="ongoing-costs" className="glass-section scroll-mt-24 border-y border-smoke-glass/70">
           <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2">
             <div>
               <h2 className="font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
@@ -379,7 +490,7 @@ export default function PricingPage() {
         </section>
 
         {/* FAQ */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
+        <section id="pricing-questions" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20">
           <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
             Pricing questions
           </h2>
