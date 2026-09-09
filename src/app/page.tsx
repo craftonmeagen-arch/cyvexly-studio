@@ -106,8 +106,8 @@ export default function Home() {
                   See the strongest work first.
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-cool-graphite sm:text-base">
-                  Velora is a working, interactive demonstration. The smaller studies show
-                  design thinking and are clearly labeled as concepts.
+                  Velora and Nexora are working, interactive demonstrations. Aurora remains
+                  a clearly labeled design study.
                 </p>
               </div>
               <ButtonLink href="/work" variant="text">
@@ -135,7 +135,7 @@ export default function Home() {
                   </p>
                   <div className="mt-6 flex flex-wrap gap-3">
                     <ButtonLink href={selectedWork[0].href}>View case study</ButtonLink>
-                    <ButtonLink href="/velora" variant="secondary">
+                    <ButtonLink href={selectedWork[0].demoHref ?? "/velora"} variant="secondary">
                       Try interactive demo
                     </ButtonLink>
                   </div>
@@ -143,10 +143,9 @@ export default function Home() {
               </article>
 
               {selectedWork.slice(1, 3).map((project) => (
-                <a
+                <article
                   key={project.name}
-                  href={project.href}
-                  className="group glass-panel glass-panel-interactive grid min-h-0 overflow-hidden rounded-2xl transition-transform duration-200 hover:-translate-y-1 sm:grid-cols-[9rem_1fr] lg:grid-cols-[8rem_1fr]"
+                  className="glass-panel grid min-h-0 overflow-hidden rounded-2xl sm:grid-cols-[9rem_1fr] lg:grid-cols-[8rem_1fr]"
                 >
                   <div
                     className={`min-h-44 overflow-hidden bg-gradient-to-br ${project.gradient}`}
@@ -156,17 +155,24 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col gap-2 p-5">
                     <span className="w-fit rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
-                      Design concept
+                      {project.kind === "Built concept demo" ? "Working concept demonstration" : "Design concept"}
                     </span>
                     <h3 className="font-display text-lg font-semibold text-midnight-slate">
                       {project.name}
                     </h3>
                     <p className="text-sm text-cool-graphite">{project.summary}</p>
-                    <span className="mt-auto pt-2 text-sm font-medium text-cyber-blue group-hover:text-[#0b4fb0]">
-                      View concept →
-                    </span>
+                    <div className="mt-auto flex flex-wrap gap-2 pt-3">
+                      <ButtonLink href={project.href} variant="text" className="text-xs">
+                        {project.kind === "Built concept demo" ? "Case study →" : "View concept →"}
+                      </ButtonLink>
+                      {project.demoHref ? (
+                        <ButtonLink href={project.demoHref} variant="text" className="text-xs">
+                          Try demo →
+                        </ButtonLink>
+                      ) : null}
+                    </div>
                   </div>
-                </a>
+                </article>
               ))}
             </div>
           </div>

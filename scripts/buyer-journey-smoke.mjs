@@ -216,14 +216,27 @@ assert.equal(
   "Server still rejects an empty alternative contact field",
 );
 
-const velora = await read("/work/velora-dining");
+const [velora, nexoraCase, nexoraDemo] = await Promise.all([
+  read("/work/velora-dining"),
+  read("/work/nexora-systems"),
+  read("/nexora"),
+]);
 assert.match(velora, /href="\/contact\?interest=hospitality-website"/);
+assert.match(work, /href="\/work\/nexora-systems"/);
+assert.match(work, /href="\/nexora"[^>]*>Try demo/);
+assert.match(home, /href="\/nexora"[^>]*>Try demo/);
+assert.match(nexoraCase, /Built concept demo — fictional/);
+assert.match(nexoraCase, /href="\/nexora"[^>]*>Explore the live demo/);
+assert.match(nexoraCase, /Cyvexly-built fictional demonstration/);
+assert.match(nexoraDemo, /Fictional product demonstration by Cyvexly Studio/);
+assert.match(nexoraDemo, /Find the release behind the change/);
+assert.match(nexoraDemo, /href="\/contact\?interest=custom-system"/);
 
 console.log(
   JSON.stringify(
     {
       baseUrl,
-      routes: 10 + contextualContacts.length + serviceDetails.length,
+      routes: 12 + contextualContacts.length + serviceDetails.length,
       serviceDestinations: serviceDestinations.length,
       buyerServiceRoutes: 5,
       pricingAnchors: 9,

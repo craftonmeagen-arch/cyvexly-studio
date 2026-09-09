@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { ButtonLink } from "@/components/button";
 import { ConceptPreview } from "@/components/concept-preview";
 import { selectedWork, workFilters } from "@/lib/site-config";
 
@@ -17,6 +18,12 @@ export function WorkGrid() {
     }
     return selectedWork.filter((project) => project.category === activeFilter);
   }, [activeFilter]);
+  const gridColumns =
+    filtered.length === 1
+      ? "max-w-lg"
+      : filtered.length === 2
+        ? "md:grid-cols-2"
+        : "md:grid-cols-2 xl:grid-cols-4";
 
   return (
     <div>
@@ -46,12 +53,11 @@ export function WorkGrid() {
           No projects match that filter yet.
         </p>
       ) : (
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className={`mt-10 grid gap-6 ${gridColumns}`}>
           {filtered.map((project) => (
-            <a
+            <article
               key={project.name}
-              href={project.href}
-              className="group glass-panel flex flex-col overflow-hidden rounded-2xl transition-transform duration-200 hover:-translate-y-1"
+              className="glass-panel flex flex-col overflow-hidden rounded-2xl"
             >
               <div
                 className={`h-48 w-full overflow-hidden bg-gradient-to-br ${project.gradient}`}
@@ -77,11 +83,18 @@ export function WorkGrid() {
                     </span>
                   ))}
                 </div>
-                <span className="mt-auto pt-2 text-sm font-medium text-cyber-blue group-hover:text-[#0b4fb0]">
-                  View case study →
-                </span>
+                <div className="mt-auto flex flex-wrap gap-2 pt-3">
+                  <ButtonLink href={project.href} variant={project.demoHref ? "secondary" : "text"} className="px-4 py-2 text-xs">
+                    {project.demoHref ? "View case study" : "View concept"}
+                  </ButtonLink>
+                  {project.demoHref ? (
+                    <ButtonLink href={project.demoHref} className="px-4 py-2 text-xs">
+                      Try demo
+                    </ButtonLink>
+                  ) : null}
+                </div>
               </div>
-            </a>
+            </article>
           ))}
         </div>
       )}

@@ -54,6 +54,7 @@ export const selectedWork = [
       "Built hospitality concept pairing cinematic restaurant storytelling with responsive menu, reservation, private-event, gifting, and gallery journeys.",
     tags: ["Hospitality", "Interactive demo"],
     href: "/work/velora-dining",
+    demoHref: "/velora",
     gradient: "from-[#20271F] via-[#49332E] to-[#D6BD8F]",
   },
   {
@@ -64,16 +65,19 @@ export const selectedWork = [
     summary: "Immersive website concept for a luxury architecture studio.",
     tags: ["Business site", "Design-led"],
     href: "/work/aurora-spaces",
+    demoHref: null,
     gradient: "from-[#0F66E0] via-[#36C7FF] to-[#EEF4FA]",
   },
   {
     slug: "nexora-systems",
     name: "Nexora Systems",
-    kind: "Concept project",
+    kind: "Built concept demo",
     category: "Business Site",
-    summary: "SaaS platform concept for an AI analytics company.",
-    tags: ["Product site", "Complex UI"],
+    summary:
+      "Working release-intelligence demo with responsive analytics, service filters, issue investigation, and clear non-transmitting sample states.",
+    tags: ["Web application", "Interactive demo"],
     href: "/work/nexora-systems",
+    demoHref: "/nexora",
     gradient: "from-[#10213D] via-[#0F66E0] to-[#36C7FF]",
   },
   {
@@ -84,6 +88,7 @@ export const selectedWork = [
     summary: "E-commerce concept for a premium skincare brand.",
     tags: ["Commerce", "Brand-led"],
     href: "/work/vellora-care",
+    demoHref: null,
     gradient: "from-[#36C7FF] via-[#EEF4FA] to-[#D8E1EA]",
   },
 ];
@@ -175,8 +180,8 @@ export const caseStudies = {
   },
   "nexora-systems": {
     name: "Nexora Systems",
-    status: "Concept project",
-    businessType: "AI analytics SaaS platform",
+    status: "Built concept demo — fictional",
+    businessType: "Fictional release-intelligence platform",
     audience: "Data and engineering leads evaluating an analytics platform for their team.",
     challenge:
       "B2B SaaS sites often bury the actual product behind marketing abstraction. Nexora Systems needed to explain a genuinely complex product clearly enough for a technical buyer to self-qualify before booking a demo.",
@@ -186,22 +191,22 @@ export const caseStudies = {
       "Convert qualified technical visitors into demo requests",
     ],
     scope: [
-      "Marketing home, Product, Pricing tiers, and demo-request flow",
-      "Reusable component system for feature/benefit pairing",
-      "Interactive product-UI preview panels",
+      "Responsive release overview with selectable time ranges and plain-language signal summaries",
+      "Service filtering, issue selection, evidence detail, and recommended investigation states",
+      "Safe Cyvexly inquiry handoff with no monitoring connection, account, or data transmission",
     ],
     decisions: [
-      "Led every section with the outcome ('catch anomalies before they reach production') before the mechanism",
-      "Used a darker, denser visual treatment to signal technical seriousness without making the product feel inaccessible",
-      "Kept the demo-request form to three fields, deferring qualification questions to the sales conversation",
+      "Led with the decision an engineering team needs to make, then revealed the supporting signal and release context",
+      "Used a darker, denser interface for technical focus while preserving readable hierarchy and generous control targets",
+      "Kept every metric deterministic and visibly fictional, with inquiry actions returning to Cyvexly instead of simulating a real account or alerting system",
     ],
     accessibilityHighlights: [
-      "Product UI preview panels include a text-equivalent summary for screen-reader users",
-      "All interactive states (hover, focus, active) are keyboard-reachable and visibly distinct",
+      "The trend graphic has a text equivalent, the dashboard begins with a skip link, and changing an issue updates a polite live region",
+      "Time ranges, service filters, issue rows, and the comparison control are keyboard reachable with visible pressed or checked states",
     ],
     intendedOutcome:
-      "A technical buyer can understand what Nexora Systems does and why it matters within two scrolls, and reach a demo request without friction.",
-    demoHref: null,
+      "A technical buyer can use the fictional product flow, understand how Cyvexly organizes dense application information, and reach a relevant project inquiry without mistaking sample data for a live service.",
+    demoHref: "/nexora",
     gradient: "from-[#10213D] via-[#0F66E0] to-[#36C7FF]",
     palette: [
       { hex: "#10213D", label: "Midnight slate ground" },

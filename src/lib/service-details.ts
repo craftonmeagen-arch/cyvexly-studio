@@ -126,7 +126,7 @@ export const serviceDetails = {
       slug: "nexora-systems",
       name: "Nexora Systems",
       context:
-        "A labeled concept showing how a complex offer can be reorganized around plain-language outcomes and visible product proof.",
+        "A built fictional demo showing how a complex offer can be reorganized around plain-language outcomes and visible product proof.",
     },
     faqs: [
       {
@@ -187,7 +187,7 @@ export const serviceDetails = {
       slug: "nexora-systems",
       name: "Nexora Systems",
       context:
-        "A labeled concept demonstrating outcome-first copy, compact product proof, and a direct demo-request path for a focused technical audience.",
+        "A built fictional demo demonstrating outcome-first copy, interactive product proof, and a direct inquiry path for a focused technical audience.",
     },
     faqs: [
       {

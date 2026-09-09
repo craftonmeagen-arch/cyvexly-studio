@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -85,7 +86,7 @@ export default async function CaseStudyPage({
                 <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
                   <ButtonLink href={study.demoHref}>Explore the live demo ↗</ButtonLink>
                   <span className="max-w-sm text-xs leading-relaxed text-cool-graphite">
-                    Fictional sample content. No booking, message, purchase, or payment is sent.
+                    Fictional sample content. The demonstration does not operate a real business service or transmit a request.
                   </span>
                 </div>
               ) : null}
@@ -169,7 +170,7 @@ export default async function CaseStudyPage({
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
             {study.demoHref
-              ? "Real captures of the built demonstration across desktop and mobile. The sample restaurant, details, availability, policies, and transactions are fictional."
+              ? `A responsive preview of the working ${study.name} demonstration. All business details, interface data, and outcomes are fictional sample content.`
               : `An illustrative preview of the visual direction across breakpoints — not a pixel-accurate screenshot, since ${study.name} is a concept project with no built site behind it.`}
           </p>
           <div className="mt-6 grid gap-6 sm:grid-cols-[1fr_200px]">
@@ -183,9 +184,20 @@ export default async function CaseStudyPage({
                   <span className="h-2.5 w-2.5 rounded-full bg-smoke-glass" aria-hidden="true" />
                   <span className="h-2.5 w-2.5 rounded-full bg-smoke-glass" aria-hidden="true" />
                 </div>
-                <div className="h-40 w-full sm:h-48" role="img" aria-label={`${study.name} illustrative desktop preview`}>
-                  <ConceptPreview slug={slug} viewport="desktop" />
-                </div>
+                {slug === "nexora-systems" ? (
+                  <Image
+                    src="/media/nexora-release-demo.png"
+                    alt="Desktop view of the built Nexora release-intelligence dashboard"
+                    width={1440}
+                    height={900}
+                    className="h-40 w-full object-cover object-top sm:h-48"
+                    sizes="(min-width: 640px) 640px, 90vw"
+                  />
+                ) : (
+                  <div className="h-40 w-full sm:h-48" role="img" aria-label={`${study.name} illustrative desktop preview`}>
+                    <ConceptPreview slug={slug} viewport="desktop" />
+                  </div>
+                )}
               </div>
             </div>
             <div>
@@ -194,9 +206,20 @@ export default async function CaseStudyPage({
               </p>
               <div className="mx-auto max-w-[200px] overflow-hidden rounded-2xl border-4 border-midnight-slate bg-frosted-glass">
                 <div className="h-3 bg-midnight-slate" aria-hidden="true" />
-                <div className="h-56 w-full sm:h-64" role="img" aria-label={`${study.name} illustrative mobile preview`}>
-                  <ConceptPreview slug={slug} viewport="mobile" />
-                </div>
+                {slug === "nexora-systems" ? (
+                  <Image
+                    src="/media/nexora-release-demo-mobile.png"
+                    alt="Mobile view of the built Nexora release-intelligence dashboard"
+                    width={390}
+                    height={844}
+                    className="h-56 w-full object-cover object-top sm:h-64"
+                    sizes="200px"
+                  />
+                ) : (
+                  <div className="h-56 w-full sm:h-64" role="img" aria-label={`${study.name} illustrative mobile preview`}>
+                    <ConceptPreview slug={slug} viewport="mobile" />
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -226,7 +249,9 @@ export default async function CaseStudyPage({
             {study.intendedOutcome}
           </p>
           <p className="mt-4 text-xs text-cool-graphite">
-            This is a labeled concept project — no client results are claimed.
+            {study.demoHref
+              ? "This is a Cyvexly-built fictional demonstration, not a client engagement or operating service. No client results are claimed."
+              : "This is a labeled concept project — no client results are claimed."}
           </p>
         </section>
 
