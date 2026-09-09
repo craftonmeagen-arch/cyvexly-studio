@@ -37,11 +37,11 @@ export const footerNav = {
 };
 
 export const credibilityPoints = [
-  { id: "owner-led", label: "Independent & owner-led" },
-  { id: "custom-strategy", label: "Custom strategy, no templates" },
-  { id: "clean-code", label: "Clean code, fast performance" },
-  { id: "secure", label: "Secure, reliable & future-ready" },
-  { id: "communication", label: "Clear communication at every step" },
+  { id: "owner-led", label: "Work directly with the studio" },
+  { id: "custom-strategy", label: "Website projects from $1,800" },
+  { id: "clean-code", label: "Typical websites: 2–6 weeks" },
+  { id: "secure", label: "You own the finished site" },
+  { id: "communication", label: "Replies within two business days" },
 ];
 
 export const selectedWork = [
@@ -91,7 +91,7 @@ export const selectedWork = [
 // Every filter here must match at least one selectedWork item's `category`
 // (or "Concept", matched against `kind`) — an unmatched filter is a
 // guaranteed dead end ("No projects match that filter yet.").
-export const workFilters = ["All", "Business Site", "Commerce", "Concept"];
+export const workFilters = ["All", "Built demo", "Design concepts", "Commerce"];
 
 export const caseStudies = {
   "velora-dining": {
@@ -153,7 +153,7 @@ export const caseStudies = {
     ],
     decisions: [
       "Full-bleed hero imagery with a single-line project caption, so the work speaks first",
-      "A restrained monochrome palette with one accent used only for the CTA, borrowed from the cyber-arctic system's cyber-blue",
+      "A restrained monochrome palette with one blue accent reserved for the main action",
       "Slow, deliberate motion on scroll rather than snappy transitions, to match the pace of the work itself",
     ],
     accessibilityHighlights: [
@@ -171,7 +171,7 @@ export const caseStudies = {
       { hex: "#EEF4FA", label: "Arctic mist ground" },
     ],
     typographyNote:
-      "Space Grotesk for large display moments, Inter for supporting copy — the same system as the core studio site, restrained to a single accent weight.",
+      "Large display type creates editorial confidence, while restrained supporting type keeps project details easy to scan.",
   },
   "nexora-systems": {
     name: "Nexora Systems",
@@ -192,7 +192,7 @@ export const caseStudies = {
     ],
     decisions: [
       "Led every section with the outcome ('catch anomalies before they reach production') before the mechanism",
-      "Used a darker, denser visual register than the rest of the cyber-arctic system to signal technical seriousness without losing brand cohesion",
+      "Used a darker, denser visual treatment to signal technical seriousness without making the product feel inaccessible",
       "Kept the demo-request form to three fields, deferring qualification questions to the sales conversation",
     ],
     accessibilityHighlights: [
@@ -210,7 +210,7 @@ export const caseStudies = {
       { hex: "#46576E", label: "Cool graphite text" },
     ],
     typographyNote:
-      "The same Space Grotesk/Inter/JetBrains Mono system as the studio site, with JetBrains Mono used more heavily for metrics and technical labels to read as product-grade.",
+      "Technical labels use a compact monospace face, while plain supporting type keeps product explanations approachable.",
   },
   "vellora-care": {
     name: "Vellora Care",
@@ -231,7 +231,7 @@ export const caseStudies = {
     ],
     decisions: [
       "Paired every hero product shot with a compact ingredient/benefit callout, rather than separating marketing copy from technical detail",
-      "Used the cooler end of the cyber-arctic palette (arctic mist, frosted glass) to read as clinical and calm rather than loud or trend-driven",
+      "Used a cool, light palette to feel clinical and calm rather than loud or trend-driven",
       "Kept checkout to a single page with order summary always visible, reducing abandonment risk",
     ],
     accessibilityHighlights: [
@@ -249,7 +249,7 @@ export const caseStudies = {
       { hex: "#0A6B45", label: "Signal emerald (in-stock/trust cues)" },
     ],
     typographyNote:
-      "Space Grotesk and Inter as usual, set slightly looser and paired with more whitespace than the rest of the system, to read as calm rather than clinical-cold.",
+      "Open spacing and relaxed supporting type keep the concept calm without making it feel clinical or cold.",
   },
 };
 
@@ -294,8 +294,8 @@ export const processSteps = [
   {
     number: "01",
     title: "Brief & fit",
-    description: "You complete the Planner. We review goals, scope, content, timing, and budget.",
-    clientInput: "A completed Project Planner covering your goals, pages, features, and budget.",
+    description: "You send a short inquiry or a detailed brief. We review the goal, timing, and likely fit.",
+    clientInput: "A short description of what you need. The detailed Project Planner is optional.",
     deliverable: "A fit confirmation and any clarifying questions.",
     approval: "You confirm you'd like a proposal.",
     timeframe: "1–2 business days",

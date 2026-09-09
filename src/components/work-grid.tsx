@@ -9,10 +9,11 @@ export function WorkGrid() {
 
   const filtered = useMemo(() => {
     if (activeFilter === "All") return selectedWork;
-    if (activeFilter === "Concept") {
-      return selectedWork.filter((project) =>
-        project.kind.toLowerCase().includes("concept"),
-      );
+    if (activeFilter === "Built demo") {
+      return selectedWork.filter((project) => project.kind === "Built concept demo");
+    }
+    if (activeFilter === "Design concepts") {
+      return selectedWork.filter((project) => project.kind === "Concept project");
     }
     return selectedWork.filter((project) => project.category === activeFilter);
   }, [activeFilter]);

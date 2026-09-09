@@ -40,12 +40,12 @@ export default function ProcessPage() {
               How projects work
             </p>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
-              Give us the brief. We&apos;ll shape the route.
+              Start with a conversation. Move forward with a clear plan.
             </h1>
             <p className="mt-5 text-base leading-relaxed text-cool-graphite sm:text-lg">
-              Every Cyvexly project moves through the same five stages, so you
-              always know what&apos;s waiting on us, what&apos;s waiting on you,
-              and what happens next.
+              A short inquiry is enough to begin. If the project looks like a
+              fit, every stage names what Cyvexly delivers, what we need from
+              you, and what you approve before work moves forward.
             </p>
           </div>
         </section>
@@ -154,26 +154,22 @@ export default function ProcessPage() {
           </div>
         </section>
 
-        <section className="glass-section border-y border-smoke-glass/70">
-          <div className="mx-auto max-w-3xl px-6 py-16 text-center">
-            <h2 className="font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
-              You will always know what&apos;s waiting on Cyvexly, what&apos;s
-              waiting on you, and what happens next.
-            </h2>
-          </div>
-        </section>
-
         <section className="mx-auto max-w-6xl px-6 py-20">
           <div className="cyber-focal-panel rounded-3xl px-8 py-16 text-center sm:px-16">
             <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
-              Ready to start the brief?
+              Ready to ask whether Cyvexly is a fit?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-              Describe your project and we&apos;ll respond within two business
-              days.
+              Start with a few sentences. Use the detailed Planner only when
+              you already have more of the brief worked out.
             </p>
-            <div className="mt-8 flex justify-center">
-              <ButtonLink href="/start">Describe your project</ButtonLink>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <ButtonLink href="/contact?interest=custom-project">
+                Ask about a project
+              </ButtonLink>
+              <ButtonLink href="/start" variant="secondary">
+                Share a detailed brief
+              </ButtonLink>
             </div>
           </div>
         </section>

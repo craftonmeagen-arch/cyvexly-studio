@@ -26,8 +26,9 @@ export default function WorkPage() {
               Design judgment you can see.
             </h1>
             <p className="mt-5 text-base leading-relaxed text-cool-graphite sm:text-lg">
-              A few strong, clearly labeled projects — not twelve thin ones.
-              Concept work is honestly marked as such.
+              See what was built, what works, and what remains a design
+              concept. Every project is labeled so you can judge the evidence
+              for yourself.
             </p>
           </div>
         </section>
@@ -39,13 +40,19 @@ export default function WorkPage() {
         <section className="mx-auto max-w-6xl px-6 pb-20">
           <div className="cyber-focal-panel rounded-3xl px-8 py-16 text-center sm:px-16">
             <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
-              Want something like this — but not identical?
+              Have a different goal in mind?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-              Every project starts from your brand and goals, not a template.
+              Send a short note about what you need. We&apos;ll tell you whether
+              Cyvexly is a fit and what the most useful next step would be.
             </p>
-            <div className="mt-8 flex justify-center">
-              <ButtonLink href="/start">Describe your project</ButtonLink>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <ButtonLink href="/contact?interest=custom-project">
+                Ask about a project
+              </ButtonLink>
+              <ButtonLink href="/start" variant="secondary">
+                Share a detailed brief
+              </ButtonLink>
             </div>
           </div>
         </section>

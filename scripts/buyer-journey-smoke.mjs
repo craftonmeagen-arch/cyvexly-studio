@@ -17,6 +17,11 @@ const inquiryContexts = {
   "commerce-package": "Commerce package",
   "custom-system": "custom web application or unusual workflow",
   "hospitality-website": "restaurant or hospitality business",
+  "business-websites": "new business website",
+  "website-redesigns": "improving or redesigning an existing website",
+  "landing-pages": "focused landing page",
+  "ecommerce-websites": "selling products or taking bookings online",
+  "website-care": "ongoing website care and updates",
 };
 
 const contextEntries = Object.entries(inquiryContexts);
@@ -30,6 +35,21 @@ const [home, services, pricing, , plainContact, unknownContact, ...contextualCon
     read("/contact?interest=not-a-real-context"),
     ...contextEntries.map(([interest]) => read(`/contact?interest=${interest}`)),
   ]);
+const [work, processHtml, about] = await Promise.all([
+  read("/work"),
+  read("/process"),
+  read("/about"),
+]);
+const serviceSlugs = [
+  "business-websites",
+  "website-redesigns",
+  "landing-pages",
+  "ecommerce-websites",
+  "website-care",
+];
+const serviceDetails = await Promise.all(
+  serviceSlugs.map((slug) => read(`/services/${slug}`)),
+);
 
 const serviceDestinations = [
   ["See package details", "/pricing#packages"],
@@ -71,11 +91,42 @@ assert.doesNotMatch(services, /Popular website types/);
 assert.match(services, /See the strongest working example/);
 assert.match(services, /href="\/work\/velora-dining"/);
 
+for (const [index, slug] of serviceSlugs.entries()) {
+  assert.match(
+    serviceDetails[index],
+    new RegExp(`href="/contact\\?interest=${slug}"[^>]*>Ask about this service`),
+    `${slug} does not offer a contextual short inquiry`,
+  );
+  assert.match(
+    serviceDetails[index],
+    new RegExp(`href="/start\\?service=${slug}"[^>]*>Share a detailed brief`),
+    `${slug} does not keep the detailed Planner as a secondary action`,
+  );
+}
+
 assert.match(home, /href="\/contact\?interest=custom-project"[^>]*>Ask about a project/);
 assert.match(home, /href="\/work"[^>]*>View our work/);
+assert.match(home, /Try interactive demo/);
+assert.match(home, /See the strongest work first/);
+assert.match(home, /Choose the business goal that sounds familiar/);
+assert.match(home, /From first conversation to a site you own/);
+assert.doesNotMatch(home, /We&apos;re not a DIY builder/);
+assert.doesNotMatch(home, /Give us the brief\. We&apos;ll shape the route/);
+assert.doesNotMatch(home, /href="\/work\/vellora-care"/);
 assert.doesNotMatch(home, /href="\/pricing"[^>]*>Need something custom\? Let/);
 assert.doesNotMatch(home, />Most popular</);
 assert.match(home, />Recommended</);
+
+assert.match(work, />Built demo</);
+assert.match(work, />Design concepts</);
+assert.doesNotMatch(work, /not twelve thin ones/);
+assert.match(work, /href="\/contact\?interest=custom-project"/);
+assert.match(processHtml, /A short inquiry is enough to begin/);
+assert.match(processHtml, /The detailed Project Planner is optional/);
+assert.match(processHtml, /href="\/contact\?interest=custom-project"/);
+assert.doesNotMatch(processHtml, /Give us the brief\. We&apos;ll shape the route/);
+assert.match(about, /clear, accountable way of working/);
+assert.doesNotMatch(about, /founder mythology/);
 
 assert.match(pricing, /href="\/contact\?interest=orbit-package"/);
 assert.match(pricing, /Ask about [\s\S]{0,80}Orbit/);
@@ -172,7 +223,7 @@ console.log(
   JSON.stringify(
     {
       baseUrl,
-      routes: 7 + contextualContacts.length,
+      routes: 10 + contextualContacts.length + serviceDetails.length,
       serviceDestinations: serviceDestinations.length,
       buyerServiceRoutes: 5,
       pricingAnchors: 9,

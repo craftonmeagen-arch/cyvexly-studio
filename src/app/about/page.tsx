@@ -41,11 +41,12 @@ export default function AboutPage() {
               About Cyvexly
             </p>
             <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
-              An independent studio, built around one clear process.
+              An independent studio with a clear, accountable way of working.
             </h1>
             <p className="mt-5 text-base leading-relaxed text-cool-graphite sm:text-lg">
-              No agency layers, no founder mythology — just a focused way of
-              turning a business brief into a website that works.
+              Work directly with Cyvexly from the first conversation through
+              launch. Each stage names the decisions, deliverables, and next
+              step.
             </p>
           </div>
         </section>
@@ -125,10 +126,9 @@ export default function AboutPage() {
                 <li className="flex items-start gap-3">
                   <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-signal-emerald" />
                   <span className="text-sm leading-relaxed text-midnight-slate">
-                    Cyvexly is run directly as an independent studio, without
-                    agency layers. When a project needs capacity or expertise
-                    beyond that, trusted collaborators are brought in
-                    transparently and never presented as in-house staff.
+                    You work directly with Cyvexly. When a project needs
+                    specialist capacity, trusted collaborators are brought in
+                    transparently and identified for the work they perform.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -182,11 +182,15 @@ export default function AboutPage() {
               Ready to work together?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-              Describe your project and we&apos;ll respond within two
-              business days.
+              Send a short note and we&apos;ll respond within two business days.
             </p>
-            <div className="mt-8 flex justify-center">
-              <ButtonLink href="/start">Describe your project</ButtonLink>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <ButtonLink href="/contact?interest=custom-project">
+                Ask about a project
+              </ButtonLink>
+              <ButtonLink href="/start" variant="secondary">
+                Share a detailed brief
+              </ButtonLink>
             </div>
           </div>
         </section>

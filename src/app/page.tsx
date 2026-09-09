@@ -6,19 +6,36 @@ import { HowItWorksVideo } from "@/components/how-it-works-video";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { ConceptPreview } from "@/components/concept-preview";
 import { CredibilityIcon } from "@/components/credibility-icon";
-import { ServiceIcon } from "@/components/service-icon";
-import { PartnershipSignalGraphic } from "@/components/partnership-signal-graphic";
-import { ProcessIcon } from "@/components/process-icon";
 import { FinalCtaSignalGraphic } from "@/components/final-cta-signal-graphic";
 import { HomeGlassArchitecture } from "@/components/home-glass-architecture";
 import {
-  capabilities,
+  buyerNeeds,
   credibilityPoints,
   faqPreview,
   pricingPreview,
-  processSteps,
   selectedWork,
 } from "@/lib/site-config";
+
+const homeProcessSteps = [
+  {
+    number: "01",
+    title: "Start with a short conversation",
+    description:
+      "Tell us what you need in a few sentences. If you already know the details, the Project Planner is available too.",
+  },
+  {
+    number: "02",
+    title: "Approve a clear plan",
+    description:
+      "You receive a written recommendation with deliverables, timing, price, and the decisions needed from you.",
+  },
+  {
+    number: "03",
+    title: "Review, launch, and own it",
+    description:
+      "You approve the work at named checkpoints, review the live site, and receive the finished project after final payment.",
+  },
+];
 
 export default function Home() {
   return (
@@ -80,126 +97,177 @@ export default function Home() {
         {/* Selected work */}
         <section className="glass-continuation border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="flex items-end justify-between gap-4">
-            <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
-              Selected work
-            </h2>
-            <ButtonLink href="/work" variant="text">
-              View all projects →
-            </ButtonLink>
-          </div>
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <div className="max-w-2xl">
+                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyber-blue">
+                  Proof before promises
+                </p>
+                <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+                  See the strongest work first.
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-cool-graphite sm:text-base">
+                  Velora is a working, interactive demonstration. The smaller studies show
+                  design thinking and are clearly labeled as concepts.
+                </p>
+              </div>
+              <ButtonLink href="/work" variant="text">
+                View all projects →
+              </ButtonLink>
+            </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {selectedWork.map((project) => (
-              <a
-                key={project.name}
-                href={project.href}
-                className="group glass-panel glass-panel-interactive flex flex-col overflow-hidden rounded-2xl transition-transform duration-200 hover:-translate-y-1"
-              >
+            <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.65fr)] lg:grid-rows-2">
+              <article className="glass-panel glass-panel-interactive flex min-h-[34rem] flex-col overflow-hidden rounded-3xl lg:row-span-2">
                 <div
-                  className={`h-44 w-full overflow-hidden bg-gradient-to-br ${project.gradient}`}
+                  className={`min-h-64 flex-1 overflow-hidden bg-gradient-to-br ${selectedWork[0].gradient}`}
                   aria-hidden="true"
                 >
-                  <ConceptPreview slug={project.slug} />
+                  <ConceptPreview slug={selectedWork[0].slug} />
                 </div>
-                <div className="flex flex-1 flex-col gap-2 p-5">
-                  <span className="w-fit rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
-                    {project.kind}
+                <div className="p-6 sm:p-8">
+                  <span className="w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
+                    Working concept demonstration
                   </span>
-                  <h3 className="font-display text-lg font-semibold text-midnight-slate">
-                    {project.name}
+                  <h3 className="mt-4 font-display text-2xl font-semibold text-midnight-slate">
+                    {selectedWork[0].name}
                   </h3>
-                  <p className="text-sm text-cool-graphite">{project.summary}</p>
-                  <span className="mt-auto pt-2 text-sm font-medium text-cyber-blue group-hover:text-[#0b4fb0]">
-                    View project →
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
-          </div>
-        </section>
-
-        {/* Capabilities */}
-        <section className="glass-section border-y border-smoke-glass/70">
-          <div className="mx-auto max-w-6xl px-6 py-20">
-            <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
-              What Cyvexly can do
-            </h2>
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {capabilities.map((capability) => (
-                <div
-                  key={capability.id}
-                  className="glass-panel glass-panel-signal relative overflow-hidden rounded-2xl p-6"
-                >
-                  <div className="flex items-start gap-4">
-                    <ServiceIcon id={capability.id} />
-                    <div className="min-w-0">
-                      <h3 className="font-display text-base font-semibold text-midnight-slate">
-                        {capability.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-cool-graphite">
-                        {capability.description}
-                      </p>
-                    </div>
+                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
+                    {selectedWork[0].summary}
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <ButtonLink href={selectedWork[0].href}>View case study</ButtonLink>
+                    <ButtonLink href="/velora" variant="secondary">
+                      Try interactive demo
+                    </ButtonLink>
                   </div>
                 </div>
+              </article>
+
+              {selectedWork.slice(1, 3).map((project) => (
+                <a
+                  key={project.name}
+                  href={project.href}
+                  className="group glass-panel glass-panel-interactive grid min-h-0 overflow-hidden rounded-2xl transition-transform duration-200 hover:-translate-y-1 sm:grid-cols-[9rem_1fr] lg:grid-cols-[8rem_1fr]"
+                >
+                  <div
+                    className={`min-h-44 overflow-hidden bg-gradient-to-br ${project.gradient}`}
+                    aria-hidden="true"
+                  >
+                    <ConceptPreview slug={project.slug} />
+                  </div>
+                  <div className="flex flex-col gap-2 p-5">
+                    <span className="w-fit rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
+                      Design concept
+                    </span>
+                    <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                      {project.name}
+                    </h3>
+                    <p className="text-sm text-cool-graphite">{project.summary}</p>
+                    <span className="mt-auto pt-2 text-sm font-medium text-cyber-blue group-hover:text-[#0b4fb0]">
+                      View concept →
+                    </span>
+                  </div>
+                </a>
               ))}
             </div>
           </div>
         </section>
 
-        {/* The difference */}
-        <section className="glass-continuation border-y border-smoke-glass/70">
+        {/* Buyer-led services */}
+        <section className="glass-section border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="partnership-panel glass-panel signal-grid-bg relative grid overflow-hidden rounded-3xl px-8 py-10 text-center sm:px-12 md:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] md:items-center md:gap-10 md:text-left lg:px-16">
-            <PartnershipSignalGraphic />
-            <div className="relative z-10">
-              <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyber-blue">
-                Built around your business
-              </p>
-              <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
-                We&apos;re not a DIY builder. We&apos;re your independent web partner.
-              </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base md:mx-0">
-                This isn&apos;t a template or a drag-and-drop. You describe what your business
-                needs, and we shape a custom website around your brand, your users, and your
-                goals — strategy, design, and code working together.
-              </p>
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <div className="max-w-2xl">
+                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyber-blue">
+                  Start with what you need
+                </p>
+                <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+                  Choose the business goal that sounds familiar.
+                </h2>
+              </div>
+              <ButtonLink href="/services" variant="text">
+                Compare all services →
+              </ButtonLink>
             </div>
-          </div>
-
-          <div className="mt-10 sm:mt-12">
-            <h3 className="font-display text-xl font-semibold text-midnight-slate sm:text-2xl">
-              So how does it work?
-            </h3>
-            <div className="mt-5">
-              <HowItWorksVideo />
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {buyerNeeds.map((need, index) => (
+                <a
+                  key={need.id}
+                  href={need.detailHref}
+                  className="group glass-panel glass-panel-interactive flex min-h-64 flex-col rounded-2xl p-5 transition-transform duration-200 hover:-translate-y-1"
+                >
+                  <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-cyber-blue">
+                    0{index + 1}
+                  </span>
+                  <h3 className="mt-4 font-display text-base font-semibold text-midnight-slate">
+                    {need.eyebrow}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
+                    {need.title}
+                  </p>
+                  <p className="mt-auto pt-5 font-mono text-[10px] uppercase tracking-[0.08em] text-cool-graphite">
+                    {need.startingPoint}
+                  </p>
+                  <span className="mt-3 text-sm font-medium text-cyber-blue group-hover:text-[#0b4fb0]">
+                    {need.detailLabel} →
+                  </span>
+                </a>
+              ))}
             </div>
-          </div>
           </div>
         </section>
 
-        {/* Process preview */}
+        {/* Process overview */}
         <section className="glass-continuation border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
-            Give us the brief. We&apos;ll shape the route.
-          </h2>
-          <ol className="process-route mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {processSteps.map((step) => (
-              <li key={step.number} className="process-route-step glass-panel rounded-2xl p-5 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-none">
-                <span className="process-node font-mono text-xs text-cyber-blue">{step.number}</span>
-                <ProcessIcon number={step.number} />
-                <h3 className="mt-4 font-display text-base font-semibold text-midnight-slate">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-cool-graphite">
-                  {step.description}
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:items-center">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyber-blue">
+                  A clear working relationship
                 </p>
-              </li>
-            ))}
-          </ol>
+                <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+                  From first conversation to a site you own.
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-cool-graphite sm:text-base">
+                  Work directly with Cyvexly through named decisions and review points. You
+                  always know what comes next, what is waiting on you, and what is waiting on
+                  the studio.
+                </p>
+                <ol className="mt-7 space-y-4">
+                  {homeProcessSteps.map((step) => (
+                    <li key={step.number} className="glass-panel rounded-2xl p-5">
+                      <div className="flex gap-4">
+                        <span className="font-mono text-xs font-semibold text-cyber-blue">
+                          {step.number}
+                        </span>
+                        <div>
+                          <h3 className="font-display text-base font-semibold text-midnight-slate">
+                            {step.title}
+                          </h3>
+                          <p className="mt-2 text-sm leading-relaxed text-cool-graphite">
+                            {step.description}
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <ButtonLink href="/process" variant="secondary">
+                    See the full process
+                  </ButtonLink>
+                  <ButtonLink href="/contact?interest=custom-project" variant="text">
+                    Start with a short inquiry →
+                  </ButtonLink>
+                </div>
+              </div>
+              <div>
+                <HowItWorksVideo />
+                <p className="mt-3 text-xs leading-relaxed text-cool-graphite">
+                  A short visual overview. The full Process page lists deliverables, timing,
+                  your responsibilities, and every approval point.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 

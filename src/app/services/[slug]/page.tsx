@@ -43,6 +43,7 @@ export default async function ServiceDetailPage({
 
   const service = serviceDetails[slug];
   const plannerHref = `/start?service=${service.slug}`;
+  const inquiryHref = `/contact?interest=${service.slug}`;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
@@ -79,11 +80,17 @@ export default async function ServiceDetailPage({
                 {service.summary}
               </p>
               <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-                <ButtonLink href={plannerHref}>Include this in my project</ButtonLink>
+                <ButtonLink href={inquiryHref}>Ask about this service</ButtonLink>
                 <ButtonLink href="/pricing" variant="secondary">
                   See pricing
                 </ButtonLink>
               </div>
+              <p className="mt-4 text-sm text-cool-graphite">
+                Already know the details?{" "}
+                <ButtonLink href={plannerHref} variant="text" className="text-sm">
+                  Add it to a detailed brief →
+                </ButtonLink>
+              </p>
             </div>
 
             <div className="service-detail-visual overflow-hidden rounded-3xl border border-white/80 px-4 py-5 sm:px-8 sm:py-7">
@@ -257,17 +264,22 @@ export default async function ServiceDetailPage({
           <div className="final-cta-shell relative overflow-hidden rounded-3xl px-7 py-14 sm:px-12 md:px-16">
             <div className="final-cta-copy relative max-w-2xl">
               <p className="font-mono text-xs uppercase tracking-[0.14em] text-[#9BDFFF]">
-                Add {service.name.toLowerCase()} to your brief
+                Ask about {service.name.toLowerCase()}
               </p>
               <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-white sm:text-4xl">
-                Start with the service selected. Shape the rest around your business.
+                Start with a short note. Shape the details together.
               </h2>
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-                The Planner will carry this starting point forward. If you already saved a draft on this device, your draft stays in control.
+                The contact form carries this service forward, so you do not
+                have to explain your starting point again. The detailed
+                Planner remains available when you are ready for it.
               </p>
-              <ButtonLink href={plannerHref} className="mt-7">
-                Include this in my project
-              </ButtonLink>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <ButtonLink href={inquiryHref}>Ask about this service</ButtonLink>
+                <ButtonLink href={plannerHref} variant="secondary">
+                  Share a detailed brief
+                </ButtonLink>
+              </div>
             </div>
           </div>
           <p className="mt-6 text-center text-sm text-cool-graphite">
