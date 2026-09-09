@@ -14,6 +14,7 @@ import {
   faqPreview,
   pricingPreview,
   selectedWork,
+  siteConfig,
 } from "@/lib/site-config";
 
 const homeProcessSteps = [
@@ -52,7 +53,10 @@ export default function Home() {
                 <span className="h-1.5 w-1.5 rounded-full bg-signal-emerald" aria-hidden="true" />
                 Independent web studio · Serving the United States
               </p>
-              <h1 className="mt-5 font-display text-[2.15rem] font-semibold leading-[1.06] tracking-tight text-midnight-slate sm:text-5xl xl:text-[3.45rem]">
+              <h1
+                aria-label={siteConfig.tagline}
+                className="mt-5 font-display text-[2.15rem] font-semibold leading-[1.06] tracking-tight text-midnight-slate sm:text-5xl xl:text-[3.45rem]"
+              >
                 Websites built to make your business{" "}
                 <span className="text-cyber-blue">unmistakable.</span>
               </h1>

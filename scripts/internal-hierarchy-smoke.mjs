@@ -77,6 +77,20 @@ async function evaluate(client, expression) {
   return result.result.value;
 }
 
+async function getAccessibleName(client, selector) {
+  const { root } = await client.send("DOM.getDocument");
+  const { nodeId } = await client.send("DOM.querySelector", {
+    nodeId: root.nodeId,
+    selector,
+  });
+  assert.notEqual(nodeId, 0, `Could not find ${selector} for accessibility proof`);
+  const { nodes } = await client.send("Accessibility.getPartialAXTree", {
+    nodeId,
+    fetchRelatives: false,
+  });
+  return nodes[0]?.name?.value ?? null;
+}
+
 async function openRoute(client, route, width, height) {
   const expectedUrl = new URL(route, baseUrl);
   await client.send("Emulation.setDeviceMetricsOverride", {
@@ -205,6 +219,11 @@ async function main() {
     ]);
 
     await openRoute(client, "/", 1280, 720);
+    assert.equal(
+      await getAccessibleName(client, ".home-hero-copy h1"),
+      "Websites built to make your business unmistakable.",
+      "Home's primary buyer promise loses a word boundary in the accessibility tree",
+    );
     const homeTimingDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const item = [...document.querySelectorAll('.home-signal-rail li')]
         .find((element) => element.textContent.includes('Website timelines'));

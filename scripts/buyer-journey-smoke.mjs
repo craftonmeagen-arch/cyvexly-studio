@@ -187,6 +187,11 @@ assert.match(home, /Ready to make your business unmistakable\?/);
 assert.doesNotMatch(home, /Ready to build something extraordinary\?/);
 assert.match(
   home,
+  /aria-label="Websites built to make your business unmistakable\."/,
+  "Home's styled buyer promise lacks one explicit accessible heading name",
+);
+assert.match(
+  home,
   /Website timelines: 2–14\+ weeks by scope/,
   "Home timing reassurance does not cover the published website-package range",
 );
