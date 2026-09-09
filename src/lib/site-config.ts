@@ -705,7 +705,7 @@ export const pricingPackages = [
     featured: false,
   },
   {
-    name: "Custom system",
+    name: "Custom application",
     anchor: "custom-system-package",
     plainName: "Purpose-built web application",
     price: "Quoted after discovery",
@@ -886,7 +886,7 @@ export const faqLibrary = [
       {
         question: "What types of websites do you build?",
         answer:
-          "Business and professional-services sites, redesigns, landing pages, e-commerce stores, and — case by case — more complex custom systems like memberships or booking platforms.",
+          "Business and professional-services sites, redesigns, landing pages, e-commerce stores, and — case by case — custom web applications such as memberships or booking platforms.",
       },
       {
         question: "How do I start a project?",
@@ -926,7 +926,7 @@ export const faqLibrary = [
       {
         question: "How long does a typical project take?",
         answer:
-          "2–3 weeks for Signal, 4–6 weeks for Orbit, 6–9 weeks for Nexus, and 8–14+ weeks for Commerce. Custom systems are scoped individually.",
+          "2–3 weeks for Signal, 4–6 weeks for Orbit, 6–9 weeks for Nexus, and 8–14+ weeks for Commerce. Custom applications are scoped individually.",
       },
       {
         question: "What can delay a launch date?",
@@ -966,7 +966,7 @@ export const faqLibrary = [
       {
         question: "How many revision rounds are included?",
         answer:
-          "Two rounds for Signal and Orbit, three for Nexus. Commerce and Custom revision rounds are defined in the proposal.",
+          "Two rounds for Signal and Orbit, three for Nexus. Commerce and custom-application revision rounds are defined in the proposal.",
       },
       {
         question: "What happens if I want changes outside the agreed scope?",

@@ -28,7 +28,7 @@ const paths: Record<string, ReactNode> = {
       <circle cx="17" cy="20" r="1.3" />
     </>
   ),
-  "Custom system": (
+  "Custom application": (
     <>
       <path d="M12 4v2.4M12 17.6V20M4 12h2.4M17.6 12H20M6.5 6.5l1.7 1.7M15.8 15.8l1.7 1.7M17.5 6.5l-1.7 1.7M8.2 15.8l-1.7 1.7" />
       <circle cx="12" cy="12" r="3.4" />

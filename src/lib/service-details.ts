@@ -310,7 +310,7 @@ export const serviceDetails = {
       "Security, privacy, compliance, scale, and launch-environment needs",
     ],
     package: {
-      name: "Custom system",
+      name: "Custom application",
       price: "Quoted after discovery",
       timing: "Confirmed after discovery",
       note: "Custom applications are scoped after the workflow, roles, data, integrations, and proof requirements are understood. The written recommendation defines the build before work begins.",

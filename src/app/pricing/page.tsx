@@ -20,7 +20,7 @@ const packageInquiryKeys: Record<string, string> = {
   Orbit: "orbit-package",
   Nexus: "nexus-package",
   Commerce: "commerce-package",
-  "Custom system": "custom-system",
+  "Custom application": "custom-system",
 };
 
 export const metadata = buildPageMetadata({
@@ -153,7 +153,7 @@ export default function PricingPage() {
                 </h2>
                 <p className="mt-1 text-sm font-medium text-midnight-slate">{pkg.plainName}</p>
                 <p className="mt-1 text-xs uppercase tracking-[0.1em] text-cool-graphite">
-                  {pkg.name === "Custom system" ? "Price" : "Starting at"}
+                  {pkg.name === "Custom application" ? "Price" : "Starting at"}
                 </p>
                 <p className="mt-1 font-display text-3xl font-semibold text-cyber-blue">
                   {pkg.price}
@@ -507,7 +507,7 @@ export default function PricingPage() {
                   </dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-midnight-slate">Commerce &amp; Custom</dt>
+                  <dt className="font-medium text-midnight-slate">Commerce &amp; custom applications</dt>
                   <dd className="text-cool-graphite">
                     Milestone schedule set in the proposal, typically 30–40%
                     to begin with later payments tied to named approvals.

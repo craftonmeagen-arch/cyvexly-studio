@@ -229,7 +229,7 @@ const servicePricingDestinations = {
   "website-redesigns": ["Nexus", "/pricing#nexus-package"],
   "landing-pages": ["Signal", "/pricing#signal-package"],
   "ecommerce-websites": ["Commerce", "/pricing#commerce-package"],
-  "custom-web-applications": ["Custom system", "/pricing#custom-system-package"],
+  "custom-web-applications": ["Custom application", "/pricing#custom-system-package"],
   "website-care": ["Care", "/pricing#care-plans"],
 };
 for (const [index, slug] of serviceSlugs.entries()) {
@@ -362,6 +362,11 @@ assert.match(home, /href="\/contact\?interest=orbit-package"/);
 assert.match(home, /href="\/contact\?interest=nexus-package"/);
 assert.match(pricing, /href="\/contact\?interest=commerce-package"/);
 assert.match(pricing, /href="\/contact\?interest=custom-system"/);
+assert.match(pricing, />Custom application</);
+assert.match(pricing, /Ask about[\s\S]{0,20}Custom application/);
+assert.match(pricing, /Commerce &amp; custom applications/);
+assert.doesNotMatch(pricing, /Custom system/);
+assert.doesNotMatch(faq, /custom systems/i);
 
 // PlannerForm waits for its device-local draft check before rendering fields,
 // so the first server response intentionally contains only its loading state.
