@@ -85,15 +85,16 @@ export default function FaqPage() {
               Still have a question?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-              Send a short message on the{" "}
-              <ButtonLink href="/contact" variant="text" className="text-sm text-ion-cyan hover:text-white">
-                Contact page
-              </ButtonLink>
-              , or describe your project and we&apos;ll answer as part of
-              your proposal.
+              Send a short note and we&apos;ll answer plainly. If you already
+              have the details, the Project Planner accepts a full brief.
             </p>
-            <div className="mt-8 flex justify-center">
-              <ButtonLink href="/start">Describe your project</ButtonLink>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <ButtonLink href="/contact?interest=custom-project">
+                Ask about a project
+              </ButtonLink>
+              <ButtonLink href="/start" variant="secondary">
+                Share a detailed brief
+              </ButtonLink>
             </div>
           </div>
         </section>

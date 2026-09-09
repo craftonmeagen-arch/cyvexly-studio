@@ -39,10 +39,11 @@ const [home, services, pricing, , plainContact, unknownContact, ...contextualCon
     read("/contact?interest=not-a-real-context"),
     ...contextEntries.map(([interest]) => read(`/contact?interest=${interest}`)),
   ]);
-const [work, processHtml, about, sitemap] = await Promise.all([
+const [work, processHtml, about, faq, sitemap] = await Promise.all([
   read("/work"),
   read("/process"),
   read("/about"),
+  read("/faq"),
   read("/sitemap.xml"),
 ]);
 const serviceSlugs = [
@@ -55,6 +56,25 @@ const serviceSlugs = [
 const serviceDetails = await Promise.all(
   serviceSlugs.map((slug) => read(`/services/${slug}`)),
 );
+
+function getHeader(html) {
+  return html.match(/<header[\s\S]*?<\/header>/)?.[0] ?? "";
+}
+
+for (const html of [home, services, pricing, work, processHtml, about, faq, plainContact]) {
+  const header = getHeader(html);
+  assert.match(
+    header,
+    /href="\/contact\?interest=custom-project"[^>]*>[\s\S]*?Ask about a project/,
+    "sitewide primary header action does not open the short inquiry",
+  );
+  assert.doesNotMatch(
+    header,
+    /href="\/start"[^>]*>[\s\S]*?Describe your project/,
+    "sitewide primary header action still routes to the detailed Planner",
+  );
+}
+assert.match(home, /href="\/start"[^>]*>[\s\S]*?Detailed Project Planner/);
 
 const serviceDestinations = [
   ["See package details", "/pricing#packages"],
@@ -134,6 +154,9 @@ assert.match(processHtml, /href="\/contact\?interest=custom-project"/);
 assert.doesNotMatch(processHtml, /Give us the brief\. We&apos;ll shape the route/);
 assert.match(about, /clear, accountable way of working/);
 assert.doesNotMatch(about, /founder mythology/);
+assert.match(faq, /Send a short inquiry with your name, email/);
+assert.match(faq, /the detailed Planner is optional/);
+assert.match(faq, /href="\/contact\?interest=custom-project"[^>]*>[\s\S]*?Ask about a project/);
 
 assert.match(pricing, /href="\/contact\?interest=orbit-package"/);
 assert.match(pricing, /Ask about [\s\S]{0,80}Orbit/);
@@ -235,6 +258,8 @@ assert.match(home, /href="\/nexora"[^>]*>Try interactive demo/);
 assert.match(nexoraCase, /Built concept demo — fictional/);
 assert.match(nexoraCase, /href="\/nexora"[^>]*>Explore the live demo/);
 assert.match(nexoraCase, /Cyvexly-built fictional demonstration/);
+assert.match(nexoraCase, /href="\/contact\?interest=custom-system"[^>]*>[\s\S]*?Ask about a project/);
+assert.match(nexoraCase, /href="\/start"[^>]*>[\s\S]*?Share a detailed brief/);
 assert.match(nexoraDemo, /Fictional product demonstration by Cyvexly Studio/);
 assert.match(nexoraDemo, /Find the release behind the change/);
 assert.match(nexoraDemo, /href="\/contact\?interest=custom-system"/);

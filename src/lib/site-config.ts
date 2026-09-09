@@ -329,8 +329,8 @@ export const servicesGroups = [
       "Conversion path planning",
     ],
     scopeChange: "Number of audiences, competitors reviewed, and page count.",
-    nextAction: "Start with the Project Planner",
-    nextHref: "/start",
+    nextAction: "Ask about strategy",
+    nextHref: "/contact?interest=custom-project",
   },
   {
     id: "website-design",
@@ -584,7 +584,7 @@ export const servicesFaq = [
   {
     question: "Do I need to know exactly which services I need?",
     answer:
-      "No. Describe your goals in the Project Planner and choose \"not sure — recommend it\" wherever you're uncertain. We'll recommend the right combination.",
+      "No. Send a short inquiry with what you want the website to accomplish and we'll recommend the right combination. The detailed Project Planner is optional when you want to share more.",
   },
   {
     question: "Can I add services after the project starts?",
@@ -815,7 +815,7 @@ export const pricingFaq = [
   {
     question: "Not sure which package fits?",
     answer:
-      "Complete the Project Planner and tell us what's uncertain — we'll recommend the right scope instead of guessing.",
+      "Send a short inquiry and tell us what's uncertain — we'll recommend the right scope instead of guessing. Use the detailed Planner only when you're ready to share more.",
   },
 ];
 
@@ -837,7 +837,7 @@ export const faqPreview = [
   {
     question: "What do you need from me to get started?",
     answer:
-      "Complete the Project Planner with your goals, pages, features, and any brand assets you already have. We recommend a scope for anything you're unsure about.",
+      "A short description of your goal is enough to start the conversation. If you already know the pages, features, or brand assets involved, you can include them in the detailed Planner.",
   },
   {
     question: "Will I be able to update my website myself?",
@@ -868,7 +868,7 @@ export const faqLibrary = [
       {
         question: "How do I know if Cyvexly is the right fit?",
         answer:
-          "If you need a custom, strategy-led website rather than a template or DIY builder, we're likely a fit. Complete the Project Planner and we'll tell you honestly if we're not the right match.",
+          "If you need a custom, strategy-led website rather than a template or DIY builder, we're likely a fit. Send a short inquiry and we'll tell you honestly if we're not the right match.",
       },
       {
         question: "What types of websites do you build?",
@@ -878,7 +878,7 @@ export const faqLibrary = [
       {
         question: "How do I start a project?",
         answer:
-          "Complete the Project Planner. We review it and respond within two business days with a fit confirmation and any clarifying questions.",
+          "Send a short inquiry with your name, email, and what you're considering. We respond within two business days with a fit confirmation and any clarifying questions; the detailed Planner is optional.",
       },
     ],
   },
@@ -923,7 +923,7 @@ export const faqLibrary = [
       {
         question: "Can you accommodate a rush timeline?",
         answer:
-          "Sometimes, for a 20–30% rush fee when our schedule allows it. Tell us your target date in the Project Planner and we'll confirm honestly.",
+          "Sometimes, for a 20–30% rush fee when our schedule allows it. Mention your target date in a short inquiry or the detailed Planner and we'll confirm honestly.",
       },
     ],
   },
@@ -933,7 +933,7 @@ export const faqLibrary = [
       {
         question: "What do you need from me to get started?",
         answer:
-          "Your goals, pages, and features in the Project Planner, plus whatever brand assets you already have. Use \"not sure — recommend it\" for anything you're uncertain about.",
+          "A rough goal and your contact details are enough for the first conversation. Before a proposal, we'll confirm pages, features, and available brand assets; the detailed Planner lets you share those early if you want.",
       },
       {
         question: "What if I don't have copy or photos yet?",
@@ -1048,7 +1048,7 @@ export const faqLibrary = [
       {
         question: "How do you handle different time zones?",
         answer:
-          "We confirm your time zone in the Project Planner and coordinate check-ins and calls accordingly.",
+          "We confirm your time zone before scheduling check-ins or calls and plan the communication rhythm around it.",
       },
     ],
   },

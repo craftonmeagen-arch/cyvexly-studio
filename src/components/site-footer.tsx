@@ -79,8 +79,16 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-white/80 hover:text-ion-cyan">
-                  General contact
+                <Link
+                  href="/contact?interest=custom-project"
+                  className="text-sm text-white/80 hover:text-ion-cyan"
+                >
+                  Project inquiry
+                </Link>
+              </li>
+              <li>
+                <Link href="/start" className="text-sm text-white/80 hover:text-ion-cyan">
+                  Detailed Project Planner
                 </Link>
               </li>
             </ul>

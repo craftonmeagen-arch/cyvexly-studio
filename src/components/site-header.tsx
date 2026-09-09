@@ -92,12 +92,12 @@ export function SiteHeader() {
 
         <div className="hidden lg:block">
           <ButtonLink
-            href="/start"
+            href="/contact?interest=custom-project"
             variant="primary"
-            aria-current={pathname === "/start" ? "page" : undefined}
+            aria-current={pathname === "/contact" ? "page" : undefined}
             className="px-5 py-2.5 text-sm"
           >
-            Describe your project
+            Ask about a project
           </ButtonLink>
         </div>
 
@@ -150,13 +150,22 @@ export function SiteHeader() {
             ))}
           </ul>
           <ButtonLink
-            href="/start"
+            href="/contact?interest=custom-project"
             variant="primary"
-            aria-current={pathname === "/start" ? "page" : undefined}
+            aria-current={pathname === "/contact" ? "page" : undefined}
             className="mt-4 w-full"
             onClick={() => setOpen(false)}
           >
-            Describe your project
+            Ask about a project
+          </ButtonLink>
+          <ButtonLink
+            href="/start"
+            variant="text"
+            aria-current={pathname === "/start" ? "page" : undefined}
+            className="mt-3 w-full justify-center text-sm"
+            onClick={() => setOpen(false)}
+          >
+            Share a detailed brief
           </ButtonLink>
         </nav>
       )}

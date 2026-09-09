@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/button";
 
 export const metadata: Metadata = {
   title: "Page not found — Cyvexly Studio",
-  description: "This page doesn't exist. Find your way back to Work, Services, or the Project Planner.",
+  description: "This page doesn't exist. Find your way back to Work, Services, or a short project inquiry.",
 };
 
 export default function NotFound() {
@@ -32,8 +32,8 @@ export default function NotFound() {
               <ButtonLink href="/work" variant="secondary">
                 Work
               </ButtonLink>
-              <ButtonLink href="/start" variant="secondary">
-                Describe your project
+              <ButtonLink href="/contact?interest=custom-project" variant="secondary">
+                Ask about a project
               </ButtonLink>
             </div>
           </div>

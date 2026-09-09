@@ -258,10 +258,16 @@ export default async function CaseStudyPage({
               Want something like this for your business?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-[#B9C6DA] sm:text-base">
-              Describe your project and we&apos;ll shape the right scope.
+              A short description is enough to ask whether Cyvexly is a fit.
+              Share the full brief only when you&apos;re ready.
             </p>
-            <div className="mt-8 flex justify-center">
-              <ButtonLink href="/start">Describe your project</ButtonLink>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <ButtonLink href="/contact?interest=custom-system">
+                Ask about a project
+              </ButtonLink>
+              <ButtonLink href="/start" variant="secondary">
+                Share a detailed brief
+              </ButtonLink>
             </div>
           </div>
         </section>
