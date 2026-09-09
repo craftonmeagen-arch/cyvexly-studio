@@ -13,6 +13,15 @@ type ContactFormProps = {
   inquiryLabel?: string;
 };
 
+function RequiredMarker() {
+  return (
+    <span className="ml-1 text-warning-coral">
+      <span aria-hidden="true">*</span>
+      <span className="sr-only"> (required)</span>
+    </span>
+  );
+}
+
 export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps) {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Errors>({});
@@ -145,15 +154,21 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
         </p>
       )}
 
+      <p className="mb-5 text-xs text-cool-graphite">
+        <span aria-hidden="true" className="font-semibold text-warning-coral">*</span>{" "}
+        Required fields
+      </p>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="text-sm font-medium text-midnight-slate">
-            Name
+            Name <RequiredMarker />
           </label>
           <input
             id="name"
             name="name"
             type="text"
+            required
             autoComplete="name"
             aria-invalid={Boolean(errors.name)}
             aria-describedby={errors.name ? "name-error" : undefined}
@@ -168,12 +183,13 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
 
         <div>
           <label htmlFor="email" className="text-sm font-medium text-midnight-slate">
-            Email
+            Email <RequiredMarker />
           </label>
           <input
             id="email"
             name="email"
             type="email"
+            required
             autoComplete="email"
             aria-invalid={Boolean(errors.email)}
             aria-describedby={errors.email ? "email-error" : undefined}
@@ -207,12 +223,13 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
 
       <div className="mt-5">
         <label htmlFor="message" className="text-sm font-medium text-midnight-slate">
-          Project description
+          Project description <RequiredMarker />
         </label>
         <textarea
           id="message"
           name="message"
           rows={5}
+          required
           placeholder="What would you like the website or application to help your business do?"
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? "message-error" : undefined}
@@ -290,12 +307,13 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
           id="consent"
           name="consent"
           type="checkbox"
+          required
           aria-invalid={Boolean(errors.consent)}
           aria-describedby={errors.consent ? "consent-error" : undefined}
           className="mt-1 h-4 w-4 shrink-0 rounded border-smoke-glass text-cyber-blue focus-visible:outline-2 focus-visible:outline-cyber-blue"
         />
         <label htmlFor="consent" className="text-sm text-cool-graphite">
-          I&apos;d like Cyvexly Studio to reply to this message.
+          I&apos;d like Cyvexly Studio to reply to this message. <RequiredMarker />
         </label>
       </div>
       {errors.consent && (

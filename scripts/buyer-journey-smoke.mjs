@@ -336,6 +336,19 @@ assert.doesNotMatch(
 );
 assert.match(contactFormHtml, /Add optional details/);
 assert.match(contactFormHtml, /Phone, company, or a different topic/);
+assert.match(contactFormHtml, /Required fields/);
+for (const fieldId of ["name", "email", "message", "consent"]) {
+  const fieldHtml = contactFormHtml.match(
+    new RegExp(`<(?:input|textarea)[^>]*id="${fieldId}"[^>]*>`),
+  )?.[0];
+  assert.ok(fieldHtml, `required contact field is missing: ${fieldId}`);
+  assert.match(fieldHtml, /\srequired(?:=""|\s|>)/, `${fieldId} is not marked required`);
+}
+assert.equal(
+  (contactFormHtml.match(/\(required\)/g) ?? []).length,
+  4,
+  "required contact labels should expose four accessible required markers",
+);
 assert.ok(
   contactFormHtml.indexOf('id="message"') < contactFormHtml.indexOf("Add optional details"),
   "the required message field should precede optional contact details",
