@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { SubmissionFallback } from "@/components/submission-fallback";
 import type { InquiryContextKey } from "@/lib/contact-context";
-import { contactTopics, siteConfig } from "@/lib/site-config";
+import { contactTopics } from "@/lib/site-config";
 
 type Status = "idle" | "submitting" | "sent" | "error";
 
@@ -90,8 +91,10 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
         }
         setSubmitError(
           response.status === 429
-            ? "Too many messages from this connection. Please try again in a few minutes."
-            : `Something went wrong sending your message. Please try again, or email us directly at ${siteConfig.email}.`,
+            ? "Too many messages came from this connection. Your details are still here; wait a few minutes, or contact the studio directly."
+            : payload?.error === "not-configured"
+              ? "The form is temporarily unavailable. Your details are still here, so you can try again later or contact the studio directly."
+              : "The message could not be sent. Your details are still here, so you can try again or contact the studio directly.",
         );
         setStatus("error");
         return;
@@ -101,7 +104,7 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
       form.reset();
     } catch {
       setSubmitError(
-        `Something went wrong sending your message. Please check your connection and try again, or email us directly at ${siteConfig.email}.`,
+        "The message could not be sent. Your details are still here. Check your connection, try again, or contact the studio directly.",
       );
       setStatus("error");
     }
@@ -145,14 +148,19 @@ export function ContactForm({ inquiryInterest, inquiryLabel }: ContactFormProps)
         />
       </div>
 
-      {status === "error" && (
-        <p
-          role="alert"
-          className="mb-6 rounded-xl border border-warning-coral/40 bg-warning-coral/10 px-4 py-3 text-sm text-warning-coral"
-        >
-          {submitError ?? "Please fix the highlighted fields below."}
-        </p>
-      )}
+      {status === "error" &&
+        (submitError ? (
+          <div className="mb-6">
+            <SubmissionFallback message={submitError} />
+          </div>
+        ) : (
+          <p
+            role="alert"
+            className="mb-6 rounded-xl border border-warning-coral/40 bg-warning-coral/10 px-4 py-3 text-sm text-warning-coral"
+          >
+            Please fix the highlighted fields below.
+          </p>
+        ))}
 
       <p className="mb-5 text-xs text-cool-graphite">
         <span aria-hidden="true" className="font-semibold text-warning-coral">*</span>{" "}

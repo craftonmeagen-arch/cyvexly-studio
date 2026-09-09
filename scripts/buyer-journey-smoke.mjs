@@ -389,11 +389,28 @@ const plannerFormSource = await readFile(
   new URL("../src/components/planner/planner-form.tsx", import.meta.url),
   "utf8",
 );
+const contactFormSource = await readFile(
+  new URL("../src/components/contact-form.tsx", import.meta.url),
+  "utf8",
+);
+const submissionFallbackSource = await readFile(
+  new URL("../src/components/submission-fallback.tsx", import.meta.url),
+  "utf8",
+);
 const plannerConfigSource = await readFile(
   new URL("../src/lib/planner-config.ts", import.meta.url),
   "utf8",
 );
 assert.match(plannerConfigSource, /"custom-web-applications": \{/);
+assert.match(contactFormSource, /<SubmissionFallback message=\{submitError\}/);
+assert.match(plannerFormSource, /<SubmissionFallback message=\{submitError\}/);
+assert.match(submissionFallbackSource, /data-submission-fallback/);
+assert.match(submissionFallbackSource, /fallback\.focus\(\{ preventScroll: true \}\)/);
+assert.match(submissionFallbackSource, /fallback\.scrollIntoView\(/);
+assert.match(submissionFallbackSource, /prefers-reduced-motion: reduce/);
+assert.match(submissionFallbackSource, /href=\{`mailto:\$\{siteConfig\.email\}`\}/);
+assert.match(submissionFallbackSource, /href=\{siteConfig\.phoneHref\}/);
+assert.match(submissionFallbackSource, /min-h-11/g);
 assert.match(
   plannerConfigSource,
   /primaryGoalOther: "Build a custom web application or operational workflow"/,

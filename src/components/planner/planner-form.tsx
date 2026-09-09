@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { ButtonLink } from "@/components/button";
-import { siteConfig } from "@/lib/site-config";
+import { SubmissionFallback } from "@/components/submission-fallback";
 import {
   assetCategories,
   assetStatusOptions,
@@ -328,8 +328,10 @@ export function PlannerForm({
         }
         setSubmitError(
           response.status === 429
-            ? "Too many submissions from this connection. Please try again in a few minutes."
-            : `Something went wrong sending your answers. Please try again, or email us directly at ${siteConfig.email}.`,
+            ? "Too many submissions came from this connection. Your answers are still here; wait a few minutes, or contact the studio directly."
+            : payload?.error === "not-configured"
+              ? "The Planner cannot send right now. Your answers are still here, so you can try again later or contact the studio directly."
+              : "The Planner could not send your answers. They are still here, so you can try again or contact the studio directly.",
         );
         setStatus("form");
         return;
@@ -343,7 +345,7 @@ export function PlannerForm({
       setStatus("submitted");
     } catch {
       setSubmitError(
-        `Something went wrong sending your answers. Please check your connection and try again, or email us directly at ${siteConfig.email}.`,
+        "The Planner could not send your answers. They are still here. Check your connection, try again, or contact the studio directly.",
       );
       setStatus("form");
     }
@@ -1197,9 +1199,7 @@ function PlannerReview({
       </div>
 
       {submitError && (
-        <p role="alert" className="rounded-xl border border-warning-coral/40 bg-warning-coral/10 px-4 py-3 text-sm text-warning-coral">
-          {submitError}
-        </p>
+        <SubmissionFallback message={submitError} />
       )}
 
       <p className="text-xs leading-relaxed text-cool-graphite">
