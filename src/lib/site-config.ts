@@ -610,6 +610,7 @@ export const servicesFaq = [
 export const pricingPackages = [
   {
     name: "Signal",
+    anchor: "signal-package",
     plainName: "Focused starter website",
     price: "$1,800",
     bestFor: "A focused first presence, campaign, event, or single service.",
@@ -631,6 +632,7 @@ export const pricingPackages = [
   },
   {
     name: "Orbit",
+    anchor: "orbit-package",
     plainName: "Small-business website",
     price: "$3,500",
     bestFor: "A complete small-business or professional-services website.",
@@ -654,6 +656,7 @@ export const pricingPackages = [
   },
   {
     name: "Nexus",
+    anchor: "nexus-package",
     plainName: "Larger content site or redesign",
     price: "$5,800",
     bestFor: "A growing business, content-led site, or strategic redesign.",
@@ -679,6 +682,7 @@ export const pricingPackages = [
   },
   {
     name: "Commerce",
+    anchor: "commerce-package",
     plainName: "Online store or booking-led website",
     price: "From $8,500",
     bestFor: "A small-to-medium online store or product business.",
@@ -702,6 +706,7 @@ export const pricingPackages = [
   },
   {
     name: "Custom system",
+    anchor: "custom-system-package",
     plainName: "Purpose-built web application",
     price: "Quoted after discovery",
     bestFor:

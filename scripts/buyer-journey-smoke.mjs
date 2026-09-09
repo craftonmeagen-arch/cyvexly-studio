@@ -115,6 +115,8 @@ function getFooter(html) {
   return html.match(/<footer[\s\S]*?<\/footer>/)?.[0] ?? "";
 }
 
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 for (const html of [home, services, pricing, work, processHtml, about, faq, plainContact]) {
   const header = getHeader(html);
   assert.match(
@@ -173,6 +175,9 @@ for (const [label, href] of serviceDestinations) {
 
 for (const id of [
   "packages",
+  "signal-package",
+  "orbit-package",
+  "nexus-package",
   "commerce-package",
   "custom-system-package",
   "compare",
@@ -219,12 +224,32 @@ for (const [index, slug] of serviceSlugs.entries()) {
     `${slug} does not keep the detailed Planner as a secondary action`,
   );
 }
-assert.match(
-  serviceDetails[serviceSlugs.indexOf("website-care")],
-  /href="\/pricing#care-plans"[^>]*>[\s\S]*?(?:See pricing|Compare pricing)/,
-  "website care does not deep-link to the care-plan comparison",
-);
-
+const servicePricingDestinations = {
+  "business-websites": ["Orbit", "/pricing#orbit-package"],
+  "website-redesigns": ["Nexus", "/pricing#nexus-package"],
+  "landing-pages": ["Signal", "/pricing#signal-package"],
+  "ecommerce-websites": ["Commerce", "/pricing#commerce-package"],
+  "custom-web-applications": ["Custom system", "/pricing#custom-system-package"],
+  "website-care": ["Care", "/pricing#care-plans"],
+};
+for (const [index, slug] of serviceSlugs.entries()) {
+  const [packageName, href] = servicePricingDestinations[slug];
+  const escapedHref = escapeRegExp(href);
+  assert.match(
+    serviceDetails[index],
+    new RegExp(
+      `href="${escapedHref}"[^>]*>[\\s\\S]{0,24}See[\\s\\S]{0,24}${escapeRegExp(packageName)}[\\s\\S]{0,24}pricing`,
+    ),
+    `${slug} does not preserve its named package in the opening pricing action`,
+  );
+  assert.match(
+    serviceDetails[index],
+    new RegExp(
+      `href="${escapedHref}"[^>]*>[\\s\\S]{0,24}Review[\\s\\S]{0,24}${escapeRegExp(packageName)}[\\s\\S]{0,24}pricing`,
+    ),
+    `${slug} does not preserve its named package in the lower pricing action`,
+  );
+}
 for (const [label, interest] of [
   ["Care", "care-plan"],
   ["Care+", "care-plus-plan"],
@@ -296,7 +321,6 @@ assert.match(pricing, /Priority reply within one business day/);
 
 const readMessageValue = (html) =>
   html.match(/<textarea[^>]*id="message"[^>]*>([\s\S]*?)<\/textarea>/)?.[1] ?? null;
-const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 assert.equal(readMessageValue(plainContact), "");
 assert.equal(readMessageValue(unknownContact), "");
@@ -398,7 +422,7 @@ assert.match(velora, /A connected hospitality site usually starts with the comme
 assert.match(velora, /Commerce begins at \$8,500/);
 assert.match(velora, /<summary[^>]*>\s*What shapes the scope/);
 assert.match(velora, /href="\/services\/ecommerce-websites"[^>]*>Explore commerce websites/);
-assert.match(velora, /href="\/pricing#packages"[^>]*>Compare packages &amp; costs/);
+assert.match(velora, /href="\/pricing#commerce-package"[^>]*>Review Commerce pricing/);
 assert.match(
   velora,
   /href="\/start\?service=ecommerce-websites"[^>]*>Share a prefilled brief/,
@@ -417,7 +441,7 @@ assert.match(
   nexoraCase,
   /href="\/services\/custom-web-applications"[^>]*>Explore custom applications/,
 );
-assert.match(nexoraCase, /href="\/pricing#packages"[^>]*>Compare packages &amp; costs/);
+assert.match(nexoraCase, /href="\/pricing#custom-system-package"[^>]*>Review custom-app pricing/);
 assert.match(
   nexoraCase,
   /href="\/start\?service=custom-web-applications"[^>]*>Share a prefilled brief/,
@@ -451,7 +475,7 @@ console.log(
       routes: 12 + contextualContacts.length + serviceDetails.length,
       serviceDestinations: serviceDestinations.length,
       buyerServiceRoutes: 5,
-      pricingAnchors: 9,
+      pricingAnchors: 12,
       pricingDecisionFields: 3,
       contactContexts: contextualContacts.length,
       plannerAlternativeContact: "optional-client-and-server",

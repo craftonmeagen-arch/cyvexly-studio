@@ -143,6 +143,20 @@ async function main() {
     assert.ok(pricingDesktop.firstCardTop <= 530, "Pricing packages do not enter the opening viewport soon enough");
     await capture(client, "pricing-desktop.png");
 
+    await openRoute(client, "/pricing#commerce-package", 1440, 900);
+    const pricingAnchorDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const header = document.querySelector('header').getBoundingClientRect();
+      const target = document.getElementById('commerce-package').getBoundingClientRect();
+      return { hash: location.hash, headerBottom: header.bottom, targetTop: target.top, targetBottom: target.bottom };
+    })())`));
+    assert.equal(pricingAnchorDesktop.hash, "#commerce-package");
+    assert.ok(pricingAnchorDesktop.targetTop >= pricingAnchorDesktop.headerBottom, "Commerce anchor is hidden behind the sticky header");
+    assert.ok(
+      pricingAnchorDesktop.targetTop < 240,
+      `Commerce anchor leaves the named package too far below the sticky header: ${JSON.stringify(pricingAnchorDesktop)}`,
+    );
+    await capture(client, "pricing-commerce-anchor-desktop.png");
+
     await openRoute(client, "/services", 1280, 720);
     const servicesDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const hero = document.querySelector('.page-intro-stage').getBoundingClientRect();
@@ -160,6 +174,21 @@ async function main() {
     );
     await capture(client, "pricing-phone.png");
 
+    await openRoute(client, "/pricing#orbit-package", 390, 844);
+    const pricingAnchorPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const header = document.querySelector('header').getBoundingClientRect();
+      const target = document.getElementById('orbit-package').getBoundingClientRect();
+      return { hash: location.hash, headerBottom: header.bottom, targetTop: target.top, targetBottom: target.bottom };
+    })())`));
+    assert.equal(pricingAnchorPhone.hash, "#orbit-package");
+    assert.ok(pricingAnchorPhone.targetTop >= pricingAnchorPhone.headerBottom, "Orbit anchor is hidden behind the phone header");
+    assert.ok(
+      pricingAnchorPhone.targetTop < 220,
+      `Orbit anchor leaves the named package too far below the phone header: ${JSON.stringify(pricingAnchorPhone)}`,
+    );
+    assert.ok(pricingAnchorPhone.targetBottom <= 844, "Orbit package decision does not fit in the phone viewport after navigation");
+    await capture(client, "pricing-orbit-anchor-phone.png");
+
     await openRoute(client, "/contact?interest=orbit-package", 390, 844);
     const contactPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const form = document.querySelector('form').getBoundingClientRect();
@@ -174,6 +203,8 @@ async function main() {
     assert.deepEqual(failures, []);
     console.log(JSON.stringify({
       pricingDesktop,
+      pricingAnchorDesktop,
+      pricingAnchorPhone,
       servicesDesktop,
       contactPhone,
       viewports: ["1280x720", "390x844"],

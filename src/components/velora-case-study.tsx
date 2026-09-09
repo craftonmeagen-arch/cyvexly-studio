@@ -281,6 +281,8 @@ export function VeloraCaseStudy({ breadcrumbJsonLd }: { breadcrumbJsonLd: Record
           inquiryLabel="Ask about a hospitality website"
           serviceHref="/services/ecommerce-websites"
           serviceLabel="Explore commerce websites"
+          pricingHref="/pricing#commerce-package"
+          pricingLabel="Review Commerce pricing"
           plannerHref="/start?service=ecommerce-websites"
         />
       </main>

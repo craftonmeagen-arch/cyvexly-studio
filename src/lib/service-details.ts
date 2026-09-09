@@ -14,6 +14,7 @@ export type ServiceDetail = {
     price: string;
     timing: string;
     note: string;
+    pricingHref: string;
   };
   example: {
     slug: "velora-dining" | "nexora-systems";
@@ -61,6 +62,7 @@ export const serviceDetails = {
       price: "From $3,500",
       timing: "Typically 4–6 weeks",
       note: "A common starting point for a complete small-business or professional-services website. Final scope is confirmed in writing.",
+      pricingHref: "/pricing#orbit-package",
     },
     example: {
       slug: "velora-dining",
@@ -123,6 +125,7 @@ export const serviceDetails = {
       price: "From $5,800",
       timing: "Typically 6–9 weeks",
       note: "A common starting point for a strategic redesign with deeper structure, custom components, and a migration allowance.",
+      pricingHref: "/pricing#nexus-package",
     },
     example: {
       slug: "nexora-systems",
@@ -185,6 +188,7 @@ export const serviceDetails = {
       price: "From $1,800",
       timing: "Typically 2–3 weeks",
       note: "A focused starting point for one to three core pages, one primary form, responsive design, and essential launch setup.",
+      pricingHref: "/pricing#signal-package",
     },
     example: {
       slug: "nexora-systems",
@@ -247,6 +251,7 @@ export const serviceDetails = {
       price: "From $8,500",
       timing: "Typically 8–14+ weeks",
       note: "A starting point for a small-to-medium online store. Platform fees, payment processing, and third-party subscriptions are separate.",
+      pricingHref: "/pricing#commerce-package",
     },
     example: {
       slug: "velora-dining",
@@ -309,6 +314,7 @@ export const serviceDetails = {
       price: "Quoted after discovery",
       timing: "Confirmed after discovery",
       note: "Custom applications are scoped after the workflow, roles, data, integrations, and proof requirements are understood. The written recommendation defines the build before work begins.",
+      pricingHref: "/pricing#custom-system-package",
     },
     example: {
       slug: "nexora-systems",
@@ -371,6 +377,7 @@ export const serviceDetails = {
       price: "From $99/mo",
       timing: "Ongoing, billed monthly in advance",
       note: "Care starts with basic peace of mind. Care+ and Evolve add more support capacity, review depth, and priority.",
+      pricingHref: "/pricing#care-plans",
     },
     example: {
       slug: "velora-dining",

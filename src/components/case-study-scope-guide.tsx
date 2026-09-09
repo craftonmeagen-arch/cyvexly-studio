@@ -14,6 +14,8 @@ export function CaseStudyScopeGuide({
   inquiryLabel,
   serviceHref,
   serviceLabel,
+  pricingHref,
+  pricingLabel,
   plannerHref,
 }: {
   eyebrow: string;
@@ -24,6 +26,8 @@ export function CaseStudyScopeGuide({
   inquiryLabel: string;
   serviceHref: string;
   serviceLabel: string;
+  pricingHref: string;
+  pricingLabel: string;
   plannerHref: string;
 }) {
   return (
@@ -47,8 +51,8 @@ export function CaseStudyScopeGuide({
               </ButtonLink>
             </div>
             <div className="mt-3 flex flex-wrap items-start gap-x-4 gap-y-1">
-              <ButtonLink href="/pricing#packages" variant="text" className="!text-white hover:!text-ion-cyan">
-                Compare packages &amp; costs →
+              <ButtonLink href={pricingHref} variant="text" className="!text-white hover:!text-ion-cyan">
+                {pricingLabel} →
               </ButtonLink>
               <ButtonLink href={plannerHref} variant="text" className="!text-white hover:!text-ion-cyan">
                 Share a prefilled brief →

@@ -278,6 +278,8 @@ export default async function CaseStudyPage({
           inquiryLabel="Ask about a custom application"
           serviceHref="/services/custom-web-applications"
           serviceLabel="Explore custom applications"
+          pricingHref="/pricing#custom-system-package"
+          pricingLabel="Review custom-app pricing"
           plannerHref="/start?service=custom-web-applications"
         />
       </main>

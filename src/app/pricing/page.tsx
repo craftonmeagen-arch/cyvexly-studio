@@ -96,9 +96,10 @@ export default function PricingPage() {
               {pricingPackages.slice(0, 3).map((pkg) => (
                 <div
                   key={pkg.name}
+                  id={pkg.anchor}
                   className={`glass-panel pricing-package-card flex flex-col rounded-2xl p-7 ${
                     pkg.featured ? "pricing-package-card-featured" : ""
-                  }`}
+                  } scroll-mt-24`}
                 >
                 {pkg.featured && (
                   <span className="mb-3 w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
@@ -143,13 +144,7 @@ export default function PricingPage() {
               {pricingPackages.slice(3).map((pkg) => (
                 <div
                   key={pkg.name}
-                  id={
-                    pkg.name === "Commerce"
-                      ? "commerce-package"
-                      : pkg.name === "Custom system"
-                        ? "custom-system-package"
-                        : undefined
-                  }
+                  id={pkg.anchor}
                   className="glass-panel pricing-package-card scroll-mt-24 flex flex-col rounded-2xl p-7"
                 >
                 <PackageIcon name={pkg.name} />

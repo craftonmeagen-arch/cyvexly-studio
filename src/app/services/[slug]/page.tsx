@@ -44,7 +44,7 @@ export default async function ServiceDetailPage({
   const service = serviceDetails[slug];
   const plannerHref = `/start?service=${service.slug}`;
   const inquiryHref = `/contact?interest=${service.slug}`;
-  const pricingHref = service.slug === "website-care" ? "/pricing#care-plans" : "/pricing";
+  const pricingHref = service.package.pricingHref;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
@@ -83,7 +83,7 @@ export default async function ServiceDetailPage({
               <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
                 <ButtonLink href={inquiryHref}>Ask about this service</ButtonLink>
                 <ButtonLink href={pricingHref} variant="secondary">
-                  See pricing
+                  See {service.package.name} pricing
                 </ButtonLink>
               </div>
               <p className="mt-4 text-sm text-cool-graphite">
@@ -245,7 +245,7 @@ export default async function ServiceDetailPage({
               </p>
             </div>
             <ButtonLink href={pricingHref} variant="secondary">
-              Compare pricing
+              Review {service.package.name} pricing
             </ButtonLink>
           </div>
         </section>
