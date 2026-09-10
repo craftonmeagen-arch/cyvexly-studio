@@ -2,8 +2,8 @@
 
 **Last completed global round:** 174
 
-**Next:** publish accepted product source `c8bc73d`, verify canonical production
-adoption, then await new reachable primary-Cyvexly evidence.
+**Next:** await new Owner direction or material primary source, buyer-use, or
+reviewer evidence.
 
 **Active chunk:** none; Chunk 10 closed in global round 174
 
@@ -15,8 +15,8 @@ adoption, then await new reachable primary-Cyvexly evidence.
 
 **Active review source:** none; review lifecycle falls back to accepted source
 
-**Current deployed product-source baseline:** `ca2b84e` until accepted
-`c8bc73d` publication is proved live in this round
+**Current deployed product-source baseline:** `c8bc73d`; acceptance/branch
+commit `ac8438b` is on `origin/main`
 
 Owner direction `2026-09-10-01` resumed the primary Builder for the two
 Cyvexly-facing showcase corrections. Team 2 Builder and all Auditor scheduler
@@ -50,6 +50,12 @@ reduced motion, links, and regression suites. Together they satisfy the two
 independent exact-source challenges; Chunk 10 is closed and the source is
 accepted for publication.
 
+Round 174 pushed branch acceptance commit `ac8438b`. Canonical `/work` changed
+to ETag `17wdf1xrhs018oi` and exposed the rail's swipe guidance and both
+direction controls. Live buyer, hierarchy/rail, Nexora, and intercepted-
+receipt suites pass with zero runtime errors or page-level overflow; no real
+message was sent.
+
 Round 172 independently adopted the inherited closeout after a concurrent
 documentation commit landed during verification. Repository head `744f1aa`
 changes governance/evidence only; its product and test trees are byte-identical
@@ -62,9 +68,9 @@ Historical round detail and the 2026-09-10 checkout reconciliation remain in
 
 ## Next work and gates
 
-Finish Round 174 by publishing accepted source `c8bc73d` and proving canonical
-production adoption. After that, no Builder-reachable product chunk remains.
-Do not access protected data or modify the outside applications.
+No Builder-reachable product chunk remains. Await new Owner direction or
+material primary source, buyer-use, or reviewer evidence. Do not access
+protected data or modify the outside applications.
 
 Remaining primary-team gates:
 

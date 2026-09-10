@@ -12,13 +12,12 @@ round 174 under Owner direction `2026-09-10-02`. Accepted product source
 projects horizontally browsable through visible controls, native touch/swipe,
 Arrow keys, announced position, truthful end states, and responsive
 containment. Auditor R132 and R133 supplied two clean independent exact-source
-challenges. Publication and canonical production proof remain the final
-Round 174 closeout actions; no new Builder-reachable product chunk is open.
+challenges. Accepted source `c8bc73d` is published and proved on canonical
+production; no new Builder-reachable product chunk is open.
 
 Chunk 9 — EduAILenz & Mudoinkle Showcase Quality — closed at product source
 `ca2b84e` after Auditor R129 and R130 supplied two clean independent challenges.
-It remains the deployed baseline until accepted Chunk 10 source `c8bc73d` is
-published and proved live.
+It is superseded by deployed Chunk 10 source `c8bc73d`.
 
 Round 116's accepted/deployed Velora presentation at `fce01e8` remains proof to
 preserve and still needs one complete independent physical/visual review.

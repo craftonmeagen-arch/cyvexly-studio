@@ -1,6 +1,6 @@
 # Cyvexly Build Team Builder — PM Prompt
 
-**Status:** ACTIVE — CHUNK 10 ACCEPTED; PUBLICATION PROOF IN PROGRESS
+**Status:** ACTIVE — CHUNK 10 CLOSED, PUBLISHED, AND PROVED
 
 Owner direction `2026-09-10-02` is the newest authority. Chunk 10 closed in
 global round 174 at accepted source `c8bc73d`. The horizontal Work-card rail preserves the
@@ -8,8 +8,9 @@ four approved projects and adds native horizontal scrolling/snap, visible
 left/right controls, touch and Arrow-key operation, announced position and end
 states, reduced-motion safety, and responsive containment. Auditor R132 and
 R133 independently passed exact `c8bc73d` with zero defects, satisfying the
-two-review gate. Production remains on `ca2b84e` until accepted-source
-publication and canonical adoption are proved.
+two-review gate. Branch acceptance commit `ac8438b` is pushed and canonical
+production serves accepted source `c8bc73d`; live buyer and hierarchy/rail
+suites pass.
 
 Earlier Owner direction `2026-09-10-01` supplied the bounded
 primary-Builder exception for the Cyvexly-facing EduAILenz and Mudoinkle

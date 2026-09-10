@@ -22,8 +22,8 @@ fixed Work grid into a native, scroll-snapping rail through the same four
 approved projects with visible controls, touch/swipe, Arrow-key operation,
 announced position, safe end states, reduced-motion behavior, and responsive
 containment. Auditor R132 and R133 independently passed exact `c8bc73d` with
-zero defects. Publication and canonical production proof remain the final
-Round 174 closeout actions; no new Builder-reachable product chunk is open.
+zero defects. Accepted source `c8bc73d` is published and proved on canonical
+production; no new Builder-reachable product chunk is open.
 
 This direction does not grant provider purchases, payment integration, secret
 access, indexing permission, outside-product changes, or scheduler changes.

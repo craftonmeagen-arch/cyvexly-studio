@@ -14,8 +14,8 @@ candidate remained at that closure.
 Builder Round 171 opened Chunk 10 under Owner direction `2026-09-10-02` and
 established exact horizontal Work-rail source `c8bc73d`. Auditor R132 and R133
 independently passed that exact source with zero defects, so Builder Round 174
-closed the chunk and accepted `c8bc73d` for publication. Production remains on
-`ca2b84e` until canonical adoption is proved. The primary Auditor automation
+closed the chunk, accepted `c8bc73d`, pushed branch acceptance commit `ac8438b`,
+and proved the rail on canonical production. The primary Auditor automation
 remains stored `PAUSED`. This is a Builder continuity update, not a later PM
 product assessment.
 

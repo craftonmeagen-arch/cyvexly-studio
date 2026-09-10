@@ -7,8 +7,9 @@ Git history, and role memory.
 ## Current source position
 
 - Primary accepted product source: `c8bc73d`.
-- Production product source remains `ca2b84e` until accepted `c8bc73d` is
-  published and canonical adoption is proved in Round 174.
+- Production product source: `c8bc73d`; branch acceptance commit `ac8438b` was
+  pushed, canonical rail markers were observed, and live buyer/hierarchy suites
+  passed.
 - Chunk 10 closed in Round 174 after Auditor R132 and R133 independently passed
   exact `c8bc73d` with zero defects. No active review candidate remains; the
   lifecycle falls back to accepted `c8bc73d`.

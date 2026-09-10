@@ -2,11 +2,10 @@
 
 **Active product chunk:** none; Chunk 10 closed in global round 174
 
-**Next position:** finish accepted-source publication, then await new reachable
-primary-Cyvexly work
+**Next position:** await new reachable primary-Cyvexly work
 
-**Accepted product source:** `c8bc73d`; production remains on `ca2b84e` until
-canonical adoption is proved in Round 174
+**Accepted and deployed product source:** `c8bc73d`; branch acceptance commit
+`ac8438b` is on `origin/main`
 
 **Active review source:** none; review lifecycle falls back to accepted source
 
@@ -25,8 +24,8 @@ reduced-motion behavior, and zero page-level overflow at desktop, tablet,
 390px, and 320px widths.
 
 Auditor R132 and R133 independently passed exact `c8bc73d` with zero defects.
-Together they satisfy the two-review gate. Publish the accepted source and prove
-canonical production adoption before ending Round 174.
+Together they satisfy the two-review gate. The accepted source is published and
+proved on canonical production.
 
 Underlying EduAILenz/Mudoinkle applications, their data, credentials,
 infrastructure, and HoneyHearted remain Team 2 scope. Do not modify them.
@@ -48,7 +47,11 @@ infrastructure, and HoneyHearted remain Team 2 scope. Do not modify them.
 - **Cleaned:** stopped owned production PID 43312 and cleared port 5173; removed
   seven accepted-candidate Builder evidence files (3,693,350 bytes) and 156
   bytes of temporary runtime logs. Auditor evidence remains external.
-- **Next:** push the acceptance record and verify canonical production adoption.
+- **Published:** pushed branch acceptance commit `ac8438b`; canonical `/work`
+  changed to ETag `17wdf1xrhs018oi` and exposed the new rail controls/guidance.
+  Live buyer, hierarchy/rail, Nexora, and intercepted-receipt suites passed with
+  zero runtime errors or page-level overflow and no real message delivery.
+- **Next:** await new Owner direction or material primary evidence.
 
 ## Round 173 — first clean exact-source review
 

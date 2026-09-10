@@ -13,7 +13,9 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
   screenshots remain external; only its operational inbox item moved to the
   processed lane.
 - Chunk 10 is closed and `c8bc73d` is accepted for publication. Production
-  remains on `ca2b84e` until branch push and canonical adoption are proved.
+  adopted it after branch acceptance commit `ac8438b` was pushed. Canonical
+  `/work` changed to ETag `17wdf1xrhs018oi` and exposed both rail controls plus
+  the swipe guidance.
 - Production build, TypeScript, lint with one historical evidence warning,
   buyer, hierarchy/rail, Nexora, submission-receipt, role setup, hot-file caps,
   and all 57 lifecycle checks pass. The submission suite passed on a unique
@@ -22,6 +24,9 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
 - Cleanup stopped owned runtime PID 43312, cleared port 5173, removed seven
   accepted-candidate Builder evidence files (3,693,350 bytes), and removed 156
   bytes of temporary logs. Auditor evidence remains external.
+- Live canonical buyer, hierarchy/rail, Nexora, and intercepted-receipt suites
+  pass with zero runtime errors or page-level overflow; no real message was
+  sent. No Builder-reachable product chunk remains.
 
 ## Round 173 — first exact-source rail review
 
