@@ -367,7 +367,7 @@ assert.doesNotMatch(home, /href="\/pricing"[^>]*>Need something custom\? Let/);
 assert.doesNotMatch(home, />Most popular</);
 assert.match(home, />Recommended</);
 
-assert.match(work, /Working experiences you can inspect/);
+assert.match(work, /Working experiences and product systems you can inspect/);
 assert.match(work, /Selectable time ranges and comparison states/);
 assert.match(work, /Reservation and private-event demo flows/);
 assert.match(
@@ -624,10 +624,12 @@ assert.equal(
   "Server still rejects an empty alternative contact field",
 );
 
-const [velora, nexoraCase, nexoraDemo] = await Promise.all([
+const [velora, nexoraCase, nexoraDemo, eduailenzCase, mudoinkleCase] = await Promise.all([
   read("/work/velora-dining"),
   read("/work/nexora-systems"),
   read("/nexora"),
+  read("/work/eduailenz"),
+  read("/work/mudoinkle"),
 ]);
 assert.match(velora, /href="\/contact\?interest=hospitality-website"/);
 assert.match(velora, /A connected hospitality site usually starts with the commerce path/);
@@ -661,6 +663,19 @@ assert.match(
 assert.match(nexoraDemo, /Fictional product demonstration by Cyvexly Studio/);
 assert.match(nexoraDemo, /Find the release behind the change/);
 assert.match(nexoraDemo, /href="\/contact\?interest=custom-system"/);
+assert.match(work, /href="\/work\/eduailenz"/);
+assert.match(work, /href="\/work\/mudoinkle"/);
+assert.match(work, /target="_blank"[^>]*href="https:\/\/eduailenz-web\.onrender\.com\/"/);
+assert.match(work, /target="_blank"[^>]*href="https:\/\/mudoinkle-staging\.onrender\.com\/"/);
+assert.match(eduailenzCase, /Built product system — active development/);
+assert.match(eduailenzCase, /Verified capability/);
+assert.match(eduailenzCase, /Still to prove/);
+assert.match(eduailenzCase, /custom domain was not/);
+assert.doesNotMatch(eduailenzCase, /student outcome|client engagement[^<]*completed/i);
+assert.match(mudoinkleCase, /Built product system — staging/);
+assert.match(mudoinkleCase, /public staging build, not a production-launch claim/i);
+assert.match(mudoinkleCase, /End-to-end List Off multi-role acceptance/);
+assert.match(mudoinkleCase, /target="_blank"[^>]*href="https:\/\/mudoinkle-staging\.onrender\.com\/"/);
 
 for (const detail of serviceDetails) {
   assert.match(detail, /Relevant working example/);
@@ -683,6 +698,8 @@ assert.deepEqual(retiredStatuses, [404, 404]);
 assert.doesNotMatch(sitemap, /aurora-spaces|vellora-care/);
 assert.match(sitemap, /work\/velora-dining/);
 assert.match(sitemap, /work\/nexora-systems/);
+assert.match(sitemap, /work\/eduailenz/);
+assert.match(sitemap, /work\/mudoinkle/);
 assert.match(sitemap, /services\/custom-web-applications/);
 
 console.log(

@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   title: "Work — Cyvexly Studio",
   description:
-    "Inspect two working Cyvexly Studio demonstrations: a brand-led hospitality website and a custom release-intelligence application.",
+    "Inspect Cyvexly Studio demonstrations and built product systems across hospitality, analytics, education, and real-time multiplayer experiences.",
   path: "/work",
 });
 
@@ -23,12 +23,12 @@ export default function WorkPage() {
               Work
             </p>
             <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
-              Working experiences you can inspect.
+              Working experiences and product systems you can inspect.
             </h1>
             <p className="mt-3 text-base leading-relaxed text-cool-graphite sm:text-lg">
-              Compare two fictional demonstrations built by Cyvexly: one
-              brand-led business website and one custom web application. Each
-              includes a case study and a safe interactive demo.
+              Compare two fictional demonstrations with two deeper built product
+              systems. Each case study distinguishes working capability, current
+              lifecycle, and anything that still needs focused proof.
             </p>
           </div>
         </section>

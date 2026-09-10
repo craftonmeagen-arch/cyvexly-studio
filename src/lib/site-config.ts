@@ -60,6 +60,8 @@ export const selectedWork = [
     ],
     href: "/work/velora-dining",
     demoHref: "/velora",
+    demoLabel: "Try demo",
+    demoExternal: false,
     gradient: "from-[#20271F] via-[#49332E] to-[#D6BD8F]",
   },
   {
@@ -77,7 +79,47 @@ export const selectedWork = [
     ],
     href: "/work/nexora-systems",
     demoHref: "/nexora",
+    demoLabel: "Try demo",
+    demoExternal: false,
     gradient: "from-[#10213D] via-[#0F66E0] to-[#36C7FF]",
+  },
+  {
+    slug: "eduailenz",
+    name: "EduAILenz",
+    kind: "Built product system",
+    category: "Education Platform",
+    summary:
+      "Deep education platform organizing teacher planning, protected student workflows, reading tools, assignments, and live classroom participation.",
+    tags: ["Education SaaS", "Role-aware workflows"],
+    capabilities: [
+      "Teacher planning, saved work, and digital assignments",
+      "BloomED caseload, goals, evidence, and reporting workflows",
+      "Shared lessons and live classroom participation modes",
+    ],
+    href: "/work/eduailenz",
+    demoHref: "https://eduailenz-web.onrender.com/",
+    demoLabel: "Open live product",
+    demoExternal: true,
+    gradient: "from-[#16213E] via-[#5B4BDB] to-[#AEE7F2]",
+  },
+  {
+    slug: "mudoinkle",
+    name: "Mudoinkle",
+    kind: "Built product system — staging",
+    category: "Multiplayer Web App",
+    summary:
+      "Playful party-game platform coordinating host, player, display, account, and live-room states across three distinct game formats.",
+    tags: ["Real-time systems", "Multi-surface UX"],
+    capabilities: [
+      "Single-device and room-based play models",
+      "Dedicated host, player, and shared-display surfaces",
+      "Protected hosting with durable business and room-state architecture",
+    ],
+    href: "/work/mudoinkle",
+    demoHref: "https://mudoinkle-staging.onrender.com/",
+    demoLabel: "Open staging preview",
+    demoExternal: true,
+    gradient: "from-[#30104D] via-[#7B2CBF] to-[#FFB703]",
   },
 ];
 
@@ -160,6 +202,121 @@ export const caseStudies = {
     ],
     typographyNote:
       "Technical labels use a compact monospace face, while plain supporting type keeps product explanations approachable.",
+  },
+  eduailenz: {
+    name: "EduAILenz",
+    status: "Built product system — active development",
+    businessType: "Education workflow and learning platform",
+    audience:
+      "Education teams evaluating a custom platform with protected teacher workflows, structured student support, content creation, and classroom participation.",
+    challenge:
+      "Teacher work rarely lives in one neat workflow. Planning, standards, saved resources, assignments, reading support, progress evidence, and live activities all create different states and responsibilities. EduAILenz brings that breadth into one navigable product system without treating AI output as a substitute for educator judgment.",
+    goals: [
+      "Organize a wide set of teacher jobs without flattening their distinct workflows",
+      "Separate public participation routes from protected planning and student-support areas",
+      "Keep generated material reviewable and under teacher control",
+    ],
+    scope: [
+      "Teacher planning, saved work, digital assignments, and standards-aware content workflows",
+      "BloomED caseload, students, goals, progress logs, evidence, tasks, calendars, families, and reports",
+      "Reading tools, shared lessons, Whoodle, Whoo Knows Live, interactive lessons, and group activities",
+    ],
+    decisions: [
+      "Structured the application around recognizable educator jobs instead of exposing one undifferentiated AI workspace",
+      "Used separate signed-in, public-share, player, and display routes so each participant receives the controls appropriate to that context",
+      "Backed production deployment with database migration and readiness gates while keeping provider configuration in protected environment controls",
+    ],
+    accessibilityHighlights: [
+      "Public participation and protected educator routes are explicitly separated in the application structure",
+      "The portfolio proof avoids private student data and uses only source-grounded, public-safe product descriptions",
+    ],
+    intendedOutcome:
+      "A buyer can see evidence of Cyvexly's ability to organize a deep, role-aware application with connected education workflows, protected areas, structured data, and multiple classroom participation modes.",
+    demoHref: "https://eduailenz-web.onrender.com/",
+    gradient: "from-[#16213E] via-[#5B4BDB] to-[#AEE7F2]",
+    palette: [
+      { hex: "#16213E", label: "Focused navy" },
+      { hex: "#5B4BDB", label: "Learning violet" },
+      { hex: "#AEE7F2", label: "Open-sky cyan" },
+      { hex: "#F7F8FC", label: "Workspace white" },
+    ],
+    typographyNote:
+      "Friendly product typography and clear status language keep dense educator workflows approachable without disguising their operational depth.",
+    externalLabel: "Open the live product",
+    externalNote:
+      "The public Render build was reachable during the latest review. The custom domain was not, so this link uses the verified Render origin.",
+    proofChecked: "Source and public-route intake checked September 9, 2026",
+    verifiedCapabilities: [
+      "Teacher planning, saved work, assignments, reading, and classroom-activity routes",
+      "BloomED caseload, goals, evidence, task, calendar, family, and report workflows",
+      "Protected application areas plus public shared-lesson, player, and display surfaces",
+      "Production-oriented PostgreSQL deployment with migrations and readiness checks",
+    ],
+    proofPending: [
+      "Authenticated end-to-end provider and durable-write workflows",
+      "Live-room reconnect, grading, import, reporting, and text-to-speech behavior",
+      "Restoration and fresh verification of the custom domain",
+    ],
+    inquiryHref: "/contact?interest=custom-system",
+    plannerHref: "/start?service=custom-web-applications",
+  },
+  mudoinkle: {
+    name: "Mudoinkle",
+    status: "Built product system — staging",
+    businessType: "Multi-surface party-game platform",
+    audience:
+      "Teams evaluating a playful real-time application whose host, player, shared display, account, and operational states must stay coordinated.",
+    challenge:
+      "A party-game hub has to feel immediate and light while coordinating several very different interaction models. Mudoinkle combines single-device play with room-based host, player, and shared-display journeys, protected account areas, and production-minded state architecture.",
+    goals: [
+      "Give each game a distinct interaction model inside one coherent brand system",
+      "Keep host, player, and display responsibilities understandable across devices",
+      "Separate live room authority from durable business data for safer operations",
+    ],
+    scope: [
+      "Witigglies single-device pass-the-phone word play",
+      "Awmuhog room-based prompt-and-judge play with host, join, and display surfaces",
+      "List Off host, join, and display surfaces with final multi-role acceptance still pending",
+      "Account, help, safety, privacy, accessibility, and reporting routes",
+    ],
+    decisions: [
+      "Used a shared game catalog and route system so three different play models still feel like one product",
+      "Separated public join/display paths from Clerk-protected host and account areas",
+      "Designed PostgreSQL for durable business records and Render Valkey for authoritative live-room state, with migration and health gates around deployment",
+    ],
+    accessibilityHighlights: [
+      "Host, player, and display roles receive dedicated routes instead of sharing one overloaded control surface",
+      "Public support, safety, privacy, accessibility, and reporting destinations are represented in the route structure",
+    ],
+    intendedOutcome:
+      "A buyer can inspect evidence that Cyvexly can plan and build playful multi-device systems with distinct roles, real-time room architecture, protected hosting, and a coherent product identity.",
+    demoHref: "https://mudoinkle-staging.onrender.com/",
+    gradient: "from-[#30104D] via-[#7B2CBF] to-[#FFB703]",
+    palette: [
+      { hex: "#30104D", label: "Game-night plum" },
+      { hex: "#7B2CBF", label: "Playful violet" },
+      { hex: "#FFB703", label: "Scoreboard gold" },
+      { hex: "#FFF7E6", label: "Warm card stock" },
+    ],
+    typographyNote:
+      "Bold display language carries the party-game personality while compact interface labels keep room roles and actions easy to scan.",
+    externalLabel: "Open the staging preview",
+    externalNote:
+      "This is a public staging build, not a production-launch claim. Final multi-role acceptance remains in progress.",
+    proofChecked: "Source and public-route intake checked September 9, 2026",
+    verifiedCapabilities: [
+      "Three defined game models with dedicated entry points",
+      "Public join/display routes and protected host/account surfaces",
+      "PostgreSQL business data plus Valkey-backed live-room authority in the deployment design",
+      "Migration, health, safety, privacy, accessibility, and reporting surfaces",
+    ],
+    proofPending: [
+      "Full multi-device room lifecycle, reconnect, moderation, and recovery proof",
+      "End-to-end List Off multi-role acceptance",
+      "Production launch and final physical-device verification",
+    ],
+    inquiryHref: "/contact?interest=custom-system",
+    plannerHref: "/start?service=custom-web-applications",
   },
 };
 

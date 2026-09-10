@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { CaseStudyScopeGuide } from "@/components/case-study-scope-guide";
 import { ConceptPreview } from "@/components/concept-preview";
+import { ExternalProductCaseStudy } from "@/components/external-product-case-study";
 import { VeloraCaseStudy } from "@/components/velora-case-study";
 import { caseStudies, selectedWork } from "@/lib/site-config";
 import { buildBreadcrumbJsonLd } from "@/lib/structured-data";
@@ -53,6 +54,16 @@ export default async function CaseStudyPage({
 
   if (slug === "velora-dining") {
     return <VeloraCaseStudy breadcrumbJsonLd={breadcrumbJsonLd} />;
+  }
+
+  if (slug === "eduailenz" || slug === "mudoinkle") {
+    return (
+      <ExternalProductCaseStudy
+        slug={slug}
+        study={caseStudies[slug]}
+        breadcrumbJsonLd={breadcrumbJsonLd}
+      />
+    );
   }
 
   return (

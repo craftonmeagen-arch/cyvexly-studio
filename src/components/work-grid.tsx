@@ -56,8 +56,10 @@ export function WorkGrid() {
               <ButtonLink
                 href={project.demoHref}
                 className="px-4 py-2 text-xs"
+                target={project.demoExternal ? "_blank" : undefined}
+                rel={project.demoExternal ? "noreferrer" : undefined}
               >
-                Try demo
+                {project.demoLabel}{project.demoExternal ? " ↗" : ""}
               </ButtonLink>
             </div>
           </div>

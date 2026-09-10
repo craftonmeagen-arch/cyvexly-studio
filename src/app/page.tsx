@@ -146,7 +146,7 @@ export default function Home() {
                 </div>
               </article>
 
-              {selectedWork.slice(1).map((project) => (
+              {selectedWork.slice(1, 2).map((project) => (
                 <article
                   key={project.name}
                   className="glass-panel flex min-h-[34rem] flex-col overflow-hidden rounded-3xl"
