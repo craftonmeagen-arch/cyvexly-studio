@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
@@ -174,6 +175,52 @@ export default function Home() {
                   </div>
                 </article>
               ))}
+            </div>
+
+            <div className="mt-10 border-t border-smoke-glass/80 pt-8">
+              <div className="flex flex-wrap items-end justify-between gap-4">
+                <div className="max-w-2xl">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyber-blue">
+                    Built product systems
+                  </p>
+                  <h3 className="mt-3 font-display text-2xl font-semibold text-midnight-slate">
+                    More ways Cyvexly handles product complexity.
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-cool-graphite">
+                    Explore an education workspace and a multi-device party platform through public-safe guided case studies, with current limitations stated clearly.
+                  </p>
+                </div>
+                <ButtonLink href="/work" variant="text">See all work →</ButtonLink>
+              </div>
+
+              <div className="mt-6 grid gap-5 md:grid-cols-2">
+                {selectedWork.slice(2).map((project) => {
+                  const preview = project.slug === "eduailenz"
+                    ? "/media/eduailenz-live-desktop.png"
+                    : "/media/mudoinkle-live-desktop.png";
+                  return (
+                    <article key={project.slug} className="glass-panel grid overflow-hidden rounded-3xl sm:grid-cols-[0.9fr_1.1fr]">
+                      <div className="relative min-h-48 overflow-hidden bg-midnight-slate">
+                        <Image
+                          src={preview}
+                          alt={`Current public ${project.name} product view`}
+                          fill
+                          className="object-cover object-top"
+                          sizes="(min-width: 768px) 24vw, 100vw"
+                        />
+                      </div>
+                      <div className="flex flex-col p-5 sm:p-6">
+                        <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-cyber-blue">{project.kind}</span>
+                        <h4 className="mt-3 font-display text-xl font-semibold text-midnight-slate">{project.name}</h4>
+                        <p className="mt-3 text-sm leading-6 text-cool-graphite">{project.summary}</p>
+                        <ButtonLink href={project.href} variant="secondary" className="mt-5 self-start px-4 py-2 text-xs">
+                          Tour the case study
+                        </ButtonLink>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>

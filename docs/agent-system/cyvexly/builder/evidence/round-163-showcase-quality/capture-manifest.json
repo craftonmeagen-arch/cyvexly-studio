@@ -1,0 +1,31 @@
+{
+  "capturedAt": "2026-09-10T10:43:06-04:00",
+  "purpose": "Public-safe visual evidence for the Cyvexly EduAILenz and Mudoinkle case-study tour",
+  "privacyBoundary": "Public pages only; no sign-in, protected route, form submission, student data, room data, or account data was accessed.",
+  "sources": [
+    {
+      "product": "EduAILenz",
+      "url": "https://eduailenz-web.onrender.com/",
+      "files": [
+        "public/media/eduailenz-live-desktop.png",
+        "public/media/eduailenz-live-mobile.png",
+        "public/media/eduailenz-tour-workflow.png",
+        "public/media/eduailenz-tour-classroom.png",
+        "public/media/eduailenz-tour-bloomed.png"
+      ],
+      "labelBoundary": "The three tour images are labeled public guided-tour illustrations and are not represented as authenticated acceptance evidence."
+    },
+    {
+      "product": "Mudoinkle",
+      "url": "https://mudoinkle-staging.onrender.com/",
+      "files": [
+        "public/media/mudoinkle-live-desktop.png",
+        "public/media/mudoinkle-live-mobile.png",
+        "public/media/mudoinkle-tour-setup.png",
+        "public/media/mudoinkle-tour-preview.png",
+        "public/media/mudoinkle-tour-games.png"
+      ],
+      "labelBoundary": "All views are labeled public staging evidence; no production-launch or completed multi-device acceptance claim is made."
+    }
+  ]
+}

@@ -90,3 +90,20 @@ evidence exposes a meaningful reachable gap.
 - **Team boundary:** Team 2's later integration at production baseline
   `493d1e6` is not covered by primary R116; Team 2 report `HH-IFA-023` closed
   its separate review.
+
+## Chunk 9 — EduAILenz & Mudoinkle Showcase Quality (OPEN)
+
+- **Authority:** Owner direction `2026-09-10-01`, a bounded exception to the
+  prior Team 2 portfolio assignment.
+- **Outcome:** both Cyvexly case studies feel as deliberate and substantial as
+  Velora while keeping their own product identities; real public-safe visual
+  proof leads; meaningful workflows are understandable; buyer-facing copy is
+  concise; access and incomplete-work boundaries remain truthful.
+- **Surface:** the two case studies, their Work cards, relevant Home discovery,
+  inquiry context, responsive presentation, and supporting proof assets/tests.
+- **Boundary:** do not modify the outside applications, credentials, data, or
+  infrastructure. Public marketing illustrations are labeled as guided tours,
+  not authenticated workflow proof.
+- **Closure:** desktop/tablet/phone visible comparison with Velora, working
+  navigation and keyboard paths, exact-source build/test proof, and the normal
+  two independent verification rounds.

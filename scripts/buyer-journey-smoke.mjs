@@ -20,6 +20,8 @@ const inquiryContexts = {
   "commerce-package": "Commerce package — online store or booking-led website",
   "custom-system": "Custom web application or unusual workflow",
   "custom-web-applications": "Custom web application or unusual workflow",
+  "education-platform": "Education platform like EduAILenz",
+  "party-game-platform": "Multi-device game platform like Mudoinkle",
   "hospitality-website": "Restaurant or hospitality website",
   "business-websites": "New business website",
   "website-redesigns": "Website improvement or redesign",
@@ -38,6 +40,8 @@ const inquiryPlannerServices = {
   "commerce-package": "ecommerce-websites",
   "custom-system": "custom-web-applications",
   "custom-web-applications": "custom-web-applications",
+  "education-platform": "custom-web-applications",
+  "party-game-platform": "custom-web-applications",
   "hospitality-website": "booking-websites",
   "business-websites": "business-websites",
   "website-redesigns": "website-redesigns",
@@ -668,14 +672,28 @@ assert.match(work, /href="\/work\/mudoinkle"/);
 assert.match(work, /target="_blank"[^>]*href="https:\/\/eduailenz-web\.onrender\.com\/"/);
 assert.match(work, /target="_blank"[^>]*href="https:\/\/mudoinkle-staging\.onrender\.com\/"/);
 assert.match(eduailenzCase, /Built product system — active development/);
-assert.match(eduailenzCase, /Verified capability/);
-assert.match(eduailenzCase, /Still to prove/);
-assert.match(eduailenzCase, /custom domain was not/);
+assert.match(eduailenzCase, /One teaching idea\. A whole classroom workflow\./);
+assert.match(eduailenzCase, /Live public product page(?:<!-- -->)? · desktop \+ phone/);
+assert.match(eduailenzCase, /Public guided-tour illustration/);
+assert.match(eduailenzCase, /Cyvexly contribution/);
+assert.match(eduailenzCase, /Shown and supported/);
+assert.match(eduailenzCase, /Current limits/);
+assert.match(eduailenzCase, /href="\/contact\?interest=education-platform"/);
+assert.match(eduailenzCase, /\/media\/eduailenz-live-desktop\.png/);
+assert.match(eduailenzCase, /\/media\/eduailenz-live-mobile\.png/);
 assert.doesNotMatch(eduailenzCase, /student outcome|client engagement[^<]*completed/i);
 assert.match(mudoinkleCase, /Built product system — staging/);
-assert.match(mudoinkleCase, /public staging build, not a production-launch claim/i);
-assert.match(mudoinkleCase, /End-to-end List Off multi-role acceptance/);
+assert.match(mudoinkleCase, /Game night starts with less setup—and more play\./);
+assert.match(mudoinkleCase, /Public staging product page(?:<!-- -->)? · desktop \+ phone/);
+assert.match(mudoinkleCase, /Live public interactive preview/);
+assert.match(mudoinkleCase, /End-to-end List Off host, player, and display acceptance/);
+assert.match(mudoinkleCase, /href="\/contact\?interest=party-game-platform"/);
+assert.match(mudoinkleCase, /\/media\/mudoinkle-live-desktop\.png/);
+assert.match(mudoinkleCase, /\/media\/mudoinkle-live-mobile\.png/);
 assert.match(mudoinkleCase, /target="_blank"[^>]*href="https:\/\/mudoinkle-staging\.onrender\.com\/"/);
+assert.match(home, /More ways Cyvexly handles product complexity/);
+assert.match(home, /href="\/work\/eduailenz"[^>]*>[\s\S]*?Tour the case study/);
+assert.match(home, /href="\/work\/mudoinkle"[^>]*>[\s\S]*?Tour the case study/);
 
 for (const detail of serviceDetails) {
   assert.match(detail, /Relevant working example/);

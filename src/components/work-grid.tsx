@@ -1,21 +1,44 @@
+import Image from "next/image";
 import { ButtonLink } from "@/components/button";
 import { ConceptPreview } from "@/components/concept-preview";
 import { selectedWork } from "@/lib/site-config";
 
+const realProjectPreviews: Record<string, { src: string; alt: string }> = {
+  eduailenz: {
+    src: "/media/eduailenz-live-desktop.png",
+    alt: "Current public EduAILenz teacher-workspace homepage",
+  },
+  mudoinkle: {
+    src: "/media/mudoinkle-live-desktop.png",
+    alt: "Current public Mudoinkle staging homepage",
+  },
+};
+
 export function WorkGrid() {
   return (
     <div className="grid gap-6 md:grid-cols-2">
-      {selectedWork.map((project) => (
-        <article
-          key={project.name}
-          className="glass-panel flex flex-col overflow-hidden rounded-2xl"
-        >
-          <div
-            className={`h-48 w-full overflow-hidden bg-gradient-to-br ${project.gradient}`}
-            aria-hidden="true"
+      {selectedWork.map((project) => {
+        const realPreview = realProjectPreviews[project.slug];
+        return (
+          <article
+            key={project.name}
+            className="glass-panel flex flex-col overflow-hidden rounded-2xl"
           >
-            <ConceptPreview slug={project.slug} />
-          </div>
+            <div className={`relative h-48 w-full overflow-hidden bg-gradient-to-br ${project.gradient}`}>
+              {realPreview ? (
+                <Image
+                  src={realPreview.src}
+                  alt={realPreview.alt}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+              ) : (
+                <div aria-hidden="true" className="h-full">
+                  <ConceptPreview slug={project.slug} />
+                </div>
+              )}
+            </div>
           <div className="flex flex-1 flex-col gap-2 p-5">
             <span className="w-fit rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
               {project.kind}
@@ -63,8 +86,9 @@ export function WorkGrid() {
               </ButtonLink>
             </div>
           </div>
-        </article>
-      ))}
+          </article>
+        );
+      })}
     </div>
   );
 }

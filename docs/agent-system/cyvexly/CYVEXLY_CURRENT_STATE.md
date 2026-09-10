@@ -1,24 +1,37 @@
 # Cyvexly Current State
 
-**Last completed global round:** 162
+**Last completed global round:** 163
 
-**Next:** global round 163; no Builder-reachable product chunk is currently open
+**Next:** global round 164; independently review the exact Round 163 Chunk 9
+candidate before any push or deployment. Correct material findings, then obtain
+a second separate exact-source challenge before closure. Other scheduler pauses
+remain unchanged.
 
-**Latest closed chunk:** Chunk 8 — Buyer Journey, Proof & Conversion
+**Active chunk:** Chunk 9 — EduAILenz & Mudoinkle Showcase Quality
+
+**Current chunk-local round:** 2
 
 **Accepted repository source:** `48a2470` (primary Chunk 8 source)
 
 **Current deployed product-source baseline:** `493d1e6` (Team 2's bounded
 outside-site integration on `48a2470`; later reconciliation is record-only)
 
-The primary Cyvexly Builder and Team 2 Builder automations are paused under
-direct Owner instruction dated 2026-09-10. The Team 2 HoneyHearted Auditor was
-already paused. Do not reactivate them without later explicit Owner direction.
-Direction `2026-09-08-29` assigns HoneyHearted,
-EduAILenz, Mudoinkle, every other outside website, and their bounded portfolio
-integrations only to Team 2. This lane owns every other Cyvexly surface.
+Owner direction `2026-09-10-01` resumes the primary Cyvexly Builder and opens
+the two Cyvexly-facing showcase corrections. Team 2 Builder and all Auditor
+scheduler states remain unchanged. Underlying outside-product work,
+credentials, infrastructure, and HoneyHearted remain Team 2 scope.
 
 ## Current product position
+
+Round 163 opened Chunk 9 from clean product baseline `493d1e6` / repository
+head `7bfbd8f`, then delivered the first coherent showcase-quality candidate.
+Both case studies now lead with distinct product identities, real current
+desktop/phone captures, three plain-language journeys, explicit Cyvexly
+contribution, proportional limitations, and direct public proof. Home, Work,
+and contextual inquiry discovery are connected. Production build, TypeScript,
+lint, the 35-route buyer smoke, desktop/tablet/phone inspection, zero-overflow
+checks, semantic inspection, and keyboard skip/focus passed. No protected data
+or outside-application state was accessed or changed.
 
 Round 162 reconciled the Cyvexly hot-memory layer after Chunk 8 closure. The
 active-chunk and next-handoff files now keep only the latest three complete
@@ -57,10 +70,11 @@ its separate review of the EduAILenz/Mudoinkle portfolio integration.
 
 ## Next work and gates
 
-Preserve primary source `48a2470` unless new Owner direction, changed primary
-source, buyer-use evidence, or primary reviewer evidence exposes a material
-reachable defect. Do not restart completed hierarchy, inquiry, service,
-pricing, Planner, or proof loops merely to keep the automation busy.
+Current Builder work is Chunk 9. The Round 163 candidate is implemented locally
+and intentionally not pushed or deployed while its required independent
+exact-source reviews remain outstanding. Do not access protected data or modify
+the outside applications. Do not restart completed hierarchy, service, pricing,
+Planner, or unrelated proof loops merely to keep the automation busy.
 
 Remaining primary-team gates:
 

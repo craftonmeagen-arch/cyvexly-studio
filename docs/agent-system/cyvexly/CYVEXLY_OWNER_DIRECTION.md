@@ -1,8 +1,117 @@
 # Cyvexly Owner Direction
 
+## EduAILenz and Mudoinkle showcase quality — 2026-09-10-01
+
+**Status:** ACTIVE — REOPENED PRIMARY CYVEXLY BUILDER PRIORITY
+**Source:** Owner's two screenshots and current conversation, 2026-09-10.
+
+### Owner direction — verbatim
+
+> These aren't the same quality of showcasing as velora. Look into this and compare velora to these. Define the difference and what the builder needs to do not how to do it just what needs done. Once defined put it in the cyvexly build owners orientation work. Then start the cyvexly builder schedular with this prompt "you are the cyvexly builder. Find the cyvexly builder orientation document and begin that work."
+
+### Current authority and scope
+
+This later direction assigns the **Cyvexly-facing showcase corrections for
+EduAILenz and Mudoinkle** to the primary Cyvexly Builder as a bounded exception
+to `2026-09-08-29`. It does not transfer their underlying application builds,
+HoneyHearted, credentials, or infrastructure to the primary team. Read-only
+inspection of relevant outside source, public runtime, and privacy-safe accepted
+evidence is permitted for accurate portfolio proof. Do not modify those outside
+repositories or access real student/customer records. Team 2 must not duplicate
+these showcase corrections; coordinate any existing entry work.
+
+Resume only the existing primary Cyvexly Builder scheduler with the Owner's
+exact quoted prompt, retaining GPT-5.6 Sol/high and its existing twice-hourly
+cadence. The earlier September 10 pause is superseded for this Builder only.
+Team 2 and Auditor scheduler states are unchanged. Prior Chunk 8 closure does
+not close this newly reopened work; reconcile the active round/chunk records
+before implementation. The Builder retains decisions about implementation.
+
+### Observed difference — comparison, not an implementation prescription
+
+Visible IAB inspection on September 10 compared `/work/velora-dining`,
+`/work/eduailenz`, and `/work/mudoinkle` on the deployed Cyvexly Render origin,
+plus the two linked public product homepages. The supplied screenshots match
+the weak case-study heroes. This review did not authenticate or establish
+end-to-end acceptance of either external application.
+
+- **Velora presents an experience:** a product-specific atmosphere, a strong
+  user-benefit headline, prominent real desktop/phone captures, recognizable
+  guest journeys, responsive visual proof, and a direct interactive-demo path.
+- **The new entries present a technical summary:** generic glass-card heroes,
+  small schematic interface illustrations, repeated headings such as
+  "Complexity organized around real users," long scope/architecture lists,
+  and no comparable actual-screen gallery or visual journey demonstration.
+- Their illustrations suppress real product identity. The public Mudoinkle
+  homepage has a distinctive pig mascot, expressive lettering, and playful
+  cream/navy/orange treatment absent from its portfolio diagram. EduAILenz's
+  current public page has a cream/navy/green identity and richer teacher-workflow
+  presentation, unlike the sparse purple workspace diagram in the case study.
+  Public marketing illustrations are not proof of authenticated workflows.
+- Operational language ("source and public-route intake," "focused acceptance,"
+  Render-origin/custom-domain explanations, "live-room authority") dominates
+  buyer attention. The necessary truth boundaries are present, but the buyer
+  must decipher a review report before appreciating what Cyvexly can build.
+- Existing custom-application inquiry/pricing links are useful and must remain;
+  the missing layer is compelling, inspectable evidence leading into them.
+
+### Required outcomes — what needs to be achieved
+
+1. **Equivalent showcase quality, distinct identities.** Both entries must feel
+   as deliberately art-directed and substantial as Velora, while expressing
+   their own real products. Preserve Cyvexly's approved blue-glass site identity
+   and accepted Velora; do not copy Velora's restaurant styling indiscriminately.
+2. **Real visual proof leads.** Give each entry prominent, legible, representative
+   desktop and phone evidence of the actual built experience. Schematic tiles
+   cannot stand in for the product. Show enough screen/context to understand
+   the work; decorative cropping, unreadable thumbnails, and invented screens
+   do not satisfy this requirement. Clearly distinguish screenshots, illustrative
+   concepts, and any safe demonstration material.
+3. **Show meaningful user journeys.** Each product needs several concrete,
+   visually supported examples that explain the user's task, the action, the
+   visible result, and the capability demonstrated. EduAILenz should make its
+   educator/learner workflows understandable; Mudoinkle should make the distinct
+   game experiences and host/player/display roles understandable. Select only
+   currently verified examples; a source route or landing-page claim alone is
+   not proof that a complete workflow works.
+4. **Sell capability in plain language.** Explain whom the product serves,
+   what problem it addresses, what Cyvexly actually contributed, and why the
+   design/engineering decisions matter to a potential client. Distinguish the
+   product's end users from Cyvexly's prospective buyers. Replace repeated
+   generic headings and process jargon with specific, concise product stories.
+5. **Make proof easy to inspect.** Visitors must understand the work without
+   signing up, supplying private data, or navigating a complex app unaided.
+   Offer an understandable on-page tour/proof path and clearly labeled live or
+   staging destinations with accurate access expectations. An external homepage
+   link alone is insufficient. Do not weaken authentication or imply access
+   to protected features that visitors cannot actually use.
+6. **Keep limitations truthful and proportionate.** State active-development,
+   staging, incomplete-feature, synthetic-data, and contribution boundaries
+   clearly where relevant. Keep internal testing dates, deployment troubleshooting,
+   and audit mechanics in team records rather than the sales narrative. Do not
+   hide material limitations, fabricate clients/results, or relabel unfinished
+   applications as production-complete to make the pages more persuasive.
+7. **Carry quality through the whole buyer journey.** Home/Work cards, case-study
+   heroes, supporting proof, mobile presentation, and project inquiry must tell
+   a consistent story. Preserve useful service/pricing connections and carry
+   relevant project context into the inquiry without adding compulsory steps.
+
+### Acceptance
+
+Compare both completed entries side by side with Velora in a visible interactive
+browser at desktop, tablet, and phone sizes. Demonstrate readable visual proof,
+clear hierarchy, distinct brand character, meaningful capability comprehension,
+working proof/demo/navigation paths, keyboard access, and no misleading claims.
+A buyer should be able to explain what each product does, what Cyvexly built,
+which concrete capabilities are demonstrated, what remains limited, and how to
+ask for comparable work. Record exact accepted source and rendered evidence,
+then follow normal commit/push/deployment and independent-review requirements.
+Do not close this direction because a page builds, links work, or generic text
+has been replaced while the actual showcasing remains below Velora's standard.
+
 ## Scheduler pause and reconciliation 2026-09-10
 
-**Status:** ACTIVE — BUILDERS PAUSED
+**Status:** PARTIALLY SUPERSEDED — PRIMARY BUILDER RESUMED BY 2026-09-10-01; OTHER PAUSES REMAIN
 **Recorded:** 2026-09-10 America/New_York
 
 The Owner paused both Builder schedulers; the Team 2 HoneyHearted Auditor was

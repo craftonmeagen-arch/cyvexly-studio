@@ -1,4 +1,11 @@
 # Cyvexly Build Team — Cyvexly Studio
+
+**Read first — 2026-09-10-01:** The newest Cyvexly Owner Direction reopens
+EduAILenz/Mudoinkle's Cyvexly showcase quality as primary Builder work, a bounded
+exception to older Team 2 exclusions below. Resume authority applies only to
+the primary Builder; all other pauses remain. Underlying outside products
+remain Team 2 scope. The required outcome is Velora-level showcasing, not a
+redesign of the outside applications.
 Updated 2026-09-08 by Owner direction to make the team assignment explicit.
 
 **Canonical team identity:** **Cyvexly Build Team**. This Cyvexly project

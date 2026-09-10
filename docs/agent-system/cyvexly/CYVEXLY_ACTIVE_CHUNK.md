@@ -1,33 +1,54 @@
 # Cyvexly Active Chunk
 
-**Active product chunk:** none; Chunk 8 closed in global round 159
+**Active product chunk:** Chunk 9 — EduAILenz & Mudoinkle Showcase Quality
 
-**Next position:** global round 163; await new reachable primary-Cyvexly work
+**Current position:** global round 164; chunk-local round 2
 
-**Accepted primary source:** `48a2470`; production head `493d1e6` adds Team 2's
-bounded outside-site portfolio integration directly on top
+**Starting source:** repository head `7bfbd8f`; production product baseline
+`493d1e6` contains Team 2's initial portfolio integration. The exact Round 163
+candidate source is recorded in `CYVEXLY_NEXT_BUILDER_HANDOFF.md` after commit.
 
-**Scheduler state:** both Builder schedulers and the Team 2 HoneyHearted
-Auditor are paused pending later explicit Owner direction.
+**Scheduler state:** primary Cyvexly Builder resumed by Owner direction
+`2026-09-10-01`; Team 2 Builder and Auditor scheduler states are unchanged.
 
-## Current position and boundaries
+## Outcome and boundaries
 
-The Chunk 8 buyer outcome is closed: serious buyers can decide fit, proof,
-cost, risk, and next step through the accepted cyber-blue glass experience.
-Independent R112 and exact-source R116 satisfy the two-round verification
-boundary. Guardio provider review remains a named Owner/account-holder gap,
-not a demonstrated product defect.
+Bring EduAILenz and Mudoinkle's Cyvexly presentation to Velora's accepted
+quality: distinct product atmosphere, prominent legible desktop/phone proof,
+several understandable workflows, plain-language capability value, easy
+proof/live paths, and truthful proportional limits throughout case-study,
+Work, Home, responsive, and inquiry surfaces.
 
-Direction `2026-09-08-29` assigns HoneyHearted, EduAILenz, Mudoinkle, every
-other outside website, and their bounded Cyvexly portfolio integrations only
-to Team 2. This lane must not implement, audit, or claim that work.
+This chunk is a bounded exception for the Cyvexly-facing showcases only. Do not
+modify the outside applications, their data, credentials, infrastructure, or
+HoneyHearted. Public marketing illustrations may support an explicitly labeled
+guided tour but cannot be presented as proof of authenticated workflow success.
 
-Primary source stays stable unless new Owner direction, changed primary source,
-buyer-use evidence, or primary reviewer evidence exposes a material reachable
-defect. Do not invent a product task or repeat completed hierarchy, inquiry,
-service, pricing, Planner, or proof loops.
+## Provisional round directions
 
-Remaining primary gates:
+- establish the live visual/content baseline and capture public-safe proof;
+- rebuild both case studies around distinct identities and real screenshots;
+- connect Work/Home discovery and preserve inquiry/pricing context;
+- compare against Velora at desktop/tablet/phone and correct material drift;
+- acquire two independent exact-source verification rounds before closure.
+
+## Round 163 plan
+
+- **Outcome:** deliver the first coherent showcase-quality implementation for
+  both entries, including real public desktop/phone proof and several guided
+  journey views.
+- **Method:** follow the accepted Velora case-study pattern at the level of
+  hierarchy and inspectability, while using each product's own visual identity
+  and concise truth boundaries.
+- **Reachability:** this is a normal editorial case-study implementation on the
+  existing Next.js platform. It needs no new service, credential, protected
+  data, or outside-repository write; current public routes and privacy-safe
+  captures are sufficient for the first implementation.
+- **Proof:** build/lint/typecheck, content regression, real local desktop/tablet/
+  phone browser inspection beside Velora, navigation/keyboard checks, and
+  exact diff/source review.
+
+Pre-existing primary gates remain outside this chunk:
 
 - one complete independent physical/visual review of accepted Velora source
   `fce01e8` (R93 was source-only);
@@ -38,6 +59,28 @@ Remaining primary gates:
 
 Team 2 report `HH-IFA-023` closed review of production baseline `493d1e6`;
 primary R116 covers only `48a2470`.
+
+## Round 163 — first showcase-quality candidate
+
+- **Built:** replaced the generic schematic-led EduAILenz and Mudoinkle case
+  studies with distinct product atmospheres, real current desktop/phone
+  captures, three concrete user journeys each, explicit Cyvexly contribution,
+  truthful current limits, direct public proof, and contextual inquiry paths.
+- **Connected:** promoted both built product systems on Home and replaced their
+  Work-card diagrams with real product views while preserving Velora/Nexora's
+  existing prominence and all unrelated buyer journeys.
+- **Corrected from rendered evidence:** exempted the new branded heroes from a
+  generic section-background cascade that washed out their color and contrast;
+  added a focusable main target so the skip link lands correctly.
+- **Proof:** production build, TypeScript, lint, and the 35-route/17-context
+  buyer smoke passed. Visible desktop/tablet/phone review covered both case
+  studies plus Home and Work; inspected widths had zero horizontal overflow;
+  semantic structure and keyboard focus order passed.
+- **Boundary:** captures came only from public pages, use no private data, and
+  are labeled as public tour/staging evidence. No outside application, account,
+  credential, room, student record, submission, production deployment, or
+  scheduler state was changed. Candidate awaits two independent exact-source
+  reviews before Chunk 9 closes.
 
 ## Round 162 — hot-memory source-truth reconciliation
 
@@ -59,14 +102,6 @@ primary R116 covers only `48a2470`.
   views had no horizontal overflow or browser warning/error.
 - **Decision:** no primary defect surfaced, so no chunk reopened. Team 2's new
   portfolio entries were intentionally outside the review.
-
-## Round 160 — bounded methodology and source-truth audit
-
-- **Decision:** no primary evidence justified reopening product work.
-- **Source proof:** production `493d1e6` directly parents to `48a2470`; its
-  changed product/test paths are the already-routed Team 2 integration.
-- **Validation:** role setup, 54 lifecycle fixtures, whitespace, cleanup, and
-  hot-file checks passed. Product and external state stayed unchanged.
 
 Older round detail is preserved in `CYVEXLY_BUILD_SUMMARY.md`,
 `docs/archive/chunks/`, Git history, and role memory.

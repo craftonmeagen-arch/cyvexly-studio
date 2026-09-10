@@ -114,7 +114,7 @@ body {
   isolation: isolate;
 }
 
-.site-root > main > section:not(.page-intro-stage):not(.home-hero-stage):not(.pricing-hero-stage):not(.glass-section):not(.glass-continuation):not(.service-combinations-stage):not(.pricing-package-stage) {
+.site-root > main > section:not(.page-intro-stage):not(.home-hero-stage):not(.pricing-hero-stage):not(.external-product-hero-stage):not(.glass-section):not(.glass-continuation):not(.service-combinations-stage):not(.pricing-package-stage) {
   background:
     radial-gradient(circle at 86% 14%, rgba(54, 199, 255, 0.14), transparent 24rem),
     linear-gradient(122deg, rgba(248, 252, 255, 0.06), rgba(98, 184, 240, 0.12) 48%, rgba(242, 250, 255, 0.05));
@@ -1535,7 +1535,7 @@ body {
     background-size: auto, auto, auto, 42px 42px, 42px 42px, auto, auto;
   }
 
-  .site-root > main > section:not(.page-intro-stage):not(.home-hero-stage):not(.pricing-hero-stage):not(.glass-section):not(.glass-continuation):not(.service-combinations-stage):not(.pricing-package-stage) {
+  .site-root > main > section:not(.page-intro-stage):not(.home-hero-stage):not(.pricing-hero-stage):not(.external-product-hero-stage):not(.glass-section):not(.glass-continuation):not(.service-combinations-stage):not(.pricing-package-stage) {
     backdrop-filter: blur(9px) saturate(120%);
   }
 }

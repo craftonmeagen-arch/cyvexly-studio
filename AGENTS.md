@@ -1,5 +1,13 @@
 # Cyvexly Build Team and Team 2 — Current Agent Guidance
 
+**Latest bounded exception — Owner direction 2026-09-10-01:** The primary
+Cyvexly Builder owns the Cyvexly-facing EduAILenz/Mudoinkle showcase-quality
+corrections measured against Velora. Read the newest Cyvexly Owner Direction
+before applying older team exclusions or closed-work/paused-Builder notes.
+Outside application builds and HoneyHearted remain Team 2 scope. Only the
+primary Cyvexly Builder scheduler is being resumed; no other scheduler changes
+are authorized by this direction.
+
 **Two-team boundary:** the **Cyvexly Build Team** owns every part of
 `cyvexly.com` except work specifically required to bring an outside website
 into its portfolio. **Team 2** exclusively owns outside-website work and those

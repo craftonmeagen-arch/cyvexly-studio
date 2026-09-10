@@ -1,5 +1,16 @@
 # Team 2 Owner Direction
 
+## Bounded showcase handoff — 2026-09-10-01
+
+The Owner has now assigned corrections to the **Cyvexly-facing EduAILenz and
+Mudoinkle showcases** to the primary Cyvexly Builder, with Velora as the quality
+standard. The complete outcome definition is at the top of
+`docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md`. This is a bounded exception
+to the older exclusive portfolio assignment: do not duplicate these corrections.
+Preserve and make available the accepted privacy-safe integration evidence;
+coordinate any overlapping portfolio work. Underlying outside applications and
+HoneyHearted remain Team 2 scope. Team 2's scheduler pause is unchanged.
+
 ## Team 2 scheduler pause 2026-09-10
 
 **Status:** ACTIVE — RECURRING TEAM 2 BUILDER AND AUDITOR PAUSED

@@ -1,6 +1,15 @@
 # Cyvexly Build Team Builder Orientation Document — Cyvexly Project Environment
 **Canonical role:** Cyvexly Build Team Builder. **Status:** Active; current Drive rules adopted 2026-09-04.
 
+**Latest Owner priority — 2026-09-10-01:** Read the new showcase-quality direction
+at the top of `docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md` first.
+The primary Builder now owns the bounded Cyvexly-facing EduAILenz/Mudoinkle
+showcase corrections to Velora's presentation standard. This expressly overrides
+the older exclusion below for these showcase surfaces only; outside application
+builds and HoneyHearted remain outside this role. The primary Builder scheduler
+is authorized to resume; prior chunk closure/no-reachable-work notes do not
+close this new assignment. Follow normal orientation and round discipline.
+
 **Team split correction (2026-09-08-27):** this role was briefly labeled "Team
 Two Website Builder" under identity direction `2026-09-08-18`. The Owner has
 since clarified (Claude Code chat, 2026-09-08) that "Team Two" is a distinct

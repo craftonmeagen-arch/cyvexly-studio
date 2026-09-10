@@ -6,7 +6,14 @@ Outside-website work belongs to Team 2.
 
 ## Open
 
-1. **Chunk 6 — one complete Velora independent physical/visual review.**
+1. **Chunk 9 — independent verification of the implemented showcase candidate.**
+   Round 163 completed the distinct product identities, real public-safe
+   desktop/phone evidence, concrete guided journeys, buyer-readable capability
+   stories, proportional limitations, Work/Home/inquiry discovery, and local
+   responsive/keyboard proof. Two separate independent exact-source review
+   rounds remain before closure; correct any material finding before continuing.
+
+2. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with
    uncropped desktop/mobile proof, six scannable capabilities, truthful status
    and contribution language, detailed disclosure, and a hospitality-specific
