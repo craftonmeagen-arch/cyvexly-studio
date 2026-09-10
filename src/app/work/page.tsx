@@ -23,12 +23,12 @@ export default function WorkPage() {
               Work
             </p>
             <h1 className="mt-3 font-display text-4xl font-semibold leading-tight text-midnight-slate sm:text-5xl">
-              Working experiences and product systems you can inspect.
+              Websites and apps you can inspect.
             </h1>
             <p className="mt-3 text-base leading-relaxed text-cool-graphite sm:text-lg">
-              Compare two fictional demonstrations with two deeper built product
-              systems. Each case study distinguishes working capability, current
-              lifecycle, and anything that still needs focused proof.
+              Explore two fictional demonstrations and two deeper built product
+              systems. Each case study shows what works, what Cyvexly
+              contributed, and what still needs proof.
             </p>
           </div>
         </section>

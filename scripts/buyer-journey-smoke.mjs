@@ -371,7 +371,7 @@ assert.doesNotMatch(home, /href="\/pricing"[^>]*>Need something custom\? Let/);
 assert.doesNotMatch(home, />Most popular</);
 assert.match(home, />Recommended</);
 
-assert.match(work, /Working experiences and product systems you can inspect/);
+assert.match(work, /Websites and apps you can inspect/);
 assert.match(work, /Selectable time ranges and comparison states/);
 assert.match(work, /Reservation and private-event demo flows/);
 assert.match(
