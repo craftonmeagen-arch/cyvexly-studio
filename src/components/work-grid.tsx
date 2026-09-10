@@ -17,7 +17,17 @@ const realProjectPreviews: Record<string, { src: string; alt: string }> = {
   },
 };
 
-export function WorkGrid() {
+type WorkGridProps = {
+  idPrefix?: string;
+  projectHeadingLevel?: "h2" | "h3";
+  regionLabel?: string;
+};
+
+export function WorkGrid({
+  idPrefix = "work",
+  projectHeadingLevel = "h2",
+  regionLabel = "Cyvexly work projects",
+}: WorkGridProps) {
   const railRef = useRef<HTMLDivElement>(null);
   const [visibleRange, setVisibleRange] = useState({ start: 0, end: 0 });
   const [canScrollBack, setCanScrollBack] = useState(false);
@@ -33,7 +43,7 @@ export function WorkGrid() {
     if (!cards.length) return;
 
     const railRect = rail.getBoundingClientRect();
-    const tolerance = 2;
+    const tolerance = 8;
     const visible = cards
       .map((card, index) => ({ index, rect: card.getBoundingClientRect() }))
       .filter(({ rect }) => {
@@ -109,6 +119,11 @@ export function WorkGrid() {
     visibleRange.start === visibleRange.end
       ? `Project ${visibleRange.start + 1} of ${selectedWork.length}`
       : `Projects ${visibleRange.start + 1}–${visibleRange.end + 1} of ${selectedWork.length}`;
+  const railId = `${idPrefix}-project-rail`;
+  const instructionsId = `${idPrefix}-rail-instructions`;
+  const mobileInstructionsId = `${idPrefix}-rail-instructions-mobile`;
+  const statusId = `${idPrefix}-rail-status`;
+  const ProjectHeading = projectHeadingLevel;
 
   return (
     <div>
@@ -117,18 +132,19 @@ export function WorkGrid() {
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-cyber-blue">
             Browse the collection
           </p>
-          <p id="work-rail-instructions" className="mt-1 hidden text-sm text-cool-graphite sm:block">
+          <p id={instructionsId} className="mt-1 hidden text-sm text-cool-graphite sm:block">
             Swipe, scroll, use the arrow keys, or choose a direction.
           </p>
         </div>
         <p
+          id={statusId}
           className="min-w-[8.5rem] text-right font-mono text-xs font-semibold uppercase tracking-[0.12em] text-midnight-slate"
           aria-live="polite"
           aria-atomic="true"
         >
           {positionLabel}
         </p>
-        <p id="work-rail-instructions-mobile" className="text-xs text-cool-graphite sm:hidden">
+        <p id={mobileInstructionsId} className="text-xs text-cool-graphite sm:hidden">
           Swipe or use arrows.
         </p>
         <div className="flex justify-end gap-2" aria-label="Work carousel controls">
@@ -138,7 +154,7 @@ export function WorkGrid() {
             onClick={() => canScrollBack && moveRail(-1)}
             aria-disabled={!canScrollBack}
             aria-label="Previous projects"
-            aria-controls="work-project-rail"
+            aria-controls={railId}
           >
             <span aria-hidden="true">←</span>
           </button>
@@ -148,7 +164,7 @@ export function WorkGrid() {
             onClick={() => canScrollForward && moveRail(1)}
             aria-disabled={!canScrollForward}
             aria-label="Next projects"
-            aria-controls="work-project-rail"
+            aria-controls={railId}
           >
             <span aria-hidden="true">→</span>
           </button>
@@ -156,13 +172,13 @@ export function WorkGrid() {
       </div>
 
       <div
-        id="work-project-rail"
+        id={railId}
         ref={railRef}
         className="work-project-rail"
         role="region"
         aria-roledescription="carousel"
-        aria-label="Cyvexly work projects"
-        aria-describedby="work-rail-instructions work-rail-instructions-mobile"
+        aria-label={regionLabel}
+        aria-describedby={`${instructionsId} ${mobileInstructionsId}`}
         tabIndex={0}
         onKeyDown={(event) => {
           if (event.key === "ArrowLeft") {
@@ -210,9 +226,9 @@ export function WorkGrid() {
                 <span className="w-fit rounded-full bg-ice-field px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
                   {project.kind}
                 </span>
-                <h2 className="font-display text-lg font-semibold text-midnight-slate">
+                <ProjectHeading className="font-display text-lg font-semibold text-midnight-slate">
                   {project.name}
-                </h2>
+                </ProjectHeading>
                 <p className="text-sm text-cool-graphite">{project.summary}</p>
                 <ul className="mt-3 space-y-2 text-sm leading-relaxed text-midnight-slate">
                   {project.capabilities.map((capability) => (

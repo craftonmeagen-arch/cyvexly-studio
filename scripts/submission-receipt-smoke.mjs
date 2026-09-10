@@ -181,6 +181,27 @@ async function submitContact(client, confirmationSent, width, height) {
   return readReceipt(client);
 }
 
+async function submitConsultation(client, method, confirmationSent, width, height) {
+  await openRoute(client, "/contact?request=consultation", width, height);
+  await waitFor(client, `Boolean(document.querySelector("form"))`, "Consultation form");
+  await evaluate(
+    client,
+    `(() => {
+      document.getElementById("name").value = "Consultation test";
+      ${method === "phone" ? "document.querySelector('input[value=\"phone\"]').click();" : ""}
+      const contact = document.getElementById(${JSON.stringify(method === "phone" ? "phone" : "email")});
+      contact.value = ${JSON.stringify(method === "phone" ? "317-555-0142" : "consult@example.com")};
+      document.getElementById("preferredWindow").value = "Afternoon";
+      document.getElementById("requesterTimeZone").value = "Central (CT)";
+      document.getElementById("message").value = "Please ask about a small-business redesign.";
+      document.getElementById("consent").click();
+      window.__receiptConfirmationSent = ${confirmationSent};
+      document.querySelector("form").requestSubmit();
+    })()`,
+  );
+  return readReceipt(client);
+}
+
 async function submitPlanner(client, confirmationSent, width, height) {
   await openRoute(client, "/start", width, height);
   const draft = {
@@ -230,6 +251,7 @@ async function main() {
     "about:blank",
   ], { stdio: "ignore", windowsHide: true });
   const failures = [];
+  const consultationPayloads = [];
   let client;
 
   try {
@@ -252,9 +274,16 @@ async function main() {
       }),
     ]);
 
-    client.on("Fetch.requestPaused", async ({ requestId }) => {
+    client.on("Fetch.requestPaused", async ({ requestId, request }) => {
       const confirmationSent = await evaluate(client, "window.__receiptConfirmationSent === true");
-      const body = Buffer.from(JSON.stringify({ ok: true, confirmationSent })).toString("base64");
+      const payload = request.postData ? JSON.parse(request.postData) : {};
+      if (payload.requestType === "consultation") consultationPayloads.push(payload);
+      const body = Buffer.from(JSON.stringify({
+        ok: true,
+        confirmationSent,
+        confirmationAvailable: payload.contactMethod !== "phone",
+        ...(payload.requestType === "consultation" ? { nextBusinessDay: "Friday, September 11, 2026" } : {}),
+      })).toString("base64");
       await client.send("Fetch.fulfillRequest", {
         requestId,
         responseCode: 200,
@@ -278,6 +307,33 @@ async function main() {
     assert.match(contactComplete.text, /we emailed you a confirmation/i);
     assert.ok(contactComplete.overflow <= 1);
 
+    const consultationEmail = await submitConsultation(client, "email", true, 1280, 800);
+    await capture(client, "consultation-email-confirmation-desktop.png");
+    assert.equal(consultationEmail.delivery, "sent");
+    assert.match(consultationEmail.text, /consultation request sent/i);
+    assert.match(consultationEmail.text, /Friday, September 11, 2026/);
+    assert.match(consultationEmail.text, /not a booked appointment/i);
+
+    const consultationPhone = await submitConsultation(client, "phone", false, 390, 844);
+    await capture(client, "consultation-phone-request.png");
+    assert.equal(consultationPhone.delivery, "failed");
+    assert.match(consultationPhone.text, /phone response/i);
+    assert.doesNotMatch(consultationPhone.text, /couldn(?:'|’)t email a confirmation/i);
+    assert.ok(consultationPhone.bottom <= consultationPhone.viewportHeight);
+    assert.ok(consultationPhone.overflow <= 1);
+    assert.deepEqual(
+      consultationPayloads.map(({ contactMethod, preferredWindow, requesterTimeZone, message }) => ({
+        contactMethod,
+        preferredWindow,
+        requesterTimeZone,
+        message,
+      })),
+      [
+        { contactMethod: "email", preferredWindow: "Afternoon", requesterTimeZone: "Central (CT)", message: "Please ask about a small-business redesign." },
+        { contactMethod: "phone", preferredWindow: "Afternoon", requesterTimeZone: "Central (CT)", message: "Please ask about a small-business redesign." },
+      ],
+    );
+
     const plannerPartial = await submitPlanner(client, false, 390, 844);
     await capture(client, "planner-confirmation-unavailable-phone.png");
     assert.equal(plannerPartial.delivery, "failed");
@@ -297,9 +353,11 @@ async function main() {
       baseUrl,
       contactPartial,
       contactComplete,
+      consultationEmail,
+      consultationPhone,
       plannerPartial,
       plannerComplete,
-      interceptedRequests: 4,
+      interceptedRequests: 6,
       realMessagesSent: 0,
       status: "passed",
     }, null, 2));

@@ -3,6 +3,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { PlannerForm } from "@/components/planner/planner-form";
 import { getServicePlannerSelection } from "@/lib/planner-config";
 import { buildPageMetadata } from "@/lib/seo";
+import { ButtonLink } from "@/components/button";
 
 export const metadata = buildPageMetadata({
   title: "Project Planner — Cyvexly Studio",
@@ -53,6 +54,12 @@ export default async function StartPage({
               recommend it&rdquo; anywhere technical knowledge would otherwise be required.
               No payment is requested here.
             </p>
+            <p className="mt-5 text-sm text-cool-graphite">
+              Prefer a quick conversation?{" "}
+              <ButtonLink href="/contact?request=consultation" variant="text" className="text-sm">
+                Request a consultation—no brief required →
+              </ButtonLink>
+            </p>
           </div>
         </section>
 
@@ -61,6 +68,12 @@ export default async function StartPage({
             <PlannerForm initialSelection={initialSelection} />
 
             <aside className="glass-panel h-fit rounded-2xl p-6 lg:sticky lg:top-24">
+              <div className="mb-6 rounded-xl border border-cyber-blue/25 bg-cyber-blue/[0.06] p-4">
+                <p className="text-sm font-medium text-midnight-slate">Not ready for nine steps?</p>
+                <ButtonLink href="/contact?request=consultation" variant="text" className="mt-2 text-sm">
+                  Request next-business-day contact →
+                </ButtonLink>
+              </div>
               <h2 className="font-display text-sm font-semibold text-midnight-slate">
                 What happens next
               </h2>

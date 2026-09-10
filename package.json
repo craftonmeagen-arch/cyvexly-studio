@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:business-days": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/business-day-smoke.mjs",
+    "test:consultation-api": "node scripts/consultation-api-smoke.mjs"
   },
   "dependencies": {
     "next": "16.3.3",

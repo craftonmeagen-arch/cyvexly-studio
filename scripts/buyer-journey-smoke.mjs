@@ -54,24 +54,43 @@ const inquiryPlannerServices = {
 };
 
 const contextEntries = Object.entries(inquiryContexts);
-const [home, services, pricing, planner, plainContact, unknownContact, genericContact, ...contextualContacts] =
+const [home, services, pricing, planner, plainContact, consultationContact, unknownContact, genericContact, ...contextualContacts] =
   await Promise.all([
     read("/"),
     read("/services"),
     read("/pricing"),
     read("/start"),
     read("/contact"),
+    read("/contact?request=consultation"),
     read("/contact?interest=not-a-real-context"),
     read("/contact?interest=custom-project"),
     ...contextEntries.map(([interest]) => read(`/contact?interest=${interest}`)),
   ]);
-const [work, processHtml, about, faq, sitemap] = await Promise.all([
+const [work, processHtml, about, faq, sitemap, privacy, terms] = await Promise.all([
   read("/work"),
   read("/process"),
   read("/about"),
   read("/faq"),
   read("/sitemap.xml"),
+  read("/privacy"),
+  read("/terms"),
 ]);
+
+for (const legalPage of [privacy, terms]) {
+  assert.match(legalPage, /Cyvexly LLC/);
+  assert.match(legalPage, /formation/);
+  assert.match(legalPage, /filing-name verification/);
+  assert.doesNotMatch(legalPage, /operated as a limited liability company/);
+}
+assert.match(home, /href="\/contact\?request=consultation"/);
+assert.match(planner, /href="\/contact\?request=consultation"/);
+assert.match(plainContact, /Request a consultation/);
+assert.match(consultationContact, /Request a consultation/);
+assert.match(consultationContact, /next business day/i);
+assert.match(consultationContact, /Request consultation/);
+assert.match(consultationContact, /Preferred contact method/);
+assert.match(consultationContact, /Preferred window/);
+assert.match(consultationContact, /Your timezone/);
 
 for (const [name, html] of [
   ["Services", services],
@@ -127,7 +146,7 @@ assert.match(
 );
 assert.match(
   plainContact,
-  /page-intro-shell[^\"]*py-4[^\"]*sm:py-7/,
+  /page-intro-shell[^\"]*py-3[^\"]*sm:py-7/,
   "Contact restored the oversized opening panel",
 );
 assert.match(
@@ -137,8 +156,13 @@ assert.match(
 );
 assert.match(
   plainContact,
-  /hidden sm:inline[^>]*>Already know the details\?/,
-  "Contact puts the detailed-Planner pitch ahead of the short form on phones",
+  /Want to skip the project description\?/,
+  "Contact does not expose the consultation path before the short form",
+);
+assert.doesNotMatch(
+  plainContact,
+  /hidden sm:inline[^>]*>Want to skip the project description\?/,
+  "Contact hides the consultation path on phones",
 );
 const serviceSlugs = [
   "business-websites",
@@ -355,8 +379,10 @@ for (const careDecision of [
 
 assert.match(home, /href="\/contact\?interest=custom-project"[^>]*>Ask about a project/);
 assert.match(home, /href="\/work"[^>]*>View our work/);
-assert.match(home, /Try interactive demo/);
-assert.match(home, /Two working demos\. Two different problems\./);
+assert.match(home, />Try demo</);
+assert.match(home, /Four projects\. Four different problems\./);
+assert.match(home, /Featured Cyvexly work projects/);
+assert.doesNotMatch(home, /Compare both projects|Both are fictional/);
 assert.match(
   home,
   /href="\/media\/nexora-release-demo\.png"/,
@@ -542,6 +568,10 @@ const privacySource = await readFile(
   new URL("../src/app/privacy/page.tsx", import.meta.url),
   "utf8",
 );
+const businessDaySource = await readFile(
+  new URL("../src/lib/business-days.ts", import.meta.url),
+  "utf8",
+);
 const submissionFallbackSource = await readFile(
   new URL("../src/components/submission-fallback.tsx", import.meta.url),
   "utf8",
@@ -573,6 +603,8 @@ assert.match(contactFormSource, /<SubmissionFallback message=\{submitError\}/);
 assert.match(plannerFormSource, /<SubmissionFallback message=\{submitError\}/);
 for (const source of [contactRouteSource, plannerRouteSource]) {
   assert.match(source, /confirmationSent: confirmationResult\.ok/);
+  assert.doesNotMatch(source, /`IP: /);
+  assert.doesNotMatch(source, /· IP /);
 }
 for (const source of [contactFormSource, plannerFormSource]) {
   assert.match(source, /<SubmissionReceipt[\s\S]*confirmationSent=\{confirmationSent === true\}/);
@@ -583,8 +615,18 @@ assert.match(submissionReceiptSource, /receipt\.focus\(\{ preventScroll: true \}
 assert.match(submissionReceiptSource, /receipt\.scrollIntoView\(/);
 assert.match(submissionReceiptSource, /prefers-reduced-motion: reduce/);
 assert.match(plannerFormSource, /We(?:&apos;|')ll also try to[\s\S]*email you a confirmation copy/);
-assert.match(privacySource, /attempts to email you a confirmation/);
-assert.match(privacySource, /emails this process successfully sends/);
+assert.match(privacySource, /phone-only consultation/);
+assert.match(privacySource, /Resend(?:&apos;|')s delivery systems/);
+assert.match(privacySource, /raw IP address is not placed/);
+assert.match(privacySource, /proposed[\s\S]*12 months/);
+assert.match(contactFormSource, /name="contactMethod"/);
+assert.match(contactFormSource, /name="preferredWindow"/);
+assert.match(contactFormSource, /name="requesterTimeZone"/);
+assert.match(contactFormSource, /No email confirmation was sent because you requested a phone response/);
+assert.match(contactRouteSource, /claimRecentSubmission/);
+assert.match(contactRouteSource, /requestType === "consultation"/);
+assert.match(businessDaySource, /America\/New_York/);
+assert.match(businessDaySource, /holidayKeys/);
 assert.match(submissionFallbackSource, /data-submission-fallback/);
 assert.match(submissionFallbackSource, /fallback\.focus\(\{ preventScroll: true \}\)/);
 assert.match(submissionFallbackSource, /fallback\.scrollIntoView\(/);
@@ -647,7 +689,7 @@ assert.match(
 );
 assert.match(work, /href="\/work\/nexora-systems"/);
 assert.match(work, /href="\/nexora"[^>]*>Try demo/);
-assert.match(home, /href="\/nexora"[^>]*>Try interactive demo/);
+assert.match(home, /href="\/nexora"[^>]*>Try demo/);
 assert.match(nexoraCase, /Built concept demo — fictional/);
 assert.match(nexoraCase, /href="\/nexora"[^>]*>Explore the live demo/);
 assert.match(nexoraCase, /Cyvexly-built fictional demonstration/);
@@ -691,9 +733,9 @@ assert.match(mudoinkleCase, /href="\/contact\?interest=party-game-platform"/);
 assert.match(mudoinkleCase, /\/media\/mudoinkle-live-desktop\.png/);
 assert.match(mudoinkleCase, /\/media\/mudoinkle-live-mobile\.png/);
 assert.match(mudoinkleCase, /target="_blank"[^>]*href="https:\/\/mudoinkle-staging\.onrender\.com\/"/);
-assert.match(home, /More ways Cyvexly handles product complexity/);
-assert.match(home, /href="\/work\/eduailenz"[^>]*>[\s\S]*?Tour the case study/);
-assert.match(home, /href="\/work\/mudoinkle"[^>]*>[\s\S]*?Tour the case study/);
+assert.match(home, /Built product system/);
+assert.match(home, /href="\/work\/eduailenz"[^>]*>[\s\S]*?View case study/);
+assert.match(home, /href="\/work\/mudoinkle"[^>]*>[\s\S]*?View case study/);
 
 for (const detail of serviceDetails) {
   assert.match(detail, /Relevant working example/);

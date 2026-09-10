@@ -1,4 +1,4 @@
-import { timingSafeEqual } from "node:crypto";
+import { createHash, timingSafeEqual } from "node:crypto";
 import { Resend } from "resend";
 import { siteConfig } from "@/lib/site-config";
 
@@ -99,6 +99,7 @@ export function textToHtml(value: string): string {
 // a substitute for a real distributed limiter if the service is later
 // scaled to multiple instances.
 const submissionLog = new Map<string, number[]>();
+const recentSubmissionFingerprints = new Map<string, number>();
 const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
 const RATE_LIMIT_MAX = 5;
 // Every key this limiter ever sees gets a permanent Map entry unless swept —
@@ -140,6 +141,31 @@ export function checkRateLimit(key: string): boolean {
   timestamps.push(now);
   submissionLog.set(key, timestamps);
   return true;
+}
+
+const DUPLICATE_WINDOW_MS = 10 * 60 * 1000;
+const MAX_RECENT_SUBMISSION_FINGERPRINTS = 5000;
+
+/**
+ * Claims a privacy-safe digest for a short duplicate-submission window. Call
+ * release() when delivery fails so the visitor can retry the preserved form.
+ */
+export function claimRecentSubmission(value: string): { duplicate: boolean; release: () => void } {
+  const now = Date.now();
+  for (const [key, createdAt] of recentSubmissionFingerprints) {
+    if (now - createdAt >= DUPLICATE_WINDOW_MS) recentSubmissionFingerprints.delete(key);
+  }
+  while (recentSubmissionFingerprints.size >= MAX_RECENT_SUBMISSION_FINGERPRINTS) {
+    const oldestKey = recentSubmissionFingerprints.keys().next().value as string | undefined;
+    if (!oldestKey) break;
+    recentSubmissionFingerprints.delete(oldestKey);
+  }
+  const key = createHash("sha256").update(value).digest("hex");
+  if (recentSubmissionFingerprints.has(key)) {
+    return { duplicate: true, release: () => {} };
+  }
+  recentSubmissionFingerprints.set(key, now);
+  return { duplicate: false, release: () => recentSubmissionFingerprints.delete(key) };
 }
 
 /**

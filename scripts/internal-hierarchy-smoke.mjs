@@ -592,6 +592,214 @@ async function main() {
     })()`);
     await capture(client, "work-rail-minimum-phone.png");
 
+    await openRoute(client, "/", 1280, 720);
+    await evaluate(client, `(() => {
+      const railHeader = document.getElementById('home-work-project-rail').previousElementSibling;
+      window.scrollTo({ top: window.scrollY + railHeader.getBoundingClientRect().top - 104, behavior: 'instant' });
+    })()`);
+    let homeRailDesktopStatus = "";
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      homeRailDesktopStatus = await evaluate(
+        client,
+        `document.getElementById('home-work-rail-status')?.textContent.trim() ?? ''`,
+      );
+      if (homeRailDesktopStatus === "Projects 1–2 of 4") break;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    const homeRailDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('home-work-project-rail');
+      const cards = [...rail.querySelectorAll('[data-work-card]')];
+      const controls = [...document.querySelectorAll('[aria-controls="home-work-project-rail"]')];
+      return {
+        heading: rail.closest('section').querySelector('h2').textContent.trim(),
+        order: cards.map((card) => card.querySelector('h3').textContent.trim()),
+        cardWidths: cards.map((card) => card.getBoundingClientRect().width),
+        clientWidth: rail.clientWidth,
+        scrollWidth: rail.scrollWidth,
+        label: rail.getAttribute('aria-label'),
+        describedBy: rail.getAttribute('aria-describedby'),
+        controlHeights: controls.map((control) => control.getBoundingClientRect().height),
+        controlTargets: controls.map((control) => control.getAttribute('aria-controls')),
+        previousDisabled: controls[0].getAttribute('aria-disabled'),
+        nextDisabled: controls[1].getAttribute('aria-disabled'),
+        caseStudyHrefs: cards.map((card) => card.querySelector('a').getAttribute('href')),
+        staleCopy: /Two working demos|Compare both projects|Both are fictional/.test(document.body.innerText),
+      };
+    })())`));
+    assert.equal(homeRailDesktopStatus, "Projects 1–2 of 4", "Desktop Home rail did not hydrate its visible range");
+    assert.equal(homeRailDesktop.heading, "Four projects. Four different problems.");
+    assert.deepEqual(homeRailDesktop.order, ["Velora", "Nexora Systems", "EduAILenz", "Mudoinkle"]);
+    assert.ok(homeRailDesktop.cardWidths.every((width) => width >= 500), "Desktop Home cards became unreadable thumbnails");
+    assert.ok(homeRailDesktop.scrollWidth > homeRailDesktop.clientWidth * 1.9, "Home rail does not expose all four projects");
+    assert.equal(homeRailDesktop.label, "Featured Cyvexly work projects");
+    assert.equal(homeRailDesktop.describedBy, "home-work-rail-instructions home-work-rail-instructions-mobile");
+    assert.ok(homeRailDesktop.controlHeights.every((height) => height >= 44), "Desktop Home controls fall below the interaction floor");
+    assert.deepEqual(homeRailDesktop.controlTargets, ["home-work-project-rail", "home-work-project-rail"]);
+    assert.equal(homeRailDesktop.previousDisabled, "true");
+    assert.equal(homeRailDesktop.nextDisabled, "false");
+    assert.deepEqual(homeRailDesktop.caseStudyHrefs, [
+      "/work/velora-dining",
+      "/work/nexora-systems",
+      "/work/eduailenz",
+      "/work/mudoinkle",
+    ]);
+    assert.equal(homeRailDesktop.staleCopy, false, "Home still describes a two-project collection");
+    await capture(client, "home-rail-desktop.png");
+
+    await evaluate(client, `document.querySelector('[aria-controls="home-work-project-rail"][aria-label="Next projects"]').scrollIntoView({ block: 'center', behavior: 'instant' })`);
+    const homeNextCenter = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const box = document.querySelector('[aria-controls="home-work-project-rail"][aria-label="Next projects"]').getBoundingClientRect();
+      return { x: box.left + box.width / 2, y: box.top + box.height / 2 };
+    })())`));
+    for (let step = 0; step < 4; step += 1) {
+      await client.send("Input.dispatchMouseEvent", { type: "mousePressed", button: "left", clickCount: 1, ...homeNextCenter });
+      await client.send("Input.dispatchMouseEvent", { type: "mouseReleased", button: "left", clickCount: 1, ...homeNextCenter });
+      await new Promise((resolve) => setTimeout(resolve, 450));
+    }
+    const homeRailEnd = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('home-work-project-rail');
+      const next = document.querySelector('[aria-controls="home-work-project-rail"][aria-label="Next projects"]');
+      return {
+        scrollLeft: rail.scrollLeft,
+        maximum: rail.scrollWidth - rail.clientWidth,
+        status: document.getElementById('home-work-rail-status').textContent.trim(),
+        nextDisabled: next.getAttribute('aria-disabled'),
+        focusedControl: document.activeElement?.getAttribute('aria-label') ?? null,
+      };
+    })())`));
+    assert.ok(Math.abs(homeRailEnd.maximum - homeRailEnd.scrollLeft) <= 8, `Home rail did not reach its right edge: ${JSON.stringify(homeRailEnd)}`);
+    assert.equal(homeRailEnd.status, "Projects 3–4 of 4");
+    assert.equal(homeRailEnd.nextDisabled, "true");
+    assert.equal(homeRailEnd.focusedControl, "Next projects", "Home end state drops focus");
+
+    await evaluate(client, `(() => {
+      const rail = document.getElementById('home-work-project-rail');
+      rail.scrollTo({ left: 0, behavior: 'instant' });
+      rail.focus();
+    })()`);
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: "ArrowRight", code: "ArrowRight", windowsVirtualKeyCode: 39 });
+    await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: "ArrowRight", code: "ArrowRight", windowsVirtualKeyCode: 39 });
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      if (await evaluate(client, "document.getElementById('home-work-project-rail').scrollLeft > 500")) break;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    assert.equal(
+      await evaluate(client, "document.activeElement?.id"),
+      "home-work-project-rail",
+      "Arrow-key Home browsing lost rail focus",
+    );
+    await capture(client, "home-rail-keyboard-desktop.png");
+
+    await openRoute(client, "/", 768, 1024);
+    await evaluate(client, `(() => {
+      const railHeader = document.getElementById('home-work-project-rail').previousElementSibling;
+      window.scrollTo({ top: window.scrollY + railHeader.getBoundingClientRect().top - 104, behavior: 'instant' });
+    })()`);
+    const homeRailTablet = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('home-work-project-rail');
+      const cards = [...rail.querySelectorAll('[data-work-card]')];
+      return {
+        cardWidths: cards.map((card) => card.getBoundingClientRect().width),
+        scrollWidth: rail.scrollWidth,
+        clientWidth: rail.clientWidth,
+        controls: [...document.querySelectorAll('[aria-controls="home-work-project-rail"]')].map((control) => control.getBoundingClientRect().height),
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.ok(homeRailTablet.cardWidths.every((width) => width >= 300), "Tablet Home cards are too narrow to inspect");
+    assert.ok(homeRailTablet.scrollWidth > homeRailTablet.clientWidth * 1.9, "Tablet Home rail does not expose the collection");
+    assert.ok(homeRailTablet.controls.every((height) => height >= 44), "Tablet Home controls fall below the interaction floor");
+    assert.ok(homeRailTablet.overflow <= 1, "Tablet Home rail causes page-level overflow");
+    await capture(client, "home-rail-tablet.png");
+
+    await openRoute(client, "/", 390, 844);
+    await evaluate(client, `(() => {
+      const railHeader = document.getElementById('home-work-project-rail').previousElementSibling;
+      window.scrollTo({ top: window.scrollY + railHeader.getBoundingClientRect().top - 104, behavior: 'instant' });
+    })()`);
+    const homeRailPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('home-work-project-rail');
+      const card = rail.querySelector('[data-work-card]').getBoundingClientRect();
+      const box = rail.getBoundingClientRect();
+      return {
+        cardWidth: card.width,
+        clientWidth: rail.clientWidth,
+        scrollWidth: rail.scrollWidth,
+        startScrollY: window.scrollY,
+        touchY: Math.min(innerHeight - 40, Math.max(40, box.top + 110)),
+        controls: [...document.querySelectorAll('[aria-controls="home-work-project-rail"]')].map((control) => control.getBoundingClientRect().height),
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.ok(homeRailPhone.cardWidth >= 300, "Phone Home card is too narrow to read");
+    assert.ok(Math.abs(homeRailPhone.cardWidth - homeRailPhone.clientWidth) <= 6, "Phone Home card does not use the readable width");
+    assert.ok(homeRailPhone.scrollWidth > homeRailPhone.clientWidth * 3, "Phone Home rail does not contain all projects");
+    assert.ok(homeRailPhone.controls.every((height) => height >= 44), "Phone Home controls fall below the interaction floor");
+    assert.ok(homeRailPhone.overflow <= 1, "Phone Home rail causes page-level overflow");
+    await client.send("Input.dispatchTouchEvent", {
+      type: "touchStart",
+      touchPoints: [{ x: 330, y: homeRailPhone.touchY, radiusX: 4, radiusY: 4, force: 1 }],
+    });
+    await client.send("Input.dispatchTouchEvent", {
+      type: "touchMove",
+      touchPoints: [{ x: 70, y: homeRailPhone.touchY, radiusX: 4, radiusY: 4, force: 1 }],
+    });
+    await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+    await new Promise((resolve) => setTimeout(resolve, 450));
+    const homeRailTouch = JSON.parse(await evaluate(client, `JSON.stringify({
+      scrollLeft: document.getElementById('home-work-project-rail').scrollLeft,
+      scrollY: window.scrollY,
+      status: document.getElementById('home-work-rail-status').textContent.trim(),
+    })`));
+    assert.ok(homeRailTouch.scrollLeft > 100, `Touch swipe did not move the phone Home rail: ${JSON.stringify(homeRailTouch)}`);
+    assert.ok(Math.abs(homeRailTouch.scrollY - homeRailPhone.startScrollY) <= 2, "Horizontal touch movement unexpectedly scrolled Home vertically");
+    await capture(client, "home-rail-phone.png");
+
+    await client.send("Emulation.setEmulatedMedia", {
+      features: [{ name: "prefers-reduced-motion", value: "reduce" }],
+    });
+    await openRoute(client, "/", 390, 844);
+    await evaluate(client, `(() => {
+      const railHeader = document.getElementById('home-work-project-rail').previousElementSibling;
+      window.scrollTo({ top: window.scrollY + railHeader.getBoundingClientRect().top - 104, behavior: 'instant' });
+    })()`);
+    const homeRailReducedMotion = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('home-work-project-rail');
+      document.querySelector('[aria-controls="home-work-project-rail"][aria-label="Next projects"]').click();
+      return {
+        preference: matchMedia('(prefers-reduced-motion: reduce)').matches,
+        scrollBehavior: getComputedStyle(rail).scrollBehavior,
+        scrollLeft: rail.scrollLeft,
+      };
+    })())`));
+    assert.equal(homeRailReducedMotion.preference, true);
+    assert.equal(homeRailReducedMotion.scrollBehavior, "auto");
+    assert.ok(homeRailReducedMotion.scrollLeft > 100, "Reduced-motion Home rail movement was not immediate");
+    await client.send("Emulation.setEmulatedMedia", { features: [] });
+
+    await openRoute(client, "/", 320, 568);
+    await evaluate(client, `(() => {
+      const railHeader = document.getElementById('home-work-project-rail').previousElementSibling;
+      window.scrollTo({ top: window.scrollY + railHeader.getBoundingClientRect().top - 104, behavior: 'instant' });
+    })()`);
+    const homeRailMinimumPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('home-work-project-rail');
+      const card = rail.querySelector('[data-work-card]').getBoundingClientRect();
+      return {
+        cardWidth: card.width,
+        scrollWidth: rail.scrollWidth,
+        clientWidth: rail.clientWidth,
+        controls: [...document.querySelectorAll('[aria-controls="home-work-project-rail"]')].map((control) => control.getBoundingClientRect().height),
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.ok(homeRailMinimumPhone.cardWidth >= 240, "Minimum-phone Home card is too narrow to read");
+    assert.ok(homeRailMinimumPhone.scrollWidth > homeRailMinimumPhone.clientWidth * 3, "Minimum-phone Home rail does not contain all projects");
+    assert.ok(homeRailMinimumPhone.controls.every((height) => height >= 44), "Minimum-phone Home controls fall below the interaction floor");
+    assert.ok(homeRailMinimumPhone.overflow <= 1, "Minimum-phone Home rail causes page-level overflow");
+    await capture(client, "home-rail-minimum-phone.png");
+
     await openRoute(client, "/pricing", 390, 844);
     assert.equal(
       await evaluate(client, "getComputedStyle(document.querySelector('.pricing-scope-visual')).display"),

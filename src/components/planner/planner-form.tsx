@@ -424,6 +424,14 @@ export function PlannerForm({
 
   return (
     <div className="glass-panel min-w-0 rounded-2xl p-6 sm:p-8">
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-cyber-blue/25 bg-cyber-blue/[0.06] px-4 py-3">
+        <p className="text-xs leading-relaxed text-cool-graphite">
+          Want to talk first? Your saved Planner draft will stay on this device.
+        </p>
+        <ButtonLink href="/contact?request=consultation" variant="text" className="text-xs">
+          Request a consultation →
+        </ButtonLink>
+      </div>
       <PlannerProgress
         currentStep={currentStep}
         maxReachedStep={maxReachedStep}

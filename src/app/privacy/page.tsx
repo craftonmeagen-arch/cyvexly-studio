@@ -35,9 +35,10 @@ export default function PrivacyPage() {
           <div className="glass-panel space-y-10 rounded-3xl px-6 py-8 text-sm leading-relaxed text-cool-graphite sm:px-10 sm:py-10 sm:text-base">
             <div className="rounded-2xl border border-cyber-blue/30 bg-cyber-blue/5 p-5 text-xs text-cool-graphite sm:text-sm">
               <strong className="text-midnight-slate">Draft under review.</strong>{" "}
-              This page describes real, current site behavior, but the exact
-              registered legal entity name is still pending Owner confirmation
-              and this draft has not yet received final Owner review. It is
+              This page describes real, current site behavior. Owner has selected
+              Cyvexly LLC as the intended legal name, but formation and exact
+              filing-name verification are still pending. This draft has not yet received
+              final Owner review. It is
               published no-index while Chunk 5 is in progress.
             </div>
 
@@ -47,9 +48,9 @@ export default function PrivacyPage() {
               </h2>
               <p className="mt-3">
                 Cyvexly Studio is an independent web design and development
-                studio operated as a limited liability company based in
-                Indiana, United States, serving clients across the United
-                States. You can reach us at{" "}
+                studio based in Indiana, United States, serving clients across
+                the United States. Cyvexly LLC is the Owner-selected legal name;
+                formation and exact filing-name verification remain pending. You can reach us at{" "}
                 <a
                   href={`mailto:${siteConfig.email}`}
                   className="text-cyber-blue hover:text-[#0b4fb0]"
@@ -70,29 +71,34 @@ export default function PrivacyPage() {
               </h2>
               <p className="mt-3">
                 The Contact form collects your name, email address, a topic,
-                and your message. The Project Planner collects a more
+                and your message. The short consultation form collects your name,
+                chosen contact method, the corresponding email address or phone
+                number, preferred contact window, timezone, consent, and any
+                optional note. The Project Planner collects a more
                 detailed project brief — information about you, your
                 business, and what you want the website to do — so we can
                 prepare a real recommendation.
               </p>
               <p className="mt-3">
-                Both forms submit directly from your browser to our server,
+                These forms submit directly from your browser to our server,
                 which sends your submission to our business inbox using
-                Resend, a third-party transactional email service, and then
-                attempts to email you a confirmation of what you submitted.
+                Resend, a third-party transactional email service. When you
+                provide an email address, the server also attempts to email you
+                a confirmation of what you submitted; phone-only consultation
+                requests do not receive an email or SMS confirmation.
                 We reply to that submission using the address you provided (a
                 &ldquo;Reply-To&rdquo; header pointed at your email). We do
-                not store your submission in a database — it exists only in
-                the emails this process successfully sends.
+                not store your submission in an application database. Copies
+                can exist in Resend&apos;s delivery systems, our business email
+                inbox, the requester&apos;s inbox when confirmation succeeds, and
+                the hosting provider&apos;s standard operational logs.
               </p>
               <p className="mt-3">
                 When you submit either form, our server also reads the IP
                 address your submission came from. We use it to limit
-                automated and spam submissions (a short-lived, per-IP rate
-                limit) and include it in the internal notification email
-                alongside your submitted answers, so we have that context if
-                we ever need to investigate abuse. It is not included in the
-                confirmation email we attempt to send you.
+                automated and spam submissions using a short-lived, per-IP rate
+                limit held in server memory. The raw IP address is not placed in
+                internal notification or confirmation emails by our form code.
               </p>
             </div>
 
@@ -152,9 +158,10 @@ export default function PrivacyPage() {
                 technical logs (such as IP address, request time, and
                 requested page) for security, reliability, and abuse
                 prevention, separate from anything you submit through our
-                forms. The one exception is the form-submission IP address
-                described above, which our own server (not the hosting
-                platform) reads directly and includes with that submission.
+                forms. Our server also reads a form-submission IP address only
+                for the short-lived rate limit described above. Form fields are
+                sent in request bodies, not page URLs, and our application does
+                not intentionally write their contents to debug logs.
               </p>
             </div>
 
@@ -206,11 +213,13 @@ export default function PrivacyPage() {
                 How long we keep it
               </h2>
               <p className="mt-3">
-                We keep inquiry emails and related project records for as
-                long as reasonably useful for our business relationship with
-                you and any legal or tax obligations that follow. Contact us
-                if you would like us to review or delete records we hold
-                about you.
+                Inquiry emails and related project records may remain in our
+                email and provider systems while reasonably useful for the
+                business relationship and any legal or tax obligations. We are
+                preparing an operational retention schedule with a proposed
+                review of inactive inquiries after 12 months; that review is not
+                yet an automatic deletion schedule or guarantee. Contact us if
+                you would like us to review or delete records we hold about you.
               </p>
             </div>
 

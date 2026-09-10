@@ -1,11 +1,10 @@
-import Image from "next/image";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { HeroShowcaseVideo } from "@/components/hero-showcase-video";
 import { HowItWorksVideo } from "@/components/how-it-works-video";
 import { FaqAccordion } from "@/components/faq-accordion";
-import { ConceptPreview } from "@/components/concept-preview";
+import { WorkGrid } from "@/components/work-grid";
 import { CredibilityIcon } from "@/components/credibility-icon";
 import { FinalCtaSignalGraphic } from "@/components/final-cta-signal-graphic";
 import { HomeGlassArchitecture } from "@/components/home-glass-architecture";
@@ -14,7 +13,6 @@ import {
   credibilityPoints,
   faqPreview,
   pricingPreview,
-  selectedWork,
   siteConfig,
 } from "@/lib/site-config";
 
@@ -73,10 +71,12 @@ export default function Home() {
                 </ButtonLink>
               </div>
               <p className="mt-4 text-xs text-cool-graphite">
-                Already have the details?{" "}
-                <ButtonLink href="/start" variant="text" className="text-xs">
-                  Share a detailed brief →
+                Prefer a next-business-day conversation?{" "}
+                <ButtonLink href="/contact?request=consultation" variant="text" className="text-xs">
+                  Request a consultation →
                 </ButtonLink>
+                <span aria-hidden="true"> · </span>
+                <ButtonLink href="/start" variant="text" className="text-xs">Share a detailed brief →</ButtonLink>
               </p>
             </div>
             <HeroShowcaseVideo />
@@ -108,119 +108,24 @@ export default function Home() {
                   Proof before promises
                 </p>
                 <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
-                  Two working demos. Two different problems.
+                  Four projects. Four different problems.
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-cool-graphite sm:text-base">
-                  Explore a brand-led hospitality website and a dense custom web
-                  application. Both are fictional, interactive, and available to inspect.
+                  Browse two fictional working demos and two built product systems.
+                  Every card names what is ready to inspect and where limitations remain.
                 </p>
               </div>
               <ButtonLink href="/work" variant="text">
-                Compare both projects →
+                See the full collection →
               </ButtonLink>
             </div>
 
-            <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.25fr)_minmax(20rem,0.75fr)]">
-              <article className="glass-panel glass-panel-interactive flex min-h-[34rem] flex-col overflow-hidden rounded-3xl">
-                <div
-                  className={`min-h-64 flex-1 overflow-hidden bg-gradient-to-br ${selectedWork[0].gradient}`}
-                  aria-hidden="true"
-                >
-                  <ConceptPreview slug={selectedWork[0].slug} />
-                </div>
-                <div className="p-6 sm:p-8">
-                  <span className="w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
-                    Working concept demonstration
-                  </span>
-                  <h3 className="mt-4 font-display text-2xl font-semibold text-midnight-slate">
-                    {selectedWork[0].name}
-                  </h3>
-                  <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
-                    {selectedWork[0].summary}
-                  </p>
-                  <div className="mt-6 flex flex-wrap gap-3">
-                    <ButtonLink href={selectedWork[0].href}>View case study</ButtonLink>
-                    <ButtonLink href={selectedWork[0].demoHref} variant="secondary">
-                      Try interactive demo
-                    </ButtonLink>
-                  </div>
-                </div>
-              </article>
-
-              {selectedWork.slice(1, 2).map((project) => (
-                <article
-                  key={project.name}
-                  className="glass-panel flex min-h-[34rem] flex-col overflow-hidden rounded-3xl"
-                >
-                  <div
-                    className={`min-h-64 flex-1 overflow-hidden bg-gradient-to-br ${project.gradient}`}
-                    aria-hidden="true"
-                  >
-                    <ConceptPreview slug={project.slug} />
-                  </div>
-                  <div className="flex flex-col gap-2 p-6 sm:p-8">
-                    <span className="w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
-                      Working concept demonstration
-                    </span>
-                    <h3 className="mt-2 font-display text-2xl font-semibold text-midnight-slate">
-                      {project.name}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-cool-graphite sm:text-base">{project.summary}</p>
-                    <div className="mt-auto flex flex-wrap gap-3 pt-4">
-                      <ButtonLink href={project.href} variant="secondary">
-                        View case study
-                      </ButtonLink>
-                      <ButtonLink href={project.demoHref}>Try interactive demo</ButtonLink>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-10 border-t border-smoke-glass/80 pt-8">
-              <div className="flex flex-wrap items-end justify-between gap-4">
-                <div className="max-w-2xl">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyber-blue">
-                    Built product systems
-                  </p>
-                  <h3 className="mt-3 font-display text-2xl font-semibold text-midnight-slate">
-                    More ways Cyvexly handles product complexity.
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-cool-graphite">
-                    Explore an education workspace and a multi-device party platform through public-safe guided case studies, with current limitations stated clearly.
-                  </p>
-                </div>
-                <ButtonLink href="/work" variant="text">See all work →</ButtonLink>
-              </div>
-
-              <div className="mt-6 grid gap-5 md:grid-cols-2">
-                {selectedWork.slice(2).map((project) => {
-                  const preview = project.slug === "eduailenz"
-                    ? "/media/eduailenz-live-desktop.png"
-                    : "/media/mudoinkle-live-desktop.png";
-                  return (
-                    <article key={project.slug} className="glass-panel grid overflow-hidden rounded-3xl sm:grid-cols-[0.9fr_1.1fr]">
-                      <div className="relative min-h-48 overflow-hidden bg-midnight-slate">
-                        <Image
-                          src={preview}
-                          alt={`Current public ${project.name} product view`}
-                          fill
-                          className="object-cover object-top"
-                          sizes="(min-width: 768px) 24vw, 100vw"
-                        />
-                      </div>
-                      <div className="flex flex-col p-5 sm:p-6">
-                        <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-cyber-blue">{project.kind}</span>
-                        <h4 className="mt-3 font-display text-xl font-semibold text-midnight-slate">{project.name}</h4>
-                        <p className="mt-3 text-sm leading-6 text-cool-graphite">{project.summary}</p>
-                        <ButtonLink href={project.href} variant="secondary" className="mt-5 self-start px-4 py-2 text-xs">
-                          Tour the case study
-                        </ButtonLink>
-                      </div>
-                    </article>
-                  );
-                })}
-              </div>
+            <div className="mt-8">
+              <WorkGrid
+                idPrefix="home-work"
+                projectHeadingLevel="h3"
+                regionLabel="Featured Cyvexly work projects"
+              />
             </div>
           </div>
         </section>

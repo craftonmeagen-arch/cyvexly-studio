@@ -35,9 +35,10 @@ export default function TermsPage() {
           <div className="glass-panel space-y-10 rounded-3xl px-6 py-8 text-sm leading-relaxed text-cool-graphite sm:px-10 sm:py-10 sm:text-base">
             <div className="rounded-2xl border border-cyber-blue/30 bg-cyber-blue/5 p-5 text-xs text-cool-graphite sm:text-sm">
               <strong className="text-midnight-slate">Draft under review.</strong>{" "}
-              The exact registered legal entity name is still pending Owner
-              confirmation and this draft has not yet received final Owner
-              review. It is published no-index while Chunk 5 is in progress.
+              Cyvexly LLC is the Owner-selected legal name, but formation and
+              exact filing-name verification remain pending. This draft has not yet
+              received final Owner review. It is published no-index while
+              Chunk 5 is in progress.
             </div>
 
             <div>
@@ -59,8 +60,9 @@ export default function TermsPage() {
               </h2>
               <p className="mt-3">
                 Cyvexly Studio is an independent web design and development
-                studio operated as a limited liability company based in
-                Indiana, United States. This site is informational and
+                studio based in Indiana, United States. Cyvexly LLC is the
+                Owner-selected legal name; formation and exact filing-name
+                verification remain pending. This site is informational and
                 exists to explain our services, showcase concept and project
                 work, and let prospective clients describe a project through
                 the Project Planner or reach us through the Contact form.

@@ -311,7 +311,7 @@ export async function POST(request: Request) {
     for (const [label, value] of rows) textLines.push(`${label}: ${value}`);
     textLines.push("");
   }
-  textLines.push(`Submitted: ${timestamp}`, `IP: ${ip}`);
+  textLines.push(`Submitted: ${timestamp}`);
   const internalText = textLines.join("\n");
 
   const internalHtml = `
@@ -333,7 +333,7 @@ export async function POST(request: Request) {
       )
       .join("")}
     <hr />
-    <p style="color:#667085;font-size:13px;">Submitted ${escapeHtml(timestamp)} · IP ${escapeHtml(ip)}</p>
+    <p style="color:#667085;font-size:13px;">Submitted ${escapeHtml(timestamp)}</p>
   `.trim();
 
   const internalResult = await sendMail({
