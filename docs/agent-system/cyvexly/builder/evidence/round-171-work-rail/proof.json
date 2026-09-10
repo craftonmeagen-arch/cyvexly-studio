@@ -42,6 +42,10 @@
     "roleSetup": "pass",
     "diffCheck": "pass"
   },
+  "retention": {
+    "reason": "Minimum responsive and interaction evidence retained while the exact candidate awaits independent review.",
+    "deletionCondition": "Delete after c8bc73d is accepted or superseded and no unread review depends on these captures."
+  },
   "screenshots": [
     "work-decision-desktop.png",
     "work-decision-phone.png",

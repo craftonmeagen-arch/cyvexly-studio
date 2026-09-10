@@ -21,6 +21,9 @@ Round 172 adopted the inherited Round 171 closeout after documentation commit
 to `c8bc73d`; fresh build, browser, regression, role, and lifecycle proof pass.
 No new exact-candidate intake exists, so the next eligible action remains an
 independent primary-Auditor invocation rather than further unsupported polish.
+The six minimum captures and `proof.json` under
+`builder/evidence/round-171-work-rail/` remain only while an unread review may
+depend on them; delete them after `c8bc73d` is accepted or superseded.
 
 The underlying EduAILenz/Mudoinkle applications, HoneyHearted, their protected
 data, credentials, repositories, infrastructure, and scheduler states remain
