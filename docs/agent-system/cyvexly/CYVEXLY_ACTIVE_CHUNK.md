@@ -2,7 +2,7 @@
 
 **Active product chunk:** Chunk 10 — Horizontal Work Rail
 
-**Next position:** global round 173; chunk-local round 3
+**Next position:** global round 174; chunk-local round 4
 
 **Accepted and deployed product source:** `ca2b84e`; published branch closeout
 is `54a90cd`
@@ -38,6 +38,19 @@ Likely round directions:
 - compare rendered desktop/tablet/phone output with the accepted card quality,
   then correct material hierarchy or interaction drift;
 - route the exact candidate through two independent reviews before closure.
+
+## Round 173 — first clean exact-source review
+
+- **Dispositioned:** Auditor `IFA-2026-09-10-R132` passed exact candidate
+  `c8bc73d` with zero defects and supplies clean challenge 1 of 2.
+- **Verified independently:** opening-fold proof, rail geometry, 48px controls,
+  Arrow-key and touch use, announced/end states, reduced motion, responsive
+  containment, build, TypeScript, lint, and buyer/regression suites passed in
+  the isolated Auditor runtime.
+- **Preserved:** the immutable report and 20 external screenshots remain
+  untouched; only the operational inbox item moved to processed.
+- **Next:** keep `c8bc73d` local-only and obtain a second separate independent
+  review before acceptance, push, deployment, or Chunk 10 closure.
 
 ## Round 172 — candidate adoption and visible revalidation
 
@@ -92,20 +105,6 @@ Remaining primary gates:
 - Chunk 5's exact LLC name, Resend setup/real-delivery proof, analytics/search
   decision, final About/legal/visual approval, and indexing permission;
 - a later payment-provider decision before transaction-readiness claims.
-
-## Round 169 — second clean review and acceptance
-
-- **Dispositioned:** R130 passed exact `ca2b84e` with zero defects, reconfirmed
-  `CYV-IFA-014` resolved, and supplies clean challenge 2 of 2 after R129.
-- **Accepted:** Chunk 9 is closed at product source `ca2b84e`.
-- **Validated:** 56-route production build, TypeScript, lint with one historical
-  evidence warning, all 57 lifecycle checks, role setup, hot-file caps, and
-  whitespace pass.
-- **Published:** branch head `54a90cd` is on `origin/main`; canonical production
-  serves the source-specific Work headline, both case studies, and all four
-  showcase images. The 35-route buyer and full hierarchy suites pass live.
-- **Next:** await fresh reachable primary evidence. Preserve no-index status and
-  every Owner/account gate.
 
 Older round detail is preserved in `CYVEXLY_BUILD_SUMMARY.md`,
 `docs/archive/chunks/`, Git history, and role memory.

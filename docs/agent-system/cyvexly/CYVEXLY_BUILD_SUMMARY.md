@@ -3,6 +3,18 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 173 — first exact-source rail review
+
+- Consumed Auditor `IFA-2026-09-10-R132`, which independently passed exact
+  candidate `c8bc73d` with zero defects across desktop/tablet/phone rail
+  behavior, hierarchy, keyboard/touch use, reduced motion, and regression
+  suites.
+- R132 supplies clean independent challenge 1 of 2. The immutable report and
+  20 screenshots remain external; only its operational inbox item moved to the
+  processed lane.
+- Product source remains unchanged and exact candidate `c8bc73d`; accepted and
+  deployed source stays `ca2b84e` pending one second independent review.
+
 ## Round 172 — rail candidate adopted and reverified
 
 - Reconciled concurrent closeout commit `744f1aa` without changing product

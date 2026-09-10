@@ -50,3 +50,10 @@ remain in the external review root. The two exact-source reviews close Chunk 9
 in global round 169. R131 later reverified that pre-rail baseline with zero
 defects; its inbox was consumed, but it does not cover Chunk 10 candidate
 `c8bc73d`. The primary Auditor automation remains stored `PAUSED`.
+
+Auditor `IFA-2026-09-10-R132` is the first exact-source review of Chunk 10
+candidate `c8bc73d`. It passed with zero defects across visual hierarchy,
+rail controls and geometry, keyboard/touch operation, end states, reduced
+motion, responsive containment, and regression suites. Its operational inbox
+item is processed; immutable report/evidence remain external. R132 supplies
+clean challenge 1 of 2, so one second independent exact-source review remains.

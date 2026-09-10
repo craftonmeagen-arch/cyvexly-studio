@@ -7,8 +7,10 @@ the horizontal Work-card rail. Exact local candidate `c8bc73d` preserves the
 four approved projects and adds native horizontal scrolling/snap, visible
 left/right controls, touch and Arrow-key operation, announced position and end
 states, reduced-motion safety, and responsive containment. Production remains
-on accepted `ca2b84e`; obtain two independent exact-source reviews before
-acceptance, push, deployment, or closure.
+on accepted `ca2b84e`; two independent exact-source reviews are required before
+acceptance, push, deployment, or closure. Auditor R132 passed exact `c8bc73d`
+with zero defects and supplies clean challenge 1 of 2; one second separate
+independent review remains.
 
 Earlier Owner direction `2026-09-10-01` supplied the bounded
 primary-Builder exception for the Cyvexly-facing EduAILenz and Mudoinkle
@@ -43,6 +45,8 @@ Accepted product source is `ca2b84e`; active review source is candidate
 `c8bc73d`. Chunk 6's physical/visual review, Guardio, and Chunk 5 account/Owner
 gates remain open but separate.
 
-Auditor R131 is the latest publication. It reverified pre-rail accepted source
+Auditor R132 is the latest publication. It passed exact rail candidate
+`c8bc73d` with zero defects and supplies clean challenge 1 of 2. R131
+reverified pre-rail accepted source
 `ca2b84e` with zero defects and has been dispositioned, but it does not cover
 Chunk 10. Review startup must target active exact candidate `c8bc73d`.

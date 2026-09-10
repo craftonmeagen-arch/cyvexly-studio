@@ -114,7 +114,8 @@ evidence exposes a meaningful reachable gap.
 
 - **Authority:** Owner direction `2026-09-10-02`, additive to the accepted
   showcase-quality direction.
-- **Exact candidate:** `c8bc73d`; local-only pending two independent reviews.
+- **Exact candidate:** `c8bc73d`; local-only after clean Auditor challenge 1
+  of 2 (`IFA-2026-09-10-R132`), pending one second independent review.
 - **Outcome:** turn the fixed two-column Work collection into a clear horizontal
   browsing rail through Velora, Nexora, EduAILenz, and Mudoinkle without
   reducing card proof, readability, or buyer actions.
