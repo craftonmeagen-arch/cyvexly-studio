@@ -114,6 +114,27 @@ async function capture(client, filename) {
   await writeFile(path.join(captureDir, filename), Buffer.from(result.data, "base64"));
 }
 
+async function stopBrowserAndRemoveProfile(browser, profile) {
+  if (browser.exitCode === null) {
+    const exited = new Promise((resolve) => browser.once("exit", resolve));
+    browser.kill();
+    await Promise.race([
+      exited,
+      new Promise((resolve) => setTimeout(resolve, 3000)),
+    ]);
+  }
+
+  for (let attempt = 0; attempt < 20; attempt += 1) {
+    try {
+      await rm(profile, { recursive: true, force: true });
+      return;
+    } catch (error) {
+      if (!["EBUSY", "EPERM"].includes(error?.code) || attempt === 19) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 250));
+    }
+  }
+}
+
 async function main() {
   const browserPath = await findBrowser();
   const profile = await mkdtemp(path.join(os.tmpdir(), "cyvexly-nexora-smoke-"));
@@ -230,22 +251,7 @@ async function main() {
     }, null, 2));
   } finally {
     client?.close();
-    if (browser.exitCode === null) {
-      browser.kill();
-      await Promise.race([
-        new Promise((resolve) => browser.once("exit", resolve)),
-        new Promise((resolve) => setTimeout(resolve, 1500)),
-      ]);
-    }
-    for (let attempt = 0; attempt < 4; attempt += 1) {
-      try {
-        await rm(profile, { recursive: true, force: true });
-        break;
-      } catch (error) {
-        if (attempt === 3) throw error;
-        await new Promise((resolve) => setTimeout(resolve, 250));
-      }
-    }
+    await stopBrowserAndRemoveProfile(browser, profile);
   }
 }
 
