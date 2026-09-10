@@ -2,10 +2,12 @@
 
 **Last completed global round:** 174
 
-**Next:** await new Owner direction or material primary source, buyer-use, or
-reviewer evidence.
+**Next:** primary Builder homepage scrolling correction under Owner direction
+`2026-09-10-03`; initialize a bounded chunk before implementation.
 
 **Active chunk:** none; Chunk 10 closed in global round 174
+
+**Queued Owner priority:** homepage `/` carousel; accepted `/work` is preserved.
 
 **Current chunk-local round:** closed after round 4
 
@@ -23,10 +25,14 @@ Cyvexly-facing showcase corrections. Team 2 Builder and all Auditor scheduler
 states remain unchanged. Outside products, credentials, infrastructure, and
 HoneyHearted remain Team 2 scope.
 
+Owner direction `2026-09-10-03` identifies the missing homepage interaction:
+`/` still has fixed card grids. The primary Builder must complete that surface
+and prove it separately. Owner inputs remain pending; no scheduler changes.
+
 Owner direction `2026-09-10-02` reopened the primary Work surface. Accepted
 source `c8bc73d` replaces the fixed two-column collection with a horizontal
-rail through the same four approved projects while preserving their accepted
-proof hierarchy and truth boundaries. Visible controls, native touch/swipe,
+rail on `/work` through the same four approved projects while preserving their
+accepted proof hierarchy and truth boundaries. Visible controls, native touch/swipe,
 Arrow-key operation, end states, reduced motion, working links, and zero
 page-level overflow pass across responsive viewports.
 
@@ -68,9 +74,9 @@ Historical round detail and the 2026-09-10 checkout reconciliation remain in
 
 ## Next work and gates
 
-No Builder-reachable product chunk remains. Await new Owner direction or
-material primary source, buyer-use, or reviewer evidence. Do not access
-protected data or modify the outside applications.
+The homepage scrolling correction is queued under `2026-09-10-03`; Chunk 10's
+`/work` acceptance does not close it. Follow the newest Owner Direction and
+next Builder handoff. Do not access protected data or modify outside apps.
 
 Remaining primary-team gates:
 

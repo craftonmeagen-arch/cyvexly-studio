@@ -1,5 +1,46 @@
 # Cyvexly Owner Direction
 
+## Homepage scrolling correction and Owner inputs — 2026-09-10-03
+
+**Status:** ACTIVE — PRIMARY CYVEXLY BUILDER PRIORITY
+**Source:** Owner authorized these findings, 2026-09-10.
+
+### Finding and required outcome
+
+The Owner's screenshot shows the homepage `/` section headed “Two working
+demos. Two different problems.” Source and live checks found horizontal cards
+on `/work`, but fixed grids on `/`.
+Auditor R132/R133 accepted the `/work` rail at `c8bc73d`; that acceptance does
+not prove the requested homepage interaction. Preserve the accepted Work page
+and reopen the missing homepage outcome, not the outside applications.
+
+The primary Builder must make the homepage showcase browse left and right
+through Velora, Nexora, EduAILenz, and Mudoinkle, retaining large readable cards,
+distinct project artwork, truthful demonstration/built-product labels, and
+working case-study/demo links. Preserve the approved cyber-blue glass design.
+Update headings/counts so “two”/“both” and fictional-demo wording do not
+misdescribe the four-project collection. Implementation remains the Builder's
+choice; apply `2026-09-10-02`'s interaction and accessibility requirements.
+
+Prove the result visibly on `/` at desktop, tablet, 390px, and 320px: left/right
+controls, swipe, keyboard/focus, reduced motion, end states, links, and no
+page-level overflow. Include `/work` regression checks, independent review,
+and canonical production proof before declaring this direction complete.
+Initialize a bounded chunk; preserve Chunk 10's `/work` history. No scheduler
+changes are authorized.
+
+### Inputs Owner and assistant will resolve together
+
+1. Exact registered LLC name.
+2. Final About, Privacy, Terms, and visual approval.
+3. Analytics decision and Search Console setup.
+4. Permission to enable search indexing.
+5. Guardio account-holder review and a fresh clean recheck.
+
+Inputs remain pending, not approved. Do not invent answers or enable indexing.
+Real Contact/Planner delivery needs separate verification; working email does
+not prove form delivery. Payment-provider selection remains deferred.
+
 ## Horizontally scrollable Work cards — 2026-09-10-02
 
 **Status:** ACTIVE — ADDITIVE PRIMARY CYVEXLY BUILDER PRIORITY

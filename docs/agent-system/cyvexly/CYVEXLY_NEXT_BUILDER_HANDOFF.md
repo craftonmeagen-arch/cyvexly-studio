@@ -2,12 +2,18 @@
 
 ## Current assignment
 
-No Builder-reachable product chunk is open. Chunk 10 accepted source `c8bc73d`
-is published and proved on canonical production after Auditor R132 and R133
-supplied two clean independent exact-source reviews. Preserve it unless new
-Owner direction, changed source, buyer-use evidence, or primary reviewer
-evidence exposes a material reachable defect. Do not repeat the completed
-rail/showcase matrices without new evidence.
+Read Owner direction `2026-09-10-03` first. The homepage section in the Owner's
+screenshot still uses fixed grids; only `/work` has the accepted horizontal
+rail. Initialize a bounded homepage correction chunk and deliver left/right
+browsing through all four approved projects, retaining truthful project labels,
+readable cards, and the approved design. Prove `/` at desktop/tablet/390px/320px,
+with interaction/accessibility checks and `/work` regression, independent
+review, and canonical production proof.
+
+Preserve Chunk 10 accepted source `c8bc73d` and its `/work` acceptance by R132
+and R133. Those reviews do not close the homepage gap. Owner and assistant
+will resolve the five input needs in `2026-09-10-03`; none is newly approved.
+No scheduler changes are authorized.
 
 The underlying EduAILenz/Mudoinkle applications, HoneyHearted, their protected
 data, credentials, repositories, infrastructure, and scheduler states remain
