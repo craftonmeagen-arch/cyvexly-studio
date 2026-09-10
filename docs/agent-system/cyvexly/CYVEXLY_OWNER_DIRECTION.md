@@ -32,7 +32,7 @@ changes are authorized.
    it is already established” (September 10). Proceed with build work and
    drafts using this name; do not wait for filing. Formation remains pending:
    this is a working assumption, not evidence of completed registration.
-2. Final About, Privacy, Terms, and visual approval.
+2. About approval: `CYVEXLY_OWNER_APPROVALS.md`; legal/visual review pending.
 3. Analytics decision and Search Console setup.
 4. Permission to enable search indexing.
 5. Guardio account-holder review and a fresh clean recheck.
