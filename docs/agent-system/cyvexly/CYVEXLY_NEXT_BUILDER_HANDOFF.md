@@ -15,6 +15,14 @@ and R133. Those reviews do not close the homepage gap. Owner and assistant
 will resolve the five input needs in `2026-09-10-03`; none is newly approved.
 No scheduler changes are authorized.
 
+Owner input correction, 2026-09-10: the LLC is not yet formed; the Owner plans
+to apply September 11. This supersedes older confirmed-LLC records. Keep its
+registration/name and final legal approval pending. Current Privacy and Terms
+source still says the studio is operated as a limited liability company;
+correct that unsupported claim without inventing another legal entity or
+treating an application as completed registration. No product correction has
+been implemented by this documentation update.
+
 The underlying EduAILenz/Mudoinkle applications, HoneyHearted, their protected
 data, credentials, repositories, infrastructure, and scheduler states remain
 outside this role.

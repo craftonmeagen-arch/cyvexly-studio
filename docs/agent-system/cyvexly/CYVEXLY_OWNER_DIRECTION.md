@@ -31,7 +31,7 @@ changes are authorized.
 
 ### Inputs Owner and assistant will resolve together
 
-1. Exact registered LLC name.
+1. LLC not yet formed (Owner, September 10); applying tomorrow. Name pending.
 2. Final About, Privacy, Terms, and visual approval.
 3. Analytics decision and Search Console setup.
 4. Permission to enable search indexing.

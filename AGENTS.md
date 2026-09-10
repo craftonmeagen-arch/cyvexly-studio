@@ -105,8 +105,9 @@ because one feature or happy path passed.
 ## Confirmed Owner facts
 
 - Brand: Cyvexly Studio.
-- Structure/location: LLC in Indiana, United States; exact registered legal
-  entity name still requires confirmation.
+- Location: Indiana, United States. Owner clarified on 2026-09-10 that the LLC
+  is not yet formed and plans to apply September 11. Registration and exact
+  legal name remain pending; do not claim an existing LLC.
 - Launch market: United States only.
 - Production domain: `cyvexly.com`.
 - Public email: `design@cyvexly.com`.
