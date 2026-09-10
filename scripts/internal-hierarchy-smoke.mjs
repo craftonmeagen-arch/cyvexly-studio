@@ -303,6 +303,16 @@ async function main() {
     assert.equal(nexoraPreviewResponse.status, 200, "Nexora's real portfolio capture is unavailable");
 
     await openRoute(client, "/work", 1280, 720);
+    let initialWorkRailStatus = "";
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      initialWorkRailStatus = await evaluate(
+        client,
+        `document.querySelector('[aria-live="polite"]')?.textContent.trim() ?? ''`,
+      );
+      if (initialWorkRailStatus === "Projects 1–2 of 4") break;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    assert.equal(initialWorkRailStatus, "Projects 1–2 of 4", "Desktop Work rail did not finish hydrating its visible range");
     const workDecisionDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const hero = document.querySelector('.page-intro-stage').getBoundingClientRect();
       const firstCard = document.querySelector('main article').getBoundingClientRect();
@@ -317,6 +327,97 @@ async function main() {
     assert.ok(workDecisionDesktop.firstCardTop <= 530, "Work proof does not enter the opening desktop viewport soon enough");
     assert.ok(workDecisionDesktop.firstArtworkBottom <= 720, "Work's first project artwork is not fully visible in the opening desktop viewport");
     await capture(client, "work-decision-desktop.png");
+
+    const workRailDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('work-project-rail');
+      const cards = [...rail.querySelectorAll('[data-work-card]')];
+      const previous = document.querySelector('[aria-label="Previous projects"]');
+      const next = document.querySelector('[aria-label="Next projects"]');
+      return {
+        order: cards.map((card) => card.querySelector('h2').textContent.trim()),
+        cardWidths: cards.map((card) => card.getBoundingClientRect().width),
+        clientWidth: rail.clientWidth,
+        scrollWidth: rail.scrollWidth,
+        overflowX: getComputedStyle(rail).overflowX,
+        scrollSnapType: getComputedStyle(rail).scrollSnapType,
+        previousHeight: previous.getBoundingClientRect().height,
+        nextHeight: next.getBoundingClientRect().height,
+        previousDisabled: previous.getAttribute('aria-disabled'),
+        nextDisabled: next.getAttribute('aria-disabled'),
+        label: rail.getAttribute('aria-label'),
+        description: rail.getAttribute('aria-describedby').split(/\\s+/).map((id) => document.getElementById(id).textContent.trim()).join(' '),
+        status: document.querySelector('[aria-live="polite"]').textContent.trim(),
+        caseStudyHrefs: cards.map((card) => card.querySelector('a').getAttribute('href')),
+      };
+    })())`));
+    assert.deepEqual(workRailDesktop.order, ["Velora", "Nexora Systems", "EduAILenz", "Mudoinkle"]);
+    assert.ok(workRailDesktop.scrollWidth > workRailDesktop.clientWidth * 1.9, "Work rail does not expose the full horizontal collection");
+    assert.equal(workRailDesktop.overflowX, "auto", "Work rail is not a native horizontal scroller");
+    assert.match(workRailDesktop.scrollSnapType, /^x /, "Work rail lacks horizontal scroll snapping");
+    assert.ok(workRailDesktop.cardWidths.every((width) => width >= 500), "Desktop Work cards became unreadable thumbnails");
+    assert.ok(workRailDesktop.previousHeight >= 44 && workRailDesktop.nextHeight >= 44, "Work rail controls fall below the 44px interaction floor");
+    assert.equal(workRailDesktop.previousDisabled, "true");
+    assert.equal(workRailDesktop.nextDisabled, "false");
+    assert.equal(workRailDesktop.label, "Cyvexly work projects");
+    assert.match(workRailDesktop.description, /Swipe.*arrow/i);
+    assert.equal(workRailDesktop.status, "Projects 1–2 of 4");
+    assert.deepEqual(workRailDesktop.caseStudyHrefs, [
+      "/work/velora-dining",
+      "/work/nexora-systems",
+      "/work/eduailenz",
+      "/work/mudoinkle",
+    ]);
+
+    const nextControlCenter = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const box = document.querySelector('[aria-label="Next projects"]').getBoundingClientRect();
+      return { x: box.left + box.width / 2, y: box.top + box.height / 2 };
+    })())`));
+    for (let step = 0; step < 2; step += 1) {
+      await client.send("Input.dispatchMouseEvent", { type: "mousePressed", button: "left", clickCount: 1, ...nextControlCenter });
+      await client.send("Input.dispatchMouseEvent", { type: "mouseReleased", button: "left", clickCount: 1, ...nextControlCenter });
+      await new Promise((resolve) => setTimeout(resolve, 450));
+    }
+    const workRailEnd = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('work-project-rail');
+      const next = document.querySelector('[aria-label="Next projects"]');
+      return {
+        scrollLeft: rail.scrollLeft,
+        maximum: rail.scrollWidth - rail.clientWidth,
+        status: document.querySelector('[aria-live="polite"]').textContent.trim(),
+        nextDisabled: next.getAttribute('aria-disabled'),
+        focusedControl: document.activeElement?.getAttribute('aria-label') ?? null,
+      };
+    })())`));
+    assert.ok(Math.abs(workRailEnd.maximum - workRailEnd.scrollLeft) <= 2, `Work rail did not reach its right edge: ${JSON.stringify(workRailEnd)}`);
+    assert.equal(workRailEnd.status, "Projects 3–4 of 4");
+    assert.equal(workRailEnd.nextDisabled, "true");
+    assert.equal(workRailEnd.focusedControl, "Next projects", "End-of-rail state drops keyboard focus");
+    await capture(client, "work-rail-end-desktop.png");
+
+    await evaluate(client, `(() => {
+      const rail = document.getElementById('work-project-rail');
+      rail.scrollTo({ left: 0, behavior: 'instant' });
+      rail.focus();
+    })()`);
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: "ArrowRight", code: "ArrowRight", windowsVirtualKeyCode: 39 });
+    await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: "ArrowRight", code: "ArrowRight", windowsVirtualKeyCode: 39 });
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      const scrollLeft = await evaluate(client, "document.getElementById('work-project-rail').scrollLeft");
+      if (scrollLeft > 500) break;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    const workRailKeyboard = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('work-project-rail');
+      return {
+        scrollLeft: rail.scrollLeft,
+        focusedId: document.activeElement?.id ?? null,
+        status: document.querySelector('[aria-live="polite"]').textContent.trim(),
+      };
+    })())`));
+    assert.ok(workRailKeyboard.scrollLeft > 500, `ArrowRight did not move the Work rail: ${JSON.stringify(workRailKeyboard)}`);
+    assert.equal(workRailKeyboard.focusedId, "work-project-rail");
+    assert.equal(workRailKeyboard.status, "Projects 2–3 of 4");
 
     await openRoute(client, "/work", 1440, 900);
     const nexoraPreviewDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
@@ -353,6 +454,72 @@ async function main() {
     assert.ok(workDecisionPhone.overflow <= 1, "Work's compact opening causes phone overflow");
     await capture(client, "work-decision-phone.png");
 
+    const workRailPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('work-project-rail');
+      const card = rail.querySelector('[data-work-card]').getBoundingClientRect();
+      const previous = document.querySelector('[aria-label="Previous projects"]');
+      const next = document.querySelector('[aria-label="Next projects"]');
+      return {
+        cardWidth: card.width,
+        clientWidth: rail.clientWidth,
+        scrollWidth: rail.scrollWidth,
+        previousHeight: previous.getBoundingClientRect().height,
+        nextHeight: next.getBoundingClientRect().height,
+        status: document.querySelector('[aria-live="polite"]').textContent.trim(),
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.ok(workRailPhone.cardWidth >= 300, "Phone Work card is too narrow to read");
+    assert.ok(Math.abs(workRailPhone.cardWidth - workRailPhone.clientWidth) <= 6, "Phone Work card does not use the available readable width");
+    assert.ok(workRailPhone.scrollWidth > workRailPhone.clientWidth * 3, "Phone Work rail does not contain all four projects");
+    assert.ok(workRailPhone.previousHeight >= 44 && workRailPhone.nextHeight >= 44, "Phone Work controls fall below the 44px interaction floor");
+    assert.equal(workRailPhone.status, "Project 1 of 4");
+    assert.ok(workRailPhone.overflow <= 1, "Phone Work rail causes page-level overflow");
+
+    await client.send("Input.dispatchTouchEvent", {
+      type: "touchStart",
+      touchPoints: [{ x: 330, y: Math.min(800, workDecisionPhone.firstCardTop + 110), radiusX: 4, radiusY: 4, force: 1 }],
+    });
+    await client.send("Input.dispatchTouchEvent", {
+      type: "touchMove",
+      touchPoints: [{ x: 70, y: Math.min(800, workDecisionPhone.firstCardTop + 110), radiusX: 4, radiusY: 4, force: 1 }],
+    });
+    await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+    await new Promise((resolve) => setTimeout(resolve, 450));
+    const workRailTouch = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('work-project-rail');
+      return { scrollLeft: rail.scrollLeft, status: document.querySelector('[aria-live="polite"]').textContent.trim() };
+    })())`));
+    assert.ok(workRailTouch.scrollLeft > 100, `Touch swipe did not move the phone Work rail: ${JSON.stringify(workRailTouch)}`);
+    assert.ok(Math.abs(await evaluate(client, "window.scrollY")) <= 1, "Horizontal touch movement unexpectedly scrolled the Work page vertically");
+    await capture(client, "work-rail-touch-phone.png");
+
+    await client.send("Emulation.setEmulatedMedia", {
+      features: [{ name: "prefers-reduced-motion", value: "reduce" }],
+    });
+    await openRoute(client, "/work", 390, 844);
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      const ready = await evaluate(
+        client,
+        `document.querySelector('[aria-live="polite"]')?.textContent.trim() === 'Project 1 of 4'`,
+      );
+      if (ready) break;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    const workRailReducedMotion = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('work-project-rail');
+      document.querySelector('[aria-label="Next projects"]').click();
+      return {
+        preference: matchMedia('(prefers-reduced-motion: reduce)').matches,
+        scrollBehavior: getComputedStyle(rail).scrollBehavior,
+        scrollLeft: rail.scrollLeft,
+      };
+    })())`));
+    assert.equal(workRailReducedMotion.preference, true);
+    assert.equal(workRailReducedMotion.scrollBehavior, "auto");
+    assert.ok(workRailReducedMotion.scrollLeft > 100, "Reduced-motion rail movement was not immediate");
+    await client.send("Emulation.setEmulatedMedia", { features: [] });
+
     const nexoraPreviewPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const card = [...document.querySelectorAll('h2')]
         .find((item) => item.textContent.trim() === 'Nexora Systems')
@@ -371,6 +538,59 @@ async function main() {
     assert.ok(nexoraPreviewPhone.height >= 180, "Nexora's phone proof is too shallow to inspect");
     await new Promise((resolve) => setTimeout(resolve, 250));
     await capture(client, "work-nexora-phone.png");
+
+    await openRoute(client, "/work", 768, 1024);
+    const workRailTablet = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('work-project-rail');
+      const cards = [...rail.querySelectorAll('[data-work-card]')];
+      return {
+        cardWidths: cards.map((card) => card.getBoundingClientRect().width),
+        clientWidth: rail.clientWidth,
+        scrollWidth: rail.scrollWidth,
+        controls: [...document.querySelectorAll('.work-rail-control')].map((control) => control.getBoundingClientRect().height),
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.ok(workRailTablet.cardWidths.every((width) => width >= 300), "Tablet Work cards are too narrow to inspect");
+    assert.ok(workRailTablet.scrollWidth > workRailTablet.clientWidth * 1.9, "Tablet Work rail does not expose the full collection");
+    assert.ok(workRailTablet.controls.every((height) => height >= 44), "Tablet Work controls fall below the interaction floor");
+    assert.ok(workRailTablet.overflow <= 1, "Tablet Work rail causes page-level overflow");
+    await capture(client, "work-rail-tablet.png");
+
+    await openRoute(client, "/work", 320, 568);
+    let minimumPhoneStatus = "";
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      minimumPhoneStatus = await evaluate(
+        client,
+        `document.querySelector('[aria-live="polite"]')?.textContent.trim() ?? ''`,
+      );
+      if (minimumPhoneStatus === "Project 1 of 4") break;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    const workRailMinimumPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('work-project-rail');
+      const card = rail.querySelector('[data-work-card]').getBoundingClientRect();
+      return {
+        cardWidth: card.width,
+        clientWidth: rail.clientWidth,
+        scrollWidth: rail.scrollWidth,
+        controls: [...document.querySelectorAll('.work-rail-control')].map((control) => control.getBoundingClientRect().height),
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.equal(minimumPhoneStatus, "Project 1 of 4");
+    assert.ok(workRailMinimumPhone.cardWidth >= 240, "Minimum-phone Work card is too narrow to read");
+    assert.ok(workRailMinimumPhone.scrollWidth > workRailMinimumPhone.clientWidth * 3, "Minimum-phone Work rail does not contain all projects");
+    assert.ok(workRailMinimumPhone.controls.every((height) => height >= 44), "Minimum-phone Work controls fall below the interaction floor");
+    assert.ok(workRailMinimumPhone.overflow <= 1, "Minimum-phone Work rail causes page-level overflow");
+    await evaluate(client, `(() => {
+      const railHeader = document.getElementById('work-project-rail').previousElementSibling;
+      window.scrollTo({
+        top: window.scrollY + railHeader.getBoundingClientRect().top - 96,
+        behavior: 'instant',
+      });
+    })()`);
+    await capture(client, "work-rail-minimum-phone.png");
 
     await openRoute(client, "/pricing", 390, 844);
     assert.equal(
@@ -617,6 +837,14 @@ async function main() {
       servicesDesktop,
       workDecisionDesktop,
       workDecisionPhone,
+      workRailDesktop,
+      workRailEnd,
+      workRailKeyboard,
+      workRailPhone,
+      workRailTouch,
+      workRailReducedMotion,
+      workRailTablet,
+      workRailMinimumPhone,
       contactPhone,
       contactMinimumPhone,
       contactDesktop,
@@ -625,7 +853,7 @@ async function main() {
       plannerStoragePhone,
       nexoraPreviewDesktop,
       nexoraPreviewPhone,
-      viewports: ["1280x720", "390x844", "320x568"],
+      viewports: ["1280x720", "768x1024", "390x844", "320x568"],
       runtimeErrors: 0,
       horizontalOverflow: 0,
       status: "passed",

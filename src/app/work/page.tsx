@@ -17,8 +17,8 @@ export default function WorkPage() {
       <SiteHeader />
 
       <main id="main-content" className="flex-1">
-        <section className="page-intro-stage border-b border-smoke-glass/70 px-4 py-5 sm:px-6 sm:py-6">
-          <div className="page-intro-shell mx-auto max-w-3xl rounded-3xl px-6 py-6 text-center sm:px-9 sm:py-7">
+        <section className="page-intro-stage border-b border-smoke-glass/70 px-4 py-3 sm:px-6 sm:py-4">
+          <div className="page-intro-shell mx-auto max-w-3xl rounded-3xl px-6 py-5 text-center sm:px-9">
             <p className="text-xs font-medium uppercase tracking-[0.14em] text-cool-graphite">
               Work
             </p>
@@ -33,7 +33,7 @@ export default function WorkPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-6xl px-6 pb-20 pt-10 sm:pt-12">
+        <section className="mx-auto max-w-6xl px-6 pb-20 pt-2 sm:pt-4">
           <WorkGrid />
         </section>
 

@@ -93,12 +93,12 @@ for (const [name, html] of [
 }
 assert.match(
   work,
-  /page-intro-stage[^\"]*py-5[^\"]*sm:py-6/,
+  /page-intro-stage[^\"]*py-3[^\"]*sm:py-4/,
   "Work restored the oversized opening stage",
 );
 assert.match(
   work,
-  /page-intro-shell[^\"]*py-6[^\"]*sm:py-7/,
+  /page-intro-shell[^\"]*py-5/,
   "Work restored the oversized opening panel",
 );
 assert.match(
