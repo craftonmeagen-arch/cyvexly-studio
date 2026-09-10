@@ -13,9 +13,9 @@ const chromeCandidates = [
 const captures = [
   { name: "eduailenz-live-desktop.png", url: "https://eduailenz-web.onrender.com/", width: 1440, height: 900 },
   { name: "eduailenz-live-mobile.png", url: "https://eduailenz-web.onrender.com/", width: 390, height: 844 },
-  { name: "eduailenz-tour-workflow.png", url: "https://eduailenz-web.onrender.com/", selector: "#workflow", width: 1200, height: 720 },
-  { name: "eduailenz-tour-classroom.png", url: "https://eduailenz-web.onrender.com/", selector: "#classroom", width: 1200, height: 720 },
-  { name: "eduailenz-tour-bloomed.png", url: "https://eduailenz-web.onrender.com/", selector: "#bloomed", width: 1200, height: 720 },
+  { name: "eduailenz-tour-workflow.png", url: "https://eduailenz-web.onrender.com/", selector: "#workflow", scrollOffset: 96, width: 1200, height: 720 },
+  { name: "eduailenz-tour-classroom.png", url: "https://eduailenz-web.onrender.com/", selector: "#classroom", scrollOffset: 96, width: 1200, height: 720 },
+  { name: "eduailenz-tour-bloomed.png", url: "https://eduailenz-web.onrender.com/", selector: "#bloomed", scrollOffset: 96, width: 1200, height: 720 },
   { name: "mudoinkle-live-desktop.png", url: "https://mudoinkle-staging.onrender.com/", width: 1440, height: 900 },
   { name: "mudoinkle-live-mobile.png", url: "https://mudoinkle-staging.onrender.com/", width: 390, height: 844 },
   { name: "mudoinkle-tour-setup.png", url: "https://mudoinkle-staging.onrender.com/", selector: "#how-it-works", width: 1200, height: 720 },
@@ -89,7 +89,9 @@ async function waitForPage(client, expectedUrl) {
     );
     const parsed = JSON.parse(state);
     if (parsed.readyState !== "loading" && parsed.url.startsWith(expectedUrl) && parsed.imagesReady && parsed.hasHeading) {
-      await new Promise((resolve) => setTimeout(resolve, 700));
+      // Give client-side identity artwork and account-status panels time to
+      // settle after their image elements report complete.
+      await new Promise((resolve) => setTimeout(resolve, 1800));
       return;
     }
     await new Promise((resolve) => setTimeout(resolve, 150));
@@ -110,7 +112,7 @@ async function capture(client, item) {
   if (item.selector) {
     const found = await evaluate(
       client,
-      `(() => { const node = document.querySelector(${JSON.stringify(item.selector)}); if (!node) return false; node.scrollIntoView({block: "start"}); window.scrollBy(0, -24); return true; })()`,
+      `(() => { const node = document.querySelector(${JSON.stringify(item.selector)}); if (!node) return false; node.scrollIntoView({block: "start"}); window.scrollBy(0, ${item.scrollOffset ?? -24}); return true; })()`,
     );
     if (!found) throw new Error(`Missing selector ${item.selector} on ${item.url}`);
     await new Promise((resolve) => setTimeout(resolve, 500));

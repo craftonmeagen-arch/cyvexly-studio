@@ -28,7 +28,7 @@ const productStories = {
     accentClass: "text-[#72dfba]",
     badgeClass: "border-[#72dfba]/40 bg-[#72dfba]/10 text-[#baf6df]",
     buttonClass:
-      "!bg-[#f6eedf] !text-[#08264b] hover:!bg-white focus-visible:!outline-[#72dfba]",
+      "!bg-[linear-gradient(135deg,#f6eedf_0%,#ffffff_100%)] !text-[#08264b] hover:!bg-[linear-gradient(135deg,#ffffff_0%,#f6eedf_100%)] focus-visible:!outline-[#72dfba]",
     journeys: [
       {
         number: "01",
@@ -78,7 +78,7 @@ const productStories = {
     accentClass: "text-[#ffbd45]",
     badgeClass: "border-[#ffbd45]/45 bg-[#ffbd45]/10 text-[#ffe09b]",
     buttonClass:
-      "!bg-[#ffbd45] !text-[#071b39] hover:!bg-[#ffd477] focus-visible:!outline-[#ffbd45]",
+      "!bg-[linear-gradient(135deg,#ffbd45_0%,#ff8f36_100%)] !text-[#071b39] hover:!bg-[linear-gradient(135deg,#ffd477_0%,#ffad3d_100%)] focus-visible:!outline-[#ffbd45]",
     journeys: [
       {
         number: "01",
@@ -230,51 +230,22 @@ export function ExternalProductCaseStudy({
           </div>
         </section>
 
-        <section id="product-tour" className="glass-section scroll-mt-24 border-y border-smoke-glass/70">
-          <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
-            <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-14">
-              <div>
-                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyber-blue">
-                  {slug === "eduailenz" ? "A connected teacher journey" : "Three games, clear roles"}
-                </p>
-                <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-midnight-slate sm:text-4xl">
-                  See what people are trying to accomplish—not just the system behind it.
-                </h2>
-                <p className="mt-5 max-w-lg text-sm leading-7 text-cool-graphite sm:text-base">
-                  Each view below pairs a user task with the action, visible result, and product capability it demonstrates. Public tour illustrations are labeled; they do not stand in for authenticated acceptance.
-                </p>
-                <ButtonLink href={study.demoHref} target="_blank" rel="noreferrer" variant="secondary" className="mt-7">
-                  Open the current public experience <ArrowMark />
-                </ButtonLink>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                {story.journeys.map((journey) => (
-                  <article key={journey.number} className="glass-content-field rounded-3xl px-5 py-6 sm:px-6">
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.17em] text-cyber-blue">{journey.number}</span>
-                      <span className="h-px flex-1 bg-gradient-to-r from-cyber-blue/35 to-transparent" />
-                    </div>
-                    <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.15em] text-cool-graphite">{journey.eyebrow}</p>
-                    <h3 className="mt-3 font-display text-xl font-semibold leading-tight text-midnight-slate">{journey.title}</h3>
-                    <p className="mt-3 text-sm leading-6 text-cool-graphite">{journey.copy}</p>
-                    <p className="mt-5 rounded-xl bg-cyber-blue/8 px-4 py-3 text-sm font-medium leading-6 text-midnight-slate">{journey.result}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
+        <section id="product-tour" className="mx-auto max-w-7xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyber-blue">Inspect the product story</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyber-blue">
+              {slug === "eduailenz" ? "A connected teacher journey" : "Three games, clear roles"}
+            </p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-midnight-slate sm:text-4xl">
-              Three moments. One understandable experience.
+              See what people are trying to accomplish—not just the system behind it.
             </h2>
             <p className="mt-5 text-sm leading-7 text-cool-graphite sm:text-base">
-              These views come from the current public product page. They make the product easier to understand without requiring an account, private data, or an unguided trip through the application.
+              {slug === "eduailenz"
+                ? "The lead image is a current public capture. The tour below uses clearly labeled public marketing illustrations to explain user tasks without implying authenticated workflow acceptance or exposing student data."
+                : "These current public staging views pair each user task with the visible result and capability it demonstrates, without requiring an account or a live room."}
             </p>
+            <ButtonLink href={study.demoHref} target="_blank" rel="noreferrer" variant="secondary" className="mt-7">
+              Open the current public experience <ArrowMark />
+            </ButtonLink>
           </div>
 
           <div className="mt-12 space-y-10">
