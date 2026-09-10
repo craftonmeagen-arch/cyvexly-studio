@@ -6,14 +6,12 @@ Git history, and role memory.
 
 ## Current source position
 
-- Primary accepted product source: `ca2b84e`.
-- Production product source: `ca2b84e`; branch closeout `54a90cd` was pushed and
-  canonical content adoption was proved through source-specific copy plus live
-  buyer/hierarchy suites.
-- Chunk 10 exact candidate and active review source is `c8bc73d`; Auditor R132
-  passed it with zero defects and supplies clean challenge 1 of 2. It remains
-  local-only pending one second independent review. Accepted/deployed source
-  remains `ca2b84e`.
+- Primary accepted product source: `c8bc73d`.
+- Production product source remains `ca2b84e` until accepted `c8bc73d` is
+  published and canonical adoption is proved in Round 174.
+- Chunk 10 closed in Round 174 after Auditor R132 and R133 independently passed
+  exact `c8bc73d` with zero defects. No active review candidate remains; the
+  lifecycle falls back to accepted `c8bc73d`.
 - Auditor R128 failed superseded candidate `312937c` on Work-fold blocker
   `CYV-IFA-014`; Round 166 corrected and proved it in `ca2b84e`. The primary
   Auditor automation remains `PAUSED`; the Builder did not alter it.

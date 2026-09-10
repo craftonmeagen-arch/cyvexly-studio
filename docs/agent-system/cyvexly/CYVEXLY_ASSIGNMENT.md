@@ -16,13 +16,14 @@ Builder owns only the Cyvexly-facing EduAILenz/Mudoinkle showcase corrections.
 The underlying applications, their repositories, credentials, infrastructure,
 and HoneyHearted remain Team 2 scope and must not be modified here.
 
-Chunk 10 — Horizontal Work Rail — is open under additive Owner direction
-`2026-09-10-02`. Exact candidate `c8bc73d` turns the fixed Work grid into a
-native, scroll-snapping rail through the same four approved projects with
-visible controls, touch/swipe, Arrow-key operation, announced position, safe
-end states, reduced-motion behavior, and responsive containment. Auditor R132
-passed exact candidate `c8bc73d` with zero defects (challenge 1 of 2); it
-remains local-only pending one second independent exact-source review.
+Chunk 10 — Horizontal Work Rail — closed in global round 174 under additive
+Owner direction `2026-09-10-02`. Accepted product source `c8bc73d` turns the
+fixed Work grid into a native, scroll-snapping rail through the same four
+approved projects with visible controls, touch/swipe, Arrow-key operation,
+announced position, safe end states, reduced-motion behavior, and responsive
+containment. Auditor R132 and R133 independently passed exact `c8bc73d` with
+zero defects. Publication and canonical production proof remain the final
+Round 174 closeout actions; no new Builder-reachable product chunk is open.
 
 This direction does not grant provider purchases, payment integration, secret
 access, indexing permission, outside-product changes, or scheduler changes.

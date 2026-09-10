@@ -1,16 +1,15 @@
 # Cyvexly Build Team Builder — PM Prompt
 
-**Status:** ACTIVE — CHUNK 10 WORK RAIL CANDIDATE UNDER REVIEW
+**Status:** ACTIVE — CHUNK 10 ACCEPTED; PUBLICATION PROOF IN PROGRESS
 
-Owner direction `2026-09-10-02` is the newest authority. Chunk 10 is open for
-the horizontal Work-card rail. Exact local candidate `c8bc73d` preserves the
+Owner direction `2026-09-10-02` is the newest authority. Chunk 10 closed in
+global round 174 at accepted source `c8bc73d`. The horizontal Work-card rail preserves the
 four approved projects and adds native horizontal scrolling/snap, visible
 left/right controls, touch and Arrow-key operation, announced position and end
-states, reduced-motion safety, and responsive containment. Production remains
-on accepted `ca2b84e`; two independent exact-source reviews are required before
-acceptance, push, deployment, or closure. Auditor R132 passed exact `c8bc73d`
-with zero defects and supplies clean challenge 1 of 2; one second separate
-independent review remains.
+states, reduced-motion safety, and responsive containment. Auditor R132 and
+R133 independently passed exact `c8bc73d` with zero defects, satisfying the
+two-review gate. Production remains on `ca2b84e` until accepted-source
+publication and canonical adoption are proved.
 
 Earlier Owner direction `2026-09-10-01` supplied the bounded
 primary-Builder exception for the Cyvexly-facing EduAILenz and Mudoinkle
@@ -41,12 +40,12 @@ The bounded `2026-09-10-01` exception supersedes the former exclusion only for
 the two Cyvexly case studies, their Work cards, relevant Home discovery,
 contextual inquiry continuity, and supporting public-safe proof/tests.
 
-Accepted product source is `ca2b84e`; active review source is candidate
-`c8bc73d`. Chunk 6's physical/visual review, Guardio, and Chunk 5 account/Owner
+Accepted product source is `c8bc73d`; no active review candidate remains.
+Chunk 6's physical/visual review, Guardio, and Chunk 5 account/Owner
 gates remain open but separate.
 
-Auditor R132 is the latest publication. It passed exact rail candidate
-`c8bc73d` with zero defects and supplies clean challenge 1 of 2. R131
+Auditor R133 is the latest publication. It passed exact rail source `c8bc73d`
+with zero defects and supplies clean challenge 2 of 2 after R132. R131
 reverified pre-rail accepted source
 `ca2b84e` with zero defects and has been dispositioned, but it does not cover
-Chunk 10. Review startup must target active exact candidate `c8bc73d`.
+Chunk 10. Review startup now falls back to accepted source `c8bc73d`.

@@ -12,9 +12,10 @@ clean independent challenges of that exact source. No **Active review source**
 candidate remained at that closure.
 
 Builder Round 171 opened Chunk 10 under Owner direction `2026-09-10-02` and
-established exact horizontal Work-rail candidate `c8bc73d`. The lifecycle now
-targets that active review source; accepted/deployed source remains `ca2b84e`
-until two independent exact-source reviews pass. The primary Auditor automation
+established exact horizontal Work-rail source `c8bc73d`. Auditor R132 and R133
+independently passed that exact source with zero defects, so Builder Round 174
+closed the chunk and accepted `c8bc73d` for publication. Production remains on
+`ca2b84e` until canonical adoption is proved. The primary Auditor automation
 remains stored `PAUSED`. This is a Builder continuity update, not a later PM
 product assessment.
 

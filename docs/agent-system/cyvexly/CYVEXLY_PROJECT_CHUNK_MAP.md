@@ -110,12 +110,11 @@ evidence exposes a meaningful reachable gap.
   independent reviews. Auditor R129 and R130 each passed exact `ca2b84e` and
   verified corrected Work proof remains in the opening desktop/phone folds.
 
-## Chunk 10 — Horizontal Work Rail (OPEN, ROUND 171)
+## Chunk 10 — Horizontal Work Rail (CLOSED, ROUND 174)
 
 - **Authority:** Owner direction `2026-09-10-02`, additive to the accepted
   showcase-quality direction.
-- **Exact candidate:** `c8bc73d`; local-only after clean Auditor challenge 1
-  of 2 (`IFA-2026-09-10-R132`), pending one second independent review.
+- **Accepted source:** `c8bc73d` after clean Auditor challenges R132 and R133.
 - **Outcome:** turn the fixed two-column Work collection into a clear horizontal
   browsing rail through Velora, Nexora, EduAILenz, and Mudoinkle without
   reducing card proof, readability, or buyer actions.
@@ -126,5 +125,6 @@ evidence exposes a meaningful reachable gap.
 - **Boundary:** preserve accepted project order, artwork, claims, contribution
   and limitation truth, inquiry continuity, and the Cyvexly blue-glass system.
   Do not modify the outside applications or add unapproved work.
-- **Closure:** exact-source browser proof at desktop, tablet, phone, and
-  minimum-phone sizes plus two separate independent review rounds.
+- **Closure:** exact-source browser proof passed at desktop, tablet, phone, and
+  minimum-phone sizes. Auditor R132 and R133 each passed exact `c8bc73d` with
+  zero defects, satisfying the two separate independent review rounds.

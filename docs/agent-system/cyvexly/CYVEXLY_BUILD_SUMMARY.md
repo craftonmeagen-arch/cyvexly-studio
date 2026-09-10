@@ -3,6 +3,26 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 174 — Work rail accepted after second review
+
+- Consumed Auditor `IFA-2026-09-10-R133`, which independently passed exact
+  candidate `c8bc73d` with zero defects across rail geometry, controls,
+  keyboard/touch use, responsive hierarchy, reduced motion, links, and the
+  complete regression suite.
+- R133 supplies clean challenge 2 of 2 after R132. The immutable report and 20
+  screenshots remain external; only its operational inbox item moved to the
+  processed lane.
+- Chunk 10 is closed and `c8bc73d` is accepted for publication. Production
+  remains on `ca2b84e` until branch push and canonical adoption are proved.
+- Production build, TypeScript, lint with one historical evidence warning,
+  buyer, hierarchy/rail, Nexora, submission-receipt, role setup, hot-file caps,
+  and all 57 lifecycle checks pass. The submission suite passed on a unique
+  CDP port after the first combined invocation inherited Nexora's released port
+  and exited with Node's unsettled-top-level-await diagnostic.
+- Cleanup stopped owned runtime PID 43312, cleared port 5173, removed seven
+  accepted-candidate Builder evidence files (3,693,350 bytes), and removed 156
+  bytes of temporary logs. Auditor evidence remains external.
+
 ## Round 173 — first exact-source rail review
 
 - Consumed Auditor `IFA-2026-09-10-R132`, which independently passed exact
