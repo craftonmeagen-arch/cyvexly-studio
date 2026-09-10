@@ -15,7 +15,10 @@ Outside-website work belongs to Team 2.
    Auditor R127 reviewed old source `48a2470`, not candidate `312937c`, and does
    not reduce this requirement. Round 164 repaired the review-source selector,
    so the next independent run can acquire exact candidate `312937c` without
-   relabeling it as the already accepted production source.
+   relabeling it as the already accepted production source. Round 165 confirmed
+   there is still no candidate-review intake and the primary Auditor automation
+   is stored `PAUSED`; the first review requires an explicit manual invocation
+   or separately authorized scheduler resume.
 
 2. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with

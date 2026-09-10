@@ -3,6 +3,22 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 165 — review acquisition reached an authority boundary
+
+- Confirmed no independent review of exact candidate `312937c` has arrived;
+  only legacy Team 2 R90-R92 remain in the operational inbox, and current
+  primary report R127 still covers old source `48a2470`.
+- Verified the clean product tree matches full candidate
+  `312937cdc10f049e224aae417f2b7921fec5970d`, with no active Auditor runtime or
+  port-5273 listener.
+- The primary Auditor automation is stored `PAUSED`; current authority does not
+  let the Builder resume it, and Builder self-review cannot satisfy the gate.
+  Closeout role validation exposed and corrected a case-sensitive `Chunk 9`
+  marker mismatch in the Auditor PM prompt. No product, deployment, outside
+  application, external reviewer record, or scheduler state changed.
+- Next action is an explicit manual primary-Auditor invocation against
+  `312937c`, or separate Owner authorization to resume that Auditor scheduler.
+
 ## Round 164 — exact-source review gate preserved
 
 - Dispositioned Auditor R127 as another clean review of old accepted source

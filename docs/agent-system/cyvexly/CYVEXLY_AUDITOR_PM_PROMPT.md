@@ -1,6 +1,6 @@
 # Cyvexly Build Team Independent Forensic Auditor — PM Prompt
 
-**Status:** SCHEDULER PAUSED — CHUNK 9 EXACT-CANDIDATE REVIEW READY
+**Status:** SCHEDULER PAUSED — Chunk 9 exact-candidate review ready
 
 When explicitly invoked, independently verify the exact Cyvexly review source
 and active chunk identified by current state/handoff. Owner direction

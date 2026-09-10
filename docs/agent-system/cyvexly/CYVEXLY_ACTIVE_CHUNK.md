@@ -2,7 +2,7 @@
 
 **Active product chunk:** Chunk 9 — EduAILenz & Mudoinkle Showcase Quality
 
-**Current position:** global round 165; chunk-local round 3
+**Current position:** global round 166; chunk-local round 4
 
 **Starting source:** repository head `7bfbd8f`; production product baseline
 `493d1e6` contains Team 2's initial portfolio integration. Exact Round 163
@@ -60,6 +60,24 @@ Pre-existing primary gates remain outside this chunk:
 Team 2 report `HH-IFA-023` closed review of production baseline `493d1e6`;
 primary R116 covers only `48a2470`.
 
+## Round 165 — independent-review acquisition boundary
+
+- **Checked:** no new primary review intake exists. Only legacy Team 2 R90-R92
+  remain unconsumed; current primary report R127 still covers old source
+  `48a2470`, not candidate `312937c`.
+- **Verified:** product paths match exact candidate
+  `312937cdc10f049e224aae417f2b7921fec5970d`; the working tree is clean, and no
+  Auditor runtime or port-5273 listener is active.
+- **Boundary:** the primary Auditor automation is stored `PAUSED`, and this
+  Builder has no authority to resume it. No Builder self-review can satisfy the
+  independent gate. A role-setup failure exposed and corrected a case-sensitive
+  `Chunk 9` marker mismatch in the Auditor PM prompt. Product, deployment,
+  outside applications, external reviewer files, and all scheduler states
+  remained unchanged.
+- **Next:** explicitly invoke the primary Auditor against `312937c` or separately
+  authorize its scheduler resume; disposition that report before further
+  candidate work or publication.
+
 ## Round 164 — exact-source review gate preserved
 
 - **Dispositioned:** Auditor R127 passed old accepted source `48a2470` with
@@ -98,17 +116,6 @@ primary R116 covers only `48a2470`.
   credential, room, student record, submission, production deployment, or
   scheduler state was changed. Candidate awaits two independent exact-source
   reviews before Chunk 9 closes.
-
-## Round 162 — hot-memory source-truth reconciliation
-
-- **Changed:** compacted the active chunk, handoff, build summary, chunk map,
-  and debt records to current truth. Chunks 3–4 now read as implementation-
-  complete with their remaining closure gates consolidated into Chunk 5.
-- **Preserved:** Chunk 6's one review gap, all Owner/account gates, accepted
-  primary/production source identities, historical evidence in Git/archives,
-  and the Team 2 boundary.
-- **Boundary/next:** no product, deployment, Team 2, reviewer, external, or
-  scheduler state changed. Await fresh primary evidence before reopening work.
 
 Older round detail is preserved in `CYVEXLY_BUILD_SUMMARY.md`,
 `docs/archive/chunks/`, Git history, and role memory.

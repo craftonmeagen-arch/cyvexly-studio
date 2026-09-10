@@ -42,3 +42,11 @@ Round 164 corrected the review source selector: the lifecycle now uses the
 explicit **Active review source** from current state (`312937c`) and falls back
 to the accepted source only when no candidate is declared. The isolated
 auditor/council/functional lifecycle suite passes all 57 checks.
+
+Round 165 found no new primary intake, active Auditor runtime, or port-5273
+listener. The primary Auditor automation is stored `PAUSED`; only an explicit
+manual invocation or separately authorized scheduler resume can provide the
+first independent candidate review. The Builder did not change scheduler or
+external reviewer state and did not count self-review toward acceptance. A
+case-sensitive `Chunk 9` status-marker mismatch in the repository Auditor PM
+prompt was corrected after role setup exposed it.

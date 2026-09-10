@@ -1,15 +1,15 @@
 # Cyvexly Current State
 
-**Last completed global round:** 164
+**Last completed global round:** 165
 
-**Next:** global round 165; independently review the exact Round 163 Chunk 9
-candidate before any push or deployment. Correct material findings, then obtain
-a second separate exact-source challenge before closure. Other scheduler pauses
-remain unchanged.
+**Next:** global round 166; obtain the first independent review of exact Chunk 9
+candidate `312937c` through an explicit manual Auditor invocation or separately
+authorized Auditor-scheduler resume. Correct material findings, then obtain a
+second separate exact-source challenge before closure.
 
 **Active chunk:** Chunk 9 — EduAILenz & Mudoinkle Showcase Quality
 
-**Current chunk-local round:** 3
+**Current chunk-local round:** 4
 
 **Accepted repository source:** `48a2470` (primary Chunk 8 source)
 
@@ -26,6 +26,18 @@ scheduler states remain unchanged. Underlying outside-product work,
 credentials, infrastructure, and HoneyHearted remain Team 2 scope.
 
 ## Current product position
+
+Round 165 confirmed that no exact-candidate review has arrived: the only
+unconsumed external inbox items are legacy Team 2 R90-R92, the current primary
+report is still R127 against old source `48a2470`, and no Auditor runtime or
+port-5273 listener is active. Product paths match exact candidate
+`312937cdc10f049e224aae417f2b7921fec5970d` and the working tree is clean.
+The configured primary Auditor automation is stored `PAUSED`; current Owner
+direction does not authorize this Builder to resume it. No scheduler, product,
+deployment, outside application, or external reviewer record changed. A final
+role-setup check exposed and corrected a case-sensitive `Chunk 9` marker mismatch
+in the Auditor PM prompt; only coordination/hot-memory files changed. Builder
+self-review cannot substitute for the two required independent challenges.
 
 Round 164 dispositioned Auditor R127. It is another zero-defect review of old
 accepted source `48a2470`, so it supplies no review coverage for Chunk 9
@@ -86,8 +98,10 @@ its separate review of the EduAILenz/Mudoinkle portfolio integration.
 
 Current Builder work is Chunk 9. The Round 163 candidate is implemented locally
 and intentionally not pushed or deployed while its required independent
-exact-source reviews remain outstanding. Do not access protected data or modify
-the outside applications. Do not restart completed hierarchy, service, pricing,
+exact-source reviews remain outstanding. The first review now requires an
+explicit manual primary-Auditor invocation or separately authorized resume of
+the paused Auditor automation. Do not access protected data or modify the
+outside applications. Do not restart completed hierarchy, service, pricing,
 Planner, or unrelated proof loops merely to keep the automation busy.
 
 Remaining primary-team gates:

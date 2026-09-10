@@ -2,19 +2,39 @@
 
 ## Current assignment
 
-Start global round 165 in Chunk 9. The first EduAILenz/Mudoinkle showcase-
+Start global round 166 in Chunk 9. The first EduAILenz/Mudoinkle showcase-
 quality candidate is exact source `312937c` and is intentionally local-only;
 `main` is six commits ahead of `origin/main`. Do not push or deploy it before
 independent exact-source review.
 
-Acquire the first independent review of `312937c` across Home, Work, both case
-studies, desktop/tablet/phone layouts, keyboard access, claim truth, public
-proof links, and contextual inquiry continuity. Correct any material finding,
-then obtain a second separate exact-source challenge before closing Chunk 9.
+No exact-candidate review has arrived, and the primary Auditor automation is
+stored `PAUSED`. Acquire the first independent review of `312937c` through an
+explicit manual primary-Auditor invocation or separately authorized scheduler
+resume. Cover Home, Work, both case studies, desktop/tablet/phone layouts,
+keyboard access, claim truth, public proof links, and contextual inquiry
+continuity. Correct any material finding, then obtain a second separate exact-
+source challenge before closing Chunk 9.
 
 The candidate changes only Cyvexly presentation. Do not modify EduAILenz,
 Mudoinkle, HoneyHearted, their credentials, protected data, infrastructure, or
 deployment. Team 2 Builder and Auditor scheduler states remain unchanged.
+
+## Round 165 handoff
+
+**State:** EXACT-SOURCE REVIEW WAITING ON AUTHORIZED INDEPENDENT INVOCATION
+
+- No new primary inbox item exists; only legacy Team 2 R90-R92 remain. Current
+  primary report R127 still reviews old source `48a2470`.
+- Product paths match full candidate
+  `312937cdc10f049e224aae417f2b7921fec5970d`; the working tree is clean, with no
+  active Auditor runtime or port-5273 listener.
+- The primary Auditor automation is `PAUSED`. This Builder did not change it,
+  and a Builder self-review was not substituted for independent acceptance.
+- Role setup exposed and corrected a case-sensitive `Chunk 9` marker mismatch
+  in the Auditor PM prompt. No product, deployment, outside-application,
+  external-reviewer-record, or scheduler state changed. Manually invoke the
+  primary Auditor against `312937c` or obtain separate authorization to resume
+  its scheduler.
 
 ## Round 164 handoff
 
