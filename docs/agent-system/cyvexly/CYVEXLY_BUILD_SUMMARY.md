@@ -5,7 +5,7 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
 ## Round 163 — EduAILenz/Mudoinkle showcase-quality candidate
 
-- Implemented exact local candidate `4bacbfa`: two product-specific case-study
+- Implemented exact local candidate `312937c`: two product-specific case-study
   atmospheres, real current desktop/phone captures, three user journeys per
   product, explicit Cyvexly contribution, truthful limitations, direct public
   proof, and contextual Custom Web Application inquiries.
@@ -19,6 +19,9 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
   cannot be confused with authenticated or production acceptance.
 - Candidate is committed locally but not pushed or deployed. Two independent
   exact-source review rounds remain before Chunk 9 can close.
+- A final refinement removed a duplicate text-only journey band, improved CTA
+  distinction, tightened proof-image framing, and made capture settling more
+  reliable before establishing the exact candidate source above.
 
 ## 2026-09-10 — shared-checkout reconciliation
 

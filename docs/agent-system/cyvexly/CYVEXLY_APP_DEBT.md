@@ -9,7 +9,7 @@ Git history, and role memory.
 - Primary accepted source: `48a2470`.
 - Production head: `493d1e6`, Team 2's bounded outside-site portfolio
   integration directly on top of the primary source.
-- Chunk 9 showcase candidate: local commit `4bacbfa`; it is not accepted,
+- Chunk 9 showcase candidate: local commit `312937c`; it is not accepted,
   pushed, or deployed while two independent exact-source reviews remain.
 - Chunk 8 closed in Round 159 after R112 and exact-source R116 supplied two
   separate clean challenges. No current primary product defect is open.

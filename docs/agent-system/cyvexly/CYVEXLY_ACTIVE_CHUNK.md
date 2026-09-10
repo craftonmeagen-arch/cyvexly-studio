@@ -6,7 +6,7 @@
 
 **Starting source:** repository head `7bfbd8f`; production product baseline
 `493d1e6` contains Team 2's initial portfolio integration. Exact Round 163
-candidate source is local commit `4bacbfa`; independent review is pending.
+candidate source is local commit `312937c`; independent review is pending.
 
 **Scheduler state:** primary Cyvexly Builder resumed by Owner direction
 `2026-09-10-01`; Team 2 Builder and Auditor scheduler states are unchanged.

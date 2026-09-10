@@ -34,6 +34,6 @@ Latest Builder disposition: Auditor publications `IFA-2026-09-10-R117`, R118,
 and R120–R126 each repeated a zero-defect pass of old accepted source
 `48a2470385e7641b1bd500eed55850286896677e`. Their inbox items were consumed and
 moved to the external processed lane; published reports/evidence remain
-external. They do not cover local Chunk 9 candidate `4bacbfa`, which still needs
+external. They do not cover local Chunk 9 candidate `312937c`, which still needs
 two separate independent exact-source reviews. Legacy Team 2 R90–R92 inbox
 items remain untouched and outside the primary lane.
