@@ -7,8 +7,9 @@ Git history, and role memory.
 ## Current source position
 
 - Primary accepted product source: `ca2b84e`.
-- Publication of the accepted Chunk 9 source is the remaining current-round
-  action; production adoption must be proved after the push.
+- Production product source: `ca2b84e`; branch closeout `54a90cd` was pushed and
+  canonical content adoption was proved through source-specific copy plus live
+  buyer/hierarchy suites.
 - No active review candidate is declared; the lifecycle selector falls back to
   the accepted source.
 - Auditor R128 failed superseded candidate `312937c` on Work-fold blocker

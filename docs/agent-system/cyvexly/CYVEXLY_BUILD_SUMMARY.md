@@ -14,7 +14,12 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
   source. Chunk 9 is closed and `ca2b84e` is the accepted product source.
 - Builder acceptance checks passed: production build, TypeScript, lint with one
   historical evidence warning, all 57 lifecycle checks, role setup, hot-file
-  caps, and whitespace. Publication is the remaining action in this round.
+  caps, and whitespace.
+- Pushed branch closeout `54a90cd`; canonical production then replaced the old
+  Work headline with `ca2b84e`'s proof-first copy. The live 35-route/17-context
+  buyer suite and complete desktop/390px/320px hierarchy suite pass with zero
+  runtime errors or overflow. Both case studies and all four proof images return
+  200 with HSTS, and staged no-index controls remain intact.
 
 ## Round 167 — first clean exact-source review passed
 

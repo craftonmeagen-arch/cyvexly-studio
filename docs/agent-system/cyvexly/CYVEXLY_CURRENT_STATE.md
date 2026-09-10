@@ -2,8 +2,7 @@
 
 **Last completed global round:** 169
 
-**Next:** publish accepted product source `ca2b84e`, verify canonical production
-adoption, then await new reachable primary-Cyvexly evidence.
+**Next:** global round 170; await new reachable primary-Cyvexly evidence.
 
 **Active chunk:** none; Chunk 9 closed in global round 169
 
@@ -15,13 +14,13 @@ adoption, then await new reachable primary-Cyvexly evidence.
 
 **Active review source:** none; review lifecycle falls back to accepted source
 
-**Current deployed product-source baseline:** `493d1e6` until the accepted
-`ca2b84e` publication is proved live in this round
+**Current deployed product-source baseline:** `ca2b84e`; published branch
+closeout `54a90cd` is on `origin/main`
 
-Owner direction `2026-09-10-01` resumes the primary Cyvexly Builder and opens
-the two Cyvexly-facing showcase corrections. Team 2 Builder and all Auditor
-scheduler states remain unchanged. Underlying outside-product work,
-credentials, infrastructure, and HoneyHearted remain Team 2 scope.
+Owner direction `2026-09-10-01` resumed the primary Builder for the two
+Cyvexly-facing showcase corrections. Team 2 Builder and all Auditor scheduler
+states remain unchanged. Outside products, credentials, infrastructure, and
+HoneyHearted remain Team 2 scope.
 
 ## Current product position
 
@@ -30,8 +29,11 @@ Round 169 consumed exact-source Auditor R130, which independently passed
 the 56-route build, TypeScript, lint, buyer, hierarchy, Nexora, and submission-
 receipt suites plus responsive visual inspection. Together with R129, it
 satisfies the two independent exact-source review requirement. Chunk 9 is
-closed and `ca2b84e` is accepted for publication. Builder acceptance checks
-also pass; production adoption remains to be recorded after the push.
+closed and `ca2b84e` is accepted. Builder acceptance checks also pass. Branch
+closeout `54a90cd` was pushed, and canonical production adopted the source-
+specific Work headline. The live 35-route buyer and full responsive hierarchy
+suites pass; both case studies and four proof images return 200 with HSTS;
+staged no-index controls remain intact.
 
 Round 167 consumed exact-source Auditor R129, which passed corrected candidate
 `ca2b84e` and independently verified that `CYV-IFA-014` is resolved. It passed
@@ -121,9 +123,9 @@ its separate review of the EduAILenz/Mudoinkle portfolio integration.
 
 ## Next work and gates
 
-Finish Round 169 by publishing the accepted source and proving canonical
-production adoption. After that, no Builder-reachable product chunk remains.
-Do not access protected data, modify the outside applications, or restart
+No Builder-reachable product chunk remains. Await new Owner direction, changed
+source, buyer-use evidence, or reviewer evidence exposing a material reachable
+gap. Do not access protected data, modify the outside applications, or restart
 unrelated loops.
 
 Remaining primary-team gates:

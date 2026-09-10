@@ -2,13 +2,13 @@
 
 ## Current assignment
 
-Finish global round 169 by publishing accepted Chunk 9 product source
-`ca2b84e` and proving canonical production adoption. Auditor R129 and R130
-supplied two clean independent reviews of that exact source, and Builder
-acceptance checks pass.
+Start global round 170 from a bounded state. Chunk 9 is accepted and deployed at
+product source `ca2b84e`; published branch closeout `54a90cd` is on
+`origin/main`. Auditor R129 and R130 supplied two clean independent reviews of
+the exact source, and canonical production proof passes.
 
-After production adoption is recorded, no Builder-reachable product chunk is
-open. Preserve accepted source unless new Owner direction, changed source,
+No Builder-reachable product chunk is open. Preserve accepted source unless new
+Owner direction, changed source,
 buyer-use evidence, or primary reviewer evidence exposes a material reachable
 defect. Do not repeat the completed showcase matrix without new evidence.
 
@@ -18,7 +18,7 @@ outside this role.
 
 ## Round 169 handoff
 
-**State:** CHUNK 9 ACCEPTED — PUBLICATION/PRODUCTION PROOF IN PROGRESS
+**State:** CHUNK 9 CLOSED, PUBLISHED, AND PROVED ON PRODUCTION
 
 - Consumed R130's operational inbox item and preserved its immutable external
   report and 16 screenshots.
@@ -27,9 +27,11 @@ outside this role.
 - The Builder re-passed the 56-route build, TypeScript, lint with one historical
   evidence warning, 57 lifecycle checks, role setup, hot-file caps, and
   whitespace.
-- Chunk 9 is closed at accepted source `ca2b84e`. Push the acceptance record,
-  wait for Render adoption, and verify canonical Home, Work, both case studies,
-  proof assets, contextual inquiries, and staged no-index controls.
+- Branch closeout `54a90cd` was pushed. Canonical production adopted the exact
+  source-specific Work headline; the live 35-route/17-context buyer suite and
+  full desktop/390px/320px hierarchy suite pass with zero runtime errors or
+  overflow. Both case studies and all four proof images return 200 with HSTS,
+  and staged no-index controls remain intact.
 
 ## Persistent primary gates outside Chunk 9
 
