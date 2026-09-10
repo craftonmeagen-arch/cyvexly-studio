@@ -2,22 +2,43 @@
 
 ## Current assignment
 
-Start global round 166 in Chunk 9. The first EduAILenz/Mudoinkle showcase-
-quality candidate is exact source `312937c` and is intentionally local-only;
-`main` is six commits ahead of `origin/main`. Do not push or deploy it before
-independent exact-source review.
+Start global round 167 in Chunk 9. Corrected exact showcase candidate `ca2b84e`
+is intentionally local-only; `main` is ahead of `origin/main`. Do not push or
+deploy it before two passing independent exact-source reviews.
 
-No exact-candidate review has arrived, and the primary Auditor automation is
-stored `PAUSED`. Acquire the first independent review of `312937c` through an
-explicit manual primary-Auditor invocation or separately authorized scheduler
-resume. Cover Home, Work, both case studies, desktop/tablet/phone layouts,
-keyboard access, claim truth, public proof links, and contextual inquiry
-continuity. Correct any material finding, then obtain a second separate exact-
-source challenge before closing Chunk 9.
+Auditor R128 verified the showcase elevation in old candidate `312937c` but
+failed Work-fold blocker `CYV-IFA-014`; Round 166 corrected and proved it in
+`ca2b84e`. R128 is not a clean pass of the new source. Acquire the first clean
+review through an explicit manual primary-Auditor invocation or separately
+authorized scheduler resume, then obtain a second separate challenge. Cover
+Home, Work, both case studies, desktop/tablet/phone layouts, keyboard access,
+claim truth, public proof links, and contextual inquiry continuity.
 
 The candidate changes only Cyvexly presentation. Do not modify EduAILenz,
 Mudoinkle, HoneyHearted, their credentials, protected data, infrastructure, or
 deployment. Team 2 Builder and Auditor scheduler states remain unchanged.
+
+## Round 166 handoff
+
+**State:** AUDITOR BLOCKER CORRECTED — NEW EXACT CANDIDATE NEEDS TWO PASSES
+
+- Consumed primary Auditor R128 and preserved its immutable external report.
+  It reviewed exact `312937c`, verified the new showcases, and failed only
+  `CYV-IFA-014`: Work proof was below the opening fold.
+- Exact local candidate `ca2b84e` replaces the long Work headline with concise
+  buyer language. At 1280x720 the hero/card/artwork measurements are
+  354.75/523.75/716.75px; at 390x844 card/artwork are 535/728px with 0 overflow.
+- TypeScript, lint, production build, 35-route/17-context buyer smoke, and the
+  full hierarchy smoke pass. Visible IAB inspection passed at desktop and at
+  its 375px effective phone content width. Minimum screenshots and metrics are
+  retained under `builder/evidence/round-166-ifa014-correction/` until the
+  candidate is accepted or superseded.
+- Cleanup removed 14 redundant captures (7,970,808 bytes), closed the IAB tab,
+  stopped both Builder-owned runtimes, and verified ports 5173/9342/9343 plus
+  lifecycle scratch are clear.
+- R128 failed the superseded source, so `ca2b84e` still needs two clean
+  independent reviews. No deployment, outside application, or scheduler state
+  changed.
 
 ## Round 165 handoff
 
@@ -53,31 +74,6 @@ deployment. Team 2 Builder and Auditor scheduler states remain unchanged.
 - No product, deployment, outside-application, Team 2, credential, or scheduler
   state changed. Do not repeat Builder polish without fresh buyer-use or review
   evidence.
-
-## Round 163 handoff
-
-**State:** FIRST SHOWCASE CANDIDATE READY — INDEPENDENT REVIEW REQUIRED
-
-- Rebuilt both case studies around distinct identities, real current public
-  desktop/phone proof, three understandable user journeys, explicit Cyvexly
-  contribution, proportional limitations, and direct public/tour paths.
-- Connected real EduAILenz/Mudoinkle proof through Home and Work, with separate
-  contextual inquiry paths into Custom Web Applications.
-- Visible review found and fixed a generic-background cascade that washed out
-  both identities; the final navy/green and navy/orange/plum heroes passed at
-  desktop, tablet, and phone widths. The skip link now focuses main content.
-- Final refinement removed a duplicate text-only journey band, improved CTA
-  distinction and proof framing, and extended capture settling before recording
-  exact candidate source `312937c`.
-- Production build, TypeScript, lint, `git diff --check`, and the 35-route,
-  17-context buyer smoke passed. Inspected layouts had zero horizontal overflow
-  and semantic/keyboard order passed.
-- Capture provenance is recorded under
-  `builder/evidence/round-163-showcase-quality/`; all evidence is public-only
-  and explicitly distinguished from authenticated or production acceptance.
-- Auditor inbox items R117, R118, and R120–R126 were consumed and moved to the
-  external processed lane. They are repeated zero-defect reviews of old source
-  `48a2470`, so none covers this candidate.
 
 ## Persistent primary gates outside Chunk 9
 

@@ -9,16 +9,14 @@ Outside-website work belongs to Team 2.
 1. **Chunk 9 — independent verification of the implemented showcase candidate.**
    Round 163 completed the distinct product identities, real public-safe
    desktop/phone evidence, concrete guided journeys, buyer-readable capability
-   stories, proportional limitations, Work/Home/inquiry discovery, and local
-   responsive/keyboard proof. Two separate independent exact-source review
-   rounds remain before closure; correct any material finding before continuing.
-   Auditor R127 reviewed old source `48a2470`, not candidate `312937c`, and does
-   not reduce this requirement. Round 164 repaired the review-source selector,
-   so the next independent run can acquire exact candidate `312937c` without
-   relabeling it as the already accepted production source. Round 165 confirmed
-   there is still no candidate-review intake and the primary Auditor automation
-   is stored `PAUSED`; the first review requires an explicit manual invocation
-   or separately authorized scheduler resume.
+   stories, proportional limitations, and Work/Home/inquiry discovery. Auditor
+   R128 verified that elevation at exact source `312937c` but found blocker
+   `CYV-IFA-014`: Work proof fell below the opening fold. Round 166 corrected it
+   in exact local candidate `ca2b84e`; full hierarchy, buyer, build, type, lint,
+   responsive, overflow, and visible-browser proof pass. Because R128 failed the
+   superseded source, `ca2b84e` still needs two clean independent exact-source
+   reviews before closure. The primary Auditor automation remains `PAUSED`, so
+   review requires explicit manual invocation or separate resume authority.
 
 2. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with

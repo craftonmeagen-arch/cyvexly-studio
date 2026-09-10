@@ -1,21 +1,20 @@
 # Cyvexly Current State
 
-**Last completed global round:** 165
+**Last completed global round:** 166
 
-**Next:** global round 166; obtain the first independent review of exact Chunk 9
-candidate `312937c` through an explicit manual Auditor invocation or separately
-authorized Auditor-scheduler resume. Correct material findings, then obtain a
-second separate exact-source challenge before closure.
+**Next:** global round 167; obtain a clean independent review of corrected exact
+Chunk 9 candidate `ca2b84e`, then a second separate exact-source challenge
+before closure. Keep the candidate local-only until both pass.
 
 **Active chunk:** Chunk 9 — EduAILenz & Mudoinkle Showcase Quality
 
-**Current chunk-local round:** 4
+**Current chunk-local round:** 5
 
 **Accepted repository source:** `48a2470` (primary Chunk 8 source)
 
-**Chunk 9 candidate source:** `312937c` (local-only; independent review pending)
+**Chunk 9 candidate source:** `ca2b84e` (local-only; independent review pending)
 
-**Active review source:** `312937c` (exact Chunk 9 candidate; not yet accepted)
+**Active review source:** `ca2b84e` (corrected exact Chunk 9 candidate; not yet accepted)
 
 **Current deployed product-source baseline:** `493d1e6` (Team 2's bounded
 outside-site integration on `48a2470`; later reconciliation is record-only)
@@ -26,6 +25,17 @@ scheduler states remain unchanged. Underlying outside-product work,
 credentials, infrastructure, and HoneyHearted remain Team 2 scope.
 
 ## Current product position
+
+Round 166 dispositioned exact-source Auditor R128, which verified the showcase
+elevation but failed candidate `312937c` on `CYV-IFA-014`: the expanded Work
+introduction pushed first proof below the opening fold. Corrected candidate
+`ca2b84e` restores a concise buyer-facing headline and proof-first hierarchy.
+Production build, TypeScript, lint, the 35-route/17-context buyer smoke, and the
+full internal hierarchy smoke pass. Exact 1280x720 measurements are 354.75px
+hero, 523.75px first-card top, and 716.75px artwork bottom; exact 390x844 first-
+card top is 535px with 0 overflow. Visible IAB inspection also passed at its
+375px effective content width. R128 was consumed but is not a clean review of
+the corrected source, so `ca2b84e` still needs two passing independent rounds.
 
 Round 165 confirmed that no exact-candidate review has arrived: the only
 unconsumed external inbox items are legacy Team 2 R90-R92, the current primary
@@ -96,13 +106,11 @@ its separate review of the EduAILenz/Mudoinkle portfolio integration.
 
 ## Next work and gates
 
-Current Builder work is Chunk 9. The Round 163 candidate is implemented locally
-and intentionally not pushed or deployed while its required independent
-exact-source reviews remain outstanding. The first review now requires an
-explicit manual primary-Auditor invocation or separately authorized resume of
-the paused Auditor automation. Do not access protected data or modify the
-outside applications. Do not restart completed hierarchy, service, pricing,
-Planner, or unrelated proof loops merely to keep the automation busy.
+Current Builder work is Chunk 9. Corrected candidate `ca2b84e` is local-only and
+must not be pushed or deployed while two clean independent exact-source reviews
+remain. The next review requires an explicit manual primary-Auditor invocation
+or separately authorized resume of the paused Auditor automation. Do not access
+protected data, modify the outside applications, or restart unrelated loops.
 
 Remaining primary-team gates:
 

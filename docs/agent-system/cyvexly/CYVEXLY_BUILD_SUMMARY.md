@@ -3,6 +3,23 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 166 — Auditor blocker corrected in exact candidate
+
+- Dispositioned exact-source Auditor R128: it verified the showcase elevation
+  in `312937c` but failed blocker `CYV-IFA-014`, where the expanded Work intro
+  pushed first proof below the opening desktop and phone folds.
+- Corrected the source-level copy in exact local candidate `ca2b84e`. At
+  1280x720 the intro is 354.75px, first card starts at 523.75px, and artwork
+  ends at 716.75px; at 390x844 the card starts at 535px and artwork ends at
+  728px, with zero overflow. Visible IAB proof also passed at its 375px
+  effective content width.
+- TypeScript, lint, production build, 35-route/17-context buyer smoke, and the
+  complete desktop/phone/minimum-phone hierarchy smoke pass. Two rendered Work
+  captures and their proof record remain under Builder evidence until review.
+- R128 was consumed but does not count as a clean review of corrected source.
+  `ca2b84e` remains local-only pending two passing independent exact-source
+  rounds; no deployment, outside application, or scheduler state changed.
+
 ## Round 165 — review acquisition reached an authority boundary
 
 - Confirmed no independent review of exact candidate `312937c` has arrived;

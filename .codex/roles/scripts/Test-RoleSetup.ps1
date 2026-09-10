@@ -46,8 +46,8 @@ $currentSourceMarkers=@{
     'CYVEXLY_AUDITOR_PM_PROMPT.md'=@('Cyvexly Build Team','Active review source','Chunk 9')
     'CYVEXLY_COUNCIL_PM_PROMPT.md'=@('Cyvexly Build Team','BUYER-JOURNEY')
     'CYVEXLY_FUNCTIONAL_PM_PROMPT.md'=@('Cyvexly Build Team','CURRENT ACCEPTED CYVEXLY SOURCE')
-    'CYVEXLY_PM_CURRENT_STATE.md'=@('Cyvexly Build Team','Chunk 9','312937c')
-    'CYVEXLY_NEXT_PM_HANDOFF.md'=@('Cyvexly Build Team','Chunk 9','312937c')
+    'CYVEXLY_PM_CURRENT_STATE.md'=@('Cyvexly Build Team','Chunk 9')
+    'CYVEXLY_NEXT_PM_HANDOFF.md'=@('Cyvexly Build Team','Chunk 9')
     'CYVEXLY_REVIEW_INDEX.md'=@('Cyvexly Build Team','Independent Forensic Auditor')
     'CYVEXLY_VISION.md'=@('Chunk 9','EduAILenz & Mudoinkle Showcase Quality')
 }
@@ -78,6 +78,13 @@ $reviewSource=if($reviewSourceMatches.Count -eq 1){$reviewSourceMatches[0].Group
 $resolvedReviewSource=(& git -C $workspace rev-parse --verify "$reviewSource^{commit}" 2>$null).Trim()
 if($LASTEXITCODE -ne 0 -or $resolvedReviewSource -notmatch '^[0-9a-f]{40}$'){
     throw "Active review source is not independently resolvable: $reviewSource"
+}
+$shortReviewSource=$resolvedReviewSource.Substring(0,7)
+foreach($pmFile in @('CYVEXLY_PM_CURRENT_STATE.md','CYVEXLY_NEXT_PM_HANDOFF.md')){
+    $pmText=Get-Content (Join-Path $lane $pmFile) -Raw
+    if(-not $pmText.Contains($shortReviewSource)){
+        throw "Current Cyvexly PM source does not name active review source: $pmFile -> $shortReviewSource"
+    }
 }
 $auditorPrompt=Get-Content (Join-Path $lane 'CYVEXLY_AUDITOR_PM_PROMPT.md') -Raw
 foreach($marker in @('Start-ReviewRound.ps1','Active review source','full SHA','Local `HEAD` is not a substitute')){

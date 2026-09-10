@@ -9,11 +9,12 @@ Git history, and role memory.
 - Primary accepted source: `48a2470`.
 - Production head: `493d1e6`, Team 2's bounded outside-site portfolio
   integration directly on top of the primary source.
-- Chunk 9 showcase candidate: local commit `312937c`; it is not accepted,
-  pushed, or deployed while two independent exact-source reviews remain.
-- Active review source: `312937c`; Round 164 repaired the lifecycle selector so
-  reviewers no longer fall back to old accepted source while this field exists.
-- Round 165 found no candidate review or active Auditor runtime. The primary
+- Chunk 9 showcase candidate: corrected local commit `ca2b84e`; it is not
+  accepted, pushed, or deployed while two clean exact-source reviews remain.
+- Active review source: `ca2b84e`; the lifecycle selector uses this field before
+  the accepted-source fallback.
+- Auditor R128 failed superseded candidate `312937c` on Work-fold blocker
+  `CYV-IFA-014`; Round 166 corrected and proved it in `ca2b84e`. The primary
   Auditor automation remains `PAUSED`; the Builder did not alter it.
 - Chunk 8 closed in Round 159 after R112 and exact-source R116 supplied two
   separate clean challenges. No current primary product defect is open.

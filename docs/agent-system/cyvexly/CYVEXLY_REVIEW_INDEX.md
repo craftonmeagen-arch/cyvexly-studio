@@ -30,23 +30,22 @@ prefixes. Never renumber an old finding. New Functional findings use CYV-FS.
 Current reports need an actual published review identity and exact reviewed source. Pending
 Council R42 publication/cleanup remains unverified until its evidence is reconciled.
 
-Latest Builder disposition: Auditor publications `IFA-2026-09-10-R117`, R118,
-and R120–R127 each repeated a zero-defect pass of old accepted source
+Auditor publications `IFA-2026-09-10-R117`, R118, and R120–R127 each repeated
+a zero-defect pass of old accepted source
 `48a2470385e7641b1bd500eed55850286896677e`. Their inbox items were consumed and
 moved to the external processed lane; published reports/evidence remain
-external. They do not cover local Chunk 9 candidate `312937c`, which still needs
-two separate independent exact-source reviews. Legacy Team 2 R90–R92 inbox
-items remain untouched and outside the primary lane.
+external. They do not cover Chunk 9. Legacy Team 2 R90–R92 inbox items remain
+untouched and outside the primary lane.
 
 Round 164 corrected the review source selector: the lifecycle now uses the
 explicit **Active review source** from current state (`312937c`) and falls back
 to the accepted source only when no candidate is declared. The isolated
 auditor/council/functional lifecycle suite passes all 57 checks.
 
-Round 165 found no new primary intake, active Auditor runtime, or port-5273
-listener. The primary Auditor automation is stored `PAUSED`; only an explicit
-manual invocation or separately authorized scheduler resume can provide the
-first independent candidate review. The Builder did not change scheduler or
-external reviewer state and did not count self-review toward acceptance. A
-case-sensitive `Chunk 9` status-marker mismatch in the repository Auditor PM
-prompt was corrected after role setup exposed it.
+Latest Builder disposition: R128 reviewed exact candidate `312937c`, verified
+the showcase elevation, and failed it on blocker `CYV-IFA-014`: Work proof was
+pushed below the opening viewport. Round 166 consumed its inbox item and
+corrected the defect in new exact local candidate `ca2b84e`. R128 is not a clean
+review of that corrected source, so two passing independent exact-`ca2b84e`
+rounds remain. The primary Auditor automation is stored `PAUSED`; review needs
+explicit manual invocation or separately authorized scheduler resume.

@@ -2,11 +2,11 @@
 
 **Active product chunk:** Chunk 9 — EduAILenz & Mudoinkle Showcase Quality
 
-**Current position:** global round 166; chunk-local round 4
+**Current position:** global round 167; chunk-local round 5
 
 **Starting source:** repository head `7bfbd8f`; production product baseline
-`493d1e6` contains Team 2's initial portfolio integration. Exact Round 163
-candidate source is local commit `312937c`; independent review is pending.
+`493d1e6` contains Team 2's initial portfolio integration. Corrected exact
+candidate source is local commit `ca2b84e`; independent review is pending.
 
 **Scheduler state:** primary Cyvexly Builder resumed by Owner direction
 `2026-09-10-01`; Team 2 Builder and Auditor scheduler states are unchanged.
@@ -60,6 +60,27 @@ Pre-existing primary gates remain outside this chunk:
 Team 2 report `HH-IFA-023` closed review of production baseline `493d1e6`;
 primary R116 covers only `48a2470`.
 
+## Round 166 — Auditor blocker corrected
+
+- **Dispositioned:** Auditor R128 verified the showcase elevation in exact
+  `312937c` but failed blocker `CYV-IFA-014`: Work proof fell below the opening
+  desktop and phone folds. Its inbox item moved to processed; the immutable
+  external report remains intact.
+- **Corrected:** exact local candidate `ca2b84e` shortens the Work headline and
+  clarifies the proof story without reducing truth boundaries. Desktop metrics
+  are 354.75px hero, 523.75px card top, and 716.75px artwork bottom; exact phone
+  card top is 535px and artwork bottom is 728px, with zero overflow.
+- **Proof:** TypeScript, lint, production build, 35-route/17-context buyer smoke,
+  and the complete hierarchy smoke pass. Visible IAB inspection also passed at
+  its 375px effective content width. Minimum correction captures and metrics
+  are retained under `builder/evidence/round-166-ifa014-correction/` until the
+  candidate is accepted or superseded.
+- **Cleanup:** removed 14 redundant captures (7,970,808 bytes), closed the IAB
+  tab, stopped both Builder-owned runtimes, and verified ports 5173/9342/9343
+  plus lifecycle scratch are clear.
+- **Next:** keep `ca2b84e` local-only and obtain two passing independent exact-
+  source reviews; R128 failed the superseded source and is not a clean pass.
+
 ## Round 165 — independent-review acquisition boundary
 
 - **Checked:** no new primary review intake exists. Only legacy Team 2 R90-R92
@@ -94,28 +115,6 @@ primary R116 covers only `48a2470`.
   credential, or scheduler state changed.
 - **Next:** obtain the first independent review of exact candidate `312937c`,
   correct any material finding, then obtain a second separate challenge.
-
-## Round 163 — first showcase-quality candidate
-
-- **Built:** replaced the generic schematic-led EduAILenz and Mudoinkle case
-  studies with distinct product atmospheres, real current desktop/phone
-  captures, three concrete user journeys each, explicit Cyvexly contribution,
-  truthful current limits, direct public proof, and contextual inquiry paths.
-- **Connected:** promoted both built product systems on Home and replaced their
-  Work-card diagrams with real product views while preserving Velora/Nexora's
-  existing prominence and all unrelated buyer journeys.
-- **Corrected from rendered evidence:** exempted the new branded heroes from a
-  generic section-background cascade that washed out their color and contrast;
-  added a focusable main target so the skip link lands correctly.
-- **Proof:** production build, TypeScript, lint, and the 35-route/17-context
-  buyer smoke passed. Visible desktop/tablet/phone review covered both case
-  studies plus Home and Work; inspected widths had zero horizontal overflow;
-  semantic structure and keyboard focus order passed.
-- **Boundary:** captures came only from public pages, use no private data, and
-  are labeled as public tour/staging evidence. No outside application, account,
-  credential, room, student record, submission, production deployment, or
-  scheduler state was changed. Candidate awaits two independent exact-source
-  reviews before Chunk 9 closes.
 
 Older round detail is preserved in `CYVEXLY_BUILD_SUMMARY.md`,
 `docs/archive/chunks/`, Git history, and role memory.

@@ -4,9 +4,9 @@
 
 Owner direction `2026-09-10-01` is the newest authority. It reopens a bounded
 primary-Builder exception for the Cyvexly-facing EduAILenz and Mudoinkle
-showcases only. Exact local candidate `312937c` is implemented and must remain
-unpublished until two independent exact-source review rounds pass, with any
-material findings corrected between reviews.
+showcases only. Auditor R128 failed original candidate `312937c` on Work-fold
+blocker `CYV-IFA-014`; corrected exact local candidate `ca2b84e` must remain
+unpublished until two independent exact-source review rounds pass.
 
 Owner direction `2026-09-08-28` supersedes the Codex-only pause recorded by
 correction `2026-09-08-26`. The `:00/:30` GPT-5.6-Sol/high Cyvexly Build Team
@@ -32,14 +32,14 @@ contextual inquiry continuity, and supporting public-safe proof/tests.
 
 Accepted primary Chunk 8 source is `48a2470`. Production head `493d1e6` adds
 Team 2's bounded outside-site portfolio integration after R116; Team 2 owns its
-acceptance/review and R116 does not cover it. Chunk 9 candidate `312937c` is
-local-only and next needs independent review across Home, Work, both case
+acceptance/review and R116 does not cover it. Corrected Chunk 9 candidate
+`ca2b84e` is local-only and next needs independent review across Home, Work, both case
 studies, desktop/tablet/phone presentation, keyboard/navigation behavior,
 claim truth, public proof links, and inquiry context. Chunk 6's visual review,
 Guardio, and Chunk 5 account/Owner gates remain open but separate.
 
-Auditor R127 is the latest publication and again reviews only old source
-`48a2470`; it explicitly excludes EduAILenz/Mudoinkle and supplies no Chunk 9
-coverage. Do not count it toward the two candidate-review rounds. Current state
-now declares `312937c` as the explicit **Active review source**, and review
-startup resolves that field before falling back to accepted source.
+Auditor R128 is the latest publication. It verified the showcase elevation in
+`312937c` but failed Work-fold hierarchy; Round 166 corrected that finding in
+`ca2b84e`. R128 is not a passing review of the new source. Current state declares
+`ca2b84e` as the explicit **Active review source**, and review startup resolves
+that field before falling back to accepted source.

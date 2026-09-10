@@ -1,0 +1,42 @@
+{
+  "round": 166,
+  "candidateSource": "ca2b84ea0b00b5cc23a73f19f8270f36afe5c97c",
+  "correctsCandidate": "312937cdc10f049e224aae417f2b7921fec5970d",
+  "review": "IFA-2026-09-10-R128",
+  "finding": "CYV-IFA-014",
+  "route": "/work",
+  "baseUrl": "http://127.0.0.1:5173",
+  "runtime": "Next.js 16.3.3 production build on Builder port 5173",
+  "measurements": {
+    "desktop1280x720": {
+      "heroHeight": 354.75,
+      "firstCardTop": 523.75,
+      "firstArtworkBottom": 716.75,
+      "horizontalOverflow": 0
+    },
+    "phone390x844": {
+      "firstCardTop": 535,
+      "firstArtworkBottom": 728,
+      "horizontalOverflow": 0
+    },
+    "visibleBrowserNominal390x844": {
+      "effectiveClientWidth": 375,
+      "heroHeight": 396,
+      "firstCardTop": 535,
+      "firstArtworkBottom": 728,
+      "horizontalOverflow": 0
+    }
+  },
+  "validation": {
+    "typecheck": "passed",
+    "lint": "passed with one pre-existing warning in round-42 evidence",
+    "productionBuild": "passed; 56 routes generated",
+    "buyerJourneySmoke": "passed; 35 routes and 17 inquiry contexts",
+    "internalHierarchySmoke": "passed; desktop, phone, and minimum-phone; zero runtime errors"
+  },
+  "retainedEvidence": [
+    "work-decision-desktop.png",
+    "work-decision-phone.png"
+  ],
+  "retentionReason": "Minimum rendered correction proof retained until candidate ca2b84e is accepted or superseded."
+}

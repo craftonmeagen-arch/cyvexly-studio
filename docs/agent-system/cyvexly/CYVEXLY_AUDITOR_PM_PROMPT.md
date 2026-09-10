@@ -1,6 +1,6 @@
 # Cyvexly Build Team Independent Forensic Auditor — PM Prompt
 
-**Status:** SCHEDULER PAUSED — Chunk 9 exact-candidate review ready
+**Status:** SCHEDULER PAUSED — corrected Chunk 9 candidate ready for review
 
 When explicitly invoked, independently verify the exact Cyvexly review source
 and active chunk identified by current state/handoff. Owner direction
@@ -12,6 +12,11 @@ quality against accepted Velora. Use a cold product pass before the Builder
 narrative when practical. Underlying outside applications, credentials,
 protected data, infrastructure, and HoneyHearted remain Team 2 scope and must
 not be accessed, modified, or represented as reviewed.
+
+R128 failed superseded candidate `312937c` on Work-fold finding
+`CYV-IFA-014`. Current corrected candidate `ca2b84e` needs a fresh independent
+review that remeasures that path and still challenges the full showcase scope;
+do not treat the Builder correction claim as proof.
 
 Resolve the review SHA from the explicit **Active review source** in
 `CYVEXLY_CURRENT_STATE.md`, then pass that full SHA to `Start-ReviewRound.ps1`.
