@@ -85,7 +85,8 @@ Remaining primary-team gates:
 2. Owner/account-holder Guardio review followed by a clean un-allowlisted
    Guardio-enabled recheck; Round 119 found no compromise or justified code
    remedy;
-3. exact registered LLC legal name;
+3. approved formation/name verification for chosen Cyvexly LLC; Owner reports
+   name availability checked September 10 and plans to apply September 11;
 4. Resend account/domain verification and production secret, followed by an
    intentionally submitted real-delivery check;
 5. GA4/Search Console values or an explicit no-analytics decision;

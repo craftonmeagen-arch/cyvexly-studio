@@ -12,16 +12,18 @@ review, and canonical production proof.
 
 Preserve Chunk 10 accepted source `c8bc73d` and its `/work` acceptance by R132
 and R133. Those reviews do not close the homepage gap. Owner and assistant
-will resolve the five input needs in `2026-09-10-03`; none is newly approved.
+are resolving the five inputs in `2026-09-10-03`; only the LLC name is chosen.
 No scheduler changes are authorized.
 
-Owner input correction, 2026-09-10: the LLC is not yet formed; the Owner plans
-to apply September 11. This supersedes older confirmed-LLC records. Keep its
-registration/name and final legal approval pending. Current Privacy and Terms
-source still says the studio is operated as a limited liability company;
-correct that unsupported claim without inventing another legal entity or
-treating an application as completed registration. No product correction has
-been implemented by this documentation update.
+Owner input update, 2026-09-10: use Cyvexly LLC as the chosen legal name. The
+Owner reports that their availability check passed and plans to apply
+September 11. Public brand remains Cyvexly Studio. This resolves name selection,
+not formation: verify the approved filing's exact name before claiming an
+existing LLC. Registration and final legal-copy approval remain pending.
+Current Privacy/Terms source still claims operation as an LLC; correct that
+unsupported present-tense claim while preparing the chosen name for activation
+after formation. This record update neither files the LLC nor changes product
+source, and supersedes older name-pending and confirmed-LLC statements.
 
 The underlying EduAILenz/Mudoinkle applications, HoneyHearted, their protected
 data, credentials, repositories, infrastructure, and scheduler states remain
@@ -54,7 +56,7 @@ outside this role.
 - one complete independent physical/visual review of accepted Velora source
   `fce01e8`;
 - Owner/account-holder Guardio review and a clean un-allowlisted recheck;
-- exact LLC name; Resend account/domain/secret and intentional real-delivery
+- approved formation/name verification for Cyvexly LLC; Resend account/domain/secret and intentional real-delivery
   proof; analytics/search decision; final About/legal/visual approval; indexing
   permission; and a later payment-provider decision.
 

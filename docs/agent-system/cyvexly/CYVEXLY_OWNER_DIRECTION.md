@@ -31,13 +31,13 @@ changes are authorized.
 
 ### Inputs Owner and assistant will resolve together
 
-1. LLC not yet formed (Owner, September 10); applying tomorrow. Name pending.
+1. Cyvexly LLC chosen; Owner checked availability September 10. Filing pending.
 2. Final About, Privacy, Terms, and visual approval.
 3. Analytics decision and Search Console setup.
 4. Permission to enable search indexing.
 5. Guardio account-holder review and a fresh clean recheck.
 
-Inputs remain pending, not approved. Do not invent answers or enable indexing.
+Other inputs remain pending. Do not invent answers or enable indexing.
 Real Contact/Planner delivery needs separate verification; working email does
 not prove form delivery. Payment-provider selection remains deferred.
 

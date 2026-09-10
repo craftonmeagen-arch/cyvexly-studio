@@ -33,9 +33,11 @@ Git history, and role memory.
    clean Guardio-enabled recheck without allowlisting. Do not change product
    source, DNS, or indexing merely to game the classifier.
 
-2. **Exact legal identity and final copy approval.** Confirm the exact
-   registered LLC name before final legal publication. The Owner must approve
-   the logo-led About copy, Privacy, Website Terms, and final public visuals.
+2. **Formation verification and final copy approval.** Owner chose Cyvexly LLC
+   and reports checking availability on September 10; filing is planned for
+   September 11. Confirm approved formation and the filing's exact name before
+   claiming an existing LLC. Public brand remains Cyvexly Studio. The Owner
+   must approve the logo-led About copy, Privacy, Terms, and final visuals.
    No founder identity, testimonial, result, credential, or legal name may be
    invented.
 
