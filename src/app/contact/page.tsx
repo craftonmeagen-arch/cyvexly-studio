@@ -41,7 +41,7 @@ export default async function ContactPage({
             </h1>
             <p className="mx-auto mt-2 max-w-2xl text-base leading-6 text-cool-graphite sm:mt-4 sm:leading-relaxed">
               {consultationMode ? (
-                <>Leave the contact details and window that work for you. We&apos;ll follow up next business day.</>
+                <>Leave the contact details and window that work for you. We&apos;ll follow up on the next business day.</>
               ) : (
                 <>A name, email, and short note are enough. <span className="hidden sm:inline">No technical language, finished content, or sitemap required.</span></>
               )}
@@ -159,7 +159,7 @@ export default async function ContactPage({
                     <ButtonLink href="/privacy" variant="text" className="text-sm">
                       Privacy Policy
                     </ButtonLink>
-                    , or send a message below.
+                    {consultationMode ? ", or use the standard Contact form linked above." : ", or use this form to send a message."}
                   </dd>
                 </div>
               </dl>
