@@ -60,6 +60,20 @@ Pre-existing primary gates remain outside this chunk:
 Team 2 report `HH-IFA-023` closed review of production baseline `493d1e6`;
 primary R116 covers only `48a2470`.
 
+## Round 167 — first clean exact-source challenge
+
+- **Dispositioned:** Auditor R129 passed exact corrected candidate `ca2b84e`
+  and independently verified `CYV-IFA-014` resolved. Desktop hero/card/artwork
+  measurements were 354.75/523.75/716.75px; phone card/artwork were 535/728px
+  with zero overflow.
+- **Proof:** the isolated review passed build, TypeScript, lint, buyer and
+  hierarchy suites, responsive desktop/phone/minimum-phone inspection,
+  showcase identity and truth boundaries, and contextual inquiry routing.
+- **Source truth:** no product or deployment change. R129 is clean challenge
+  1 of 2 on `ca2b84e`; the candidate remains local-only.
+- **Next:** obtain one second, separate independent exact-source challenge
+  before acceptance, push, deployment, or Chunk 9 closure.
+
 ## Round 166 — Auditor blocker corrected
 
 - **Dispositioned:** Auditor R128 verified the showcase elevation in exact
@@ -98,23 +112,6 @@ primary R116 covers only `48a2470`.
 - **Next:** explicitly invoke the primary Auditor against `312937c` or separately
   authorize its scheduler resume; disposition that report before further
   candidate work or publication.
-
-## Round 164 — exact-source review gate preserved
-
-- **Dispositioned:** Auditor R127 passed old accepted source `48a2470` with
-  zero defects. It explicitly excluded EduAILenz/Mudoinkle and therefore does
-  not review candidate `312937c`; its operational item was consumed without
-  weakening Chunk 9's two-review gate.
-- **Repaired the review gate:** review startup now resolves the declared
-  **Active review source** (`312937c`) instead of forcing every review back to
-  accepted Chunk 8 source `48a2470`; it retains accepted-source fallback when
-  no candidate is active. The isolated lifecycle suite passes all 57 checks.
-- **Source truth:** verified that `312937c` remains the exact product candidate.
-  Round 164 changed only review tooling and continuity records; role setup and
-  hot-file guards pass. No product, deployment, outside application, Team 2,
-  credential, or scheduler state changed.
-- **Next:** obtain the first independent review of exact candidate `312937c`,
-  correct any material finding, then obtain a second separate challenge.
 
 Older round detail is preserved in `CYVEXLY_BUILD_SUMMARY.md`,
 `docs/archive/chunks/`, Git history, and role memory.

@@ -42,10 +42,9 @@ explicit **Active review source** from current state (`312937c`) and falls back
 to the accepted source only when no candidate is declared. The isolated
 auditor/council/functional lifecycle suite passes all 57 checks.
 
-Latest Builder disposition: R128 reviewed exact candidate `312937c`, verified
-the showcase elevation, and failed it on blocker `CYV-IFA-014`: Work proof was
-pushed below the opening viewport. Round 166 consumed its inbox item and
-corrected the defect in new exact local candidate `ca2b84e`. R128 is not a clean
-review of that corrected source, so two passing independent exact-`ca2b84e`
-rounds remain. The primary Auditor automation is stored `PAUSED`; review needs
-explicit manual invocation or separately authorized scheduler resume.
+Latest Builder disposition: R129 passed exact corrected candidate `ca2b84e`,
+independently verified `CYV-IFA-014` resolved, and supplies clean challenge 1
+of 2. Its inbox item was consumed; immutable report and evidence remain in the
+external review root. One second separate passing exact-`ca2b84e` round remains.
+The primary Auditor automation is stored `PAUSED`; review needs explicit manual
+invocation or separately authorized scheduler resume.

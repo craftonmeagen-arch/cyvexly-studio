@@ -2,21 +2,35 @@
 
 ## Current assignment
 
-Start global round 167 in Chunk 9. Corrected exact showcase candidate `ca2b84e`
+Start global round 168 in Chunk 9. Corrected exact showcase candidate `ca2b84e`
 is intentionally local-only; `main` is ahead of `origin/main`. Do not push or
-deploy it before two passing independent exact-source reviews.
+deploy it before the second passing independent exact-source review.
 
-Auditor R128 verified the showcase elevation in old candidate `312937c` but
-failed Work-fold blocker `CYV-IFA-014`; Round 166 corrected and proved it in
-`ca2b84e`. R128 is not a clean pass of the new source. Acquire the first clean
-review through an explicit manual primary-Auditor invocation or separately
-authorized scheduler resume, then obtain a second separate challenge. Cover
+Auditor R129 passed exact corrected candidate `ca2b84e`, independently verified
+`CYV-IFA-014` resolved, and supplies clean challenge 1 of 2. Acquire one second
+separate review through an explicit manual primary-Auditor invocation or a
+separately authorized scheduler resume. Cover
 Home, Work, both case studies, desktop/tablet/phone layouts, keyboard access,
 claim truth, public proof links, and contextual inquiry continuity.
 
 The candidate changes only Cyvexly presentation. Do not modify EduAILenz,
 Mudoinkle, HoneyHearted, their credentials, protected data, infrastructure, or
 deployment. Team 2 Builder and Auditor scheduler states remain unchanged.
+
+## Round 167 handoff
+
+**State:** FIRST CLEAN EXACT-SOURCE REVIEW PASSED — SECOND CHALLENGE REQUIRED
+
+- Consumed primary Auditor R129 and preserved its immutable report/evidence.
+  It reviewed exact `ca2b84e`, passed the corrected Work fold, and independently
+  marked `CYV-IFA-014` resolved.
+- The isolated review also passed build/type/lint, buyer and hierarchy suites,
+  responsive desktop/phone/minimum-phone proof, showcase identity and claim
+  boundaries, and contextual inquiry routing.
+- R129 is clean challenge 1 of 2. Product source, deployment, outside apps, and
+  scheduler state stayed unchanged; `ca2b84e` remains local-only.
+- Next: obtain one separate clean exact-source challenge before acceptance,
+  push, deployment, or Chunk 9 closure.
 
 ## Round 166 handoff
 
@@ -56,24 +70,6 @@ deployment. Team 2 Builder and Auditor scheduler states remain unchanged.
   external-reviewer-record, or scheduler state changed. Manually invoke the
   primary Auditor against `312937c` or obtain separate authorization to resume
   its scheduler.
-
-## Round 164 handoff
-
-**State:** CANDIDATE UNCHANGED — EXACT-SOURCE REVIEWS STILL REQUIRED
-
-- Auditor R127 was consumed and archived as another zero-defect review of old
-  accepted source `48a2470`. Its report explicitly excludes EduAILenz and
-  Mudoinkle, so it supplies no Chunk 9 acceptance evidence.
-- Repaired the exact-source workflow: `Start-ReviewRound.ps1` now selects the
-  explicit **Active review source** (`312937c`) and falls back to accepted
-  source only when no candidate is declared. The Auditor PM prompt and role
-  checks now agree with Chunk 9.
-- All 57 isolated review-lifecycle checks, role setup, and hot-file caps pass.
-  `312937c` remains the exact product candidate; Round 164 changed only review
-  tooling and continuity records.
-- No product, deployment, outside-application, Team 2, credential, or scheduler
-  state changed. Do not repeat Builder polish without fresh buyer-use or review
-  evidence.
 
 ## Persistent primary gates outside Chunk 9
 

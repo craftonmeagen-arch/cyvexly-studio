@@ -13,9 +13,10 @@ Outside-website work belongs to Team 2.
    R128 verified that elevation at exact source `312937c` but found blocker
    `CYV-IFA-014`: Work proof fell below the opening fold. Round 166 corrected it
    in exact local candidate `ca2b84e`; full hierarchy, buyer, build, type, lint,
-   responsive, overflow, and visible-browser proof pass. Because R128 failed the
-   superseded source, `ca2b84e` still needs two clean independent exact-source
-   reviews before closure. The primary Auditor automation remains `PAUSED`, so
+   responsive, overflow, and visible-browser proof pass. Auditor R129 then
+   passed exact `ca2b84e` and independently verified `CYV-IFA-014` resolved,
+   supplying clean challenge 1 of 2. One second separate exact-source review
+   remains before closure. The primary Auditor automation remains `PAUSED`, so
    review requires explicit manual invocation or separate resume authority.
 
 2. **Chunk 6 — one complete Velora independent physical/visual review.**

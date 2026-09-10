@@ -10,12 +10,15 @@ Git history, and role memory.
 - Production head: `493d1e6`, Team 2's bounded outside-site portfolio
   integration directly on top of the primary source.
 - Chunk 9 showcase candidate: corrected local commit `ca2b84e`; it is not
-  accepted, pushed, or deployed while two clean exact-source reviews remain.
+  accepted, pushed, or deployed while the second clean exact-source review
+  remains.
 - Active review source: `ca2b84e`; the lifecycle selector uses this field before
   the accepted-source fallback.
 - Auditor R128 failed superseded candidate `312937c` on Work-fold blocker
   `CYV-IFA-014`; Round 166 corrected and proved it in `ca2b84e`. The primary
   Auditor automation remains `PAUSED`; the Builder did not alter it.
+- Auditor R129 passed exact `ca2b84e`, verified `CYV-IFA-014` resolved, and
+  supplies clean challenge 1 of 2. One separate exact-source challenge remains.
 - Chunk 8 closed in Round 159 after R112 and exact-source R116 supplied two
   separate clean challenges. No current primary product defect is open.
 - Team 2 report `HH-IFA-023` closed review of the later integration; primary

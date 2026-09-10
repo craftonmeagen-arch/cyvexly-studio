@@ -6,7 +6,8 @@ Owner direction `2026-09-10-01` is the newest authority. It reopens a bounded
 primary-Builder exception for the Cyvexly-facing EduAILenz and Mudoinkle
 showcases only. Auditor R128 failed original candidate `312937c` on Work-fold
 blocker `CYV-IFA-014`; corrected exact local candidate `ca2b84e` must remain
-unpublished until two independent exact-source review rounds pass.
+unpublished until the second independent exact-source review passes. Auditor
+R129 supplies clean challenge 1 of 2 and verifies the blocker resolved.
 
 Owner direction `2026-09-08-28` supersedes the Codex-only pause recorded by
 correction `2026-09-08-26`. The `:00/:30` GPT-5.6-Sol/high Cyvexly Build Team
@@ -38,8 +39,7 @@ studies, desktop/tablet/phone presentation, keyboard/navigation behavior,
 claim truth, public proof links, and inquiry context. Chunk 6's visual review,
 Guardio, and Chunk 5 account/Owner gates remain open but separate.
 
-Auditor R128 is the latest publication. It verified the showcase elevation in
-`312937c` but failed Work-fold hierarchy; Round 166 corrected that finding in
-`ca2b84e`. R128 is not a passing review of the new source. Current state declares
-`ca2b84e` as the explicit **Active review source**, and review startup resolves
-that field before falling back to accepted source.
+Auditor R129 is the latest publication. It passed exact `ca2b84e`, verified the
+Work-fold correction and showcase quality, and supplies clean challenge 1 of 2.
+Current state declares `ca2b84e` as the explicit **Active review source**, and
+review startup resolves that field before falling back to accepted source.
