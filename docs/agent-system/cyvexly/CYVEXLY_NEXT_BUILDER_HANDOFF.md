@@ -2,7 +2,7 @@
 
 ## Current assignment
 
-Continue global round 172 / Chunk 10 round 2 under Owner direction
+Continue global round 173 / Chunk 10 round 3 under Owner direction
 `2026-09-10-02`. Preserve accepted/deployed product source `ca2b84e` while
 exact candidate `c8bc73d` receives two independent reviews.
 
@@ -15,6 +15,12 @@ deploy it before two separate exact-source reviews clear the candidate.
 
 Auditor R131 independently reverified the prior accepted `ca2b84e` baseline
 with zero defects. It predates Chunk 10 and does not review the rail candidate.
+
+Round 172 adopted the inherited Round 171 closeout after documentation commit
+`744f1aa` landed during verification. Its product/test trees are byte-identical
+to `c8bc73d`; fresh build, browser, regression, role, and lifecycle proof pass.
+No new exact-candidate intake exists, so the next eligible action remains an
+independent primary-Auditor invocation rather than further unsupported polish.
 
 The underlying EduAILenz/Mudoinkle applications, HoneyHearted, their protected
 data, credentials, repositories, infrastructure, and scheduler states remain

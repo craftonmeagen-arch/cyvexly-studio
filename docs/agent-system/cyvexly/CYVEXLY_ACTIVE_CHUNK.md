@@ -2,7 +2,7 @@
 
 **Active product chunk:** Chunk 10 — Horizontal Work Rail
 
-**Next position:** global round 172; chunk-local round 2
+**Next position:** global round 173; chunk-local round 3
 
 **Accepted and deployed product source:** `ca2b84e`; published branch closeout
 is `54a90cd`
@@ -38,6 +38,21 @@ Likely round directions:
 - compare rendered desktop/tablet/phone output with the accepted card quality,
   then correct material hierarchy or interaction drift;
 - route the exact candidate through two independent reviews before closure.
+
+## Round 172 — candidate adoption and visible revalidation
+
+- **Adopted:** reconciled governance/evidence head `744f1aa` after it landed
+  during verification and proved its product/test trees byte-identical to exact
+  candidate `c8bc73d`.
+- **Revalidated:** TypeScript, lint (one historical evidence warning), the
+  56-route production build, 35-route/17-context buyer smoke, full hierarchy
+  smoke, role setup, and all 57 review-lifecycle checks pass.
+- **Used visibly:** desktop controls, end states, Home/Arrow keyboard movement,
+  390px native horizontal scrolling, zero page overflow, and a case-study link
+  passed in the interactive browser. CDP touch input and reduced-motion behavior
+  also pass in the exact hierarchy suite.
+- **Next:** no exact-candidate review is available; keep `c8bc73d` local-only
+  until two independent reviews pass.
 
 ## Round 171 — exact horizontal-rail candidate established
 

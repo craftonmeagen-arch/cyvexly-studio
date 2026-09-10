@@ -1,12 +1,12 @@
 # Cyvexly Current State
 
-**Last completed global round:** 171
+**Last completed global round:** 172
 
-**Next:** global round 172; obtain independent review of the exact rail candidate.
+**Next:** global round 173; obtain independent review of the exact rail candidate.
 
 **Active chunk:** Chunk 10 — Horizontal Work Rail
 
-**Next chunk-local round:** 2
+**Next chunk-local round:** 3
 
 **Accepted repository source:** `ca2b84e` (Chunk 9 showcase correction)
 
@@ -45,6 +45,13 @@ end states, native swipe, and reduced-motion-safe movement. Production build,
 TypeScript, buyer and hierarchy suites pass across desktop, tablet, 390px, and
 320px widths with zero runtime errors or page-level overflow. It remains local
 and unaccepted pending two independent exact-source reviews.
+
+Round 172 independently adopted the inherited closeout after a concurrent
+documentation commit landed during verification. Repository head `744f1aa`
+changes governance/evidence only; its product and test trees are byte-identical
+to exact candidate `c8bc73d`. A fresh production build, TypeScript, lint, buyer
+and hierarchy suites, visible desktop/390px interaction, role setup, and all 57
+review-lifecycle checks pass. No new exact-candidate review has arrived.
 
 Historical round detail and the 2026-09-10 checkout reconciliation remain in
 `CYVEXLY_BUILD_SUMMARY.md`, archives, Git history, and Builder memory.

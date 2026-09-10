@@ -3,6 +3,17 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 172 — rail candidate adopted and reverified
+
+- Reconciled concurrent closeout commit `744f1aa` without changing product
+  source; all product and test trees remain exact candidate `c8bc73d`.
+- Fresh TypeScript, lint, 56-route production build, buyer, hierarchy, role
+  setup, and 57 lifecycle checks pass. Visible desktop and 390px interaction
+  confirmed controls, end states, keyboard movement, native horizontal scroll,
+  zero overflow, and case-study navigation.
+- No independent review of `c8bc73d` has arrived. The candidate remains local
+  and unaccepted; accepted/deployed source remains `ca2b84e`.
+
 ## Round 171 — accessible horizontal Work rail candidate
 
 - Implemented exact local candidate `c8bc73d`: the four accepted Work cards now
