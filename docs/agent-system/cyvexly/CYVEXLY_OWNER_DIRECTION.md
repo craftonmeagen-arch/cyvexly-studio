@@ -7,17 +7,14 @@
 
 ### Finding and required outcome
 
-The Owner's screenshot shows the homepage `/` section headed “Two working
-demos. Two different problems.” Source and live checks found horizontal cards
-on `/work`, but fixed grids on `/`.
-Auditor R132/R133 accepted the `/work` rail at `c8bc73d`; that acceptance does
-not prove the requested homepage interaction. Preserve the accepted Work page
-and reopen the missing homepage outcome, not the outside applications.
+The Owner's screenshot shows `/`'s “Two working demos. Two different problems.”
+section. Source/live checks found fixed grids on `/`, with horizontal cards
+only on `/work`. R132/R133 accepted `/work` at `c8bc73d`, not the homepage
+interaction. Preserve that acceptance; outside apps remain out of scope.
 
-The primary Builder must make the homepage showcase browse left and right
-through Velora, Nexora, EduAILenz, and Mudoinkle, retaining large readable cards,
-distinct project artwork, truthful demonstration/built-product labels, and
-working case-study/demo links. Preserve the approved cyber-blue glass design.
+Make the homepage browse left/right through Velora, Nexora, EduAILenz, and
+Mudoinkle. Retain large readable cards, distinct artwork, truthful demo/product
+labels, working case-study/demo links, and the approved cyber-blue glass design.
 Update headings/counts so “two”/“both” and fictional-demo wording do not
 misdescribe the four-project collection. Implementation remains the Builder's
 choice; apply `2026-09-10-02`'s interaction and accessibility requirements.
@@ -31,7 +28,10 @@ changes are authorized.
 
 ### Inputs Owner and assistant will resolve together
 
-1. Cyvexly LLC chosen; Owner checked availability September 10. Filing pending.
+1. Cyvexly LLC chosen; Owner checked availability and directed “proceed as if
+   it is already established” (September 10). Proceed with build work and
+   drafts using this name; do not wait for filing. Formation remains pending:
+   this is a working assumption, not evidence of completed registration.
 2. Final About, Privacy, Terms, and visual approval.
 3. Analytics decision and Search Console setup.
 4. Permission to enable search indexing.
