@@ -37,3 +37,9 @@ local-only and next needs independent review across Home, Work, both case
 studies, desktop/tablet/phone presentation, keyboard/navigation behavior,
 claim truth, public proof links, and inquiry context. Chunk 6's visual review,
 Guardio, and Chunk 5 account/Owner gates remain open but separate.
+
+Auditor R127 is the latest publication and again reviews only old source
+`48a2470`; it explicitly excludes EduAILenz/Mudoinkle and supplies no Chunk 9
+coverage. Do not count it toward the two candidate-review rounds. Current state
+now declares `312937c` as the explicit **Active review source**, and review
+startup resolves that field before falling back to accepted source.

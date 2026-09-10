@@ -31,9 +31,14 @@ Current reports need an actual published review identity and exact reviewed sour
 Council R42 publication/cleanup remains unverified until its evidence is reconciled.
 
 Latest Builder disposition: Auditor publications `IFA-2026-09-10-R117`, R118,
-and R120–R126 each repeated a zero-defect pass of old accepted source
+and R120–R127 each repeated a zero-defect pass of old accepted source
 `48a2470385e7641b1bd500eed55850286896677e`. Their inbox items were consumed and
 moved to the external processed lane; published reports/evidence remain
 external. They do not cover local Chunk 9 candidate `312937c`, which still needs
 two separate independent exact-source reviews. Legacy Team 2 R90–R92 inbox
 items remain untouched and outside the primary lane.
+
+Round 164 corrected the review source selector: the lifecycle now uses the
+explicit **Active review source** from current state (`312937c`) and falls back
+to the accepted source only when no candidate is declared. The isolated
+auditor/council/functional lifecycle suite passes all 57 checks.

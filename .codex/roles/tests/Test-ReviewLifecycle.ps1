@@ -30,8 +30,14 @@ foreach($role in @('AUDITOR','COUNCIL')){
 & git -C $fixture add .
 & git -C $fixture -c user.name=Fixture -c user.email=fixture@example.invalid commit -qm fixture
 if($LASTEXITCODE -ne 0){throw 'Fixture commit failed.'}
-$sha=(& git -C $fixture rev-parse HEAD)
-[IO.File]::WriteAllText((Join-Path $fixture 'docs/agent-system/cyvexly/CYVEXLY_CURRENT_STATE.md'),"**Accepted repository source:** ``$sha``")
+$acceptedSha=(& git -C $fixture rev-parse HEAD)
+[IO.File]::WriteAllText((Join-Path $fixture 'src/probe.txt'),'candidate source')
+& git -C $fixture add src/probe.txt
+& git -C $fixture -c user.name=Fixture -c user.email=fixture@example.invalid commit -qm fixture-candidate
+if($LASTEXITCODE -ne 0){throw 'Fixture candidate commit failed.'}
+$reviewSha=(& git -C $fixture rev-parse HEAD)
+$state="**Accepted repository source:** ``$acceptedSha``$([Environment]::NewLine)**Active review source:** ``$reviewSha``"
+[IO.File]::WriteAllText((Join-Path $fixture 'docs/agent-system/cyvexly/CYVEXLY_CURRENT_STATE.md'),$state)
 & git -C $fixture add docs/agent-system/cyvexly/CYVEXLY_CURRENT_STATE.md
 & git -C $fixture -c user.name=Fixture -c user.email=fixture@example.invalid commit -qm fixture-state
 if($LASTEXITCODE -ne 0){throw 'Fixture state commit failed.'}
@@ -43,11 +49,12 @@ try {
     foreach($role in @('auditor','council','functional')){
         $run='fixture-'+$role
         $wrongRun='wrong-source-'+$role
-        Refused { & (Join-Path $helper 'Start-ReviewRound.ps1') -Role $role -RoundId $wrongRun -SourceRef HEAD } 'Local HEAD is not a substitute' "$role rejects source other than current accepted SHA"
+        Refused { & (Join-Path $helper 'Start-ReviewRound.ps1') -Role $role -RoundId $wrongRun -SourceRef HEAD } 'Local HEAD is not a substitute' "$role rejects source other than current active review SHA"
         Check (-not (Test-Path -LiteralPath (Join-Path $review "runs/$role/$wrongRun"))) "$role creates no resources for rejected source"
-        $identity=(& (Join-Path $helper 'Start-ReviewRound.ps1') -Role $role -RoundId $run -SourceRef $sha | ConvertFrom-Json)
-        Check ($identity.sourceHead -eq $sha) "$role exact source identity"
-        Check ([IO.File]::ReadAllText((Join-Path $identity.runtimeRoot 'src/probe.txt')) -eq 'accepted source') "$role excludes dirty Builder edits"
+        Refused { & (Join-Path $helper 'Start-ReviewRound.ps1') -Role $role -RoundId "accepted-source-$role" -SourceRef $acceptedSha } 'current state requires review' "$role rejects superseded accepted source while candidate review is active"
+        $identity=(& (Join-Path $helper 'Start-ReviewRound.ps1') -Role $role -RoundId $run -SourceRef $reviewSha | ConvertFrom-Json)
+        Check ($identity.sourceHead -eq $reviewSha) "$role exact source identity"
+        Check ([IO.File]::ReadAllText((Join-Path $identity.runtimeRoot 'src/probe.txt')) -eq 'candidate source') "$role snapshots candidate and excludes dirty Builder edits"
         Check (-not (Test-Path -LiteralPath (Join-Path $identity.runtimeRoot '.env.local'))) "$role excludes Builder credentials"
         Check ((Get-Item (Join-Path $identity.snapshotRoot 'src/probe.txt')).IsReadOnly) "$role frozen snapshot"
         Check (-not (Get-Item (Join-Path $identity.runtimeRoot 'src/probe.txt')).IsReadOnly) "$role writable runtime"
@@ -55,7 +62,7 @@ try {
         Refused { & (Join-Path $helper 'Complete-ReviewRound.ps1') -Role $role -RoundId $run } 'Publish findings' "$role requires publication before cleanup"
         $candidate=Join-Path $identity.logRoot 'candidate.md'
         $reviewId='FIXTURE-'+$role
-        [IO.File]::WriteAllText($candidate,("REVIEW ID: $reviewId"+[Environment]::NewLine+"Source: $sha"+[Environment]::NewLine+'Fixture test only; no product review.'))
+        [IO.File]::WriteAllText($candidate,("REVIEW ID: $reviewId"+[Environment]::NewLine+"Source: $reviewSha"+[Environment]::NewLine+'Fixture test only; no product review.'))
         if($role -eq 'auditor'){
             $ownedProcess=Start-Process -FilePath (Get-Command pwsh).Source -ArgumentList '-NoProfile','-Command','Start-Sleep -Seconds 120' -WindowStyle Hidden -PassThru
             & (Join-Path $helper 'Register-RoleProcess.ps1') -Role $role -RoundId $run -ProcessId $ownedProcess.Id | Out-Null
@@ -92,11 +99,11 @@ try {
         if($role -eq 'auditor'){ Check ($null -eq (Get-Process -Id $ownedProcess.Id -ErrorAction SilentlyContinue)) 'Verified owned process stopped'; $ownedProcess=$null }
         Check (Test-Path -LiteralPath (Join-Path $review "reports/published/$role/$reviewId.md")) "$role preserves published report"
     }
-    $a=(& (Join-Path $helper 'Start-ReviewRound.ps1') -Role auditor -RoundId stale-a -SourceRef $sha | ConvertFrom-Json)
-    $b=(& (Join-Path $helper 'Start-ReviewRound.ps1') -Role auditor -RoundId stale-b -SourceRef $sha | ConvertFrom-Json)
+    $a=(& (Join-Path $helper 'Start-ReviewRound.ps1') -Role auditor -RoundId stale-a -SourceRef $reviewSha | ConvertFrom-Json)
+    $b=(& (Join-Path $helper 'Start-ReviewRound.ps1') -Role auditor -RoundId stale-b -SourceRef $reviewSha | ConvertFrom-Json)
     $candidateA=Join-Path $a.logRoot 'candidate.md'; $candidateB=Join-Path $b.logRoot 'candidate.md'
-    [IO.File]::WriteAllText($candidateA,"REVIEW ID: FIXTURE-A$([char]10)Source: $sha")
-    [IO.File]::WriteAllText($candidateB,"REVIEW ID: FIXTURE-B$([char]10)Source: $sha")
+    [IO.File]::WriteAllText($candidateA,"REVIEW ID: FIXTURE-A$([char]10)Source: $reviewSha")
+    [IO.File]::WriteAllText($candidateB,"REVIEW ID: FIXTURE-B$([char]10)Source: $reviewSha")
     & (Join-Path $helper 'Publish-RoleReport.ps1') -Role auditor -RoundId stale-a -ReviewId FIXTURE-A -ReportPath $candidateA | Out-Null
     Refused { & (Join-Path $helper 'Publish-RoleReport.ps1') -Role auditor -RoundId stale-b -ReviewId FIXTURE-B -ReportPath $candidateB } 'Current report changed' 'Stale publication cannot overwrite current'
     Check (Test-Path -LiteralPath $candidateB) 'Stale candidate preserved'

@@ -42,14 +42,14 @@ foreach($role in $orientations.Keys){
     foreach($field in @('name','description','developer_instructions')){if($config -notmatch "(?m)^$field\s*="){throw "Role missing field: $role $field"}}
 }
 $currentSourceMarkers=@{
-    'CYVEXLY_ASSIGNMENT.md'=@('Cyvexly Build Team','Buyer Journey, Proof & Conversion')
-    'CYVEXLY_AUDITOR_PM_PROMPT.md'=@('Cyvexly Build Team','Accepted repository source')
+    'CYVEXLY_ASSIGNMENT.md'=@('Cyvexly Build Team','Chunk 9','EduAILenz & Mudoinkle Showcase Quality')
+    'CYVEXLY_AUDITOR_PM_PROMPT.md'=@('Cyvexly Build Team','Active review source','Chunk 9')
     'CYVEXLY_COUNCIL_PM_PROMPT.md'=@('Cyvexly Build Team','BUYER-JOURNEY')
     'CYVEXLY_FUNCTIONAL_PM_PROMPT.md'=@('Cyvexly Build Team','CURRENT ACCEPTED CYVEXLY SOURCE')
-    'CYVEXLY_PM_CURRENT_STATE.md'=@('Cyvexly Build Team','Buyer Journey, Proof & Conversion')
-    'CYVEXLY_NEXT_PM_HANDOFF.md'=@('Cyvexly Build Team','Chunk 8')
+    'CYVEXLY_PM_CURRENT_STATE.md'=@('Cyvexly Build Team','Chunk 9','312937c')
+    'CYVEXLY_NEXT_PM_HANDOFF.md'=@('Cyvexly Build Team','Chunk 9','312937c')
     'CYVEXLY_REVIEW_INDEX.md'=@('Cyvexly Build Team','Independent Forensic Auditor')
-    'CYVEXLY_VISION.md'=@('Chunk 8','Buyer Journey, Proof & Conversion')
+    'CYVEXLY_VISION.md'=@('Chunk 9','EduAILenz & Mudoinkle Showcase Quality')
 }
 foreach($entry in $currentSourceMarkers.GetEnumerator()){
     $text=Get-Content (Join-Path $lane $entry.Key) -Raw
@@ -70,14 +70,23 @@ $resolvedAcceptedSource=(& git -C $workspace rev-parse --verify "$acceptedSource
 if($LASTEXITCODE -ne 0 -or $resolvedAcceptedSource -notmatch '^[0-9a-f]{40}$'){
     throw "Accepted repository source is not independently resolvable: $acceptedSource"
 }
+$reviewSourceMatches=[regex]::Matches($currentState,'(?m)^\*\*Active review source:\*\* `([0-9a-f]{7,40})`')
+if($reviewSourceMatches.Count -gt 1){
+    throw 'Current state may declare at most one Active review source.'
+}
+$reviewSource=if($reviewSourceMatches.Count -eq 1){$reviewSourceMatches[0].Groups[1].Value}else{$acceptedSource}
+$resolvedReviewSource=(& git -C $workspace rev-parse --verify "$reviewSource^{commit}" 2>$null).Trim()
+if($LASTEXITCODE -ne 0 -or $resolvedReviewSource -notmatch '^[0-9a-f]{40}$'){
+    throw "Active review source is not independently resolvable: $reviewSource"
+}
 $auditorPrompt=Get-Content (Join-Path $lane 'CYVEXLY_AUDITOR_PM_PROMPT.md') -Raw
-foreach($marker in @('Start-ReviewRound.ps1','full SHA','Local `HEAD` is not a substitute')){
+foreach($marker in @('Start-ReviewRound.ps1','Active review source','full SHA','Local `HEAD` is not a substitute')){
     if(-not $auditorPrompt.Contains($marker)){
         throw "Auditor PM prompt does not enforce exact-source acquisition: $marker"
     }
 }
 $startHelper=Get-Content (Join-Path $PSScriptRoot 'Start-ReviewRound.ps1') -Raw
-foreach($marker in @('CYVEXLY_CURRENT_STATE.md','Accepted repository source','Local HEAD is not a substitute')){
+foreach($marker in @('CYVEXLY_CURRENT_STATE.md','Active review source','Local HEAD is not a substitute')){
     if(-not $startHelper.Contains($marker)){
         throw "Review start helper does not enforce accepted-source identity: $marker"
     }
@@ -109,6 +118,8 @@ foreach($file in Get-ChildItem $PSScriptRoot -Filter '*.ps1'){
 & (Join-Path $PSScriptRoot 'Test-HotFileCaps.ps1') | Out-Null
 [pscustomobject]@{
     status='PASS';team='Cyvexly Build Team';acceptedSource=$resolvedAcceptedSource
-    localHead=$localHead;localHeadMatchesAccepted=($localHead -eq $resolvedAcceptedSource)
+    reviewSource=$resolvedReviewSource;localHead=$localHead
+    localHeadMatchesAccepted=($localHead -eq $resolvedAcceptedSource)
+    localHeadMatchesReview=($localHead -eq $resolvedReviewSource)
     verifiedPackets=8;orientations=6;retiredFilesAbsent=6;parsedHelpers=$helperCount;hotFiles='PASS'
 }|ConvertTo-Json

@@ -11,6 +11,8 @@ Git history, and role memory.
   integration directly on top of the primary source.
 - Chunk 9 showcase candidate: local commit `312937c`; it is not accepted,
   pushed, or deployed while two independent exact-source reviews remain.
+- Active review source: `312937c`; Round 164 repaired the lifecycle selector so
+  reviewers no longer fall back to old accepted source while this field exists.
 - Chunk 8 closed in Round 159 after R112 and exact-source R116 supplied two
   separate clean challenges. No current primary product defect is open.
 - Team 2 report `HH-IFA-023` closed review of the later integration; primary

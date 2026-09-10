@@ -2,9 +2,9 @@
 
 ## Current assignment
 
-Start global round 164 in Chunk 9. The first EduAILenz/Mudoinkle showcase-
+Start global round 165 in Chunk 9. The first EduAILenz/Mudoinkle showcase-
 quality candidate is exact source `312937c` and is intentionally local-only;
-`main` is three commits ahead of `origin/main`. Do not push or deploy it before
+`main` is six commits ahead of `origin/main`. Do not push or deploy it before
 independent exact-source review.
 
 Acquire the first independent review of `312937c` across Home, Work, both case
@@ -15,6 +15,24 @@ then obtain a second separate exact-source challenge before closing Chunk 9.
 The candidate changes only Cyvexly presentation. Do not modify EduAILenz,
 Mudoinkle, HoneyHearted, their credentials, protected data, infrastructure, or
 deployment. Team 2 Builder and Auditor scheduler states remain unchanged.
+
+## Round 164 handoff
+
+**State:** CANDIDATE UNCHANGED — EXACT-SOURCE REVIEWS STILL REQUIRED
+
+- Auditor R127 was consumed and archived as another zero-defect review of old
+  accepted source `48a2470`. Its report explicitly excludes EduAILenz and
+  Mudoinkle, so it supplies no Chunk 9 acceptance evidence.
+- Repaired the exact-source workflow: `Start-ReviewRound.ps1` now selects the
+  explicit **Active review source** (`312937c`) and falls back to accepted
+  source only when no candidate is declared. The Auditor PM prompt and role
+  checks now agree with Chunk 9.
+- All 57 isolated review-lifecycle checks, role setup, and hot-file caps pass.
+  `312937c` remains the exact product candidate; Round 164 changed only review
+  tooling and continuity records.
+- No product, deployment, outside-application, Team 2, credential, or scheduler
+  state changed. Do not repeat Builder polish without fresh buyer-use or review
+  evidence.
 
 ## Round 163 handoff
 

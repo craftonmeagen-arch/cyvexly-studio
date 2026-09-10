@@ -12,6 +12,10 @@ Outside-website work belongs to Team 2.
    stories, proportional limitations, Work/Home/inquiry discovery, and local
    responsive/keyboard proof. Two separate independent exact-source review
    rounds remain before closure; correct any material finding before continuing.
+   Auditor R127 reviewed old source `48a2470`, not candidate `312937c`, and does
+   not reduce this requirement. Round 164 repaired the review-source selector,
+   so the next independent run can acquire exact candidate `312937c` without
+   relabeling it as the already accepted production source.
 
 2. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with

@@ -15,11 +15,13 @@ if (-not (Test-Path -LiteralPath $statePath -PathType Leaf)) { throw 'Current st
 $state=Get-Content -LiteralPath $statePath -Raw
 $acceptedMatches=[regex]::Matches($state,'(?m)^\*\*Accepted repository source:\*\* `([0-9a-f]{7,40})`')
 if ($acceptedMatches.Count -ne 1) { throw 'Current state must declare exactly one Accepted repository source.' }
-$acceptedRef=$acceptedMatches[0].Groups[1].Value
-$acceptedSha=(& git -C $layout.workspace rev-parse --verify "$acceptedRef^{commit}" | Select-Object -First 1)
-if ($LASTEXITCODE -ne 0 -or $acceptedSha -notmatch '^[a-f0-9]{40}$') { throw 'Current accepted repository source must resolve to a commit.' }
-if ($sha -ne $acceptedSha) {
-    throw "SourceRef resolves to $sha but current state accepts $acceptedSha. Local HEAD is not a substitute."
+$reviewMatches=[regex]::Matches($state,'(?m)^\*\*Active review source:\*\* `([0-9a-f]{7,40})`')
+if ($reviewMatches.Count -gt 1) { throw 'Current state may declare at most one Active review source.' }
+$reviewRef=if($reviewMatches.Count -eq 1){$reviewMatches[0].Groups[1].Value}else{$acceptedMatches[0].Groups[1].Value}
+$reviewSha=(& git -C $layout.workspace rev-parse --verify "$reviewRef^{commit}" | Select-Object -First 1)
+if ($LASTEXITCODE -ne 0 -or $reviewSha -notmatch '^[a-f0-9]{40}$') { throw 'Current active review source must resolve to a commit.' }
+if ($sha -ne $reviewSha) {
+    throw "SourceRef resolves to $sha but current state requires review of $reviewSha. Local HEAD is not a substitute."
 }
 $entries=@(& git -C $layout.workspace ls-tree -r $sha)
 if ($LASTEXITCODE -ne 0) { throw 'Cannot enumerate source commit.' }

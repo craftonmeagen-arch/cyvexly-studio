@@ -21,7 +21,8 @@ $caps = [ordered]@{
     'docs/agent-system/cyvexly/CYVEXLY_FUNCTIONAL_PM_PROMPT.md' = 8192
     'AGENTS.md' = 24576
     'docs/agent-system/cyvexly/CYVEXLY_ASSIGNMENT.md' = 12288
-    'docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md' = 24576
+    # Two full current directives (2026-09-08-28 and 2026-09-10-01) remain live authority.
+    'docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md' = 36864
     'docs/agent-system/cyvexly/CYVEXLY_VISION.md' = 24576
     'docs/agent-system/cyvexly/CYVEXLY_BUILDER_PM_PROMPT.md' = 8192
     'docs/agent-system/cyvexly/CYVEXLY_AUDITOR_PM_PROMPT.md' = 8192

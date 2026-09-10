@@ -100,7 +100,7 @@ Paths below are relative to docs/agent-system/cyvexly unless absolute.
 ## Runtime and report commands
 Run PowerShell 7 (pwsh), not legacy Windows PowerShell. Helpers are under
 C:/app projects/website/.codex/roles/scripts/.
-- Start-ReviewRound.ps1 -Role auditor|council|functional -RoundId <unique-id> -SourceRef <accepted-commit>
+- Start-ReviewRound.ps1 -Role auditor|council|functional -RoundId <unique-id> -SourceRef <active-review-commit>
 - Register-RoleProcess.ps1 -Role <role> -RoundId <id> -ProcessId <owned-pid>
 - Publish-RoleReport.ps1 -Role <role> -RoundId <id> -ReviewId <unique-review-id> -ReportPath <candidate-in-run-logs>
 - Complete-ReviewRound.ps1 -Role <role> -RoundId <id>

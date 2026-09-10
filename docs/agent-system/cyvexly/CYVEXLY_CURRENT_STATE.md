@@ -1,19 +1,21 @@
 # Cyvexly Current State
 
-**Last completed global round:** 163
+**Last completed global round:** 164
 
-**Next:** global round 164; independently review the exact Round 163 Chunk 9
+**Next:** global round 165; independently review the exact Round 163 Chunk 9
 candidate before any push or deployment. Correct material findings, then obtain
 a second separate exact-source challenge before closure. Other scheduler pauses
 remain unchanged.
 
 **Active chunk:** Chunk 9 — EduAILenz & Mudoinkle Showcase Quality
 
-**Current chunk-local round:** 2
+**Current chunk-local round:** 3
 
 **Accepted repository source:** `48a2470` (primary Chunk 8 source)
 
 **Chunk 9 candidate source:** `312937c` (local-only; independent review pending)
+
+**Active review source:** `312937c` (exact Chunk 9 candidate; not yet accepted)
 
 **Current deployed product-source baseline:** `493d1e6` (Team 2's bounded
 outside-site integration on `48a2470`; later reconciliation is record-only)
@@ -24,6 +26,16 @@ scheduler states remain unchanged. Underlying outside-product work,
 credentials, infrastructure, and HoneyHearted remain Team 2 scope.
 
 ## Current product position
+
+Round 164 dispositioned Auditor R127. It is another zero-defect review of old
+accepted source `48a2470`, so it supplies no review coverage for Chunk 9
+candidate `312937c`. Root cause was the review-start helper allowing only the
+accepted-source field; it now selects the explicit active review source and
+falls back to accepted source only when no candidate is declared. All 57
+isolated lifecycle checks, role setup, and hot-file caps pass. The candidate
+identity and boundary remain unchanged: Round 164 touched only review tooling
+and continuity records, and no push or deployment is authorized before two
+exact-source reviews.
 
 Round 163 opened Chunk 9 from clean product baseline `493d1e6` / repository
 head `7bfbd8f`, then delivered the first coherent showcase-quality candidate.

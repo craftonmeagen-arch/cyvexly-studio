@@ -2,7 +2,7 @@
 
 **Active product chunk:** Chunk 9 — EduAILenz & Mudoinkle Showcase Quality
 
-**Current position:** global round 164; chunk-local round 2
+**Current position:** global round 165; chunk-local round 3
 
 **Starting source:** repository head `7bfbd8f`; production product baseline
 `493d1e6` contains Team 2's initial portfolio integration. Exact Round 163
@@ -60,6 +60,23 @@ Pre-existing primary gates remain outside this chunk:
 Team 2 report `HH-IFA-023` closed review of production baseline `493d1e6`;
 primary R116 covers only `48a2470`.
 
+## Round 164 — exact-source review gate preserved
+
+- **Dispositioned:** Auditor R127 passed old accepted source `48a2470` with
+  zero defects. It explicitly excluded EduAILenz/Mudoinkle and therefore does
+  not review candidate `312937c`; its operational item was consumed without
+  weakening Chunk 9's two-review gate.
+- **Repaired the review gate:** review startup now resolves the declared
+  **Active review source** (`312937c`) instead of forcing every review back to
+  accepted Chunk 8 source `48a2470`; it retains accepted-source fallback when
+  no candidate is active. The isolated lifecycle suite passes all 57 checks.
+- **Source truth:** verified that `312937c` remains the exact product candidate.
+  Round 164 changed only review tooling and continuity records; role setup and
+  hot-file guards pass. No product, deployment, outside application, Team 2,
+  credential, or scheduler state changed.
+- **Next:** obtain the first independent review of exact candidate `312937c`,
+  correct any material finding, then obtain a second separate challenge.
+
 ## Round 163 — first showcase-quality candidate
 
 - **Built:** replaced the generic schematic-led EduAILenz and Mudoinkle case
@@ -92,16 +109,6 @@ primary R116 covers only `48a2470`.
   and the Team 2 boundary.
 - **Boundary/next:** no product, deployment, Team 2, reviewer, external, or
   scheduler state changed. Await fresh primary evidence before reopening work.
-
-## Round 161 — post-integration primary-route regression
-
-- **Visible proof:** production passed Home → Business websites → Velora →
-  Pricing → contextual Orbit inquiry at desktop, tablet, and phone widths. The
-  phone menu opened, package context persisted, and no form was submitted.
-- **Runtime proof:** eleven primary routes returned HTTP 200 with HSTS; inspected
-  views had no horizontal overflow or browser warning/error.
-- **Decision:** no primary defect surfaced, so no chunk reopened. Team 2's new
-  portfolio entries were intentionally outside the review.
 
 Older round detail is preserved in `CYVEXLY_BUILD_SUMMARY.md`,
 `docs/archive/chunks/`, Git history, and role memory.

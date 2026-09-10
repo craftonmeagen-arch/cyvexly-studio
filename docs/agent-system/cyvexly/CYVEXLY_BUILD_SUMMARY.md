@@ -3,6 +3,23 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 164 — exact-source review gate preserved
+
+- Dispositioned Auditor R127 as another clean review of old accepted source
+  `48a2470`; it explicitly excluded EduAILenz/Mudoinkle and does not cover
+  Chunk 9 candidate `312937c`.
+- Fixed the source-selection root cause: the review lifecycle now honors an
+  explicit **Active review source** (`312937c`) and uses accepted source only
+  as fallback. All 57 isolated lifecycle checks, role setup, and hot-file caps
+  pass.
+- Verified candidate source truth: `312937c` remains the exact product commit.
+  Round 164 changed only review tooling and continuity records. No product,
+  deployment, outside-application, Team 2, credential, or scheduler state
+  changed.
+- The candidate remains local-only pending two independent exact-source review
+  rounds. The first eligible next action is candidate review, not more Builder
+  polish without new evidence.
+
 ## Round 163 — EduAILenz/Mudoinkle showcase-quality candidate
 
 - Implemented exact local candidate `312937c`: two product-specific case-study
