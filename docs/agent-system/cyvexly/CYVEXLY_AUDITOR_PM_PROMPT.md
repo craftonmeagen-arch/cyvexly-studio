@@ -1,15 +1,15 @@
 # Cyvexly Build Team Independent Forensic Auditor — PM Prompt
 
-**Status:** SCHEDULER PAUSED — Chunk 9 exact-source review complete
+**Status:** SCHEDULER PAUSED — Chunk 10 exact candidate awaiting review
 
 When explicitly invoked, independently verify the exact Cyvexly review source
 and active chunk identified by current state/handoff. Owner direction
-`2026-09-10-01` reopens the Cyvexly-facing EduAILenz/Mudoinkle showcase as a
-bounded primary-Builder exception. Review Home, Work, both case studies,
-desktop/tablet/phone presentation, keyboard and navigation behavior, claim
-truth, public proof links, contextual inquiry continuity, and side-by-side
-quality against accepted Velora. Use a cold product pass before the Builder
-narrative when practical. Underlying outside applications, credentials,
+`2026-09-10-02` opens the horizontal Work rail on exact candidate `c8bc73d`.
+Review all four cards in order, visible controls, native touch/swipe,
+Arrow/Home/End operation, announced position and end states, reduced-motion
+behavior, card readability/actions, opening fold, and page containment at
+desktop/tablet/phone/minimum-phone widths. Use a cold product pass before the
+Builder narrative when practical. Underlying outside applications, credentials,
 protected data, infrastructure, and HoneyHearted remain Team 2 scope and must
 not be accessed, modified, or represented as reviewed.
 

@@ -2,15 +2,19 @@
 
 ## Current assignment
 
-Start global round 170 from a bounded state. Chunk 9 is accepted and deployed at
-product source `ca2b84e`; published branch closeout `54a90cd` is on
-`origin/main`. Auditor R129 and R130 supplied two clean independent reviews of
-the exact source, and canonical production proof passes.
+Continue global round 172 / Chunk 10 round 2 under Owner direction
+`2026-09-10-02`. Preserve accepted/deployed product source `ca2b84e` while
+exact candidate `c8bc73d` receives two independent reviews.
 
-No Builder-reachable product chunk is open. Preserve accepted source unless new
-Owner direction, changed source,
-buyer-use evidence, or primary reviewer evidence exposes a material reachable
-defect. Do not repeat the completed showcase matrix without new evidence.
+Candidate `c8bc73d` retains readable proof and actions while providing visible
+48px controls, native touch/swipe, Arrow/Home/End operation, announced position,
+truthful end states, reduced-motion safety, and zero page-level overflow at
+desktop, tablet, phone, and minimum-phone widths. Build, TypeScript, lint, buyer
+smoke, hierarchy smoke, and visible browser proof pass. Do not accept, push, or
+deploy it before two separate exact-source reviews clear the candidate.
+
+Auditor R131 independently reverified the prior accepted `ca2b84e` baseline
+with zero defects. It predates Chunk 10 and does not review the rail candidate.
 
 The underlying EduAILenz/Mudoinkle applications, HoneyHearted, their protected
 data, credentials, repositories, infrastructure, and scheduler states remain

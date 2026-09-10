@@ -16,10 +16,13 @@ Builder owns only the Cyvexly-facing EduAILenz/Mudoinkle showcase corrections.
 The underlying applications, their repositories, credentials, infrastructure,
 and HoneyHearted remain Team 2 scope and must not be modified here.
 
-No Builder-reachable product chunk is currently open. The Owner-authorized
-role-system repair does not grant provider purchases, payment integration,
-secret access, indexing permission,
-or scheduler changes. The six Cyvexly Build Team roles and exact boundaries
-are listed in `CYVEXLY_TEAM_START_HERE.md` and
-`CYVEXLY_ROLE_RULES_MAPPING.md`. Independent review output is external to the
-product tree.
+Chunk 10 — Horizontal Work Rail — is open under additive Owner direction
+`2026-09-10-02`. Exact candidate `c8bc73d` turns the fixed Work grid into a
+native, scroll-snapping rail through the same four approved projects with
+visible controls, touch/swipe, Arrow-key operation, announced position, safe
+end states, reduced-motion behavior, and responsive containment. It remains
+local-only pending two independent exact-source reviews.
+
+This direction does not grant provider purchases, payment integration, secret
+access, indexing permission, outside-product changes, or scheduler changes.
+Independent review output remains external to the product tree.

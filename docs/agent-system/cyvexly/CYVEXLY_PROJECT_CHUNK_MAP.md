@@ -109,3 +109,21 @@ evidence exposes a meaningful reachable gap.
   navigation and keyboard paths, exact-source build/test proof, and two clean
   independent reviews. Auditor R129 and R130 each passed exact `ca2b84e` and
   verified corrected Work proof remains in the opening desktop/phone folds.
+
+## Chunk 10 — Horizontal Work Rail (OPEN, ROUND 171)
+
+- **Authority:** Owner direction `2026-09-10-02`, additive to the accepted
+  showcase-quality direction.
+- **Exact candidate:** `c8bc73d`; local-only pending two independent reviews.
+- **Outcome:** turn the fixed two-column Work collection into a clear horizontal
+  browsing rail through Velora, Nexora, EduAILenz, and Mudoinkle without
+  reducing card proof, readability, or buyer actions.
+- **Required behavior:** visible left/right controls, native touch/swipe,
+  discoverable keyboard operation, understandable position and end states,
+  reduced-motion safety, working card links, and responsive containment with no
+  page-level horizontal overflow.
+- **Boundary:** preserve accepted project order, artwork, claims, contribution
+  and limitation truth, inquiry continuity, and the Cyvexly blue-glass system.
+  Do not modify the outside applications or add unapproved work.
+- **Closure:** exact-source browser proof at desktop, tablet, phone, and
+  minimum-phone sizes plus two separate independent review rounds.

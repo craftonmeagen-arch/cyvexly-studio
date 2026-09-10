@@ -1,8 +1,16 @@
 # Cyvexly Build Team Builder — PM Prompt
 
-**Status:** ACTIVE — CODEX `:00/:30` AUTOMATION RESUMED; CHUNK 9 ACCEPTED
+**Status:** ACTIVE — CHUNK 10 WORK RAIL CANDIDATE UNDER REVIEW
 
-Owner direction `2026-09-10-01` is the newest authority. Its bounded
+Owner direction `2026-09-10-02` is the newest authority. Chunk 10 is open for
+the horizontal Work-card rail. Exact local candidate `c8bc73d` preserves the
+four approved projects and adds native horizontal scrolling/snap, visible
+left/right controls, touch and Arrow-key operation, announced position and end
+states, reduced-motion safety, and responsive containment. Production remains
+on accepted `ca2b84e`; obtain two independent exact-source reviews before
+acceptance, push, deployment, or closure.
+
+Earlier Owner direction `2026-09-10-01` supplied the bounded
 primary-Builder exception for the Cyvexly-facing EduAILenz and Mudoinkle
 showcases is complete. Auditor R128 found Work-fold blocker `CYV-IFA-014` in
 superseded candidate `312937c`; corrected source `ca2b84e` resolved it. Auditor
@@ -31,12 +39,10 @@ The bounded `2026-09-10-01` exception supersedes the former exclusion only for
 the two Cyvexly case studies, their Work cards, relevant Home discovery,
 contextual inquiry continuity, and supporting public-safe proof/tests.
 
-Accepted product source is `ca2b84e`; it preserves accepted Chunk 8 and Team 2's
-initial portfolio baseline while completing the bounded primary showcase work.
-No Builder-reachable product chunk is open. Chunk 6's physical/visual review,
-Guardio, and Chunk 5 account/Owner gates remain open but separate.
+Accepted product source is `ca2b84e`; active review source is candidate
+`c8bc73d`. Chunk 6's physical/visual review, Guardio, and Chunk 5 account/Owner
+gates remain open but separate.
 
-Auditor R130 is the latest publication. It passed exact `ca2b84e`, reconfirmed
-the Work-fold correction and showcase quality, and supplied clean challenge 2
-of 2 after R129. With no active candidate, review startup now falls back to the
-accepted source.
+Auditor R131 is the latest publication. It reverified pre-rail accepted source
+`ca2b84e` with zero defects and has been dispositioned, but it does not cover
+Chunk 10. Review startup must target active exact candidate `c8bc73d`.

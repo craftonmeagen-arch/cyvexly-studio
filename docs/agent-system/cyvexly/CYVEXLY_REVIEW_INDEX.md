@@ -39,12 +39,14 @@ untouched and outside the primary lane.
 
 Round 164 corrected the review source selector: the lifecycle uses an explicit
 **Active review source** when a candidate is declared and otherwise falls back
-to the accepted source. Chunk 9 no longer has an active candidate, so the
-accepted `ca2b84e` fallback applies. The isolated auditor/council/functional
-lifecycle suite passes all 57 checks.
+to the accepted source. Chunk 10 now declares exact active review source
+`c8bc73d`; accepted/deployed fallback remains `ca2b84e`. The isolated
+auditor/council/functional lifecycle suite passes all 57 checks.
 
 Latest Builder disposition: R130 passed exact corrected source `ca2b84e`,
 independently reconfirmed `CYV-IFA-014` resolved, and supplies clean challenge
 2 of 2 after R129. Its inbox item was consumed; immutable report and evidence
 remain in the external review root. The two exact-source reviews close Chunk 9
-in global round 169. The primary Auditor automation remains stored `PAUSED`.
+in global round 169. R131 later reverified that pre-rail baseline with zero
+defects; its inbox was consumed, but it does not cover Chunk 10 candidate
+`c8bc73d`. The primary Auditor automation remains stored `PAUSED`.

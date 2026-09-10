@@ -6,7 +6,12 @@ Outside-website work belongs to Team 2.
 
 ## Open
 
-1. **Chunk 6 — one complete Velora independent physical/visual review.**
+1. **Chunk 10 — two independent exact-source reviews.** Candidate `c8bc73d`
+   implements and locally proves the Owner-directed horizontal Work rail.
+   Builder verification cannot satisfy the independent-review gate; keep
+   accepted/deployed source `ca2b84e` in place until two clean reviews pass.
+
+2. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with
    uncropped desktop/mobile proof, six scannable capabilities, truthful status
    and contribution language, detailed disclosure, and a hospitality-specific

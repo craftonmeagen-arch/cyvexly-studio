@@ -10,8 +10,9 @@ Git history, and role memory.
 - Production product source: `ca2b84e`; branch closeout `54a90cd` was pushed and
   canonical content adoption was proved through source-specific copy plus live
   buyer/hierarchy suites.
-- No active review candidate is declared; the lifecycle selector falls back to
-  the accepted source.
+- Chunk 10 exact candidate and active review source is `c8bc73d`; it remains
+  local-only pending two independent reviews. Accepted/deployed source remains
+  `ca2b84e`.
 - Auditor R128 failed superseded candidate `312937c` on Work-fold blocker
   `CYV-IFA-014`; Round 166 corrected and proved it in `ca2b84e`. The primary
   Auditor automation remains `PAUSED`; the Builder did not alter it.

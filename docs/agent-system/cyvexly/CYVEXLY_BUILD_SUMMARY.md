@@ -3,6 +3,22 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 171 — accessible horizontal Work rail candidate
+
+- Implemented exact local candidate `c8bc73d`: the four accepted Work cards now
+  form a native horizontal scroll-snap rail with visible 48px controls,
+  Arrow/Home/End support, announced position, truthful end states, native
+  touch movement, and reduced-motion-safe navigation.
+- Preserved Velora → Nexora → EduAILenz → Mudoinkle order, complete proof-rich
+  cards, working case-study/inquiry actions, and the proof-first opening fold.
+- Production build, TypeScript, lint with one historical evidence-only warning,
+  the 35-route buyer suite, and the full hierarchy suite pass. Browser evidence
+  covers 1280x720, 768x1024, 390x844, and 320x568 with zero runtime errors or
+  page-level overflow.
+- Consumed R131, a zero-defect recheck of pre-rail accepted source `ca2b84e`;
+  it is not a Chunk 10 review. Candidate `c8bc73d` remains local-only pending
+  two independent exact-source reviews; no scheduler or outside app changed.
+
 ## Round 169 — Chunk 9 accepted after second exact-source review
 
 - Consumed Auditor R130, which independently passed exact `ca2b84e` with zero
