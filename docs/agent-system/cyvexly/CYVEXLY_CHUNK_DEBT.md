@@ -6,20 +6,7 @@ Outside-website work belongs to Team 2.
 
 ## Open
 
-1. **Chunk 9 — independent verification of the implemented showcase candidate.**
-   Round 163 completed the distinct product identities, real public-safe
-   desktop/phone evidence, concrete guided journeys, buyer-readable capability
-   stories, proportional limitations, and Work/Home/inquiry discovery. Auditor
-   R128 verified that elevation at exact source `312937c` but found blocker
-   `CYV-IFA-014`: Work proof fell below the opening fold. Round 166 corrected it
-   in exact local candidate `ca2b84e`; full hierarchy, buyer, build, type, lint,
-   responsive, overflow, and visible-browser proof pass. Auditor R129 then
-   passed exact `ca2b84e` and independently verified `CYV-IFA-014` resolved,
-   supplying clean challenge 1 of 2. One second separate exact-source review
-   remains before closure. The primary Auditor automation remains `PAUSED`, so
-   review requires explicit manual invocation or separate resume authority.
-
-2. **Chunk 6 — one complete Velora independent physical/visual review.**
+1. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with
    uncropped desktop/mobile proof, six scannable capabilities, truthful status
    and contribution language, detailed disclosure, and a hospitality-specific
@@ -32,6 +19,8 @@ Outside-website work belongs to Team 2.
 
 - Chunk 8 closed in Round 159 after R112's separate product-equivalent pass and
   R116's zero-defect review of exact accepted source `48a2470`.
+- Chunk 9 closed in Round 169 at accepted source `ca2b84e` after R129 and R130
+  supplied two clean independent exact-source reviews.
 - Guardio review is external app debt, not chunk/product debt.
 - Chunks 3–4 have no remaining implementation debt; their account/approval
   closure gates are consolidated into Chunk 5 and `CYVEXLY_APP_DEBT.md`.

@@ -37,14 +37,14 @@ moved to the external processed lane; published reports/evidence remain
 external. They do not cover Chunk 9. Legacy Team 2 R90–R92 inbox items remain
 untouched and outside the primary lane.
 
-Round 164 corrected the review source selector: the lifecycle now uses the
-explicit **Active review source** from current state (`312937c`) and falls back
-to the accepted source only when no candidate is declared. The isolated
-auditor/council/functional lifecycle suite passes all 57 checks.
+Round 164 corrected the review source selector: the lifecycle uses an explicit
+**Active review source** when a candidate is declared and otherwise falls back
+to the accepted source. Chunk 9 no longer has an active candidate, so the
+accepted `ca2b84e` fallback applies. The isolated auditor/council/functional
+lifecycle suite passes all 57 checks.
 
-Latest Builder disposition: R129 passed exact corrected candidate `ca2b84e`,
-independently verified `CYV-IFA-014` resolved, and supplies clean challenge 1
-of 2. Its inbox item was consumed; immutable report and evidence remain in the
-external review root. One second separate passing exact-`ca2b84e` round remains.
-The primary Auditor automation is stored `PAUSED`; review needs explicit manual
-invocation or separately authorized scheduler resume.
+Latest Builder disposition: R130 passed exact corrected source `ca2b84e`,
+independently reconfirmed `CYV-IFA-014` resolved, and supplies clean challenge
+2 of 2 after R129. Its inbox item was consumed; immutable report and evidence
+remain in the external review root. The two exact-source reviews close Chunk 9
+in global round 169. The primary Auditor automation remains stored `PAUSED`.

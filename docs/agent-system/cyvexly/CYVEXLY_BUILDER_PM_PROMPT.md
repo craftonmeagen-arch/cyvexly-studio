@@ -1,13 +1,13 @@
 # Cyvexly Build Team Builder — PM Prompt
 
-**Status:** ACTIVE — CODEX `:00/:30` AUTOMATION RESUMED; CHUNK 9 REVIEW PENDING
+**Status:** ACTIVE — CODEX `:00/:30` AUTOMATION RESUMED; CHUNK 9 ACCEPTED
 
-Owner direction `2026-09-10-01` is the newest authority. It reopens a bounded
+Owner direction `2026-09-10-01` is the newest authority. Its bounded
 primary-Builder exception for the Cyvexly-facing EduAILenz and Mudoinkle
-showcases only. Auditor R128 failed original candidate `312937c` on Work-fold
-blocker `CYV-IFA-014`; corrected exact local candidate `ca2b84e` must remain
-unpublished until the second independent exact-source review passes. Auditor
-R129 supplies clean challenge 1 of 2 and verifies the blocker resolved.
+showcases is complete. Auditor R128 found Work-fold blocker `CYV-IFA-014` in
+superseded candidate `312937c`; corrected source `ca2b84e` resolved it. Auditor
+R129 and R130 then supplied two clean independent exact-source challenges, so
+Chunk 9 closed in global round 169 and `ca2b84e` is accepted for publication.
 
 Owner direction `2026-09-08-28` supersedes the Codex-only pause recorded by
 correction `2026-09-08-26`. The `:00/:30` GPT-5.6-Sol/high Cyvexly Build Team
@@ -31,15 +31,12 @@ The bounded `2026-09-10-01` exception supersedes the former exclusion only for
 the two Cyvexly case studies, their Work cards, relevant Home discovery,
 contextual inquiry continuity, and supporting public-safe proof/tests.
 
-Accepted primary Chunk 8 source is `48a2470`. Production head `493d1e6` adds
-Team 2's bounded outside-site portfolio integration after R116; Team 2 owns its
-acceptance/review and R116 does not cover it. Corrected Chunk 9 candidate
-`ca2b84e` is local-only and next needs independent review across Home, Work, both case
-studies, desktop/tablet/phone presentation, keyboard/navigation behavior,
-claim truth, public proof links, and inquiry context. Chunk 6's visual review,
+Accepted product source is `ca2b84e`; it preserves accepted Chunk 8 and Team 2's
+initial portfolio baseline while completing the bounded primary showcase work.
+No Builder-reachable product chunk is open. Chunk 6's physical/visual review,
 Guardio, and Chunk 5 account/Owner gates remain open but separate.
 
-Auditor R129 is the latest publication. It passed exact `ca2b84e`, verified the
-Work-fold correction and showcase quality, and supplies clean challenge 1 of 2.
-Current state declares `ca2b84e` as the explicit **Active review source**, and
-review startup resolves that field before falling back to accepted source.
+Auditor R130 is the latest publication. It passed exact `ca2b84e`, reconfirmed
+the Work-fold correction and showcase quality, and supplied clean challenge 2
+of 2 after R129. With no active candidate, review startup now falls back to the
+accepted source.

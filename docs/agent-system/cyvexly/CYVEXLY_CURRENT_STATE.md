@@ -1,23 +1,22 @@
 # Cyvexly Current State
 
-**Last completed global round:** 167
+**Last completed global round:** 169
 
-**Next:** global round 168; obtain the second clean independent review of exact
-Chunk 9 candidate `ca2b84e` before closure. Keep the candidate local-only until
-that separate challenge passes.
+**Next:** publish accepted product source `ca2b84e`, verify canonical production
+adoption, then await new reachable primary-Cyvexly evidence.
 
-**Active chunk:** Chunk 9 — EduAILenz & Mudoinkle Showcase Quality
+**Active chunk:** none; Chunk 9 closed in global round 169
 
-**Current chunk-local round:** 6
+**Current chunk-local round:** closed after round 6
 
-**Accepted repository source:** `48a2470` (primary Chunk 8 source)
+**Accepted repository source:** `ca2b84e` (Chunk 9 showcase correction)
 
-**Chunk 9 candidate source:** `ca2b84e` (local-only; independent review pending)
+**Chunk 9 candidate source:** none; `ca2b84e` is accepted
 
-**Active review source:** `ca2b84e` (corrected exact Chunk 9 candidate; not yet accepted)
+**Active review source:** none; review lifecycle falls back to accepted source
 
-**Current deployed product-source baseline:** `493d1e6` (Team 2's bounded
-outside-site integration on `48a2470`; later reconciliation is record-only)
+**Current deployed product-source baseline:** `493d1e6` until the accepted
+`ca2b84e` publication is proved live in this round
 
 Owner direction `2026-09-10-01` resumes the primary Cyvexly Builder and opens
 the two Cyvexly-facing showcase corrections. Team 2 Builder and all Auditor
@@ -25,6 +24,14 @@ scheduler states remain unchanged. Underlying outside-product work,
 credentials, infrastructure, and HoneyHearted remain Team 2 scope.
 
 ## Current product position
+
+Round 169 consumed exact-source Auditor R130, which independently passed
+`ca2b84e` with zero defects and reconfirmed `CYV-IFA-014` resolved. R130 passed
+the 56-route build, TypeScript, lint, buyer, hierarchy, Nexora, and submission-
+receipt suites plus responsive visual inspection. Together with R129, it
+satisfies the two independent exact-source review requirement. Chunk 9 is
+closed and `ca2b84e` is accepted for publication. Builder acceptance checks
+also pass; production adoption remains to be recorded after the push.
 
 Round 167 consumed exact-source Auditor R129, which passed corrected candidate
 `ca2b84e` and independently verified that `CYV-IFA-014` is resolved. It passed
@@ -114,12 +121,10 @@ its separate review of the EduAILenz/Mudoinkle portfolio integration.
 
 ## Next work and gates
 
-Current Builder work is Chunk 9. Corrected candidate `ca2b84e` is local-only and
-must not be pushed or deployed while the second clean independent exact-source
-review remains. The next review requires an explicit manual primary-Auditor
-invocation or separately authorized resume of the paused Auditor automation. Do
-not access protected data, modify the outside applications, or restart unrelated
-loops.
+Finish Round 169 by publishing the accepted source and proving canonical
+production adoption. After that, no Builder-reachable product chunk remains.
+Do not access protected data, modify the outside applications, or restart
+unrelated loops.
 
 Remaining primary-team gates:
 

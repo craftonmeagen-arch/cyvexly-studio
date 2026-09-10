@@ -2,74 +2,34 @@
 
 ## Current assignment
 
-Start global round 168 in Chunk 9. Corrected exact showcase candidate `ca2b84e`
-is intentionally local-only; `main` is ahead of `origin/main`. Do not push or
-deploy it before the second passing independent exact-source review.
+Finish global round 169 by publishing accepted Chunk 9 product source
+`ca2b84e` and proving canonical production adoption. Auditor R129 and R130
+supplied two clean independent reviews of that exact source, and Builder
+acceptance checks pass.
 
-Auditor R129 passed exact corrected candidate `ca2b84e`, independently verified
-`CYV-IFA-014` resolved, and supplies clean challenge 1 of 2. Acquire one second
-separate review through an explicit manual primary-Auditor invocation or a
-separately authorized scheduler resume. Cover
-Home, Work, both case studies, desktop/tablet/phone layouts, keyboard access,
-claim truth, public proof links, and contextual inquiry continuity.
+After production adoption is recorded, no Builder-reachable product chunk is
+open. Preserve accepted source unless new Owner direction, changed source,
+buyer-use evidence, or primary reviewer evidence exposes a material reachable
+defect. Do not repeat the completed showcase matrix without new evidence.
 
-The candidate changes only Cyvexly presentation. Do not modify EduAILenz,
-Mudoinkle, HoneyHearted, their credentials, protected data, infrastructure, or
-deployment. Team 2 Builder and Auditor scheduler states remain unchanged.
+The underlying EduAILenz/Mudoinkle applications, HoneyHearted, their protected
+data, credentials, repositories, infrastructure, and scheduler states remain
+outside this role.
 
-## Round 167 handoff
+## Round 169 handoff
 
-**State:** FIRST CLEAN EXACT-SOURCE REVIEW PASSED — SECOND CHALLENGE REQUIRED
+**State:** CHUNK 9 ACCEPTED — PUBLICATION/PRODUCTION PROOF IN PROGRESS
 
-- Consumed primary Auditor R129 and preserved its immutable report/evidence.
-  It reviewed exact `ca2b84e`, passed the corrected Work fold, and independently
-  marked `CYV-IFA-014` resolved.
-- The isolated review also passed build/type/lint, buyer and hierarchy suites,
-  responsive desktop/phone/minimum-phone proof, showcase identity and claim
-  boundaries, and contextual inquiry routing.
-- R129 is clean challenge 1 of 2. Product source, deployment, outside apps, and
-  scheduler state stayed unchanged; `ca2b84e` remains local-only.
-- Next: obtain one separate clean exact-source challenge before acceptance,
-  push, deployment, or Chunk 9 closure.
-
-## Round 166 handoff
-
-**State:** AUDITOR BLOCKER CORRECTED — NEW EXACT CANDIDATE NEEDS TWO PASSES
-
-- Consumed primary Auditor R128 and preserved its immutable external report.
-  It reviewed exact `312937c`, verified the new showcases, and failed only
-  `CYV-IFA-014`: Work proof was below the opening fold.
-- Exact local candidate `ca2b84e` replaces the long Work headline with concise
-  buyer language. At 1280x720 the hero/card/artwork measurements are
-  354.75/523.75/716.75px; at 390x844 card/artwork are 535/728px with 0 overflow.
-- TypeScript, lint, production build, 35-route/17-context buyer smoke, and the
-  full hierarchy smoke pass. Visible IAB inspection passed at desktop and at
-  its 375px effective phone content width. Minimum screenshots and metrics are
-  retained under `builder/evidence/round-166-ifa014-correction/` until the
-  candidate is accepted or superseded.
-- Cleanup removed 14 redundant captures (7,970,808 bytes), closed the IAB tab,
-  stopped both Builder-owned runtimes, and verified ports 5173/9342/9343 plus
-  lifecycle scratch are clear.
-- R128 failed the superseded source, so `ca2b84e` still needs two clean
-  independent reviews. No deployment, outside application, or scheduler state
-  changed.
-
-## Round 165 handoff
-
-**State:** EXACT-SOURCE REVIEW WAITING ON AUTHORIZED INDEPENDENT INVOCATION
-
-- No new primary inbox item exists; only legacy Team 2 R90-R92 remain. Current
-  primary report R127 still reviews old source `48a2470`.
-- Product paths match full candidate
-  `312937cdc10f049e224aae417f2b7921fec5970d`; the working tree is clean, with no
-  active Auditor runtime or port-5273 listener.
-- The primary Auditor automation is `PAUSED`. This Builder did not change it,
-  and a Builder self-review was not substituted for independent acceptance.
-- Role setup exposed and corrected a case-sensitive `Chunk 9` marker mismatch
-  in the Auditor PM prompt. No product, deployment, outside-application,
-  external-reviewer-record, or scheduler state changed. Manually invoke the
-  primary Auditor against `312937c` or obtain separate authorization to resume
-  its scheduler.
+- Consumed R130's operational inbox item and preserved its immutable external
+  report and 16 screenshots.
+- R130 passed exact `ca2b84e` with zero defects and reconfirmed Work-fold
+  blocker `CYV-IFA-014` resolved. It is clean challenge 2 of 2 after R129.
+- The Builder re-passed the 56-route build, TypeScript, lint with one historical
+  evidence warning, 57 lifecycle checks, role setup, hot-file caps, and
+  whitespace.
+- Chunk 9 is closed at accepted source `ca2b84e`. Push the acceptance record,
+  wait for Render adoption, and verify canonical Home, Work, both case studies,
+  proof assets, contextual inquiries, and staged no-index controls.
 
 ## Persistent primary gates outside Chunk 9
 

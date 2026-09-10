@@ -6,19 +6,16 @@ Git history, and role memory.
 
 ## Current source position
 
-- Primary accepted source: `48a2470`.
-- Production head: `493d1e6`, Team 2's bounded outside-site portfolio
-  integration directly on top of the primary source.
-- Chunk 9 showcase candidate: corrected local commit `ca2b84e`; it is not
-  accepted, pushed, or deployed while the second clean exact-source review
-  remains.
-- Active review source: `ca2b84e`; the lifecycle selector uses this field before
-  the accepted-source fallback.
+- Primary accepted product source: `ca2b84e`.
+- Publication of the accepted Chunk 9 source is the remaining current-round
+  action; production adoption must be proved after the push.
+- No active review candidate is declared; the lifecycle selector falls back to
+  the accepted source.
 - Auditor R128 failed superseded candidate `312937c` on Work-fold blocker
   `CYV-IFA-014`; Round 166 corrected and proved it in `ca2b84e`. The primary
   Auditor automation remains `PAUSED`; the Builder did not alter it.
-- Auditor R129 passed exact `ca2b84e`, verified `CYV-IFA-014` resolved, and
-  supplies clean challenge 1 of 2. One separate exact-source challenge remains.
+- Auditor R129 and R130 passed exact `ca2b84e`, verified `CYV-IFA-014` resolved,
+  and satisfy the two-review gate. Chunk 9 closed in global round 169.
 - Chunk 8 closed in Round 159 after R112 and exact-source R116 supplied two
   separate clean challenges. No current primary product defect is open.
 - Team 2 report `HH-IFA-023` closed review of the later integration; primary
