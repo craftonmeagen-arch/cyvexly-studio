@@ -1,26 +1,31 @@
-# Team Two Website Builder — Cyvexly PM Prompt
+# Cyvexly Build Team Builder — PM Prompt
 
-**Status:** PAUSED BY OWNER
+**Status:** ACTIVE — CODEX `:00/:30` AUTOMATION RESUMED; CHUNK 8 CLOSED
 
-Do not begin another Team Two Website Builder round. Owner direction
-`2026-09-08-21` assigns the next HoneyHearted owner-dashboard, Clerk
-authorization, durable content/storage, and TPT publishing architecture to
-Claude because Codex credits are low. Preserve Claude's work and do not create a
-competing implementation. The existing Builder scheduler must remain paused
-with its saved :00/:30 cadence, GPT-5.6 Sol model, and high reasoning settings
-until the Owner explicitly asks to resume it.
+Owner direction `2026-09-08-28` supersedes the Codex-only pause recorded by
+correction `2026-09-08-26`. The `:00/:30` GPT-5.6-Sol/high Cyvexly Build Team
+Builder automation is ACTIVE.
 
-If explicitly resumed, Owner direction `2026-09-08-22` queues separate premium
-EduAILenz and Mudoinkle Work cards/case studies as the next Builder portfolio
-expansion. Investigate their repositories read-only, never inspect/copy secrets
-or private data, ground every claim in verified source/runtime truth, and use
-safe synthetic responsive proof. The direction itself does not unpause this
-scheduler.
+Latest correction `2026-09-08-29`: HoneyHearted and all EduAILenz/Mudoinkle or
+other outside-website work are **Team 2's**, not this Cyvexly Build Team's. Their directions, current state, and PM
+guidance now live in `docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md` and
+`TEAM2_BUILDER_ORIENTATION_DOCUMENT.md` (repo root). This file no longer
+carries HoneyHearted assignment text.
 
-Accepted product state before the pause: HoneyHearted source `6af5e3c` and
-Velora buyer-case-study source `fce01e8` are deployed. Chunk 6 still requires
-two independent reviews; Chunk 7 retains its independent-review and external
-Owner/account gates. A future explicitly resumed Builder must disposition fresh
-review intake and reconcile Claude's accepted source before changing product
-code.
+Owner direction `2026-09-08-28` opened Chunk 8 — Buyer Journey, Proof &
+Conversion. Global round 159 closes it after R116 passed exact accepted source
+`48a2470` with zero defects and supplied the second independent challenge after
+R112's product-equivalent pass. Preserve accepted source unless new material
+evidence or Owner direction justifies reopening a coherent product slice.
 
+Direction `2026-09-08-22` moved to Team 2 in full. Do not investigate,
+implement, audit, or claim the EduAILenz/Mudoinkle portfolio entries. If their
+future bounded integration creates a dependency, record it for Team 2 and
+continue unrelated reachable Cyvexly work.
+
+Accepted primary Chunk 8 source is `48a2470`. Production head `493d1e6` adds
+Team 2's bounded outside-site portfolio integration after R116; Team 2 owns its
+acceptance/review and R116 does not cover it. Chunk 6 still requires one
+complete independent physical/visual review. Guardio and Chunk 5 account/Owner
+gates remain external. Do not invent a new product task merely to keep the
+automation busy.

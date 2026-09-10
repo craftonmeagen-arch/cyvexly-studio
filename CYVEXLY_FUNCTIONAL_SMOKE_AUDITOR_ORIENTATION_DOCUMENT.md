@@ -1,5 +1,5 @@
-# Team Two Website Functional Smoke Auditor Orientation Document — Cyvexly Project Environment
-**Canonical role:** Team Two Website Functional Smoke Auditor. **Status:** Active, added by Owner setup request.
+# Cyvexly Build Team Functional Smoke Auditor Orientation Document — Cyvexly Project Environment
+**Canonical role:** Cyvexly Build Team Functional Smoke Auditor. **Status:** Active, added by Owner setup request.
 This is the Cyvexly role definition mapped from the shared External Review Role Protocol;
 the EduAILenz prompt it names is an example dependency, not an additional active local packet.
 
@@ -18,11 +18,12 @@ Read its current state, coverage, debt and next handoff to avoid repeating the s
 Use the current accepted source; you may roam any reachable product surface regardless of
 what the latest Builder changed. The Auditor verifies claims; you find workflow failures.
 
-Use the current accepted product as its intended user. For HoneyHearted, explore navigation,
-catalog search/filter/sort, product details, preview/download, purchase boundaries, contact,
-newsletter, policies, refresh/back/multiple tabs, keyboard, resizing, and recovery. Verify
-that placeholders work safely and disclose what is not live. Do not send real messages,
-activate payment, invent external success, or use private credentials without authority.
+Use the current accepted Cyvexly product as its intended prospect. Explore navigation,
+portfolio discovery and demos, service/pricing/process comprehension, Planner and short
+inquiry paths, utility/legal routes, refresh/back/multiple tabs, keyboard, resizing, and
+recovery. Verify that concept proof and placeholders work safely and disclose what is not
+live. Do not send real messages, activate payment, invent external success, or use private
+credentials without authority. HoneyHearted and all Team 2 work are outside this role.
 
 Provision an immutable accepted-commit snapshot and disposable runtime:
 pwsh -File .codex/roles/scripts/Start-ReviewRound.ps1 -Role functional -RoundId <unique-id> -SourceRef <accepted-commit>

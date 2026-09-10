@@ -1,99 +1,324 @@
 # Cyvexly Owner Direction
 
+## Scheduler pause and reconciliation 2026-09-10
+
+**Status:** ACTIVE — BUILDERS PAUSED
+**Recorded:** 2026-09-10 America/New_York
+
+The Owner paused both Builder schedulers; the Team 2 HoneyHearted Auditor was
+already paused. Do not reactivate them without later explicit Owner direction.
+Preserve accepted work and reconcile records on `origin/main`, excluding local
+caches and Codex attachments.
+
+## External-website work boundary clarification 2026-09-08-29
+
+**Status:** ACTIVE — LATEST TEAM-SCOPE AUTHORITY
+**Source:** Owner via active Codex conversation
+**Recorded:** 2026-09-08 America/New_York
+
+### Owner direction — verbatim
+
+> “Once done ensure team two understands in their owners direction that the
+> only activities they are involved in is bringing in other websites in that
+> area or working on other website. So like the work that we left in owners
+> direction to reference mudoinkle and eduailenze. That work is strictly theirs
+> and work related to it. But everything else cyvexly is the cyvexly primary
+> builder team”
+
+### Binding team boundary — agent interpretation
+
+- **Team 2 owns external-website work.** Its two authorized lanes are building,
+  repairing, deploying, or otherwise working on a website other than Cyvexly;
+  and bringing an outside website into Cyvexly's portfolio with truthful,
+  verified evidence.
+- Direction `2026-09-08-22` and every task related to EduAILenz or Mudoinkle
+  belong strictly to Team 2. That includes repository/runtime investigation,
+  claim verification, screenshots or synthetic proof, Work cards, case-study
+  pages, safe demos or links, necessary portfolio discoverability, tests,
+  review, and correction of those entries. The complete direction is moved to
+  Team 2's Owner Direction.
+- Team 2 may touch the Cyvexly repository only when an assigned outside-site
+  portfolio integration genuinely requires it, and only within that bounded
+  entry and its necessary discoverability/testing surface. It must coordinate
+  with the primary team and must not take unrelated Cyvexly cleanup, services,
+  pricing, Planner, contact, business, design-system, or buyer-journey work.
+- The **primary Cyvexly Build Team owns everything else on Cyvexly**, including
+  the general buyer journey, domain-warning investigation, navigation truth,
+  services, pricing, contact, Planner, sitewide hierarchy/copy, launch work,
+  and maintenance of existing Cyvexly surfaces such as Velora unless the Owner
+  separately reassigns them.
+- Primary Cyvexly Builder and Auditor rounds must not perform or claim
+  EduAILenz/Mudoinkle portfolio work. They may identify a boundary or integration
+  dependency and hand it to Team 2, then continue other reachable Cyvexly work.
+
 Fulfilled setup/approval direction `2026-08-30-01`/`02` and superseded visual
 history `2026-08-30-04`/`05` are preserved in
 `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`. The active scheduler boundary
 remains here deliberately.
 
-## EduAILenz and Mudoinkle completed-work portfolio direction 2026-09-08-22
+## Buyer-journey improvement and primary Cyvexly team restart 2026-09-08-28
 
-**Status:** ACTIVE — NEXT TEAM TWO WEBSITE BUILDER PORTFOLIO EXPANSION
+**Status:** ACTIVE — PRIMARY CYVEXLY BUILD TEAM WORK
 **Source:** Owner via active Codex conversation
 **Recorded:** 2026-09-08 America/New_York
 
 ### Owner direction — verbatim
 
-> “add to owners direction for cyvexly builder that i want to add eduailenz
-> and mudoinkle to the portfolio of completed works. these are complicated
-> websites so they should be able to sell capabilities. full authroization to
-> look in those folders to investigate that work”
+> “Ok define all this clearly as to what we need and put this in cyvexly
+> owners direction. Make sure honey hearted work (if there is any) goes to
+> team 2. Then begin a schedular for chat sol 5.6 on high to begin this work
+> as the primary cyvexly builder. And begin a second schedular for chat Luna
+> 5.6 on extra high to be an auditor for the primary cyvexly team. And set her
+> with essentially the exact same prompt and stipulations as the auditor for
+> team two.”
 
-### Required outcome and authority
+### Team ownership and scheduler authority — agent interpretation
 
-- Build separate Work cards and buyer-facing case studies after investigating
-  real source/runtime truth. The Builder has full read-only authority in
-  `C:/app projects/Eduailenze` and `C:/app projects/Mudoinkle` and their
-  relevant evidence. Do not modify those repos or
-  inspect/copy secrets, `.env` values,
-  credentials, private user/student data, or generated dependencies.
-- Sell verified complexity clearly. “Completed works” does not permit invented
-  clients, results, launch or feature status. Separate completed capability
-  from ongoing work; use safe synthetic proof and verified links/assets only.
-- Match Velora's premium standard and visibly verify discovery, routes,
-  metadata, responsive/keyboard behavior, performance, disclosures, and CTAs.
-  This is the next Builder portfolio expansion; preserve Velora and Claude's
-  HoneyHearted work. The scheduler stays paused under direction `2026-09-08-21`.
+- The **Cyvexly Build Team** is the primary team for `cyvexly.com`, including
+  its sales journey and maintenance of accepted Velora. Later direction
+  `2026-09-08-29` assigns outside-site portfolio work—including every
+  EduAILenz/Mudoinkle task—to Team 2.
+- **HoneyHearted belongs only to Team 2.** Its standalone source, private
+  repository, owner dashboard, TPT integration, Render deployment, Namecheap
+  DNS, Clerk configuration, and corresponding independent audit must follow
+  `docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. The primary Cyvexly
+  Builder and primary Cyvexly Auditor must not implement or audit HoneyHearted
+  as part of their Cyvexly rounds.
+- This direction explicitly resumes the existing primary Cyvexly Builder
+  automation. It uses `gpt-5.6-sol`, high reasoning, and the established
+  twice-hourly `:00/:30` cadence. This supersedes the Codex-only pause recorded
+  by direction `2026-09-08-26`; it does not change Team 2's scheduler state.
+- This direction also authorizes a distinct primary Cyvexly Independent
+  Forensic Auditor automation using `gpt-5.6-luna` with extra-high (`xhigh`)
+  reasoning, scheduled hourly at `:20` between Builder starts to reduce role
+  overlap. Its audit obligations, no-work prohibition, exact-source
+  discipline, independent runtime, reviewer-only repair authority, publication
+  requirements, and manifest-safe cleanup match the existing Team 2 Auditor,
+  adapted only to the Cyvexly product and Cyvexly Builder's accepted source.
+- Scheduler prompts activate the full orientation/rule system and do not
+  replace it. One Builder firing is one substantive Builder round; one Auditor
+  firing is one substantive independent review pass. Neither role may change
+  scheduler configuration.
 
-## HoneyHearted owner dashboard and TPT commerce direction 2026-09-08-21
+### Authoritative buyer outcome
 
-**Status:** ACTIVE — AUTHORIZED ARCHITECTURE; IMPLEMENTATION HANDED TO CLAUDE
-**Source:** Owner via active Codex conversation
+Cyvexly must remain visually distinctive while becoming easier for a serious
+buyer to understand, trust, compare, and contact. The approved architectural
+ice-blue/cyber-blue glass identity remains the visual authority. This is not a
+generic redesign and does not authorize flattening the brand into a competitor
+clone. The work changes hierarchy, evidence, language, navigation, and buyer
+friction wherever current rendered evidence supports it.
+
+The detailed source review and screenshots are retained at
+`C:/app projects/website-independent-review/buyer-review-2026-09-08/BUYER_REVIEW.md`.
+The requirements below are binding scope; the report is supporting evidence and
+does not override later Owner direction or independently verified product truth.
+
+### Required workstreams
+
+1. **Domain trust warning:** independently investigate the observed Guardio
+   block page for `cyvexly.com`. Determine whether this is a false-positive
+   reputation classification or a real security/domain issue before choosing a
+   remedy. Do not claim the site contains malware merely because one extension
+   blocked it, and do not conceal an unresolved warning from readiness status.
+2. **Navigation truth:** repair every label/destination mismatch. In particular,
+   Services links promising package details, add-on pricing, the Commerce
+   package, accessibility information, or care-plan comparison must open the
+   promised information rather than the Project Planner. “Let's talk” must lead
+   to a genuine contact route. Preserve or carry relevant service/package/case-
+   study context into inquiry paths when useful.
+3. **Portfolio proof:** use the current Velora case study and working demo as the
+   minimum proof standard for existing primary-team work. Direction
+   `2026-09-08-29` assigns every EduAILenz/Mudoinkle and other outside-site
+   portfolio task to Team 2. Each featured built project should provide meaningful
+   screenshots, its business/user purpose, verified demonstrated capabilities,
+   an accurate Cyvexly contribution/status statement, and distinct case-study
+   and safe-demo actions when a demo is supportable. Never invent clients,
+   results, permissions, launch state, or functionality. Clearly separate built
+   demonstrations, completed applications, and design-only explorations.
+4. **Portfolio organization:** prefer two or three strong inspectable examples
+   over equal emphasis on thin schematic concepts. Improve, demote, separate,
+   or remove current placeholder-like entries when they weaken the proof.
+   Resolve the confusing similarity between “Velora” and “Vellora Care” if both
+   remain. Remove filters that add no useful distinction or make filter
+   semantics truthful and visibly useful.
+5. **Low-friction first contact:** make a short project inquiry prominent. A
+   buyer must be able to ask whether Cyvexly is a fit using only essential
+   contact information and a short description. Keep the nine-step Project
+   Planner as an optional detailed-brief route for buyers who are ready, not the
+   admission requirement for every project conversation. Email and phone may
+   remain direct alternatives. Do not advertise a calendar, callback, or other
+   contact process unless it truly operates.
+6. **Planner usability:** keep the verified local save/restore behavior and
+   disclose before use that it saves on that device. On step changes, place
+   focus and scroll at the new step content below the sticky header. Replace or
+   correct the narrow-screen progress overflow; make required fields and
+   optional sections unmistakable; avoid collecting the same contact decision
+   twice; and place “not sure — recommend it” choices where they reduce effort
+   before long technical lists. Preserve accessible validation, correction,
+   consent, review, and submission behavior.
+7. **Buyer-led service organization:** organize the primary choices around
+   needs buyers recognize: a new business website, improvement/redesign of an
+   existing site, selling or taking bookings online, a custom web application,
+   and ongoing website support. Strategy, design, development, content,
+   accessibility, integrations, and CMS remain important supporting details,
+   but buyers should not have to reconcile three overlapping taxonomies before
+   finding their route. Connect each buyer route to relevant proof, indicative
+   pricing, and the appropriate next action.
+8. **Information and visual hierarchy:** reduce repeated nested panels, equal-
+   strength glow/borders, oversized internal-page introductions, repeated DIY/
+   no-template statements, and duplicated process explanations where they make
+   the site feel longer or more complicated. Preserve the approved visual
+   system, deliberate motion, readable contrast, and useful technical detail.
+   Give the strongest rendered work the most visual emphasis; use calmer
+   treatment for supporting information. Correct the desktop portfolio orphan-
+   card imbalance and make mobile journeys shorter and easier to scan.
+9. **Pricing decisions:** keep truthful published starting prices, timelines,
+   add-ons, milestone billing, ownership/handoff, optional care, and separate
+   third-party-cost disclosures. Pair branded package names with plain-language
+   buyer descriptions; make meaningful package differences easier to compare;
+   add verified illustrative scope/cost examples when supportable; provide
+   useful section navigation; and define care-plan response expectations and a
+   “small content request.” Resolve the real payment-provider decision before
+   claiming transaction readiness. If “Most popular” is not supported by real
+   uptake evidence, relabel it as a recommendation or remove it.
+10. **Professional customer-facing voice:** replace inward-looking, defensive,
+    or process-jargon copy such as commentary about “twelve thin” projects,
+    “founder mythology,” or repeated abstract “route/system/pathway” language.
+    Explain plainly who Cyvexly helps, what the buyer receives, how approvals
+    and communication work, who owns the result, and what happens after launch.
+    Keep the approved logo-led studio story; no founder name, portrait,
+    biography, team size, testimonials, awards, results, or credentials may be
+    invented.
+11. **Surface reassurance instead of adding clutter:** ownership, editing and
+    migration, revision allowances, hosting/domain guidance, content readiness,
+    post-launch support, and care cancellation are already answered across the
+    FAQ/About/Pricing/Process material. Bring the right concise answer to the
+    buyer's decision point and link to detail. Do not add pages or duplicate
+    copy merely to make the site appear larger.
+
+### Preferred buyer sequence
+
+The homepage should help a buyer answer **fit, proof, cost, risk, and next
+step** in that order:
+
+1. clear audience/offer, strongest work visual, short-inquiry action, and Work;
+2. compact reassurance about starting investment, realistic timing, direct
+   working relationship, and ownership;
+3. two or three strong projects with accurate case-study/demo routes;
+4. buyer-led service choices connected to relevant proof;
+5. a concise working process with detail available separately;
+6. concise scope/pricing/ongoing-cost guidance and the most useful questions;
+7. easy contact plus the optional detailed Planner.
+
+The Builder may improve this exact sequence when stronger rendered evidence
+shows a better buyer outcome, but must preserve all required buyer decisions.
+
+### Verification and completion standard
+
+- Use the real integrated website and strongest available **visible interactive
+  browser** method. Visual or interaction acceptance must not rely only on a
+  headless run, source inspection, a build, or stale screenshots. Inspect and
+  actually view desktop, tablet, and phone states; keyboard/focus behavior;
+  navigation destinations; filters; short inquiry; Planner progress, save,
+  restore, validation, review, and safe submission boundaries; and relevant
+  case-study/demo transitions. Do not send fake public inquiries or perform
+  real transactions merely to prove UI.
+- Confirm current IAB/visual-browser capability each round rather than assuming
+  a historical limitation. If IAB is unavailable, use the strongest permitted
+  visible-browser alternative, record the exact limitation honestly, and do not
+  represent that alternative as IAB.
+- Product claims, links, and proof labels must match exact current source and
+  runtime behavior. Concept disclosure must remain clear without dominating the
+  buyer experience. Secrets and private data remain outside source/evidence.
+- The Builder dispositions the full scope through coherent rounds, maintaining
+  current chunk/state/debt/handoff truth. The independent Auditor verifies exact
+  accepted commits and publishes actionable findings without editing product
+  source. Completion still requires the governing two separate verification
+  rounds; one good screenshot, build, or happy path is not completion.
+- After implementation, conduct a simple unfamiliar-buyer task test: find a
+  relevant example, estimate likely spend, identify buyer responsibilities,
+  determine ownership/editability, and reach a non-submitted inquiry. Observe
+  wrong turns and hesitation. Do not fabricate improved conversion; measure it
+  only if real analytics or user evidence later exists.
+
+## Codex-scheduler-pause scope correction 2026-09-08-26
+
+**Status:** ACTIVE — CORRECTS SCOPE OF PRIOR PAUSE LANGUAGE
+**Source:** Owner via Claude Code chat
 **Recorded:** 2026-09-08 America/New_York
 
 ### Owner direction — verbatim
 
-> “ok lets do option 2. she will need that complete set up. whcih means we will
-> need to set up clerk as well. whcih i will do soon. but put this in owners
-> direction. i will and pause the schedular. i will have claude do this wror
-> since i am runningh ouyt of chat credits”
+> "yeah i paused codex. to have you do the work"
+
+> "it sounds like codex put everything i said in owners direction whcih caused
+> some confusion. that statement should be removed since that was for codex
+> specifically and not for the team in owners direction"
 
 ### Agent interpretation — not Owner-authored wording
 
-- “Option 2” means a complete, secure HoneyHearted owner dashboard for managing
-  website content while **Teachers Pay Teachers (TPT) remains the commerce,
-  checkout, order, paid-file-delivery, sales-reporting, and payout system**.
-  HoneyHearted must not accept card details, claim an on-site payment, create a
-  local paid order, or imply that HoneyHearted itself transferred money.
-- Implement a private owner experience that lets the authorized owner create,
-  edit, preview, publish, unpublish/archive, and reorder products; manage final
-  titles, descriptions, grade bands, categories, formats, prices displayed for
-  reference, approved covers/previews, exact TPT listing URLs, articles, and
-  other agreed editable website content. Public purchase actions must open the
-  exact corresponding TPT listing and clearly disclose that checkout occurs on
-  TPT.
-- Use **Clerk** for authentication. The Owner will create and control the Clerk
-  account/project soon. Protect every owner route and every write operation on
-  the server, restrict administration to the explicitly approved owner
-  identity, provide safe sign-in/sign-out/session recovery and unauthorized
-  states, and use production-domain configuration before launch. A visible
-  login screen alone is not authorization. Clerk keys and all other secrets
-  must be entered through protected environment controls and must never be
-  committed, embedded in client-visible source, reports, screenshots, or chat.
-- Clerk supplies identity/session infrastructure; the implementation still
-  needs durable product/content data, approved asset storage, validation,
-  publication state, backups/recovery, and an auditable safe deployment path.
-  Choose and document a proportionate backend and storage solution without
-  fabricating an external account. Placeholder/local adapters may support
-  development until the Owner creates each required account, but they cannot be
-  represented as production persistence.
-- The owner dashboard does not replace the TPT Seller Dashboard. The Owner must
-  create/control the TPT Seller account, product listings, tax/payout identity,
-  Hyperwallet transfer method, product files, licenses, pricing, refund/support
-  practices, and exact public URLs. HoneyHearted may display and promote that
-  approved information but must not claim TPT accepted a listing or issued a
-  payout until it actually did.
-- The complete setup includes responsive and accessible dashboard workflows;
-  validation, error/retry/recovery states; safe upload restrictions; draft and
-  preview behavior; secure deployment configuration; contact/newsletter
-  integration where approved; truthful policies; logging without secrets or
-  unnecessary personal data; and end-to-end proof of owner edit → public
-  publication → exact TPT product navigation.
-- The Owner has assigned this implementation to **Claude** because current
-  Codex chat credits are running low. Preserve Claude's work and do not start a
-  competing Team Two Website Builder implementation. The existing Team Two
-  Website Builder scheduler must remain **PAUSED** until the Owner explicitly
-  asks to resume it. Pausing does not erase the saved prompt, cadence, model, or
-  reasoning settings.
+- The pause instruction that used to appear in the (now moved-to-Team-2)
+  HoneyHearted directions ("i will [and] pause the schedular") was the Owner
+  telling the **Codex-based `:00/:30` GPT-5.6-Sol Cyvexly Build Team Builder
+  automation** to pause itself. Codex recorded its own full raw chat turn into
+  this file and additionally wrote a broader interpretive sentence that read
+  as applying to every Builder scheduler/session rather than only to Codex's
+  own automation — that is corrected here, not deleted from the record.
+- **Corrected scope:** only the Codex `:00/:30` GPT-5.6-Sol automation is
+  paused. Preserve its saved prompt, cadence, model, and reasoning settings
+  until the Owner explicitly asks to resume it. This pause was never about
+  HoneyHearted work generally — see `2026-09-08-27` below and
+  `docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`: HoneyHearted is Team 2's
+  own separate project, not a Cyvexly Build Team assignment.
+
+## Team split — HoneyHearted and Team 2 moved out 2026-09-08-27 — MOVED
+
+The complete verbatim direction and interpretation are preserved in
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Latest direction
+`2026-09-08-29` further clarifies that Team 2 owns outside websites and their
+bounded Cyvexly portfolio integration; every other Cyvexly activity belongs to
+the primary Cyvexly Build Team.
+
+## HoneyHearted purchased-domain confirmation 2026-09-08-25 — MOVED
+
+**Status:** MOVED TO TEAM 2 — see
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Confirms the purchased
+production domain `honeyhearted.org`. Not Cyvexly Build Team scope.
+
+## HoneyHearted standalone repository and staged launch direction 2026-09-08-24 — MOVED
+
+**Status:** MOVED TO TEAM 2 — see
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Standalone Next.js build
+order and repository-push handoff contract for
+`https://github.com/craftonmeagen-arch/Honeyhearted`. Not Cyvexly Build Team
+scope.
+
+## HoneyHearted implementation order and independent audit direction 2026-09-08-23 — MOVED
+
+**Status:** MOVED TO TEAM 2 — see
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Implementation-sequencing
+authority and the Independent Forensic Auditor (Luna) scheduler authorization
+for HoneyHearted work. Not Cyvexly Build Team scope. (The Auditor scheduler's
+environment/port infrastructure currently still lives under
+`CYVEXLY_AUDITOR_ENVIRONMENT.md`/port `5273` pending a decision on whether to
+re-home it — see the outstanding-setup-debt note in
+`TEAM2_BUILDER_ORIENTATION_DOCUMENT.md`.)
+
+## EduAILenz and Mudoinkle completed-work portfolio direction 2026-09-08-22 — MOVED
+
+**Status:** MOVED TO TEAM 2 by Owner direction `2026-09-08-29`. The complete
+verbatim direction and its updated team-specific interpretation are in
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. All EduAILenz/Mudoinkle
+investigation, proof, portfolio-entry, and related implementation/audit work is
+Team 2 scope, not primary Cyvexly Build Team scope.
+
+## HoneyHearted owner dashboard and TPT commerce direction 2026-09-08-21 — MOVED
+
+**Status:** MOVED TO TEAM 2 — see
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Authorizes the Clerk +
+durable-storage + TPT owner-dashboard architecture and assigns HoneyHearted
+implementation. Not Cyvexly Build Team scope.
 
 ## Velora buyer-facing portfolio presentation direction 2026-09-08-20
 
@@ -102,216 +327,30 @@ remains here deliberately.
 Full direction is preserved in `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`;
 the accepted result and remaining reviews stay live in the chunk map/state.
 
-## HoneyHearted fully functional website direction 2026-09-08-19
+## HoneyHearted fully functional website direction 2026-09-08-19 — MOVED
 
-**Status:** SUPERSEDED IN IMPLEMENTATION DETAIL BY 2026-09-08-21
+**Status:** MOVED TO TEAM 2 — see
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md` (superseded in
+implementation detail there by moved direction `2026-09-08-21`, same as
+before the move). Not Cyvexly Build Team scope.
 
-Full direction is preserved in `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`;
-live HoneyHearted boundaries remain in the chunk map/state.
+## Former Team Two Website identity direction 2026-09-08-18 — SUPERSEDED
 
-## Team Two Website role identity direction 2026-09-08-18
+The complete direction is preserved in
+`docs/archive/CYVEXLY_OWNER_DIRECTION_TEAM_IDENTITY_2026-09-08-18.md`.
+Directions `2026-09-08-27` and `2026-09-08-28` supersede that former combined-team identity: the primary Cyvexly Build Team owns Cyvexly Studio, while Team 2 owns HoneyHearted.
 
-**Status:** ACTIVE — ROLE-SYSTEM IDENTITY
-**Source:** Owner via active Codex conversation
-**Recorded:** 2026-09-08 America/New_York
+## Launch completion and business operations direction 2026-09-04-14 — ARCHIVED
 
-### Owner direction — verbatim
+The complete Owner wording and interpretation are preserved in
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ACTIVE_HISTORY_2026-09-08.md`.
+Its still-active business facts are restated under **Confirmed Owner facts** below; direction `2026-09-08-28` governs current implementation priority.
 
-> “ok look at the rules label it clearly as team two website builder.snd all
-> the other roles and files likewise to make the system work for them”
+## Velora capability-demonstration direction 2026-09-07-17 — FULFILLED/ARCHIVED
 
-### Agent interpretation — not Owner-authored wording
-
-- The canonical team/lane name for this repository is **Team Two Website**.
-- Its role labels are Team Two Website Builder, Supervisor, Independent
-  Forensic Auditor, Quality & Methods Council, Project Manager, and Functional
-  Smoke Auditor.
-- Cyvexly Studio remains the product/brand. Existing `CYVEXLY_*` filenames,
-  `cyvexly_*` configuration filenames, and lifecycle role keys remain stable
-  compatibility interfaces; visible identity metadata and active entry text
-  carry the Team Two Website name.
-- The eight imported rule packets remain unchanged and checksum-verifiable.
-  The project mapping and local rule README apply them to Team Two Website.
-- This identity direction does not create a second concurrent Builder, change
-  a scheduler, or convert the Supervisor/review roles into Builders.
-
-## Launch completion and business operations direction 2026-09-04-14
-
-**Status:** ACTIVE — MAKE THIS THE NEXT MAJOR CHUNK
-**Source:** Owner via active Codex conversation
-**Recorded:** 2026-09-04 America/New_York
-
-### Owner decisions
-
-- The public brand remains **Cyvexly Studio**.
-- The business structure is an **LLC** based in **Indiana, United States**.
-  The exact registered legal entity name has not yet been supplied and must be
-  verified before it is placed in Privacy, Terms, invoices, or agreements.
-- Cyvexly will serve the **United States only at launch**. Remove or revise
-  “worldwide,” international-client, international-currency, or international-
-  payment language wherever it appears.
-- The production domain is **`cyvexly.com`**.
-- The public email is **`design@cyvexly.com`**.
-- The public phone is **`(317) 572-5780`**, with `+13175725780` used for `tel:`
-  links and structured/machine-readable representations.
-- No personal founder name will be published at launch. The About page must be
-  studio-led and use the existing Cyvexly logo/brand treatment instead of a
-  founder portrait. Do not invent a person, biography, pronouns, team, or photo.
-- The About story should explain that Cyvexly was founded to help business
-  owners obtain the tools, marketing support, and practical website capabilities
-  they need. The refined draft in `CYVEXLY_VISION_PLAN.md` §6.8 is authorized as
-  reviewable starting copy; the Owner will review and may revise it.
-- Payment-provider selection is **tabled for Owner research**. Do not activate
-  a provider, add checkout, or advertise a method as operational merely because
-  it appeared in an earlier recommendation. Payment research and implementation
-  are a separately tracked later decision.
-- Real portfolio replacement is **tabled** until the Owner supplies appropriate
-  work and publishing permission. Existing concept projects may remain only
-  when their concept status is unmistakable; never imply they are clients or
-  measured client results.
-- The Owner also approves including the other previously identified launch work:
-  production-domain setup, metadata/discovery, About/legal pages, real form
-  delivery and confirmation, truthful contact information, privacy-aware
-  analytics/search ownership, and comprehensive launch QA.
-
-### Authoritative next-chunk vision
-
-The next major chunk is **Chunk 5 — United States Launch Completion & Business
-Operations**. Its purpose is to turn the working Render preview into a truthful,
-contactable, searchable, legally coherent public business site at
-`https://cyvexly.com` without changing Cyvexly into a self-service website
-builder. Prospects still describe their needs; Cyvexly reviews the brief and
-recommends scope before proposals, agreements, invoices, or payment.
-
-The Builder must treat `CYVEXLY_VISION_PLAN.md` §17 as the detailed scope and
-completion standard. The Auditor and Council must independently compare the
-implemented result against this Owner direction, the production site, and the
-approved visual authority. Earlier notes that the domain, Indiana jurisdiction,
-founder-image choice, public email, phone, or market were wholly undecided are
-superseded by this section.
-
-### Required workstreams
-
-1. **Domain and HTTPS:** connect `cyvexly.com`/`www`, select one canonical host,
-   verify Render routing and certificate behavior, and prove redirects.
-2. **Production discovery:** set production metadata and canonical/social URLs,
-   provide `sitemap.xml`, preserve no-index during the release gate, and enable
-   indexing only after Owner review.
-3. **Identity and contact:** use `design@cyvexly.com`, publish the phone
-   accessibly, and eliminate stale contact or market claims.
-4. **About:** create a logo-led, studio-origin About page from the approved draft
-   and values without inventing a founder identity.
-5. **Legal:** draft Indiana/United States Privacy and Website Terms around actual
-   site behavior; obtain the exact LLC legal name before final publication and
-   keep the client project agreement separate.
-6. **Inquiry delivery:** replace the Contact/Planner `mailto:` bridge with secure
-   server delivery, internal notification, visitor confirmation/summary,
-   accessible success/error/retry behavior, necessary-data minimization, secret
-   isolation, and proportionate accessible spam/rate controls.
-7. **Measurement:** connect Owner-controlled search ownership and the least
-   invasive useful analytics configuration; describe actual collection and use
-   cookie controls only when required by the chosen implementation.
-8. **Truth audit:** retain concept labels, remove unsupported payment claims,
-   remove worldwide/international promises, and verify every business claim.
-9. **Release QA:** verify routes, legal/footer links, forms and real email,
-   responsive visuals, keyboard/accessibility, performance, security, metadata,
-   social preview, sitemap, robots, diagnostics, and final public deployment.
-
-### Hard boundaries and deferred work
-
-- Payment provider/account/invoicing/checkout work is not authorized in Chunk 5.
-  Public payment copy must remain truthful while the decision is tabled.
-- Real-client portfolio replacement is not authorized until the Owner supplies
-  work and permission; concept work remains honestly labeled.
-- No personal founder identity is required or authorized for launch.
-- Credentials, API keys, passwords, and verification tokens never belong in
-  source, reports, screenshots, or chat transcripts. Configure them only in the
-  approved provider/Render secret controls.
-- Enabling public search indexing is the final release action and requires Owner
-  approval after the canonical domain, legal pages, forms, and metadata pass.
-
-### Remaining Owner gates
-
-The team may plan and implement every non-secret portion now. The Owner still
-needs to provide or approve: the exact registered LLC name; DNS/provider access
-at the account boundary; the business inbox and transactional-email provider;
-provider secrets entered securely; analytics/Search Console ownership or a
-no-analytics decision; About/legal copy review; public visual acceptance; and
-the final indexability release.
-
-This is one integrated launch-completion direction. Do not fragment it into
-unrelated cosmetic rounds or report it complete because only the domain, only
-legal copy, or only form UI was finished.
-
-## Velora capability-demonstration build and Builder scheduler authorization 2026-09-07-17
-
-**Status:** ACTIVE — CURRENT BUILDER PRIORITY
-**Source:** Owner via active Codex conversation
-**Recorded:** 2026-09-07 21:43 EDT (America/New_York)
-
-### Owner direction — verbatim
-
-> “ok set a schedular to work on this website to get it working. make all the
-> decisions neededd to get it running. everything is fake...it is a website to
-> show capability. it will be added to the portfolio of websites that we put
-> togethter in cyvexly. so it has to function but for like the address use 123
-> not real drive evansville indiana. stuff like that. or phone numbers as
-> 555555555 and email as notrealrestaurant\@gmail.com. stuff like that. but
-> everything has to work.”
-
-> “put that in owners direction and move round for round like the rules say. set
-> a schedular like the rules say for the cyvecxly builder. gpt 5.6 sol as the
-> builder on high. set everything according to the rules and make sure the
-> builder can get to work.”
-
-### Agent interpretation — not Owner-authored wording
-
-- Velora is an explicitly fictional fine-dining website and a Cyvexly Studio
-  capability demonstration. It may be developed as clearly labeled concept
-  work and later represented in Cyvexly's portfolio; it must never be presented
-  as a real restaurant, real client engagement, testimonial, or measured client
-  result. This direction supersedes the earlier portfolio deferral only for the
-  authorized Velora concept; it does not authorize inventing real client work.
-- The restored source begins at `velora/index.html`. The Cyvexly Builder owns
-  reachable work within `velora/` and should reconcile this new direction into
-  the project chunk map, active chunk, current round/chunk position, and hot
-  handoff during the first scheduled round, then begin useful implementation in
-  that same round when practical.
-- “Everything has to work” means every advertised navigation path, responsive
-  state, control, menu, reservation/contact/demo workflow, validation path,
-  success/failure/correction state, accessibility behavior, and other visible
-  interaction must be implemented and proven in the real rendered site. The
-  Builder may make strong reversible product, content, design, and engineering
-  decisions without waiting for further Owner input.
-- All restaurant facts and user-facing contact details must remain obviously
-  fictional. Use the Owner's examples consistently, normalized for display as
-  `123 Not Real Drive, Evansville, Indiana`, `555-555-5555`, and
-  `notrealrestaurant@gmail.com`. Do not send real email, place real calls,
-  create real reservations, collect real payment, claim real availability, or
-  depend on a real restaurant account. Where a production service would
-  normally be required, build a safe, clearly disclosed demonstration behavior
-  that exercises the complete user experience without misleading visitors or
-  transmitting personal data to a possibly real third party.
-- Preserve the existing Velora visual concept as evidence and improve it where
-  rendered inspection shows a stronger professional capability demonstration.
-  Keep the concept disclosure clear without allowing it to dominate or weaken
-  the presentation.
-- This message explicitly authorizes creating and enabling the Cyvexly Builder
-  recurring scheduler. “Like the rules say” uses the project-specific role
-  entry from `CYVEXLY_TEAM_START_HERE.md`: “You are the Cyvexly Builder. Look
-  for the Cyvexly Builder Orientation Document and then perform that role.” The
-  automation runs every 30 minutes at `:00` and `:30`, with scheduler-managed
-  same-role non-overlap, direct work in the saved local Cyvexly project,
-  GPT-5.6 Sol, and high reasoning.
-  This authorization supersedes scheduler boundary `2026-08-30-03` for this
-  one Builder automation only. It does not authorize Supervisor, Auditor,
-  Council, PM, or Functional schedulers.
-- The scheduler remains active round-for-round until the Owner pauses or stops
-  it. Each invocation is one coherent fresh-agent Builder round, including
-  source-truth preservation, proportionate rendered proof, concise continuity
-  updates, and cleanup. Readiness still requires the two separate verification
-  rounds required by the governing packet; a single successful build or visual
-  pass does not establish completion.
+The complete Owner wording, acceptance boundary, and scheduler history are preserved in
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ACTIVE_HISTORY_2026-09-08.md`.
+Velora's accepted implementation is preserved; current portfolio work is governed by direction `2026-09-08-28`.
 
 ## Scheduler boundary 2026-08-30-03
 

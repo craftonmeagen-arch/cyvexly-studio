@@ -8,101 +8,23 @@ requires.
 
 ## Chunk 1 — Foundation & Home (CLOSED, round 1)
 
-- **Outcome:** A real, running Next.js/TypeScript/Tailwind application exists
-  as source truth, carrying the cyber-arctic design system (color tokens,
+- **Outcome:** A Next.js/TypeScript/Tailwind application carries the
+  cyber-arctic design system (color tokens,
   typography, glass/grid utilities, reusable header/footer/button/FAQ
   components), with a complete, verified Home page.
-- **Closure evidence:** build/lint/typecheck clean; real dev-server content,
-  console/network, and interaction verified; a real tablet-width nav overlap
-  bug was found (from concurrently-published Auditor screenshots) and fixed;
-  committed as git source truth. See the round-1 report in
-  `CYVEXLY_ACTIVE_CHUNK.md`.
-- Closed does not mean frozen — later evidence (e.g. a full Auditor visual
-  review) may reopen it.
+- **Closure:** build, lint, typecheck, runtime, and interaction proof passed;
+  the discovered tablet-nav overlap was fixed. Git and archived round history
+  retain evidence. Closed chunks remain revisitable.
 
-## Chunk 2 — Core marketing pages (CLOSED, opened round 1, extended round 2, closed round 3)
+## Chunk 2 — Core marketing pages (CLOSED; historical detail archived)
 
-- **Outcome:** Services, Work/Portfolio (+ case-study template), Pricing,
-  Process, About, and general Contact pages, reusing Chunk 1's design system
-  and `src/lib/site-config.ts`.
-- **Progress:** `/process` (round 1), `/services`, `/pricing`, `/contact`,
-  `/work` (+ filterable grid), `/work/[slug]` case-study template with three
-  concept case studies (Aurora Spaces, Nexora Systems, Vellora Care) all
-  built and verified round 2. Five of six pages done.
-- **Original remaining/bounded state:** `/about` was the only page not built
-  because the first vision expected a founder name/story/portrait that no
-  Builder could invent. **Superseded September 4, 2026:** Owner direction
-  `2026-09-04-14` authorizes a logo-led studio About, no public personal founder
-  name or portrait, and the reviewable origin draft in vision §6.8. Chunk 5 now
-  owns implementation and verification. See `CYVEXLY_APP_DEBT.md` item 1.
-  **Closed round 3:** independently re-verified via a live route sweep
-  (`curl` against all six pages plus `/about`) that `/`, `/process`,
-  `/services`, `/pricing`, `/contact`, `/work` (+3 case studies) all return
-  200 and `/about` still 404s. The founder-identity gap is unchanged and
-  still not a Builder-reachable decision at that historical round. Per the
-  chunk's own closure boundary ("resolved or explicitly and
-  honestly bounded"), this satisfies closure — closed with the About page
-  carried forward as `CYVEXLY_APP_DEBT.md` item 1, not as open chunk debt.
-  Closed does not mean frozen: reopens automatically once Owner-supplied
-  approved identity direction arrives. That direction has now arrived and is
-  assigned to Chunk 5.
-- **Known visual gaps vs. mockups** (found via round-2 mockup comparison,
-  see `CYVEXLY_CHUNK_DEBT.md`): Services/Pricing pages are content-complete
-  and match vision text closely, but use denser cards than
-  `mockups/02-services-pricing.png`'s more compact layout — both pages now
-  have icon badges (Services round 2, Pricing round 3); the density/framing
-  difference itself remains a deliberate adaptation, not fixed.
-- **Round 5, revisiting closed-chunk debt (closed does not mean frozen):**
-  rebuilt `/process`'s steps section as a connected vertical timeline with
-  numbered circle badges, added a "Typical timing" table and an "Our
-  collaboration promise" panel, matching `mockups/04-process-planner.png`'s
-  visual pattern (`CYVEXLY_CHUNK_DEBT.md` item 1 — now resolved). Also
-  replaced the Work grid/case-study flat gradients with three distinct,
-  hand-authored abstract SVG compositions per concept project, grounded in
-  each project's own already-written creative "decisions" and palette
-  (`CYVEXLY_CHUNK_DEBT.md` item 2 — partially resolved; real photographic/
-  screen-sequence imagery, what both the Auditor and Council explicitly
-  asked for, remains open pending an Owner framing decision — see
-  `CYVEXLY_ACTIVE_CHUNK.md`'s round-5 report).
-- **Round 8, cross-surface reconciliation:** the current Council review found
-  that Home still used the original flat gradients even though Work/case
-  studies had adopted the stronger project-specific abstract artwork; source
-  inspection found Services had the same stale pattern. Both now reuse
-  `ConceptPreview`, verified in real 1440/768/390 headless-Chrome/CDP renders
-  with zero overflow. The reachable inconsistency is closed; the separate Owner
-  decision on abstract-vs-commissioned concept imagery remains open.
-- **Round 14, service-detail completion:** commit `930e050` fulfills vision
-  §6.3 with one reusable `/services/[slug]` template and exactly five focused
-  routes. Services/footer entry points now reach them, and each offer hands an
-  editable starting state to the Planner without overwriting a saved draft.
-  Desktop/tablet/phone, 320px, 24px-root, native-navigation, semantics, and
-  production-build proof pass. This revisits the closed chunk without reopening
-  it or resolving the separate Owner-blocked About gap.
-- **Round 17, Services combination-pathway reconciliation:** replaced the
-  remaining text-table adaptation identified in Chunk Debt item 4 with five
-  mockup-aligned, icon-led glass pathways. Every existing audience/service
-  combination remains present, now with an honest outcome and Planner handoff.
-  Optimized-production proof passes at 1440/1280/1024/768/720/390/320 widths; the
-  three-column layout intentionally waits until 1280px so compact desktops do
-  not repeat the cross-device cramped-scale problem. This revisits the closed
-  chunk without changing its Owner-blocked About boundary.
-- **Round 18, Pricing scope-system reconciliation:** replaced the sparse
-  centered Pricing entry with a split glass composition and an original
-  five-package scope signal, then coordinated the unchanged package cards in a
-  luminous constellation field. Exact 1440/1024/1023/768/390/320 and 24px-root
-  states, native Planner/FAQ input, complete five-card visual inspection,
-  build/route/media regression, and opened public desktop/phone proof pass.
-  The approved mockup's orbital hierarchy is now represented without copying
-  its thumbnail-density tables or changing any package fact. This revisits the
-  closed chunk without changing its Owner-blocked About boundary.
-- **Round 19, dynamic 404 metadata correction:** invalid service/work slugs now
-  call `notFound()` during metadata generation, so streamed fallback metadata
-  cannot overwrite the hydrated 404 title. Both invalid routes retain 404,
-  noindex, landmarks, recovery links, containment, and clean browser state;
-  all eight valid dynamic routes remain 200. This is a cross-chunk runtime
-  correction and does not change the closed marketing-page boundary.
-- Non-goal: Project Planner (its own chunk, given its multi-step form
-  complexity).
+Services, Work/case studies, Pricing, Process, About, and Contact are implemented
+and remain revisitable when current buyer evidence warrants it. Later rounds
+reconciled cross-surface artwork, service-detail routes, combination pathways,
+pricing presentation, and dynamic 404 metadata. The complete round-by-round
+history is preserved in
+`docs/archive/chunks/CYVEXLY_PROJECT_CHUNK_MAP_CHUNK2_HISTORY.md`.
+Project Planner remains a separate chunk.
 
 ## Chunk 3 — Project Planner (OPENED round 4, IN PROGRESS)
 
@@ -255,45 +177,127 @@ requires.
   independent verification rounds confirm the new accepted source. One clean
   Builder pass does not close this chunk.
 
-## Chunk 7 — HoneyHearted Functional Storefront (OPEN, global round 116; Builder scheduler paused)
+## Chunk 7 — HoneyHearted Functional Storefront (MOVED TO TEAM 2)
 
-- **Authority:** Owner directions `2026-09-08-19` and `2026-09-08-21`.
-- **Outcome:** turn the imported teacher-resource storefront into a polished,
-  fully functional site whose available actions work and whose unavailable
-  commerce/account actions are truthfully demonstrated.
-- **Source truth:** `honey-hearted/index.html`; `honey-hearted/smoke.mjs` is the
-  durable rendered workflow check; `/honey-hearted` is the same-origin preview.
-- **Rounds 100–114 progress:** integrated the no-indexed route and proved the
-  catalog, resource/gallery/dialog, download/print, content/policy, preview-
-  form, adapter, activation, responsive, accessibility, storage, network, and
-  navigation-history boundaries in real Chrome. Follow-up fixes preserve
-  dialog, route-return, print, breakpoint, Back-to-top, and mobile-menu focus
-  continuity; launch instructions and hosted-link confirmations match the real
-  self-contained source. The durable suite covers 18 routed accessibility
-  states, all 85 visible Home controls, all seven mobile destinations, and
-  same-route reactivation. Round 111 also enforces the 44px design floor for
-  32 visible standalone mobile controls. Round 112 preserves focus through the
-  mobile-store action's truthful connection notice after its menu trigger is
-  hidden. Round 113 adds a 320px WCAG-style text-spacing contract across eight
-  representative route families with no overflow or clipped readable/control
-  text. Round 114 adds Windows High Contrast/forced-colors proof for selected
-  state, real-Tab focus visibility, named controls, containment, and four routed
-  views. Round 115 hardens the actual downloaded sample and its printed output
-  at accepted/deployed source `6af5e3c`. Detailed round history remains in the
-  build summary and archived reports.
-- **Current assignment boundary:** the next complete owner-dashboard phase is
-  assigned to Claude. It will use Clerk for server-enforced owner authorization,
-  durable content/asset storage, and TPT-linked publishing while TPT remains the
-  checkout/order/delivery/payout system. The Team Two Website Builder scheduler
-  remains paused and must not create a competing implementation without new
-  Owner direction.
-- **Boundaries:** do not invent products, rights, sales, reviews, identity,
-  destinations, legal facts, transmission, subscriptions, or payments. Keep
-  missing inputs and their safe replacement steps in
-  `HONEY_HEARTED_OWNER_NEEDS.md`.
-- **Completion boundary:** all advertised workflows, correction/failure paths,
-  keyboard/zoom/reflow states, content and asset provenance, activation safety,
-  production integration, and two independent verification rounds pass.
+- Owner directions `2026-09-08-27` and `2026-09-08-29` moved HoneyHearted and
+  all later implementation/review work to Team 2. Rounds 100–115 remain
+  historical evidence through accepted source `6af5e3c`; their complete detail
+  is preserved in the build summary, Git history, and archived round records.
+- Live authority and state are in `docs/agent-system/team2/`. This Cyvexly
+  Builder must not implement, audit, or claim that outside-website work.
+
+## Chunk 8 — Buyer Journey, Proof & Conversion (CLOSED, global round 159)
+
+- **Authority:** Owner directions `2026-09-08-28` and `2026-09-08-29`,
+  preserving the visual/business boundaries in `2026-09-04-14`.
+- **Outcome:** make `cyvexly.com` easier for a serious buyer to understand,
+  trust, compare, and contact while preserving the approved architectural
+  cyber-blue glass identity.
+- **Scope:** domain-warning investigation; navigation-label truth; strong and
+  accurately labeled existing Cyvexly proof; a prominent short inquiry plus
+  optional detailed Planner; Planner
+  usability; buyer-led service organization; clearer visual/information
+  hierarchy; applicable pricing and care-plan clarity; professional customer-
+  facing voice; and contextual placement of existing trust answers.
+- **Primary buyer sequence:** fit, proof, cost, risk, next step.
+- **Source evidence:**
+  `C:/app projects/website-independent-review/buyer-review-2026-09-08/BUYER_REVIEW.md`
+  and its rendered screenshots, subject to current source/runtime verification.
+- **Boundaries:** outside-site work, including EduAILenz/Mudoinkle integration,
+  is Team 2 only; no secrets/private data or invented clients, permissions,
+  results, credentials, providers, or conversion gains; visual acceptance is
+  not headless-only.
+- **Round 119 domain disposition:** no compromise was found; Guardio review and
+  an un-allowlisted recheck remain external. No product remedy was justified.
+- **Rounds 120–121 buyer layer:** buyer-led Services, comparable Pricing, and
+  Home's fit → proof → needs → process → cost → risk → inquiry sequence pass
+  responsive/local/public proof at accepted source `37afba2`.
+- **Rounds 122–123 portfolio proof:** Nexora became the second working
+  fictional demo, while Home and Work narrowed proof to Velora and Nexora and
+  retired the two weaker concept routes to 404. Build, demo, buyer, and visible
+  responsive proof pass at accepted source `e0be008`.
+- **Rounds 124–126 contact paths:** sitewide actions lead with the short
+  inquiry, Contact keeps only name/email/description primary, and the custom-
+  application need has a complete service/proof/pricing path. Accepted source
+  advanced through `c780c43` with build, buyer, and responsive proof.
+- **Rounds 127–129 decision continuity:** care-plan terms became comparable;
+  case studies connect proof to relevant estimates; and 15 recognized inquiry
+  contexts remain visible while still requiring a real buyer description.
+  Accepted source advanced through `8c7024e` with local/public proof.
+- **Round 130 decision hierarchy:** compact internal introductions bring
+  Pricing packages and Services buyer choices into the first desktop viewport;
+  Pricing no longer overlaps its section navigation and omits its decorative
+  phone diagram; Contact presents the short form before direct alternatives.
+  Accepted/deployed source `4e36d99`; local/public buyer and hierarchy suites
+  plus visible production proof pass with zero overflow/runtime errors.
+- **Round 131 buyer-language alignment:** the shared footer now mirrors the five
+  primary buyer needs and reaches custom web applications; Home and Planner use
+  concrete, consistent decision copy. The 33-route/15-context local/public
+  buyer suite and visible desktop/phone proof pass at accepted source `6a40912`.
+- **Round 132 package-context preservation:** all service and built-case-study
+  pricing actions now retain the named scope through stable package anchors.
+  Local/public buyer and real Chromium geometry proof pass on desktop/phone at
+  accepted/deployed source `710b3ed`.
+- **Round 133 terminology alignment:** the discovery-priced offering is now
+  called “Custom application” consistently across service, Pricing,
+  comparison/payment, and FAQ guidance. Stable package fragments remain
+  compatible. Local/public buyer and geometry proof plus visible live phone
+  navigation pass at accepted/deployed source `891db24`. Auditor R102 passed
+  exact local equivalent `03e3bf0` with zero findings.
+- **Rounds 134–137 inquiry truth and recovery:** the short inquiry exposes its
+  requirements, both forms preserve answers and direct recovery actions after
+  delivery failure, all recognized context continues into the optional
+  Planner, and receipts distinguish real confirmation-copy outcomes. Build,
+  responsive, intercepted, and local/public buyer proof pass through deployed
+  `190cf8f`.
+- **Rounds 138–140 proof and contact hierarchy:** Nexora now uses its real
+  dashboard capture; Contact's direct actions meet the 44px floor; and the
+  short inquiry enters the first desktop viewport. Local/public responsive
+  proof passes through `ce526f2`; R107 passed exact local Round 140 source.
+- **Rounds 141–144 path truth:** the store/booking journey, Commerce package,
+  Planner save disclosure, and Home timing now match published scope. Proof and
+  exact source history remain in the build summary and active-chunk record.
+- **Rounds 145–149 decision hierarchy:** Pricing shortcuts wrap at 320px;
+  Home's primary heading has its correct accessible name; Work leads with real
+  proof; all five Services choices preserve inquiry context; and Contact now
+  shows its required cue and full Name label within 320×568 (`506px` and
+  `546–563px`, versus `626px` and `666px`). Exact local/deployment/public and
+  visible proof passes through accepted source `8a15a6f`; two reviews remain.
+- **Round 150 wider audit:** visible buyer use found no material new gap, so
+  product UI `8a15a6f` is held stable for review. Repository source `48a2470`
+  fixes only Nexora proof cleanup; two exact-source reviews remain.
+- **Round 151 review disposition:** Auditor R112 passed product-equivalent
+  local closeout `9c56e05` with zero findings. Product/runtime/proof paths are
+  identical to repository source `48a2470`; one further exact-source review
+  remains.
+- **Rounds 152–153 stability proof:** two distinct visible buyer paths and the
+  complete local/public proof suites found no material defect; R113 still
+  named local `9c56e05`, so exact-`48a2470` review remained.
+- **Round 154 review-acquisition repair:** R114 passed with zero findings but
+  again substituted divergent local `9c56e05` for repository source `48a2470`.
+  The Auditor PM prompt now resolves the explicit accepted repository SHA from
+  current state and forbids local `HEAD` substitution. Product source remains
+  stable; one review naming exact `48a2470` still closes the remaining gate.
+- **Round 155 role-source alignment:** required Cyvexly assignment, vision,
+  review, Council/Functional, and PM hot sources now identify the primary
+  Cyvexly Build Team, Chunk 8, and the Team 2 outside-site boundary. The role
+  setup regression rejects the superseded Team Two/HoneyHearted mission while
+  product source remains unchanged at `48a2470`.
+- **Rounds 156–157 exact-source enforcement:** setup exposed accepted `48a2470`
+  versus local `9c56e05`, but R115 proved the snapshot helper still permitted
+  the wrong source. Review start now rejects every ref except the single
+  current-state SHA before creating resources; all 54 lifecycle fixtures pass.
+- **Round 158 dispatch truth:** the paused/stale Auditor automation was routed
+  without scheduler mutation; product source stayed `48a2470`.
+- **Round 159 closeout:** Auditor R116 passed exact accepted source `48a2470`
+  with zero defects across the full independent route, responsive, interaction,
+  accessibility, truth, and buyer-decision suite. Together with R112's separate
+  clean product-equivalent pass, it satisfies the two-round verification floor.
+- **Completion:** every requirement in Owner direction `2026-09-08-28` is
+  dispositioned against exact source and integrated visible-browser proof,
+  buyer-task testing shows no material wrong turns, and two separate
+  verification rounds pass. Guardio provider review and an un-allowlisted
+  recheck remain an Owner/account-holder app-level gate.
 
 ## Historical implementation context
 

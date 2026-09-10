@@ -1,11 +1,13 @@
-# Team Two Website — Cyvexly Studio Current Agent Guidance
+# Cyvexly Build Team and Team 2 — Current Agent Guidance
 
-**Team identity:** This repository is assigned to **Team Two Website**. The six
-active roles are the **Team Two Website Builder**, **Team Two Website
-Supervisor**, **Team Two Website Independent Forensic Auditor**, **Team Two
-Website Quality & Methods Council**, **Team Two Website Project Manager**, and
-**Team Two Website Functional Smoke Auditor**. `Cyvexly` remains the product
-and stable path/file prefix; it is not the team name.
+**Two-team boundary:** the **Cyvexly Build Team** owns every part of
+`cyvexly.com` except work specifically required to bring an outside website
+into its portfolio. **Team 2** exclusively owns outside-website work and those
+bounded portfolio integrations, beginning with HoneyHearted, EduAILenz, and
+Mudoinkle. The teams have
+separate Owner Direction and orientation documents. `CYVEXLY_*` remains the
+stable path/file prefix for the primary Cyvexly role system; it does not assign
+HoneyHearted to that team.
 
 The previous contents of this file are superseded by direct Owner instruction
 dated 2026-09-04. Do not use older setup-state claims such as “Git is not
@@ -16,9 +18,11 @@ the chunk map.” The project is established, versioned, and deployed.
 
 Owner setup direction 2026-09-04 replaces the older role packets and lock-based
 launch procedures with the eight unchanged files in
-`docs/agent-system/cyvexly/rules/`. Read
-`docs/agent-system/cyvexly/CYVEXLY_TEAM_START_HERE.md` and the matching root
-orientation for the assigned Team Two Website role.
+`docs/agent-system/cyvexly/rules/`. A Cyvexly Build Team role reads
+`docs/agent-system/cyvexly/CYVEXLY_TEAM_START_HERE.md` and its matching root
+`CYVEXLY_*_ORIENTATION_DOCUMENT.md`. A Team 2 role reads its matching root
+`TEAM2_*_ORIENTATION_DOCUMENT.md` and
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`.
 `docs/agent-system/cyvexly/CYVEXLY_ROLE_RULES_MAPPING.md` supplies exact Cyvexly
 paths and applicability for shared rules containing other-product examples.
 Older reports and Git history are evidence only, never active launch instructions.
@@ -27,40 +31,63 @@ Scheduler-managed runs use scheduler non-overlap; manual starts must avoid an
 already-running copy of the same role using live task status. No scheduler
 change is authorized by this environment migration.
 
-Independent reviewers write new reports, memory, evidence, and runtime output
-only under `C:/app projects/website-independent-review`. Read the review index
-for current intake. Council must form its cold product view before reading the
-Builder narrative; the reading list below is a required set, not an override of
-that Council ordering. Role identity and authority do not depend on the model.
+Cyvexly independent reviewers write new reports, memory, evidence, and runtime
+output only under `C:/app projects/website-independent-review`. Team 2 reviewers
+must use the separate environment named by their orientation and must not reuse
+Cyvexly reviewer ports, snapshots, reports, memory, or browser profiles. Read
+the applicable review index for current intake. Council must form its cold
+product view before reading the Builder narrative; role identity and authority
+do not depend on the model.
 
-## Current product mission
+## Current product missions
 
-The current Team Two Website Builder priority is reopened **Chunk 6 — Velora
-buyer-facing portfolio presentation** under Owner direction
-`2026-09-08-20`. Rebuild `/work/velora-dining` so the Home → case study → live
-demo path presents the strong working restaurant concept as premium buyer
-proof rather than a sparse internal brief. Preserve `/velora` unless fresh
-rendered evidence identifies a real defect. HoneyHearted's accepted source,
-Owner-needs boundaries, and independent-review obligations remain active in
-parallel; they are not erased by the new forward priority.
+Owner directions `2026-09-08-28` and `2026-09-08-29` resume the primary **Cyvexly Build Team
+Builder** and authorize a separate primary Cyvexly Independent Forensic
+Auditor. Their active mission is the complete buyer-journey improvement of
+`cyvexly.com`: navigation truth, lower-friction inquiry, Planner and service
+organization, pricing clarity, professional copy, visual hierarchy,
+and investigation of the observed domain-warning evidence. Preserve the
+approved architectural cyber-blue glass design. Round 116 completed the
+reopened Velora presentation; Velora remains accepted evidence to preserve and
+a minimum standard for other built-work presentation.
 
-Before working, read:
+HoneyHearted is a **Team 2** mission only. EduAILenz/Mudoinkle investigation,
+portfolio presentation, and all related implementation/review are also Team 2
+only under direction `2026-09-08-29`. HoneyHearted's private repository is
+`https://github.com/craftonmeagen-arch/Honeyhearted`; its live directions and
+staged deployment order are in
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. A primary Cyvexly role must
+not implement or audit Team 2 assignments. A Team 2 role must not implement
+unrelated Cyvexly buyer-journey work; its only permitted Cyvexly-repository
+changes are bounded integration surfaces required for an assigned outside-site
+portfolio entry.
 
-1. `docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md`, especially Owner
-   direction `2026-09-08-20`;
-2. `/work/velora-dining`, `/velora`, their source/configuration, and the prior
-   Velora production evidence;
-3. the current project chunk map and active chunk;
-4. the matching current-state, debt, handoff, and PM-prompt files for the role.
+Before working, read the assigned team's current Owner Direction and matching
+root orientation. A Cyvexly role prioritizes direction `2026-09-08-29` and then
+the still-active non-conflicting scope in direction `2026-09-08-28`, then
+reads the current project chunk map, active chunk, state, debt, handoff, PM
+prompt, and applicable review intake. A Team 2 role follows its Owner Direction
+and the accepted source for its assigned outside website or portfolio
+integration, coordinating any necessary Cyvexly-repository touch with the
+primary team.
 
 All roles use the same current Owner scope and completion definition. The
 Builder implements; the Auditor and Council review independently after an
 accepted source is available. Do not report the integrated website complete
 because one feature or happy path passed.
 
-## HoneyHearted Owner facts
+## Team 2 HoneyHearted facts — not primary Cyvexly scope
 
 - Brand/source title: HoneyHearted — “Resources made with heart.”
+- Standalone private repository:
+  `https://github.com/craftonmeagen-arch/Honeyhearted`.
+- The Clerk Development application exists and uses Invite-only access; the app
+  must still enforce owner-only authorization on the server.
+- Purchased production domain: `honeyhearted.org`. Use it only in the later
+  Render → Namecheap DNS → Clerk production activation stages after the
+  standalone application has been accepted and pushed.
+- TPT exclusively handles checkout, paid-file delivery, orders, reporting, and
+  payouts; HoneyHearted links to exact approved listings.
 - Placeholder products are authorized, but every feature must work.
 - Missing final content, accounts, URLs, or credentials must be documented and
   represented by safe working placeholder/demo behavior, not treated as a stop.
@@ -78,7 +105,10 @@ because one feature or happy path passed.
 - Public phone: `(317) 572-5780` / `+13175725780`.
 - About: logo-led studio story; no personal founder name or portrait.
 - Payment provider/integration: deferred for Owner research.
-- Real portfolio replacement: deferred; concept work must stay clearly labeled.
+- Real-client claims remain deferred. Owner-authorized demonstrations and
+  verified completed-work case studies may be added under directions
+  `2026-09-08-22` and `2026-09-08-28`; concept status and contribution must stay
+  clear.
 
 ## Working boundaries
 

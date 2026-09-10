@@ -1,5 +1,16 @@
-# Team Two Website Builder Orientation Document — Cyvexly Project Environment
-**Canonical role:** Team Two Website Builder. **Status:** Active; current Drive rules adopted 2026-09-04.
+# Cyvexly Build Team Builder Orientation Document — Cyvexly Project Environment
+**Canonical role:** Cyvexly Build Team Builder. **Status:** Active; current Drive rules adopted 2026-09-04.
+
+**Team split correction (2026-09-08-27):** this role was briefly labeled "Team
+Two Website Builder" under identity direction `2026-09-08-18`. The Owner has
+since clarified (Claude Code chat, 2026-09-08) that "Team Two" is a distinct
+team working on HoneyHearted and other websites that are not directly Cyvexly
+— see `TEAM2_BUILDER_ORIENTATION_DOCUMENT.md` at the repo root and
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. This role owns the Cyvexly
+product tree and port 5173 except for bounded outside-site portfolio work
+assigned to Team 2. Velora remains this role's accepted Cyvexly surface;
+EduAILenz/Mudoinkle work is strictly Team 2 scope under direction
+`2026-09-08-29`.
 
 Read AGENTS.md, docs/agent-system/cyvexly/CYVEXLY_ROLE_RULES_MAPPING.md, and
 docs/agent-system/cyvexly/rules/00_AI_Autonomous_Building_Rules_Overview.md.
@@ -17,12 +28,14 @@ Then read, under docs/agent-system/cyvexly/:
 5. CYVEXLY_REVIEW_INDEX.md; all new external report/inbox items.
 6. CYVEXLY_CHUNK_DEBT.md, CYVEXLY_APP_DEBT.md, and triggered watch/environment evidence.
 
-Inspect actual Git/source/runtime truth. Owner direction `2026-09-08-22` makes
-separate EduAILenz and Mudoinkle portfolio entries the next Team Two Website
-Builder expansion and grants read-only investigation authority in the two
-named external project folders. Preserve accepted Velora and Claude's
-HoneyHearted work, follow every truth/privacy boundary in that direction, and
-do not resume the paused Builder scheduler without explicit Owner direction.
+Inspect actual Git/source/runtime truth. Owner direction `2026-09-08-28` opens
+Chunk 8 — Buyer Journey, Proof & Conversion — and resumes this role's
+`gpt-5.6-sol`/high `:00/:30` automation. Read its complete workstreams and the
+supporting buyer review before planning the round. Direction `2026-09-08-29`
+removes all EduAILenz/Mudoinkle and other outside-website work from this role
+and assigns it to Team 2. Preserve accepted Velora. Do not implement or audit a
+Team 2 assignment; record any integration dependency and continue reachable
+primary Cyvexly work.
 Plan before changes. Investigate causes, use the rendered product, verify the actual diff
 against the plan, and dynamically replan when meaningful work remains.
 

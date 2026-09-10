@@ -1,13 +1,14 @@
 # Cyvexly Auditor Current State
 
-**Owner update 2026-09-04:** the next review target is Chunk 5 under Owner
-direction `2026-09-04-14` and vision §17. Domain (`cyvexly.com`), Indiana/
-United States jurisdiction, public email/phone, United States-only market, and
-logo-led/no-personal-founder About direction are confirmed. Re-identify the
-current source, then audit the integrated domain/discovery, contact, About,
-legal, real form delivery, measurement, truth, and public-QA outcome. Exact LLC
-name, provider/account access, final copy/visual/indexing approval remain Owner
-gates. Payment integration and real portfolio replacement are deferred.
+**Owner update 2026-09-08:** direction `2026-09-08-28` creates a distinct
+primary Cyvexly Independent Forensic Auditor and makes Chunk 8 — Buyer Journey,
+Proof & Conversion — the next review target as accepted Builder commits become
+available. Re-identify exact current source, use the external Auditor memory as
+current operational state, and independently audit the complete direction:
+domain-warning disposition, navigation truth, portfolio evidence and labels,
+EduAILenz/Mudoinkle presentation, short inquiry, Planner/service organization,
+pricing/care clarity, professional copy, and responsive visual hierarchy.
+HoneyHearted is Team 2 scope and must not be audited as part of this role.
 
 **Last reviewed source:** accepted product commit `06fbadd6448b4e8e8c77d1618b1c4e6cb14238f2`; product `src/` tree `d9f3e4a976e08f4acc11307b152bcb388d6885a6`. After closeout, HEAD advanced to `4b087446` with source tree `3ea8774a`; that successor was observed but not inspected. Re-identify before the next audit.
 

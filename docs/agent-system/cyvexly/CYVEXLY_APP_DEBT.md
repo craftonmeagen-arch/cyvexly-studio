@@ -1,110 +1,199 @@
 # Cyvexly App Debt
 
-## Round 116 — Velora buyer-facing portfolio presentation
+## Round 159 — Chunk 8 closed; external gates preserved
 
-Accepted/deployed source `fce01e8` completes the reachable reopening scope for
-`/work/velora-dining`: premium buyer language, six functional capability cards,
-complete uncropped responsive proof, design/accessibility decisions, layered
-concept disclosure, and a hospitality-specific conversion CTA. The unchanged
-live demo and Work → case study → demo route pass local visible/headless and
-public Chromium runs with zero failures/errors/origin issues. Remaining Chunk 6
-debt is two independent reviews.
+Auditor R116 passed exact source `48a2470` after R112's separate clean pass,
+closing Chunk 8's review boundary. Guardio review and a clean un-allowlisted
+recheck remain Owner/account gates; Round 119 found no compromise or code
+remedy. Velora visual review and account/approval inputs also remain external.
+Team 2 report `HH-IFA-023` later closed its review of portfolio head `493d1e6`.
+Primary accepted source remains `48a2470`.
 
-## Round 115 — HoneyHearted downloaded free-sample artifact
+## Round 157 — exact-source lifecycle enforcement
 
-Accepted/deployed source `6af5e3c` gives the generated sample Print button the
-44px product floor and verifies the actual downloaded local HTML at 390px,
-including self-containment, native activation, screenshot, and tagged one-page
-Letter PDF output. The next HoneyHearted dashboard/TPT publishing architecture
-is not Builder debt: Owner direction `2026-09-08-21` assigns it to Claude and
-keeps this scheduler paused. Owner-controlled Clerk, durable storage, exact TPT
-listing URLs, final catalog/assets, and launch approvals remain external gates.
+R115 proved the Round 154–156 prompt/setup contract did not constrain the real
+snapshot helper. `Start-ReviewRound.ps1` now resolves the single accepted SHA
+from current state and rejects any other source before creating resources; the
+convenience runner requires an explicit `SourceRef`. All 54 lifecycle fixtures
+and a real-workspace `HEAD` rejection pass. Product source is unchanged and the
+remaining independent-review gate stays in Chunk Debt item 0c.
 
-## Round 114 — HoneyHearted forced-colors adaptability
+## Round 145 — mobile Pricing shortcuts
 
-Proof source `dacec6a` adds a real-Chromium Windows High Contrast/forced-colors
-contract at 320px. The corrected instrument verifies selected-filter
-distinction, a visible 3px keyboard focus ring reached by real Tab input, names
-for all 76 visible controls, width containment, and product, sample, About, and
-launch headings. Local/public suites pass with zero workflow/runtime/network
-errors, and two opened public captures match local pixels exactly. Product
-source remains `000dcd9`; two independent reviews remain the only reachable
-Chunk 7 debt.
+Accepted/deployed `f143308` replaces Pricing's phone scrollbar and `449px`
+hidden rail with a contained three-row shortcut band. Responsive proof passes;
+R109 covered superseded Round 144, so two current-source reviews remain.
 
-## Round 113 — HoneyHearted text-spacing adaptability
+## Round 144 — Home timing truth
 
-Proof source `bb327be` adds a real-Chromium 320px contract using WCAG-style
-line, paragraph, letter, and word-spacing overrides across eight representative
-Home, product, article, sample, About, policy, launch, and recovery states. The
-first detector was refined after decorative clipping and screen-reader-only
-labels produced false positives; text-range measurement then passed locally
-and publicly with zero horizontal overflow, readable/control-text clipping,
-runtime, network, or workflow errors. Product source remains `000dcd9`; two
-independent reviews remain the only reachable Chunk 7 debt.
+Accepted/deployed source `67f66aa` replaces Home's narrower 2–6 week timing
+claim with the published 2–14+ week range and extends the FAQ through Commerce
+plus custom-application discovery. Prior source fails the new contract; local/public buyer, hierarchy,
+build, and visible responsive proof pass. Two exact-source reviews and the
+unchanged Owner/account gates remain.
 
-## Round 112 — HoneyHearted mobile store-notice focus continuity
+## Round 143 — Planner device-local save disclosure
 
-Public source `d88bfc8` opened the mobile menu's truthful unconnected-store
-notice, but Escape returned focus to `BODY` because the invoking menu button
-had already become hidden. Accepted/deployed source `000dcd9` moves focus to
-the visible menu toggle before the notice opens. The real-Space-key regression
-fails before and passes locally/publicly afterward; the complete suites and
-repository gates pass. Two independent reviews remain the only reachable
-Chunk 7 debt.
+Accepted/deployed source `f9a21a0` states before the Planner save action that
+the draft remains only in this browser/device and Cyvexly cannot
+see it until submission. The control references the note; the prior deployment
+fails the strengthened check, while native local save,
+desktop/phone geometry, buyer, build, and visible proof pass. Auditor R108
+passed superseded Round 142; two source reviews of `f9a21a0` remain.
 
-## Round 111 — HoneyHearted mobile touch-target geometry
+## Round 142 — Booking-inclusive Commerce package
 
-The deployed baseline exposed 12 visible standalone controls below the 44px
-product design floor. Accepted/deployed source `d88bfc8` applies one coherent
-target-size layer to menu, catalog, consent, footer, dialog, and back-to-top
-actions while leaving inline prose links compact. The new real-Chrome contract
-fails before and passes 32/32 controls locally and publicly afterward. The
-complete suites and repository gates pass; two independent reviews remain the
-only reachable Chunk 7 debt.
+Accepted/deployed `8e52872` (product commit `95cf243`) aligns the Commerce card and comparison with the
+store-or-booking offer and removes its repeated starting-price qualifier. The
+prior public regression fails; the 52-route build, TypeScript, lint,
+local/public buyer suites, hierarchy suite, and visible responsive proof pass.
+Two exact-source reviews and unchanged Owner/account gates remain.
 
-## Round 110 — HoneyHearted mobile-link focus continuity
+## Round 140 — Short inquiry first-viewport prominence
 
-The wider methodology audit identified a shared focus-lifecycle gap behind
-recent one-off repairs. Real Enter activation on deployed `7b9813c` closed the
-mobile menu but left focus inside its hidden DOM for changed and current
-destinations. Accepted/deployed source `49017a3` centralizes Home-route focus
-transfer; all seven mobile links plus same-route reactivation pass locally and
-publicly. TypeScript, lint (one known evidence warning), the 53-route build,
-role setup, hot-file caps, review lifecycle, and complete suites pass. Two
-independent reviews remain the only reachable Chunk 7 debt.
+`ce526f2` moves Contact's form into the first desktop viewport (`659.75px →
+468.5px`) with responsive/keyboard proof. R107 passed; one review and Owner
+gates remain.
 
-## Round 109 — HoneyHearted Back to top focus continuity
+## Round 139 — Direct contact interaction floor
 
-Accepted/deployed source `7b9813c` fixes the Back to top control hiding itself
-after scroll completion while leaving keyboard focus on `BODY`. The handler
-now makes the visible hero heading programmatically focusable, focuses it
-without an extra scroll, and preserves reduced-motion-aware scrolling. The new
-real-Space-key regression fails on public `1c49c00` and passes locally and on
-production at `7b9813c`; the focus capture visibly shows the heading outline.
-TypeScript, lint (one known evidence warning), the 53-route build, and complete
-suites pass. Two independent reviews remain the only reachable Chunk 7 debt.
+Accepted/deployed `3118a3f` raises Contact's direct email/phone alternatives
+from 28px to 44px, retaining the real destinations and glass hierarchy. The
+prior public regression fails; build, TypeScript, lint, local/public buyer and
+geometry suites, Nexora smoke, and visible phone proof pass. R106 passed the
+superseded Round 138 exact source; two current-source reviews and unchanged
+Owner/account gates remain.
 
-## Round 108 — HoneyHearted responsive-menu focus continuity
+## Round 137 — Truthful submission receipts
 
-Accepted/deployed source `1c49c00` fixes breakpoint-driven focus loss from the
-open mobile menu. When the layout crosses to desktop, a focused mobile link now
-moves to its matching visible desktop link, and the mobile store action moves
-to the desktop store action. The new real-Chromium regression failed on the
-public baseline and passes locally/publicly after the fix. TypeScript, lint
-(one known evidence warning), the 53-route build, and complete suites pass.
-Two independent reviews remain the only reachable Chunk 7 debt.
+Deployed `190cf8f` gives Contact and Planner honest sent/unavailable
+receipts, shared responsive focus/scroll, and matching Privacy copy. Build,
+tsc, lint, local/public buyer and four-state intercepted proof pass with no
+real messages. R105 passed prior Round 136 source `4b2b2d1`, which Round 137
+supersedes; two current-source reviews and unchanged Owner/account gates remain.
 
-Rounds 105–107 HoneyHearted detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUNDS_105_107_ARCHIVE.md`.
+## Round 136 — Inquiry-to-Planner context continuity
 
-Rounds 102–104 HoneyHearted detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUNDS_102_104_ARCHIVE.md`.
+Accepted/deployed `1e127ae` carries all 15 recognized Contact contexts through
+both Planner links using editable prefill; generic/unknown inquiries stay
+blank and saved drafts retain precedence. Build, TypeScript, lint, local/public
+buyer and visible responsive proof pass. R104 passed prior `af8ece8`; current-
+source reviews and Owner/account gates remained.
 
-Round 101's interaction-hardening detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_101_ARCHIVE.md`.
+## Round 134 — Explicit inquiry requirements
 
-Round 100's first integrated-pass detail is archived at
-`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_100_ARCHIVE.md`.
+Accepted/deployed source `db8388b` marks name, email, project description, and
+reply consent as visibly and programmatically required without changing the
+short form's data contract or optional-details disclosure. The new regression
+fails against prior `891db24`; the 52-route build, post-build TypeScript, lint
+(one historical warning), 33-route/15-context local/public buyer suites, and
+visible desktop/phone proof pass. Two exact-source reviews and the unchanged
+Owner/account gates remain.
+
+## Round 133 — Custom-application terminology
+
+Accepted/deployed source `891db24` aligns the discovery-priced package with
+the established “Custom application” service language across shared data,
+Pricing, comparison/payment copy, and FAQs while retaining stable fragment and
+inquiry keys. TypeScript, lint (one historical warning), the 52-route webpack
+build, 33-route/15-context clean-local/public buyer suites, local/public
+hierarchy proof, and visible live phone navigation pass with no overflow or
+runtime errors. Auditor R102 independently passed exact local equivalent
+`03e3bf0` with zero findings. One further Chunk 8 verification round and the
+unchanged Owner/account gates remain.
+
+## Round 127 — Care-plan decision clarity
+
+Accepted/deployed source `586ea23` makes Website care's pricing links truthful,
+exposes comparable plan capacity/response/review fields, carries Care/Care+/
+Evolve context into the short inquiry, and surfaces bounded cancellation/
+unused-capacity guidance before billing. The first tablet render exposed and
+closed a cramped three-column state. TypeScript, lint (one historical warning),
+the 52-route build, clean-local/public 34-route buyer suite, and exact
+desktop/tablet/phone visible/interactive proof pass. Auditor R99 closes Round
+126 source `c780c43`; Round 127 exact-source review and unchanged Owner/account
+gates remain.
+
+## Round 126 — Custom web application service path
+
+Accepted/deployed source `c780c43` closes the missing explanation and proof
+path for the fifth Services buyer need. The new data-driven service page,
+Nexora proof, contextual Contact prompt, and valid optional-Planner selection
+pass TypeScript, lint (one historical warning), the 52-route build, 31-route
+clean-local/public smoke, and responsive visible-browser proof. Remaining
+gates are exact-source independent review plus a fresh buyer-use gap; the
+external Guardio Owner/account-holder check is unchanged.
+
+## Round 125 — Contact first-use friction
+
+Accepted/deployed source `d1bcb5f` makes the promised name/email/message path
+the actual first-use form presentation. Phone, company, and topic remain
+available behind a native optional-details disclosure; support/press guidance
+points to it and no submission/server contract changed. Clean-local/public
+buyer smoke, the 50-route build, and visible desktop/phone production-runtime
+proof pass. Auditor R98 closes Round 124's exact-patch gate; Round 125 exact-
+source review and the unchanged Owner/account gates remain.
+
+## Rounds 123–124 — Focused proof and short inquiry
+
+Accepted/deployed sources `e0be008` and `8209264` focused the portfolio on the
+two working demos and made contextual short inquiry the sitewide primary
+action. Full local/public, responsive, demo, and build proof remains in the
+build summary and Git; Owner/account gates were unchanged.
+
+## Round 122 — Second working portfolio demo
+
+Accepted/deployed source `2a53e31` turns Nexora Systems from a schematic study
+into a responsive, interactive fictional release-intelligence demonstration.
+It supports time-range switching, service filtering, issue investigation,
+plain-language evidence, and a safe Cyvexly inquiry handoff without monitoring,
+accounts, or transmission. Home and Work expose distinct case-study/demo
+actions; the case study uses real desktop/mobile captures. `/nexora` is
+explicitly no-indexed and absent from the sitemap. Local/public visible IAB,
+the 54-route build, 29-route buyer smoke, and dedicated interaction/reflow
+smoke pass. Remaining Chunk 8 work is independent exact-source review plus a
+decision on the two thin design-only studies; Guardio review remains external.
+
+## Round 121 — Professional voice and buyer hierarchy
+
+Accepted/deployed source `37afba2` closes the identified inward-copy,
+Home/process duplication, proof-filter truth, and unfamiliar-buyer-task slice.
+Home now presents a coherent buyer sequence with Velora as the strongest built
+proof; Work distinguishes the built demo from design concepts; service details
+lead to a context-carrying short inquiry and keep the Planner optional.
+Desktop/tablet/phone visible proof, browser diagnostics, and the expanded
+27-route local/public suite pass. Remaining reachable Chunk 8 debt is
+supportable primary-team portfolio depth and independent verification; Guardio
+review remains an external provider/account-holder action.
+
+## Round 120 — Buyer-led Services and pricing clarity
+
+Accepted/deployed source `19acd95` closes the current Services/Pricing decision
+slice: five buyer-recognizable needs lead Services, delivery disciplines are
+secondary disclosures, and the strongest built proof is emphasized without
+invented outcomes. Pricing now includes plain package descriptions, section
+shortcuts, editing/integration/revision comparison, calculated example scopes,
+separate third-party costs, and bounded care-response/request definitions.
+Visible desktop/tablet/phone and local/public automated proof pass after fixing
+a comparison-table overflow and adjacent-cell spacing defect. Remaining Chunk
+8 debt is professional customer-facing copy, coherent Home/process hierarchy,
+unfamiliar-buyer task testing, and the external Guardio review.
+
+## Round 118 — Planner low-friction and responsive navigation
+
+Accepted/deployed `d7a545c` made alternative contact optional and replaced the
+phone progress rail with a responsive, focus-managed step control. Full details
+remain in the build summary, evidence, and Git.
+
+## Historical HoneyHearted rounds moved to Team 2
+
+Rounds 100–115 completed verified workflow, responsive, accessibility,
+keyboard/focus, forced-colors, text-spacing, download/print, and failure-
+recovery work through accepted source `6af5e3c`. Owner directions
+`2026-09-08-27` and `2026-09-08-29` moved HoneyHearted and its remaining
+independent-review/account work entirely to Team 2. Detailed evidence remains
+in Git history and `docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND*_ARCHIVE.md`;
+it is no longer active Cyvexly app debt.
 
 ## Round 99 — Velora portfolio metadata and social-preview integration
 
@@ -208,63 +297,10 @@ check + 0-defect service-details.ts/pricingPackages convergence-check;
 89 FAQ/Pricing/Home payment-copy convergence-check across three
 independent surfaces, 0 defects.
 
-## Round 79 — no new defect; live keyboard/validation verification + rAF proof-instrument refinement
-
-- **Checked the Auditor inbox first:** one new item, `IFA-2026-09-07-R70` (45th
-  consecutive clean confirmation, reviewed commit `7708964` — round 77's head),
-  0 active code defects, "PASS WITH COMMENDATION" including its own live CDP
-  re-verification of the round-76 video. Same stale "Production Domain
-  Connection" gate wording rounds 77-78 already noted (domain verified live
-  since round 53). No Builder action required; moved to `exchange/processed/`.
-- **Completed round 78's recommended live keyboard-only Tab traversal of the
-  header nav / Contact form / Planner** via the manual-start-then-attach
-  Browser-pane workaround (real compositing screenshot + real native `Tab`
-  confirmed working again this round). Real click + `Tab` sequence through
-  the Home hero traversed hero CTA → Explore services → the round-76 "how it
-  works" video trigger (a focusable `role="button"` `<div>` — confirmed it
-  carries `aria-label="Open the Cyvexly process video in a larger view"`, not
-  a defect) → Work cards, in correct visual/DOM order. On `/contact`, a real
-  native `Tab` sequence from a real click on Name traversed Name → Email →
-  Phone → Company → Topic → Message → Consent → Send message, each with
-  correct `<label for>` association; the honeypot field
-  (`contact-company-website`) is confirmed `tabIndex="-1"` and correctly
-  unreachable by keyboard.
-- **Found and correctly diagnosed a proof-instrument gap, not a product
-  defect.** A real click on Contact's "Send message" with an empty form set
-  `aria-invalid`/`aria-describedby`/the `role="alert"` summary correctly, but
-  focus stayed on the button instead of moving to the first invalid field as
-  `contact-form.tsx` intends (`form.querySelector('[aria-invalid="true"]')
-  ?.focus()`, wrapped in `requestAnimationFrame`). Root-caused before
-  concluding it was a bug: a direct rAF probe in the same Browser-pane session
-  (`requestAnimationFrame` counter after a real 3s wait) stayed at `0` even
-  though `document.hidden` read `false` and compositing/Tab-focus worked —
-  this is the same rAF-suppression limitation `CYVEXLY_TOOLS_AND_CAPABILITIES.md`
-  documented at round 6, now shown to be an *independent* degradation from
-  compositing/keyboard (one can work while the other stays suppressed; they
-  are not one unified capability). Verified the real product behavior instead
-  via round 8's local-headless-Chrome/CDP method, where `requestAnimationFrame`
-  genuinely fires: a real DOM click on Contact's submit button with an empty
-  form correctly moved focus to the Name input (`aria-invalid="true"`,
-  `aria-describedby="name-error"` → "Please enter your name."). **No product
-  defect** — confirmed working as designed via a stronger instrument.
-- **Planner Step 1, same method:** a real native click (headless-Chrome CDP)
-  on "Continue →" with every field empty correctly moved focus to `fullName`
-  (`aria-invalid="true"`, `aria-describedby="fullName-error"`, 3 real
-  `role="alert"` messages), then real native `Input.dispatchKeyEvent` `Tab`
-  presses traversed workEmail → contactMethod → roleTitle → companyName →
-  country → otherApprovers in correct order with correct labels — reconfirms
-  round 8's original finding still holds on current source (commit
-  `94048c4`), no regression.
-- **Verified:** no source file changed this round (verification/proof-gap
-  closure only), so `tsc`/lint/build were not re-run (round 78's clean
-  results stand unchanged).
-- Cleaned up: stopped the manually-started `next dev` listener on port 5173
-  by verified real listener PID; stopped the round-owned headless-Chrome
-  instance by matching its unique `--user-data-dir` command-line substring
-  (not by process name — several unrelated `chrome.exe` processes were
-  running); removed the unique Chrome profile directory, dev-server log, and
-  both scratch CDP helper scripts from the OS temp root and session
-  scratchpad; closed the Browser pane tab.
+Round 79's full keyboard, validation, and rAF proof-instrument record is
+archived at
+`docs/archive/chunks/CYVEXLY_APP_DEBT_ROUND_79_ARCHIVE.md` (moved round 122
+to restore hot-file headroom; no evidence was removed).
 
 Round 78's full detail (environment finding — the manual-start-then-attach
 Browser-pane workaround is reachable but intermittent; and the round-76

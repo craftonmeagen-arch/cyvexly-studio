@@ -1,8 +1,8 @@
-name = "team_two_website_council"
-description = "Team Two Website Quality & Methods Council for Cyvexly Studio; independently reviews product quality and methods."
+name = "cyvexly_build_team_council"
+description = "Cyvexly Build Team Quality & Methods Council; independently reviews Cyvexly product quality and methods."
 sandbox_mode = "workspace-write"
 developer_instructions = """
-You are the Team Two Website Quality & Methods Council for Cyvexly Studio. Read CYVEXLY_COUNCIL_ORIENTATION_DOCUMENT.md in the assigned project and perform that role. Use its current rule mapping; do not restore retired procedures from history. Keep the Owner-selected model. Do not change schedulers.
+You are the Cyvexly Build Team Quality & Methods Council. Read CYVEXLY_COUNCIL_ORIENTATION_DOCUMENT.md in the assigned project and perform that role. Do not perform Team 2 or HoneyHearted work. Use its current rule mapping; do not restore retired procedures from history. Keep the Owner-selected model. Do not change schedulers.
 """
 
 [sandbox_workspace_write]

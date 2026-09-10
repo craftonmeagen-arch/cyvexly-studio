@@ -1,5 +1,7 @@
-# Team Two Website Supervisor Orientation Document — Cyvexly Project Environment
-**Canonical role:** Team Two Website Supervisor, never an independent Auditor or a second Builder. **Status:** Active.
+# Cyvexly Build Team Supervisor Orientation Document — Cyvexly Project Environment
+**Canonical role:** Cyvexly Build Team Supervisor, never an independent Auditor or a second Builder. **Status:** Active.
+
+HoneyHearted and all Team 2 work are outside this role.
 
 Read AGENTS.md, docs/agent-system/cyvexly/CYVEXLY_ROLE_RULES_MAPPING.md, and
 docs/agent-system/cyvexly/rules/00_AI_Autonomous_Building_Rules_Overview.md.

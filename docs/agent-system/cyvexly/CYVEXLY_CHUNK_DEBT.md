@@ -1,47 +1,75 @@
 # Cyvexly Chunk Debt
 
-Active product/chunk findings and reachable follow-ups across the current
-Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
-`CYVEXLY_PROJECT_CHUNK_MAP.md` for chunk-level direction.
+Active product/chunk findings and reachable follow-ups for Chunk 8 and
+revisitable primary Cyvexly chunks. Not the full backlog — see
+`CYVEXLY_PROJECT_CHUNK_MAP.md` for chunk-level direction. Outside-website work
+belongs to Team 2 and is retained here only when an older historical entry has
+not yet rotated to archive.
+
+## Recently resolved
+
+- **Round 159:** Auditor R116 passed exact accepted repository source
+  `48a2470385e7641b1bd500eed55850286896677e` with zero defects. Together
+  with R112's separate clean product-equivalent pass, this closes Chunk 8's
+  two-round and exact-source verification boundary. Guardio provider review is
+  moved to app-level external debt; product source remains unchanged.
+
+- **Round 149:** accepted/deployed `8a15a6f` brings Contact's form, required
+  cue, and complete Name label into the 320×568 opening viewport at `481px`,
+  `506px`, and `546–563px`, versus public `601px`, `626px`, and `666px`.
+  Local/deployment/public and visible responsive proof pass. R111 passed
+  superseded Round 148, so two current-source reviews remain.
+
+- **Round 148:** accepted/deployed `0e2c9b4` makes every buyer-led Services
+  choice preserve its need into the short inquiry and optional Planner. The
+  prior public source fails the five-card contract; local, clean-deployment,
+  public, and visible responsive proof pass. Two current-source reviews remain.
+
+- **Round 147:** accepted/deployed `9c67c1e` brings Work's first real project
+  card and complete artwork into the opening desktop and phone view. Public
+  Round 146 fails at `615.75px` / `808.75px`; accepted source passes at
+  `523.75px` / `716.75px`, with phone proof and zero overflow. R110 passed
+  superseded Round 146, so two current-source reviews remain.
+
+- **Round 146:** accepted/deployed `e408b5e` restores Home's exact canonical
+  H1 name. Round 145 collapses “business unmistakable”; local/public AX-tree,
+  buyer, hierarchy, build, and visible proof pass. Two reviews remain.
+
+- **Round 145:** accepted/deployed `f143308` removes the Pricing shortcut
+  rail's phone-only native scrollbar and `449px` hidden overflow. All seven
+  destinations wrap into three rows at 390px and remain fully contained at
+  320px; local/public proof passes. R109 passed superseded Round 144, so two
+  current-source reviews remain.
+
+- **Round 142:** `8e52872` made Commerce booking-inclusive at the unchanged
+  `$8,500` start. R108 passed its exact local equivalent with zero findings.
+
+- **Round 136:** accepted/deployed source `1e127ae` preserves all 15 recognized
+  inquiry contexts across a buyer's switch from short Contact to the optional
+  detailed Planner. Both links use the closest editable service prefill while
+  generic/unknown routes stay blank and saved drafts retain precedence. R104
+  passed prior source `af8ece8`; two reviews of current source remain.
+
+- **Round 135:** accepted/deployed source `af8ece8` makes Contact and Planner
+  delivery failures actionable without losing entered answers. The shared
+  alert focuses, scrolls below the sticky header, respects reduced motion, and
+  exposes 44px email/phone actions. R104 later passed this exact source before
+  Round 136 superseded it.
+
+Rounds 118–128 are preserved in `CYVEXLY_BUILD_SUMMARY.md`, Git history, and
+archived active-chunk/handoff records. They are no longer active debt.
+
+## Historical item moved to Team 2
+
+0. **Chunk 7 — HoneyHearted.** Rounds 100–115 completed broad workflow,
+   accessibility, keyboard/focus, responsive, failure-recovery, download/print,
+   storage, network, safe-activation, and no-index proof through accepted
+   historical source `6af5e3c`. Owner directions `2026-09-08-27` and
+   `2026-09-08-29` moved the product and its remaining independent-review/
+   account work entirely to Team 2. Full detail remains in Git history,
+   archived handoffs, and Builder memory; it is not active Cyvexly debt.
 
 ## Open
-
-0. **Chunk 7 — HoneyHearted independent review (opened round 100).** Rounds
-   100–115 completed the integrated route and current Builder-reachable proof at
-   accepted product source `6af5e3c`: primary and
-   negative/correction workflows,
-   320px/zoom-equivalent reflow, all 85 visible Home controls by real keyboard,
-   dialog focus return, catalog claim/asset disclosures, image resilience,
-   safe activation boundaries, adapter failure/retry, download/print, storage,
-   network, preview, and no-index checks, plus direct deep-link, Back/Forward,
-   route-focus, malformed-hash recovery, accurate hosted-link copy confirmation,
-   detail-to-Home focus restoration, truthful self-contained launch
-   instructions, illustrative-notice keyboard/focus lifecycle, notice-to-
-   launch routing, and configured outbound adapters/event hooks all pass. Still open before chunk
-   closure: the 18-view route accessibility contract also passes visible-H1,
-   heading-order, control-name, form-label, ARIA-reference, embedded-image, and
-   route-focus checks. Round 107 also fixed and proved keyboard-focus
-   continuity through the free-sample print action; Round 108 fixed and proved
-   focus continuity from open mobile-menu controls to their visible desktop
-   equivalents when the responsive breakpoint changes. Round 109 fixed and
-   proved Back to top activation moving focus from its hidden trigger to the
-   visible hero heading. Round 110 fixed and proved all seven mobile-menu links
-   moving focus to their visible destination headings after the menu closes,
-   including same-route reactivation. Round 111 fixed 12 undersized mobile
-   controls and now proves all 32 visible standalone controls meet the 44px
-   design floor. Round 112 fixes and proves focus return from the mobile-store
-   action's truthful connection notice to the visible menu toggle after the
-   originating menu control is hidden. Round 113 proves WCAG-style text spacing
-   at 320px across eight representative route families without horizontal
-   overflow or clipped readable/interactive text. Round 114 adds forced-colors
-   coverage; Round 115 directly proves the downloaded weekly-reset HTML as a
-   contained, operable `file:` artifact with a 44px Print control and one-page
-   Letter PDF output. Two separate independent
-   verification rounds must challenge this
-   accepted state. Owner/account substitutions stay in
-   `HONEY_HEARTED_OWNER_NEEDS.md`, not here. Owner direction `2026-09-08-21`
-   assigns the next Clerk/TPT dashboard implementation to Claude and pauses the
-   Team Two Website Builder scheduler; do not start competing work.
 
 0a. **Chunk 6 — Velora verification and integration depth (opened round 95).**
    Rounds 95-96 closed the primary, invalid/correction, keyboard/focus, 320px
@@ -59,9 +87,9 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    capability proofs, direct prospect framing, later detailed disclosure, and
    hospitality-specific conversion path pass in a visible local browser and
    production suite. `/velora` stayed unchanged because no defect surfaced.
-   Still open before chunk closure: obtain the two separate independent
-   verification rounds required by the governing rules. These are reachable
-   follow-up tasks, not Owner gates.
+   Still open before chunk closure: obtain one complete independent physical/
+   visual verification of the accepted presentation; R93 was source-only.
+   This is a reachable reviewer follow-up, not an Owner gate.
 
 1. **RESOLVED round 30, correction recorded round 35.** This item's
    original text (below, preserved for history) claimed `/about`,
@@ -85,10 +113,13 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    navigation until approved identity content exists. `/privacy` and
    `/terms` links remain visible release blockers because they are
    expected policy destinations, not optional studio-navigation copy."
-2. **Placeholder work-card imagery — partially resolved round 5, real
-   photographic imagery still open.** `selectedWork` / `caseStudies` in
+2. **Placeholder work-card imagery — RESOLVED round 123.** Round 122 built
+   Nexora as a real interactive demo and replaced its case-study previews with
+   actual desktop/mobile captures. Round 123 removed the remaining Aurora
+   Spaces and Vellora Care schematic studies from public portfolio and service
+   proof, so no design-only card remains. `selectedWork` / `caseStudies` in
    `src/lib/site-config.ts` originally used flat two-tone CSS gradients
-   for the three concept projects (Aurora Spaces, Nexora Systems, Vellora
+   for the original three concept projects (Aurora Spaces, Nexora Systems, Vellora
    Care) — honest (no fabricated client work) but flagged independently
    by both the Auditor (`CYV-IFA-002`) and the Council (`CYC-R1-F002`) as
    their own "Next" priority finding. Round 5 replaced the gradients with
@@ -112,14 +143,14 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    wrappers, honestly labeled "An illustrative preview... not a
    pixel-accurate screenshot." Verified at desktop/tablet/mobile widths
    (zero horizontal overflow) and via a fetch/DOM structural check across
-   all three case studies. **Still open:** all of the above are schematic
+   all three case studies. **Historical gap, superseded round 123:** all of the above are schematic
    illustrations, not real screenshots — the mockup's own device-frame
    previews show real photographic/rendered scenes, and both reviewers'
    closure tests ask for "real designed crops or screen sequences," which
    needs an actual completed design to photograph (none exists for these
    fictional concept projects) — an Owner-level framing question (see
    round-5 recommended next tasks in `CYVEXLY_ACTIVE_CHUNK.md`), not a
-   reachable Builder gap this round.
+   reachable Builder gap in that round.
 
    **Round 8 update — all current marketing surfaces now share the accepted
    truthful abstract artwork.** Council round 4 independently found
@@ -131,9 +162,8 @@ Chunks 3/4 and revisitable closed marketing chunks. Not the full backlog — see
    captures opened at exact 390px, 768px, and 1440px show all three distinct
    compositions with zero horizontal overflow. This closes the reachable
    cross-surface inconsistency and Council `CYC-R2-F002`'s Home presentation
-   symptom; the separate Owner framing question — whether truthful abstract
-   illustration is permanent release-sufficient artwork or commissioned
-   higher-fidelity concept design is required — remains open and unchanged.
+   symptom. Round 123 resolved the later Owner framing question by removing
+   the two remaining design-only projects rather than overstating them.
    Concurrent Council round 5 then independently verified Home, Services, and
    Work at desktop/tablet/phone and closed the implementation symptom while
    explicitly retaining that Owner framing question.

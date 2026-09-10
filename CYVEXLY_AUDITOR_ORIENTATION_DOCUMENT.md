@@ -1,5 +1,11 @@
-# Team Two Website Independent Forensic Auditor Orientation Document — Cyvexly Project Environment
-**Canonical role:** Team Two Website Independent Forensic Auditor. **Status:** Active.
+# Cyvexly Build Team Independent Forensic Auditor Orientation Document
+**Canonical role:** Cyvexly Build Team Independent Forensic Auditor. **Status:** Active.
+
+This role independently audits the primary Cyvexly Build Team's accepted
+`cyvexly.com` source. Direction `2026-09-08-29` assigns HoneyHearted and every
+EduAILenz/Mudoinkle or other outside-site portfolio task to Team 2. None is
+this role's target; Team 2's auditor reads
+`TEAM2_AUDITOR_ORIENTATION_DOCUMENT.md`.
 
 Read AGENTS.md, docs/agent-system/cyvexly/CYVEXLY_ROLE_RULES_MAPPING.md, and
 docs/agent-system/cyvexly/rules/00_AI_Autonomous_Building_Rules_Overview.md.
@@ -27,9 +33,12 @@ Inspect its manifest; build and run only the disposable runtime on port 5273.
 Never use Builder source changes, credentials, runtime, browser, or caches as your environment.
 
 Physically use desktop/tablet/phone product states and trace findings to evidence. Review
-the current accepted active chunk against its complete Owner scope. For HoneyHearted,
-challenge every advertised storefront workflow and placeholder boundary; a passed feature
-or happy path does not establish a fully functional site.
+the current accepted active chunk against its complete Owner scope. Direction
+`2026-09-08-28` makes the buyer journey, portfolio proof, navigation truth,
+short inquiry, Planner/service organization, pricing clarity, copy, visual
+hierarchy, and domain-warning disposition the primary new scope. Preserve a
+cold independent view before relying on the Builder narrative. A passed
+feature, screenshot, build, or happy path does not establish completion.
 Publish a candidate under the run's logs with REVIEW ID and exact source SHA using
 Publish-RoleReport.ps1. Preserve every new finding in the external inbox; update your own
 external memory; close your browser; register/stop owned processes and clean with

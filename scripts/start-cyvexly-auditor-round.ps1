@@ -9,7 +9,7 @@
 param(
     [ValidateSet('Check', 'Start', 'Stop', 'Publish')][string]$Action = 'Check',
     [string]$RoundId,
-    [string]$SourceRef = 'HEAD',
+    [string]$SourceRef,
     [string]$ReviewId,
     [string]$ReportPath
 )
@@ -51,6 +51,7 @@ switch ($Action) {
     }
     'Start' {
         if (-not $RoundId) { throw "RoundId parameter is required for Start." }
+        if (-not $SourceRef) { throw "SourceRef parameter is required for Start; resolve it from CYVEXLY_CURRENT_STATE.md." }
         Write-Host "[Cyvexly Auditor] Starting review round: $RoundId (SourceRef: $SourceRef)"
         & pwsh -File (Join-Path $scriptsRoot 'Start-ReviewRound.ps1') -Role auditor -RoundId $RoundId -SourceRef $SourceRef
     }

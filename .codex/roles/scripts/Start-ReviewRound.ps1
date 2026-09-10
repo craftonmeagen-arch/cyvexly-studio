@@ -10,6 +10,17 @@ $layout=Get-ReviewLayout $Role $RoundId; Assert-NoReparse $layout.reviewRoot
 if (Test-Path -LiteralPath $layout.run) { throw 'Run ID already has resources; use a fresh ID. No role lock was checked.' }
 $sha=(& git -C $layout.workspace rev-parse --verify "$SourceRef^{commit}" | Select-Object -First 1)
 if ($LASTEXITCODE -ne 0 -or $sha -notmatch '^[a-f0-9]{40}$') { throw 'Accepted source ref must resolve to a commit.' }
+$statePath=Join-Path $layout.workspace 'docs/agent-system/cyvexly/CYVEXLY_CURRENT_STATE.md'
+if (-not (Test-Path -LiteralPath $statePath -PathType Leaf)) { throw 'Current state is required to verify the accepted review source.' }
+$state=Get-Content -LiteralPath $statePath -Raw
+$acceptedMatches=[regex]::Matches($state,'(?m)^\*\*Accepted repository source:\*\* `([0-9a-f]{7,40})`')
+if ($acceptedMatches.Count -ne 1) { throw 'Current state must declare exactly one Accepted repository source.' }
+$acceptedRef=$acceptedMatches[0].Groups[1].Value
+$acceptedSha=(& git -C $layout.workspace rev-parse --verify "$acceptedRef^{commit}" | Select-Object -First 1)
+if ($LASTEXITCODE -ne 0 -or $acceptedSha -notmatch '^[a-f0-9]{40}$') { throw 'Current accepted repository source must resolve to a commit.' }
+if ($sha -ne $acceptedSha) {
+    throw "SourceRef resolves to $sha but current state accepts $acceptedSha. Local HEAD is not a substitute."
+}
 $entries=@(& git -C $layout.workspace ls-tree -r $sha)
 if ($LASTEXITCODE -ne 0) { throw 'Cannot enumerate source commit.' }
 $allowed=@('src','public','package.json','pnpm-lock.yaml','next.config.ts','next.config.js','next.config.mjs',

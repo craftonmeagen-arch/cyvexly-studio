@@ -1,7 +1,7 @@
 # Round 123 portfolio-focus evidence
 
-- Candidate source: global round 123 working tree based on local product source
-  `84dbbb3` / accepted deployed source `2a53e31`.
+- Accepted/deployed source: `e0be008`; equivalent local Builder product/
+  evidence commit: `8588b16`.
 - Product question: do Aurora Spaces and Vellora Care strengthen buyer trust
   beside the two inspectable Velora and Nexora demonstrations?
 - Disposition: no. The two schematic studies were removed from featured work,

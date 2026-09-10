@@ -1,14 +1,15 @@
-# Team Two Website — Cyvexly role setup validation
+# Cyvexly Build Team — role setup validation
 
 ## Team identity update — 2026-09-08
 
-Owner direction now assigns this repository's role lane the canonical display
-name **Team Two Website**. All six active entrances, agent definitions, local
-rule adapters, and PM prompts use the full Team Two Website role labels.
+Owner directions `2026-09-08-27` through `2026-09-08-29` assign this
+repository's primary lane the canonical display name **Cyvexly Build Team**.
+All six active entrances, agent definitions, local rule adapters, and PM prompts
+use the full Cyvexly Build Team role labels.
 Stable `CYVEXLY_*` filenames and low-level lifecycle role keys were retained so
 the existing scheduler and review helpers continue to resolve their inputs.
 The eight checksum-verified imported rule packets remain byte-identical; their
-Team Two Website interpretation belongs in the local mapping, not inside the
+Cyvexly Build Team interpretation belongs in the local mapping, not inside the
 frozen universal text.
 **Validated:** 2026-09-05. **Scope:** Owner-authorized rule and environment migration.
 This is setup validation, not a Builder round, independent product review, deployment,
@@ -43,7 +44,9 @@ to the single project orientation rather than keeping a divergent copy.
 
 ## Verification
 - Test-RoleSetup.ps1 passes: 8 packet hashes/sizes, 6 orientations/configurations,
-  6 retired files absent, 8 PowerShell helpers parse, current operating-file caps pass.
+  current Cyvexly role/mission sources, the independently resolvable accepted
+  repository SHA and Auditor exact-source contract, 6 retired files absent, 8
+  PowerShell helpers parse, and current operating-file caps.
 - Test-ReviewLifecycle.ps1 passes 48 isolated fixture checks for all three reviewers:
   exact committed-source capture, dirty Builder/source and environment exclusion,
   immutable snapshot/writable runtime, traversal refusal, publication-before-cleanup,

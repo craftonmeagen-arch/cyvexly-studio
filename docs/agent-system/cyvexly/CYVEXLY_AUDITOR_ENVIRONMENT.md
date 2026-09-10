@@ -7,6 +7,30 @@ The guard-based setup and round records below are historical evidence only.
 The separately added recovery/launcher record is preserved; this rule migration
 does not itself create, modify, or verify a scheduler.
 
+**Scheduler authority and observed state (checked 2026-09-10):** Owner direction
+`2026-09-08-28` authorizes the distinct primary Cyvexly automation
+`cyvexly-build-team-independent-forensic-auditor` for hourly minute `20` on
+`gpt-5.6-luna` with extra-high (`xhigh`) reasoning. The stored automation is
+currently `PAUSED`, however, and its saved prompt still contains a superseded
+EduAILenz/Mudoinkle primary-scope phrase. Owner-authorized correction/resume or
+explicit manual invocation is required before it can perform another exact-
+source pass. This record does not itself change the scheduler. Team 2's
+separate HoneyHearted Auditor uses
+`TEAM2_AUDITOR_ORIENTATION_DOCUMENT.md`, port `5573`, and
+`C:/app projects/honeyhearted-independent-review`; it must not reuse this
+environment. The primary Cyvexly Builder automation is ACTIVE at `:00/:30` on
+GPT-5.6 Sol/high. Older recovery notes below are historical evidence, not
+current scheduler authority.
+
+The current Auditor may repair only her reviewer-owned external environment and
+external review wording when needed to carry out the role. She must use the
+current mapping and Owner direction to resolve stale examples instead of
+exiting without work. Every pass—including a partial or unsuccessful pass—must
+publish the reachable evidence/finding first and then complete manifest-safe
+cleanup of its browsers, owned processes, disposable runtime/snapshot, and
+unnecessary temporary captures, with reclaimed resources and retained
+exceptions recorded.
+
 - Disposable snapshot/runtime root: `.codex/runtime/auditor/<round-id>/`
 - Active identity guard: `.codex/role-state/auditor.active.json`
 - Reserved port: `5273`

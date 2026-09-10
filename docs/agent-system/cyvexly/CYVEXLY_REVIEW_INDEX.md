@@ -1,9 +1,10 @@
-# Team Two Website — Cyvexly Review Index
-**Independent roles:** Team Two Website Independent Forensic Auditor, Quality &
-Methods Council, and Functional Smoke Auditor; explicit invocation or existing
-Owner-managed schedule.
+# Cyvexly Build Team — Review Index
 
-Current authoritative root: C:/app projects/website-independent-review.
+**Independent roles:** Cyvexly Build Team Independent Forensic Auditor,
+Quality & Methods Council, and Functional Smoke Auditor; explicit invocation
+or existing Owner-managed schedule.
+
+Current authoritative root: `C:/app projects/website-independent-review`.
 | Role | Current report | Archive | Memory |
 |---|---|---|---|
 | Auditor | reports/AUDITOR_CURRENT.md | reports/AUDITOR_ARCHIVE.md | memory/auditor/ |
@@ -12,10 +13,12 @@ Current authoritative root: C:/app projects/website-independent-review.
 
 These paths are relative to the external root. A missing first report means no review yet;
 provisioning must never replace a real report with a placeholder.
-Each new publication also has a permanent reports/published/<role>/<review-id>.md and its
-own exchange/operational-inbox/<role>-<review-id>.json. Read every unconsumed item, not
-only the latest current report. Builder records findings/disposition in handoff/debt and
-moves the consumed item to exchange/processed/ without deleting the unique report.
+Each new publication also has a permanent `reports/published/<role>/<review-id>.md`
+and its own `exchange/operational-inbox/<role>-<review-id>.json`. Read every
+unconsumed Cyvexly item, not only the latest current report. Builder records
+findings/disposition in handoff/debt and moves only the consumed item to
+`exchange/processed/` without deleting the unique report. Legacy Team 2 inbox
+items are outside this lane and remain untouched.
 
 Historical fallback: this directory's reports/AUDITOR_CURRENT.md, QUALITY_METHODS_CURRENT.md,
 and archives/evidence record pre-migration reviews. They remain evidence for those sources,
@@ -26,3 +29,7 @@ prefixes. Never renumber an old finding. New Functional findings use CYV-FS.
 
 Current reports need an actual published review identity and exact reviewed source. Pending
 Council R42 publication/cleanup remains unverified until its evidence is reconciled.
+
+Latest Builder disposition: Auditor `IFA-2026-09-10-R116` passed exact
+accepted source `48a2470385e7641b1bd500eed55850286896677e` with zero defects.
+Its inbox item is processed and its published report/evidence remain external.

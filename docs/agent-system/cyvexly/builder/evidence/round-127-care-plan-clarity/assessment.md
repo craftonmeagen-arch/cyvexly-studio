@@ -1,5 +1,7 @@
 # Round 127 — Care-plan decision clarity
 
+- **Accepted source:** deployed `586ea23`; equivalent local Builder commit
+  `406de2d`. Their stable patch IDs match.
 - **Observed gap:** the Website care route's two pricing actions landed at the
   top of Pricing instead of the promised care comparison. At that decision
   point, Care, Care+, and Evolve presented their details as dense paragraphs,

@@ -1,381 +1,428 @@
 # Cyvexly Build Summary
 
-## Owner launch direction — 2026-09-04
-
-Round 29 opened Chunk 5 — United States Launch Completion & Business
-Operations — under Owner direction `2026-09-04-14` and vision §17. Confirmed
-facts are `cyvexly.com`, Indiana/United States LLC operations, United States-only
-launch market, `design@cyvexly.com`, `(317) 572-5780`, and a logo-led About with
-no public personal founder identity. The chunk integrates domain/discovery,
-contact, About, legal, real Contact/Planner delivery, privacy-aware measurement,
-truth audit, and production QA. Payment integration and real portfolio
-replacement are deferred. Historical summaries below describe the source
-baseline, not current decision gaps.
-
-Older setup and rounds 1-10 are preserved in
-`docs/archive/CYVEXLY_BUILD_SUMMARY_ARCHIVE.md`.
-
-## Round 116 / Velora buyer-facing case study — 2026-09-08
-
-Accepted/deployed source `fce01e8` replaces `/work/velora-dining`'s sparse
-internal-report presentation with a premium buyer story: direct hospitality
-language, complete uncropped desktop/mobile captures, six working capability
-summaries, responsive and accessibility decisions, restrained opening plus
-detailed fictional/non-transmitting disclosure, and a specific project CTA.
-The Work card now uses capability-led copy. Optimized 53-route build,
-TypeScript, lint (one known round-42 evidence warning), complete local headless
-and visible-browser runs, and the adopted public run pass with zero failures,
-runtime/network errors, unexpected origins, or responsive overflow. `/velora`
-was unchanged. Two independent reviews remain. Owner direction `2026-09-08-21`
-then paused the Builder scheduler and assigned the next HoneyHearted dashboard
-phase to Claude.
-
-## Round 115 / HoneyHearted downloaded sample — 2026-09-08
-
-Accepted/deployed source `6af5e3c` corrects the generated free-sample Print
-button from 41.5px to the 44px product floor and adds durable proof against the
-actual downloaded local HTML at 390px. The artifact is self-contained, uses no
-external resources, activates through its native control, and prints as a
-tagged one-page Letter PDF. Complete local/public HoneyHearted suites,
-TypeScript, lint (one known evidence warning), and the 53-route build pass.
-
-## Round 114 / HoneyHearted chunk round 15 — 2026-09-08
-
-Added proof source `dacec6a`, a real-Chromium Windows High Contrast/forced-
-colors contract at 320px. It verifies selected-filter distinction, a visible
-3px focus indicator reached by real Tab input, names for all 76 visible
-controls, width containment, and visible headings across product, sample,
-About, and launch routes. Two early detector failures were corrected as
-instrument errors. Final local/public suites pass with zero workflow/runtime/
-network errors; two opened public captures match local pixels exactly. Product
-source remains `000dcd9`; two independent reviews remain.
-
-## Round 113 / HoneyHearted chunk round 14 — 2026-09-08
-
-Added proof source `bb327be`, a real-Chromium text-spacing adaptability
-contract at 320px across eight representative route families. The first
-detector correctly exposed instrument noise from decorative card clipping and
-screen-reader-only labels; the refined text-range measurement passes locally
-and publicly with zero overflow, clipping, runtime, network, or workflow
-errors. Three opened public captures match local pixels exactly. Product source
-remains `000dcd9`; two independent reviews remain.
-
-## Round 112 / HoneyHearted chunk round 13 — 2026-09-08
-
-Fixed mobile store-notice focus continuity at accepted/deployed source
-`000dcd9`. A real-Space-key regression proved public `d88bfc8` opened the
-truthful unconnected-store notice but returned focus to `BODY` after Escape
-because its menu trigger had already become hidden. The menu listener now
-hands focus to the visible toggle before opening the notice. The complete
-local/public suites, TypeScript, lint (one known evidence warning), the
-53-route build, role setup, hot-file caps, and 48 lifecycle checks pass. Two
-independent reviews remain.
-
-## Round 111 / HoneyHearted chunk round 12 — 2026-09-08
-
-Fixed mobile target sizing at accepted/deployed source `d88bfc8`. A new
-real-Chrome regression measured 12 visible standalone controls below the 44px
-design floor on the prior production source and 0 of 32 after the source-level
-CSS hardening. Inline prose links retain their compact reading flow. The full
-local/public workflow suites, TypeScript, lint (one known evidence warning),
-the 53-route build, role setup, hot-file caps, and lifecycle checks pass. Two
-independent reviews remain.
-
-## Round 110 / HoneyHearted chunk round 11 — 2026-09-08
-
-The wider methodology audit found a shared mobile-navigation focus defect:
-activating a menu link hid the focused control without moving focus to the
-destination, including same-route reactivation. Accepted/deployed source
-`49017a3` centralizes Home-route focus transfer. All seven mobile destinations
-and same-route reactivation pass with real Enter-key input locally and
-publicly; TypeScript, lint (one known evidence warning), the 53-route build,
-role setup, hot-file caps, and 48 lifecycle checks pass. Two independent
-reviews remain.
-
-## Round 109 / HoneyHearted chunk round 10 — 2026-09-08
-
-Fixed Back to top keyboard continuity. On deployed `1c49c00`, real Space-key
-activation scrolled to the top, hid the trigger, and left focus on `BODY`.
-Accepted/deployed source `7b9813c` moves focus to the visible hero heading
-before scrolling; the focus ring is visibly rendered there. The complete
-local/public Chromium suites, TypeScript, lint (one known evidence warning),
-and the 53-route build pass. Two independent reviews remain.
-
-## Round 108 / HoneyHearted chunk round 9 — 2026-09-08
-
-Fixed responsive navigation focus continuity. The deployed baseline lost the
-keyboard continuation point when an open mobile menu crossed the desktop
-breakpoint. Accepted/deployed source `1c49c00` maps the focused mobile link or
-store action to its visible desktop equivalent. The real-Chromium regression
-failed before the fix and passes locally/publicly afterward; TypeScript, lint
-(one known evidence warning), the 53-route build, and the complete suites pass.
-Two independent reviews remain.
-
-## Round 107 / HoneyHearted chunk round 8 — 2026-09-08
-
-Found and fixed a real keyboard-continuity defect in the free-sample print
-flow: it focused a 1×1 `aria-hidden` iframe and stranded keyboard users there.
-The public baseline reproduced `IFRAME#sample-print-frame`; accepted/deployed
-source `9465ae9` prints through that frame without focusing it and keeps the
-visible Print button active. The complete local/public Chromium suites,
-TypeScript, lint (one known evidence warning), and the 53-route build pass.
-Two independent reviews remain.
-
-## Round 106 / HoneyHearted chunk round 7 — 2026-09-08
-
-Added a durable 18-route accessibility contract covering every Home, product,
-article, sample, About, policy, launch, and recovery state. It verifies visible
-H1/heading order, named controls, labeled fields, valid ARIA references,
-embedded images, and client-route focus. The first run exposed and corrected an
-instrument false positive from decorative `aria-hidden` cover text; no product
-defect resulted. Proof source `f4adb32` passes locally and on production with
-zero failures or runtime/network errors. Two independent reviews remain.
-
-## Round 105 / HoneyHearted chunk round 6 — 2026-09-08
-
-No new independent-review intake existed. Added a distinct activation-
-integration layer to the durable Chrome suite: illustrative-cover notice open
-and Escape focus return, notice-to-launch keyboard routing with visible-heading
-focus, configured store/product/social/sample destinations, protected HTTPS
-new-tab attributes, and the documented local outbound-event contract. Proof
-source `cacc5af` passes locally and on production with zero failures or browser/
-network errors; product source remains `165b246`. Two independent reviews still
-gate Chunk 7 closure.
-
-## Round 104 / HoneyHearted chunk round 5 — 2026-09-08
-
-Corrected a user-facing source-truth defect in the launch checklist: the
-standalone site no longer points to nonexistent `app.js` or claims the folder
-contains separate CSS, JavaScript, image, and sample files. A new rendered
-regression verifies the real `SITE_CONFIG` location and self-contained artifact
-description. Accepted source `165b246` passes TypeScript, lint (one known
-evidence warning), the 53-route build, and the complete optimized-runtime suite
-locally and on production with zero failures/errors. Two independent review
-rounds still gate Chunk 7 closure.
-
-## Round 103 / HoneyHearted chunk round 4 — 2026-09-08
-
-Fixed two production-integration truth defects at accepted source `b47c7cb`:
-hosted resource-link copies now receive an accurate shareable-link confirmation
-while `file:` copies retain their local-only warning, and detail-to-Home or
-malformed-hash recovery now focuses the visible destination heading instead of
-leaving focus in hidden content. The before-fix Chrome run reproduced all
-three assertions. TypeScript, lint (one known evidence warning), the 53-route
-build, and the expanded optimized-runtime suite pass locally and publicly with
-zero failures/errors. Two independent review rounds still gate Chunk 7 closure.
-
-## Round 102 / HoneyHearted chunk round 3 — 2026-09-08
-
-Added durable Chrome/CDP proof for direct resource deep links, browser
-Back/Forward route restoration and focus, and malformed encoded-hash recovery.
-The first run identified two incorrect assertions rather than product defects;
-the corrected suite passes with zero failures or runtime/network errors.
-TypeScript, lint (one known evidence warning), and the 53-route build pass.
-Product source remains `4e3f06e`; proof source is `94b7fdb`. No review intake
-arrived, so two independent rounds remain before Chunk 7 closure.
-
-## Round 101 / HoneyHearted chunk round 2 — 2026-09-08
-
-Adopted and reverified inherited HoneyHearted interaction hardening: native
-dialogs restore focus on every close path and activation settings reject unsafe
-email/URL values. Expanded the durable Chrome suite through combined/empty
-catalog correction, native-invalid forms, newsletter failure/retry, contact
-draft encoding, every catalog disclosure, image failure, 200%-zoom-equivalent
-reflow, and a real sequential traversal of all 85 visible Home controls with
-Enter/Space activation. TypeScript, lint (one known evidence warning), the
-53-route build, and the full local rendered suite pass. Accepted source is
-`4e3f06e`; the same expanded suite passes on the adopted production route and
-review evidence is retained for two independent rounds.
-
-## Round 100 / HoneyHearted chunk round 1 — 2026-09-08
-
-Opened Chunk 7 under Owner direction `2026-09-08-19`. Integrated the imported
-standalone storefront at `/honey-hearted` with layered no-index protection,
-fixed the broken contact-subject option markup, and added a durable rendered
-smoke covering the whole current demo at desktop/mobile/320px. Catalog,
-resource/dialog, download/print, content/policy, truthful form, accessibility,
-responsive, storage, and network boundaries all pass with zero browser or
-network errors. Accepted product source `8d84b96` passes TypeScript, lint, and
-the 53-route build. The identical suite passes after Render adoption at
-`cyvexly.com`; missing Owner inputs remain explicitly bounded in
-`HONEY_HEARTED_OWNER_NEEDS.md`.
-
-## Round 99 / Velora chunk round 5 — 2026-09-08
-
-Checked a fresh production-integration surface without repeating the prior
-workflow matrix. The live Velora case study's canonical, Open Graph/Twitter
-metadata, BreadcrumbList JSON-LD, disclosure copy, staged no-index state, and
-sitemap boundary all match source. Rendered and opened its route-specific
-1200x630 Open Graph image through a local production runtime; the longer Velora
-challenge copy fits cleanly. TypeScript, lint (one known evidence warning), and
-the 52-route build pass. No product defect or product-source change; two
-independent verification rounds remain.
-
-## Round 98 / Velora chunk round 4 — 2026-09-08
-
-Revalidated accepted Velora source `0ca0504` at `cyvexly.com`: public entry,
-case-study, demo, media, canonical redirect, sitemap inclusion/exclusion,
-same-origin CSP, and layered no-index behavior all pass. Opened the retained
-production Chrome/CDP result and responsive captures; no product defect or
-source change was warranted. Two independent verification rounds remain.
-
-## Round 97 / Velora chunk round 3 — 2026-09-08
-
-Integrated Velora into the production-normal Cyvexly path: moved its source to
-`public/velora/index.html`, self-hosted its four illustrative images and two
-font families, added `/velora`, and published a built-concept Work card/case
-study using real desktop/mobile captures. Expanded the durable smoke through
-the Work filters, portfolio/case-study responsive layouts, and live-demo link.
-Accepted source `0ca0504` passes with zero browser/runtime/network failures;
-typecheck/lint/build pass at 52 routes. The full matrix also passes on
-`cyvexly.com`, proving Render adoption. Independent verification remains.
-
-## Round 96 / Velora chunk round 2 — 2026-09-07
-
-Deepened `velora/smoke.mjs` beyond happy paths: real invalid→corrected
-reservation, private-event, gift, and newsletter flows; menu/room keyboard
-tabs; modal focus/inert/return behavior; mobile Escape focus; reduced motion;
-320px reflow; illustrative-image fallback/provenance; and allowed network
-origins. Accepted source `2e79c45` passed with zero failures or unexpected
-requests; desktop/mobile/320px captures were opened. Parent typecheck/lint/build
-also passed. No product defect surfaced, so `index.html` did not change.
-
-## Round 95 / Velora chunk round 1 — 2026-09-07
-
-Opened Chunk 6 under Owner direction `2026-09-07-17` and established
-`velora/index.html` as the standalone concept source truth. Corrected the
-fictional location/contact identity, prevented real phone/email transmission,
-and fixed a major rendered hero cascade defect discovered from baseline proof.
-Added a durable Chrome/CDP smoke suite and proved all primary demo workflows at
-desktop/mobile with zero overflow or runtime/network errors. The parent Cyvexly
-typecheck/lint/build remains clean. Chunk 6 stays open for deeper negative,
-keyboard/zoom, content/provenance, integration, and independent-review proof.
-
-## Round 94 — 2026-09-07
-
-Dispositioned Auditor item `IFA-2026-09-07-R85` (60th consecutive clean
-confirmation, "historic benchmark"; stale on arrival — evaluated a head
-predating round 93's own lint fix and convergence checks). Ran two fresh
-convergence checks named by round 93's handoff: the Accessibility
-statement's "see Pricing" cross-reference against current Pricing
-content (0 defects — both claims still match `site-config.ts`'s
-`projectIncludes`/`addOns`), and Contact's topic `<select>`/consent
-checkbox reviewed at the source level (native controls, no custom
-keyboard logic, already exercised by round 79's CDP Tab traversal). 0
-new defects; no product-source change.
-
-## Round 87 — 2026-09-07
-
-Dispositioned Auditor item `IFA-2026-09-07-R78` (53rd consecutive clean
-confirmation, "PASS WITH COMMENDATION"). Convergence-checked Home's other
-CTAs/claims against `site-config.ts` and found/fixed a real
-truth-precision defect: the Home pricing-preview card overstated a
-capped Nexus-tier inclusion ("Up to two standard integrations") as a
-guaranteed "Two standard integrations" — every other page-count feature
-in the same array correctly kept "Up to". Fixed and verified live on a
-rebuilt `next start` server (corrected text renders, 17/17 routes 200).
-
-## Round 84 — 2026-09-07
-
-Dispositioned Auditor item `IFA-2026-09-07-R75` (50th consecutive clean
-confirmation, "PASS WITH COMMENDATION"). Fixed a Builder-owned
-environment defect (Node/pnpm missing from this session's PowerShell
-`PATH`; documented the one-line fix for future rounds). Convergence-
-checked FAQ content, Pricing payment terms, sitewide response-time copy,
-and the About page against Owner direction and each other's
-source-of-truth data. No defects found; no source change.
-
-## Round 81 — 2026-09-07
-
-Closed round 80's routed proof gap: reproduced its Return/Space
-key-synthesis test via local headless-Chrome/CDP. Real native key
-dispatch correctly activated a Planner Step 6 `StatusRow` toggle button
-and the progress-rail's step-jump button, confirming the earlier
-non-activation was specific to the Browser pane's own key-synthesis
-tool, not a product accessibility defect. No source change; dispositioned
-Auditor's 47th consecutive clean confirmation.
-
-## Round 76 — 2026-09-06 (interactive, Owner direction 2026-09-06-17)
-
-Added a Home "So how does it work?" section: an Owner-supplied process
-video embedded under the "We're not a DIY builder" panel as a silent,
-looping, chrome-less ambient clip (`how-it-works-video.tsx`) that opens
-a controllable lightbox on click/Enter. Found and fixed a real bug
-during verification — the lightbox's `fixed` overlay wasn't actually
-viewport-fixed because a `backdrop-filter` ancestor (the sitewide glass
-treatment) creates a new CSS containing block for `position: fixed` —
-fixed via `createPortal(..., document.body)`. TypeScript, lint, and
-build passed; verified via CDP (portal/backdrop-click/Escape/focus-
-return, 0 overflow at 375px). Pushed to `origin/main`.
-
-## Round 75 — 2026-09-06
-
-Dispositioned Auditor item `IFA-2026-09-06-R64` (39th consecutive clean
-confirmation) and actioned its one recommendation: replaced the last 4
-pre-refresh `#1478FF` literals (inert `gradient` Tailwind class strings
-in `site-config.ts`) with `#0F66E0` for full sitewide token
-consistency — zero visual effect. Adversarially diffed
-`service-details.ts` pricing copy against `site-config.ts`'s
-`pricingPackages`/`carePlans` and the JSON-LD price extractor; found no
-defect (both surfaces independently label the same starting price).
-TypeScript, lint, and build passed; verified via a real `next start`
-21-route sweep. Pushed to `origin/main`.
-
-## Round 40 — 2026-09-05
-
-Fixed a real Planner defect (`71d233f`): `goToStep()` scrolled to top
-synchronously before React committed the new step's DOM, so scroll-anchoring
-silently kept the old position and focus never left the Continue/Back
-button. Moved scroll+focus into a post-render `useEffect` and added a polite
-live-region step announcement for assistive tech. Verified before/after with
-real CDP mouse events against a production server. TypeScript, lint, and
-build passed; pushed to `origin/main`.
-
-## Round 29 — 2026-09-04
-
-Contact identity, phone, production metadata/sitemap, and United States/payment truth copy
-implemented as f35a2a6 on main. TypeScript, lint and build passed; public adoption and
-Owner visual acceptance remain unconfirmed. This completes one workstream, not Chunk 5.
-
-## Round 27 — 2026-09-01
-
-- Opened the public Home at 1440×900 in the visible in-app Browser and measured
-  the Owner-rejected baseline: correct copy/media proportions but a flat grid
-  and two opaque-card reading versus mockup 06's architectural glass space.
-- Changed component grammar instead of repeating a global opacity pass. Home
-  now has layered architectural planes, luminous columns and beams, circuit
-  traces/nodes, coordinate marks, a reflected floor, a protected double-rim
-  copy pane, a deeper media chassis, and an inset credibility deck.
-- Preserved the established headline/actions, truthful content, real media,
-  `0.75×` looping playback, data-saving/reduced-motion behavior, and absence of
-  visible/native playback chrome.
-- Opened final 1440×900, 768×1024, and 390×844 renders plus the complete Home.
-  All states are exactly width-contained with one main/H1; phone retains one
-  architectural column while hiding secondary density. Sticky/z50 navigation,
-  pointer pause, native Enter resume, and clean browser diagnostics pass.
-- ESLint, optimized 23-page build, and post-build TypeScript pass. Durable
-  target visualization, baseline/final PNGs, runtime metrics, and verification
-  are indexed under `builder/evidence/`. The Round 27 commit is pushed to
-  `origin/main`; public Render adoption and Owner acceptance remain pending.
-
-## Round 28 — 2026-09-01
-
-- Confirmed the Owner's scrolled-Home diagnosis in the visible in-app Browser:
-  the architectural first viewport gave way to flat pale section bands and
-  ordinary cards; Services and Pricing repeated the same shared failure.
-- Extended the shared environment with portal planes, luminous cross-stage
-  beams, and a perspective horizon. Replaced flat continuation/direct-section
-  surfaces with bounded, rim-lit translucent bays so the architecture remains
-  visible between protected content fields through every route height.
-- Darkened secondary graphite copy to `#46576e`; the conservative protected-
-  field model measures `5.5986:1`. Phone hides secondary portal/rail/data
-  density while keeping one portal and simplified beams.
-- Visible IAB route-family renders, video/FAQ/menu interactions, and 54 measured
-  states at desktop/tablet/phone widths pass. Every state is width-contained
-  with one main/H1 and sticky/z50 navigation.
-- ESLint, optimized 23-page build, and TypeScript pass. The existing
-  Owner/domain-blocked `metadataBase` warning is unchanged. Round 28 is pushed
-  to `origin/main`; public Render adoption and Owner acceptance remain pending.
-
-Earlier rounds 11–26 are preserved in
-docs/archive/role-migration-2026-09-05/CYVEXLY_BUILD_SUMMARY.md.
+This is the current build log. Detailed evidence and superseded history remain
+in `docs/archive/chunks/`, Git history, and role memory.
+
+## Round 161 — post-integration primary-route regression
+
+- Visible desktop/tablet/phone use passed Home → Business websites → Velora →
+  Pricing → contextual Orbit inquiry, including the phone menu, without a
+  submission, overflow, or browser warning/error.
+- Eleven primary routes returned HTTP 200 with HSTS. Team 2 entries were outside
+  this pass; product, deployment, schedulers, and external state were unchanged.
+
+## Round 160 — bounded methodology and source-truth audit
+
+- No primary evidence justifies reopening product work. Production `493d1e6`
+  is Team 2's patch-equivalent commit on `48a2470`; role setup and all 54
+  lifecycle checks pass. Product and external state were unchanged.
+
+## Round 159 — Chunk 8 exact-source closeout
+
+- Dispositioned Auditor `IFA-2026-09-10-R116`, which passed exact accepted
+  source `48a2470385e7641b1bd500eed55850286896677e` with zero defects across
+  25 routes and desktop/tablet/phone/minimum-phone evidence.
+- R116 is the second challenge after R112's clean product-equivalent pass and
+  closes the exact-source gate. Chunk
+  8 closes as `DONE WITH A NAMED EXTERNAL GAP`; Guardio provider review and an
+  un-allowlisted recheck remain Owner/account-holder actions.
+- This Builder changed no product, deployment, Team 2 work, reports, or
+  schedulers. Team 2 separately deployed `493d1e6` after R116; R116's inbox was
+  processed while its immutable report/evidence remain external.
+
+## Rounds 155–158 — exact-source review acquisition
+
+- Aligned role sources with the primary-team mission, made accepted-SHA
+  resolution executable, and rejected divergent refs before resource creation.
+  All 54 lifecycle fixtures passed. Round 158 then routed the paused/stale
+  Auditor automation without mutating it; product source stayed `48a2470`.
+
+## Round 154 — exact-source review acquisition repair
+
+- Processed R114's zero-finding wrong-source pass and made the Auditor prompt
+  resolve accepted `48a2470` instead of divergent local `HEAD`; product stayed
+  unchanged. Full acquisition history remains in the handoff and Git.
+
+## Rounds 152–153 — exact-source stability proof
+
+- Held `48a2470` stable through distinct visible desktop/tablet/phone buyer
+  paths covering Nexora/custom-app and Velora/business-website decisions,
+  Pricing, responsibilities/editability, and contextual short inquiry. The
+  build, TypeScript, lint, and local/public buyer suites passed with no runtime,
+  overflow, submission, or material buyer-path defect.
+- R113 passed local `9c56e05` but did not name exact repository source
+  `48a2470`; its intake was processed without closing that gate.
+
+## Round 151 — first current-product independent review
+
+- Auditor R112 passed product-equivalent local `9c56e05`; a path-limited diff
+  proved its product/runtime/proof paths identical to repository `48a2470`.
+  One exact-source review still remained at that point.
+
+## Round 150 — wider methodology and product-pattern audit
+
+- Held accepted product UI `8a15a6f` stable after a visible desktop/phone
+  unfamiliar-buyer path found no material wrong turn. This corrects the pattern
+  of repeated product edits superseding clean Auditor passes before two could
+  accumulate.
+- The 52-route build, post-build TypeScript, lint with one historical warning,
+  and local/public buyer, hierarchy, and Nexora suites pass. No inquiry or
+  external action was submitted.
+- Fixed Nexora smoke profile cleanup after reproducing an `EBUSY` race;
+  repository source `48a2470` is pushed. Two exact-source reviews remain.
+
+## Rounds 148–149 — contextual and visible short inquiry
+
+- All five Services choices now preserve buyer context into Contact and the
+  optional Planner. Contact's required cue and complete Name label also enter
+  the 320×568 opening viewport (`506px` / `546–563px`, previously `626px` /
+  `666px`). Local, deployment, public, and visible responsive proof pass
+  through accepted source `8a15a6f`; no inquiry was submitted.
+
+## Round 147 — Work proof enters the opening view
+
+- Compacted Work's introduction so real project proof appears before the first
+  scroll without changing copy, actions, or the accepted glass presentation.
+- Public Round 146 fails at first-card/artwork `615.75px` / `808.75px`;
+  accepted source passes at `523.75px` / `716.75px` on desktop and `535px` /
+  `728px` on phone with zero overflow/runtime errors.
+- Build, TypeScript, lint, local/public suites, and responsive proof pass.
+  Product `5fa17c6` deployed as
+  `77181b2`; accepted source is `9c67c1e`. R110 passed superseded Round 146;
+  two current-source reviews remain.
+
+## Round 146 — Home hero accessible name
+
+- Fixed the first buyer-facing heading's browser accessibility name, which
+  collapsed “business unmistakable” across the styled inline boundary even
+  though the visible spacing was correct.
+- The H1 now takes its explicit name from the canonical site tagline while its
+  split-color desktop/phone composition remains unchanged. The hierarchy suite
+  now reads Chromium's actual accessibility tree; the buyer suite checks the
+  rendered contract.
+- The new regression fails public Round 145, then local/public buyer and
+  responsive hierarchy suites, the 52-route build, TypeScript, lint with one
+  historical warning, and visible desktop/390px proof pass. Product `175c23c`
+  deployed as `a484880`; accepted closeout source is `e408b5e`. Two current-
+  source reviews remain.
+
+## Round 145 — mobile Pricing shortcuts
+
+- Replaced the phone Pricing page's horizontally scrolling section rail with
+  a wrapped decision band while preserving all seven anchors, 44px actions,
+  and the single-line desktop layout.
+- The visible public baseline measured `824px` scroll width inside `375px`
+  (`449px` hidden). Local and deployed source measure `375/375px` in three
+  rows at 390px and `320/320px` at the minimum phone width, with no native
+  scrollbar.
+- The 52-route build, post-build TypeScript, lint with one historical warning,
+  local/public 33-route buyer suites, local/public hierarchy suites, and
+  visible desktop/390px/320px review pass. Product `85f22b9` deployed as
+  `68a3ec0`; accepted closeout source is `f143308`. R109 passed superseded
+  Round 144, so two current-source reviews remain.
+
+## Round 144 — Home timing truth
+
+- Replaced Home's misleading 2–6 week timing reassurance with the published
+  2–14+ week scope-dependent website range and expanded the preview FAQ through
+  Commerce while keeping custom applications discovery-scoped.
+- Added buyer-contract and responsive containment proof. The first capture
+  exposed an `EBUSY` profile cleanup race; the harness now waits for its owned
+  Chromium exit and retries only the exact temporary profile.
+- Prior `f9a21a0` fails the new regression. Build, TypeScript, lint, local/
+  public buyer and hierarchy suites, and visible desktop/390px proof pass.
+  Product/evidence `904e8ef`/`b2ad914` deployed as `1d7c65d`/accepted
+  `67f66aa`. Two current-source reviews remain.
+
+## Round 143 — device-local Planner save disclosure
+
+- Planner explains before saving that drafts stay in the current browser/
+  device and remain invisible to Cyvexly until submission; the save control
+  references the note through `aria-describedby`.
+- Prior `8e52872` fails the strengthened check. Build, TypeScript, lint, buyer,
+  native-save, responsive, and desktop/390px proof pass with no submission.
+  Product/evidence `20e9681`/`e323389` deployed as `a44745a`/accepted
+  `f9a21a0`; R108 passed superseded Round 142. Two current-source reviews
+  remain.
+
+## Round 142 — booking-inclusive Commerce package
+
+- Replaced the linked Commerce package's store-only scope with accurate
+  either/or wording for storefront and booking journeys, product or service
+  content, checkout/payment or scheduling, and shipping/tax or booking rules.
+- Preserved the `$8,500` starting amount while removing the redundant rendered
+  “Starting at / From” qualifier. Stable inquiry and package anchors are
+  unchanged.
+- The new regression fails prior public `af9b4e2`; the 52-route build,
+  TypeScript, lint, local/public buyer suites, local hierarchy suite, and
+  visible local/live desktop/390px checks pass. Local product `8e55b63`
+  deployed as stable-patch-equivalent `95cf243`; local evidence `9950538`
+  deployed as accepted source `8e52872`. Two exact-source reviews remain.
+
+## Round 141 — commerce and booking buyer context
+
+- Reconciled the shared service with the existing “sell or take bookings”
+  Services choice and Commerce package. Its detail, footer, scope inputs,
+  operating factors, cost note, and FAQs now cover stores and booking-led
+  businesses without claiming a provider or live transaction capability.
+- Added a booking-specific internal Planner selection for Velora and
+  hospitality Contact context. The stable generic commerce route now leaves
+  the primary goal open instead of assuming every buyer wants to sell.
+- The strengthened regression fails the prior source. The 52-route build,
+  TypeScript, lint with one historical warning, local/public 33-route buyer
+  suites, hierarchy and Nexora suites, and visible desktop/390px Planner proof
+  pass with zero runtime errors or overflow. No inquiry was submitted. Local
+  `14a6af9` deployed as equivalent `af9b4e2`; two reviews remain.
+
+## Round 140 — short inquiry first-viewport prominence
+
+- Compacted Contact's route-specific intro and section transition so the
+  primary short inquiry enters the opening desktop viewport while retaining
+  the approved architectural glass system and all buyer-facing content.
+- The new regression fails on prior production at form `659.75px` / required
+  cue `692.75px`, then passes locally and publicly at `468.5px` / `501.5px`.
+  Phone form entry improves from `615px` to `575px`; tablet entry is
+  `494.1875px`, with zero overflow and Name→Email keyboard order preserved.
+- The 52-route build, TypeScript, lint, 33-route/15-context buyer suite,
+  responsive hierarchy suite, and visible desktop/tablet/phone comparison
+  pass. Local `0a96f4c` deployed as equivalent `ce526f2`; Auditor R107 passed
+  exact local source with zero findings and one further review remains.
+
+## Round 139 — direct contact interaction floor
+
+- Measured Contact's direct email and phone recovery actions in the live 390px
+  browser at 28px high while the adjacent form and Planner actions met 44px.
+- Raised both direct alternatives to a 44px full-width action with restrained
+  glass hover/focus treatment and added an exact responsive geometry contract.
+- The prior public deployment fails at `[28,28]`; local and deployed source
+  pass at `[44,44]`. The 52-route build, post-build TypeScript, lint (one
+  historical warning), local/public buyer and hierarchy suites, Nexora smoke,
+  and visible IAB phone review pass without submitting an inquiry or activating
+  email/phone. Local `1dc61ae` deployed as equivalent `3118a3f`. Auditor R106
+  passed superseded Round 138 source; two current-source reviews remain.
+
+## Round 137 — truthful submission receipts
+
+- Made Contact and Planner receipts consume the API's real visitor-
+  confirmation outcome instead of always claiming a confirmation email was
+  sent after the internal inquiry succeeded.
+- Added honest sent/unavailable variants, a shared focus-and-center result
+  component, and matching best-effort language in Planner and Privacy. A buyer
+  whose copy fails is told the inquiry arrived and not to resubmit.
+- The prior public source fails the new receipt regression. The clean 52-route
+  build, post-build TypeScript, lint (one historical warning), exact-local/
+  public 33-route/15-context buyer suite, local/public four-state intercepted
+  desktop/390px suite, and visible local proof pass. Local `4a02581` deployed
+  as equivalent `190cf8f`; no real message was sent. Two current-source reviews
+  remain.
+
+## Round 136 — inquiry-to-Planner context continuity
+
+- Preserved every recognized package, service, care-plan, and case-study
+  context when a buyer switches from the short Contact form to the optional
+  detailed Planner; both links use the existing editable service prefill.
+- Added one typed 15-context mapping and a regression that requires both links
+  while leaving generic/unknown inquiries blank and saved drafts authoritative.
+- The regression fails on prior public `af8ece8`; the 52-route clean build,
+  post-build TypeScript, lint, exact-local/public 33-route/15-context suites,
+  and visible desktop/390px local/public Orbit transition pass. Local
+  `4b2b2d1` deployed as equivalent `1e127ae`; no inquiry was submitted. R104
+  passed prior source `af8ece8`, so two reviews of current source remain.
+
+## Round 135 — actionable inquiry failure recovery
+
+- Added one shared Contact/Planner recovery panel with direct email and phone
+  actions while preserving every entered answer and the existing send/retry
+  contract.
+- The first rendered pass exposed an off-screen alert after submit; the final
+  component focuses and scrolls itself below the sticky header, respects
+  reduced motion, and provides 44px actions that stack cleanly on phones.
+- The 52-route clean build, post-build TypeScript, lint (one historical
+  warning), clean-local/canonical 33-route/15-context buyer suites, visible
+  local desktop/390px no-send `503` proof, and live bundle adoption pass. Local
+  `64ed076` deployed as accepted source `af8ece8`; no public inquiry was sent.
+  R103 passed prior source `db8388b`; two current-source reviews remain.
+
+## Round 134 — explicit short-inquiry requirements
+
+- Added visible and assistive-technology-readable required cues to name,
+  email, project description, and reply consent without expanding the short
+  form or changing its optional-details disclosure.
+- Added native required semantics while retaining the existing custom
+  validation, error announcement, and first-invalid-field focus behavior.
+- The regression failed on prior deployment `891db24`; the 52-route build,
+  post-build TypeScript, lint (one historical warning), 33-route/15-context
+  exact-local/public buyer suites, and visible desktop/phone local/public IAB
+  proof pass. Local `e4c9529` deployed as equivalent `db8388b`; no inquiry was
+  submitted. Two exact-source independent reviews remain.
+
+## Round 133 — custom-application terminology
+
+- Replaced the last buyer-facing “Custom system” package label with “Custom
+  application,” matching the established service language across Pricing,
+  comparison/payment copy, and FAQs.
+- Preserved stable internal fragment and inquiry keys so Round 132's service
+  and case-study package links continue to work.
+- TypeScript, lint (one historical warning), the 52-route webpack build,
+  33-route/15-context clean-local/public buyer smoke, local/public Chromium
+  hierarchy proof, and visible live 390px service-to-package navigation pass
+  with no overflow/runtime errors. Local `03e3bf0` deployed as equivalent
+  accepted source `891db24`; changed blobs and stable patch IDs match. Auditor
+  `IFA-2026-09-09-R102` independently passed exact local source with zero
+  findings; one further verification round remains before Chunk 8 readiness.
+
+## Round 132 — package-context preservation
+
+- Added stable anchors to all five pricing packages and routed every service
+  detail's named package/care action directly to its applicable comparison.
+- Connected Velora to Commerce pricing and Nexora to custom-application
+  pricing, preserving the scope context established by each case study.
+- TypeScript, lint (one historical warning), the 52-route Turbopack build,
+  33-route/15-context local/public buyer smoke, hardened local/public Chromium
+  hierarchy proof, and visible local/live IAB review pass. Live phone Orbit
+  geometry is header `82px`, target `96–659px`, with zero overflow/runtime
+  errors. Local `543f4bf` deployed as equivalent accepted source `710b3ed`;
+  exact-source independent review remains pending.
+
+## Round 131 — sitewide buyer-language alignment
+
+- Aligned the shared footer with the five buyer-recognizable service choices:
+  custom web applications replace Landing pages as a primary category while
+  the focused Landing pages detail route remains available.
+- Replaced Home's generic final-CTA hype with the established brand promise and
+  changed the optional Planner's “right route” wording to a concrete scope
+  recommendation.
+- TypeScript, lint (one historical warning), the 52-route webpack build, and
+  the 33-route/15-context local/public buyer suite pass. The regression failed
+  on the prior deployed footer, then passed on adopted source `6a40912`.
+  Visible desktop/390px IAB review and custom-service navigation pass with no
+  browser errors; local equivalent source is `4bfdaac`.
+
+## Round 130 — internal-page decision hierarchy
+
+- Reduced oversized introductions across primary internal routes so the next
+  buyer decision enters the opening viewport without changing the accepted
+  architectural glass identity.
+- Compacted Pricing, removed its package/navigation overlap, omitted the
+  decorative scope diagram on phones, and placed Contact's primary short form
+  before secondary email/phone guidance.
+- TypeScript, lint (one historical warning), the 52-route webpack build,
+  33-route/15-context local/public buyer smoke, durable local/public hierarchy
+  smoke, role setup, and visible local/production IAB proof pass. Public
+  measurements show zero overflow/runtime errors. Local `4fcc779` deployed as
+  accepted source `4e36d99`; independent review remains pending.
+
+## Round 129 — inquiry context requires a buyer description
+
+- Replaced message-field boilerplate with a separate visible context card and
+  a blank required project-description field across 15 service, package,
+  care-plan, and case-study inquiry links.
+- Centralized context validation, preserved recognized context in the server
+  payload and both email variants, and made generic/unknown values fall back to
+  the ordinary form. Empty contextual messages now fail client and server
+  validation; no inquiry was submitted.
+- TypeScript, lint (one historical warning), the 52-route webpack build,
+  33-route/15-context local and public buyer smoke, role setup, hot-file caps,
+  and visible desktop/390px IAB proof pass. Local `483038e` deployed as exact-
+  patch accepted source `8c7024e`; independent review remains pending.
+
+## Round 128 — case studies connect proof to buyer decisions
+
+- Added one reusable close to the Velora and Nexora case studies that connects
+  each working demo to its relevant service, pricing, short inquiry, and
+  correctly prefilled detailed brief.
+- Velora distinguishes the Commerce starting point from a simpler information-
+  led site; Nexora explains the discovery inputs behind a custom-application
+  quote. Secondary quote factors use a native phone disclosure.
+- TypeScript, lint (one historical warning), the 52-route webpack build,
+  34-route public buyer suite, exact local responsive metrics, and visible
+  local/production IAB proof pass. Local `b6c8843` deployed as accepted source
+  `8923ba6`; Auditor R100 cleanly closes Round 127 source `586ea23`.
+
+## Round 127 — care-plan comparison and inquiry context
+
+- Made Website care pricing links land on the care-plan comparison and replaced
+  dense plan paragraphs with comparable capacity, response, and review fields.
+- Added plan-specific Care/Care+/Evolve short inquiries plus a bounded terms
+  note covering cancellation and unused-capacity disclosure before billing.
+- The first 768px render exposed a cramped three-column state; the final two-
+  column tablet composition restores 46px actions. TypeScript, lint, the 52-
+  route build, 34-route clean-local/public smoke, and exact responsive/visible
+  proof pass. Local `406de2d` deployed as accepted source `586ea23`; Auditor
+  R99 cleanly closes Round 126 source `c780c43`.
+
+## Round 126 — complete custom web application service path
+
+- Replaced the fifth Services buyer need's Pricing-only jump with a complete,
+  data-driven custom web applications page covering discovery, deliverables,
+  client inputs, scope factors, pricing posture, FAQs, and Nexora proof.
+- Preserved context through the short Contact inquiry and optional Planner;
+  the Planner reaches Step 3 with a valid custom-workflow `Other` goal. No
+  inquiry was submitted.
+- TypeScript, lint (one historical warning), the 52-route build, 31-route
+  clean-local/public smoke, and desktop/tablet/phone browser proof pass. Local
+  `0d65cb3` deployed as accepted source `c780c43`; exact-source independent
+  review remains pending.
+
+## Rounds 119–125 — trust, buyer clarity, and inquiry foundation
+
+- Investigated the Guardio warning without finding compromise or a justified
+  code remedy; Owner/account-holder detection review and a clean Guardio
+  recheck remain external gates.
+- Established buyer-led Services/Pricing, professional hierarchy, focused
+  Velora/Nexora proof, and the working Nexora demo. Full evidence and source
+  identities remain in the round artifacts and Git history.
+- Made the short inquiry the sitewide primary path, then moved nonessential
+  fields into optional disclosure while preserving the Planner and server
+  contract. Builds, responsive review, and local/public buyer proof passed.
+
+## Rounds 117–118 — buyer-journey foundation
+
+- Corrected Services destinations, promoted the short inquiry while keeping
+  Planner optional, reduced required contact data, and replaced the overflowing
+  phone progress rail. Buyer smoke and responsive proof were established;
+  accepted/deployed source was `d7a545c`.
+
+## Round 116 — Velora buyer-facing case study
+
+- Replaced the sparse `/work/velora-dining` page with premium buyer language,
+  six scannable working capabilities, complete desktop/mobile proof, design and
+  accessibility decisions, restrained opening disclosure, detailed concept
+  limits, and a hospitality-specific inquiry.
+- The unchanged `/velora` demo and Work → case study → demo path passed local/
+  public visible and automated proof. Accepted/deployed `fce01e8`.
+- One complete independent physical/visual review remains after R89; R93 was
+  source-only.
+
+## Rounds 100–115 — former HoneyHearted phase, now Team 2
+
+These rounds integrated and hardened the former HoneyHearted standalone
+experience through navigation, catalog, sample/download/print, contact/
+newsletter preview, accessibility, keyboard/focus, reflow/zoom, forced-colors,
+failure recovery, safe activation, storage, network, no-index, and source-truth
+checks. Accepted source reached `6af5e3c` in the historical Cyvexly tree.
+
+Owner directions `2026-09-08-27` and `2026-09-08-29` moved HoneyHearted and
+every outside website entirely to Team 2. The complete per-round record remains
+in Git history, archived handoffs, and Builder memory. It is retained as
+historical evidence only and must not steer primary Cyvexly implementation.
+
+## Rounds 95–99 — Velora restoration, integration, and proof
+
+- Restored the accepted standalone Velora concept and expanded its regression
+  into primary, invalid/correction, keyboard/focus, dialog, reduced-motion,
+  320px reflow, image resilience, provenance, no-index, form-safety, and
+  allowed-origin checks.
+- Integrated the self-hosted demo at `/velora`, added the truthful Work card and
+  case study, protected the raw demo from indexing, and verified production
+  metadata, structured data, sitemap boundaries, social preview, redirects,
+  assets, and CSP.
+- Accepted integration source `0ca0504`; later buyer-facing presentation is
+  Round 116.
+
+## Rounds 75–94 — launch completion and later hardening
+
+Established the Owner facts and launch gates, then hardened production routing,
+metadata, security, delivery, Planner, and Work behavior through accepted
+source `456289f`. Full detail remains in Git and archived chunk records; email,
+analytics, search, and indexing gates remain Owner-controlled.

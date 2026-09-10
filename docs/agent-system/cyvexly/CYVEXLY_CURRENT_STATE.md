@@ -1,123 +1,132 @@
 # Cyvexly Current State
 
-**Last completed global round:** 116. **Builder scheduler:** PAUSED by Owner
-direction `2026-09-08-21`; preserve its saved :00/:30 cadence, GPT-5.6 Sol, and
-high reasoning settings. Do not resume or begin a competing HoneyHearted owner-
-dashboard implementation until the Owner explicitly says so. Claude owns that
-next implementation, including Clerk-backed owner authorization and durable
-content/storage architecture while TPT remains the commerce system.
-Owner direction `2026-09-08-22` queues separate EduAILenz and Mudoinkle Work
-cards/case studies as the next Builder portfolio expansion after an explicit
-resume. That direction grants read-only investigation authority in their
-repositories but does not unpause this scheduler.
+**Last completed global round:** 161
 
-Round 116 completed the reopened Chunk 6 buyer-facing portfolio presentation.
-Accepted and deployed source `fce01e8` replaces the sparse report-like
-`/work/velora-dining` page with direct prospect language, six scannable working
-capabilities, complete uncropped desktop/mobile proof, restrained opening plus
-detailed concept disclosure, design/accessibility decisions, and a hospitality-
-specific CTA. The unchanged `/velora` demo and the Work → case study → demo path
-pass complete local visible/headless and public Chromium proof with no failures,
-runtime errors, network errors, unexpected origins, or responsive overflow.
-Chunk 6 remains open only for its two independent reviews.
+**Next:** global round 162; no Builder-reachable product chunk is currently open
 
-Round 115 hardened HoneyHearted's actual downloaded free-sample artifact. The
-generated HTML now preserves the 44px control floor, and the durable suite opens
-the downloaded local file at 390px, verifies zero external resources and native
-activation, captures it, and prints a tagged one-page Letter PDF. Accepted and
-deployed source `6af5e3c` passes locally and publicly. Chunk 7's existing review
-obligations and Owner-input boundaries remain, but its next architecture phase
-is assigned to Claude under direction `2026-09-08-21`.
+**Latest closed chunk:** Buyer Journey, Proof & Conversion
 
-Round 114 changed method again to Windows High Contrast/forced-colors
-adaptability. Proof source `dacec6a` adds a real-Chromium contract at 320px for
-selected-filter distinction, real-Tab focus visibility, named controls, width
-containment, and representative product, sample, About, and launch routes. Two
-initial failures were instrument errors (a hidden desktop CTA and incomplete
-accessible-name calculation), then the corrected suite passed locally and
-publicly with zero workflow/runtime/network errors. Two opened public captures
-match local pixels exactly. Product source remains `000dcd9`; two independent
-reviews remain.
+**Accepted repository source:** `48a2470` (primary Chunk 8 source)
 
-Round 113 changed method from focus hardening to storefront-wide text-spacing
-adaptability. Proof source `bb327be` applies WCAG-style line, paragraph,
-letter, and word-spacing overrides at 320px across eight representative Home,
-product, article, sample, About, policy, launch, and recovery states. Local and
-public runs remain width-contained with no clipped readable/interactive text;
-three opened public captures match local pixels exactly. Product source remains
-`000dcd9`; two independent reviews remain.
+**Current deployed product-source baseline:** `493d1e6` (Team 2's bounded
+outside-site portfolio integration applied directly on top of `48a2470`; the
+later reconciliation commit changes coordination/evidence only)
 
-Round 112 found the untested mobile-store notice lifecycle losing focus after
-its invoking menu button became hidden. Accepted/deployed source `000dcd9`
-moves focus to the visible menu toggle before the truthful notice opens; a
-real-Space-key regression fails on public `d88bfc8` and passes locally and
-publicly after deployment. The complete suites and repository gates pass with
-zero failures. Two independent reviews remain.
+The primary Cyvexly Builder automation and Team 2 Builder automation are paused
+under direct Owner instruction dated 2026-09-10. Do not reactivate either
+without later explicit Owner direction. Direction `2026-09-08-29` assigns HoneyHearted,
+EduAILenz, Mudoinkle, every other outside website, and their bounded portfolio
+integrations only to Team 2. This lane owns every other Cyvexly surface.
 
-Round 111 moved to a distinct mobile touch-target question after Round 110's
-focus methodology audit. The deployed baseline exposed 12 visible standalone
-controls below the product's 44px design floor. Accepted/deployed source
-`d88bfc8` gives menu, catalog, consent, footer, dialog, and back-to-top actions
-44px targets without inflating inline prose links. A real-Chrome regression
-fails before and passes all 32 measured controls locally/publicly afterward;
-the complete suites and repository gates pass. Two independent reviews remain.
+## Current product position
 
-Round 110's wider methodology audit identified a shared focus-lifecycle gap
-behind recent one-off fixes: activating any mobile-menu link closed the menu
-but left focus inside its hidden DOM, including when the current destination
-was reactivated. Accepted/deployed source `49017a3` centralizes Home-route
-focus transfer and covers all seven mobile destinations plus same-route
-reactivation with real Enter-key input. The regression failed on deployed
-`7b9813c`; complete local/public suites, TypeScript, lint (one known evidence
-warning), the 53-route build, role setup, and review-lifecycle checks pass.
-Two independent reviews remain.
+Round 161 completed a bounded post-integration production regression on the
+primary Cyvexly buyer journey without reviewing Team 2's new portfolio entries.
+Visible use passed Home → Business websites → Velora case study →
+Pricing → contextual Orbit inquiry at desktop, tablet, and phone widths;
+the phone menu opened correctly, the short form retained its package context,
+and no inquiry was submitted. Eleven primary routes returned HTTP 200 with
+HSTS, the inspected pages had no horizontal overflow or browser warning/error,
+and the accepted buyer sequence remained visually intact. This fresh production
+evidence does not reopen product work or close Team 2's separate review boundary.
+Role setup and all 54 isolated review-lifecycle checks also pass.
 
-Rounds 100–109 integrated the no-indexed storefront and established its
-catalog, content, form, activation, accessibility, navigation, download/print,
-and focus-lifecycle proof. Their source identities and complete outcomes are
-preserved in the build summary, app debt, and archived active-chunk/handoff
-reports.
+Round 160 completed the governing five-round methodology and product-pattern
+audit without reopening finished product work. Exact source checks confirm
+production `493d1e6` is one patch-equivalent Team 2 portfolio commit directly
+on top of primary accepted source `48a2470`; its nine changed product/test paths
+remain the bounded outside-site integration already assigned to Team 2. No new
+primary review intake or changed-primary-source evidence exists. Role setup,
+all 54 isolated review-lifecycle checks, and whitespace validation pass. The
+supported decision is to keep the primary product stable and await new Owner,
+buyer-use, or reviewer evidence rather than manufacture another UI change.
 
-**Parallel accepted product position:** Round 97 Velora integration source is committed
-and pushed at `0ca0504` on `main`; its closeout is `c2f8e8e`.
-`https://cyvexly.com/work/velora-dining` and `https://cyvexly.com/velora` are
-live; the raw demo returns the explicit no-index response header.
-`cyvexly.com` remains fully connected, HTTPS, and canonicalized (verified round
-53). `origin/master` is historical.
+Round 159 dispositioned independent Auditor report `IFA-2026-09-10-R116`.
+It passed exact accepted repository source
+`48a2470385e7641b1bd500eed55850286896677e` with zero defects across the
+25-route suite, desktop/tablet/phone/minimum-phone responsive states, buyer
+navigation, contact and Planner behavior, pricing, proof, accessibility, and
+truth boundaries. R116 is the required exact-source second challenge after
+R112's zero-finding pass of product-equivalent local source `9c56e05`; the
+product/runtime/proof paths between those sources were already verified
+identical. Together the two passes satisfy Chunk 8's verification floor.
 
-## Owner launch decisions and remaining gates
+Chunk 8 is **DONE WITH A NAMED EXTERNAL GAP**. Every Builder-reachable
+workstream in Owner direction `2026-09-08-28` is dispositioned. Guardio
+provider review and an un-allowlisted recheck remain Owner/account-holder
+actions; Round 119 found no compromise and no justified product remedy. This
+Builder made no product, deployment, Team 2, reviewer-report, or scheduler
+change. Team 2 separately deployed `493d1e6` after R116; that integration is
+outside R116's source. Team 2's later external report `HH-IFA-023` independently
+closed its own acceptance/review lane.
 
-The Owner has now confirmed: Cyvexly Studio; LLC structure; Indiana, United
-States; United States-only launch market; `cyvexly.com`;
-`design@cyvexly.com`; `(317) 572-5780`; logo-led About; no public personal
-founder name or portrait; and a studio-origin narrative authorized for review.
+## Shared-checkout reconciliation (2026-09-10)
 
-The following still require Owner account access, confirmation, or final
-approval and must not be invented:
+Under direct Owner instruction, the previously divergent shared checkout was
+preserved on a local safety branch and in a verified all-reference Git bundle,
+then its current coordination/evidence tree was applied as one record-only
+change on top of `origin/main`. Cyvexly application source remains identical to
+the deployed `493d1e6` product tree. Codex attachment images and the local pnpm
+cache remain on disk but outside Git. The historical ahead/behind warnings in
+older round narratives are now superseded by this reconciliation record.
 
-1. exact registered LLC legal name for legal text and later agreements;
-2. Resend account creation, sending-domain DNS verification (account-
-   specific records Resend generates after the domain is added — see
-   `CYVEXLY_APP_DEBT.md` item 2), and `RESEND_API_KEY` entered securely in
-   Render — the code path is built, deployed, and tested short of an
-   actual send;
-3. a GA4 property + Measurement ID (or an explicit no-analytics decision),
-   and/or a Google Search Console verification value — both are wired in
-   code (dormant) and activate the moment a real value is supplied;
-4. review of About/Privacy/Terms drafts, public visual acceptance, and
-   final permission to enable search indexing.
+Rounds 150–158 held the accepted product stable, proved two unfamiliar-buyer
+paths, and repaired the review-acquisition system after R112–R115 repeatedly
+targeted divergent local `HEAD`. `Start-ReviewRound.ps1` now resolves the one
+accepted SHA from this state and rejects every mismatch before creating
+resources; all 54 lifecycle fixtures pass. Full details remain in the build
+summary, active-chunk record, handoff, and Git.
 
-Domain/DNS/HTTPS/canonicalization is **done** — verified live round 53, not
-merely code-complete. Payment-provider selection and real portfolio
-replacement are deliberately tabled. Existing payment claims must be
-removed or qualified until supported; existing concepts must remain
-unmistakably labeled. Contact/Planner now use real server-side delivery
-(not `mailto:`) — see `CYVEXLY_APP_DEBT.md` item 2.
+Rounds 117–149 established the buyer-led Home/Services/Pricing sequence, two
+working fictional demos, truthful contextual inquiry, optional Planner,
+responsive failure-safe contact, comparable pricing, and corrected hierarchy/
+accessibility through accepted UI `8a15a6f`. Per-round source and measurements
+remain in the build summary, active chunk, evidence, and Git.
 
-## Working orientation
+Auditor R96–R111 source identities, zero-finding outcomes, supersession
+boundaries, and processed intake are retained in the build summary and
+published external reports. R101 was cleanup-only evidence and closed no
+review gate; R112/R113 are the current product-equivalent passes described
+above.
 
-Use the six current root orientations and CYVEXLY_ROLE_RULES_MAPPING.md. New reviewer
-reports and memory are external; read CYVEXLY_REVIEW_INDEX.md and all unread inbox items.
-The existing architectural-glass visual baseline is unchanged. Older round proof is in
-CYVEXLY_BUILD_SUMMARY.md and the archived pre-migration current state. No new product
-round or Owner visual acceptance is claimed by the environment migration.
+Round 119 found no current compromise behind the observed Guardio block:
+deployed source, visible runtime, TLS/redirects/headers, dependencies, and
+multi-vendor reputation checks were clean. The supported disposition is a
+likely Guardio-specific false positive/new-domain reputation classification,
+not demonstrated malware. Guardio detection review remains an Owner/account-
+holder action; do not change source, DNS, or indexing to game the classifier.
+
+## Next work and gates
+
+Next Builder:
+
+- preserve primary source `48a2470` unless new Owner direction, changed source,
+  buyer-use evidence, or
+  reviewer evidence exposes a material reachable defect;
+- do not restart completed hierarchy, inquiry, or proof loops merely to keep
+  the automation busy.
+
+Chunk 6's accepted Velora presentation still needs one complete independent
+physical/visual review; R93 was source-only. Chunk 8's separate R112 and R116
+passes close its review boundary. The remaining gates do not authorize
+speculative product changes.
+
+Team 2's separate review of production head `493d1e6` closed in external
+Auditor report `HH-IFA-023`; primary R116 must not be represented as coverage
+of that later outside-site integration. The Team 2 Builder scheduler is now
+paused, so additional outside-site implementation awaits later Owner direction.
+
+Owner/account inputs that must not be invented:
+
+1. exact registered LLC legal name;
+2. Resend account/domain verification and `RESEND_API_KEY` in Render for real
+   delivery (the code path is built and tested short of an actual send);
+3. GA4/Search Console values or an explicit no-analytics decision;
+4. final About/Privacy/Terms/visual approval and permission to enable indexing;
+5. a future payment-provider decision before any transaction-readiness claim.
+
+The canonical domain, HTTPS, redirects, public email/phone, server-side Contact
+and Planner paths, and staged no-index posture are implemented. Payment
+integration and real-client portfolio claims remain deferred. Use the current
+Owner Direction, active chunk, handoff, debt, build summary, and external review
+index for detail; historical reports are evidence, not newer authority.
