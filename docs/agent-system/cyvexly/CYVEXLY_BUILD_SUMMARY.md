@@ -3,6 +3,23 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 163 — EduAILenz/Mudoinkle showcase-quality candidate
+
+- Implemented exact local candidate `4bacbfa`: two product-specific case-study
+  atmospheres, real current desktop/phone captures, three user journeys per
+  product, explicit Cyvexly contribution, truthful limitations, direct public
+  proof, and contextual Custom Web Application inquiries.
+- Replaced generic diagrams with real product views on Work and added a compact
+  Home showcase while preserving the accepted Velora/Nexora hierarchy.
+- Visible desktop/tablet/phone comparison found and fixed a background-cascade
+  defect that washed out both hero identities; zero horizontal overflow,
+  semantic structure, skip-link focus, and keyboard order passed afterward.
+- Production build, TypeScript, lint, whitespace, and the 35-route/17-context
+  buyer smoke passed. All new capture evidence is public-only and labeled so it
+  cannot be confused with authenticated or production acceptance.
+- Candidate is committed locally but not pushed or deployed. Two independent
+  exact-source review rounds remain before Chunk 9 can close.
+
 ## 2026-09-10 — shared-checkout reconciliation
 
 - Preserved the divergent checkout on a safety branch and verified Git bundle,

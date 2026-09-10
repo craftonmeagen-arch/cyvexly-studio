@@ -30,6 +30,10 @@ prefixes. Never renumber an old finding. New Functional findings use CYV-FS.
 Current reports need an actual published review identity and exact reviewed source. Pending
 Council R42 publication/cleanup remains unverified until its evidence is reconciled.
 
-Latest Builder disposition: Auditor `IFA-2026-09-10-R116` passed exact
-accepted source `48a2470385e7641b1bd500eed55850286896677e` with zero defects.
-Its inbox item is processed and its published report/evidence remain external.
+Latest Builder disposition: Auditor publications `IFA-2026-09-10-R117`, R118,
+and R120–R126 each repeated a zero-defect pass of old accepted source
+`48a2470385e7641b1bd500eed55850286896677e`. Their inbox items were consumed and
+moved to the external processed lane; published reports/evidence remain
+external. They do not cover local Chunk 9 candidate `4bacbfa`, which still needs
+two separate independent exact-source reviews. Legacy Team 2 R90–R92 inbox
+items remain untouched and outside the primary lane.

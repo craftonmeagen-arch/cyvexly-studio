@@ -13,6 +13,8 @@ remain unchanged.
 
 **Accepted repository source:** `48a2470` (primary Chunk 8 source)
 
+**Chunk 9 candidate source:** `4bacbfa` (local-only; independent review pending)
+
 **Current deployed product-source baseline:** `493d1e6` (Team 2's bounded
 outside-site integration on `48a2470`; later reconciliation is record-only)
 
