@@ -1,6 +1,6 @@
 # Cyvexly Build Team Builder — PM Prompt
 
-**Status:** ACTIVE — CHUNK 11 SOURCE `4232574` AWAITS PUBLICATION
+**Status:** ACTIVE — CHUNK 11 DEPLOYED; PROTECTED DELIVERY GATE REMAINS
 
 Owner directions `2026-09-10-03` and `2026-09-10-04` open Chunk 11. Exact
 source `4232574` replaces Home's fixed project grids with the accepted
@@ -10,8 +10,10 @@ preferred window and timezone, optional note, consent, federal-holiday-aware
 next-business-day timing, duplicate protection, truthful delivery, and separate
 confirmation outcomes. It removes routine raw IPs from Contact/Planner
 notifications and reconciles public privacy/legal copy. Builder proof and
-independent Auditor challenges R136/R137 pass with zero defects. Publication,
-canonical verification, and controlled Owner-inbox delivery remain.
+independent Auditor challenges R136/R137 pass with zero defects. Round 176
+publication and canonical verification pass. Controlled Contact, Planner, and
+Consultation attempts all returned `503 not-configured`, so protected Resend/
+domain setup and actual Owner-inbox delivery remain.
 
 Owner direction `2026-09-10-02` closed Chunk 10 in
 global round 174 at accepted source `c8bc73d`. The horizontal Work-card rail preserves the
@@ -53,7 +55,7 @@ the two Cyvexly case studies, their Work cards, relevant Home discovery,
 contextual inquiry continuity, and supporting public-safe proof/tests.
 
 Accepted product source is `4232574`; no active review candidate remains.
-Production still serves `c8bc73d` until Round 176 publication.
+Production serves `4232574` through release commit `8c34031`.
 Chunk 6's physical/visual review, Guardio, and Chunk 5 account/Owner
 gates remain open but separate.
 

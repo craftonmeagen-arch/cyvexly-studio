@@ -38,8 +38,10 @@ uses the protected mail path. The same round removes routine raw IPs from form
 emails and corrects public legal/privacy copy without inventing a formed entity.
 
 Exact source `4232574` passed independent Auditor challenges R136 and R137 with
-zero defects and is accepted for Round 176 publication. It is not yet deployed
-or proved by real Owner-inbox delivery.
+zero defects and is deployed through release commit `8c34031`; canonical buyer
+and hierarchy proof passes. Controlled delivery attempts returned `503 not-
+configured`, so actual Owner-inbox delivery remains unproved and no messages
+were sent.
 
 This direction does not grant provider purchases, payment integration, secret
 access, indexing permission, outside-product changes, or scheduler changes.

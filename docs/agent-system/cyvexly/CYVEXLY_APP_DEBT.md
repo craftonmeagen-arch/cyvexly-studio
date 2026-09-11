@@ -9,9 +9,9 @@ Git history, and role memory.
 - Primary accepted product source: `4232574` after Auditor R136/R137.
 - Active Chunk 11 review candidate: none; review lifecycle falls back to
   accepted `4232574`.
-- Production product source: `c8bc73d`; branch acceptance commit `ac8438b` was
-  pushed, canonical rail markers were observed, and live buyer/hierarchy suites
-  passed. Round 176 publication of `4232574` is pending.
+- Production product source: `4232574`; release commit `8c34031` is pushed,
+  canonical ETag `14aii22kn8q2otg` exposed the Home rail and consultation route,
+  and live buyer/hierarchy suites passed.
 - Chunk 10 closed in Round 174 after Auditor R132 and R133 independently passed
   exact `c8bc73d` with zero defects. No active review candidate remains; the
   lifecycle falls back to accepted `c8bc73d`.
@@ -46,14 +46,15 @@ Git history, and role memory.
 3. **Real Contact/Planner/Consultation delivery.** Server-side Resend routes, validation,
    honeypot, rate limiting, sanitization, honest not-configured/failure states,
    and best-effort visitor confirmation are implemented. The Owner/account
-   holder must verify the sending domain, store `RESEND_API_KEY` only in
-   Render's protected environment, redeploy, and intentionally test one real
+   holder must verify the sending domain and store `RESEND_API_KEY` only in
+   Render's protected environment. Round 176 intentionally attempted one real
    Contact, one Planner, and one email-path Consultation delivery to
-   the Owner inbox. Verify the internal notification first and the requester
-   email confirmation separately; phone-only requests do not send SMS or email
-   confirmation. Round 176 may exercise the protected production routes after
-   publication, but server acceptance is not inbox-receipt proof. Do not store
-   or print the secret.
+   the Owner inbox; all three returned `503 not-configured`, so no notification
+   or requester-confirmation email was sent. After protected configuration and
+   redeployment, coordinate one fresh attempt per route and verify the internal
+   notification first and requester confirmation separately. Phone-only requests
+   do not send SMS or email confirmation. Do not repeat before configuration
+   changes, and do not store or print the secret.
 
 4. **Analytics, search ownership, and indexing release.** The dormant GA4/GSC
    wiring and staged no-index posture are implemented. The Owner must supply

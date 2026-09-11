@@ -6,11 +6,12 @@ Outside-website work belongs to Team 2.
 
 ## Open
 
-1. **Chunk 11 — publication and real-delivery gates for accepted `4232574`.**
-   Builder proof and two independent exact-source reviews pass: Auditor R136
-   and R137 each found zero defects. Publication, canonical verification, one
-   controlled real Contact/Planner/Consultation delivery, and Owner confirmation
-   of inbox receipt remain before closure.
+1. **Chunk 11 — protected real-delivery gate for deployed `4232574`.** Builder
+   proof, Auditor R136/R137, publication, and canonical buyer/hierarchy proof
+   pass. Controlled Contact, Planner, and Consultation attempts each returned
+   `503 not-configured`, so no messages were sent. Protected Render Resend/domain
+   configuration, one coordinated re-test per route, and Owner inbox confirmation
+   remain before closure. Do not repeat submissions before configuration changes.
 
 2. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with

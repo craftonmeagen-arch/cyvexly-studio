@@ -1,16 +1,15 @@
 # Cyvexly Current State
 
-**Last completed global round:** 175
+**Last completed global round:** 176
 
-**Current global round:** 176
+**Current global round:** 177
 
 **Active chunk:** Chunk 11 — Homepage Work Rail & Quick Consultation
 
-**Current mission:** publish accepted product source `4232574`, verify the
-canonical Home/Work/consultation experience, and run controlled real delivery
-checks without overstating inbox receipt.
+**Current mission:** preserve deployed source `4232574` and await protected
+Render Resend configuration before repeating the controlled delivery checks.
 
-**Current chunk-local round:** 2
+**Current chunk-local round:** 3
 
 **Accepted repository source:** `4232574` (Homepage rail and quick consultation)
 
@@ -18,8 +17,8 @@ checks without overstating inbox receipt.
 
 **Active review source:** none; review lifecycle falls back to accepted `4232574`
 
-**Current deployed product-source baseline:** `c8bc73d`; accepted source
-`4232574` is queued for publication in Round 176
+**Current deployed product-source baseline:** `4232574`; release commit
+`8c34031` is on `origin/main`
 
 Owner direction `2026-09-10-01` resumed the primary Builder for the two
 Cyvexly-facing showcase corrections. Team 2 Builder and all Auditor scheduler
@@ -79,11 +78,13 @@ Historical round detail and the 2026-09-10 checkout reconciliation remain in
 ## Active work and gates
 
 Auditor R136 and R137 independently passed exact source `4232574` with zero
-defects, satisfying the two-review gate. Publish the accepted source, prove the
-canonical Home/Contact/Planner/Work experience, and run one controlled real
-Contact, Planner, and Consultation delivery to the Owner inbox. Server acceptance
-does not prove inbox receipt; preserve that distinction until the Owner confirms
-the messages arrived. Preserve outside-product boundaries and protected data.
+defects, satisfying the two-review gate. Round 176 published it and canonical
+buyer/hierarchy proof passes. One controlled real Contact, Planner, and
+Consultation attempt returned honest `503 not-configured` responses for all
+three routes, proving no messages were sent. The Owner/account holder must add
+the protected Render `RESEND_API_KEY` and verify the sending domain before a
+new intentionally coordinated attempt. Do not repeat submissions without that
+configuration change. Preserve outside-product boundaries and protected data.
 
 Remaining primary-team gates:
 

@@ -15,9 +15,18 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
   35-route/17-context buyer suite, six intercepted receipt variants, full
   responsive hierarchy/rail proof, role setup, hot-file caps, all 57 review-
   lifecycle checks, and whitespace. No real message was sent during validation.
-- Accepted product source `4232574`. Publication, canonical verification, and
-  controlled real Contact/Planner/Consultation delivery remain; actual inbox
-  receipt must not be inferred from server acceptance.
+- Accepted and pushed product source `4232574` through release commit `8c34031`.
+  Canonical ETag `14aii22kn8q2otg` exposed the new Home rail and consultation
+  route; live buyer and responsive hierarchy suites passed with zero runtime
+  errors or page-level overflow.
+- One controlled real Contact, Planner, and Consultation attempt each returned
+  `503 not-configured`; no email was sent. Protected Render Resend/domain setup,
+  one coordinated re-test per route, and Owner inbox confirmation remain.
+- The optional production receipt-browser rerun hit a Windows lock during temp-
+  profile cleanup. No browser process or proof port remained, but host policy
+  rejected later removal of the exact 724,557-byte disposable profile at
+  `C:/Users/Tcraf/AppData/Local/Temp/cyvexly-receipt-smoke-t0xLEE`; reconcile it
+  next round.
 
 ## Round 175 — Home rail and quick-consultation candidate
 
