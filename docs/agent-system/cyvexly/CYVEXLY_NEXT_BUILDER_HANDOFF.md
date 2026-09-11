@@ -2,28 +2,31 @@
 
 ## Current assignment
 
-Read Owner direction `2026-09-10-03` first. The homepage section in the Owner's
-screenshot still uses fixed grids; only `/work` has the accepted horizontal
-rail. Initialize a bounded homepage correction chunk and deliver left/right
-browsing through all four approved projects, retaining truthful project labels,
-readable cards, and the approved design. Prove `/` at desktop/tablet/390px/320px,
-with interaction/accessibility checks and `/work` regression, independent
-review, and canonical production proof.
+Read Owner directions `2026-09-10-04` and `2026-09-10-03` first. Chunk 11 exact
+candidate `4232574` now combines the homepage four-project rail with the
+explicitly tracked quick-consultation path. Builder proof passes; the next work
+is independent challenge of that exact source, not forward implementation.
 
-Preserve Chunk 10 accepted source `c8bc73d` and its `/work` acceptance by R132
-and R133. Those reviews do not close the homepage gap. Owner and assistant
-are resolving the five inputs in `2026-09-10-03`; only the LLC name is chosen.
-No scheduler changes are authorized.
+Challenge Home and `/work` rail order, controls, keyboard, swipe, end states,
+reduced motion, links, and 1280/768/390/320 containment. Challenge consultation
+discovery, email-only and phone-only completion, optional note, window/timezone
+transmission, Planner draft preservation, protected failures, separate
+confirmation outcomes, raw-IP exclusion, privacy disclosure, and truthful
+next-business-day/non-appointment copy.
 
 Owner input update, 2026-09-10: use Cyvexly LLC as the chosen legal name. The
 Owner reports that their availability check passed and plans to apply
 September 11. Public brand remains Cyvexly Studio. This resolves name selection,
 not formation: verify the approved filing's exact name before claiming an
 existing LLC. Registration and final legal-copy approval remain pending.
-Current Privacy/Terms source still claims operation as an LLC; correct that
-unsupported present-tense claim while preparing the chosen name for activation
-after formation. This record update neither files the LLC nor changes product
-source, and supersedes older name-pending and confirmed-LLC statements.
+Candidate `4232574` corrects the unsupported present-tense LLC claim while
+retaining Cyvexly LLC as the chosen name. This does not prove formation.
+
+After two clean independent reviews, coordinate one controlled real Contact,
+Planner, and Consultation delivery to the Owner inbox using protected Resend
+configuration. Do not send unrelated test mail. Only then may the Builder
+accept, publish, and verify canonical production. No scheduler changes are
+authorized.
 
 The underlying EduAILenz/Mudoinkle applications, HoneyHearted, their protected
 data, credentials, repositories, infrastructure, and scheduler states remain

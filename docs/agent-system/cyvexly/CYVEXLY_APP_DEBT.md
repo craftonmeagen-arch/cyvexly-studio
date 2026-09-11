@@ -7,6 +7,7 @@ Git history, and role memory.
 ## Current source position
 
 - Primary accepted product source: `c8bc73d`.
+- Active Chunk 11 review candidate: `4232574`; not accepted or deployed.
 - Production product source: `c8bc73d`; branch acceptance commit `ac8438b` was
   pushed, canonical rail markers were observed, and live buyer/hierarchy suites
   passed.
@@ -41,12 +42,15 @@ Git history, and role memory.
    No founder identity, testimonial, result, credential, or legal name may be
    invented.
 
-3. **Real Contact/Planner delivery.** Server-side Resend routes, validation,
+3. **Real Contact/Planner/Consultation delivery.** Server-side Resend routes, validation,
    honeypot, rate limiting, sanitization, honest not-configured/failure states,
    and best-effort visitor confirmation are implemented. The Owner/account
    holder must verify the sending domain, store `RESEND_API_KEY` only in
    Render's protected environment, redeploy, and intentionally test one real
-   Contact and one real Planner delivery. Do not store or print the secret.
+   Contact, one Planner, and one email- or phone-path Consultation delivery to
+   the Owner inbox. Verify the internal notification first and the requester
+   email confirmation separately; phone-only requests do not send SMS or email
+   confirmation. Do not store or print the secret.
 
 4. **Analytics, search ownership, and indexing release.** The dormant GA4/GSC
    wiring and staged no-index posture are implemented. The Owner must supply

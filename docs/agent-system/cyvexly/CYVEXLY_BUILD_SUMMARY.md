@@ -3,6 +3,32 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 175 — Home rail and quick-consultation candidate
+
+- Opened Chunk 11 under Owner direction `2026-09-10-03`, then explicitly
+  tracked direction `2026-09-10-04` without discarding the Home work.
+- Exact candidate `4232574` reuses the accepted four-project rail on Home with
+  Home-specific semantics while preserving `/work`, project truth, routes,
+  visible controls, native swipe, Arrow/Home/End keys, end states, and reduced
+  motion.
+- Added a short consultation mode on Contact with Home and Planner discovery,
+  email-only/phone-only contact, preferred window and timezone, optional note,
+  consent, Planner-draft preservation, and truthful next-business-day timing.
+- Added observed-U.S.-federal-holiday calendar logic in the studio's
+  America/New_York timezone, recent duplicate protection, separate requester
+  confirmation outcomes, and honest provider/network failure recovery.
+- Removed routine raw-IP inclusion from Contact and Planner notification emails;
+  corrected Privacy/Terms to distinguish the Owner-selected Cyvexly LLC name
+  from still-pending formation and to disclose actual provider/inbox/log storage
+  plus the proposed—not automatic—retention review.
+- Build, TypeScript, lint (one historical warning), 35-route buyer, six-case
+  calendar, consultation API, six intercepted submissions, exact-width
+  hierarchy/rail, role, and visible-browser proof pass. No real mail was sent.
+- Candidate remains unaccepted and unpushed pending two independent reviews,
+  controlled Owner-inbox delivery, accepted-source publication, and canonical
+  verification. Curated evidence is indexed in
+  `builder/evidence/ROUND_175_BUILDER_EVIDENCE.md`.
+
 ## Round 174 — Work rail accepted after second review
 
 - Consumed Auditor `IFA-2026-09-10-R133`, which independently passed exact

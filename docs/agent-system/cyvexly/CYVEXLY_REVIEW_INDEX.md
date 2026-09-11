@@ -39,8 +39,8 @@ untouched and outside the primary lane.
 
 Round 164 corrected the review source selector: the lifecycle uses an explicit
 **Active review source** when a candidate is declared and otherwise falls back
-to the accepted source. Chunk 10 no longer has an active candidate, so accepted
-source `c8bc73d` is the fallback. The isolated
+to the accepted source. Chunk 11 now declares exact active review source
+`4232574`; accepted source remains `c8bc73d`. The isolated
 auditor/council/functional lifecycle suite passes all 57 checks.
 
 Latest Builder disposition: R130 passed exact corrected source `ca2b84e`,

@@ -128,3 +128,31 @@ evidence exposes a meaningful reachable gap.
 - **Closure:** exact-source browser proof passed at desktop, tablet, phone, and
   minimum-phone sizes. Auditor R132 and R133 each passed exact `c8bc73d` with
   zero defects, satisfying the two separate independent review rounds.
+
+## Chunk 11 — Homepage Work Rail & Quick Consultation (OPEN, ROUND 175)
+
+- **Authority:** Owner direction `2026-09-10-03`, applying Chunk 10's accepted
+  interaction/accessibility requirements to Home.
+- **Outcome:** replace Home's fixed, two-tier project grids with one horizontal
+  browsing rail through Velora, Nexora, EduAILenz, and Mudoinkle while keeping
+  large readable cards, distinct proof, truthful labels, working links, and the
+  approved cyber-blue glass hierarchy.
+- **Required behavior:** visible left/right controls, native touch/swipe,
+  discoverable keyboard operation, announced position and end states,
+  reduced-motion safety, and no page-level overflow across desktop, tablet,
+  390px, and 320px views.
+- **Adjacent truth correction:** remove the unsupported existing-LLC claim from
+  the draft Privacy and Terms pages; Cyvexly LLC is the chosen name, while
+  formation, exact filing-name verification, and final legal approval remain
+  Owner inputs.
+- **Explicitly tracked addition:** Owner direction `2026-09-10-04` adds a short
+  consultation request on Home, Contact, Planner entry, and inside the Planner.
+  It supports email-only and phone-only requests, window/timezone context,
+  optional note, consent, federal-holiday-aware next-business-day logic,
+  separate confirmation outcomes, duplicate protection, and failure recovery.
+- **Candidate:** `4232574`; Builder automated and visible-browser proof passes.
+- **Boundary:** preserve accepted `/work` source `c8bc73d`, project order and
+  claims, outside-product isolation, no-index controls, and all scheduler state.
+- **Closure:** exact candidate proof, two separate independent challenges,
+  accepted-source publication, and canonical production verification of both
+  Home and `/work`.

@@ -1,19 +1,79 @@
 # Cyvexly Active Chunk
 
-**Active product chunk:** none; Chunk 10 closed in global round 174
+**Active product chunk:** Chunk 11 — Homepage Work Rail & Quick Consultation
 
-**Next position:** await new reachable primary-Cyvexly work
+**Current position:** global round 175, chunk-local round 1
 
 **Accepted and deployed product source:** `c8bc73d`; branch acceptance commit
 `ac8438b` is on `origin/main`
 
-**Active review source:** none; review lifecycle falls back to accepted source
+**Chunk 11 candidate / active review source:** `4232574`
 
 **Scheduler state:** the primary Cyvexly Builder remains resumed by Owner
 direction `2026-09-10-01`; Team 2 Builder and all Auditor scheduler states are
 unchanged.
 
-## Current position and boundaries
+## Outcome and boundaries
+
+Home's section headed “Two working demos. Two different problems.” still uses
+two fixed project grids even though `/work` has the accepted four-project rail.
+Chunk 11 applies that proven interaction model to Home without changing the
+underlying outside applications or regressing `/work`.
+
+Success requires one coherent Home showcase through Velora, Nexora,
+EduAILenz, and Mudoinkle with readable artwork and proof, truthful status,
+working case-study/demo links, visible controls, touch/swipe, Arrow/Home/End
+keys, announced position and end states, reduced-motion-safe movement, and no
+page-level overflow at desktop, tablet, 390px, or 320px.
+
+Owner direction `2026-09-10-04` adds a bounded quick-consultation path to this
+open round: visitors can skip the Planner, choose email or phone, provide the
+corresponding contact value plus a preferred window and timezone, and send an
+optional note. The receipt promises next-business-day follow-up, not a booked
+appointment, through protected and truthful server behavior.
+
+Cyvexly LLC is the Owner-selected legal name, but formation and exact filing-
+name verification remain pending. Public draft legal pages preserve that
+distinction and accurately describe form processing, storage, and retention.
+
+## Round plan — global 175 / chunk-local 1
+
+- Reuse and parameterize the accepted Work rail instead of creating a second
+  interaction system; preserve `/work` semantics and behavior.
+- Replace both Home project grids and stale “two/both” language with one
+  four-project browse experience using the accepted project data and proof.
+- Correct the unsupported LLC wording in Privacy and Terms.
+- Add Home, Contact, Planner-entry, and in-Planner consultation discovery;
+  implement the short form through the existing protected mail route.
+- Remove routine raw-IP inclusion from Contact and Planner notifications;
+  disclose actual Resend/inbox/log handling and the proposed retention review.
+- Extend regression coverage for Home order, controls, keyboard, touch-sized
+  affordances, reduced motion, links, responsive containment, and `/work`.
+- Inspect rendered Home and Work at 1280px, 768px, 390px, and 320px; establish
+  an exact candidate only after source, build, browser, and cleanup proof pass.
+
+## Reachability and methodology check
+
+The established approach is the already accepted native overflow/scroll-snap
+`WorkGrid` with button controls and keyboard handling. The outcome is reachable
+inside the current Next.js source and Builder runtime with no new service,
+credential, package, outside-product access, or Owner decision. Earliest proof
+is a local production build plus exact-width Chromium/CDP geometry and input
+checks. Material falsifiers include lost heading semantics, unreadable cards,
+broken links, page overflow, a `/work` regression, consultation completion that
+requires Planner answers, mismatched contact validation, false appointment or
+confirmation copy, or leaked contact/IP data.
+
+## Candidate disposition — `4232574`
+
+Builder source, build, exact-width browser, keyboard/touch, calendar-boundary,
+API-validation, and intercepted-mail proof pass. Curated evidence is indexed in
+`builder/evidence/ROUND_175_BUILDER_EVIDENCE.md`. No real message was sent.
+Two separate independent reviews, controlled Owner-inbox delivery after
+protected Resend configuration, acceptance, publication, and canonical proof
+remain required before Chunk 11 can close.
+
+## Preserved Chunk 10 baseline
 
 Chunk 10 achieved Owner direction `2026-09-10-02`: the four proof-rich Work
 cards are horizontally browsable in Velora → Nexora → EduAILenz → Mudoinkle
@@ -30,7 +90,7 @@ proved on canonical production.
 Underlying EduAILenz/Mudoinkle applications, their data, credentials,
 infrastructure, and HoneyHearted remain Team 2 scope. Do not modify them.
 
-## Round 174 — second review and acceptance
+## Prior Round 174 — second review and acceptance
 
 - **Dispositioned:** Auditor `IFA-2026-09-10-R133` passed exact `c8bc73d` with
   zero defects and supplies clean challenge 2 of 2 after R132.

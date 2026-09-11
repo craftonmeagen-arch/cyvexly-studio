@@ -2,20 +2,21 @@
 
 **Last completed global round:** 174
 
-**Next:** primary Builder homepage scrolling correction under Owner direction
-`2026-09-10-03`; initialize a bounded chunk before implementation.
+**Current global round:** 175
 
-**Active chunk:** none; Chunk 10 closed in global round 174
+**Active chunk:** Chunk 11 — Homepage Work Rail & Quick Consultation
 
-**Queued Owner priority:** homepage `/` carousel; accepted `/work` is preserved.
+**Current mission:** independently review exact `4232574`, which replaces
+Home's fixed project grids with one accessible four-project rail and adds the
+short next-business-day consultation path with privacy corrections.
 
-**Current chunk-local round:** closed after round 4
+**Current chunk-local round:** 1
 
 **Accepted repository source:** `c8bc73d` (horizontal Work rail)
 
-**Chunk 10 candidate source:** none; `c8bc73d` is accepted
+**Chunk 11 candidate source:** `4232574`
 
-**Active review source:** none; review lifecycle falls back to accepted source
+**Active review source:** `4232574`
 
 **Current deployed product-source baseline:** `c8bc73d`; acceptance/branch
 commit `ac8438b` is on `origin/main`
@@ -26,8 +27,11 @@ states remain unchanged. Outside products, credentials, infrastructure, and
 HoneyHearted remain Team 2 scope.
 
 Owner direction `2026-09-10-03` identifies the missing homepage interaction:
-`/` still has fixed card grids. The primary Builder must complete that surface
-and prove it separately. Owner inputs remain pending; no scheduler changes.
+`/` still had fixed card grids. Candidate `4232574` completes that Builder
+surface and adds the explicitly tracked quick-consultation direction
+`2026-09-10-04`. Cyvexly LLC is the chosen legal name, but formation and exact
+filing-name verification remain pending; the draft legal pages now say so. No
+scheduler state changed.
 
 Owner direction `2026-09-10-02` reopened the primary Work surface. Accepted
 source `c8bc73d` replaces the fixed two-column collection with a horizontal
@@ -72,11 +76,12 @@ review-lifecycle checks pass.
 Historical round detail and the 2026-09-10 checkout reconciliation remain in
 `CYVEXLY_BUILD_SUMMARY.md`, archives, Git history, and Builder memory.
 
-## Next work and gates
+## Active work and gates
 
-The homepage scrolling correction is queued under `2026-09-10-03`; Chunk 10's
-`/work` acceptance does not close it. Follow the newest Owner Direction and
-next Builder handoff. Do not access protected data or modify outside apps.
+Challenge exact candidate `4232574` against both Owner directions. Two separate
+independent passes, controlled real delivery to the Owner inbox, accepted-source
+publication, and canonical Home/Contact/Planner/Work proof remain required.
+Preserve outside-product boundaries and do not access protected data.
 
 Remaining primary-team gates:
 

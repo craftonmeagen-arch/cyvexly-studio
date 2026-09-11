@@ -6,7 +6,13 @@ Outside-website work belongs to Team 2.
 
 ## Open
 
-1. **Chunk 6 — one complete Velora independent physical/visual review.**
+1. **Chunk 11 — review and publication gates for exact `4232574`.** Builder
+   implementation and local proof pass for the Home rail and quick consultation
+   path. Two separate independent exact-source reviews, controlled real
+   Owner-inbox delivery, acceptance, publication, and canonical verification
+   remain before closure.
+
+2. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with
    uncropped desktop/mobile proof, six scannable capabilities, truthful status
    and contribution language, detailed disclosure, and a hospitality-specific
