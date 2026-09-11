@@ -170,6 +170,23 @@ async function capture(client, name) {
   await writeFile(path.join(captureDir, name), Buffer.from(result.data, "base64"));
 }
 
+async function swipeHorizontal(client, y, startX, endX, steps = 8) {
+  await client.send("Input.dispatchTouchEvent", {
+    type: "touchStart",
+    touchPoints: [{ x: startX, y, radiusX: 4, radiusY: 4, force: 1 }],
+  });
+  for (let step = 1; step <= steps; step += 1) {
+    const x = startX + ((endX - startX) * step) / steps;
+    await client.send("Input.dispatchTouchEvent", {
+      type: "touchMove",
+      touchPoints: [{ x, y, radiusX: 4, radiusY: 4, force: 1 }],
+    });
+    await new Promise((resolve) => setTimeout(resolve, 16));
+  }
+  await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+  await new Promise((resolve) => setTimeout(resolve, 450));
+}
+
 async function stopBrowserAndRemoveProfile(browser, profile) {
   if (browser.exitCode === null) {
     const exited = new Promise((resolve) => browser.once("exit", resolve));
@@ -476,16 +493,7 @@ async function main() {
     assert.equal(workRailPhone.status, "Project 1 of 4");
     assert.ok(workRailPhone.overflow <= 1, "Phone Work rail causes page-level overflow");
 
-    await client.send("Input.dispatchTouchEvent", {
-      type: "touchStart",
-      touchPoints: [{ x: 330, y: Math.min(800, workDecisionPhone.firstCardTop + 110), radiusX: 4, radiusY: 4, force: 1 }],
-    });
-    await client.send("Input.dispatchTouchEvent", {
-      type: "touchMove",
-      touchPoints: [{ x: 70, y: Math.min(800, workDecisionPhone.firstCardTop + 110), radiusX: 4, radiusY: 4, force: 1 }],
-    });
-    await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
-    await new Promise((resolve) => setTimeout(resolve, 450));
+    await swipeHorizontal(client, Math.min(800, workDecisionPhone.firstCardTop + 110), 330, 70);
     const workRailTouch = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const rail = document.getElementById('work-project-rail');
       return { scrollLeft: rail.scrollLeft, status: document.querySelector('[aria-live="polite"]').textContent.trim() };
@@ -737,16 +745,7 @@ async function main() {
     assert.ok(homeRailPhone.scrollWidth > homeRailPhone.clientWidth * 3, "Phone Home rail does not contain all projects");
     assert.ok(homeRailPhone.controls.every((height) => height >= 44), "Phone Home controls fall below the interaction floor");
     assert.ok(homeRailPhone.overflow <= 1, "Phone Home rail causes page-level overflow");
-    await client.send("Input.dispatchTouchEvent", {
-      type: "touchStart",
-      touchPoints: [{ x: 330, y: homeRailPhone.touchY, radiusX: 4, radiusY: 4, force: 1 }],
-    });
-    await client.send("Input.dispatchTouchEvent", {
-      type: "touchMove",
-      touchPoints: [{ x: 70, y: homeRailPhone.touchY, radiusX: 4, radiusY: 4, force: 1 }],
-    });
-    await client.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
-    await new Promise((resolve) => setTimeout(resolve, 450));
+    await swipeHorizontal(client, homeRailPhone.touchY, 330, 70);
     const homeRailTouch = JSON.parse(await evaluate(client, `JSON.stringify({
       scrollLeft: document.getElementById('home-work-project-rail').scrollLeft,
       scrollY: window.scrollY,
