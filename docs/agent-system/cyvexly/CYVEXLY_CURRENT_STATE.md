@@ -77,9 +77,12 @@ HoneyHearted, credentials, and infrastructure remain Team 2 scope.
 
 Round 178 re-ran typecheck/lint/build/smoke against unchanged `b14a92b` (all
 pass, zero regressions) and spot-checked the dormant analytics state, Stripe
-copy, and privacy anchor; see `CYVEXLY_BUILD_SUMMARY.md` Round 178. It also
-found and removed an orphaned pre-team-split HoneyHearted route/static asset
-that had no business being in this repo (commit `67fb358`, on top of `b14a92b`
-at `719b3a4`), verified clean after removal. Current `main` HEAD is `67fb358`;
-`b14a92b` remains the exact Chunk 5 candidate hash awaiting independent
-review, and accepted/deployed production source is unaffected at `4232574`.
+copy, and privacy anchor; see `CYVEXLY_BUILD_SUMMARY.md` Round 178 and
+`builder/evidence/round-178-reverification/assessment.md`. It also found and
+removed an orphaned pre-team-split HoneyHearted route/static asset that had no
+business being in this repo (commit `67fb358`, on top of `b14a92b` at
+`719b3a4`), verified clean after removal (55 routes build clean, down from 56
+now that the orphaned route is gone). `main` HEAD is now `5e748d3`, entirely
+Round 178 documentation commits on top of `67fb358`. `b14a92b` remains the
+exact Chunk 5 candidate hash awaiting independent review, and accepted/
+deployed production source is unaffected at `4232574`.
