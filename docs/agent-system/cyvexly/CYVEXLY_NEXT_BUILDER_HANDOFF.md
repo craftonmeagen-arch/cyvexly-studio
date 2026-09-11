@@ -35,11 +35,22 @@ anything — the two-review gate was already satisfied by R139/R140 in Round
 live `https://cyvexly.com/` (HTTP 200, `noindex, nofollow`, robots
 `Disallow: /`) still matches the accepted dormant state — no drift.
 
+**Round 182 checked and found one new publication:** `IFA-2026-09-11-R142`, a
+fourth routine zero-defect re-verification of the same accepted source
+`85c128e` (build/lint/typecheck, consent, search-readiness, buyer-journey,
+and all regression suites, 39 evidence screenshots). Same non-reopening
+pattern as R138/R141 — the review gate stays satisfied by R139/R140.
+Dispositioned in `CYVEXLY_REVIEW_INDEX.md`. Round 182 also re-confirmed live
+`https://cyvexly.com/` (`noindex, nofollow`, robots `Disallow: /`, zero
+Google tag requests) still matches the accepted dormant state — no drift —
+and re-checked `CYVEXLY_OWNER_DIRECTION.md` for any entry newer than
+`2026-09-10-07`; none found.
+
 **Before repeating any verification pass:** check
 `C:/app projects/website-independent-review/reports/published/auditor/` for
-any new publication past `R141` — the next builder should still check rather
-than assume none exists. `CYVEXLY_REVIEW_INDEX.md` records `R140` and `R141`
-as consumed.
+any new publication past `R142` — the next builder should still check rather
+than assume none exists. `CYVEXLY_REVIEW_INDEX.md` records `R140` through
+`R142` as consumed.
 
 **No reachable Builder implementation work is currently open.** Every active
 chunk item is either an Owner/account gate (Chunk 5's LLC/Resend/GA4/Stripe/
