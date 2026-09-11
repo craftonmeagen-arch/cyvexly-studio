@@ -1,5 +1,46 @@
 # Cyvexly Owner Direction
 
+## Measurement and search launch standard — 2026-09-10-05
+
+**Status:** ACTIVE — OWNER-APPROVED PRIMARY CYVEXLY LAUNCH DECISION
+**Source:** Owner directed Cyvexly to follow the normal professional standard
+for analytics and search, 2026-09-10.
+
+Use a Google Search Console domain property for `cyvexly.com`, verify ownership,
+submit/monitor the existing sitemap, and connect it to one dedicated Google
+Analytics 4 property and web stream. Measure basic traffic and successful
+buyer actions only. Contact, Planner, and consultation **success** may be key
+events; never send names, email addresses, phone numbers, project notes, or
+other form contents to Analytics.
+
+GA4 must use a privacy-conscious configuration: no advertising personalization,
+no Google Signals/cross-device linking, no remarketing, and a clear consent
+choice before analytics cookies load. Update the Privacy notice to match the
+exact live behavior. Keep the existing dormant environment-variable gates;
+do not invent IDs, enable tracking with placeholders, or expose protected
+account data.
+
+Public indexing is approved in principle as the launch standard, but activation
+remains sequenced after the Owner completes the planned LLC filing check,
+approves the final legal wording, and configures/verifies real inquiry delivery.
+Then set the real Search Console/GA4 values through protected deployment
+configuration, enable indexing, redeploy, submit the sitemap, and verify both
+collection and public crawl behavior. Account creation, ownership verification,
+and third-party configuration remain Owner/account-holder actions unless the
+Owner separately coordinates them. No scheduler change is authorized.
+
+## Velora Owner visual approval — 2026-09-10-06
+
+**Status:** APPROVED — OWNER VISUAL ACCEPTANCE
+**Source:** Owner reports reviewing Velora and states that it looks good,
+2026-09-10.
+
+Treat the accepted Velora presentation and its current visual direction as
+Owner-approved. Preserve its truthful fictional-demo boundaries. This approval
+closes the Owner appearance decision; it is not a substitute for any separately
+required independent technical, accessibility, or security verification and
+must not be described as one.
+
 ## Quick consultation request — 2026-09-10-04
 
 **Status:** ACTIVE — ADDITIVE PRIMARY CYVEXLY BUILDER PRIORITY

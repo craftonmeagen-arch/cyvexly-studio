@@ -3,6 +3,34 @@
 Record only the specific content or decisions the Owner has reviewed. This
 file supplements `CYVEXLY_OWNER_DIRECTION.md`; it does not expand team scope.
 
+## Measurement, search, and indexing approach — 2026-09-10
+
+**Status:** APPROVED IN PRINCIPLE — ACCOUNT VALUES AND SEQUENCED ACTIVATION
+REMAIN PENDING.
+**Source:** Owner directed Cyvexly to use the industry-standard approach.
+
+- Use a Search Console domain property for `cyvexly.com`, submit/monitor the
+  sitemap, and link it to a dedicated GA4 property/web stream.
+- Use privacy-conscious GA4 for basic traffic and successful buyer actions;
+  do not send form contents or other personally identifying data to Analytics.
+- Keep advertising personalization, Google Signals, cross-device linking, and
+  remarketing disabled. Require a clear consent choice before analytics cookies
+  load and make Privacy describe the exact behavior.
+- Enable public indexing only after real inquiry delivery, the planned LLC
+  filing/name check, and final legal wording are complete and verified.
+
+This approval does not create Google properties, supply real IDs, enable live
+tracking, change deployment configuration, or certify legal compliance.
+
+## Velora presentation — 2026-09-10
+
+**Status:** OWNER VISUALLY APPROVED.
+**Source:** Owner reports reviewing Velora and states that it looks good.
+
+Preserve the accepted presentation and its fictional-demo disclosures. This is
+visual approval, not a claim that the Owner performed an independent technical,
+accessibility, or security audit.
+
 ## Privacy business approach — 2026-09-10
 
 **Status:** APPROVED IN PRINCIPLE — baseline practices, with the refinements
