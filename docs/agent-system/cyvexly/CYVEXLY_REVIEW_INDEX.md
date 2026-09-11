@@ -80,3 +80,10 @@ consultation path, business-day logic, email-only/phone-only receipts, Planner
 draft preservation, privacy/legal truth, `/work` regression, and responsive
 containment. They supply challenges 1 and 2 respectively, satisfying the review
 gate and making `4232574` the accepted product source for Round 176 publication.
+
+Auditor `IFA-2026-09-11-R138` (Builder Round 178 disposition) is a third,
+routine re-verification of already-accepted deployed source `4232574` with zero
+defects. It does not evaluate pending Chunk 5 candidate `b14a92b`, so the
+required independent exact-source review of `b14a92b` remains outstanding. No
+operational-inbox JSON accompanied it; the immutable published report and
+evidence were read directly, consistent with R136/R137's pattern.

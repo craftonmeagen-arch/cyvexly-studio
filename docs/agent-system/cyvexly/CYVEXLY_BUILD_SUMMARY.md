@@ -3,6 +3,57 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 178 — candidate re-verification, no reachable implementation gap found
+
+- Consumed Auditor publication `IFA-2026-09-11-R138`: a routine re-verification
+  of already-accepted deployed source `4232574` (zero defects, third clean
+  challenge of that baseline). It does not review pending Chunk 5 candidate
+  `b14a92b`, so the independent exact-source review gate for `b14a92b` remains
+  open. No new finding required disposition.
+- Re-ran the full local verification ledger against unchanged candidate
+  `b14a92b` with zero code changes: `tsc --noEmit` clean, `eslint` zero errors,
+  `next build` 56 routes clean, and `business-day`, `consultation-api`, and
+  `search-readiness` smoke suites all pass (zero real messages sent).
+- Spot-checked rendered behavior via a manually started dev server (unattended
+  session; live browser control unavailable per
+  `CYVEXLY_TOOLS_AND_CAPABILITIES.md`, so `read_page`/`get_page_text`/console/
+  network inspection were used instead): confirmed zero Google/gtag requests
+  and no consent UI when `NEXT_PUBLIC_GA_MEASUREMENT_ID` is unset (correct
+  dormant state), confirmed `robots: noindex, nofollow` and no verification
+  meta on `/`, confirmed the Pricing page's Stripe copy makes no active-account
+  or checkout claim, and confirmed `/privacy#cookies-and-analytics` exists and
+  is the anchor the consent banner links to. No console errors beyond the
+  expected dev-mode `eval()` notice. No defect found; no source change made.
+- Reviewed `CYVEXLY_VISION_PLAN.md` §17's full Chunk 5 requirement list end to
+  end; all ten required-launch-work items are already reachable-complete per
+  current state. Found no additional reachable Chunk 5 implementation work:
+  remaining gates are the independent exact-source review of `b14a92b`
+  (Auditor/Council role, not Builder) and the Owner/account actions already
+  tracked in `CYVEXLY_APP_DEBT.md`. Completion state: `IMPLEMENTED —
+  INDEPENDENT REVIEW PENDING`.
+- **Found and fixed, out-of-cycle repo hygiene:** a full route-by-route QA
+  sweep (About, FAQ, Accessibility, Terms, Work + all four case studies,
+  Start/Planner) surfaced `src/app/honey-hearted/route.ts`, an unlinked,
+  noindexed route left over from pre-team-split Round 100 that served a frozen
+  ~2MB static HoneyHearted storefront snapshot from the Cyvexly repo root
+  (`honey-hearted/index.html`, plus `honey-hearted/smoke.mjs`). Nothing else in
+  source referenced it; HoneyHearted has since been built and deployed
+  independently at `honeyhearted.org` under Team 2 (see
+  `HONEY_HEARTED_OWNER_NEEDS.md`). This was exactly the cross-team leftover
+  the Owner's 2026-09-08 team-split direction was meant to prevent, so it was
+  removed as low-risk, reversible, in-scope repo hygiene (git history retains
+  it) rather than left as silent debt. Verified after removal: `tsc --noEmit`
+  clean, `eslint` zero errors (one unchanged historical warning), `next build`
+  compiles all 55 remaining routes cleanly, and `/honey-hearted` now returns
+  404 while `/` still returns 200. Committed separately from candidate
+  `b14a92b` as `67fb358` so `b14a92b`'s own exact hash/identity for the
+  pending independent review is undisturbed. Current `main` HEAD is `67fb358`
+  (on top of `719b3a4` → `b14a92b`); the accepted/deployed production source
+  remains `4232574` and is unaffected.
+- Stopped the manually started dev server by its verified listening PID before
+  exit; no other Builder-owned process, port, or temp resource was left
+  running.
+
 ## Round 177 — unattended launch-preparation candidate
 
 - Adopted Owner direction `2026-09-10-07` and reopened Chunk 5 for reachable
