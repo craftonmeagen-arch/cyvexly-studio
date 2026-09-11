@@ -3,6 +3,39 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 180 — Chunk 5 candidate accepted after second independent challenge
+
+Full evidence: `builder/evidence/round-180-acceptance/assessment.md`.
+
+- Found new unconsumed Auditor publication `IFA-2026-09-11-R140`: the second
+  exact-source review of Chunk 5 candidate `b14a92b`, zero defects, 39
+  evidence screenshots. Verified full hash match, ancestor-of-`main`, and
+  on-disk screenshot count before recording. Supplies challenge 2 of 2 after
+  R139, satisfying the review gate.
+- Re-ran the full verification ledger fresh against current `main`: lint
+  (0 errors, 1 historical warning), 55-route build, `tsc --noEmit`,
+  business-day, consultation-api, search-readiness, buyer-journey,
+  submission-receipt, nexora-demo, and analytics-consent (against a separate
+  synthetic-GA-ID build, restored to dormant afterward) all passed.
+- Found and fixed a test-only fragility in `internal-hierarchy-smoke.mjs`:
+  its phone touch-swipe checks used a single zero-velocity touch jump, which
+  this Chromium build's `scroll-snap-type: x mandatory` correctly snapped
+  back to rest instead of advancing. Confirmed not a product defect via a
+  standalone CDP check (a real multi-step swipe moves the rail correctly),
+  and confirmed distinct from Round 178's `next dev`-only timing flake
+  (this reproduced against `next build`/`next start` too). Fixed with a
+  shared multi-step `swipeHorizontal` helper covering both the Work and Home
+  rails; re-verified passing. No product source changed.
+- Accepted candidate `b14a92b` (product-identical to current `main` HEAD,
+  which also carries Round 178's verified-clean orphaned-route removal) and
+  pushed it to `origin/main` as `85c128e`. Chunk 5's review gate is closed;
+  production remains dormant (no GA ID, `noindex, nofollow`) pending the
+  Owner/account gates in `CYVEXLY_APP_DEBT.md`.
+- Updated `CYVEXLY_CURRENT_STATE.md`, `CYVEXLY_ACTIVE_CHUNK.md`,
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`, `CYVEXLY_REVIEW_INDEX.md`,
+  `CYVEXLY_APP_DEBT.md`, and `CYVEXLY_TOOLS_AND_CAPABILITIES.md` to record
+  the disposition.
+
 ## Round 179 — first independent challenge of Chunk 5 candidate consumed
 
 Full evidence: `builder/evidence/round-179-review-consumption/assessment.md`.

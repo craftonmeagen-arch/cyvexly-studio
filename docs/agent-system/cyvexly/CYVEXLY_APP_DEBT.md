@@ -6,11 +6,12 @@ Git history, and role memory.
 
 ## Current source position
 
-- Primary accepted product source: `4232574` after Auditor R136/R137.
-- Active Chunk 5 review candidate: `b14a92b`; accepted source remains `4232574`.
-- Production product source: `4232574`; release commit `8c34031` is pushed,
-  canonical ETag `14aii22kn8q2otg` exposed the Home rail and consultation route,
-  and live buyer/hierarchy suites passed.
+- Primary accepted product source: `85c128e` after Auditor R139/R140 (two
+  clean independent challenges of Chunk 5 candidate `b14a92b`), accepted and
+  pushed by the Builder in Round 180.
+- No active Chunk 5 review candidate; the lifecycle falls back to accepted
+  `85c128e`.
+- Production product source: `85c128e`; release commit `85c128e` is pushed.
 - Chunk 10 closed in Round 174 after Auditor R132 and R133 independently passed
   exact `c8bc73d` with zero defects. No active review candidate remains; the
   lifecycle falls back to accepted `c8bc73d`.
@@ -55,9 +56,10 @@ Git history, and role memory.
    do not send SMS or email confirmation. Do not repeat before configuration
    changes, and do not store or print the secret.
 
-4. **Analytics, search ownership, and indexing release.** Candidate `b14a92b`
-   adds consent-controlled GA4, a non-PII success-event allowlist, and synthetic
-   verification/indexing checks while preserving the dormant default. The
+4. **Analytics, search ownership, and indexing release.** Accepted source
+   `85c128e` adds consent-controlled GA4, a non-PII success-event allowlist,
+   and synthetic verification/indexing checks while preserving the dormant
+   default. The
    Owner must create the GA4 and Search Console domain properties, approve the
    consent/privacy draft, provide protected real values, and separately
    authorize indexing. Until then, keep GA absent, `robots.txt` disallowing

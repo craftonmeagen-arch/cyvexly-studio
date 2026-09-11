@@ -2,43 +2,36 @@
 
 ## Current assignment
 
-Read Owner direction `2026-09-10-07` first. Global Round 177 reopened Chunk 5
-for unattended launch preparation, Round 178 re-verified it with zero code
-changes and zero regressions, and Round 179 consumed the first clean
-independent challenge. Exact candidate `b14a92b` adds consent-controlled GA4,
-minimal success-only lead measurement, search/indexing gate tests, and
-truthful Stripe Invoicing readiness copy. It is local, unaccepted, unpushed,
-and undeployed pending its second independent exact-source review — that
-review (Auditor/Council) is the next required action, not further Builder
-implementation.
+Round 180 accepted Chunk 5 candidate `b14a92b` after its second clean
+independent challenge (Auditor `IFA-2026-09-11-R140`, following R139) and
+pushed it to `origin/main` as `85c128e`. **This is now the accepted and
+deployed production source.** No Chunk 5 candidate remains open. Read Owner
+direction `2026-09-10-07` for the still-active preparation-vs-launch
+boundary: the deployed state stays dormant (no GA ID, `noindex, nofollow`,
+no Stripe/Resend activation) until the Owner completes the account gates
+below.
 
-**Round 179:** Auditor `IFA-2026-09-11-R139` passed exact `b14a92b` with zero
-defects (consent harness, search-readiness harness, buyer-journey suite, and
-existing regression suites; 39 evidence screenshots). This is challenge 1 of
-2. Verified: the reviewed hash is an ancestor of current `main`, and all 39
-listed screenshots are present under
-`C:/app projects/website-independent-review/evidence/auditor/auditor-20260911T042000Z-137`.
-No operational-inbox JSON accompanied it; consumed directly from the immutable
-publication, consistent with R136-R138. **Next builder: check
-`CYVEXLY_REVIEW_INDEX.md` first for a newer Auditor/Council publication
-supplying challenge 2 of 2 against unchanged exact `b14a92b` before repeating
-any verification pass** — do not re-run the full ledger again without a
-specific reason (new evidence, a reviewer finding, or a source change).
+**Round 180 also found and fixed a test-only issue, not a product defect:**
+`internal-hierarchy-smoke.mjs`'s phone touch-swipe checks used a single
+`touchStart`→`touchMove`→`touchEnd` jump with no velocity. This Chromium
+build's `scroll-snap-type: x mandatory` correctly snaps a zero-velocity jump
+back to rest, so the assertion failed reproducibly against both a synthetic-
+GA-ID build and the dormant production build — confirmed NOT the same as
+Round 178's `next dev`-only timing flake, because this reproduced against a
+`next build`/`next start` server too. A standalone CDP check proved the
+Work rail is genuinely swipeable (an 8-step, velocity-carrying touch dispatch
+moved it correctly) before concluding it was a script issue, not a rail
+defect. Fixed with a shared multi-step `swipeHorizontal` helper; both rails
+now pass reliably. Full trail: `builder/evidence/round-180-acceptance/assessment.md`.
+If a future round sees `internal-hierarchy-smoke.mjs` fail at a touch-swipe
+assertion again, that would be new evidence of an actual regression, not
+this same fragility (already fixed).
 
-Round 178 also removed an orphaned pre-team-split HoneyHearted route
-(`src/app/honey-hearted/route.ts` + `honey-hearted/index.html`/`smoke.mjs`,
-~2MB, unlinked, noindexed, superseded by the real standalone deployment at
-`honeyhearted.org`) as commit `67fb358` on top of `b14a92b`, followed only by
-documentation commits (run `git log --oneline 719b3a4..main` for the exact
-current list — do not hardcode a "current HEAD" hash here, it goes stale the
-moment another commit lands). This does not change candidate `b14a92b`'s own
-exact-hash identity for its pending independent review, and it does not
-affect the accepted/deployed production source `4232574`. `67fb358` is
-verified clean (tsc/eslint/next build all pass — 55 routes, down from 56 now
-that the orphaned route is gone) before treating it as part of the next push;
-route the Auditor to review current `main` HEAD rather than only the named
-candidate hash. Full detail:
-`builder/evidence/round-178-reverification/assessment.md`.
+**Before repeating any verification pass:** check
+`C:/app projects/website-independent-review/reports/published/auditor/` for
+any new publication past `R140` — none is expected immediately since Chunk 5
+just closed, but the next builder should still check rather than assume.
+`CYVEXLY_REVIEW_INDEX.md` records `R140` as consumed.
 
 Consent proof shows zero Google requests before grant; decline is keyboard-
 operable and fully usable; the choice persists and can be reopened; ad storage,
@@ -49,8 +42,8 @@ Desktop and 390px captures are under
 
 Search checks pass in three states: no values + no-index, synthetic Search
 Console verification + no-index, and synthetic verification + explicit index.
-The final local build was restored without GA/GSC/indexing values. Never invent
-or commit identifiers, secrets, or an indexing authorization.
+The deployed build carries no GA/GSC/indexing values. Never invent or commit
+identifiers, secrets, or an indexing authorization.
 
 Stripe Invoicing Starter is the Owner-selected future provider path. Site copy
 truthfully says the account/methods are not active, invoices are provider-hosted
@@ -71,6 +64,6 @@ redeploy change that state. The exact disposable temp profile at
 host policy rejected cleanup; no associated Chrome process or proof port was
 left running.
 
-Accepted/deployed source remains `4232574` through release commit `8c34031`.
-Underlying outside products, HoneyHearted, their data, credentials, repositories,
-infrastructure, and scheduler states remain outside this role.
+Accepted/deployed source is now `85c128e` (release commit). Underlying outside
+products, HoneyHearted, their data, credentials, repositories, infrastructure,
+and scheduler states remain outside this role.

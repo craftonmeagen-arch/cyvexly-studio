@@ -82,6 +82,29 @@ instrument before concluding a defect. Re-verify this finding if a future
 round sees the same failure survive a production-build re-run — that would be
 new evidence of an actual regression, not the same dev-mode artifact.
 
+**Round 180 note — the above dev-vs-prod finding did NOT cover a second,
+distinct `internal-hierarchy-smoke.mjs` fragility: single-jump synthetic
+touch dispatch vs. mandatory scroll-snap.** This round's failure survived a
+production `next build && next start` re-run twice (the exact re-verification
+the Round 178 note calls for), confirming it was genuinely new evidence, not
+the dev-mode artifact above. Diagnosis: `.work-project-rail`/
+`.home-work-project-rail` use `scroll-snap-type: x mandatory`
+(`src/app/globals.css`); the script dispatched exactly one `touchStart` →
+one `touchMove` (an instant jump, zero velocity) → `touchEnd`. A standalone
+CDP check against the same server confirmed `rail.scrollLeft = 150` (a
+direct, zero-velocity set) snaps back to `0` immediately — correct mandatory
+snap-back behavior — while an 8-step touch dispatch with ~16ms spacing
+(approximating real finger velocity) reliably advanced the rail. Fixed by
+replacing both single-jump dispatches in `internal-hierarchy-smoke.mjs` with
+a shared multi-step `swipeHorizontal` helper; no product source changed. See
+`builder/evidence/round-180-acceptance/assessment.md` for the full
+diagnostic trail. **Lesson: a synthetic touch/pointer gesture that omits
+intermediate points and timing can misrepresent how a real user's gesture
+interacts with CSS scroll-snap, independent of the dev-vs-prod distinction
+above** — treat a single-jump touch dispatch as a script fragility to check
+first, not only a `next dev` timing question, before concluding a rail/carousel
+regression from either symptom.
+
 **Round 84 note — Node.js/pnpm missing from this session's PowerShell
 `PATH`; one-line fix, not a real unavailability.** `pnpm`/`node` were "not
 recognized" in a fresh PowerShell tool call even though setup-time

@@ -2,12 +2,13 @@
 
 **Active product chunk:** Chunk 5 — United States Launch Completion & Business Operations
 
-**Current position:** global round 179, launch-preparation round 3
-(independent-review consumption; no source change)
+**Current position:** global round 180, launch-preparation round 4
+(candidate accepted and pushed; no new candidate declared)
 
-**Accepted/deployed product source:** `4232574`
+**Accepted/deployed product source:** `85c128e`
 
-**Chunk 5 candidate / active review source:** `b14a92b`
+**Chunk 5 candidate / active review source:** none active; falls back to
+accepted `85c128e`
 
 **Scheduler state:** the primary Cyvexly Builder remains resumed; no scheduler
 configuration changed.
@@ -16,9 +17,13 @@ configuration changed.
 
 Owner direction `2026-09-10-07` authorizes unattended preparation—not account
 activation or launch—for consent-controlled GA4, Search Console verification,
-indexing, Stripe Invoicing, and the Guardio provider review.
+indexing, Stripe Invoicing, and the Guardio provider review. Accepted source
+`85c128e` implements this preparation while keeping production dormant
+(no-ID/no-index); it does not activate any account-controlled feature.
 
-Candidate `b14a92b` supplies:
+Accepted source `85c128e` (formerly candidate `b14a92b`, plus the
+already-verified orphaned-route removal and a Round 180 test-fragility fix)
+supplies:
 
 - a persistent, keyboard-accessible allow/decline control that prevents every
   Google tag/request until explicit grant and keeps advertising/Signals denied;
@@ -32,46 +37,34 @@ Candidate `b14a92b` supplies:
   pre-agreement payment, raw payment storage, or recurring-billing claim.
 
 The curated evidence index is
-`builder/evidence/round-177-launch-preparation/assessment.md`. Round 119 evidence
-is summarized for an Owner-submitted Guardio review in
+`builder/evidence/round-177-launch-preparation/assessment.md`. Round 119
+evidence is summarized for an Owner-submitted Guardio review in
 `builder/evidence/round-177-launch-preparation/GUARDIO_REVIEW_PACKET.md`.
+Round 180's acceptance evidence is
+`builder/evidence/round-180-acceptance/assessment.md`.
 
-## Proof and review gate
+## Proof and review gate — SATISFIED
 
-TypeScript, lint, three 56-route gated builds, 35-route/17-context buyer smoke,
-consent interaction, search readiness, business-day, Consultation API,
-intercepted receipts, and responsive hierarchy checks pass. No real message,
-analytics hit, payment, provider submission, indexing change, push, or deploy
-occurred.
+TypeScript, lint, a 55-route production build, 35-route/17-context buyer
+smoke, consent interaction, search readiness, business-day, Consultation API,
+intercepted receipts, Nexora demo, and responsive hierarchy/rail (desktop +
+phone, keyboard + touch) checks all pass with zero regressions. No real
+message, analytics hit, payment, provider submission, or account action
+occurred during verification.
 
-Candidate `b14a92b` has one clean independent challenge (Auditor
-`IFA-2026-09-11-R139`, zero defects) and requires one more before acceptance
-or publication. The accepted production baseline remains `4232574` through
-release commit `8c34031`.
+Two clean independent challenges are complete: Auditor `IFA-2026-09-11-R139`
+(first) and `IFA-2026-09-11-R140` (second), both zero defects against exact
+candidate `b14a92b`. Round 180 accepted the candidate (via product-identical
+current `main` HEAD `85c128e`) and pushed it to `origin/main` — this is now
+the accepted and deployed production source.
 
-Round 178's full evidence is
-`builder/evidence/round-178-reverification/assessment.md`.
-
-Round 178 re-ran the full verification ledger against unchanged `b14a92b`
-(typecheck, lint, 56-route build, business-day/consultation-api/search-
-readiness smoke) with zero regressions, and spot-checked the dormant consent
-state, Stripe copy, and privacy anchor via a manually started dev server
-(unattended-session capability, per `CYVEXLY_TOOLS_AND_CAPABILITIES.md`). It
-consumed Auditor publication `IFA-2026-09-11-R138`, a routine re-verification
-of already-accepted `4232574` that does not cover `b14a92b`. No Chunk 5 source
-change was needed. A full route sweep did surface and fix one unrelated
-finding: an orphaned pre-team-split HoneyHearted route/static asset, removed
-as commit `67fb358` on top of `b14a92b` (see `CYVEXLY_BUILD_SUMMARY.md` Round
-178 for full detail). This does not change `b14a92b`'s own hash/identity for
-the pending independent review.
-
-Round 179 consumed Auditor `IFA-2026-09-11-R139`, the first exact-source
-review of candidate `b14a92b`: zero defects across the consent harness,
-search-readiness harness, buyer-journey suite, and existing regression
-suites, with 39 evidence screenshots independently confirmed present on disk
-and the reviewed commit confirmed as an ancestor of current `main`. This
-supplies challenge 1 of 2; challenge 2 of 2 against unchanged `b14a92b`
-remains the required next action. No source change was needed.
+Round 180 also found and fixed a test-only fragility in
+`internal-hierarchy-smoke.mjs`: a single-jump synthetic touch dispatch
+doesn't carry the velocity a real swipe has, so this Chromium build's
+`scroll-snap-type: x mandatory` correctly snapped back to rest instead of
+advancing — not a Work-rail/Home-rail product defect. Fixed with a
+multi-step swipe helper; re-verified passing. Full diagnostic:
+`builder/evidence/round-180-acceptance/assessment.md`.
 
 ## Owner/account gates
 

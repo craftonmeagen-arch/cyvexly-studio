@@ -6,9 +6,9 @@ or existing Owner-managed schedule.
 
 Current authoritative root: `C:/app projects/website-independent-review`.
 
-**Active review source:** Chunk 5 candidate `b14a92b`. Accepted and deployed
-product source remains `4232574` until the required independent exact-source
-challenges pass and the Builder explicitly accepts it.
+**Active review source:** none active; falls back to accepted `85c128e`
+(formerly Chunk 5 candidate `b14a92b`, accepted by the Builder in Round 180
+after two clean independent challenges).
 | Role | Current report | Archive | Memory |
 |---|---|---|---|
 | Auditor | reports/AUDITOR_CURRENT.md | reports/AUDITOR_ARCHIVE.md | memory/auditor/ |
@@ -92,8 +92,18 @@ Auditor `IFA-2026-09-11-R139` (Builder Round 179 disposition) is the first
 exact-source review of Chunk 5 candidate `b14a92b`, passed with zero defects
 across the consent harness, search-readiness harness, buyer-journey suite, and
 existing regression suites, with 39 evidence screenshots. It supplies challenge
-1 of 2; one further independent challenge against unchanged `b14a92b` is still
-required before acceptance. No operational-inbox JSON accompanied it; the
-immutable published report and evidence were verified directly (hash confirmed
-as an ancestor of current `main`, all 39 screenshots confirmed present on
-disk).
+1 of 2. No operational-inbox JSON accompanied it; the immutable published
+report and evidence were verified directly (hash confirmed as an ancestor of
+current `main`, all 39 screenshots confirmed present on disk).
+
+Auditor `IFA-2026-09-11-R140` (Builder Round 180 disposition) is the second
+exact-source review of Chunk 5 candidate `b14a92b`, passed with zero defects
+across the same suites plus regression coverage, with 39 evidence screenshots.
+It supplies challenge 2 of 2, satisfying the review gate. No operational-inbox
+JSON accompanied it; the immutable published report and evidence were verified
+directly (full hash matched exactly, ancestor of current `main` confirmed, all
+39 screenshots confirmed present on disk under
+`evidence/auditor/auditor-20260911T052000Z-138`). Round 180 accepted candidate
+`b14a92b` (via product-identical current `main` HEAD `85c128e`) and pushed it
+to `origin/main` as the new accepted/deployed source. Chunk 5's review gate is
+now closed; no new candidate is active.
