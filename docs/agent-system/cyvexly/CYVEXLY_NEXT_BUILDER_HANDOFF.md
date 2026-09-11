@@ -59,10 +59,10 @@ recheck are closure conditions.
 
 Round 176's real Contact, Planner, and Consultation attempts all returned
 `503 not-configured`. Do not repeat until Resend domain/key configuration and a
-redeploy change that state. The exact disposable temp profile at
-`C:/Users/Tcraf/AppData/Local/Temp/cyvexly-receipt-smoke-t0xLEE` remains after
-host policy rejected cleanup; no associated Chrome process or proof port was
-left running.
+redeploy change that state. The disposable temp profile at
+`C:/Users/Tcraf/AppData/Local/Temp/cyvexly-receipt-smoke-t0xLEE` (left over
+since Round 176) was successfully removed in Round 180 — no longer an open
+item.
 
 Accepted/deployed source is now `85c128e` (release commit). Underlying outside
 products, HoneyHearted, their data, credentials, repositories, infrastructure,

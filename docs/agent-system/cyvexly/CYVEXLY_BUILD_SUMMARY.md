@@ -33,8 +33,11 @@ Full evidence: `builder/evidence/round-180-acceptance/assessment.md`.
   Owner/account gates in `CYVEXLY_APP_DEBT.md`.
 - Updated `CYVEXLY_CURRENT_STATE.md`, `CYVEXLY_ACTIVE_CHUNK.md`,
   `CYVEXLY_NEXT_BUILDER_HANDOFF.md`, `CYVEXLY_REVIEW_INDEX.md`,
-  `CYVEXLY_APP_DEBT.md`, and `CYVEXLY_TOOLS_AND_CAPABILITIES.md` to record
-  the disposition.
+  `CYVEXLY_APP_DEBT.md`, `CYVEXLY_PROJECT_CHUNK_MAP.md`, and
+  `CYVEXLY_TOOLS_AND_CAPABILITIES.md` to record the disposition.
+- Removed the Round 176 leftover disposable temp profile at
+  `C:/Users/Tcraf/AppData/Local/Temp/cyvexly-receipt-smoke-t0xLEE`
+  (previously rejected by host policy); no live process depended on it.
 
 ## Round 179 — first independent challenge of Chunk 5 candidate consumed
 
