@@ -138,10 +138,14 @@ build) reliably fails with `src/app/layout.tsx(74,50): error TS2304: Cannot
 find name 'LayoutProps'.` — Next 16's generated typed-layout ambient type only
 exists in `.next/types/` after `next build`/`next dev` has run once. Reproduced
 twice, both times clean after `pnpm run build` regenerated `.next/types` with
-zero source changes. Documented in `CYVEXLY_TOOLS_AND_CAPABILITIES.md` because
-`CYVEXLY_ROLE_RULES_MAPPING.md`'s documented check order lists `tsc` before
-`build`, which could cause a reviewer's genuinely fresh `runtime/` checkout to
-misreport this as a real defect.
+zero source changes. **This was reproduced independently, not newly
+discovered** — `CYVEXLY_WATCH.md` Round 10 already documented the identical
+root cause and fix. The genuinely new part this round: `CYVEXLY_ROLE_RULES_MAPPING.md`
+and `CYVEXLY_ENVIRONMENT.md` still listed `tsc` before `build` in the
+documented check order, eight-plus rounds after Round 10 established the
+correct order, which could cause a reviewer's genuinely fresh `runtime/`
+checkout to hit this exact false failure. Corrected both files' check order to
+lint → build → tsc.
 
 ## Final closeout regression run
 
