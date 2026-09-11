@@ -63,13 +63,29 @@ items remain Owner/account gates or require an independent reviewer). The
 `exchange/operational-inbox/` legacy Team 2 `R90`–`R92` items remain
 untouched, consistent with prior rounds.
 
+**Round 184 found and dispositioned nine new publications** (`IFA-2026-09-11-R144`
+through `R152`), all routine zero-defect re-verifications of unchanged
+`85c128e`, consolidated into one `CYVEXLY_REVIEW_INDEX.md` entry. Round 184
+also did a fresh hands-on visible-browser pass of the live site (homepage plus
+the EduAILenz/Mudoinkle showcase pages) rather than only re-checking metadata,
+and found/fixed one genuine low-risk visual defect: an orphaned `aria-hidden`
+separator dot in the hero's secondary-links line at mobile width. Fixed in
+`src/app/page.tsx` (grouped the dot with its link in a `whitespace-nowrap`
+span), verified with lint/build/tsc plus visual checks at 375px and desktop
+against a local `next start` server, and committed/pushed directly as a
+Section 2.10 mechanical correction (not a new Chunk 5 candidate — see
+`CYVEXLY_CURRENT_STATE.md` Round 184 for full detail). The next builder should
+confirm this commit deployed cleanly and that the Auditor's next routine pass
+covers the new HEAD.
+
 **Before repeating any verification pass:** check
 `C:/app projects/website-independent-review/reports/published/auditor/` for
-any new publication past `R143` — the next builder should still check rather
+any new publication past `R152` — the next builder should still check rather
 than assume none exists. `CYVEXLY_REVIEW_INDEX.md` records `R140` through
-`R143` as consumed.
+`R152` as consumed.
 
-**No reachable Builder implementation work is currently open.** Every active
+**No reachable Builder implementation work beyond routine verification and
+incidental low-risk fixes is currently open.** Every active
 chunk item is either an Owner/account gate (Chunk 5's LLC/Resend/GA4/Stripe/
 Guardio gates; Chunk 11's protected real-delivery gate) or requires an
 independent reviewer rather than the Builder (Chunk 6's one remaining Velora

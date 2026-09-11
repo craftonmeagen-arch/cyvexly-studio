@@ -1,8 +1,8 @@
 # Cyvexly Current State
 
-**Last completed global round:** 183
+**Last completed global round:** 184
 
-**Current global round:** 184
+**Current global round:** 185
 
 **Active chunk:** Chunk 5 — United States Launch Completion & Business Operations
 
@@ -84,6 +84,33 @@ build was then restored and confirmed matching (no GA env vars, no consent
 panel by design since there is no ID to consent to). No local processes or
 temp profiles were left running; `git status` was clean apart from this
 round's own doc updates.
+
+## Round 184 — hands-on visual pass finds and fixes an orphaned separator
+
+Round 184 did a fresh hands-on visible-browser pass of the live production
+site (not only a documentation/metadata re-check) and found one genuine
+low-risk visual defect: at mobile width (375px) the hero's
+"Request a consultation → · Share a detailed brief →" line left a bare
+`aria-hidden` middle-dot separator orphaned alone at the end of a line when
+the second link wrapped below it. Fixed in `src/app/page.tsx` by grouping the
+separator and second link into one `whitespace-nowrap` unit; verified visually
+at 375px and desktop width against a locally built `next start` server on
+port 5173, with zero console errors. `pnpm run lint` (0 errors, 1 unchanged
+unrelated historical warning), `next build` (55 routes), and `tsc --noEmit`
+all pass. This is a mechanical, content-preserving CSS correction (no new
+product decision, no architecture, no risk) adopted directly per the Section
+2.10 housekeeping carve-out rather than opened as a new Chunk 5 review
+candidate. Accepted/deployed source remains `85c128e` for review-lifecycle
+purposes; this new commit sits on top of it and will be re-verified by the
+Auditor's next routine pass like every other commit.
+
+Round 184 also found and dispositioned nine new routine zero-defect Auditor
+publications (`IFA-2026-09-11-R144` through `R152`, the sixth through
+fourteenth re-verifications of unchanged `85c128e`) in one consolidated
+`CYVEXLY_REVIEW_INDEX.md` entry, re-confirmed live `cyvexly.com` matched the
+accepted dormant state before this round's fix, and re-checked Owner
+direction/chunk/app debt for anything newly reachable — none found beyond the
+standing gates. Full detail: `CYVEXLY_BUILD_SUMMARY.md` Round 184.
 
 ## Open gates (Owner/account, not reachable by Builder)
 

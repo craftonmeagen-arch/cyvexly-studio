@@ -75,8 +75,10 @@ export default function Home() {
                 <ButtonLink href="/contact?request=consultation" variant="text" className="text-xs">
                   Request a consultation →
                 </ButtonLink>
-                <span aria-hidden="true"> · </span>
-                <ButtonLink href="/start" variant="text" className="text-xs">Share a detailed brief →</ButtonLink>
+                <span className="whitespace-nowrap">
+                  <span aria-hidden="true"> · </span>
+                  <ButtonLink href="/start" variant="text" className="text-xs">Share a detailed brief →</ButtonLink>
+                </span>
               </p>
             </div>
             <HeroShowcaseVideo />
