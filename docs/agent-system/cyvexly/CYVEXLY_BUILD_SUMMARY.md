@@ -41,6 +41,14 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
   `next dev`/Turbopack timing artifact rather than a product regression (full
   root-cause detail in `CYVEXLY_TOOLS_AND_CAPABILITIES.md` Round 178 note).
   `buyer-journey-smoke.mjs` and `nexora-demo-smoke.mjs` passed both times.
+- Re-ran `analytics-consent-smoke.mjs` fresh against current HEAD `67fb358`
+  using a synthetic, uncommitted `NEXT_PUBLIC_GA_MEASUREMENT_ID` production
+  build (matching Round 177's method): zero Google requests before consent,
+  the tag loads only after grant, one correct `generate_lead/contact` event
+  with no form values, 44px controls, and no desktop/phone overflow — same
+  result as Round 177's original evidence, now reconfirmed on top of the
+  hygiene fix. The workspace was rebuilt back to the safe no-ID dormant state
+  immediately afterward; the synthetic ID was never committed.
 - **Found and fixed, out-of-cycle repo hygiene:** a full route-by-route QA
   sweep (About, FAQ, Accessibility, Terms, Work + all four case studies,
   Start/Planner) surfaced `src/app/honey-hearted/route.ts`, an unlinked,
