@@ -11,9 +11,10 @@
 **Main HEAD at round start:** `719b3a4` (Round 177's handoff commit, on top of
 `b14a92b`)
 
-**Main HEAD at round end:** `be1ee96`, four new commits on top of `719b3a4`:
-`67fb358` (the hygiene fix below) and three documentation-only commits
-(`5c12e64`, `7e60e6d`, `be1ee96`) recording this round's findings. None touch
+**Main HEAD at round end:** one non-documentation commit, `67fb358` (the
+hygiene fix below), followed by a run of documentation-only commits recording
+this round's findings — see `git log --oneline 719b3a4..main` for the exact
+list. None of the documentation commits touch product source, and none touch
 the Chunk 5 candidate's own files.
 
 **Disposition:** IMPLEMENTED — INDEPENDENT REVIEW PENDING. No new reachable
@@ -128,6 +129,32 @@ both suites clean hours earlier. Re-running both unchanged against a
 production `next build`/`next start` server passed cleanly on the first
 attempt. Recorded in `CYVEXLY_TOOLS_AND_CAPABILITIES.md` so a future round
 does not misdiagnose the same dev-mode artifact as a product regression.
+
+## Finding 3 (documented, not a defect): `tsc --noEmit` needs a prior build on
+a fresh checkout
+
+Deleting `.next` and immediately running `pnpm exec tsc --noEmit` (no prior
+build) reliably fails with `src/app/layout.tsx(74,50): error TS2304: Cannot
+find name 'LayoutProps'.` — Next 16's generated typed-layout ambient type only
+exists in `.next/types/` after `next build`/`next dev` has run once. Reproduced
+twice, both times clean after `pnpm run build` regenerated `.next/types` with
+zero source changes. Documented in `CYVEXLY_TOOLS_AND_CAPABILITIES.md` because
+`CYVEXLY_ROLE_RULES_MAPPING.md`'s documented check order lists `tsc` before
+`build`, which could cause a reviewer's genuinely fresh `runtime/` checkout to
+misreport this as a real defect.
+
+## Final closeout regression run
+
+After the fixes and findings above, the full local smoke ledger was re-run
+once more end to end against a production `next build`/`next start` server on
+the final committed HEAD (`59a36e6`): `business-day-smoke.mjs` (7 cases),
+`consultation-api-smoke.mjs` (0 real messages), `search-readiness-smoke.mjs`
+(dormant state), `buyer-journey-smoke.mjs` (35 routes/17 contexts),
+`internal-hierarchy-smoke.mjs` (0 runtime errors, 0 overflow),
+`submission-receipt-smoke.mjs` (6 intercepted, 0 real messages), and
+`nexora-demo-smoke.mjs` — all passed cleanly. The production server was
+stopped by its verified listening PID afterward; no Builder-owned process or
+port was left running.
 
 ## Remaining authority gates (unchanged from Round 177)
 
