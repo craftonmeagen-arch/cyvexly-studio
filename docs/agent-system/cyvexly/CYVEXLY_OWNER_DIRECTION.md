@@ -331,48 +331,13 @@ caches and Codex attachments.
 ## External-website work boundary clarification 2026-09-08-29
 
 **Status:** ACTIVE — LATEST TEAM-SCOPE AUTHORITY
-**Source:** Owner via active Codex conversation
-**Recorded:** 2026-09-08 America/New_York
 
-### Owner direction — verbatim
-
-> “Once done ensure team two understands in their owners direction that the
-> only activities they are involved in is bringing in other websites in that
-> area or working on other website. So like the work that we left in owners
-> direction to reference mudoinkle and eduailenze. That work is strictly theirs
-> and work related to it. But everything else cyvexly is the cyvexly primary
-> builder team”
-
-### Binding team boundary — agent interpretation
-
-- **Team 2 owns external-website work.** Its two authorized lanes are building,
-  repairing, deploying, or otherwise working on a website other than Cyvexly;
-  and bringing an outside website into Cyvexly's portfolio with truthful,
-  verified evidence.
-- Direction `2026-09-08-22` and every task related to EduAILenz or Mudoinkle
-  belong strictly to Team 2. That includes repository/runtime investigation,
-  claim verification, screenshots or synthetic proof, Work cards, case-study
-  pages, safe demos or links, necessary portfolio discoverability, tests,
-  review, and correction of those entries. The complete direction is moved to
-  Team 2's Owner Direction.
-- Team 2 may touch the Cyvexly repository only when an assigned outside-site
-  portfolio integration genuinely requires it, and only within that bounded
-  entry and its necessary discoverability/testing surface. It must coordinate
-  with the primary team and must not take unrelated Cyvexly cleanup, services,
-  pricing, Planner, contact, business, design-system, or buyer-journey work.
-- The **primary Cyvexly Build Team owns everything else on Cyvexly**, including
-  the general buyer journey, domain-warning investigation, navigation truth,
-  services, pricing, contact, Planner, sitewide hierarchy/copy, launch work,
-  and maintenance of existing Cyvexly surfaces such as Velora unless the Owner
-  separately reassigns them.
-- Primary Cyvexly Builder and Auditor rounds must not perform or claim
-  EduAILenz/Mudoinkle portfolio work. They may identify a boundary or integration
-  dependency and hand it to Team 2, then continue other reachable Cyvexly work.
-
-Fulfilled setup/approval direction `2026-08-30-01`/`02` and superseded visual
-history `2026-08-30-04`/`05` are preserved in
-`docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`. The active scheduler boundary
-remains here deliberately.
+The complete verbatim direction and interpretation are preserved in
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ROTATED_2026-09-10.md` and
+`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Team 2 exclusively owns
+outside-site work and its bounded Cyvexly portfolio integration, including all
+EduAILenz/Mudoinkle work. The primary Cyvexly Build Team owns every other
+Cyvexly surface and must not cross that boundary.
 
 ## Buyer-journey improvement and primary Cyvexly team restart 2026-09-08-28
 
@@ -560,115 +525,12 @@ shows a better buyer outcome, but must preserve all required buyer decisions.
   wrong turns and hesitation. Do not fabricate improved conversion; measure it
   only if real analytics or user evidence later exists.
 
-## Codex-scheduler-pause scope correction 2026-09-08-26
+## Rotated historical directions
 
-**Status:** ACTIVE — CORRECTS SCOPE OF PRIOR PAUSE LANGUAGE
-**Source:** Owner via Claude Code chat
-**Recorded:** 2026-09-08 America/New_York
-
-### Owner direction — verbatim
-
-> "yeah i paused codex. to have you do the work"
-
-> "it sounds like codex put everything i said in owners direction whcih caused
-> some confusion. that statement should be removed since that was for codex
-> specifically and not for the team in owners direction"
-
-### Agent interpretation — not Owner-authored wording
-
-- The pause instruction that used to appear in the (now moved-to-Team-2)
-  HoneyHearted directions ("i will [and] pause the schedular") was the Owner
-  telling the **Codex-based `:00/:30` GPT-5.6-Sol Cyvexly Build Team Builder
-  automation** to pause itself. Codex recorded its own full raw chat turn into
-  this file and additionally wrote a broader interpretive sentence that read
-  as applying to every Builder scheduler/session rather than only to Codex's
-  own automation — that is corrected here, not deleted from the record.
-- **Corrected scope:** only the Codex `:00/:30` GPT-5.6-Sol automation is
-  paused. Preserve its saved prompt, cadence, model, and reasoning settings
-  until the Owner explicitly asks to resume it. This pause was never about
-  HoneyHearted work generally — see `2026-09-08-27` below and
-  `docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`: HoneyHearted is Team 2's
-  own separate project, not a Cyvexly Build Team assignment.
-
-## Team split — HoneyHearted and Team 2 moved out 2026-09-08-27 — MOVED
-
-The complete verbatim direction and interpretation are preserved in
-`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Latest direction
-`2026-09-08-29` further clarifies that Team 2 owns outside websites and their
-bounded Cyvexly portfolio integration; every other Cyvexly activity belongs to
-the primary Cyvexly Build Team.
-
-## HoneyHearted purchased-domain confirmation 2026-09-08-25 — MOVED
-
-**Status:** MOVED TO TEAM 2 — see
-`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Confirms the purchased
-production domain `honeyhearted.org`. Not Cyvexly Build Team scope.
-
-## HoneyHearted standalone repository and staged launch direction 2026-09-08-24 — MOVED
-
-**Status:** MOVED TO TEAM 2 — see
-`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Standalone Next.js build
-order and repository-push handoff contract for
-`https://github.com/craftonmeagen-arch/Honeyhearted`. Not Cyvexly Build Team
-scope.
-
-## HoneyHearted implementation order and independent audit direction 2026-09-08-23 — MOVED
-
-**Status:** MOVED TO TEAM 2 — see
-`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Implementation-sequencing
-authority and the Independent Forensic Auditor (Luna) scheduler authorization
-for HoneyHearted work. Not Cyvexly Build Team scope. (The Auditor scheduler's
-environment/port infrastructure currently still lives under
-`CYVEXLY_AUDITOR_ENVIRONMENT.md`/port `5273` pending a decision on whether to
-re-home it — see the outstanding-setup-debt note in
-`TEAM2_BUILDER_ORIENTATION_DOCUMENT.md`.)
-
-## EduAILenz and Mudoinkle completed-work portfolio direction 2026-09-08-22 — MOVED
-
-**Status:** MOVED TO TEAM 2 by Owner direction `2026-09-08-29`. The complete
-verbatim direction and its updated team-specific interpretation are in
-`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. All EduAILenz/Mudoinkle
-investigation, proof, portfolio-entry, and related implementation/audit work is
-Team 2 scope, not primary Cyvexly Build Team scope.
-
-## HoneyHearted owner dashboard and TPT commerce direction 2026-09-08-21 — MOVED
-
-**Status:** MOVED TO TEAM 2 — see
-`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md`. Authorizes the Clerk +
-durable-storage + TPT owner-dashboard architecture and assigns HoneyHearted
-implementation. Not Cyvexly Build Team scope.
-
-## Velora buyer-facing portfolio presentation direction 2026-09-08-20
-
-**Status:** IMPLEMENTED/DEPLOYED ROUND 116 — INDEPENDENT REVIEWS REMAIN
-
-Full direction is preserved in `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`;
-the accepted result and remaining reviews stay live in the chunk map/state.
-
-## HoneyHearted fully functional website direction 2026-09-08-19 — MOVED
-
-**Status:** MOVED TO TEAM 2 — see
-`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md` (superseded in
-implementation detail there by moved direction `2026-09-08-21`, same as
-before the move). Not Cyvexly Build Team scope.
-
-## Former Team Two Website identity direction 2026-09-08-18 — SUPERSEDED
-
-The complete direction is preserved in
-`docs/archive/CYVEXLY_OWNER_DIRECTION_TEAM_IDENTITY_2026-09-08-18.md`.
-Directions `2026-09-08-27` and `2026-09-08-28` supersede that former combined-team identity: the primary Cyvexly Build Team owns Cyvexly Studio, while Team 2 owns HoneyHearted.
-
-## Launch completion and business operations direction 2026-09-04-14 — ARCHIVED
-
-The complete Owner wording and interpretation are preserved in
-`docs/archive/CYVEXLY_OWNER_DIRECTION_ACTIVE_HISTORY_2026-09-08.md`.
-Its still-active business facts are restated under **Confirmed Owner facts** below; direction `2026-09-08-28` governs current implementation priority.
-
-## Velora capability-demonstration direction 2026-09-07-17 — FULFILLED/ARCHIVED
-
-The complete Owner wording, acceptance boundary, and scheduler history are preserved in
-`docs/archive/CYVEXLY_OWNER_DIRECTION_ACTIVE_HISTORY_2026-09-08.md`.
-Velora's accepted implementation is preserved; current portfolio work is governed by direction `2026-09-08-28`.
+Superseded, moved, and fulfilled directions are preserved in
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ROTATED_2026-09-10.md` and its linked
+archives. Current ownership and scheduler authority are stated above; history
+does not override active direction `2026-09-10-07`.
 
 ## Scheduler boundary 2026-08-30-03
 
@@ -680,61 +542,12 @@ Velora's accepted implementation is preserved; current portfolio work is governe
 
 Do not create, configure, enable, or modify recurring role schedulers or automations unless later authenticated Owner direction explicitly authorizes them and provides the needed cadence/metadata.
 
-## Earlier accepted media history
+## Preserved implementation history and visual authority
 
-The fulfilled live-video recovery and original hero-scale direction are preserved in
-docs/archive/role-migration-2026-09-05/CYVEXLY_OWNER_DIRECTION.md.
-Keep the accepted Home video asset, integrated large hero placement and reduced-motion/
-data-saving behavior. The later playback-chrome and full-height visual directions below
-remain active. Do not restore superseded controls from historical media instructions.
-
-Home showcase playback-chrome direction `2026-08-31-08` (FULFILLED — Round 20
-public deployment proof) is archived at
-`docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`. It removed the visible
-play/pause control and progress chrome and set `0.75×` playback — both remain
-in force.
-
-## Standing Cyvexly visual authority — detailed history archived
-
-The Owner-approved `mockups/06-sitewide-blue-glass-owner-direction.png` remains
-the visual authority for Cyvexly's full-height, every-route architectural
-ice-blue glass environment. Preserve protected readable fields, restrained
-wires/traces/coordinates and depth, controlled dark focal stages, no flat white
-fallback gaps, and verified WCAG/readability across responsive states. Round
-28's continuous middle/lower-page correction remains implemented; public and
-Owner acceptance status must come from current product evidence. The complete
-Owner wording, provenance, correction history, and completion standards are
-preserved verbatim in `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md` under
-“Active visual authority archived from the hot file on 2026-09-07.”
-
-
-## Rule-system migration — 2026-09-05
-
-Owner request: “ok fix it. and we need to remove the older rules so there are no confusion”.
-Authorizes syncing the eight NEW AI BUILD RULES packets, replacing outdated role
-orientations/helpers, removing superseded rule files, and completing the six-role
-Cyvexly environment — not scheduler changes or a product release. See
-CYVEXLY_TEAM_START_HERE.md and CYVEXLY_ROLE_RULES_MAPPING.md.
-
-## Full launch-readiness execution direction 2026-09-05-15
-
-**Status:** PARTIALLY FULFILLED — round 53 closed every reachable item
-(domain verified live, real Contact/Planner email delivery shipped,
-dormant GA4/GSC scaffolding, Privacy Policy corrected, clean sitewide
-audit). Remainder is Owner-side gates the directive itself names — see
-`CYVEXLY_APP_DEBT.md` items 1-2. Full verbatim Owner text and agent
-interpretation are archived at
-`docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md` (moved round 63/live
-session to free hot-file headroom for new direction — every remaining
-gate it names is still tracked live in `CYVEXLY_APP_DEBT.md`/
-`CYVEXLY_CURRENT_STATE.md`, not lost by the move).
-**Source:** Owner via interactive Claude Code chat
-**Recorded:** 2026-09-05
-
-## Fulfilled visual directions archived 2026-09-08
-
-The completed 2026-09-06 text-cursor correction (fixed round 70) and Home
-"how does it work?" process-video implementation (round 76) are preserved
-verbatim in `docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md`. Their Owner
-visual-confirmation status remains pending; archiving only keeps this hot
-authority file within its enforced size cap.
+Earlier media, playback, rule-migration, launch-readiness, text-cursor, and
+process-video directions are preserved verbatim in
+`docs/archive/CYVEXLY_OWNER_DIRECTION_ARCHIVE.md` and the linked role-migration
+archive. Keep the accepted Home video/reduced-motion behavior and the approved
+full-height architectural ice-blue glass system; do not restore superseded
+controls. Current Owner/account gates remain in `CYVEXLY_APP_DEBT.md` and
+`CYVEXLY_CURRENT_STATE.md`.

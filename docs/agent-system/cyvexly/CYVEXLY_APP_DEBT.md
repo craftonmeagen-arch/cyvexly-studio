@@ -7,8 +7,7 @@ Git history, and role memory.
 ## Current source position
 
 - Primary accepted product source: `4232574` after Auditor R136/R137.
-- Active Chunk 11 review candidate: none; review lifecycle falls back to
-  accepted `4232574`.
+- Active Chunk 5 review candidate: `b14a92b`; accepted source remains `4232574`.
 - Production product source: `4232574`; release commit `8c34031` is pushed,
   canonical ETag `14aii22kn8q2otg` exposed the Home rail and consultation route,
   and live buyer/hierarchy suites passed.
@@ -56,16 +55,21 @@ Git history, and role memory.
    do not send SMS or email confirmation. Do not repeat before configuration
    changes, and do not store or print the secret.
 
-4. **Analytics, search ownership, and indexing release.** The dormant GA4/GSC
-   wiring and staged no-index posture are implemented. The Owner must supply
-   GA4/Search Console values or explicitly choose no analytics, approve final
-   copy/visuals, and separately authorize indexing. Until then, keep
-   `robots.txt` disallowing crawling and page metadata at `noindex, nofollow`.
+4. **Analytics, search ownership, and indexing release.** Candidate `b14a92b`
+   adds consent-controlled GA4, a non-PII success-event allowlist, and synthetic
+   verification/indexing checks while preserving the dormant default. The
+   Owner must create the GA4 and Search Console domain properties, approve the
+   consent/privacy draft, provide protected real values, and separately
+   authorize indexing. Until then, keep GA absent, `robots.txt` disallowing
+   crawling, and metadata at `noindex, nofollow`.
 
-5. **Payment provider.** Selection and integration remain deliberately
-   deferred for Owner research. Do not claim transaction readiness, supported
-   methods, checkout, deposits, or payment availability before a real provider
-   is approved and active.
+5. **Stripe activation and invoice proof.** The Owner selected Stripe Invoicing
+   Starter with provider-hosted invoices after signed agreement. Candidate copy
+   preserves package milestones and monthly-in-advance Care while stating that
+   ACH/cards are not active. The Owner must create/verify the account, confirm
+   enabled methods/settings, and send a test invoice. Do not add public checkout,
+   pre-agreement payment, raw payment storage, automated recurring billing, or
+   an activation claim.
 
 6. **Optional origin-bypass hardening.** Dormant `CF_ORIGIN_SECRET` support is
    implemented and tested. Activating it requires a matching protected

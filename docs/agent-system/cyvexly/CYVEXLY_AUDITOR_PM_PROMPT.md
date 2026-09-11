@@ -1,9 +1,13 @@
 # Cyvexly Build Team Independent Forensic Auditor — PM Prompt
 
-**Status:** SCHEDULER PAUSED — no active candidate; named Velora gap remains
+**Status:** ACTIVE REVIEW SOURCE `b14a92b`; scheduler state unchanged
 
 When explicitly invoked, independently verify the exact Cyvexly review source
-and active work identified by current state/handoff. R132 and R133 each passed
+and active work identified by current state/handoff. Candidate `b14a92b` is the
+Chunk 5 consent/search/Stripe-readiness source and must be challenged before
+acceptance. Verify zero Google requests before grant, revocation and keyboard/
+responsive behavior, the non-PII event allowlist, dormant/indexable search
+gates, truthful inactive payment copy, and regressions. R132 and R133 each passed
 the horizontal Work rail at exact source `c8bc73d` with zero defects, closing
 Chunk 10's two-review gate. Do not repeat that matrix without new source or
 material evidence. Use a cold product pass before the Builder narrative when

@@ -2,42 +2,26 @@
 
 **Status:** CURRENT WORKING VISION
 
-The existing project vision artifact is:
+The complete vision artifact is `CYVEXLY_VISION_PLAN.md`; root vision §17 and
+Owner direction `2026-09-10-07` govern current launch preparation.
 
-- `CYVEXLY_VISION_PLAN.md`
+Current Builder position: Chunk 5 is active in global Round 177. Candidate
+`b14a92b` makes analytics explicitly consensual and minimal, keeps search and
+indexing separately gated, and explains the selected Stripe Invoicing path
+without presenting inactive services as live. It is awaiting independent
+exact-source review. Accepted/deployed source remains `4232574`.
 
-Current Builder position: Chunk 11 — Homepage Work Rail & Quick Consultation —
-open in global round 175 under Owner directions `2026-09-10-03` and
-`2026-09-10-04`. Home must browse all four approved
-projects left/right with the accepted interaction/accessibility behavior while
-`/work` remains stable. Visitors can choose a minimal next-business-day contact
-request instead of the Planner, with truthful timing/confirmation language and
-protected delivery. Public draft legal pages identify Cyvexly LLC as the chosen
-name without claiming formation. Exact source `4232574` passed Auditor R136
-and R137 with zero defects and is deployed through release commit `8c34031`;
-canonical buyer/hierarchy proof passes. Protected Resend configuration and real
-Owner-inbox delivery proof remain.
+The intended buyer outcome remains a distinctive, trustworthy cyber-blue glass
+studio experience with truthful proof, understandable price/scope, and a low-
+friction inquiry. Launch preparation must not weaken that design or invent
+provider readiness, legal status, delivery, payments, indexing, security
+clearance, client work, or results.
 
-Chunk 10 — Horizontal Work Rail — closed in global round 174 under Owner
-direction `2026-09-10-02`. Accepted product source
-`c8bc73d` preserves Chunk 9's proof-rich cards while making all four approved
-projects horizontally browsable through visible controls, native touch/swipe,
-Arrow keys, announced position, truthful end states, and responsive
-containment. Auditor R132 and R133 supplied two clean independent exact-source
-challenges. Accepted source `c8bc73d` is published and proved on canonical
-production.
+Owner/account closure still requires LLC filing/name verification, Resend
+activation plus controlled delivery, real GA4/GSC values and approval, explicit
+indexing permission, Stripe verification/test invoice, Guardio review/recheck,
+and final legal/visual approval. Chunk 6's Velora visual review remains separate.
+All outside-product and HoneyHearted work remains Team 2 scope.
 
-Chunk 9 — EduAILenz & Mudoinkle Showcase Quality — closed at product source
-`ca2b84e` after Auditor R129 and R130 supplied two clean independent challenges.
-It is superseded by deployed Chunk 10 source `c8bc73d`.
-
-Round 116's accepted/deployed Velora presentation at `fce01e8` remains proof to
-preserve and still needs one complete independent physical/visual review.
-Chunk 5 remains open only for its recorded Owner/account gates.
-
-Direction `2026-09-10-01` is a bounded exception to `2026-09-08-29` for these
-two Cyvexly showcase surfaces only. Underlying outside-product work and
-HoneyHearted remain Team 2 scope.
-
-Treat current authenticated Owner direction as higher authority. Before using an unresolved product choice as binding direction, verify whether the Owner accepted it or whether it remains a reversible proposal. Do not copy the full vision into this hot-path index.
-
+Preserved milestone: Chunk 9 — EduAILenz & Mudoinkle Showcase Quality — closed
+at `ca2b84e`; current work must preserve its truthful Cyvexly-facing proof.

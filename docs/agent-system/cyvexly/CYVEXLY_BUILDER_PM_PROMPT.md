@@ -1,66 +1,28 @@
 # Cyvexly Build Team Builder — PM Prompt
 
-**Status:** ACTIVE — CHUNK 11 DEPLOYED; PROTECTED DELIVERY GATE REMAINS
+**Status:** ACTIVE — CHUNK 5 CANDIDATE AWAITS INDEPENDENT REVIEW
 
-Owner directions `2026-09-10-03` and `2026-09-10-04` open Chunk 11. Exact
-source `4232574` replaces Home's fixed project grids with the accepted
-four-project horizontal interaction and adds a discoverable quick consultation
-path that bypasses the Planner. It supports email-only or phone-only contact,
-preferred window and timezone, optional note, consent, federal-holiday-aware
-next-business-day timing, duplicate protection, truthful delivery, and separate
-confirmation outcomes. It removes routine raw IPs from Contact/Planner
-notifications and reconciles public privacy/legal copy. Builder proof and
-independent Auditor challenges R136/R137 pass with zero defects. Round 176
-publication and canonical verification pass. Controlled Contact, Planner, and
-Consultation attempts all returned `503 not-configured`, so protected Resend/
-domain setup and actual Owner-inbox delivery remain.
+Read Owner direction `2026-09-10-07`. Round 177 candidate `b14a92b` implements
+the authorized unattended launch preparation: basic-consent GA4 with no Google
+request before grant, persistent/revocable choice, no advertising/Signals, and
+only page views plus a non-PII success-only lead type; synthetic Search Console
+verification and separate indexing gates; truthful Privacy disclosure; and
+Stripe-hosted-invoice readiness copy that preserves milestones and Care billing
+without claiming activation or checkout.
 
-Owner direction `2026-09-10-02` closed Chunk 10 in
-global round 174 at accepted source `c8bc73d`. The horizontal Work-card rail preserves the
-four approved projects and adds native horizontal scrolling/snap, visible
-left/right controls, touch and Arrow-key operation, announced position and end
-states, reduced-motion safety, and responsive containment. Auditor R132 and
-R133 independently passed exact `c8bc73d` with zero defects, satisfying the
-two-review gate. Branch acceptance commit `ac8438b` is pushed and canonical
-production serves accepted source `c8bc73d`; live buyer and hierarchy/rail
-suites pass.
+The candidate is local, unaccepted, unpushed, and undeployed. The next product
+action is independent exact-source review, not publication. Accepted/deployed
+source remains `4232574` through release commit `8c34031`.
 
-Earlier Owner direction `2026-09-10-01` supplied the bounded
-primary-Builder exception for the Cyvexly-facing EduAILenz and Mudoinkle
-showcases is complete. Auditor R128 found Work-fold blocker `CYV-IFA-014` in
-superseded candidate `312937c`; corrected source `ca2b84e` resolved it. Auditor
-R129 and R130 then supplied two clean independent exact-source challenges, so
-Chunk 9 closed in global round 169 and `ca2b84e` is accepted for publication.
+Do not invent or commit GA/GSC/Stripe/Resend values, enable indexing, activate
+payment or recurring billing, submit/allowlist Guardio, repeat real forms before
+Resend changes, or claim the pending LLC exists. Owner/account closure actions
+are listed in current state and handoff.
 
-Owner direction `2026-09-08-28` supersedes the Codex-only pause recorded by
-correction `2026-09-08-26`. The `:00/:30` GPT-5.6-Sol/high Cyvexly Build Team
-Builder automation is ACTIVE.
+The active Builder automation is unchanged. The underlying EduAILenz/Mudoinkle
+applications, HoneyHearted, credentials, protected data, repositories,
+infrastructure, and all outside-site work remain Team 2 scope.
 
-Direction `2026-09-08-29` still assigns HoneyHearted, the underlying
-EduAILenz/Mudoinkle applications, and all other outside-website work to Team 2.
-Their directions, current state, and PM guidance live in
-`docs/agent-system/team2/TEAM2_OWNER_DIRECTION.md` and
-`TEAM2_BUILDER_ORIENTATION_DOCUMENT.md` (repo root). Do not access or modify
-their credentials, protected data, repositories, infrastructure, or scheduler
-states.
-
-Owner direction `2026-09-08-28` opened Chunk 8 — Buyer Journey, Proof &
-Conversion. Global round 159 closes it after R116 passed exact accepted source
-`48a2470` with zero defects and supplied the second independent challenge after
-R112's product-equivalent pass. Preserve accepted source unless new material
-evidence or Owner direction justifies reopening a coherent product slice.
-
-The bounded `2026-09-10-01` exception supersedes the former exclusion only for
-the two Cyvexly case studies, their Work cards, relevant Home discovery,
-contextual inquiry continuity, and supporting public-safe proof/tests.
-
-Accepted product source is `4232574`; no active review candidate remains.
-Production serves `4232574` through release commit `8c34031`.
-Chunk 6's physical/visual review, Guardio, and Chunk 5 account/Owner
-gates remain open but separate.
-
-Auditor R137 is the latest immutable publication. R136 and R137 independently
-passed exact `4232574` with zero defects and satisfy the Chunk 11 review gate.
-The root current-report pointer lags at R133 and no operational-inbox JSON was
-published for R136/R137; their immutable reports and evidence were consumed
-directly. Review startup now falls back to accepted `4232574`.
+Latest accepted review evidence remains Auditor R136/R137 for exact `4232574`.
+New reviews must challenge exact `b14a92b` and keep their runtime/evidence in the
+independent review environment.

@@ -4,102 +4,71 @@
 
 **Current global round:** 177
 
-**Active chunk:** Chunk 11 — Homepage Work Rail & Quick Consultation
+**Active chunk:** Chunk 5 — United States Launch Completion & Business Operations
 
-**Current mission:** preserve deployed source `4232574` and await protected
-Render Resend configuration before repeating the controlled delivery checks.
-
-**Current chunk-local round:** 3
+**Current mission:** prepare consent-controlled analytics, Search Console and
+indexing gates, truthful Stripe Invoicing copy, and the Guardio review handoff
+without activating accounts, indexing, payment, or external submissions.
 
 **Accepted repository source:** `4232574` (Homepage rail and quick consultation)
 
-**Chunk 11 candidate source:** none; `4232574` passed review and is accepted
+**Chunk 5 candidate source:** `b14a92b`
 
-**Active review source:** none; review lifecycle falls back to accepted `4232574`
+**Active review source:** `b14a92b`
 
 **Current deployed product-source baseline:** `4232574`; release commit
 `8c34031` is on `origin/main`
 
-Owner direction `2026-09-10-01` resumed the primary Builder for the two
-Cyvexly-facing showcase corrections. Team 2 Builder and all Auditor scheduler
-states remain unchanged. Outside products, credentials, infrastructure, and
-HoneyHearted remain Team 2 scope.
+Owner direction `2026-09-10-07` reopens reachable Chunk 5 preparation. Candidate
+`b14a92b` implements Google's basic-consent pattern: no Google tag or request
+exists before a visitor allows analytics, declining leaves the site fully
+usable, the choice persists and is changeable, and ad storage, personalization,
+Google Signals, and cross-device use remain disabled. Only page views and one
+`generate_lead` event carrying the inquiry type (`contact`, `planner`, or
+`consultation`) are permitted; form values are never sent.
 
-Owner direction `2026-09-10-03` identifies the missing homepage interaction:
-`/` still had fixed card grids. Candidate `4232574` completes that Builder
-surface and adds the explicitly tracked quick-consultation direction
-`2026-09-10-04`. Cyvexly LLC is the chosen legal name, but formation and exact
-filing-name verification remain pending; the draft legal pages now say so. No
-scheduler state changed.
+Search readiness remains gated by `GOOGLE_SITE_VERIFICATION` and
+`NEXT_PUBLIC_SITE_INDEXABLE`. No-ID/no-index, synthetic-verification/no-index,
+and synthetic-verification/indexable builds pass exact canonical, robots,
+sitemap, and metadata checks. The workspace's final build is restored to the
+safe no-ID/no-index state.
 
-Owner direction `2026-09-10-02` reopened the primary Work surface. Accepted
-source `c8bc73d` replaces the fixed two-column collection with a horizontal
-rail on `/work` through the same four approved projects while preserving their
-accepted proof hierarchy and truth boundaries. Visible controls, native touch/swipe,
-Arrow-key operation, end states, reduced motion, working links, and zero
-page-level overflow pass across responsive viewports.
+Public Pricing, FAQ, Privacy, and Terms copy now reflects the Owner-selected
+Stripe Invoicing path without claiming activation: provider-hosted invoices
+only after a signed agreement; ACH bank debit/cards may be offered after the
+Owner verifies the account; no public checkout; no raw payment storage; package
+milestones and monthly-in-advance Care remain unchanged.
 
-## Current product position
+Round 119 still supports a likely Guardio-specific false positive/new-domain
+classification, not demonstrated compromise. Round 177 prepares a truthful
+review packet only; submission, reclassification, and a clean un-allowlisted
+recheck remain Owner/account-holder work.
 
-Chunk 9 is accepted and deployed at product source `ca2b84e`. Auditor R129 and
-R130 supplied the two clean independent exact-source challenges; R131 later
-reverified that same pre-rail baseline with zero defects and has been
-dispositioned. Its report does not review Chunk 10.
+## Candidate proof
 
-Chunk 10 opened from clean `main == origin/main` at direction record `b91d87c`.
-Accepted source `c8bc73d` replaces the fixed grid with a native overflow/scroll-snap
-rail plus 48px controls, Arrow/Home/End handling, announced position, truthful
-end states, native swipe, and reduced-motion-safe movement. Production build,
-TypeScript, buyer and hierarchy suites pass across desktop, tablet, 390px, and
-320px widths with zero runtime errors or page-level overflow.
+- TypeScript passes; lint has zero errors and one unchanged historical evidence
+  warning.
+- All three 56-route builds pass: synthetic GA4/GSC while no-indexed, synthetic
+  GSC while indexable, and final dormant no-ID/no-index.
+- Consent browser proof records zero Google requests before choice, a Google
+  request only after grant, 44px controls, keyboard decline, persistent/revocable
+  choice, one allowlisted successful Contact event, and no desktop/390px overflow.
+- Buyer smoke passes 35 routes and 17 inquiry contexts. Search-readiness smoke
+  passes each gated configuration. Existing business-day, consultation API,
+  intercepted-receipt, and responsive hierarchy suites passed earlier in this
+  round without real delivery.
 
-Auditor R132 and R133 independently passed exact `c8bc73d` with zero defects
-across rail geometry, controls, keyboard/touch use, responsive hierarchy,
-reduced motion, links, and regression suites. Together they satisfy the two
-independent exact-source challenges; Chunk 10 is closed and the source is
-accepted for publication.
+## Open gates
 
-Round 174 pushed branch acceptance commit `ac8438b`. Canonical `/work` changed
-to ETag `17wdf1xrhs018oi` and exposed the rail's swipe guidance and both
-direction controls. Live buyer, hierarchy/rail, Nexora, and intercepted-
-receipt suites pass with zero runtime errors or page-level overflow; no real
-message was sent.
+Candidate `b14a92b` is local, unaccepted, unpushed, and undeployed pending the
+required independent exact-source challenges. Owner/account actions remain:
+LLC filing/name verification; Resend domain/key and three controlled deliveries;
+GA4 property and Search Console domain property creation plus later protected
+values/indexing authorization; consent/privacy approval; Stripe account
+verification and a test invoice; Guardio review submission and clean recheck.
+Do not repeat real forms until Resend configuration changes.
 
-Round 172 independently adopted the inherited closeout after a concurrent
-documentation commit landed during verification. Repository head `744f1aa`
-changes governance/evidence only; its product and test trees are byte-identical
-to exact candidate `c8bc73d`. A fresh production build, TypeScript, lint, buyer
-and hierarchy suites, visible desktop/390px interaction, role setup, and all 57
-review-lifecycle checks pass.
-
-Historical round detail and the 2026-09-10 checkout reconciliation remain in
-`CYVEXLY_BUILD_SUMMARY.md`, archives, Git history, and Builder memory.
-
-## Active work and gates
-
-Auditor R136 and R137 independently passed exact source `4232574` with zero
-defects, satisfying the two-review gate. Round 176 published it and canonical
-buyer/hierarchy proof passes. One controlled real Contact, Planner, and
-Consultation attempt returned honest `503 not-configured` responses for all
-three routes, proving no messages were sent. The Owner/account holder must add
-the protected Render `RESEND_API_KEY` and verify the sending domain before a
-new intentionally coordinated attempt. Do not repeat submissions without that
-configuration change. Preserve outside-product boundaries and protected data.
-
-Remaining primary-team gates:
-
-1. one complete independent physical/visual review of Chunk 6's accepted
-   Velora presentation; R93 was source-only;
-2. Owner/account-holder Guardio review followed by a clean un-allowlisted
-   Guardio-enabled recheck; Round 119 found no compromise or justified code
-   remedy;
-3. approved formation/name verification for chosen Cyvexly LLC; Owner reports
-   name availability checked September 10 and plans to apply September 11;
-4. Resend account/domain verification and production secret, followed by an
-   intentionally submitted real-delivery check;
-5. GA4/Search Console values or an explicit no-analytics decision;
-6. final About/Privacy/Terms/visual approval and permission to enable indexing;
-7. a future payment-provider decision before any transaction-readiness claim.
-
-Team 2 report `HH-IFA-023` closed review of production baseline `493d1e6`;
-primary R116 must not be represented as coverage of that later integration.
+Chunk 11's product work is accepted/deployed; its real-delivery condition is
+now tracked in Chunk 5. Chunk 6 still needs one complete independent physical/
+visual review of accepted Velora source `fce01e8`. Underlying outside products,
+HoneyHearted, credentials, and infrastructure remain Team 2 scope.

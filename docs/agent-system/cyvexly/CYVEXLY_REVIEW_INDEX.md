@@ -5,6 +5,10 @@ Quality & Methods Council, and Functional Smoke Auditor; explicit invocation
 or existing Owner-managed schedule.
 
 Current authoritative root: `C:/app projects/website-independent-review`.
+
+**Active review source:** Chunk 5 candidate `b14a92b`. Accepted and deployed
+product source remains `4232574` until the required independent exact-source
+challenges pass and the Builder explicitly accepts it.
 | Role | Current report | Archive | Memory |
 |---|---|---|---|
 | Auditor | reports/AUDITOR_CURRENT.md | reports/AUDITOR_ARCHIVE.md | memory/auditor/ |

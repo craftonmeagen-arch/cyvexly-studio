@@ -3,46 +3,27 @@
 Canonical team: **Cyvexly Build Team**. Active product: Cyvexly Studio at
 `C:/app projects/website` on deployment branch `main`.
 
-Chunk 9 — EduAILenz & Mudoinkle Showcase Quality — closed in global round 169
-at accepted product source `ca2b84e`. The two Cyvexly-facing case studies,
-Work cards, and relevant Home discovery now meet Velora's accepted presentation
-standard with real public-safe visual proof, distinct product identity,
-meaningful user journeys, plain-language capability stories, and truthful
-access/limitation boundaries. Auditor R129 and R130 supply two clean independent
-challenges of the exact accepted source.
+Owner direction `2026-09-10-07` reopens Chunk 5 — United States Launch
+Completion & Business Operations — for unattended preparation only. Exact
+candidate `b14a92b` supplies consent-controlled GA4, minimal success-only
+measurement, Search Console/indexing gates and proof, and truthful Stripe
+Invoicing readiness copy. It must remain unaccepted, unpushed, and undeployed
+until independent exact-source review passes.
 
-This is a bounded exception to the older portfolio boundary. The primary
-Builder owns only the Cyvexly-facing EduAILenz/Mudoinkle showcase corrections.
-The underlying applications, their repositories, credentials, infrastructure,
-and HoneyHearted remain Team 2 scope and must not be modified here.
+Do not activate GA4, Search Console, indexing, Stripe, or recurring billing;
+submit the Guardio review; repeat real forms before Resend configuration; invent
+IDs/secrets; or claim account, formation, delivery, payment, indexing, or
+reclassification completion. Owner/account actions are recorded in current
+state and handoff.
 
-Chunk 10 — Horizontal Work Rail — closed in global round 174 under additive
-Owner direction `2026-09-10-02`. Accepted product source `c8bc73d` turns the
-fixed Work grid into a native, scroll-snapping rail through the same four
-approved projects with visible controls, touch/swipe, Arrow-key operation,
-announced position, safe end states, reduced-motion behavior, and responsive
-containment. Auditor R132 and R133 independently passed exact `c8bc73d` with
-zero defects. Accepted source `c8bc73d` is published and proved on canonical
-production.
+Accepted/deployed source remains `4232574` through release commit `8c34031`.
+Chunk 11's product implementation is closed and its real-delivery condition is
+consolidated into Chunk 5. Chunk 6 still needs one independent physical/visual
+review of accepted Velora source `fce01e8`.
 
-Chunk 11 — Homepage Work Rail & Quick Consultation — is open in global round
-175 under Owner directions `2026-09-10-03` and `2026-09-10-04`. The bounded
-outcome replaces Home's fixed,
-two-tier project grids with one accessible left/right rail through Velora,
-Nexora, EduAILenz, and Mudoinkle while preserving the accepted `/work` rail,
-truthful project labels, readable proof, working case-study/demo routes, and
-the cyber-blue glass design. It also supplies a short email-or-phone
-consultation request that bypasses the Planner, preserves Planner drafts,
-communicates next-business-day follow-up without inventing an appointment, and
-uses the protected mail path. The same round removes routine raw IPs from form
-emails and corrects public legal/privacy copy without inventing a formed entity.
+The primary Builder owns only Cyvexly. Underlying EduAILenz/Mudoinkle apps,
+their repositories, credentials, infrastructure, and HoneyHearted remain Team 2
+scope. No scheduler change is authorized.
 
-Exact source `4232574` passed independent Auditor challenges R136 and R137 with
-zero defects and is deployed through release commit `8c34031`; canonical buyer
-and hierarchy proof passes. Controlled delivery attempts returned `503 not-
-configured`, so actual Owner-inbox delivery remains unproved and no messages
-were sent.
-
-This direction does not grant provider purchases, payment integration, secret
-access, indexing permission, outside-product changes, or scheduler changes.
-Independent review output remains external to the product tree.
+Historical continuity: Chunk 9 — EduAILenz & Mudoinkle Showcase Quality — is
+closed at accepted source `ca2b84e`; it does not authorize outside-app work.

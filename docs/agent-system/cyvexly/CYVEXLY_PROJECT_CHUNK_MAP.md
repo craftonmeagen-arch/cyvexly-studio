@@ -42,18 +42,24 @@ evidence exposes a meaningful reachable gap.
   closure is consolidated into Chunk 5's exact-LLC-name, copy/visual approval,
   analytics/search decision, and indexing-permission gates.
 
-## Chunk 5 — United States Launch Completion & Business Operations (OPEN — OWNER/ACCOUNT GATED)
+## Chunk 5 — United States Launch Completion & Business Operations (OPEN — CANDIDATE REVIEW + OWNER GATES)
 
-- **Authority:** Owner direction `2026-09-04-14` and vision §17.
+- **Authority:** Owner directions `2026-09-04-14` and `2026-09-10-07`, plus
+  vision §17.
 - **Completed reachable scope:** canonical HTTPS/domain redirects; production
   metadata and staged discovery controls; public contact facts; logo-led
   About; draft Indiana/United States Privacy and Terms; server-side Contact and
   Planner delivery paths; dormant Owner-controlled analytics/search wiring;
   content-truth audit; and production QA.
+- **Round 177 candidate:** `b14a92b` adds basic-consent GA4, success-only
+  non-PII lead events, gated Search Console/indexing proof, and truthful dormant
+  Stripe Invoicing readiness copy. Independent exact-source review remains.
 - **Remaining gates:** exact registered LLC name; Resend account/domain/API
-  secret plus real-delivery confirmation; GA4/Search Console values or a
-  no-analytics decision; final About/legal/visual approval; indexing release.
-- **Deferrals:** payment-provider selection/integration and real-client claims.
+  secret plus three-route real-delivery confirmation; real GA4/Search Console
+  values and consent/privacy approval; final About/legal/visual approval;
+  Stripe verification/test invoice; Guardio review/recheck; indexing release.
+- **Deferrals:** public checkout, automated recurring billing, and real-client
+  claims.
 
 ## Chunk 6 — Velora Capability Demonstration (OPEN FOR ONE REVIEW)
 
@@ -129,7 +135,7 @@ evidence exposes a meaningful reachable gap.
   minimum-phone sizes. Auditor R132 and R133 each passed exact `c8bc73d` with
   zero defects, satisfying the two separate independent review rounds.
 
-## Chunk 11 — Homepage Work Rail & Quick Consultation (OPEN, ROUND 175)
+## Chunk 11 — Homepage Work Rail & Quick Consultation (IMPLEMENTATION CLOSED; DELIVERY GATE CONSOLIDATED)
 
 - **Authority:** Owner direction `2026-09-10-03`, applying Chunk 10's accepted
   interaction/accessibility requirements to Home.
@@ -157,4 +163,4 @@ evidence exposes a meaningful reachable gap.
 - **Closure:** exact-source proof, two separate independent challenges,
   publication, and canonical Home/Work proof are complete. Protected Resend/
   domain configuration, one fresh controlled delivery per route, and Owner
-  inbox confirmation remain.
+  inbox confirmation remain consolidated into active Chunk 5.

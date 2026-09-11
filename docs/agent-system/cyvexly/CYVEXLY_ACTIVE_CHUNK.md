@@ -1,173 +1,64 @@
 # Cyvexly Active Chunk
 
-**Active product chunk:** Chunk 11 — Homepage Work Rail & Quick Consultation
+**Active product chunk:** Chunk 5 — United States Launch Completion & Business Operations
 
-**Current position:** global round 177, chunk-local round 3
+**Current position:** global round 177, launch-preparation round 1
 
-**Accepted and deployed product source:** `4232574` after clean Auditor
-challenges R136/R137 and Round 176 canonical publication.
+**Accepted/deployed product source:** `4232574`
 
-**Chunk 11 candidate / active review source:** none; lifecycle falls back to
-accepted source `4232574`
+**Chunk 5 candidate / active review source:** `b14a92b`
 
-**Scheduler state:** the primary Cyvexly Builder remains resumed by Owner
-direction `2026-09-10-01`; Team 2 Builder and all Auditor scheduler states are
-unchanged.
+**Scheduler state:** the primary Cyvexly Builder remains resumed; no scheduler
+configuration changed.
 
 ## Outcome and boundaries
 
-Home's section headed “Two working demos. Two different problems.” still uses
-two fixed project grids even though `/work` has the accepted four-project rail.
-Chunk 11 applies that proven interaction model to Home without changing the
-underlying outside applications or regressing `/work`.
+Owner direction `2026-09-10-07` authorizes unattended preparation—not account
+activation or launch—for consent-controlled GA4, Search Console verification,
+indexing, Stripe Invoicing, and the Guardio provider review.
 
-Success requires one coherent Home showcase through Velora, Nexora,
-EduAILenz, and Mudoinkle with readable artwork and proof, truthful status,
-working case-study/demo links, visible controls, touch/swipe, Arrow/Home/End
-keys, announced position and end states, reduced-motion-safe movement, and no
-page-level overflow at desktop, tablet, 390px, or 320px.
+Candidate `b14a92b` supplies:
 
-Owner direction `2026-09-10-04` adds a bounded quick-consultation path to this
-open round: visitors can skip the Planner, choose email or phone, provide the
-corresponding contact value plus a preferred window and timezone, and send an
-optional note. The receipt promises next-business-day follow-up, not a booked
-appointment, through protected and truthful server behavior.
+- a persistent, keyboard-accessible allow/decline control that prevents every
+  Google tag/request until explicit grant and keeps advertising/Signals denied;
+- one minimal `generate_lead` event after accepted Contact, Planner, or
+  Consultation success, carrying only the inquiry type and `website` source;
+- strict GA ID validation and dormant CSP behavior;
+- a truthful conditional Privacy disclosure and responsive settings control;
+- synthetic search-readiness tests for verification metadata, canonical URLs,
+  sitemap, no-index defaults, and the separate indexing switch;
+- accurate Stripe-hosted-invoice readiness copy with no checkout, activation,
+  pre-agreement payment, raw payment storage, or recurring-billing claim.
 
-Cyvexly LLC is the Owner-selected legal name, but formation and exact filing-
-name verification remain pending. Public draft legal pages preserve that
-distinction and accurately describe form processing, storage, and retention.
+The curated evidence index is
+`builder/evidence/round-177-launch-preparation/assessment.md`. Round 119 evidence
+is summarized for an Owner-submitted Guardio review in
+`builder/evidence/round-177-launch-preparation/GUARDIO_REVIEW_PACKET.md`.
 
-## Round plan — global 175 / chunk-local 1
+## Proof and review gate
 
-- Reuse and parameterize the accepted Work rail instead of creating a second
-  interaction system; preserve `/work` semantics and behavior.
-- Replace both Home project grids and stale “two/both” language with one
-  four-project browse experience using the accepted project data and proof.
-- Correct the unsupported LLC wording in Privacy and Terms.
-- Add Home, Contact, Planner-entry, and in-Planner consultation discovery;
-  implement the short form through the existing protected mail route.
-- Remove routine raw-IP inclusion from Contact and Planner notifications;
-  disclose actual Resend/inbox/log handling and the proposed retention review.
-- Extend regression coverage for Home order, controls, keyboard, touch-sized
-  affordances, reduced motion, links, responsive containment, and `/work`.
-- Inspect rendered Home and Work at 1280px, 768px, 390px, and 320px; establish
-  an exact candidate only after source, build, browser, and cleanup proof pass.
+TypeScript, lint, three 56-route gated builds, 35-route/17-context buyer smoke,
+consent interaction, search readiness, business-day, Consultation API,
+intercepted receipts, and responsive hierarchy checks pass. No real message,
+analytics hit, payment, provider submission, indexing change, push, or deploy
+occurred.
 
-## Reachability and methodology check
+Candidate `b14a92b` now requires the governing independent exact-source review
+rounds before acceptance or publication. The accepted production baseline
+remains `4232574` through release commit `8c34031`.
 
-The established approach is the already accepted native overflow/scroll-snap
-`WorkGrid` with button controls and keyboard handling. The outcome is reachable
-inside the current Next.js source and Builder runtime with no new service,
-credential, package, outside-product access, or Owner decision. Earliest proof
-is a local production build plus exact-width Chromium/CDP geometry and input
-checks. Material falsifiers include lost heading semantics, unreadable cards,
-broken links, page overflow, a `/work` regression, consultation completion that
-requires Planner answers, mismatched contact validation, false appointment or
-confirmation copy, or leaked contact/IP data.
+## Owner/account gates
 
-## Candidate disposition — `4232574`
+1. File/verify Cyvexly LLC and approve final legal/visual copy.
+2. Verify Resend domain, protect the API key, redeploy, and coordinate one real
+   Contact, Planner, and Consultation check; do not repeat before configuration.
+3. Create GA4 and Search Console domain properties, approve the consent/privacy
+   draft, then separately supply protected values and indexing permission.
+4. Create/verify Stripe, confirm invoice settings and enabled ACH/card methods,
+   and send one test invoice before any activation claim.
+5. Submit the Guardio review packet through the official channel, record the
+   outcome, then recheck without allowlisting.
 
-Builder source, build, exact-width browser, keyboard/touch, calendar-boundary,
-API-validation, and intercepted-mail proof pass. Curated evidence is indexed in
-`builder/evidence/ROUND_175_BUILDER_EVIDENCE.md`. Auditor R136 and R137 then
-independently passed the exact source with zero defects, satisfying the two-
-review gate. No real message was sent during candidate or Auditor proof.
-
-## Round plan — global 176 / chunk-local 2
-
-- Revalidate the exact accepted product tree and review identities before push.
-- Publish `4232574` through the normal `main`/Render path and observe canonical
-  adoption without changing infrastructure or scheduler state.
-- Prove Home, Work, Contact, Planner, consultation, timing, receipts, responsive
-  containment, and privacy/legal markers against canonical production.
-- Submit one clearly synthetic controlled Contact, Planner, and Consultation
-  request to the Owner inbox. Treat server acceptance and requester-confirmation
-  status separately from actual inbox receipt.
-- Keep Chunk 11 open if the Owner still needs to confirm inbox arrival; retain
-  that as an external gate rather than manufacturing a completion claim.
-
-## Round 176 result
-
-- Pushed release commit `8c34031`; canonical production adopted the new Home
-  rail and consultation route at ETag `14aii22kn8q2otg`.
-- The live 35-route/17-context buyer suite and responsive Home/Work/consultation
-  hierarchy suite passed with zero runtime errors or page-level overflow.
-- One controlled real Contact, Planner, and Consultation attempt each returned
-  `503 not-configured`. No notification or requester-confirmation email was sent.
-- Chunk 11 remains open only for the protected Resend/domain configuration,
-  intentional re-test, and actual Owner inbox confirmation. Do not repeat the
-  submissions until the account configuration changes.
-- The optional production receipt-browser rerun completed its interaction work
-  but hit a Windows lock while deleting a 724,557-byte role-owned temp profile
-  at `C:/Users/Tcraf/AppData/Local/Temp/cyvexly-receipt-smoke-t0xLEE`. No Chrome
-  process or proof port remained; host policy rejected the later recursive
-  removal attempt. Reconcile this exact disposable path next round only.
-
-## Preserved Chunk 10 baseline
-
-Chunk 10 achieved Owner direction `2026-09-10-02`: the four proof-rich Work
-cards are horizontally browsable in Velora → Nexora → EduAILenz → Mudoinkle
-order through a native overflow/scroll-snap rail. The accepted source preserves
-readable proof and actions while supplying visible 48px controls, native
-touch/swipe, Arrow/Home/End operation, announced position, truthful end states,
-reduced-motion behavior, and zero page-level overflow at desktop, tablet,
-390px, and 320px widths.
-
-Auditor R132 and R133 independently passed exact `c8bc73d` with zero defects.
-Together they satisfy the two-review gate. The accepted source is published and
-proved on canonical production.
-
-Underlying EduAILenz/Mudoinkle applications, their data, credentials,
-infrastructure, and HoneyHearted remain Team 2 scope. Do not modify them.
-
-## Prior Round 174 — second review and acceptance
-
-- **Dispositioned:** Auditor `IFA-2026-09-10-R133` passed exact `c8bc73d` with
-  zero defects and supplies clean challenge 2 of 2 after R132.
-- **Verified independently:** opening-fold proof, rail geometry, 48px controls,
-  Arrow-key and touch use, announced/end states, reduced motion, responsive
-  containment, build, TypeScript, lint, and buyer/regression suites passed in a
-  fresh isolated runtime.
-- **Preserved:** the immutable report and 20 external screenshots remain
-  untouched; only the operational inbox item moved to processed.
-- **Revalidated:** the 56-route production build, TypeScript, lint with one
-  historical evidence warning, 35-route/17-context buyer suite, full hierarchy
-  and rail suite, Nexora demo, submission receipts, role setup, hot-file caps,
-  and all 57 lifecycle checks pass.
-- **Cleaned:** stopped owned production PID 43312 and cleared port 5173; removed
-  seven accepted-candidate Builder evidence files (3,693,350 bytes) and 156
-  bytes of temporary runtime logs. Auditor evidence remains external.
-- **Published:** pushed branch acceptance commit `ac8438b`; canonical `/work`
-  changed to ETag `17wdf1xrhs018oi` and exposed the new rail controls/guidance.
-  Live buyer, hierarchy/rail, Nexora, and intercepted-receipt suites passed with
-  zero runtime errors or page-level overflow and no real message delivery.
-- **Next:** await new Owner direction or material primary evidence.
-
-## Round 173 — first clean exact-source review
-
-- **Dispositioned:** Auditor `IFA-2026-09-10-R132` passed exact candidate
-  `c8bc73d` with zero defects and supplied clean challenge 1 of 2.
-- **Verified independently:** opening-fold proof, rail geometry, 48px controls,
-  Arrow-key and touch use, announced/end states, reduced motion, responsive
-  containment, build, TypeScript, lint, and buyer/regression suites passed in
-  the isolated Auditor runtime.
-
-## Round 172 — candidate adoption and visible revalidation
-
-- **Adopted:** reconciled governance/evidence head `744f1aa` and proved its
-  product/test trees byte-identical to exact candidate `c8bc73d`.
-- **Revalidated:** TypeScript, lint, the 56-route production build, 35-route/
-  17-context buyer smoke, full hierarchy smoke, role setup, all 57 review-
-  lifecycle checks, and visible desktop/390px interaction passed.
-
-Remaining primary gates:
-
-- one complete independent physical/visual review of accepted Velora source
-  `fce01e8` (R93 was source-only);
-- Owner/account-holder Guardio review and an un-allowlisted recheck;
-- Chunk 5's exact LLC name, Resend setup/real-delivery proof, analytics/search
-  decision, final About/legal/visual approval, and indexing permission;
-- a later payment-provider decision before transaction-readiness claims.
-
-Older round detail is preserved in `CYVEXLY_BUILD_SUMMARY.md`,
-`docs/archive/chunks/`, Git history, and role memory.
+Chunk 11's accepted product behavior is preserved and its delivery gate is
+consolidated here. Chunk 6's independent visual review remains separate. Team 2
+retains all outside-application and HoneyHearted work.

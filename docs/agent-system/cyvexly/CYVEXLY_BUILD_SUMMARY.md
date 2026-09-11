@@ -3,6 +3,27 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 177 — unattended launch-preparation candidate
+
+- Adopted Owner direction `2026-09-10-07` and reopened Chunk 5 for reachable
+  preparation only. Exact candidate `b14a92b` is local, unaccepted, unpushed,
+  and undeployed pending independent review.
+- Added basic-consent GA4: no Google tag or request before grant; persistent and
+  revocable allow/decline controls; advertising and Google Signals disabled;
+  only page views plus one success-only `generate_lead` event carrying the
+  Contact/Planner/Consultation type. No form values enter analytics.
+- Added synthetic search-readiness testing for canonical metadata, sitemap,
+  Search Console verification, the default no-index state, and the distinct
+  indexing switch. Both gated modes and the final dormant build pass.
+- Updated Pricing, FAQ, Privacy, and Terms for the Owner-selected Stripe
+  Invoicing path without claiming activation, checkout, pre-agreement payment,
+  stored payment data, or automated recurring billing. Existing milestones and
+  monthly-in-advance Care remain.
+- Prepared a Guardio review packet from Round 119 evidence without submitting,
+  allowlisting, or claiming reclassification. TypeScript, lint (one historical
+  warning), three 56-route builds, buyer/search/consent/browser and existing
+  form/responsive suites pass without real messages or provider actions.
+
 ## Round 176 — exact-source acceptance and release preparation
 
 - Consumed immutable Auditor publications R136 and R137. Each independently
