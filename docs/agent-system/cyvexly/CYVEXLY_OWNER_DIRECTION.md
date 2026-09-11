@@ -1,5 +1,108 @@
 # Cyvexly Owner Direction
 
+## Unattended launch preparation and Owner handoff — 2026-09-10-07
+
+**Status:** ACTIVE — PRIMARY CYVEXLY BUILDER PRIORITY
+**Source:** Owner directs the team to prepare the standard launch integrations
+unattended tonight and leave account-controlled activation for the Owner on
+September 11, 2026.
+
+This later direction resolves older non-conflicting records that still call
+analytics, indexing, or the payment-provider choice undecided or deferred.
+Those records remain historical evidence; the choices and sequence below are
+now controlling.
+
+This is a preparation-and-proof assignment, not permission to create external
+accounts, accept provider terms, expose credentials, transmit a real inquiry,
+activate payments or analytics, file a Guardio report, or make the site
+indexable tonight. The existing primary Builder and Gemini Auditor schedules
+continue unchanged; do not create, resume, pause, or modify a scheduler.
+
+### Builder work authorized without the Owner present
+
+1. **Consent-controlled analytics readiness.** Finish a clear, accessible
+   analytics choice that prevents GA4 and its cookies from loading until the
+   visitor grants analytics consent. Refusal must leave the site fully usable,
+   the choice must persist and be changeable, and the control must work by
+   keyboard and across desktop, tablet, 390px, and 320px layouts. Preserve no
+   advertising personalization, Google Signals, cross-device linking, or
+   remarketing.
+2. **Minimal measurement contract.** Prepare basic page measurement and named
+   success events for Contact, Planner, and Consultation. Measure only a
+   genuinely accepted successful action. Never place a name, email address,
+   phone number, company, project note, URL field containing personal data,
+   form contents, or another user-provided value in Analytics events.
+3. **Account-value readiness.** Preserve and verify dormant environment gates
+   for the real GA4 measurement ID, Search Console verification value, and
+   indexing switch. Missing values must remain an honest disabled state. No
+   placeholder, secret, account identifier, or guessed value may enter source,
+   evidence, documentation, or chat.
+4. **Search readiness.** Verify canonical metadata, robots behavior, sitemap,
+   and Search Console verification rendering in both disabled and synthetic
+   test configurations. Production must remain `noindex` until the ordered
+   Owner gates below are complete.
+5. **Truthful policy and interface drafts.** Prepare Privacy and any necessary
+   consent copy so it accurately describes the disabled state and the eventual
+   consent-controlled GA4 behavior. Do not publish language claiming Analytics,
+   indexing, Resend delivery, LLC formation, Guardio clearance, or payments are
+   active before each fact is verified.
+6. **Payment operations readiness.** Use **Stripe Invoicing Starter** as the
+   selected professional-services direction, with provider-hosted invoices,
+   ACH bank debit and cards after a signed agreement. Preserve the accepted
+   project milestone schedules and monthly-in-advance Care-plan model. Cyvexly
+   must not add a public self-checkout, request payment before a signed
+   agreement and invoice, store raw card/bank data, claim Stripe is active, or
+   activate recurring billing tonight. Prepare only the truthful site copy,
+   internal handoff, and testable non-live boundaries actually needed.
+7. **Guardio review packet.** Preserve the Round 119 evidence and prepare a
+   concise provider-review packet stating the observed Guardio block, current
+   domain, clean source/dependency/runtime/TLS findings, and supporting public
+   reputation results. Do not bypass or allowlist the warning, submit a support
+   form, or claim reclassification without the Owner and Guardio outcome.
+8. **Verification and review.** Run proportionate build, type, lint, route,
+   consent, privacy, responsive, and no-data-leak checks. The independent
+   Gemini Auditor must challenge the exact candidate in its isolated
+   environment under the normal review lifecycle. Do not publish or activate
+   account-controlled features merely because local checks pass.
+
+### Owner/account-holder actions for September 11
+
+1. Complete the planned Indiana filing and provide the approved exact legal
+   name before the public site claims that Cyvexly LLC exists.
+2. In Resend, verify the sending domain and create/approve the production API
+   key; store it only as Render's protected `RESEND_API_KEY`, redeploy, and then
+   coordinate one intentional Contact, Planner, and Consultation delivery test.
+   Confirm studio notification, requester confirmation, and actual inbox
+   receipt separately.
+3. Create or select the dedicated GA4 account/property/web stream and provide
+   its real measurement ID. Create the Search Console **domain property** for
+   `cyvexly.com`, complete its account/DNS ownership verification, and provide
+   the real verification value if the chosen method needs one.
+4. Review the final consent and Privacy behavior. After LLC/legal wording and
+   real inquiry delivery are verified, authorize protected production values,
+   GA4 activation, `NEXT_PUBLIC_SITE_INDEXABLE=true`, redeployment, sitemap
+   submission, and live collection/crawl verification.
+5. Create and verify the Stripe business account, identity, bank, tax, and
+   payout details; accept provider terms; enable Invoicing Starter plus ACH and
+   cards; and approve a controlled test invoice before Cyvexly states that
+   those payment methods are available. Care-plan automation may remain later
+   work.
+6. Submit the prepared Guardio detection-review request through Guardio's
+   official channel. After Guardio responds, run a clean Guardio-enabled test
+   without bypassing or allowlisting `cyvexly.com`.
+
+### Completion standard
+
+Preparation is complete only when the disabled production state stays truthful,
+all privacy and no-personal-data constraints pass, responsive consent behavior
+is visibly proved, the exact candidate receives the required independent
+review, and the Owner receives one short account-side handoff containing only
+the actions and non-secret values still needed. Final launch completion requires
+the real protected configurations, successful controlled delivery/payment
+proof where applicable, Guardio disposition, legal-name verification, enabled
+indexing, submitted sitemap, and verified live behavior. Keep provider secrets
+out of Git, reports, screenshots, logs, and chat.
+
 ## Measurement and search launch standard — 2026-09-10-05
 
 **Status:** ACTIVE — OWNER-APPROVED PRIMARY CYVEXLY LAUNCH DECISION
