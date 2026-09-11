@@ -23,6 +23,29 @@ describe their original session types; discover and verify current capabilities.
 
 ## Product and browser capabilities
 
+**Round 178 note — `tsc --noEmit` alone falsely fails on a fresh checkout
+(before any `next build`/`next dev` has run) because Next.js's generated
+typed-route/layout ambient types don't exist yet; run a build first, or don't
+read a standalone `tsc` failure as a real defect without checking this.**
+Deleting `.next` and immediately running `pnpm exec tsc --noEmit` (no prior
+build in that fresh state) reliably fails: `src/app/layout.tsx(74,50): error
+TS2304: Cannot find name 'LayoutProps'.` — `RootLayout({ children }:
+LayoutProps<"/">)` uses Next 16's generated typed-layout-props ambient type,
+which Next.js only writes to `.next/types/` as a side effect of `next build`
+or `next dev`, not as part of `tsc` itself. Running `pnpm run build` (or
+starting `next dev` once) regenerates `.next/types/` and `tsc --noEmit` then
+passes clean with zero other changes — reproduced twice, both times clean
+after a build and failing identically before one. **This matters because
+`CYVEXLY_ROLE_RULES_MAPPING.md`'s documented Cyvexly check order is `pnpm exec
+tsc --noEmit, pnpm run lint, pnpm run build` — tsc listed first** — so a
+reviewer or fresh Builder following that literal order on a truly fresh
+checkout (a new `runtime/` clone with no prior build) could hit this exact
+false failure and wrongly report a TypeScript defect. Run `pnpm run build` (or
+`next dev` once) before trusting a `tsc --noEmit` failure that specifically
+names a Next.js-generated type (`LayoutProps`, `PageProps`, or similar) as a
+real defect; a `tsc` failure naming an actual project symbol is unaffected by
+this and should still be treated as real.
+
 **Round 178 note — `internal-hierarchy-smoke.mjs` and `submission-receipt-smoke.mjs`
 can fail against `next dev` (Turbopack) with no product regression; both pass
 clean against a production build.** Running the full local verification ledger
