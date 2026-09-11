@@ -970,7 +970,7 @@ export const pricingFaq = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "We're finalizing our payment provider for United States clients. Once it's active, your proposal and invoice will state exactly which methods are accepted — no payment is ever requested before a signed agreement and invoice.",
+      "Cyvexly plans to use Stripe-hosted invoices for United States clients. After the Owner verifies the account, invoices may offer ACH bank debit and cards; those methods are not active yet. No payment is requested before a signed agreement and invoice.",
   },
   {
     question: "What happens if my project grows beyond the package scope?",
@@ -1068,7 +1068,7 @@ export const faqLibrary = [
       {
         question: "What payment methods do you accept?",
         answer:
-          "We're finalizing our payment provider for United States clients. Once it's active, your proposal and invoice will state exactly which methods are accepted — no payment is ever requested before a signed agreement and invoice.",
+          "Cyvexly plans to use Stripe-hosted invoices for United States clients. After the Owner verifies the account, invoices may offer ACH bank debit and cards; those methods are not active yet. No payment is requested before a signed agreement and invoice.",
       },
       {
         question: "Is anything billed separately from your fee?",

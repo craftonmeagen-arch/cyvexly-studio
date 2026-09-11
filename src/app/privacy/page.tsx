@@ -2,6 +2,11 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { siteConfig } from "@/lib/site-config";
 import { buildPageMetadata } from "@/lib/seo";
+import { isValidGaMeasurementId } from "@/lib/analytics";
+
+const analyticsConfigured = isValidGaMeasurementId(
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim(),
+);
 
 export const metadata = buildPageMetadata({
   title: "Privacy Policy — Cyvexly Studio",
@@ -25,7 +30,7 @@ export default function PrivacyPage() {
               Privacy Policy
             </h1>
             <p className="mt-5 text-base leading-relaxed text-cool-graphite sm:text-lg">
-              Effective September 5, 2026. This describes what actually
+              Effective September 10, 2026. This describes what actually
               happens on cyvexly.com today, not a generic template.
             </p>
           </div>
@@ -116,6 +121,11 @@ export default function PrivacyPage() {
                 clears automatically once you submit.
               </p>
               <p className="mt-3">
+                If analytics is configured, this browser also saves your
+                analytics choice in local storage. That preference does not
+                contain your contact or project information.
+              </p>
+              <p className="mt-3">
                 The Project Planner also includes a hidden field used only to
                 detect automated spam submissions. Legitimate visitors never
                 see or fill it in, and it is not used to identify or track
@@ -123,17 +133,44 @@ export default function PrivacyPage() {
               </p>
             </div>
 
-            <div>
+            <div id="cookies-and-analytics" className="scroll-mt-28">
               <h2 className="font-display text-lg font-semibold text-midnight-slate">
                 Cookies and analytics
               </h2>
+              {analyticsConfigured ? (
+                <>
+                  <p className="mt-3">
+                    Google Analytics 4 is available on this site, but its tag
+                    does not load and no data is sent to Google unless you
+                    choose &ldquo;Allow analytics.&rdquo; If allowed, it measures
+                    page visits and records a successful Contact, Planner, or
+                    consultation submission as a lead type. Our analytics code
+                    does not send names, email addresses, phone numbers, project
+                    notes, or other form contents.
+                  </p>
+                  <p className="mt-3">
+                    Google Analytics may set first-party analytics cookies after
+                    you allow it. Advertising storage, advertising personalization,
+                    remarketing signals, and Google Signals are disabled in our
+                    tag configuration. You can reopen &ldquo;Analytics settings&rdquo;
+                    at any time; declining or withdrawing permission removes the
+                    Google Analytics cookies this site can identify and stops the
+                    tag from loading on the refreshed page.
+                  </p>
+                </>
+              ) : (
+                <p className="mt-3">
+                  Google Analytics is not currently configured, so this site
+                  does not load its tag or set analytics cookies. The dormant
+                  integration requires a valid measurement ID and, once
+                  configured, will still wait for your explicit permission
+                  before loading.
+                </p>
+              )}
               <p className="mt-3">
-                We do not currently use cookies, advertising pixels, or
-                third-party analytics or tracking scripts on cyvexly.com. If
-                we add privacy-aware analytics or search-console verification
-                in the future, we will update this section first to name the
-                exact tool, what it measures, and any choice you have before
-                it goes live.
+                Google Search Console ownership verification, when configured,
+                uses site metadata and does not add a visitor tracking script.
+                We do not use advertising pixels on cyvexly.com.
               </p>
             </div>
 
@@ -199,12 +236,13 @@ export default function PrivacyPage() {
               </h2>
               <p className="mt-3">
                 We do not currently collect payment information anywhere on
-                this site. No payment method is active for public use. When a
-                payment provider is selected, invoices and proposals will
-                state exactly how payment works before any payment is
-                requested, and payment details will always be entered
-                directly with our chosen provider, never typed into a form on
-                this site.
+                this site, and no payment method is active for public use.
+                Cyvexly has selected Stripe Invoicing for provider-hosted
+                invoices after a signed agreement. If the Owner later verifies
+                and activates the account, payment details for an offered ACH
+                bank debit or card payment will be entered directly with
+                Stripe, never typed into a form on cyvexly.com. Cyvexly will not
+                store raw card or bank details on this website.
               </p>
             </div>
 
@@ -258,8 +296,9 @@ export default function PrivacyPage() {
               </h2>
               <p className="mt-3">
                 If how we collect or use information changes — for example,
-                adding analytics or a payment provider — we will update this
-                page and its effective date before that change goes live.
+                activating a payment provider or expanding analytics — we will
+                update this page and its effective date before that change goes
+                live.
               </p>
             </div>
 

@@ -7,8 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test:analytics-consent": "node scripts/analytics-consent-smoke.mjs",
     "test:business-days": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/business-day-smoke.mjs",
-    "test:consultation-api": "node scripts/consultation-api-smoke.mjs"
+    "test:consultation-api": "node scripts/consultation-api-smoke.mjs",
+    "test:search-readiness": "node scripts/search-readiness-smoke.mjs"
   },
   "dependencies": {
     "next": "16.3.3",

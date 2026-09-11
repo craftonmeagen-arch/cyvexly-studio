@@ -82,6 +82,19 @@ for (const legalPage of [privacy, terms]) {
   assert.match(legalPage, /filing-name verification/);
   assert.doesNotMatch(legalPage, /operated as a limited liability company/);
 }
+for (const paymentPage of [pricing, faq, privacy, terms]) {
+  assert.match(paymentPage, /Stripe/);
+  assert.match(
+    paymentPage,
+    /not active(?:<!-- -->)? yet|not active for public use|no payment method is active for public use/,
+  );
+  assert.match(paymentPage, /ACH/);
+  assert.match(paymentPage, /card/i);
+}
+assert.match(pricing, /There is no public checkout/);
+assert.match(terms, /has no public checkout/);
+assert.match(privacy, /never typed into a form on cyvexly\.com/);
+assert.doesNotMatch(pricing, /Pay now|Buy now|Checkout now/);
 assert.match(home, /href="\/contact\?request=consultation"/);
 assert.match(planner, /href="\/contact\?request=consultation"/);
 assert.match(plainContact, /Request a consultation/);
@@ -568,6 +581,14 @@ const privacySource = await readFile(
   new URL("../src/app/privacy/page.tsx", import.meta.url),
   "utf8",
 );
+const analyticsSource = await readFile(
+  new URL("../src/lib/analytics.ts", import.meta.url),
+  "utf8",
+);
+const analyticsConsentSource = await readFile(
+  new URL("../src/components/google-analytics.tsx", import.meta.url),
+  "utf8",
+);
 const businessDaySource = await readFile(
   new URL("../src/lib/business-days.ts", import.meta.url),
   "utf8",
@@ -620,6 +641,17 @@ assert.match(privacySource, /phone-only consultation/);
 assert.match(privacySource, /Resend(?:&apos;|')s delivery systems/);
 assert.match(privacySource, /raw IP address is not placed/);
 assert.match(privacySource, /proposed[\s\S]*12 months/);
+assert.match(privacySource, /does not load and no data is sent to Google unless you/);
+assert.match(analyticsSource, /type InquiryType = "contact" \| "planner" \| "consultation"/);
+assert.match(analyticsSource, /window\.gtag\("event", "generate_lead"/);
+assert.match(analyticsSource, /lead_source: "website"/);
+assert.match(analyticsConsentSource, /data-analytics-consent="denied"/);
+assert.match(analyticsConsentSource, /data-analytics-consent="granted"/);
+assert.match(analyticsConsentSource, /consent === "granted"/);
+assert.match(analyticsConsentSource, /analytics_storage: 'denied'/);
+assert.match(analyticsConsentSource, /ad_personalization: 'denied'/);
+assert.match(contactFormSource, /trackSuccessfulInquiry\(isConsultation \? "consultation" : "contact"\)/);
+assert.match(plannerFormSource, /trackSuccessfulInquiry\("planner"\)/);
 assert.match(contactFormSource, /name="contactMethod"/);
 assert.match(contactFormSource, /name="preferredWindow"/);
 assert.match(contactFormSource, /name="requesterTimeZone"/);

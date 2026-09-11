@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { SubmissionReceipt } from "@/components/submission-receipt";
 import { SubmissionFallback } from "@/components/submission-fallback";
+import { trackSuccessfulInquiry } from "@/lib/analytics";
 import type { InquiryContextKey } from "@/lib/contact-context";
 import { contactTopics } from "@/lib/site-config";
 
@@ -142,6 +143,7 @@ export function ContactForm({ inquiryInterest, inquiryLabel, mode = "contact" }:
       setConfirmationSent(payload?.confirmationSent === true);
       setConfirmationAvailable(payload?.confirmationAvailable !== false);
       setNextBusinessDay(typeof payload?.nextBusinessDay === "string" ? payload.nextBusinessDay : null);
+      trackSuccessfulInquiry(isConsultation ? "consultation" : "contact");
       setStatus("sent");
       form.reset();
     } catch {

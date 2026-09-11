@@ -519,10 +519,12 @@ export default function PricingPage() {
                 </div>
               </dl>
               <p className="mt-5 text-xs leading-relaxed text-cool-graphite">
-                We&apos;re finalizing our payment provider for United States
-                clients. Your proposal and invoice will state exactly which
-                methods are accepted before any payment is requested. We never
-                store raw card or bank details on our own website.
+                Cyvexly plans to send Stripe-hosted invoices after a signed
+                agreement. Once the Owner verifies the Stripe account, invoices
+                may offer ACH bank debit and card payment; those methods are not
+                active yet. There is no public checkout, no payment is requested
+                before an agreement and invoice, and this website never stores
+                raw card or bank details.
               </p>
             </div>
           </div>

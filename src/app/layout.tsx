@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { SiteAtmosphere } from "@/components/site-atmosphere";
+import { isValidGaMeasurementId } from "@/lib/analytics";
 import { organizationJsonLd } from "@/lib/structured-data";
 import { SITE_NAME, SITE_URL } from "@/lib/seo";
 import "./globals.css";
@@ -24,7 +25,10 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 const isIndexable = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
-const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+const configuredGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+const gaMeasurementId = isValidGaMeasurementId(configuredGaMeasurementId)
+  ? configuredGaMeasurementId
+  : undefined;
 const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
 
 const title = "Cyvexly Studio — Websites built to make your business unmistakable";

@@ -12,7 +12,8 @@ import type { NextConfig } from "next";
 // Google Analytics domains are appended only when NEXT_PUBLIC_GA_MEASUREMENT_ID
 // is actually set (src/app/layout.tsx gates the gtag.js tag the same way) —
 // the CSP never advertises a capability the site isn't using.
-const gaEnabled = Boolean(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim());
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+const gaEnabled = Boolean(gaMeasurementId && /^G-[A-Z0-9]{6,20}$/.test(gaMeasurementId));
 const scriptSrc = gaEnabled
   ? "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com"
   : "script-src 'self' 'unsafe-inline'";

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { ButtonLink } from "@/components/button";
 import { SubmissionFallback } from "@/components/submission-fallback";
 import { SubmissionReceipt } from "@/components/submission-receipt";
+import { trackSuccessfulInquiry } from "@/lib/analytics";
 import {
   assetCategories,
   assetStatusOptions,
@@ -345,6 +346,7 @@ export function PlannerForm({
       } catch {
         // Nothing to clean up if storage was never available.
       }
+      trackSuccessfulInquiry("planner");
       setStatus("submitted");
     } catch {
       setSubmitError(

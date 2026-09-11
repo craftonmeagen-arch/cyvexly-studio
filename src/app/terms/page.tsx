@@ -142,11 +142,13 @@ export default function TermsPage() {
                 No payment on this site
               </h2>
               <p className="mt-3">
-                This site does not currently process payments. No payment
-                method is represented as active. Any future payment
-                relationship will be described in a proposal and invoice
-                before it applies, and will use a dedicated, secure payment
-                provider rather than a form on this site.
+                This site does not process payments and has no public checkout.
+                Cyvexly has selected Stripe Invoicing for provider-hosted
+                invoices, but the account and payment methods are not active
+                yet. After activation, an invoice may offer ACH bank debit or
+                card payment only after both parties sign the project agreement.
+                Payment details will be entered on Stripe&apos;s hosted page, never
+                in a form on cyvexly.com.
               </p>
             </div>
 
