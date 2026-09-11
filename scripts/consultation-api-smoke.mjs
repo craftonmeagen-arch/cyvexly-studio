@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
 
 const baseUrl = process.env.BASE_URL ?? "http://127.0.0.1:5173";
+const testIpPrefix = `2001:db8:${(process.pid % 65535).toString(16)}`;
 
-async function submit(overrides = {}, ip = "198.51.100.24") {
+async function submit(overrides = {}, ip = `${testIpPrefix}::24`) {
   const response = await fetch(new URL("/api/contact", baseUrl), {
     method: "POST",
     headers: { "Content-Type": "application/json", "x-forwarded-for": ip },
@@ -23,7 +24,7 @@ async function submit(overrides = {}, ip = "198.51.100.24") {
   return { status: response.status, body: await response.json() };
 }
 
-const emailOnly = await submit({}, "198.51.100.10");
+const emailOnly = await submit({}, `${testIpPrefix}::10`);
 assert.equal(emailOnly.status, 503);
 assert.equal(emailOnly.body.error, "not-configured");
 
@@ -31,29 +32,29 @@ const phoneOnly = await submit({
   contactMethod: "phone",
   email: "",
   phone: "317-555-0142",
-}, "198.51.100.11");
+}, `${testIpPrefix}::11`);
 assert.equal(phoneOnly.status, 503);
 assert.equal(phoneOnly.body.error, "not-configured");
 
-const missingPhone = await submit({ contactMethod: "phone", email: "", phone: "" }, "198.51.100.12");
+const missingPhone = await submit({ contactMethod: "phone", email: "", phone: "" }, `${testIpPrefix}::12`);
 assert.equal(missingPhone.status, 400);
 assert.match(missingPhone.body.fields.phone, /phone number/i);
 
-const missingTimezone = await submit({ requesterTimeZone: "" }, "198.51.100.13");
+const missingTimezone = await submit({ requesterTimeZone: "" }, `${testIpPrefix}::13`);
 assert.equal(missingTimezone.status, 400);
 assert.match(missingTimezone.body.fields.requesterTimeZone, /timezone/i);
 
 const unexplainedTimezone = await submit({
   requesterTimeZone: "Other — include it in your note",
-}, "198.51.100.14");
+}, `${testIpPrefix}::14`);
 assert.equal(unexplainedTimezone.status, 400);
 assert.match(unexplainedTimezone.body.fields.message, /timezone/i);
 
-const honeypot = await submit({ "contact-company-website": "spam.example" }, "198.51.100.15");
+const honeypot = await submit({ "contact-company-website": "spam.example" }, `${testIpPrefix}::15`);
 assert.equal(honeypot.status, 400);
 assert.equal(honeypot.body.error, "rejected");
 
-const rateLimitIp = "203.0.113.50";
+const rateLimitIp = `${testIpPrefix}::50`;
 for (let attempt = 0; attempt < 5; attempt += 1) {
   const allowed = await submit({ name: `Rate test ${attempt}` }, rateLimitIp);
   assert.equal(allowed.status, 503);

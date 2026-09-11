@@ -316,7 +316,7 @@ async function main() {
 
     const consultationPhone = await submitConsultation(client, "phone", false, 390, 844);
     await capture(client, "consultation-phone-request.png");
-    assert.equal(consultationPhone.delivery, "failed");
+    assert.equal(consultationPhone.delivery, "not-applicable");
     assert.match(consultationPhone.text, /phone response/i);
     assert.doesNotMatch(consultationPhone.text, /couldn(?:'|’)t email a confirmation/i);
     assert.ok(consultationPhone.bottom <= consultationPhone.viewportHeight);

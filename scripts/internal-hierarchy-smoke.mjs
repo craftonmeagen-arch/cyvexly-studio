@@ -955,6 +955,70 @@ async function main() {
     assert.ok(contactDesktop.formTop <= contactDesktop.directTop, "desktop direct alternatives precede the primary short inquiry");
     await capture(client, "contact-desktop.png");
 
+    const consultationViewports = [
+      [1280, 720, "desktop"],
+      [768, 1024, "tablet"],
+      [390, 844, "phone"],
+      [320, 568, "minimum-phone"],
+    ];
+    const consultationLayouts = [];
+    for (const [width, height, label] of consultationViewports) {
+      await openRoute(client, "/contact?request=consultation", width, height);
+      const layout = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+        const form = document.querySelector('form').getBoundingClientRect();
+        const name = document.getElementById('name').getBoundingClientRect();
+        const contactChoices = [...document.querySelectorAll('input[name="contactMethod"]')]
+          .map((input) => input.closest('label').getBoundingClientRect().height);
+        const submit = document.querySelector('button[type="submit"]').getBoundingClientRect();
+        return {
+          title: document.querySelector('h1').textContent.trim(),
+          formTop: form.top,
+          nameBottom: name.bottom,
+          contactChoices,
+          hasWindow: Boolean(document.getElementById('preferredWindow')),
+          hasTimezone: Boolean(document.getElementById('requesterTimeZone')),
+          timezoneDefault: document.getElementById('requesterTimeZone').value,
+          noteOptional: document.querySelector('label[for="message"]').textContent.includes('(optional)'),
+          submitHeight: submit.height,
+          overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        };
+      })())`));
+      assert.equal(layout.title, "Request a consultation.");
+      assert.equal(layout.hasWindow, true);
+      assert.equal(layout.hasTimezone, true);
+      assert.equal(layout.timezoneDefault, "", `${label} consultation silently assumes a timezone`);
+      assert.equal(layout.noteOptional, true);
+      assert.ok(layout.contactChoices.every((controlHeight) => controlHeight >= 44), `${label} consultation contact choices fall below 44px`);
+      assert.ok(layout.submitHeight >= 44, `${label} consultation submit action falls below 44px`);
+      assert.ok(layout.overflow <= 1, `${label} consultation overflows horizontally`);
+      if (width <= 390) {
+        assert.ok(layout.formTop < height, `${label} consultation form begins below the opening viewport`);
+      }
+      await capture(client, `consultation-${label}.png`);
+      consultationLayouts.push({ width, height, label, ...layout });
+    }
+
+    await openRoute(client, "/contact?request=consultation", 1280, 720);
+    await evaluate(client, "document.getElementById('name').focus()");
+    await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: "Tab", code: "Tab", windowsVirtualKeyCode: 9 });
+    await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: "Tab", code: "Tab", windowsVirtualKeyCode: 9 });
+    const firstConsultationFocus = await evaluate(client, "document.activeElement?.value ?? null");
+    assert.equal(firstConsultationFocus, "email", "Tab from Name does not reach the email contact-method choice");
+    await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: "ArrowRight", code: "ArrowRight", windowsVirtualKeyCode: 39 });
+    await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: "ArrowRight", code: "ArrowRight", windowsVirtualKeyCode: 39 });
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    const consultationKeyboard = JSON.parse(await evaluate(client, `JSON.stringify({
+      activeValue: document.activeElement?.value ?? null,
+      selectedMethod: document.querySelector('input[name="contactMethod"]:checked')?.value ?? null,
+      phoneFieldVisible: Boolean(document.getElementById('phone')),
+    })`));
+    assert.deepEqual(consultationKeyboard, {
+      activeValue: "phone",
+      selectedMethod: "phone",
+      phoneFieldVisible: true,
+    });
+    await capture(client, "consultation-keyboard-desktop.png");
+
     await openRoute(client, "/start?service=ecommerce-websites", 1280, 720);
     let plannerStorageReady = false;
     for (let attempt = 0; attempt < 40; attempt += 1) {
@@ -1003,6 +1067,12 @@ async function main() {
       draftStored: localStorage.getItem('cyvexly-planner-draft-v1') !== null,
     })`));
     assert.deepEqual(plannerSaveResult, { statusVisible: true, draftStored: true });
+    await openRoute(client, "/contact?request=consultation", 1280, 720);
+    const plannerDraftAfterConsultation = await evaluate(
+      client,
+      "localStorage.getItem('cyvexly-planner-draft-v1') !== null",
+    );
+    assert.equal(plannerDraftAfterConsultation, true, "opening the consultation path clears the saved Planner draft");
     await evaluate(client, "localStorage.removeItem('cyvexly-planner-draft-v1')");
 
     await openRoute(client, "/start?service=ecommerce-websites", 390, 844);
@@ -1056,8 +1126,11 @@ async function main() {
       contactPhone,
       contactMinimumPhone,
       contactDesktop,
+      consultationLayouts,
+      consultationKeyboard,
       plannerStorageDesktop,
       plannerSaveResult,
+      plannerDraftAfterConsultation,
       plannerStoragePhone,
       nexoraPreviewDesktop,
       nexoraPreviewPhone,

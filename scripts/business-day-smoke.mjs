@@ -14,4 +14,10 @@ for (const [name, input, expected] of cases) {
   assert.equal(getNextBusinessDay(new Date(input)).isoDate, expected, name);
 }
 
-console.log(`business-day smoke: ${cases.length} calendar cases passed`);
+assert.equal(
+  getNextBusinessDay(new Date("2026-09-10T16:00:00Z"), new Set(["2026-09-11"])).isoDate,
+  "2026-09-14",
+  "configured studio closure",
+);
+
+console.log(`business-day smoke: ${cases.length + 1} calendar cases passed`);

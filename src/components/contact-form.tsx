@@ -156,6 +156,7 @@ export function ContactForm({ inquiryInterest, inquiryLabel, mode = "contact" }:
     return (
       <SubmissionReceipt
         confirmationSent={confirmationSent === true}
+        confirmationAvailable={confirmationAvailable}
         className="glass-panel rounded-2xl px-6 py-8 text-center"
       >
         <h2 className="font-display text-lg font-semibold text-midnight-slate">

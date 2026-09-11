@@ -54,19 +54,35 @@ function holidayKeys(year: number): Set<string> {
   return new Set(dates.map((date) => date.toISOString().slice(0, 10)));
 }
 
-function isBusinessDay(date: Date): boolean {
+function configuredClosureKeys(): Set<string> {
+  return new Set(
+    (process.env.CYVEXLY_CONSULTATION_CLOSED_DATES ?? "")
+      .split(",")
+      .map((value) => value.trim())
+      .filter((value) => /^\d{4}-\d{2}-\d{2}$/.test(value)),
+  );
+}
+
+function isBusinessDay(date: Date, additionalClosureKeys: Set<string>): boolean {
   const weekday = date.getUTCDay();
   if (weekday === 0 || weekday === 6) return false;
   const key = date.toISOString().slice(0, 10);
   const year = date.getUTCFullYear();
-  return !holidayKeys(year).has(key) && !holidayKeys(year + 1).has(key);
+  return (
+    !holidayKeys(year).has(key) &&
+    !holidayKeys(year + 1).has(key) &&
+    !additionalClosureKeys.has(key)
+  );
 }
 
-export function getNextBusinessDay(now = new Date()): { isoDate: string; label: string } {
+export function getNextBusinessDay(
+  now = new Date(),
+  additionalClosureKeys = configuredClosureKeys(),
+): { isoDate: string; label: string } {
   const current = calendarDate(parts(now));
   do {
     current.setUTCDate(current.getUTCDate() + 1);
-  } while (!isBusinessDay(current));
+  } while (!isBusinessDay(current, additionalClosureKeys));
 
   return {
     isoDate: current.toISOString().slice(0, 10),

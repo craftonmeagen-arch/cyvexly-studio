@@ -610,7 +610,8 @@ for (const source of [contactFormSource, plannerFormSource]) {
   assert.match(source, /<SubmissionReceipt[\s\S]*confirmationSent=\{confirmationSent === true\}/);
   assert.match(source, /don(?:&apos;|')t need to resubmit/);
 }
-assert.match(submissionReceiptSource, /data-confirmation-delivery=\{confirmationSent \? "sent" : "failed"\}/);
+assert.match(submissionReceiptSource, /confirmationAvailable \? \(confirmationSent \? "sent" : "failed"\) : "not-applicable"/);
+assert.match(contactFormSource, /confirmationAvailable=\{confirmationAvailable\}/);
 assert.match(submissionReceiptSource, /receipt\.focus\(\{ preventScroll: true \}\)/);
 assert.match(submissionReceiptSource, /receipt\.scrollIntoView\(/);
 assert.match(submissionReceiptSource, /prefers-reduced-motion: reduce/);

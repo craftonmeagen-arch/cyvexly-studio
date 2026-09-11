@@ -4,12 +4,14 @@ import { useEffect, useRef, type ReactNode } from "react";
 
 type SubmissionReceiptProps = {
   confirmationSent: boolean;
+  confirmationAvailable?: boolean;
   children: ReactNode;
   className?: string;
 };
 
 export function SubmissionReceipt({
   confirmationSent,
+  confirmationAvailable = true,
   children,
   className = "",
 }: SubmissionReceiptProps) {
@@ -34,7 +36,9 @@ export function SubmissionReceipt({
       role="status"
       tabIndex={-1}
       data-submission-receipt
-      data-confirmation-delivery={confirmationSent ? "sent" : "failed"}
+      data-confirmation-delivery={
+        confirmationAvailable ? (confirmationSent ? "sent" : "failed") : "not-applicable"
+      }
       className={`scroll-mt-28 outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyber-blue ${className}`}
     >
       {children}
