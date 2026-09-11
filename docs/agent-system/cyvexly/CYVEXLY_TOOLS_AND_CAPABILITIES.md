@@ -23,6 +23,35 @@ describe their original session types; discover and verify current capabilities.
 
 ## Product and browser capabilities
 
+**Round 178 note — `internal-hierarchy-smoke.mjs` and `submission-receipt-smoke.mjs`
+can fail against `next dev` (Turbopack) with no product regression; both pass
+clean against a production build.** Running the full local verification ledger
+for unrelated repo-hygiene work, `internal-hierarchy-smoke.mjs` failed
+consistently (two consecutive runs, same result) against a manually started
+`pnpm exec next dev --port 5173` server: the `/work` desktop Work rail's
+`aria-live` status stayed `"Project 1 of 4"` instead of settling to
+`"Projects 1–2 of 4"` within the script's existing 3-second/30-attempt poll.
+`submission-receipt-smoke.mjs` timed out the same run waiting for a receipt.
+Source-diff check ruled out a real cause: the only change in flight was an
+unrelated, isolated route deletion (`src/app/honey-hearted/route.ts`, see
+Round 178 in `CYVEXLY_BUILD_SUMMARY.md`) with zero references to the Work rail
+or receipt components, and neither script's target files had changed at all
+since Auditor `IFA-2026-09-11-R138` passed both suites clean hours earlier.
+**Root cause, confirmed by a stronger instrument:** stopping the dev server and
+re-running both scripts unchanged against `pnpm exec next build && pnpm exec
+next start --port 5173` (the same production server type most rounds already
+build for release proof) passed both cleanly on the first attempt — zero
+runtime errors, zero overflow, all assertions true. This points to `next dev`/
+Turbopack's slower, incremental first-hydration timing occasionally missing
+these two CDP scripts' fixed poll windows, not a Work-rail or receipt-delivery
+defect. **Do not conclude a regression from either script's failure alone when
+run against `next dev`:** re-run against a production `next build`/`next
+start` server before treating a failure as real, the same way rounds 78-81
+re-verified Browser-pane compositing/keyboard findings with a stronger
+instrument before concluding a defect. Re-verify this finding if a future
+round sees the same failure survive a production-build re-run — that would be
+new evidence of an actual regression, not the same dev-mode artifact.
+
 **Round 84 note — Node.js/pnpm missing from this session's PowerShell
 `PATH`; one-line fix, not a real unavailability.** `pnpm`/`node` were "not
 recognized" in a fresh PowerShell tool call even though setup-time

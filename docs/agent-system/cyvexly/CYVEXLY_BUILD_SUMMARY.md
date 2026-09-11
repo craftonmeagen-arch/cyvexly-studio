@@ -31,6 +31,16 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
   (Auditor/Council role, not Builder) and the Owner/account actions already
   tracked in `CYVEXLY_APP_DEBT.md`. Completion state: `IMPLEMENTED —
   INDEPENDENT REVIEW PENDING`.
+- Re-ran the fuller regression suite (`buyer-journey-smoke.mjs`,
+  `internal-hierarchy-smoke.mjs`, `submission-receipt-smoke.mjs`,
+  `nexora-demo-smoke.mjs`) after the hygiene fix below. Against a manually
+  started `next dev` server, `internal-hierarchy-smoke.mjs` and
+  `submission-receipt-smoke.mjs` failed on Work-rail hydration timing and a
+  receipt-wait timeout respectively; both passed cleanly on the first retry
+  against a production `next build`/`next start` server, confirming a
+  `next dev`/Turbopack timing artifact rather than a product regression (full
+  root-cause detail in `CYVEXLY_TOOLS_AND_CAPABILITIES.md` Round 178 note).
+  `buyer-journey-smoke.mjs` and `nexora-demo-smoke.mjs` passed both times.
 - **Found and fixed, out-of-cycle repo hygiene:** a full route-by-route QA
   sweep (About, FAQ, Accessibility, Terms, Work + all four case studies,
   Start/Planner) surfaced `src/app/honey-hearted/route.ts`, an unlinked,
