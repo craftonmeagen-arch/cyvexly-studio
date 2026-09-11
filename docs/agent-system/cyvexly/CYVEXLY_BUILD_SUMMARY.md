@@ -3,6 +3,30 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 179 — first independent challenge of Chunk 5 candidate consumed
+
+Full evidence: `builder/evidence/round-179-review-consumption/assessment.md`.
+
+- Found new unconsumed Auditor publication `IFA-2026-09-11-R139` in the
+  external review root (not yet reflected in `CYVEXLY_REVIEW_INDEX.md`):
+  the first exact-source review of Chunk 5 candidate `b14a92b`, zero defects
+  across the consent harness, search-readiness harness, buyer-journey suite,
+  and existing regression suites, with 39 evidence screenshots. Supplies
+  challenge 1 of 2.
+- Verified before recording: `b14a92b` is an ancestor of current `main`
+  (`git merge-base --is-ancestor`), and all 39 screenshots the report lists
+  are present on disk in the cited evidence folder. No operational-inbox JSON
+  accompanied the publication; consumed directly, consistent with R136-R138.
+- No source change was made or needed. Candidate `b14a92b` still requires one
+  more independent challenge before acceptance/publication; production
+  remains unaffected at accepted source `4232574`. Updated
+  `CYVEXLY_CURRENT_STATE.md`, `CYVEXLY_ACTIVE_CHUNK.md`,
+  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`, and `CYVEXLY_REVIEW_INDEX.md` to record
+  the disposition.
+- Re-checked `CYVEXLY_CHUNK_DEBT.md`/`CYVEXLY_APP_DEBT.md`: both open items
+  (Chunk 11 real-delivery gate, Chunk 6 Velora physical review) remain
+  Owner/account or reviewer gates, not reachable Builder work this round.
+
 ## Round 178 — candidate re-verification and orphaned-route cleanup
 
 Full evidence: `builder/evidence/round-178-reverification/assessment.md`.
