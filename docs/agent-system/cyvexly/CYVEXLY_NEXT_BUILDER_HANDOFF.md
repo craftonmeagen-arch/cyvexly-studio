@@ -19,13 +19,17 @@ Council publication against exact `b14a92b` first.
 Round 178 also removed an orphaned pre-team-split HoneyHearted route
 (`src/app/honey-hearted/route.ts` + `honey-hearted/index.html`/`smoke.mjs`,
 ~2MB, unlinked, noindexed, superseded by the real standalone deployment at
-`honeyhearted.org`) as commit `67fb358` on top of `b14a92b`. `main` HEAD is
-now `67fb358`. This does not change candidate `b14a92b`'s own exact-hash
-identity for its pending independent review, and it does not affect the
-accepted/deployed production source `4232574`. Verify `67fb358` builds clean
-(it does: tsc/eslint/next build all pass) before treating it as part of the
-next push, and route the Auditor to review current `main` HEAD rather than
-only the named candidate hash.
+`honeyhearted.org`) as commit `67fb358` on top of `b14a92b`, followed only by
+documentation commits (run `git log --oneline 719b3a4..main` for the exact
+current list — do not hardcode a "current HEAD" hash here, it goes stale the
+moment another commit lands). This does not change candidate `b14a92b`'s own
+exact-hash identity for its pending independent review, and it does not
+affect the accepted/deployed production source `4232574`. `67fb358` is
+verified clean (tsc/eslint/next build all pass — 55 routes, down from 56 now
+that the orphaned route is gone) before treating it as part of the next push;
+route the Auditor to review current `main` HEAD rather than only the named
+candidate hash. Full detail:
+`builder/evidence/round-178-reverification/assessment.md`.
 
 Consent proof shows zero Google requests before grant; decline is keyboard-
 operable and fully usable; the choice persists and can be reopened; ad storage,
