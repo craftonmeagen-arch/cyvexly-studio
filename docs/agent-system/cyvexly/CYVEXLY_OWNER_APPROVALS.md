@@ -93,6 +93,19 @@ indexing, and actual LLC formation remain separate. No real inquiries were
 submitted, no records were deleted, no scheduler/account settings changed,
 and no product source was edited by this approval-record update.
 
+**Round 178 status check on the four required follow-ups above (source-
+verified, no product change made this round):** all four are implemented in
+current `src/app/privacy/page.tsx`. Item 1 — the raw IP is used only for
+in-memory rate limiting (`checkRateLimit`) and confirmed absent from email
+content (`src/app/api/contact/route.ts`, `src/app/api/planner/route.ts`), and
+Privacy states this explicitly ("The raw IP address is not placed in internal
+notification or confirmation emails"). Item 2 — Privacy names the proposed
+12-month inactive-inquiry review as a proposed, not statutory or automatic,
+schedule. Item 3 — Privacy explicitly states no application submission
+database and distinguishes it from Resend/inbox/hosting-log copies. Item 4 —
+not independently re-verified field-by-field this round; no evidence of drift
+was found in the surfaces checked.
+
 ## About core description and presentation — 2026-09-10
 
 **Status:** APPROVED — the description and presentation below only.
