@@ -27,11 +27,27 @@ If a future round sees `internal-hierarchy-smoke.mjs` fail at a touch-swipe
 assertion again, that would be new evidence of an actual regression, not
 this same fragility (already fixed).
 
+**Round 181 checked and found one new publication:** `IFA-2026-09-11-R141`, a
+third routine zero-defect re-verification of already-accepted candidate
+`b14a92b` (product-identical to `main` HEAD `85c128e`). It does not reopen
+anything — the two-review gate was already satisfied by R139/R140 in Round
+180. Dispositioned in `CYVEXLY_REVIEW_INDEX.md`. Round 181 also re-confirmed
+live `https://cyvexly.com/` (HTTP 200, `noindex, nofollow`, robots
+`Disallow: /`) still matches the accepted dormant state — no drift.
+
 **Before repeating any verification pass:** check
 `C:/app projects/website-independent-review/reports/published/auditor/` for
-any new publication past `R140` — none is expected immediately since Chunk 5
-just closed, but the next builder should still check rather than assume.
-`CYVEXLY_REVIEW_INDEX.md` records `R140` as consumed.
+any new publication past `R141` — the next builder should still check rather
+than assume none exists. `CYVEXLY_REVIEW_INDEX.md` records `R140` and `R141`
+as consumed.
+
+**No reachable Builder implementation work is currently open.** Every active
+chunk item is either an Owner/account gate (Chunk 5's LLC/Resend/GA4/Stripe/
+Guardio gates; Chunk 11's protected real-delivery gate) or requires an
+independent reviewer rather than the Builder (Chunk 6's one remaining Velora
+physical/visual review, per `CYVEXLY_CHUNK_DEBT.md`). Re-check
+`CYVEXLY_OWNER_DIRECTION.md` for any new entry, and the independent-review
+root for new publications, before assuming this is still true.
 
 Consent proof shows zero Google requests before grant; decline is keyboard-
 operable and fully usable; the choice persists and can be reopened; ad storage,
