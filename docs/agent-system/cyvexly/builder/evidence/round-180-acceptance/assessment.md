@@ -107,3 +107,26 @@ change, or account action occurred. Production remains dormant
 (`noindex, nofollow`, no GA ID, no Search Console verification) exactly as
 Owner direction `2026-09-10-07` requires until the Owner completes the
 account-side gates in `CYVEXLY_APP_DEBT.md`.
+
+## Live production verification (post-push)
+
+After pushing `85c128e` to `origin/main`, confirmed the Render deployment
+picked up the new build:
+
+- `curl https://cyvexly.com/honey-hearted` went from `200` (pre-push, still
+  serving the pre-`67fb358` build) to `404` (the orphaned route removed in
+  `67fb358`, downstream of `b14a92b`) — proves the live origin now serves
+  code at or after that commit.
+- The `ETag` on `/` changed from the pre-push value to a new value,
+  independently confirming a redeploy occurred.
+- `/privacy` now serves the candidate's dormant-state consent copy ("Google
+  Analytics is not currently configured... The dormant integration requires
+  a valid measurement ID and, once configured, will still wait for your
+  explicit permission before loading"), which only exists in `b14a92b`.
+- `robots.txt` still disallows all crawling and no Search Console
+  verification tag is present — production correctly remains dormant/no-index
+  post-deploy, matching Owner direction `2026-09-10-07`.
+
+Deployment lag was roughly a few minutes after the push (Render's normal
+build/deploy cycle for this Next.js app), not a stalled or failed deploy.
+
