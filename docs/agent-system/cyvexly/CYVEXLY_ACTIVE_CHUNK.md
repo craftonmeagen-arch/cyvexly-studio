@@ -48,6 +48,9 @@ Candidate `b14a92b` now requires the governing independent exact-source review
 rounds before acceptance or publication. The accepted production baseline
 remains `4232574` through release commit `8c34031`.
 
+Round 178's full evidence is
+`builder/evidence/round-178-reverification/assessment.md`.
+
 Round 178 re-ran the full verification ledger against unchanged `b14a92b`
 (typecheck, lint, 56-route build, business-day/consultation-api/search-
 readiness smoke) with zero regressions, and spot-checked the dormant consent
