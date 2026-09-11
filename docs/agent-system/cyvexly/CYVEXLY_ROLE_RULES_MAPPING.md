@@ -109,8 +109,14 @@ Read the returned source identity, paths, and port. Install frozen dependencies 
 with pnpm install --frozen-lockfile. Start Next with pnpm exec next dev --port <role-port>
 (or an optimized build when the review requires it), recording all started child processes.
 Do not reuse Builder node_modules, build caches, browser contexts, environment, or login.
-Cyvexly checks: pnpm exec tsc --noEmit, pnpm run lint, pnpm run build, plus actual rendered
-workflow proof appropriate to the change. Never claim a non-existent typecheck script ran.
+Cyvexly checks, in this order — pnpm run lint, pnpm run build, then pnpm exec
+tsc --noEmit — plus actual rendered workflow proof appropriate to the change.
+Never claim a non-existent typecheck script ran. Run build (or `next typegen`)
+before a standalone `tsc --noEmit` on a fresh checkout: Next 16's generated
+typed-route/layout ambient types (e.g. `LayoutProps`) only exist in
+`.next/types/` after a build, so `tsc` run first on a clean tree falsely
+reports them missing (`CYVEXLY_WATCH.md` Round 10; reconfirmed
+`CYVEXLY_TOOLS_AND_CAPABILITIES.md` Round 178).
 
 Publish the report with source SHA and REVIEW ID before stopping. Update external memory
 and close your browser; then complete exact process/disk cleanup. Unique/uncommitted runtime

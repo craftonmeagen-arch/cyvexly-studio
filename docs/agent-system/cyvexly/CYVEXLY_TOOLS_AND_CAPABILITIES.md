@@ -27,6 +27,13 @@ describe their original session types; discover and verify current capabilities.
 (before any `next build`/`next dev` has run) because Next.js's generated
 typed-route/layout ambient types don't exist yet; run a build first, or don't
 read a standalone `tsc` failure as a real defect without checking this.**
+(This exact root cause was already found once, in `CYVEXLY_WATCH.md` Round 10
+— "generate Next route/layout types before standalone `tsc`" — but
+`CYVEXLY_ROLE_RULES_MAPPING.md`'s and `CYVEXLY_ENVIRONMENT.md`'s documented
+check order still listed `tsc` before `build` eight-plus rounds later. Round
+178 reproduced it independently, then corrected both check-order references
+to lint → build → tsc so the same false failure stops recurring in the
+authoritative checklists, not only in this tools file.)
 Deleting `.next` and immediately running `pnpm exec tsc --noEmit` (no prior
 build in that fresh state) reliably fails: `src/app/layout.tsx(74,50): error
 TS2304: Cannot find name 'LayoutProps'.` — `RootLayout({ children }:

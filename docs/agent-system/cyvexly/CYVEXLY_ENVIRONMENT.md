@@ -8,7 +8,9 @@ Current role setup: 2026-09-05. See CYVEXLY_ROLE_RULES_MAPPING.md for authority 
 - Review snapshots, runtimes, browser profiles, memory, reports and inbox are external.
 - Source stack: Next.js 16, React 19, TypeScript, Tailwind 4; pinned pnpm in package.json.
 - Install pnpm install --frozen-lockfile. Dev pnpm exec next dev --port <owned-port>.
-- Checks pnpm exec tsc --noEmit, pnpm run lint, pnpm run build.
+- Checks, in this order, pnpm run lint, pnpm run build, then pnpm exec tsc
+  --noEmit (build before standalone tsc on a fresh checkout — see
+  CYVEXLY_WATCH.md Round 10 and CYVEXLY_TOOLS_AND_CAPABILITIES.md Round 178).
 - Use PowerShell 7 for lifecycle helpers. Start background processes hidden and register
   each owned server/worker/browser process before cleanup.
 - Reviewers install dependencies in their disposable runtime; never use Builder caches,
