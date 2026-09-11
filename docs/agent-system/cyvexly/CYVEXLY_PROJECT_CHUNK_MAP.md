@@ -150,9 +150,10 @@ evidence exposes a meaningful reachable gap.
   It supports email-only and phone-only requests, window/timezone context,
   optional note, consent, federal-holiday-aware next-business-day logic,
   separate confirmation outcomes, duplicate protection, and failure recovery.
-- **Candidate:** `4232574`; Builder automated and visible-browser proof passes.
+- **Accepted source:** `4232574`; Builder proof and independent Auditor R136/R137
+  pass with zero defects. Round 176 publication and canonical delivery proof remain.
 - **Boundary:** preserve accepted `/work` source `c8bc73d`, project order and
   claims, outside-product isolation, no-index controls, and all scheduler state.
-- **Closure:** exact candidate proof, two separate independent challenges,
-  accepted-source publication, and canonical production verification of both
-  Home and `/work`.
+- **Closure:** exact-source proof and two separate independent challenges are
+  complete. Accepted-source publication, canonical production verification of
+  Home and `/work`, and controlled Owner-inbox delivery remain.

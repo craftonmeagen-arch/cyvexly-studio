@@ -3,16 +3,17 @@
 ## Current assignment
 
 Read Owner directions `2026-09-10-04` and `2026-09-10-03` first. Chunk 11 exact
-candidate `4232574` now combines the homepage four-project rail with the
-explicitly tracked quick-consultation path. Builder proof passes; the next work
-is independent challenge of that exact source, not forward implementation.
+source `4232574` combines the homepage four-project rail with the quick-
+consultation path. Builder proof passes, and Auditor R136/R137 supply two clean
+independent challenges. The next work is publication and canonical delivery
+proof, not more feature implementation.
 
-Challenge Home and `/work` rail order, controls, keyboard, swipe, end states,
-reduced motion, links, and 1280/768/390/320 containment. Challenge consultation
-discovery, email-only and phone-only completion, optional note, window/timezone
-transmission, Planner draft preservation, protected failures, separate
-confirmation outcomes, raw-IP exclusion, privacy disclosure, and truthful
-next-business-day/non-appointment copy.
+Publish the accepted source, then regress Home and `/work` rail order, controls,
+keyboard, swipe, end states, reduced motion, links, and responsive containment.
+Verify consultation discovery, email-only and phone-only behavior, optional
+note, window/timezone transmission, Planner draft preservation, protected
+failures, separate confirmation outcomes, raw-IP exclusion, privacy disclosure,
+and truthful next-business-day/non-appointment copy on canonical production.
 
 Owner input update, 2026-09-10: use Cyvexly LLC as the chosen legal name. The
 Owner reports that their availability check passed and plans to apply
@@ -22,11 +23,11 @@ existing LLC. Registration and final legal-copy approval remain pending.
 Candidate `4232574` corrects the unsupported present-tense LLC claim while
 retaining Cyvexly LLC as the chosen name. This does not prove formation.
 
-After two clean independent reviews, coordinate one controlled real Contact,
-Planner, and Consultation delivery to the Owner inbox using protected Resend
-configuration. Do not send unrelated test mail. Only then may the Builder
-accept, publish, and verify canonical production. No scheduler changes are
-authorized.
+Coordinate one controlled real Contact, Planner, and Consultation delivery to
+the Owner inbox using protected Resend configuration. Do not send unrelated
+test mail. Record server acceptance and requester-confirmation status separately
+from actual inbox receipt; keep the gate open until the Owner confirms arrival.
+No scheduler changes are authorized.
 
 The underlying EduAILenz/Mudoinkle applications, HoneyHearted, their protected
 data, credentials, repositories, infrastructure, and scheduler states remain

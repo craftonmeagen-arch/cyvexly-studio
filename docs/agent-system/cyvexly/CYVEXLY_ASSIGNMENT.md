@@ -37,8 +37,9 @@ communicates next-business-day follow-up without inventing an appointment, and
 uses the protected mail path. The same round removes routine raw IPs from form
 emails and corrects public legal/privacy copy without inventing a formed entity.
 
-Exact candidate `4232574` is ready for independent review; it is not yet
-accepted, deployed, or proved by a real Owner-inbox delivery.
+Exact source `4232574` passed independent Auditor challenges R136 and R137 with
+zero defects and is accepted for Round 176 publication. It is not yet deployed
+or proved by real Owner-inbox delivery.
 
 This direction does not grant provider purchases, payment integration, secret
 access, indexing permission, outside-product changes, or scheduler changes.

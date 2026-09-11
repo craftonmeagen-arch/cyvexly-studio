@@ -30,6 +30,12 @@ prefixes. Never renumber an old finding. New Functional findings use CYV-FS.
 Current reports need an actual published review identity and exact reviewed source. Pending
 Council R42 publication/cleanup remains unverified until its evidence is reconciled.
 
+The root `reports/AUDITOR_CURRENT.md` pointer currently lags at R133, but the
+immutable published reports and evidence for R136 and R137 are present under
+`reports/published/auditor/` and `evidence/auditor/`. No new primary operational-
+inbox JSON accompanied them; the Builder consumed the immutable publications
+directly and did not touch legacy Team 2 inbox items.
+
 Auditor publications `IFA-2026-09-10-R117`, R118, and R120–R127 each repeated
 a zero-defect pass of old accepted source
 `48a2470385e7641b1bd500eed55850286896677e`. Their inbox items were consumed and
@@ -63,3 +69,10 @@ defects and supplies challenge 2 of 2 after R132. Its operational inbox item is
 processed; immutable report and 20 screenshots remain external. The two clean
 exact-source reviews close Chunk 10 in global round 174 and make `c8bc73d`
 eligible for acceptance, publication, and deployment.
+
+Auditor `IFA-2026-09-11-R136` and `IFA-2026-09-11-R137` independently passed
+exact Chunk 11 source `4232574` with zero defects across the Home rail, quick
+consultation path, business-day logic, email-only/phone-only receipts, Planner
+draft preservation, privacy/legal truth, `/work` regression, and responsive
+containment. They supply challenges 1 and 2 respectively, satisfying the review
+gate and making `4232574` the accepted product source for Round 176 publication.

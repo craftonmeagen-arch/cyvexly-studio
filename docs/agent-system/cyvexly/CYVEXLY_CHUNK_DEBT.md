@@ -6,11 +6,11 @@ Outside-website work belongs to Team 2.
 
 ## Open
 
-1. **Chunk 11 — review and publication gates for exact `4232574`.** Builder
-   implementation and local proof pass for the Home rail and quick consultation
-   path. Two separate independent exact-source reviews, controlled real
-   Owner-inbox delivery, acceptance, publication, and canonical verification
-   remain before closure.
+1. **Chunk 11 — publication and real-delivery gates for accepted `4232574`.**
+   Builder proof and two independent exact-source reviews pass: Auditor R136
+   and R137 each found zero defects. Publication, canonical verification, one
+   controlled real Contact/Planner/Consultation delivery, and Owner confirmation
+   of inbox receipt remain before closure.
 
 2. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with

@@ -1,17 +1,17 @@
 # Cyvexly Build Team Builder — PM Prompt
 
-**Status:** ACTIVE — CHUNK 11 CANDIDATE `4232574` AWAITS REVIEW
+**Status:** ACTIVE — CHUNK 11 SOURCE `4232574` AWAITS PUBLICATION
 
 Owner directions `2026-09-10-03` and `2026-09-10-04` open Chunk 11. Exact
-candidate `4232574` replaces Home's fixed project grids with the accepted
+source `4232574` replaces Home's fixed project grids with the accepted
 four-project horizontal interaction and adds a discoverable quick consultation
 path that bypasses the Planner. It supports email-only or phone-only contact,
 preferred window and timezone, optional note, consent, federal-holiday-aware
 next-business-day timing, duplicate protection, truthful delivery, and separate
 confirmation outcomes. It removes routine raw IPs from Contact/Planner
-notifications and reconciles public privacy/legal copy. Builder proof passes;
-two independent reviews, controlled Owner-inbox delivery, acceptance,
-publication, and canonical verification remain.
+notifications and reconciles public privacy/legal copy. Builder proof and
+independent Auditor challenges R136/R137 pass with zero defects. Publication,
+canonical verification, and controlled Owner-inbox delivery remain.
 
 Owner direction `2026-09-10-02` closed Chunk 10 in
 global round 174 at accepted source `c8bc73d`. The horizontal Work-card rail preserves the
@@ -52,12 +52,13 @@ The bounded `2026-09-10-01` exception supersedes the former exclusion only for
 the two Cyvexly case studies, their Work cards, relevant Home discovery,
 contextual inquiry continuity, and supporting public-safe proof/tests.
 
-Accepted product source remains `c8bc73d`; active review candidate is `4232574`.
+Accepted product source is `4232574`; no active review candidate remains.
+Production still serves `c8bc73d` until Round 176 publication.
 Chunk 6's physical/visual review, Guardio, and Chunk 5 account/Owner
 gates remain open but separate.
 
-Auditor R133 is the latest publication. It passed exact rail source `c8bc73d`
-with zero defects and supplies clean challenge 2 of 2 after R132. R131
-reverified pre-rail accepted source
-`ca2b84e` with zero defects and has been dispositioned, but it does not cover
-Chunk 10. Review startup must challenge exact active source `4232574`.
+Auditor R137 is the latest immutable publication. R136 and R137 independently
+passed exact `4232574` with zero defects and satisfy the Chunk 11 review gate.
+The root current-report pointer lags at R133 and no operational-inbox JSON was
+published for R136/R137; their immutable reports and evidence were consumed
+directly. Review startup now falls back to accepted `4232574`.
