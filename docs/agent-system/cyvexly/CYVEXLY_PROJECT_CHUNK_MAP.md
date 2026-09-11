@@ -42,7 +42,7 @@ evidence exposes a meaningful reachable gap.
   closure is consolidated into Chunk 5's exact-LLC-name, copy/visual approval,
   analytics/search decision, and indexing-permission gates.
 
-## Chunk 5 — United States Launch Completion & Business Operations (OPEN — CANDIDATE REVIEW + OWNER GATES)
+## Chunk 5 — United States Launch Completion & Business Operations (OPEN — OWNER GATES ONLY)
 
 - **Authority:** Owner directions `2026-09-04-14` and `2026-09-10-07`, plus
   vision §17.
@@ -51,13 +51,16 @@ evidence exposes a meaningful reachable gap.
   About; draft Indiana/United States Privacy and Terms; server-side Contact and
   Planner delivery paths; dormant Owner-controlled analytics/search wiring;
   content-truth audit; and production QA.
-- **Round 177 candidate:** `b14a92b` adds basic-consent GA4, success-only
-  non-PII lead events, gated Search Console/indexing proof, and truthful dormant
-  Stripe Invoicing readiness copy. Independent exact-source review remains.
-- **Remaining gates:** exact registered LLC name; Resend account/domain/API
-  secret plus three-route real-delivery confirmation; real GA4/Search Console
-  values and consent/privacy approval; final About/legal/visual approval;
-  Stripe verification/test invoice; Guardio review/recheck; indexing release.
+- **Accepted/deployed source:** `85c128e` (Round 180), formerly candidate
+  `b14a92b`. Adds basic-consent GA4, success-only non-PII lead events, gated
+  Search Console/indexing proof, and truthful dormant Stripe Invoicing
+  readiness copy. Independent exact-source review is satisfied: Auditor
+  `IFA-2026-09-11-R139` and `R140` each passed with zero defects.
+- **Remaining gates (all Owner/account, not reachable by Builder):** exact
+  registered LLC name; Resend account/domain/API secret plus three-route
+  real-delivery confirmation; real GA4/Search Console values and
+  consent/privacy approval; final About/legal/visual approval; Stripe
+  verification/test invoice; Guardio review/recheck; indexing release.
 - **Deferrals:** public checkout, automated recurring billing, and real-client
   claims.
 
