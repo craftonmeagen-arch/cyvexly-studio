@@ -5,9 +5,11 @@ Studio truthfully offers Indianapolis-area in-person consultations by
 appointment while retaining remote United States service. The primary Cyvexly
 Builder owns the local page and search integration plus one eligible Google
 service-area Business Profile. Use `Cyvexly Studio`, primary category `Website
-designer`, and Indianapolis only. Never claim a walk-in storefront, expose a
-private address, create duplicate profiles, or add other cities without later
-Owner confirmation. Provider verification and ranking remain external outcomes.
+designer`, and Indianapolis as the first confirmed local area. This adds local
+discovery; it does not make Cyvexly an exclusive provider or replace nationwide
+remote service. Never claim a walk-in storefront, expose a private address,
+create duplicate profiles, or add other cities without later Owner confirmation.
+Provider verification and ranking remain external outcomes.
 
 **Latest primary direction — Owner direction 2026-09-13-01:** begin phased,
 standards-based search-visibility growth for `cyvexly.com`. Preserve the

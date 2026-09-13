@@ -22,7 +22,8 @@ address is claimed. IndexNow accepted all 26 canonical URLs with HTTP 200.
 
 1. Complete one eligible Google service-area Business Profile only: public
    business name `Cyvexly Studio`, primary category `Website designer`, and
-   Indianapolis as the sole confirmed service area. The Owner must privately
+   Indianapolis as the first confirmed local area alongside nationwide remote
+   service. This is not an exclusive-provider claim. The Owner must privately
    enter any address Google requires for verification; keep it hidden publicly
    when customers are not served there. Do not create duplicates, a storefront
    claim, or additional city areas/pages without later confirmation.

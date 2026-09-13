@@ -27,9 +27,10 @@ no public walk-in storefront and no public street address is claimed.
 
 Actual discovery is not yet proven. The next local account step is one eligible
 Google service-area Business Profile using `Cyvexly Studio`, primary category
-`Website designer`, and Indianapolis only. The Owner must enter any verification
-address privately and it must remain hidden publicly when clients are not served
-there. On September 13, Google accepted priority-
+`Website designer`, and Indianapolis as an added local market alongside
+nationwide remote service—not an exclusive-provider claim. The Owner must enter
+any verification address privately and it must remain hidden publicly when
+clients are not served there. On September 13, Google accepted priority-
 crawl requests for the Resources hub and both guides; all three were still
 unknown/not indexed at request time. Sampled external searches did not surface
 Cyvexly before this cluster deployed, so the next work is coverage monitoring,

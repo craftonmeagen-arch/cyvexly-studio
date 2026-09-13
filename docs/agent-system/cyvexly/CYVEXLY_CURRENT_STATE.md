@@ -45,9 +45,11 @@ URLs with HTTP 200.
   indexing or ranking.
 - One eligible service-area Google Business Profile is the next local-discovery
   account step. Use `Cyvexly Studio`, primary category `Website designer`, and
-  Indianapolis only; the Owner must privately enter any address Google requires
-  for verification and it must remain hidden publicly when clients are not
-  served there. Do not create duplicate profiles or add unconfirmed cities.
+  Indianapolis as the first confirmed local area alongside nationwide remote
+  service; the Owner must privately enter any address Google requires for
+  verification and it must remain hidden publicly when clients are not served
+  there. This is not an exclusive-provider claim. Do not create duplicate
+  profiles or add unconfirmed cities.
 
 ## Round 187 — Bing discovery and deployment-gated IndexNow
 

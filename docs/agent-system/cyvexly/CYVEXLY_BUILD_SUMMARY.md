@@ -24,9 +24,11 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
   accepted all 26 canonical URLs with HTTP 200.
 - Technical publication and notification do not prove indexing or ranking. The
   next account step is one eligible service-area Google Business Profile using
-  `Cyvexly Studio`, primary category `Website designer`, Indianapolis only, and
-  no public home address or fabricated storefront. Owner-private address entry
-  and provider verification remain required.
+  `Cyvexly Studio`, primary category `Website designer`, and Indianapolis as an
+  added local market alongside nationwide remote service. It is not an
+  exclusive-provider claim. No public home address or fabricated storefront is
+  authorized; Owner-private address entry and provider verification remain
+  required.
 
 ## Round 187 — Bing discovery and deployment-gated IndexNow
 

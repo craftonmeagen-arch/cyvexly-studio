@@ -26,6 +26,8 @@ verification flow and keep it hidden from the public when customers are not
 served there. Start with Indianapolis as the confirmed service area. Do not
 claim a walk-in office, storefront, fixed meeting address, multiple locations,
 other cities, or a larger in-person radius without later Owner confirmation.
+Indianapolis is an additional local-discovery market, not a claim that Cyvexly
+is the sole provider there and not a restriction on nationwide remote service.
 Do not create duplicate profiles, doorway pages, virtual-office claims, or
 ranking guarantees. Local discovery remains subject to provider verification,
 distance, relevance, prominence, indexing, and competition.
