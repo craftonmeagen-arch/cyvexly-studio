@@ -1,10 +1,11 @@
 # Cyvexly Marketability Record
 
-**Record date:** September 13, 2026  
-**Public brand:** Cyvexly Studio  
-**Legal business:** Cyvexly LLC — Owner-confirmed; not independently verified
-against an Indiana filing record  
-**Canonical website:** <https://cyvexly.com>  
+- **Record date:** September 13, 2026
+- **Public brand:** Cyvexly Studio
+- **Legal business:** Cyvexly LLC — Owner-confirmed; not independently verified
+  against an Indiana filing record
+- **Canonical website:** <https://cyvexly.com>
+
 **Purpose:** This is the owner-friendly, durable record of what has been done to
 make Cyvexly easier to find, understand, trust, and contact. Future Cyvexly
 teams should update this file when a material marketing, search, listing,
