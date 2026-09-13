@@ -9,9 +9,11 @@ context, the sitemap, Article/Breadcrumb data, and automated proof now connect
 that first small cluster. The expanded search and buyer contracts pass on
 canonical production, with responsive visible proof at desktop and 375px.
 
-Actual discovery is not yet proven. Sampled external searches did not surface
-Cyvexly before this cluster deployed, so the next work is recrawl/coverage
-monitoring, legitimate profiles/mentions/earned links, and Search Console/GA4
+Actual discovery is not yet proven. On September 13, Google accepted priority-
+crawl requests for the Resources hub and both guides; all three were still
+unknown/not indexed at request time. Sampled external searches did not surface
+Cyvexly before this cluster deployed, so the next work is coverage monitoring,
+legitimate profiles/mentions/earned links, and Search Console/GA4
 evidence—not another immediate page batch, fake Indianapolis claims, purchased
 links, fabricated reviews, or ranking guarantees.
 

@@ -48,7 +48,8 @@ discovery remains a measured external outcome rather than a completion claim.
 ## Likely next round directions
 
 - inspect early Search Console coverage/query evidence when available;
-- request or monitor recrawling for the updated commercial/resource routes;
+- monitor the accepted recrawl requests for the three resource routes and
+  confirm Google rereads the refreshed sitemap;
 - allow the first cluster to gather evidence before selecting later topics;
 - establish a legitimate external-profile/citation checklist from actual
   business eligibility, not generic directory volume.

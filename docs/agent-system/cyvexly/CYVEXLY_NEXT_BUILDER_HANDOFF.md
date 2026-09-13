@@ -13,8 +13,10 @@ journey without changing prices or service claims.
 
 1. Check the external review root for a publication newer than Auditor R152.
    Treat old review of `85c128e` as historical; it does not review `483975d`.
-2. In Search Console, request or monitor recrawling of Home, Services, Pricing,
-   Resources, and both guide routes; confirm the refreshed sitemap is processed.
+2. In Search Console, monitor the accepted recrawl requests for Resources and
+   both guide routes. Request refreshed Home, Services, and Pricing crawling
+   only if coverage evidence shows it is needed, and confirm the refreshed
+   sitemap is processed.
 3. Inspect early coverage/query evidence when available. Do not infer ranking
    from successful deployment or indexing eligibility.
 
@@ -28,11 +30,12 @@ internal links, `robots.txt`, and the 25-URL refreshed sitemap passed. The live
 ranking continues as an asynchronous measurement item rather than a release
 claim.
 
-Search Console read-only evidence at Round 186 close: the existing sitemap is
-still `Success`, last read September 12, with 22 discovered pages; the property
-overview is still processing data; and `/resources` is currently unknown/not
-indexed. The `/resources` Request indexing control is prepared in the retained
-browser handoff but has not been submitted.
+Search Console evidence after Round 186: the existing sitemap is still
+`Success`, last read September 12, with 22 discovered pages, and the property
+overview is still processing data. On September 13, Google accepted priority-
+crawl requests for `/resources`, `/resources/small-business-website-cost`, and
+`/resources/what-custom-website-includes`. All three remained unknown/not
+indexed at request time; monitor rather than resubmitting them.
 
 ## Later content candidates — evidence required
 

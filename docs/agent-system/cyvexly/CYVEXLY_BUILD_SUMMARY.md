@@ -25,10 +25,12 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
 - Render deployed `483975d`; the expanded search and buyer contracts both pass
   against canonical production. Next work is recrawl/coverage monitoring and
   legitimate authority signals, not immediate bulk content.
-- Read-only Search Console check shows the existing sitemap still successful
-  with 22 pages from its September 12 read, the property overview still
-  processing data, and the new `/resources` URL unknown/not indexed. Prepared
-  the Request indexing action without submitting it.
+- Search Console shows the existing sitemap still successful with 22 pages
+  from its September 12 read and the property overview still processing data.
+  On September 13, Google accepted priority-crawl requests for `/resources`,
+  `/resources/small-business-website-cost`, and
+  `/resources/what-custom-website-includes`. All three remained unknown/not
+  indexed at request time; submission is not an indexing or ranking guarantee.
 
 ## Round 185 — commercial search-purpose foundation
 

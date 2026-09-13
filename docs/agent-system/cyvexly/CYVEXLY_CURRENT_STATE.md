@@ -38,9 +38,11 @@ contracts on September 13, 2026.
   dynamic routes built, the expanded search contract passed, and the buyer
   journey passed with 37 routes and 19 inquiry contexts.
 - Search Console still reports the submitted sitemap as successful with 22
-  discovered pages from its September 12 read, while the new `/resources` URL
-  is currently unknown/not indexed and the property overview is still
-  processing data. Request-indexing action is prepared but not submitted.
+  discovered pages from its September 12 read, while the property overview is
+  still processing data. On September 13, Google accepted priority-crawl
+  requests for `/resources`, `/resources/small-business-website-cost`, and
+  `/resources/what-custom-website-includes`; all three were still unknown/not
+  indexed at request time, so indexing and ranking remain asynchronous.
 
 ## Round 185 — commercial search-purpose foundation
 
@@ -79,8 +81,10 @@ contracts on September 13, 2026.
 
 ## Next phase
 
-Request or monitor recrawling of the updated Home, Services, Pricing, Resources,
-and two guide routes. Then use Search Console query/impression evidence and GA4
+Monitor the accepted recrawl requests for Resources and both guide routes;
+request refreshed Home, Services, and Pricing crawling only if coverage data
+shows it is needed, and confirm Google rereads the 25-URL sitemap. Then use
+Search Console query/impression evidence and GA4
 behavior to decide whether a later resource should address redesign timing,
 website versus web application, booking/ecommerce prerequisites, or after-
 launch ownership. Do not create another batch without evidence.
