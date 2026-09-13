@@ -1,22 +1,53 @@
 # Cyvexly Current State
 
-**Last completed global round:** 187
+**Last completed global round:** 188
 
-**Current global round:** 188
+**Current global round:** 189
 
 **Active chunk:** Chunk 12 — Search Visibility & Useful Content Growth
 
-**Current mission:** execute Owner direction `2026-09-13-01` through phased,
-truthful search improvements while preserving the accepted cyber-blue product
-and United States service model.
+**Current mission:** execute Owner directions `2026-09-13-01` and
+`2026-09-13-02` through phased, truthful search improvements while preserving
+the accepted cyber-blue product, nationwide remote service, and the newly
+confirmed Indianapolis in-person-by-appointment model.
 
-**Current repository source:** `53b802c` — deployment-gated IndexNow
-notification, pushed to `origin/main`; Round 187 continuity records are the
-next docs-only commit.
+**Current product source:** `2923ce5` — truthful Indianapolis service presence,
+pushed to `origin/main`; Round 188 continuity records are the next docs-only
+commit.
 
-**Current deployed product source:** `53b802c`; its canonical production
-deployment passed the complete live search-readiness contract on September 13,
-2026, and IndexNow accepted all 25 canonical sitemap URLs with HTTP 200.
+**Current deployed product source:** `2923ce5`; its canonical production
+deployment passed the complete live search-readiness and buyer-journey
+contracts on September 13, 2026, and IndexNow accepted all 26 canonical sitemap
+URLs with HTTP 200.
+
+## Round 188 — truthful Indianapolis service presence
+
+- Recorded Owner direction `2026-09-13-02`: Cyvexly remains remote across the
+  United States and now truthfully offers Indianapolis-area in-person
+  consultations by appointment. It does not operate a public walk-in
+  storefront.
+- Added a substantial `/indianapolis-web-design` service page with unique
+  metadata, City-scoped Service and Breadcrumb data, published starting points,
+  real service paths, local-service FAQs, and a preserved inquiry context.
+- Connected the local offer from Home, About, FAQ data, the footer, Organization
+  area-served data, and the sitemap without exposing or inventing a street
+  address.
+- Corrected a mobile homepage secondary-link separator exposed during visible
+  QA. Desktop and 375px phone review passed with no horizontal overflow, broken
+  image, or browser-console error.
+- Lint passed with the one unchanged historical evidence warning; TypeScript,
+  the 62-route indexable build, IndexNow smoke, 39-route/20-context buyer
+  journey, and expanded search readiness passed locally.
+- Render deployed exact product source `2923ce5`. The live route returns 200,
+  uses its canonical URL, appears in the 26-URL sitemap, and passed both full
+  production contracts. IndexNow accepted the 26 canonical URLs with HTTP 200.
+  This establishes technical availability and discovery notification, not
+  indexing or ranking.
+- One eligible service-area Google Business Profile is the next local-discovery
+  account step. Use `Cyvexly Studio`, primary category `Website designer`, and
+  Indianapolis only; the Owner must privately enter any address Google requires
+  for verification and it must remain hidden publicly when clients are not
+  served there. Do not create duplicate profiles or add unconfirmed cities.
 
 ## Round 187 — Bing discovery and deployment-gated IndexNow
 

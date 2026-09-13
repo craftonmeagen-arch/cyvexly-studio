@@ -3,6 +3,31 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 188 — truthful Indianapolis service presence
+
+- Recorded Owner direction `2026-09-13-02`, confirming that Cyvexly can meet
+  Indianapolis-area prospects in person by appointment while retaining its
+  nationwide remote service. The public offer explicitly disclaims a walk-in
+  storefront and makes no fixed-address or unconfirmed-city claim.
+- Implemented and pushed exact source `2923ce5`: a substantial
+  `/indianapolis-web-design` page, unique commercial metadata, City-scoped
+  Service and Breadcrumb data, Home/About/footer/FAQ discovery paths, sitemap
+  inclusion, and a preserved `indianapolis-project` inquiry context.
+- Responsive QA caught and removed a homepage separator that could wrap alone
+  on phone. Desktop and 375px review then passed with no overflow, broken image,
+  or console error.
+- Lint passed with one unchanged historical evidence-file warning; TypeScript,
+  the 62-route indexable build, IndexNow smoke, 39-route/20-context buyer
+  journey, and expanded search-readiness suite passed locally. Render deployed
+  exact source `2923ce5`; the live page returns 200 with the correct canonical,
+  appears in the 26-URL sitemap, and both production contracts passed. IndexNow
+  accepted all 26 canonical URLs with HTTP 200.
+- Technical publication and notification do not prove indexing or ranking. The
+  next account step is one eligible service-area Google Business Profile using
+  `Cyvexly Studio`, primary category `Website designer`, Indianapolis only, and
+  no public home address or fabricated storefront. Owner-private address entry
+  and provider verification remain required.
+
 ## Round 187 — Bing discovery and deployment-gated IndexNow
 
 - Imported `cyvexly.com` from its verified Google Search Console property into

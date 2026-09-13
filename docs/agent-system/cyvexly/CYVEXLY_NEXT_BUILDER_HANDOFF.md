@@ -2,40 +2,46 @@
 
 ## Current assignment
 
-Owner direction `2026-09-13-01` opens Chunk 12 for standards-based search
-visibility and useful content growth. Round 185 established commercial metadata
-at `feb0b2d`; Round 186 deployed the first useful-content cluster at exact
-source `483975d`. Resources now contains a hub, a Cyvexly-specific cost guide,
-and a custom-website-inclusions guide, connected to the established commercial
-journey without changing prices or service claims.
+Owner directions `2026-09-13-01` and `2026-09-13-02` govern Chunk 12 search
+visibility work. Rounds 185–187 established commercial metadata, the first
+useful-content cluster, Bing discovery, and deployment-gated IndexNow.
 
 Round 187 deployed exact source `53b802c`, imported the verified domain into
 Bing Webmaster Tools, submitted the canonical sitemap there, and established a
 deployment-gated IndexNow workflow. The first verified run received HTTP 200
 for all 25 canonical sitemap URLs.
 
+Round 188 deployed exact source `2923ce5`. Cyvexly now has a substantial,
+truthful Indianapolis web-design page and offers local consultations by
+appointment while retaining nationwide remote delivery. The page, metadata,
+City-scoped Service data, internal links, inquiry context, and 26-URL sitemap
+passed locally and on canonical production. No storefront or public street
+address is claimed. IndexNow accepted all 26 canonical URLs with HTTP 200.
+
 ## First action
 
-1. Check the external review root for a publication newer than Auditor R152.
-   Treat old review of `85c128e` as historical; it does not review `483975d`.
-2. Monitor the accepted Google recrawl requests for Resources and both guide
-   routes, plus Bing's processing sitemap. Request refreshed Home, Services,
-   and Pricing crawling only if coverage evidence shows it is needed.
-3. On later relevant production pushes, confirm the IndexNow workflow waits for
-   the exact Render commit and succeeds; do not manually resubmit unchanged
-   URLs.
+1. Complete one eligible Google service-area Business Profile only: public
+   business name `Cyvexly Studio`, primary category `Website designer`, and
+   Indianapolis as the sole confirmed service area. The Owner must privately
+   enter any address Google requires for verification; keep it hidden publicly
+   when customers are not served there. Do not create duplicates, a storefront
+   claim, or additional city areas/pages without later confirmation.
+2. Check the external review root for a publication newer than Auditor R152.
+   Older review of `85c128e` does not review the current search work.
+3. Monitor the accepted Google recrawl requests for Resources and both guide
+   routes, the new Indianapolis route, and Bing's processing sitemap. Avoid
+   repeated unchanged submissions.
 4. Inspect early coverage/query evidence when available. Do not infer ranking
    from successful deployment, notification, or indexing eligibility.
 
 ## Live release proof
 
-Render deployed `53b802c`. On September 13, 2026, the expanded production
-search-readiness suite passed against `https://cyvexly.com`: all 12 commercial/
-resource metadata contracts, Article/Breadcrumb/site identity, reciprocal
-internal links, `robots.txt`, and the 25-URL refreshed sitemap passed. The live
-37-route buyer journey also passed with 19 inquiry contexts. Search discovery/
-ranking continues as an asynchronous measurement item rather than a release
-claim.
+Render deployed `2923ce5`. On September 13, 2026, the expanded production
+search-readiness suite passed against `https://cyvexly.com`, including the
+Indianapolis metadata, Service/Breadcrumb data, internal discovery, canonical,
+`robots.txt`, and 26-URL sitemap. The live 39-route buyer journey passed with 20
+inquiry contexts. Search discovery/ranking continues as an asynchronous
+measurement item rather than a release claim.
 
 Search Console evidence after Round 186: the existing sitemap is still
 `Success`, last read September 12, with 22 discovered pages, and the property
@@ -64,8 +70,8 @@ resource cluster. The strongest current candidates are:
 The first two questions (cost and inclusions) are now live. Do not publish the
 remaining ideas as a bulk batch. Wait for query/buyer evidence, then choose the
 next coherent decision the existing service/pricing/proof pages can support
-truthfully. Thin variants, fake locality, copied competitor language, and
-ranking claims are prohibited.
+truthfully. Thin variants, unconfirmed locality, copied competitor language,
+and ranking claims are prohibited.
 
 ## Standing boundaries
 

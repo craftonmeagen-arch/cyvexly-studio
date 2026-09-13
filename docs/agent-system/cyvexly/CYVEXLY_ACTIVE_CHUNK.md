@@ -2,10 +2,11 @@
 
 **Active product chunk:** Chunk 12 — Search Visibility & Useful Content Growth
 
-**Current position:** global round 188; commercial metadata, the first useful-
-content cluster, Bing discovery, and deployment-gated IndexNow are live
+**Current position:** global round 189; commercial metadata, the first useful-
+content cluster, Bing discovery, deployment-gated IndexNow, and the truthful
+Indianapolis service presence are live
 
-**Current product source:** `53b802c` (pushed to `origin/main` and verified on
+**Current product source:** `2923ce5` (pushed to `origin/main` and verified on
 canonical production)
 
 **Scheduler state:** unchanged; this direction authorizes no scheduler action.
@@ -28,8 +29,9 @@ Inside this chunk:
 
 Outside this chunk:
 
-- fake Indianapolis/local presence, doorway pages, keyword stuffing, thin bulk
-  content, fabricated reviews, purchased links, and ranking guarantees;
+- unconfirmed local claims or cities, a storefront/fixed-address claim,
+  doorway pages, keyword stuffing, thin bulk content, fabricated reviews,
+  purchased links, and ranking guarantees;
 - underlying EduAILenz/Mudoinkle/HoneyHearted implementation;
 - Stripe activation and Guardio account actions;
 - scheduler changes.
@@ -37,21 +39,25 @@ Outside this chunk:
 ## Current proof
 
 Phase 1 updates nine commercial routes and homepage site identity. Phase 2 adds
-the Resources hub and two substantial buyer guides, bringing the verified build
-to 61 routes and the buyer contract to 37 routes/19 inquiry contexts. Lint
+the Resources hub and two substantial buyer guides. Round 188 adds the
+substantial Indianapolis service page and honest local-by-appointment signals,
+bringing the verified build to 62 routes and the buyer contract to 39 routes/20
+inquiry contexts. Lint
 passes with one unchanged historical evidence-file warning; build, TypeScript,
 expanded search readiness, and buyer regression pass locally and on canonical
 production. Responsive visual QA passed at desktop and 375px. Sampled external
 searches still did not surface Cyvexly before this cluster deployed, so ranking/
 discovery remains a measured external outcome rather than a completion claim.
 The verified Bing property has accepted the canonical sitemap for processing,
-and IndexNow accepted all 25 canonical sitemap URLs with HTTP 200 after the
-workflow verified exact production source `53b802c`. These are discovery
+and IndexNow accepted all 26 canonical sitemap URLs with HTTP 200 after exact
+production source `2923ce5` went live. These are discovery
 signals, not indexing or ranking claims.
 
 ## Likely next round directions
 
 - inspect early Search Console coverage/query evidence when available;
+- complete one eligible Indianapolis-only service-area Google Business Profile
+  without publicly exposing the Owner's private address;
 - monitor the accepted recrawl requests for the three resource routes and
   confirm Google and Bing process the refreshed sitemap;
 - monitor the deployment-gated IndexNow workflow on later relevant pushes;
