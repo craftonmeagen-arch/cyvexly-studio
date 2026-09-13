@@ -1,5 +1,33 @@
 # Cyvexly Owner Direction
 
+## Final legal-copy standard approval — 2026-09-12-02
+
+**Status:** ACTIVE — OWNER-APPROVED STANDARD, INDEXING SWITCH STILL SEPARATE
+**Source:** After confirming Cyvexly LLC formation, the Owner directed the
+assistant to approve the public Privacy and Terms if they meet the normal
+industry standard on September 12, 2026.
+
+The reviewed Privacy and Website Terms meet a reasonable, proportionate
+baseline for this United States, inquiry-led professional-services website
+after the final corrections below. Remove the public draft/review labels,
+identify Cyvexly LLC as the legal business and Cyvexly Studio as its public
+brand, and make the privacy-request and manual retention practices explicit.
+Preserve accurate Resend, hosting, GA4 consent, no-sale, no-marketing, local
+draft, payment-disabled, concept-work, separate-client-agreement, and Indiana
+governing-law disclosures.
+
+Adopt a manual review of inactive inquiry records after 12 months, deleting
+them when no longer reasonably needed while preserving legitimate client,
+accounting, tax, security, dispute, and legal records. Acknowledge privacy
+requests within two business days, allow proportionate identity verification,
+and explain any applicable retention limit or denied request. Do not promise
+automatic deletion or a universal deletion deadline.
+
+This is an Owner business-policy approval and product-quality assessment, not
+legal advice or an independent attorney review. The production indexing
+environment switch and Search Console sitemap submission remain separate live
+actions and must not be inferred from this copy approval alone.
+
 ## LLC formation confirmation — 2026-09-12-01
 
 **Status:** ACTIVE — OWNER-CONFIRMED BUSINESS IDENTITY

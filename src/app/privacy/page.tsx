@@ -39,11 +39,10 @@ export default function PrivacyPage() {
         <section className="mx-auto max-w-3xl px-6 py-16">
           <div className="glass-panel space-y-10 rounded-3xl px-6 py-8 text-sm leading-relaxed text-cool-graphite sm:px-10 sm:py-10 sm:text-base">
             <div className="rounded-2xl border border-cyber-blue/30 bg-cyber-blue/5 p-5 text-xs text-cool-graphite sm:text-sm">
-              <strong className="text-midnight-slate">Draft under review.</strong>{" "}
+              <strong className="text-midnight-slate">Current policy.</strong>{" "}
               This page describes real, current site behavior. Cyvexly LLC is
               the studio&apos;s legal business name, and Cyvexly Studio is its
-              public brand. This draft has not yet received final Owner review.
-              It remains published no-index pending launch release.
+              public brand.
             </div>
 
             <div>
@@ -251,11 +250,15 @@ export default function PrivacyPage() {
               <p className="mt-3">
                 Inquiry emails and related project records may remain in our
                 email and provider systems while reasonably useful for the
-                business relationship and any legal or tax obligations. We are
-                preparing an operational retention schedule with a proposed
-                review of inactive inquiries after 12 months; that review is not
-                yet an automatic deletion schedule or guarantee. Contact us if
-                you would like us to review or delete records we hold about you.
+                business relationship and any legal or tax obligations. We
+                manually review inactive inquiry records after 12 months and
+                delete them when they are no longer reasonably needed for
+                follow-up, legitimate business operations, security, disputes,
+                or legal, tax, and accounting obligations. Client, project, and
+                accounting records may be kept longer when those needs apply.
+                This is a manual review, not an automatic-deletion promise.
+                Contact us if you would like us to review or delete records we
+                hold about you.
               </p>
             </div>
 
@@ -272,8 +275,12 @@ export default function PrivacyPage() {
                   {siteConfig.email}
                 </a>{" "}
                 to ask what information we hold about you, to correct it, or
-                to request that we delete it. We will respond within two
-                business days.
+                to request that we delete it. We will acknowledge your request
+                within two business days and may need to verify your identity
+                before disclosing, correcting, or deleting records. If we cannot
+                complete all or part of a request because a legitimate legal or
+                business retention need applies, we will explain that decision;
+                you may ask us to review it by replying to the same email thread.
               </p>
             </div>
 

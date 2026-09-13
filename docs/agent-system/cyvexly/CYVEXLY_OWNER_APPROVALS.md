@@ -3,6 +3,18 @@
 Record only the specific content or decisions the Owner has reviewed. This
 file supplements `CYVEXLY_OWNER_DIRECTION.md`; it does not expand team scope.
 
+## Final Privacy and Website Terms baseline — 2026-09-12
+
+**Status:** OWNER APPROVED SUBJECT TO THE RECORDED STANDARD.
+**Source:** The Owner directed the assistant to approve the pages if they meet
+the normal industry standard.
+
+The final copy is approved after removing draft labels and adopting the
+explicit manual retention and privacy-request practices recorded in Owner
+Direction `2026-09-12-02`. The assessment is a proportionate small-business
+product and operations review, not legal advice or an attorney certification.
+Public indexing remains a separate live release action.
+
 ## Legal business identity — 2026-09-12
 
 **Status:** OWNER CONFIRMED.
@@ -76,10 +88,11 @@ universal industry-standard certification or legal-compliance opinion:
    to the assistant's earlier recommendation, not an already-deployed change.
    Do not add new personal-data logging. Test with synthetic submissions.
 2. Document an operational retention schedule, separating inactive inquiries
-   from client, accounting, and dispute records. A review of inactive leads
-   after 12 months is a proposed business default, not a statutory period or
-   an approved automatic-deletion promise. Do not delete existing records or
-   claim a schedule is operational without verifying the actual process.
+   from client, accounting, and dispute records. A manual review of inactive
+   leads after 12 months is now the approved business practice under Owner
+   Direction `2026-09-12-02`; it is not a statutory period or an automatic-
+   deletion promise. Do not delete existing records without reviewing the
+   legitimate business, accounting, tax, security, dispute, and legal need.
 3. Make Privacy accurately distinguish no application submission database
    from provider storage. Resend can store message content/metadata, inboxes
    retain mail, and infrastructure may retain technical logs. Do not claim

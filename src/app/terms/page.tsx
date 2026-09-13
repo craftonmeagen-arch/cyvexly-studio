@@ -33,13 +33,6 @@ export default function TermsPage() {
 
         <section className="mx-auto max-w-3xl px-6 py-16">
           <div className="glass-panel space-y-10 rounded-3xl px-6 py-8 text-sm leading-relaxed text-cool-graphite sm:px-10 sm:py-10 sm:text-base">
-            <div className="rounded-2xl border border-cyber-blue/30 bg-cyber-blue/5 p-5 text-xs text-cool-graphite sm:text-sm">
-              <strong className="text-midnight-slate">Draft under review.</strong>{" "}
-              Cyvexly LLC is the studio&apos;s legal business name, and Cyvexly
-              Studio is its public brand. This draft has not yet received final
-              Owner review. It remains published no-index pending launch release.
-            </div>
-
             <div>
               <h2 className="font-display text-lg font-semibold text-midnight-slate">
                 Acceptance of these terms
@@ -58,9 +51,11 @@ export default function TermsPage() {
                 What this site is for
               </h2>
               <p className="mt-3">
-                Cyvexly Studio is the public brand of Cyvexly LLC, an independent
+                Cyvexly LLC operates publicly as Cyvexly Studio, an independent
                 web design and development studio based in Indiana, United States.
-                This site is informational and
+                In these Website Terms, &ldquo;Cyvexly Studio,&rdquo; &ldquo;we,&rdquo;
+                &ldquo;us,&rdquo; and &ldquo;our&rdquo; refer to Cyvexly LLC. This site is
+                informational and
                 exists to explain our services, showcase concept and project
                 work, and let prospective clients describe a project through
                 the Project Planner or reach us through the Contact form.
