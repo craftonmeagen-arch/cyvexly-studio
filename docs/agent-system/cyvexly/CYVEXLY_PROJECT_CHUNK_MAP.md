@@ -42,7 +42,7 @@ evidence exposes a meaningful reachable gap.
   closure is consolidated into Chunk 5's exact-LLC-name, copy/visual approval,
   analytics/search decision, and indexing-permission gates.
 
-## Chunk 5 — United States Launch Completion & Business Operations (OPEN — OWNER GATES ONLY)
+## Chunk 5 — United States Launch Completion & Business Operations (IMPLEMENTATION COMPLETE; EXTERNAL GATES REMAIN)
 
 - **Authority:** Owner directions `2026-09-04-14` and `2026-09-10-07`, plus
   vision §17.
@@ -56,11 +56,13 @@ evidence exposes a meaningful reachable gap.
   Search Console/indexing proof, and truthful dormant Stripe Invoicing
   readiness copy. Independent exact-source review is satisfied: Auditor
   `IFA-2026-09-11-R139` and `R140` each passed with zero defects.
-- **Remaining gates (all Owner/account, not reachable by Builder):** exact
-  registered LLC name; Resend account/domain/API secret plus three-route
-  real-delivery confirmation; real GA4/Search Console values and
-  consent/privacy approval; final About/legal/visual approval; Stripe
-  verification/test invoice; Guardio review/recheck; indexing release.
+- **Later Owner-completed gates:** Cyvexly LLC identity, final legal baseline,
+  GA4/Search Console configuration, public indexing, and sitemap submission are
+  recorded in Owner directions `2026-09-12-01` through `2026-09-12-03`.
+- **Remaining external gates:** Stripe verification/test invoice is deferred;
+  Guardio review/recheck remains account-holder work. Preserve truthful live
+  behavior for Resend/analytics and verify it separately when the affected
+  source changes.
 - **Deferrals:** public checkout, automated recurring billing, and real-client
   claims.
 
@@ -167,3 +169,26 @@ evidence exposes a meaningful reachable gap.
   publication, and canonical Home/Work proof are complete. Protected Resend/
   domain configuration, one fresh controlled delivery per route, and Owner
   inbox confirmation remain consolidated into active Chunk 5.
+
+## Chunk 12 — Search Visibility & Useful Content Growth (OPEN, ROUND 186)
+
+- **Authority:** Owner direction `2026-09-13-01`.
+- **Outcome:** help relevant United States buyers discover Cyvexly through
+  truthful commercial-page meaning, substantial buyer resources, useful
+  internal connections, legitimate external authority, and evidence-led
+  Search Console/GA4 refinement.
+- **Phase 1 source:** `feb0b2d` gives Home, Services, Pricing, and six service
+  pages unique search-purpose titles and summaries; adds homepage `WebSite`
+  identity data; expands the search-readiness contract; and repairs stale legal
+  regression assertions without changing public legal copy. Its canonical
+  deployment passed the live search-readiness contract on September 13, 2026.
+- **Next:** select a small first resource cluster from real buyer questions and
+  available performance evidence, then establish legitimate authority signals
+  and monitor Search Console/GA4.
+- **Boundary:** no fake local presence, doorway/thin keyword pages, fabricated
+  reviews/results, purchased links, bulk junk-directory submissions, or ranking
+  guarantees. Preserve the accepted design and existing truthful claims.
+- **Closure:** core commercial intent and an evidence-selected content
+  foundation are live and reviewed; legitimate authority-building and
+  monitoring processes exist; all meaningful reachable quality gaps are
+  resolved or bounded. Search ranking itself remains external and unpromised.

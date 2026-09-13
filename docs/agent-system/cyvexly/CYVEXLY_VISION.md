@@ -2,28 +2,24 @@
 
 **Status:** CURRENT WORKING VISION
 
-The complete vision artifact is `CYVEXLY_VISION_PLAN.md`; root vision §17 and
-Owner direction `2026-09-10-07` govern current launch preparation.
+The complete vision artifact is `CYVEXLY_VISION_PLAN.md`. Owner directions
+`2026-09-12-01` through `2026-09-12-03` establish the formed legal identity,
+approved legal baseline, and live public indexing. Owner direction
+`2026-09-13-01` adds standards-based search visibility and useful content growth
+without changing the accepted product design or national service model.
 
-Current Builder position: Chunk 5 is active; global Round 178 re-verified
-candidate `b14a92b` fresh (unchanged, zero regressions) and found no further
-reachable implementation work. Candidate `b14a92b` makes analytics explicitly
-consensual and minimal, keeps search and indexing separately gated, and
-explains the selected Stripe Invoicing path without presenting inactive
-services as live. It is awaiting independent exact-source review. Accepted/
-deployed source remains `4232574`.
+Current Builder position: Chunk 12 is active. Round 185 implemented Phase 1 at
+`feb0b2d`: the nine commercial routes now have unique, truthful search-purpose
+titles and summaries; Home supplies explicit `WebSite` site-name data; and the
+search harness protects those fields, canonicals, sitemap, and indexability.
+No visible buyer-interface or service claim changed.
 
 The intended buyer outcome remains a distinctive, trustworthy cyber-blue glass
-studio experience with truthful proof, understandable price/scope, and a low-
-friction inquiry. Launch preparation must not weaken that design or invent
-provider readiness, legal status, delivery, payments, indexing, security
-clearance, client work, or results.
+studio experience with inspectable proof, understandable price/scope, and a
+low-friction inquiry. Search growth must come from clearer existing pages,
+substantial resources that answer real buyer questions, relevant internal
+links, and legitimate external authority—not fabricated locality, reviews,
+results, or ranking promises.
 
-Owner/account closure still requires LLC filing/name verification, Resend
-activation plus controlled delivery, real GA4/GSC values and approval, explicit
-indexing permission, Stripe verification/test invoice, Guardio review/recheck,
-and final legal/visual approval. Chunk 6's Velora visual review remains separate.
+Stripe activation and Guardio disposition remain separate account-side work.
 All outside-product and HoneyHearted work remains Team 2 scope.
-
-Preserved milestone: Chunk 9 — EduAILenz & Mudoinkle Showcase Quality — closed
-at `ca2b84e`; current work must preserve its truthful Cyvexly-facing proof.

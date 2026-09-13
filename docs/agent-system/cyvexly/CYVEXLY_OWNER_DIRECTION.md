@@ -1,5 +1,35 @@
 # Cyvexly Owner Direction
 
+## Standard search-visibility growth — 2026-09-13-01
+
+**Status:** ACTIVE — PHASE 1 IMPLEMENTED; CONTENT GROWTH AND MONITORING CONTINUE
+**Source:** Owner via the active Codex conversation on September 13, 2026.
+
+### Owner direction — verbatim
+
+> “ok i want to become more searchable the standard industry way. what do we need to do?”
+>
+> “ok lets begin”
+
+### Agent interpretation — not Owner-authored direction
+
+Proceed with a phased, standards-based search program for `cyvexly.com` that
+preserves the approved design and truthful national service model. Begin by
+making the existing commercial pages unambiguous to search engines and buyers:
+give Home, Services, each service-detail page, and Pricing a unique descriptive
+title and page-specific summary, preserve canonical/indexing controls, and add
+the homepage `WebSite` identity data Google documents for preferred site names.
+Then build genuinely useful buyer resources around real questions, connect them
+through relevant internal links, earn legitimate business mentions and links,
+and monitor Search Console/GA4 evidence before deciding later priorities.
+
+Do not create fake Indianapolis or local-service claims, doorway pages, thin
+keyword variants, fabricated reviews, purchased links, bulk junk-directory
+listings, or ranking guarantees. A future local-market page is appropriate only
+if Cyvexly genuinely chooses to serve and describe that market. Stripe and
+Guardio remain separate from this search-growth direction. No scheduler change
+is authorized.
+
 ## Public indexing and sitemap release — 2026-09-12-03
 
 **Status:** COMPLETE — PRODUCTION INDEXING ENABLED; MONITORING CONTINUES

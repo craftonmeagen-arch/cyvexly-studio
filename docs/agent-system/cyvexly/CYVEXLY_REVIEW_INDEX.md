@@ -6,9 +6,10 @@ or existing Owner-managed schedule.
 
 Current authoritative root: `C:/app projects/website-independent-review`.
 
-**Active review source:** none active; falls back to accepted `85c128e`
-(formerly Chunk 5 candidate `b14a92b`, accepted by the Builder in Round 180
-after two clean independent challenges).
+**Active review source:** `feb0b2d`, the live Chunk 12 Phase 1 search-purpose
+source. No independent report newer than R152 existed at Round 185 intake;
+R152 and earlier reviews of `85c128e` are historical and do not review this
+source. The last source satisfying the prior two-review gate remains `85c128e`.
 | Role | Current report | Archive | Memory |
 |---|---|---|---|
 | Auditor | reports/AUDITOR_CURRENT.md | reports/AUDITOR_ARCHIVE.md | memory/auditor/ |
@@ -188,3 +189,9 @@ does not control the Auditor's schedule or cadence and this is not a product
 defect requiring Builder action. Future Builder rounds may continue
 consolidating multiple same-pattern publications into one paragraph rather
 than one per report.
+
+Builder Round 185 declared and published exact active review source `feb0b2d`
+for Chunk 12 Phase 1 after local and canonical-production search contracts
+passed. A later independent reviewer must evaluate this source directly; no
+older zero-defect report may be treated as coverage of its metadata, structured
+data, or expanded regression contract.

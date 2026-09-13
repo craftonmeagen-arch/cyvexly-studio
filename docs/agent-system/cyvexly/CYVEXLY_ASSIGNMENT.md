@@ -3,27 +3,25 @@
 Canonical team: **Cyvexly Build Team**. Active product: Cyvexly Studio at
 `C:/app projects/website` on deployment branch `main`.
 
-Owner direction `2026-09-10-07` reopens Chunk 5 — United States Launch
-Completion & Business Operations — for unattended preparation only. Exact
-candidate `b14a92b` supplies consent-controlled GA4, minimal success-only
-measurement, Search Console/indexing gates and proof, and truthful Stripe
-Invoicing readiness copy. It must remain unaccepted, unpushed, and undeployed
-until independent exact-source review passes.
+Owner direction `2026-09-13-01` opens **Chunk 12 — Search Visibility & Useful
+Content Growth**. Round 185 implements its first bounded phase at product commit
+`feb0b2d`: truthful, unique search titles and page summaries across the nine
+core commercial routes, homepage-only `WebSite` site-name data, a stronger
+search-readiness contract, and repair of stale LLC/retention assertions in the
+buyer regression suite. The visible cyber-blue product and buyer flow are
+unchanged.
 
-Do not activate GA4, Search Console, indexing, Stripe, or recurring billing;
-submit the Guardio review; repeat real forms before Resend configuration; invent
-IDs/secrets; or claim account, formation, delivery, payment, indexing, or
-reclassification completion. Owner/account actions are recorded in current
-state and handoff.
+Next work is not mass page production. Use Search Console/GA4 evidence and real
+buyer questions to select substantial resource topics, connect them to the
+relevant service, pricing, proof, and inquiry routes, and pursue only legitimate
+business profiles, mentions, and links. Do not promise rankings, fabricate
+local presence or reviews, buy links, or generate doorway/thin keyword pages.
 
-Accepted/deployed source remains `4232574` through release commit `8c34031`.
-Chunk 11's product implementation is closed and its real-delivery condition is
-consolidated into Chunk 5. Chunk 6 still needs one independent physical/visual
-review of accepted Velora source `fce01e8`.
+Production indexing, Search Console verification/sitemap submission, GA4,
+Cyvexly LLC identity, and the final legal baseline were completed or confirmed
+under directions `2026-09-12-01` through `2026-09-12-03`. Stripe remains
+deferred for Owner information; Guardio review remains account-side work.
 
 The primary Builder owns only Cyvexly. Underlying EduAILenz/Mudoinkle apps,
 their repositories, credentials, infrastructure, and HoneyHearted remain Team 2
 scope. No scheduler change is authorized.
-
-Historical continuity: Chunk 9 — EduAILenz & Mudoinkle Showcase Quality — is
-closed at accepted source `ca2b84e`; it does not authorize outside-app work.

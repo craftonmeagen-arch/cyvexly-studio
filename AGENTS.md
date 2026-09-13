@@ -1,5 +1,14 @@
 # Cyvexly Build Team and Team 2 — Current Agent Guidance
 
+**Latest primary direction — Owner direction 2026-09-13-01:** begin phased,
+standards-based search-visibility growth for `cyvexly.com`. Preserve the
+approved design and truthful United States service model; strengthen existing
+commercial-page search intent first, then add genuinely useful buyer resources,
+legitimate authority signals, and Search Console/GA4 monitoring. Do not create
+false local claims, doorway pages, thin keyword variants, fabricated reviews,
+purchased links, or ranking guarantees. This direction changes neither team
+boundaries nor scheduler authority.
+
 **Latest bounded exception — Owner direction 2026-09-10-01:** The primary
 Cyvexly Builder owns the Cyvexly-facing EduAILenz/Mudoinkle showcase-quality
 corrections measured against Velora. Read the newest Cyvexly Owner Direction

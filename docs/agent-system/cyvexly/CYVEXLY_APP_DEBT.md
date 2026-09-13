@@ -6,24 +6,20 @@ Git history, and role memory.
 
 ## Current source position
 
-- Primary accepted product source: `85c128e` after Auditor R139/R140 (two
-  clean independent challenges of Chunk 5 candidate `b14a92b`), accepted and
-  pushed by the Builder in Round 180.
-- No active Chunk 5 review candidate; the lifecycle falls back to accepted
-  `85c128e`.
-- Production product source: `85c128e`; release commit `85c128e` is pushed.
-- Chunk 10 closed in Round 174 after Auditor R132 and R133 independently passed
-  exact `c8bc73d` with zero defects. No active review candidate remains; the
-  lifecycle falls back to accepted `c8bc73d`.
-- Auditor R128 failed superseded candidate `312937c` on Work-fold blocker
-  `CYV-IFA-014`; Round 166 corrected and proved it in `ca2b84e`. The primary
-  Auditor automation remains `PAUSED`; the Builder did not alter it.
-- Auditor R129 and R130 passed exact `ca2b84e`, verified `CYV-IFA-014` resolved,
-  and satisfy the two-review gate. Chunk 9 closed in global round 169.
-- Chunk 8 closed in Round 159 after R112 and exact-source R116 supplied two
-  separate clean challenges. No current primary product defect is open.
-- Team 2 report `HH-IFA-023` closed review of the later integration; primary
-  R116 does not cover it.
+- Current deployed product source: `feb0b2d`, the Round 185 commercial
+  search-purpose foundation. Its canonical production deployment passed the
+  live search-readiness contract on September 13, 2026.
+- Last independently reviewed product baseline: `85c128e` after Auditor
+  R139/R140. Later commits include a low-risk visual correction, the
+  Owner-confirmed Cyvexly LLC/final legal baseline, indexing-release records,
+  and Round 185 search-facing metadata/test work. No report newer than R152
+  existed at Round 185 intake.
+- Public indexing, Search Console domain verification/sitemap submission, GA4,
+  Cyvexly LLC identity, and the final legal baseline are no longer open gates;
+  they were completed or confirmed under Owner directions `2026-09-12-01`
+  through `2026-09-12-03`.
+- Active product work is Chunk 12, governed by `2026-09-13-01`. Ranking is an
+  external outcome to monitor, not a product completion claim.
 
 ## Open external and Owner gates
 
@@ -35,15 +31,7 @@ Git history, and role memory.
    clean Guardio-enabled recheck without allowlisting. Do not change product
    source, DNS, or indexing merely to game the classifier.
 
-2. **Formation verification and final copy approval.** Owner chose Cyvexly LLC
-   and reports checking availability on September 10; filing is planned for
-   September 11. Confirm approved formation and the filing's exact name before
-   claiming an existing LLC. Public brand remains Cyvexly Studio. The Owner
-   must approve the logo-led About copy, Privacy, Terms, and final visuals.
-   No founder identity, testimonial, result, credential, or legal name may be
-   invented.
-
-3. **Real Contact/Planner/Consultation delivery.** Server-side Resend routes, validation,
+2. **Real Contact/Planner/Consultation delivery.** Server-side Resend routes, validation,
    honeypot, rate limiting, sanitization, honest not-configured/failure states,
    and best-effort visitor confirmation are implemented. The Owner/account
    holder must verify the sending domain and store `RESEND_API_KEY` only in
@@ -56,16 +44,7 @@ Git history, and role memory.
    do not send SMS or email confirmation. Do not repeat before configuration
    changes, and do not store or print the secret.
 
-4. **Analytics, search ownership, and indexing release.** Accepted source
-   `85c128e` adds consent-controlled GA4, a non-PII success-event allowlist,
-   and synthetic verification/indexing checks while preserving the dormant
-   default. The
-   Owner must create the GA4 and Search Console domain properties, approve the
-   consent/privacy draft, provide protected real values, and separately
-   authorize indexing. Until then, keep GA absent, `robots.txt` disallowing
-   crawling, and metadata at `noindex, nofollow`.
-
-5. **Stripe activation and invoice proof.** The Owner selected Stripe Invoicing
+3. **Stripe activation and invoice proof.** The Owner selected Stripe Invoicing
    Starter with provider-hosted invoices after signed agreement. Candidate copy
    preserves package milestones and monthly-in-advance Care while stating that
    ACH/cards are not active. The Owner must create/verify the account, confirm
@@ -73,7 +52,7 @@ Git history, and role memory.
    pre-agreement payment, raw payment storage, automated recurring billing, or
    an activation claim.
 
-6. **Optional origin-bypass hardening.** Dormant `CF_ORIGIN_SECRET` support is
+4. **Optional origin-bypass hardening.** Dormant `CF_ORIGIN_SECRET` support is
    implemented and tested. Activating it requires a matching protected
    Cloudflare request-header rule and Render secret. This is an optional
    Owner/account security enhancement, not a current product defect or launch

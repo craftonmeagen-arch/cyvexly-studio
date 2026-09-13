@@ -6,14 +6,21 @@ Outside-website work belongs to Team 2.
 
 ## Open
 
-1. **Chunk 11 — protected real-delivery gate for deployed `4232574`.** Builder
+1. **Chunk 12 — independent review of live Phase 1 source `feb0b2d`.** Local
+   and canonical-production search-readiness proof passes, but no Auditor,
+   Council, or Functional publication newer than R152 reviewed this exact
+   source at Round 185 intake. Review the nine commercial metadata contracts,
+   homepage `WebSite` identity, indexability/discovery surfaces, and buyer-flow
+   regression without treating current rankings as a product promise.
+
+2. **Chunk 11 — protected real-delivery gate for deployed `4232574`.** Builder
    proof, Auditor R136/R137, publication, and canonical buyer/hierarchy proof
    pass. Controlled Contact, Planner, and Consultation attempts each returned
    `503 not-configured`, so no messages were sent. Protected Render Resend/domain
    configuration, one coordinated re-test per route, and Owner inbox confirmation
    remain before closure. Do not repeat submissions before configuration changes.
 
-2. **Chunk 6 — one complete Velora independent physical/visual review.**
+3. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with
    uncropped desktop/mobile proof, six scannable capabilities, truthful status
    and contribution language, detailed disclosure, and a hospitality-specific

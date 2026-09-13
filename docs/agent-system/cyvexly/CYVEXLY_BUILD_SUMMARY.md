@@ -3,6 +3,34 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 185 — commercial search-purpose foundation
+
+- Opened Chunk 12 under Owner direction `2026-09-13-01`. Implemented and
+  pushed product commit `feb0b2d`: unique search-focused titles and summaries
+  for Home, Services, Pricing, and all six service pages; homepage-only
+  `WebSite` site-name JSON-LD; and a nine-route search metadata/canonical
+  regression contract. Visible design, service facts, buyer flow, and payment
+  behavior are unchanged.
+- Expanded search proof beyond the prior Home-only checks. Lint passed; the
+  indexable Next.js production build generated 55 routes; TypeScript passed;
+  search readiness passed against a production-style server in both dormant
+  and indexable configurations; and the 35-route buyer journey passed with all
+  service, pricing, portfolio, and inquiry contexts intact.
+- The buyer suite initially exposed two inherited stale assertions from the
+  September 12 legal updates: it still expected pending LLC formation and a
+  proposed rather than approved retention schedule. Updated only the tests to
+  protect the current Owner-confirmed legal name, manual 12-month inquiry
+  review, and two-business-day privacy-request acknowledgement. Public legal
+  copy was not changed.
+- No new Auditor publication exists past R152 at round intake. The next product
+  work is a small evidence-selected resource cluster and legitimate external
+  authority work, not bulk keyword pages or fabricated locality/reputation.
+- Confirmed Render published `feb0b2d`: the expanded search-readiness suite
+  passed against canonical production with public indexing, all nine expected
+  commercial-page metadata contracts, homepage site identity, robots, sitemap,
+  and canonicals intact. Sampled external searches did not yet surface Cyvexly;
+  discovery/ranking remains asynchronous and is not overstated as complete.
+
 ## Round 184 — orphaned-separator visual fix; nine Auditor publications consolidated
 
 - Found nine new unconsumed Auditor publications, `IFA-2026-09-11-R144`
