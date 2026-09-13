@@ -1,79 +1,73 @@
 # Cyvexly Active Chunk
 
-**Active product chunk:** Chunk 12 — Search Visibility & Useful Content Growth
+**Active product chunk:** Chunk 13 — EduAILenz/Mudoinkle Showcase Parity
 
-**Current position:** global round 189; commercial metadata, the first useful-
-content cluster, Bing discovery, deployment-gated IndexNow, and the truthful
-Indianapolis service presence are live; Google Business Profile verification
-is processing; mobile-app website integration is deferred until the Owner
-resumes it
+**Current position:** global round 190; Owner direction `2026-09-13-05`
+requires the Cyvexly-facing EduAILenz and Mudoinkle case studies to reach the
+accepted Velora showcase standard. Search monitoring continues without
+displacing this Builder priority. Mobile-app website integration is deferred.
 
 **Current product source:** `2923ce5` (pushed to `origin/main` and verified on
-canonical production)
+canonical production before Chunk 13 implementation)
 
-**Scheduler state:** unchanged; this direction authorizes no scheduler action.
+**Scheduler state:** the Owner explicitly resumed the existing primary
+Cyvexly Builder at its existing twice-hourly GPT-5.6 Sol/high configuration and
+exact prompt. No other scheduler change is authorized.
 
-## Outcome and boundaries
+## Outcome
 
-Help relevant buyers discover Cyvexly through accurate, useful, durable search
-signals without flattening the approved design or manufacturing locality,
-reputation, reviews, results, or authority.
+Make `/work/eduailenz` and `/work/mudoinkle` as substantial, visually evidenced,
+distinctive, persuasive, and buyer-comprehensible as accepted
+`/work/velora-dining`. A potential buyer must understand each product, its
+users and verified journeys, Cyvexly's contribution, evidence and limitations,
+and the path to request comparable work.
 
-Inside this chunk:
+## Required result
 
-- unique search purpose for existing commercial pages;
-- correct site/entity/canonical/discovery data;
-- substantial buyer resources selected from real questions and performance
-  evidence;
-- useful internal links among resources, services, pricing, proof, and inquiry;
-- legitimate external business citations, mentions, and earned links;
-- Search Console/GA4 monitoring and evidence-based refinement.
+- distinct product identity inside the accepted Cyvexly design;
+- a buyer-focused opening with audience, problem, benefit, status, and proof;
+- large, legible, privacy-safe desktop and phone product evidence;
+- at least three visually supported verified journeys per product when that
+  much evidence exists, with truthful disclosure rather than invention if it
+  does not;
+- clear Cyvexly contribution and transferable capability in plain language;
+- accurate live/staging/demo/authentication/development and limitation labels;
+- coherent Home, Work, case-study, proof, service/pricing, and inquiry paths;
+- desktop, tablet, phone, keyboard, accessibility, and regression quality;
+- preserved Velora, search/indexing, analytics consent, privacy, inquiry
+  delivery, and approved Cyvexly visual behavior.
 
-Outside this chunk:
+The full outcome and acceptance brief is direction `2026-09-13-05` at the top
+of `CYVEXLY_OWNER_DIRECTION.md`.
 
-- unconfirmed local claims or cities, a storefront/fixed-address claim,
-  doorway pages, keyword stuffing, thin bulk content, fabricated reviews,
-  purchased links, and ranking guarantees;
-- underlying EduAILenz/Mudoinkle/HoneyHearted implementation;
-- deferred mobile-app website integration;
-- Stripe activation and Guardio account actions;
-- scheduler changes.
+## Boundaries
 
-## Current proof
+- Do not modify underlying EduAILenz or Mudoinkle application source,
+  infrastructure, credentials, private data, or acceptance records; those
+  remain Team 2 scope.
+- Do not invent screens, workflows, access, clients, results, credentials,
+  production readiness, or product acceptance.
+- Do not turn internal audit, deployment, source-intake, or proof mechanics
+  into the dominant buyer narrative.
+- Do not begin deferred mobile-app website integration.
+- Do not activate Stripe, submit Guardio account actions, create unconfirmed
+  local claims, or change any scheduler.
 
-Phase 1 updates nine commercial routes and homepage site identity. Phase 2 adds
-the Resources hub and two substantial buyer guides. Round 188 adds the
-substantial Indianapolis service page and honest local-by-appointment signals,
-bringing the verified build to 62 routes and the buyer contract to 39 routes/20
-inquiry contexts. Lint
-passes with one unchanged historical evidence-file warning; build, TypeScript,
-expanded search readiness, and buyer regression pass locally and on canonical
-production. Responsive visual QA passed at desktop and 375px. Sampled external
-searches still did not surface Cyvexly before this cluster deployed, so ranking/
-discovery remains a measured external outcome rather than a completion claim.
-The verified Bing property has accepted the canonical sitemap for processing,
-and IndexNow accepted all 26 canonical sitemap URLs with HTTP 200 after exact
-production source `2923ce5` went live. These are discovery
-signals, not indexing or ranking claims.
+## Parallel monitoring that must remain intact
 
-## Likely next round directions
+- Google Business Profile verification remains processing and must not be
+  called public before Google changes the status.
+- Search Console, GA4, Bing sitemap processing, accepted crawl requests, and
+  release-gated IndexNow remain monitoring inputs.
+- Search ranking is an external outcome, not a product-completion promise.
 
-- inspect early Search Console coverage/query evidence when available;
-- monitor the single Indianapolis service-area Google Business Profile until
-  Google changes it from not publicly visible; never expose the private address
-  or create a duplicate;
-- monitor the accepted recrawl requests for the three resource routes and
-  confirm Google and Bing process the refreshed sitemap;
-- monitor the deployment-gated IndexNow workflow on later relevant pushes;
-- allow the first cluster to gather evidence before selecting later topics;
-- establish a legitimate external-profile/citation checklist from actual
-  business eligibility, not generic directory volume.
+## Closure
 
-## Closure boundary
-
-The chunk can close when the core commercial pages and an evidence-selected
-useful-content foundation are live, internally connected, technically sound,
-and independently challenged; a legitimate authority-building process and
-Search Console/GA4 monitoring cadence are established; and no meaningful
-reachable search-quality defect remains. Rankings themselves are not a closure
-promise because search-engine discovery and competition are external.
+Compare both completed entries side by side with Velora in a visible
+interactive browser at desktop, tablet, and phone sizes. Confirm readable real
+evidence, distinct brand character, meaningful journey comprehension, truthful
+status and limitations, working proof/demo/navigation/inquiry paths, keyboard
+access, and no collateral regression. Record exact accepted source and rendered
+evidence, commit and push to `main`, verify the matching Render deployment, and
+complete the normal independent review. More text or a passing build alone does
+not close this chunk.

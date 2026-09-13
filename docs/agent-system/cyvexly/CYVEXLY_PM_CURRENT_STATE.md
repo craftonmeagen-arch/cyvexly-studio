@@ -1,10 +1,12 @@
 # Cyvexly Build Team Project Manager — Current State
 
-Owner directions `2026-09-13-01` through `2026-09-13-04` govern phased,
-standards-based search visibility and truthful Indianapolis discovery. Mobile-
-application capability remains confirmed, but direction `2026-09-13-04`
-defers its website integration until the Owner resumes it. Builder Round 185 established
-commercial metadata at `feb0b2d`; Round 186 deployed exact active review source
+Owner direction `2026-09-13-05` opens Chunk 13 as the primary Builder priority:
+bring the Cyvexly-facing EduAILenz and Mudoinkle case studies to the accepted
+Velora showcase standard under the detailed current outcome and acceptance
+brief. The bounded exception does not transfer either underlying application
+to the primary team. Mobile-application capability remains confirmed, but
+direction `2026-09-13-04` defers its website integration. Builder Round 185
+established commercial metadata at `feb0b2d`; Round 186 deployed exact active review source
 `483975d`, adding a Resources hub and substantial website-cost and custom-
 website-inclusions guides. Navigation, Services, Pricing, Process, inquiry
 context, the sitemap, Article/Breadcrumb data, and automated proof now connect
@@ -54,5 +56,6 @@ information, Guardio remains account-holder work, and the accepted Velora
 physical-review item remains separately tracked. Protected inquiry delivery is
 now inbox-confirmed and closed.
 Underlying EduAILenz/Mudoinkle applications, HoneyHearted, and other outside-
-website work remain Team 2. No scheduler change is authorized.
+website work remain Team 2. The Owner resumed only the existing primary
+Cyvexly Builder scheduler; all other scheduler states remain unchanged.
 

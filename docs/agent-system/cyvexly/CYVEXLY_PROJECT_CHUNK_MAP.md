@@ -197,3 +197,28 @@ evidence exposes a meaningful reachable gap.
   foundation are live and reviewed; legitimate authority-building and
   monitoring processes exist; all meaningful reachable quality gaps are
   resolved or bounded. Search ranking itself remains external and unpromised.
+
+## Chunk 13 — EduAILenz/Mudoinkle Showcase Parity (OPEN, ROUND 190)
+
+- **Authority:** Owner directions `2026-09-10-01` and `2026-09-13-05`.
+- **Outcome:** make the two Cyvexly-facing case studies as substantial,
+  persuasive, visually evidenced, responsive, and buyer-comprehensible as the
+  accepted Velora case study while retaining each product's distinct identity
+  and truthful limitations.
+- **Required surfaces:** `/work/eduailenz`, `/work/mudoinkle`, their Home and
+  Work discovery cards, relevant service/pricing/proof connections, public or
+  staging proof links, and context-preserving inquiry paths.
+- **Evidence standard:** large privacy-safe desktop and phone product evidence;
+  at least three verified user journeys per product when available; clear
+  audience/problem/benefit, Cyvexly contribution, capability, access, status,
+  and limitation language; and no invented screen, workflow, client, result,
+  acceptance, or access claim.
+- **Boundary:** the primary Builder owns only the Cyvexly showcase surfaces.
+  Underlying EduAILenz/Mudoinkle builds, credentials, private data,
+  infrastructure, and acceptance remain Team 2 scope. Preserve Velora and all
+  current Cyvexly buyer, search, privacy, analytics, and inquiry behavior.
+- **Closure:** side-by-side visible desktop/tablet/phone comparison demonstrates
+  Velora-level substance and clarity for both entries; a first-time buyer can
+  explain each product, verified journeys, Cyvexly contribution, evidence and
+  limitations, and next action; all relevant paths and regression checks pass;
+  exact source is committed, pushed, deployed, and independently reviewed.

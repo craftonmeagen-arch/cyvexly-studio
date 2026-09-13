@@ -1,5 +1,116 @@
 # Cyvexly Owner Direction
 
+## EduAILenz/Mudoinkle showcase completion and Builder restart — 2026-09-13-05
+
+**Status:** ACTIVE — PRIMARY CYVEXLY BUILDER PRIORITY; EXISTING SCHEDULER RESUMED
+**Source:** Owner via the active Codex conversation on September 13, 2026.
+
+### Owner direction — verbatim
+
+> “Ok step two put in clear detail what needs done for that work. And then
+> start the cyvexly builder schedular. The one that was on before. And then we
+> will work on the other stuff”
+
+### Scope and ownership
+
+Complete the Cyvexly-facing `/work/eduailenz` and `/work/mudoinkle` portfolio
+presentations to the accepted quality level of `/work/velora-dining`. This is a
+bounded primary Cyvexly Builder assignment covering those two case studies and
+their connecting Cyvexly Home, Work, service, pricing, and inquiry surfaces.
+Underlying EduAILenz and Mudoinkle application code, infrastructure,
+credentials, private data, and product acceptance remain Team 2 scope. The
+Builder may inspect public/auth-safe product evidence read-only but must not
+modify either outside application.
+
+This direction resumes the existing primary Cyvexly Builder scheduler using its
+existing prompt, GPT-5.6 Sol/high configuration, and twice-hourly cadence. Do
+not create a duplicate scheduler or alter any Team 2, Auditor, Council, or other
+scheduler.
+
+### Required completed result — what must be present
+
+1. **Velora-level substance, not Velora imitation.** Each case study must feel
+   as complete, deliberate, persuasive, and visually rich as the accepted
+   Velora presentation while retaining the real product's own character.
+   Preserve Velora and Cyvexly's approved cyber-blue glass framework. Do not
+   copy restaurant-specific styling into unrelated products.
+2. **A product-specific opening that sells the work.** Each opening must make a
+   potential buyer understand the product, intended users, central problem,
+   primary benefit, truthful current status, and next proof action without
+   reading an internal audit narrative. The dominant evidence must represent
+   the actual product rather than a small generic schematic.
+3. **Large, legible, representative visual evidence.** Both entries must show
+   authentic, privacy-safe desktop and phone views of the built experience at
+   a useful size. Evidence must not be decorative, materially cropped,
+   unreadable, duplicated merely to fill space, or invented. Screenshots,
+   illustrations, prototypes, and live/staging material must be labeled
+   according to what they actually are.
+4. **Several understandable user journeys per product.** Each case study must
+   visually explain at least three distinct, currently verified journeys when
+   that much evidence exists. Every journey must make the user's goal, action,
+   visible response, and demonstrated Cyvexly capability understandable. If
+   fewer than three journeys can be verified, disclose the limitation and do
+   not manufacture one.
+5. **EduAILenz must become understandable as an education product.** Its case
+   study must distinguish educator and learner needs and make the verified
+   planning, content, reading/student-support, classroom-participation, or
+   progress workflows that actually exist easy to follow. Do not imply that a
+   route name, marketing image, or protected screen proves an untested workflow.
+6. **Mudoinkle must become understandable as a multi-surface game product.** Its
+   case study must distinguish the verified game experiences and the host,
+   player, and shared-display responsibilities. Where verified, buyers should
+   understand selection, room/join flow, play interaction, shared results, and
+   operational continuity. Do not claim incomplete multi-role behavior as
+   accepted merely because its public landing page exists.
+7. **Clear Cyvexly contribution and transferable capability.** Each page must
+   state what Cyvexly actually designed or built, the important product and
+   engineering problems addressed, and what that demonstrates for a buyer
+   considering comparable work. Separate the outside product's purpose from
+   Cyvexly's contribution and avoid unsupported exclusivity or client claims.
+8. **Buyer language before internal mechanics.** Replace or subordinate review
+   jargon, source-intake language, deployment troubleshooting, proof dates, and
+   architecture inventories that currently dominate the sales story. Preserve
+   material limitations and status, but express them briefly and plainly.
+   Detailed audit mechanics belong in internal evidence records.
+9. **Truthful access and status boundaries.** Live, staging, demonstration,
+   active-development, synthetic-data, incomplete-feature, authentication, and
+   contribution labels must be accurate and proportionate. A visitor must not
+   be promised access that requires credentials or be led to believe a concept
+   or partial workflow is a completed client result.
+10. **A coherent path from interest to inquiry.** Home and Work cards, both
+    case studies, relevant service/pricing links, live or staging proof links,
+    and project inquiry must tell the same product-specific story. Inquiry links
+    must preserve the relevant project context without adding compulsory steps.
+11. **Complete responsive and accessible presentation.** The enriched proof
+    must remain readable and intentional on desktop, tablet, and phone; support
+    keyboard use; maintain meaningful headings, link labels, image alternatives,
+    focus visibility, contrast, and reduced-motion behavior; and avoid clipping,
+    overflow, broken images, or illegible proof.
+12. **No collateral regression.** Preserve the accepted Velora presentation,
+    overall Work browsing, navigation truth, pricing/service facts, inquiry
+    delivery, public indexing, metadata/canonicals, sitemap, analytics consent,
+    privacy, performance, and the approved Cyvexly visual system.
+
+### Acceptance and closure
+
+The work is complete only when visible side-by-side review against Velora at
+desktop, tablet, and phone sizes shows comparable depth, prominence of real
+evidence, product-specific identity, and buyer comprehension for **both** new
+case studies. A first-time buyer must be able to explain:
+
+- what EduAILenz and Mudoinkle each do;
+- who uses each product and what important journeys are demonstrated;
+- what Cyvexly actually contributed;
+- which evidence is real, illustrative, public, protected, staged, or limited;
+- how to inspect available proof and inquire about comparable work.
+
+All proof/demo/navigation/inquiry paths must work, automated and visible checks
+must pass, and no misleading claim may remain. Record the exact accepted source
+and rendered evidence, commit and push the work to `main`, confirm the matching
+Render deployment, and complete the normal independent review. Do not close the
+direction merely because the pages build or contain more text; both pages must
+actually reach the accepted Velora showcase standard.
+
 ## Mobile-application website integration deferral — 2026-09-13-04
 
 **Status:** ACTIVE — CAPABILITY RETAINED; WEBSITE INTEGRATION DEFERRED

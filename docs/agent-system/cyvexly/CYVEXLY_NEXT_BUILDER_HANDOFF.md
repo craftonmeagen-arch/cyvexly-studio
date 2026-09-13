@@ -2,11 +2,10 @@
 
 ## Current assignment
 
-Owner directions `2026-09-13-01` through `2026-09-13-04` govern current search
-visibility and service-model work. Direction `2026-09-13-04` defers mobile-app
-website integration until the Owner resumes it. Rounds 185–187 established commercial
-metadata, the first useful-content cluster, Bing discovery, and deployment-
-gated IndexNow.
+Owner direction `2026-09-13-05` makes Chunk 13 — EduAILenz/Mudoinkle Showcase
+Parity — the primary Builder assignment. Read its complete outcome and
+acceptance brief at the top of `CYVEXLY_OWNER_DIRECTION.md`. Direction
+`2026-09-13-04` continues to defer mobile-app website integration.
 
 Round 187 deployed exact source `53b802c`, imported the verified domain into
 Bing Webmaster Tools, submitted the canonical sitemap there, and established a
@@ -22,21 +21,27 @@ address is claimed. IndexNow accepted all 26 canonical URLs with HTTP 200.
 
 ## First action
 
-1. Monitor the single Google service-area Business Profile. It has the confirmed
+1. Compare the live EduAILenz and Mudoinkle case studies side by side with the
+   accepted Velora case study at desktop, tablet, and phone widths. Inventory
+   which required Chunk 13 evidence, product identity, verified journeys,
+   Cyvexly contribution, truth boundaries, and buyer paths are currently absent
+   or materially weaker, then complete the highest-value reachable showcase
+   slice without modifying either outside application.
+2. Monitor the single Google service-area Business Profile. It has the confirmed
    name, `Website designer` category, Indianapolis area, canonical website,
    approved description, hidden private address, and accurate services. Google
    currently says it is not publicly visible while verification processes for
    up to five days. Do not create a duplicate or claim it is live. The public
    phone remains pending because Google rejected it during setup; unconfirmed
    hours/photos, ads, Workspace, and storefront claims were skipped.
-2. Check the external review root for a publication newer than Auditor R152.
+3. Check the external review root for a publication newer than Auditor R152.
    Older review of `85c128e` does not review the current search work.
-3. Monitor the accepted Google recrawl requests for Resources and both guide
+4. Monitor the accepted Google recrawl requests for Resources and both guide
    routes, the new Indianapolis route, and Bing's processing sitemap. Avoid
    repeated unchanged submissions.
-4. Inspect early coverage/query evidence when available. Do not infer ranking
+5. Inspect early coverage/query evidence when available. Do not infer ranking
    from successful deployment, notification, or indexing eligibility.
-5. Establish only legitimate external business profiles, citations, and earned
+6. Establish only legitimate external business profiles, citations, and earned
    authority opportunities supported by actual eligibility. Do not begin the
    deferred mobile-app website integration, create bulk listings, or invent
    locality, reviews, partnerships, or recognition.
@@ -88,4 +93,5 @@ and ranking claims are prohibited.
 - Mobile-app website integration is deferred under `2026-09-13-04`.
 - Stripe remains deferred; Guardio remains an Owner/account-holder action.
 - Underlying outside products and HoneyHearted remain Team 2 scope.
-- No scheduler change is authorized.
+- The existing primary Builder scheduler is resumed under `2026-09-13-05`; no
+  other scheduler change is authorized.

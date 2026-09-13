@@ -1,5 +1,14 @@
 # Cyvexly Build Team and Team 2 — Current Agent Guidance
 
+**Latest Builder direction — Owner direction 2026-09-13-05:** complete the
+Cyvexly-facing EduAILenz and Mudoinkle case studies to the accepted Velora
+showcase standard. The current detailed outcome and acceptance brief is at the
+top of `docs/agent-system/cyvexly/CYVEXLY_OWNER_DIRECTION.md`. This remains a
+bounded Cyvexly portfolio assignment: do not modify either underlying outside
+application or cross into Team 2 work. The Owner explicitly resumed the
+existing primary Cyvexly Builder scheduler at its existing twice-hourly cadence;
+all other scheduler states remain unchanged.
+
 **Latest capability timing direction — Owner direction 2026-09-13-04:** the
 Owner confirms that mobile-application development remains a Cyvexly
 capability but defers its website integration until later. Do not begin or

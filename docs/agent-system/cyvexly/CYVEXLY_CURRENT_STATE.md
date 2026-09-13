@@ -1,16 +1,15 @@
 # Cyvexly Current State
 
-**Last completed global round:** 188
+**Last completed global round:** 189
 
-**Current global round:** 189
+**Current global round:** 190
 
-**Active chunk:** Chunk 12 — Search Visibility & Useful Content Growth
+**Active chunk:** Chunk 13 — EduAILenz/Mudoinkle Showcase Parity
 
-**Current mission:** execute Owner directions `2026-09-13-01` through
-`2026-09-13-04` through phased, truthful search improvements while preserving
-the accepted cyber-blue product, nationwide remote service, and confirmed
-Indianapolis in-person-by-appointment availability. Mobile-app website
-integration is deferred until the Owner resumes it.
+**Current mission:** execute Owner direction `2026-09-13-05` by bringing the
+Cyvexly-facing EduAILenz and Mudoinkle case studies to the accepted Velora
+showcase standard. Preserve the live search foundation, truthful Indianapolis
+availability, and the mobile-app integration deferral.
 
 **Current product source:** `2923ce5` — truthful Indianapolis service presence,
 pushed to `origin/main`; Round 188 continuity records are the next docs-only
@@ -20,6 +19,21 @@ commit.
 deployment passed the complete live search-readiness and buyer-journey
 contracts on September 13, 2026, and IndexNow accepted all 26 canonical sitemap
 URLs with HTTP 200.
+
+## Round 190 — showcase parity brief and Builder restart
+
+- Owner direction `2026-09-13-05` reopens the bounded Cyvexly-facing
+  EduAILenz/Mudoinkle showcase work as the primary Builder priority.
+- The completion brief requires Velora-level substance with distinct product
+  identities, large real desktop/phone evidence, several verified user
+  journeys, clear Cyvexly contribution, truthful status/access/limitations,
+  a coherent inquiry path, responsive/accessibility quality, and no regression.
+- Underlying application builds and private evidence remain Team 2 scope. The
+  primary Builder may inspect public/auth-safe evidence read-only but must not
+  modify either outside repository.
+- The Owner explicitly resumed the existing Cyvexly Builder scheduler at its
+  existing twice-hourly GPT-5.6 Sol/high configuration and exact prompt. No
+  other scheduler state is changed.
 
 ## Round 189 — Google Business Profile processing and mobile capability intake
 
