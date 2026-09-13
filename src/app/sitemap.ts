@@ -10,6 +10,7 @@ const staticRoutes = [
   "/services",
   "/work",
   "/pricing",
+  "/indianapolis-web-design",
   "/resources",
   "/process",
   "/about",

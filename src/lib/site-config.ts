@@ -23,6 +23,7 @@ export const footerNav = {
     { label: "Resources", href: "/resources" },
     { label: "Process", href: "/process" },
     { label: "About", href: "/about" },
+    { label: "Indianapolis web design", href: "/indianapolis-web-design" },
   ],
   services: [
     { label: "Business websites", href: "/services/business-websites" },
@@ -1215,7 +1216,12 @@ export const faqLibrary = [
       {
         question: "Do you work with clients outside Indiana?",
         answer:
-          "Yes — Cyvexly works remotely with businesses across the United States. At launch, Cyvexly serves United States clients only.",
+          "Yes — Cyvexly works remotely with businesses across the United States. In-person consultations are also available by appointment in the Indianapolis area.",
+      },
+      {
+        question: "Can we meet in person in Indianapolis?",
+        answer:
+          "Yes. Indianapolis-area businesses can request an in-person consultation by appointment. Cyvexly does not operate a public walk-in storefront, so the meeting location is confirmed directly after the request is reviewed.",
       },
       {
         question: "How do you handle different time zones?",

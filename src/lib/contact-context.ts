@@ -20,6 +20,7 @@ export const inquiryContexts = {
   "evolve-plan": "Evolve plan — ongoing website support",
   "website-budget": "Website budget and package fit",
   "project-scope": "Custom website scope and inclusions",
+  "indianapolis-project": "Indianapolis-area website project",
 } as const;
 
 export type InquiryContextKey = keyof typeof inquiryContexts;
@@ -44,6 +45,7 @@ export const inquiryPlannerServices = {
   "evolve-plan": "website-care",
   "website-budget": "business-websites",
   "project-scope": "business-websites",
+  "indianapolis-project": "business-websites",
 } satisfies Record<InquiryContextKey, ServicePlannerKey>;
 
 export function getInquiryContext(value: unknown): {

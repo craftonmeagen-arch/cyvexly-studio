@@ -119,8 +119,9 @@ export default function AboutPage() {
                 <li className="flex items-start gap-3">
                   <CheckIcon className="mt-0.5 h-4 w-4 shrink-0 text-signal-emerald" />
                   <span className="text-sm leading-relaxed text-midnight-slate">
-                    Fully remote, serving business owners across the United
-                    States.
+                    Based in Indiana, serving business owners remotely across
+                    the United States, with Indianapolis-area meetings
+                    available by appointment.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">

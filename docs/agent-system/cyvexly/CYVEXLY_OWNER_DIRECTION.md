@@ -1,5 +1,35 @@
 # Cyvexly Owner Direction
 
+## Indianapolis in-person service and local discovery — 2026-09-13-02
+
+**Status:** ACTIVE — OWNER-CONFIRMED SERVICE MODEL
+**Source:** Owner via the active Codex conversation on September 13, 2026.
+
+### Owner direction — verbatim
+
+> “Ok I can meet people in indianapolis. So if that will help get business then
+> I would be willing.”
+>
+> “Confirm”
+
+### Agent interpretation — not Owner-authored direction
+
+Cyvexly Studio now truthfully offers in-person consultations by appointment in
+the Indianapolis area while continuing to work remotely with businesses across
+the United States. Add a substantial Indianapolis web-design service page,
+accurate internal links, metadata, sitemap coverage, and non-address local
+business/service signals that preserve the approved design and national offer.
+
+Pursue one Google Business Profile only if it remains eligible as a genuine
+service-area business. Use the Owner's real address only inside Google's
+verification flow and keep it hidden from the public when customers are not
+served there. Start with Indianapolis as the confirmed service area. Do not
+claim a walk-in office, storefront, fixed meeting address, multiple locations,
+other cities, or a larger in-person radius without later Owner confirmation.
+Do not create duplicate profiles, doorway pages, virtual-office claims, or
+ranking guarantees. Local discovery remains subject to provider verification,
+distance, relevance, prominence, indexing, and competition.
+
 ## Standard search-visibility growth — 2026-09-13-01
 
 **Status:** ACTIVE — COMMERCIAL FOUNDATION AND FIRST RESOURCE CLUSTER LIVE;
@@ -24,12 +54,12 @@ Then build genuinely useful buyer resources around real questions, connect them
 through relevant internal links, earn legitimate business mentions and links,
 and monitor Search Console/GA4 evidence before deciding later priorities.
 
-Do not create fake Indianapolis or local-service claims, doorway pages, thin
-keyword variants, fabricated reviews, purchased links, bulk junk-directory
-listings, or ranking guarantees. A future local-market page is appropriate only
-if Cyvexly genuinely chooses to serve and describe that market. Stripe and
-Guardio remain separate from this search-growth direction. No scheduler change
-is authorized.
+Do not create fake local-service claims, doorway pages, thin keyword variants,
+fabricated reviews, purchased links, bulk junk-directory listings, or ranking
+guarantees. Later direction `2026-09-13-02` confirms Indianapolis-area in-person
+consultations and authorizes one truthful local-market page and eligible service-
+area profile; it does not authorize other city claims. Stripe and Guardio remain
+separate from this search-growth direction. No scheduler change is authorized.
 
 ## Public indexing and sitemap release — 2026-09-12-03
 

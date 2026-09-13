@@ -55,7 +55,7 @@ export default function Home() {
             <div className="home-hero-copy relative overflow-hidden rounded-[1.75rem] px-5 py-6 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
               <p className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-[#315a8d]">
                 <span className="h-1.5 w-1.5 rounded-full bg-signal-emerald" aria-hidden="true" />
-                Independent web studio · Serving the United States
+                Indiana-based web studio · Serving the United States
               </p>
               <h1
                 aria-label={siteConfig.tagline}
@@ -77,13 +77,18 @@ export default function Home() {
               </div>
               <p className="mt-4 text-xs text-cool-graphite">
                 Prefer a next-business-day conversation?{" "}
-                <ButtonLink href="/contact?request=consultation" variant="text" className="text-xs">
-                  Request a consultation →
-                </ButtonLink>
-                <span className="whitespace-nowrap">
-                  <span aria-hidden="true"> · </span>
+                <span className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 sm:mt-0 sm:inline-flex">
+                  <ButtonLink href="/contact?request=consultation" variant="text" className="text-xs">
+                    Request a consultation →
+                  </ButtonLink>
                   <ButtonLink href="/start" variant="text" className="text-xs">Share a detailed brief →</ButtonLink>
                 </span>
+              </p>
+              <p className="mt-3 text-xs leading-relaxed text-cool-graphite">
+                In-person consultations are available by appointment in the Indianapolis area.{" "}
+                <ButtonLink href="/indianapolis-web-design" variant="text" className="text-xs">
+                  See Indianapolis services →
+                </ButtonLink>
               </p>
             </div>
             <HeroShowcaseVideo />

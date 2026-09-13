@@ -33,6 +33,7 @@ const inquiryContexts = {
   "evolve-plan": "Evolve plan — ongoing website support",
   "website-budget": "Website budget and package fit",
   "project-scope": "Custom website scope and inclusions",
+  "indianapolis-project": "Indianapolis-area website project",
 };
 
 const inquiryPlannerServices = {
@@ -55,6 +56,7 @@ const inquiryPlannerServices = {
   "evolve-plan": "website-care",
   "website-budget": "business-websites",
   "project-scope": "business-websites",
+  "indianapolis-project": "business-websites",
 };
 
 const contextEntries = Object.entries(inquiryContexts);
@@ -70,7 +72,7 @@ const [home, services, pricing, planner, plainContact, consultationContact, unkn
     read("/contact?interest=custom-project"),
     ...contextEntries.map(([interest]) => read(`/contact?interest=${interest}`)),
   ]);
-const [work, processHtml, about, faq, sitemap, privacy, terms] = await Promise.all([
+const [work, processHtml, about, faq, sitemap, privacy, terms, indianapolis] = await Promise.all([
   read("/work"),
   read("/process"),
   read("/about"),
@@ -78,6 +80,7 @@ const [work, processHtml, about, faq, sitemap, privacy, terms] = await Promise.a
   read("/sitemap.xml"),
   read("/privacy"),
   read("/terms"),
+  read("/indianapolis-web-design"),
 ]);
 
 for (const legalPage of [privacy, terms]) {
@@ -102,6 +105,11 @@ assert.match(terms, /has no public checkout/);
 assert.match(privacy, /never typed into a form on cyvexly\.com/);
 assert.doesNotMatch(pricing, /Pay now|Buy now|Checkout now/);
 assert.match(home, /href="\/contact\?request=consultation"/);
+assert.match(home, /href="\/indianapolis-web-design"/);
+assert.match(about, /Indianapolis-area meetings/);
+assert.match(indianapolis, /Indianapolis web design/);
+assert.match(indianapolis, /does not operate a public walk-in storefront/);
+assert.match(indianapolis, /href="\/contact\?interest=indianapolis-project"/);
 assert.match(planner, /href="\/contact\?request=consultation"/);
 assert.match(plainContact, /Request a consultation/);
 assert.match(consultationContact, /Request a consultation/);
@@ -801,12 +809,13 @@ assert.match(sitemap, /work\/nexora-systems/);
 assert.match(sitemap, /work\/eduailenz/);
 assert.match(sitemap, /work\/mudoinkle/);
 assert.match(sitemap, /services\/custom-web-applications/);
+assert.match(sitemap, /indianapolis-web-design/);
 
 console.log(
   JSON.stringify(
     {
       baseUrl,
-      routes: 12 + contextualContacts.length + serviceDetails.length,
+      routes: 13 + contextualContacts.length + serviceDetails.length,
       serviceDestinations: serviceDestinations.length,
       buyerServiceRoutes: 5,
       pricingAnchors: 12,

@@ -60,6 +60,12 @@ const commercialPages = [
       "See starting prices for custom websites, redesigns, landing pages, ecommerce and booking sites, web applications, add-ons, and monthly website care.",
   },
   {
+    path: "/indianapolis-web-design",
+    title: "Indianapolis Web Design & Development | Cyvexly",
+    description:
+      "Custom web design and development for Indianapolis-area businesses, with local consultations by appointment, clear pricing, and nationwide remote delivery.",
+  },
+  {
     path: "/resources",
     title: "Website Planning Guides for Business Owners | Cyvexly",
     description:
@@ -144,6 +150,7 @@ assert.match(home, /"url":"https:\/\/cyvexly\.com\/"/);
 assert.match(sitemap, /<loc>https:\/\/cyvexly\.com<\/loc>/);
 assert.match(sitemap, /<loc>https:\/\/cyvexly\.com\/start<\/loc>/);
 assert.match(sitemap, /<loc>https:\/\/cyvexly\.com\/resources<\/loc>/);
+assert.match(sitemap, /<loc>https:\/\/cyvexly\.com\/indianapolis-web-design<\/loc>/);
 assert.match(sitemap, /<loc>https:\/\/cyvexly\.com\/resources\/small-business-website-cost<\/loc>/);
 assert.match(sitemap, /<loc>https:\/\/cyvexly\.com\/resources\/what-custom-website-includes<\/loc>/);
 assert.match(robots, /Sitemap: https:\/\/cyvexly\.com\/sitemap\.xml/);
@@ -159,6 +166,7 @@ const costGuide = htmlByPath.get("/resources/small-business-website-cost");
 const inclusionGuide = htmlByPath.get("/resources/what-custom-website-includes");
 const services = htmlByPath.get("/services");
 const pricing = htmlByPath.get("/pricing");
+const indianapolis = htmlByPath.get("/indianapolis-web-design");
 
 assert.match(resources, /href="\/resources\/small-business-website-cost"/);
 assert.match(resources, /href="\/resources\/what-custom-website-includes"/);
@@ -171,6 +179,12 @@ assert.match(inclusionGuide, /href="\/resources\/small-business-website-cost"/);
 assert.match(services, /href="\/resources\/small-business-website-cost"/);
 assert.match(services, /href="\/resources\/what-custom-website-includes"/);
 assert.match(pricing, /href="\/resources\/small-business-website-cost"/);
+assert.match(home, /href="\/indianapolis-web-design"/);
+assert.match(indianapolis, /Indianapolis-area businesses/);
+assert.match(indianapolis, /does not operate a public walk-in storefront/);
+assert.match(indianapolis, /"@type":"Service"/);
+assert.match(indianapolis, /"name":"Indianapolis"/);
+assert.match(indianapolis, /href="\/contact\?interest=indianapolis-project"/);
 
 if (expectedIndexable) {
   assert.match(home, /<meta name="robots" content="index, follow"\/>/);

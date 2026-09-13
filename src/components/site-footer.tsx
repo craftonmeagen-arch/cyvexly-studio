@@ -13,7 +13,7 @@ export function SiteFooter() {
               CYVEXLY STUDIO
             </p>
             <p className="mt-3 max-w-[220px] text-sm text-white/70">
-              Independent web design and development studio. Remote, serving the United States.
+              Indiana-based web design and development studio. Remote across the United States, with Indianapolis meetings by appointment.
             </p>
             <p className="mt-4 flex items-center gap-2 text-xs font-medium text-ion-cyan">
               <span className="h-1.5 w-1.5 rounded-full bg-ion-cyan shadow-[0_0_12px_rgba(54,199,255,0.9)]" aria-hidden="true" />
