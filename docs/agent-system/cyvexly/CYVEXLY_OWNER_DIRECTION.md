@@ -1,5 +1,26 @@
 # Cyvexly Owner Direction
 
+## Public indexing and sitemap release — 2026-09-12-03
+
+**Status:** COMPLETE — PRODUCTION INDEXING ENABLED; MONITORING CONTINUES
+**Source:** After reviewing the final legal-copy standard, the Owner explicitly
+confirmed the live indexing deployment and Search Console sitemap submission
+on September 12, 2026.
+
+Production now has `NEXT_PUBLIC_SITE_INDEXABLE=true`. The resulting Render
+deployment succeeded; `https://cyvexly.com/` returned index/follow metadata,
+`https://cyvexly.com/robots.txt` returned `Allow: /`, and the production
+sitemap returned HTTP 200 with canonical `https://cyvexly.com/` URLs. Google
+Search Console accepted `https://cyvexly.com/sitemap.xml`, processed it
+successfully, and reported 22 discovered pages at verification time.
+
+This later verified state supersedes older no-index and indexing-pending
+instructions. Do not restore the production no-index gate unless a later Owner
+direction or an urgent safety/legal issue requires it. Search appearance and
+coverage remain asynchronous monitoring work; do not claim that all pages are
+already indexed or ranked. Stripe activation and Guardio disposition remain
+separate unfinished account-side work.
+
 ## Final legal-copy standard approval — 2026-09-12-02
 
 **Status:** ACTIVE — OWNER-APPROVED STANDARD, INDEXING SWITCH STILL SEPARATE
@@ -25,8 +46,8 @@ automatic deletion or a universal deletion deadline.
 
 This is an Owner business-policy approval and product-quality assessment, not
 legal advice or an independent attorney review. The production indexing
-environment switch and Search Console sitemap submission remain separate live
-actions and must not be inferred from this copy approval alone.
+environment switch and Search Console sitemap submission were separately
+authorized and completed under direction `2026-09-12-03`.
 
 ## LLC formation confirmation — 2026-09-12-01
 

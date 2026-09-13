@@ -111,6 +111,9 @@ because one feature or happy path passed.
   retrieved state filing record. Public brand remains Cyvexly Studio.
 - Launch market: United States only.
 - Production domain: `cyvexly.com`.
+- Public search indexing: enabled and verified live on 2026-09-12. The verified
+  Search Console domain property processed `https://cyvexly.com/sitemap.xml`
+  successfully and reported 22 discovered pages at submission time.
 - Public email: `design@cyvexly.com`.
 - Public phone: `(317) 572-5780` / `+13175725780`.
 - About: logo-led studio story; no personal founder name or portrait.

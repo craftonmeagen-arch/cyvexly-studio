@@ -13,7 +13,8 @@ The final copy is approved after removing draft labels and adopting the
 explicit manual retention and privacy-request practices recorded in Owner
 Direction `2026-09-12-02`. The assessment is a proportionate small-business
 product and operations review, not legal advice or an attorney certification.
-Public indexing remains a separate live release action.
+Public indexing was separately authorized and completed under Owner Direction
+`2026-09-12-03`.
 
 ## Legal business identity — 2026-09-12
 
@@ -28,12 +29,13 @@ when asked to confirm the exact filed name **Cyvexly LLC**.
 - This is Owner-supplied confirmation, not an independently retrieved Indiana
   filing record.
 
-This confirmation does not approve final Privacy or Terms wording, activate
-Stripe, resolve Guardio, or release the separate public-indexing gate.
+This confirmation did not by itself approve final Privacy or Terms wording,
+activate Stripe, resolve Guardio, or release public indexing. Those later
+legal-copy and indexing decisions are recorded in their own sections.
 
 ## Measurement, search, and indexing approach — 2026-09-10
 
-**Status:** APPROVED IN PRINCIPLE — PUBLIC INDEXING RELEASE REMAINS PENDING.
+**Status:** APPROVED AND ACTIVATED — MONITORING CONTINUES.
 **Source:** Owner directed Cyvexly to use the industry-standard approach.
 
 - Use a Search Console domain property for `cyvexly.com`, submit/monitor the
@@ -47,9 +49,11 @@ Stripe, resolve Guardio, or release the separate public-indexing gate.
   filing/name check, and final legal wording are complete and verified.
 
 The Owner subsequently completed the Google account steps and supplied the
-production measurement configuration on September 12, 2026. Public indexing
-remains a separate release decision; this approval does not certify legal
-compliance.
+production measurement configuration on September 12, 2026. The Owner then
+authorized public indexing: the production index/follow and robots behavior
+were verified, and Search Console processed the submitted sitemap successfully
+with 22 discovered pages. Search coverage and analytics reporting remain
+asynchronous monitoring work. This approval does not certify legal compliance.
 
 ## Velora presentation — 2026-09-10
 
