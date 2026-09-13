@@ -3,6 +3,25 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 187 — Bing discovery and deployment-gated IndexNow
+
+- Imported `cyvexly.com` from its verified Google Search Console property into
+  Bing Webmaster Tools with view-only access and submitted
+  `https://cyvexly.com/sitemap.xml`; Bing accepted it with processing status.
+- Implemented and pushed exact source `53b802c`: a Render-backed IndexNow key
+  route, a no-indexed deployed-release endpoint, a release-gated sitemap
+  submitter, and a main-branch GitHub Actions workflow. Future relevant pushes
+  wait until Render reports the exact commit before notifying IndexNow, avoiding
+  premature submissions against an older deployment.
+- Kept the protocol key out of source, documentation, logs, and GitHub secrets.
+  Render holds the value, while the workflow reads the public verification file
+  IndexNow requires at runtime.
+- Dedicated smoke, TypeScript, lint (one unchanged historical evidence warning),
+  and the 61-route production build passed. Render deployed `53b802c`; the live
+  release endpoint, key route, 25-URL sitemap, and complete indexable search-
+  readiness contract passed. IndexNow then accepted all 25 canonical URLs with
+  HTTP 200. Acceptance confirms notification only, not indexing or ranking.
+
 ## Round 186 — first useful buyer-resource cluster
 
 - Implemented and pushed exact source `483975d`: a new `/resources` hub plus

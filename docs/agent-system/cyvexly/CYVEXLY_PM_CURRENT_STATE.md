@@ -9,6 +9,14 @@ context, the sitemap, Article/Breadcrumb data, and automated proof now connect
 that first small cluster. The expanded search and buyer contracts pass on
 canonical production, with responsive visible proof at desktop and 375px.
 
+Builder Round 187 deployed exact source `53b802c`: Bing Webmaster Tools now has
+the imported verified domain and a processing canonical sitemap, while a new
+deployment-gated workflow waits for the exact Render commit before submitting
+the live 25-URL sitemap to IndexNow. The first release-gated submission received
+HTTP 200 for all 25 canonical URLs. The key remains outside source and
+documentation in Render's protected environment control; notification success
+does not establish indexing or ranking.
+
 Actual discovery is not yet proven. On September 13, Google accepted priority-
 crawl requests for the Resources hub and both guides; all three were still
 unknown/not indexed at request time. Sampled external searches did not surface

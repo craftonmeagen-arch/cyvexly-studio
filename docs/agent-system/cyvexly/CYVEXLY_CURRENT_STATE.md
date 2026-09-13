@@ -1,8 +1,8 @@
 # Cyvexly Current State
 
-**Last completed global round:** 186
+**Last completed global round:** 187
 
-**Current global round:** 187
+**Current global round:** 188
 
 **Active chunk:** Chunk 12 — Search Visibility & Useful Content Growth
 
@@ -10,13 +10,35 @@
 truthful search improvements while preserving the accepted cyber-blue product
 and United States service model.
 
-**Current repository source:** `483975d` — first useful buyer-resource cluster,
-pushed to `origin/main`; Round 186 continuity records are the next docs-only
-commit.
+**Current repository source:** `53b802c` — deployment-gated IndexNow
+notification, pushed to `origin/main`; Round 187 continuity records are the
+next docs-only commit.
 
-**Current deployed product source:** `483975d`; its canonical production
-deployment passed the complete live search-readiness and 37-route buyer-journey
-contracts on September 13, 2026.
+**Current deployed product source:** `53b802c`; its canonical production
+deployment passed the complete live search-readiness contract on September 13,
+2026, and IndexNow accepted all 25 canonical sitemap URLs with HTTP 200.
+
+## Round 187 — Bing discovery and deployment-gated IndexNow
+
+- Imported the verified `cyvexly.com` Search Console property into Bing
+  Webmaster Tools with view-only Google access and submitted the canonical
+  sitemap. Bing accepted the sitemap and reported it as processing; crawl and
+  reporting data can take up to 48 hours and must not be overstated.
+- Added a protected Render `INDEXNOW_KEY`, a public protocol-required
+  `/indexnow-key.txt` verification route, and a no-indexed `/api/release`
+  endpoint that reports Render's deployed Git commit.
+- Added a GitHub Actions workflow that waits for canonical production to report
+  the exact pushed commit, verifies the live key location, reads the current
+  sitemap, and submits only same-origin canonical URLs to IndexNow. The workflow
+  reads the intentionally public key from production rather than duplicating it
+  into GitHub secrets.
+- Local smoke, TypeScript, lint (one unchanged historical warning), and the
+  61-route production build passed before push. Render deployed exact source
+  `53b802c`; live release/key/sitemap checks and the complete indexable search-
+  readiness suite passed afterward.
+- A direct release-gated run received HTTP 200 from IndexNow for all 25
+  canonical sitemap URLs. This is successful discovery notification, not an
+  indexing or ranking guarantee.
 
 ## Round 186 — first useful buyer-resource cluster
 
@@ -81,10 +103,11 @@ contracts on September 13, 2026.
 
 ## Next phase
 
-Monitor the accepted recrawl requests for Resources and both guide routes;
-request refreshed Home, Services, and Pricing crawling only if coverage data
-shows it is needed, and confirm Google rereads the 25-URL sitemap. Then use
-Search Console query/impression evidence and GA4
+Monitor the accepted Google recrawl requests for Resources and both guide
+routes, Bing's processing sitemap, and the automatic IndexNow workflow on later
+production pushes. Request refreshed Home, Services, and Pricing crawling only
+if coverage evidence shows it is needed. Then use Search Console/Bing query and
+coverage evidence plus GA4
 behavior to decide whether a later resource should address redesign timing,
 website versus web application, booking/ecommerce prerequisites, or after-
 launch ownership. Do not create another batch without evidence.

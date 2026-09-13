@@ -2,10 +2,10 @@
 
 **Active product chunk:** Chunk 12 — Search Visibility & Useful Content Growth
 
-**Current position:** global round 187; commercial metadata and the first
-useful-content cluster are live
+**Current position:** global round 188; commercial metadata, the first useful-
+content cluster, Bing discovery, and deployment-gated IndexNow are live
 
-**Current product source:** `483975d` (pushed to `origin/main` and verified on
+**Current product source:** `53b802c` (pushed to `origin/main` and verified on
 canonical production)
 
 **Scheduler state:** unchanged; this direction authorizes no scheduler action.
@@ -44,12 +44,17 @@ expanded search readiness, and buyer regression pass locally and on canonical
 production. Responsive visual QA passed at desktop and 375px. Sampled external
 searches still did not surface Cyvexly before this cluster deployed, so ranking/
 discovery remains a measured external outcome rather than a completion claim.
+The verified Bing property has accepted the canonical sitemap for processing,
+and IndexNow accepted all 25 canonical sitemap URLs with HTTP 200 after the
+workflow verified exact production source `53b802c`. These are discovery
+signals, not indexing or ranking claims.
 
 ## Likely next round directions
 
 - inspect early Search Console coverage/query evidence when available;
 - monitor the accepted recrawl requests for the three resource routes and
-  confirm Google rereads the refreshed sitemap;
+  confirm Google and Bing process the refreshed sitemap;
+- monitor the deployment-gated IndexNow workflow on later relevant pushes;
 - allow the first cluster to gather evidence before selecting later topics;
 - establish a legitimate external-profile/citation checklist from actual
   business eligibility, not generic directory volume.
