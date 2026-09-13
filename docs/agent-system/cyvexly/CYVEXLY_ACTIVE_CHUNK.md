@@ -4,7 +4,9 @@
 
 **Current position:** global round 189; commercial metadata, the first useful-
 content cluster, Bing discovery, deployment-gated IndexNow, and the truthful
-Indianapolis service presence are live
+Indianapolis service presence are live; Google Business Profile verification
+is processing and the Owner-confirmed mobile-app capability awaits coherent
+website integration
 
 **Current product source:** `2923ce5` (pushed to `origin/main` and verified on
 canonical production)
@@ -56,8 +58,11 @@ signals, not indexing or ranking claims.
 ## Likely next round directions
 
 - inspect early Search Console coverage/query evidence when available;
-- complete one eligible Indianapolis-only service-area Google Business Profile
-  without publicly exposing the Owner's private address;
+- monitor the single Indianapolis service-area Google Business Profile until
+  Google changes it from not publicly visible; never expose the private address
+  or create a duplicate;
+- integrate Owner-confirmed mobile-application development into the public
+  service model without invented platform, price, proof, or client claims;
 - monitor the accepted recrawl requests for the three resource routes and
   confirm Google and Bing process the refreshed sitemap;
 - monitor the deployment-gated IndexNow workflow on later relevant pushes;

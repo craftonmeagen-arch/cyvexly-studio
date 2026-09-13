@@ -2,9 +2,10 @@
 
 ## Current assignment
 
-Owner directions `2026-09-13-01` and `2026-09-13-02` govern Chunk 12 search
-visibility work. Rounds 185–187 established commercial metadata, the first
-useful-content cluster, Bing discovery, and deployment-gated IndexNow.
+Owner directions `2026-09-13-01` through `2026-09-13-03` govern current search
+visibility and service-model work. Rounds 185–187 established commercial
+metadata, the first useful-content cluster, Bing discovery, and deployment-
+gated IndexNow.
 
 Round 187 deployed exact source `53b802c`, imported the verified domain into
 Bing Webmaster Tools, submitted the canonical sitemap there, and established a
@@ -20,19 +21,23 @@ address is claimed. IndexNow accepted all 26 canonical URLs with HTTP 200.
 
 ## First action
 
-1. Complete one eligible Google service-area Business Profile only: public
-   business name `Cyvexly Studio`, primary category `Website designer`, and
-   Indianapolis as the first confirmed local area alongside nationwide remote
-   service. This is not an exclusive-provider claim. The Owner must privately
-   enter any address Google requires for verification; keep it hidden publicly
-   when customers are not served there. Do not create duplicates, a storefront
-   claim, or additional city areas/pages without later confirmation.
-2. Check the external review root for a publication newer than Auditor R152.
+1. Monitor the single Google service-area Business Profile. It has the confirmed
+   name, `Website designer` category, Indianapolis area, canonical website,
+   approved description, hidden private address, and accurate services. Google
+   currently says it is not publicly visible while verification processes for
+   up to five days. Do not create a duplicate or claim it is live. The public
+   phone remains pending because Google rejected it during setup; unconfirmed
+   hours/photos, ads, Workspace, and storefront claims were skipped.
+2. Implement Owner direction `2026-09-13-03`: add mobile-application development
+   coherently to the Cyvexly website and buyer journey, defining truthful scope
+   and boundaries without invented platform, price, proof, result, credential,
+   or client claims. Google already lists the confirmed capability.
+3. Check the external review root for a publication newer than Auditor R152.
    Older review of `85c128e` does not review the current search work.
-3. Monitor the accepted Google recrawl requests for Resources and both guide
+4. Monitor the accepted Google recrawl requests for Resources and both guide
    routes, the new Indianapolis route, and Bing's processing sitemap. Avoid
    repeated unchanged submissions.
-4. Inspect early coverage/query evidence when available. Do not infer ranking
+5. Inspect early coverage/query evidence when available. Do not infer ranking
    from successful deployment, notification, or indexing eligibility.
 
 ## Live release proof

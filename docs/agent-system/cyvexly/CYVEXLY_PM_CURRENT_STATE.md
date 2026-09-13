@@ -1,7 +1,8 @@
 # Cyvexly Build Team Project Manager — Current State
 
-Owner directions `2026-09-13-01` and `2026-09-13-02` govern phased, standards-
-based search visibility and truthful Indianapolis discovery. Builder Round 185 established
+Owner directions `2026-09-13-01` through `2026-09-13-03` govern phased,
+standards-based search visibility, truthful Indianapolis discovery, and the
+newly confirmed mobile-application capability. Builder Round 185 established
 commercial metadata at `feb0b2d`; Round 186 deployed exact active review source
 `483975d`, adding a Resources hub and substantial website-cost and custom-
 website-inclusions guides. Navigation, Services, Pricing, Process, inquiry
@@ -24,6 +25,16 @@ context, and a 26-URL sitemap. The 62-route build, 39-route/20-context buyer
 contract, expanded search contract, responsive visual QA, and canonical live
 checks passed; IndexNow accepted all 26 URLs with HTTP 200. Cyvexly still has
 no public walk-in storefront and no public street address is claimed.
+
+Round 189 account work created one Google service-area Business Profile with
+the confirmed name, category, Indianapolis area, canonical website, approved
+description, hidden private address, and truthful services including mobile-
+application development. Google reports the profile as not publicly visible
+while verification processes for up to five days. The public phone remains
+pending because Google's setup field rejected it. Hours, photos, paid ads,
+Workspace, storefront/address publication, and broad software-development
+claims were skipped. Builder must now align the website with Owner direction
+`2026-09-13-03` before treating the mobile offer as coherently published.
 
 Actual discovery is not yet proven. The next local account step is one eligible
 Google service-area Business Profile using `Cyvexly Studio`, primary category

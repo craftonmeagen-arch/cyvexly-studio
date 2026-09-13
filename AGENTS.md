@@ -1,5 +1,11 @@
 # Cyvexly Build Team and Team 2 — Current Agent Guidance
 
+**Latest capability direction — Owner direction 2026-09-13-03:** the Owner
+confirms that Cyvexly has mobile-application development capability. The
+primary Cyvexly Builder must integrate it coherently into the public service
+model without inventing shipped apps, platform support, prices, results,
+credentials, or client claims.
+
 **Latest Cyvexly service direction — Owner direction 2026-09-13-02:** Cyvexly
 Studio truthfully offers Indianapolis-area in-person consultations by
 appointment while retaining remote United States service. The primary Cyvexly

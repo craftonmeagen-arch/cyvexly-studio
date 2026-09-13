@@ -1,8 +1,26 @@
 # Cyvexly Owner Direction
 
+## Mobile-application capability — 2026-09-13-03
+
+**Status:** ACTIVE — OWNER-CONFIRMED CAPABILITY
+**Source:** Owner via the active Codex conversation on September 13, 2026.
+
+### Owner direction — verbatim
+
+> “It should we have that capability”
+
+### Agent interpretation — not Owner-authored direction
+
+Cyvexly Studio has mobile-application development capability. Include that
+capability in the public service model alongside the established website and
+custom-web-application work. Keep the offer coherent across the website,
+Google Business Profile, pricing/discovery language, and future proof. Do not
+invent shipped mobile apps, platform coverage, credentials, results, prices, or
+client claims that the Owner has not confirmed.
+
 ## Indianapolis in-person service and local discovery — 2026-09-13-02
 
-**Status:** ACTIVE — OWNER-CONFIRMED SERVICE MODEL
+**Status:** ACTIVE — PROFILE CREATED; GOOGLE VERIFICATION PROCESSING
 **Source:** Owner via the active Codex conversation on September 13, 2026.
 
 ### Owner direction — verbatim
@@ -31,6 +49,20 @@ is the sole provider there and not a restriction on nationwide remote service.
 Do not create duplicate profiles, doorway pages, virtual-office claims, or
 ranking guarantees. Local discovery remains subject to provider verification,
 distance, relevance, prominence, indexing, and competition.
+
+### Current Google Business Profile evidence — September 13, 2026
+
+One profile was created under the Owner's Google account using `Cyvexly Studio`,
+primary category `Website designer`, Indianapolis as the service area, and
+`https://cyvexly.com/`. The private verification address is hidden and is not
+stored in repository documentation. Website and application services,
+including Owner-confirmed mobile-app development, plus the approved business
+description were submitted. No storefront, public address, unconfirmed hours,
+photos, paid ad, Google Workspace trial, or broad software-development claim
+was added. Google currently reports the profile as not publicly visible while
+verification is processing and says processing may take up to five days. The
+phone field did not accept the established public number during setup, so phone
+publication remains pending rather than being misreported as complete.
 
 ## Standard search-visibility growth — 2026-09-13-01
 
