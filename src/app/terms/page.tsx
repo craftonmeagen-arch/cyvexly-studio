@@ -25,7 +25,7 @@ export default function TermsPage() {
               Website Terms
             </h1>
             <p className="mt-5 text-base leading-relaxed text-cool-graphite sm:text-lg">
-              Effective September 5, 2026. These terms cover this website
+              Effective September 12, 2026. These terms cover this website
               only — not a signed client project.
             </p>
           </div>
@@ -35,10 +35,9 @@ export default function TermsPage() {
           <div className="glass-panel space-y-10 rounded-3xl px-6 py-8 text-sm leading-relaxed text-cool-graphite sm:px-10 sm:py-10 sm:text-base">
             <div className="rounded-2xl border border-cyber-blue/30 bg-cyber-blue/5 p-5 text-xs text-cool-graphite sm:text-sm">
               <strong className="text-midnight-slate">Draft under review.</strong>{" "}
-              Cyvexly LLC is the Owner-selected legal name, but formation and
-              exact filing-name verification remain pending. This draft has not yet
-              received final Owner review. It is published no-index while
-              Chunk 5 is in progress.
+              Cyvexly LLC is the studio&apos;s legal business name, and Cyvexly
+              Studio is its public brand. This draft has not yet received final
+              Owner review. It remains published no-index pending launch release.
             </div>
 
             <div>
@@ -59,10 +58,9 @@ export default function TermsPage() {
                 What this site is for
               </h2>
               <p className="mt-3">
-                Cyvexly Studio is an independent web design and development
-                studio based in Indiana, United States. Cyvexly LLC is the
-                Owner-selected legal name; formation and exact filing-name
-                verification remain pending. This site is informational and
+                Cyvexly Studio is the public brand of Cyvexly LLC, an independent
+                web design and development studio based in Indiana, United States.
+                This site is informational and
                 exists to explain our services, showcase concept and project
                 work, and let prospective clients describe a project through
                 the Project Planner or reach us through the Contact form.

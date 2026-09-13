@@ -1,5 +1,22 @@
 # Cyvexly Owner Direction
 
+## LLC formation confirmation — 2026-09-12-01
+
+**Status:** ACTIVE — OWNER-CONFIRMED BUSINESS IDENTITY
+**Source:** The Owner stated that the LLC is done and, when asked whether the
+exact filed name is **Cyvexly LLC**, directed the work to continue on
+September 12, 2026.
+
+Treat **Cyvexly LLC** as the confirmed legal business name and **Cyvexly
+Studio** as the public brand. Correct current public Privacy and Terms wording
+that still describes formation or filing-name verification as pending. Record
+the effective date honestly and preserve the separate final-copy review and
+no-index launch gates until the Owner releases them.
+
+This is Owner-supplied confirmation, not an independently retrieved Indiana
+filing record. It does not by itself activate Stripe, approve a payment claim,
+authorize a Guardio submission, or authorize public search indexing.
+
 ## Unattended launch preparation and Owner handoff — 2026-09-10-07
 
 **Status:** ACTIVE — PRIMARY CYVEXLY BUILDER PRIORITY

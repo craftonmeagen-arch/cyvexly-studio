@@ -3,10 +3,25 @@
 Record only the specific content or decisions the Owner has reviewed. This
 file supplements `CYVEXLY_OWNER_DIRECTION.md`; it does not expand team scope.
 
+## Legal business identity — 2026-09-12
+
+**Status:** OWNER CONFIRMED.
+**Source:** The Owner stated that the LLC is done and directed work to continue
+when asked to confirm the exact filed name **Cyvexly LLC**.
+
+- Legal business name: **Cyvexly LLC**.
+- Public brand: **Cyvexly Studio**.
+- Public Privacy and Terms may identify Cyvexly LLC as the legal business and
+  must no longer describe formation or filing-name verification as pending.
+- This is Owner-supplied confirmation, not an independently retrieved Indiana
+  filing record.
+
+This confirmation does not approve final Privacy or Terms wording, activate
+Stripe, resolve Guardio, or release the separate public-indexing gate.
+
 ## Measurement, search, and indexing approach — 2026-09-10
 
-**Status:** APPROVED IN PRINCIPLE — ACCOUNT VALUES AND SEQUENCED ACTIVATION
-REMAIN PENDING.
+**Status:** APPROVED IN PRINCIPLE — PUBLIC INDEXING RELEASE REMAINS PENDING.
 **Source:** Owner directed Cyvexly to use the industry-standard approach.
 
 - Use a Search Console domain property for `cyvexly.com`, submit/monitor the
@@ -19,8 +34,10 @@ REMAIN PENDING.
 - Enable public indexing only after real inquiry delivery, the planned LLC
   filing/name check, and final legal wording are complete and verified.
 
-This approval does not create Google properties, supply real IDs, enable live
-tracking, change deployment configuration, or certify legal compliance.
+The Owner subsequently completed the Google account steps and supplied the
+production measurement configuration on September 12, 2026. Public indexing
+remains a separate release decision; this approval does not certify legal
+compliance.
 
 ## Velora presentation — 2026-09-10
 
@@ -89,7 +106,7 @@ universal industry-standard certification or legal-compliance opinion:
 
 The business approach is approved; it does not certify legal compliance or
 approve inaccurate/unreviewed final wording. Terms, final visuals, analytics,
-indexing, and actual LLC formation remain separate. No real inquiries were
+and indexing remain separate. No real inquiries were
 submitted, no records were deleted, no scheduler/account settings changed,
 and no product source was edited by this approval-record update.
 
@@ -129,7 +146,7 @@ was found in the surfaces checked.
 ### Approval boundary
 
 This is not blanket approval of additional About claims or commitments, the
-complete rendered page, Privacy, Terms, final site visuals, analytics, indexing,
-or completed LLC formation. Later decisions are recorded separately above;
+complete rendered page, Privacy, Terms, final site visuals, analytics, or indexing.
+Later decisions are recorded separately above;
 they must not be inferred from this About approval. No product source was
 changed by this approval-record update.

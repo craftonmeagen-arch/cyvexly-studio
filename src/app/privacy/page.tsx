@@ -30,7 +30,7 @@ export default function PrivacyPage() {
               Privacy Policy
             </h1>
             <p className="mt-5 text-base leading-relaxed text-cool-graphite sm:text-lg">
-              Effective September 10, 2026. This describes what actually
+              Effective September 12, 2026. This describes what actually
               happens on cyvexly.com today, not a generic template.
             </p>
           </div>
@@ -40,11 +40,10 @@ export default function PrivacyPage() {
           <div className="glass-panel space-y-10 rounded-3xl px-6 py-8 text-sm leading-relaxed text-cool-graphite sm:px-10 sm:py-10 sm:text-base">
             <div className="rounded-2xl border border-cyber-blue/30 bg-cyber-blue/5 p-5 text-xs text-cool-graphite sm:text-sm">
               <strong className="text-midnight-slate">Draft under review.</strong>{" "}
-              This page describes real, current site behavior. Owner has selected
-              Cyvexly LLC as the intended legal name, but formation and exact
-              filing-name verification are still pending. This draft has not yet received
-              final Owner review. It is
-              published no-index while Chunk 5 is in progress.
+              This page describes real, current site behavior. Cyvexly LLC is
+              the studio&apos;s legal business name, and Cyvexly Studio is its
+              public brand. This draft has not yet received final Owner review.
+              It remains published no-index pending launch release.
             </div>
 
             <div>
@@ -52,10 +51,9 @@ export default function PrivacyPage() {
                 Who we are
               </h2>
               <p className="mt-3">
-                Cyvexly Studio is an independent web design and development
-                studio based in Indiana, United States, serving clients across
-                the United States. Cyvexly LLC is the Owner-selected legal name;
-                formation and exact filing-name verification remain pending. You can reach us at{" "}
+                Cyvexly Studio is the public brand of Cyvexly LLC, an independent
+                web design and development studio based in Indiana, United States,
+                serving clients across the United States. You can reach us at{" "}
                 <a
                   href={`mailto:${siteConfig.email}`}
                   className="text-cyber-blue hover:text-[#0b4fb0]"
