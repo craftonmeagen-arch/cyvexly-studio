@@ -1,5 +1,6 @@
 import { siteConfig, faqLibrary, pricingPackages } from "./site-config";
 import type { ServiceDetail } from "./service-details";
+import type { ResourceGuide } from "./resource-guides";
 
 // WebSite structured data belongs on the canonical home page and gives search
 // engines an explicit, consistent site-name preference. "Cyvexly" is the
@@ -169,5 +170,35 @@ export function buildBreadcrumbJsonLd(
       name: item.name,
       item: `https://cyvexly.com${item.path}`,
     })),
+  } as const;
+}
+
+// Article data for substantial buyer guides. The Organization is the real
+// author/publisher; no personal byline or expertise credential is invented.
+export function buildArticleJsonLd(guide: ResourceGuide) {
+  const url = `https://cyvexly.com/resources/${guide.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: guide.title,
+    description: guide.seoDescription,
+    datePublished: guide.published,
+    dateModified: guide.published,
+    mainEntityOfPage: url,
+    url,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: "https://cyvexly.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: "https://cyvexly.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://cyvexly.com/icon.svg",
+      },
+    },
   } as const;
 }

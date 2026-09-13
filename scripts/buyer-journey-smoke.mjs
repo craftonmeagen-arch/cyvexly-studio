@@ -31,6 +31,8 @@ const inquiryContexts = {
   "care-plan": "Care plan — ongoing website support",
   "care-plus-plan": "Care+ plan — ongoing website support",
   "evolve-plan": "Evolve plan — ongoing website support",
+  "website-budget": "Website budget and package fit",
+  "project-scope": "Custom website scope and inclusions",
 };
 
 const inquiryPlannerServices = {
@@ -51,6 +53,8 @@ const inquiryPlannerServices = {
   "care-plan": "website-care",
   "care-plus-plan": "website-care",
   "evolve-plan": "website-care",
+  "website-budget": "business-websites",
+  "project-scope": "business-websites",
 };
 
 const contextEntries = Object.entries(inquiryContexts);

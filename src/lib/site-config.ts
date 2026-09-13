@@ -10,6 +10,7 @@ export const primaryNav = [
   { label: "Services", href: "/services" },
   { label: "Work", href: "/work" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Resources", href: "/resources" },
   { label: "Process", href: "/process" },
   { label: "About", href: "/about" },
 ];
@@ -19,6 +20,7 @@ export const footerNav = {
     { label: "Services", href: "/services" },
     { label: "Work", href: "/work" },
     { label: "Pricing", href: "/pricing" },
+    { label: "Resources", href: "/resources" },
     { label: "Process", href: "/process" },
     { label: "About", href: "/about" },
   ],

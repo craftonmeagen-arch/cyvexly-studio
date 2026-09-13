@@ -12,12 +12,35 @@ export function buildPageMetadata({
   title,
   description,
   path,
+  kind = "website",
+  publishedTime,
 }: {
   title: string;
   description: string;
   path: string;
+  kind?: "website" | "article";
+  publishedTime?: string;
 }): Metadata {
   const url = path === "/" ? SITE_URL : `${SITE_URL}${path}`;
+  const openGraph = kind === "article"
+    ? {
+        title,
+        description,
+        url,
+        siteName: SITE_NAME,
+        type: "article" as const,
+        locale: "en_US",
+        publishedTime,
+        authors: [SITE_NAME],
+      }
+    : {
+        title,
+        description,
+        url,
+        siteName: SITE_NAME,
+        type: "website" as const,
+        locale: "en_US",
+      };
 
   return {
     title,
@@ -25,14 +48,7 @@ export function buildPageMetadata({
     alternates: {
       canonical: path,
     },
-    openGraph: {
-      title,
-      description,
-      url,
-      siteName: SITE_NAME,
-      type: "website",
-      locale: "en_US",
-    },
+    openGraph,
     twitter: {
       card: "summary_large_image",
       title,

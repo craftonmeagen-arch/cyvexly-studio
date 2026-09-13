@@ -18,6 +18,8 @@ export const inquiryContexts = {
   "care-plan": "Care plan — ongoing website support",
   "care-plus-plan": "Care+ plan — ongoing website support",
   "evolve-plan": "Evolve plan — ongoing website support",
+  "website-budget": "Website budget and package fit",
+  "project-scope": "Custom website scope and inclusions",
 } as const;
 
 export type InquiryContextKey = keyof typeof inquiryContexts;
@@ -40,6 +42,8 @@ export const inquiryPlannerServices = {
   "care-plan": "website-care",
   "care-plus-plan": "website-care",
   "evolve-plan": "website-care",
+  "website-budget": "business-websites",
+  "project-scope": "business-websites",
 } satisfies Record<InquiryContextKey, ServicePlannerKey>;
 
 export function getInquiryContext(value: unknown): {

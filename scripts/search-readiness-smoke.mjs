@@ -59,6 +59,24 @@ const commercialPages = [
     description:
       "See starting prices for custom websites, redesigns, landing pages, ecommerce and booking sites, web applications, add-ons, and monthly website care.",
   },
+  {
+    path: "/resources",
+    title: "Website Planning Guides for Business Owners | Cyvexly",
+    description:
+      "Practical guides to website cost, project scope, launch decisions, and comparing proposals from Cyvexly Studio, a U.S. web design and development studio.",
+  },
+  {
+    path: "/resources/small-business-website-cost",
+    title: "Small-Business Website Cost Guide | Cyvexly Studio",
+    description:
+      "See what changes custom website cost, how Cyvexly's $1,800–$8,500 starting packages differ, and which expenses sit outside the project fee.",
+  },
+  {
+    path: "/resources/what-custom-website-includes",
+    title: "What Is Included in a Custom Website? | Cyvexly Studio",
+    description:
+      "Use this practical custom website checklist to understand strategy, design, development, testing, launch, ownership, support, and common add-ons.",
+  },
 ];
 
 async function read(path) {
@@ -82,6 +100,9 @@ const [commercialHtml, robots, sitemap] = await Promise.all([
   read("/sitemap.xml"),
 ]);
 const home = commercialHtml[0];
+const htmlByPath = new Map(
+  commercialPages.map((page, index) => [page.path, commercialHtml[index]]),
+);
 
 for (const [index, page] of commercialPages.entries()) {
   const html = commercialHtml[index];
@@ -122,7 +143,34 @@ assert.match(home, /"alternateName":"Cyvexly"/);
 assert.match(home, /"url":"https:\/\/cyvexly\.com\/"/);
 assert.match(sitemap, /<loc>https:\/\/cyvexly\.com<\/loc>/);
 assert.match(sitemap, /<loc>https:\/\/cyvexly\.com\/start<\/loc>/);
+assert.match(sitemap, /<loc>https:\/\/cyvexly\.com\/resources<\/loc>/);
+assert.match(sitemap, /<loc>https:\/\/cyvexly\.com\/resources\/small-business-website-cost<\/loc>/);
+assert.match(sitemap, /<loc>https:\/\/cyvexly\.com\/resources\/what-custom-website-includes<\/loc>/);
 assert.match(robots, /Sitemap: https:\/\/cyvexly\.com\/sitemap\.xml/);
+
+for (const html of commercialHtml.slice(-2)) {
+  assert.match(html, /"@type":"Article"/);
+  assert.match(html, /"author":\{"@type":"Organization","name":"Cyvexly Studio"/);
+  assert.match(html, /"@type":"BreadcrumbList"/);
+}
+
+const resources = htmlByPath.get("/resources");
+const costGuide = htmlByPath.get("/resources/small-business-website-cost");
+const inclusionGuide = htmlByPath.get("/resources/what-custom-website-includes");
+const services = htmlByPath.get("/services");
+const pricing = htmlByPath.get("/pricing");
+
+assert.match(resources, /href="\/resources\/small-business-website-cost"/);
+assert.match(resources, /href="\/resources\/what-custom-website-includes"/);
+assert.match(costGuide, /Cyvexly website projects currently start at \$1,800/);
+assert.match(costGuide, /href="\/pricing"/);
+assert.match(costGuide, /href="\/resources\/what-custom-website-includes"/);
+assert.match(inclusionGuide, /A complete custom website project should define/);
+assert.match(inclusionGuide, /href="\/process"/);
+assert.match(inclusionGuide, /href="\/resources\/small-business-website-cost"/);
+assert.match(services, /href="\/resources\/small-business-website-cost"/);
+assert.match(services, /href="\/resources\/what-custom-website-includes"/);
+assert.match(pricing, /href="\/resources\/small-business-website-cost"/);
 
 if (expectedIndexable) {
   assert.match(home, /<meta name="robots" content="index, follow"\/>/);

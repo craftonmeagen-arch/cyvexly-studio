@@ -530,6 +530,26 @@ export default function PricingPage() {
           </div>
         </section>
 
+        {/* Pricing resources */}
+        <section id="pricing-guide" className="glass-continuation scroll-mt-24 border-y border-smoke-glass/70">
+          <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+            <div className="glass-panel grid gap-7 rounded-3xl p-7 sm:p-9 lg:grid-cols-[minmax(0,0.66fr)_minmax(220px,0.34fr)] lg:items-center">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-cyber-blue">Pricing guide</p>
+                <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+                  See what changes the number before comparing quotes.
+                </h2>
+                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-cool-graphite sm:text-base">
+                  The website cost guide explains the decisions behind Cyvexly&apos;s starting prices, the expenses commonly billed separately, and an apples-to-apples way to review proposals.
+                </p>
+              </div>
+              <ButtonLink href="/resources/small-business-website-cost" variant="secondary" className="w-full lg:justify-center">
+                Read the website cost guide
+              </ButtonLink>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="pricing-questions" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20">
           <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">

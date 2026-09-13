@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
@@ -173,6 +174,40 @@ export default function ServicesPage() {
                 <ButtonLink href={featuredWork.href} variant="secondary" className="mt-6 w-fit">
                   View case study
                 </ButtonLink>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Buyer resources */}
+        <section id="buyer-resources" className="glass-continuation scroll-mt-24 border-y border-smoke-glass/70">
+          <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)] lg:items-start">
+              <div>
+                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-cyber-blue">
+                  Before you choose a service
+                </p>
+                <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+                  Understand the scope behind the label.
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-cool-graphite sm:text-base">
+                  Use the buyer guides to compare cost, inclusions, responsibilities, and launch expectations before deciding which starting point fits.
+                </p>
+                <ButtonLink href="/resources" variant="secondary" className="mt-6">
+                  View all buyer resources
+                </ButtonLink>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Link href="/resources/small-business-website-cost" className="glass-panel rounded-2xl p-6 hover:border-cyber-blue/30">
+                  <p className="font-mono text-[9px] uppercase tracking-[0.13em] text-cyber-blue">Cost guide</p>
+                  <h3 className="mt-3 font-display text-lg font-semibold text-midnight-slate">What changes website cost?</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-cool-graphite">Compare real starting points and the scope decisions behind them.</p>
+                </Link>
+                <Link href="/resources/what-custom-website-includes" className="glass-panel rounded-2xl p-6 hover:border-cyber-blue/30">
+                  <p className="font-mono text-[9px] uppercase tracking-[0.13em] text-cyber-blue">Scope guide</p>
+                  <h3 className="mt-3 font-display text-lg font-semibold text-midnight-slate">What should a project include?</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-cool-graphite">Follow planning, design, development, launch, and handoff.</p>
+                </Link>
               </div>
             </div>
           </div>
