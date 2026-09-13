@@ -14,14 +14,7 @@ Outside-website work belongs to Team 2.
    indexability/discovery surfaces, and buyer-flow regression without treating
    current rankings as a product promise.
 
-2. **Chunk 11 — protected real-delivery gate for deployed `4232574`.** Builder
-   proof, Auditor R136/R137, publication, and canonical buyer/hierarchy proof
-   pass. Controlled Contact, Planner, and Consultation attempts each returned
-   `503 not-configured`, so no messages were sent. Protected Render Resend/domain
-   configuration, one coordinated re-test per route, and Owner inbox confirmation
-   remain before closure. Do not repeat submissions before configuration changes.
-
-3. **Chunk 6 — one complete Velora independent physical/visual review.**
+2. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with
    uncropped desktop/mobile proof, six scannable capabilities, truthful status
    and contribution language, detailed disclosure, and a hospitality-specific
@@ -38,6 +31,10 @@ Outside-website work belongs to Team 2.
   supplied two clean independent exact-source reviews.
 - Chunk 10 closed in Round 174 at accepted source `c8bc73d` after R132 and R133
   supplied two clean independent exact-source reviews.
+- Chunk 11's protected real-delivery gate closed after Owner-supplied inbox
+  evidence reviewed September 13 confirmed both the studio notification and
+  requester confirmation for the September 12 Contact, Project Planner, and
+  Consultation production tests.
 - Guardio review is external app debt, not chunk/product debt.
 - Chunks 3–4 have no remaining implementation debt; their account/approval
   closure gates are consolidated into Chunk 5 and `CYVEXLY_APP_DEBT.md`.

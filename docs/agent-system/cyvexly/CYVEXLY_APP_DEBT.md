@@ -6,10 +6,10 @@ Git history, and role memory.
 
 ## Current source position
 
-- Current deployed product source: `483975d`, the Round 186 first buyer-resource
-  cluster on top of Round 185's commercial search-purpose foundation. Its
-  canonical production deployment passed expanded search and buyer contracts
-  on September 13, 2026.
+- Current deployed product source: `2923ce5`, the Round 188 Indianapolis service
+  presence on top of the commercial search, buyer-resource, and IndexNow
+  foundations. Its canonical production deployment passed expanded search and
+  buyer contracts on September 13, 2026.
 - Last independently reviewed product baseline: `85c128e` after Auditor
   R139/R140. Later commits include a low-risk visual correction, the
   Owner-confirmed Cyvexly LLC/final legal baseline, indexing-release records,
@@ -32,20 +32,7 @@ Git history, and role memory.
    clean Guardio-enabled recheck without allowlisting. Do not change product
    source, DNS, or indexing merely to game the classifier.
 
-2. **Real Contact/Planner/Consultation delivery.** Server-side Resend routes, validation,
-   honeypot, rate limiting, sanitization, honest not-configured/failure states,
-   and best-effort visitor confirmation are implemented. The Owner/account
-   holder must verify the sending domain and store `RESEND_API_KEY` only in
-   Render's protected environment. Round 176 intentionally attempted one real
-   Contact, one Planner, and one email-path Consultation delivery to
-   the Owner inbox; all three returned `503 not-configured`, so no notification
-   or requester-confirmation email was sent. After protected configuration and
-   redeployment, coordinate one fresh attempt per route and verify the internal
-   notification first and requester confirmation separately. Phone-only requests
-   do not send SMS or email confirmation. Do not repeat before configuration
-   changes, and do not store or print the secret.
-
-3. **Stripe activation and invoice proof.** The Owner selected Stripe Invoicing
+2. **Stripe activation and invoice proof.** The Owner selected Stripe Invoicing
    Starter with provider-hosted invoices after signed agreement. Candidate copy
    preserves package milestones and monthly-in-advance Care while stating that
    ACH/cards are not active. The Owner must create/verify the account, confirm
@@ -53,7 +40,7 @@ Git history, and role memory.
    pre-agreement payment, raw payment storage, automated recurring billing, or
    an activation claim.
 
-4. **Optional origin-bypass hardening.** Dormant `CF_ORIGIN_SECRET` support is
+3. **Optional origin-bypass hardening.** Dormant `CF_ORIGIN_SECRET` support is
    implemented and tested. Activating it requires a matching protected
    Cloudflare request-header rule and Render secret. This is an optional
    Owner/account security enhancement, not a current product defect or launch
@@ -63,3 +50,9 @@ Git history, and role memory.
 
 Chunk 6 still needs one complete independent physical/visual review of accepted
 Velora source `fce01e8`; track that review in `CYVEXLY_CHUNK_DEBT.md`.
+
+The protected Contact, Planner, and Consultation delivery gate is closed.
+Owner-supplied inbox evidence reviewed September 13 shows that all three
+September 12 production tests delivered the studio notification and requester
+confirmation after Resend/domain configuration. No credentials, message
+contents, or private inbox screenshot are stored in this repository.

@@ -26,7 +26,7 @@ controls remain the source of truth for those values.
 | Bing and IndexNow | Configured and monitoring | Bing accepted the imported property and sitemap; production releases automatically notify IndexNow after the exact deployment is live. |
 | Google Analytics 4 | Active monitoring input | Privacy-conscious analytics is wired behind visitor consent and measures basic traffic and successful buyer actions without sending form contents. |
 | Indianapolis search presence | Website work live; profile processing | A truthful Indianapolis service page is live. The Google Business Profile exists but is not yet publicly visible while Google processes verification. |
-| Inquiry email | Provider configuration added; final proof must be preserved | The Resend domain is verified and its key was placed in Render's protected environment. The durable team record still needs one documented end-to-end test for Contact, Planner, and Consultation. |
+| Inquiry email | Complete and inbox-confirmed | The Resend domain and protected Render key are configured. Contact, Planner, and Consultation each produced the studio notification and requester confirmation in the Owner-supplied inbox proof. |
 | Payments | Deferred | Stripe verification and controlled invoice proof wait for the Owner's required business information. No public checkout or active-payment claim is allowed. |
 | Mobile application service | Confirmed; website integration pending | Google Business Profile includes the capability. The website still needs a coherent service, scope, pricing/discovery, and inquiry presentation without invented proof or prices. |
 
@@ -162,6 +162,11 @@ specific, and supportable—not bulk keyword variations.
   rate limiting, sanitization, failure recovery, studio notifications, and
   best-effort requester confirmations. Phone-only inquiries do not falsely
   promise an email or text confirmation.
+- Owner-supplied Gmail inbox evidence reviewed on September 13 shows the
+  September 12 production tests for Contact, Project Planner, and Consultation.
+  All three studio notifications and all three corresponding requester
+  confirmations arrived. This closes the protected real-delivery gate without
+  placing message contents or the screenshot in the repository.
 - The canonical Render deployment for product source `2923ce5` passed live
   search-readiness and buyer-journey checks. The live Indianapolis page,
   canonicals, robots rules, 26-URL sitemap, 39 checked routes, and 20 inquiry
@@ -177,15 +182,11 @@ specific, and supportable—not bulk keyword variations.
    confirm that the one profile is publicly visible. Retry the established
    public phone through a valid provider flow. Add hours only after the Owner
    confirms them and add only approved logo/portfolio images.
-2. **Inquiry delivery proof:** document one controlled live Contact, Planner,
-   and Consultation submission after configuration. Verify the studio inbox,
-   the requester confirmation when applicable, and the user-facing success
-   state separately. Do not repeatedly submit tests or use real prospect data.
-3. **Mobile applications:** integrate this Owner-confirmed capability across
+2. **Mobile applications:** integrate this Owner-confirmed capability across
    the website's service model, discovery language, scope, pricing approach,
    navigation, and inquiry paths. Do not invent platforms, published apps,
    results, client work, or prices.
-4. **Search monitoring:** review Search Console, Bing, and GA4 after enough data
+3. **Search monitoring:** review Search Console, Bing, and GA4 after enough data
    exists. Track impressions, queries, indexed pages, click-throughs, landing
    pages, and successful inquiry actions without overstating early data.
 

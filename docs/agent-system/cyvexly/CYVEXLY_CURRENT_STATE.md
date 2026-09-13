@@ -36,6 +36,11 @@ URLs with HTTP 200.
 - The established public phone was not accepted by Google's setup field and is
   not presently shown on the profile. Retry only through a valid provider flow;
   do not substitute or invent a number.
+- Owner-supplied Gmail inbox evidence reviewed on September 13 shows that the
+  September 12 production Contact, Project Planner, and Consultation tests each
+  delivered both the studio notification and the requester confirmation. This
+  closes the protected Resend/domain real-delivery gate; keep all credentials
+  and message contents out of source and documentation.
 - Owner direction `2026-09-13-03` confirms mobile-application development as a
   Cyvexly capability. The current website does not yet present that service
   coherently; Builder integration and truthful scope remain Round 189 work.

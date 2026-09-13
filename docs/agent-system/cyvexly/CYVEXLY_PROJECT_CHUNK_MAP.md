@@ -29,9 +29,10 @@ evidence exposes a meaningful reachable gap.
   honeypot, device-local save/restore, responsive progress, focus management,
   and contextual prefills.
 - **Current truth:** server-side Resend delivery is implemented with honest
-  not-configured/failure states and tested short of a real message. Final
-  closure is consolidated into Chunk 5's Owner-controlled Resend/domain-secret
-  and intentional real-delivery gate.
+  not-configured/failure states. After protected configuration, Owner-supplied
+  inbox evidence reviewed September 13 confirmed both the studio notification
+  and requester confirmation for the September 12 Contact, Project Planner,
+  and Consultation production tests. The real-delivery gate is closed.
 
 ## Chunk 4 — Utility, legal & launch readiness (IMPLEMENTATION COMPLETE; OWNER-GATED CLOSURE)
 
@@ -166,9 +167,10 @@ evidence exposes a meaningful reachable gap.
 - **Boundary:** preserve accepted `/work` source `c8bc73d`, project order and
   claims, outside-product isolation, no-index controls, and all scheduler state.
 - **Closure:** exact-source proof, two separate independent challenges,
-  publication, and canonical Home/Work proof are complete. Protected Resend/
-  domain configuration, one fresh controlled delivery per route, and Owner
-  inbox confirmation remain consolidated into active Chunk 5.
+  publication, and canonical Home/Work proof are complete. The protected
+  Resend/domain real-delivery gate also closed after Owner-supplied inbox
+  evidence confirmed both delivery types for Contact, Project Planner, and
+  Consultation.
 
 ## Chunk 12 — Search Visibility & Useful Content Growth (OPEN, ROUND 187)
 
