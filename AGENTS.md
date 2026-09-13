@@ -26,6 +26,12 @@ false local claims, doorway pages, thin keyword variants, fabricated reviews,
 purchased links, or ranking guarantees. This direction changes neither team
 boundaries nor scheduler authority.
 
+The canonical owner-facing summary of completed marketability work, provider
+status, pending work, ongoing checks, and truth boundaries is
+`docs/agent-system/cyvexly/CYVEXLY_MARKETABILITY_RECORD.md`. Update it whenever a
+material marketing, search, listing, conversion, or reputation milestone
+changes; never place secrets or the private verification address in it.
+
 **Latest bounded exception — Owner direction 2026-09-10-01:** The primary
 Cyvexly Builder owns the Cyvexly-facing EduAILenz/Mudoinkle showcase-quality
 corrections measured against Velora. Read the newest Cyvexly Owner Direction
