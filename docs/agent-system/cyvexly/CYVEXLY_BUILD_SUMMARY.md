@@ -3,6 +3,33 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 186 — first useful buyer-resource cluster
+
+- Implemented and pushed exact source `483975d`: a new `/resources` hub plus
+  substantial guides to small-business website cost and what a custom website
+  project includes. The cost guide uses Cyvexly's real current starting prices,
+  timelines, cost drivers, outside-cost boundaries, first-release framework,
+  and proposal-comparison questions; it explicitly disclaims market-average or
+  project-quote status. The inclusions guide covers planning, design,
+  development, launch, ownership, support, separate scope, and seven proposal
+  questions without inventing credentials, outcomes, or market facts.
+- Integrated Resources into primary/footer navigation, Services, Pricing,
+  Process, reciprocal guide paths, two new inquiry contexts, Open Graph art,
+  the sitemap, Organization-authored Article/Breadcrumb data, and expanded
+  search/buyer regression coverage.
+- Verification passed: lint (zero errors; one unchanged historical evidence-
+  file warning), 61-route indexable production build, TypeScript, expanded
+  search readiness, and 37-route/19-context buyer journey. Desktop and 375px
+  visible review passed for the hub, both guide openings, long-form/table
+  reflow, and Services/Pricing discovery panels.
+- Render deployed `483975d`; the expanded search and buyer contracts both pass
+  against canonical production. Next work is recrawl/coverage monitoring and
+  legitimate authority signals, not immediate bulk content.
+- Read-only Search Console check shows the existing sitemap still successful
+  with 22 pages from its September 12 read, the property overview still
+  processing data, and the new `/resources` URL unknown/not indexed. Prepared
+  the Request indexing action without submitting it.
+
 ## Round 185 — commercial search-purpose foundation
 
 - Opened Chunk 12 under Owner direction `2026-09-13-01`. Implemented and

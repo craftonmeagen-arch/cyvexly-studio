@@ -2,10 +2,11 @@
 
 **Active product chunk:** Chunk 12 — Search Visibility & Useful Content Growth
 
-**Current position:** global round 186; search-growth Phase 1 is live and the
-first useful-content cluster is next
+**Current position:** global round 187; commercial metadata and the first
+useful-content cluster are live
 
-**Phase 1 product source:** `feb0b2d` (pushed to `origin/main`)
+**Current product source:** `483975d` (pushed to `origin/main` and verified on
+canonical production)
 
 **Scheduler state:** unchanged; this direction authorizes no scheduler action.
 
@@ -35,20 +36,20 @@ Outside this chunk:
 
 ## Current proof
 
-Phase 1 updates nine commercial routes, adds homepage `WebSite` identity data,
-and expands the automated search contract. Lint, 55-route indexable build,
-TypeScript, nine-route search readiness, and 35-route buyer regression pass.
-The same search-readiness contract also passes against canonical production
-after Render deployed `feb0b2d`. The visible product is unchanged. Sampled
-external searches do not yet surface Cyvexly, so ranking/discovery remains a
-measured external outcome rather than a completion claim.
+Phase 1 updates nine commercial routes and homepage site identity. Phase 2 adds
+the Resources hub and two substantial buyer guides, bringing the verified build
+to 61 routes and the buyer contract to 37 routes/19 inquiry contexts. Lint
+passes with one unchanged historical evidence-file warning; build, TypeScript,
+expanded search readiness, and buyer regression pass locally and on canonical
+production. Responsive visual QA passed at desktop and 375px. Sampled external
+searches still did not surface Cyvexly before this cluster deployed, so ranking/
+discovery remains a measured external outcome rather than a completion claim.
 
 ## Likely next round directions
 
 - inspect early Search Console coverage/query evidence when available;
-- select and design the first small, coherent resource cluster around a real
-  buyer decision;
-- implement, visibly inspect, and internally connect those resources;
+- request or monitor recrawling for the updated commercial/resource routes;
+- allow the first cluster to gather evidence before selecting later topics;
 - establish a legitimate external-profile/citation checklist from actual
   business eligibility, not generic directory volume.
 

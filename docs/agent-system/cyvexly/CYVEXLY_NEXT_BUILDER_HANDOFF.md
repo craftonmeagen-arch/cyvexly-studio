@@ -3,32 +3,38 @@
 ## Current assignment
 
 Owner direction `2026-09-13-01` opens Chunk 12 for standards-based search
-visibility and useful content growth. Round 185 Phase 1 product commit
-`feb0b2d` is pushed to `origin/main` and changes only search-facing metadata,
-homepage site-name structured data, and test coverage. It does not alter visible
-layout, pricing, scope, forms, analytics, or payment behavior.
+visibility and useful content growth. Round 185 established commercial metadata
+at `feb0b2d`; Round 186 deployed the first useful-content cluster at exact
+source `483975d`. Resources now contains a hub, a Cyvexly-specific cost guide,
+and a custom-website-inclusions guide, connected to the established commercial
+journey without changing prices or service claims.
 
 ## First action
 
 1. Check the external review root for a publication newer than Auditor R152.
-   Treat any old review of `85c128e` as historical; it does not review the new
-   search source.
-2. Inspect early Search Console coverage and query evidence when it becomes
-   available. Do not infer ranking from successful deployment or indexing
-   eligibility.
-3. Select the first small, coherent buyer-resource cluster described below and
-   connect it to the existing service, pricing, proof, and inquiry paths.
+   Treat old review of `85c128e` as historical; it does not review `483975d`.
+2. In Search Console, request or monitor recrawling of Home, Services, Pricing,
+   Resources, and both guide routes; confirm the refreshed sitemap is processed.
+3. Inspect early coverage/query evidence when available. Do not infer ranking
+   from successful deployment or indexing eligibility.
 
 ## Live release proof
 
-Render deployed `feb0b2d`. On September 13, 2026, the complete production
-search-readiness suite passed against `https://cyvexly.com`: all nine expected
-titles, summaries, and canonicals were present; homepage `WebSite` JSON-LD was
-present; `robots.txt` allowed crawling; and the sitemap remained canonical.
-Sampled external searches did not yet surface Cyvexly, so discovery/ranking
-continues as an asynchronous measurement item rather than a release claim.
+Render deployed `483975d`. On September 13, 2026, the expanded production
+search-readiness suite passed against `https://cyvexly.com`: all 12 commercial/
+resource metadata contracts, Article/Breadcrumb/site identity, reciprocal
+internal links, `robots.txt`, and the 25-URL refreshed sitemap passed. The live
+37-route buyer journey also passed with 19 inquiry contexts. Search discovery/
+ranking continues as an asynchronous measurement item rather than a release
+claim.
 
-## Next coherent product work
+Search Console read-only evidence at Round 186 close: the existing sitemap is
+still `Success`, last read September 12, with 22 discovered pages; the property
+overview is still processing data; and `/resources` is currently unknown/not
+indexed. The `/resources` Request indexing control is prepared in the retained
+browser handoff but has not been submitted.
+
+## Later content candidates — evidence required
 
 Use real buyer questions and Search Console evidence to select a small first
 resource cluster. The strongest current candidates are:
@@ -40,12 +46,11 @@ resource cluster. The strongest current candidates are:
 - what a booking or ecommerce website needs;
 - what happens after a website launches.
 
-Do not publish all of these as a bulk batch. Choose a coherent cluster that the
-existing service/pricing/proof pages can support truthfully. Each resource needs
-substantial original guidance, a clear reader decision, relevant internal links,
-accurate metadata/structured hierarchy, responsive visual proof, and a useful
-next action. Thin keyword variants, fake locality, copied competitor language,
-and ranking claims are prohibited.
+The first two questions (cost and inclusions) are now live. Do not publish the
+remaining ideas as a bulk batch. Wait for query/buyer evidence, then choose the
+next coherent decision the existing service/pricing/proof pages can support
+truthfully. Thin variants, fake locality, copied competitor language, and
+ranking claims are prohibited.
 
 ## Standing boundaries
 

@@ -6,12 +6,13 @@ Outside-website work belongs to Team 2.
 
 ## Open
 
-1. **Chunk 12 — independent review of live Phase 1 source `feb0b2d`.** Local
-   and canonical-production search-readiness proof passes, but no Auditor,
-   Council, or Functional publication newer than R152 reviewed this exact
-   source at Round 185 intake. Review the nine commercial metadata contracts,
-   homepage `WebSite` identity, indexability/discovery surfaces, and buyer-flow
-   regression without treating current rankings as a product promise.
+1. **Chunk 12 — independent review of live source `483975d`.** Local and
+   canonical-production search/buyer proof passes, but no Auditor, Council, or
+   Functional publication newer than R152 reviewed this exact source at Round
+   186 intake. Review the commercial/resource metadata, site/Article/Breadcrumb
+   data, guide substance and truth, responsive presentation, internal links,
+   indexability/discovery surfaces, and buyer-flow regression without treating
+   current rankings as a product promise.
 
 2. **Chunk 11 — protected real-delivery gate for deployed `4232574`.** Builder
    proof, Auditor R136/R137, publication, and canonical buyer/hierarchy proof

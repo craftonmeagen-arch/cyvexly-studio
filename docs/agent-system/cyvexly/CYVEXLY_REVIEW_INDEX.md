@@ -6,8 +6,8 @@ or existing Owner-managed schedule.
 
 Current authoritative root: `C:/app projects/website-independent-review`.
 
-**Active review source:** `feb0b2d`, the live Chunk 12 Phase 1 search-purpose
-source. No independent report newer than R152 existed at Round 185 intake;
+**Active review source:** `483975d`, the live Chunk 12 Phase 2 useful-content
+source. No independent report newer than R152 existed at Round 186 intake;
 R152 and earlier reviews of `85c128e` are historical and do not review this
 source. The last source satisfying the prior two-review gate remains `85c128e`.
 | Role | Current report | Archive | Memory |
@@ -195,3 +195,9 @@ for Chunk 12 Phase 1 after local and canonical-production search contracts
 passed. A later independent reviewer must evaluate this source directly; no
 older zero-defect report may be treated as coverage of its metadata, structured
 data, or expanded regression contract.
+
+Builder Round 186 superseded that active review source with exact live source
+`483975d`, adding the first useful-content cluster, internal discovery paths,
+Article/Breadcrumb data, inquiry context, and expanded local/live contracts. A
+later independent review must evaluate `483975d` directly; passing local and
+canonical Builder proof does not substitute for independent challenge.

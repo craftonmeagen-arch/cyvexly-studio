@@ -2,7 +2,8 @@
 
 ## Standard search-visibility growth — 2026-09-13-01
 
-**Status:** ACTIVE — PHASE 1 IMPLEMENTED; CONTENT GROWTH AND MONITORING CONTINUE
+**Status:** ACTIVE — COMMERCIAL FOUNDATION AND FIRST RESOURCE CLUSTER LIVE;
+MONITORING AND AUTHORITY GROWTH CONTINUE
 **Source:** Owner via the active Codex conversation on September 13, 2026.
 
 ### Owner direction — verbatim

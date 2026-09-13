@@ -4,18 +4,18 @@ Canonical team: **Cyvexly Build Team**. Active product: Cyvexly Studio at
 `C:/app projects/website` on deployment branch `main`.
 
 Owner direction `2026-09-13-01` opens **Chunk 12 — Search Visibility & Useful
-Content Growth**. Round 185 implements its first bounded phase at product commit
-`feb0b2d`: truthful, unique search titles and page summaries across the nine
-core commercial routes, homepage-only `WebSite` site-name data, a stronger
-search-readiness contract, and repair of stale LLC/retention assertions in the
-buyer regression suite. The visible cyber-blue product and buyer flow are
-unchanged.
+Content Growth**. Round 185 established truthful commercial metadata at
+`feb0b2d`. Round 186 deployed the first small buyer-resource cluster at
+`483975d`: a resource hub plus substantial guides to website cost and custom
+website inclusions, connected to Services, Pricing, Process, inquiry context,
+navigation, the sitemap, Article/Breadcrumb data, and expanded regression
+proof. The approved cyber-blue system and existing service facts are preserved.
 
-Next work is not mass page production. Use Search Console/GA4 evidence and real
-buyer questions to select substantial resource topics, connect them to the
-relevant service, pricing, proof, and inquiry routes, and pursue only legitimate
-business profiles, mentions, and links. Do not promise rankings, fabricate
-local presence or reviews, buy links, or generate doorway/thin keyword pages.
+Next work is not mass page production. Request/monitor recrawling of the updated
+commercial and resource routes, use Search Console/GA4 evidence to decide later
+content, and pursue only legitimate business profiles, mentions, and links. Do
+not promise rankings, fabricate local presence or reviews, buy links, or
+generate doorway/thin keyword pages.
 
 Production indexing, Search Console verification/sitemap submission, GA4,
 Cyvexly LLC identity, and the final legal baseline were completed or confirmed

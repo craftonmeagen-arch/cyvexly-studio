@@ -1,8 +1,8 @@
 # Cyvexly Current State
 
-**Last completed global round:** 185
+**Last completed global round:** 186
 
-**Current global round:** 186
+**Current global round:** 187
 
 **Active chunk:** Chunk 12 — Search Visibility & Useful Content Growth
 
@@ -10,12 +10,37 @@
 truthful search improvements while preserving the accepted cyber-blue product
 and United States service model.
 
-**Current repository source:** `feb0b2d` — Phase 1 product/test commit, pushed
-to `origin/main`; Round 185 continuity records are the next docs-only commit.
+**Current repository source:** `483975d` — first useful buyer-resource cluster,
+pushed to `origin/main`; Round 186 continuity records are the next docs-only
+commit.
 
-**Current deployed product source:** `feb0b2d`; its canonical production
-deployment passed the complete live search-readiness contract on September 13,
-2026.
+**Current deployed product source:** `483975d`; its canonical production
+deployment passed the complete live search-readiness and 37-route buyer-journey
+contracts on September 13, 2026.
+
+## Round 186 — first useful buyer-resource cluster
+
+- Added `/resources` plus substantial guides at
+  `/resources/small-business-website-cost` and
+  `/resources/what-custom-website-includes`.
+- Grounded the cost guide in Cyvexly's real $1,800/$3,500/$5,800/$8,500
+  starting points, real timelines, and separate-cost boundaries; it explicitly
+  says these are not market averages or a project quote.
+- Built the inclusions guide around planning, design, development, launch,
+  ownership, support, separate scope, and seven proposal questions.
+- Connected Resources through primary/footer navigation, Services, Pricing,
+  Process, reciprocal guide links, contextual inquiry states, and the sitemap.
+- Added per-guide metadata, Open Graph art, Organization-authored Article data,
+  Breadcrumb data, static generation, and expanded search/buyer regression.
+- Desktop and 375px phone inspection passed for the hub, both guide openings,
+  long-form cards/table reflow, and new Services/Pricing discovery panels.
+- Canonical production proof passed after Render deployed `483975d`: 61 static/
+  dynamic routes built, the expanded search contract passed, and the buyer
+  journey passed with 37 routes and 19 inquiry contexts.
+- Search Console still reports the submitted sitemap as successful with 22
+  discovered pages from its September 12 read, while the new `/resources` URL
+  is currently unknown/not indexed and the property overview is still
+  processing data. Request-indexing action is prepared but not submitted.
 
 ## Round 185 — commercial search-purpose foundation
 
@@ -54,13 +79,11 @@ deployment passed the complete live search-readiness contract on September 13,
 
 ## Next phase
 
-Use Search Console performance evidence and real buyer questions to choose the
-first substantial resource cluster. Strong starting questions are website cost,
-what a custom website includes, when to redesign, website versus web app, what
-booking/ecommerce projects require, and what happens after launch. Each
-resource must be genuinely useful, internally connected to the relevant
-service/pricing/proof/inquiry pages, and reviewed for truth and visual quality.
-Do not create thin keyword variants or a large batch without evidence.
+Request or monitor recrawling of the updated Home, Services, Pricing, Resources,
+and two guide routes. Then use Search Console query/impression evidence and GA4
+behavior to decide whether a later resource should address redesign timing,
+website versus web application, booking/ecommerce prerequisites, or after-
+launch ownership. Do not create another batch without evidence.
 
 Separately pursue legitimate external authority: consistent business profiles,
 real partnerships/associations, and earned mentions or links. Do not buy links,

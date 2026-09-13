@@ -6,9 +6,10 @@ Git history, and role memory.
 
 ## Current source position
 
-- Current deployed product source: `feb0b2d`, the Round 185 commercial
-  search-purpose foundation. Its canonical production deployment passed the
-  live search-readiness contract on September 13, 2026.
+- Current deployed product source: `483975d`, the Round 186 first buyer-resource
+  cluster on top of Round 185's commercial search-purpose foundation. Its
+  canonical production deployment passed expanded search and buyer contracts
+  on September 13, 2026.
 - Last independently reviewed product baseline: `85c128e` after Auditor
   R139/R140. Later commits include a low-risk visual correction, the
   Owner-confirmed Cyvexly LLC/final legal baseline, indexing-release records,

@@ -9,10 +9,12 @@ approved legal baseline, and live public indexing. Owner direction
 without changing the accepted product design or national service model.
 
 Current Builder position: Chunk 12 is active. Round 185 implemented Phase 1 at
-`feb0b2d`: the nine commercial routes now have unique, truthful search-purpose
-titles and summaries; Home supplies explicit `WebSite` site-name data; and the
-search harness protects those fields, canonicals, sitemap, and indexability.
-No visible buyer-interface or service claim changed.
+`feb0b2d`. Round 186 deployed source `483975d`, adding the first deliberately
+small useful-content cluster: a buyer-resource hub, an exact Cyvexly website-
+cost guide, and a stage-by-stage custom-website-inclusions guide. They are
+connected through navigation, Services, Pricing, Process, inquiry context, the
+sitemap, Article/Breadcrumb data, and expanded live regression proof. The
+approved visual system and existing commercial truth are preserved.
 
 The intended buyer outcome remains a distinctive, trustworthy cyber-blue glass
 studio experience with inspectable proof, understandable price/scope, and a
