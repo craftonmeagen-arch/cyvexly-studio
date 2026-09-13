@@ -7,9 +7,10 @@
 **Active chunk:** Chunk 12 — Search Visibility & Useful Content Growth
 
 **Current mission:** execute Owner directions `2026-09-13-01` through
-`2026-09-13-03` through phased, truthful search improvements while preserving
-the accepted cyber-blue product, nationwide remote service, and the newly
-confirmed Indianapolis in-person-by-appointment and mobile-app capability.
+`2026-09-13-04` through phased, truthful search improvements while preserving
+the accepted cyber-blue product, nationwide remote service, and confirmed
+Indianapolis in-person-by-appointment availability. Mobile-app website
+integration is deferred until the Owner resumes it.
 
 **Current product source:** `2923ce5` — truthful Indianapolis service presence,
 pushed to `origin/main`; Round 188 continuity records are the next docs-only
@@ -42,8 +43,8 @@ URLs with HTTP 200.
   closes the protected Resend/domain real-delivery gate; keep all credentials
   and message contents out of source and documentation.
 - Owner direction `2026-09-13-03` confirms mobile-application development as a
-  Cyvexly capability. The current website does not yet present that service
-  coherently; Builder integration and truthful scope remain Round 189 work.
+  Cyvexly capability. Later direction `2026-09-13-04` defers its website
+  integration until the Owner resumes it; it is not current Builder work.
 
 ## Round 188 — truthful Indianapolis service presence
 

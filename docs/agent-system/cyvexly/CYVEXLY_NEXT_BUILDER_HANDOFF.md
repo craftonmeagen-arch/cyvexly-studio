@@ -2,8 +2,9 @@
 
 ## Current assignment
 
-Owner directions `2026-09-13-01` through `2026-09-13-03` govern current search
-visibility and service-model work. Rounds 185–187 established commercial
+Owner directions `2026-09-13-01` through `2026-09-13-04` govern current search
+visibility and service-model work. Direction `2026-09-13-04` defers mobile-app
+website integration until the Owner resumes it. Rounds 185–187 established commercial
 metadata, the first useful-content cluster, Bing discovery, and deployment-
 gated IndexNow.
 
@@ -28,17 +29,17 @@ address is claimed. IndexNow accepted all 26 canonical URLs with HTTP 200.
    up to five days. Do not create a duplicate or claim it is live. The public
    phone remains pending because Google rejected it during setup; unconfirmed
    hours/photos, ads, Workspace, and storefront claims were skipped.
-2. Implement Owner direction `2026-09-13-03`: add mobile-application development
-   coherently to the Cyvexly website and buyer journey, defining truthful scope
-   and boundaries without invented platform, price, proof, result, credential,
-   or client claims. Google already lists the confirmed capability.
-3. Check the external review root for a publication newer than Auditor R152.
+2. Check the external review root for a publication newer than Auditor R152.
    Older review of `85c128e` does not review the current search work.
-4. Monitor the accepted Google recrawl requests for Resources and both guide
+3. Monitor the accepted Google recrawl requests for Resources and both guide
    routes, the new Indianapolis route, and Bing's processing sitemap. Avoid
    repeated unchanged submissions.
-5. Inspect early coverage/query evidence when available. Do not infer ranking
+4. Inspect early coverage/query evidence when available. Do not infer ranking
    from successful deployment, notification, or indexing eligibility.
+5. Establish only legitimate external business profiles, citations, and earned
+   authority opportunities supported by actual eligibility. Do not begin the
+   deferred mobile-app website integration, create bulk listings, or invent
+   locality, reviews, partnerships, or recognition.
 
 ## Live release proof
 
@@ -84,6 +85,7 @@ and ranking claims are prohibited.
 - Preserve public indexing; do not restore no-index without later Owner
   direction or an urgent safety/legal reason.
 - Never expose GA4, Resend, Search Console, Render, or other protected values.
+- Mobile-app website integration is deferred under `2026-09-13-04`.
 - Stripe remains deferred; Guardio remains an Owner/account-holder action.
 - Underlying outside products and HoneyHearted remain Team 2 scope.
 - No scheduler change is authorized.

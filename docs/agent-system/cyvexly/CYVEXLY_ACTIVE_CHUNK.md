@@ -5,8 +5,8 @@
 **Current position:** global round 189; commercial metadata, the first useful-
 content cluster, Bing discovery, deployment-gated IndexNow, and the truthful
 Indianapolis service presence are live; Google Business Profile verification
-is processing and the Owner-confirmed mobile-app capability awaits coherent
-website integration
+is processing; mobile-app website integration is deferred until the Owner
+resumes it
 
 **Current product source:** `2923ce5` (pushed to `origin/main` and verified on
 canonical production)
@@ -35,6 +35,7 @@ Outside this chunk:
   doorway pages, keyword stuffing, thin bulk content, fabricated reviews,
   purchased links, and ranking guarantees;
 - underlying EduAILenz/Mudoinkle/HoneyHearted implementation;
+- deferred mobile-app website integration;
 - Stripe activation and Guardio account actions;
 - scheduler changes.
 
@@ -61,8 +62,6 @@ signals, not indexing or ranking claims.
 - monitor the single Indianapolis service-area Google Business Profile until
   Google changes it from not publicly visible; never expose the private address
   or create a duplicate;
-- integrate Owner-confirmed mobile-application development into the public
-  service model without invented platform, price, proof, or client claims;
 - monitor the accepted recrawl requests for the three resource routes and
   confirm Google and Bing process the refreshed sitemap;
 - monitor the deployment-gated IndexNow workflow on later relevant pushes;

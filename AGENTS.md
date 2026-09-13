@@ -1,9 +1,11 @@
 # Cyvexly Build Team and Team 2 — Current Agent Guidance
 
-**Latest capability direction — Owner direction 2026-09-13-03:** the Owner
-confirms that Cyvexly has mobile-application development capability. The
-primary Cyvexly Builder must integrate it coherently into the public service
-model without inventing shipped apps, platform support, prices, results,
+**Latest capability timing direction — Owner direction 2026-09-13-04:** the
+Owner confirms that mobile-application development remains a Cyvexly
+capability but defers its website integration until later. Do not begin or
+prioritize that integration until the Owner resumes it. The Google Business
+Profile may retain the truthful service already entered; do not expand its
+public claims or invent shipped apps, platform support, prices, results,
 credentials, or client claims.
 
 **Latest Cyvexly service direction — Owner direction 2026-09-13-02:** Cyvexly

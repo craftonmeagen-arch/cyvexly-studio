@@ -28,7 +28,7 @@ controls remain the source of truth for those values.
 | Indianapolis search presence | Website work live; profile processing | A truthful Indianapolis service page is live. The Google Business Profile exists but is not yet publicly visible while Google processes verification. |
 | Inquiry email | Complete and inbox-confirmed | The Resend domain and protected Render key are configured. Contact, Planner, and Consultation each produced the studio notification and requester confirmation in the Owner-supplied inbox proof. |
 | Payments | Deferred | Stripe verification and controlled invoice proof wait for the Owner's required business information. No public checkout or active-payment claim is allowed. |
-| Mobile application service | Confirmed; website integration pending | Google Business Profile includes the capability. The website still needs a coherent service, scope, pricing/discovery, and inquiry presentation without invented proof or prices. |
+| Mobile application service | Confirmed; website integration deferred | Google Business Profile includes the capability. Owner direction `2026-09-13-04` defers new website integration until the Owner resumes it. |
 
 ## Confirmed public business facts
 
@@ -182,11 +182,7 @@ specific, and supportable—not bulk keyword variations.
    confirm that the one profile is publicly visible. Retry the established
    public phone through a valid provider flow. Add hours only after the Owner
    confirms them and add only approved logo/portfolio images.
-2. **Mobile applications:** integrate this Owner-confirmed capability across
-   the website's service model, discovery language, scope, pricing approach,
-   navigation, and inquiry paths. Do not invent platforms, published apps,
-   results, client work, or prices.
-3. **Search monitoring:** review Search Console, Bing, and GA4 after enough data
+2. **Search monitoring:** review Search Console, Bing, and GA4 after enough data
    exists. Track impressions, queries, indexed pages, click-throughs, landing
    pages, and successful inquiry actions without overstating early data.
 
@@ -210,6 +206,9 @@ specific, and supportable—not bulk keyword variations.
 
 ### Deferred or external-account work
 
+- **Mobile applications:** capability remains confirmed, but the Owner deferred
+  new website service, navigation, pricing/discovery, and inquiry integration
+  until later. Do not start it until the Owner resumes it.
 - **Stripe:** business verification, payout/tax information, and a controlled
   test invoice are deferred until the Owner has the required information. Do
   not claim Stripe, card, ACH, recurring billing, or public checkout is active.

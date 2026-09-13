@@ -1,5 +1,23 @@
 # Cyvexly Owner Direction
 
+## Mobile-application website integration deferral — 2026-09-13-04
+
+**Status:** ACTIVE — CAPABILITY RETAINED; WEBSITE INTEGRATION DEFERRED
+**Source:** Owner via the active Codex conversation on September 13, 2026.
+
+### Owner direction — verbatim
+
+> “No we can do that work later. What else needs done?”
+
+### Agent interpretation — not Owner-authored direction
+
+Cyvexly's confirmed mobile-application development capability remains truthful,
+and the service already entered in Google Business Profile may remain. Defer
+new website pages, navigation, search metadata, pricing/discovery language, and
+inquiry-flow integration for that capability until the Owner explicitly
+resumes the work. Do not let older direction `2026-09-13-03` make mobile-app
+integration the Builder's current priority.
+
 ## Mobile-application capability — 2026-09-13-03
 
 **Status:** ACTIVE — OWNER-CONFIRMED CAPABILITY
