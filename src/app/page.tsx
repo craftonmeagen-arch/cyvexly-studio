@@ -15,6 +15,7 @@ import {
   pricingPreview,
   siteConfig,
 } from "@/lib/site-config";
+import { websiteJsonLd } from "@/lib/structured-data";
 
 const homeProcessSteps = [
   {
@@ -40,6 +41,10 @@ const homeProcessSteps = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       <SiteHeader />
 
       <main id="main-content" className="flex-1">

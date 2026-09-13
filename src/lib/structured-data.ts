@@ -1,6 +1,18 @@
 import { siteConfig, faqLibrary, pricingPackages } from "./site-config";
 import type { ServiceDetail } from "./service-details";
 
+// WebSite structured data belongs on the canonical home page and gives search
+// engines an explicit, consistent site-name preference. "Cyvexly" is the
+// shortened form already used by the Owner and production domain; the public
+// brand remains Cyvexly Studio.
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteConfig.name,
+  alternateName: "Cyvexly",
+  url: "https://cyvexly.com/",
+} as const;
+
 // Organization structured data (schema.org / JSON-LD) so search engines can
 // identify Cyvexly Studio as a real business entity with correct contact
 // details — part of vision §17's "searchable" launch requirement. Uses only

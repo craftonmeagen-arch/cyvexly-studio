@@ -27,8 +27,8 @@ export async function generateMetadata({
 
   const service = serviceDetails[slug];
   return buildPageMetadata({
-    title: `${service.name} — Cyvexly Studio`,
-    description: service.summary,
+    title: service.seoTitle,
+    description: service.seoDescription,
     path: `/services/${slug}`,
   });
 }

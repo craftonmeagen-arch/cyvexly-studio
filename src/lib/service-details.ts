@@ -1,6 +1,8 @@
 export type ServiceDetail = {
   slug: string;
   name: string;
+  seoTitle: string;
+  seoDescription: string;
   eyebrow: string;
   headline: string;
   summary: string;
@@ -29,6 +31,9 @@ export const serviceDetails = {
   "business-websites": {
     slug: "business-websites",
     name: "Business websites",
+    seoTitle: "Custom Small Business Website Design | Cyvexly Studio",
+    seoDescription:
+      "Custom website design for small businesses and professional teams, including strategy, responsive development, inquiry forms, launch support, and owner handoff.",
     eyebrow: "A clear, credible digital home",
     headline: "Turn your expertise into a website people understand and trust.",
     summary:
@@ -92,6 +97,9 @@ export const serviceDetails = {
   "website-redesigns": {
     slug: "website-redesigns",
     name: "Website redesigns",
+    seoTitle: "Small Business Website Redesign Services | Cyvexly Studio",
+    seoDescription:
+      "Strategic website redesign services for businesses that need clearer content, stronger mobile usability, modern visuals, careful migration, and launch support.",
     eyebrow: "A strategic rebuild, not a surface reskin",
     headline: "Replace an outdated website with a clearer path to action.",
     summary:
@@ -155,6 +163,9 @@ export const serviceDetails = {
   "landing-pages": {
     slug: "landing-pages",
     name: "Landing pages",
+    seoTitle: "Custom Landing Page Design Services | Cyvexly Studio",
+    seoDescription:
+      "Custom landing page design and development for campaigns, launches, events, and focused services, built around one audience and one clear action.",
     eyebrow: "One offer, one audience, one clear action",
     headline: "Give your campaign a focused place to convert attention into action.",
     summary:
@@ -218,6 +229,9 @@ export const serviceDetails = {
   "ecommerce-websites": {
     slug: "ecommerce-websites",
     name: "Commerce & booking websites",
+    seoTitle: "Ecommerce & Booking Website Design | Cyvexly Studio",
+    seoDescription:
+      "Custom ecommerce and booking website design for businesses that need clear offers, responsive customer journeys, and carefully planned integrations.",
     eyebrow: "Selling and booking, planned around trust",
     headline: "Sell products or take bookings online without losing clarity.",
     summary:
@@ -281,6 +295,9 @@ export const serviceDetails = {
   "custom-web-applications": {
     slug: "custom-web-applications",
     name: "Custom web applications",
+    seoTitle: "Custom Web Application Development | Cyvexly Studio",
+    seoDescription:
+      "Discovery-led custom web application design and development for dashboards, memberships, operational tools, and connected business workflows.",
     eyebrow: "Purpose-built workflows beyond a standard website",
     headline: "Turn a complex workflow into a clear, usable web application.",
     summary:
@@ -344,6 +361,9 @@ export const serviceDetails = {
   "website-care": {
     slug: "website-care",
     name: "Website care",
+    seoTitle: "Small Business Website Maintenance | Cyvexly Studio",
+    seoDescription:
+      "Ongoing website maintenance and support for small businesses, including content updates, troubleshooting, monitoring, and planned improvements.",
     eyebrow: "A dependable lane for post-launch changes",
     headline: "Keep your website current without turning upkeep into your job.",
     summary:

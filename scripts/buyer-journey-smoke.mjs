@@ -78,10 +78,12 @@ const [work, processHtml, about, faq, sitemap, privacy, terms] = await Promise.a
 
 for (const legalPage of [privacy, terms]) {
   assert.match(legalPage, /Cyvexly LLC/);
-  assert.match(legalPage, /formation/);
-  assert.match(legalPage, /filing-name verification/);
-  assert.doesNotMatch(legalPage, /operated as a limited liability company/);
+  assert.doesNotMatch(legalPage, /formation remains pending/);
+  assert.doesNotMatch(legalPage, /filing-name verification/);
 }
+assert.match(privacy, /legal business name/);
+assert.match(privacy, /public brand of Cyvexly LLC/);
+assert.match(terms, /Cyvexly LLC operates publicly as Cyvexly Studio/);
 for (const paymentPage of [pricing, faq, privacy, terms]) {
   assert.match(paymentPage, /Stripe/);
   assert.match(
@@ -640,7 +642,8 @@ assert.match(plannerFormSource, /We(?:&apos;|')ll also try to[\s\S]*email you a 
 assert.match(privacySource, /phone-only consultation/);
 assert.match(privacySource, /Resend(?:&apos;|')s delivery systems/);
 assert.match(privacySource, /raw IP address is not placed/);
-assert.match(privacySource, /proposed[\s\S]*12 months/);
+assert.match(privacySource, /manually review[\s\S]*12 months/);
+assert.match(privacySource, /within two business days/);
 assert.match(privacySource, /does not load and no data is sent to Google unless you/);
 assert.match(analyticsSource, /type InquiryType = "contact" \| "planner" \| "consultation"/);
 assert.match(analyticsSource, /window\.gtag\("event", "generate_lead"/);

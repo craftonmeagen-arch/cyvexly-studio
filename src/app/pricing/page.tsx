@@ -24,9 +24,9 @@ const packageInquiryKeys: Record<string, string> = {
 };
 
 export const metadata = buildPageMetadata({
-  title: "Pricing — Cyvexly Studio",
+  title: "Custom Website Design Pricing | Cyvexly Studio",
   description:
-    "Clear starting packages for Cyvexly Studio websites, plus add-ons and care plans. Final quotes are shaped around your goals, content, pages, and features.",
+    "See starting prices for custom websites, redesigns, landing pages, ecommerce and booking sites, web applications, add-ons, and monthly website care.",
   path: "/pricing",
 });
 

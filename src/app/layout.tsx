@@ -31,9 +31,9 @@ const gaMeasurementId = isValidGaMeasurementId(configuredGaMeasurementId)
   : undefined;
 const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
 
-const title = "Cyvexly Studio — Websites built to make your business unmistakable";
+const title = "Custom Web Design & Development | Cyvexly Studio";
 const description =
-  "Cyvexly Studio is an independent, remote web design and development studio. Describe your project and get a proposal, custom design, and launch-ready website.";
+  "Cyvexly Studio designs and builds custom websites and web applications for U.S. businesses, with clear pricing, collaborative planning, and launch support.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
