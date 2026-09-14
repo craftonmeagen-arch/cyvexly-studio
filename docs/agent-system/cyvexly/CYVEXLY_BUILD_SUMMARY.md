@@ -3,6 +3,19 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 196 — fresh exact-candidate visual and contract proof
+
+- Confirmed no independent publication or live primary-Auditor task covers
+  combined candidate `ca6140b`; product/test paths remain exact.
+- Lint (one unchanged historical warning), 63-route build, TypeScript,
+  buyer/Indiana/search contracts, and the complete responsive hierarchy suite
+  pass with zero runtime errors or overflow.
+- Visible in-app Velora/EduAILenz/Mudoinkle comparison at desktop, tablet, and
+  phone sizes plus native-size Mudoinkle phone-proof inspection found no new
+  defect. The browser and Builder server were closed; port 5173 is clear.
+- No product, deployment, outside-application, provider, or scheduler state
+  changed. Independent review of exact `ca6140b` remains the publication gate.
+
 ## Round 195 — exact review gate and state cleanup
 
 - Confirmed no independent publication covers combined candidate `ca6140b`
@@ -240,29 +253,16 @@ Full evidence: `builder/evidence/round-180-acceptance/assessment.md`.
   evidence screenshots. Verified full hash match, ancestor-of-`main`, and
   on-disk screenshot count before recording. Supplies challenge 2 of 2 after
   R139, satisfying the review gate.
-- Re-ran the full verification ledger fresh against current `main`: lint
-  (0 errors, 1 historical warning), 55-route build, `tsc --noEmit`,
-  business-day, consultation-api, search-readiness, buyer-journey,
-  submission-receipt, nexora-demo, and analytics-consent (against a separate
-  synthetic-GA-ID build, restored to dormant afterward) all passed.
-- Found and fixed a test-only fragility in `internal-hierarchy-smoke.mjs`:
-  its phone touch-swipe checks used a single zero-velocity touch jump, which
-  this Chromium build's `scroll-snap-type: x mandatory` correctly snapped
-  back to rest instead of advancing. Confirmed not a product defect via a
-  standalone CDP check (a real multi-step swipe moves the rail correctly),
-  and confirmed distinct from Round 178's `next dev`-only timing flake
-  (this reproduced against `next build`/`next start` too). Fixed with a
-  shared multi-step `swipeHorizontal` helper covering both the Work and Home
-  rails; re-verified passing. No product source changed.
+- Re-ran the complete verification ledger successfully. Repaired a test-only
+  synthetic-swipe fragility by using a realistic multi-step gesture; the full
+  diagnosis remains in Round 180 evidence and the tools record. No product
+  source changed for that correction.
 - Accepted candidate `b14a92b` (product-identical to current `main` HEAD,
   which also carries Round 178's verified-clean orphaned-route removal) and
   pushed it to `origin/main` as `85c128e`. Chunk 5's review gate is closed;
   production remains dormant (no GA ID, `noindex, nofollow`) pending the
   Owner/account gates in `CYVEXLY_APP_DEBT.md`.
-- Updated `CYVEXLY_CURRENT_STATE.md`, `CYVEXLY_ACTIVE_CHUNK.md`,
-  `CYVEXLY_NEXT_BUILDER_HANDOFF.md`, `CYVEXLY_REVIEW_INDEX.md`,
-  `CYVEXLY_APP_DEBT.md`, `CYVEXLY_PROJECT_CHUNK_MAP.md`, and
-  `CYVEXLY_TOOLS_AND_CAPABILITIES.md` to record the disposition.
+- Updated current role state, review, debt, map, and tools records.
 - Removed the Round 176 leftover disposable temp profile at
   `C:/Users/Tcraf/AppData/Local/Temp/cyvexly-receipt-smoke-t0xLEE`
   (previously rejected by host policy); no live process depended on it.

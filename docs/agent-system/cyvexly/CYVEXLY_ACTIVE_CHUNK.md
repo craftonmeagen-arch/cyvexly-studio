@@ -2,7 +2,7 @@
 
 **Active product chunk:** Chunk 13 — EduAILenz/Mudoinkle Showcase Parity
 
-**Current position:** global round 196; Owner direction `2026-09-13-05`
+**Current position:** global round 197; Owner direction `2026-09-13-05`
 requires the Cyvexly-facing EduAILenz and Mudoinkle case studies to reach the
 accepted Velora showcase standard. Search monitoring continues without
 displacing this Builder priority. Mobile-app website integration is deferred.
@@ -24,6 +24,13 @@ exercised in the visible browser. Round 192 confirmed no publication covers
 `7fb2a51`, no live primary Auditor task exists, and the stored primary Auditor
 automation remains paused. Independent review is still next; the Builder is
 not authorized to change that scheduler or substitute self-review.
+
+Round 196 freshly revalidated the combined candidate without changing product
+source. Lint, the 63-route production build, TypeScript, buyer/Indiana/search
+contracts, and the full responsive hierarchy suite passed. Visible in-app
+comparison at 1280x720, 768x1024, and 390x844 plus a native-size Mudoinkle
+phone-proof inspection found no new defect. Exact-source independent review of
+`ca6140b` remains the next action.
 
 **Scheduler state:** the Owner explicitly resumed the existing primary
 Cyvexly Builder at its existing twice-hourly GPT-5.6 Sol/high configuration and
