@@ -1,5 +1,31 @@
 # Cyvexly Build Team Builder — Next Handoff
 
+## PM live-search delivery — September 13, 2026
+
+Owner explicitly requested completion of search steps 1,2,3,5. The separate
+Builder task released this bounded implementation to PM after answering an
+Owner pricing question. Isolated candidate `c9f0d6b` adds `/indiana-web-design`,
+four-city commercial/About/local links, truthful schema and sitemap entry.
+It passed primary checks plus exact-source isolated independent review and was
+pushed alone to origin/main. Render succeeded and the public release endpoint
+confirms exact `c9f0d6b`; production search/Indiana smoke checks pass. Main has merged this source while preserving
+the unaccepted showcase commits. **Do not push the remaining ahead commits
+until their showcase review gate is satisfied.** No scheduler changed.
+
+The isolated `C:/app projects/cyvexly-search-delivery` worktree subsequently
+received unexplained dirty Contact/smoke/schema changes. PM, Builder and reviewer
+did not author them. They were preserved, not adopted, built, committed or
+pushed. Do not delete the worktree or fold those bytes into accepted source
+without resolving provenance and review. The accepted remote commit is unchanged.
+
+Current provider truth supersedes old profile-hold statements below: Google
+reports the business is on Google; four cities, phone and expanded description
+are saved; logo is saved; representative concept image submitted. Homepage
+Google live test passes despite its stale pre-release robots block; homepage,
+Services and Indianapolis indexing requests accepted. Search performance has
+no impressions/query rows yet. See `CYVEXLY_MARKETABILITY_RECORD.md` for final
+provider/release status and baseline.
+
 ## Current assignment
 
 Owner direction `2026-09-13-05` makes Chunk 13 — EduAILenz/Mudoinkle Showcase

@@ -1,5 +1,16 @@
 # Cyvexly Current State
 
+## PM production update — September 13, 2026
+
+Bounded Owner search steps 1,2,3,5 completed: exact independently accepted SEO
+source `c9f0d6b381be755952974a1b7a583b5fb40f91be` is live and production checks
+pass. Google profile complete; sitemap and four URL indexing requests accepted;
+performance baseline recorded in `CYVEXLY_MARKETABILITY_RECORD.md`. This later
+deployment supersedes old deployed-source references below but does NOT accept
+the separate active showcase source or change its review selector/scheduler.
+Main includes the SEO merge plus still-unaccepted local showcase commits; do
+not push the remaining ahead commits until their separate gate passes.
+
 **Last completed global round:** 191
 
 **Current global round:** 192

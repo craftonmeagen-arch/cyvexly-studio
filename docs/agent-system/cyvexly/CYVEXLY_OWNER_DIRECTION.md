@@ -1,5 +1,42 @@
 # Cyvexly Owner Direction
 
+## Expanded Indiana search visibility — 2026-09-13-06
+
+The Owner confirms Bloomington, Evansville, and Jasper, Indiana as additional
+service areas alongside Indianapolis and authorizes routine implementation of
+standard, lawful search-visibility improvements without repeated permission
+requests. Preserve nationwide remote service, the approved design, and private
+address suppression. Do not invent offices, local clients, reviews, rankings,
+or distinct city facts. Do not start paid services or subscriptions.
+
+Owner follow-up: “I fully authorize you to keep working till steps 1,2,3 and 5
+are done.” This authorizes current execution, not merely queueing these items
+behind the showcase. The primary Builder must isolate this delivery from any
+unaccepted showcase source and integrate the four confirmed cities into useful Indiana service information,
+relevant About/contact/service navigation and truthful structured data. Prefer
+a useful consolidated service-area presentation unless distinct city content
+is supported by real evidence; do not produce city-name-swapped doorway pages.
+Verify responsive presentation, links, metadata and inquiry continuity, then
+follow normal independent acceptance and deployment gates. Record deployed
+source and distinguish live work from local candidates.
+
+PM owns provider completion: check the relevant URLs in Search Console and
+request indexing after confirming eligibility; complete the existing Google
+Business Profile with accurate areas, contact details, description, approved
+logo and honestly labeled representative work; record a dated Search Console
+performance baseline. Zero/no data must not be presented as a measured ranking.
+Provider processing and rankings are external outcomes, not promises. Step 4
+(customer reviews and relationship-based authority growth) is not part of this
+completion request. No paid advertising or subscriptions are authorized.
+
+Google provider work in this owner task has added the three cities to the one
+existing profile; Google now reports the business is on Google. The public phone
+is accepted; the expanded description, logo and representative concept image
+are accepted. The four-city website source `c9f0d6b` is independently accepted
+and live. See the
+marketability record for current status.
+No scheduler state or outside-application ownership changes are authorized.
+
 ## EduAILenz/Mudoinkle showcase completion and Builder restart — 2026-09-13-05
 
 **Status:** ACTIVE — PRIMARY CYVEXLY BUILDER PRIORITY; EXISTING SCHEDULER RESUMED

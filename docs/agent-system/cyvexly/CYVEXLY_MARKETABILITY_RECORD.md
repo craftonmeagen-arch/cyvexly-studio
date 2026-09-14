@@ -17,6 +17,78 @@ controls remain the source of truth for those values.
 
 ## Executive status
 
+### Latest Google update — September 13, 2026
+
+The signed-in Google manager now reports “Your business is on Google,” replacing
+the earlier verification hold. The Cyvexly Studio knowledge panel is present.
+Bloomington, Evansville, and Jasper, Indiana were added to the existing
+Indianapolis service area with Owner authorization; the saved information now
+lists all four cities. The public phone (317) 572-5780 is now saved without a
+pending marker. The expanded four-city description is also accepted without a
+pending marker. The existing approved logo was exported to PNG and saved as the
+profile logo. One representative Velora case-study capture is also saved without
+a pending marker; its visible labels disclose the fictional concept demo.
+The private address remains hidden. These milestones do
+not establish placement for competitive city web-designer searches.
+The older processing status below is historical and superseded by this update.
+Website integration of all four confirmed cities is now live at
+<https://cyvexly.com/indiana-web-design>.
+
+### Search Console baseline — September 13, 2026
+
+Signed-in domain property `sc-domain:cyvexly.com`, Web search, three-month
+selection: **0 clicks, 0 impressions, no query rows**. The chart currently covers
+only September 11, 2026 and the report says last updated 9.5 hours ago. The UI
+displays CTR 0% and average position 0, but without impressions there is no
+meaningful measured ranking; position must be treated as unavailable, not rank
+zero. No city-specific performance claim is supported yet. Aggregate page
+indexing is still “Processing data, please check again in a day or so.”
+
+URL Inspection for `/indianapolis-web-design` reports not indexed / unknown to
+Google. A live eligibility check completed and Google accepted the indexing
+request into its priority crawl queue. This is a submission milestone, not
+proof of indexing. `/services` was discovered via the sitemap and the scope
+guide, but not yet crawled/indexed; its eligibility check also completed and
+Google accepted an indexing request. Repeated requests do not improve queue
+priority.
+
+Homepage inspection initially showed the September 12 crawl blocked by the old
+robots.txt setting. The current public robots file permits crawling, the full
+live search-readiness suite passes, and Google's own September 13 live test
+reports “URL is available to Google” / “Page can be indexed.” Google accepted
+the homepage indexing request. The stale recorded crawl is not evidence of a
+current production block, and no robots or security settings were weakened.
+
+The bounded website implementation was explicitly handed back to PM after the
+Builder answered a separate Owner pricing question. Exact source
+`c9f0d6b381be755952974a1b7a583b5fb40f91be` was independently accepted and pushed
+alone from base `ca48781`, excluding unaccepted showcase changes. Render
+auto-deployment succeeded; the public release endpoint confirms this exact SHA.
+Production search-readiness and Indiana route/schema/sitemap/link checks pass.
+Independent report: `C:/app projects/website-independent-review/reports/published/auditor/IFA-2026-09-13-INDIANA-C9F0D6B.md`
+(read with its `memory/auditor/INDIANA-C9F0D6B-CLOSEOUT.md` integrity clarification).
+The updated canonical sitemap was successfully resubmitted to Google. The new
+Indiana page was discovered through that sitemap; its live eligibility check
+passed and Google confirmed acceptance into the priority crawl queue.
+**Owner steps 1, 2, 3 and 5 are complete as implementation/submission work:**
+four-city site coverage live, indexing checks and four URL requests accepted,
+accurate Google profile complete, and dated performance baseline/measurement
+method recorded. Actual indexing, competitive rankings and traffic growth
+remain external outcomes. No further Owner push or approval is needed for this
+bounded release.
+Step 4 customer reviews and relationship-based authority growth remains outside
+this bounded task. No ranking or indexing completion is implied by deployment.
+
+For the next meaningful performance comparison, use Web search and equal
+complete 28-day periods, keeping brand and non-brand queries separate. Filter
+queries for Indianapolis, Bloomington, Evansville, and Jasper plus web design /
+website designer terms, and compare the Indiana/Indianapolis landing pages with
+the core services. Record impressions, clicks, CTR and position only when data
+exists. Investigate indexing before rewriting pages with no exposure. Improve
+titles or content where actual queries reveal mismatch; do not manufacture city
+pages merely because the new baseline is empty. Provider review/indexing may
+finish before this lagging aggregate report catches up.
+
 | Area | Status | What that means |
 | --- | --- | --- |
 | Public website | Complete and live | `cyvexly.com` is the canonical production site and is open to public crawling. |
@@ -27,7 +99,7 @@ controls remain the source of truth for those values.
 | Bing Places | Verification in progress | One Cyvexly Studio listing was created as a web designer and a mailed verification PIN was requested on September 13, 2026. The listing remains unpublished pending PIN verification and private-address suppression. |
 | Apple Business | Domain verified; organization review pending | The Cyvexly LLC organization exists and `cyvexly.com` is verified. Apple still requires one additional independent business-identity method before organization review can be submitted. |
 | Google Analytics 4 | Active monitoring input | Privacy-conscious analytics is wired behind visitor consent and measures basic traffic and successful buyer actions without sending form contents. |
-| Indianapolis search presence | Website work live; profile processing | A truthful Indianapolis service page is live. The Google Business Profile exists but is not yet publicly visible while Google processes verification. |
+| Indiana search presence | Four-city website live; Google profile complete | Source `c9f0d6b` is deployed and independently accepted. Indiana and Indianapolis pages preserve nationwide remote service. Four profile cities, phone, description, logo and representative concept image are accepted; rankings remain external. |
 | Inquiry email | Complete and inbox-confirmed | The Resend domain and protected Render key are configured. Contact, Planner, and Consultation each produced the studio notification and requester confirmation in the Owner-supplied inbox proof. |
 | Payments | Deferred | Stripe verification and controlled invoice proof wait for the Owner's required business information. No public checkout or active-payment claim is allowed. |
 | Mobile application service | Confirmed; website integration deferred | Google Business Profile includes the capability. Owner direction `2026-09-13-04` defers new website integration until the Owner resumes it. |
