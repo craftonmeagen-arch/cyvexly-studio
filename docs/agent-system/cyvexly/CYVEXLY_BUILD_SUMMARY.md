@@ -3,6 +3,18 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 195 — exact review gate and state cleanup
+
+- Confirmed no independent publication covers combined candidate `ca6140b`
+  and no primary Auditor task is active; accepted/deployed source remains the
+  separately reviewed Indiana release `c9f0d6b`.
+- Verified `src`, `public`, and `scripts` are unchanged from `ca6140b`. Moved
+  the already-consumed Indiana inbox item to the external processed lane and
+  corrected stale map/app state without changing product source.
+- Re-inventoried the exact 17,444,333-byte Round 191 scratch directory, but host
+  policy again rejected its verified deletion. Nothing was pushed or deployed;
+  exact-source independent review remains the next gate.
+
 ## Round 194 — Indiana release intake and Contact continuity
 
 - Consumed the separate exact-source Indiana Auditor pass and correction for

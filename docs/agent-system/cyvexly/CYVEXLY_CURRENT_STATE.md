@@ -12,9 +12,9 @@ review selector/scheduler. Main includes the SEO merge plus still-unaccepted
 local showcase commits; do not push the remaining ahead commits until their
 exact combined-source gate passes.
 
-**Last completed global round:** 194
+**Last completed global round:** 195
 
-**Current global round:** 195
+**Current global round:** 196
 
 **Active chunk:** Chunk 13 — EduAILenz/Mudoinkle Showcase Parity
 
@@ -37,6 +37,24 @@ independent review.
 Render release match, canonical search contract, Indiana route/schema/link
 smoke, and provider/search-submission record are documented in the PM update
 above and `CYVEXLY_MARKETABILITY_RECORD.md`.
+
+## Round 195 — review gate and continuity reconciliation
+
+- Re-entered the complete Builder authority and confirmed no independent
+  publication covers exact combined candidate `ca6140b`; the latest primary
+  report remains the bounded Indiana pass for accepted `c9f0d6b`.
+- Confirmed no active duplicate primary Builder or primary Auditor task. The
+  source, public assets, and scripts remain byte-identical to `ca6140b`; only
+  later continuity documents differ.
+- Moved the already-consumed Indiana operational item to the external processed
+  lane and corrected stale app/map state that still named pre-Indiana deployed
+  source and Chunk 12 as the active product work.
+- The exact 17,444,333-byte Round 191 scratch directory was re-inventoried with
+  no reparse points or dependent process, but host policy rejected its verified
+  deletion before execution. It remains the only worktree exception.
+- No product, deployment, outside application, provider, credential, or
+  scheduler state changed. Independent exact-source review remains the next
+  gate; the Builder did not self-certify, push, or deploy.
 
 ## Round 194 — Indiana release intake and combined review source
 

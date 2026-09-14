@@ -99,8 +99,13 @@ combined source.
 7. Cleanup follow-up: exact ignored scratch path
    `C:/app projects/website/.tmp/cyvexly-round-191-hierarchy` contains 30
    regenerable files totaling 17,444,333 bytes. Host policy rejected recursive
-   deletion after its resolved workspace-contained path and inventory were
-   verified. Remove only that exact directory when policy permits.
+   deletion again in Round 195 after its exact resolved path, inventory, absent
+   reparse points, and lack of another dependent process were verified. Remove
+   only that exact directory when policy permits.
+
+The bounded Indiana review item was consumed in Round 194 and moved from the
+external operational inbox to `exchange/processed/` in Round 195. The three
+remaining operational-inbox items are legacy Team 2 records and stay untouched.
 
 ## Live release proof
 

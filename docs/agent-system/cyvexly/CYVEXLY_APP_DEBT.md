@@ -6,21 +6,21 @@ Git history, and role memory.
 
 ## Current source position
 
-- Current deployed product source: `2923ce5`, the Round 188 Indianapolis service
-  presence on top of the commercial search, buyer-resource, and IndexNow
-  foundations. Its canonical production deployment passed expanded search and
-  buyer contracts on September 13, 2026.
-- Last independently reviewed product baseline: `85c128e` after Auditor
-  R139/R140. Later commits include a low-risk visual correction, the
-  Owner-confirmed Cyvexly LLC/final legal baseline, indexing-release records,
-  and Round 185 search-facing metadata/test work. No report newer than R152
-  existed at Round 185 intake.
+- Current accepted and deployed product source: `c9f0d6b`, the independently
+  reviewed four-city Indiana service-area release. Its canonical deployment,
+  search contract, sitemap, structured data, navigation, responsive
+  presentation, and no-storefront boundary passed on September 13, 2026.
+- Current local review source: `ca6140b`. It combines the unaccepted Chunk 13
+  showcase work with accepted `c9f0d6b` and a tested Contact/service-area
+  continuity correction. No independent publication evaluates this exact
+  source, so the local ahead commits must not be pushed or deployed yet.
 - Public indexing, Search Console domain verification/sitemap submission, GA4,
   Cyvexly LLC identity, and the final legal baseline are no longer open gates;
   they were completed or confirmed under Owner directions `2026-09-12-01`
   through `2026-09-12-03`.
-- Active product work is Chunk 12, governed by `2026-09-13-01`. Ranking is an
-  external outcome to monitor, not a product completion claim.
+- Active product work is Chunk 13 under `2026-09-13-05`. Chunk 12 search
+  visibility continues as monitoring and evidence-led growth; ranking remains
+  an external outcome, not a product completion claim.
 
 ## Open external and Owner gates
 
@@ -47,6 +47,11 @@ Git history, and role memory.
    completion claim.
 
 ## Related chunk gate
+
+Chunk 13 needs independent exact-source review of local candidate `ca6140b`
+before acceptance, push, deployment, and final canonical side-by-side proof.
+Chunk 12's live search/resource source also retains its independently reviewed
+coverage gap; both are tracked in `CYVEXLY_CHUNK_DEBT.md`.
 
 Chunk 6 still needs one complete independent physical/visual review of accepted
 Velora source `fce01e8`; track that review in `CYVEXLY_CHUNK_DEBT.md`.

@@ -172,7 +172,7 @@ evidence exposes a meaningful reachable gap.
   evidence confirmed both delivery types for Contact, Project Planner, and
   Consultation.
 
-## Chunk 12 — Search Visibility & Useful Content Growth (OPEN, ROUND 187)
+## Chunk 12 — Search Visibility & Useful Content Growth (LIVE FOUNDATION; MONITORING)
 
 - **Authority:** Owner direction `2026-09-13-01`.
 - **Outcome:** help relevant United States buyers discover Cyvexly through
@@ -198,7 +198,7 @@ evidence exposes a meaningful reachable gap.
   monitoring processes exist; all meaningful reachable quality gaps are
   resolved or bounded. Search ranking itself remains external and unpromised.
 
-## Chunk 13 — EduAILenz/Mudoinkle Showcase Parity (OPEN, ROUND 190)
+## Chunk 13 — EduAILenz/Mudoinkle Showcase Parity (OPEN, ROUND 195)
 
 - **Authority:** Owner directions `2026-09-10-01` and `2026-09-13-05`.
 - **Outcome:** make the two Cyvexly-facing case studies as substantial,

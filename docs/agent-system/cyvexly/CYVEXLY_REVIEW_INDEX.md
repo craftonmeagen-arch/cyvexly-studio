@@ -224,4 +224,6 @@ Builder Round 194 consumed the separate exact-source Indiana acceptance review
 `IFA-2026-09-13-INDIANA-C9F0D6B` and its integrity clarification. That report
 covers deployed `c9f0d6b`, not the showcase. Local `main` now declares
 combined review source `ca6140b`; no existing publication covers that exact
-source.
+source. Round 195 moved the already-consumed Indiana operational item to the
+external processed lane; only the legacy Team 2 R90-R92 items remain in the
+operational inbox.
