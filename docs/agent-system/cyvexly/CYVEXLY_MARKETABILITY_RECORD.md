@@ -24,6 +24,7 @@ controls remain the source of truth for those values.
 | Buyer resources | First cluster live | The resource hub and two substantial buyer guides are live and internally connected. |
 | Google Search Console | Verified and monitoring | The domain property is verified and its sitemap was accepted. Indexing and rankings continue over time. |
 | Bing and IndexNow | Configured and monitoring | Bing accepted the imported property and sitemap; production releases automatically notify IndexNow after the exact deployment is live. |
+| Bing Places | Verification in progress | One Cyvexly Studio listing was created as a web designer and a mailed verification PIN was requested on September 13, 2026. The listing remains unpublished pending PIN verification and private-address suppression. |
 | Google Analytics 4 | Active monitoring input | Privacy-conscious analytics is wired behind visitor consent and measures basic traffic and successful buyer actions without sending form contents. |
 | Indianapolis search presence | Website work live; profile processing | A truthful Indianapolis service page is live. The Google Business Profile exists but is not yet publicly visible while Google processes verification. |
 | Inquiry email | Complete and inbox-confirmed | The Resend domain and protected Render key are configured. Contact, Planner, and Consultation each produced the studio notification and requester confirmation in the Owner-supplied inbox proof. |
@@ -148,6 +149,13 @@ specific, and supportable—not bulk keyword variations.
   hidden. At the last authoritative check, Google said the profile was **not
   publicly visible** while verification was processing and that processing
   could take up to five days.
+- One Bing Places profile was created as **Cyvexly Studio** with primary
+  category **Web designer**, the canonical website, and the public phone. Bing
+  accepted a mailed-PIN request on September 13, 2026 and reports verification
+  in progress. The private verification address is intentionally omitted from
+  this record. The listing remains unpublished until the PIN arrives; before
+  public verification is completed, configure it as a service-area business
+  and confirm that the private address will not be displayed.
 - The public phone was not accepted during setup and remains pending. No
   unconfirmed hours, storefront claim, paid ad, Google Workspace trial, or
   overly broad `Software development` service was added. Photos wait for
@@ -183,7 +191,10 @@ specific, and supportable—not bulk keyword variations.
    confirm that the one profile is publicly visible. Retry the established
    public phone through a valid provider flow. Add hours only after the Owner
    confirms them and add only approved logo/portfolio images.
-2. **Search monitoring:** review Search Console, Bing, and GA4 after enough data
+2. **Bing Places:** watch for the mailed verification PIN, expected in roughly
+   5–6 business days. Before submitting that PIN, confirm the service-area
+   setting and private-address suppression; only then complete publication.
+3. **Search monitoring:** review Search Console, Bing, and GA4 after enough data
    exists. Track impressions, queries, indexed pages, click-throughs, landing
    pages, and successful inquiry actions without overstating early data.
 
