@@ -6,10 +6,13 @@ or existing Owner-managed schedule.
 
 Current authoritative root: `C:/app projects/website-independent-review`.
 
-**Active review source:** `483975d`, the live Chunk 12 Phase 2 useful-content
-source. No independent report newer than R152 existed at Round 186 intake;
-R152 and earlier reviews of `85c128e` are historical and do not review this
-source. The last source satisfying the prior two-review gate remains `85c128e`.
+**Active review source:** `121918d`, the local Chunk 13 EduAILenz/Mudoinkle
+showcase-parity candidate. Review the rendered case studies and Round 190
+evidence at desktop, tablet, and phone sizes; challenge evidence provenance,
+privacy, journey accuracy, status/limitation truth, external proof and inquiry
+paths, accessibility, and regression. No earlier publication reviews this
+source. Accepted/deployed product source remains `2923ce5` pending the normal
+independent gate.
 | Role | Current report | Archive | Memory |
 |---|---|---|---|
 | Auditor | reports/AUDITOR_CURRENT.md | reports/AUDITOR_ARCHIVE.md | memory/auditor/ |

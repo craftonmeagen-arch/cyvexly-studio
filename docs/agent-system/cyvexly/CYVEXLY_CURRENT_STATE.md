@@ -11,9 +11,9 @@ Cyvexly-facing EduAILenz and Mudoinkle case studies to the accepted Velora
 showcase standard. Preserve the live search foundation, truthful Indianapolis
 availability, and the mobile-app integration deferral.
 
-**Current product source:** `2923ce5` — truthful Indianapolis service presence,
-pushed to `origin/main`; Round 188 continuity records are the next docs-only
-commit.
+**Current product source:** `121918d` — local, unaccepted Chunk 13 showcase-
+parity candidate. It is intentionally unpushed and undeployed pending exact-
+source independent review. Accepted/deployed product source remains `2923ce5`.
 
 **Current deployed product source:** `2923ce5`; its canonical production
 deployment passed the complete live search-readiness and buyer-journey
@@ -31,6 +31,22 @@ URLs with HTTP 200.
 - Underlying application builds and private evidence remain Team 2 scope. The
   primary Builder may inspect public/auth-safe evidence read-only but must not
   modify either outside repository.
+- Implemented local candidate `121918d`. EduAILenz now presents three real
+  authenticated teacher tasks—Quick Lesson setup, BloomED progress logging,
+  and BloomED reporting—with paired desktop/phone captures from exact accepted
+  Team 2 source `9e48f41d`; the test account is synthetic and no student data
+  is shown. Mudoinkle now presents three distinct live public staging previews
+  for Awmuhog, Witigglies, and List Off with paired desktop/phone captures.
+- Replaced generic marketing-tour proof with task/action/visible-result copy,
+  explicit evidence provenance, and truthful staging/authentication/acceptance
+  boundaries. Neither outside repository was modified.
+- Lint, production build/TypeScript, buyer journey, and expanded hierarchy
+  smoke passed. The new hierarchy contract verifies three journeys, paired
+  evidence, external proof links, and zero horizontal overflow at desktop,
+  tablet, and phone widths. Nine visible comparison captures against Velora
+  are recorded under Builder evidence for Round 190.
+- Candidate `121918d` still requires exact-source independent review before it
+  can be pushed, deployed, or treated as Chunk 13 closure.
 - The Owner explicitly resumed the existing Cyvexly Builder scheduler at its
   existing twice-hourly GPT-5.6 Sol/high configuration and exact prompt. No
   other scheduler state is changed.

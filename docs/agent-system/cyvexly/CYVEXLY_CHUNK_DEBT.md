@@ -6,7 +6,16 @@ Outside-website work belongs to Team 2.
 
 ## Open
 
-1. **Chunk 12 — independent review of live source `483975d`.** Local and
+1. **Chunk 13 — independent review of local candidate `121918d`.** Challenge
+   both case studies against accepted Velora in rendered desktop/tablet/phone
+   views. Verify that EduAILenz evidence matches accepted Team 2 source
+   `9e48f41d`, contains no real student data, and does not imply public access;
+   verify that Mudoinkle evidence is genuinely live public staging preview
+   proof without implying completed room acceptance or launch. Recheck all
+   proof/demo, service/pricing, and inquiry paths plus accessibility and
+   regression before publication.
+
+2. **Chunk 12 — independent review of live source `483975d`.** Local and
    canonical-production search/buyer proof passes, but no Auditor, Council, or
    Functional publication newer than R152 reviewed this exact source at Round
    186 intake. Review the commercial/resource metadata, site/Article/Breadcrumb
@@ -14,7 +23,7 @@ Outside-website work belongs to Team 2.
    indexability/discovery surfaces, and buyer-flow regression without treating
    current rankings as a product promise.
 
-2. **Chunk 6 — one complete Velora independent physical/visual review.**
+3. **Chunk 6 — one complete Velora independent physical/visual review.**
    Accepted/deployed source `fce01e8` presents the fictional working demo with
    uncropped desktop/mobile proof, six scannable capabilities, truthful status
    and contribution language, detailed disclosure, and a hospitality-specific

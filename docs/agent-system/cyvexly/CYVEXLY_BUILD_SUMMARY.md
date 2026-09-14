@@ -3,6 +3,31 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 190 — real showcase evidence for EduAILenz and Mudoinkle
+
+- Opened the current Builder role through the canonical orientation and Owner
+  direction, then compared live Velora, EduAILenz, and Mudoinkle in the visible
+  browser. The material parity gap was not the opening design; it was that the
+  two external-product journeys relied mostly on generic marketing-tour art.
+- Built local candidate `121918d`. EduAILenz now shows Quick Lesson setup,
+  BloomED progress logging, and BloomED reporting with large desktop captures
+  and phone insets. All six files hash-match exact accepted Team 2 source
+  `9e48f41d`; the setup is empty and BloomED uses a synthetic test account, so
+  no real student data is exposed.
+- Mudoinkle now shows separately exercised Awmuhog, Witigglies, and List Off
+  live public staging previews with paired desktop/phone captures. Copy names
+  the task, action, and visible result while preserving the explicit boundary
+  that these previews do not prove full multi-device room acceptance or a
+  production launch.
+- Added reusable capture controls for selecting live preview tabs and producing
+  local comparison evidence, plus regression assertions for all new assets and
+  responsive case-study geometry. Lint, build/TypeScript, buyer journey, and
+  hierarchy smoke pass; the latter verifies three journeys, paired evidence,
+  proof links, zero overflow, and zero runtime errors at 1440, 768, and 390.
+- Recorded nine visible Velora/EduAILenz/Mudoinkle comparison captures under
+  `builder/evidence/round-190-showcase-parity`. Candidate `121918d` is local,
+  unpushed, and undeployed pending exact-source independent review.
+
 ## Round 188 — truthful Indianapolis service presence
 
 - Recorded Owner direction `2026-09-13-02`, confirming that Cyvexly can meet
