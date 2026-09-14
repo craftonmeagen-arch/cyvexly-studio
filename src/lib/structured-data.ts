@@ -23,6 +23,10 @@ const indianapolisArea = {
   },
 } as const;
 
+const indianaCities = ["Indianapolis", "Bloomington", "Evansville", "Jasper"].map(name => ({
+  "@type": "City", name, containedInPlace: { "@type": "State", name: "Indiana" },
+}));
+
 // Organization structured data (schema.org / JSON-LD) so search engines can
 // identify Cyvexly Studio as a real business entity with correct contact
 // details — part of vision §17's "searchable" launch requirement. Uses only
@@ -35,13 +39,13 @@ export const organizationJsonLd = {
   url: "https://cyvexly.com",
   logo: "https://cyvexly.com/icon.svg",
   description:
-    "Indiana-based web design and development studio serving businesses remotely across the United States, with in-person consultations available by appointment in the Indianapolis area.",
+    "Indiana-based web design and development studio serving Indianapolis, Bloomington, Evansville, and Jasper, with consultations by appointment and remote service across the United States.",
   areaServed: [
     {
       "@type": "Country",
       name: "United States",
     },
-    indianapolisArea,
+    ...indianaCities,
   ],
   address: {
     "@type": "PostalAddress",
@@ -74,6 +78,17 @@ export const indianapolisServiceJsonLd = {
     url: "https://cyvexly.com",
   },
   areaServed: indianapolisArea,
+} as const;
+
+export const indianaServiceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Indiana web design and development",
+  serviceType: "Website design and development",
+  description: "Custom websites, redesigns, and web applications for Indianapolis, Bloomington, Evansville, and Jasper businesses, with consultations by appointment and nationwide remote delivery.",
+  url: "https://cyvexly.com/indiana-web-design",
+  provider: { "@type": "Organization", name: siteConfig.name, url: "https://cyvexly.com" },
+  areaServed: indianaCities,
 } as const;
 
 // FAQPage structured data for the /faq route — flattens the already-published

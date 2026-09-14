@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IndianaServiceArea } from "@/components/indiana-service-area";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
@@ -195,6 +196,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+        <IndianaServiceArea />
       </main>
 
       <SiteFooter />
