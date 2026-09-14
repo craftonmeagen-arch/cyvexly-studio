@@ -3,6 +3,25 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 191 — distinct stories and native-size proof inspection
+
+- Advanced the local showcase candidate to exact source `7fb2a51`. EduAILenz
+  and Mudoinkle now have distinct tour and contribution headings rather than a
+  repeated generic narrative.
+- Added a demonstrated-capability statement to every verified journey and
+  keyboard-accessible same-tab inspection links for all desktop and phone proof
+  assets. Visible IAB use confirmed native-size EduAILenz desktop and Mudoinkle
+  phone evidence opens without popup dependence.
+- Clarified learner-route and multi-device-room proof boundaries. Lint,
+  62-route build/TypeScript, 39-route/20-context buyer journey, and responsive
+  hierarchy smoke pass with zero runtime errors or page-level overflow.
+- Opened the nine refreshed Velora/EduAILenz/Mudoinkle 1440/768/390 comparison
+  captures under `builder/evidence/round-191-showcase-inspectability`.
+  Candidate `7fb2a51` is unpushed and undeployed pending independent review.
+- Host policy rejected deletion of the exact ignored 17,444,333-byte hierarchy
+  scratch directory after path and inventory verification; it is recorded for
+  bounded cleanup without affecting source truth.
+
 ## Round 190 — real showcase evidence for EduAILenz and Mudoinkle
 
 - Opened the current Builder role through the canonical orientation and Owner

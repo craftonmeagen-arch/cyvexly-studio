@@ -2,22 +2,24 @@
 
 **Active product chunk:** Chunk 13 — EduAILenz/Mudoinkle Showcase Parity
 
-**Current position:** global round 190; Owner direction `2026-09-13-05`
+**Current position:** global round 191; Owner direction `2026-09-13-05`
 requires the Cyvexly-facing EduAILenz and Mudoinkle case studies to reach the
 accepted Velora showcase standard. Search monitoring continues without
 displacing this Builder priority. Mobile-app website integration is deferred.
 
-**Current product source:** `121918d` (local, unaccepted showcase-parity
+**Current product source:** `7fb2a51` (local, unaccepted showcase-parity
 candidate). Accepted/deployed source remains `2923ce5` until exact-source
 independent review permits publication.
 
-**Current implementation position:** the first coherent parity slice is built.
+**Current implementation position:** two coherent parity slices are built.
 Each case study now has three task/action/result journeys with large paired
 desktop/phone proof. EduAILenz uses accepted authenticated validation captures
 from exact Team 2 source `9e48f41d`, with an empty setup or synthetic test
 account and no student data. Mudoinkle uses three separately exercised live
 public staging preview states. Visible 1440/768/390 comparison captures against
-Velora and expanded responsive contracts pass. Independent review is next.
+Velora and expanded responsive contracts pass. Round 191 adds distinct product
+stories, explicit journey-capability language, and native-size proof links
+exercised in the visible browser. Independent review is next.
 
 **Scheduler state:** the Owner explicitly resumed the existing primary
 Cyvexly Builder at its existing twice-hourly GPT-5.6 Sol/high configuration and

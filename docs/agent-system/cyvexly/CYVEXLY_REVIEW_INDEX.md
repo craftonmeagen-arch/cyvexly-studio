@@ -6,8 +6,8 @@ or existing Owner-managed schedule.
 
 Current authoritative root: `C:/app projects/website-independent-review`.
 
-**Active review source:** `121918d`, the local Chunk 13 EduAILenz/Mudoinkle
-showcase-parity candidate. Review the rendered case studies and Round 190
+**Active review source:** `7fb2a51`, the local Chunk 13 EduAILenz/Mudoinkle
+showcase-parity candidate. Review the rendered case studies and Round 190/191
 evidence at desktop, tablet, and phone sizes; challenge evidence provenance,
 privacy, journey accuracy, status/limitation truth, external proof and inquiry
 paths, accessibility, and regression. No earlier publication reviews this
@@ -204,3 +204,8 @@ Builder Round 186 superseded that active review source with exact live source
 Article/Breadcrumb data, inquiry context, and expanded local/live contracts. A
 later independent review must evaluate `483975d` directly; passing local and
 canonical Builder proof does not substitute for independent challenge.
+
+Builder Round 191 superseded Round 190's candidate with exact active review
+source `7fb2a51`. The product retains the six paired verified journeys and adds
+distinct tour narratives, explicit capability statements, and native-size
+desktop/phone proof actions. No older publication covers this source.

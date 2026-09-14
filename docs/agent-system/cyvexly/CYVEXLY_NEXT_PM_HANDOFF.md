@@ -1,17 +1,13 @@
 # Cyvexly Build Team Project Manager — Next Handoff
 
-No current PM assessment round is recorded. Builder Round 177 reopens Chunk 5
-under Owner direction `2026-09-10-07` and declares exact review candidate
-`b14a92b`. It adds consent-controlled minimal analytics, synthetic search and
-indexing gate proof, truthful Stripe Invoicing readiness copy, and an Owner-use
-Guardio packet without activating or submitting anything.
+Builder Round 191 advances Chunk 13 — EduAILenz/Mudoinkle Showcase Parity — to
+exact local active review source `7fb2a51`. Accepted/deployed source remains
+`2923ce5`. The next PM invocation should preserve the independent-review gate,
+verify that no older report is counted as coverage, and keep the candidate
+unpushed and undeployed until exact-source review is clean.
 
-The next PM invocation should preserve accepted/deployed source `4232574`, the
-active `b14a92b` independent-review gate, and all Owner/account closure items.
-Do not collapse synthetic proof into activation evidence. Chunk 11 product work
-is closed with its real-delivery gate consolidated into Chunk 5; Chunk 6 still
-needs one independent visual review. Keep every outside product and
-HoneyHearted assignment in Team 2 and do not alter scheduler state.
-
-Historical continuity: Chunk 9 closed at `ca2b84e` after the EduAILenz &
-Mudoinkle Showcase Quality reviews; it is not the current product assignment.
+The candidate uses three verified paired desktop/phone journeys per product,
+distinct product-specific stories, explicit task/action/result/capability
+language, native-size proof inspection, and truthful authentication/staging/
+acceptance limits. Underlying applications and HoneyHearted remain Team 2;
+mobile-app website integration remains deferred. Do not alter scheduler state.

@@ -1,8 +1,8 @@
 # Cyvexly Current State
 
-**Last completed global round:** 189
+**Last completed global round:** 190
 
-**Current global round:** 190
+**Current global round:** 191
 
 **Active chunk:** Chunk 13 — EduAILenz/Mudoinkle Showcase Parity
 
@@ -11,14 +11,36 @@ Cyvexly-facing EduAILenz and Mudoinkle case studies to the accepted Velora
 showcase standard. Preserve the live search foundation, truthful Indianapolis
 availability, and the mobile-app integration deferral.
 
-**Current product source:** `121918d` — local, unaccepted Chunk 13 showcase-
+**Current product source:** `7fb2a51` — local, unaccepted Chunk 13 showcase-
 parity candidate. It is intentionally unpushed and undeployed pending exact-
 source independent review. Accepted/deployed product source remains `2923ce5`.
+
+**Accepted repository source:** `2923ce5`
+
+**Active review source:** `7fb2a51`
 
 **Current deployed product source:** `2923ce5`; its canonical production
 deployment passed the complete live search-readiness and buyer-journey
 contracts on September 13, 2026, and IndexNow accepted all 26 canonical sitemap
 URLs with HTTP 200.
+
+## Round 191 — distinct stories and inspectable proof
+
+- Advanced Round 190's evidence candidate to exact local source `7fb2a51`.
+  Both product tours now use distinct product-specific headings rather than one
+  repeated generic story.
+- Every journey now states its task, action, visible result, and demonstrated
+  Cyvexly capability. All six desktop and six phone assets have keyboard-
+  accessible same-tab native-size inspection links.
+- Clarified that EduAILenz learner routes are source-verified but not presented
+  as accepted learner journeys, and that Mudoinkle's previews do not establish
+  complete multi-device room acceptance.
+- Lint, 62-route build/TypeScript, buyer journey, and expanded hierarchy smoke
+  pass. Visible IAB proof exercised EduAILenz desktop and Mudoinkle phone image
+  paths; nine refreshed comparisons pass at 1440, 768, and 390.
+- Exact candidate `7fb2a51` remains unpushed and undeployed pending independent
+  review. An exact 17,444,333-byte ignored hierarchy scratch directory remains
+  only because host policy rejected verified recursive deletion.
 
 ## Round 190 — showcase parity brief and Builder restart
 

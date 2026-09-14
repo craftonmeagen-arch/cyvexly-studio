@@ -8,13 +8,14 @@ approved legal baseline, and live public indexing. Owner direction
 `2026-09-13-01` adds standards-based search visibility and useful content growth
 without changing the accepted product design or national service model.
 
-Current Builder position: Chunk 12 is active. Round 185 implemented Phase 1 at
-`feb0b2d`. Round 186 deployed source `483975d`, adding the first deliberately
-small useful-content cluster: a buyer-resource hub, an exact Cyvexly website-
-cost guide, and a stage-by-stage custom-website-inclusions guide. They are
-connected through navigation, Services, Pricing, Process, inquiry context, the
-sitemap, Article/Breadcrumb data, and expanded live regression proof. The
-approved visual system and existing commercial truth are preserved.
+Current Builder position: Chunk 13 — EduAILenz/Mudoinkle Showcase Parity — is
+active under Owner direction `2026-09-13-05`. Exact local candidate `7fb2a51`
+presents three verified paired desktop/phone journeys per product, distinct
+product stories, explicit task/action/result/capability language, native-size
+proof inspection, and truthful authentication/staging/acceptance boundaries.
+Accepted/deployed source remains `2923ce5` pending independent review. The
+approved visual system, accepted Velora presentation, and live search
+foundation remain preserved.
 
 The intended buyer outcome remains a distinctive, trustworthy cyber-blue glass
 studio experience with inspectable proof, understandable price/scope, and a

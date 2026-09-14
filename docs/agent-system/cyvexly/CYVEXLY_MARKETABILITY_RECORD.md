@@ -30,7 +30,7 @@ controls remain the source of truth for those values.
 | Inquiry email | Complete and inbox-confirmed | The Resend domain and protected Render key are configured. Contact, Planner, and Consultation each produced the studio notification and requester confirmation in the Owner-supplied inbox proof. |
 | Payments | Deferred | Stripe verification and controlled invoice proof wait for the Owner's required business information. No public checkout or active-payment claim is allowed. |
 | Mobile application service | Confirmed; website integration deferred | Google Business Profile includes the capability. Owner direction `2026-09-13-04` defers new website integration until the Owner resumes it. |
-| EduAILenz/Mudoinkle portfolio proof | Candidate ready for independent review | Local candidate `121918d` replaces generic journey art with three real, paired desktop/phone journeys per product; it is not public until exact-source review passes. |
+| EduAILenz/Mudoinkle portfolio proof | Candidate ready for independent review | Local candidate `7fb2a51` presents three real paired journeys per product, distinct product stories, explicit capability explanations, and native-size proof inspection; it is not public until exact-source review passes. |
 
 ## Confirmed public business facts
 
@@ -72,11 +72,12 @@ controls remain the source of truth for those values.
   exceptions for business, tax, security, dispute, and legal records.
 - The site does not fabricate testimonials, clients, revenue, outcomes,
   credentials, awards, or payment availability.
-- Local Chunk 13 candidate `121918d` materially strengthens portfolio proof:
+- Local Chunk 13 candidate `7fb2a51` materially strengthens portfolio proof:
   EduAILenz uses privacy-safe authenticated validation captures from its exact
   accepted Team 2 source, and Mudoinkle uses three live public staging preview
   states. Each case now explains three buyer-readable task/action/results with
-  desktop and phone evidence. This candidate is awaiting independent review
+  desktop and phone evidence, explicit demonstrated-capability explanations,
+  and native-size inspection links. This candidate is awaiting independent review
   and is not yet a public marketing milestone.
 
 ### 2. Commercial pages that search engines and buyers can understand

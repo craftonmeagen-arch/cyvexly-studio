@@ -19,18 +19,20 @@ City-scoped Service data, internal links, inquiry context, and 26-URL sitemap
 passed locally and on canonical production. No storefront or public street
 address is claimed. IndexNow accepted all 26 canonical URLs with HTTP 200.
 
-Round 190 produced local, unaccepted Chunk 13 candidate `121918d`. It replaces
+Round 191 produced local, unaccepted Chunk 13 candidate `7fb2a51`. It replaces
 generic tour illustrations with three paired desktop/phone task journeys per
 product. EduAILenz evidence hash-matches accepted Team 2 source `9e48f41d` and
 contains no real student data; Mudoinkle evidence comes from three separately
-exercised live public staging previews. Nine rendered comparison captures
-against Velora and expanded desktop/tablet/phone runtime contracts pass. The
+exercised live public staging previews. The follow-up slice gives each product
+a distinct tour, names the transferable capability in every journey, and
+exposes all desktop/phone assets through native-size inspection links. Nine
+refreshed comparisons against Velora and responsive runtime contracts pass. The
 candidate is intentionally unpushed and undeployed pending independent review.
 
 ## First action
 
 1. Check the external review root for an independent publication that evaluates
-   exact candidate `121918d`. Inspect the report and evidence; if clean, follow
+   exact candidate `7fb2a51`. Inspect the report and evidence; if clean, follow
    the normal acceptance/publication path. If it finds defects, fix them without
    modifying either outside application, then issue a new exact review source.
 2. Monitor the single Google service-area Business Profile. It has the confirmed
@@ -41,7 +43,7 @@ candidate is intentionally unpushed and undeployed pending independent review.
    phone remains pending because Google rejected it during setup; unconfirmed
    hours/photos, ads, Workspace, and storefront claims were skipped.
 3. Do not treat older Auditor R152 or search-source reviews as coverage of
-   candidate `121918d`.
+   candidate `7fb2a51`.
 4. Monitor the accepted Google recrawl requests for Resources and both guide
    routes, the new Indianapolis route, and Bing's processing sitemap. Avoid
    repeated unchanged submissions.
@@ -51,6 +53,11 @@ candidate is intentionally unpushed and undeployed pending independent review.
    authority opportunities supported by actual eligibility. Do not begin the
    deferred mobile-app website integration, create bulk listings, or invent
    locality, reviews, partnerships, or recognition.
+7. Cleanup follow-up: exact ignored scratch path
+   `C:/app projects/website/.tmp/cyvexly-round-191-hierarchy` contains 30
+   regenerable files totaling 17,444,333 bytes. Host policy rejected recursive
+   deletion after its resolved workspace-contained path and inventory were
+   verified. Remove only that exact directory when policy permits.
 
 ## Live release proof
 

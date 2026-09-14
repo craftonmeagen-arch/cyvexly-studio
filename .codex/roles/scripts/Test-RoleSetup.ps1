@@ -42,14 +42,14 @@ foreach($role in $orientations.Keys){
     foreach($field in @('name','description','developer_instructions')){if($config -notmatch "(?m)^$field\s*="){throw "Role missing field: $role $field"}}
 }
 $currentSourceMarkers=@{
-    'CYVEXLY_ASSIGNMENT.md'=@('Cyvexly Build Team','Chunk 9','EduAILenz & Mudoinkle Showcase Quality')
-    'CYVEXLY_AUDITOR_PM_PROMPT.md'=@('Cyvexly Build Team','Active review source','Chunk 9')
+    'CYVEXLY_ASSIGNMENT.md'=@('Cyvexly Build Team','Chunk 13','Showcase Parity')
+    'CYVEXLY_AUDITOR_PM_PROMPT.md'=@('Cyvexly Build Team','Active review source','Chunk 13')
     'CYVEXLY_COUNCIL_PM_PROMPT.md'=@('Cyvexly Build Team','BUYER-JOURNEY')
     'CYVEXLY_FUNCTIONAL_PM_PROMPT.md'=@('Cyvexly Build Team','CURRENT ACCEPTED CYVEXLY SOURCE')
-    'CYVEXLY_PM_CURRENT_STATE.md'=@('Cyvexly Build Team','Chunk 9')
-    'CYVEXLY_NEXT_PM_HANDOFF.md'=@('Cyvexly Build Team','Chunk 9')
+    'CYVEXLY_PM_CURRENT_STATE.md'=@('Cyvexly Build Team','Chunk 13')
+    'CYVEXLY_NEXT_PM_HANDOFF.md'=@('Cyvexly Build Team','Chunk 13')
     'CYVEXLY_REVIEW_INDEX.md'=@('Cyvexly Build Team','Independent Forensic Auditor')
-    'CYVEXLY_VISION.md'=@('Chunk 9','EduAILenz & Mudoinkle Showcase Quality')
+    'CYVEXLY_VISION.md'=@('Chunk 13','Showcase Parity')
 }
 foreach($entry in $currentSourceMarkers.GetEnumerator()){
     $text=Get-Content (Join-Path $lane $entry.Key) -Raw
