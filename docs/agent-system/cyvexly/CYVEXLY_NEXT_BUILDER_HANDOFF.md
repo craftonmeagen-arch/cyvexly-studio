@@ -29,12 +29,23 @@ exposes all desktop/phone assets through native-size inspection links. Nine
 refreshed comparisons against Velora and responsive runtime contracts pass. The
 candidate is intentionally unpushed and undeployed pending independent review.
 
+Round 192 confirmed that no independent publication evaluates `7fb2a51`, no
+live primary Cyvexly Auditor task is present, and the stored primary Auditor
+automation remains `PAUSED`. Direction `2026-09-13-05` resumed only the Builder
+and forbids other scheduler changes. Product/test paths remain exact
+`7fb2a51`; role setup, hot-file caps, and whitespace checks pass. Do not push or
+deploy until an explicit manual primary-Auditor invocation reviews this source,
+or the Owner separately authorizes the Auditor scheduler to resume.
+
 ## First action
 
-1. Check the external review root for an independent publication that evaluates
-   exact candidate `7fb2a51`. Inspect the report and evidence; if clean, follow
-   the normal acceptance/publication path. If it finds defects, fix them without
-   modifying either outside application, then issue a new exact review source.
+1. The exact next dependency is a manual primary Cyvexly Auditor invocation
+   against `7fb2a51`, or separate Owner authorization to resume its stored
+   automation. The Builder may check for a later publication but must not change
+   the Auditor scheduler, self-certify the gate, push, or deploy. When a review
+   arrives, inspect its report and evidence; if clean, follow the normal
+   acceptance/publication path. If it finds defects, fix them without modifying
+   either outside application, then issue a new exact review source.
 2. Monitor the single Google service-area Business Profile. It has the confirmed
    name, `Website designer` category, Indianapolis area, canonical website,
    approved description, hidden private address, and accurate services. Google

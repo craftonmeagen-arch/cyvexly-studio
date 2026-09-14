@@ -1,8 +1,8 @@
 # Cyvexly Current State
 
-**Last completed global round:** 190
+**Last completed global round:** 191
 
-**Current global round:** 191
+**Current global round:** 192
 
 **Active chunk:** Chunk 13 — EduAILenz/Mudoinkle Showcase Parity
 
@@ -23,6 +23,22 @@ source independent review. Accepted/deployed product source remains `2923ce5`.
 deployment passed the complete live search-readiness and buyer-journey
 contracts on September 13, 2026, and IndexNow accepted all 26 canonical sitemap
 URLs with HTTP 200.
+
+## Round 192 — exact-source review path routed
+
+- Confirmed no Auditor, Council, or Functional publication evaluates exact
+  candidate `7fb2a51`; the external Auditor publication stream still ends at
+  R152 on old source `85c128e`, and only legacy Team 2 inbox items remain.
+- Confirmed there is no live primary Cyvexly Auditor task and the stored Auditor
+  automation remains `PAUSED`. Owner direction `2026-09-13-05` resumed only the
+  Builder, so this role did not alter any scheduler or self-certify review.
+- Product and test paths remain byte-identical to `7fb2a51`; role setup, hot-file
+  caps, and whitespace validation pass. No build/browser rerun was repeated
+  because source and review evidence are unchanged from Round 191.
+- Acceptance, push, and deployment remain gated on an explicit manual primary
+  Auditor invocation against `7fb2a51` or later Owner authorization to resume
+  that Auditor. The exact ignored Round 191 scratch directory remains because
+  host policy again rejected its verified workspace-contained deletion.
 
 ## Round 191 — distinct stories and inspectable proof
 

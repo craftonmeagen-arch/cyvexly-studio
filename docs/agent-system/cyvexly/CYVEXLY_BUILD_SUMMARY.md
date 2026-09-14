@@ -3,6 +3,19 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 192 — independent-review path boundary
+
+- No publication covers exact candidate `7fb2a51`; the external Auditor stream
+  still ends at R152 on old source `85c128e`, no live primary Auditor task is
+  present, and its stored automation remains paused.
+- Direction `2026-09-13-05` resumed only the Builder, so no scheduler changed
+  and no self-review was substituted. Product/test paths remain exact
+  `7fb2a51`; role setup, hot-file caps, and whitespace checks pass.
+- Acceptance, push, and deployment require a manual primary-Auditor invocation
+  against `7fb2a51` or later Owner authorization to resume that automation.
+  Host policy again rejected removal of the verified 17,444,333-byte ignored
+  Round 191 scratch directory; it remains the only worktree exception.
+
 ## Round 191 — distinct stories and native-size proof inspection
 
 - Advanced the local showcase candidate to exact source `7fb2a51`. EduAILenz
