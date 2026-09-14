@@ -32,33 +32,45 @@ const productStories = {
     journeys: [
       {
         number: "01",
-        eyebrow: "Plan → review",
-        title: "Carry one idea through the teaching cycle",
-        copy: "A teacher begins with a topic, text, or photo, chooses the class context and supported standards, reviews the draft, and keeps that context as the work moves into teaching and evidence.",
-        result: "Capability: a connected workflow instead of seven disconnected tools.",
-        image: "/media/eduailenz-tour-workflow.png",
-        alt: "Public EduAILenz product tour showing Plan, Teach, Check, and Document stages",
-        proofLabel: "Public guided-tour illustration",
+        eyebrow: "Topic → constraints → workspace",
+        title: "Shape a quick lesson around the class in front of you",
+        copy: "The authenticated setup starts with the teaching need, then makes grade, subject, and available time explicit before a workspace can be created.",
+        result: "Visible result: a focused lesson setup that keeps classroom constraints attached to the request.",
+        image: "/media/eduailenz-proof-quick-lesson.png",
+        mobileImage: "/media/eduailenz-proof-quick-lesson-mobile.png",
+        alt: "Authenticated EduAILenz Quick Lesson setup on desktop with topic, grade, subject, and time controls",
+        mobileAlt: "Authenticated EduAILenz Quick Lesson setup arranged for a phone",
+        proofLabel: "Accepted authenticated validation · no student data",
+        screenLabel: "Quick Lesson setup",
+        desktopSize: [1440, 900],
       },
       {
         number: "02",
-        eyebrow: "Teach → participate",
-        title: "Turn a reviewed lesson into the right classroom format",
-        copy: "Teachers can choose an interactive lesson, digital quiz, group activity, live game, or printable practice rather than forcing every class into the same delivery model.",
-        result: "Capability: one source can support individual, collaborative, live, and printable moments.",
-        image: "/media/eduailenz-tour-classroom.png",
-        alt: "Public EduAILenz product tour showing classroom resource formats",
-        proofLabel: "Public guided-tour illustration",
+        eyebrow: "Student → goal → observation",
+        title: "Record progress while the evidence is still useful",
+        copy: "BloomED gives an educator a deliberate path from student and goal selection to the dated value and optional observation, with a faster quick-log path alongside it.",
+        result: "Visible result: structured progress evidence that can support the next teacher-reviewed decision.",
+        image: "/media/eduailenz-proof-progress-log.png",
+        mobileImage: "/media/eduailenz-proof-progress-log-mobile.png",
+        alt: "Authenticated BloomED progress log on desktop with student, goal, value, date, and notes fields",
+        mobileAlt: "Authenticated BloomED progress log arranged for a phone",
+        proofLabel: "Accepted authenticated validation · synthetic test account",
+        screenLabel: "BloomED progress log",
+        desktopSize: [1440, 900],
       },
       {
         number: "03",
-        eyebrow: "Notice → document",
-        title: "Bring the work between meetings into view",
-        copy: "BloomED groups daily priorities, student evidence, services, family follow-up, dates, and teacher-reviewed reports so the next support decision is easier to see.",
-        result: "Capability: role-aware information design for dense, sensitive operational work.",
-        image: "/media/eduailenz-tour-bloomed.png",
-        alt: "Public EduAILenz product tour showing the illustrative BloomED Teacher Today workspace",
-        proofLabel: "Public guided-tour illustration",
+        eyebrow: "Range → goals → editable narrative",
+        title: "Turn accumulated evidence into a reviewable report",
+        copy: "The report workspace keeps the student, time period, goal selection, and optional comparison context visible before generating an editable progress narrative.",
+        result: "Visible result: a bounded reporting step that keeps educator review in the workflow.",
+        image: "/media/eduailenz-proof-reports.png",
+        mobileImage: "/media/eduailenz-proof-reports-mobile.png",
+        alt: "Authenticated BloomED report generator on desktop with student, date range, and report controls",
+        mobileAlt: "Authenticated BloomED report generator arranged for a phone",
+        proofLabel: "Accepted authenticated validation · synthetic test account",
+        screenLabel: "BloomED reports",
+        desktopSize: [1440, 900],
       },
     ],
   },
@@ -82,33 +94,45 @@ const productStories = {
     journeys: [
       {
         number: "01",
-        eyebrow: "Host → room → phones",
-        title: "Explain a multi-screen game in three steps",
-        copy: "The host launches the shared view, friends join with a room code or QR path, and their phones become the controls for the round.",
-        result: "Capability: different device roles stay understandable before anyone has to sign in.",
-        image: "/media/mudoinkle-tour-setup.png",
-        alt: "Public Mudoinkle tour showing host launch, friend join, and phone-controller steps",
-        proofLabel: "Public staging product tour",
+        eyebrow: "Prompt → captions → reaction",
+        title: "Understand Awmuhog before opening a room",
+        copy: "The live public sample presents the image prompt, competing captions, and next-prompt action in the same visual rhythm a player will meet during the game.",
+        result: "Visible result: the caption-battle decision pattern is understandable without an account.",
+        image: "/media/mudoinkle-proof-awmuhog.png",
+        mobileImage: "/media/mudoinkle-proof-awmuhog-mobile.png",
+        alt: "Live Mudoinkle Awmuhog preview on desktop with an image prompt and two sample captions",
+        mobileAlt: "Live Mudoinkle Awmuhog preview arranged for a phone",
+        proofLabel: "Live public staging preview",
+        screenLabel: "Awmuhog sample round",
+        desktopSize: [1200, 720],
       },
       {
         number: "02",
-        eyebrow: "Try → choose → react",
-        title: "Let visitors sample the games before hosting",
-        copy: "A public interactive preview demonstrates the tone and decision pattern of Awmuhog, Witigglies, and List Off without asking for an account or a live room.",
-        result: "Capability: a low-friction product preview that helps people understand the fun first.",
-        image: "/media/mudoinkle-tour-preview.png",
-        alt: "Interactive Mudoinkle staging preview with sample Awmuhog responses",
+        eyebrow: "Secret word → taboo clues → pass",
+        title: "Make a one-phone game legible at a glance",
+        copy: "Witigglies exposes the timer, secret word, forbidden clues, and next-card action together so the person holding the phone knows what to protect and what to do next.",
+        result: "Visible result: a pass-and-play round with a distinct information hierarchy and control model.",
+        image: "/media/mudoinkle-proof-witigglies.png",
+        mobileImage: "/media/mudoinkle-proof-witigglies-mobile.png",
+        alt: "Live Mudoinkle Witigglies preview on desktop with timer, secret word, and forbidden clues",
+        mobileAlt: "Live Mudoinkle Witigglies preview arranged for a phone",
         proofLabel: "Live public interactive preview",
+        screenLabel: "Witigglies sample round",
+        desktopSize: [1200, 720],
       },
       {
         number: "03",
-        eyebrow: "Choose the play model",
-        title: "Give three games three distinct reasons to play",
-        copy: "Pass-the-phone word play, room-based caption judging, and rapid-fire categories each have their own promise, audience, and interaction model inside one brand system.",
-        result: "Capability: a shared platform that does not flatten different products into one generic flow.",
-        image: "/media/mudoinkle-tour-games.png",
-        alt: "Mudoinkle staging game shelf with Witigglies, Awmuhog, and List Off",
-        proofLabel: "Public staging game catalog",
+        eyebrow: "Category → answers → score",
+        title: "Keep a rapid-fire group round moving",
+        copy: "List Off puts the active topic, accepted answer, next-answer action, and new-category control into one fast scan for players following the round.",
+        result: "Visible result: a real-time category loop that reads differently from the other two games.",
+        image: "/media/mudoinkle-proof-list-off.png",
+        mobileImage: "/media/mudoinkle-proof-list-off-mobile.png",
+        alt: "Live Mudoinkle List Off preview on desktop with topic, accepted answer, and scoring controls",
+        mobileAlt: "Live Mudoinkle List Off preview arranged for a phone",
+        proofLabel: "Live public interactive preview",
+        screenLabel: "List Off sample round",
+        desktopSize: [1200, 720],
       },
     ],
   },
@@ -240,8 +264,8 @@ export function ExternalProductCaseStudy({
             </h2>
             <p className="mt-5 text-sm leading-7 text-cool-graphite sm:text-base">
               {slug === "eduailenz"
-                ? "The lead image is a current public capture. The tour below uses clearly labeled public marketing illustrations to explain user tasks without implying authenticated workflow acceptance or exposing student data."
-                : "These current public staging views pair each user task with the visible result and capability it demonstrates, without requiring an account or a live room."}
+                ? "The lead image is a current public capture. The tour pairs it with accepted authenticated validation captures from the exact Team 2 source commit, using an empty lesson setup and a synthetic test account—never real student data."
+                : "These live public staging previews show three distinct game loops on desktop and phone. They demonstrate the preview experience, not completed multi-device room acceptance or a production launch."}
             </p>
             <ButtonLink href={study.demoHref} target="_blank" rel="noreferrer" variant="secondary" className="mt-7">
               Open the current public experience <ArrowMark />
@@ -251,8 +275,29 @@ export function ExternalProductCaseStudy({
           <div className="mt-12 space-y-10">
             {story.journeys.map((journey, index) => (
               <article key={journey.image} className="grid items-center gap-7 lg:grid-cols-[1.28fr_0.72fr] lg:gap-10">
-                <div className={`overflow-hidden rounded-3xl border border-smoke-glass bg-white shadow-[0_34px_80px_-46px_rgba(7,31,67,0.84)] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <Image src={journey.image} alt={journey.alt} width={1200} height={720} className="h-auto w-full" sizes="(min-width: 1024px) 65vw, 94vw" />
+                <div className={`relative pb-12 sm:pb-16 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+                  <div className="overflow-hidden rounded-3xl border border-smoke-glass bg-[#071b39] shadow-[0_34px_80px_-46px_rgba(7,31,67,0.84)]">
+                    <PreviewChrome label={`${study.name} · ${journey.screenLabel}`} />
+                    <Image
+                      src={journey.image}
+                      alt={journey.alt}
+                      width={journey.desktopSize[0]}
+                      height={journey.desktopSize[1]}
+                      className="h-auto w-full"
+                      sizes="(min-width: 1024px) 65vw, 94vw"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 right-3 w-[27%] min-w-[106px] max-w-[168px] overflow-hidden rounded-[1.45rem] border-[4px] border-[#071b39] bg-[#071b39] shadow-[0_24px_56px_-20px_rgba(0,0,0,0.88),0_0_0_1px_rgba(255,255,255,0.28)] sm:right-6">
+                    <PreviewChrome label={study.name} compact />
+                    <Image
+                      src={journey.mobileImage}
+                      alt={journey.mobileAlt}
+                      width={390}
+                      height={844}
+                      className="h-auto w-full"
+                      sizes="168px"
+                    />
+                  </div>
                 </div>
                 <div className={index % 2 === 1 ? "lg:order-1" : ""}>
                   <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyber-blue">{journey.proofLabel}</p>

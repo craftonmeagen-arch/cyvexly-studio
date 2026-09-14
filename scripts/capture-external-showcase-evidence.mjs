@@ -3,8 +3,9 @@ import os from "node:os";
 import path from "node:path";
 import { spawn } from "node:child_process";
 
-const outputDir = path.resolve("public/media");
+const outputDir = path.resolve(process.env.CAPTURE_OUTPUT_DIR ?? "public/media");
 const cdpPort = Number(process.env.CDP_PORT ?? 9341);
+const reviewBaseUrl = process.env.REVIEW_BASE_URL?.replace(/\/$/, "");
 const chromeCandidates = [
   "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
@@ -21,6 +22,25 @@ const captures = [
   { name: "mudoinkle-tour-setup.png", url: "https://mudoinkle-staging.onrender.com/", selector: "#how-it-works", width: 1200, height: 720 },
   { name: "mudoinkle-tour-preview.png", url: "https://mudoinkle-staging.onrender.com/", selector: "#taste-of-chaos", width: 1200, height: 720 },
   { name: "mudoinkle-tour-games.png", url: "https://mudoinkle-staging.onrender.com/", selector: "#games", width: 1200, height: 720 },
+  { name: "mudoinkle-proof-awmuhog.png", url: "https://mudoinkle-staging.onrender.com/", selector: "#taste-of-chaos", tabText: "Awmuhog", width: 1200, height: 720 },
+  { name: "mudoinkle-proof-awmuhog-mobile.png", url: "https://mudoinkle-staging.onrender.com/", selector: "#taste-of-chaos", tabText: "Awmuhog", width: 390, height: 844 },
+  { name: "mudoinkle-proof-witigglies.png", url: "https://mudoinkle-staging.onrender.com/", selector: "#taste-of-chaos", tabText: "Witigglies", width: 1200, height: 720 },
+  { name: "mudoinkle-proof-witigglies-mobile.png", url: "https://mudoinkle-staging.onrender.com/", selector: "#taste-of-chaos", tabText: "Witigglies", width: 390, height: 844 },
+  { name: "mudoinkle-proof-list-off.png", url: "https://mudoinkle-staging.onrender.com/", selector: "#taste-of-chaos", tabText: "List Off", width: 1200, height: 720 },
+  { name: "mudoinkle-proof-list-off-mobile.png", url: "https://mudoinkle-staging.onrender.com/", selector: "#taste-of-chaos", tabText: "List Off", width: 390, height: 844 },
+  ...(reviewBaseUrl
+    ? [
+        { name: "review-velora-desktop-1440x900.png", url: `${reviewBaseUrl}/work/velora-dining`, selector: "#capabilities", scrollOffset: -24, width: 1440, height: 900 },
+        { name: "review-velora-tablet-768x1024.png", url: `${reviewBaseUrl}/work/velora-dining`, selector: "#capabilities", scrollOffset: -16, width: 768, height: 1024 },
+        { name: "review-velora-phone-390x844.png", url: `${reviewBaseUrl}/work/velora-dining`, selector: "#capabilities", scrollOffset: -8, width: 390, height: 844 },
+        { name: "review-eduailenz-desktop-1440x900.png", url: `${reviewBaseUrl}/work/eduailenz`, selector: "#product-tour", scrollOffset: -24, width: 1440, height: 900 },
+        { name: "review-eduailenz-tablet-768x1024.png", url: `${reviewBaseUrl}/work/eduailenz`, selector: "#product-tour", scrollOffset: -16, width: 768, height: 1024 },
+        { name: "review-eduailenz-phone-390x844.png", url: `${reviewBaseUrl}/work/eduailenz`, selector: "#product-tour", scrollOffset: -8, width: 390, height: 844 },
+        { name: "review-mudoinkle-desktop-1440x900.png", url: `${reviewBaseUrl}/work/mudoinkle`, selector: "#product-tour", scrollOffset: -24, width: 1440, height: 900 },
+        { name: "review-mudoinkle-tablet-768x1024.png", url: `${reviewBaseUrl}/work/mudoinkle`, selector: "#product-tour", scrollOffset: -16, width: 768, height: 1024 },
+        { name: "review-mudoinkle-phone-390x844.png", url: `${reviewBaseUrl}/work/mudoinkle`, selector: "#product-tour", scrollOffset: -8, width: 390, height: 844 },
+      ]
+    : []),
 ];
 
 async function findChrome() {
@@ -85,7 +105,7 @@ async function waitForPage(client, expectedUrl) {
   for (let attempt = 0; attempt < 80; attempt += 1) {
     const state = await evaluate(
       client,
-      `JSON.stringify({readyState: document.readyState, url: location.href, imagesReady: Array.from(document.images).every((image) => image.complete), hasHeading: Boolean(document.querySelector("h1"))})`,
+      `JSON.stringify({readyState: document.readyState, url: location.href, imagesReady: Array.from(document.images).filter((image) => image.getBoundingClientRect().top < innerHeight + 120).every((image) => image.complete), hasHeading: Boolean(document.querySelector("h1"))})`,
     );
     const parsed = JSON.parse(state);
     if (parsed.readyState !== "loading" && parsed.url.startsWith(expectedUrl) && parsed.imagesReady && parsed.hasHeading) {
@@ -109,12 +129,29 @@ async function capture(client, item) {
   await client.send("Page.navigate", { url: item.url });
   await waitForPage(client, item.url);
 
+  if (item.tabText) {
+    const clicked = await evaluate(
+      client,
+      `(() => { const node = Array.from(document.querySelectorAll('[role="tab"]')).find((tab) => tab.textContent?.includes(${JSON.stringify(item.tabText)})); if (!node) return false; node.click(); return true; })()`,
+    );
+    if (!clicked) throw new Error(`Missing ${item.tabText} preview tab on ${item.url}`);
+    await new Promise((resolve) => setTimeout(resolve, 350));
+  }
+
   if (item.selector) {
     const found = await evaluate(
       client,
-      `(() => { const node = document.querySelector(${JSON.stringify(item.selector)}); if (!node) return false; node.scrollIntoView({block: "start"}); window.scrollBy(0, ${item.scrollOffset ?? -24}); return true; })()`,
+      `(() => { const node = document.querySelector(${JSON.stringify(item.selector)}); if (!node) return false; document.documentElement.style.scrollBehavior = "auto"; const top = node.getBoundingClientRect().top + window.scrollY + ${item.scrollOffset ?? -24}; window.scrollTo({top: Math.max(0, top), behavior: "instant"}); return true; })()`,
     );
     if (!found) throw new Error(`Missing selector ${item.selector} on ${item.url}`);
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      const imagesReady = await evaluate(
+        client,
+        `Array.from(document.images).filter((image) => { const rect = image.getBoundingClientRect(); return rect.bottom > -120 && rect.top < innerHeight + 120; }).every((image) => image.complete)`,
+      );
+      if (imagesReady) break;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
     await new Promise((resolve) => setTimeout(resolve, 500));
   } else {
     await evaluate(client, "window.scrollTo(0, 0)");
@@ -155,8 +192,14 @@ async function main() {
       client.send("Network.enable"),
     ]);
 
+    const captureMatch = process.env.CAPTURE_MATCH;
+    const selectedCaptures = captureMatch
+      ? captures.filter((item) => item.name.includes(captureMatch))
+      : captures;
+    if (selectedCaptures.length === 0) throw new Error(`No captures matched ${captureMatch}`);
+
     const written = [];
-    for (const item of captures) written.push(await capture(client, item));
+    for (const item of selectedCaptures) written.push(await capture(client, item));
     process.stdout.write(`${JSON.stringify({ capturedAt: new Date().toISOString(), written }, null, 2)}\n`);
   } finally {
     client?.close();

@@ -1102,6 +1102,47 @@ async function main() {
     await new Promise((resolve) => setTimeout(resolve, 150));
     await capture(client, "planner-storage-phone.png");
 
+    const externalCaseStudies = [];
+    for (const slug of ["eduailenz", "mudoinkle"]) {
+      for (const viewport of [
+        { label: "desktop", width: 1440, height: 900 },
+        { label: "tablet", width: 768, height: 1024 },
+        { label: "phone", width: 390, height: 844 },
+      ]) {
+        await openRoute(client, `/work/${slug}#product-tour`, viewport.width, viewport.height);
+        for (let attempt = 0; attempt < 24; attempt += 1) {
+          if (await evaluate(client, "Array.from(document.querySelectorAll('#product-tour article:first-of-type img')).every((image) => image.complete && image.naturalWidth > 0)")) break;
+          await new Promise((resolve) => setTimeout(resolve, 125));
+        }
+        const layout = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+          const section = document.querySelector('#product-tour');
+          const firstCard = section.querySelector('article');
+          const images = [...firstCard.querySelectorAll('img')];
+          const link = section.querySelector('a[target="_blank"]');
+          return {
+            slug: ${JSON.stringify(slug)},
+            viewport: ${JSON.stringify(viewport.label)},
+            journeys: section.querySelectorAll('article').length,
+            firstCardImages: images.length,
+            firstCardImagesReady: images.every((image) => image.complete && image.naturalWidth > 0),
+            firstCardTop: firstCard.getBoundingClientRect().top,
+            firstCardWidth: firstCard.getBoundingClientRect().width,
+            sectionWidth: section.getBoundingClientRect().width,
+            proofLink: link?.getAttribute('href') ?? null,
+            overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+          };
+        })())`));
+        assert.equal(layout.journeys, 3, `${slug} no longer presents three evidenced journeys`);
+        assert.equal(layout.firstCardImages, 2, `${slug} first journey lost desktop or phone evidence`);
+        assert.equal(layout.firstCardImagesReady, true, `${slug} first journey evidence did not render`);
+        assert.ok(layout.firstCardTop < viewport.height, `${slug} first journey misses the ${viewport.label} tour viewport`);
+        assert.ok(layout.firstCardWidth <= layout.sectionWidth + 1, `${slug} first journey exceeds its section width`);
+        assert.match(layout.proofLink ?? "", /^https:\/\//, `${slug} lost its external proof link`);
+        assert.ok(layout.overflow <= 1, `${slug} showcase causes ${viewport.label} horizontal overflow`);
+        externalCaseStudies.push(layout);
+      }
+    }
+
     assert.deepEqual(failures, []);
     console.log(JSON.stringify({
       homeTimingDesktop,
@@ -1133,6 +1174,7 @@ async function main() {
       plannerStoragePhone,
       nexoraPreviewDesktop,
       nexoraPreviewPhone,
+      externalCaseStudies,
       viewports: ["1280x720", "768x1024", "390x844", "320x568"],
       runtimeErrors: 0,
       horizontalOverflow: 0,
