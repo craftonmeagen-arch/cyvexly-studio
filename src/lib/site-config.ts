@@ -24,6 +24,7 @@ export const footerNav = {
     { label: "Process", href: "/process" },
     { label: "About", href: "/about" },
     { label: "Indianapolis web design", href: "/indianapolis-web-design" },
+    { label: "Indiana service areas", href: "/indiana-web-design" },
   ],
   services: [
     { label: "Business websites", href: "/services/business-websites" },

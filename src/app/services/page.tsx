@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IndianaServiceArea } from "@/components/indiana-service-area";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
@@ -213,6 +214,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
+        <IndianaServiceArea />
         {/* FAQ */}
         <section className="glass-continuation border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">

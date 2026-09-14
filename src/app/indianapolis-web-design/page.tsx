@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IndianaServiceArea } from "@/components/indiana-service-area";
 import { ButtonLink } from "@/components/button";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -199,6 +200,7 @@ export default function IndianapolisWebDesignPage() {
             </div>
           </div>
         </section>
+        <IndianaServiceArea />
       </main>
 
       <SiteFooter />
