@@ -227,9 +227,9 @@ specific, and supportable—not bulk keyword variations.
   service area, the canonical website, an approved business description, and
   accurate website/application services.
 - Google accepted private-address verification while keeping the address
-  hidden. At the last authoritative check, Google said the profile was **not
-  publicly visible** while verification was processing and that processing
-  could take up to five days.
+  hidden. The latest authoritative check reports that the one service-area
+  profile is on Google with Indianapolis, Bloomington, Evansville, and Jasper
+  saved; this does not establish competitive search placement.
 - One Bing Places profile was created as **Cyvexly Studio** with primary
   category **Web designer**, the canonical website, and the public phone. Bing
   accepted a mailed-PIN request on September 13, 2026 and reports verification
@@ -237,10 +237,10 @@ specific, and supportable—not bulk keyword variations.
   this record. The listing remains unpublished until the PIN arrives; before
   public verification is completed, configure it as a service-area business
   and confirm that the private address will not be displayed.
-- The public phone was not accepted during setup and remains pending. No
-  unconfirmed hours, storefront claim, paid ad, Google Workspace trial, or
-  overly broad `Software development` service was added. Photos wait for
-  approved business assets.
+- The public phone, approved four-city description, logo, and one truthfully
+  labeled representative Velora concept image are saved. No unconfirmed hours,
+  storefront claim, paid ad, Google Workspace trial, or overly broad
+  `Software development` service was added.
 - An Apple Business organization was created for **Cyvexly LLC**, and
   `cyvexly.com` was verified through its Namecheap DNS on September 13, 2026.
   Existing website, Google, Resend, and mail-routing records were preserved.
@@ -263,10 +263,10 @@ specific, and supportable—not bulk keyword variations.
   All three studio notifications and all three corresponding requester
   confirmations arrived. This closes the protected real-delivery gate without
   placing message contents or the screenshot in the repository.
-- The canonical Render deployment for product source `2923ce5` passed live
-  search-readiness and buyer-journey checks. The live Indianapolis page,
-  canonicals, robots rules, 26-URL sitemap, 39 checked routes, and 20 inquiry
-  contexts passed.
+- The canonical Render deployment for exact accepted Indiana source `c9f0d6b`
+  passed production search-readiness and Indiana route/schema/sitemap/link
+  checks. The live consolidated four-city page, nationwide remote scope,
+  canonicals, robots rules, structured data, and inquiry continuity pass.
 - Responsive review passed on desktop and a 375-pixel phone viewport without
   horizontal overflow, broken images, or browser-console errors.
 
@@ -274,10 +274,10 @@ specific, and supportable—not bulk keyword variations.
 
 ### Immediate follow-up
 
-1. **Google Business Profile:** wait for Google's processing window, then
-   confirm that the one profile is publicly visible. Retry the established
-   public phone through a valid provider flow. Add hours only after the Owner
-   confirms them and add only approved logo/portfolio images.
+1. **Google Business Profile:** monitor the one live service-area profile for
+   accuracy and public presentation. Add hours only after Owner confirmation,
+   use only approved truthful images, preserve the hidden private address, and
+   do not infer rankings from profile availability.
 2. **Bing Places:** watch for the mailed verification PIN, expected in roughly
    5–6 business days. Before submitting that PIN, confirm the service-area
    setting and private-address suppression; only then complete publication.
@@ -378,7 +378,9 @@ Key production milestones:
 - `feb0b2d` — unique commercial-page metadata and search identity.
 - `483975d` — buyer resource hub and first two guides.
 - `53b802c` — Bing/IndexNow release-notification foundation.
-- `2923ce5` — truthful Indianapolis service presence and 26-URL discovery run.
+- `2923ce5` — initial truthful Indianapolis service presence and discovery run.
+- `c9f0d6b` — independently accepted, deployed four-city Indiana service-area
+  release with current provider/search continuity.
 
 Detailed round evidence remains in `CYVEXLY_BUILD_SUMMARY.md`, current status in
 `CYVEXLY_CURRENT_STATE.md`, active authority in

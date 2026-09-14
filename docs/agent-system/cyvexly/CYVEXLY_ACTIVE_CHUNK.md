@@ -2,7 +2,7 @@
 
 **Active product chunk:** Chunk 13 — EduAILenz/Mudoinkle Showcase Parity
 
-**Current position:** global round 197; Owner direction `2026-09-13-05`
+**Current position:** global round 198; Owner direction `2026-09-13-05`
 requires the Cyvexly-facing EduAILenz and Mudoinkle case studies to reach the
 accepted Velora showcase standard. Search monitoring continues without
 displacing this Builder priority. Mobile-app website integration is deferred.
@@ -31,6 +31,10 @@ contracts, and the full responsive hierarchy suite passed. Visible in-app
 comparison at 1280x720, 768x1024, and 390x844 plus a native-size Mudoinkle
 phone-proof inspection found no new defect. Exact-source independent review of
 `ca6140b` remains the next action.
+
+Round 197 confirmed no exact-source review arrived and reconciled duplicated
+provider records to the already-authoritative Google-on-Google, four-city,
+phone/image-saved state. Product source and the review gate are unchanged.
 
 **Scheduler state:** the Owner explicitly resumed the existing primary
 Cyvexly Builder at its existing twice-hourly GPT-5.6 Sol/high configuration and
@@ -83,8 +87,10 @@ of `CYVEXLY_OWNER_DIRECTION.md`.
 
 ## Parallel monitoring that must remain intact
 
-- Google Business Profile verification remains processing and must not be
-  called public before Google changes the status.
+- Google now reports the one service-area Business Profile is on Google, with
+  all four confirmed cities, the public phone, approved description, logo, and
+  truthfully labeled representative concept image saved. Monitor accuracy and
+  visibility without creating a duplicate or implying competitive ranking.
 - Search Console, GA4, Bing sitemap processing, accepted crawl requests, and
   release-gated IndexNow remain monitoring inputs.
 - Search ranking is an external outcome, not a product-completion promise.

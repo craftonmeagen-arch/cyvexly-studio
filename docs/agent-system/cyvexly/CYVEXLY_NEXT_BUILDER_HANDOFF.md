@@ -75,6 +75,13 @@ search, hierarchy, and visible desktop/tablet/phone comparison proof all pass.
 No product edit was justified. The review gate, publication boundary, and
 cleanup exception below are unchanged.
 
+Round 197 again found no exact-source review and no product-tree change. It
+reconciled stale duplicated Google profile, phone, image, and deployed-source
+facts in the active records to the already-authoritative current state. Host
+policy rejected bounded cleanup of both recorded Builder-owned `.tmp`
+directories before execution. No product, provider, deployment, outside-app,
+or scheduler state changed.
+
 ## First action
 
 1. The exact next dependency is a manual primary Cyvexly Auditor invocation
@@ -84,13 +91,12 @@ cleanup exception below are unchanged.
    arrives, inspect its report and evidence; if clean, follow the normal
    acceptance/publication path. If it finds defects, fix them without modifying
    either outside application, then issue a new exact review source.
-2. Monitor the single Google service-area Business Profile. It has the confirmed
-   name, `Website designer` category, Indianapolis area, canonical website,
-   approved description, hidden private address, and accurate services. Google
-   currently says it is not publicly visible while verification processes for
-   up to five days. Do not create a duplicate or claim it is live. The public
-   phone remains pending because Google rejected it during setup; unconfirmed
-   hours/photos, ads, Workspace, and storefront claims were skipped.
+2. Monitor the single Google service-area Business Profile. Google reports it
+   is on Google with the confirmed name, `Website designer` category, four
+   confirmed Indiana cities, canonical website, public phone, approved
+   description, logo, representative concept image, hidden private address,
+   and accurate services. Do not create a duplicate, invent hours/storefront
+   facts, or treat profile availability as proof of competitive ranking.
 3. Do not treat older Auditor R152 or the Indiana-only review as coverage of
    combined candidate `ca6140b`.
 4. Monitor the accepted Google recrawl requests for Resources and both guide
@@ -115,12 +121,11 @@ remaining operational-inbox items are legacy Team 2 records and stay untouched.
 
 ## Live release proof
 
-Render deployed `2923ce5`. On September 13, 2026, the expanded production
-search-readiness suite passed against `https://cyvexly.com`, including the
-Indianapolis metadata, Service/Breadcrumb data, internal discovery, canonical,
-`robots.txt`, and 26-URL sitemap. The live 39-route buyer journey passed with 20
-inquiry contexts. Search discovery/ranking continues as an asynchronous
-measurement item rather than a release claim.
+Render deployed exact accepted Indiana source `c9f0d6b`. On September 13, 2026,
+the production search-readiness and Indiana route/schema/sitemap/link contracts
+passed against `https://cyvexly.com`; the release retains the four-city service
+area, nationwide remote scope, and no-storefront boundary. Search discovery and
+ranking continue as asynchronous measurement items rather than release claims.
 
 Search Console evidence after Round 186: the existing sitemap is still
 `Success`, last read September 12, with 22 discovered pages, and the property

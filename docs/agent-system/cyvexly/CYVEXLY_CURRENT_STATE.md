@@ -12,9 +12,9 @@ review selector/scheduler. Main includes the SEO merge plus still-unaccepted
 local showcase commits; do not push the remaining ahead commits until their
 exact combined-source gate passes.
 
-**Last completed global round:** 196
+**Last completed global round:** 197
 
-**Current global round:** 197
+**Current global round:** 198
 
 **Active chunk:** Chunk 13 — EduAILenz/Mudoinkle Showcase Parity
 
@@ -37,6 +37,22 @@ independent review.
 Render release match, canonical search contract, Indiana route/schema/link
 smoke, and provider/search-submission record are documented in the PM update
 above and `CYVEXLY_MARKETABILITY_RECORD.md`.
+
+## Round 197 — exact review gate and provider-record reconciliation
+
+- Confirmed no external report, publication, memory, or operational item
+  evaluates exact combined candidate `ca6140b`; the newest independent report
+  remains the Indiana-only pass for accepted/deployed `c9f0d6b`.
+- Verified `src`, `public`, and `scripts` remain tree-identical to `ca6140b`,
+  local `main` remains twelve commits ahead of `origin/main`, and all Builder/
+  reviewer ports are clear. No product rerun or publication was justified.
+- Corrected superseded Google profile, phone, image, and deployed-source facts
+  that remained duplicated in the active chunk, handoff, and marketability
+  record. No public product, provider, outside application, or scheduler state
+  changed.
+- Revalidated both exact Builder-owned temporary directories. Host policy
+  rejected their bounded native PowerShell removal before execution, so no
+  files were deleted and `.tmp/` remains the only worktree exception.
 
 ## Round 196 — fresh candidate proof; review gate unchanged
 

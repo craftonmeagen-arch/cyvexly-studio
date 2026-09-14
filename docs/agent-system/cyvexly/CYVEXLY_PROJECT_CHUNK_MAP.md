@@ -198,7 +198,7 @@ evidence exposes a meaningful reachable gap.
   monitoring processes exist; all meaningful reachable quality gaps are
   resolved or bounded. Search ranking itself remains external and unpromised.
 
-## Chunk 13 — EduAILenz/Mudoinkle Showcase Parity (OPEN, ROUND 195)
+## Chunk 13 — EduAILenz/Mudoinkle Showcase Parity (OPEN, ROUND 197)
 
 - **Authority:** Owner directions `2026-09-10-01` and `2026-09-13-05`.
 - **Outcome:** make the two Cyvexly-facing case studies as substantial,

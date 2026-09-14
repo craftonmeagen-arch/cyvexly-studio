@@ -3,6 +3,20 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 197 — exact review gate and provider-record reconciliation
+
+- Confirmed no independent record covers exact combined candidate `ca6140b`;
+  product/public/script trees remain exact, local `main` is twelve commits
+  ahead of accepted/deployed `c9f0d6b`, and Builder/reviewer ports are clear.
+- Corrected stale lower-section Google profile, phone, image, and deployment
+  facts in the canonical active chunk, handoff, and marketability records so
+  they agree with the already-recorded current provider state.
+- No product validation loop, self-certification, push, deployment, provider
+  action, outside-application edit, or scheduler change was performed. Exact-
+  source independent review remains the next gate.
+- Host policy rejected verified cleanup of the two exact Builder-owned `.tmp`
+  directories before execution; no files were deleted.
+
 ## Round 196 — fresh exact-candidate visual and contract proof
 
 - Confirmed no independent publication or live primary-Auditor task covers
@@ -204,45 +218,15 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
 ## Round 184 — orphaned-separator visual fix; nine Auditor publications consolidated
 
-- Found nine new unconsumed Auditor publications, `IFA-2026-09-11-R144`
-  through `R152`, all routine zero-defect re-verifications of unchanged
-  accepted source `85c128e` (sixth through fourteenth such re-verification).
-  Verified each report's Evaluated Head against the accepted source and all
-  39 evidence screenshots present on disk per round; none contains a defect,
-  finding, or blocker. Consolidated into one `CYVEXLY_REVIEW_INDEX.md` entry
-  per the Lean Documentation Amendment rather than nine near-duplicate
-  paragraphs, and flagged the Auditor's roughly-hourly re-verification cadence
-  as a Section 3.6 convergence-check observation (not a Builder-actionable
-  defect — the Builder does not control Auditor scheduling). Consumed the four
-  accompanying operational-inbox items (`R149`–`R152`) to `exchange/processed/`.
-- Re-confirmed live `https://cyvexly.com/` still serves the accepted dormant
-  state (`noindex, nofollow`, `robots.txt Disallow: /`, correct canonical, no
-  Google tag/verification meta) with zero drift, and re-checked Owner
-  direction/chunk/app debt for anything newly reachable — none found beyond
-  the standing Owner/account gates and the Chunk 6 independent-review item.
-- Went beyond re-reading reports: did a fresh hands-on visible-browser pass of
-  the live production site (homepage, EduAILenz and Mudoinkle showcase case
-  studies, both external product links) rather than only re-verifying
-  metadata, since prior rounds 181-183 found no reachable work through
-  documentation review alone. Found one genuine, low-risk visual defect: the
-  hero's "Request a consultation → · Share a detailed brief →" line uses an
-  `aria-hidden` middle-dot separator between two independent inline-flex
-  links; at mobile width (375px) the second link wraps to its own line while
-  the bare separator dot is left orphaned alone at the end of the first line.
-  Fixed in `src/app/page.tsx` by wrapping the separator and second link in a
-  `whitespace-nowrap` span so the two travel as one unit — verified visually
-  at 375px (dot now moves down with its link, no longer orphaned) and at
-  desktop width (still renders inline on one line, no console errors) against
-  a locally built production server on Builder port 5173. `pnpm run lint`
-  (zero errors, one unchanged unrelated historical warning), `next build`
-  (55 routes, zero errors), and `tsc --noEmit` (clean) all pass. This is a
-  mechanical, non-architectural, content-preserving CSS-wrapping correction
-  (Section 2.10) adopted directly rather than opened as a new Chunk 5 review
-  candidate; the standing Auditor cadence will naturally re-verify the new
-  commit on its next pass.
-- No RAM/disk cleanup debt: stopped the locally started `next start` process
-  and removed its temporary log files before exit; `git status` clean apart
-  from this round's own two file changes.
+- Consolidated Auditor R144–R152: all nine independently reported zero defects
+  on unchanged accepted source `85c128e`; evaluated heads and 39 captures per
+  round were verified, and R149–R152 inbox items were processed. The repeated
+  unchanged-source cadence was recorded as a scheduler-owner convergence note,
+  not a Builder product defect.
+- Visible live desktop/375px review found the Home consultation/detail-link
+  separator could orphan on its own line. Grouped the separator with the
+  second link in `src/app/page.tsx`; desktop/phone rendering, lint, 55-route
+  build, and TypeScript passed. Owned runtime and temporary logs were cleaned.
 
 ## Round 180 — Chunk 5 candidate accepted after second independent challenge
 
