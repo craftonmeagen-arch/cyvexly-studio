@@ -14,6 +14,11 @@ const json = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/scr
 const service = json.find(item => item['@type'] === 'Service');
 assert.equal(service.areaServed.length, 4);
 assert.equal(service.url, 'https://cyvexly.com' + route);
+const organization = json.find(item => item['@type'] === 'Organization');
+assert.ok(organization.areaServed.some(area => area['@type'] === 'Country' && area.name === 'United States'));
+for (const city of ['Indianapolis', 'Bloomington', 'Evansville', 'Jasper']) {
+  assert.ok(organization.areaServed.some(area => area['@type'] === 'City' && area.name === city));
+}
 const paths = ['/services/business-websites', '/services/website-redesigns', '/services/ecommerce-websites', '/services/custom-web-applications', '/work/velora-dining', '/work/nexora-systems', '/pricing', '/start', '/contact?interest=custom-project'];
 for (const path of paths) {
   assert.ok(html.includes('href="' + path + '"'), path);
@@ -22,5 +27,8 @@ for (const path of paths) {
 for (const path of ['/about', '/services', '/indianapolis-web-design']) {
   assert.ok((await (await fetch(base + path)).text()).includes('href="' + route + '"'), path);
 }
+const contact = await (await fetch(base + '/contact')).text();
+assert.ok(contact.includes('href="' + route + '"'));
+for (const city of ['Indianapolis', 'Bloomington', 'Evansville', 'Jasper']) assert.ok(contact.includes(city));
 assert.ok((await (await fetch(base + '/sitemap.xml')).text()).includes('https://cyvexly.com' + route));
 console.log('PASS Indiana service scope, canonical, schema, sitemap, links and inquiry routes');

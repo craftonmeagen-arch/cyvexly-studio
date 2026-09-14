@@ -93,6 +93,23 @@ export default async function ContactPage({
               </div>
 
               <dl className="mt-10 space-y-6 text-sm">
+                <div>
+                  <dt className="font-mono text-[11px] uppercase tracking-[0.1em] text-cool-graphite">
+                    Where we work
+                  </dt>
+                  <dd className="mt-1 text-midnight-slate">
+                    Remote projects are available across the United States. In
+                    Indiana, we serve Indianapolis, Bloomington, Evansville,
+                    and Jasper, with consultations by appointment.{" "}
+                    <ButtonLink
+                      href="/indiana-web-design"
+                      variant="text"
+                      className="text-sm"
+                    >
+                      Explore Indiana service →
+                    </ButtonLink>
+                  </dd>
+                </div>
                 {consultationMode ? (
                   <>
                     <div>
