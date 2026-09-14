@@ -15,6 +15,11 @@ const productStories = {
   eduailenz: {
     eyebrow: "Teacher workflow · planning, participation & evidence",
     headline: "One teaching idea. A whole classroom workflow.",
+    tourEyebrow: "Three educator tasks, followed end to end",
+    tourHeading: "Plan the lesson, record the evidence, review the progress.",
+    tourSummary:
+      "These accepted validation captures make three protected teacher jobs inspectable without exposing student information. Learner-facing lesson, player, and display routes are source-verified, but they are not presented here as accepted learner journeys.",
+    contributionHeading: "Education software that keeps the teacher in control.",
     summary:
       "EduAILenz connects lesson planning, classroom resources, reading support, assignments, and special-education documentation without taking judgment away from the teacher.",
     contribution:
@@ -36,6 +41,7 @@ const productStories = {
         title: "Shape a quick lesson around the class in front of you",
         copy: "The authenticated setup starts with the teaching need, then makes grade, subject, and available time explicit before a workspace can be created.",
         result: "Visible result: a focused lesson setup that keeps classroom constraints attached to the request.",
+        capability: "Capability demonstrated: turning a broad request into a clear, constraint-aware planning flow.",
         image: "/media/eduailenz-proof-quick-lesson.png",
         mobileImage: "/media/eduailenz-proof-quick-lesson-mobile.png",
         alt: "Authenticated EduAILenz Quick Lesson setup on desktop with topic, grade, subject, and time controls",
@@ -50,6 +56,7 @@ const productStories = {
         title: "Record progress while the evidence is still useful",
         copy: "BloomED gives an educator a deliberate path from student and goal selection to the dated value and optional observation, with a faster quick-log path alongside it.",
         result: "Visible result: structured progress evidence that can support the next teacher-reviewed decision.",
+        capability: "Capability demonstrated: structured data entry with deliberate and quick-log paths for different moments of use.",
         image: "/media/eduailenz-proof-progress-log.png",
         mobileImage: "/media/eduailenz-proof-progress-log-mobile.png",
         alt: "Authenticated BloomED progress log on desktop with student, goal, value, date, and notes fields",
@@ -64,6 +71,7 @@ const productStories = {
         title: "Turn accumulated evidence into a reviewable report",
         copy: "The report workspace keeps the student, time period, goal selection, and optional comparison context visible before generating an editable progress narrative.",
         result: "Visible result: a bounded reporting step that keeps educator review in the workflow.",
+        capability: "Capability demonstrated: assembling structured evidence into an editable, human-reviewed reporting workflow.",
         image: "/media/eduailenz-proof-reports.png",
         mobileImage: "/media/eduailenz-proof-reports-mobile.png",
         alt: "Authenticated BloomED report generator on desktop with student, date range, and report controls",
@@ -77,6 +85,11 @@ const productStories = {
   mudoinkle: {
     eyebrow: "Party games · host, player & shared-display experiences",
     headline: "Game night starts with less setup—and more play.",
+    tourEyebrow: "Three games, three different play patterns",
+    tourHeading: "Compare the prompt, pass-the-phone, and rapid-fire loops.",
+    tourSummary:
+      "These live public previews make each game model easy to compare without an account. Accepted source includes separate host, player, and shared-display routes; complete multi-device room acceptance is still pending and is not represented by these preview captures.",
+    contributionHeading: "A playful product system built for several screens at once.",
     summary:
       "Mudoinkle brings three original party games into one playful browser experience, with clear paths for the host, each player, and the screen everyone shares.",
     contribution:
@@ -98,6 +111,7 @@ const productStories = {
         title: "Understand Awmuhog before opening a room",
         copy: "The live public sample presents the image prompt, competing captions, and next-prompt action in the same visual rhythm a player will meet during the game.",
         result: "Visible result: the caption-battle decision pattern is understandable without an account.",
+        capability: "Capability demonstrated: translating a social prompt-and-response game into a branded, self-explanatory interaction loop.",
         image: "/media/mudoinkle-proof-awmuhog.png",
         mobileImage: "/media/mudoinkle-proof-awmuhog-mobile.png",
         alt: "Live Mudoinkle Awmuhog preview on desktop with an image prompt and two sample captions",
@@ -112,6 +126,7 @@ const productStories = {
         title: "Make a one-phone game legible at a glance",
         copy: "Witigglies exposes the timer, secret word, forbidden clues, and next-card action together so the person holding the phone knows what to protect and what to do next.",
         result: "Visible result: a pass-and-play round with a distinct information hierarchy and control model.",
+        capability: "Capability demonstrated: touch-first information hierarchy for a private, single-device play pattern.",
         image: "/media/mudoinkle-proof-witigglies.png",
         mobileImage: "/media/mudoinkle-proof-witigglies-mobile.png",
         alt: "Live Mudoinkle Witigglies preview on desktop with timer, secret word, and forbidden clues",
@@ -126,6 +141,7 @@ const productStories = {
         title: "Keep a rapid-fire group round moving",
         copy: "List Off puts the active topic, accepted answer, next-answer action, and new-category control into one fast scan for players following the round.",
         result: "Visible result: a real-time category loop that reads differently from the other two games.",
+        capability: "Capability demonstrated: keeping topic, accepted input, score, and round controls understandable in one fast-moving state.",
         image: "/media/mudoinkle-proof-list-off.png",
         mobileImage: "/media/mudoinkle-proof-list-off-mobile.png",
         alt: "Live Mudoinkle List Off preview on desktop with topic, accepted answer, and scoring controls",
@@ -257,15 +273,13 @@ export function ExternalProductCaseStudy({
         <section id="product-tour" className="mx-auto max-w-7xl scroll-mt-24 px-5 py-16 sm:px-8 sm:py-24">
           <div className="mx-auto max-w-3xl text-center">
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyber-blue">
-              {slug === "eduailenz" ? "A connected teacher journey" : "Three games, clear roles"}
+              {story.tourEyebrow}
             </p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-midnight-slate sm:text-4xl">
-              See what people are trying to accomplish—not just the system behind it.
+              {story.tourHeading}
             </h2>
             <p className="mt-5 text-sm leading-7 text-cool-graphite sm:text-base">
-              {slug === "eduailenz"
-                ? "The lead image is a current public capture. The tour pairs it with accepted authenticated validation captures from the exact Team 2 source commit, using an empty lesson setup and a synthetic test account—never real student data."
-                : "These live public staging previews show three distinct game loops on desktop and phone. They demonstrate the preview experience, not completed multi-device room acceptance or a production launch."}
+              {story.tourSummary}
             </p>
             <ButtonLink href={study.demoHref} target="_blank" rel="noreferrer" variant="secondary" className="mt-7">
               Open the current public experience <ArrowMark />
@@ -304,6 +318,21 @@ export function ExternalProductCaseStudy({
                   <h3 className="mt-4 font-display text-2xl font-semibold leading-tight text-midnight-slate sm:text-3xl">{journey.title}</h3>
                   <p className="mt-4 text-sm leading-7 text-cool-graphite sm:text-base">{journey.copy}</p>
                   <p className="mt-5 text-sm font-medium leading-6 text-midnight-slate">{journey.result}</p>
+                  <p className="mt-3 text-sm leading-6 text-cyber-blue">{journey.capability}</p>
+                  <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-sm">
+                    <a
+                      href={journey.image}
+                      className="inline-flex min-h-11 items-center gap-2 rounded-full text-midnight-slate underline decoration-cyber-blue/40 underline-offset-8 hover:text-cyber-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyber-blue"
+                    >
+                      Inspect desktop proof <ArrowMark />
+                    </a>
+                    <a
+                      href={journey.mobileImage}
+                      className="inline-flex min-h-11 items-center gap-2 rounded-full text-midnight-slate underline decoration-cyber-blue/40 underline-offset-8 hover:text-cyber-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyber-blue"
+                    >
+                      Inspect phone proof <ArrowMark />
+                    </a>
+                  </div>
                 </div>
               </article>
             ))}
@@ -315,7 +344,7 @@ export function ExternalProductCaseStudy({
             <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-cyber-blue">Cyvexly contribution</p>
-                <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-midnight-slate">A product system, shaped around its users.</h2>
+                <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-midnight-slate">{story.contributionHeading}</h2>
                 <p className="mt-5 text-sm leading-7 text-cool-graphite sm:text-base">{story.contribution}</p>
                 <p className="mt-4 text-xs leading-6 text-cool-graphite">
                   This is a built product-system capability example, not a client engagement or a claim of revenue, adoption, or measured business results.

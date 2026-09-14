@@ -1119,6 +1119,7 @@ async function main() {
           const firstCard = section.querySelector('article');
           const images = [...firstCard.querySelectorAll('img')];
           const link = section.querySelector('a[target="_blank"]');
+          const inspectLinks = [...section.querySelectorAll('article a[href^="/media/"]')].map((item) => item.getAttribute('href'));
           return {
             slug: ${JSON.stringify(slug)},
             viewport: ${JSON.stringify(viewport.label)},
@@ -1129,6 +1130,7 @@ async function main() {
             firstCardWidth: firstCard.getBoundingClientRect().width,
             sectionWidth: section.getBoundingClientRect().width,
             proofLink: link?.getAttribute('href') ?? null,
+            inspectLinks,
             overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
           };
         })())`));
@@ -1138,6 +1140,8 @@ async function main() {
         assert.ok(layout.firstCardTop < viewport.height, `${slug} first journey misses the ${viewport.label} tour viewport`);
         assert.ok(layout.firstCardWidth <= layout.sectionWidth + 1, `${slug} first journey exceeds its section width`);
         assert.match(layout.proofLink ?? "", /^https:\/\//, `${slug} lost its external proof link`);
+        assert.equal(layout.inspectLinks.length, 6, `${slug} no longer exposes desktop and phone inspection links for all three journeys`);
+        assert.ok(layout.inspectLinks.every((href) => href?.startsWith(`/media/${slug}-proof-`)), `${slug} inspection links do not target its proof assets`);
         assert.ok(layout.overflow <= 1, `${slug} showcase causes ${viewport.label} horizontal overflow`);
         externalCaseStudies.push(layout);
       }
