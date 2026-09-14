@@ -25,6 +25,7 @@ controls remain the source of truth for those values.
 | Google Search Console | Verified and monitoring | The domain property is verified and its sitemap was accepted. Indexing and rankings continue over time. |
 | Bing and IndexNow | Configured and monitoring | Bing accepted the imported property and sitemap; production releases automatically notify IndexNow after the exact deployment is live. |
 | Bing Places | Verification in progress | One Cyvexly Studio listing was created as a web designer and a mailed verification PIN was requested on September 13, 2026. The listing remains unpublished pending PIN verification and private-address suppression. |
+| Apple Business | Domain verified; organization review pending | The Cyvexly LLC organization exists and `cyvexly.com` is verified. Apple still requires one additional independent business-identity method before organization review can be submitted. |
 | Google Analytics 4 | Active monitoring input | Privacy-conscious analytics is wired behind visitor consent and measures basic traffic and successful buyer actions without sending form contents. |
 | Indianapolis search presence | Website work live; profile processing | A truthful Indianapolis service page is live. The Google Business Profile exists but is not yet publicly visible while Google processes verification. |
 | Inquiry email | Complete and inbox-confirmed | The Resend domain and protected Render key are configured. Contact, Planner, and Consultation each produced the studio notification and requester confirmation in the Owner-supplied inbox proof. |
@@ -167,6 +168,12 @@ specific, and supportable—not bulk keyword variations.
   unconfirmed hours, storefront claim, paid ad, Google Workspace trial, or
   overly broad `Software development` service was added. Photos wait for
   approved business assets.
+- An Apple Business organization was created for **Cyvexly LLC**, and
+  `cyvexly.com` was verified through its Namecheap DNS on September 13, 2026.
+  Existing website, Google, Resend, and mail-routing records were preserved.
+  Apple organization verification remains incomplete until a second accepted
+  identity method is provided and reviewed; this is not yet a public Apple Maps
+  location or brand-publication milestone.
 
 ### 7. Email, deployment, and technical reliability
 
@@ -201,7 +208,13 @@ specific, and supportable—not bulk keyword variations.
 2. **Bing Places:** watch for the mailed verification PIN, expected in roughly
    5–6 business days. Before submitting that PIN, confirm the service-area
    setting and private-address suppression; only then complete publication.
-3. **Search monitoring:** review Search Console, Bing, and GA4 after enough data
+3. **Apple Business:** provide one additional accepted business-identity proof.
+   Prefer the Indiana business registration number or federal EIN when the
+   Owner has the exact official value; otherwise use an eligible official
+   document. Submit the two-method verification for Apple review, then add or
+   publish brand/location information only after truthful scope and private-
+   address handling are confirmed.
+4. **Search monitoring:** review Search Console, Bing, and GA4 after enough data
    exists. Track impressions, queries, indexed pages, click-throughs, landing
    pages, and successful inquiry actions without overstating early data.
 
