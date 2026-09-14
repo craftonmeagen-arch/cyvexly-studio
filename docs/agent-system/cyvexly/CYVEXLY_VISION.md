@@ -9,11 +9,13 @@ approved legal baseline, and live public indexing. Owner direction
 without changing the accepted product design or national service model.
 
 Current Builder position: Chunk 13 — EduAILenz/Mudoinkle Showcase Parity — is
-active under Owner direction `2026-09-13-05`. Exact local candidate `7fb2a51`
-presents three verified paired desktop/phone journeys per product, distinct
+active under Owner direction `2026-09-13-05`. Exact local combined candidate
+`ca6140b` preserves showcase source `7fb2a51`, which presents three verified
+paired desktop/phone journeys per product, distinct
 product stories, explicit task/action/result/capability language, native-size
 proof inspection, and truthful authentication/staging/acceptance boundaries.
-Accepted/deployed source remains `2923ce5` pending independent review. The
+Accepted/deployed source is independently reviewed Indiana release `c9f0d6b`
+pending combined candidate review. The
 approved visual system, accepted Velora presentation, and live search
 foundation remain preserved.
 

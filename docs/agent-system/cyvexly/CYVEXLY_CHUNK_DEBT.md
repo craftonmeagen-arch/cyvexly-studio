@@ -6,7 +6,8 @@ Outside-website work belongs to Team 2.
 
 ## Open
 
-1. **Chunk 13 — independent review of local candidate `7fb2a51`.** Challenge
+1. **Chunk 13 — independent review of local combined candidate `ca6140b`.**
+   Challenge
    both case studies against accepted Velora in rendered desktop/tablet/phone
    views. Verify that EduAILenz evidence matches accepted Team 2 source
    `9e48f41d`, contains no real student data, and does not imply public access;

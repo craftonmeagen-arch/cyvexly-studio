@@ -2,14 +2,15 @@
 
 **Active product chunk:** Chunk 13 — EduAILenz/Mudoinkle Showcase Parity
 
-**Current position:** global round 192; Owner direction `2026-09-13-05`
+**Current position:** global round 195; Owner direction `2026-09-13-05`
 requires the Cyvexly-facing EduAILenz and Mudoinkle case studies to reach the
 accepted Velora showcase standard. Search monitoring continues without
 displacing this Builder priority. Mobile-app website integration is deferred.
 
-**Current product source:** `7fb2a51` (local, unaccepted showcase-parity
-candidate). Accepted/deployed source remains `2923ce5` until exact-source
-independent review permits publication.
+**Current product source:** `ca6140b` (local, unaccepted combined candidate).
+It contains showcase candidate `7fb2a51`, independently accepted/deployed
+Indiana source `c9f0d6b`, and a verified Contact/service-area continuity
+correction. Accepted/deployed source is `c9f0d6b`.
 
 **Current implementation position:** two coherent parity slices are built.
 Each case study now has three task/action/result journeys with large paired
@@ -27,6 +28,12 @@ not authorized to change that scheduler or substitute self-review.
 **Scheduler state:** the Owner explicitly resumed the existing primary
 Cyvexly Builder at its existing twice-hourly GPT-5.6 Sol/high configuration and
 exact prompt. No other scheduler change is authorized.
+
+**Round 194 integration note:** the bounded Indiana delivery was built and
+reviewed in isolation before `c9f0d6b` was pushed and deployed. Local `main`
+now combines that accepted source with the unaccepted showcase candidate and
+the Contact follow-up. The next independent review must evaluate exact
+`ca6140b`; do not treat the Indiana-only review as showcase coverage.
 
 ## Outcome
 

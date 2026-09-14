@@ -3,6 +3,20 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 194 — Indiana release intake and Contact continuity
+
+- Consumed the separate exact-source Indiana Auditor pass and correction for
+  `c9f0d6b`; the consolidated four-city page is independently accepted and
+  deployed without publishing the showcase candidate.
+- Added a concise nationwide/four-city service block to Contact plus regression
+  coverage for Contact discovery and Organization country/city schema.
+- Lint, 63-route indexable build, TypeScript, Indiana/search/buyer contracts,
+  and the full hierarchy suite pass. Visible in-app desktop/tablet/phone review,
+  Indiana-to-Contact and return navigation, and browser diagnostics pass with
+  zero overflow or warnings/errors.
+- Preserved the follow-up in local combined source `ca6140b`; it is unpushed.
+  The next gate is independent review of that exact combined source.
+
 ## Round 192 — independent-review path boundary
 
 - No publication covers exact candidate `7fb2a51`; the external Auditor stream

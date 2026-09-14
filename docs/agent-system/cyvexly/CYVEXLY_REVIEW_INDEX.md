@@ -6,12 +6,14 @@ or existing Owner-managed schedule.
 
 Current authoritative root: `C:/app projects/website-independent-review`.
 
-**Active review source:** `7fb2a51`, the local Chunk 13 EduAILenz/Mudoinkle
-showcase-parity candidate. Review the rendered case studies and Round 190/191
+**Active review source:** `ca6140b`, the local combined Chunk 13 candidate. It
+preserves showcase source `7fb2a51`, independently reviewed/deployed Indiana
+source `c9f0d6b`, and a tested Contact/service-area continuity correction.
+Review the rendered case studies and Round 190/191
 evidence at desktop, tablet, and phone sizes; challenge evidence provenance,
 privacy, journey accuracy, status/limitation truth, external proof and inquiry
 paths, accessibility, and regression. No earlier publication reviews this
-source. Accepted/deployed product source remains `2923ce5` pending the normal
+source. Accepted/deployed product source is `c9f0d6b` pending the normal
 independent gate.
 | Role | Current report | Archive | Memory |
 |---|---|---|---|
@@ -217,3 +219,9 @@ primary Auditor task was present, and the stored primary Auditor automation is
 acquisition requires an explicit manual primary-Auditor invocation or separate
 Owner scheduler authorization. This is a review-path boundary, not permission
 to accept, push, deploy, or substitute Builder self-review.
+
+Builder Round 194 consumed the separate exact-source Indiana acceptance review
+`IFA-2026-09-13-INDIANA-C9F0D6B` and its integrity clarification. That report
+covers deployed `c9f0d6b`, not the showcase. Local `main` now declares
+combined review source `ca6140b`; no existing publication covers that exact
+source.

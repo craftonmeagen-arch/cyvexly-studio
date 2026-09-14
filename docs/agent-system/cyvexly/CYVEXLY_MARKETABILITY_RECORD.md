@@ -103,7 +103,7 @@ finish before this lagging aggregate report catches up.
 | Inquiry email | Complete and inbox-confirmed | The Resend domain and protected Render key are configured. Contact, Planner, and Consultation each produced the studio notification and requester confirmation in the Owner-supplied inbox proof. |
 | Payments | Deferred | Stripe verification and controlled invoice proof wait for the Owner's required business information. No public checkout or active-payment claim is allowed. |
 | Mobile application service | Confirmed; website integration deferred | Google Business Profile includes the capability. Owner direction `2026-09-13-04` defers new website integration until the Owner resumes it. |
-| EduAILenz/Mudoinkle portfolio proof | Candidate ready for independent review | Local candidate `7fb2a51` presents three real paired journeys per product, distinct product stories, explicit capability explanations, and native-size proof inspection; it is not public until exact-source review passes. |
+| EduAILenz/Mudoinkle portfolio proof | Candidate ready for independent review | Local combined candidate `ca6140b` preserves showcase source `7fb2a51` and awaits exact-source review before the remaining local commits may publish. |
 
 ## Confirmed public business facts
 
@@ -113,8 +113,8 @@ finish before this lagging aggregate report catches up.
 - Public phone: **(317) 572-5780** / **+1 317-572-5780**.
 - Base market: Indiana, United States.
 - Delivery model: remote service for businesses across the United States.
-- Added local availability: Indianapolis-area consultations in person by
-  appointment.
+- Confirmed Indiana service areas: Indianapolis, Bloomington, Evansville, and
+  Jasper, with consultations by appointment.
 - Cyvexly does **not** operate a public walk-in storefront. The private address
   supplied to Google for verification must remain hidden and must never be
   copied into this repository.
@@ -145,7 +145,8 @@ finish before this lagging aggregate report catches up.
   exceptions for business, tax, security, dispute, and legal records.
 - The site does not fabricate testimonials, clients, revenue, outcomes,
   credentials, awards, or payment availability.
-- Local Chunk 13 candidate `7fb2a51` materially strengthens portfolio proof:
+- Local combined Chunk 13 candidate `ca6140b` preserves showcase source
+  `7fb2a51`, which materially strengthens portfolio proof:
   EduAILenz uses privacy-safe authenticated validation captures from its exact
   accepted Team 2 source, and Mudoinkle uses three live public staging preview
   states. Each case now explains three buyer-readable task/action/results with

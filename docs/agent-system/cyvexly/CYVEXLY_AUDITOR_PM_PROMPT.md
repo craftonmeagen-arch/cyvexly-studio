@@ -1,11 +1,13 @@
 # Cyvexly Build Team Independent Forensic Auditor — PM Prompt
 
-**Status:** ACTIVE REVIEW SOURCE `7fb2a51`; scheduler state unchanged
+**Status:** ACTIVE REVIEW SOURCE `ca6140b`; scheduler state unchanged
 
 When explicitly invoked, independently verify the exact Cyvexly review source
-and active work identified by current state/handoff. Candidate `7fb2a51` is the
-Chunk 13 EduAILenz/Mudoinkle showcase-parity source and must be challenged
-before acceptance. Compare both case studies visibly with accepted Velora at
+and active work identified by current state/handoff. Candidate `ca6140b`
+combines Chunk 13 showcase source `7fb2a51` with already reviewed/deployed
+Indiana source `c9f0d6b` and a tested Contact continuity correction. Challenge
+the exact combined source before acceptance. Compare both case studies visibly
+with accepted Velora at
 desktop, tablet, and phone sizes; verify evidence provenance/privacy, three
 journeys and native-size proof actions per product, contribution/access/status
 truth, inquiry continuity, accessibility, and regressions. R132 and R133 each passed

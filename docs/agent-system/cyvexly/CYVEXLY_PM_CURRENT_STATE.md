@@ -1,10 +1,11 @@
 # Cyvexly Build Team Project Manager — Current State
 
 Chunk 13 — EduAILenz/Mudoinkle Showcase Parity — is the current primary
-Builder assignment under Owner direction `2026-09-13-05`. Round 191 declares
-exact local active review source `7fb2a51`; accepted/deployed source remains
-`2923ce5`. The candidate presents three verified paired desktop/phone journeys
-per product, distinct product stories, explicit task/action/result/capability
+Builder assignment under Owner direction `2026-09-13-05`. Round 194 declares
+exact local active review source `ca6140b`; accepted/deployed source is
+independently reviewed Indiana release `c9f0d6b`. The combined candidate
+preserves showcase source `7fb2a51` and its three verified paired desktop/phone
+journeys per product, distinct product stories, explicit task/action/result/capability
 language, native-size proof actions, and proportionate access/acceptance
 limits. Independent exact-source review is the next product gate. Underlying
 outside applications and HoneyHearted remain Team 2 scope, and mobile-app

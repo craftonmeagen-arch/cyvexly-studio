@@ -12,11 +12,11 @@ confirms exact `c9f0d6b`; production search/Indiana smoke checks pass. Main has 
 the unaccepted showcase commits. **Do not push the remaining ahead commits
 until their showcase review gate is satisfied.** No scheduler changed.
 
-The isolated `C:/app projects/cyvexly-search-delivery` worktree subsequently
-received unexplained dirty Contact/smoke/schema changes. PM, Builder and reviewer
-did not author them. They were preserved, not adopted, built, committed or
-pushed. Do not delete the worktree or fold those bytes into accepted source
-without resolving provenance and review. The accepted remote commit is unchanged.
+Round 194 resolved the isolated worktree provenance: the current scheduled
+Builder authored the Contact and smoke changes, verified them against the
+production build and visible responsive browser, committed them as `f31b1fc`,
+and cherry-picked them to local combined source `ca6140b`. They were not pushed.
+The accepted remote commit remains `c9f0d6b`.
 
 Current provider truth supersedes old profile-hold statements below: Google
 reports the business is on Google; four cities, phone and expanded description
@@ -63,10 +63,16 @@ and forbids other scheduler changes. Product/test paths remain exact
 deploy until an explicit manual primary-Auditor invocation reviews this source,
 or the Owner separately authorizes the Auditor scheduler to resume.
 
+Round 194 consumed the separate clean Indiana review and verified deployed
+`c9f0d6b`. Local combined candidate `ca6140b` adds only the tested Contact
+service-area continuity correction on top of the accepted Indiana release and
+the still-unaccepted showcase line. No existing publication covers this exact
+combined source.
+
 ## First action
 
 1. The exact next dependency is a manual primary Cyvexly Auditor invocation
-   against `7fb2a51`, or separate Owner authorization to resume its stored
+   against `ca6140b`, or separate Owner authorization to resume its stored
    automation. The Builder may check for a later publication but must not change
    the Auditor scheduler, self-certify the gate, push, or deploy. When a review
    arrives, inspect its report and evidence; if clean, follow the normal
@@ -79,10 +85,10 @@ or the Owner separately authorizes the Auditor scheduler to resume.
    up to five days. Do not create a duplicate or claim it is live. The public
    phone remains pending because Google rejected it during setup; unconfirmed
    hours/photos, ads, Workspace, and storefront claims were skipped.
-3. Do not treat older Auditor R152 or search-source reviews as coverage of
-   candidate `7fb2a51`.
+3. Do not treat older Auditor R152 or the Indiana-only review as coverage of
+   combined candidate `ca6140b`.
 4. Monitor the accepted Google recrawl requests for Resources and both guide
-   routes, the new Indianapolis route, and Bing's processing sitemap. Avoid
+   routes, the consolidated Indiana route, and Bing's processing sitemap. Avoid
    repeated unchanged submissions.
 5. Inspect early coverage/query evidence when available. Do not infer ranking
    from successful deployment, notification, or indexing eligibility.

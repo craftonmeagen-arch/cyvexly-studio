@@ -213,14 +213,15 @@ evidence exposes a meaningful reachable gap.
   audience/problem/benefit, Cyvexly contribution, capability, access, status,
   and limitation language; and no invented screen, workflow, client, result,
   acceptance, or access claim.
-- **Current candidate:** local exact source `7fb2a51` replaces generic tour
+- **Current candidate:** local exact combined source `ca6140b` preserves
+  showcase source `7fb2a51`, which replaces generic tour
   illustrations with three paired desktop/phone task journeys per product.
   EduAILenz evidence is hash-matched to Team 2's accepted `9e48f41d` source and
   uses no real student data; Mudoinkle evidence comes from three live public
   staging preview states. Each journey now names the demonstrated capability
   and exposes native-size proof actions. Nine visible Velora/EduAILenz/
   Mudoinkle comparison captures and responsive runtime checks pass.
-- **Next:** independent exact-source challenge of `7fb2a51`. Do not push or
+- **Next:** independent exact-source challenge of `ca6140b`. Do not push or
   deploy the candidate until that gate is satisfied.
 - **Boundary:** the primary Builder owns only the Cyvexly showcase surfaces.
   Underlying EduAILenz/Mudoinkle builds, credentials, private data,

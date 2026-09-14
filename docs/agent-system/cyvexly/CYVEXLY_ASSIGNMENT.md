@@ -4,8 +4,9 @@ Canonical team: **Cyvexly Build Team**. Active product: Cyvexly Studio at
 `C:/app projects/website` on deployment branch `main`.
 
 Owner direction `2026-09-13-05` makes **Chunk 13 — EduAILenz/Mudoinkle
-Showcase Parity** the primary Builder assignment. Local candidate `7fb2a51`
-replaces generic marketing-tour evidence with three verified, buyer-readable
+Showcase Parity** the primary Builder assignment. Combined local candidate
+`ca6140b` preserves showcase source `7fb2a51`, which replaces generic
+marketing-tour evidence with three verified, buyer-readable
 task journeys and paired desktop/phone proof for each product. Every journey
 now names its result and demonstrated capability and links to native-size
 desktop/phone evidence. EduAILenz assets
@@ -13,8 +14,9 @@ hash-match accepted Team 2 source `9e48f41d`, use an empty setup or synthetic
 test account, and contain no real student data. Mudoinkle assets were captured
 from three separately exercised live public staging preview states.
 
-The next product action is exact-source independent review of `7fb2a51`, not
-publication. Accepted/deployed source remains `2923ce5`. After a clean review,
+The next product action is exact-source independent review of `ca6140b`, not
+publication. Accepted/deployed source is `c9f0d6b`, the separately built,
+reviewed, and deployed four-city Indiana delivery. After a clean review,
 push the candidate, verify the matching Render deployment and canonical buyer/
 search contracts, and complete the Owner-required final visible comparison.
 

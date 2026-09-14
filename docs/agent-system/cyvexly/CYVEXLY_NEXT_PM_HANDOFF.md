@@ -1,8 +1,9 @@
 # Cyvexly Build Team Project Manager — Next Handoff
 
-Builder Round 191 advances Chunk 13 — EduAILenz/Mudoinkle Showcase Parity — to
-exact local active review source `7fb2a51`. Accepted/deployed source remains
-`2923ce5`. The next PM invocation should preserve the independent-review gate,
+Builder Round 194 advances Chunk 13 — EduAILenz/Mudoinkle Showcase Parity — to
+exact local combined review source `ca6140b`. Accepted/deployed source is the
+separately reviewed Indiana release `c9f0d6b`. The next PM invocation should
+preserve the independent-review gate,
 verify that no older report is counted as coverage, and keep the candidate
 unpushed and undeployed until exact-source review is clean.
 
