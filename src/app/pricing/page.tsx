@@ -2,7 +2,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ButtonLink } from "@/components/button";
 import { FaqAccordion } from "@/components/faq-accordion";
-import { PackageIcon } from "@/components/package-icon";
+import { PricingCarousel } from "@/components/pricing-carousel";
 import { PricingScopeSignal } from "@/components/pricing-scope-signal";
 import {
   addOns,
@@ -11,22 +11,15 @@ import {
   pricingFaq,
   pricingPackages,
   projectIncludes,
+  starterManagementPlan,
 } from "@/lib/site-config";
 import { buildPageMetadata } from "@/lib/seo";
 import { pricingJsonLd } from "@/lib/structured-data";
 
-const packageInquiryKeys: Record<string, string> = {
-  Signal: "signal-package",
-  Orbit: "orbit-package",
-  Nexus: "nexus-package",
-  Commerce: "commerce-package",
-  "Custom application": "custom-system",
-};
-
 export const metadata = buildPageMetadata({
   title: "Custom Website Design Pricing | Cyvexly Studio",
   description:
-    "See starting prices for custom websites, redesigns, landing pages, ecommerce and booking sites, web applications, add-ons, and monthly website care.",
+    "See Cyvexly's $199 new-client one-page Launch Offer, standard custom website packages from $1,800, add-ons, and optional website care.",
   path: "/pricing",
 });
 
@@ -91,94 +84,53 @@ export default function PricingPage() {
 
         {/* Package cards */}
         <section id="packages" className="pricing-package-stage scroll-mt-24 relative border-b border-smoke-glass/70">
-          <div className="relative z-10 mx-auto max-w-6xl px-6 py-12 lg:pb-20 lg:pt-6">
-            <div className="grid gap-6 lg:grid-cols-3">
-              {pricingPackages.slice(0, 3).map((pkg) => (
-                <div
-                  key={pkg.name}
-                  id={pkg.anchor}
-                  className={`glass-panel pricing-package-card flex flex-col rounded-2xl p-7 ${
-                    pkg.featured ? "pricing-package-card-featured" : ""
-                  } scroll-mt-24`}
-                >
-                {pkg.featured && (
-                  <span className="mb-3 w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
-                    Recommended
-                  </span>
-                )}
-                <PackageIcon name={pkg.name} />
-                <h2 className="mt-3 font-display text-lg font-semibold text-midnight-slate">
-                  {pkg.name}
-                </h2>
-                <p className="mt-1 text-sm font-medium text-midnight-slate">{pkg.plainName}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.1em] text-cool-graphite">
-                  Starting at
-                </p>
-                <p className="mt-1 font-display text-3xl font-semibold text-cyber-blue">
-                  {pkg.price}
-                </p>
-                <p className="mt-3 text-sm text-cool-graphite">{pkg.bestFor}</p>
-                <ul className="mt-4 flex-1 space-y-2 text-sm text-midnight-slate">
-                  {pkg.scope.slice(0, 5).map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-cyber-blue" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
-                  {pkg.timeline}
-                </p>
-                <ButtonLink
-                  href={`/contact?interest=${packageInquiryKeys[pkg.name]}`}
-                  variant={pkg.featured ? "primary" : "secondary"}
-                  className="mt-6 w-full"
-                >
-                  Ask about {pkg.name}
-                </ButtonLink>
-                </div>
-              ))}
+          <div className="relative z-10 mx-auto max-w-6xl px-6 py-12 lg:pb-20 lg:pt-2">
+            <div className="mb-5 max-w-4xl">
+              <h2 className="font-display text-2xl font-semibold text-midnight-slate">
+                Browse every pricing option.
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-cool-graphite">
+                The $199 Launch Offer is a tightly scoped new-client option, not a discounted
+                Signal package. The comparison below explains every difference.
+              </p>
             </div>
+            <PricingCarousel
+              idPrefix="pricing"
+              packageHeadingLevel="h3"
+              regionLabel="Cyvexly website packages"
+            />
 
-            <div className="mt-6 grid gap-6 md:grid-cols-2">
-              {pricingPackages.slice(3).map((pkg) => (
-                <div
-                  key={pkg.name}
-                  id={pkg.anchor}
-                  className="glass-panel pricing-package-card scroll-mt-24 flex flex-col rounded-2xl p-7"
-                >
-                <PackageIcon name={pkg.name} />
-                <h2 className="mt-3 font-display text-lg font-semibold text-midnight-slate">
-                  {pkg.name}
-                </h2>
-                <p className="mt-1 text-sm font-medium text-midnight-slate">{pkg.plainName}</p>
-                <p className="mt-1 text-xs uppercase tracking-[0.1em] text-cool-graphite">
-                  {pkg.name === "Custom application" ? "Price" : "Starting at"}
+            <div className="glass-content-field mt-8 grid gap-6 rounded-2xl p-6 sm:p-7 lg:grid-cols-2">
+              <div>
+                <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                  What keeps the Launch Offer at $199
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
+                  It is one page, up to five sections, with client-supplied final copy, logo,
+                  and images. Copywriting, new brand identity, CMS, ecommerce, booking,
+                  payments, CRM connections, custom integrations, migrations, and advanced
+                  animation require a standard package or separate quote.
                 </p>
-                <p className="mt-1 font-display text-3xl font-semibold text-cyber-blue">
-                  {pkg.price}
+                <p className="mt-3 text-xs leading-relaxed text-cool-graphite">
+                  Domain, hosting, email, taxes, licensed assets, and other provider fees are
+                  separate from the build fee.
                 </p>
-                <p className="mt-3 text-sm text-cool-graphite">{pkg.bestFor}</p>
-                <ul className="mt-4 flex-1 space-y-2 text-sm text-midnight-slate">
-                  {pkg.scope.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-cyber-blue" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 font-mono text-xs uppercase tracking-[0.1em] text-cool-graphite">
-                  {pkg.timeline}
+              </div>
+              <div>
+                <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                  Agreement, launch, and optional management
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
+                  A signed agreement confirms fit and scope before work. The full $199 is
+                  invoiced after final approval and is due before the public launch. There is
+                  no public checkout.
                 </p>
-                <ButtonLink
-                  href={`/contact?interest=${packageInquiryKeys[pkg.name]}`}
-                  variant="secondary"
-                  className="mt-6 w-full"
-                >
-                  Ask about {pkg.name}
-                </ButtonLink>
-                </div>
-              ))}
+                <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
+                  Eligible Launch Offer sites can add technical Starter Management for
+                  $50/month, billed monthly in advance. It is month-to-month with 30 days&apos;
+                  cancellation notice; content changes are not included.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -283,6 +235,29 @@ export default function PricingPage() {
                 </tbody>
               </table>
             </div>
+            <div className="mt-8 grid gap-3 md:grid-cols-2">
+              {pricingPackages.map((pkg) => (
+                <details
+                  key={`${pkg.name}-details`}
+                  className="rounded-xl border border-smoke-glass bg-frosted-glass/60 px-4 py-4"
+                >
+                  <summary className="cursor-pointer font-medium text-midnight-slate">
+                    Full {pkg.name} scope
+                  </summary>
+                  <ul className="mt-4 space-y-2 text-sm leading-relaxed text-cool-graphite">
+                    {pkg.scope.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <span
+                          className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyber-blue"
+                          aria-hidden="true"
+                        />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ))}
+            </div>
             <p className="mt-4 max-w-2xl text-xs text-cool-graphite">
               &ldquo;Core pages&rdquo; means distinct content templates or page
               layouts, not every automatically generated CMS item or product
@@ -298,13 +273,26 @@ export default function PricingPage() {
               Put the numbers together
             </p>
             <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
-              Two illustrative project scopes
+              Three illustrative project scopes
             </h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-cool-graphite">
               These examples use the published starting prices and add-on ranges below. They are
               planning examples, not fixed quotes; a written proposal confirms the actual scope.
             </p>
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="mt-8 grid gap-6 lg:grid-cols-3">
+              <article className="glass-panel rounded-2xl p-7">
+                <h3 className="font-display text-lg font-semibold text-midnight-slate">
+                  Eligible one-page launch
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-cool-graphite">
+                  The new-client Launch Offer covers one responsive page with up to five
+                  sections, client-supplied final content, one simple form or primary action,
+                  one review round, and launch support.
+                </p>
+                <p className="mt-5 font-display text-2xl font-semibold text-cyber-blue">
+                  One-time build fee: $199
+                </p>
+              </article>
               <article className="glass-panel rounded-2xl p-7">
                 <h3 className="font-display text-lg font-semibold text-midnight-slate">
                   Focused three-page launch
@@ -406,13 +394,11 @@ export default function PricingPage() {
             to 30 minutes and does not add a new layout, page, feature, or integration. Response
             windows confirm when we reply and schedule the work; they are not emergency-resolution guarantees.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {carePlans.map((plan, index) => (
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {[starterManagementPlan, ...carePlans].map((plan) => (
               <div
                 key={plan.name}
-                className={`glass-panel flex flex-col rounded-2xl p-7 ${
-                  index === carePlans.length - 1 ? "md:col-span-2 lg:col-span-1" : ""
-                }`}
+                className="glass-panel flex flex-col rounded-2xl p-7"
               >
                 <h3 className="font-display text-lg font-semibold text-midnight-slate">
                   {plan.name}
@@ -421,6 +407,11 @@ export default function PricingPage() {
                   {plan.price}
                 </p>
                 <p className="mt-3 text-sm font-medium text-midnight-slate">{plan.use}</p>
+                {"eligibility" in plan && typeof plan.eligibility === "string" && (
+                  <p className="mt-3 text-xs leading-relaxed text-cool-graphite">
+                    {plan.eligibility}
+                  </p>
+                )}
                 <dl className="mt-6 flex-1 space-y-4 border-t border-smoke-glass/70 pt-5 text-sm">
                   <div>
                     <dt className="font-mono text-[10px] uppercase tracking-[0.12em] text-cool-graphite">
@@ -494,6 +485,13 @@ export default function PricingPage() {
               </h2>
               <dl className="mt-4 space-y-4 text-sm">
                 <div>
+                  <dt className="font-medium text-midnight-slate">Launch Offer</dt>
+                  <dd className="text-cool-graphite">
+                    A signed agreement comes first. The full $199 is invoiced after final
+                    approval and is due before public launch.
+                  </dd>
+                </div>
+                <div>
                   <dt className="font-medium text-midnight-slate">Signal</dt>
                   <dd className="text-cool-graphite">
                     50% to reserve and begin; 50% after final approval and
@@ -514,7 +512,7 @@ export default function PricingPage() {
                   </dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-midnight-slate">Care plans</dt>
+                  <dt className="font-medium text-midnight-slate">Management &amp; Care plans</dt>
                   <dd className="text-cool-graphite">Billed monthly in advance.</dd>
                 </div>
               </dl>

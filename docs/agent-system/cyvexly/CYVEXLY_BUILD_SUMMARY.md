@@ -3,6 +3,28 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
+## Round 201 — `$199` Launch Offer working-tree candidate
+
+- Implemented Owner direction `2026-09-20-01`: a truthful, narrowly scoped
+  `$199` new-client one-page offer; optional `$50/month` Starter Management;
+  and a six-option Home/Pricing carousel with touch, keyboard, status, reduced-
+  motion, and direct-hash behavior.
+- Reconciled affected inquiry/planner choices, local/service/resource copy,
+  structured data, private business and marketability records, and dormant ad
+  planning without enabling payments, checkout, ads, provider actions, or a
+  false expiration date.
+- Build, TypeScript, buyer/search contracts, and full responsive Chromium
+  hierarchy/runtime proof pass with zero horizontal overflow. Lint has zero
+  errors and one pre-existing warning. The in-app browser bridge remained
+  unavailable after its required retry, so Chromium screenshots supplied the
+  visual evidence.
+- Kept the candidate uncommitted, unpushed, and undeployed because the branch
+  already contains the unaccepted combined showcase line. Independent review
+  of the complete exact source remains the release gate.
+- Host policy rejected exact-path cleanup of the two new `.tmp` screenshot
+  directories after verification; they remain untracked and contain no source
+  or secrets.
+
 ## Round 200 — exact-source review dependency unchanged
 
 - Confirmed no independent publication, reviewer memory, operational item, or

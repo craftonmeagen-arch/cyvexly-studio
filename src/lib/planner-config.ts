@@ -196,6 +196,7 @@ export const visualSpectrums = [
 ];
 
 export const budgetRanges = [
+  "$199 Launch Offer — eligible new clients",
   "$1,800–$3,000",
   "$3,000–$5,000",
   "$5,000–$8,000",

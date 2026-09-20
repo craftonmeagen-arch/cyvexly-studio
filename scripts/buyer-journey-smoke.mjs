@@ -14,6 +14,8 @@ async function readStatus(path) {
 }
 
 const inquiryContexts = {
+  "launch-offer": "Launch Offer — $199 one-page website for eligible new clients",
+  "starter-management": "Starter Management — technical care for a Launch Offer site",
   "signal-package": "Signal package — focused starter website",
   "orbit-package": "Orbit package — small-business website",
   "nexus-package": "Nexus package — larger content site or redesign",
@@ -37,6 +39,8 @@ const inquiryContexts = {
 };
 
 const inquiryPlannerServices = {
+  "launch-offer": "landing-pages",
+  "starter-management": "website-care",
   "signal-package": "landing-pages",
   "orbit-package": "business-websites",
   "nexus-package": "website-redesigns",
@@ -291,6 +295,7 @@ for (const [label, href] of serviceDestinations) {
 
 for (const id of [
   "packages",
+  "launch-offer",
   "signal-package",
   "orbit-package",
   "nexus-package",
@@ -451,6 +456,7 @@ assert.match(pricing, /href="\/start"[^>]*>Share a detailed brief/);
 assert.doesNotMatch(pricing, />Most popular</);
 assert.match(pricing, />Recommended</);
 for (const label of [
+  "One-page website for new clients",
   "Focused starter website",
   "Small-business website",
   "Larger content site or redesign",
@@ -499,6 +505,15 @@ assert.doesNotMatch(
 assert.match(pricing, /Content editing/);
 assert.match(pricing, /Forms \/ integrations/);
 assert.match(pricing, /Illustrative build fee: \$4,500–\$5,750/);
+assert.match(pricing, /One-time build fee: \$199/);
+assert.match(pricing, /New-client offer/);
+assert.match(pricing, /once per client/);
+assert.match(pricing, /Starter Management/);
+assert.match(pricing, /\$50\/mo/);
+assert.match(pricing, /30 days(?:&#x27;|&apos;|') cancellation notice/);
+assert.match(pricing, /content changes are not included/i);
+assert.match(pricing, /full \$199 is invoiced after final approval/i);
+assert.doesNotMatch(pricing, /limited time|expires|countdown|was \$|<del>/i);
 assert.match(pricing, /A small content request is one update/);
 assert.match(pricing, /Priority reply within one business day/);
 
@@ -560,11 +575,15 @@ for (const [[interest, expectedLabel], html] of contextEntries.map((entry, index
   );
 }
 
+assert.match(home, /href="\/contact\?interest=launch-offer"/);
+assert.match(home, /href="\/contact\?interest=starter-management"/);
 assert.match(home, /href="\/contact\?interest=signal-package"/);
 assert.match(home, /href="\/contact\?interest=orbit-package"/);
 assert.match(home, /href="\/contact\?interest=nexus-package"/);
 assert.match(pricing, /href="\/contact\?interest=commerce-package"/);
 assert.match(pricing, /href="\/contact\?interest=custom-system"/);
+assert.match(pricing, /href="\/contact\?interest=launch-offer"/);
+assert.match(pricing, /href="\/contact\?interest=starter-management"/);
 assert.match(pricing, />Custom application</);
 assert.match(pricing, /Ask about[\s\S]{0,20}Custom application/);
 assert.match(pricing, /Commerce &amp; custom applications/);

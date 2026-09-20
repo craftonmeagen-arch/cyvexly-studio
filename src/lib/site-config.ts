@@ -42,7 +42,7 @@ export const footerNav = {
 
 export const credibilityPoints = [
   { id: "owner-led", label: "Work directly with the studio" },
-  { id: "custom-strategy", label: "Website projects from $1,800" },
+  { id: "custom-strategy", label: "$199 new-client launch offer" },
   { id: "clean-code", label: "Website timelines: 2–14+ weeks by scope" },
   { id: "secure", label: "You own the finished site" },
   { id: "communication", label: "Replies within two business days" },
@@ -448,33 +448,6 @@ export const aboutValues = [
   },
 ];
 
-// Curated highlights for the Home preview, kept separate from
-// `pricingPackages` below (full scope list) so each can pick its own
-// best 3-4 items. Keep name/price in sync with `pricingPackages` by hand.
-export const pricingPreview = [
-  {
-    name: "Signal",
-    price: "$1,800",
-    description: "A focused first presence, campaign, event, or single service.",
-    features: ["1–3 core pages", "Responsive design", "One primary form", "Essential SEO setup"],
-    featured: false,
-  },
-  {
-    name: "Orbit",
-    price: "$3,500",
-    description: "A complete small-business or professional-services website.",
-    features: ["Up to 7 core pages", "Custom visual system", "Basic CMS or blog", "Two review rounds"],
-    featured: true,
-  },
-  {
-    name: "Nexus",
-    price: "$5,800",
-    description: "A growing business, content-led site, or strategic redesign.",
-    features: ["Up to 12 core pages", "CMS collections", "Up to two standard integrations", "Three review rounds"],
-    featured: false,
-  },
-];
-
 export const servicesGroups = [
   {
     id: "strategy-structure",
@@ -635,7 +608,7 @@ export const buyerNeeds = [
     title: "Launch a credible site that makes the next step obvious.",
     description:
       "For new businesses and established teams without a useful web presence. We shape the message, page plan, visual direction, build, and inquiry path together.",
-    startingPoint: "Signal from $1,800 · Orbit from $3,500",
+    startingPoint: "$199 new-client launch offer · Standard packages from $1,800",
     detailHref: "/services/business-websites",
     detailLabel: "Explore business websites",
     inquiryHref: "/contact?interest=business-websites",
@@ -766,14 +739,70 @@ export const servicesFaq = [
   },
 ];
 
-// Full package data for /pricing. See `pricingPreview` above - keep
-// name/price in sync by hand when either changes.
+export type PricingPackage = {
+  name: string;
+  anchor: string;
+  inquiryKey: string;
+  plainName: string;
+  price: string;
+  priceLabel: string;
+  bestFor: string;
+  scope: string[];
+  compactScope: string[];
+  timeline: string;
+  contentEditing: string;
+  integrations: string;
+  revisions: string;
+  featured: boolean;
+  promotional: boolean;
+  badge?: string;
+  eligibility?: string;
+};
+
+// One source of truth for the Home and Pricing carousels, comparison tables,
+// inquiry routes, and structured pricing data.
 export const pricingPackages = [
+  {
+    name: "Launch Offer",
+    anchor: "launch-offer",
+    inquiryKey: "launch-offer",
+    plainName: "One-page website for new clients",
+    price: "$199",
+    priceLabel: "One-time build fee",
+    bestFor:
+      "An eligible new Cyvexly client who needs a focused one-page presence and already has final copy and brand assets ready.",
+    scope: [
+      "One responsive page with up to five sections",
+      "Light custom styling aligned to your existing identity",
+      "One simple contact form or primary call to action",
+      "Essential title, description, and social-sharing setup",
+      "One review round",
+      "Launch support and 14 days of defect support",
+      "Client supplies final copy, logo, and images",
+    ],
+    compactScope: [
+      "One responsive page · up to five sections",
+      "Client-supplied final copy and assets",
+      "One simple form or primary action",
+      "Essential search and sharing setup",
+      "One review round plus launch support",
+    ],
+    timeline: "7–10 business days after content is supplied",
+    contentEditing: "Client-supplied final content; no CMS",
+    integrations: "One simple form or primary action",
+    revisions: "One review round",
+    featured: false,
+    promotional: true,
+    badge: "New-client offer",
+    eligibility: "New Cyvexly clients · once per client · subject to fit and availability",
+  },
   {
     name: "Signal",
     anchor: "signal-package",
+    inquiryKey: "signal-package",
     plainName: "Focused starter website",
     price: "$1,800",
+    priceLabel: "Starting at",
     bestFor: "A focused first presence, campaign, event, or single service.",
     scope: [
       "1–3 core pages",
@@ -785,17 +814,27 @@ export const pricingPackages = [
       "Two review rounds",
       "Launch support",
     ],
+    compactScope: [
+      "1–3 core pages",
+      "Responsive design",
+      "One primary form",
+      "Essential SEO setup",
+      "Two review rounds",
+    ],
     timeline: "2–3 weeks",
     contentEditing: "Available as an add-on",
     integrations: "One primary form",
     revisions: "Two review rounds",
     featured: false,
+    promotional: false,
   },
   {
     name: "Orbit",
     anchor: "orbit-package",
+    inquiryKey: "orbit-package",
     plainName: "Small-business website",
     price: "$3,500",
+    priceLabel: "Starting at",
     bestFor: "A complete small-business or professional-services website.",
     scope: [
       "Up to 7 core pages",
@@ -809,17 +848,28 @@ export const pricingPackages = [
       "Owner handoff",
       "Launch support",
     ],
+    compactScope: [
+      "Up to 7 core pages",
+      "Custom visual system",
+      "Basic CMS or blog",
+      "Two forms",
+      "Two review rounds",
+    ],
     timeline: "4–6 weeks",
     contentEditing: "Basic CMS or blog",
     integrations: "Two forms",
     revisions: "Two review rounds",
     featured: true,
+    promotional: false,
+    badge: "Recommended",
   },
   {
     name: "Nexus",
     anchor: "nexus-package",
+    inquiryKey: "nexus-package",
     plainName: "Larger content site or redesign",
     price: "$5,800",
+    priceLabel: "Starting at",
     bestFor: "A growing business, content-led site, or strategic redesign.",
     scope: [
       "Up to 12 core pages",
@@ -835,17 +885,27 @@ export const pricingPackages = [
       "Training",
       "Launch support",
     ],
+    compactScope: [
+      "Up to 12 core pages",
+      "Deeper strategy and custom components",
+      "CMS collections",
+      "Up to two standard integrations",
+      "Three review rounds",
+    ],
     timeline: "6–9 weeks",
     contentEditing: "CMS collections and training",
     integrations: "Up to two standard integrations",
     revisions: "Three review rounds",
     featured: false,
+    promotional: false,
   },
   {
     name: "Commerce",
     anchor: "commerce-package",
+    inquiryKey: "commerce-package",
     plainName: "Online store or booking-led website",
     price: "$8,500",
+    priceLabel: "Starting at",
     bestFor: "A small-to-medium online store or booking-led business.",
     scope: [
       "Storefront or booking journey structure",
@@ -859,17 +919,27 @@ export const pricingPackages = [
       "Training",
       "Launch support",
     ],
+    compactScope: [
+      "Storefront or booking journey",
+      "Product, service, and collection templates",
+      "Checkout, payment, or scheduling setup",
+      "Operations and policy review",
+      "Training and launch support",
+    ],
     timeline: "8–14+ weeks",
     contentEditing: "Catalog or service tools and training",
     integrations: "Checkout, booking, and approved services",
     revisions: "Defined in the proposal",
     featured: false,
+    promotional: false,
   },
   {
     name: "Custom application",
     anchor: "custom-system-package",
+    inquiryKey: "custom-system",
     plainName: "Purpose-built web application",
     price: "Quoted after discovery",
+    priceLabel: "Price",
     bestFor:
       "Memberships, complex booking, multilingual, large migrations, advanced integrations, or unusual workflows.",
     scope: [
@@ -878,24 +948,32 @@ export const pricingPackages = [
       "Timeline and dependencies",
       "Milestone billing",
     ],
+    compactScope: [
+      "Discovery-led scope",
+      "Phased proposal",
+      "Defined acceptance points",
+      "Named dependencies and timeline",
+      "Milestone billing",
+    ],
     timeline: "Scope dependent",
     contentEditing: "Defined during discovery",
     integrations: "Defined during discovery",
     revisions: "Defined in the proposal",
     featured: false,
+    promotional: false,
   },
-];
+] satisfies PricingPackage[];
 
 export const projectIncludes = [
   "A defined goal and primary action",
-  "Sitemap / page plan",
+  "Page or section plan for the agreed scope",
   "Responsive desktop, tablet, and mobile behavior",
   "Custom styling aligned to your brand",
   "Accessible interaction and content standards target",
   "Functional forms and clear confirmation/error states",
   "Baseline page titles and descriptions for agreed pages",
   "Favicon and social-sharing image direction",
-  "Analytics connection when you supply or authorize the account",
+  "Analytics connection when included in scope and you supply or authorize the account",
   "Pre-launch review and your approval",
   "Handoff and ownership terms",
   "14 days of post-launch defect support",
@@ -950,6 +1028,19 @@ export const carePlans = [
   },
 ];
 
+export const starterManagementPlan = {
+  name: "Starter Management",
+  price: "$50/mo",
+  use: "Technical care for Launch Offer sites",
+  capacity:
+    "Technical health, form and uptime checks, applicable dependency/security maintenance, troubleshooting, and backup/recovery oversight",
+  response: "Within two business days",
+  review: "Monthly technical check",
+  interest: "starter-management",
+  eligibility:
+    "Optional for Launch Offer sites only. Content changes and provider subscriptions are separate.",
+};
+
 export const billedSeparately = [
   "Domain registration and renewal",
   "Hosting / platform subscription",
@@ -962,6 +1053,11 @@ export const billedSeparately = [
 
 export const pricingFaq = [
   {
+    question: "How is the $199 Launch Offer different from Signal?",
+    answer:
+      "The Launch Offer is one responsive page with up to five sections for an eligible new client who supplies final copy, a logo, and images. It includes one simple form or primary action and one review round. Signal is the standard custom package for one to three core pages, broader content structure, and two review rounds.",
+  },
+  {
     question: "Are these prices final?",
     answer:
       "They're honest starting points for typical scope. Your final quote reflects your actual pages, content, features, and timeline — you'll see it in writing before any work begins.",
@@ -969,7 +1065,7 @@ export const pricingFaq = [
   {
     question: "How does payment work?",
     answer:
-      "No work begins until we've agreed on scope and you've received a signed agreement and first invoice. Packages are billed in milestones; Care plans are billed monthly in advance.",
+      "No work begins until scope is agreed in a signed agreement. The $199 Launch Offer is invoiced after final approval and paid before public launch. Standard packages are billed in milestones; Starter Management and Care plans are billed monthly in advance.",
   },
   {
     question: "What payment methods do you accept?",
@@ -984,7 +1080,7 @@ export const pricingFaq = [
   {
     question: "Do care plans require a contract?",
     answer:
-      "No long-term contract. Care plans bill monthly in advance and can be paused or cancelled with notice as described in your agreement.",
+      "No long-term contract. Starter Management and Care plans bill monthly in advance and can be paused or cancelled with notice as described in your agreement. Starter Management is limited to eligible Launch Offer sites and requires 30 days' cancellation notice.",
   },
   {
     question: "Not sure which package fits?",
@@ -1006,7 +1102,7 @@ export const faqPreview = [
   {
     question: "How long does a website project take?",
     answer:
-      "Signal projects typically take 2–3 weeks, Orbit 4–6, Nexus 6–9, and Commerce 8–14+ weeks. Custom applications are scoped individually.",
+      "The Launch Offer typically takes 7–10 business days after final content is supplied. Signal projects typically take 2–3 weeks, Orbit 4–6, Nexus 6–9, and Commerce 8–14+ weeks. Custom applications are scoped individually.",
   },
   {
     question: "What do you need from me to get started?",
@@ -1021,7 +1117,7 @@ export const faqPreview = [
   {
     question: "Do you offer ongoing support?",
     answer:
-      "Every project includes 14 days of post-launch defect support, and optional monthly Care plans for continued updates.",
+      "Every project includes 14 days of post-launch defect support. Eligible Launch Offer sites can add $50/month technical Starter Management; full Care plans add content and design capacity from $99/month.",
   },
   {
     question: "Do you work with businesses outside my industry?",
@@ -1031,7 +1127,7 @@ export const faqPreview = [
   {
     question: "How do payments work?",
     answer:
-      "Work begins after a signed agreement and first invoice. Packages are billed in milestones; Care plans are billed monthly in advance.",
+      "A signed agreement comes before work. The Launch Offer is paid after final approval and before public launch; standard packages are billed in milestones. Monthly management and Care are billed in advance.",
   },
 ];
 
@@ -1062,12 +1158,12 @@ export const faqLibrary = [
       {
         question: "Are the published prices final?",
         answer:
-          "They're honest starting points for typical scope. Your final quote reflects your actual pages, content, features, and timeline, written out before work begins.",
+          "The $199 Launch Offer is a defined, tightly scoped option for eligible new clients. Standard package prices are honest starting points for typical scope. Your written agreement confirms the actual pages, content, features, timeline, and price before work begins.",
       },
       {
         question: "Do you require a deposit?",
         answer:
-          "Yes. Signal projects are 50% to begin and 50% at final approval. Orbit and Nexus are 40% to begin, 30% at design approval, 30% before launch. Commerce and Custom follow a milestone schedule set in the proposal.",
+          "The Launch Offer follows a signed agreement, then the full $199 is invoiced after final approval and paid before public launch. Signal projects are 50% to begin and 50% at final approval. Orbit and Nexus are 40% to begin, 30% at design approval, and 30% before launch. Commerce and Custom follow a milestone schedule set in the proposal.",
       },
       {
         question: "What payment methods do you accept?",
@@ -1087,7 +1183,7 @@ export const faqLibrary = [
       {
         question: "How long does a typical project take?",
         answer:
-          "2–3 weeks for Signal, 4–6 weeks for Orbit, 6–9 weeks for Nexus, and 8–14+ weeks for Commerce. Custom applications are scoped individually.",
+          "The Launch Offer typically takes 7–10 business days after final content is supplied. Standard timing is 2–3 weeks for Signal, 4–6 weeks for Orbit, 6–9 weeks for Nexus, and 8–14+ weeks for Commerce. Custom applications are scoped individually.",
       },
       {
         question: "What can delay a launch date?",
@@ -1202,7 +1298,7 @@ export const faqLibrary = [
       {
         question: "Do you offer ongoing support after that?",
         answer:
-          "Yes — optional monthly Care plans starting at $99/mo, with more capacity available on Care+ and Evolve.",
+          "Yes. Eligible Launch Offer sites can add technical-only Starter Management at $50/month. Full Care plans start at $99/month and add content or design capacity, with more capacity available on Care+ and Evolve.",
       },
       {
         question: "Is there a long-term contract for Care plans?",

@@ -1,6 +1,13 @@
 import type { ReactNode } from "react";
 
 const paths: Record<string, ReactNode> = {
+  "Launch Offer": (
+    <>
+      <path d="M12 3.5v17M3.5 12h17" />
+      <path d="m6.4 6.4 11.2 11.2M17.6 6.4 6.4 17.6" />
+      <circle cx="12" cy="12" r="4.2" />
+    </>
+  ),
   Signal: (
     <>
       <circle cx="12" cy="17" r="1.6" />

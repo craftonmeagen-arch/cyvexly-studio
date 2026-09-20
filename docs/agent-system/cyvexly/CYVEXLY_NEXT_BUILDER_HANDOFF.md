@@ -1,5 +1,36 @@
 # Cyvexly Build Team Builder — Next Handoff
 
+## Owner Launch Offer implementation — September 20, 2026
+
+Owner direction `2026-09-20-01` is fully implemented in the working tree on
+HEAD `448b02f68f26`. The candidate introduces a tightly bounded `$199`
+one-page offer for eligible new clients, the optional `$50/month` Starter
+Management plan, and a six-card pricing carousel matching the Work carousel's
+responsive and accessible interaction model. Home, Pricing, Contact contexts,
+Planner budget selection, relevant service/local/resource copy, structured
+data, private business/marketability records, and dormant Google Ads planning
+are aligned. No payment integration, checkout, campaign publication, provider
+action, scheduler change, or outside-application edit occurred.
+
+`pnpm run build`, `pnpm exec tsc --noEmit`, buyer-journey smoke,
+search-readiness smoke, and the full internal-hierarchy production-browser
+suite pass. Lint has zero errors and one pre-existing archived-evidence
+warning. Fresh desktop and phone captures show Launch Offer first, Signal
+second, correct direct-anchor reveal, readable cards, usable controls, and no
+horizontal overflow. The in-app browser bridge was unavailable after one
+reset/retry, so do not describe the Chromium evidence as an attended in-app
+browser session.
+
+The implementation is intentionally uncommitted and unpushed because current
+main already contains the still-unaccepted combined showcase candidate. The
+next gate is an independent exact-source review of the complete combined
+candidate before any commit/push/deploy decision.
+
+Host policy rejected bounded removal of the two exact Builder-owned screenshot
+directories `.tmp/launch-offer-review` and
+`.tmp/launch-offer-review-final` after their resolved paths were verified
+inside the workspace. They remain untracked and contain no source or secrets.
+
 ## PM live-search delivery — September 13, 2026
 
 Owner explicitly requested completion of search steps 1,2,3,5. The separate

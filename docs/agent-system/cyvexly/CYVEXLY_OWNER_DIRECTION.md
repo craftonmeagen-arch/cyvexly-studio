@@ -1,5 +1,57 @@
 # Cyvexly Owner Direction
 
+## New-client Launch Offer and pricing carousel — 2026-09-20-01
+
+**Status:** ACTIVE — IMPLEMENTATION AUTHORIZED
+**Source:** Owner via the active Codex conversation on September 20, 2026.
+
+### Owner direction — verbatim
+
+> “Let's do a 199 promotional thing. In the prices can you do that for the
+> basic package and make the cards in the price section a slide deck like the
+> projects part. Look into this before implementation. And if there are any
+> other pages affected can you take care of that as well.”
+>
+> “we still offer the site management for 50 a month”
+>
+> “let's just do industry standards for all future wuestions”
+>
+> “Implement the proposed plan.”
+
+### Approved interpretation and outcome
+
+- Add an ongoing **$199 Launch Offer** for eligible new Cyvexly clients. It is
+  a tightly scoped one-page offer, not a discount or replacement for the
+  standard $1,800 Signal package. Do not create fake urgency, a crossed-out
+  price, an expiration date, or a fixed availability promise.
+- Include one responsive page with up to five sections, client-supplied final
+  copy/logo/images, light custom styling, one simple form or primary action,
+  essential title/description/social-sharing setup, one review round, launch
+  support, and 14 days of defect support. Target 7–10 business days after all
+  content is supplied, subject to fit and scheduling availability.
+- Exclude copywriting, new identity work, CMS, ecommerce, booking, payments,
+  CRM, custom integrations, migrations, advanced animation, domains, hosting,
+  email, taxes, licensed assets, and provider fees unless separately scoped.
+- Require a signed agreement before work. Invoice the full $199 after final
+  approval and require payment before public launch. Preserve the current
+  truthful no-public-checkout and payment-provider-not-active boundaries.
+- Add optional **Starter Management at $50/month** only for eligible Launch
+  Offer sites. It is month-to-month, billed in advance, uses 30 days'
+  cancellation notice, and covers technical health, forms, uptime, applicable
+  dependency/security maintenance, troubleshooting, and backup/recovery
+  oversight. It excludes content changes and provider subscriptions. Preserve
+  the existing $99+ Care plans for content/design support.
+- Present Launch Offer, Signal, Orbit, Nexus, Commerce, and Custom application
+  in an accessible two-up desktop/one-up mobile carousel on both Home and
+  Pricing, following the accepted Projects carousel interaction standard.
+  Preserve Orbit's “Recommended” label, package anchors, keyboard/touch
+  operation, reduced motion, visible focus, comparison detail, and inquiry
+  context.
+- Reconcile affected service, local-search, cost-guide, Planner, FAQ,
+  structured-data, internal business record, marketability record, and dormant
+  advertising-plan language. Do not publish or change an external ad campaign,
+  activate payments, or alter recurring schedulers under this direction.
+
 ## Expanded Indiana search visibility — 2026-09-13-06
 
 The Owner confirms Bloomington, Evansville, and Jasper, Indiana as additional

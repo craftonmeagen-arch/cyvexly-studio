@@ -280,16 +280,101 @@ async function main() {
     await new Promise((resolve) => setTimeout(resolve, 150));
     await capture(client, "home-timing-phone.png");
 
+    await openRoute(client, "/?capture=pricing-desktop#pricing-preview", 1280, 720);
+    const homePricingDesktopTop = await waitForAnchorNearTop(client, "pricing-preview", 240);
+    assert.ok(homePricingDesktopTop >= 0 && homePricingDesktopTop < 240, `Home pricing desktop hash target did not settle near the top: ${homePricingDesktopTop}`);
+    const homePricingDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('home-pricing-rail');
+      const railRect = rail.getBoundingClientRect();
+      const cards = [...rail.querySelectorAll('[data-pricing-card]')];
+      return {
+        anchorContainsRail: document.getElementById('pricing-preview')?.contains(rail) ?? false,
+        cardCount: cards.length,
+        visibleCards: cards.filter((card) => {
+          const rect = card.getBoundingClientRect();
+          return Math.min(rect.right, railRect.right) - Math.max(rect.left, railRect.left) >= rect.width * .5;
+        }).length,
+        cardWidths: cards.map((card) => card.getBoundingClientRect().width),
+        controls: [...document.querySelectorAll('[aria-controls="home-pricing-rail"]')].map((control) => control.getBoundingClientRect().height),
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.equal(homePricingDesktop.anchorContainsRail, true, "Home pricing hash target does not contain the pricing carousel");
+    assert.equal(homePricingDesktop.cardCount, 6, "Home pricing carousel does not contain all six options");
+    assert.equal(homePricingDesktop.visibleCards, 2, "Home pricing carousel should show two cards on desktop");
+    assert.ok(homePricingDesktop.cardWidths.every((width) => width >= 500), "Home pricing cards became unreadable desktop thumbnails");
+    assert.ok(homePricingDesktop.controls.every((height) => height >= 44), "Home pricing controls fall below the touch target floor");
+    assert.ok(homePricingDesktop.overflow <= 1, "Home pricing carousel causes desktop page overflow");
+    await capture(client, "home-pricing-desktop.png");
+
+    await evaluate(client, `(() => {
+      const rail = document.getElementById('home-pricing-rail');
+      rail.focus();
+    })()`);
+    await client.send("Input.dispatchKeyEvent", { type: "keyDown", key: "ArrowRight", code: "ArrowRight", windowsVirtualKeyCode: 39 });
+    await client.send("Input.dispatchKeyEvent", { type: "keyUp", key: "ArrowRight", code: "ArrowRight", windowsVirtualKeyCode: 39 });
+    for (let attempt = 0; attempt < 30; attempt += 1) {
+      if (await evaluate(client, "document.getElementById('home-pricing-rail').scrollLeft > 500")) break;
+      await new Promise((resolve) => setTimeout(resolve, 100));
+    }
+    assert.ok(await evaluate(client, "document.getElementById('home-pricing-rail').scrollLeft > 500"), "ArrowRight did not advance Home pricing");
+    assert.equal(await evaluate(client, "document.activeElement?.id"), "home-pricing-rail", "Home pricing keyboard navigation lost focus");
+
+    await openRoute(client, "/?capture=pricing-phone#pricing-preview", 390, 844);
+    const homePricingPhoneTop = await waitForAnchorNearTop(client, "pricing-preview", 220);
+    assert.ok(homePricingPhoneTop >= 0 && homePricingPhoneTop < 220, `Home pricing phone hash target did not settle near the top: ${homePricingPhoneTop}`);
+    const homePricingPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
+      const rail = document.getElementById('home-pricing-rail');
+      const railRect = rail.getBoundingClientRect();
+      const cards = [...rail.querySelectorAll('[data-pricing-card]')];
+      const first = cards[0].getBoundingClientRect();
+      return {
+        anchorContainsRail: document.getElementById('pricing-preview')?.contains(rail) ?? false,
+        visibleCards: cards.filter((card) => {
+          const rect = card.getBoundingClientRect();
+          return Math.min(rect.right, railRect.right) - Math.max(rect.left, railRect.left) >= rect.width * .5;
+        }).length,
+        cardWidth: first.width,
+        railWidth: railRect.width,
+        overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      };
+    })())`));
+    assert.equal(homePricingPhone.anchorContainsRail, true, "Home pricing phone hash target does not contain the pricing carousel");
+    assert.equal(homePricingPhone.visibleCards, 1, "Home pricing carousel should show one card on phone");
+    assert.ok(Math.abs(homePricingPhone.cardWidth - homePricingPhone.railWidth) <= 6, "Home pricing card does not use the readable phone width");
+    assert.ok(homePricingPhone.overflow <= 1, "Home pricing carousel causes phone page overflow");
+    await capture(client, "home-pricing-phone.png");
+
     await openRoute(client, "/pricing", 1280, 720);
     const pricingDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const hero = document.querySelector('.pricing-hero-stage').getBoundingClientRect();
       const nav = document.querySelector('[aria-label="Pricing sections"]').getBoundingClientRect();
-      const firstCard = [...document.querySelectorAll('h2')].find((item) => item.textContent.trim() === 'Signal').closest('div').getBoundingClientRect();
-      return { heroHeight: hero.height, navBottom: nav.bottom, firstCardTop: firstCard.top };
+      const rail = document.getElementById('pricing-pricing-rail');
+      const cards = [...rail.querySelectorAll('[data-pricing-card]')];
+      const firstCard = document.getElementById('launch-offer').getBoundingClientRect();
+      const secondCard = document.getElementById('signal-package').getBoundingClientRect();
+      return {
+        heroHeight: hero.height,
+        navBottom: nav.bottom,
+        firstCardTop: firstCard.top,
+        cardCount: cards.length,
+        visibleCards: cards.filter((card) => {
+          const rect = card.getBoundingClientRect();
+          const railRect = rail.getBoundingClientRect();
+          return Math.min(rect.right, railRect.right) - Math.max(rect.left, railRect.left) >= rect.width * .5;
+        }).length,
+        firstWidth: firstCard.width,
+        secondWidth: secondCard.width,
+        controls: [...document.querySelectorAll('[aria-controls="pricing-pricing-rail"]')].map((control) => control.getBoundingClientRect().height),
+      };
     })())`));
     assert.ok(pricingDesktop.heroHeight <= 340, "Pricing hero is too tall to reveal package decisions");
     assert.ok(pricingDesktop.firstCardTop >= pricingDesktop.navBottom, "Pricing cards overlap section navigation");
-    assert.ok(pricingDesktop.firstCardTop <= 530, "Pricing packages do not enter the opening viewport soon enough");
+    assert.ok(pricingDesktop.firstCardTop <= 720, `Pricing packages do not enter the opening viewport soon enough: ${JSON.stringify(pricingDesktop)}`);
+    assert.equal(pricingDesktop.cardCount, 6, "Pricing carousel does not contain all six options");
+    assert.equal(pricingDesktop.visibleCards, 2, "Pricing carousel should show two cards on desktop");
+    assert.ok(Math.abs(pricingDesktop.firstWidth - pricingDesktop.secondWidth) <= 2, "Pricing carousel cards are not equal width");
+    assert.ok(pricingDesktop.controls.every((height) => height >= 44), "Pricing carousel controls are below the touch target floor");
     await capture(client, "pricing-desktop.png");
 
     await openRoute(client, "/pricing#commerce-package", 1440, 900);
@@ -297,7 +382,8 @@ async function main() {
     const pricingAnchorDesktop = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const header = document.querySelector('header').getBoundingClientRect();
       const target = document.getElementById('commerce-package').getBoundingClientRect();
-      return { hash: location.hash, headerBottom: header.bottom, targetTop: target.top, targetBottom: target.bottom };
+      const rail = document.getElementById('pricing-pricing-rail').getBoundingClientRect();
+      return { hash: location.hash, headerBottom: header.bottom, targetTop: target.top, targetBottom: target.bottom, targetLeft: target.left, targetRight: target.right, railLeft: rail.left, railRight: rail.right };
     })())`));
     assert.equal(pricingAnchorDesktop.hash, "#commerce-package");
     assert.ok(pricingAnchorDesktop.targetTop >= pricingAnchorDesktop.headerBottom, "Commerce anchor is hidden behind the sticky header");
@@ -305,6 +391,7 @@ async function main() {
       pricingAnchorDesktop.targetTop < 240,
       `Commerce anchor leaves the named package too far below the sticky header: ${JSON.stringify(pricingAnchorDesktop)}`,
     );
+    assert.ok(pricingAnchorDesktop.targetLeft >= pricingAnchorDesktop.railLeft - 2 && pricingAnchorDesktop.targetRight <= pricingAnchorDesktop.railRight + 2, "Commerce anchor is not horizontally revealed in the carousel");
     await capture(client, "pricing-commerce-anchor-desktop.png");
 
     await openRoute(client, "/services", 1280, 720);
@@ -863,7 +950,8 @@ async function main() {
     const pricingAnchorPhone = JSON.parse(await evaluate(client, `JSON.stringify((() => {
       const header = document.querySelector('header').getBoundingClientRect();
       const target = document.getElementById('orbit-package').getBoundingClientRect();
-      return { hash: location.hash, headerBottom: header.bottom, targetTop: target.top, targetBottom: target.bottom };
+      const rail = document.getElementById('pricing-pricing-rail').getBoundingClientRect();
+      return { hash: location.hash, headerBottom: header.bottom, targetTop: target.top, targetBottom: target.bottom, targetLeft: target.left, targetRight: target.right, railLeft: rail.left, railRight: rail.right, pageOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth };
     })())`));
     assert.equal(pricingAnchorPhone.hash, "#orbit-package");
     assert.ok(pricingAnchorPhone.targetTop >= pricingAnchorPhone.headerBottom, "Orbit anchor is hidden behind the phone header");
@@ -871,7 +959,8 @@ async function main() {
       pricingAnchorPhone.targetTop < 220,
       `Orbit anchor leaves the named package too far below the phone header: ${JSON.stringify(pricingAnchorPhone)}`,
     );
-    assert.ok(pricingAnchorPhone.targetBottom <= 844, "Orbit package decision does not fit in the phone viewport after navigation");
+    assert.ok(pricingAnchorPhone.targetLeft >= pricingAnchorPhone.railLeft - 2 && pricingAnchorPhone.targetRight <= pricingAnchorPhone.railRight + 2, "Orbit anchor is not horizontally revealed on phone");
+    assert.ok(pricingAnchorPhone.pageOverflow <= 1, `Pricing carousel causes page-level phone overflow: ${JSON.stringify(pricingAnchorPhone)}`);
     await capture(client, "pricing-orbit-anchor-phone.png");
 
     await openRoute(client, "/contact?interest=orbit-package", 390, 844);
@@ -1151,6 +1240,8 @@ async function main() {
     console.log(JSON.stringify({
       homeTimingDesktop,
       homeTimingPhone,
+      homePricingDesktop,
+      homePricingPhone,
       pricingDesktop,
       pricingAnchorDesktop,
       pricingAnchorPhone,

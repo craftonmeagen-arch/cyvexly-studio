@@ -1,6 +1,8 @@
 import type { ServicePlannerKey } from "@/lib/planner-config";
 
 export const inquiryContexts = {
+  "launch-offer": "Launch Offer — $199 one-page website for eligible new clients",
+  "starter-management": "Starter Management — technical care for a Launch Offer site",
   "signal-package": "Signal package — focused starter website",
   "orbit-package": "Orbit package — small-business website",
   "nexus-package": "Nexus package — larger content site or redesign",
@@ -26,6 +28,8 @@ export const inquiryContexts = {
 export type InquiryContextKey = keyof typeof inquiryContexts;
 
 export const inquiryPlannerServices = {
+  "launch-offer": "landing-pages",
+  "starter-management": "website-care",
   "signal-package": "landing-pages",
   "orbit-package": "business-websites",
   "nexus-package": "website-redesigns",

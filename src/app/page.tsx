@@ -8,11 +8,11 @@ import { WorkGrid } from "@/components/work-grid";
 import { CredibilityIcon } from "@/components/credibility-icon";
 import { FinalCtaSignalGraphic } from "@/components/final-cta-signal-graphic";
 import { HomeGlassArchitecture } from "@/components/home-glass-architecture";
+import { PricingCarousel } from "@/components/pricing-carousel";
 import {
   buyerNeeds,
   credibilityPoints,
   faqPreview,
-  pricingPreview,
   siteConfig,
 } from "@/lib/site-config";
 import { websiteJsonLd } from "@/lib/structured-data";
@@ -242,58 +242,31 @@ export default function Home() {
         </section>
 
         {/* Pricing preview */}
-        <section className="glass-section border-y border-smoke-glass/70">
+        <section id="pricing-preview" className="home-pricing-stage glass-section scroll-mt-24 border-y border-smoke-glass/70">
           <div className="mx-auto max-w-6xl px-6 py-20">
             <div className="flex flex-wrap items-end justify-between gap-4">
-              <h2 className="font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
-                Simple starting points
-              </h2>
+              <div className="max-w-2xl">
+                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyber-blue">
+                  Clear ways to begin
+                </p>
+                <h2 className="mt-3 font-display text-2xl font-semibold text-midnight-slate sm:text-3xl">
+                  From a $199 one-page launch to a purpose-built application.
+                </h2>
+                <p className="mt-3 text-sm leading-relaxed text-cool-graphite sm:text-base">
+                  The Launch Offer is a narrower option for eligible new clients. Standard
+                  custom website packages still begin with Signal at $1,800.
+                </p>
+              </div>
               <ButtonLink href="/contact?interest=custom-project" variant="text">
                 Need something custom? Let&apos;s talk →
               </ButtonLink>
             </div>
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-              {pricingPreview.map((tier) => (
-                <div
-                  key={tier.name}
-                  className={`flex flex-col rounded-2xl p-7 ${
-                    tier.featured
-                      ? "border-2 border-cyber-blue bg-frosted-glass shadow-[0_16px_40px_-16px_rgba(20,120,255,0.35)]"
-                      : "glass-panel"
-                  }`}
-                >
-                  {tier.featured && (
-                    <span className="mb-3 w-fit rounded-full bg-signal-emerald/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-signal-emerald">
-                      Recommended
-                    </span>
-                  )}
-                  <h3 className="font-display text-lg font-semibold text-midnight-slate">
-                    {tier.name}
-                  </h3>
-                  <p className="mt-1 text-xs uppercase tracking-[0.1em] text-cool-graphite">
-                    Starting at
-                  </p>
-                  <p className="mt-1 font-display text-3xl font-semibold text-cyber-blue">
-                    {tier.price}
-                  </p>
-                  <p className="mt-3 text-sm text-cool-graphite">{tier.description}</p>
-                  <ul className="mt-4 flex-1 space-y-2 text-sm text-midnight-slate">
-                    {tier.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2">
-                        <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-cyber-blue" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <ButtonLink
-                    href={`/contact?interest=${tier.name.toLowerCase()}-package`}
-                    variant={tier.featured ? "primary" : "secondary"}
-                    className="mt-6 w-full"
-                  >
-                    Ask about {tier.name}
-                  </ButtonLink>
-                </div>
-              ))}
+            <div className="mt-8">
+              <PricingCarousel
+                idPrefix="home"
+                packageHeadingLevel="h3"
+                regionLabel="Cyvexly website pricing options"
+              />
             </div>
           </div>
         </section>

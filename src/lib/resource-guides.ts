@@ -55,12 +55,12 @@ export const resourceGuides = {
       "A practical way to understand website pricing, compare quotes, and decide which scope belongs in your first release.",
     seoTitle: "Small-Business Website Cost Guide | Cyvexly Studio",
     seoDescription:
-      "See what changes custom website cost, how Cyvexly's $1,800–$8,500 starting packages differ, and which expenses sit outside the project fee.",
+      "Compare Cyvexly's $199 new-client one-page offer with standard $1,800–$8,500 website packages and the expenses outside the project fee.",
     published: "2026-09-13",
-    updated: "September 13, 2026",
+    updated: "September 20, 2026",
     readTime: "8-minute guide",
     quickAnswer:
-      "Cyvexly website projects currently start at $1,800 for a focused 1–3 page site, $3,500 for a complete small-business website, $5,800 for a larger content site or strategic redesign, and $8,500 for a commerce or booking-led website. Custom applications are quoted after discovery. These are starting points—not universal prices or a quote for your project.",
+      "Cyvexly has a tightly scoped $199 one-page Launch Offer for eligible new clients who supply final content and assets. Standard custom website packages still start at $1,800 for a focused 1–3 page site, $3,500 for a complete small-business website, $5,800 for a larger content site or strategic redesign, and $8,500 for a commerce or booking-led website. Custom applications are quoted after discovery. These are defined starting points—not universal prices or a quote for your project.",
     quickPoints: [
       "The number of pages matters, but content, integrations, migration, and decision speed can matter just as much.",
       "A lower starting price is useful only when the scope still includes the work your business needs.",
@@ -69,9 +69,10 @@ export const resourceGuides = {
     table: {
       title: "Cyvexly's current starting points",
       intro:
-        "Use these packages as comparison anchors. The final scope, timeline, and price are confirmed in a written proposal before work begins.",
+        "Use these options as comparison anchors. The $199 offer is narrower than Signal; every final scope, timeline, and price is confirmed in a written agreement before work begins.",
       columns: ["Starting point", "Current price", "Typical scope", "Typical window"],
       rows: [
+        ["Launch Offer", "$199", "One page, up to 5 sections, eligible new clients", "7–10 business days after content"],
         ["Signal", "$1,800", "1–3 focused pages", "2–3 weeks"],
         ["Orbit", "$3,500", "Up to 7 core pages", "4–6 weeks"],
         ["Nexus", "$5,800", "Up to 12 core pages or redesign", "6–9 weeks"],

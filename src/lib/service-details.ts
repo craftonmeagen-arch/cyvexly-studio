@@ -198,7 +198,7 @@ export const serviceDetails = {
       name: "Signal",
       price: "From $1,800",
       timing: "Typically 2–3 weeks",
-      note: "A focused starting point for one to three core pages, one primary form, responsive design, and essential launch setup.",
+      note: "A focused standard package for one to three core pages, one primary form, responsive design, and essential launch setup. Eligible new clients with final content ready may instead fit the narrower $199 one-page Launch Offer.",
       pricingHref: "/pricing#signal-package",
     },
     example: {

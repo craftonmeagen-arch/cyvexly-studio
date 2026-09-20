@@ -56,7 +56,7 @@ const localQuestions = [
   {
     question: "How much does an Indianapolis business website cost?",
     answer:
-      "Cyvexly website projects currently begin at $1,800, with larger redesign, commerce, booking, and application scopes priced from their published starting points or after discovery. The written proposal confirms the actual price before work begins.",
+      "Cyvexly offers a tightly scoped $199 one-page Launch Offer to eligible new clients. Standard custom website packages begin at $1,800, with larger redesign, commerce, booking, and application scopes priced from their published starting points or after discovery. The written agreement confirms the actual price before work begins.",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function IndianapolisWebDesignPage() {
                 Published starting points and written scope
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-cool-graphite sm:text-base">
-                Website projects currently start at $1,800. The final recommendation names deliverables, timing, price, responsibilities, and approval points before an agreement is signed.
+                Eligible new clients can ask about the tightly scoped $199 one-page Launch Offer; standard custom website projects start at $1,800. The final recommendation names deliverables, timing, price, responsibilities, and approval points before an agreement is signed.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
                 <ButtonLink href="/pricing" variant="text">Review pricing →</ButtonLink>

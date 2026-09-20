@@ -1,5 +1,32 @@
 # Cyvexly Current State
 
+## Round 201 working-tree implementation — September 20, 2026
+
+Owner direction `2026-09-20-01` is implemented locally on top of current HEAD
+`448b02f68f26`. The uncommitted product candidate adds the truthful `$199`
+new-client Launch Offer, an optional `$50/month` technical management plan,
+and a six-option accessible pricing carousel on Home and Pricing. It also
+updates inquiry/planner contexts, local commercial copy, structured data,
+buyer resources, regression contracts, and the private marketability/business
+records. Payments remain deferred and no public checkout, false deadline, or
+ranking claim was added.
+
+Production build (63 routes), TypeScript, buyer-journey, search-readiness, and
+full responsive hierarchy/runtime checks pass. The hierarchy run verifies two
+pricing cards on desktop, one on phones, keyboard and direct-hash navigation,
+44px-plus controls, zero horizontal overflow, and correct Home Launch Offer
+entry. ESLint passes with one pre-existing warning in archived Round 42
+evidence. The in-app browser bridge was unavailable after its required retry;
+fresh Chromium production screenshots were reviewed instead. This source is
+not committed, pushed, deployed, or independently accepted. Preserve the live
+accepted/deployed source `c9f0d6b` until the combined exact-source review gate
+is satisfied.
+
+Bounded PowerShell cleanup of `.tmp/launch-offer-review` and
+`.tmp/launch-offer-review-final` was rejected by host policy after both exact
+paths were resolved inside the workspace; those temporary capture directories
+remain untracked alongside the pre-existing `.tmp` evidence directories.
+
 ## PM production update — September 13, 2026
 
 Bounded Owner search steps 1,2,3,5 completed: exact independently accepted SEO

@@ -1,9 +1,8 @@
 # Cyvexly Marketability Record
 
-- **Record date:** September 13, 2026
+- **Record date:** September 14, 2026
 - **Public brand:** Cyvexly Studio
-- **Legal business:** Cyvexly LLC — Owner-confirmed; not independently verified
-  against an Indiana filing record
+- **Legal business:** Cyvexly LLC, operating publicly as Cyvexly Studio (Owner-confirmed formation)
 - **Canonical website:** <https://cyvexly.com>
 
 **Purpose:** This is the owner-friendly, durable record of what has been done to
@@ -99,6 +98,7 @@ finish before this lagging aggregate report catches up.
 | Bing Places | Verification in progress | One Cyvexly Studio listing was created as a web designer and a mailed verification PIN was requested on September 13, 2026. The listing remains unpublished pending PIN verification and private-address suppression. |
 | Apple Business | Domain verified; organization review pending | The Cyvexly LLC organization exists and `cyvexly.com` is verified. Apple still requires one additional independent business-identity method before organization review can be submitted. |
 | Google Analytics 4 | Active monitoring input | Privacy-conscious analytics is wired behind visitor consent and measures basic traffic and successful buyer actions without sending form contents. |
+| Google Ads | Ready-to-publish draft; no spend active | GA4 is linked without audience importing. The success-only `generate_lead` event is the primary Submit lead form conversion and counts one conversion per ad interaction. The Search draft uses a $2/day average budget and $2 max CPC; final publication still requires Owner confirmation because it can begin charges. |
 | Indiana search presence | Four-city website live; Google profile complete | Source `c9f0d6b` is deployed and independently accepted. Indiana and Indianapolis pages preserve nationwide remote service. Four profile cities, phone, description, logo and representative concept image are accepted; rankings remain external. |
 | Inquiry email | Complete and inbox-confirmed | The Resend domain and protected Render key are configured. Contact, Planner, and Consultation each produced the studio notification and requester confirmation in the Owner-supplied inbox proof. |
 | Payments | Deferred | Stripe verification and controlled invoice proof wait for the Owner's required business information. No public checkout or active-payment claim is allowed. |
@@ -108,7 +108,8 @@ finish before this lagging aggregate report catches up.
 ## Confirmed public business facts
 
 - Public brand: **Cyvexly Studio**.
-- Owner-confirmed legal name: **Cyvexly LLC**.
+- Legal business: **Cyvexly LLC**, operating publicly as **Cyvexly Studio**
+  (formation status supplied by the Owner, not independently retrieved here).
 - Public email: **design@cyvexly.com**.
 - Public phone: **(317) 572-5780** / **+1 317-572-5780**.
 - Base market: Indiana, United States.
@@ -134,9 +135,13 @@ finish before this lagging aggregate report catches up.
   contact routes, and a detailed Project Planner.
 - Prospects can use a short inquiry, consultation path, or more detailed
   Planner. Links preserve the buyer's originating service or resource context.
-- Published starting points are grounded in Cyvexly's real offer: **$1,800,
-  $3,500, $5,800, and $8,500**. They are starting points, not market averages
-  or automatic quotes.
+- Cyvexly now has a defined **$199 one-page Launch Offer** for eligible new
+  clients with final content ready. It is narrower than the standard packages,
+  which remain grounded at **$1,800, $3,500, $5,800, and $8,500**. These are
+  offer/package figures, not market averages or automatic quotes.
+- Eligible Launch Offer sites may add technical-only **Starter Management at
+  $50/month**. The $99+ Care plans retain content/design capacity so the two
+  offers are not presented as interchangeable.
 - Public Privacy, Terms, and accessibility information support buyer trust.
   The legal copy identifies Cyvexly LLC as the legal business and Cyvexly
   Studio as the public brand.
@@ -197,6 +202,26 @@ specific, and supportable—not bulk keyword variations.
 - Analytics records page views and a success-only `generate_lead` event for
   Contact, Planner, or Consultation. Names, emails, phone numbers, project
   descriptions, and other form contents must never be sent to Analytics.
+- The correct Cyvexly GA4 property is linked to Google Ads without importing
+  Analytics audiences. `generate_lead` is registered as a GA4 key event and
+  imported as the primary **Submit lead form** conversion. It counts one
+  conversion per ad interaction and has no placeholder monetary value.
+
+### 4A. Controlled Google Search advertising draft
+
+- One Google Search campaign, `Leads | Indiana | Search | 2026-09`, is built and
+  reports ready to publish. It remains an inactive draft; no ad spend is active.
+- The initial test is Indianapolis-focused, uses exact and phrase match buyer
+  terms, sends traffic to the truthful Indianapolis service page, and preserves
+  nationwide remote availability on the website.
+- Search Partners, Display expansion, AI Max, text customization, final URL
+  expansion, Analytics audience importing, phone-call conversions, and
+  remarketing are off.
+- Bidding uses Maximize clicks with a **$2 maximum CPC limit**. The average
+  budget is **$2/day**, with Google's normal individual-day ceiling of $4 and
+  an approximate unchanged monthly charging limit of $60.80.
+- The final **Publish campaign** action has not been taken. It requires explicit
+  Owner confirmation because it can begin Google Ads charges.
 
 ### 5. Bing discovery and release-gated IndexNow
 
@@ -290,6 +315,10 @@ specific, and supportable—not bulk keyword variations.
 4. **Search monitoring:** review Search Console, Bing, and GA4 after enough data
    exists. Track impressions, queries, indexed pages, click-throughs, landing
    pages, and successful inquiry actions without overstating early data.
+5. **Google Ads:** if the Owner publishes the prepared campaign, verify billing
+   status, ad review, auto-tagging, and `generate_lead` measurement; then review
+   spend and search terms within two business days. Do not apply automated
+   budget, network, keyword, or location expansion recommendations.
 
 ### Growth work that should follow evidence
 

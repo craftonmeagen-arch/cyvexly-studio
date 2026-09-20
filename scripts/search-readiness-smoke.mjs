@@ -57,7 +57,7 @@ const commercialPages = [
     path: "/pricing",
     title: "Custom Website Design Pricing | Cyvexly Studio",
     description:
-      "See starting prices for custom websites, redesigns, landing pages, ecommerce and booking sites, web applications, add-ons, and monthly website care.",
+      "See Cyvexly's $199 new-client one-page Launch Offer, standard custom website packages from $1,800, add-ons, and optional website care.",
   },
   {
     path: "/indianapolis-web-design",
@@ -75,7 +75,7 @@ const commercialPages = [
     path: "/resources/small-business-website-cost",
     title: "Small-Business Website Cost Guide | Cyvexly Studio",
     description:
-      "See what changes custom website cost, how Cyvexly's $1,800–$8,500 starting packages differ, and which expenses sit outside the project fee.",
+      "Compare Cyvexly's $199 new-client one-page offer with standard $1,800–$8,500 website packages and the expenses outside the project fee.",
   },
   {
     path: "/resources/what-custom-website-includes",
@@ -170,7 +170,8 @@ const indianapolis = htmlByPath.get("/indianapolis-web-design");
 
 assert.match(resources, /href="\/resources\/small-business-website-cost"/);
 assert.match(resources, /href="\/resources\/what-custom-website-includes"/);
-assert.match(costGuide, /Cyvexly website projects currently start at \$1,800/);
+assert.match(costGuide, /tightly scoped \$199 one-page Launch Offer/);
+assert.match(costGuide, /Standard custom website packages still start at \$1,800/);
 assert.match(costGuide, /href="\/pricing"/);
 assert.match(costGuide, /href="\/resources\/what-custom-website-includes"/);
 assert.match(inclusionGuide, /A complete custom website project should define/);
@@ -179,6 +180,9 @@ assert.match(inclusionGuide, /href="\/resources\/small-business-website-cost"/);
 assert.match(services, /href="\/resources\/small-business-website-cost"/);
 assert.match(services, /href="\/resources\/what-custom-website-includes"/);
 assert.match(pricing, /href="\/resources\/small-business-website-cost"/);
+assert.match(pricing, /"name":"Launch Offer"/);
+assert.match(pricing, /"price":199/);
+assert.doesNotMatch(pricing, /priceValidUntil/);
 assert.match(home, /href="\/indianapolis-web-design"/);
 assert.match(indianapolis, /Indianapolis-area businesses/);
 assert.match(indianapolis, /does not operate a public walk-in storefront/);
