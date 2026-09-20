@@ -26,7 +26,10 @@ showcase candidate and was sixteen commits ahead of the remote, then explicitly
 directed commit and push under direction `2026-09-20-02`. Product commit
 `0b5cd45` contains the complete implementation. This authorization releases
 the publication hold but does not satisfy or erase the independent-review gap.
-Record the remote and Render source after release verification.
+Local and remote `main` matched release-record commit `b17ac1d`, Render reported
+that exact commit, and the canonical Pricing page exposed “Launch Offer” and
+`$199`. The remaining review gap must stay explicit even though publication is
+complete.
 
 Host policy rejected bounded removal of the two exact Builder-owned screenshot
 directories `.tmp/launch-offer-review` and

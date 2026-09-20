@@ -23,6 +23,13 @@ showcase line, the Owner explicitly authorized committing and pushing the
 combined branch under direction `2026-09-20-02`. Publication does not convert
 the source into an independently accepted candidate; that review gap remains.
 
+GitHub `origin/main` and local `main` matched exact release-record commit
+`b17ac1d74744408bd716bb31b9eb8945c7571b64`. Render subsequently reported the
+same exact release commit, and cache-bypassed production checks confirmed the
+canonical Pricing page contains both “Launch Offer” and `$199`. The product
+tree is the one committed in `0b5cd45`; this closeout record changes only
+documentation.
+
 Bounded PowerShell cleanup of `.tmp/launch-offer-review` and
 `.tmp/launch-offer-review-final` was rejected by host policy after both exact
 paths were resolved inside the workspace; those temporary capture directories
@@ -60,10 +67,10 @@ and the Round 201 Launch Offer implementation.
 
 **Active review source:** `0b5cd45`; independent acceptance remains outstanding.
 
-**Current deployed product source:** `c9f0d6b`; its isolated independent review,
-Render release match, canonical search contract, Indiana route/schema/link
-smoke, and provider/search-submission record are documented in the PM update
-above and `CYVEXLY_MARKETABILITY_RECORD.md`.
+**Current deployed product tree:** exact to product commit `0b5cd45`; first
+verified combined release record `b17ac1d`. The last independently accepted
+repository source remains `c9f0d6b`; publication of the combined line does not
+erase its outstanding review gap.
 
 ## Round 200 — independent-review authority boundary unchanged
 

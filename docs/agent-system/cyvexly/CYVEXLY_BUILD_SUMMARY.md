@@ -23,6 +23,10 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
   showcase line, the Owner explicitly directed commit and push under direction
   `2026-09-20-02`. Publication does not count as independent acceptance; the
   exact-source review gap remains recorded.
+- Pushed through release-record commit `b17ac1d`; local and remote `main`
+  matched. Render then reported exact `b17ac1d`, while the canonical Pricing
+  page returned the public Launch Offer and `$199` copy. This verifies release,
+  not independent acceptance of the combined showcase source.
 - Host policy rejected exact-path cleanup of the two new `.tmp` screenshot
   directories after verification; they remain untracked and contain no source
   or secrets.

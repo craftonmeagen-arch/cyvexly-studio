@@ -2,7 +2,7 @@
 
 ## Owner-authorized combined publication — 2026-09-20-02
 
-**Status:** ACTIVE — COMMIT AND PUSH AUTHORIZED
+**Status:** COMPLETED — PUSHED AND DEPLOYED
 **Source:** Owner via the active Codex conversation on September 20, 2026.
 
 After being told that the `$199` pricing work was local and uncommitted, that
@@ -17,6 +17,12 @@ remote source and Render deployment. This explicit publication instruction
 supersedes the previous hold on pushing the combined line; it does not
 retroactively describe the combined source as independently accepted. Keep the
 outstanding independent-review status truthful in the active records.
+
+Completion record: product commit `0b5cd45` and release-record commit
+`b17ac1d` were pushed to `origin/main`. The production release endpoint then
+reported exact `b17ac1d`, and the canonical Pricing page returned both the
+Launch Offer and `$199` public copy. This confirms publication, not independent
+acceptance of the combined showcase line.
 
 ## New-client Launch Offer and pricing carousel — 2026-09-20-01
 

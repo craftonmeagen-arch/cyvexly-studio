@@ -412,6 +412,10 @@ Key production milestones:
 - `2923ce5` — initial truthful Indianapolis service presence and discovery run.
 - `c9f0d6b` — independently accepted, deployed four-city Indiana service-area
   release with current provider/search continuity.
+- `b17ac1d` — first verified Owner-authorized combined release containing the
+  `$199` Launch Offer pricing experience and previously local showcase line.
+  Public release was confirmed; independent acceptance of the combined source
+  remains outstanding.
 
 Detailed round evidence remains in `CYVEXLY_BUILD_SUMMARY.md`, current status in
 `CYVEXLY_CURRENT_STATE.md`, active authority in
