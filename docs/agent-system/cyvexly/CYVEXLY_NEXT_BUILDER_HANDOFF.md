@@ -3,7 +3,7 @@
 ## Owner Launch Offer implementation — September 20, 2026
 
 Owner direction `2026-09-20-01` is fully implemented in the working tree on
-HEAD `448b02f68f26`. The candidate introduces a tightly bounded `$199`
+product commit `0b5cd45`. The candidate introduces a tightly bounded `$199`
 one-page offer for eligible new clients, the optional `$50/month` Starter
 Management plan, and a six-card pricing carousel matching the Work carousel's
 responsive and accessible interaction model. Home, Pricing, Contact contexts,
@@ -21,10 +21,12 @@ horizontal overflow. The in-app browser bridge was unavailable after one
 reset/retry, so do not describe the Chromium evidence as an attended in-app
 browser session.
 
-The implementation is intentionally uncommitted and unpushed because current
-main already contains the still-unaccepted combined showcase candidate. The
-next gate is an independent exact-source review of the complete combined
-candidate before any commit/push/deploy decision.
+The Owner was told that current `main` included the still-unaccepted combined
+showcase candidate and was sixteen commits ahead of the remote, then explicitly
+directed commit and push under direction `2026-09-20-02`. Product commit
+`0b5cd45` contains the complete implementation. This authorization releases
+the publication hold but does not satisfy or erase the independent-review gap.
+Record the remote and Render source after release verification.
 
 Host policy rejected bounded removal of the two exact Builder-owned screenshot
 directories `.tmp/launch-offer-review` and

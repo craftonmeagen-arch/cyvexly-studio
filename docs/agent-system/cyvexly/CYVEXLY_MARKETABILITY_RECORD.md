@@ -156,8 +156,10 @@ finish before this lagging aggregate report catches up.
   accepted Team 2 source, and Mudoinkle uses three live public staging preview
   states. Each case now explains three buyer-readable task/action/results with
   desktop and phone evidence, explicit demonstrated-capability explanations,
-  and native-size inspection links. This candidate is awaiting independent review
-  and is not yet a public marketing milestone.
+  and native-size inspection links. The Owner authorized publication of the
+  combined line on September 20 after being told its independent review was
+  still outstanding. Publication must not be described as independent
+  acceptance.
 
 ### 2. Commercial pages that search engines and buyers can understand
 

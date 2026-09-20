@@ -1,9 +1,9 @@
 # Cyvexly Current State
 
-## Round 201 working-tree implementation — September 20, 2026
+## Round 201 Owner-authorized release — September 20, 2026
 
-Owner direction `2026-09-20-01` is implemented locally on top of current HEAD
-`448b02f68f26`. The uncommitted product candidate adds the truthful `$199`
+Owner direction `2026-09-20-01` is implemented in product commit `0b5cd45`.
+The combined candidate adds the truthful `$199`
 new-client Launch Offer, an optional `$50/month` technical management plan,
 and a six-option accessible pricing carousel on Home and Pricing. It also
 updates inquiry/planner contexts, local commercial copy, structured data,
@@ -17,10 +17,11 @@ pricing cards on desktop, one on phones, keyboard and direct-hash navigation,
 44px-plus controls, zero horizontal overflow, and correct Home Launch Offer
 entry. ESLint passes with one pre-existing warning in archived Round 42
 evidence. The in-app browser bridge was unavailable after its required retry;
-fresh Chromium production screenshots were reviewed instead. This source is
-not committed, pushed, deployed, or independently accepted. Preserve the live
-accepted/deployed source `c9f0d6b` until the combined exact-source review gate
-is satisfied.
+fresh Chromium production screenshots were reviewed instead. After being told
+that local `main` was sixteen commits ahead and included the still-unaccepted
+showcase line, the Owner explicitly authorized committing and pushing the
+combined branch under direction `2026-09-20-02`. Publication does not convert
+the source into an independently accepted candidate; that review gap remains.
 
 Bounded PowerShell cleanup of `.tmp/launch-offer-review` and
 `.tmp/launch-offer-review-final` was rejected by host policy after both exact
@@ -50,15 +51,14 @@ Cyvexly-facing EduAILenz and Mudoinkle case studies to the accepted Velora
 showcase standard. Preserve the live search foundation, truthful Indianapolis
 availability, and the mobile-app integration deferral.
 
-**Current product source:** `ca6140b` — local, unaccepted combined candidate.
-It preserves Chunk 13 showcase source `7fb2a51`, merges independently accepted
-and deployed Indiana source `c9f0d6b`, and adds a verified Contact/service-area
-continuity correction. It is intentionally unpushed pending exact-source
-independent review.
+**Current product source:** `0b5cd45` — Owner-authorized combined release
+candidate. It preserves Chunk 13 showcase source `7fb2a51`, the independently
+accepted Indiana source `c9f0d6b`, the verified Contact/service-area correction,
+and the Round 201 Launch Offer implementation.
 
 **Accepted repository source:** `c9f0d6b`
 
-**Active review source:** `ca6140b`
+**Active review source:** `0b5cd45`; independent acceptance remains outstanding.
 
 **Current deployed product source:** `c9f0d6b`; its isolated independent review,
 Render release match, canonical search contract, Indiana route/schema/link

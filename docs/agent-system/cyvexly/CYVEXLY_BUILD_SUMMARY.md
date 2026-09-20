@@ -3,7 +3,7 @@
 This is the broad continuous-build log. Full per-round evidence and superseded
 detail remain in `docs/archive/chunks/`, Git history, and role memory.
 
-## Round 201 — `$199` Launch Offer working-tree candidate
+## Round 201 — `$199` Launch Offer and Owner-authorized release
 
 - Implemented Owner direction `2026-09-20-01`: a truthful, narrowly scoped
   `$199` new-client one-page offer; optional `$50/month` Starter Management;
@@ -18,9 +18,11 @@ detail remain in `docs/archive/chunks/`, Git history, and role memory.
   errors and one pre-existing warning. The in-app browser bridge remained
   unavailable after its required retry, so Chromium screenshots supplied the
   visual evidence.
-- Kept the candidate uncommitted, unpushed, and undeployed because the branch
-  already contains the unaccepted combined showcase line. Independent review
-  of the complete exact source remains the release gate.
+- Committed the implementation as product source `0b5cd45`. After being told
+  that `main` was sixteen commits ahead and contained the unaccepted combined
+  showcase line, the Owner explicitly directed commit and push under direction
+  `2026-09-20-02`. Publication does not count as independent acceptance; the
+  exact-source review gap remains recorded.
 - Host policy rejected exact-path cleanup of the two new `.tmp` screenshot
   directories after verification; they remain untracked and contain no source
   or secrets.

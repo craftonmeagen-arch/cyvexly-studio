@@ -1,5 +1,23 @@
 # Cyvexly Owner Direction
 
+## Owner-authorized combined publication — 2026-09-20-02
+
+**Status:** ACTIVE — COMMIT AND PUSH AUTHORIZED
+**Source:** Owner via the active Codex conversation on September 20, 2026.
+
+After being told that the `$199` pricing work was local and uncommitted, that
+local `main` was sixteen commits ahead of `origin/main`, and that pushing would
+publish the earlier combined showcase work as well, the Owner replied:
+
+> “Ok do it pls”
+
+Commit the completed Launch Offer implementation and push the current combined
+`main` branch. Exclude untracked temporary screenshot directories. Confirm the
+remote source and Render deployment. This explicit publication instruction
+supersedes the previous hold on pushing the combined line; it does not
+retroactively describe the combined source as independently accepted. Keep the
+outstanding independent-review status truthful in the active records.
+
 ## New-client Launch Offer and pricing carousel — 2026-09-20-01
 
 **Status:** ACTIVE — IMPLEMENTATION AUTHORIZED
